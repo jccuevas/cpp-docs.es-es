@@ -1,5 +1,5 @@
 ---
-title: Clases de directivas de copia ATL
+title: Clases de política de copia de ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [C++], ATL
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f40f31124d4547076249a7459ac4b63cc25305d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317389"
 ---
-# <a name="atl-copy-policy-classes"></a>Clases de directivas de copia ATL
+# <a name="atl-copy-policy-classes"></a>Clases de política de copia de ATL
 
-Clases de directivas de copia son [clases de utilidad](../atl/utility-classes.md) utilizado para inicializar, copiar y eliminar datos. Clases de directivas de copia permiten definir la semántica de copiado para cualquier tipo de datos así como definir conversiones entre tipos de datos diferentes.
+Las clases de directiva de copia son [clases](../atl/utility-classes.md) de utilidad que se utilizan para inicializar, copiar y eliminar datos. Las clases de directiva de copia permiten definir la semántica de copia para cualquier tipo de datos y definir conversiones entre diferentes tipos de datos.
 
-ATL utiliza clases de directivas de copia en sus implementaciones de las siguientes plantillas:
+ATL utiliza clases de política de copia en sus implementaciones de las siguientes plantillas:
 
 - [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)
 
@@ -27,11 +27,11 @@ ATL utiliza clases de directivas de copia en sus implementaciones de las siguien
 
 - [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)
 
-Al encapsular la información necesaria para copiar o convertir los datos en una clase de directiva de copia que se puede pasar como argumento de plantilla, los desarrolladores ATL han proporcionado para poder reutilizarlo extreme de estas clases. Por ejemplo, si necesita implementar una colección con cualquier tipo de datos arbitrarios, todo lo que necesita proporcionar es la directiva de copia correspondiente; nunca tiene que tocar el código que implementa la colección.
+Al encapsular la información necesaria para copiar o convertir datos en una clase de directiva de copia que se puede pasar como argumento de plantilla, los desarrolladores de ATL han proporcionado una reutilización extrema de estas clases. Por ejemplo, si necesita implementar una colección con cualquier tipo de datos arbitrario, todo lo que necesita proporcionar es la directiva de copia adecuada; nunca tiene que tocar el código que implementa la colección.
 
 ## <a name="definition"></a>Definición
 
-Por definición, una clase que proporciona las siguientes funciones estáticas es una clase de directiva de copia:
+Por definición, una clase que proporciona las siguientes funciones estáticas es una clase de política de copia:
 
 `static void init(` `DestinationType` `* p);`
 
@@ -39,46 +39,46 @@ Por definición, una clase que proporciona las siguientes funciones estáticas e
 
 `static void destroy(` `DestinationType` `* p);`
 
-Puede reemplazar los tipos `DestinationType` y *SourceType* con tipos de datos arbitrarios para cada directiva de copia.
+Puede reemplazar los `DestinationType` tipos y *SourceType* por tipos de datos arbitrarios para cada directiva de copia.
 
 > [!NOTE]
->  Aunque puede definir clases de directivas de copia para cualquier tipo de datos arbitrarios, debe limitar el uso de las clases en el código ATL los tipos que tengan sentido. Por ejemplo, si mediante una directiva de copia la clase con la colección de ATL o implementaciones de enumerador, `DestinationType` debe ser un tipo que se puede usar como un parámetro en un método de interfaz COM.
+> Aunque puede definir clases de directiva de copia para cualquier tipo de datos arbitrarios, el uso de las clases en código ATL debe limitar los tipos que tienen sentido. Por ejemplo, cuando se usa una clase de política de `DestinationType` copia con la colección o las implementaciones de enumerador de ATL, debe ser un tipo que se pueda usar como parámetro en un método de interfaz COM.
 
-Use **init** para inicializar los datos, **copia** para copiar los datos, y **destruir** para liberar los datos. El significado exacto de inicialización, copia y destrucción están en el dominio de la clase de directiva de copia y puede variar en función de los tipos de datos implicados.
+Utilice **init** para inicializar datos, **copiar** los datos y **destruirlos** para liberarlos. El significado preciso de inicialización, copia y destrucción es el dominio de la clase de directiva de copia y variará en función de los tipos de datos implicados.
 
-Hay dos requisitos sobre el uso y la implementación de una clase de directiva de copia:
+Hay dos requisitos sobre el uso y la implementación de una clase de política de copia:
 
-- El primer parámetro **copia** sólo debe recibir un puntero a datos que se haya inicializado anteriormente mediante **init**.
+- El primer parámetro que se va a **copiar** solo debe recibir un puntero a los datos que haya inicializado previamente mediante **init**.
 
-- **destruir** nunca debe recibir un puntero a datos que se haya inicializado anteriormente mediante **init** o copiar a través de **copia**.
+- **destroy** solo debe recibir un puntero a los datos que haya inicializado previamente mediante **init** o copiado mediante **copia.**
 
 ## <a name="standard-implementations"></a>Implementaciones estándar
 
-ATL proporciona dos clases de directivas de copia en el formulario de la `_Copy` y `_CopyInterface` clases de plantilla:
+ATL proporciona dos clases de `_Copy` directiva `_CopyInterface` de copia en forma de las clases de plantilla y:
 
-- El `_Copy` clase permite homogéneo copiar solo (no la conversión entre tipos de datos) puesto que sólo ofrece un parámetro de plantilla único para especificar ambos `DestinationType` y *SourceType*. La implementación genérica de esta plantilla no contiene ningún código de inicialización o la destrucción y usa `memcpy` para copiar los datos. ATL también proporciona especializaciones de `_Copy` para tipos de datos VARIANT, LPOLESTR, OLEVERB y CONNECTDATA.
+- La `_Copy` clase solo permite la copia homogénea (no la conversión `DestinationType` entre tipos de datos) ya que solo ofrece un único parámetro de plantilla para especificar ambos y *SourceType*. La implementación genérica de esta plantilla no `memcpy` contiene código de inicialización o destrucción y se usa para copiar los datos. ATL también proporciona `_Copy` especializaciones para los tipos de datos VARIANT, LPOLESTR, OLEVERB y CONNECTDATA.
 
-- La `_CopyInterface` clase proporciona una implementación para copiar los punteros de interfaz que siguen reglas COM estándar. Una vez más esta clase permite solo copiar homogéneos, por lo que usa una asignación simple y una llamada a `AddRef` para realizar la copia.
+- La `_CopyInterface` clase proporciona una implementación para copiar punteros de interfaz siguiendo las reglas COM estándar. Una vez más esta clase solo permite la copia homogénea, por lo que utiliza una asignación simple y una llamada para `AddRef` realizar la copia.
 
 ## <a name="custom-implementations"></a>Implementaciones personalizadas
 
-Normalmente, necesitará definir sus propias clases de directiva de copia para copiar heterogéneas (es decir, la conversión entre tipos de datos). Algunos ejemplos de clases de directivas de copia personalizadas, examine los archivos VCUE_Copy.h y VCUE_CopyString.h el [ATLCollections](../overview/visual-cpp-samples.md) ejemplo. Estos archivos contienen dos clases de directivas de copia de plantilla, `GenericCopy` y `MapCopy`, junto con un número de especializaciones de `GenericCopy` para diferentes tipos de datos.
+Normalmente, deberá definir sus propias clases de directiva de copia para la copia heterogénea (es decir, la conversión entre tipos de datos). Para ver algunos ejemplos de clases de directiva de copia personalizadas, consulte los archivos VCUE_Copy.h y VCUE_CopyString.h en el ejemplo [ATLCollections.](../overview/visual-cpp-samples.md) Estos archivos contienen dos `GenericCopy` clases de directiva de copia de plantilla y `MapCopy`, además de una serie de especializaciones de diferentes tipos de `GenericCopy` datos.
 
 ### <a name="genericcopy"></a>GenericCopy
 
-`GenericCopy` le permite especificar el *SourceType* y `DestinationType` como argumentos de plantilla. Aquí es la forma más general de la `GenericCopy` clase a partir de VCUE_Copy.h:
+`GenericCopy`le permite especificar *SourceType* y `DestinationType` como argumentos de plantilla. Esta es la forma más `GenericCopy` general de la clase de VCUE_Copy.h:
 
 [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]
 
-VCUE_Copy.h también contiene las siguientes especializaciones de esta clase: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h contiene especializaciones para copiar desde **std:: String**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, y `GenericCopy<BSTR, std::string>`. Se podría mejorar `GenericCopy` proporcionando más especializaciones de su elección.
+VCUE_Copy.h también contiene las siguientes especializaciones `GenericCopy<VARIANT, BSTR>` `GenericCopy<BSTR, VARIANT>`de esta clase: `GenericCopy<BSTR>`, , . VCUE_CopyString.h contiene especializaciones para copiar desde **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, y `GenericCopy<BSTR, std::string>`. Usted podría `GenericCopy` mejorar proporcionando más especializaciones de su propia.
 
 ### <a name="mapcopy"></a>MapCopy
 
-`MapCopy` se da por supuesto que los datos copiados se almacenan en un mapa de la biblioteca estándar de C++-style, por lo que permite especificar el tipo de mapa en el que se almacenan los datos y el tipo de destino. La implementación de la clase solo usa las definiciones de tipo proporcionado por el *MapType* (clase) para determinar el tipo del origen de datos y llamar a la correspondiente `GenericCopy` clase. No hay especializaciones de esta clase son necesarios.
+`MapCopy`se supone que los datos que se copian se almacenan en un mapa de estilo de biblioteca estándar de C++, por lo que le permite especificar el tipo de mapa en el que se almacenan los datos y el tipo de destino. La implementación de la clase solo usa las typedefs proporcionadas por la clase `GenericCopy` *MapType* para determinar el tipo de los datos de origen y llamar a la clase adecuada. No se necesitan especializaciones de esta clase.
 
 [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Implementar una recopilación basada en la biblioteca estándar de C++](../atl/implementing-an-stl-based-collection.md)<br/>
-[Ejemplo ATLCollections](../overview/visual-cpp-samples.md)
+[Implementación de una colección basada en biblioteca estándar C++](../atl/implementing-an-stl-based-collection.md)<br/>
+[Ejemplo de ATLCollections](../overview/visual-cpp-samples.md)

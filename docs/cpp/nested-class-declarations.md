@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367902"
 ---
 # <a name="nested-class-declarations"></a>Declaraciones de clase anidadas
 
@@ -54,14 +54,14 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` y `BufferedIO::BufferedOutput` se declaran en `BufferedIO`. Estos nombres de clase no son visibles fuera del ámbito de la clase `BufferedIO`. Sin embargo, un objeto de tipo `BufferedIO` no contiene objetos de los tipos `BufferedInput` o `BufferedOutput`.
+`BufferedIO::BufferedInput`y `BufferedIO::BufferedOutput` se `BufferedIO`declaran dentro de . Estos nombres de clase no son visibles fuera del ámbito de la clase `BufferedIO`. Sin embargo, un objeto de tipo `BufferedIO` no contiene objetos de los tipos `BufferedInput` o `BufferedOutput`.
 
 Las clases anidadas pueden utilizar directamente nombres, nombres de tipo, nombres de miembros estáticos y enumeradores solo de la clase envolvente. Para usar nombres de otros miembros de clase, debe utilizar punteros, referencias o nombres de objeto.
 
 En el ejemplo anterior de `BufferedIO`, pueden tener acceso directamente a la enumeración `IOError` funciones miembro de las clases anidadas, `BufferedIO::BufferedInput` o `BufferedIO::BufferedOutput`, como se muestra en la función `good`.
 
 > [!NOTE]
->  Las clases anidadas declaran solo tipos dentro del ámbito de la clase. No provocan la creación de objetos contenidos de la clase anidada. El ejemplo anterior declara dos clases anidadas pero no declara ningún objeto de estos tipos de clase.
+> Las clases anidadas declaran solo tipos dentro del ámbito de la clase. No provocan la creación de objetos contenidos de la clase anidada. El ejemplo anterior declara dos clases anidadas pero no declara ningún objeto de estos tipos de clase.
 
 Una excepción a la visibilidad del ámbito de una declaración de clase es cuando se declara un nombre de tipo junto con una declaración adelantada.  En este caso, el nombre de clase declarado por la declaración adelantada está visible fuera de la clase envolvente, con el ámbito definido de modo que sea el menor envolvente no de clase.  Por ejemplo:
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-En el ejemplo anterior, se utiliza la sintaxis *Qualified-type-name* para declarar el nombre de la función. La declaración:
+En el ejemplo anterior, se utiliza la sintaxis *qualified-type-name* para declarar el nombre de la función. La declaración:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-significa “la función `read` que es miembro de la clase `BufferedInput` que está en el ámbito de la clase `BufferedIO`.” Dado que esta declaración usa la sintaxis *Qualified-type-name* , son posibles las construcciones de la forma siguiente:
+significa “la función `read` que es miembro de la clase `BufferedInput` que está en el ámbito de la clase `BufferedIO`.” Dado que esta declaración utiliza la sintaxis *qualified-type-name,* son posibles construcciones del siguiente formulario:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;

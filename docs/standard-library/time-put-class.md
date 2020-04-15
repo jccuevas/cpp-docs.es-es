@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 10691de0a583dc7d5a66c319968d90978bf59480
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426094"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367998"
 ---
 # <a name="time_put-class"></a>time_put (Clase)
 
-La plantilla de clase describe un objeto que puede actuar como una faceta de configuración regional para controlar las conversiones de valores de hora en secuencias de tipo `CharType`.
+La plantilla de clase describe un objeto que puede servir como una faceta `CharType`de configuración regional para controlar las conversiones de valores de tiempo a secuencias de tipo .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-\ *CharType*
+*CharType*\
 Tipo usado dentro de un programa para codificar caracteres.
 
-\ *OutputIterator*
+*OutputIterator*\
 El tipo de iterador en el que las funciones time put escriben sus resultados.
 
 ## <a name="remarks"></a>Observaciones
@@ -67,11 +67,11 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<configuración regional >
+**Encabezado:** \<locale>
 
 **Espacio de nombres:** std
 
-## <a name="char_type"></a>  time_put::char_type
+## <a name="time_putchar_type"></a><a name="char_type"></a>time_put::char_type
 
 Tipo que se usa para describir un carácter empleado por una configuración regional.
 
@@ -83,7 +83,7 @@ typedef CharType char_type;
 
 El tipo es un sinónimo del parámetro de plantilla `CharType`.
 
-## <a name="do_put"></a>  time_put::do_put
+## <a name="time_putdo_put"></a><a name="do_put"></a>time_put::do_put
 
 Una función virtual que genera información de hora y fecha como una secuencia de `CharType`s.
 
@@ -98,7 +98,7 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parámetros
 
-*siguiente*\
+*próximo*\
 Un iterador de salida en el que se va a insertar la secuencia de caracteres que representan la fecha y la hora.
 
 *_Iosbase*\
@@ -119,15 +119,15 @@ Un iterador a la primera posición después del último elemento insertado.
 
 ### <a name="remarks"></a>Observaciones
 
-La función miembro virtual protegida genera elementos secuenciales que comienzan en `next` a partir de los valores de tiempo almacenados en el objeto \* `_Pt`, de tipo `tm`. La función devuelve un iterador que designa el lugar siguiente para insertar un elemento más allá de la salida generada.
+La función miembro protegido virtual `next` genera elementos secuenciales a partir de los valores de tiempo almacenados en el objeto \* `_Pt`, de tipo `tm`. La función devuelve un iterador que designa el lugar siguiente para insertar un elemento más allá de la salida generada.
 
-La salida se genera mediante las mismas reglas utilizadas por `strftime`, con un último argumento de *_Pt*, para generar una serie de elementos **Char** en una matriz. Se supone que cada elemento **Char** de este tipo se asigna a un elemento equivalente de tipo `CharType` mediante una asignación simple, uno a uno. Si *_Mod* es igual a cero, el formato efectivo es "% F", donde F se reemplaza por *_Fmt*. De lo contrario, el formato efectivo es "% MF", donde M se reemplaza por *_Mod*.
+La salida se genera mediante las `strftime`mismas reglas utilizadas por , con un último argumento de *_Pt*, para generar una serie de elementos **char** en una matriz. Se supone que cada elemento **char** se `CharType` asigna a un elemento equivalente de tipo mediante una asignación simple de uno a uno. Si *_Mod* es igual a cero, el formato efectivo es "%F", donde F se sustituye por *_Fmt*. De lo contrario, el formato efectivo es "%MF", donde M se sustituye por *_Mod*.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [put](#put), que llama a `do_put`.
 
-## <a name="iter_type"></a>  time_put::iter_type
+## <a name="time_putiter_type"></a><a name="iter_type"></a>time_put::iter_type
 
 Tipo que describe un iterador de salida.
 
@@ -139,7 +139,7 @@ typedef OutputIterator iter_type;
 
 El tipo es un sinónimo del parámetro de plantilla `OutputIterator`.
 
-## <a name="put"></a>  time_put::put
+## <a name="time_putput"></a><a name="put"></a>time_put::put
 
 Genera información de hora y fecha como una secuencia de `CharType`s.
 
@@ -161,14 +161,14 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Parámetros
 
-*siguiente*\
+*próximo*\
 Un iterador de salida en el que se va a insertar la secuencia de caracteres que representan la fecha y la hora.
 
 *_Iosbase*\
 Sin usar.
 
 *_Fill*\
-Carácter de tipo `CharType` utilizado para el espaciado.
+Carácter de `CharType` tipo utilizado para el espaciado.
 
 *_Pt*\
 La información de fecha y hora que se va a representar.
@@ -179,10 +179,10 @@ El formato de la salida. Vea [strftime, wcsftime, _strftime_l, _wcsftime_l](../c
 *_Mod*\
 Un modificador para el formato. Vea [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para conocer los valores válidos.
 
-*primer*\
+*Primero*\
 El principio de la cadena de formato para la salida. Vea [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para conocer los valores válidos.
 
-*última*\
+*Última*\
 El final de la cadena de formato para la salida. Vea [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para conocer los valores válidos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -191,7 +191,7 @@ Un iterador a la primera posición después del último elemento insertado.
 
 ### <a name="remarks"></a>Observaciones
 
-La primera función miembro devuelve [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). La segunda función miembro copia en \* `next` + + cualquier elemento del intervalo [`first`, `last`) que no sea un porcentaje (%). En el caso de un porcentaje seguido de un carácter *C* en el intervalo [`first`, `last`), la función evalúa `next` = `do_put`(`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) y omite *C*pasado. Sin embargo, si *C* es un carácter calificador de set CEO #, seguido de un carácter `C2` en el intervalo [`first`, `last`), la función evalúa `next` = `do_put`(`next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) y omite `C2`.
+La primera función`next`miembro `_Iosbase` `_Fill`devuelve `_Pt` `_Fmt`do_put `_Mod`( , , , , , . . [do_put](#do_put) La segunda función \* `next` miembro copia en ++ cualquier elemento del intervalo [ `first`, `last`) que no sea un porcentaje (%). Para un porcentaje seguido *C* de un `first`carácter C en el intervalo [ `last`, ), la función en su lugar evalúa `next`  =  `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) y omite más allá de *C*. Sin embargo, si *C* es un carácter calificador del `C2` conjunto EOQ, seguido de un carácter en el intervalo [ `first` `last`, ), la función en su lugar evalúa `next`  =  `do_put` `next`( , `_Iosbase`, `_Fill`, `_Pt`, , `C2`, *C*) y omite más allá `C2`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -237,7 +237,7 @@ num_put( ) = x: 05:30:40 07/04/00
 strftime( ) = x: 05:30:40 07/04/00
 ```
 
-## <a name="time_put"></a>  time_put::time_put
+## <a name="time_puttime_put"></a><a name="time_put"></a>time_put::time_put
 
 Constructor para los objetos de tipo `time_put`.
 
@@ -258,12 +258,12 @@ Los valores posibles para el parámetro *_Refs* y su importancia son:
 
 - 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: estos valores no están definidos.
+- \>1: Estos valores no están definidos.
 
-El constructor inicializa su objeto base con [locale:: Facet](../standard-library/locale-class.md#facet_class)( *_Refs*).
+El constructor inicializa su objeto base con [locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
 ## <a name="see-also"></a>Consulte también
 
-[\<locale>](../standard-library/locale.md)\
-[time_base (Clase)](../standard-library/time-base-class.md)\
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<>de la localidad](../standard-library/locale.md)\
+[Clase time_base](../standard-library/time-base-class.md)\
+[Seguridad de roscas en la biblioteca estándar C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

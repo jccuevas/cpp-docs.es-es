@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427126"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368418"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
 
@@ -24,11 +24,11 @@ En este tema, se documentan las enumeraciones del encabezado del sistema de arch
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<experimental/filesystem >
+**Encabezado:** \<experimental/filesystem>
 
 **Espacio de nombres:** std::experimental::filesystem
 
-## <a name="copy_options"></a>  copy_options
+## <a name="copy_options"></a><a name="copy_options"></a>copy_options
 
 Una enumeración de valores de máscara de bits que se usa con las funciones [copy](filesystem-functions.md#copy) y [copy_file](filesystem-functions.md#copy_file) para especificar el comportamiento.
 
@@ -64,7 +64,7 @@ enum class copy_options {
 |`create_symlinks`|Establezca vínculos simbólicos en lugar de copiar archivos. Una ruta de acceso absoluta debe usarse como la ruta de acceso de origen a menos que el destino sea el directorio actual.|
 |`create_hard_links`|Establezca vínculos físicos en lugar de copiar archivos.|
 
-## <a name="directory_options"></a> directory_options
+## <a name="directory_options"></a><a name="directory_options"></a> directory_options
 
 Especifica si se deben seguir los vínculos simbólicos a directorios o bien si se deben ignorar.
 
@@ -84,9 +84,9 @@ enum class directory_options {
 |`none`|Comportamiento predeterminado: omitir vínculos simbólicos a directorios. Permiso denegado es un error.|
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|
 
-## <a name="file_type"></a>  file_type
+## <a name="file_type"></a><a name="file_type"></a>file_type
 
-Enumeración de tipos de archivo. Los valores admitidos son regular, Directory, not_found y Unknown.
+Enumeración de tipos de archivo. Los valores admitidos son regulares, directory, not_found y desconocidos.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|Representa un socket en sistemas basados en UNIX. (No se admite).|
 |`unknown`|8|Representa un archivo cuyo estado no se puede determinar.|
 
-## <a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a>perm_options
 
-Incluye valores `replace`, `add`, `remove`y `nofollow`.
+Incluye `replace`valores `add` `remove`, `nofollow`, , y .
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a>  perms
+## <a name="perms"></a><a name="perms"></a>Permanentes
 
-Marcas para los permisos de archivo. Los valores admitidos son básicamente "readonly" y todos. Para los archivos de solo lectura, no se establece ningún bit *_write. En caso contrario, se establece el bit `all` (0x0777).
+Marcas para los permisos de archivo. Los valores admitidos son esencialmente "readonly" y all. Para los archivos de solo lectura, no se establece ningún bit *_write. En caso contrario, se establece el bit `all` (0x0777).
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -164,4 +164,4 @@ enum class perms {// names for permissions
 ## <a name="see-also"></a>Consulte también
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
-[\<filesystem>](../standard-library/filesystem.md)
+[\<>del sistema de archivos](../standard-library/filesystem.md)

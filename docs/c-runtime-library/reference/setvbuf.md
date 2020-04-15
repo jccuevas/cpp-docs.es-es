@@ -1,8 +1,9 @@
 ---
 title: setvbuf
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - setvbuf
+- _o_setvbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 38b6474f550107a8edd941c7112ba98891ab3c12
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 203265a8dd85854bcedd737359b856fdc4cce04d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316258"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -50,37 +52,39 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
-*buffer*<br/>
+*Búfer*<br/>
 Búfer asignado por el usuario.
 
-*mode*<br/>
+*Modo*<br/>
 Modo de almacenamiento en búfer.
 
-*size*<br/>
-Tamaño del búfer en bytes. Intervalo permitido: 2 < = *size* < = INT_MAX (2147483647). Internamente, el valor proporcionado para el *tamaño* se redondea hacia abajo al múltiplo más próximo de 2.
+*Tamaño*<br/>
+Tamaño del búfer en bytes. Rango permitido: 2 <de *tamaño* <a INT_MAX (2147483647). Internamente, el valor proporcionado para *el tamaño* se redondea hacia abajo al múltiplo más cercano de 2.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Si la operación se realiza correctamente, devuelve 0.
 
-Si *Stream* es **null**, o si el *modo* o *el tamaño* no está dentro de un cambio válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** en **EINVAL**.
+Si *stream* es **NULL**, o si *mode* o *size* no está dentro de un cambio válido, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **setvbuf (** permite que el programa controle el almacenamiento en búfer y el tamaño de búfer de la *secuencia*. la *secuencia* debe hacer referencia a un archivo abierto que no haya sufrido una operación de e/s desde que se abrió. La matriz a la que apunta el *búfer* se usa como búfer, a menos que sea **null**, en cuyo caso **setvbuf (** usa un búfer asignado automáticamente de *tamaño*de \* longitud/2 2 bytes.
+La función **setvbuf** permite al programa controlar tanto el almacenamiento en búfer como el tamaño del búfer para la *secuencia.* *stream* debe hacer referencia a un archivo abierto que no ha sido sometido a una operación de E/S desde que se abrió. La matriz señalada por *buffer* se utiliza como búfer, a menos que sea **NULL**, en \* cuyo caso **setvbuf** utiliza un búfer asignado automáticamente de *tamaño*de longitud /2 2 2 bytes.
 
-El modo debe ser **_IOFBF**, **_IOLBF**o **_IONBF**. Si el *modo* es **_IOFBF** o **_IOLBF**, se usa el *tamaño* como el tamaño del búfer. Si el *modo* es **_IONBF**, el flujo no se almacena en búfer y se omiten el *tamaño* y el *búfer* . Los valores para el *modo* y sus significados son:
+El modo debe ser **_IOFBF**, **_IOLBF**o **_IONBF**. Si *el modo* es **_IOFBF** o **_IOLBF**, el *tamaño* se utiliza como el tamaño del búfer. Si *el modo* es **_IONBF**, la secuencia no se almacena en búfer y se omiten el *tamaño* y el *búfer.* Los valores para el *modo* y sus significados son:
 
-|valor de *modo*|Significado|
+|valor *del modo*|Significado|
 |-|-|
-| **_IOFBF** | Almacenamiento en búfer completo; es decir, el *búfer* se utiliza como búfer y el *tamaño* se utiliza como tamaño del búfer. Si *buffer* es **null**, se usa un *tamaño* de búfer asignado automáticamente de bytes de longitud. |
-| **_IOLBF** | En algunos sistemas, esto proporciona un almacenamiento en búfer en línea, Sin embargo, para Win32, el comportamiento es el mismo que el almacenamiento en búfer completo de **_IOFBF** . |
-| **_IONBF** | No se usa ningún búfer, independientemente del *búfer* o *el tamaño*. |
+| **_IOFBF** | Almacenamiento en búfer completo; es decir, el *búfer* se utiliza como búfer y el *tamaño* se utiliza como el tamaño del búfer. Si *el búfer* es **NULL**, se utiliza un *tamaño* de búfer asignado automáticamente bytes de largo. |
+| **_IOLBF** | En algunos sistemas, esto proporciona un almacenamiento en búfer en línea, Sin embargo, para Win32, el comportamiento es el mismo que **_IOFBF** - Almacenamiento en búfer completo. |
+| **_IONBF** | No se utiliza ningún búfer, independientemente del *búfer* o *el tamaño.* |
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -88,7 +92,7 @@ El modo debe ser **_IOFBF**, **_IOLBF**o **_IONBF**. Si el *modo* es **_IOFBF** 
 |-------------|---------------------|
 |**setvbuf**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -131,7 +135,7 @@ int main( void )
 'stream2' now has no buffer
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

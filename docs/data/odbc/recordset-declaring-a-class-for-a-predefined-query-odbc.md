@@ -8,31 +8,31 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9d19328fb82503519fd8eca083e0dd11e10883ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9618f25d738c092ab1818ef7c4ea52928e2ea60
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212958"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367037"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Conjunto de registros: Declarar una clase para una consulta predefinida (ODBC)
 
 > [!NOTE]
-> El Asistente para consumidores ODBC de MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor de forma manual.
+> El Asistente para consumidores ODBC MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor manualmente.
 
 Este tema es aplicable a las clases ODBC de MFC.
 
 En este tema se explica cómo crear una clase de conjunto de registros para una consulta predefinida (también denominada procedimiento almacenado, como en Microsoft SQL Server).
 
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si se implementa la obtención masiva de filas, el proceso es muy similar. Para comprender las diferencias entre los conjuntos de registros que implementan la obtención masiva de filas y los que no, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si se implementa la obtención masiva de filas, el proceso es muy similar. Para comprender las diferencias entre los conjuntos de registros que implementan la obtención masiva de filas y los que no, vea [Conjunto de registros: obtención de registros en masa (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 Algunos sistemas de administración de bases de datos (DBMS) permiten crear una consulta predefinida y llamarla desde programas como una función. La consulta tiene un nombre y es posible que tome parámetros y que devuelva registros. En el procedimiento descrito en este tema se explica cómo llamar a una consulta predefinida que devuelve registros (y que es posible que tome parámetros).
 
 Las clases de base de datos no admiten la actualización de consultas predefinidas. La diferencia entre una consulta predefinida de instantánea y una consulta predefinida de conjunto de registros dinámicos no es la capacidad de actualización, sino si los cambios realizados por otros usuarios (u otros conjuntos de registros del programa) son visibles en el conjunto de registros.
 
 > [!TIP]
->  No se necesita un conjunto de registros para llamar a una consulta predefinida que no devuelve ningún registro. Prepare la instrucción SQL como se describe a continuación, pero ejecútela mediante una llamada a la función miembro `CDatabase`ExecuteSQL[ de ](../../mfc/reference/cdatabase-class.md#executesql).
+> No se necesita un conjunto de registros para llamar a una consulta predefinida que no devuelve ningún registro. Prepare la instrucción SQL como se describe a continuación, pero ejecútela mediante una llamada a la función miembro [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) de `CDatabase`.
 
 Puede crear una única clase de conjunto de registros para administrar la llamada a una consulta predefinida, pero tendrá que hacer parte del trabajo personalmente. Los asistentes no admiten la creación de una clase específicamente para este propósito.
 
@@ -66,7 +66,7 @@ Puede crear una única clase de conjunto de registros para administrar la llamad
 
 1. Si la consulta acepta parámetros, agregue un miembro de datos de parámetro para cada parámetro, una llamada de función RFX y una inicialización para cada uno.
 
-1. Debe incrementar `m_nParams` para cada parámetro que se agregue, como ha hecho con `m_nFields` para los campos agregados en el paso 4 de este procedimiento. Para obtener más información, vea [conjunto de registros: parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Debe incrementar `m_nParams` para cada parámetro que se agregue, como ha hecho con `m_nFields` para los campos agregados en el paso 4 de este procedimiento. Para obtener más información, vea [Conjunto de registros: parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Escriba manualmente una cadena de instrucción SQL con el formato siguiente:
 
@@ -151,7 +151,7 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 Este código crea una instantánea, le pasa un parámetro que ha obtenido antes del usuario y llama a la consulta predefinida. Cuando se ejecuta la consulta, devuelve los registros para la región de ventas especificada. Cada registro contiene columnas para el número de cuenta y el apellido y el número de teléfono del cliente.
 
 > [!TIP]
->  Es posible que quiera controlar un valor devuelto (parámetro de salida) desde un procedimiento almacenado. Para obtener más información y un ejemplo, vea [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
+> Es posible que quiera controlar un valor devuelto (parámetro de salida) desde un procedimiento almacenado. Para obtener más información y un ejemplo, vea [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
 ## <a name="see-also"></a>Consulte también
 

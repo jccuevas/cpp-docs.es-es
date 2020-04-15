@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 1c63002db7de4ebce348505c4e757e6901861a93
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 4f293f73eb1fa8a38bf06692ef5b7938faeab0d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367273"
 ---
 # <a name="uniform_real_distribution-class"></a>uniform_real_distribution (Clase)
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *RealType*
-El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, por defecto **es double**. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La plantilla de clase describe una distribución inclusiva-exclusiva que genera valores de un tipo de punto flotante integral especificado por el usuario con una distribución, de modo que cada valor es igual de probable. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución exclusiva inclusiva que produce valores de un tipo de punto flotante integral especificado por el usuario con una distribución para que cada valor sea igualmente probable. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
 
-El miembro de propiedad `a()` devuelve el límite mínimo de la distribución almacenado actualmente, mientras que `b()` devuelve el límite máximo almacenado actualmente. Para esta clase de distribución, estos valores mínimo y máximo son los mismos que los devueltos por las funciones de propiedad común `min()` y `max()` descritas en el tema [\<random>](../standard-library/random.md).
+El miembro de propiedad `a()` devuelve el límite mínimo de la distribución almacenado actualmente, mientras que `b()` devuelve el límite máximo almacenado actualmente. Para esta clase de distribución, estos valores mínimo y máximo `min()` `max()` son los mismos que los devueltos por las funciones de propiedad comunes y descritos en el [ \<](../standard-library/random.md) tema de>aleatorio.
 
 El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.
 
@@ -93,7 +93,7 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información acerca de las clases de distribución y sus miembros, vea [ \<>aleatorias ](../standard-library/random.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -178,7 +178,7 @@ Distribution for 10 samples:
 
 **Espacio de nombres:** std
 
-## <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution::uniform_real_distribution
 
 Construye la distribución.
 
@@ -189,24 +189,24 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*un* \
+*Un*\
 Límite inferior para los valores aleatorios (incluido).
 
-*b* \
+*B*\
 Límite superior para los valores aleatorios (excluido).
 
-\ *PARM*
+*Parmesana*\
 La estructura `param_type` usada para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `a < b`
+**Condición previa:**`a < b`
 
-El primer constructor *crea un objeto cuyo valor almacenado contiene* el valor *a* y cuyo valor *b* almacenado contiene el valor *b*.
+El primer constructor construye un objeto cuyo valor almacenado *contiene* el valor *a* y cuyo valor *b* almacenado contiene el valor *b*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="param_type"></a>  uniform_real_distribution::param_type
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::param_type
 
 Almacena todos los parámetros de la distribución.
 
@@ -224,21 +224,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*un* \
+*Un*\
 Límite inferior para los valores aleatorios (incluido).
 
-*b* \
+*B*\
 Límite superior para los valores aleatorios (excluido).
 
-\ *derecha*
+*Correcto*\
 El objeto `param_type` que se va a comparar con este.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `a < b`
+**Condición previa:**`a < b`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)
+[\<>al azar](../standard-library/random.md)

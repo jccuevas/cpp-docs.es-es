@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: bb4b67a4c534598a8e26eb9ab5f297b108b67b6d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3ed6a862cda769769cd07d2dcd72007292068dc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212997"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367096"
 ---
 # <a name="recordset-architecture-odbc"></a>Conjunto de registros: Arquitectura (ODBC)
 
@@ -33,12 +33,12 @@ En este tema se describen los miembros de datos que componen la arquitectura de 
 - [Uso de miembros de datos m_nFields y m_nParams](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si se implementa la obtención masiva de filas, la arquitectura es muy similar. Para comprender las diferencias, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si se implementa la obtención masiva de filas, la arquitectura es muy similar. Para comprender las diferencias, vea [Conjunto de registros: obtención de registros en masa (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="sample-class"></a><a name="_core_a_sample_class"></a> Clase de ejemplo
+## <a name="sample-class"></a><a name="_core_a_sample_class"></a> Clase de ejemplo
 
 > [!NOTE]
-> El Asistente para consumidores ODBC de MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor de forma manual.
+> El Asistente para consumidores ODBC MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor manualmente.
 
 Cuando se usa el [Asistente para consumidores ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) desde el Asistente para **agregar clases** a fin de declarar una clase de conjunto de registros derivada `CRecordset`, la clase resultante tiene la estructura general que se muestra en la siguiente clase de ejemplo:
 
@@ -56,7 +56,7 @@ public:
 
 Al principio de la clase, el asistente escribe un conjunto de [miembros de datos de campo](#_core_field_data_members). Al crear la clase, debe especificar uno o varios miembros de datos de campo. Si la clase está parametrizada, como la clase de ejemplo (con el miembro de datos `m_strIDParam`), debe agregar manualmente [miembros de datos de parámetros](#_core_parameter_data_members). El asistente no admite la adición de parámetros a una clase.
 
-##  <a name="field-data-members"></a><a name="_core_field_data_members"></a> Miembros de datos de campo
+## <a name="field-data-members"></a><a name="_core_field_data_members"></a>Miembros de datos de campo
 
 Los miembros más importantes de la clase de conjunto de registros son los miembros de datos de campo. Para cada columna que haya seleccionado en el origen de datos, la clase contiene un miembro de datos del tipo de datos adecuado para esa columna. Por ejemplo, la [clase de ejemplo](#_core_a_sample_class) mostrada al principio de este tema tiene dos miembros de datos de campo, ambos de tipo `CString`, denominados `m_strCourseID` y `m_strCourseTitle`.
 
@@ -64,7 +64,7 @@ Cuando el conjunto de registros selecciona una serie de registros, el marco enla
 
 Cuando el usuario se desplaza a un nuevo registro, el marco usa los miembros de datos de campo para representar el registro actual. El marco actualiza los miembros de datos de campo y reemplaza los valores del registro anterior. Los miembros de datos de campo también se usan para actualizar el registro actual y agregar nuevos registros. Como parte del proceso para actualizar un registro, debe especificar los valores de actualización. Para ello, asigne los valores directamente a los miembros de datos de campo adecuados.
 
-##  <a name="parameter-data-members"></a><a name="_core_parameter_data_members"></a> Miembros de datos de parámetros
+## <a name="parameter-data-members"></a><a name="_core_parameter_data_members"></a>Miembros de datos de parámetros
 
 Si la clase está parametrizada, tiene uno o varios miembros de datos de parámetros. Una clase parametrizada permite basar una consulta del conjunto de registros en la información que se ha obtenido o calculado en tiempo de ejecución.
 
@@ -83,16 +83,16 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 Al definir miembros de datos de parámetros, le está indicando al marco los parámetros que contiene la cadena SQL. El marco enlaza el parámetro, lo que permite que ODBC sepa dónde debe obtener los valores para sustituir el marcador de posición. En el ejemplo, el conjunto de registros resultante solo contiene el registro de la tabla Course con una columna CourseID, cuyo valor es MATH101. Todas las columnas especificadas de este registro están seleccionadas. Puede especificar tantos parámetros (y marcadores de posición) como necesite.
 
 > [!NOTE]
->  MFC no hace nada específico con los parámetros (en concreto, no realiza una sustitución de texto), pero le indica a ODBC dónde obtener el parámetro, de modo que ODBC pueda recuperar los datos y realizar la parametrización necesaria.
+> MFC no hace nada específico con los parámetros (en concreto, no realiza una sustitución de texto), pero le indica a ODBC dónde obtener el parámetro, de modo que ODBC pueda recuperar los datos y realizar la parametrización necesaria.
 
 > [!NOTE]
->  El orden de los parámetros es importante. Para obtener información sobre este y más información sobre los parámetros, vea [conjunto de registros: parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+> El orden de los parámetros es importante. Para obtener información acerca de esto y más información acerca de los parámetros, vea [Conjunto de registros: parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-##  <a name="using-m_nfields-and-m_nparams"></a><a name="_core_using_m_nfields_and_m_nparams"></a> Uso de m_nFields y m_nParams
+## <a name="using-m_nfields-and-m_nparams"></a><a name="_core_using_m_nfields_and_m_nparams"></a> Uso de m_nFields y m_nParams
 
 Cuando un asistente escribe un constructor para la clase, también inicializa el miembro de datos [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields), que especifica el número de [miembros de datos de campo](#_core_field_data_members) de la clase. Si agrega algún [parámetro](#_core_parameter_data_members) a la clase, debe agregar también una inicialización para el miembro de datos [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams), que especifica el número de miembros de datos de parámetros. El marco usa estos valores para trabajar con los miembros de datos.
 
-Para obtener más información y ejemplos, vea [intercambio de campos de registros: utilizar RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Para obtener más información y ejemplos, vea Intercambio de campos de [registros: Uso](../../data/odbc/record-field-exchange-using-rfx.md)de RFX .
 
 ## <a name="see-also"></a>Consulte también
 

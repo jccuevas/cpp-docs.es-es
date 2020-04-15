@@ -6,64 +6,64 @@ helpviewer_keywords:
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-ms.openlocfilehash: 79ec102aa27440c64f03c6e22b9f2fe959cac6b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b989e5c3df63ee7b5129d01468a0f869772ed286
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399556"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367322"
 ---
 # <a name="wininet-basics"></a>Fundamentos de WinInet
 
-Puede usar WinInet para agregar compatibilidad con FTP para descargar y cargar archivos desde su aplicación. Puede invalidar [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) y usar el *dwContext* parámetro para proporcionar información de progreso a los usuarios como para busca y descargar archivos.
+Puede usar WinInet para agregar compatibilidad con FTP para descargar y cargar archivos desde la aplicación. Puede invalidar [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) y usar el parámetro *dwContext* para proporcionar información de progreso a los usuarios a medida que busca y descarga archivos.
 
-Este artículo contiene los temas siguientes:
+Ese artículo contiene los siguientes temas:
 
-- [Crear un explorador muy Simple](#_core_create_a_very_simple_browser)
+- [Crear un navegador muy simple](#_core_create_a_very_simple_browser)
 
-- [Descargar una página Web](#_core_download_a_web_page)
+- [Descargar una página web](#_core_download_a_web_page)
 
-- [Un archivo FTP](#_core_ftp_a_file)
+- [FTP un archivo](#_core_ftp_a_file)
 
-- [Recuperar un directorio Gopher](#_core_retrieve_a_gopher_directory)
+- [Recuperar un directorio de Gopher](#_core_retrieve_a_gopher_directory)
 
 - [Mostrar información de progreso durante la transferencia de archivos](#_core_display_progress_information_while_transferring_files)
 
-Los fragmentos de código siguientes muestran cómo crear un simple explorador, descargar una página Web, un archivo, FTP y buscar un archivo gopher. No se ha diseñado como ejemplos completos y no incluyen el control de excepciones.
+Los siguientes extractos de código muestran cómo crear un navegador simple, descargar una página Web, FTP un archivo y buscar un archivo gopher. No se entienden como ejemplos completos y no todos contienen control de excepciones.
 
-Para obtener más información sobre WinInet, vea [extensiones de Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md).
+Para obtener información adicional sobre WinInet, consulte Extensiones de [Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md).
 
-##  <a name="_core_create_a_very_simple_browser"></a> Crear un explorador muy Simple
+## <a name="create-a-very-simple-browser"></a><a name="_core_create_a_very_simple_browser"></a>Crear un navegador muy simple
 
 [!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]
 
-##  <a name="_core_download_a_web_page"></a> Descargar una página Web
+## <a name="download-a-web-page"></a><a name="_core_download_a_web_page"></a>Descargar una página web
 
 [!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]
 
-##  <a name="_core_ftp_a_file"></a> Un archivo FTP
+## <a name="ftp-a-file"></a><a name="_core_ftp_a_file"></a>FTP un archivo
 
 [!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]
 
-##  <a name="_core_retrieve_a_gopher_directory"></a> Recuperar un directorio Gopher
+## <a name="retrieve-a-gopher-directory"></a><a name="_core_retrieve_a_gopher_directory"></a>Recuperar un directorio de Gopher
 
 [!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]
 
-## <a name="use-onstatuscallback"></a>Utilizar OnStatusCallback
+## <a name="use-onstatuscallback"></a>Usar OnStatusCallback
 
-Al usar las clases WinInet, puede usar el [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) miembro de la aplicación [CInternetSession](../mfc/reference/cinternetsession-class.md) objeto para recuperar información de estado. Si deriva sus propias `CInternetSession` de objetos, invalidar `OnStatusCallback`y habilitar las devoluciones de llamada de estado, MFC llamará a su `OnStatusCallback` función con la información de progreso sobre toda la actividad en esa sesión de Internet.
+Al usar las clases WinInet, puede usar el miembro [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) del objeto [CInternetSession](../mfc/reference/cinternetsession-class.md) de la aplicación para recuperar información de estado. Si deriva su `CInternetSession` propio `OnStatusCallback`objeto, invalida y habilita devoluciones de llamada de estado, MFC llamará a la función `OnStatusCallback` con información de progreso sobre toda la actividad en esa sesión de Internet.
 
-Dado que una sola sesión puede admitir varias conexiones (que, durante su ciclo de vida, pueden realizar muchas operaciones distintas), `OnStatusCallback` necesita un mecanismo para identificar cada cambio de estado con una conexión o transacción determinada. Ese mecanismo es proporcionado por el parámetro de Id. de contexto dado a muchas de las funciones miembro en las clases de soporte técnico de WinInet. Este parámetro siempre es del tipo **DWORD** y siempre se denomina *dwContext*.
+Dado que una sola sesión puede admitir varias conexiones (que, a lo largo de su vida útil, pueden realizar muchas operaciones distintas diferentes), `OnStatusCallback` necesita un mecanismo para identificar cada cambio de estado con una conexión o transacción determinada. Ese mecanismo lo proporciona el parámetro de identificador de contexto proporcionado a muchas de las funciones miembro en las clases de soporte de WinInet. Este parámetro siempre es de tipo **DWORD** y siempre se denomina *dwContext*.
 
-El contexto que se asigna a un objeto concreto de Internet sólo se utiliza para identificar la actividad que hace que el objeto en el `OnStatusCallback` miembro de la `CInternetSession` objeto. La llamada a `OnStatusCallback` recibe varios parámetros; estos parámetros funcionan conjuntamente para indicar a la aplicación se ha realizado el progreso de la transacción y la conexión.
+El contexto asignado a un objeto de Internet determinado solo `OnStatusCallback` se utiliza `CInternetSession` para identificar la actividad que causa el objeto en el miembro del objeto. La llamada `OnStatusCallback` a recibe varios parámetros; estos parámetros trabajan juntos para indicar a la aplicación qué progreso se ha realizado para qué transacción y conexión.
 
-Cuando creas un `CInternetSession` objeto, puede especificar un *dwContext* parámetro al constructor. `CInternetSession` Sí no usa el identificador de contexto en su lugar, pasa el identificador de contexto con cualquiera **InternetConnection**-explícitamente no obtención un identificador de contexto de sus propios objetos derivados. A su vez, los `CInternetConnection` objetos pasará el identificador de contexto a `CInternetFile` objetos que crean si no se especifica explícitamente un identificador de contexto diferente. Por otro lado, si especifica un identificador de contexto específico de su propio, el objeto y cualquier trabajo que se asociarán con ese identificador de contexto. Puede usar los identificadores de contexto para identificar qué información de estado se entrega para usted en su `OnStatusCallback` función.
+Al crear `CInternetSession` un objeto, puede especificar un parámetro *dwContext* para el constructor. `CInternetSession`no utiliza el identificador de contexto; en su lugar, pasa el identificador de contexto a cualquier objeto derivado de **InternetConnection**que no obtenga explícitamente un identificador de contexto propio. A su `CInternetConnection` vez, esos objetos `CInternetFile` pasarán el identificador de contexto a los objetos que creen si no especifica explícitamente un identificador de contexto diferente. Si, por otro lado, especifica un identificador de contexto específico propio, el objeto y cualquier trabajo que realice se asociará con ese identificador de contexto. Puede utilizar los datos de contexto para identificar qué información `OnStatusCallback` de estado se le proporciona en la función.
 
-##  <a name="_core_display_progress_information_while_transferring_files"></a> Mostrar información de progreso durante la transferencia de archivos
+## <a name="display-progress-information-while-transferring-files"></a><a name="_core_display_progress_information_while_transferring_files"></a>Mostrar información de progreso durante la transferencia de archivos
 
-Por ejemplo, si escribe una aplicación que crea una conexión con un servidor FTP para leer un archivo y también se conecta a un servidor HTTP para obtener una página Web, tendrá un `CInternetSession` (objeto), dos `CInternetConnection` objetos (uno sería un `CFtpSession` y el otro sería un `CHttpSession`) y dos `CInternetFile` objetos (uno para cada conexión). Si usa los valores predeterminados para el *dwContext* parámetros, no sería capaz de distinguir entre el `OnStatusCallback` invocaciones que indican el progreso de la conexión FTP y las invocaciones que indican el progreso de la Conexión de HTTP. Si especifica un *dwContext* identificador, que se puede comprobar más adelante en `OnStatusCallback`, sabrá qué operación generó la devolución de llamada.
+Por ejemplo, si escribe una aplicación que crea una conexión con un servidor FTP para leer un archivo y `CInternetSession` también `CInternetConnection` se conecta a `CFtpSession` un servidor HTTP `CHttpSession`para obtener `CInternetFile` una página Web, tendrá un objeto, dos objetos (uno sería a y el otro sería un ) y dos objetos (uno para cada conexión). Si utiliza valores predeterminados para los parámetros *dwContext,* `OnStatusCallback` no podrá distinguir entre las invocaciones que indican el progreso de la conexión FTP y las invocaciones que indican el progreso de la conexión HTTP. Si especifica un id *dwContext,* que puede `OnStatusCallback`probar más adelante en , sabrá qué operación generó la devolución de llamada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)<br/>
+[Fundamentos de programación de Internet de MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Extensiones de Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)

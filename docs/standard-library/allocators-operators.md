@@ -5,22 +5,22 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7bc37e98ed85582cac8fc7ae21e54a6d5da9e06f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424060"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364956"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; (operadores)
 
-Estas son las funciones de operador de plantilla global definidas en &lt;asignadores&gt;. Para las funciones de operador de miembro de clase, vea la documentación de la clase.
+Estas son las funciones &lt;globales&gt;del operador de plantilla definidas en los asignadores. Para las funciones del operador de miembro de clase, consulte la documentación de la clase.
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[¡Operador!](#op_neq)|[operadora](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>¡Operador!
 
 Comprueba la desigualdad entre los objetos de asignador de una clase especificada.
 
@@ -35,8 +35,8 @@ bool operator!=(
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*left*|Uno de los objetos de asignador cuya desigualdad se va a comprobar.|
-|*right*|Uno de los objetos de asignador cuya desigualdad se va a comprobar.|
+|*Izquierda*|Uno de los objetos de asignador cuya desigualdad se va a comprobar.|
+|*Correcto*|Uno de los objetos de asignador cuya desigualdad se va a comprobar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -46,7 +46,7 @@ bool operator!=(
 
 El operador de la plantilla devuelve `!(left == right)`.
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operadora
 
 Comprueba la igualdad entre los objetos de asignador de una clase especificada.
 
@@ -61,8 +61,8 @@ bool operator==(
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*left*|Uno de los objetos de asignador cuya igualdad se va a comprobar.|
-|*right*|Uno de los objetos de asignador cuya igualdad se va a comprobar.|
+|*Izquierda*|Uno de los objetos de asignador cuya igualdad se va a comprobar.|
+|*Correcto*|Uno de los objetos de asignador cuya igualdad se va a comprobar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -74,4 +74,4 @@ Este operador de la plantilla devuelve `left.equals(right)`.
 
 ## <a name="see-also"></a>Consulte también
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<asignadores>](../standard-library/allocators-header.md)

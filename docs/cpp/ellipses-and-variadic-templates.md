@@ -2,24 +2,24 @@
 title: Puntos suspensivos y plantillas variádicas
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 9c9294089b9f0a144946b7f6b81da2a71ca710bc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366335"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Puntos suspensivos y plantillas variádicas
 
 En este artículo se muestra cómo utilizar los puntos suspensivos (`...`) con plantillas variádicas de C++. Los puntos suspensivos han tenido muchos usos en C y C++. Entre ellos se incluyen listas de argumentos de variable para funciones. La función `printf()` de la biblioteca en tiempo de ejecución de C es uno de los ejemplos más conocidos.
 
-Una *plantilla variádicas* es una plantilla de clase o de función que admite un número arbitrario de argumentos. Este mecanismo resulta especialmente útil para los desarrolladores de bibliotecas de C++, ya que puede aplicarse tanto a las plantillas de clase como a las plantillas de función y, por tanto, proporciona una gama amplia de funcionalidad y flexibilidad con seguridad de tipos y no triviales.
+Una *plantilla variádica* es una plantilla de clase o función que admite un número arbitrario de argumentos. Este mecanismo resulta especialmente útil para los desarrolladores de bibliotecas de C++, ya que puede aplicarse tanto a las plantillas de clase como a las plantillas de función y, por tanto, proporciona una gama amplia de funcionalidad y flexibilidad con seguridad de tipos y no triviales.
 
 ## <a name="syntax"></a>Sintaxis
 
 Las plantillas variádicas utilizan los puntos suspensivos de dos maneras. A la izquierda del nombre del parámetro, significa un paquete de *parámetros*y, a la derecha del nombre del parámetro, expande los paquetes de parámetros en nombres independientes.
 
-A continuación se muestra un ejemplo básico de sintaxis de definición de *clase de plantilla variádicas* :
+Este es un ejemplo básico de sintaxis de definición de clase de *plantilla variádica:*
 
 ```cpp
 template<typename... Arguments> class classname;
@@ -39,7 +39,7 @@ template<typename ... Arguments> class classname;
 
 Tenga en cuenta que en este artículo se utiliza la convención que se muestra en el primer ejemplo (los puntos suspensivos van junto a `typename`).
 
-En los ejemplos anteriores, *arguments* es un paquete de parámetros. La clase `classname` puede aceptar un número variable de argumentos, como en estos ejemplos:
+En los ejemplos anteriores, Arguments es un paquete de *parámetros.* La clase `classname` puede aceptar un número variable de argumentos, como en estos ejemplos:
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -56,13 +56,13 @@ Cuando se usa una definición de clase de plantilla variádica, también puede s
 template <typename First, typename... Rest> class classname;
 ```
 
-A continuación se muestra un ejemplo básico de sintaxis de *función de plantilla variádicas* :
+Este es un ejemplo básico de sintaxis de función de *plantilla variádica:*
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments... args);
 ```
 
-A continuación, el paquete de parámetros *arguments* se expande para su uso, como se muestra en la sección siguiente, **Descripción de las plantillas variádicas**.
+A continuación, se expande el paquete de *parámetros Arguments* para su uso, como se muestra en la sección siguiente, Descripción de **las plantillas variádicas**.
 
 Es posible utilizar otras formas de sintaxis de función de plantilla variática, incluidas las de estos ejemplos, entre otras:
 
@@ -72,7 +72,7 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);
 ```
 
-También se permiten especificadores como **const** :
+También se permiten especificadores como **const:**
 
 ```cpp
 template <typename... Arguments> returntype functionname(const Arguments&... args);
@@ -102,9 +102,9 @@ void tfunc(const Arguments&... args)
 
 Anteriormente en este artículo se ha descrito la posición de los puntos suspensivos que definen los paquetes de parámetros y las expansiones como "a la izquierda del nombre de parámetro, significa un paquete de parámetros, y a la derecha del nombre de parámetro, expande los paquetes de parámetros en nombres diferentes". Esto es técnicamente cierto pero puede ser confuso trasladarlo al código. Considere:
 
-- En una lista de parámetros de plantilla (`template <parameter-list>`), `typename...` presenta un paquete de parámetros de plantilla.
+- En una lista de`template <parameter-list>`parámetros de plantilla ( ), `typename...` se introduce un paquete de parámetros de plantilla.
 
-- En una cláusula de declaración de parámetros (`func(parameter-list)`), los puntos suspensivos de "nivel superior" presentan un paquete de parámetros de función y la posición de los puntos suspensivos es importante:
+- En una cláusula-declaración-parámetro (`func(parameter-list)`), los puntos suspensivos de "nivel superior" introducen un paquete de parámetros de función y el posicionamiento de puntos suspensivos es importante:
 
     ```cpp
     // v1 is NOT a function parameter pack:
@@ -161,4 +161,4 @@ first, 2, third, 3.14159
 ```
 
 > [!NOTE]
->  La mayoría de las implementaciones que incorporan funciones de plantilla variádicas utilizan la recursividad de alguna forma, pero es ligeramente diferente de la recursividad tradicional.  La recursividad tradicional conlleva una función que se llama a sí misma utilizando la misma firma. (Puede estar sobrecargado o con plantilla, pero se elige la misma firma cada vez). La recursividad variádicas implica llamar a una plantilla de función variádicas mediante el uso de números de argumentos diferentes (casi siempre en disminución) y, por lo tanto, marcan una firma diferente cada vez. Sigue siendo necesario un "caso base", pero la naturaleza de la recursividad es diferente.
+> La mayoría de las implementaciones que incorporan funciones de plantilla variádicas utilizan recursividad de alguna forma, pero es ligeramente diferente de la recursividad tradicional.  La recursividad tradicional implica una función que se llama a sí misma mediante la misma firma. (Puede estar sobrecargado o con plantilla, pero se elige la misma firma cada vez.) La recursividad variádica implica llamar a una plantilla de función variádica mediante el uso de diferentes números de argumentos (casi siempre decrecientes) y, por lo tanto, estampar una firma diferente cada vez. Sigue siendo necesario un "caso base", pero la naturaleza de la recursividad es diferente.

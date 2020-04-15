@@ -133,16 +133,16 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 9d6a408b6ed7e7ab6f3dd138a4222b262978fd6c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364162"
 ---
 # <a name="cpane-class"></a>CPane Class
 
-La clase `CPane` es una mejora de la [clase CControlBar](../../mfc/reference/ccontrolbar-class.md). Si está actualizando un proyecto MFC existente, reemplace todas las apariciones de `CControlBar` por `CPane`.
+La `CPane` clase es una mejora de la [clase CControlBar](../../mfc/reference/ccontrolbar-class.md). Si va a actualizar un proyecto MFC existente, reemplace todas las apariciones de `CControlBar` con `CPane`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -150,7 +150,7 @@ La clase `CPane` es una mejora de la [clase CControlBar](../../mfc/reference/cco
 class CPane : public CBasePane
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
@@ -162,91 +162,91 @@ class CPane : public CBasePane
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CPane:: AdjustSizeImmediate](#adjustsizeimmediate)|Vuelve a calcular inmediatamente el diseño de un panel.|
-|[CPane:: AllocElements](#allocelements)|Asigna almacenamiento para uso interno.|
-|[CPane:: AllowShowOnPaneMenu](#allowshowonpanemenu)|Especifica si el panel aparece en la lista de paneles generados en tiempo de ejecución de la aplicación.|
-|[CPane:: CalcAvailableSize](#calcavailablesize)|Calcula la diferencia de tamaño entre un rectángulo especificado y el rectángulo de ventana actual.|
-|[CPane:: CalcInsideRect](#calcinsiderect)|Calcula el rectángulo interior de un panel, teniendo en cuenta los bordes y los agarradores.|
-|[CPane:: CalcRecentDockedRect](#calcrecentdockedrect)|Calcula el rectángulo acoplado recientemente.|
-|[CPane:: CalcSize](#calcsize)|Calcula el tamaño del panel.|
-|[CPane:: CanBeDocked](#canbedocked)|Determina si el panel se puede acoplar en el panel base especificado.|
-|[CPane:: CanBeTabbedDocument](#canbetabbeddocument)|Determina si el panel se puede convertir en un documento con pestañas.|
-|[CPane:: ConvertToTabbedDocument](#converttotabbeddocument)|Convierte un panel acoplable en un documento con pestañas.|
-|[CPane:: CopyState](#copystate)|Copia el estado de un panel. (Invalida [a cbasepane:: CopyState](../../mfc/reference/cbasepane-class.md#copystate)).|
-|[CPane:: Create](#create)|Crea una barra de controles y la adjunta al objeto `CPane`.|
-|[CPane:: CreateDefaultMiniframe](#createdefaultminiframe)|Crea una ventana de marco reducido para un panel flotante.|
-|[CPane:: CreateEx](#createex)|Crea una barra de controles y la adjunta al objeto `CPane`.|
+|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Recalcula inmediatamente el diseño de un panel.|
+|[CPane::AllocElements](#allocelements)|Asigna almacenamiento para uso interno.|
+|[Cpane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Especifica si el panel aparece en la lista de paneles generados por tiempo de ejecución para la aplicación.|
+|[CPane::CalcAvailableSize](#calcavailablesize)|Calcula la diferencia de tamaño entre un rectángulo especificado y el rectángulo de ventana actual.|
+|[CPane::CalcInsideRect](#calcinsiderect)|Calcula el rectángulo interior de un panel, teniendo en cuenta los bordes y pinzas.|
+|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Calcula el rectángulo acoplado recientemente.|
+|[CPane::CalcSize](#calcsize)|Calcula el tamaño del panel.|
+|[Cpane::CanBeDocked](#canbedocked)|Determina si el panel se puede acoplar en el panel base especificado.|
+|[Cpane::CanBeTabbedDocument](#canbetabbeddocument)|Determina si el panel se puede convertir en un documento con fichas.|
+|[Cpane::ConvertToTabbedDocument](#converttotabbeddocument)|Convierte un panel acoplable en un documento con fichas.|
+|[CPane::CopyState](#copystate)|Copia el estado de un panel. (Reemplaza [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
+|[CPane::Crear](#create)|Crea una barra de control `CPane` y la adjunta al objeto.|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Crea una ventana de marco pequeño para un panel flotante.|
+|[CPane::CreateEx](#createex)|Crea una barra de control `CPane` y la adjunta al objeto.|
 |`CPane::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
-|[CPane::D ockByMouse](#dockbymouse)|Acopla un panel mediante el método de acoplamiento del mouse.|
-|[CPane::D ockPane](#dockpane)|Acopla el panel flotante a un panel base.|
-|[CPane::D ockPaneStandard](#dockpanestandard)|Acopla un panel mediante el acoplamiento de esquema (estándar).|
-|[CPane::D ockToFrameWindow](#docktoframewindow)|Acopla un panel acoplable a un marco. (Invalida `CBasePane::DockToFrameWindow`).|
-|[CPane::D oesAllowSiblingBars](#doesallowsiblingbars)|Indica si se puede acoplar otro panel en la misma fila en la que está acoplado el panel actual.|
-|[CPane:: FloatPane](#floatpane)|Flota el panel.|
-|[CPane:: GetAvailableExpandSize](#getavailableexpandsize)|Devuelve la cantidad, en píxeles, que el panel puede expandir.|
-|[CPane:: GetAvailableStretchSize](#getavailablestretchsize)|Devuelve la cantidad, en píxeles, que el panel puede reducir.|
-|[CPane:: GetBorders](#getborders)|Devuelve el ancho de los bordes del panel.|
-|[CPane:: GetClientHotSpot](#getclienthotspot)|Devuelve la *zona activa* del panel.|
-|[CPane:: GetDockSiteRow](#getdocksiterow)|Devuelve la fila de acoplamiento en la que se acopla el panel.|
-|[CPane:: GetExclusiveRowMode](#getexclusiverowmode)|Determina si el panel está en modo de fila exclusivo.|
-|[CPane:: GetHotSpot](#gethotspot)|Devuelve la zona activa que se almacena en un objeto de `CMFCDragFrameImpl` subyacente.|
-|[CPane:: GetMinSize](#getminsize)|Recupera el tamaño mínimo permitido para el panel.|
-|[CPane:: GetPaneName](#getpanename)|Recupera el título del panel.|
+|[CPane::DockByMouse](#dockbymouse)|Acopla un panel mediante el método de acoplamiento del mouse.|
+|[CPane::DockPane](#dockpane)|Acopla el panel flotante a un panel base.|
+|[CPane::DockPaneStandard](#dockpanestandard)|Acopla un panel mediante el acoplamiento de esquema (estándar).|
+|[CPane::DockToFrameWindow](#docktoframewindow)|Acopla un panel acoplable a un marco. (Invalida `CBasePane::DockToFrameWindow`).|
+|[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Indica si puede acoplar otro panel en la misma fila donde está acoplado el panel actual.|
+|[CPane::FloatPane](#floatpane)|Flota el panel.|
+|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Devuelve la cantidad, en píxeles, que el panel puede expandir.|
+|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Devuelve la cantidad, en píxeles, que el panel puede reducir.|
+|[CPane::GetBorders](#getborders)|Devuelve el ancho de los bordes del panel.|
+|[CPane::GetClientHotSpot](#getclienthotspot)|Devuelve la *zona de acceso rápido* del panel.|
+|[CPane::GetDockSiteRow](#getdocksiterow)|Devuelve la fila de acoplamiento en la que se acopla el panel.|
+|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Determina si el panel está en modo de fila exclusivo.|
+|[CPane::GetHotSpot](#gethotspot)|Devuelve la zona de acceso rápido `CMFCDragFrameImpl` que se almacena en un objeto subyacente.|
+|[CPane::GetMinSize](#getminsize)|Recupera el tamaño mínimo permitido para el panel.|
+|[CPane::GetPaneName](#getpanename)|Recupera el título del panel.|
 |`CPane::GetResizeStep`|Utilizado de forma interna.|
-|`CPane::GetThisClass`|Lo usa el marco de trabajo para obtener un puntero al objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) asociado a este tipo de clase.|
-|[CPane:: GetVirtualRect](#getvirtualrect)|Recupera el *rectángulo virtual* del panel.|
-|[CPane:: IsChangeState](#ischangestate)|A medida que se mueve el panel, este método analiza la posición del panel con respecto a otros paneles, acoplar filas y ventanas de marco reducido, y devuelve el valor de AFX_CS_STATUS adecuado.|
-|[CPane:: IsDragMode](#isdragmode)|Especifica si el panel se está arrastrando.|
-|[CPane:: IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Especifica si el panel se encuentra en una ventana de marco de varios paneles. (Invalida `CBasePane::IsInFloatingMultiPaneFrameWnd`).|
-|[CPane:: IsLeftOf](#isleftof)|Determina si el panel está a la izquierda del rectángulo especificado (o superior).|
-|[CPane:: IsResizable](#isresizable)|Determina si se puede cambiar el tamaño del panel. (Invalida [a cbasepane:: IsResizable](../../mfc/reference/cbasepane-class.md#isresizable)).|
-|[CPane:: IsTabbed](#istabbed)|Determina si el panel se ha insertado en el control de pestaña de una ventana con pestañas. (Invalida [a cbasepane:: IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed)).|
-|[CPane:: LoadState](#loadstate)|Carga el estado del panel desde el registro. (Invalida [a cbasepane:: Loadstate](../../mfc/reference/cbasepane-class.md#loadstate)).|
-|[CPane:: MoveByAlignment](#movebyalignment)|Mueve el panel y el rectángulo virtual en la cantidad especificada.|
-|[CPane:: MovePane](#movepane)|Mueve el panel al rectángulo especificado.|
-|[CPane:: OnAfterChangeParent](#onafterchangeparent)|Lo llama el marco de trabajo cuando cambia el elemento primario de un panel.|
-|[CPane:: OnBeforeChangeParent](#onbeforechangeparent)|Lo llama el marco de trabajo cuando el elemento primario del panel está a punto de cambiar.|
-|[CPane:: OnPressCloseButton](#onpressclosebutton)|Lo llama el marco de trabajo cuando el usuario elige el botón cerrar en el título del panel.|
+|`CPane::GetThisClass`|Utilizado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|
+|[CPane::GetVirtualRect](#getvirtualrect)|Recupera el *rectángulo virtual* del panel.|
+|[CPane::IsChangeState](#ischangestate)|A medida que se mueve el panel, este método analiza la posición del panel en relación con otros paneles, filas de acoplamiento y ventanas de marco pequeño y devuelve el valor de AFX_CS_STATUS adecuado.|
+|[Cpane::IsDragMode](#isdragmode)|Especifica si se está arrastrando el panel.|
+|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Especifica si el panel está en una ventana de marco de varios paneles. (Invalida `CBasePane::IsInFloatingMultiPaneFrameWnd`).|
+|[Cpane::IsLeftOf](#isleftof)|Determina si el panel queda del rectángulo especificado (o por encima).|
+|[CPane::IsResizable](#isresizable)|Determina si se puede cambiar el tamaño del panel. (Reemplaza [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
+|[CPane::IsTabbed](#istabbed)|Determina si el panel se ha insertado en el control de ficha de una ventana con fichas. (Reemplaza [CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|
+|[CPane::LoadState](#loadstate)|Carga el estado del panel desde el registro. (Reemplaza [CBasePane::LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
+|[Cpane::MoveByAlignment](#movebyalignment)|Mueve el panel y el rectángulo virtual en la cantidad especificada.|
+|[CPane::MovePane](#movepane)|Mueve el panel al rectángulo especificado.|
+|[Cpane::OnAfterChangeParent](#onafterchangeparent)|Llamado por el marco de trabajo cuando el elemento primario de un panel ha cambiado.|
+|[Cpane::OnBeforeChangeParent](#onbeforechangeparent)|Llamado por el marco de trabajo cuando el elemento primario del panel está a punto de cambiar.|
+|[Cpane::OnPressCloseButton](#onpressclosebutton)|Llamado por el marco de trabajo cuando el usuario elige el botón Cerrar en el título del panel.|
 |`CPane::OnProcessDblClk`|Utilizado de forma interna.|
-|[CPane:: OnShowControlBarMenu](#onshowcontrolbarmenu)|Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.|
-|[CPane:: OnShowControlBarMenu](#onshowcontrolbarmenu)|Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.|
+|[Cpane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.|
+|[Cpane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.|
 |`CPane::PrepareToDock`|Utilizado de forma interna.|
-|[CPane:: RecalcLayout](#recalclayout)|Vuelve a calcular la información de diseño del panel. (Invalida [a cbasepane:: RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout)).|
-|[CPane:: SaveState](#savestate)|Guarda el estado del panel en el registro. (Invalida [a cbasepane:: SaveState](../../mfc/reference/cbasepane-class.md#savestate)).|
-|[CPane:: SetActiveInGroup](#setactiveingroup)|Marca un panel como activo.|
-|[CPane:: SetBorders](#setborders)|Establece los valores de borde del panel.|
-|[CPane:: SetClientHotSpot](#setclienthotspot)|Establece la zona activa del panel.|
-|[CPane:: SetDockState](#setdockstate)|Restaura la información de estado de acoplamiento del panel.|
-|[CPane:: SetExclusiveRowMode](#setexclusiverowmode)|Habilita o deshabilita el modo de fila exclusivo.|
-|[CPane:: SetMiniFrameRTC](#setminiframertc)|Establece la información de clase en tiempo de ejecución para la ventana de marco reducido predeterminada.|
-|[CPane:: SetMinSize](#setminsize)|Establece el tamaño mínimo permitido para el panel.|
-|[CPane:: SetVirtualRect](#setvirtualrect)|Establece el *rectángulo virtual* del panel.|
-|[CPane:: StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Estira el panel vertical u horizontalmente según el estilo de acoplamiento.|
-|[CPane:: ToggleAutoHide](#toggleautohide)|Alterna el modo de ocultación automática.|
-|[CPane:: UndockPane](#undockpane)|Quita el panel del sitio de acoplamiento, el control deslizante predeterminado o la ventana de marco reducido donde está acoplado actualmente. (Invalida [a cbasepane:: UndockPane](../../mfc/reference/cbasepane-class.md#undockpane)).|
-|[CPane:: UpdateVirtualRect](#updatevirtualrect)|Actualiza el rectángulo virtual.|
+|[CPane::RecalcLayout](#recalclayout)|Vuelve a calcular la información de diseño del panel. (Reemplaza [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
+|[CPane::SaveState](#savestate)|Guarda el estado del panel en el registro. (Reemplaza [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
+|[CPane::SetActiveInGroup](#setactiveingroup)|Marca un panel como activo.|
+|[CPane::SetBorders](#setborders)|Establece los valores de borde del panel.|
+|[CPane::SetClientHotSpot](#setclienthotspot)|Establece la zona activa del panel.|
+|[CPane::SetDockState](#setdockstate)|Restaura la información de estado de acoplamiento del panel.|
+|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Habilita o deshabilita el modo de fila exclusivo.|
+|[CPane::SetMiniFrameRTC](#setminiframertc)|Establece la información de clase en tiempo de ejecución para la ventana de marco pequeño predeterminada.|
+|[CPane::SetMinSize](#setminsize)|Establece el tamaño mínimo permitido para el panel.|
+|[CPane::SetVirtualRect](#setvirtualrect)|Establece el *rectángulo virtual* del panel.|
+|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Estira el panel vertical u horizontalmente en función del estilo de acoplamiento.|
+|[CPane::ToggleAutoHide](#toggleautohide)|Alterna el modo de ocultación automática.|
+|[CPane::UndockPane](#undockpane)|Quita el panel del sitio de acoplamiento, el control deslizante predeterminado o la ventana de marco pequeño donde está acoplado actualmente. (Reemplaza [CBasePane::UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
+|[CPane::UpdateVirtualRect](#updatevirtualrect)|Actualiza el rectángulo virtual.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CPane:: OnAfterDock](#onafterdock)|Lo llama el marco de trabajo cuando se ha acoplado un panel.|
-|[CPane:: OnAfterFloat](#onafterfloat)|Lo llama el marco de trabajo cuando se ha flotado un panel.|
-|[CPane:: OnBeforeDock](#onbeforedock)|Lo llama el marco de trabajo cuando el panel está a punto de acoplarse.|
-|[CPane:: OnBeforeFloat](#onbeforefloat)|Lo llama el marco de trabajo cuando un panel está a punto de flotar.|
+|[Cpane::OnAfterDock](#onafterdock)|Llamado por el marco de trabajo cuando se ha acoplado un panel.|
+|[Cpane::OnAfterFloat](#onafterfloat)|Llamado por el marco de trabajo cuando se ha flotado un panel.|
+|[Cpane::OnBeforeDock](#onbeforedock)|Llamado por el marco de trabajo cuando el panel está a punto de ser acoplado.|
+|[Cpane::OnBeforeFloat](#onbeforefloat)|Llamado por el marco de trabajo cuando un panel está a punto de flotar.|
 
 ### <a name="data-members"></a>Miembros de datos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CPane:: m_bHandleMinSize](#m_bhandleminsize)|Habilita el control coherente del tamaño mínimo de los paneles.|
-|[CPane:: m_recentDockInfo](#m_recentdockinfo)|Contiene información de acoplamiento reciente.|
+|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Permite un control coherente del tamaño mínimo para los paneles.|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|Contiene información de acoplamiento reciente.|
 
 ## <a name="remarks"></a>Observaciones
 
-Normalmente, no se crea una instancia de los objetos `CPane` directamente. Si necesita un panel que tenga funcionalidad de acoplamiento, derive el objeto de [CDockablePane](../../mfc/reference/cdockablepane-class.md). Si necesita la funcionalidad de la barra de herramientas, derive el objeto de [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
+Normalmente, `CPane` los objetos no se crean instancias directamente. Si necesita un panel que tenga funcionalidad de acoplamiento, derive el objeto de [CDockablePane](../../mfc/reference/cdockablepane-class.md). Si necesita funcionalidad de barra de herramientas, derive el objeto de [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
 
-Al derivar una clase de `CPane`, se puede acoplar en un [CDockSite](../../mfc/reference/cdocksite-class.md) y se puede flotar en un [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Cuando se deriva `CPane`una clase de , se puede acoplar en un [CDockSite](../../mfc/reference/cdocksite-class.md) y se puede flotar en un [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -256,17 +256,17 @@ Al derivar una clase de `CPane`, se puede acoplar en un [CDockSite](../../mfc/re
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[A cbasepane](../../mfc/reference/cbasepane-class.md)
+[CBasePane](../../mfc/reference/cbasepane-class.md)
 
 [CPane](../../mfc/reference/cpane-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxPane. h
+**Encabezado:** afxPane.h
 
-##  <a name="adjustsizeimmediate"></a>CPane:: AdjustSizeImmediate
+## <a name="cpaneadjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate
 
-Vuelve a calcular inmediatamente el diseño de un panel.
+Recalcula inmediatamente el diseño de un panel.
 
 ```
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
@@ -275,13 +275,13 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ### <a name="parameters"></a>Parámetros
 
 *bRecalcLayout*<br/>
-de TRUE para volver a calcular automáticamente el diseño del panel; en caso contrario, FALSE.
+[en] TRUE para volver a calcular automáticamente el diseño del panel; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método cuando cambie dinámicamente el diseño de un panel. Por ejemplo, puede que desee llamar a este método al ocultar o mostrar los botones de la barra de herramientas.
+Llame a este método cuando cambie dinámicamente el diseño de un panel. Por ejemplo, es posible que desee llamar a este método al ocultar o mostrar botones de barra de herramientas.
 
-##  <a name="allocelements"></a>CPane:: AllocElements
+## <a name="cpaneallocelements"></a><a name="allocelements"></a>CPane::AllocElements
 
 Asigna almacenamiento para uso interno.
 
@@ -293,19 +293,19 @@ BOOL AllocElements(
 
 ### <a name="parameters"></a>Parámetros
 
-*nElements*<br/>
-de Número de elementos para los que se va a asignar el almacenamiento.
+*nElementos*<br/>
+[en] El número de elementos para los que se va a asignar almacenamiento.
 
 *cbElement*<br/>
-de Tamaño, en bytes, de un elemento.
+[en] El tamaño, en bytes, de un elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-FALSE si se produce un error en la asignación de memoria; en caso contrario, TRUE.
+FALSE si se produce un error en la asignación de memoria; de lo contrario, TRUE.
 
-##  <a name="allowshowonpanemenu"></a>CPane:: AllowShowOnPaneMenu
+## <a name="cpaneallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>Cpane::AllowShowOnPaneMenu
 
-Especifica si el panel aparece en la lista de paneles generados en tiempo de ejecución de la aplicación.
+Especifica si el panel aparece en la lista de paneles generados por tiempo de ejecución para la aplicación.
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -313,13 +313,13 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se muestra en la lista; en caso contrario, FALSE. La implementación base siempre devuelve TRUE.
+TRUESi el panel se muestra en la lista; de lo contrario, FALSE. La implementación base siempre devuelve TRUE.
 
 ### <a name="remarks"></a>Observaciones
 
-La aplicación generada por AppWizard contiene una opción de menú que muestra los paneles que contiene. Este método determina si el panel se muestra en la lista.
+La aplicación generada por AppWizard contiene una opción de menú que enumera los paneles que contiene. Este método determina si el panel se muestra en la lista.
 
-##  <a name="calcavailablesize"></a>CPane:: CalcAvailableSize
+## <a name="cpanecalcavailablesize"></a><a name="calcavailablesize"></a>CPane::CalcAvailableSize
 
 Calcula la diferencia de tamaño entre un rectángulo especificado y el rectángulo de ventana actual.
 
@@ -329,16 +329,16 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 
 ### <a name="parameters"></a>Parámetros
 
-*rectRequired*<br/>
-de Rectángulo necesario.
+*rectRequerido*<br/>
+[en] El rectángulo requerido.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La diferencia en el ancho y el alto entre *rectRequired* y el rectángulo de la ventana actual.
+La diferencia de anchura y altura entre *rectRequired* y el rectángulo de la ventana actual.
 
-##  <a name="calcinsiderect"></a>CPane:: CalcInsideRect
+## <a name="cpanecalcinsiderect"></a><a name="calcinsiderect"></a>CPane::CalcInsideRect
 
-Calcula el rectángulo interior de un panel, incluidos los bordes y las agarradores.
+Calcula el rectángulo interior de un panel, incluidos los bordes y pinzas.
 
 ```
 void CalcInsideRect(
@@ -349,16 +349,16 @@ void CalcInsideRect(
 ### <a name="parameters"></a>Parámetros
 
 *Rect*<br/>
-enuncia Contiene el tamaño y el desplazamiento del área cliente del panel.
+[fuera] Contiene el tamaño y el desplazamiento del área de cliente del panel.
 
 *bHorz*<br/>
-de TRUE si el panel está orientado horizontalmente; en caso contrario, FALSE.
+[en] TRUESi el panel está orientado horizontalmente; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo llama a este método cuando tiene que volver a calcular el diseño de un panel. El parámetro *Rect* se rellena con el tamaño y el desplazamiento del área cliente del panel. Esto incluye sus bordes y agarradores.
+El marco de trabajo llama a este método cuando tiene que volver a calcular el diseño de un panel. El parámetro *rect* se rellena con el tamaño y el desplazamiento del área de cliente del panel. Esto incluye sus bordes y pinzas.
 
-##  <a name="calcrecentdockedrect"></a>CPane:: CalcRecentDockedRect
+## <a name="cpanecalcrecentdockedrect"></a><a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect
 
 Calcula el rectángulo acoplado recientemente.
 
@@ -368,9 +368,9 @@ void CalcRecentDockedRect();
 
 ### <a name="remarks"></a>Observaciones
 
-Este método actualiza [CPane:: m_recentDockInfo](#m_recentdockinfo).
+Este método actualiza [CPane::m_recentDockInfo](#m_recentdockinfo).
 
-##  <a name="calcsize"></a>CPane:: CalcSize
+## <a name="cpanecalcsize"></a><a name="calcsize"></a>CPane::CalcSize
 
 Calcula el tamaño del panel.
 
@@ -381,17 +381,17 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="parameters"></a>Parámetros
 
 *bVertDock*<br/>
-de TRUE si el panel se está acoplando verticalmente; de lo contrario, FALSE.
+[en] TRUESi el panel se está acoplando verticalmente, FALSE en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La implementación predeterminada de este método devuelve un tamaño de (0,0).
+La implementación predeterminada de este método devuelve un tamaño de (0, 0).
 
 ### <a name="remarks"></a>Observaciones
 
 Las clases derivadas deben invalidar este método.
 
-##  <a name="canbedocked"></a>CPane:: CanBeDocked
+## <a name="cpanecanbedocked"></a><a name="canbedocked"></a>Cpane::CanBeDocked
 
 Determina si el panel se puede acoplar en el panel base especificado.
 
@@ -402,21 +402,21 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ### <a name="parameters"></a>Parámetros
 
 *pDockBar*<br/>
-de Especifica el panel en el que se acoplará este panel.
+[en] Especifica el panel donde se va a acoplar este panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si este panel se puede acoplar en el panel de acoplamiento especificado; en caso contrario, FALSE.
+TRUESi este panel se puede acoplar en el panel de acoplamiento especificado; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Normalmente, el marco llama a este método para determinar si un panel se puede acoplar en el panel de acoplamiento especificado. Para determinar si se puede acoplar el panel, el método evalúa la alineación de acoplamiento habilitada actualmente del panel.
+Normalmente, el marco de trabajo llama a este método para determinar si se puede acoplar un panel en el panel de acoplamiento especificado. Para determinar si el panel se puede acoplar, el método evalúa la alineación de acoplamiento habilitada actualmente del panel.
 
-Para habilitar el acoplamiento en los distintos lados de la ventana de marco, llame a [a cbasepane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Habilitar el acoplamiento a los distintos lados de la ventana de marco mediante una llamada a [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-##  <a name="canbetabbeddocument"></a>CPane:: CanBeTabbedDocument
+## <a name="cpanecanbetabbeddocument"></a><a name="canbetabbeddocument"></a>Cpane::CanBeTabbedDocument
 
-Determina si el panel se puede convertir en un documento con pestañas.
+Determina si el panel se puede convertir en un documento con fichas.
 
 ```
 virtual BOOL CanBeTabbedDocument() const;
@@ -424,15 +424,15 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se puede convertir en un documento con pestañas; en caso contrario, FALSE.
+TRUESi el panel se puede convertir en un documento con fichas; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide este método en una clase derivada y devuelva FALSE si desea evitar que un panel se convierta en un documento con pestañas. Los documentos con pestañas no se mostrarán en el menú posición de la ventana.
+Invalide este método en una clase derivada y devuelva FALSE si desea evitar que un panel se convierta en un documento con fichas. Un documento con pestañas no aparecerá en el menú Posición de ventana.
 
-##  <a name="converttotabbeddocument"></a>CPane:: ConvertToTabbedDocument
+## <a name="cpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>Cpane::ConvertToTabbedDocument
 
-Convierte un panel acoplable en un documento con pestañas.
+Convierte un panel acoplable en un documento con fichas.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -441,13 +441,13 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>Parámetros
 
 *bActiveTabOnly*<br/>
-de No se usa en `CPane::ConvertToTabbedDocument`.
+[en] No se `CPane::ConvertToTabbedDocument`utiliza en .
 
 ### <a name="remarks"></a>Observaciones
 
-Solo los paneles acoplables se pueden convertir en documentos con fichas. Para obtener más información, vea [CDockablePane:: ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
+Solo los paneles acoplables se pueden convertir en documentos con fichas. Para obtener información, vea [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
 
-##  <a name="copystate"></a>CPane:: CopyState
+## <a name="cpanecopystate"></a><a name="copystate"></a>CPane::CopyState
 
 Copia el estado de un panel.
 
@@ -458,15 +458,15 @@ virtual void CopyState(CPane* pOrgBar);
 ### <a name="parameters"></a>Parámetros
 
 *pOrgBar*<br/>
-de Un puntero a un panel.
+[en] Un puntero a un panel.
 
 ### <a name="remarks"></a>Observaciones
 
 Este método copia el estado de *pOrgBar* en el panel actual.
 
-##  <a name="create"></a>CPane:: Create
+## <a name="cpanecreate"></a><a name="create"></a>CPane::Crear
 
-Crea una barra de controles y la adjunta al objeto [CPane](../../mfc/reference/cpane-class.md) .
+Crea una barra de control y la adjunta al objeto [CPane.](../../mfc/reference/cpane-class.md)
 
 ```
 virtual BOOL Create(
@@ -482,39 +482,39 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *lpszClassName*<br/>
-de Especifica el nombre de la clase de Windows.
+[en] Especifica el nombre de la clase Windows.
 
 *dwStyle*<br/>
-de Especifica los atributos de estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+[en] Especifica los atributos de estilo de ventana. Para obtener más información, consulte [Estilos](../../mfc/reference/styles-used-by-mfc.md#window-styles)de ventana .
 
 *Rect*<br/>
-de Especifica el tamaño y la posición iniciales de la ventana de *pParentWnd* , en coordenadas de cliente.
+[en] Especifica el tamaño inicial y la posición de la ventana *pParentWnd,* en coordenadas de cliente.
 
 *pParentWnd*<br/>
-[in, out] Especifica la ventana primaria de este panel.
+[adentro, fuera] Especifica la ventana primaria de este panel.
 
 *nID*<br/>
-de Especifica el identificador del panel.
+[en] Especifica el identificador del panel.
 
 *dwControlBarStyle*<br/>
-de Especifica el estilo del panel. Para obtener más información, vea [a cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+[en] Especifica el estilo del panel. Para obtener más información, vea [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[in, out] Especifica el contexto de creación del panel.
+[adentro, fuera] Especifica el contexto de creación del panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se ha creado correctamente; en caso contrario, FALSE.
+TRUESi el panel se creó correctamente; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Este método crea un panel de Windows y lo adjunta al objeto `CPane`.
+Este método crea un panel de `CPane` Windows y lo adjunta al objeto.
 
-Si no ha inicializado explícitamente [CPane:: m_recentDockInfo](#m_recentdockinfo) antes de llamar a `Create`, el parámetro *Rect* se usará como rectángulo al flotar o acoplar el panel.
+Si no ha inicializado explícitamente [CPane::m_recentDockInfo](#m_recentdockinfo) antes de llamar a `Create`, el parámetro *rect* se usará como rectángulo al flotar o acoplar el panel.
 
-##  <a name="createdefaultminiframe"></a>CPane:: CreateDefaultMiniframe
+## <a name="cpanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>CPane::CreateDefaultMiniframe
 
-Crea una ventana de marco reducido para un panel flotante.
+Crea una ventana de marco pequeño para un panel flotante.
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -522,22 +522,22 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 
 ### <a name="parameters"></a>Parámetros
 
-*rectInitial*<br/>
-de Especifica el tamaño y la posición iniciales, en coordenadas de la pantalla, de la ventana de marco reducido que se va a crear.
+*rectInicial*<br/>
+[en] Especifica el tamaño inicial y la posición, en coordenadas de pantalla, de la ventana de marco pequeño que se va a crear.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La ventana de marco reducido recién creada.
+La ventana de marco pequeño recién creada.
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo llama a este método para crear una ventana de marco reducido cuando se flota un panel. La ventana de marco reducido puede ser de tipo [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) o de tipo [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Si el panel tiene el estilo de AFX_CBRS_FLOAT_MULTI, se crea una ventana de marco múltiple.
+El marco de trabajo llama a este método para crear una ventana de marco pequeño cuando se flota un panel. La ventana de marco pequeño puede ser de tipo [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) o de tipo [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Se crea una ventana de marco pequeño múltiple si el panel tiene el estilo AFX_CBRS_FLOAT_MULTI.
 
-La información de clase en tiempo de ejecución de la ventana de marco reducido se almacena en el miembro `CPane::m_pMiniFrameRTC`. Puede usar una clase derivada para establecer este miembro si decide crear ventanas de marco reducido personalizadas.
+La información de clase en tiempo de `CPane::m_pMiniFrameRTC` ejecución para la ventana de marco pequeño se almacena en el miembro. Puede usar una clase derivada para establecer este miembro si decide crear ventanas de marco pequeño personalizadas.
 
-##  <a name="createex"></a>CPane:: CreateEx
+## <a name="cpanecreateex"></a><a name="createex"></a>CPane::CreateEx
 
-Crea una barra de controles y la adjunta al objeto [CPane](../../mfc/reference/cpane-class.md) .
+Crea una barra de control y la adjunta al objeto [CPane.](../../mfc/reference/cpane-class.md)
 
 ```
 virtual BOOL CreateEx(
@@ -554,42 +554,42 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parámetros
 
 *dwStyleEx*<br/>
-de Especifica los atributos extendidos de estilo de ventana. Para obtener más información, vea [estilos extendidos de ventana](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
+[en] Especifica atributos de estilo de ventana extendidos. Para obtener más información, consulte Estilos de [ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
 *lpszClassName*<br/>
-de Especifica el nombre de la clase de Windows.
+[en] Especifica el nombre de la clase Windows.
 
 *dwStyle*<br/>
-de Especifica los atributos de estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+[en] Especifica los atributos de estilo de ventana. Para obtener más información, consulte [Estilos](../../mfc/reference/styles-used-by-mfc.md#window-styles)de ventana .
 
 *Rect*<br/>
-de Especifica el tamaño y la posición iniciales de la ventana de *pParentWnd* , en coordenadas de cliente.
+[en] Especifica el tamaño inicial y la posición de la ventana *pParentWnd,* en coordenadas de cliente.
 
 *pParentWnd*<br/>
-[in, out] Especifica la ventana primaria de este panel.
+[adentro, fuera] Especifica la ventana primaria de este panel.
 
 *nID*<br/>
-de Especifica el identificador del panel.
+[en] Especifica el identificador del panel.
 
 *dwControlBarStyle*<br/>
-de Especifica el estilo del panel. Para obtener más información, vea [a cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+[en] Especifica el estilo del panel. Para obtener más información, vea [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[in, out] Especifica el contexto de creación para el panel.
+[adentro, fuera] Especifica el contexto de creación para el panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se ha creado correctamente; en caso contrario, FALSE.
+TRUESi el panel se creó correctamente; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Este método crea un panel de Windows y lo adjunta al objeto `CPane`.
+Este método crea un panel de `CPane` Windows y lo adjunta al objeto.
 
-Si no ha inicializado explícitamente [CPane:: m_recentDockInfo](#m_recentdockinfo) antes de llamar a `CreateEx`, el parámetro *Rect* se usará como rectángulo al flotar o acoplar el panel.
+Si no ha inicializado explícitamente [CPane::m_recentDockInfo](#m_recentdockinfo) antes de llamar a `CreateEx`, el parámetro *rect* se usará como rectángulo al flotar o acoplar el panel.
 
-##  <a name="dockbymouse"></a>CPane::D ockByMouse
+## <a name="cpanedockbymouse"></a><a name="dockbymouse"></a>CPane::DockByMouse
 
-Acopla un panel mediante el mouse.
+Acopla un panel con el mouse.
 
 ```
 virtual BOOL DockByMouse(CBasePane* pDockBar);
@@ -598,13 +598,13 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ### <a name="parameters"></a>Parámetros
 
 *pDockBar*<br/>
-de Especifica el panel base en el que se acoplará este panel.
+[en] Especifica el panel base al que se va a acoplar este panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se ha acoplado correctamente; en caso contrario, FALSE.
+TRUESi el panel se acopla correctamente; de lo contrario, FALSE.
 
-##  <a name="dockpane"></a>CPane::D ockPane
+## <a name="cpanedockpane"></a><a name="dockpane"></a>CPane::DockPane
 
 Acopla el panel flotante a un panel base.
 
@@ -618,32 +618,32 @@ virtual BOOL DockPane(
 ### <a name="parameters"></a>Parámetros
 
 *pDockBar*<br/>
-[in, out] Especifica el panel base en el que se acoplará este panel.
+[adentro, fuera] Especifica el panel base al que se va acoplar este panel.
 
 *lpRect*<br/>
-de Especifica el rectángulo en el panel base donde se acoplará este panel.
+[en] Especifica el rectángulo en el panel base donde se va a acoplar este panel.
 
 *dockMethod*<br/>
-de Especifica el método de acoplamiento que se va a usar. Las opciones disponibles son las siguientes:
+[en] Especifica el método de acoplamiento que se va a utilizar. Las opciones disponibles son las siguientes:
 
 |Opción|Descripción|
 |------------|-----------------|
-|DM_UNKNOWN|El marco de trabajo usa esta opción cuando se desconoce el método de acoplamiento. El panel no almacena su posición flotante más reciente. También puede usar esta opción para acoplar un panel mediante programación cuando no tenga que almacenar la posición flotante reciente.|
+|DM_UNKNOWN|El marco de trabajo utiliza esta opción cuando se desconoce el método de acoplamiento. El panel no almacena su posición flotante más reciente. También puede usar esta opción para acoplar un panel mediante programación cuando no tiene que almacenar la posición flotante reciente.|
 |DM_MOUSE|Utilizado de forma interna.|
-|DM_DBL_CLICK|Esta opción se usa cuando se hace doble clic en el agarrador. Se cambia la posición del panel en su posición de acoplamiento más reciente. Si el panel está desacoplado haciendo doble clic en, se cambia la posición del panel en su posición flotante más reciente.|
-|DM_SHOW|Esta opción se puede utilizar para acoplar el panel mediante programación. El panel almacena su posición flotante más reciente.|
+|DM_DBL_CLICK|Esta opción se utiliza cuando se hace doble clic en el pinzamiento. El panel se reposiciona en su posición de acoplamiento más reciente. Si el panel se desacopla haciendo doble clic, el panel se vuelve a colocar en su posición flotante más reciente.|
+|DM_SHOW|Esta opción se puede usar para acoplar el panel mediante programación. El panel almacena su posición flotante más reciente.|
 |DM_RECT|El panel está acoplado en la región especificada por *lpRect*.|
-|DM_STANDARD|Cuando se usa esta opción, el marco de trabajo dibuja el panel como marco del contorno mientras se mueve.|
+|DM_STANDARD|Cuando se usa esta opción, el marco de trabajo dibuja el panel como un marco de esquema mientras se mueve.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se ha acoplado correctamente; en caso contrario, FALSE.
+TRUESi el panel se acopla correctamente; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Este método acopla el panel al panel base especificado por el parámetro *pDockBar* . Primero debe habilitar el acoplamiento llamando a [a cbasepane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Este método acopla el panel al panel base especificado por el *pDockBar* parámetro. En primer lugar, debe habilitar el acoplamiento llamando a [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-##  <a name="dockpanestandard"></a>CPane::D ockPaneStandard
+## <a name="cpanedockpanestandard"></a><a name="dockpanestandard"></a>CPane::DockPaneStandard
 
 Acopla un panel mediante el acoplamiento de esquema (estándar).
 
@@ -654,17 +654,17 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="parameters"></a>Parámetros
 
 *bWasDocked*<br/>
-de TRUE si el panel se ha acoplado correctamente; en caso contrario, FALSE.
+[en] TRUESi el panel se acoplaba correctamente; de lo contrario, FALSE.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Este método siempre devuelve el puntero **this** .
+Este método siempre devuelve el **puntero this.**
 
 ### <a name="remarks"></a>Observaciones
 
-Este método solo se usa para los paneles que se derivan de la [clase CDockablePane](../../mfc/reference/cdockablepane-class.md). Para obtener más información, vea [CDockablePane::D ockpanestandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
+Este método solo se utiliza para los paneles que se derivan de la [clase CDockablePane](../../mfc/reference/cdockablepane-class.md). Para obtener más información, vea [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
 
-##  <a name="docktoframewindow"></a>CPane::D ockToFrameWindow
+## <a name="cpanedocktoframewindow"></a><a name="docktoframewindow"></a>CPane::DockToFrameWindow
 
 Acopla un panel acoplable a un marco.
 
@@ -681,32 +681,32 @@ virtual BOOL DockToFrameWindow(
 ### <a name="parameters"></a>Parámetros
 
 *dwAlignment*<br/>
-de Lado del marco primario en el que desea acoplar el panel.
+[en] El lado del marco primario al que desea acoplar el panel.
 
 *lpRect*<br/>
-de Tamaño especificado.
+[en] El tamaño especificado.
 
 *dwDockFlags*<br/>
-de Tendrán.
+[en] Ignorado.
 
 *pRelativeBar*<br/>
-de Tendrán.
+[en] Ignorado.
 
 *nRelativeIndex*<br/>
-de Tendrán.
+[en] Ignorado.
 
 *bOuterEdge*<br/>
-de Si es TRUE y hay otros paneles acoplables en el lado que especifica *dwAlignment*, el panel se acopla fuera de los demás paneles, más cerca del borde del marco primario. Si es FALSE, el panel se acopla cerca del centro del área cliente.
+[en] Si TRUE y hay otros paneles acoplables en el lado especificados por *dwAlignment*, el panel se acopla fuera de los otros paneles, más cerca del borde del marco primario. Si FALSE, el panel se acopla más cerca del centro del área de cliente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-FALSE si no se puede crear un divisor de paneles ( [clase CPaneDivider](../../mfc/reference/cpanedivider-class.md)); en caso contrario, TRUE.
+FALSE si no se puede crear un divisor de paneles ( [CPaneDivider (Clase));](../../mfc/reference/cpanedivider-class.md) de lo contrario, TRUE.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="doesallowsiblingbars"></a>CPane::D oesAllowSiblingBars
+## <a name="cpanedoesallowsiblingbars"></a><a name="doesallowsiblingbars"></a>CPane::DoesAllowSiblingBars
 
-Indica si se puede acoplar otro panel en la misma fila en la que está acoplado el panel actual.
+Indica si puede acoplar otro panel en la misma fila donde está acoplado el panel actual.
 
 ```
 virtual BOOL DoesAllowSiblingBars() const;
@@ -714,15 +714,15 @@ virtual BOOL DoesAllowSiblingBars() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si este panel se puede acoplar a otro panel de la misma fila que el propio. en caso contrario, FALSE.
+TRUESi este panel puede acoplarse a otro panel en la misma fila que él mismo; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Puede habilitar o deshabilitar este comportamiento llamando a [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
+Puede habilitar o deshabilitar este comportamiento llamando a [CPane::SetExclusiveRowMode](#setexclusiverowmode).
 
 De forma predeterminada, las barras de herramientas tienen el modo de fila exclusivo deshabilitado y la barra de menús tiene habilitado el modo de fila exclusivo.
 
-##  <a name="floatpane"></a>CPane:: FloatPane
+## <a name="cpanefloatpane"></a><a name="floatpane"></a>CPane::FloatPane
 
 Flota el panel.
 
@@ -736,23 +736,23 @@ virtual BOOL FloatPane(
 ### <a name="parameters"></a>Parámetros
 
 *rectFloat*<br/>
-de Especifica la ubicación, en coordenadas de pantalla, para colocar el panel cuando se flota.
+[en] Especifica la ubicación, en coordenadas de pantalla, para colocar el panel cuando se flota.
 
 *dockMethod*<br/>
-de Especifica el método de acoplamiento que se va a usar cuando se flota el panel. Para obtener una lista de los valores posibles, vea [CPane::D ockpane](#dockpane).
+[en] Especifica el método de acoplamiento que se usará cuando se flote el panel. Para obtener una lista de valores posibles, vea [CPane::DockPane](#dockpane).
 
-*bShow*<br/>
-de TRUE para mostrar el panel cuando está flotando; en caso contrario, FALSE.
+*bMostrar*<br/>
+[en] TRUE para mostrar el panel cuando está flotado; de lo contrario, FALSE.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se flota correctamente o si el panel no se puede flotar porque [a cbasepane:: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) devuelve false; en caso contrario, FALSE.
+TRUESi el panel se ha flotado correctamente o si el panel no se puede flotar porque [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) devuelve FALSE; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método para flotar el panel en la posición especificada por el parámetro *rectFloat* . Este método crea automáticamente una ventana primaria de marco reducido para el panel.
+Llame a este método para flotar el panel en la posición especificada por el *rectFloat* parámetro. Este método crea automáticamente una ventana de marco pequeño primario para el panel.
 
-##  <a name="getavailableexpandsize"></a>CPane:: GetAvailableExpandSize
+## <a name="cpanegetavailableexpandsize"></a><a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize
 
 Devuelve la cantidad, en píxeles, que el panel puede expandir.
 
@@ -762,11 +762,11 @@ virtual int GetAvailableExpandSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si el panel está acoplado horizontalmente, el valor devuelto es el ancho disponible; de lo contrario, el valor devuelto es el alto disponible.
+Si el panel está acoplado horizontalmente, el valor devuelto es el ancho disponible; de lo contrario, el valor devuelto es la altura disponible.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getavailablestretchsize"></a>CPane:: GetAvailableStretchSize
+## <a name="cpanegetavailablestretchsize"></a><a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize
 
 Devuelve la cantidad, en píxeles, que el panel puede reducir.
 
@@ -776,13 +776,13 @@ virtual int GetAvailableStretchSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Cantidad, en píxeles, que el panel puede reducir. Si el panel está acoplado horizontalmente, esta cantidad es el ancho disponible; de lo contrario, es el alto disponible.
+La cantidad, en píxeles, que el panel puede reducir. Si el panel está acoplado horizontalmente, esta cantidad es el ancho disponible; de lo contrario, es la altura disponible.
 
 ### <a name="remarks"></a>Observaciones
 
-El tamaño de stretch disponible se calcula restando el tamaño mínimo permitido para el panel ( [CPane:: GetMinSize](#getminsize)) del tamaño actual ( [CWnd:: GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
+El tamaño de extensión disponible se calcula restando el tamaño mínimo permitido para el panel ( [CPane::GetMinSize](#getminsize)) del tamaño actual ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
 
-##  <a name="getborders"></a>CPane:: GetBorders
+## <a name="cpanegetborders"></a><a name="getborders"></a>CPane::GetBorders
 
 Devuelve el ancho de los bordes del panel.
 
@@ -792,15 +792,15 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contiene el ancho actual, en píxeles, de cada lado del panel. Por ejemplo, el valor del miembro `left` del objeto `CRect` es el ancho del borde izquierdo.
+Un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el ancho actual, en píxeles, de cada lado del panel. Por ejemplo, el `left` valor del `CRect` miembro del objeto es el ancho del borde izquierdo.
 
 ### <a name="remarks"></a>Observaciones
 
-Para establecer el tamaño de los bordes, llame a [CPane:: SetBorders](#setborders).
+Para establecer el tamaño de los bordes, llame a [CPane::SetBorders](#setborders).
 
-##  <a name="getclienthotspot"></a>CPane:: GetClientHotSpot
+## <a name="cpanegetclienthotspot"></a><a name="getclienthotspot"></a>CPane::GetClientHotSpot
 
-Devuelve la *zona activa* del panel.
+Devuelve la *zona de acceso rápido* del panel.
 
 ```
 CPoint GetClientHotSpot() const;
@@ -810,11 +810,11 @@ CPoint GetClientHotSpot() const;
 
 ### <a name="remarks"></a>Observaciones
 
-La *zona activa* es el punto del panel que el usuario selecciona y mantiene para desplazar el panel. Una zona activa se usa para la animación suave cuando el panel se mueve de una posición acoplada.
+La *zona de acceso rápido* es el punto del panel que el usuario selecciona y mantiene para mover el panel. Una zona de acceso rápido se utiliza para una animación suave cuando el panel se mueve desde una posición acoplada.
 
-##  <a name="getdocksiterow"></a>CPane:: GetDockSiteRow
+## <a name="cpanegetdocksiterow"></a><a name="getdocksiterow"></a>CPane::GetDockSiteRow
 
-Devuelve la fila de acoplamiento ( [clase CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)) en la que se acopla el panel.
+Devuelve la fila de acoplamiento ( [CDockingPanesRow (Clase)](../../mfc/reference/cdockingpanesrow-class.md)en la que se acopla el panel.
 
 ```
 CDockingPanesRow* GetDockSiteRow() const;
@@ -822,9 +822,9 @@ CDockingPanesRow* GetDockSiteRow() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`CDockingPanesRow`* que apunta a la fila de acoplamiento en la que está acoplado el panel, o NULL si el panel no está acoplado.
+Un `CDockingPanesRow`* que apunta a la fila de acoplamiento en la que se acopla el panel, o NULL si el panel no está acoplado.
 
-##  <a name="getexclusiverowmode"></a>CPane:: GetExclusiveRowMode
+## <a name="cpanegetexclusiverowmode"></a><a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode
 
 Determina si el panel está en modo de fila exclusivo.
 
@@ -834,15 +834,15 @@ virtual BOOL GetExclusiveRowMode() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel está en modo de fila exclusivo; en caso contrario, FALSE.
+TRUESi el panel está en modo de fila exclusivo; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Para obtener más información sobre el modo de fila exclusivo, vea [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
+Para obtener más información sobre el modo de fila exclusivo, vea [CPane::SetExclusiveRowMode](#setexclusiverowmode).
 
-##  <a name="gethotspot"></a>CPane:: GetHotSpot
+## <a name="cpanegethotspot"></a><a name="gethotspot"></a>CPane::GetHotSpot
 
-Devuelve la zona activa que se almacena en un objeto de `CMFCDragFrameImpl` subyacente.
+Devuelve la zona de acceso rápido `CMFCDragFrameImpl` que se almacena en un objeto subyacente.
 
 ```
 CPoint GetHotSpot() const;
@@ -852,9 +852,9 @@ CPoint GetHotSpot() const;
 
 ### <a name="remarks"></a>Observaciones
 
-La clase `CPane` contiene un objeto `CMFCDragFrameImpl`, `m_dragFrameImpl`, que es responsable de dibujar el rectángulo que aparece cuando el usuario mueve un panel en el modo de acoplamiento estándar. La zona activa se usa para dibujar el rectángulo con respecto a la posición actual del mouse cuando el usuario mueve el panel.
+La `CPane` clase `CMFCDragFrameImpl` contiene `m_dragFrameImpl`un objeto, , que es responsable de dibujar el rectángulo que aparece cuando el usuario mueve un panel en el modo de acoplamiento estándar. La zona de acceso rápido se utiliza para dibujar el rectángulo en relación con la posición actual del mouse a medida que el usuario mueve el panel.
 
-##  <a name="getminsize"></a>CPane:: GetMinSize
+## <a name="cpanegetminsize"></a><a name="getminsize"></a>CPane::GetMinSize
 
 Recupera el tamaño mínimo permitido para el panel.
 
@@ -864,12 +864,12 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*size*<br/>
-enuncia `CSize` objeto que se rellena con el tamaño mínimo permitido.
+*Tamaño*<br/>
+[fuera] Objeto `CSize` que se rellena con el tamaño mínimo permitido.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getpanename"></a>CPane:: GetPaneName
+## <a name="cpanegetpanename"></a><a name="getpanename"></a>CPane::GetPaneName
 
 Recupera el título del panel.
 
@@ -880,13 +880,13 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="parameters"></a>Parámetros
 
 *strName*<br/>
-enuncia `CString` objeto que se rellena con el nombre de título.
+[fuera] Objeto `CString` que se rellena con el nombre del título.
 
 ### <a name="remarks"></a>Observaciones
 
-El título del panel se muestra en el área de título cuando el panel está acoplado o flotante. Si el panel forma parte de un grupo con pestañas, el título se muestra en el área de pestañas. Si el panel está en modo de ocultación automática, el título se muestra en un `CMFCAutoHideButton`.
+El título del panel se muestra en el área de título cuando el panel está acoplado o flotante. Si el panel forma parte de un grupo con fichas, el título se muestra en el área de ficha. Si el panel está en modo de ocultación `CMFCAutoHideButton`automática, el título se muestra en un archivo .
 
-##  <a name="getvirtualrect"></a>CPane:: GetVirtualRect
+## <a name="cpanegetvirtualrect"></a><a name="getvirtualrect"></a>CPane::GetVirtualRect
 
 Recupera el *rectángulo virtual* del panel.
 
@@ -897,17 +897,17 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ### <a name="parameters"></a>Parámetros
 
 *rectVirtual*<br/>
-enuncia `CRect` objeto que se rellena con el rectángulo virtual.
+[fuera] Objeto `CRect` que se rellena con el rectángulo virtual.
 
 ### <a name="remarks"></a>Observaciones
 
 Cuando se mueve un panel, el marco de trabajo almacena la posición original del panel en un rectángulo virtual. El marco de trabajo puede usar el rectángulo virtual para restaurar la posición original del panel.
 
-No llame a métodos que estén relacionados con rectángulos virtuales a menos que vaya a mover paneles mediante programación.
+No llame a métodos relacionados con rectángulos virtuales a menos que mueva paneles mediante programación.
 
-##  <a name="ischangestate"></a>CPane:: IsChangeState
+## <a name="cpaneischangestate"></a><a name="ischangestate"></a>CPane::IsChangeState
 
-A medida que se mueve el panel, este método analiza su posición en relación con otros paneles, acoplar filas y ventanas de marco reducido, y devuelve el valor de AFX_CS_STATUS adecuado.
+A medida que se mueve el panel, este método analiza su posición con respecto a otros paneles, filas de acoplamiento y ventanas de marco pequeño y devuelve el valor de AFX_CS_STATUS adecuado.
 
 ```
 virtual AFX_CS_STATUS IsChangeState(
@@ -918,25 +918,25 @@ virtual AFX_CS_STATUS IsChangeState(
 ### <a name="parameters"></a>Parámetros
 
 *nOffset*<br/>
-de Especifica la sensibilidad de acoplamiento. Por ejemplo, un panel que se mueve dentro de *nOffset* píxeles de una fila de acoplamiento se acoplará.
+[en] Especifica la sensibilidad de acoplamiento. Por ejemplo, se acoplará un panel que se mueve dentro de los píxeles *nOffset* de una fila de acoplamiento.
 
 *ppTargetBar*<br/>
-de Cuando el método devuelve, *ppTargetBar* contiene un puntero al objeto al que se debe acoplar el panel actual o null si no se debe producir ningún acoplamiento.
+[en] Cuando se devuelve el método, *ppTargetBar* contiene un puntero al objeto al que se debe acoplar el panel actual o NULL si no se debe producir ningún acoplamiento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Uno de los siguientes valores de AFX_CS_STATUS:
+Uno de los siguientes valores AFX_CS_STATUS:
 
 |Value|Descripción|
 |-----------|-----------------|
-|CS_NOTHING|El panel no está cerca de un sitio de Docker. El marco de trabajo no acopla el panel.|
-|CS_DOCK_IMMEDIATELY|El panel se encuentra sobre un sitio de acoplamiento y está habilitado el estilo de DT_IMMEDIATE. El marco acopla el panel inmediatamente.|
-|CS_DELAY_DOCK|El panel se encuentra sobre un sitio de acoplamiento que es otro panel de acoplamiento o un borde del marco principal. El marco acopla el panel cuando el usuario suelta el movimiento.|
-|CS_DELAY_DOCK_TO_TAB|El panel se encuentra sobre un sitio de acoplamiento que hace que el panel se acople en una ventana con pestañas. Esto ocurre cuando el panel está sobre el título de otro panel de acoplamiento o sobre el área de pestañas de un panel con pestañas. El marco acopla el panel cuando el usuario suelta el movimiento.|
+|CS_NOTHING|El panel no está cerca de un sitio de acoplamiento. El marco de trabajo no acopla el panel.|
+|CS_DOCK_IMMEDIATELY|El panel está sobre un sitio de acoplamiento y el estilo de DT_IMMEDIATE está habilitado. El marco de trabajo acopla el panel inmediatamente.|
+|CS_DELAY_DOCK|El panel está sobre un sitio de acoplamiento que es otro panel de acoplamiento o un borde del marco principal. El marco de trabajo acopla el panel cuando el usuario libera el movimiento.|
+|CS_DELAY_DOCK_TO_TAB|El panel está sobre un sitio de acoplamiento que hace que el panel se acopla en una ventana con pestañas. Esto ocurre cuando el panel está sobre el título de otro panel de acoplamiento o sobre el área de ficha de un panel con fichas. El marco de trabajo acopla el panel cuando el usuario libera el movimiento.|
 
-##  <a name="isdragmode"></a>CPane:: IsDragMode
+## <a name="cpaneisdragmode"></a><a name="isdragmode"></a>Cpane::IsDragMode
 
-Especifica si el panel se está moviendo.
+Especifica si se está moviendo el panel.
 
 ```
 virtual BOOL IsDragMode() const;
@@ -944,13 +944,13 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se está moviendo el panel; en caso contrario, FALSE.
+TRUESi se mueve el panel; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="isinfloatingmultipaneframewnd"></a>CPane:: IsInFloatingMultiPaneFrameWnd
+## <a name="cpaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd
 
-Especifica si el panel se encuentra en una ventana de marco de varios paneles ( [clase CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
+Especifica si el panel está en una ventana de marco de varios paneles ( [CMultiPaneFrameWnd (Clase)](../../mfc/reference/cmultipaneframewnd-class.md)).
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -958,15 +958,15 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel está en una ventana de marco de varios paneles; en caso contrario, FALSE.
+TRUESi el panel está en una ventana de marco de varios paneles; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Solo los paneles acoplables pueden flotar en una ventana de marco de varios paneles. Por lo tanto, `CPane::IsInFloatingMultiPaneFrameWnd` siempre devuelve FALSE.
+Solo los paneles acoplables pueden flotar en una ventana de marco de varios paneles. Por `CPane::IsInFloatingMultiPaneFrameWnd` lo tanto, siempre devuelve FALSE.
 
-##  <a name="isleftof"></a>CPane:: IsLeftOf
+## <a name="cpaneisleftof"></a><a name="isleftof"></a>Cpane::IsLeftOf
 
-Determina si el panel está a la izquierda del rectángulo especificado (o superior).
+Determina si el panel queda del rectángulo especificado (o por encima).
 
 ```
 bool IsLeftOf(
@@ -977,20 +977,20 @@ bool IsLeftOf(
 ### <a name="parameters"></a>Parámetros
 
 *Rect*<br/>
-de Objeto `CRect` que se utiliza para la comparación.
+[en] Objeto `CRect` que se utiliza para la comparación.
 
 *bWindowRect*<br/>
-de Si es TRUE, se supone que *Rect* contiene coordenadas de pantalla; Si es FALSE, se supone que *Rect* contiene coordenadas de cliente.
+[en] Si es TRUE, se supone que *rect* contiene coordenadas de pantalla; si SE supone que FALSE, *rect* contiene coordenadas de cliente.
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Observaciones
 
-Si el panel está acoplado horizontalmente, este método comprueba si su ubicación está a la izquierda de *Rect*. De lo contrario, este método comprueba si la ubicación está por encima de *Rect*.
+Si el panel está acoplado horizontalmente, este método comprueba si su ubicación queda de *rect*. De lo contrario, este método comprueba si la ubicación está por encima *de rect*.
 
-##  <a name="isresizable"></a>CPane:: IsResizable
+## <a name="cpaneisresizable"></a><a name="isresizable"></a>CPane::IsResizable
 
-Especifica si se va a cambiar el tamaño del panel.
+Especifica si el panel es redimensionable.
 
 ```
 virtual BOOL IsResizable() const;
@@ -998,19 +998,19 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se va a cambiar el tamaño del panel; en caso contrario, FALSE.
+TRUESi el panel es redimensionable; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Los objetos de `CPane` base no se pueden cambiar de tamaño.
+Los `CPane` objetos base no se pueden cambiar de tamaño.
 
-El administrador de acoplamiento utiliza la marca de tamaño variable para determinar el diseño del panel. Los paneles no ajustables siempre se encuentran en los bordes exteriores del marco primario.
+El administrador de acoplamiento utiliza el indicador de tamaño variable para determinar el diseño del panel. Los paneles no redimensionables siempre se encuentran en los bordes exteriores del marco primario.
 
-Los paneles no ajustables no pueden residir en contenedores de acoplamiento.
+Los paneles no redimensionables no pueden residir en contenedores de acoplamiento.
 
-##  <a name="istabbed"></a>CPane:: IsTabbed
+## <a name="cpaneistabbed"></a><a name="istabbed"></a>CPane::IsTabbed
 
-Determina si el panel se ha insertado en el control de pestaña de una ventana con pestañas.
+Determina si el panel se ha insertado en el control de ficha de una ventana con fichas.
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1018,13 +1018,13 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel tiene pestañas; en caso contrario, FALSE.
+TRUESi el panel tiene pestañas; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-El estado de las pestañas se trata por separado de los Estados flotante, acoplado y de ocultación automática.
+El estado con pestañas se trata por separado de los estados flotantes, acoplados y de ocultación automática.
 
-##  <a name="loadstate"></a>CPane:: LoadState
+## <a name="cpaneloadstate"></a><a name="loadstate"></a>CPane::LoadState
 
 Carga el estado del panel desde el registro.
 
@@ -1038,27 +1038,27 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-de Nombre del perfil.
+[en] Nombre del perfil.
 
 *nIndex*<br/>
-de Índice de perfil.
+[en] Indice de perfil.
 
 *uiID*<br/>
-de IDENTIFICADOR del panel.
+[en] ID de panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el estado del panel se cargó correctamente; en caso contrario, FALSE.
+TRUESi el estado del panel se cargó correctamente; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo llama a este método para cargar el estado del panel desde el registro. Reemplácelo en una clase derivada para cargar información adicional guardada por [CPane:: SaveState](#savestate).
+El marco de trabajo llama a este método para cargar el estado del panel desde el registro. Invalide en una clase derivada para cargar información adicional guardada por [CPane::SaveState](#savestate).
 
-Cuando invalide este método, llame también al método base y devuelva FALSE si el método base devuelve FALSE.
+Al reemplazar este método, también llame al método base y devuelva FALSE si el método base devuelve FALSE.
 
-##  <a name="m_bhandleminsize"></a>CPane:: m_bHandleMinSize
+## <a name="cpanem_bhandleminsize"></a><a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize
 
-Habilita el control coherente de los tamaños mínimos de los paneles.
+Permite un control coherente de los tamaños mínimos de los paneles.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
@@ -1066,11 +1066,11 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 ### <a name="remarks"></a>Observaciones
 
-Si uno o varios paneles de acoplamiento de la aplicación invalidan `GetMinSize`, o si la aplicación llama a `SetMinSize`, es posible que desee establecer este miembro estático en TRUE para permitir que el marco de trabajo controle de forma coherente cómo se ajusta el tamaño de los paneles.
+Si uno o varios paneles de `GetMinSize`acoplamiento de la `SetMinSize`aplicación invalidan , o si la aplicación llama , es posible que desee establecer este miembro estático en TRUE para permitir que el marco de trabajo controle de forma coherente el tamaño de los paneles.
 
-Si este valor se establece en TRUE, todos los paneles cuyo tamaño se debe reducir por debajo de su tamaño mínimo se recortan, no se ajustan. Dado que el marco de trabajo usa regiones de ventana para el ajuste de tamaño del panel, no cambie el tamaño de la región de la ventana para los paneles de acoplamiento si este valor se establece en TRUE.
+Si este valor se establece en TRUE, todos los paneles cuyo tamaño debe reducirse por debajo de su tamaño mínimo se recortan, no se estiran. Dado que el marco de trabajo usa regiones de ventana para el tamaño del panel, no cambie el tamaño de la región de ventana para los paneles de acoplamiento si este valor se establece en TRUE.
 
-##  <a name="m_recentdockinfo"></a>CPane:: m_recentDockInfo
+## <a name="cpanem_recentdockinfo"></a><a name="m_recentdockinfo"></a>CPane::m_recentDockInfo
 
 Contiene información de acoplamiento reciente.
 
@@ -1082,7 +1082,7 @@ CRecentDockSiteInfo m_recentDockInfo;
 
 El marco de trabajo almacena la información de estado de acoplamiento más reciente para el panel en este miembro.
 
-##  <a name="movebyalignment"></a>CPane:: MoveByAlignment
+## <a name="cpanemovebyalignment"></a><a name="movebyalignment"></a>Cpane::MoveByAlignment
 
 Mueve el panel y el rectángulo virtual en la cantidad especificada.
 
@@ -1095,10 +1095,10 @@ BOOL MoveByAlignment(
 ### <a name="parameters"></a>Parámetros
 
 *dwAlignment*<br/>
-de Especifica la alineación del panel.
+[en] Especifica la alineación del panel.
 
 *nOffset*<br/>
-de Cantidad, en píxeles, por la que se va a trasladar el panel y el rectángulo virtual.
+[en] La cantidad, en píxeles, por la que se mueve el panel y el rectángulo virtual.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1108,15 +1108,15 @@ de Cantidad, en píxeles, por la que se va a trasladar el panel y el rectángulo
 
 |Value|Descripción|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|Permite acoplar el panel en la parte superior del área de cliente de una ventana de marco.|
-|CBRS_ALIGN_BOTTOM|Permite acoplar el panel en la parte inferior del área cliente de una ventana de marco.|
-|CBRS_ALIGN_LEFT|Permite acoplar el panel en el lado izquierdo del área cliente de una ventana de marco.|
-|CBRS_ALIGN_RIGHT|Permite acoplar el panel en el lado derecho del área de cliente de una ventana de marco.|
+|CBRS_ALIGN_TOP|Permite acoplar el panel a la parte superior del área de cliente de una ventana de marco.|
+|CBRS_ALIGN_BOTTOM|Permite acoplar el panel a la parte inferior del área de cliente de una ventana de marco.|
+|CBRS_ALIGN_LEFT|Permite acoplar el panel al lado izquierdo del área de cliente de una ventana de marco.|
+|CBRS_ALIGN_RIGHT|Permite acoplar el panel al lado derecho del área de cliente de una ventana de marco.|
 |CBRS_ALIGN_ANY|Permite acoplar el panel a cualquier lado del área de cliente de una ventana de marco.|
 
 Si *dwAlignment* contiene la marca CBRS_ALIGN_LEFT o CBRS_ALIGN_RIGHT, el panel y el rectángulo virtual se mueven horizontalmente; de lo contrario, si *dwAlignment* contiene la marca CBRS_ALIGN_TOP o CBRS_ALIGN_BOTTOM, el panel y el rectángulo virtual se mueven verticalmente.
 
-##  <a name="movepane"></a>CPane:: MovePane
+## <a name="cpanemovepane"></a><a name="movepane"></a>CPane::MovePane
 
 Mueve el panel al rectángulo especificado.
 
@@ -1130,25 +1130,25 @@ virtual CSize MovePane(
 ### <a name="parameters"></a>Parámetros
 
 *rectNew*<br/>
-de Especifica el nuevo rectángulo para el panel.
+[en] Especifica el nuevo rectángulo para el panel.
 
 *bForceMove*<br/>
-de Si es TRUE, este método omite el tamaño mínimo permitido del panel ( [CPane:: GetMinSize](#getminsize)); de lo contrario, el panel se ajusta, si es necesario, para asegurarse de que es al menos el tamaño mínimo permitido.
+[en] Si ES TRUE, este método omite el tamaño mínimo permitido del panel ( [CPane::GetMinSize](#getminsize)); de lo contrario, el panel se ajusta, si es necesario, para asegurarse de que es al menos el tamaño mínimo permitido.
 
 *hdwp*<br/>
 [in] No se utiliza.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`CSize` objeto que contiene las diferencias de ancho y alto entre los rectángulos nuevo y antiguo (Rectangle- *rectNew*anterior).
+Objeto `CSize` que contiene las diferencias de anchura y altura entre los rectángulos nuevos y antiguos (antiguo rectángulo - *rectNew*).
 
 ### <a name="remarks"></a>Observaciones
 
-Este método solo se usa para los paneles acoplables.
+Este método solo se utiliza para paneles acoplables.
 
-##  <a name="onafterchangeparent"></a>CPane:: OnAfterChangeParent
+## <a name="cpaneonafterchangeparent"></a><a name="onafterchangeparent"></a>Cpane::OnAfterChangeParent
 
-Lo llama el marco de trabajo cuando cambia el elemento primario de un panel.
+Llamado por el marco de trabajo cuando el elemento primario de un panel ha cambiado.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1157,15 +1157,15 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Parámetros
 
 *pWndOldParent*<br/>
-[in, out] Ventana primaria anterior del panel.
+[adentro, fuera] La ventana primaria anterior del panel.
 
 ### <a name="remarks"></a>Observaciones
 
 El marco de trabajo llama a este método cuando el elemento primario de un panel ha cambiado debido a una operación de acoplamiento o flotante.
 
-##  <a name="onafterdock"></a>CPane:: OnAfterDock
+## <a name="cpaneonafterdock"></a><a name="onafterdock"></a>Cpane::OnAfterDock
 
-Lo llama el marco de trabajo cuando se ha acoplado un panel.
+Llamado por el marco de trabajo cuando se ha acoplado un panel.
 
 ```
 virtual void OnAfterDock(
@@ -1177,17 +1177,17 @@ virtual void OnAfterDock(
 ### <a name="parameters"></a>Parámetros
 
 *pBar*<br/>
-de Este parámetro no se utiliza.
+[en] Este parámetro no se utiliza.
 
 *lpRect*<br/>
-de Este parámetro no se utiliza.
+[en] Este parámetro no se utiliza.
 
 *dockMethod*<br/>
-de Este parámetro no se utiliza.
+[en] Este parámetro no se utiliza.
 
-##  <a name="onafterfloat"></a>CPane:: OnAfterFloat
+## <a name="cpaneonafterfloat"></a><a name="onafterfloat"></a>Cpane::OnAfterFloat
 
-Lo llama el marco de trabajo después de que un panel flote.
+Llamado por el marco de trabajo después de que un panel flota.
 
 ```
 virtual void OnAfterFloat();
@@ -1195,11 +1195,11 @@ virtual void OnAfterFloat();
 
 ### <a name="remarks"></a>Observaciones
 
-Puede invalidar este método en una clase derivada si desea realizar cualquier procesamiento después de que un panel flote.
+Puede invalidar este método en una clase derivada si desea realizar cualquier procesamiento después de que un panel flota.
 
-##  <a name="onbeforechangeparent"></a>CPane:: OnBeforeChangeParent
+## <a name="cpaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>Cpane::OnBeforeChangeParent
 
-Lo llama el marco de trabajo cuando el elemento primario del panel está a punto de cambiar.
+Llamado por el marco de trabajo cuando el elemento primario del panel está a punto de cambiar.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1210,20 +1210,20 @@ virtual void OnBeforeChangeParent(
 ### <a name="parameters"></a>Parámetros
 
 *pWndNewParent*<br/>
-[in, out] Especifica la nueva ventana primaria.
+[adentro, fuera] Especifica la nueva ventana primaria.
 
 *bDelay*<br/>
-de TRUE para retrasar el ajuste de diseño de acoplamiento global; en caso contrario, FALSE.
+[en] TRUE para retrasar el ajuste de diseño de acoplamiento global; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
 El marco de trabajo llama a este método cuando el elemento primario del panel está a punto de cambiar porque el panel se está acoplando o flotando.
 
-De forma predeterminada, se anula el registro del panel con el panel de acoplamiento llamando a `CDockSite::RemovePane`.
+De forma predeterminada, el panel no se `CDockSite::RemovePane`registra con el panel de acoplamiento llamando a .
 
-##  <a name="onbeforedock"></a>CPane:: OnBeforeDock
+## <a name="cpaneonbeforedock"></a><a name="onbeforedock"></a>Cpane::OnBeforeDock
 
-Lo llama el marco de trabajo cuando el panel está a punto de acoplarse.
+Llamado por el marco de trabajo cuando el panel está a punto de acoplarse.
 
 ```
 virtual BOOL OnBeforeDock(
@@ -1235,25 +1235,25 @@ virtual BOOL OnBeforeDock(
 ### <a name="parameters"></a>Parámetros
 
 *ppDockBar*<br/>
-[in, out] Especifica el panel al que está acoplado este panel.
+[adentro, fuera] Especifica el panel al que se está acoplando este panel.
 
 *lpRect*<br/>
-de Especifica el rectángulo de acoplamiento.
+[en] Especifica el rectángulo de acoplamiento.
 
 *dockMethod*<br/>
-de Especifica el método de acoplamiento.
+[en] Especifica el método de acoplamiento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se puede acoplar el panel. Si la función devuelve FALSE, se anulará la operación de acoplamiento.
+TRUESi el panel se puede acoplar. Si la función devuelve FALSE, se anulará la operación de acoplamiento.
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo llama a este método cuando un panel está a punto de acoplarse. Puede invalidar este método en una clase derivada si desea realizar cualquier procesamiento antes de que un panel se acople finalmente.
+El marco de trabajo llama a este método cuando un panel está a punto de acoplarse. Puede invalidar este método en una clase derivada si desea realizar cualquier procesamiento antes de que un panel se acopla finalmente.
 
-##  <a name="onbeforefloat"></a>CPane:: OnBeforeFloat
+## <a name="cpaneonbeforefloat"></a><a name="onbeforefloat"></a>Cpane::OnBeforeFloat
 
-Lo llama el marco de trabajo cuando un panel está a punto de flotar.
+Llamado por el marco de trabajo cuando un panel está a punto de flotar.
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1264,22 +1264,22 @@ virtual BOOL OnBeforeFloat(
 ### <a name="parameters"></a>Parámetros
 
 *rectFloat*<br/>
-de Especifica la posición y el tamaño del panel cuando está en un estado flotante.
+[en] Especifica la posición y el tamaño del panel cuando está en un estado flotante.
 
 *dockMethod*<br/>
-de Especifica el método de acoplamiento del panel.
+[en] Especifica el método de acoplamiento del panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se puede flotar; en caso contrario, FALSE.
+TRUESi el panel se puede flotar; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo llama a este método cuando un panel está a punto de flotar. Puede invalidar este método en una clase derivada si desea realizar cualquier procesamiento antes de que el panel Finally flote.
+El marco de trabajo llama a este método cuando un panel está a punto de flotar. Puede invalidar este método en una clase derivada si desea realizar cualquier procesamiento antes de que el panel finalmente flota.
 
-##  <a name="onpressclosebutton"></a>CPane:: OnPressCloseButton
+## <a name="cpaneonpressclosebutton"></a><a name="onpressclosebutton"></a>Cpane::OnPressCloseButton
 
-Lo llama el marco de trabajo cuando el usuario presiona el botón cerrar en el título del panel.
+Llamado por el marco de trabajo cuando el usuario presiona el botón cerrar en el título del panel.
 
 ```
 virtual void OnPressCloseButton();
@@ -1287,9 +1287,9 @@ virtual void OnPressCloseButton();
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo llama a este método cuando un usuario presiona el botón **cerrar** en el título del panel. Para recibir notificaciones sobre el evento de **cierre** , puede invalidar este método en una clase derivada.
+El marco de trabajo llama a este método cuando un usuario presiona el botón **Cerrar** en el título del panel. Para recibir notificaciones sobre el **Evento Close,** puede invalidar este método en una clase derivada.
 
-##  <a name="onshowcontrolbarmenu"></a>CPane:: OnShowControlBarMenu
+## <a name="cpaneonshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>Cpane::OnShowControlBarMenu
 
 Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.
 
@@ -1299,18 +1299,18 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-de Especifica la ubicación del menú.
+*Punto*<br/>
+[en] Especifica la ubicación del menú.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se puede mostrar el menú; en caso contrario, FALSE.
+TRUESi se puede mostrar el menú; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-El menú contiene varios elementos que le permiten especificar el comportamiento del panel, es decir, **flotante**, **acoplar**, **Ocultar automáticamente**y **ocultar**. Puede habilitar este menú para todos los paneles llamando a [CDockingManager:: EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+El menú contiene varios elementos que le permiten especificar el comportamiento del panel, a saber: **Flotante**, **Acoplamiento**, **Ocultar**automáticamente y **Ocultar**. Puede habilitar este menú para todos los paneles llamando a [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
-##  <a name="recalclayout"></a>CPane:: RecalcLayout
+## <a name="cpanerecalclayout"></a><a name="recalclayout"></a>CPane::RecalcLayout
 
 Vuelve a calcular la información de diseño del panel.
 
@@ -1320,11 +1320,11 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Observaciones
 
-Si el panel está acoplado, este método actualiza el rectángulo virtual del panel estableciendo su tamaño en el tamaño actual del panel.
+Si el panel está acoplado, este método actualiza el rectángulo virtual para el panel estableciendo su tamaño en el tamaño actual del panel.
 
-Si el panel es flotante, este método notifica al fotograma primario para ajustar el tamaño del panel al tamaño del marco reducido. El marco de trabajo garantiza que el marco mínimo sea al menos el tamaño mínimo permitido para el panel ( [CPane:: GetMinSize](#getminsize)) y cambiará el tamaño del marco reducido si es necesario.
+Si el panel está flotante, este método notifica al minimarco primario para ajustar el tamaño del panel al tamaño del minimarco. El marco de trabajo garantiza que el marco mini es al menos el tamaño mínimo permitido para el panel ( [CPane::GetMinSize](#getminsize)) y cambia el tamaño del marco mini si es necesario.
 
-##  <a name="savestate"></a>CPane:: SaveState
+## <a name="cpanesavestate"></a><a name="savestate"></a>CPane::SaveState
 
 Guarda el estado del panel en el registro.
 
@@ -1338,25 +1338,25 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-de Nombre del perfil.
+[en] Nombre del perfil.
 
 *nIndex*<br/>
-de Índice de perfil.
+[en] Indice de perfil.
 
 *uiID*<br/>
-de IDENTIFICADOR del panel.
+[en] ID de panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el estado se ha guardado correctamente; en caso contrario, FALSE.
+TRUESi el estado se guardó correctamente; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo llama a este método cuando guarda el estado del panel en el registro. Invalide `SaveState` en una clase derivada para almacenar información adicional.
+El marco de trabajo llama a este método cuando guarda el estado del panel en el registro. Invalidar `SaveState` en una clase derivada para almacenar información adicional.
 
-Cuando invalide este método, llame también al método base y devuelva FALSE si el método base devuelve FALSE.
+Al reemplazar este método, también llame al método base y devuelva FALSE si el método base devuelve FALSE.
 
-##  <a name="setactiveingroup"></a>CPane:: SetActiveInGroup
+## <a name="cpanesetactiveingroup"></a><a name="setactiveingroup"></a>CPane::SetActiveInGroup
 
 Marca un panel como activo.
 
@@ -1367,17 +1367,17 @@ virtual void SetActiveInGroup(BOOL bActive);
 ### <a name="parameters"></a>Parámetros
 
 *bActive*<br/>
-de Un BOOLEANO que especifica si el panel se marca como activo.
+[en] BoOL que especifica si el panel está marcado como activo.
 
 ### <a name="remarks"></a>Observaciones
 
 Cuando se muestra un panel acoplable o se elige un botón de ocultación automática, el panel de ocultación automática correspondiente se marca como activo.
 
-La apariencia de un botón de ocultación automática que está asociada con el panel se basa en dos factores. Si el panel está activo y el `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` es TRUE, el marco de trabajo muestra el botón de ocultación automática como un icono y una etiqueta. En el caso de un panel inactivo, el marco de trabajo muestra solo el icono de ocultación automática.
+La apariencia de un botón de ocultación automática asociado al panel se basa en dos factores. Si el panel está `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` activo y es TRUE, el marco de trabajo muestra el botón de ocultación automática como un icono y una etiqueta. Para un panel inactivo, el marco de trabajo solo muestra el icono de ocultación automática.
 
-Si `CMFCAutoHideButton::m_bOverlappingTabs` es FALSE o si el panel no se encuentra en un grupo, el marco de trabajo muestra el botón de ocultación automática asociado como un icono y una etiqueta.
+Si `CMFCAutoHideButton::m_bOverlappingTabs` es FALSE, o si el panel no se encuentra en un grupo, el marco de trabajo muestra el botón de ocultación automática asociado como un icono y una etiqueta.
 
-##  <a name="setborders"></a>CPane:: SetBorders
+## <a name="cpanesetborders"></a><a name="setborders"></a>CPane::SetBorders
 
 Establece los valores de borde del panel.
 
@@ -1394,25 +1394,25 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="parameters"></a>Parámetros
 
 *cxLeft*<br/>
-de Especifica el ancho, en píxeles, del borde izquierdo del panel.
+[en] Especifica el ancho, en píxeles, del borde izquierdo del panel.
 
 *cyTop*<br/>
-de Especifica el ancho, en píxeles, del borde superior del panel.
+[en] Especifica el ancho, en píxeles, del borde superior del panel.
 
 *cxRight*<br/>
-de Especifica el ancho, en píxeles, del borde derecho del panel.
+[en] Especifica el ancho, en píxeles, del borde derecho del panel.
 
 *cyBottom*<br/>
-de Especifica el ancho, en píxeles, del borde inferior del panel.
+[en] Especifica el ancho, en píxeles, del borde inferior del panel.
 
 *lpRect*<br/>
-de Un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contiene el ancho, en píxeles, de cada borde del panel.
+[en] Un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el ancho, en píxeles, de cada borde del panel.
 
 ### <a name="remarks"></a>Observaciones
 
 Llame a esta función para establecer los tamaños de los bordes del panel.
 
-##  <a name="setclienthotspot"></a>CPane:: SetClientHotSpot
+## <a name="cpanesetclienthotspot"></a><a name="setclienthotspot"></a>CPane::SetClientHotSpot
 
 Establece la *zona activa* del panel.
 
@@ -1423,13 +1423,13 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="parameters"></a>Parámetros
 
 *ptNew*<br/>
-de Objeto `CPoint` que especifica la nueva zona activa.
+[en] Objeto `CPoint` que especifica la nueva zona de acceso rápido.
 
 ### <a name="remarks"></a>Observaciones
 
-La *zona activa* es el punto del panel que el usuario selecciona y mantiene para desplazar el panel. Una zona activa se usa para la animación suave cuando el panel se arrastra desde una posición acoplada.
+La *zona de acceso rápido* es el punto del panel que el usuario selecciona y mantiene para mover el panel. Una zona de acceso rápido se utiliza para una animación suave cuando el panel se arrastra desde una posición acoplada.
 
-##  <a name="setdockstate"></a>CPane:: SetDockState
+## <a name="cpanesetdockstate"></a><a name="setdockstate"></a>CPane::SetDockState
 
 Restaura la información de estado de acoplamiento del panel.
 
@@ -1440,15 +1440,15 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ### <a name="parameters"></a>Parámetros
 
 *pDockManager*<br/>
-de Puntero al administrador de acoplamiento para la ventana de marco principal.
+[en] Puntero al administrador de acoplamiento para la ventana de marco principal.
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo llama a este método para restaurar información reciente sobre el estado de acoplamiento del panel. Un panel almacena información de estado de acoplamiento reciente en [CPane:: m_recentDockInfo](#m_recentdockinfo). Para obtener más información, vea la [clase CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
+El marco de trabajo llama a este método para restaurar la información de estado de acoplamiento reciente para el panel. Un panel almacena información de estado de acoplamiento reciente en [CPane::m_recentDockInfo](#m_recentdockinfo). Para obtener más información, vea la [clase CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
 
 También puede llamar a este método para establecer el estado de acoplamiento al cargar información del panel desde un origen externo.
 
-##  <a name="setexclusiverowmode"></a>CPane:: SetExclusiveRowMode
+## <a name="cpanesetexclusiverowmode"></a><a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode
 
 Habilita o deshabilita el modo de fila exclusivo.
 
@@ -1459,15 +1459,15 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ### <a name="parameters"></a>Parámetros
 
 *bExclusive*<br/>
-de TRUE para habilitar el modo de fila exclusivo; en caso contrario, FALSE.
+[en] TRUE para habilitar el modo de fila exclusivo; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método para habilitar o deshabilitar el modo de fila exclusivo. Cuando un panel está en modo de fila exclusivo, no puede compartir la misma fila con otras barras de herramientas.
+Llame a este método para habilitar o deshabilitar el modo de fila exclusivo. Cuando un panel está en modo de fila exclusivo, no puede compartir la misma fila con ninguna otra barra de herramientas.
 
 De forma predeterminada, todas las barras de herramientas tienen el modo de fila exclusivo deshabilitado y la barra de menús tiene habilitado el modo de fila exclusivo.
 
-##  <a name="setminsize"></a>CPane:: SetMinSize
+## <a name="cpanesetminsize"></a><a name="setminsize"></a>CPane::SetMinSize
 
 Establece el tamaño mínimo permitido para el panel.
 
@@ -1477,12 +1477,12 @@ void SetMinSize(const CSize& size);
 
 ### <a name="parameters"></a>Parámetros
 
-*size*<br/>
-de `CSize` objeto que contiene el tamaño mínimo permitido para el panel.
+*Tamaño*<br/>
+[en] Objeto `CSize` que contiene el tamaño mínimo permitido para el panel.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="setvirtualrect"></a>CPane:: SetVirtualRect
+## <a name="cpanesetvirtualrect"></a><a name="setvirtualrect"></a>CPane::SetVirtualRect
 
 Establece el *rectángulo virtual* del panel.
 
@@ -1495,20 +1495,20 @@ void SetVirtualRect(
 ### <a name="parameters"></a>Parámetros
 
 *Rect*<br/>
-de Objeto `CRect` que especifica el rectángulo virtual que se va a establecer.
+[en] Objeto `CRect` que especifica el rectángulo virtual que se va a establecer.
 
 *bMapToParent*<br/>
-de Especifique TRUE si *Rect* contiene puntos relativos a la ventana primaria.
+[en] Especifique TRUE si *rect* contiene puntos relativos a la ventana primaria.
 
 ### <a name="remarks"></a>Observaciones
 
 Un *rectángulo virtual* almacena la posición original de un panel cuando se mueve. El marco de trabajo puede usar el rectángulo virtual para restaurar la posición original.
 
-No llame a métodos que estén relacionados con rectángulos virtuales a menos que vaya a mover paneles mediante programación.
+No llame a métodos relacionados con rectángulos virtuales a menos que mueva paneles mediante programación.
 
-##  <a name="setminiframertc"></a>CPane:: SetMiniFrameRTC
+## <a name="cpanesetminiframertc"></a><a name="setminiframertc"></a>CPane::SetMiniFrameRTC
 
-Establece la información de clase en tiempo de ejecución para la ventana de marco reducido predeterminada.
+Establece la información de clase en tiempo de ejecución para la ventana de marco pequeño predeterminada.
 
 ```
 void SetMiniFrameRTC(CRuntimeClass* pClass);
@@ -1517,15 +1517,15 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ### <a name="parameters"></a>Parámetros
 
 *pClass*<br/>
-[in, out] Especifica la información de clase en tiempo de ejecución para la ventana de marco reducido.
+[adentro, fuera] Especifica la información de clase en tiempo de ejecución para la ventana de marco pequeño.
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando un panel está flotando, se coloca en una ventana de [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (marco reducido). Puede proporcionar una clase personalizada derivada de `CPaneFrameWnd`que se utilizará cuando se llame a [CPane:: CreateDefaultMiniframe](#createdefaultminiframe) .
+Cuando se flota un panel, se coloca en una ventana [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (minimarco). Puede proporcionar una `CPaneFrameWnd`clase derivada personalizada que se usará cuando se llame [a CPane::CreateDefaultMiniframe.](#createdefaultminiframe)
 
-##  <a name="stretchpanedeferwndpos"></a>CPane:: StretchPaneDeferWndPos
+## <a name="cpanestretchpanedeferwndpos"></a><a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos
 
-Estira el panel vertical u horizontalmente según el estilo de acoplamiento.
+Estira el panel vertical u horizontalmente en función del estilo de acoplamiento.
 
 ```
 virtual int StretchPaneDeferWndPos(
@@ -1536,20 +1536,20 @@ virtual int StretchPaneDeferWndPos(
 ### <a name="parameters"></a>Parámetros
 
 *nStretchSize*<br/>
-de Cantidad, en píxeles, para expandir el panel. Use un valor negativo para reducir el panel.
+[en] La cantidad, en píxeles, para estirar el panel. Utilice un valor negativo para reducir el panel.
 
 *hdwp*<br/>
 [in] No se utiliza.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Cantidad real, en píxeles, que se ajustó el panel.
+La cantidad real, en píxeles, que el panel se estiró.
 
 ### <a name="remarks"></a>Observaciones
 
-Si es necesario, este método modifica *nStretchSize* para asegurarse de que el panel no supera los límites de tamaño. Estos límites se obtienen mediante una llamada a [CPane:: GetAvailableStretchSize](#getavailablestretchsize) y [CPane:: GetAvailableExpandSize](#getavailableexpandsize).
+Si es necesario, este método modifica *nStretchSize* para asegurarse de que el panel no supera los límites de tamaño. Estos límites se obtienen llamando a [CPane::GetAvailableStretchSize](#getavailablestretchsize) y [CPane::GetAvailableExpandSize](#getavailableexpandsize).
 
-##  <a name="toggleautohide"></a>CPane:: ToggleAutoHide
+## <a name="cpanetoggleautohide"></a><a name="toggleautohide"></a>CPane::ToggleAutoHide
 
 Alterna el modo de ocultación automática.
 
@@ -1559,11 +1559,11 @@ virtual void ToggleAutoHide();
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método para alternar el modo de ocultación automática. Un panel debe estar acoplado a una ventana de marco principal para cambiar al modo de ocultación automática.
+Llame a este método para alternar el modo de ocultación automática. Un panel se debe acoplar a una ventana de marco principal para poder cambiar al modo de ocultación automática.
 
-##  <a name="undockpane"></a>CPane:: UndockPane
+## <a name="cpaneundockpane"></a><a name="undockpane"></a>CPane::UndockPane
 
-Quita el panel del sitio de acoplamiento, el control deslizante predeterminado o la ventana de marco reducido donde está acoplado actualmente.
+Quita el panel del sitio de acoplamiento, el control deslizante predeterminado o la ventana de marco pequeño donde está acoplado actualmente.
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
@@ -1572,13 +1572,13 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ### <a name="parameters"></a>Parámetros
 
 *bDelay*<br/>
-de Si es FALSE, el marco de trabajo llama a [a cbasepane:: AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) para ajustar el diseño de acoplamiento.
+[en] Si FALSE, el marco de trabajo llama a [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) para ajustar el diseño de acoplamiento.
 
 ### <a name="remarks"></a>Observaciones
 
-Use este método para desacoplar un panel mediante programación.
+Utilice este método para desacoplar mediante programación un panel.
 
-##  <a name="updatevirtualrect"></a>CPane:: UpdateVirtualRect
+## <a name="cpaneupdatevirtualrect"></a><a name="updatevirtualrect"></a>CPane::UpdateVirtualRect
 
 Actualiza el rectángulo virtual.
 
@@ -1591,16 +1591,16 @@ void UpdateVirtualRect(CSize sizeNew);
 ### <a name="parameters"></a>Parámetros
 
 *ptOffset*<br/>
-de Objeto `CPoint` que especifica un desplazamiento por el que se va a desplazar el panel.
+[en] Objeto `CPoint` que especifica un desplazamiento por el que se va a desplazar el panel.
 
 *sizeNew*<br/>
-de Objeto `CSize` que especifica un nuevo tamaño para el panel.
+[en] Objeto `CSize` que especifica un nuevo tamaño para el panel.
 
 ### <a name="remarks"></a>Observaciones
 
-La primera sobrecarga establece el rectángulo virtual utilizando la posición actual y el tamaño del panel.
+La primera sobrecarga establece el rectángulo virtual mediante la posición y el tamaño actuales del panel.
 
-La segunda sobrecarga desplaza el rectángulo virtual en la cantidad especificada por *ptOffset*.
+La segunda sobrecarga desplaza el rectángulo virtual por la cantidad especificada por *ptOffset*.
 
 La tercera sobrecarga establece el rectángulo virtual mediante la posición actual del panel y el tamaño especificado por *sizeNew*.
 

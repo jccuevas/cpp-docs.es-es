@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0612a4b365b928d3c9be6d76168a76b4ee1caa85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324030"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318253"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Clase CSinusoidalTransitionFromRange
 
@@ -41,29 +41,29 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|Construye un objeto de transición.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSinusoidalTransitionFromRange::Crear](#create)|Llama a la biblioteca de transición para crear un objeto COM de transición encapsulado. (Reemplaza [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|El valor de la variable de animación en un pico de la onda sinusoidal.|
-|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|El valor de la variable de animación en un Valle de la onda sinusoidal.|
+|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|El valor de la variable de animación en una vaguada de la onda sinusoidal.|
 |[CSinusoidalTransitionFromRange::m_duration](#m_duration)|La duración de la transición.|
 |[CSinusoidalTransitionFromRange::m_period](#m_period)|El período de oscilación de la onda sinusoidal en segundos.|
-|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|La pendiente del principio de la transición.|
+|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|La pendiente al inicio de la transición.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El valor de la variable de animación fluctúa entre los valores mínimos y máximo especificados en toda la duración de una transición de intervalo sinusoidal. El parámetro "pendiente" se usa para eliminar la ambigüedad entre las dos ondas de seno posible especificadas por los otros parámetros. Dado que todas las transiciones se borran automáticamente, se recomienda asignada a ellos mediante el operador nuevo. El objeto COM IUIAnimationTransition encapsulado se crea por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.
+El valor de la variable de animación fluctúa entre los valores mínimo y máximo especificados durante toda la duración de una transición de rango sinusoidal. El parámetro slope se utiliza para desambiguar entre las dos ondas sinusoidales posibles especificadas por los demás parámetros. Dado que todas las transiciones se borran automáticamente, se recomienda asignarlas mediante el operador new. CAnimationController::AnimateGroup crea el objeto COM IUIAnimationTransition encapsulado, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -77,9 +77,9 @@ El valor de la variable de animación fluctúa entre los valores mínimos y máx
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create
+## <a name="csinusoidaltransitionfromrangecreate"></a><a name="create"></a>CSinusoidalTransitionFromRange::Crear
 
-Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.
+Llama a la biblioteca de transición para crear un objeto COM de transición encapsulado.
 
 ```
 virtual BOOL Create(
@@ -90,13 +90,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *pLibrary*<br/>
-Un puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándares.
+Un puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la transición se crea correctamente; en caso contrario, FALSE.
+TRUESi la transición se crea correctamente; de lo contrario FALSO.
 
-##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
+## <a name="csinusoidaltransitionfromrangecsinusoidaltransitionfromrange"></a><a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
 
 Construye un objeto de transición.
 
@@ -111,22 +111,22 @@ CSinusoidalTransitionFromRange(
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*<br/>
+*duration*<br/>
 La duración de la transición.
 
 *dblMinimumValue*<br/>
-El valor de la variable de animación en un Valle de la onda sinusoidal.
+El valor de la variable de animación en una vaguada de la onda sinusoidal.
 
 *dblMaximumValue*<br/>
 El valor de la variable de animación en un pico de la onda sinusoidal.
 
-*period*<br/>
+*Período*<br/>
 El período de oscilación de la onda sinusoidal en segundos.
 
-*slope*<br/>
-La pendiente del principio de la transición.
+*Pendiente*<br/>
+La pendiente al inicio de la transición.
 
-##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue
+## <a name="csinusoidaltransitionfromrangem_dblmaximumvalue"></a><a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue
 
 El valor de la variable de animación en un pico de la onda sinusoidal.
 
@@ -134,15 +134,15 @@ El valor de la variable de animación en un pico de la onda sinusoidal.
 DOUBLE m_dblMaximumValue;
 ```
 
-##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue
+## <a name="csinusoidaltransitionfromrangem_dblminimumvalue"></a><a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue
 
-El valor de la variable de animación en un Valle de la onda sinusoidal.
+El valor de la variable de animación en una vaguada de la onda sinusoidal.
 
 ```
 DOUBLE m_dblMinimumValue;
 ```
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromRange::m_duration
+## <a name="csinusoidaltransitionfromrangem_duration"></a><a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration
 
 La duración de la transición.
 
@@ -150,7 +150,7 @@ La duración de la transición.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period
+## <a name="csinusoidaltransitionfromrangem_period"></a><a name="m_period"></a>CSinusoidalTransitionFromRange::m_period
 
 El período de oscilación de la onda sinusoidal en segundos.
 
@@ -158,14 +158,14 @@ El período de oscilación de la onda sinusoidal en segundos.
 UI_ANIMATION_SECONDS m_period;
 ```
 
-##  <a name="m_slope"></a>  CSinusoidalTransitionFromRange::m_slope
+## <a name="csinusoidaltransitionfromrangem_slope"></a><a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope
 
-La pendiente del principio de la transición.
+La pendiente al inicio de la transición.
 
 ```
 UI_ANIMATION_SLOPE m_slope;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

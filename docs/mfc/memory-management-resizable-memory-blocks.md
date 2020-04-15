@@ -9,20 +9,20 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: 124a2599e1523d5393fcf6255c88de0fd8cd72cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364775"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Administración de memoria: Bloques de memoria redimensionables
 
-El **nueva** y **eliminar** operadores, se describe en el artículo [administración de memoria: Ejemplos](../mfc/memory-management-examples.md), son buenos para la asignación y desasignación de bloques de memoria de tamaño fijo y objetos. En ocasiones, la aplicación puede necesitar bloques de memoria redimensionables. Debe usar las funciones de biblioteca en tiempo de ejecución de C estándar [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), y [libre](../c-runtime-library/reference/free.md) para administrar los bloques de memoria de tamaño variable en el montón.
+Los operadores **new** y **delete,** descritos en el artículo [Memory Management: Examples](../mfc/memory-management-examples.md), son buenos para asignar y desasignar bloques y objetos de memoria de tamaño fijo. En ocasiones, es posible que la aplicación necesite bloques de memoria redimensionables. Debe utilizar las funciones estándar de biblioteca en tiempo de ejecución de C [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md)y [free](../c-runtime-library/reference/free.md) para administrar bloques de memoria redimensionables en el montón.
 
 > [!IMPORTANT]
->  Mezclar la **nueva** y **eliminar** operadores con las funciones de asignación de memoria de tamaño variable en el mismo bloque de memoria dará como resultado una memoria dañada en la versión de depuración de MFC. No se debe usar **realloc** en un bloque de memoria asignada con **nuevo**. Del mismo modo, no se debe asignar un bloque de memoria con el **nueva** operador y elimínela con **libre**, o usar el **eliminar** operador en un bloque de memoria asignada con **malloc**.
+> La mezcla de los operadores **new** y **delete** con las funciones de asignación de memoria redimensionables en el mismo bloque de memoria dará como resultado memoria dañada en la versión de depuración de MFC. No debe utilizar **realloc** en un bloque de memoria asignado con **new**. Del mismo modo, no debe asignar un bloque de memoria con el **operador new** y eliminarlo con **free**, o utilizar el operador **delete** en un bloque de memoria asignado con **malloc**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Administración de la memoria: asignación en el montón](../mfc/memory-management-heap-allocation.md)
+[Administración de memoria: Asignación del montón](../mfc/memory-management-heap-allocation.md)

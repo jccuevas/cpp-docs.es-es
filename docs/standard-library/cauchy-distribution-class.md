@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ea75395c14c0babf5a047e7ae8f937e2a237b445
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688335"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317122"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution (Clase)
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *RealType*
-El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, por defecto **es double**. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-@No__t_1 *URNG*
-Motor del generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*Urng*\
+El motor generador de números aleatorios uniforme. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La plantilla de clase describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución de Cauchy. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que produce valores de un tipo de punto flotante especificado por el usuario, o escriba **double** si no se proporciona ninguno, distribuido según la distribución de Cauchy. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información acerca de las clases de distribución y sus miembros, vea [ \<>aleatorias ](../standard-library/random.md).
 
 Para obtener información detallada sobre la distribución de Cauchy, vea el artículo de Wolfram MathWorld sobre la [distribución de Cauchy](https://go.microsoft.com/fwlink/p/?linkid=400523).
 
@@ -240,7 +240,7 @@ Distribution for 10 samples:
 
 **Espacio de nombres:** std
 
-## <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution::cauchy_distribution
 
 Construye la distribución.
 
@@ -251,24 +251,24 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*un* \
+*Un*\
 El parámetro de distribución `a`.
 
-*b* \
+*B*\
 El parámetro de distribución `b`.
 
-\ *PARM*
+*Parmesana*\
 La estructura `param_type` usada para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `0.0 < b`
+**Condición previa:**`0.0 < b`
 
 El primer constructor crea un objeto cuyo valor `a` almacenado contiene el valor *a* y cuyo valor `b` almacenado contiene el valor *b*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="param_type"></a>  cauchy_distribution::param_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::param_type
 
 Almacena todos los parámetros de la distribución.
 
@@ -286,21 +286,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*un* \
+*Un*\
 El parámetro de distribución `a`.
 
-*b* \
+*B*\
 El parámetro de distribución `b`.
 
-\ *derecha*
+*Correcto*\
 El objeto `param_type` que se va a comparar con este.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `0.0 < b`
+**Condición previa:**`0.0 < b`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)
+[\<>al azar](../standard-library/random.md)

@@ -1,6 +1,6 @@
 ---
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset_s_l
 - _strnset_s
@@ -8,6 +8,10 @@ api_name:
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
+- _o__mbsnset_s
+- _o__mbsnset_s_l
+- _o__strnset_s
+- _o__wcsnset_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -58,19 +63,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 62b0ecdc7d9e1afb93c4b15c37016ac687dc80d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626134"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364453"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
 Inicializa los caracteres de una cadena en un carácter dado. Estas versiones de [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsnset_s** y **_mbsnset_s_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset_s** y **_mbsnset_s_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -118,13 +123,13 @@ errno_t _mbsnset_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*Str*<br/>
 Cadena que se va a modificar.
 
 *numberOfElements*<br/>
-Tamaño del búfer *Str* .
+El tamaño del búfer *str.*
 
-*c*<br/>
+*C*<br/>
 Especificación de carácter.
 
 *count*<br/>
@@ -137,17 +142,19 @@ Configuración regional que se va a usar.
 
 Cero si es correcto, código de error en caso contrario.
 
-Estas funciones validan sus argumentos. Si *Str* no es una cadena terminada en NULL válida o el argumento de tamaño es menor o igual que 0, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen **errno** en ese código de error. El código de error predeterminado es **EINVAL** si no se aplica un valor más específico.
+Estas funciones validan sus argumentos. Si *str* no es una cadena válida terminada en null o el argumento size es menor o igual que 0, se invoca el controlador de parámetros no válidos, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven un código de error y **establecen errno** en ese código de error. El código de error predeterminado es **EINVAL** si no se aplica un valor más específico.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estas funciones establecen, como máximo, los primeros caracteres de *recuento* de *Str* en *c*. Si el *recuento* es mayor que el tamaño de *Str*, se utiliza el tamaño de *Str* en lugar del *recuento*. Se produce un error si el *recuento* es mayor que *numberOfElements* y ambos parámetros son mayores que el tamaño de *Str*.
+Estas funciones establecen, como máximo, los primeros caracteres de *recuento* de *str* a *c*. Si *count* es mayor que el tamaño de *str*, se utiliza el tamaño de *str* en lugar de *count*. Se produce un error si *count* es mayor que *numberOfElements* y ambos parámetros son mayores que el tamaño de *str*.
 
-**_wcsnset_s** y **_mbsnset_s** son versiones de caracteres anchos y multibyte de **_strnset_s**. El argumento de cadena de **_wcsnset_s** es una cadena de caracteres anchos; el de **_mbsnset_s** es una cadena de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**_wcsnset_s** y **_mbsnset_s** son versiones de caracteres anchos y multibyte de **_strnset_s.** El argumento de cadena de **_wcsnset_s** es una cadena de caracteres anchos; _mbsnset_s **es** una cadena de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -190,9 +197,9 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Configuración regional](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

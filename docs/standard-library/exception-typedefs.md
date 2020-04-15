@@ -6,16 +6,16 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: aba17b7bf052b6974bf849f60ff895b8e84a1092
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f71c03e0c0a2e7ea4f37a85e85628ccf630ea317
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427138"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368735"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; (Typedefs)
 
-## <a name="exception_ptr"></a>  exception_ptr
+## <a name="exception_ptr"></a><a name="exception_ptr"></a>exception_ptr
 
 Tipo que describe un puntero a una excepción.
 
@@ -31,7 +31,7 @@ Utilice un objeto `exception_ptr` para hacer referencia a la excepción actual o
 
 Cuando se declara una variable `exception_ptr`, la variable no está asociada a ninguna excepción. Es decir, su campo de referencia de excepción es NULL. Este tipo de objeto `exception_ptr` se denomina *exception_ptr null*.
 
-Utilice la función `current_exception` o `make_exception_ptr` para asignar una excepción a un objeto `exception_ptr`. Cuando se asigna una excepción a una variable `exception_ptr`, el campo de referencia de excepción de la variable apunta a una copia de la excepción. Si no hay memoria suficiente para copiar la excepción, el campo de referencia de excepción apunta a una copia de una excepción [std::bad_alloc](../standard-library/bad-alloc-class.md). Si la función `current_exception` o `make_exception_ptr` no puede copiar la excepción por cualquier otro motivo, la función llama a la función de CRT `terminate` para salir del proceso actual.
+Utilice la función `current_exception` o `make_exception_ptr` para asignar una excepción a un objeto `exception_ptr`. Cuando se asigna una excepción a una variable `exception_ptr`, el campo de referencia de excepción de la variable apunta a una copia de la excepción. Si no hay memoria suficiente para copiar la excepción, el campo de referencia de excepción apunta a una copia de una excepción [std::bad_alloc](../standard-library/bad-alloc-class.md). Si `current_exception` la `make_exception_ptr` función o no puede copiar la `terminate` excepción por cualquier otro motivo, la función llama a la función CRT para salir del proceso actual.
 
 A pesar de su nombre, un objeto `exception_ptr` no es en sí mismo un puntero. No obedece a la semántica de los punteros y no se puede usar con los operadores de acceso (`->`) o de direccionamiento indirecto (*) de miembro de puntero. El objeto `exception_ptr` no tiene ningún miembro de datos ni ninguna función miembro de tipo público.
 
@@ -39,7 +39,7 @@ A pesar de su nombre, un objeto `exception_ptr` no es en sí mismo un puntero. N
 
 Se pueden usar los operadores de igualdad (`==`) y desigualdad (`!=`) para comparar dos objetos `exception_ptr`. Los operadores no comparan el valor binario (patrón de bits) de las estructuras `EXCEPTION_RECORD` que representan las excepciones. En su lugar, los operadores comparan las indicaciones del campo de referencia de excepción de los objetos `exception_ptr`. Por tanto, un `exception_ptr` NULL y el valor NULL se consideran iguales.
 
-## <a name="terminate_handler"></a>terminate_handler
+## <a name="terminate_handler"></a><a name="terminate_handler"></a>terminate_handler
 
 El tipo describe un puntero a una función que se puede usar como `terminate_handler`.
 
@@ -55,7 +55,7 @@ El tipo describe un puntero a una función que se puede usar como controlador de
 
 Vea [set_terminate](../standard-library/exception-functions.md#set_terminate) para obtener un ejemplo de uso de `terminate_handler`.
 
-## <a name="unexpected_handler"></a>unexpected_handler
+## <a name="unexpected_handler"></a><a name="unexpected_handler"></a>unexpected_handler
 
 El tipo describe un puntero a una función que se puede usar como un `unexpected_handler`.
 

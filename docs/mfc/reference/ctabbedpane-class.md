@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17351eaed585ec34117a2ef825964fd51bd0d86b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365946"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane (clase)
 
 Implementa la funcionalidad de un panel con pestañas separables.
 
-o más detalles vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
+o más detalles vea el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\mfc** de la instalación de Visual Studio.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,42 +51,42 @@ class CTabbedPane : public CBaseTabbedPane
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`CTabbedPane::CTabbedPane`|Constructor predeterminado.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CTabbedPane::DetachPane](#detachpane)|(Invalida [cbasetabbedpane:: Detachpane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
+|[CTabbedPane::DetachPane](#detachpane)|(Reemplaza [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
 |[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Habilita o deshabilita el coloreado automático de pestañas.|
-|[CTabbedPane::FloatTab](#floattab)|Convierte un panel en flotante, pero solo si el panel se encuentra actualmente en una pestaña desmontable. (Invalida [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
+|[CTabbedPane::FloatTab](#floattab)|Flota un panel, pero solo si el panel reside actualmente en una ficha desmontable.(Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
 |[CTabbedPane::GetTabArea](#gettabarea)|Devuelve el tamaño y la posición del área de pestañas de la ventana con pestañas.|
 |[CTabbedPane::GetTabWnd](#gettabwnd)||
-|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Determina si el panel con pestañas se puede cambiar a modo de ocultación automática. (Invalida [cbasetabbedpane:: Hasautohidemode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|
+|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Determina si el panel con pestañas se puede cambiar a modo de ocultación automática. (Reemplaza [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|
 |[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Determina si las pestañas se sitúan en la parte inferior de la ventana.|
 |[CTabbedPane::ResetTabs](#resettabs)|Restablece todos los paneles con pestañas al estado predeterminado.|
 |[CTabbedPane::SetTabAutoColors](#settabautocolors)|Establece una lista de colores personalizados que se pueden usar cuando se habilita la característica de color automático.|
 
 ### <a name="data-members"></a>Miembros de datos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|La ubicación predeterminada de las pestañas en la aplicación.|
 |[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Información de clase en tiempo de ejecución para un derivado de `CMFCTabCtrl` personalizado.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El marco de trabajo crea automáticamente una instancia de esta clase cuando un usuario adjunta un panel a otro apuntando al título del segundo panel. Todos los paneles con pestañas que se crean mediante el marco de trabajo tienen un identificador de -1.
 
-Para especificar pestañas normales en lugar de pestañas de estilo de Outlook, pase el estilo de AFX_CBRS_REGULAR_TABS el [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) método.
+Para especificar pestañas regulares en lugar de pestañas de estilo de Outlook, pase el estilo de AFX_CBRS_REGULAR_TABS al método [CDockablePane::CreateEx.](../../mfc/reference/cdockablepane-class.md#createex)
 
 Si crea un panel con pestañas separables, el marco de trabajo puede destruir automáticamente el panel, por lo que no debe almacenar el puntero. Para obtener un puntero al panel con pestañas, llame al método `CBasePane::GetParentTabbedPane`.
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo, crearemos un objeto `CTabbedPane`. A continuación, usamos [cbasetabbedpane:: addTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) para asociar otras pestañas.
+En este ejemplo, crearemos un objeto `CTabbedPane`. A continuación, usamos [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) para adjuntar pestañas adicionales.
 
 ```cpp
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -119,7 +119,7 @@ DockPane(pTabbededBar);
 
 ## <a name="example"></a>Ejemplo
 
-Otra forma de crear un objeto de barra de control con pestañas es usar [CDockablePane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). El `AttachToTabWnd` método crea dinámicamente un objeto de panel con pestañas con información de clase en tiempo de ejecución establecida por [CDockablePane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).
+Otra forma de crear un objeto de barra de control con fichas es utilizar [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). El `AttachToTabWnd` método crea dinámicamente un objeto de panel con fichas mediante la información de clase en tiempo de ejecución establecida por [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).
 
 En este ejemplo se crea dinámicamente un panel con pestañas, se asocian dos pestañas y se convierte la segunda pestaña en no separable.
 
@@ -163,7 +163,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 
 **Encabezado:** afxTabbedPane.h
 
-##  <a name="detachpane"></a>  CTabbedPane::DetachPane
+## <a name="ctabbedpanedetachpane"></a><a name="detachpane"></a>CTabbedPane::DetachPane
 
 ```
 virtual BOOL DetachPane(
@@ -173,15 +173,15 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pBar*<br/>
+[en] *pBar*<br/>
 
-[in] *bHide*<br/>
+[en] *bOcultar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor
+## <a name="ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor
 
 Habilita o deshabilita el coloreado automático de pestañas.
 
@@ -191,18 +191,18 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
-[in] TRUE para habilitar el coloreado automático de fichas; en caso contrario, FALSE.
+*bHabilitar*<br/>
+[en] TRUE para habilitar el color automático de las pestañas; de lo contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice este método estático para habilitar o deshabilitar el coloreado automático de las fichas en todos los paneles con pestañas en la aplicación. Cuando se habilita esta característica, cada pestaña se rellena mediante su propio color. Puede encontrar la lista de colores que se usan para las pestañas de color mediante una llamada a la [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) método.
+Utilice este método estático para habilitar o deshabilitar el color automático de las pestañas en todos los paneles con fichas de la aplicación. Cuando esta función está habilitada, cada pestaña se rellena con su propio color. Puede encontrar la lista de colores que se usan para colorear las fichas mediante una llamada a la [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) método.
 
-Puede especificar la lista de colores que se usará para las pestañas llamando [CTabbedPane::SetTabAutoColors](#settabautocolors).
+Puede especificar la lista de colores que se usarán para las fichas llamando a [CTabbedPane::SetTabAutoColors](#settabautocolors).
 
-De forma predeterminada, esta opción está deshabilitada.
+Esta opción está deshabilitada de forma predeterminada.
 
-##  <a name="floattab"></a>  CTabbedPane::FloatTab
+## <a name="ctabbedpanefloattab"></a><a name="floattab"></a>CTabbedPane::FloatTab
 
 ```
 virtual BOOL FloatTab(
@@ -214,18 +214,18 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pBar*<br/>
-[in] *nTabID*<br/>
-[in] *dockMethod*<br/>
-[in] *bHide*<br/>
+[en] *pBar*<br/>
+[en] *nTabID*<br/>
+[en] *dockMethod*<br/>
+[en] *bOcultar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea
+## <a name="ctabbedpanegettabarea"></a><a name="gettabarea"></a>CTabbedPane::GetTabArea
 
-Devuelve el tamaño y posición del área de pestaña en la ventana con pestañas.
+Devuelve el tamaño y la posición del área de ficha en la ventana con fichas.
 
 ```
 virtual void GetTabArea(
@@ -236,18 +236,18 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>Parámetros
 
 *rectTabAreaTop*<br/>
-[out] Contiene el tamaño y posición, en coordenadas de pantalla del área superior de ficha.
+[fuera] Contiene el tamaño y la posición, en coordenadas de pantalla, del área de la ficha superior.
 
 *rectTabAreaBottom*<br/>
-[out] Contiene el tamaño y posición, en coordenadas de pantalla del área inferior de ficha.
+[fuera] Contiene el tamaño y la posición, en coordenadas de pantalla, del área de la ficha inferior.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El marco llama a este método para determinar cómo acoplar un panel que un usuario está arrastrando. Cuando el usuario arrastra un panel en el área de pestañas del panel de destino, el marco de trabajo intenta agregarlo como una nueva pestaña del panel de destino. En caso contrario, intenta acoplar el panel al lado del panel de destino, que implica la creación de un nuevo contenedor de panel con un divisor que separa los dos paneles.
+El marco de trabajo llama a este método para determinar cómo acoplar un panel que un usuario está arrastrando. Cuando el usuario arrastra un panel sobre el área de ficha del panel de destino, el marco de trabajo intenta agregarlo como una nueva pestaña del panel de destino. De lo contrario, intenta acoplar el panel al lado del panel de destino, lo que implica la creación de un nuevo contenedor de paneles con un divisor de paneles que separa los dos paneles.
 
-Invalide este método en un `CTabbedPane`-clase derivada para cambiar este comportamiento.
+Invalide este `CTabbedPane`método en una clase derivada para cambiar este comportamiento.
 
-##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd
+## <a name="ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>CTabbedPane::GetTabWnd
 
 ```
 CMFCTabCtrl* GetTabWnd() const;
@@ -255,9 +255,9 @@ CMFCTabCtrl* GetTabWnd() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode
+## <a name="ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode
 
 ```
 virtual BOOL HasAutoHideMode() const;
@@ -265,9 +265,9 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom
+## <a name="ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>CTabbedPane::IstabLocationBottom
 
 Determina si las pestañas se sitúan en la parte inferior de la ventana.
 
@@ -277,11 +277,11 @@ virtual BOOL IsTabLocationBottom() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se encuentra el área de pestañas en la parte inferior de la ventana con pestañas. en caso contrario, FALSE.
+TRUESi el área de ficha se encuentra en la parte inferior de la ventana con pestañas; de lo contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop
+## <a name="ctabbedpanem_btabsalwaystop"></a><a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop
 
 La ubicación predeterminada de las pestañas en la aplicación.
 
@@ -289,15 +289,15 @@ La ubicación predeterminada de las pestañas en la aplicación.
 AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Establecer a este miembro estático en True para forzar que todas las fichas en la aplicación que se mostrará en la parte superior del panel con pestañas.
+Establezca este miembro estático en TRUE para forzar que todas las fichas de la aplicación se muestren en la parte superior del panel con fichas.
 
-Debe establecer este valor antes de que se ha creado un panel con pestañas.
+Debe establecer este valor antes de crear un panel con fichas.
 
 El valor predeterminado es FALSE.
 
-##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+## <a name="ctabbedpanem_ptabwndrtc"></a><a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC
 
 Información de clase en tiempo de ejecución para un derivado de `CMFCTabCtrl` personalizado.
 
@@ -305,11 +305,11 @@ Información de clase en tiempo de ejecución para un derivado de `CMFCTabCtrl` 
 AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Establecer esta variable de miembro estático en un puntero a la información de clase en tiempo de ejecución de un `CMFCTabCtrl`-objeto derivado, si está utilizando una ventana con pestañas personalizada dentro de un panel con pestañas.
+Establezca esta variable miembro estática en un puntero `CMFCTabCtrl`a la información de clase en tiempo de ejecución de un objeto derivado si utiliza una ventana con fichas personalizada dentro de un panel con fichas.
 
-##  <a name="resettabs"></a>  CTabbedPane::ResetTabs
+## <a name="ctabbedpaneresettabs"></a><a name="resettabs"></a>CTabbedPane::ResetTabs
 
 Restablece todos los paneles con pestañas al estado predeterminado.
 
@@ -317,13 +317,13 @@ Restablece todos los paneles con pestañas al estado predeterminado.
 static void ResetTabs();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a este método para revertir todos los paneles con pestañas a su estado predeterminado. Cuando se llama, este método restablece el tamaño de borde y el estado de color automático de todos los paneles con pestañas.
+Llame a este método para revertir todos los paneles con pestañas a su estado predeterminado. Cuando se llama, este método restablece los tamaños de borde y el estado de color automático de todos los paneles con pestañas.
 
-##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors
+## <a name="ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors
 
-Establece una lista de colores personalizados que se usan cuando se habilita la característica de color automático.
+Establece una lista de colores personalizados que se utilizan cuando la función de color automático está habilitada.
 
 ```
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
@@ -332,18 +332,18 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ### <a name="parameters"></a>Parámetros
 
 *arColors*<br/>
-[in] Contiene la matriz de colores para establecer.
+[en] Contiene la matriz de colores que se han de establecer.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice este método para personalizar la lista de colores que se usan cuando se habilita la característica de color automático. Esto es una función estática y afecta a todas las fichas en la aplicación.
+Utilice este método para personalizar la lista de colores que se utilizan cuando la característica de color automático está habilitada. Se trata de una función estática y afecta a todos los paneles con pestañas de la aplicación.
 
-Use [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) para habilitar o deshabilitar la característica de color automático.
+Utilice [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) para habilitar o deshabilitar la característica de color automático.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
 [CBaseTabbedPane (clase)](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md)
+[CMFCOutlookBar Clase](../../mfc/reference/cmfcoutlookbar-class.md)

@@ -16,35 +16,35 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: d54470bdf4b2555b01993582a74f65505858f94b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 756fb6f17aa02fda9a19d501395c39a0b1f602f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189239"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366314"
 ---
 # <a name="event-handling-in-com"></a>Control de eventos en COM
 
-En el control de eventos COM, se configura un origen de eventos y un receptor de eventos mediante los atributos [event_source](../windows/attributes/event-source.md) y [event_receiver](../windows/attributes/event-receiver.md) , respectivamente, que especifican `type`=`com`. Estos atributos insertan el código adecuado para las interfaces personalizadas, de envío y duales para permitir que las clases a las que se aplican desencadenen eventos y los controlen a través de puntos de conexión de COM.
+En el control de eventos COM, se configura un origen de eventos `type` = `com`y un receptor de eventos mediante los atributos [event_source](../windows/attributes/event-source.md) y [event_receiver,](../windows/attributes/event-receiver.md) respectivamente, especificando . Estos atributos insertan el código adecuado para las interfaces personalizadas, de envío y duales para permitir que las clases a las que se aplican desencadenen eventos y los controlen a través de puntos de conexión de COM.
 
 ## <a name="declaring-events"></a>Declarar eventos
 
-En una clase de origen de eventos, use la palabra clave [__event](../cpp/event.md) en una declaración de interfaz para declarar los métodos de la interfaz como eventos. Los eventos de esa interfaz se desencadenan cuando se llaman como métodos de interfaz. Los métodos de las interfaces de eventos pueden tener cero o más parámetros (que deben estar todos *en* parámetros). El tipo de valor devuelto puede ser void o cualquier tipo entero.
+En una clase de origen de eventos, utilice la palabra clave [__event](../cpp/event.md) en una declaración de interfaz para declarar los métodos de esa interfaz como eventos. Los eventos de esa interfaz se desencadenan cuando se llaman como métodos de interfaz. Los métodos de las interfaces de eventos pueden tener cero o más parámetros (que deberían estar *todos en* parámetros). El tipo de valor devuelto puede ser void o cualquier tipo entero.
 
 ## <a name="defining-event-handlers"></a>Definir controladores de eventos
 
-En una clase de receptor de eventos, se definen los controladores de eventos, que son métodos con firmas (tipos de valor devuelto, convenciones de llamada y argumentos) que coinciden con el evento que van a controlar. En el caso de los eventos COM, no es necesario que las convenciones de llamada coincidan; vea [los eventos com dependientes del diseño](#vcconeventhandlingincomanchorlayoutdependentcomevents) a continuación para obtener más información.
+En una clase de receptor de eventos, se definen los controladores de eventos, que son métodos con firmas (tipos de valor devuelto, convenciones de llamada y argumentos) que coinciden con el evento que van a controlar. Para los eventos COM, las convenciones de llamada no tienen que coincidir; consulte [Eventos COM dependientes del diseño](#vcconeventhandlingincomanchorlayoutdependentcomevents) a continuación para obtener más información.
 
 ## <a name="hooking-event-handlers-to-events"></a>Enlazar controladores de eventos a eventos
 
-Además, en una clase de receptor de eventos, se usa la función intrínseca [__hook](../cpp/hook.md) para asociar eventos a controladores de eventos y [__unhook](../cpp/unhook.md) para desasociar eventos de los controladores de eventos. Puede enlazar varios eventos a un controlador de eventos o varios controladores de eventos a un evento.
+También en una clase de receptor de eventos, se usa la función intrínseca [__hook](../cpp/hook.md) para asociar eventos con controladores de eventos y [__unhook](../cpp/unhook.md) para disociar eventos de controladores de eventos. Puede enlazar varios eventos a un controlador de eventos o varios controladores de eventos a un evento.
 
 > [!NOTE]
->  Normalmente, hay dos técnicas para permitir que un receptor de eventos COM acceda a las definiciones de interfaz del origen de eventos. La primera, mostrada a continuación, es compartir un archivo de encabezado común. La segunda es usar [#import](../preprocessor/hash-import-directive-cpp.md) con el calificador `embedded_idl` Import, de modo que la biblioteca de tipos de origen de eventos se escriba en el archivo. TLH con el código generado por el atributo conservado.
+> Normalmente, hay dos técnicas para permitir que un receptor de eventos COM acceda a las definiciones de interfaz del origen de eventos. La primera, mostrada a continuación, es compartir un archivo de encabezado común. El segundo consiste [#import](../preprocessor/hash-import-directive-cpp.md) en `embedded_idl` usar #import con el calificador de importación, de modo que la biblioteca de tipos de origen de eventos se escriba en el archivo .tlh con el código generado por atributos conservado.
 
 ## <a name="firing-events"></a>Desencadenar eventos
 
-Para desencadenar un evento, basta con llamar a un método en la interfaz declarada con la palabra clave **__event** en la clase de origen del evento. Si se han enlazado controladores al evento, se llamará a los controladores.
+Para desencadenar un evento, simplemente llame a un método en la interfaz declarada con la palabra clave **__event** en la clase de origen de eventos. Si se han enlazado controladores al evento, se llamará a los controladores.
 
 ### <a name="com-event-code"></a>Código de eventos COM
 
@@ -157,13 +157,13 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.
 ```
 
-##  <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Eventos COM dependientes del diseño
+## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Eventos COM dependientes del diseño
 
 La dependencia de diseño solo es un problema para la programación COM. En el control de eventos nativos y administrados, las firmas (tipo de valor devuelto, convención de llamada y argumentos) de los controladores deben coincidir con sus eventos, pero los nombres de controlador no tienen que coincidir con sus eventos.
 
-Sin embargo, en el control de eventos COM, cuando se establece el parámetro *layout_dependent* de `event_receiver` en **true**, se aplica el nombre y la coincidencia de la firma. Esto significa que los nombres y las firmas de los controladores del receptor de eventos deben coincidir exactamente con los nombres y las firmas de los eventos a los que están enlazados.
+Sin embargo, en el control de `event_receiver` eventos COM, cuando se establece el parámetro *layout_dependent* de **true**, se aplica la coincidencia de nombre y firma. Esto significa que los nombres y las firmas de los controladores del receptor de eventos deben coincidir exactamente con los nombres y las firmas de los eventos a los que están enlazados.
 
-Cuando *layout_dependent* está establecido en **false**, la Convención de llamada y la clase de almacenamiento (virtual, estática, etc.) se pueden combinar y coincidir entre el método de evento de activación y los métodos de enlace (sus delegados). Es ligeramente más eficaz tener *layout_dependent*=**true**.
+Cuando *layout_dependent* se establece en **false**, la convención de llamada y la clase de almacenamiento (virtual, estática, etc.) se pueden mezclar y combinar entre el método de evento de activación y los métodos de enlace (sus delegados). Es un poco más eficiente tener *layout_dependent*=**verdadero.**
 
 Suponga, por ejemplo, que se define `IEventSource` para que tenga los siguientes métodos:
 
@@ -215,4 +215,4 @@ public:
 
 ## <a name="see-also"></a>Consulte también
 
-[Control de eventos](../cpp/event-handling.md)
+[Manejo de eventos](../cpp/event-handling.md)

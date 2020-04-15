@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 03/25/2019
+ms.date: 4/2/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -8,6 +8,10 @@ api_name:
 - _mbstok
 - strtok
 - _wcstok_l
+- _o__mbstok
+- _o__mbstok_l
+- _o_strtok
+- _o_wcstok
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -48,19 +53,19 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d228d9824c534a21e4a22797e4b070e6d8d0b179
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957655"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365193"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
 Busca el siguiente token en una cadena, con la configuración regional actual o con la configuración regional especificada que se pase. Hay disponibles versiones más seguras de estas funciones; vea [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **_mbstok** y **_mbstok_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok** y **_mbstok_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -107,23 +112,25 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero al siguiente token que se encuentra en *strToken*. Las funciones devuelven **null** cuando no se encuentran más tokens. Cada llamada modifica *strToken* sustituyendo un carácter nulo por el primer delimitador que aparece después del token devuelto.
+Devuelve un puntero al siguiente token que se encuentra en *strToken*. Las funciones devuelven **NULL** cuando no se encuentran más tokens. Cada llamada modifica *strToken* sustituyendo un carácter nulo por el primer delimitador que se produce después del token devuelto.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **strtok** busca el siguiente token en *strToken*. El conjunto de caracteres de *strDelimit* especifica los delimitadores posibles del token que se va a encontrar en *strToken* en la llamada actual. **wcstok** y **_mbstok** son versiones de caracteres anchos y multibyte de **strtok**. Los argumentos y el valor devuelto de **wcstok** son cadenas de caracteres anchos; los de **_mbstok** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+La función **strtok** busca el siguiente token en *strToken*. El conjunto de caracteres en *strDelimit* especifica los posibles delimitadores del token que se encuentra en *strToken* en la llamada actual. **wcstok** y **_mbstok** son versiones de caracteres anchos y multibyte de **strtok**. Los argumentos y el valor devuelto de **wcstok** son cadenas de caracteres anchos; las de **_mbstok** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 > [!IMPORTANT]
 > Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-En la primera llamada a **strtok**, la función omite los delimitadores iniciales y devuelve un puntero al primer token en *strToken*, terminando el token con un carácter nulo. Una serie de llamadas a **strtok**puede desglosar más tokens del resto de *strToken* . Cada llamada a **strtok** modifica *strToken* insertando un carácter nulo después del **token** devuelto por la llamada. Para leer el siguiente token de *strToken*, llame a **strtok** con un valor **null** para el argumento *strToken* . El argumento *StrToken* **nulo** hace que **strtok** busque el siguiente token en la *strToken*modificada. El argumento *strDelimit* puede tomar cualquier valor de una llamada a la siguiente, por lo que el conjunto de delimitadores puede variar.
+En la primera llamada a **strtok**, la función omite los delimitadores iniciales y devuelve un puntero al primer token de *strToken*, terminando el token con un carácter nulo. Se pueden desglosar más tokens del resto de *strToken* mediante una serie de llamadas a **strtok**. Cada llamada a **strtok** modifica *strToken* insertando un carácter nulo después del **token** devuelto por esa llamada. Para leer el siguiente token de *strToken*, llame a **strtok** con un valor **NULL** para el argumento *strToken.* El argumento **NULL** *strToken* hace que **strtok** busque el siguiente token en el *strToken*modificado. El *argumento strDelimit* puede tomar cualquier valor de una llamada a la siguiente para que el conjunto de delimitadores pueda variar.
 
-El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md).
+El valor de salida se ve afectado por la configuración de la configuración de **categoría de LC_CTYPE** de la configuración regional. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md).
 
-Las versiones de estas funciones sin el sufijo **_L** usan la configuración regional actual para este comportamiento dependiente de la configuración regional. Las versiones con el sufijo **_L** son idénticas, salvo que usan en su lugar el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones sin el **sufijo _l** utilizan la configuración regional actual para este comportamiento dependiente de la configuración regional. Las versiones con el sufijo **_l** son idénticas, excepto que utilizan el parámetro de configuración regional pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Cada función usa una variable estática local de subproceso para dividir la cadena en tokens. Por consiguiente, varios subprocesos pueden llamar simultáneamente a estas funciones sin que se produzcan efectos no deseados. Sin embargo, dentro de un único subproceso, la intercalación de llamadas a una de estas funciones generará probablemente daños en los datos y resultados poco precisos. Al analizar diferentes cadenas, termine de analizar una cadena antes de empezar a analizar la siguiente. Además, tenga en cuenta el riesgo que puede existir al llamar a una de estas funciones dentro de un bucle donde se llama a otra función. Si la otra función usa una de estas funciones, se producirá una secuencia intercalada de llamadas y se generarán daños en los datos.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -140,7 +147,7 @@ Las versiones de estas funciones sin el sufijo **_L** usan la configuración reg
 |**wcstok**|\<string.h> o \<wchar.h>|
 |**_mbstok**, **_mbstok_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -188,9 +195,9 @@ more
 tokens
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Configuración regional](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

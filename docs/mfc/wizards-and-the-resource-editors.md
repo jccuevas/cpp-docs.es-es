@@ -12,44 +12,44 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: fb1a523ca82cd8e1a4256da657efe9702517beda
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 04d9f2cf615636b151af93a3c3880f7357496048
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907351"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365275"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Asistentes y editores de recursos
 
-Visual C++ incluye varios asistentes que se usan en la programación de MFC, junto con muchos editores de recursos integrados. En la programación de controles ActiveX, el Asistente para controles [ActiveX](../mfc/reference/mfc-activex-control-wizard.md) sirve de forma similar a la del Asistente para aplicaciones MFC. Aunque puede escribir aplicaciones MFC sin la mayoría de estas herramientas, las herramientas simplifican y agilizan enormemente el trabajo.
+Visual C++ incluye varios asistentes para su uso en la programación MFC, junto con muchos editores de recursos integrados. Para la programación de controles ActiveX, el [Asistente para controles ActiveX](../mfc/reference/mfc-activex-control-wizard.md) tiene un propósito muy similar al del Asistente para aplicaciones MFC. Aunque puede escribir aplicaciones MFC sin la mayoría de estas herramientas, las herramientas simplifican y aceleran enormemente su trabajo.
 
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a>Usar el Asistente para aplicaciones MFC para crear una aplicación MFC
+## <a name="use-the-mfc-application-wizard-to-create-an-mfc-application"></a><a name="_core_use_appwizard_to_create_an_mfc_application"></a>Utilice el Asistente para aplicaciones MFC para crear una aplicación MFC
 
-Use el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md) para crear un proyecto MFC en C++visual, que puede incluir compatibilidad con bases de datos y OLE. Los archivos del proyecto contienen las clases de aplicación, documento, vista y ventana de marco. recursos estándar, incluidos los menús y una barra de herramientas opcional; Otros archivos necesarios de Windows; y archivos. rtf opcionales que contienen temas de ayuda de Windows estándar que puede revisar y aumentar para crear el archivo de ayuda del programa.
+Use el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md) para crear un proyecto MFC en Visual C++, que puede incluir OLE y compatibilidad con bases de datos. Los archivos del proyecto contienen las clases de aplicación, documento, vista y ventana de marco; recursos estándar, incluidos los menús y una barra de herramientas opcional; otros archivos de Windows necesarios; y archivos .rtf opcionales que contienen temas estándar de la Ayuda de Windows que puede revisar y aumentar para crear el archivo de ayuda del programa.
 
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a>Usar Vista de clases para administrar clases y mensajes de Windows
+## <a name="use-class-view-to-manage-classes-and-windows-messages"></a><a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a>Usar la vista de clases para administrar clases y mensajes de Windows
 
-Vista de clases ayuda a crear funciones de controlador para mensajes y comandos de Windows, crear y administrar clases, crear variables de miembro de clase, crear métodos y propiedades de automatización, crear clases de base de datos, etc.
+Vista de clases le ayuda a crear funciones de controlador para mensajes y comandos de Windows, crear y administrar clases, crear variables miembro de clase, crear métodos y propiedades de automatización, crear clases de base de datos y mucho más.
 
 > [!NOTE]
->  Vista de clases también ayuda a invalidar funciones virtuales en las clases MFC. Seleccione la clase y la función virtual que se va a invalidar. El resto del proceso es similar al control de mensajes, tal y como se describe en los párrafos siguientes.
+> La vista de clases también le ayuda a invalidar las funciones virtuales en las clases MFC. Seleccione la clase y la función virtual que desea invalidar. El resto del proceso es similar al control de mensajes, como se describe en los párrafos siguientes.
 
-Las aplicaciones que se ejecutan en Windows están [controladas por mensajes](../mfc/message-handling-and-mapping.md). Las acciones del usuario y otros eventos que se producen en el programa en ejecución hacen que Windows envíe mensajes a las ventanas del programa. Por ejemplo, si el usuario hace clic con el mouse en una ventana, Windows envía un mensaje de WM_LBUTTONDOWN cuando se presiona el botón primario del mouse y un mensaje de WM_LBUTTONUP cuando se suelta el botón. Windows también envía mensajes WM_COMMAND cuando el usuario selecciona comandos en la barra de menús.
+Las aplicaciones que se ejecutan en Windows están [controladas por mensajes.](../mfc/message-handling-and-mapping.md) Las acciones del usuario y otros eventos que se producen en el programa en ejecución hacen que Windows envíe mensajes a las ventanas del programa. Por ejemplo, si el usuario hace clic en el mouse en una ventana, Windows envía un mensaje de WM_LBUTTONDOWN cuando se presiona el botón izquierdo del mouse y un WM_LBUTTONUP mensaje cuando se suelta el botón. Windows también envía mensajes WM_COMMAND cuando el usuario selecciona comandos de la barra de menús.
 
-En el marco de trabajo de MFC, varios objetos, como documentos, vistas, ventanas de marco, plantillas de documento y el objeto de aplicación, pueden "controlar" los mensajes. Este tipo de objeto proporciona una "función controladora" como una de sus funciones miembro y el marco de trabajo asigna el mensaje entrante a su controlador.
+En el marco de trabajo MFC, varios objetos, como documentos, vistas, ventanas de marco, plantillas de documento y el objeto de aplicación, pueden "controlar" mensajes. Este tipo de objeto proporciona una "función de controlador" como una de sus funciones miembro y el marco de trabajo asigna el mensaje entrante a su controlador.
 
-Una gran parte de la tarea de programación es elegir qué mensajes se deben asignar a qué objetos y, a continuación, implementar esa asignación. Para ello, use Vista de clases y el [Asistente para clases](reference/mfc-class-wizard.md).
+Una gran parte de la tarea de programación es elegir qué mensajes asignar a qué objetos y, a continuación, implementar esa asignación. Para ello, utilice la vista de clases y el [Asistente para clases](reference/mfc-class-wizard.md).
 
-El [Asistente para clases](reference/mfc-class-wizard.md) creará funciones de miembro de controlador de mensajes vacías y utilizará el editor de código fuente para implementar el cuerpo del controlador. También puede crear o editar clases (incluidas clases propias, no derivadas de clases MFC) y sus miembros con Vista de clases. Para obtener más información sobre el uso de Vista de clases y sobre los asistentes que agregan código a un proyecto, vea [Agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md).
+El [Asistente para clases](reference/mfc-class-wizard.md) creará funciones miembro de controlador de mensajes vacías y usará el editor de código fuente para implementar el cuerpo del controlador. También puede crear o editar clases (incluidas las clases propias, no derivadas de clases MFC) y sus miembros con la vista de clases. Para obtener más información sobre el uso de la vista de clases y sobre los asistentes que agregan código a un proyecto, vea [Agregar funcionalidad con asistentes](../ide/adding-functionality-with-code-wizards-cpp.md)de código .
 
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a>Usar los editores de recursos para crear y editar recursos
+## <a name="use-the-resource-editors-to-create-and-edit-resources"></a><a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a>Utilice los editores de recursos para crear y editar recursos
 
-Use los C++ [editores de recursos](../windows/resource-editors.md) visuales para crear y editar menús, cuadros de diálogo, controles personalizados, teclas de aceleración, mapas de bits, iconos, cursores, cadenas y recursos de versión. A partir de C++ la versión 4,0 de Visual, un editor de barras de herramientas facilita enormemente la creación de barras de herramientas.
+Utilice los editores de recursos de Visual C++ para crear y editar [menús,](../windows/resource-editors.md) cuadros de diálogo, controles personalizados, teclas de aceleración, mapas de bits, iconos, cursores, cadenas y recursos de versión. A partir de Visual C++ versión 4.0, un editor de barras de herramientas facilita mucho la creación de barras de herramientas.
 
-Para que le resulte más fácil, el biblioteca MFC proporciona un archivo llamado COMMON. RES, que contiene los recursos de "imagen prediseñada" que puede copiar de común. RES y péguelo en su propio archivo de recursos. Normal. RES incluye botones de barra de herramientas, cursores comunes, iconos, etc. Puede usar, modificar y redistribuir estos recursos en la aplicación. Para obtener más información acerca de COMMON. RES, vea el [ejemplo de clipart](../overview/visual-cpp-samples.md).
+Para ayudarle aún más, la biblioteca Microsoft Foundation Class proporciona un archivo denominado COMMON. RES, que contiene recursos de "clip art" que puede copiar de COMMON. RES y pegar en su propio archivo de recursos. Común. RES incluye botones de barra de herramientas, cursores comunes, iconos y mucho más. Puede usar, modificar y redistribuir estos recursos en la aplicación. Para obtener más información acerca de COMMON. RES, consulte el [ejemplo de imágenes prediseñadas](../overview/visual-cpp-samples.md).
 
-El Asistente para aplicaciones MFC, los C++ asistentes visuales, los editores de recursos y el marco de trabajo de MFC hacen mucho trabajo por usted y facilitan la administración del código. La mayor parte del código específico de la aplicación se encuentra en las clases de documento y vista.
+El Asistente para aplicaciones MFC, los asistentes de Visual C++, los editores de recursos y el marco de trabajo MFC realizan mucho trabajo y facilitan mucho la administración del código. La mayor parte del código específico de la aplicación se encuentra en las clases de documento y vista.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

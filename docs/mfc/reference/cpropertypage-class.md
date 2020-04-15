@@ -1,5 +1,5 @@
 ---
-title: CPropertyPage (clase)
+title: Clase CPropertyPage
 ms.date: 11/04/2016
 f1_keywords:
 - CPropertyPage
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426442"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363998"
 ---
-# <a name="cpropertypage-class"></a>CPropertyPage (clase)
+# <a name="cpropertypage-class"></a>Clase CPropertyPage
 
 Representa páginas individuales de una hoja de propiedades, también conocidas como cuadro de diálogo de pestaña.
 
@@ -57,47 +57,47 @@ Representa páginas individuales de una hoja de propiedades, también conocidas 
 class CPropertyPage : public CDialog
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CPropertyPage:: CPropertyPage](#cpropertypage)|Construye un objeto `CPropertyPage`.|
+|[CPropertyPage::CPropertyPage](#cpropertypage)|Construye un objeto `CPropertyPage`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CPropertyPage:: CancelToClose](#canceltoclose)|Cambia el botón Aceptar para leer Close y deshabilita el botón Cancelar, después de un cambio irrecuperable en la página de una hoja de propiedades modal.|
-|[CPropertyPage:: Construct](#construct)|Construye un objeto `CPropertyPage`. Use `Construct` si desea especificar los parámetros en tiempo de ejecución, o si está utilizando matrices.|
-|[CPropertyPage:: GetPSP](#getpsp)|Recupera la estructura [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) de Windows asociada al objeto `CPropertyPage`.|
-|[CPropertyPage:: alapply](#onapply)|Lo llama el marco de trabajo cuando se hace clic en el botón aplicar ahora.|
-|[CPropertyPage:: OnCancel](#oncancel)|Lo llama el marco de trabajo cuando se hace clic en el botón Cancelar.|
-|[CPropertyPage:: OnKillActive](#onkillactive)|Lo llama el marco de trabajo cuando la página actual ya no es la página activa. Realice la validación de datos aquí.|
-|[CPropertyPage:: OnOK](#onok)|Lo llama el marco de trabajo cuando se hace clic en el botón Aceptar, aplicar ahora o cerrar.|
-|[CPropertyPage:: OnQueryCancel](#onquerycancel)|Lo llama el marco de trabajo cuando se hace clic en el botón Cancelar y antes de que se realice la cancelación.|
-|[CPropertyPage:: onreset](#onreset)|Lo llama el marco de trabajo cuando se hace clic en el botón Cancelar.|
-|[CPropertyPage:: OnSetActive](#onsetactive)|Lo llama el marco de trabajo cuando la página se convierte en la página activa.|
-|[CPropertyPage:: OnWizardBack](#onwizardback)|Lo llama el marco de trabajo cuando se hace clic en el botón atrás mientras se usa una hoja de propiedades de tipo asistente.|
-|[CPropertyPage:: OnWizardFinish](#onwizardfinish)|Lo llama el marco de trabajo cuando se hace clic en el botón Finalizar mientras se usa una hoja de propiedades de tipo asistente.|
-|[CPropertyPage:: OnWizardNext](#onwizardnext)|Lo llama el marco de trabajo cuando se hace clic en el botón siguiente mientras se usa una hoja de propiedades de tipo asistente.|
-|[CPropertyPage:: QuerySiblings](#querysiblings)|Reenvía el mensaje a cada página de la hoja de propiedades.|
-|[CPropertyPage:: SetModified](#setmodified)|Llame a para activar o desactivar el botón aplicar ahora.|
+|[CPropertyPage::CancelToClose](#canceltoclose)|Cambia el botón Aceptar para leer Cerrar y deshabilita el botón Cancelar, después de un cambio irrecuperable en la página de una hoja de propiedades modal.|
+|[CPropertyPage::Construct](#construct)|Construye un objeto `CPropertyPage`. Utilícelo `Construct` si desea especificar los parámetros en tiempo de ejecución o si está utilizando matrices.|
+|[CPropertyPage::GetPSP](#getpsp)|Recupera la estructura [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) de `CPropertyPage` Windows asociada al objeto.|
+|[CPropertyPage::OnApply](#onapply)|Llamado por el marco de trabajo cuando se hace clic en el botón Aplicar ahora.|
+|[CPropertyPage::OnCancel](#oncancel)|Llamado por el marco de trabajo cuando se hace clic en el botón Cancelar.|
+|[CPropertyPage::OnKillActive](#onkillactive)|Llamado por el marco de trabajo cuando la página actual ya no es la página activa. Realice la validación de datos aquí.|
+|[CPropertyPage::OnOK](#onok)|Llamado por el marco de trabajo cuando se hace clic en el botón Aceptar, Aplicar ahora o Cerrar.|
+|[CPropertyPage::OnQueryCancel](#onquerycancel)|Llamado por el marco de trabajo cuando se hace clic en el botón Cancelar y antes de que se haya realizado la cancelación.|
+|[CPropertyPage::OnReset](#onreset)|Llamado por el marco de trabajo cuando se hace clic en el botón Cancelar.|
+|[CPropertyPage::OnSetActive](#onsetactive)|Llamado por el marco de trabajo cuando la página se hace la página activa.|
+|[CPropertyPage::OnWizardBack](#onwizardback)|Llamado por el marco de trabajo cuando se hace clic en el botón Atrás mientras se usa una hoja de propiedades de tipo asistente.|
+|[CPropertyPage::OnWizardFinish](#onwizardfinish)|Llamado por el marco de trabajo cuando se hace clic en el botón Finalizar mientras se usa una hoja de propiedades de tipo asistente.|
+|[CPropertyPage::OnWizardNext](#onwizardnext)|Llamado por el marco de trabajo cuando se hace clic en el botón Siguiente mientras se usa una hoja de propiedades de tipo asistente.|
+|[CPropertyPage::QuerySiblings](#querysiblings)|Reenvía el mensaje a cada página de la hoja de propiedades.|
+|[CPropertyPage::SetModified](#setmodified)|Llame para activar o desactivar el botón Aplicar ahora.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CPropertyPage:: m_psp](#m_psp)|Estructura [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) de Windows. Proporciona acceso a los parámetros de la página de propiedades básica.|
+|[CPropertyPage::m_psp](#m_psp)|La estructura [PROPSHEETPAGE de](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) Windows. Proporciona acceso a los parámetros básicos de la página de propiedades.|
 
 ## <a name="remarks"></a>Observaciones
 
-Al igual que con los cuadros de diálogo estándar, se deriva una clase de `CPropertyPage` para cada página de la hoja de propiedades. Para usar objetos derivados de `CPropertyPage`, cree primero un objeto [CPropertySheet](../../mfc/reference/cpropertysheet-class.md) y, a continuación, cree un objeto para cada página que se incluye en la hoja de propiedades. Llame a [CPropertySheet:: AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) para cada página de la hoja y, a continuación, muestre la hoja de propiedades mediante una llamada a [CPropertySheet::D omodal](../../mfc/reference/cpropertysheet-class.md#domodal) para una hoja de propiedades modal, o a [CPropertySheet:: Create](../../mfc/reference/cpropertysheet-class.md#create) para una hoja de propiedades no modal.
+Al igual que con los cuadros de diálogo estándar, deriva una clase de `CPropertyPage` cada página de la hoja de propiedades. Para `CPropertyPage`usar objetos derivados, primero cree un [CPropertySheet](../../mfc/reference/cpropertysheet-class.md) objeto y, a continuación, cree un objeto para cada página que va en la hoja de propiedades. Llame a [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) para cada página de la hoja y, a continuación, muestre la hoja de propiedades mediante una llamada a [CPropertySheet::DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) para una hoja de propiedades modal o [CPropertySheet::Create](../../mfc/reference/cpropertysheet-class.md#create) para una hoja de propiedades no modal.
 
-Puede crear un tipo de cuadro de diálogo de pestaña denominado asistente, que consta de una hoja de propiedades con una secuencia de páginas de propiedades que guía al usuario a través de los pasos de una operación, como la configuración de un dispositivo o la creación de un boletín. En un cuadro de diálogo de ficha tipo de asistente, las páginas de propiedades no tienen pestañas y solo se puede ver una página de propiedades a la vez. Además, en lugar de tener botones aceptar y aplicar ahora, un cuadro de diálogo de la pestaña tipo asistente tiene un botón atrás, un botón siguiente o finalizar y un botón Cancelar.
+Puede crear un tipo de cuadro de diálogo de ficha denominado asistente, que consta de una hoja de propiedades con una secuencia de páginas de propiedades que guían al usuario a través de los pasos de una operación, como la configuración de un dispositivo o la creación de un boletín informativo. En un cuadro de diálogo de ficha de tipo asistente, las páginas de propiedades no tienen pestañas y solo una página de propiedades está visible a la vez. Además, en lugar de tener los botones Aceptar y Aplicar ahora, un cuadro de diálogo de ficha de tipo asistente tiene un botón Atrás, un botón Siguiente o Finalizar y un botón Cancelar.
 
-Para obtener más información sobre cómo establecer una hoja de propiedades como un asistente, vea [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode). Para obtener más información sobre el uso de objetos de `CPropertyPage`, vea el artículo hojas de propiedades [y páginas de propiedades](../../mfc/property-sheets-and-property-pages-in-mfc.md).
+Para obtener más información sobre cómo establecer una hoja de propiedades como asistente, vea [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode). Para obtener más `CPropertyPage` información sobre el uso de objetos, vea el artículo Hojas de propiedades [y páginas](../../mfc/property-sheets-and-property-pages-in-mfc.md)de propiedades .
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -113,9 +113,9 @@ Para obtener más información sobre cómo establecer una hoja de propiedades co
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxdlgs. h
+**Encabezado:** afxdlgs.h
 
-##  <a name="canceltoclose"></a>CPropertyPage:: CancelToClose
+## <a name="cpropertypagecanceltoclose"></a><a name="canceltoclose"></a>CPropertyPage::CancelToClose
 
 Llame a esta función después de que se haya realizado un cambio irrecuperable en los datos de una página de una hoja de propiedades modal.
 
@@ -125,17 +125,17 @@ void CancelToClose();
 
 ### <a name="remarks"></a>Observaciones
 
-Esta función cambiará el botón Aceptar para cerrar y deshabilitar el botón Cancelar. Este cambio avisa al usuario de que un cambio es permanente y las modificaciones no se pueden cancelar.
+Esta función cambiará el botón Aceptar a Cerrar y desactivará el botón Cancelar. Este cambio alerta al usuario de que un cambio es permanente y que las modificaciones no se pueden cancelar.
 
-La función miembro `CancelToClose` no hace nada en una hoja de propiedades no modal, porque una hoja de propiedades no modal no tiene un botón Cancelar de forma predeterminada.
+La `CancelToClose` función miembro no hace nada en una hoja de propiedades no esquemética, porque una hoja de propiedades no es mide no tiene un botón Cancelar de forma predeterminada.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CPropertyPage:: QuerySiblings](#querysiblings).
+  Vea el ejemplo de [CPropertyPage::QuerySiblings](#querysiblings).
 
-##  <a name="construct"></a>CPropertyPage:: Construct
+## <a name="cpropertypageconstruct"></a><a name="construct"></a>CPropertyPage::Construct
 
-Llame a esta función miembro para construir un objeto de `CPropertyPage`.
+Llame a esta función miembro para construir un `CPropertyPage` objeto.
 
 ```
 void Construct(
@@ -162,39 +162,39 @@ void Construct(
 ### <a name="parameters"></a>Parámetros
 
 *nIDTemplate*<br/>
-IDENTIFICADOR de la plantilla utilizada para esta página.
+ID de la plantilla utilizada para esta página.
 
 *nIDCaption*<br/>
-IDENTIFICADOR del nombre que se va a colocar en la pestaña de esta página. Si es 0, el nombre se tomará de la plantilla de cuadro de diálogo de esta página.
+ID del nombre que se colocará en la pestaña de esta página. Si es 0, el nombre se tomará de la plantilla de cuadro de diálogo de esta página.
 
 *lpszTemplateName*<br/>
 Contiene una cadena terminada en null que es el nombre de un recurso de plantilla.
 
 *nIDHeaderTitle*<br/>
-IDENTIFICADOR del nombre que se va a colocar en la ubicación del título del encabezado de la página de propiedades. De forma predeterminada, es 0.
+ID del nombre que se colocará en la ubicación del título del encabezado de la página de propiedades. De forma predeterminada, 0.
 
 *nIDHeaderSubTitle*<br/>
-IDENTIFICADOR del nombre que se va a colocar en la ubicación del subtítulo del encabezado de la página de propiedades. De forma predeterminada, es 0.
+ID del nombre que se colocará en la ubicación de los subtítulos del encabezado de la página de propiedades. De forma predeterminada, 0.
 
 ### <a name="remarks"></a>Observaciones
 
-El objeto se muestra cuando se cumplen todas las condiciones siguientes:
+El objeto se muestra después de cumplir todas las condiciones siguientes:
 
-- La página se ha agregado a una hoja de propiedades mediante [CPropertySheet:: AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).
+- La página se ha agregado a una hoja de propiedades mediante [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).
 
 - Se ha llamado a la función [DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) o [Create](../../mfc/reference/cpropertysheet-class.md#create) de la hoja de propiedades.
 
-- El usuario ha seleccionado (con pestañas) esta página.
+- El usuario ha seleccionado (con pestañas para) esta página.
 
-Llame a `Construct` si no se ha llamado a uno de los otros constructores de clase. La función miembro `Construct` es flexible porque puede dejar la instrucción Parameter en blanco y, a continuación, especificar varios parámetros y construcción en cualquier punto del código.
+Llame `Construct` si no se ha llamado a uno de los otros constructores de clase. La `Construct` función miembro es flexible porque puede dejar la instrucción de parámetro en blanco y, a continuación, especificar varios parámetros y construcción en cualquier punto del código.
 
-Debe utilizar `Construct` al trabajar con matrices y debe llamar a `Construct` por cada miembro de la matriz para que los miembros de datos tengan asignados los valores correctos.
+Debe usar `Construct` cuando trabaje con matrices y `Construct` debe llamar a cada miembro de la matriz para que a los miembros de datos se les asignen los valores adecuados.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]
 
-##  <a name="cpropertypage"></a>CPropertyPage:: CPropertyPage
+## <a name="cpropertypagecpropertypage"></a><a name="cpropertypage"></a>CPropertyPage::CPropertyPage
 
 Construye un objeto `CPropertyPage`.
 
@@ -229,39 +229,39 @@ CPropertyPage(
 ### <a name="parameters"></a>Parámetros
 
 *nIDTemplate*<br/>
-IDENTIFICADOR de la plantilla utilizada para esta página.
+ID de la plantilla utilizada para esta página.
 
 *nIDCaption*<br/>
-IDENTIFICADOR del nombre que se va a colocar en la pestaña de esta página. Si es 0, el nombre se tomará de la plantilla de cuadro de diálogo de esta página.
+ID del nombre que se colocará en la pestaña de esta página. Si es 0, el nombre se tomará de la plantilla de cuadro de diálogo de esta página.
 
 *dwSize*<br/>
 *lpszTemplateName* Apunta a una cadena que contiene el nombre de la plantilla para esta página. No puede ser NULL.
 
 *nIDHeaderTitle*<br/>
-IDENTIFICADOR del nombre que se va a colocar en la ubicación del título del encabezado de la página de propiedades.
+ID del nombre que se colocará en la ubicación del título del encabezado de la página de propiedades.
 
 *nIDHeaderSubTitle*<br/>
-IDENTIFICADOR del nombre que se va a colocar en la ubicación del subtítulo del encabezado de la página de propiedades.
+ID del nombre que se colocará en la ubicación de los subtítulos del encabezado de la página de propiedades.
 
 ### <a name="remarks"></a>Observaciones
 
-El objeto se muestra cuando se cumplen todas las condiciones siguientes:
+El objeto se muestra después de cumplir todas las condiciones siguientes:
 
-- La página se ha agregado a una hoja de propiedades mediante [CPropertySheet:: AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).
+- La página se ha agregado a una hoja de propiedades mediante [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).
 
 - Se ha llamado a la función [DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) o [Create](../../mfc/reference/cpropertysheet-class.md#create) de la hoja de propiedades.
 
-- El usuario ha seleccionado (con pestañas) esta página.
+- El usuario ha seleccionado (con pestañas para) esta página.
 
-Si tiene varios parámetros (por ejemplo, si usa una matriz), use [CPropertySheet:: Construct](../../mfc/reference/cpropertysheet-class.md#construct) en lugar de `CPropertyPage`.
+Si tiene varios parámetros (por ejemplo, si utiliza una matriz), utilice `CPropertyPage` [CPropertySheet::Construct](../../mfc/reference/cpropertysheet-class.md#construct) en lugar de .
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]
 
-##  <a name="getpsp"></a>CPropertyPage:: GetPSP
+## <a name="cpropertypagegetpsp"></a><a name="getpsp"></a>CPropertyPage::GetPSP
 
-Recupera la estructura [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) de Windows asociada al objeto `CPropertyPage`.
+Recupera la estructura [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) de `CPropertyPage` Windows asociada al objeto.
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -271,11 +271,11 @@ PROPSHEETPAGE& GetPSP();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Referencia a la estructura de `PROPSHEETPAGE`.
+Una referencia `PROPSHEETPAGE` a la estructura.
 
-##  <a name="m_psp"></a>CPropertyPage:: m_psp
+## <a name="cpropertypagem_psp"></a><a name="m_psp"></a>CPropertyPage::m_psp
 
-`m_psp` es una estructura cuyos miembros almacenan las características de [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2).
+`m_psp`es una estructura cuyos miembros almacenan las características de [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2).
 
 ```
 PROPSHEETPAGE m_psp;
@@ -283,17 +283,17 @@ PROPSHEETPAGE m_psp;
 
 ### <a name="remarks"></a>Observaciones
 
-Use esta estructura para inicializar la apariencia de una página de propiedades después de construirla.
+Utilice esta estructura para inicializar la apariencia de una página de propiedades después de construirla.
 
-Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea `PROPSHEETPAGE` en el Windows SDK.
+Para obtener más información sobre esta estructura, `PROPSHEETPAGE` incluida una lista de sus miembros, consulte el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]
 
-##  <a name="onapply"></a>CPropertyPage:: alapply
+## <a name="cpropertypageonapply"></a><a name="onapply"></a>CPropertyPage::OnApply
 
-El marco de trabajo llama a esta función miembro cuando el usuario elige el botón Aceptar o aplicar ahora.
+El marco de trabajo llama a esta función miembro cuando el usuario elige el aceptar o el aplicar ahora botón.
 
 ```
 virtual BOOL OnApply();
@@ -301,23 +301,23 @@ virtual BOOL OnApply();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si se aceptan los cambios; de lo contrario, es 0.
+Distinto de cero si se aceptan los cambios; de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando el marco de trabajo llama a esta función, se aceptan los cambios realizados en todas las páginas de propiedades de la hoja de propiedades, la hoja de propiedades conserva el foco y `OnApply` devuelve TRUE (el valor 1). Antes de que el marco de trabajo pueda llamar a `OnApply`, debe haber llamado a [SetModified](#setmodified) y establecer su parámetro en true. Se activará el botón aplicar ahora en cuanto el usuario realice un cambio en la página de propiedades.
+Cuando el marco de trabajo llama a esta función, se aceptan los cambios `OnApply` realizados en todas las páginas de propiedades de la hoja de propiedades, la hoja de propiedades conserva el foco y devuelve TRUE (el valor 1). Antes `OnApply` de que el marco de trabajo pueda llamar a ella, debe haber llamado a [SetModified](#setmodified) y establecer su parámetro en TRUE. Esto activará el botón Aplicar ahora tan pronto como el usuario realice un cambio en la página de propiedades.
 
-Invalide esta función miembro para especificar la acción que realizará el programa cuando el usuario haga clic en el botón aplicar ahora. Al reemplazar, la función debe devolver TRUE para aceptar los cambios y FALSE para evitar que los cambios surtan efecto.
+Invalide esta función miembro para especificar qué acción realiza el programa cuando el usuario hace clic en el botón Aplicar ahora. Al reemplazar, la función debe devolver TRUE para aceptar cambios y FALSE para evitar que los cambios surtan efecto.
 
-La implementación predeterminada de `OnApply` llama a `OnOK`.
+La implementación `OnApply` `OnOK`predeterminada de llamadas .
 
-Para obtener más información acerca de los mensajes de notificación enviados cuando el usuario presiona el botón aplicar ahora o aceptar en una hoja de propiedades, consulte [PSN_APPLY](/windows/win32/Controls/psn-apply) en el Windows SDK.
+Para obtener más información acerca de los mensajes de notificación enviados cuando el usuario presiona el botón Aplicar ahora o Aceptar en una hoja de propiedades, consulte [PSN_APPLY](/windows/win32/Controls/psn-apply) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CPropertyPage:: onok](#onok).
+  Vea el ejemplo de [CPropertyPage::OnOK](#onok).
 
-##  <a name="oncancel"></a>CPropertyPage:: OnCancel
+## <a name="cpropertypageoncancel"></a><a name="oncancel"></a>CPropertyPage::OnCancel
 
 El marco de trabajo llama a esta función miembro cuando se selecciona el botón Cancelar.
 
@@ -327,13 +327,13 @@ virtual void OnCancel();
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide esta función miembro para realizar acciones de botón Cancelar. El valor predeterminado niega los cambios realizados.
+Invalidar esta función miembro para realizar acciones de botón Cancelar. El valor predeterminado anula los cambios que se han realizado.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]
 
-##  <a name="onkillactive"></a>CPropertyPage:: OnKillActive
+## <a name="cpropertypageonkillactive"></a><a name="onkillactive"></a>CPropertyPage::OnKillActive
 
 El marco de trabajo llama a esta función miembro cuando la página ya no es la página activa.
 
@@ -343,23 +343,23 @@ virtual BOOL OnKillActive();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es distinto de cero si los datos se actualizaron correctamente; de lo contrario, es 0.
+Distinto de cero si los datos se actualizaron correctamente, de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide esta función miembro para realizar tareas de validación de datos especiales.
+Invalide esta función miembro para realizar tareas especiales de validación de datos.
 
-La implementación predeterminada de esta función miembro copia la configuración de los controles de la página de propiedades en las variables miembro de la página de propiedades. Si los datos no se actualizaron correctamente debido a un error de validación de datos de diálogo (DDV), la página conserva el foco.
+La implementación predeterminada de esta función miembro copia la configuración de los controles de la página de propiedades a las variables miembro de la página de propiedades. Si los datos no se actualizaron correctamente debido a un error de validación de datos de cuadro de diálogo (DDV), la página conserva el foco.
 
-Después de que esta función miembro se devuelva correctamente, el marco de trabajo llamará a la función [onok](#onok) de la página.
+Después de que esta función miembro devuelve correctamente, el marco de trabajo llamará a la función [OnOK](#onok) de la página.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]
 
-##  <a name="onok"></a>CPropertyPage:: OnOK
+## <a name="cpropertypageonok"></a><a name="onok"></a>CPropertyPage::OnOK
 
-El marco de trabajo llama a esta función miembro cuando el usuario elige el botón Aceptar o aplicar ahora, inmediatamente después de que el marco de trabajo llame a [OnKillActive](#onkillactive).
+El marco de trabajo llama a esta función miembro cuando el usuario elige el botón Aceptar o Aplicar ahora, inmediatamente después de que el marco de trabajo llame a [OnKillActive](#onkillactive).
 
 ```
 virtual void OnOK();
@@ -367,19 +367,19 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando el usuario elige el botón Aceptar o aplicar ahora, el marco de trabajo recibe la notificación de [PSN_APPLY](/windows/win32/Controls/psn-apply) de la página de propiedades. La llamada a `OnOK` no se realizará si se llama a [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) porque la página de propiedades no envía la notificación en ese caso.
+Cuando el usuario elige el Aceptar o el botón Aplicar ahora, el marco de trabajo recibe la [notificación PSN_APPLY](/windows/win32/Controls/psn-apply) de la página de propiedades. La llamada `OnOK` a no se realizará si se llama a [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) porque la página de propiedades no envía la notificación en ese caso.
 
-Invalide esta función miembro para implementar un comportamiento adicional específico de la página activa actualmente cuando el usuario descarta toda la hoja de propiedades.
+Invalidar esta función miembro para implementar un comportamiento adicional específico de la página activa actualmente cuando el usuario descarta toda la hoja de propiedades.
 
-La implementación predeterminada de esta función miembro marca la página como "Clean" para reflejar que los datos se han actualizado en la función `OnKillActive`.
+La implementación predeterminada de esta función miembro marca la página como `OnKillActive` "limpia" para reflejar que los datos se actualizaron en la función.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#116](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]
 
-##  <a name="onquerycancel"></a>CPropertyPage:: OnQueryCancel
+## <a name="cpropertypageonquerycancel"></a><a name="onquerycancel"></a>CPropertyPage::OnQueryCancel
 
-El marco de trabajo llama a esta función miembro cuando el usuario hace clic en el botón Cancelar y antes de que se realice la acción de cancelación.
+El marco de trabajo llama a esta función miembro cuando el usuario hace clic en el botón Cancelar y antes de que se haya realizado la acción de cancelación.
 
 ```
 virtual BOOL OnQueryCancel();
@@ -393,13 +393,13 @@ Devuelve FALSE para evitar la operación de cancelación o TRUE para permitirlo.
 
 Invalide esta función miembro para especificar una acción que el programa realiza cuando el usuario hace clic en el botón Cancelar.
 
-La implementación predeterminada de `OnQueryCancel` devuelve TRUE.
+La implementación `OnQueryCancel` predeterminada de devuelve TRUE.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]
 
-##  <a name="onreset"></a>CPropertyPage:: onreset
+## <a name="cpropertypageonreset"></a><a name="onreset"></a>CPropertyPage::OnReset
 
 El marco de trabajo llama a esta función miembro cuando el usuario elige el botón Cancelar.
 
@@ -409,17 +409,17 @@ virtual void OnReset();
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando el marco de trabajo llama a esta función, se descartan los cambios realizados en todas las páginas de propiedades realizadas por el usuario antes de elegir el botón aplicar ahora y la hoja de propiedades conserva el foco.
+Cuando el marco de trabajo llama a esta función, se descartan los cambios en todas las páginas de propiedades realizadas por el usuario que eligieron previamente el botón Aplicar ahora y la hoja de propiedades conserva el foco.
 
 Invalide esta función miembro para especificar qué acción realiza el programa cuando el usuario hace clic en el botón Cancelar.
 
-La implementación predeterminada de `OnReset` no hace nada.
+La implementación `OnReset` predeterminada de no hace nada.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CPropertyPage:: OnCancel](#oncancel).
+  Vea el ejemplo de [CPropertyPage::OnCancel](#oncancel).
 
-##  <a name="onsetactive"></a>CPropertyPage:: OnSetActive
+## <a name="cpropertypageonsetactive"></a><a name="onsetactive"></a>CPropertyPage::OnSetActive
 
 El marco de trabajo llama a esta función miembro cuando el usuario elige la página y se convierte en la página activa.
 
@@ -429,21 +429,21 @@ virtual BOOL OnSetActive();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la página se estableció correctamente activa; de lo contrario, es 0.
+Distinto de cero si la página se estableció correctamente activa; de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
 Invalide esta función miembro para realizar tareas cuando se activa una página. La invalidación de esta función miembro normalmente llamaría a la versión predeterminada después de actualizar los miembros de datos, para permitirle actualizar los controles de página con los nuevos datos.
 
-La implementación predeterminada crea la ventana de la página, si no se ha creado previamente, y la convierte en la página activa.
+La implementación predeterminada crea la ventana para la página, si no se creó anteriormente, y la convierte en la página activa.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CPropertySheet:: SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext).
+  Vea el ejemplo de [CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext).
 
-##  <a name="onwizardback"></a>CPropertyPage:: OnWizardBack
+## <a name="cpropertypageonwizardback"></a><a name="onwizardback"></a>CPropertyPage::OnWizardBack
 
-El marco de trabajo llama a esta función miembro cuando el usuario hace clic en el botón atrás en un asistente.
+El marco de trabajo llama a esta función miembro cuando el usuario hace clic en el botón Atrás de un asistente.
 
 ```
 virtual LRESULT OnWizardBack();
@@ -455,17 +455,17 @@ virtual LRESULT OnWizardBack();
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide esta función miembro para especificar alguna acción que el usuario debe realizar cuando se presiona el botón atrás.
+Invalide esta función miembro para especificar alguna acción que el usuario debe realizar cuando se presiona el botón Atrás.
 
-Para obtener más información sobre cómo crear una hoja de propiedades de tipo asistente, vea [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
+Para obtener más información sobre cómo crear una hoja de propiedades de tipo asistente, vea [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]
 
-##  <a name="onwizardfinish"></a>CPropertyPage:: OnWizardFinish
+## <a name="cpropertypageonwizardfinish"></a><a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish
 
-El marco de trabajo llama a esta función miembro cuando el usuario hace clic en el botón Finalizar en un asistente.
+El marco de trabajo llama a esta función miembro cuando el usuario hace clic en el botón Finalizar de un asistente.
 
 ```
 virtual BOOL OnWizardFinish();
@@ -473,17 +473,17 @@ virtual BOOL OnWizardFinish();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la hoja de propiedades se destruye cuando finaliza el asistente; de lo contrario, es cero.
+Distinto de cero si la hoja de propiedades se destruye cuando finaliza el asistente; de lo contrario cero.
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando un usuario hace clic en el botón **Finalizar** en un asistente, el marco de trabajo llama a esta función. Cuando `OnWizardFinish` devuelve TRUE (un valor distinto de cero), la hoja de propiedades se puede destruir (pero no se destruye realmente). Llame a `DestroyWindow` para destruir la hoja de propiedades. No llame a `DestroyWindow` desde `OnWizardFinish`; Si lo hace, se producirán daños en el montón u otros errores.
+Cuando un usuario hace clic en **el** finalizar botón en un asistente, el marco de trabajo llama a esta función; cuando `OnWizardFinish` devuelve TRUE (un valor distinto de cero), la hoja de propiedades puede destruirse (pero no se destruye realmente). Llame `DestroyWindow` para destruir la hoja de propiedades. No llame `DestroyWindow` `OnWizardFinish`desde ; hacerlo causará daños en el montón u otros errores.
 
 Puede invalidar esta función miembro para especificar alguna acción que el usuario debe realizar cuando se presiona el botón Finalizar. Al reemplazar esta función, devuelva FALSE para evitar que se destruya la hoja de propiedades.
 
 Para obtener más información acerca de los mensajes de notificación enviados cuando el usuario presiona el botón Finalizar en una hoja de propiedades del asistente, vea [PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) en el Windows SDK.
 
-Para obtener más información sobre cómo crear una hoja de propiedades de tipo asistente, vea [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
+Para obtener más información sobre cómo crear una hoja de propiedades de tipo asistente, vea [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
 
 ### <a name="example"></a>Ejemplo
 
@@ -495,9 +495,9 @@ Para obtener más información sobre cómo crear una hoja de propiedades de tipo
 
 [!code-cpp[NVC_MFCDocView#122](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]
 
-##  <a name="onwizardnext"></a>CPropertyPage:: OnWizardNext
+## <a name="cpropertypageonwizardnext"></a><a name="onwizardnext"></a>CPropertyPage::OnWizardNext
 
-El marco de trabajo llama a esta función miembro cuando el usuario hace clic en el botón siguiente de un asistente.
+El marco de trabajo llama a esta función miembro cuando el usuario hace clic en el botón Siguiente de un asistente.
 
 ```
 virtual LRESULT OnWizardNext();
@@ -509,15 +509,15 @@ virtual LRESULT OnWizardNext();
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide esta función miembro para especificar alguna acción que el usuario debe realizar cuando se presiona el botón siguiente.
+Invalide esta función miembro para especificar alguna acción que el usuario debe realizar cuando se presiona el botón Siguiente.
 
-Para obtener más información sobre cómo crear una hoja de propiedades de tipo asistente, vea [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
+Para obtener más información sobre cómo crear una hoja de propiedades de tipo asistente, vea [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#123](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]
 
-##  <a name="querysiblings"></a>CPropertyPage:: QuerySiblings
+## <a name="cpropertypagequerysiblings"></a><a name="querysiblings"></a>CPropertyPage::QuerySiblings
 
 Llame a esta función miembro para reenviar un mensaje a cada página de la hoja de propiedades.
 
@@ -537,11 +537,11 @@ Especifica información adicional dependiente del mensaje
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor distinto de cero de una página de la hoja de propiedades, o 0 si todas las páginas devuelven un valor de 0.
+El valor distinto de cero de una página de la hoja de propiedades, o 0 si todas las páginas devuelven un valor de 0.
 
 ### <a name="remarks"></a>Observaciones
 
-Si una página devuelve un valor distinto de cero, la hoja de propiedades no envía el mensaje a las páginas siguientes.
+Si una página devuelve un valor distinto de cero, la hoja de propiedades no envía el mensaje a las páginas posteriores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -551,9 +551,9 @@ Si una página devuelve un valor distinto de cero, la hoja de propiedades no env
 
 [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]
 
-##  <a name="setmodified"></a>CPropertyPage:: SetModified
+## <a name="cpropertypagesetmodified"></a><a name="setmodified"></a>CPropertyPage::SetModified
 
-Llame a esta función miembro para habilitar o deshabilitar el botón aplicar ahora, en función de si la configuración de la página de propiedades se debe aplicar al objeto externo adecuado.
+Llame a esta función miembro para habilitar o deshabilitar el botón Aplicar ahora, en función de si la configuración de la página de propiedades se debe aplicar al objeto externo adecuado.
 
 ```
 void SetModified(BOOL bChanged = TRUE);
@@ -566,7 +566,7 @@ TRUE para indicar que la configuración de la página de propiedades se ha modif
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo realiza un seguimiento de las páginas que están "desfasadas", es decir, las páginas de propiedades para las que se ha llamado `SetModified( TRUE )`. El botón aplicar ahora siempre estará habilitado si llama a `SetModified( TRUE )` para una de las páginas. El botón aplicar ahora se deshabilitará al llamar a `SetModified( FALSE )` para una de las páginas, pero solo si ninguna de las otras páginas está "desfasada".
+El marco de trabajo realiza un seguimiento de qué páginas son `SetModified( TRUE )`"sucias", es decir, las páginas de propiedades para las que ha llamado . El botón Aplicar ahora siempre estará `SetModified( TRUE )` habilitado si llama a una de las páginas. El botón Aplicar ahora se `SetModified( FALSE )` deshabilitará cuando llame a una de las páginas, pero solo si ninguna de las otras páginas está "sucia".
 
 ### <a name="example"></a>Ejemplo
 
@@ -575,10 +575,10 @@ El marco de trabajo realiza un seguimiento de las páginas que están "desfasada
 ## <a name="see-also"></a>Consulte también
 
 [Ejemplo de MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
-[Ejemplo de MFC CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo cmNCTRL2 de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[Ejemplo de MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
-[CDialog (clase)](../../mfc/reference/cdialog-class.md)<br/>
+[EJEMPLO de MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Clase CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CPropertySheet (clase)](../../mfc/reference/cpropertysheet-class.md)<br/>
-[CDialog (clase)](../../mfc/reference/cdialog-class.md)
+[Clase CDialog](../../mfc/reference/cdialog-class.md)
