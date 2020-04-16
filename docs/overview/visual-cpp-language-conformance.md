@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 8a5ffb5b3ab4bc80cb200b41752b19d1c958ece6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 18f8db28fab83f795baced82a346f07d73256716
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365239"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabla de conformidad del lenguaje Microsoft C++
 
@@ -385,33 +385,34 @@ __VS 2019 16.5__ indica las características que se admiten en Visual Studio 
 
 ### <a name="notes"></a>Notas
 
-<a name="note_A"></a>__A__ En el modo [/std:c++14](../build/reference/std-specify-language-standard-version.md), las especificaciones de excepción dinámicas permanecen sin implementar y `throw()` se sigue tratando como un sinónimo de `__declspec(nothrow)`. En C++ 17, las especificaciones de excepción dinámicas se quitaron principalmente por P0003R5, dejando un vestigio: `throw()` está en desuso y se debe comportar como un sinónimo de `noexcept`. En el modo [/std:c++17](../build/reference/std-specify-language-standard-version.md), MSVC ahora se ajusta al Estándar al otorgar a `throw()` el mismo comportamiento que `noexcept`, es decir, cumplimiento mediante la terminación.
+<a name="note_A"></a> __A__ En el modo [/std:c++14](../build/reference/std-specify-language-standard-version.md), las especificaciones de excepción dinámicas permanecen sin implementar y `throw()` se sigue tratando como un sinónimo de `__declspec(nothrow)`. En C++ 17, las especificaciones de excepción dinámicas se quitaron principalmente por P0003R5, dejando un vestigio: `throw()` está en desuso y se debe comportar como un sinónimo de `noexcept`. En el modo [/std:c++17](../build/reference/std-specify-language-standard-version.md), MSVC ahora se ajusta al Estándar al otorgar a `throw()` el mismo comportamiento que `noexcept`, es decir, cumplimiento mediante la terminación.
 
 La opción del compilador [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) solicita el comportamiento anterior de `__declspec(nothrow)`. Es probable que `throw()` se quite en C++20. Para ayudar a migrar el código en respuesta a estos cambios en el Estándar y la implementación, se agregaron advertencias del compilador nuevas para problemas de especificación de excepciones en [/std:c++17](../build/reference/std-specify-language-standard-version.md) y [/permissive-](../build/reference/permissive-standards-conformance.md).
 
-<a name="note_B"></a>__B__ Se admite en el modo [/permissive-](../build/reference/permissive-standards-conformance.md) Visual Studio 2017, versión 15.7. Para más información, consulte [La compatibilidad con la búsqueda de nombres en dos fases llega a MSVC](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/).
+<a name="note_B"></a> __B__ Se admite en el modo [/permissive-](../build/reference/permissive-standards-conformance.md) Visual Studio 2017, versión 15.7. Para más información, consulte [La compatibilidad con la búsqueda de nombres en dos fases llega a MSVC](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/).
 
-<a name="note_C"></a>__C__ La compatibilidad del compilador con las reglas del preprocesador C99 es incompleta en Visual Studio 2017. Se va a revisar el preprocesador y hemos empezado a incluir esos cambios en Visual Studio 2017, versión 15.8 con el conmutador de compilador [/experimental:preprocessor](../build/reference/experimental-preprocessor.md).
+<a name="note_C"></a> __C__ La compatibilidad del compilador con las reglas del preprocesador C99 es incompleta en Visual Studio 2017. Se va a revisar el preprocesador y hemos empezado a incluir esos cambios en Visual Studio 2017, versión 15.8 con el conmutador de compilador [/experimental:preprocessor](../build/reference/experimental-preprocessor.md).
 
-<a name="note_D"></a>__D__ Compatible con [/std:c++14](../build/reference/std-specify-language-standard-version.md) con una advertencia que se puede suprimir, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
+<a name="note_D"></a> __D__ Compatible con [/std:c++14](../build/reference/std-specify-language-standard-version.md) con una advertencia que se puede suprimir, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
-<a name="note_E"></a>__E__ Esta es una implementación completamente nueva, incompatible con la versión anterior de `std::experimental`, necesaria por la compatibilidad con symlink, las correcciones de errores y los cambios en el comportamiento requerido estándar. Actualmente, la inclusión de \<filesystem> proporciona la versión nueva de `std::filesystem` y la versión anterior de `std::experimental::filesystem`, y la inclusión de \<experimental/filesystem> solo proporciona la implementación experimental anterior. La implementación experimental se QUITARÁ en la próxima versión sin ABI de las bibliotecas.
+<a name="note_E"></a> __E__ Esta es una implementación completamente nueva, incompatible con la versión anterior de `std::experimental`, necesaria por la compatibilidad con symlink, las correcciones de errores y los cambios en el comportamiento requerido estándar. Actualmente, la inclusión de \<filesystem> proporciona la versión nueva de `std::filesystem` y la versión anterior de `std::experimental::filesystem`, y la inclusión de \<experimental/filesystem> solo proporciona la implementación experimental anterior. La implementación experimental se QUITARÁ en la próxima versión sin ABI de las bibliotecas.
 
-<a name="note_G"></a>__G__ Compatible con una función intrínseca de compilador.
+<a name="note_G"></a> __G__ Compatible con una función intrínseca de compilador.
 
-<a name="note_14"></a>__14__ Estas características de C++17/20 siempre están habilitadas, incluso cuando se especifica [/std:c++14](../build/reference/std-specify-language-standard-version.md) (el valor predeterminado). El motivo es que la característica se implementó antes de la introducción de las opciones **/std**, o porque la implementación condicional era compleja de una manera no deseable.
+<a name="note_14"></a> __14__ Estas características de C++17/20 siempre están habilitadas, incluso cuando se especifica [/std:c++14](../build/reference/std-specify-language-standard-version.md) (valor predeterminado). El motivo es que la característica se implementó antes de la introducción de las opciones **/std**, o porque la implementación condicional era compleja de una manera no deseable.
 
-<a name="note_17"></a>__17__ Estas características están habilitadas por la opción del compilador [/std:c++17](../build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](../build/reference/std-specify-language-standard-version.md)).
+<a name="note_17"></a> __17__ Estas características se habilitan mediante la opción del compilador [/std:c++17](../build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](../build/reference/std-specify-language-standard-version.md)).
 
-<a name="note_20"></a>__20__ Estas características están habilitadas por la opción del compilador [/std:c++latest](../build/reference/std-specify-language-standard-version.md). Si la implementación de C++20 es completa, se agregará una nueva opción del compilador **/std:c++20**, en la que estas características también estarán disponibles.
+<a name="note_20"></a> __20__ Estas características se habilitan mediante la opción del compilador [/std:c++latest](../build/reference/std-specify-language-standard-version.md). Si la implementación de C++20 es completa, se agregará una nueva opción del compilador **/std:c++20**, en la que estas características también estarán disponibles.
 
-<a name="note_byte"></a>__byte__`std::byte` está habilitada por [/std:c++17](../build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](../build/reference/std-specify-language-standard-version.md)), pero como en algunos casos puede entrar en conflicto con los encabezados de Windows SDK, tiene una macro de desactivación específica. Se puede deshabilitar si se define `_HAS_STD_BYTE` como `0`.
+<a name="note_byte"></a> __byte__ `std::byte` se habilita mediante [/std:c++17](../build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](../build/reference/std-specify-language-standard-version.md)), pero como en algunos casos puede entrar en conflicto con los encabezados de Windows SDK, tiene una macro de desactivación específica. Se puede deshabilitar si se define `_HAS_STD_BYTE` como `0`.
 
-<a name="note_C11"></a>__C11__ Universal CRT implementó los elementos de la biblioteca estándar C11 que se requieren en C++17, a excepción de los especificadores de conversión alternativos de E/O `strftime()` de C99, el modo exclusivo de `fopen()` de C11 y `aligned_alloc()` de C11. Es poco probable implementar esta última opción, porque C11 especificó `aligned_alloc()` de una manera no compatible con la implementación de Microsoft de `free()`: es decir, que `free()` debe poder controlar asignaciones muy alineadas.
+<a name="note_C11"></a> __C11__ Universal CRT implementó los elementos de la biblioteca estándar C11 que se requieren en C++17, a excepción de los especificadores de conversión alternativos de E/O `strftime()` de C99, el modo exclusivo de `fopen()` de C11 y `aligned_alloc()` de C11. Es poco probable implementar esta última opción, porque C11 especificó `aligned_alloc()` de una manera no compatible con la implementación de Microsoft de `free()`: es decir, que `free()` debe poder controlar asignaciones muy alineadas.
 
-<a name="note_rem"></a>__rem__ Las características se quitan cuando se especifica la opción de compilador [/std:c++17](../build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](../build/reference/std-specify-language-standard-version.md)). Estas características pueden habilitarse de nuevo para facilitar la transición a los modos de lenguaje más recientes mediante el uso de estas macros: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` y `_HAS_UNEXPECTED`.
+<a name="note_rem"></a> __rem__ Las características se quitan cuando se especifica la opción de compilador [/std:c++17](../build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](../build/reference/std-specify-language-standard-version.md)). Estas características pueden habilitarse de nuevo para facilitar la transición a los modos de lenguaje más recientes mediante el uso de estas macros: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` y `_HAS_UNEXPECTED`.
 
-<a name="note_charconv"></a>__charconv__`from_chars()` y `to_chars()` están disponibles para los enteros. La escala de tiempo de punto flotante `from_chars()` y de punto flotante `to_chars()` es la siguiente:
+<a name="note_charconv"></a> __charconv__ `from_chars()` y `to_chars()` están disponibles para los enteros. La escala de tiempo de punto flotante `from_chars()` y de punto flotante `to_chars()` es la siguiente:
+
 - VS 2017 15.7: Entero `from_chars()` y `to_chars()`.
 - VS 2017 15.8: Punto flotante `from_chars()`.
 - VS 2017 15.9: Sobrecargas de punto flotante `to_chars()` para decimales más cortos.

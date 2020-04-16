@@ -3,12 +3,12 @@ title: Novedades de C++ en Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 9b656d4e13fe241c22a9c555d1c597016c5353d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415725"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366820"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novedades de C++ en Visual Studio
 
@@ -98,7 +98,7 @@ Análisis mejorado con `/Qspectre` para proporcionar asistencia de mitigación e
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019, versión 16.1
 
-IntelliCode es una extensión opcional que usa su amplio aprendizaje y su contexto de código para colocar lo que es más probable que use en la parte superior de la lista de finalización. A menudo puede eliminar la necesidad de desplazarse hacia abajo por la lista. Para C++, IntelliCode ofrece más ayuda al usar bibliotecas conocidas, como la biblioteca estándar. Está disponible como un componente de carga de trabajo en el instalador. Para obtener más información, vea [AI-Assisted Code Completion Suggestions Come to C++ via IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/) (Las sugerencias de finalización de código asistidas por inteligencia artificial se hacen realidad en C++ a través de IntelliCode).
+IntelliCode es una extensión opcional que usa un amplio aprendizaje y su contexto de código para colocar lo que es más probable que use en la parte superior de la lista de finalización. A menudo puede eliminar la necesidad de desplazarse hacia abajo por la lista. Para C++, IntelliCode ofrece más ayuda al usar bibliotecas conocidas, como la biblioteca estándar. Está disponible como un componente de carga de trabajo en el instalador. Para obtener más información, vea [AI-Assisted Code Completion Suggestions Come to C++ via IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/) (Las sugerencias de finalización de código asistidas por inteligencia artificial se hacen realidad en C++ a través de IntelliCode).
 
 ### <a name="template-intellisense"></a>IntelliSense para plantilla
 
@@ -180,7 +180,7 @@ IntelliCode ahora se distribuye como un componente opcional en la carga de traba
 
 ## <a name="incredibuild-integration"></a>Integración de IncrediBuild
 
-IncrediBuild se incluye como un componente opcional en la carga de trabajo **Desarrollo para el escritorio con C++** . El monitor de compilaciones de IncrediBuild está totalmente integrado en el IDE de Visual Studio. Para más información, vea [Visualize your build with IncrediBuild’s Build Monitor and Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/) (Visualización de la compilación con el monitor de compilaciones de IncrediBuild y Visual Studio 2019).
+IncrediBuild se incluye como un componente opcional en la carga de trabajo **Desarrollo para el escritorio con C++** . El monitor de compilaciones de IncrediBuild está totalmente integrado en el IDE de Visual Studio. Para obtener más información, consulte [Visualización de la compilación con el monitor de compilaciones de IncrediBuild y Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
 
 ## <a name="debugging"></a>Depuración
 

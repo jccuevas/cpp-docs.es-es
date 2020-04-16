@@ -4,12 +4,12 @@ description: vcpkg es un administrador de paquetes de la línea de comandos que 
 ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9dbeba1f55164ace01fb8bb26155dd9319ba62db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422761"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335407"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS
 
@@ -128,7 +128,7 @@ Ejecute **vcpkg integrate install** para configurar Visual Studio Code en Linux 
 
 Puede generar archivos binarios de Linux en un equipo Windows mediante el subsistema de Windows para Linux (WSL). Siga las instrucciones para [configurar WSL en Windows 10](/windows/wsl/install-win10) y configurarlo con la [extensión de Visual Studio para Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Puede colocar todas las bibliotecas compiladas para Windows y Linux en la misma carpeta. Podrá acceder a ellas desde Windows y WSL.
 
-## <a name="export_binaries_per_project"></a> Exportar archivos binarios y encabezados compilados
+## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> Exportar archivos binarios y encabezados compilados
 
 No es eficaz hacer que todos los usuarios de un equipo descarguen y compilen bibliotecas comunes. Un miembro del equipo puede usar el comando **vcpkg export** para crear un archivo ZIP común con los binarios y los encabezados, o bien un paquete NuGet. Después, es fácil compartirlo con otros miembros del equipo.
 

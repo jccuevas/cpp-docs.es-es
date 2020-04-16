@@ -457,7 +457,7 @@
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
         - name: Procedimiento Modificación de la plataforma de destino y el conjunto de herramientas de la plataforma
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
-    - name: 'Tutorial: Crear y utilizar una biblioteca estática (C++)'
+    - name: 'Tutorial: Creación y uso de una biblioteca estática (C++)'
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
     - name: Creación de DLL de C++ en Visual Studio
       expanded: false
@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: Inicialización de CRT
                   href: c-runtime-library/crt-initialization.md
+                - name: Estado global en CRT
+                  href: c-runtime-library/global-state.md
             - name: Rutinas en tiempo de ejecución Universal C por categoría
               expanded: false
               items:
@@ -9380,14 +9382,14 @@
                       href: standard-library/stack.md
                     - name: Operadores de <stack>
                       href: standard-library/stack-operators.md
-                    - name: stack (Clase)
+                    - name: stack (clase)
                       href: standard-library/stack-class.md
                 - name: <stdexcept>
                   expanded: false
                   items:
                     - name: <stdexcept>
                       href: standard-library/stdexcept.md
-                    - name: domain_error (clase)
+                    - name: domain_error (Clase)
                       href: standard-library/domain-error-class.md
                     - name: invalid_argument (Clase)
                       href: standard-library/invalid-argument-class.md
@@ -10417,9 +10419,9 @@
                           href: parallel/concrt/reference/concurrency-namespace-enums.md
                         - name: affinity_partitioner (Clase)
                           href: parallel/concrt/reference/affinity-partitioner-class.md
-                        - name: agent (Clase)
+                        - name: agent (clase)
                           href: parallel/concrt/reference/agent-class.md
-                        - name: auto_partitioner (clase)
+                        - name: auto_partitioner (Clase)
                           href: parallel/concrt/reference/auto-partitioner-class.md
                         - name: bad_target (Clase)
                           href: parallel/concrt/reference/bad-target-class.md

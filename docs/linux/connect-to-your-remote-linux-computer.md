@@ -2,12 +2,12 @@
 title: Conexión al sistema Linux de destino en Visual Studio
 description: En este artículo se describe cómo conectarse a una máquina remota Linux o al Subsistema de Windows para Linux desde un proyecto de Visual Studio C++.
 ms.date: 01/17/2020
-ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 624dce6bb05e4f4a961628e0c6f455e11c14dff8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518223"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364362"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Conexión al sistema Linux de destino en Visual Studio
 
@@ -150,10 +150,10 @@ En Visual Studio 2017, se usan los mismos pasos para conectarse a WSL que para
 
 La versión 16.1 de Visual Studio 2019 incorpora compatibilidad nativa para usar C++ con el [subsistema de Windows para Linux (WSL)](/windows/wsl/about). Esto significa que puede compilar y depurar directamente en la instalación local de WSL. Ya no es necesario agregar una conexión remota ni configurar SSH. Encontrará más detalles sobre [cómo instalar WSL](/windows/wsl/install-win10) aquí.
 
-Para configurar la instalación de WSL de modo que funcione con Visual Studio, se necesitan las herramientas gcc o clang, gdb, make, rsync y zip. Puede instalarlos en distribuciones que usan apt mediante este comando, que también instala el compilador g++:
+Para configurar la instalación de WSL de modo que funcione con Visual Studio, es necesario tener instaladas las herramientas gcc o clang, gdb, make, ninja-build (solo necesario para los proyectos de CMake que usan Visual Studio 2019, versión 16.6 o posteriores), rsync y zip. Puede instalarlos en distribuciones que usan apt mediante este comando, que también instala el compilador g++:
 
 ```bash
-sudo apt install g++ gdb make rsync zip
+sudo apt install g++ gdb make ninja-build rsync zip
 ```
 
 Para más información, vea [Descargar, instalar y configurar la carga de trabajo de Linux](download-install-and-setup-the-linux-development-workload.md).
