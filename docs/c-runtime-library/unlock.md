@@ -23,12 +23,12 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 185cb1e5f582fd5eeb1dbcb337c402319ab78f00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73eec2b05b1d321bfc8ac61e743459bf2323fb8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365685"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745113"
 ---
 # <a name="_unlock"></a>_unlock
 
@@ -39,7 +39,7 @@ Libera un bloqueo multiproceso.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void __cdecl _unlock(
    int locknum
 );
@@ -54,7 +54,7 @@ void __cdecl _unlock(
 
 **Origen:** mlock.c
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_lock](../c-runtime-library/lock.md)

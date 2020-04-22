@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 28d305e2107f7b9a8fd2164eb0ec9678d62ef8fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 14ac32524436ff46449171ad90599e60f63dff2a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369746"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750149"
 ---
 # <a name="canimationgroup-class"></a>Clase CAnimationGroup
 
@@ -135,7 +135,7 @@ Destructor. Se llama cuando se destruye un grupo de animación.
 
 Un ayudante que agrega fotogramas clave a un guión gráfico.
 
-```
+```cpp
 void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```
 
@@ -151,7 +151,7 @@ Especifica si este método debe agregarse a los fotogramas clave del guión grá
 
 Una aplicación auxiliar que agrega transiciones a un guión gráfico.
 
-```
+```cpp
 void AddTransitions(
     IUIAnimationStoryboard* pStoryboard,
     BOOL bDependOnKeyframes);
@@ -193,7 +193,7 @@ Este método crea un guión gráfico interno, crea y aplica transiciones y progr
 
 Aplica transiciones a objetos de animación.
 
-```
+```cpp
 void ApplyTransitions();
 ```
 
@@ -326,7 +326,7 @@ ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 
 Quita y, opcionalmente, destruye todos los fotogramas clave que pertenecen a un grupo de animación.
 
-```
+```cpp
 void RemoveKeyframes();
 ```
 
@@ -338,7 +338,7 @@ Si m_bAutodestroyKeyframes miembro es TRUE, los fotogramas clave se eliminan y d
 
 Quita las transiciones de los objetos de animación que pertenecen a un grupo de animación.
 
-```
+```cpp
 void RemoveTransitions();
 ```
 
@@ -374,7 +374,7 @@ Llame a esta función para programar una animación a la hora especificada. Debe
 
 Dirige que todos los objetos de animación que pertenecen al grupo destruyen automáticamente las transiciones.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -387,6 +387,6 @@ Especifica cómo destruir transiciones.
 
 Establezca este valor en FALSE solo si asigna transiciones en la pila. El valor predeterminado es TRUE, por lo que es muy recomendable asignar objetos de transición mediante el operador new.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331248"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746578"
 ---
 # <a name="crbtree-class"></a>CRBTree Clase
 
@@ -276,7 +276,7 @@ El contador de posición *pos* se actualiza después de cada llamada. Si el elem
 
 Llame a este método para obtener la clave y el valor de un elemento almacenado en el mapa y avanzar la posición al siguiente elemento.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 Llame a este método para `CRBTree` quitar todos los elementos del objeto.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ Borra el `CRBTree` objeto, liberando la memoria utilizada para almacenar los ele
 
 Llame a este método para quitar el `CRBTree` elemento en la posición dada en el objeto.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ Elimina el par clave/valor almacenado en la posición especificada. La memoria u
 
 Llame a este método para cambiar el `CRBTree` valor almacenado en una posición determinada en el objeto.
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 
@@ -490,6 +490,6 @@ Tipo utilizado cuando se pasa un valor como argumento de salida.
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../atl/atl-class-overview.md)

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: adaad47c49a64c6654b70fa60ef5514e104c50a5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1448a5638b263a87403edf0baca170f0f952e26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321050"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748138"
 ---
 # <a name="ccombstr-class"></a>Clase CComBSTR
 
@@ -242,7 +242,7 @@ S_OK en caso de éxito o de cualquier valor de error HRESULT estándar.
 
 Asocia un BSTR `CComBSTR` al objeto estableciendo el [m_str](#m_str) miembro *en src*.
 
-```
+```cpp
 void Attach(BSTR src) throw();
 ```
 
@@ -329,7 +329,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 *src*<br/>
 [in] Objeto `CComBSTR`.
 
-*Guid*<br/>
+*guid*<br/>
 [en] Una referencia `GUID` a una estructura.
 
 ### <a name="remarks"></a>Observaciones
@@ -424,7 +424,7 @@ El BSTR asociado `CComBSTR` al objeto.
 
 Libera al miembro [de m_str.](#m_str)
 
-```
+```cpp
 void Empty() throw();
 ```
 

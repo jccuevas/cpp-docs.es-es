@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: dce33289699b9e7b7484d1feb6335476f93dee9b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76d418c4f063d5787209ea72e7c681013eb37801
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317686"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747034"
 ---
 # <a name="csimplestringt-class"></a>Clase CSimpleStringT
 
@@ -56,7 +56,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>Parámetros
 
-*Basetype*<br/>
+*BaseType*<br/>
 El tipo de carácter de la clase de cadena. Puede ser uno de los siguientes:
 
 - **char** (para cadenas de caracteres ANSI).
@@ -133,7 +133,7 @@ Anexa un `CSimpleStringT` objeto a `CSimpleStringT` un objeto existente.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Append(const CSimpleStringT& strSrc);
 void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
@@ -172,7 +172,7 @@ Anexa un carácter `CSimpleStringT` a un objeto existente.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void AppendChar(XCHAR ch);
 ```
 
@@ -316,7 +316,7 @@ Convierte `CSimpleStringT` este objeto en una cadena vacía y libera memoria seg
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Empty() throw();
 ```
 
@@ -339,7 +339,7 @@ Libera cualquier memoria adicional asignada previamente por la cadena, pero ya n
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -895,7 +895,7 @@ Asigna una cantidad específica de `CSimpleStringT` bytes para el objeto.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Preallocate( int nLength);
 ```
 
@@ -937,7 +937,7 @@ Libera el control del búfer asignado por [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void ReleaseBuffer(int nNewLength = -1);
 ```
 
@@ -978,7 +978,7 @@ Libera el control del búfer asignado por [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void ReleaseBufferSetLength(int nNewLength);
 ```
 
@@ -997,7 +997,7 @@ Establece un único `CSimpleStringT` carácter de un objeto.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void SetAt(int iChar, XCHAR ch);
 ```
 
@@ -1029,7 +1029,7 @@ Especifica el administrador de `CSimpleStringT` memoria del objeto.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void SetManager(IAtlStringMgr* pStringMgr);
 ```
 
@@ -1057,7 +1057,7 @@ Establece la cadena `CSimpleStringT` de un objeto.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```
@@ -1130,7 +1130,7 @@ Trunca la cadena a la nueva longitud.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Truncate(int nNewLength);
 ```
 
@@ -1165,7 +1165,7 @@ Desbloquea el búfer `CSimpleStringT` del objeto.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void UnlockBuffer() throw();
 ```
 
@@ -1189,7 +1189,7 @@ Destruye un objeto `CSimpleStringT` .
 
 Llame a este `CSimpleStringT` método para destruir el objeto.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369639"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749606"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane Clase
 
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 Libera los recursos utilizados por las imágenes en el panel de la barra de Outlook.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ La implementación predeterminada comprueba el modo de personalización ( [CMFCT
 
 Especifica si las flechas de desplazamiento en el panel de la barra de Outlook avanzan la lista de botones página por página o botón por botón.
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,13 +395,13 @@ TRUESi el botón se ha quitado correctamente; FALSE si el identificador de coman
 
 Establece el color de fondo de la barra de Outlook.
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Especifica el nuevo color de fondo.
 
 ### <a name="remarks"></a>Observaciones
@@ -412,7 +412,7 @@ Llame a esta función para establecer el color de fondo actual para la barra de 
 
 Establece la imagen de fondo.
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ Llame a este método para establecer la imagen de fondo de la barra de Outlook. 
 
 Restablece el panel de la barra de Outlook al conjunto original de botones.
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ Este método restaura los botones de la barra de Outlook al conjunto original. E
 
 Establece el número de píxeles de relleno utilizados alrededor de los botones en el panel de la barra de Outlook.
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 Establece los colores del texto normal y resaltado en el panel de la barra de Outlook.
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,20 +467,20 @@ void SetTextColor(
 
 Establece el color transparente para el panel de la barra de Outlook.
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 Especifica el nuevo color transparente.
 
 ### <a name="remarks"></a>Observaciones
 
 El color transparente es necesario para mostrar imágenes transparentes. Cualquier aparición de este color en una imagen se pinta con el color de fondo en su lugar.  No hay mezcla de imágenes de fondo y de primer plano.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

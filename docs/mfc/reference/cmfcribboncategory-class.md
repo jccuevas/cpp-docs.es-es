@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375274"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749541"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory (Clase)
 
@@ -260,7 +260,7 @@ En el diagrama siguiente se muestra una figura de la categoría Inicio de la apl
 
 Agrega el elemento de la cinta de opciones especificado a la matriz de elementos de la cinta de opciones que se muestran en el cuadro de diálogo de personalización.
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ Puntero a un elemento de la cinta de opciones si el método se realizó correcta
 
 Recupera todos los elementos de la cinta de opciones en la categoría de la cinta de opciones.
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ Los elementos de la cinta de opciones que están diseñados para su uso en la ba
 
 Recupera todos los elementos de la cinta de opciones asociados con el identificador de comando especificado.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ El tamaño recuperado incluye el factor de escala de imagen global.
 
 Recupera los elementos de comando de los elementos de la cinta de opciones contenidos en la categoría de la cinta de opciones.
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ La ubicación vertical del texto, en píxeles, en los botones de la cinta de opc
 
 Recupera todos los elementos visibles que pertenecen a la categoría de la cinta de opciones.
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 Define el orden en el que se contraen los paneles de la cinta de opciones de la categoría de la cinta de opciones.
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ En el ejemplo siguiente se `SetCollapseOrder` muestra `CMFCRibbonCategory` cómo
 
 Establece los datos definidos por el usuario que se asociarán a la categoría de la cinta de opciones.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 Asigna una información clave a la categoría de la cinta de opciones.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ Las sugerencias de teclas se muestran cuando el usuario presiona la tecla Alt o 
 
 Asigna un nombre y una información clave a la categoría de la cinta de opciones.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,13 +1410,13 @@ Para establecer la información clave para la categoría de la cinta de opciones
 
 Establece el color de la categoría de la cinta de opciones.
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Especifica el nuevo color de la categoría de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
@@ -1439,7 +1439,7 @@ El color puede ser uno de los siguientes valores:
 
 - AFX_CategoryColor_Violet
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

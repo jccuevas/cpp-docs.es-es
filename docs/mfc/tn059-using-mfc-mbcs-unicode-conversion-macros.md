@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366591"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749434"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: Usar macros de conversión MBCS/Unicode de MFC
 
@@ -114,7 +114,7 @@ Una vez más, hay macros similares para realizar cadenas asignadas a TEXTMETRIC,
 
 No utilice las macros en un bucle estrecho. Por ejemplo, no desea escribir el siguiente tipo de código:
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 ¡El código anterior podría dar lugar a la asignación de megabytes `lpsz` de memoria en la pila dependiendo de cuál sea el contenido de la cadena! También toma tiempo convertir la cadena para cada iteración del bucle. En su lugar, mueva tales conversiones constantes fuera del bucle:
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 Si la cadena no es constante, encapsular la llamada al método en una función. Esto permitirá liberar el búfer de conversión cada vez. Por ejemplo:
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -192,7 +192,7 @@ return lpszT; // CString makes copy
 
 Las macros son fáciles de usar y fáciles de insertar en el código, pero como se puede ver en las advertencias anteriores, debe tener cuidado al usarlas.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

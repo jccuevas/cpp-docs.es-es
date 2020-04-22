@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 24d141c5b0ec703feadcd7db96da33f9de940dda
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b2ef093c1142b592ad2a6605a08bd8c34a643ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327951"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748072"
 ---
 # <a name="ccomcritseclock-class"></a>Clase CComCritSecLock
 
@@ -66,7 +66,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Parámetros
 
-*cs*<br/>
+*Cs*<br/>
 El objeto de sección crítica.
 
 *bInitialLock*<br/>
@@ -108,7 +108,7 @@ Si el objeto ya está bloqueado, se producirá un error ASSERT en las compilacio
 
 Llame a este método para desbloquear el objeto de sección crítica.
 
-```
+```cpp
 void Unlock() throw();
 ```
 
@@ -116,7 +116,7 @@ void Unlock() throw();
 
 Si el objeto ya está desbloqueado, se producirá un error ASSERT en las compilaciones de depuración.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Clase CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)

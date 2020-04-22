@@ -7,22 +7,22 @@ helpviewer_keywords:
 - COM interfaces, attach pointer
 - Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
-ms.openlocfilehash: 870e3580ed23ce994d832f7c59b951680d725e41
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 057d784bb495aefaeec1b86697a7421f6464cbd7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180503"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745071"
 ---
 # <a name="_com_ptr_tattach"></a>_com_ptr_t::Attach
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
 Encapsula un puntero de interfaz sin formato del tipo de este puntero inteligente.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Attach( Interface* pInterface ) throw( );
 void Attach( Interface* pInterface, bool fAddRef ) throw( );
 ```
@@ -33,16 +33,16 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
 Puntero a interfaz sin formato.
 
 *fAddRef*<br/>
-Si es TRUE, se llama a `AddRef`. Si es FALSE, el objeto de `_com_ptr_t` toma la propiedad del puntero de interfaz sin formato sin llamar a `AddRef`.
+Si es TRUE, `AddRef` se llama. Si es FALSE, `_com_ptr_t` el objeto toma la propiedad `AddRef`del puntero de interfaz sin formato sin llamar a .
 
 ## <a name="remarks"></a>Observaciones
 
-- No se llama a `AddRef` **Attach (** *pInterface* **)** . La propiedad de la interfaz se pasa a este objeto `_com_ptr_t`. se llama a `Release` para reducir el recuento de referencias del puntero encapsulado previamente.
+- No se llama a **Attach(***pInterface***).** `AddRef`     La propiedad de la interfaz se pasa a este objeto `_com_ptr_t`. `Release`se llama para disminuir el recuento de referencias para el puntero encapsulado anteriormente.
 
-- **Adjuntar (**  *pInterface* **,**  *fAddRef*  **)** Si *fAddRef* es true, se llama a `AddRef` para incrementar el recuento de referencias para el puntero de interfaz encapsulado. Si *fAddRef* es false, este objeto `_com_ptr_t` toma la propiedad del puntero de interfaz sin formato sin llamar a `AddRef`. se llama a `Release` para reducir el recuento de referencias del puntero encapsulado previamente.
+- **Attach(**  *pInterface* **,**  *fAddRef*  **)** Si *fAddRef* es `AddRef` TRUE, se llama para incrementar el recuento de referencias para el puntero de interfaz encapsulado. Si *fAddRef* es `_com_ptr_t` FALSE, este objeto toma la `AddRef`propiedad del puntero de interfaz sin formato sin llamar a . `Release`se llama para disminuir el recuento de referencias para el puntero encapsulado anteriormente.
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)
+[Clase _com_ptr_t](../cpp/com-ptr-t-class.md)

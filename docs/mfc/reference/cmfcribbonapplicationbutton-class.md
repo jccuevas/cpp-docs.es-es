@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 0debd40825990b647cd5b1df9a144e3abd450de3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b28d075c5fcc4313e1a62ae731b3fad8ef4d8a12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361607"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749930"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton (Clase)
 
@@ -90,7 +90,7 @@ El botón de aplicación de la cinta de opciones es un botón especial que se en
 
 Asigna una imagen al botón de la aplicación.
 
-```
+```cpp
 void SetImage(UINT uiBmpResID);
 void SetImage(HBITMAP hBmp);
 ```
@@ -107,7 +107,7 @@ void SetImage(HBITMAP hBmp);
 
 Utilice este método para asignar una nueva imagen al botón de aplicación de la cinta de opciones después de crear el botón. El botón de aplicación se encuentra en la esquina superior izquierda de la ventana de la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

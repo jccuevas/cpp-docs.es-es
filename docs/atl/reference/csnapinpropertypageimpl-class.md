@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330698"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747581"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Clase CSnapInPropertyPageImpl
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 Llame a esta función después de que se haya realizado un cambio irrecuperable en los datos de una página de una hoja de propiedades modal.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ La implementación `OnApply` predeterminada de devuelve TRUE.
 
 Esta función miembro se llama cuando el usuario hace clic en el botón **Ayuda** para la página de propiedades.
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ La implementación `OnQueryCancel` predeterminada de devuelve TRUE.
 
 Esta función miembro se llama cuando el usuario hace clic en el **cancelar** botón.
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ Si una página devuelve un valor distinto de cero, la hoja de propiedades no env
 
 Llame a esta función miembro para habilitar o deshabilitar el **botón Aplicar ahora,** en función de si la configuración de la página de propiedades se debe aplicar al objeto externo adecuado.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 
@@ -347,6 +347,6 @@ void SetModified(BOOL bChanged = TRUE);
 
 La hoja de propiedades realiza un seguimiento de qué páginas están `SetModified( TRUE )`"sucias", es decir, las páginas de propiedades para las que ha llamado . El botón **Aplicar ahora** siempre estará `SetModified( TRUE )` habilitado si llama a una de las páginas. El botón **Aplicar ahora** se `SetModified( FALSE )` deshabilitará cuando llame a una de las páginas, pero solo si ninguna de las otras páginas está "sucia".
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../atl/atl-class-overview.md)

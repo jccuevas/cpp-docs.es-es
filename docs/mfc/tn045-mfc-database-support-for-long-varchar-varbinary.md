@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: f67d159fb600dcacd8eedd40e672edf18bddee9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55a68ba970d0a26163f426d51818c701c13ed051
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365510"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750286"
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Compatibilidad MFC/base de datos con Long Varchar/Varbinary
 
@@ -45,7 +45,7 @@ Este enfoque es fácil de entender y se trabaja con clases familiares. El marco 
 
 Las funciones `CString` RFX para y `CByteArray` tienen un argumento adicional que le permite invalidar el tamaño predeterminado de la memoria asignada para contener el valor recuperado para la columna de datos. Observe el argumento nMaxLength en las siguientes declaraciones de función:
 
-```
+```cpp
 void AFXAPI RFX_Text(CFieldExchange* pFX,
     const char *szName,
     CString& value,
@@ -116,7 +116,7 @@ En este caso, la columna de datos larga debe estar en la lista de selección del
 > [!NOTE]
 > Dado que la columna de datos larga no está enlazada `CRecordset::Update` por el marco de trabajo, los cambios en ella no se controlarán con llamadas. Debe crear y enviar las instrucciones SQL **INSERT** y **UPDATE** necesarias usted mismo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 2420e1643444e6cbbf8edff90bbd3ecb1eac8534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15cfa205337248181f02e6a1218d49e75bda58e6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320783"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748113"
 ---
 # <a name="ccomcontrolbase-class"></a>Clase CComControlBase
 
@@ -606,7 +606,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 *dispid*<br/>
 Identificador de la propiedad contenedora que se va a recuperar.
 
-*Var*<br/>
+*var*<br/>
 Variable para recibir la propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -794,7 +794,7 @@ Este valor se establece mediante [CComControlBase::SetDirty](#setdirty).
 
 Recupera los valores x e y del numerador y el denominador del factor de zoom para un control activado para la edición in situ.
 
-```
+```cpp
 void GetZoomInfo(ATL_DRAWINFO& di);
 ```
 
@@ -1553,7 +1553,7 @@ Para un control con ventanas, se llama a la función [SetFocus](/windows/win32/a
 
 Establece el `m_bRequiresSave` miembro de datos en el valor en *bDirty*.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 
@@ -1566,7 +1566,7 @@ Valor del miembro de datos [CComControlBase::m_bRequiresSave](#m_brequiressave).
 
 `SetDirty(TRUE)`debe llamarse para marcar que el control ha cambiado desde la última vez que se guardó. El valor `m_bRequiresSave` de se recupera con [CComControlBase::GetDirty](#getdirty).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

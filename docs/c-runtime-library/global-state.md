@@ -3,12 +3,12 @@ title: Estado global en el CRT
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 487418da104b2edbc45b5d3a664e4385394ada31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377603"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745341"
 ---
 # <a name="global-state-in-the-crt"></a>Estado global en el CRT
 
@@ -20,8 +20,8 @@ El estado global del UCRT no se comparte entre las aplicaciones y el sistema ope
 
 En el UCRT, las funciones que interactúan con el `_o_`estado global tienen una función "twin", precedida con . Por ejemplo:
 
-    `setlocale()` affects global state specific to the app.
-    `_o_setlocale()` affects global state shared by all OS components, but not apps.
+- `setlocale()`afecta al estado global específico de la aplicación.
+- `_o_setlocale()`afecta al estado global compartido por todos los componentes del sistema operativo, pero no las aplicaciones.
 
 La única diferencia entre estas funciones "gemelos" es que cuando leen y escriben el estado `_o_`global de CRT, las versiones específicas del sistema operativo (es decir, las versiones que comienzan con ) usan la copia del sistema operativo del estado global en lugar de la copia del estado global de la aplicación.
 
@@ -53,6 +53,6 @@ El estado global afectado por la separación de la aplicación y el estado del s
 - [fmode] (text-and-binary-mode-file-i-o.md)
 - [Información de zona horaria](time-management.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [C Referencia de biblioteca en tiempo de ejecución](c-run-time-library-reference.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329346"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747347"
 ---
 # <a name="worker-archetype"></a>Arquetipo de trabajador
 
@@ -58,7 +58,7 @@ Estos parámetros de plantilla esperan que la clase se ajuste a este arquetipo:
 
 Se llama para procesar un elemento de trabajo.
 
-```
+```cpp
 void Execute(
     RequestType request,
     void* pvWorkerParam,
@@ -109,7 +109,7 @@ Este tipo debe utilizarse como `WorkerArchetype::Execute` primer parámetro de y
 
 Se llama para anular la inicialización del `WorkerArchetype::Execute`objeto de trabajo después de que se hayan pasado todas las solicitudes a ).
 
-```
+```cpp
 void Terminate(void* pvParam) throw();
 ```
 
@@ -118,7 +118,7 @@ void Terminate(void* pvParam) throw();
 *pvParam*<br/>
 Un parámetro personalizado entendido por la clase de trabajo. También pasó `WorkerArchetype::Initialize` `WorkerArchetype::Execute`a y .
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Conceptos](../../atl/active-template-library-atl-concepts.md)<br/>
 [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)

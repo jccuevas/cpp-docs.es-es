@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361435"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749751"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar (clase)
 
@@ -581,7 +581,7 @@ La categoría de la cinta de opciones de acceso rápido solo se utiliza en el cu
 
 Agrega el elemento de la cinta de opciones especificado a la fila de pestañas de la barra de la cinta de opciones.
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ TRUESi se creó la ventana; de lo contrario FALSO.
 
 Cierra todos los controles de información clave de la barra de la cinta de opciones.
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 Habilita o deshabilita la característica de información sobre teclas para la barra de la cinta de opciones.
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ Al habilitar esta característica, se muestran sugerencias de teclas cuando el u
 
 Habilita o deshabilita la función Vista previa de **impresión.**
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ De forma predeterminada, la función Vista previa de **impresión** está habili
 
 Habilita o deshabilita la información sobre herramientas y las descripciones de información sobre herramientas opcionales en la barra de la cinta de opciones.
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ El índice de base cero de una categoría de cinta de opciones si el método se 
 
 Ajusta el diseño de todos los elementos de la barra de la cinta de opciones y de la ventana principal y vuelve a dibujar toda la ventana.
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ El elemento de la cinta de opciones que se deja caer actualmente; o NULL si no h
 
 Recupera una matriz de punteros a todos los elementos de la cinta de opciones que tienen un identificador de comando específico.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ En la tabla siguiente se muestra la posible combinación de indicadores para el 
 
 Recupera los elementos de comando para la colección especificada de elementos de la cinta de opciones en la barra de la cinta de opciones.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ Un puntero al elemento de la cinta de opciones en la barra de herramientas de ac
 
 Recupera una lista de vínculos de comando para los elementos de la cinta de opciones en la barra de herramientas de acceso rápido.
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ Si una categoría de contexto está activa, la categoría activa se restablece a
 
 Oculta todas las sugerencias de teclas en la barra de la cinta de opciones.
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ TRUESi se ha procesado el evento de pulsación de tecla; de lo contrario FALSO.
 
 Quita una información sobre herramientas de la vista.
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ Después del ajuste de diseño, se actualiza la visualización de la barra de la
 
 Elimina todas las categorías de la cinta de opciones de la barra de la cinta de opciones.
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ Este método elimina todas las categorías de la cinta de opciones de la memoria
 
 Quita todos los elementos de la cinta de opciones del área de pestañas.
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ Si no se muestra la categoría especificada por *pCategory,* no se puede estable
 
 Asocia los botones del sistema en la barra de la cinta de opciones que pertenecen a una ventana secundaria de interfaz de varios documentos (MDI) a la ventana secundaria MDI especificada.
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 Asigna un botón de la cinta de opciones de aplicación a la barra de cinta.
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ La información sobre teclas de menú opcional es para los elementos de la cinta
 
 Establece el nivel de navegación del teclado a medida que el usuario presiona las sugerencias de teclas que se encuentran en la barra de la cinta de opciones.
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ La navegación por el teclado de la barra de la cinta de opciones se inicia cuan
 
 Ajusta la barra de la cinta de opciones cuando el tamaño de ventana de una ventana secundaria de interfaz de varios documentos (MDI) entra o sale del estado maximizado.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ La barra de la cinta de opciones muestra los botones del sistema para una ventan
 
 Agrega uno o más elementos de la cinta de opciones a la barra de herramientas de acceso rápido.
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,7 +1890,7 @@ En el ejemplo siguiente se `SetQuickAccessCommands` muestra `CMFCRibbonBar` cóm
 
 Establece la barra de herramientas de acceso rápido en el estado predeterminado.
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
@@ -1913,7 +1913,7 @@ En el ejemplo siguiente se `SetQuickAccessDefaultState` muestra `CMFCRibbonBar` 
 
 Coloca la barra de herramientas de acceso rápido por encima o por debajo de la barra de la cinta de opciones.
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 Establece los tamaños regulares y grandes de anchos fijos de información sobre herramientas para la barra de la cinta de opciones.
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ Establecer un parámetro en 0 hace que el ancho correspondiente varíe.
 
 Muestra u oculta la categoría de la cinta de opciones especificada.
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 Muestra u oculta las categorías de contexto que tienen el identificador especificado.
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 Muestra las sugerencias de teclas para cada elemento de la cinta de opciones en la barra de la cinta de opciones.
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 Alterna la barra de cinta entre los estados minimizado y maximizado.
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ TRUE si es correcto; en caso contrario, FALSE.
 
 Habilita o deshabilita el aspecto de Windows 7 (botón de aplicación rectangular pequeña) para la cinta de opciones.
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);
@@ -2147,7 +2147,7 @@ TRUE vuelve a calcular el diseño de la cinta de opciones; FALSE en caso contrar
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

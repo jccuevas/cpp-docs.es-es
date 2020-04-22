@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 5940cce6d55b95d8e1bac103cacc0bc828c213de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7c1c98d739aa1c17bb30df2d9d4ce8c41558c76d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371105"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750193"
 ---
 # <a name="canimationcolor-class"></a>Clase CAnimationColor
 
@@ -108,7 +108,7 @@ La Clase CAnimationColor encapsula tres objetos CAnimationVariable y puede repre
 
 Añade transiciones para componentes rojos, verdes y azules.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pRTransition,
     CBaseTransition* pGTransition,
@@ -146,7 +146,7 @@ CAnimationColor(
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 Especifica el color predeterminado.
 
 *nGroupID*<br/>
@@ -249,7 +249,7 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 Salida. Contiene el valor actual cuando se devuelve este método.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -296,13 +296,13 @@ operator COLORREF();
 
 Asigna color a CAnimationColor.
 
-```
+```cpp
 void operator=(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 Especifica el nuevo valor Color de animación.
 
 ### <a name="remarks"></a>Observaciones
@@ -313,19 +313,19 @@ Se recomienda hacerlo antes del inicio de la animación, porque este operador ll
 
 Establece el valor predeterminado.
 
-```
+```cpp
 void SetDefaultValue(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 Especifica nuevos valores predeterminados para los componentes rojo, verde y azul.
 
 ### <a name="remarks"></a>Observaciones
 
 Utilice esta función para establecer un valor predeterminado en el objeto de animación. Este método asigna valores predeterminados a los componentes de color del color de animación. También vuelve a crear objetos COM subyacentes si se han creado. Si suscribió este objeto de animación a eventos (ValueChanged o IntegerValueChanged), debe volver a habilitar estos eventos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

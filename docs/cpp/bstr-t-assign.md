@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190647"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749711"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
-Copia un `BSTR` en el `BSTR` incluido en **_** `bstr_t`.
+Copia `BSTR` a `BSTR` en el envuelto por un **_**`bstr_t`.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Assign(
    BSTR s
 );
@@ -34,7 +34,7 @@ void Assign(
 
 ## <a name="remarks"></a>Observaciones
 
-**Assign** realiza una copia binaria, lo que significa que se copia toda la longitud del `BSTR`, independientemente del contenido.
+**Assign** realiza una copia binaria, lo `BSTR` que significa que se copia toda la longitud de la copia, independientemente del contenido.
 
 ## <a name="example"></a>Ejemplo
 
@@ -109,8 +109,8 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [_bstr_t (Clase)](../cpp/bstr-t-class.md)

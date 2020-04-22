@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: ae790cf1248c78ff9aa70c0e586f86af6c8f3b9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16eebfff4330a47888d1b60eaa993ee87d120f72
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318939"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748298"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase (clase)
 
@@ -129,7 +129,7 @@ Devuelve S_OK en caso de éxito o un error HRESULT en caso de error.
 
 Llame a este método para obtener los datos de un objeto de asignación de archivos.
 
-```
+```cpp
 void* GetData() const throw();
 ```
 
@@ -316,7 +316,7 @@ Devuelve S_OK en caso de éxito o un error HRESULT en caso de error.
 
 Consulte [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) en el Windows SDK para obtener más detalles.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CAtlFileMapping Clase](../../atl/reference/catlfilemapping-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

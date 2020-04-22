@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 9f05e83c8d0a1fd68fce3228dea9cfeab6183c96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9200c9c396fc16b6df3f4c2f4c66fb7976316d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321166"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748166"
 ---
 # <a name="ccomaggobject-class"></a>Clase CComAggObject
 
@@ -171,7 +171,7 @@ Un valor HRESULT estándar.
 
 Llamado durante la destrucción de objetos, este método libera el [m_contained](#m_contained) miembro.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -233,7 +233,7 @@ STDMETHOD_(ULONG, Release)();
 
 En compilaciones `Release` de depuración, devuelve un valor que puede ser útil para diagnósticos o pruebas. En compilaciones que `Release` no son de depuración, siempre devuelve 0.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [CComPolyObject (Clase)](../../atl/reference/ccompolyobject-class.md)<br/>

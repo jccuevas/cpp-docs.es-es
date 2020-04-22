@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1985384c2d9a324abac548f27be6be5f0cacf5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321337"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748592"
 ---
 # <a name="catlservicemodulet-class"></a>Clase CAtlServiceModuleT
 
@@ -147,7 +147,7 @@ Inicializa los miembros de datos y establece el estado inicial del servicio.
 
 La rutina de controlador para el servicio.
 
-```
+```cpp
 void Handler(DWORD dwOpcode) throw();
 ```
 
@@ -230,7 +230,7 @@ Devuelve TRUE si el servicio está instalado, FALSE en caso contrario.
 
 Escribe en el registro de eventos.
 
-```
+```cpp
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ```
 
@@ -310,7 +310,7 @@ Cadena terminada en null que almacena el nombre del servicio.
 
 Invalide este método para continuar con el servicio.
 
-```
+```cpp
 void OnContinue() throw();
 ```
 
@@ -318,7 +318,7 @@ void OnContinue() throw();
 
 Invalide este método para interrogar el servicio.
 
-```
+```cpp
 void OnInterrogate() throw();
 ```
 
@@ -326,7 +326,7 @@ void OnInterrogate() throw();
 
 Invalide este método para pausar el servicio.
 
-```
+```cpp
 void OnPause() throw();
 ```
 
@@ -334,7 +334,7 @@ void OnPause() throw();
 
 Invalide este método para cerrar el servicio.
 
-```
+```cpp
 void OnShutdown() throw();
 ```
 
@@ -342,7 +342,7 @@ void OnShutdown() throw();
 
 Invalide este método para detener el servicio.
 
-```
+```cpp
 void OnStop() throw();
 ```
 
@@ -350,7 +350,7 @@ void OnStop() throw();
 
 Invalide este método para controlar las solicitudes desconocidas al servicio.
 
-```
+```cpp
 void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```
 
@@ -446,7 +446,7 @@ Después de `Run` llamarse, llama a [CAtlServiceModuleT::PreMessageLoop](#premes
 
 El Administrador de control de servicios llama a este método.
 
-```
+```cpp
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 ```
 
@@ -468,7 +468,7 @@ Después de `ServiceMain`las llamadas de SCM , un servicio debe proporcionar al 
 
 Este método actualiza el estado del servicio.
 
-```
+```cpp
 void SetServiceStatus(DWORD dwState) throw();
 ```
 
@@ -563,7 +563,7 @@ Devuelve el valor devuelto del servicio.
 
 Este método procesa la línea de comandos (con [CAtlServiceModuleT::ParseCommandLine](#parsecommandline)) y, a continuación, inicia el servicio (mediante [CAtlServiceModuleT::Start](#start)).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

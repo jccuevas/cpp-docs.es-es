@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: aca9606271040e5c5c9aee81be0a08b64cf2bab7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369127"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750304"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Clase CD2DRadialGradientBrush
 
@@ -123,7 +123,7 @@ virtual ~CD2DRadialGradientBrush();
 
 Adjunta la interfaz de recursos existente al objeto
 
-```
+```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```
 
@@ -303,7 +303,7 @@ Puntero a un ID2D1RadialGradientBrush interfaz o NULL si el objeto no se ha inic
 
 Especifica el centro de la elipse de degradado en el espacio de coordenadas del pincel
 
-```
+```cpp
 void SetCenter(CD2DPointF point);
 ```
 
@@ -316,7 +316,7 @@ El centro de la elipse de degradado, en el espacio de coordenadas del pincel
 
 Especifica el desfase del origen del degradado en relación con el centro de la elipse de degradado
 
-```
+```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```
 
@@ -329,7 +329,7 @@ El desplazamiento del origen del degradado desde el centro de la elipse de degra
 
 Especifica el radio x de la elipse de degradado, en el espacio de coordenadas del pincel
 
-```
+```cpp
 void SetRadiusX(FLOAT radiusX);
 ```
 
@@ -342,7 +342,7 @@ El radio x de la elipse de degradado. Este valor está en el espacio de coordena
 
 Especifica el radio Y de la elipse de degradado, en el espacio de coordenadas del pincel
 
-```
+```cpp
 void SetRadiusY(FLOAT radiusY);
 ```
 
@@ -351,6 +351,6 @@ void SetRadiusY(FLOAT radiusY);
 *radiusY*<br/>
 El radio Y de la elipse degradada. Este valor está en el espacio de coordenadas del pincel
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

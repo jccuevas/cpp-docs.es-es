@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: cb8e3d6b71db6ab60b3b246bd8c5bf4f2c9aaa34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2fa6eb26c2e2cd569d74c02d8303768b1aeb4f1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321253"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748273"
 ---
 # <a name="cautoptr-class"></a>Clase CAutoPtr
 
@@ -93,7 +93,7 @@ Vea también [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) y [CAut
 
 Llame a este método para tomar la propiedad de un puntero existente.
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
@@ -179,7 +179,7 @@ Vea el ejemplo en La descripción general de [CAutoPtr](../../atl/reference/caut
 
 Llame a este método para eliminar `CAutoPtr`un objeto al que apunta un archivo .
 
-```
+```cpp
 void Free() throw();
 ```
 
@@ -267,7 +267,7 @@ Devuelve un puntero al tipo de datos de objeto definido en la plantilla de clase
 
 Vea el ejemplo en La descripción general de [CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Clase CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>

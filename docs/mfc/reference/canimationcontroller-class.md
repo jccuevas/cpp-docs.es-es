@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369755"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750181"
 ---
 # <a name="canimationcontroller-class"></a>Clase CAnimationController
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 Llamado por el marco de trabajo para limpiar el grupo cuando se ha programado la animación.
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -1010,7 +1010,7 @@ Se llama a este método si habilita eventos de guión gráfico mediante CAnimati
 
 Quita todos los grupos de animación del controlador de animación.
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ Se eliminarán todos los grupos, su puntero, si se almacena en el nivel de aplic
 
 Quita un grupo de animación con el identificador especificado del controlador de animación.
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ Este método quita un grupo de animación de la lista interna de grupos y lo eli
 
 Quitar un objeto de animación del controlador de animación.
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ Quita un objeto de animación del controlador de animación y del grupo de anima
 
 Quita las transiciones de los objetos de animación que pertenecen al grupo especificado.
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ Debe llamar a AnimateGroup con el parámetro bScheduleNow establecido en FALSE a
 
 Establece una relación entre el controlador de animación y una ventana.
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 
@@ -1129,6 +1129,6 @@ virtual void UpdateAnimationManager();
 
 Llamar a este método avanza el administrador de animaciones a la hora actual, cambiando los estados de los guiones gráficos según sea necesario y actualizando las variables de animación a los valores interpolados adecuados. Internamente este método llama a IUIAnimationTimer::GetTime(timeNow) y IUIAnimationManager::Update(timeNow). Invalide este método en una clase derivada para personalizar este comportamiento.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

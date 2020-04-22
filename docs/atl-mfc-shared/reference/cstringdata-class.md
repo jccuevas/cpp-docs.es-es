@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 5915d9e25588e4e35538619662281ceaf1b35ff7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317610"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746839"
 ---
 # <a name="cstringdata-class"></a>Clase CStringData
 
@@ -91,7 +91,7 @@ Estos datos se componen de:
 
 Incrementa el recuento de referencias del objeto de cadena.
 
-```
+```cpp
 void AddRef() throw();
 ```
 
@@ -106,7 +106,7 @@ Incrementa el recuento de referencias del objeto de cadena.
 
 Devuelve un puntero al búfer de caracteres de un objeto de cadena.
 
-```
+```cpp
 void* data() throw();
 ```
 
@@ -157,7 +157,7 @@ Llame a esta función para determinar si el búfer de caracteres de un objeto de
 
 Bloquea el búfer de caracteres del objeto de cadena asociado.
 
-```
+```cpp
 void Lock() throw();
 ```
 
@@ -220,7 +220,7 @@ Almacena el administrador de memoria para el objeto de cadena asociado. Para obt
 
 Disminuye el recuento de referencias del objeto de datos de cadena.
 
-```
+```cpp
 void Release() throw();
 ```
 
@@ -236,7 +236,7 @@ Por ejemplo, el código `CStringData::Release` siguiente llamaría al `str1`obje
 
 Desbloquea el búfer de caracteres del objeto de cadena asociado.
 
-```
+```cpp
 void Unlock() throw();
 ```
 
@@ -249,7 +249,7 @@ Llame a esta función para desbloquear el búfer de caracteres del objeto de dat
 
 El bloqueo y el desbloqueo se usan cuando el desarrollador debe asegurarse de que los datos de cadena no se comparten. Un buen ejemplo de bloqueo se muestra mediante el `CSimpleStringT` [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) y [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) métodos de .
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

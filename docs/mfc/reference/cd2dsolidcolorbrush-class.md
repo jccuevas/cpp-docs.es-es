@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: 5aa3d7688046b0c1b04983f2d27fe5579dd7c680
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d66a92e4801f7a13c62e2d83fdb94411d077ff53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369054"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750260"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Clase CD2DSolidColorBrush
 
@@ -103,7 +103,7 @@ virtual ~CD2DSolidColorBrush();
 
 Adjunta la interfaz de recursos existente al objeto
 
-```
+```cpp
 void Attach(ID2D1SolidColorBrush* pResource);
 ```
 
@@ -136,7 +136,7 @@ CD2DSolidColorBrush(
 *pParentTarget*<br/>
 Un puntero al destino de representación.
 
-*color*<br/>
+*Color*<br/>
 Los valores rojo, verde, azul y alfa del color del pincel.
 
 *pBrushProperties*<br/>
@@ -241,15 +241,15 @@ Puntero a un ID2D1SolidColorBrush interfaz o NULL si el objeto aún no se ha ini
 
 Especifica el color de este pincel de color sólido
 
-```
+```cpp
 void SetColor(D2D1_COLOR_F color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 El color de este pincel de color sólido
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

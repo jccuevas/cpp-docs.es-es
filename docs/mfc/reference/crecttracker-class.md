@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 4d262ab5f88481d56de1c236effb66fcbf6a706a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3600bc5a945c24e91269bc280b4b8e99c54d4c8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368375"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750455"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (clase)
 
@@ -174,7 +174,7 @@ El constructor predeterminado `CRectTracker` inicializa el objeto con los valore
 
 Llame a esta función para dibujar las líneas externas y la región interna del rectángulo.
 
-```
+```cpp
 void Draw(CDC* pDC) const;
 ```
 
@@ -247,7 +247,7 @@ Invalide esta función miembro para ocultar o mostrar los identificadores de cam
 
 Llame a esta función para recuperar las coordenadas del rectángulo.
 
-```
+```cpp
 void GetTrueRect(LPRECT lpTrueRect) const;
 ```
 
@@ -287,7 +287,7 @@ El valor devuelto se basa `CRectTracker::TrackerHit` en el tipo enumerado y pued
 
 - `CRectTracker::hitBottomLeft`3
 
-- `CRectTracker::hitTop`4
+- `CRectTracker::hitTop` 4
 
 - `CRectTracker::hitRight`5
 
@@ -479,7 +479,7 @@ Esta función capturará el ratón hasta que el usuario suelte el botón izquier
 
 El seguimiento se realiza con una selección de tipo banda de goma del mango inferior derecho. Si se permite invertir, el rectángulo se puede dimensionar arrastrando hacia arriba y hacia la izquierda o hacia abajo y hacia la derecha.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [EJEMPLO TRACKER de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>

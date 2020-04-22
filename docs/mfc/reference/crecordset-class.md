@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368360"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750504"
 ---
 # <a name="crecordset-class"></a>Clase CRecordset
 
@@ -331,7 +331,7 @@ Para obtener más información acerca de los marcadores y la navegación de conj
 
 Solicita que el origen de datos cancele una operación asincrónica en curso o un proceso de un segundo subproceso.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ Tenga en cuenta que las clases ODBC de MFC ya no utilizan el procesamiento asinc
 
 Cancela las actualizaciones pendientes, causadas por una operación [Edit](#edit) o [AddNew,](#addnew) antes de llamar a [Update.](#update)
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ En el código `COutParamRecordset` siguiente `CRecordset`se supone que es un obj
 
 Obtiene el valor del marcador para el registro actual.
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ Para obtener más información, vea el artículo [Conjunto de registros: declara
 
 Recupera datos de campo en el registro actual.
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ Para obtener más información acerca de la creación de conjuntos de registros,
 
 Obtiene información sobre los campos del conjunto de registros.
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ Para obtener más información, `SQLExtendedFetch` consulte la función de API O
 
 Determina el índice del registro actual en el conjunto de registros y si se ha visto el último registro.
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ Para obtener más información acerca de la navegación de conjuntos de registro
 
 Convierte el primer registro del primer conjunto de filas en el registro actual.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ Para obtener más información acerca de la navegación de conjuntos de registro
 
 Convierte el primer registro del último conjunto de filas completo en el registro actual.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ Para obtener más información acerca de la navegación de conjuntos de registro
 
 Convierte el primer registro del siguiente conjunto de filas en el registro actual.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ Para obtener más información acerca de la navegación de conjuntos de registro
 
 Convierte el primer registro del conjunto de filas anterior en el registro actual.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ Los siguientes ejemplos de código `Open` muestran diferentes formas de la llama
 
 Actualiza los datos y el estado de una fila del conjunto de filas actual.
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ En este ejemplo se vuelve a generar un conjunto de registros para aplicar un cri
 
 Coloca el conjunto de registros en el registro correspondiente al número de registro especificado.
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ Para obtener más información acerca de la navegación de conjuntos de registro
 
 Coloca el conjunto de registros en el registro que contiene el marcador especificado.
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ Para obtener más información acerca de los marcadores y la navegación de conj
 
 Marca un miembro de datos de campo del conjunto de registros como modificado o como sin cambios.
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ Esto significa que `param` no puede establecer todos `outputColumn` los campos e
 
 Marca un miembro de datos de campo del conjunto de registros como Null (específicamente sin valor) o como no nulo.
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ Esto significa que `param` no puede establecer todos `outputColumn` los campos e
 
 Establece el modo de bloqueo en bloqueo "optimista" (valor predeterminado) o bloqueo "pesimista". Determina cómo se bloquean los registros para las actualizaciones.
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ Llame a esta función miembro si necesita especificar cuál de las dos estrategi
 
 Marca un parámetro como Null (específicamente sin valor) o como no Null.
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ A diferencia de [SetFieldNull](#setfieldnull), puede llamar `SetParamNull` antes
 
 Mueve el cursor a una fila dentro del conjunto de filas actual.
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 
@@ -1957,7 +1957,7 @@ Para obtener `Update` más información sobre el control de errores, vea el art�
 
 Consulte el artículo [Transacción: realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 40dbfb822e71309e9675aba14d46d333ffa4ee06
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f4899d4470903a4145cc171579e4b251b984f95
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373261"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747187"
 ---
 # <a name="ctypedptrlist-class"></a>Clase CTypedPtrList
 
@@ -354,7 +354,7 @@ Debe asegurarse de que la `RemoveTail`lista no está vacía antes de llamar a . 
 
 Esta función `BASE_CLASS`miembro llama **a ::SetAt**.
 
-```
+```cpp
 void SetAt(POSITION pos, TYPE newElement);
 ```
 
@@ -377,7 +377,7 @@ Debe asegurarse de que el valor POSITION representa una posición válida en la 
 
 Para obtener comentarios más detallados, vea [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [RECOPILACIÓN de muestras de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

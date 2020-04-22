@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: c59ed587e2c8e51f5c08a026a7ee0b9d0af25168
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99eca7fe3a9c84f8b79ef3d694e27b6dd74dcd9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317714"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747056"
 ---
 # <a name="crect-class"></a>Clase CRect
 
@@ -242,7 +242,7 @@ void CMyDlg::OnPaint()
 
 Copia `lpSrcRect` el `CRect`rectángulo en .
 
-```
+```cpp
 void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
@@ -288,13 +288,13 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*l*<br/>
+*L*<br/>
 Especifica la posición `CRect`izquierda de .
 
-*T*<br/>
+*t*<br/>
 Especifica la parte `CRect`superior de .
 
-*R*<br/>
+*r*<br/>
 Especifica la posición `CRect`correcta de .
 
 *B*<br/>
@@ -309,7 +309,7 @@ Apunta a `RECT` la estructura con `CRect`las coordenadas de .
 *Punto*<br/>
 Especifica el punto de origen del rectángulo que se va a construir. Corresponde a la esquina superior izquierda.
 
-*Tamaño*<br/>
+*size*<br/>
 Especifica el desplazamiento desde la esquina superior izquierda hasta la esquina inferior derecha del rectángulo que se va a construir.
 
 *topLeft*<br/>
@@ -366,7 +366,7 @@ ASSERT(rect5 == rect4);
 
 `DeflateRect`se desinfla `CRect` moviendo sus lados hacia su centro.
 
-```
+```cpp
 void DeflateRect(int x, int y) throw();
 void DeflateRect(SIZE size) throw();
 void DeflateRect(LPCRECT lpRect) throw();
@@ -375,25 +375,25 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica el número de unidades que se desinflan los lados izquierdo y derecho de `CRect`.
 
 *y y*<br/>
 Especifica el número de unidades que se `CRect`desinflan la parte superior e inferior de .
 
-*Tamaño*<br/>
+*size*<br/>
 Un [SIZE](/windows/win32/api/windef/ns-windef-size) o [CSize](csize-class.md) que especifica el número `CRect`de unidades que se van a desinflar. El `cx` valor especifica el número de unidades para desinflar los lados izquierdo y derecho y el `cy` valor especifica el número de unidades para desinflar la parte superior e inferior.
 
 *lpRect*<br/>
 Apunta a una estructura `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o que especifica el número de unidades que se van a desinflar cada lado.
 
-*l*<br/>
+*L*<br/>
 Especifica el número de unidades que se `CRect`desinflan el lado izquierdo de .
 
-*T*<br/>
+*t*<br/>
 Especifica el número de unidades que `CRect`se desinflan la parte superior de .
 
-*R*<br/>
+*r*<br/>
 Especifica el número de unidades que se `CRect`desinflan el lado derecho de .
 
 *B*<br/>
@@ -492,7 +492,7 @@ ASSERT(nHt == 40);
 
 `InflateRect``CRect` inflaalmoviendo moviendo sus lados lejos de su centro.
 
-```
+```cpp
 void InflateRect(int x, int y) throw();
 void InflateRect(SIZE size) throw();
 void InflateRect(LPCRECT lpRect) throw();
@@ -501,25 +501,25 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica el número de unidades para inflar `CRect`los lados izquierdo y derecho de .
 
 *y y*<br/>
 Especifica el número de unidades que se `CRect`inflan la parte superior e inferior de .
 
-*Tamaño*<br/>
+*size*<br/>
 Un [SIZE](/windows/win32/api/windef/ns-windef-size) o [CSize](csize-class.md) que especifica el `CRect`número de unidades que se va a inflar . El `cx` valor especifica el número de unidades para inflar los lados izquierdo y derecho y el `cy` valor especifica el número de unidades para inflar la parte superior e inferior.
 
 *lpRect*<br/>
 Apunta a una estructura `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o que especifica el número de unidades para inflar cada lado.
 
-*l*<br/>
+*L*<br/>
 Especifica el número de unidades para `CRect`inflar el lado izquierdo de .
 
-*T*<br/>
+*t*<br/>
 Especifica el número de unidades que `CRect`se inflan en la parte superior de .
 
-*R*<br/>
+*r*<br/>
 Especifica el número de unidades para `CRect`inflar el lado derecho de .
 
 *B*<br/>
@@ -647,13 +647,13 @@ ASSERT(!rectNotNull.IsRectNull());
 
 Llame a esta función para mover el rectángulo a la coordenada x absoluta especificada por *x*.
 
-```
+```cpp
 void MoveToX(int x) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Coordenada x absoluta para la esquina superior izquierda del rectángulo.
 
 ### <a name="example"></a>Ejemplo
@@ -670,14 +670,14 @@ ASSERT(rect == CRect(10, 0, 110, 100));
 
 Llame a esta función para mover el rectángulo a las coordenadas x e y absolutas especificadas.
 
-```
+```cpp
 void MoveToXY(int x, int y) throw();
 void MoveToXY(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Coordenada x absoluta para la esquina superior izquierda del rectángulo.
 
 *y y*<br/>
@@ -699,7 +699,7 @@ ASSERT(rect == CRect(10, 10, 110, 110));
 
 Llame a esta función para mover el rectángulo a la coordenada y absoluta especificada por *y*.
 
-```
+```cpp
 void MoveToY(int y) throw();
 ```
 
@@ -721,7 +721,7 @@ ASSERT(rect == CRect(0, 10, 100, 110));
 
 Normaliza `CRect` para que tanto la altura como la anchura sean positivas.
 
-```
+```cpp
 void NormalizeRect() throw();
 ```
 
@@ -746,7 +746,7 @@ ASSERT(rect1 == rect2);
 
 Se `CRect` mueve por los desplazamientos especificados.
 
-```
+```cpp
 void OffsetRect(int x, int y) throw();
 void OffsetRect(POINT point) throw();
 void OffsetRect(SIZE size) throw();
@@ -754,7 +754,7 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la cantidad que se va a mover a la izquierda o a la derecha. Debe ser negativo moverse a la izquierda.
 
 *y y*<br/>
@@ -763,7 +763,7 @@ Especifica la cantidad que se va a mover hacia arriba o hacia abajo. Debe ser ne
 *Punto*<br/>
 Contiene una estructura [POINT](/windows/win32/api/windef/ns-windef-point) o un objeto [CPoint](cpoint-class.md) que especifica ambas dimensiones por las que se va a mover.
 
-*Tamaño*<br/>
+*size*<br/>
 Contiene una estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o un objeto [CSize](csize-class.md) que especifica ambas dimensiones por las que se va a mover.
 
 ### <a name="remarks"></a>Observaciones
@@ -810,7 +810,7 @@ Vea el ejemplo de [CRect::operator LPCRECT](#operator_lpcrect).
 
 Asigna *srcRect* `CRect`a .
 
-```
+```cpp
 void operator=(const RECT& srcRect) throw();
 ```
 
@@ -913,7 +913,7 @@ ASSERT(rect3 != test);
 
 Las dos primeras `CRect` sobrecargas se mueven por los desplazamientos especificados.
 
-```
+```cpp
 void operator+=(POINT point) throw();
 void operator+=(SIZE size) throw();
 void operator+=(LPCRECT lpRect) throw();
@@ -924,7 +924,7 @@ void operator+=(LPCRECT lpRect) throw();
 *Punto*<br/>
 Una estructura [POINT](/windows/win32/api/windef/ns-windef-point) o un objeto [CPoint](cpoint-class.md) que especifica el número de unidades para mover el rectángulo.
 
-*Tamaño*<br/>
+*size*<br/>
 Una estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o [cSize](csize-class.md) objeto que especifica el número de unidades para mover el rectángulo.
 
 *lpRect*<br/>
@@ -951,7 +951,7 @@ ASSERT(rect1 == rect2);
 
 Las dos primeras `CRect` sobrecargas se mueven por los desplazamientos especificados.
 
-```
+```cpp
 void operator-=(POINT point) throw();
 void operator-=(SIZE size) throw();
 void operator-=(LPCRECT lpRect) throw();
@@ -962,7 +962,7 @@ void operator-=(LPCRECT lpRect) throw();
 *Punto*<br/>
 Una estructura [POINT](/windows/win32/api/windef/ns-windef-point) o un objeto [CPoint](cpoint-class.md) que especifica el número de unidades para mover el rectángulo.
 
-*Tamaño*<br/>
+*size*<br/>
 Una estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o [cSize](csize-class.md) objeto que especifica el número de unidades para mover el rectángulo.
 
 *lpRect*<br/>
@@ -989,7 +989,7 @@ ASSERT(rect1 == rectResult);
 
 Establece `CRect` igual a `CRect` la `rect`intersección de y .
 
-```
+```cpp
 void operator&=(const RECT& rect) throw();
 ```
 
@@ -1013,7 +1013,7 @@ Vea el ejemplo de [CRect::IntersectRect](#intersectrect).
 
 Establece `CRect` igual a `CRect` la `rect`unión de y .
 
-```
+```cpp
 void operator|=(const RECT& rect) throw();
 ```
 
@@ -1055,7 +1055,7 @@ CRect operator+(SIZE size) const throw();
 *Punto*<br/>
 Estructura [POINT](/windows/win32/api/windef/ns-windef-point) o [cPoint](cpoint-class.md) objeto que especifica el número de unidades para mover el valor devuelto.
 
-*Tamaño*<br/>
+*size*<br/>
 Una estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o un objeto [CSize](csize-class.md) que especifica el número de unidades para mover el valor devuelto.
 
 *lpRect*<br/>
@@ -1098,7 +1098,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 *Punto*<br/>
 Estructura [POINT](/windows/win32/api/windef/ns-windef-point) u `CPoint` objeto POINT que especifica el número de unidades para mover el valor devuelto.
 
-*Tamaño*<br/>
+*size*<br/>
 Estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o `CSize` objeto SIZE que especifica el número de unidades para mover el valor devuelto.
 
 *lpRect*<br/>
@@ -1255,7 +1255,7 @@ ASSERT(rect.PtInRect(pt));
 
 Establece las `CRect` dimensiones de las coordenadas especificadas.
 
-```
+```cpp
 void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
@@ -1285,7 +1285,7 @@ ASSERT(rect == CRect(256, 256, 512, 512));
 
 Crea `CRect` un rectángulo nulo estableciendo todas las coordenadas en cero.
 
-```
+```cpp
 void SetRectEmpty() throw();
 ```
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: d7f7f7363eb123181bd6e0389663810346094cba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330292"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746000"
 ---
 # <a name="cwindowimpl-class"></a>Clase CWindowImpl
 
@@ -48,7 +48,7 @@ Nueva clase derivada de `CWindowImpl`.
 Clase base de la clase. De forma predeterminada, la clase base es [CWindow](../../atl/reference/cwindow-class.md).
 
 *TWinTraits*<br/>
-Clase de [rasgos](../../atl/understanding-window-traits.md) que define estilos para la ventana. El valor predeterminado es `CControlWinTraits`.
+Clase de [rasgos](../../atl/understanding-window-traits.md) que define estilos para la ventana. De manera predeterminada, es `CControlWinTraits`.
 
 ## <a name="members"></a>Miembros
 
@@ -147,7 +147,7 @@ HWND Create(
 [en] El identificador de la ventana principal o propietaria.
 
 *Rect*<br/>
-[en] Estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifica la posición de la ventana. El `RECT` se puede pasar por puntero o por referencia.
+[en] Estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifica la posición de la ventana. El `RECT` se puede pasar por puntero o por referencia.
 
 *szWindowName*<br/>
 [en] Especifica el nombre de la ventana. El valor predeterminado es NULL.
@@ -375,7 +375,7 @@ El resultado del procesamiento de mensajes.
 
 Puede invalidar `WindowProc` para proporcionar un mecanismo diferente para controlar los mensajes.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Clase CComControl](../../atl/reference/ccomcontrol-class.md)<br/>

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327110"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747721"
 ---
 # <a name="cdebugreporthook-class"></a>Clase CDebugReportHook
 
@@ -107,7 +107,7 @@ static int __cdecl CDebugReportHookProc(
 *reportType*<br/>
 El tipo del informe (_CRT_WARN, _CRT_ERROR o _CRT_ASSERT).
 
-*Mensaje*<br/>
+*message*<br/>
 Cadena del mensaje.
 
 *returnValue*<br/>
@@ -127,7 +127,7 @@ El código de esta función se ejecuta en el contexto de seguridad subyacente de
 
 Llame a este método para dejar de enviar informes de depuración a la canalización con nombre y restaurar el enlace de informe anterior.
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ Las llamadas [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreport
 
 Llame a este método para empezar a enviar informes de depuración a la canalización con nombre.
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
 Llame a este método para establecer el tiempo en milisegundos que esta clase esperará a que la canalización con nombre esté disponible.
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 
@@ -182,6 +182,6 @@ void SetTimeout(DWORD dwTimeout);
 *dwTimeout*<br/>
 El tiempo en milisegundos que esta clase esperará a que la canalización con nombre esté disponible.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../atl/reference/atl-classes.md)

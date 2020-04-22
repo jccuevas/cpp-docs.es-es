@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 6cdb2e966ca1878377fd26a6d4b9075090d32c3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1bb2ce9a957b9cd9f7add983b4da7a228d7a1d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361806"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750066"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet (clase)
 
@@ -142,7 +142,7 @@ La siguiente ilustración muestra una hoja de propiedades que se encuentra en el
 
 Agrega una página a la hoja de propiedades.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -161,7 +161,7 @@ Si la hoja de propiedades está en el estilo de Microsoft Outlook, el marco de t
 
 Agrega una nueva página de propiedades al control de árbol.
 
-```
+```cpp
 void AddPageToTree(
     CMFCPropertySheetCategoryInfo* pCategory,
     CMFCPropertyPage* pPage,
@@ -261,7 +261,7 @@ Para obtener más información, vea los parámetros para el [CPropertySheet::CPr
 
 Reserva espacio en la parte superior de cada página para dibujar un encabezado personalizado.
 
-```
+```cpp
 void EnablePageHeader(int nHeaderHeight);
 ```
 
@@ -414,7 +414,7 @@ TRUESi este método se realiza correctamente; de lo contrario, FALSE.
 
 Quita un nodo del control de árbol.
 
-```
+```cpp
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```
 
@@ -431,7 +431,7 @@ Utilice este método para quitar un nodo, que también se conoce como una catego
 
 Quita una página de propiedades de la hoja de propiedades.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -488,7 +488,7 @@ Para obtener más información acerca de los métodos que admiten este método, 
 
 Especifica el aspecto de la hoja de propiedades.
 
-```
+```cpp
 void SetLook(
     PropSheetLook look,
     int nNavControlWidth=100);
@@ -516,7 +516,7 @@ En la tabla siguiente se enumeran los valores de enumeración que se pueden espe
 |`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Muestra una pestaña, en el estilo de Microsoft OneNote, para cada página de propiedades. El marco de trabajo muestra pestañas en la parte superior de la hoja de propiedades y flechas de desplazamiento si hay más pestañas de las que caben en una sola fila.|
 |`CMFCPropertySheet::PropSheetLook_List`|Muestra una lista en el lado izquierdo de la hoja de propiedades. Cada elemento de lista corresponde a una página de propiedades. El marco de trabajo muestra flechas de desplazamiento si hay más elementos de lista de los que caben en el área visible de la lista.|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

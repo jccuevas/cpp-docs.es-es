@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317599"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746713"
 ---
 # <a name="cstringt-class"></a>Clase CStringT
 
@@ -102,7 +102,7 @@ class CStringT :
 
 #### <a name="parameters"></a>Parámetros
 
-*Basetype*<br/>
+*BaseType*<br/>
 El tipo de carácter de la clase de cadena. Puede ser uno de los siguientes:
 
 - **char** (para cadenas de caracteres ANSI).
@@ -306,7 +306,7 @@ El siguiente ejemplo muestra el uso de `CStringT::AllocSysString`.
 
 Convierte todos los caracteres de este `CStringT` objeto del juego de caracteres ANSI en el juego de caracteres OEM.
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ La función no está disponible si se define _UNICODE.
 
 Anexa datos con formato `CStringT` a un objeto existente.
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -335,7 +335,7 @@ Una cadena de control de formato.
 *nFormatID*<br/>
 Identificador de recurso de cadena que contiene la cadena de control de formato.
 
-*Argumento*<br/>
+*argument*<br/>
 Argumentos opcionales.
 
 ### <a name="remarks"></a>Observaciones
@@ -546,7 +546,7 @@ Objeto `CStringT` existente que se va `CStringT` a copiar en este objeto. Para o
 *varSrc*<br/>
 Objeto de variante que se `CStringT` va a copiar en este objeto.
 
-*Basetype*<br/>
+*BaseType*<br/>
 El tipo de carácter de la clase de cadena. Puede ser uno de los siguientes:
 
 **char** (para cadenas de caracteres ANSI).
@@ -696,7 +696,7 @@ Busca la primera aparición de cualquiera de los caracteres en *pszCharSet*.
 
 Escribe datos con formato `CStringT` en un de la misma manera que [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) da formato a los datos en una matriz de caracteres de estilo C.
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -709,7 +709,7 @@ Identificador de recurso de cadena que contiene la cadena de control de formato.
 *pszFormat*<br/>
 Una cadena de control de formato.
 
-*Argumento*<br/>
+*argument*<br/>
 Argumentos opcionales.
 
 ### <a name="remarks"></a>Observaciones
@@ -730,7 +730,7 @@ Para obtener más información, vea [Sintaxis de especificación de formato: Fun
 
 Da formato a una cadena de mensaje.
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -743,7 +743,7 @@ Identificador de recurso de cadena que contiene el texto del mensaje sin formato
 *pszFormat*<br/>
 Apunta a la cadena de control de formato. Se escaneará en busca de inserciones y se formateará en consecuencia. La cadena de formato es similar a las cadenas de formato *printf*-style de la función en tiempo de ejecución, excepto que permite que los parámetros se inserten en un orden arbitrario.
 
-*Argumento*<br/>
+*argument*<br/>
 Argumentos opcionales.
 
 ### <a name="remarks"></a>Observaciones
@@ -763,7 +763,7 @@ Cada inserción debe tener un parámetro correspondiente después del parámetro
 
 Da formato a una cadena de mensaje mediante una lista de argumentos de variable.
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ Para obtener más información, vea la función [FormatMessage](/windows/win32/a
 
 Da formato a una cadena de mensaje mediante una lista de argumentos de variable.
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -1012,7 +1012,7 @@ Para conjuntos de caracteres multibyte (MBCS), *nCount* hace referencia a cada c
 
 Convierte todos los caracteres de este `CStringT` objeto del juego de caracteres OEM en el juego de caracteres ANSI.
 
-```
+```cpp
 void OemToAnsi();
 ```
 
@@ -1053,10 +1053,10 @@ Referencia a un objeto `CThisSimpleString`.
 *bMFCDLL*<br/>
 Un booleano que especifica si el proyecto es un archivo DLL de MFC o no.
 
-*Basetype*<br/>
+*BaseType*<br/>
 El tipo base de cadena.
 
-*Var*<br/>
+*var*<br/>
 Objeto de variante que se va a asignar a esta cadena.
 
 *Ch*<br/>
@@ -1147,10 +1147,10 @@ Referencia a un objeto `CThisSimpleString`.
 *bMFCDLL*<br/>
 Un booleano que especifica si el proyecto es un archivo DLL de MFC o no.
 
-*Basetype*<br/>
+*BaseType*<br/>
 El tipo base de cadena.
 
-*Var*<br/>
+*var*<br/>
 Objeto de variante que se va a concatenar a esta cadena.
 
 *Ch*<br/>

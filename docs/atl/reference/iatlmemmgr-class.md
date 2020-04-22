@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: c296c9de79c305d0f7d2f135f250d181d3cd667a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcecf716e9d865b1b8590a733216576e0da4c2fb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330065"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746002"
 ---
 # <a name="iatlmemmgr-class"></a>Clase IAtlMemMgr
 
@@ -37,7 +37,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 |||
 |-|-|
 |[Asignar](#allocate)|Llame a este método para asignar un bloque de memoria.|
-|[Gratuito](#free)|Llame a este método para liberar un bloque de memoria.|
+|[Gratis](#free)|Llame a este método para liberar un bloque de memoria.|
 |[GetSize](#getsize)|Llame a este método para recuperar el tamaño de un bloque de memoria asignado.|
 |[Reasignar](#reallocate)|Llame a este método para reasignar un bloque de memoria.|
 
@@ -60,7 +60,7 @@ Esta interfaz se implementa mediante [CComHeap](../../atl/reference/ccomheap-cla
 
 Llame a este método para asignar un bloque de memoria.
 
-```
+```cpp
 void* Allocate(size_t nBytes) throw();
 ```
 
@@ -85,7 +85,7 @@ Para obtener un ejemplo, vea información general de [IAtlMemMgr](../../atl/refe
 
 Llame a este método para liberar un bloque de memoria.
 
-```
+```cpp
 void Free(void* p) throw();
 ```
 
@@ -127,7 +127,7 @@ Para obtener un ejemplo, vea información general de [IAtlMemMgr](../../atl/refe
 
 Llame a este método para reasignar la memoria asignada por este administrador de memoria.
 
-```
+```cpp
 void* Reallocate(void* p, size_t nBytes) throw();
 ```
 
@@ -967,6 +967,6 @@ Vea [IAxWinHostWindow::CreateControlEx](#createcontrolex) para obtener una descr
 
 Consulte [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `IAxWinHostWindowLic::CreateControlLicEx`.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../atl/atl-class-overview.md)

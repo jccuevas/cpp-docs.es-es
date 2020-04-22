@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 62cabf281473cdf21fe260fa23082bc55f339849
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e247b4f488411ffdcde5d1d9016436c9c36fe793
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326900"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747688"
 ---
 # <a name="cheapptrbase-class"></a>Clase CHeapPtrBase
 
@@ -107,7 +107,7 @@ En compilaciones de depuración, se producirá un error de aserción si la varia
 
 Llame a este método para tomar la propiedad de un puntero existente.
 
-```
+```cpp
 void Attach(T* pData) throw();
 ```
 
@@ -154,7 +154,7 @@ Libera la propiedad de un puntero, establece el [CHeapPtrBase::m_pData](#m_pdata
 
 Llame a este método para eliminar `CHeapPtrBase`un objeto al que apunta un archivo .
 
-```
+```cpp
 void Free() throw();
 ```
 
@@ -231,7 +231,7 @@ La nueva cantidad de memoria que se va a asignar, en bytes.
 
 Devuelve true si la memoria se asigna correctamente, false en caso contrario.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Clase CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>

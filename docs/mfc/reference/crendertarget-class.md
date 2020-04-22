@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368345"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747199"
 ---
 # <a name="crendertarget-class"></a>Clase CRenderTarget
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 Adjunta la interfaz de destino de representación existente al objeto
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ Interfaz de destino de representación existente. No puede ser NULL
 
 Inicia el dibujo en este destino de representación.
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,13 +257,13 @@ void BeginDraw();
 
 Borra el área de dibujo al color especificado.
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 El color al que se borra el área de dibujo.
 
 ## <a name="crendertargetcolorref_to_d2dcolor"></a><a name="colorref_to_d2dcolor"></a>CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 Valor RGB.
 
 *nAlpha*
@@ -314,7 +314,7 @@ El tamaño deseado del nuevo destino de representación en píxeles si debe ser 
 *desiredFormat*<br/>
 El formato de píxel deseado y el modo alfa del nuevo destino de representación, o NULL. Si el formato de píxel se establece en DXGI_FORMAT_UNKNOWN o si este parámetro es null, el nuevo destino de representación utiliza el mismo formato de píxel que el destino de representación original. Si el modo alfa es D2D1_ALPHA_MODE_UNKNOWN o este parámetro es NULL, el modo alfa del nuevo destino de representación tiene como valor predeterminado D2D1_ALPHA_MODE_PREMULTIPLIED. Para obtener información sobre los formatos de píxeles compatibles, consulte Formatos de píxeles compatibles y Modos alfa.
 
-*Opciones*<br/>
+*options*<br/>
 Valor que especifica si el nuevo destino de representación debe ser compatible con GDI.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -362,7 +362,7 @@ Puntero a interfaz de destino de representación separada.
 
 Dibuja el texto con formato descrito por el objeto IDWriteTextLayout especificado.
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ El tamaño y la posición, en píxeles independientes del dispositivo en el espa
 
 Dibuja el contorno de la elipse especificada utilizando el estilo de trazo especificado.
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ El estilo de trazo que se aplicará al contorno de la elipse o NULL para pintar 
 
 Dibuja el contorno de la geometría especificada utilizando el estilo de trazo especificado.
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ El estilo de trazo que se aplicará al contorno de la geometría, o NULL para pi
 
 Dibuja los pictogramas especificados.
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ Valor que indica cómo se utilizan las métricas de glifo para medir el texto cu
 
 Dibuja una línea entre los puntos especificados utilizando el estilo de trazo especificado.
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ El estilo de trazo para pintar, o NULL para pintar una línea sólida.
 
 Dibuja el contorno de un rectángulo que tiene las dimensiones y el estilo de trazo especificados.
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ El estilo de trazo para pintar, o NULL para pintar un trazo sólido.
 
 Dibuja el contorno del rectángulo redondeado especificado utilizando el estilo de trazo especificado.
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ El estilo del trazo del rectángulo redondeado, o NULL para pintar un trazo sól
 
 Dibuja el texto especificado mediante la información de formato proporcionada por un IDWriteTextFormat objeto.
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -576,7 +576,7 @@ Pincel utilizado para pintar el texto.
 *textFormat*<br/>
 Objeto que describe los detalles de formato del texto que se va a dibujar, como la fuente, el tamaño de fuente y la dirección del flujo.
 
-*Opciones*<br/>
+*options*<br/>
 Valor que indica si el texto se debe ajustar a los límites de píxeles y si el texto se debe recortar al rectángulo de diseño. El valor predeterminado es D2D1_DRAW_TEXT_OPTIONS_NONE, lo que indica que el texto se debe ajustar a los límites de píxeles y no se debe recortar al rectángulo de diseño.
 
 *measuringMode*<br/>
@@ -586,7 +586,7 @@ Valor que indica cómo se utilizan las métricas de glifo para medir el texto cu
 
 Dibuja el texto con formato descrito por el objeto IDWriteTextLayout especificado.
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -605,7 +605,7 @@ Texto con formato que se ha de dibujar. Se omiten los efectos de dibujo que no h
 *pBrushForeground*<br/>
 El pincel utilizado para pintar cualquier texto en textLayout que aún no tiene un pincel asociado como un efecto de dibujo (especificado por el IDWriteTextLayout::SetDrawingEffect método).
 
-*Opciones*<br/>
+*options*<br/>
 Valor que indica si el texto se debe ajustar a los límites de píxeles y si el texto se debe recortar al rectángulo de diseño. El valor predeterminado es D2D1_DRAW_TEXT_OPTIONS_NONE, lo que indica que el texto se debe ajustar a los límites de píxeles y no se debe recortar al rectángulo de diseño.
 
 ## <a name="crendertargetenddraw"></a><a name="enddraw"></a>CRenderTarget::EndDraw
@@ -624,7 +624,7 @@ Si el método se realiza correctamente, devuelve S_OK. De lo contrario, devuelve
 
 Pinta el interior de la elipse especificada.
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ El pincel utilizado para pintar el interior de la elipse.
 
 Pinta el interior de la geometría especificada.
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ La máscara de opacidad que se aplicará a la geometría; NULL para ninguna más
 
 Pinta el interior de la malla especificada.
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ El pincel utilizado para pintar la malla.
 
 Aplica la máscara de opacidad descrita por el mapa de bits especificado a un pincel y utiliza ese pincel para pintar una región del destino de representación.
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -712,7 +712,7 @@ La región del mapa de bits que se va a utilizar como máscara de opacidad, en p
 
 Pinta el interior del rectángulo especificado.
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ El pincel utilizado para pintar el interior del rectángulo.
 
 Pinta el interior del rectángulo redondeado especificado.
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ El pincel utilizado para pintar el interior del rectángulo redondeado.
 
 Ejecuta todos los comandos de dibujo pendientes.
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ El tamaño actual del destino de representación en píxeles independientes del 
 
 Obtiene la etiqueta para las operaciones de dibujo posteriores.
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ Modo de suavizado actual para operaciones de dibujo de texto y glifo.
 
 Recupera las opciones de representación de texto actuales del destino de representación.
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ Cuando se devuelve este método, textRenderingParamscontiene la dirección de un
 
 Obtiene la transformación actual del destino de representación.
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ Puntero a una interfaz ID2D1RenderTarget o NULL si el objeto aún no se ha inici
 
 Elimina el último clip alineado con el eje del destino de renderización. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujo posteriores.
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 Detiene la redirección de operaciones de dibujo a la capa especificada por la última llamada PushLayer.
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 Elimina el último clip alineado con el eje del destino de renderización. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujo posteriores.
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ El modo de suavizado que se utiliza para dibujar los bordes de los rectángulos 
 
 Agrega la capa especificada al destino de representación para que reciba todas las operaciones de dibujo posteriores hasta que se llame a PopLayer.
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ La capa que recibe las operaciones de dibujo posteriores.
 
 Establece el estado de dibujo del destino de representación en el del ID2D1DrawingStateBlock especificado.
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ El nuevo estado de dibujo del destino de representación.
 
 Guarda el estado de dibujo actual en el ID2D1DrawingStateBlock especificado.
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ Cuando se devuelve este método, contiene el estado de dibujo actual del destino
 
 Establece el modo de suavizado del destino de representación. El modo de suavizado se aplica a todas las operaciones de dibujo posteriores, excluyendo las operaciones de dibujo de texto y glifo.
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ El modo de suavizado para futuras operaciones de dibujo.
 
 Establece los puntos por pulgada (DPI) del destino de representación.
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ Valor mayor o igual que cero que especifica el horizontal/verticalDPI del destin
 
 Especifica una etiqueta para las operaciones de dibujo posteriores.
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ Una etiqueta que se aplicará a las operaciones de dibujo posteriores.
 
 Especifica el modo de suavizado que se utilizará para las operaciones de dibujo de texto y glifo posteriores.
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ El modo de suavizado que se utiliza para las operaciones de dibujo de texto y gl
 
 Especifica las opciones de representación de texto que se aplicarán a todas las operaciones de dibujo de texto y pictograma posteriores.
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ Las opciones de representación de texto que se aplicarán a todas las operacion
 
 Aplica la transformación especificada al destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujo posteriores se producen en el espacio transformado.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```
@@ -1146,6 +1146,6 @@ Puntero al objeto CD2DResource.
 
 TRUE es object si es válido; de lo contrario FALSO.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

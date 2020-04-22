@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 90a12badc90bfcb74e873180b5f887e37cd47fd5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 474e2707ba1936082bb6abc1be2109a27924f1d5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376207"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745167"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages (clase)
 
@@ -270,7 +270,7 @@ En el ejemplo siguiente se `CMFCToolBarImages` muestra cómo configurar `CMFCToo
 
 ## <a name="cmfctoolbarimagesadaptcolors"></a><a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors
 
-```
+```cpp
 void AdaptColors(
     COLORREF clrBase,
     COLORREF clrTone);
@@ -349,7 +349,7 @@ static void __stdcall CleanUp();
 
 Libera los recursos del sistema que el [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) objeto asignado.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -471,7 +471,7 @@ BOOL Draw(
 *pDC*<br/>
 [en] Puntero a un contexto de dispositivo.
 
-*X*<br/>
+*x*<br/>
 [en] Coordenada X del lado izquierdo del rectángulo donde se va a dibujar la imagen.
 
 *y y*<br/>
@@ -545,7 +545,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 
 Libera los recursos del sistema que [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage) asignó después de dibujar una imagen de barra de herramientas llamando a [CMFCToolBarImages::Draw](#draw).
 
-```
+```cpp
 void EndDrawImage(CAfxDrawState& ds);
 ```
 
@@ -1068,7 +1068,7 @@ BOOL MirrorVert();
 
 ## <a name="cmfctoolbarimagesonsyscolorchange"></a><a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1161,7 +1161,7 @@ Llame a este método para almacenar las imágenes definidas por el usuario en un
 
 ## <a name="cmfctoolbarimagessetalwayslight"></a><a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight
 
-```
+```cpp
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```
 
@@ -1204,7 +1204,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 Establece el tamaño de cada imagen de barra de herramientas (tamaño de origen).
 
-```
+```cpp
 void SetImageSize(
     SIZE sizeImage,
     BOOL bUpdateCount=FALSE);
@@ -1221,7 +1221,7 @@ De forma predeterminada, el tamaño de la imagen de la barra de herramientas es 
 
 ## <a name="cmfctoolbarimagessetlightpercentage"></a><a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage
 
-```
+```cpp
 void SetLightPercentage(int nValue);
 ```
 
@@ -1233,7 +1233,7 @@ void SetLightPercentage(int nValue);
 
 ## <a name="cmfctoolbarimagessetmapto3dcolors"></a><a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors
 
-```
+```cpp
 void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```
 
@@ -1245,7 +1245,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ## <a name="cmfctoolbarimagessetpremultiplyautocheck"></a><a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck
 
-```
+```cpp
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```
 
@@ -1257,7 +1257,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ## <a name="cmfctoolbarimagessetsingleimage"></a><a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage
 
-```
+```cpp
 void SetSingleImage();
 ```
 
@@ -1382,7 +1382,7 @@ TRUESi el cambio de tamaño se realiza correctamente; de lo contrario FALSO.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

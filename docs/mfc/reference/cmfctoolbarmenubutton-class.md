@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0dffd273b51dd1c71328332f9f7e29e1ac5cd213
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376172"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745151"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton (clase)
 
@@ -328,7 +328,7 @@ La implementación predeterminada solo construye `CMFCPopupMenu` y devuelve un n
 
 Dibuja un icono de documento en el botón de menú.
 
-```
+```cpp
 void DrawDocumentIcon(
     CDC* pDC,
     const CRect& rectImage,
@@ -352,7 +352,7 @@ Este método toma un icono de documento y lo dibuja en el botón de menú, centr
 
 ## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize
 
-```
+```cpp
 void EnableQuickCustomize();
 ```
 
@@ -428,7 +428,7 @@ Un botón de menú de la barra de herramientas puede mostrar un submenú. Puede 
 
 Recupera el rectángulo delimitador de la imagen del botón.
 
-```
+```cpp
 void GetImageRect(CRect& rectImage);
 ```
 
@@ -794,7 +794,7 @@ De forma predeterminada, este método establece los datos de accesibilidad para 
 
 Especifica si el botón se dibuja como un botón de menú o un botón de división cuando tiene un identificador de comando válido y un submenú.
 
-```
+```cpp
 void SetMenuOnly(BOOL bMenuOnly);
 ```
 
@@ -811,7 +811,7 @@ Normalmente, cuando un botón de menú de la barra de herramientas tiene un subm
 
 Especifica si el menú desplegable está en modo de paleta.
 
-```
+```cpp
 void SetMenuPaletteMode(
     BOOL bMenuPaletteMode=TRUE,
     int nPaletteRows=1);
@@ -831,7 +831,7 @@ En el modo de paleta, todos los elementos de menú se muestran como una paleta d
 
 ## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 
@@ -874,7 +874,7 @@ Llame a este método para especificar el identificador de la barra de desmontaje
 
 Llame a [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) para habilitar la característica de menú de desmontaje en la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: 49ef7850edb18cd51092f282644973376abd4c7c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3fabb7a7a6da4129787d219bd83b2a35fa0c4dd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317494"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746611"
 ---
 # <a name="iatlstringmgr-class"></a>Clase IAtlStringMgr
 
@@ -39,7 +39,7 @@ __interface IAtlStringMgr
 |-|-|
 |[Asignar](#allocate)|Llame a este método para asignar una nueva estructura de datos de cadena.|
 |[Clonar](#clone)|Llame a este método para devolver un puntero a `CSimpleStringT`un nuevo administrador de cadenas para su uso con otra instancia de .|
-|[Gratuito](#free)|Llame a este método para liberar una estructura de datos de cadena.|
+|[Gratis](#free)|Llame a este método para liberar una estructura de datos de cadena.|
 |[GetNilString](#getnilstring)|Devuelve un puntero `CStringData` al objeto utilizado por los objetos de cadena vacíos.|
 |[Reasignar](#reallocate)|Llame a este método para reasignar una estructura de datos de cadena.|
 
@@ -108,7 +108,7 @@ Sin embargo, si el administrador de memoria `CSimpleStringT`no admite el uso de 
 
 Libera una estructura de datos de cadena.
 
-```
+```cpp
 void Free(CStringData* pData) throw();
 ```
 
@@ -181,7 +181,7 @@ Llame a [IAtlStringMgr::Free](#free) para liberar la memoria asignada por este m
 > [!NOTE]
 > Para obtener ejemplos de uso, vea [Administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

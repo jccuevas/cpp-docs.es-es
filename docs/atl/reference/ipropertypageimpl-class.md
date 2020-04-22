@@ -31,12 +31,12 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: ac8fcb3b8b2bd0f876cf28d58e195000112373f4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 154bfb5beb258ff26649f44f0bd4c23fb8708977
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329583"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745863"
 ---
 # <a name="ipropertypageimpl-class"></a>Clase IPropertyPageImpl
 
@@ -295,7 +295,7 @@ Consulte [IPropertyPage::Move](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-m
 
 Marca el estado de la página de propiedades como modificado o sin cambios, en función del valor de *bDirty*.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 
@@ -356,7 +356,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 Consulte [IPropertyPage::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)<br/>
 [Clase IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>

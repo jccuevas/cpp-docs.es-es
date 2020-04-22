@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 0b970915aa07fe2d1af2b3a07345d5b19826be69
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e52868f23883836919b96be9aec1815bc1c17b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330564"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747449"
 ---
 # <a name="cthreadpool-class"></a>Clase CThreadPool
 
@@ -333,7 +333,7 @@ Tenga en cuenta que *dwMaxWait* es el tiempo que el grupo esperará a que se apa
 
 Llame a este método para cerrar el grupo de subprocesos.
 
-```
+```cpp
 void Shutdown(DWORD dwMaxWait = 0) throw();
 ```
 
@@ -346,7 +346,7 @@ El tiempo máximo solicitado en milisegundos que el grupo de subprocesos esperar
 
 Este método publica una solicitud de apagado en todos los subprocesos del grupo. Si expira el tiempo de espera, este método llamará a [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) en cualquier subproceso que no haya salido. Este método se llama automáticamente desde el destructor de la clase.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Interfaz IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>

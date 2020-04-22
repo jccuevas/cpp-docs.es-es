@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 50dd488d1f59c99b8fee1eb96acf6d0041547df9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f25bff9564eb7a4290f958f0b7810cac8ef7e238
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369690"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749622"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar (Clase)
 
@@ -430,7 +430,7 @@ Utilice este método si desea que un control de menú tenga los mismos elementos
 
 Habilita un cuadro combinado **Ayuda** que se encuentra en el lado derecho de la barra de menús.
 
-```
+```cpp
 void EnableHelpCombobox(
     UINT uiID,
     LPCTSTR lpszPrompt = NULL,
@@ -954,7 +954,7 @@ La información guardada incluye los elementos de menú, el estado de acoplamien
 
 Establece el menú predeterminado para un [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) objeto basado en el identificador de recurso.
 
-```
+```cpp
 void SetDefaultMenuResId(UINT uiResId);
 ```
 
@@ -971,7 +971,7 @@ Utilice el [cMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) método para
 
 ## <a name="cmfcmenubarsetforcedownarrows"></a><a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows
 
-```
+```cpp
 void SetForceDownArrows(BOOL bValue);
 ```
 
@@ -985,7 +985,7 @@ void SetForceDownArrows(BOOL bValue);
 
 El marco de trabajo llama a este método cuando un MDI cambia su modo de visualización y la barra de menús debe actualizarse.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL,
@@ -1011,7 +1011,7 @@ Cuando se maximiza una ventana secundaria MDI, una barra de menús adjunta a la 
 
 Establece la información de clase en tiempo de ejecución que usa el marco de trabajo cuando el usuario crea botones de menú.
 
-```
+```cpp
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```
 
@@ -1082,7 +1082,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 
 Si un menú no muestra todos los comandos de menú, oculta los comandos que rara vez se utilizan. Para obtener más información sobre cómo mostrar comandos de menú, vea [CMFCMenuBar (Clase)](../../mfc/reference/cmfcmenubar-class.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

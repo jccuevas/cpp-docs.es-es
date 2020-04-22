@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 3b52661097ca1feab4c8045be240e4138a0c0f21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190669"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749701"
 ---
 # <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
 Vincula un contenedor `_bstr_t` a un `BSTR`.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Attach(
    BSTR s
 );
@@ -38,10 +38,10 @@ Si `_bstr_t` se ha asociado previamente a otro `BSTR`, `_bstr_t` limpiará el re
 
 ## <a name="example"></a>Ejemplo
 
-Vea [_bstr_t:: Assign](../cpp/bstr-t-assign.md) para obtener un ejemplo de uso de **Attach**.
+Consulte [_bstr_t::Asignar](../cpp/bstr-t-assign.md) para obtener un ejemplo mediante **Adjuntar**.
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [_bstr_t (Clase)](../cpp/bstr-t-class.md)

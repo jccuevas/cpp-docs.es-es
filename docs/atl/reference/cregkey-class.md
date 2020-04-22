@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3bdb2e7c3ab0ef56ef7f6fba5d43f1ba0bb7fc6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331040"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746509"
 ---
 # <a name="cregkey-class"></a>Clase CRegKey
 
@@ -137,7 +137,7 @@ Al cerrar una clave, sus datos del registro se escriben (se vacían) en el disco
 
 Llame a este método para `CRegKey` asociar un HKEY al objeto estableciendo el identificador de miembro [m_hKey](#m_hkey) en *hKey*.
 
-```
+```cpp
 void Attach(HKEY hKey) throw();
 ```
 
@@ -1056,7 +1056,7 @@ Las dos versiones originales de `SetValue` están marcadas como ATL_DEPRECATED y
 
 El tercer método llama a [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Muestra DCOM](../../overview/visual-cpp-samples.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

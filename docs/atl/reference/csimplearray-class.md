@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: e45c9b3fd778aacd3a3e2d5d3696661afa0c6fb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3386687757412d09e4df29e84f691f1615c472a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330910"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746473"
 ---
 # <a name="csimplearray-class"></a>Clase CSimpleArray
 
@@ -97,7 +97,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*t*<br/>
 El elemento que se va a agregar a la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -148,7 +148,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*t*<br/>
 El elemento para el que se va a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -241,7 +241,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*t*<br/>
 El elemento que se va a quitar de la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -256,7 +256,7 @@ Cuando se quita un elemento, los elementos restantes de la matriz se vuelven a n
 
 Quita todos los elementos de la matriz.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -300,13 +300,13 @@ BOOL SetAtIndex(
 *nIndex*<br/>
 El índice del elemento que se va a cambiar.
 
-*T*<br/>
+*t*<br/>
 El valor que se va a asignar al elemento especificado.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve TRUE si se realiza correctamente, FALSE si el índice no era válido.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../atl/atl-class-overview.md)

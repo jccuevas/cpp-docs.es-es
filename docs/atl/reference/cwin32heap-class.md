@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: fbdb77e7f52e858401c87e1cd8782b59cc6ebcea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2d79de308b1afb3059cf04ad40b63b6e603073c8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330460"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746033"
 ---
 # <a name="cwin32heap-class"></a>Clase CWin32Heap
 
@@ -108,7 +108,7 @@ Se implementa mediante [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapall
 
 Asocia el objeto de montón a un montón existente.
 
-```
+```cpp
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ```
 
@@ -267,7 +267,7 @@ Devuelve un puntero al bloque de memoria recién asignado.
 
 Si *p* es NULL, se supone que el bloque de memoria aún no se ha asignado y se llama a [CWin32Heap::Allocate,](#allocate) con un argumento de *nBytes*.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Clase IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)<br/>

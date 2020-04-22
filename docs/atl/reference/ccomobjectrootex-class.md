@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327602"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747905"
 ---
 # <a name="ccomobjectrootex-class"></a>Clase CComObjectRootEx
 
@@ -155,7 +155,7 @@ Esta es una manera típica de crear un agregado:
 
 Puede invalidar este método en la clase derivada para realizar cualquier limpieza necesaria para el objeto.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ Si el modelo de subprocesos es multiproceso, `InterlockedDecrement` se usa para 
 
 Si el modelo de subprocesos es multiproceso, este método llama a la función de API de Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), que espera hasta que el subproceso pueda tomar la propiedad del objeto de sección crítica obtenido a través de un miembro de datos privados.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ En compilaciones que no son de depuración, siempre devuelve 0. En compilaciones
 
 Si el modelo de subprocesos es multiproceso, este método llama a la función de API de Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), que libera la propiedad del objeto de sección crítica obtenido a través de un miembro de datos privados.
 
-```
+```cpp
 void Unlock();
 ```
 
@@ -369,7 +369,7 @@ Para obtener la propiedad, `Lock`el subproceso debe llamar a . Cada llamada `Loc
 
 Si el modelo de subprocesos es de un solo subproceso, este método no hace nada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
 [Clase CComObject](../../atl/reference/ccomobject-class.md)<br/>

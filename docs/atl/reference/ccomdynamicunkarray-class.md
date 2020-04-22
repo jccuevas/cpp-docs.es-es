@@ -18,12 +18,12 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: 57383823897a434f649c6c4af78e71fe6ff66a6a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51b1d7e81c98bd5dbcf957b1705e7a717bfb9ab0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327907"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747977"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Clase CComDynamicUnkArray
 
@@ -113,7 +113,7 @@ Antes de `IUnknown` usar la interfaz, debe comprobar que no es NULL.
 
 Vacía la matriz.
 
-```
+```cpp
 void clear();
 ```
 
@@ -238,7 +238,7 @@ La cookie que `IUnknown` hace referencia al puntero que se va a quitar de la mat
 
 Devuelve TRUE si se quita el puntero; de lo contrario FALSO.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CComUnkArray](../../atl/reference/ccomunkarray-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

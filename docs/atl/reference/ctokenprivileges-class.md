@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: ceb9aeca6b99e7fc9d08625e11cbdb182fb3dc9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75c09f723860540aa54cf3744cde7e61d9202f79
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330540"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747365"
 ---
 # <a name="ctokenprivileges-class"></a>Clase CTokenPrivileges
 
@@ -166,7 +166,7 @@ Este método es útil como herramienta para crear tokens restringidos.
 
 Elimina todos los `CTokenPrivileges` privilegios del objeto de token de acceso.
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -178,7 +178,7 @@ Elimina todos los privilegios `CTokenPrivileges` contenidos en el objeto de toke
 
 Recupera los nombres para mostrar de `CTokenPrivileges` los privilegios contenidos en el objeto de token de acceso.
 
-```
+```cpp
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```
 
@@ -221,7 +221,7 @@ Devuelve el número de bytes `TOKEN_PRIVILEGES` necesarios para `CTokenPrivilege
 
 Recupera los identificadores únicos locales (LUID) `CTokenPrivileges` y las marcas de atributo del objeto.
 
-```
+```cpp
 void GetLuidsAndAttributes(
     CLUIDArray* pPrivileges,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -243,7 +243,7 @@ Este método enumerará todos los privilegios `CTokenPrivileges` contenidos en e
 
 Recupera las marcas de nombre `CTokenPrivileges` y atributo del objeto.
 
-```
+```cpp
 void GetNamesAndAttributes(
     CNames* pNames,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -330,7 +330,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 Convierte un valor en un puntero a la [estructura TOKEN_PRIVILEGES.](/windows/win32/api/winnt/ns-winnt-token_privileges)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de seguridad](../../overview/visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)<br/>

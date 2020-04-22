@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: e6a713ac9d9e906ec204d4a52b43ed51c08fd99c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c715ca1b8a2b647f89ada008f3c6606ca5e58783
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318431"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750394"
 ---
 # <a name="csharedfile-class"></a>CSharedFile (clase)
 
@@ -110,7 +110,7 @@ Puede volver a abrirlo llamando a [SetHandle](#sethandle), mediante el identific
 
 Llame a esta función para asociar `CSharedFile` un bloque de memoria global al objeto.
 
-```
+```cpp
 void SetHandle(
     HGLOBAL hGlobalMemory,
     BOOL bAllowGrow = TRUE);
@@ -128,7 +128,7 @@ Especifica si el bloque de memoria puede crecer.
 
 Si *bAllowGrow* es distinto de cero, el tamaño del bloque de memoria aumenta según sea necesario, por ejemplo, si intenta escribir más bytes en el archivo que el tamaño del bloque de memoria.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CMemFile](../../mfc/reference/cmemfile-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

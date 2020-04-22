@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 7d450f7762b39d7fa8fae07230690eecb8edbb4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c62cc912b3fea3ea68390882bdda37cbfb25a7e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327461"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747760"
 ---
 # <a name="ccomptrbase-class"></a>Clase CComPtrBase
 
@@ -122,7 +122,7 @@ Consulte [AtlAdvise](connection-point-global-functions.md#atladvise) para obtene
 
 Llame a este método para tomar la propiedad de un puntero existente.
 
-```
+```cpp
 void Attach(T* p2) throw();
 ```
 
@@ -386,7 +386,7 @@ En compilaciones de depuración, se producirá un error de aserción si *pp* no 
 
 Llame a este método para liberar la interfaz.
 
-```
+```cpp
 void Release() throw();
 ```
 
@@ -415,6 +415,6 @@ Devuelve S_OK en caso de éxito o un error HRESULT en caso de error.
 
 Este método llama a [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../atl/atl-class-overview.md)

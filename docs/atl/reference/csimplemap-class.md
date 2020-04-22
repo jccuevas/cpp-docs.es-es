@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: b8650f36ac3d190207870616754dcd596cb7cc45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eed41c2250728d257b6d303e79c3afd36a543dbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330806"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747649"
 ---
 # <a name="csimplemap-class"></a>Clase CSimpleMap
 
@@ -294,7 +294,7 @@ Devuelve TRUE si la clave y el valor coincidente se quitaron correctamente, FALS
 
 Elimina todas las claves y valores.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -386,6 +386,6 @@ Devuelve TRUE si se realiza correctamente, FALSE si el índice no era válido.
 
 Actualiza tanto la clave como el valor a los que apunta *nIndex*.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../atl/atl-class-overview.md)

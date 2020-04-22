@@ -23,12 +23,12 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: 30cd84f008c7174d767ecf5e2b744a58b21e5000
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ab7cab2209dc2e02cacca6d540927aa39dc3965
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351095"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745393"
 ---
 # <a name="_lock"></a>_lock
 
@@ -39,7 +39,7 @@ Adquiere un bloqueo multiproceso.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void __cdecl _lock
    int locknum
 );
@@ -58,7 +58,7 @@ Si ya se adquirió el bloqueo, este método obtiene el bloqueo de todas formas y
 
 **Origen:** mlock.c
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_unlock](../c-runtime-library/unlock.md)

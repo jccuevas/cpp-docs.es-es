@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321440"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748657"
 ---
 # <a name="catlmap-class"></a>Clase CAtlMap
 
@@ -159,7 +159,7 @@ Para obtener más información, vea Clases de [colección ATL](../../atl/atl-col
 
 Llame a este método para `CAtlMap` provocar un ASSERT si el objeto no es válido.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ Esta clase es utilizada por los métodos [CAtlMap::GetNext](#getnext) y [CAtlMap
 
 Llame a este método para deshabilitar `CAtlMap` el rehashing automático del objeto.
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ Cuando se habilita el rehashing automático (que es de forma predeterminada), el
 
 Llame a este método para habilitar `CAtlMap` el rehashing automático del objeto.
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ Cuando se habilita el rehashing automático (que es de forma predeterminada), el
 
 Llame a este método para devolver el elemento en una posición especificada en el mapa.
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -376,7 +376,7 @@ Devuelve un puntero al siguiente par de elementos clave/valor almacenados en el 
 
 Obtiene el siguiente elemento para iterar.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -597,7 +597,7 @@ Si la clave ya existe, se reemplaza el elemento. Si la clave no existe, se agreg
 
 Llame a este método `CAtlMap` para volver a hash el objeto.
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ Si *nBins* es `CAtlMap` 0, calcula un número razonable en función del número 
 
 Llame a este método para `CAtlMap` quitar todos los elementos del objeto.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ Borra el `CAtlMap` objeto, liberando la memoria utilizada para almacenar los ele
 
 Llame a este método para quitar el `CAtlMap` elemento en la posición dada en el objeto.
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -690,7 +690,7 @@ Devuelve la posición del par clave/valor del elemento en el `CAtlMap` objeto.
 
 Llame a este método para `CAtlMap` establecer la carga óptima del objeto.
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ Este método redefine el valor `CAtlMap` de carga óptimo para el objeto. Consul
 
 Llame a este método para cambiar el `CAtlMap` valor almacenado en una posición determinada en el objeto.
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);
@@ -780,7 +780,7 @@ V  m_value;
 *Ⅴ*<br/>
 El tipo de elemento value.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Muestra de marquesina](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>

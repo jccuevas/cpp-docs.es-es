@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 1540c90e3538d763708e161ba6c1a5e459bb2bdf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 713e78635fe261615a82ab518cdb2c68ac0eeed4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327153"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747739"
 ---
 # <a name="cdacl-class"></a>Clase CDacl
 
@@ -235,7 +235,7 @@ Debe asegurarse de que solo pasa una DACL (lista de control de acceso discrecion
 
 Quita un ACE específico (entrada de `CDacl` control de acceso) del objeto.
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -252,7 +252,7 @@ Este método se deriva de [CAtlArray::RemoveAt](../../atl/reference/catlarray-cl
 
 Quita todas las ACE (entradas de control de acceso) contenidas en el `CDacl` objeto.
 
-```
+```cpp
 void RemoveAllAces() throw();
 ```
 
@@ -260,7 +260,7 @@ void RemoveAllAces() throw();
 
 Quita todas `ACE` las estructuras (entrada de control `CDacl` de acceso) (si las hay) del objeto.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de seguridad](../../overview/visual-cpp-samples.md)<br/>
 [Clase CAcl](../../atl/reference/cacl-class.md)<br/>

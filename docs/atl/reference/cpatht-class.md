@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331474"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746594"
 ---
 # <a name="cpatht-class"></a>Clase CPathT
 
@@ -166,7 +166,7 @@ La clase de cadena ATL/MFC que se va a utilizar para la ruta de acceso (consulte
 
 Llame a este método para agregar una barra diagonal inversa al final de una cadena para crear la sintaxis correcta para una ruta de acceso. Si la ruta de acceso ya tiene una barra diagonal inversa final, no se agregará ninguna barra diagonal inversa.
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ Para obtener más información, consulte [PathAppend](/windows/win32/api/shlwapi
 
 Llame a este método para crear una ruta de acceso raíz a partir de un número de unidad determinado.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ Para obtener más información, vea [PathBuildRoot](/windows/win32/api/shlwapi/n
 
 Llame a este método para convertir la ruta de acceso a forma canónica.
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ Para obtener más información, consulte [PathCanonicalize](/windows/win32/api/s
 
 Llame a este método para concatenar una cadena que representa un nombre de directorio y una cadena que representa un nombre de ruta de acceso de archivo en una ruta de acceso.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 Llame a este método para incluir la ruta entre comillas si contiene espacios.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ Para obtener más información, vea [PathRelativePathTo](/windows/win32/api/shlw
 
 Llame a este método para quitar los argumentos de línea de comandos de la ruta de acceso.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ Para obtener más información, vea [PathRemoveArgs](/windows/win32/api/shlwapi/
 
 Llame a este método para quitar la barra diagonal inversa final de la ruta de acceso.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ Para obtener más información, vea [PathRemoveBackslash](/windows/win32/api/shl
 
 Llame a este método para quitar todos los espacios iniciales y finales de la ruta de acceso.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ Para obtener más información, vea [PathRemoveBlanks](/windows/win32/api/shlwap
 
 Llame a este método para quitar la extensión de archivo de la ruta de acceso, si hay uno.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ Para obtener más información, consulte [PathSkipRoot](/windows/win32/api/shlwa
 
 Llame a este método para quitar la parte de ruta de acceso de una ruta de acceso completa y el nombre de archivo.
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ Para obtener más información, vea [PathStripToRoot](/windows/win32/api/shlwapi
 
 Llame a este método para quitar comillas desde el principio y el final de una ruta de acceso.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 
@@ -907,7 +907,7 @@ typedef StringType::XCHAR XCHAR;
 
 `StringType`es el parámetro `CPathT`de plantilla para .
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../atl/reference/atl-classes.md)<br/>
 [Clase CStringT](../../atl-mfc-shared/reference/cstringt-class.md)

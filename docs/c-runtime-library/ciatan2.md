@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: 2535cb5747b5eac9257594bd4c6d91e64ee7b3eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 585608b4d3dce723c0ea3a82e1c52325a0f6b7e6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334389"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745925"
 ---
 # <a name="_ciatan2"></a>_CIatan2
 
@@ -38,7 +38,7 @@ Calcula el arco tangente de *x* / *y* donde *x* e *y* son valores en la parte su
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void __cdecl _CIatan2();
 ```
 
@@ -54,7 +54,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 **Plataforma:** x86
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

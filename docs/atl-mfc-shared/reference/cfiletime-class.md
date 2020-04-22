@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: bc9fe752898a5dfde2631352abd8c3cf5f8b378c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fd19d941365c7772363417ce3e9225bd9b0300b2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317891"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748842"
 ---
 # <a name="cfiletime-class"></a>Clase CFileTime
 
@@ -436,7 +436,7 @@ Vea el ejemplo de [CFileTime::Millisecond](#millisecond).
 
 Llame a este método para establecer `CFileTime` la fecha y hora almacenadas por el objeto.
 
-```
+```cpp
 void SetTime(ULONGLONG nTime) throw();
 ```
 
@@ -473,7 +473,7 @@ static const ULONGLONG Week = Day* 7;
 
 Vea el ejemplo de [CFileTime::Millisecond](#millisecond).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)<br/>
 [Clase CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>

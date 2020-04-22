@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330728"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746419"
 ---
 # <a name="csnapinitemimpl-class"></a>Clase CSnapInItemImpl
 
@@ -350,7 +350,7 @@ STDMETHOD(Notify)(
 *Arg*<br/>
 [en] Depende del tipo de notificación.
 
-*Param*<br/>
+*param*<br/>
 [en] Depende del tipo de notificación.
 
 *pComponentData*<br/>
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 Llame a esta función para modificar los indicadores de inserción de menú, especificados por *pInsertionAllowed*, para el objeto de complemento.
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ No debe intentar establecer bits en *pInsertionAllowed* que se borraron original
 
 Llame a esta función para modificar los estilos de botón de la barra de herramientas, del objeto de complemento, antes de crear la barra de herramientas.
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 Llame a esta función para modificar un elemento de menú antes de insertarlo en el menú contextual del objeto de complemento.
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
@@ -473,7 +473,7 @@ void UpdateMenuState(
 *pBuf*<br/>
 [en] Un puntero a la cadena para el elemento de menú que se va a actualizar.
 
-*Banderas*<br/>
+*flags*<br/>
 [en] Especifica los nuevos indicadores de estado. Esto puede ser una combinación de los siguientes indicadores:
 
 - MF_POPUP Especifica que se trata de un submenú dentro del menú contextual. Los elementos de menú, los puntos de inserción `IInsertionPointID`y otros submenús se pueden agregar a este submenú utilizando su `lCommandID` archivo .
@@ -530,6 +530,6 @@ Especifica un estado de botón de barra de herramientas. Si se va a establecer e
 
 - BUTTONPRESSED Se está pulsando el botón.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Información general de clases](../../atl/atl-class-overview.md)

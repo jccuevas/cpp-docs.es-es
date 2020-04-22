@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: cccd45bf5a97ae7dcc8369015e0a431b3a9e960f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f24965357e0b71f28ba39b82d045600e7e1a44e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360372"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749689"
 ---
 # <a name="coblist-class"></a>CObList (clase)
 
@@ -749,7 +749,7 @@ En la tabla siguiente se muestran otras funciones miembro que son similares a `C
 
 Elimina todos los elementos de esta `CObList` lista y libera la memoria asociada.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -776,7 +776,7 @@ Consulte [CObList::CObList](#coblist) para obtener `CAge` una lista de la clase.
 
 Quita el elemento especificado de esta lista.
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
@@ -876,7 +876,7 @@ Consulte [CObList::CObList](#coblist) para obtener `CAge` una lista de la clase.
 
 Establece el elemento en una posición determinada.
 
-```
+```cpp
 void SetAt(
     POSITION pos,
     CObject* newElement);
@@ -917,7 +917,7 @@ a CAge at $4D98 40
 a CAge at $4DB8 65
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

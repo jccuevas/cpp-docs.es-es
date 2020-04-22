@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: cde9c73a195303e57758cb4f27184b5136bdaf14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b89346bbc62cdda808b193a199fdf121f052ebb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327212"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747750"
 ---
 # <a name="ccontainedwindowt-class"></a>Clase CContainedWindowT
 
@@ -49,7 +49,7 @@ class CContainedWindowT : public TBase
 La clase base de tu nueva clase. La clase base `CWindow`predeterminada es .
 
 *TWinTraits*<br/>
-Clase de rasgos que define los estilos de la ventana. El valor predeterminado es `CControlWinTraits`.
+Clase de rasgos que define los estilos de la ventana. De manera predeterminada, es `CControlWinTraits`.
 
 > [!NOTE]
 > [CContainedWindow](ccontainedwindowt-class.md) es una `CContainedWindowT`especialización de . Si desea cambiar la clase base `CContainedWindowT` o los rasgos, utilice directamente.
@@ -214,7 +214,7 @@ HWND Create(
 [en] El identificador de la ventana principal o propietaria.
 
 *Rect*<br/>
-[en] Estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifica la posición de la ventana. El `RECT` se puede pasar por puntero o por referencia.
+[en] Estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifica la posición de la ventana. El `RECT` se puede pasar por puntero o por referencia.
 
 *szWindowName*<br/>
 [en] Especifica el nombre de la ventana. El valor predeterminado es NULL.
@@ -390,7 +390,7 @@ La ventana con subclases ahora utiliza [CContainedWindowT::WindowProc](#windowpr
 
 Cambia el mapa de mensajes que se utilizará para procesar los mensajes de la ventana contenida.
 
-```
+```cpp
 void SwitchMessageMap(DWORD dwMsgMapID);
 ```
 
@@ -460,7 +460,7 @@ El resultado del procesamiento de mensajes.
 
 `WindowProc`dirige los mensajes al mapa de mensajes identificado por [m_dwMsgMapID](#m_dwmsgmapid). Si es `WindowProc` necesario, llame a [DefWindowProc](#defwindowproc) para el procesamiento de mensajes adicional.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CWindow](../../atl/reference/cwindow-class.md)<br/>
 [Clase CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
