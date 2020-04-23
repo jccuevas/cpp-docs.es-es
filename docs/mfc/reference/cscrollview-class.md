@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318484"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754423"
 ---
 # <a name="cscrollview-class"></a>CScrollView (clase)
 
@@ -124,7 +124,7 @@ Para obtener más `CScrollView`información sobre el uso de , vea Arquitectura d
 
 Llame a esta función miembro para determinar si la vista de desplazamiento tiene barras horizontales y verticales.
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ Debe llamar `SetScrollSizes` a `SetScaleToFitSize` una o antes de que se pueda u
 
 Llame `FillOutsideRect` para rellenar el área de la vista que aparece fuera del área de desplazamiento.
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ Este par de coordenadas corresponde a la ubicación del documento al que se ha d
 
 `GetDeviceScrollSizes`obtiene el modo de asignación actual, el tamaño total y los tamaños de línea y página de la vista desplazable.
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ El tamaño total de la vista de desplazamiento en unidades lógicas. El tamaño 
 
 Llame `ResizeParentToFit` para que el tamaño de la vista dicte el tamaño de su ventana de marco.
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ Esto se recomienda solo para vistas en ventanas de marco secundario MDI. Utilíc
 
 Llamada `ScrollToPosition` para desplazarse a un punto determinado de la vista.
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ La vista se desplazará para que este punto se encuentra en la esquina superior 
 
 Llame `SetScaleToFitSize` cuando desee escalar automáticamente el tamaño de la ventana gráfica al tamaño de ventana actual.
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ Normalmente colocará la llamada `SetScaleToFitSize` en la invalidación `OnInit
 
 Llame `SetScrollSizes` cuando la vista está a punto de actualizarse.
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 22208aec505033d372f5a80ba2a9641b1bd15874
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367697"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752518"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton (Clase)
 
@@ -193,7 +193,7 @@ El marco de trabajo llama a este método cuando el usuario presiona un botón de
 
 Activa y desactiva un botón "automático" que se coloca encima de los botones de color normales. (El botón automático estándar del sistema está etiquetado como **Automático**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -219,7 +219,7 @@ El botón automático aplica el color predeterminado actual.
 
 Permite la visualización de colores específicos del documento en lugar de colores del sistema.
 
-```
+```cpp
 void EnableDocumentColors(
     LPCTSTR lpszLabel,
     BOOL bEnable=TRUE);
@@ -241,7 +241,7 @@ Utilice este método para mostrar los colores de documento actuales o los colore
 
 Habilita y deshabilita un botón "otros" que se coloca debajo de los botones de color normales. (El botón estándar del sistema "otros" está etiquetado como **Más Colores**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -265,7 +265,7 @@ void EnableOtherButton(
 
 Permite arrancar un panel de color.
 
-```
+```cpp
 void EnableTearOff(
     UINT uiID,
     int nVertDockColumns=-1,
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [en] El identificador de recurso de un botón de menú de color.
 
-*color*<br/>
+*Color*<br/>
 [en] Un valor de color RGB.
 
 ## <a name="cmfccolormenubuttonsetcolorname"></a><a name="setcolorname"></a>CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] El valor RGB del color cuyo nombre cambia.
 
 *strName*<br/>
@@ -533,7 +533,7 @@ static void SetColorName(
 
 Establece el número de columnas que se mostrarán en un control de selección de color [(cMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) objeto).
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -544,7 +544,7 @@ void SetColumnsNumber(int nColumns);
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

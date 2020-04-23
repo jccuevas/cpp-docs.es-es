@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: db82a3c9019655fae850002d9e664e5de5407aa6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367814"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754905"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -425,7 +425,7 @@ Las siguientes sugerencias se refieren a la `CMFCBaseTabCtrl Class` y a todas su
 
 Agrega un icono a la lista de `CMap m_mapAddedIcons` iconos del miembro protegido.
 
-```
+```cpp
 void AddIcon(
     HICON hIcon,
     int iIcon);
@@ -494,7 +494,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow
 
-```
+```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -598,7 +598,7 @@ Si la pestaña especificada por *nTabNum* no es desmontable, se produce un error
 
 ## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive
 
-```
+```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
@@ -612,7 +612,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 Controla si el marco de trabajo utiliza los colores de fondo automáticos al dibujar una ficha.
 
-```
+```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```
 
@@ -695,7 +695,7 @@ TRUE si es correcto; en caso contrario, FALSE.
 
 Permite al usuario cambiar el orden de tabulación con un ratón.
 
-```
+```cpp
 void EnableTabSwap(BOOL bEnable);
 ```
 
@@ -733,7 +733,7 @@ De forma predeterminada, el `CMFCBaseTabCtrl Class`archivo . Debe implementar es
 
 ## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode
 
-```
+```cpp
 void EnterDragMode();
 ```
 
@@ -1409,7 +1409,7 @@ Si el objeto indicado por *pNewWnd* no se deriva de la [Clase CDockablePane](../
 
 ## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>CMFCBaseTabCtrl::InvalidateTab
 
-```
+```cpp
 void InvalidateTab(int iTab);
 ```
 
@@ -1944,7 +1944,7 @@ virtual BOOL RenameTab();
 
 Restablece la lista de imágenes de una instancia de la [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
-```
+```cpp
 void ResetImageList();
 ```
 
@@ -2019,7 +2019,7 @@ De forma predeterminada, el marco de trabajo obtiene el color de texto de [GetSy
 
 Establece los colores del control de ficha que el marco de trabajo utiliza en el modo de color automático.
 
-```
+```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```
 
@@ -2038,7 +2038,7 @@ Para habilitar el modo de color automático, utilice el [CMFCBaseTabCtrl::Enable
 
 Establece la clase de contenedor que se usa para los objetos que no derivan de la [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).
 
-```
+```cpp
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```
 
@@ -2055,7 +2055,7 @@ Las fichas se agregan a un control de ficha mediante los métodos [CMFCBaseTabCt
 
 Habilita y deshabilita el procesamiento de caracteres de prefijo en etiquetas de tabulación.
 
-```
+```cpp
 void SetDrawNoPrefix(
     BOOL bNoPrefix,
     BOOL bRedraw = TRUE);
@@ -2139,7 +2139,7 @@ virtual BOOL SetTabBkColor(
 *Itab*<br/>
 [en] El índice de base cero de la pestaña.
 
-*color*<br/>
+*Color*<br/>
 [en] El color que se ha establecido.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2304,7 +2304,7 @@ virtual BOOL SetTabTextColor(
 *Itab*<br/>
 [en] El índice de base cero de la pestaña.
 
-*color*<br/>
+*Color*<br/>
 [en] Un parámetro [COLORREF](/windows/win32/gdi/colorref) que indica el nuevo color del texto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2375,7 +2375,7 @@ virtual void SwapTabs(
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

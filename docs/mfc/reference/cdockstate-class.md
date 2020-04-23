@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375550"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753263"
 ---
 # <a name="cdockstate-class"></a>CDockState (clase)
 
@@ -74,7 +74,7 @@ Para obtener más información sobre las barras de control de acoplamiento, cons
 
 Llame a esta función para borrar `CDockState` toda la información de acoplamiento almacenada en el objeto.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -102,7 +102,7 @@ La compatibilidad con versiones permite que una barra revisada agregue nuevas pr
 
 Llame a esta función para recuperar información de estado del registro o . Archivo INI.
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
@@ -127,7 +127,7 @@ CPtrArray m_arrBarInfo;
 
 Llame a esta función para guardar la información de estado en el registro o . Archivo INI.
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 
@@ -140,7 +140,7 @@ Apunta a una cadena de valores NULL que especifica el nombre de una sección en 
 
 El nombre del perfil es la sección de la aplicación. INI o el registro que contiene la información de estado de la barra de control. `SaveState`también guarda el tamaño de pantalla actual. Puede recuperar información de la barra de control del registro o . INI con `LoadState`.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

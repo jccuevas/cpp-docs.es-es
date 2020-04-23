@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 12de7bd72f643f08cebf948634703172d6725ce6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6520d1c38701647ae51450b9b9800a7cd2701b7a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370103"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754581"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb (clase)
 
@@ -201,7 +201,7 @@ En la tabla siguiente se muestran otras funciones miembro que son similares a `C
 
 Recupera el elemento de mapa en *rNextPosition*y, a continuación, actualiza *rNextPosition* para hacer referencia al siguiente elemento del mapa.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     CString& rKey,
@@ -353,7 +353,7 @@ En la tabla siguiente se muestran otras funciones miembro que son similares a `C
 
 Inicializa la tabla hash.
 
-```
+```cpp
 void InitHashTable(
     UINT hashSize,
     BOOL bAllocNow = TRUE);
@@ -534,7 +534,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 
 Elimina todos los elementos de este `CString` mapa y destruye los objetos clave.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -612,7 +612,7 @@ RemoveKey example: A CMapStringToOb with 3 elements
 
 El principal significa insertar un elemento en un mapa.
 
-```
+```cpp
 void SetAt(
     LPCTSTR key,
     CObject* newValue);
@@ -658,7 +658,7 @@ after Lisa's birthday: A CMapStringToOb with 2 elements
 [Bart] = a CAge at $4654 13
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

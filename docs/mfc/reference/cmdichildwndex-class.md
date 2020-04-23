@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370070"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754558"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 
@@ -249,7 +249,7 @@ TRUESi el panel se registró correctamente con el administrador de acoplamiento;
 
 Agrega un panel con pestañas.
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ Invalide este método en una clase derivada y devuelva FALSE si la ventana no se
 
 Acopla un panel.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Quita un panel del administrador de acoplamiento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::ShowPane
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ Identificador de un icono para mostrar lo que se muestra en la pestaña de la ba
 
 Quita el elemento secundario MDI de las pestañas de la barra de tareas de Windows 7.
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ TRUE si es correcto; en caso contrario, FALSE.
 
 Establece las propiedades de una pestaña de la barra de tareas de Windows 7.
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ Combinación de valores STPFLAG. Para obtener más información, vea [ITaskbarLi
 
 Inserta el elemento secundario MDI antes de la ventana especificada en las pestañas de la barra de tareas de Windows 7.
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ Puntero a la ventana secundaria MDI cuya miniatura se inserta a la izquierda. Es
 
 Activa la pestaña de la barra de tareas de Windows 7 correspondiente.
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -941,7 +941,7 @@ Especifica un puntero a la ventana primaria de nivel superior de la ventana que 
 *nHitTest*<br/>
 Especifica el código de área de prueba de posicionación. Una prueba de posicionación es una prueba que determina la ubicación del cursor.
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el número de mensaje del mouse.
 
 ### <a name="remarks"></a>Observaciones
@@ -1146,7 +1146,7 @@ Puntero a `CMDITabProxyWnd` un objeto, que se registra con las pestañas de la b
 
 Habilita o deshabilita la selección automática de una parte del área de cliente de una ventana para mostrarla como la miniatura de esa ventana en la barra de tareas.
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 
@@ -1183,7 +1183,7 @@ virtual void ActivateTopLevelFrame();
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

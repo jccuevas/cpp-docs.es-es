@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: 8cf92d8d4b1b113f751bee85ac2a7df6eb06afea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 528b883d75889589c7021f462324dd9dcb71be25
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375243"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754845"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton (clase)
 
@@ -116,7 +116,7 @@ En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase
 
 Agrega un grupo de colores al área de color normal.
 
-```
+```cpp
 void AddColorsGroup(
     LPCTSTR lpszName,
     const CList<COLORREF,COLORREF>& lstColors,
@@ -171,7 +171,7 @@ CMFCRibbonColorButton(
 *nSmallImageIndex*<br/>
 [en] El índice de base cero de la imagen pequeña que aparecerá en el botón.
 
-*color*<br/>
+*Color*<br/>
 [en] El color del botón (por defecto es negro).
 
 *bSimpleButtonLook*<br/>
@@ -188,7 +188,7 @@ CMFCRibbonColorButton(
 
 Especifica si el botón **Automático** está habilitado.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -222,7 +222,7 @@ void EnableAutomaticButton(
 
 Habilita el botón **Otros** .
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     LPCTSTR lpszToolTip=NULL);
@@ -310,7 +310,7 @@ El color del elemento seleccionado actualmente en la paleta de colores emergente
 
 Quita todos los grupos de colores del área de color normal.
 
-```
+```cpp
 void RemoveAllColorGroups();
 ```
 
@@ -318,20 +318,20 @@ void RemoveAllColorGroups();
 
 Selecciona un color del área de color normal.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Un color para establecer.
 
 ## <a name="cmfcribboncolorbuttonsetcolorboxsize"></a><a name="setcolorboxsize"></a>CMFCRibbonColorButton::SetColorBoxSize
 
 Establece el tamaño de los elementos de color que aparecen en la barra de colores.
 
-```
+```cpp
 void SetColorBoxSize(CSize sizeBox);
 ```
 
@@ -352,7 +352,7 @@ static void __stdcall SetColorName(
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] El valor RGB de un color.
 
 *strName*<br/>
@@ -366,7 +366,7 @@ Dado que `CMFCColorBar::SetColorName`llama a , este método cambia `CMFCColorBar
 
 Establece el número de columnas que se muestran en la tabla de colores que se presenta al usuario durante el proceso de selección de color del usuario.
 
-```
+```cpp
 void SetColumns(int nColumns);
 ```
 
@@ -381,7 +381,7 @@ void SetColumns(int nColumns);
 
 Especifica una lista de valores RGB para mostrar en el área de color del documento.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -399,7 +399,7 @@ void SetDocumentColors(
 
 Especifica los colores estándar que se mostrarán en la tabla de colores que muestra el botón de color.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -414,20 +414,20 @@ void SetPalette(CPalette* pPalette);
 
 Llamado por el marco de trabajo cuando el usuario selecciona un color de la tabla de colores que se muestra cuando el usuario hace clic en el botón de color.
 
-```
+```cpp
 void UpdateColor(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Color seleccionado por el usuario.
 
 ### <a name="remarks"></a>Observaciones
 
 El `CMFCRibbonColorButton::UpdateColor` método cambia el color del botón seleccionado actualmente y notifica a su elemento primario mediante el envío de un mensaje de WM_COMMAND con una notificación estándar BN_CLICKED. Utilice el [CMFCRibbonColorButton::GetColor](#getcolor) método para recuperar el color seleccionado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

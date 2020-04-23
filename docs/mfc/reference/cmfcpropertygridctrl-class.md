@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361927"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754143"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl (clase)
 
@@ -380,7 +380,7 @@ Este método vuelve a calcular cómo dibujar todo el control de cuadrícula de p
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ TRUESi el método se realiza correctamente; de lo contrario, FALSE.
 
 Habilita o deshabilita el área de descripción que se muestra debajo de la lista de propiedades en el control de cuadrícula de propiedades.
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ El área de descripción se muestra en la parte inferior del control de cuadríc
 
 Habilita o deshabilita el control de encabezado en la parte superior del control de cuadrícula de propiedades.
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ TRUESi la operación de edición finaliza correctamente; FALSE si los datos de p
 
 Desplaza un control de cuadrícula de propiedades y expande los elementos de propiedad hasta que la propiedad especificada esté visible.
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 Expande o contrae todos los nodos de control de cuadrícula de propiedades.
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ Puntero al objeto de propiedad que corresponde al elemento seleccionado en el co
 
 Recupera los colores personalizados que están definidos actualmente para los elementos de control de cuadrícula de propiedades.
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1225,7 +1225,7 @@ Utilice el [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) método par
 
 Especifica cómo mostrar las propiedades modificadas.
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ De forma predeterminada, este método envía el [mensaje AFX_WM_PROPERTY_CHANGED
 
 Llamado por el marco de trabajo cuando se selecciona una propiedad que contiene un control de cuadro combinado.
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 Quita todos los objetos de propiedad de un control de cuadrícula de propiedades.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 Restaura los valores originales de todas las propiedades.
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 Establece o restablece el modo alfabético.
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ Cuando el control de cuadrícula de propiedades está en modo alfabético, el co
 
 Especifica el texto de las etiquetas booleanas.
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 Selecciona una propiedad en un control de cuadrícula de propiedades.
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ Utilice este método para cancelar la selección del elemento actual en el contr
 
 Especifica colores personalizados para varios elementos del control de cuadrícula de propiedades.
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ Para personalizar la apariencia de una propiedad específica, derive una clase d
 
 Especifica el número de filas que se mostrarán en la sección de descripción del control de cuadrícula de propiedades actual.
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 Especifica si se debe mostrar el ancho completo del nombre de categoría para un grupo de propiedades en el control de cuadrícula de propiedades actual.
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ Los términos nombre del *grupo* y nombre de *categoría* se utilizan indistinta
 
 Define un carácter que se utiliza como delimitador en una lista de valores de propiedad.
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ De forma predeterminada, el [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpr
 
 Especifica si el marco de trabajo vuelve a dibujar las columnas de nombre y valor del control de cuadrícula de propiedades actual cuando un usuario cambia el tamaño de las columnas.
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ El usuario puede cambiar el tamaño de las columnas de nombre y valor de un cont
 
 Establece la apariencia del control de cuadrícula de propiedades en el estilo que se usa en Visual Studio .NET.
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Un valor de color RGB.
 
 ### <a name="remarks"></a>Observaciones
@@ -1639,7 +1639,7 @@ El [CMFCPropertyGridCtrl::EndEditItem](#endedititem) método llama a este métod
 
 Si invalida este método, devuelva TRUE si los datos de propiedad especificados son válidos. De lo contrario, devuelva FALSE, en cuyo caso el marco de trabajo no actualiza la propiedad.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

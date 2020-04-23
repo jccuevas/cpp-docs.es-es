@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367634"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752452"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -391,7 +391,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 Establece la nueva velocidad de animación.
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
@@ -408,7 +408,7 @@ Llame a este método para establecer la velocidad de animación para la ventana 
 
 Establece el tipo de animación.
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
@@ -435,7 +435,7 @@ Llame a este método para establecer el tipo de animación. Puede especificar un
 
 Establece el tiempo de espera de cierre automático.
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
@@ -452,7 +452,7 @@ La ventana de alerta se cierra automáticamente después del tiempo especificado
 
 Cambia entre subtítulos pequeños y de tamaño normal.
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
@@ -469,7 +469,7 @@ Llame a este método para mostrar el título de tamaño pequeño o regular. De f
 
 Establece el nivel de transparencia de la ventana emergente.
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 
@@ -492,7 +492,7 @@ virtual CSize GetDialogSize();
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

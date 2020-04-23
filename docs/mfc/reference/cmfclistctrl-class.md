@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 63fbfd236ed98eee3b90f4a20b191817026903c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 099ec086bd95a1180af4cf5a8f6a9fa7f1d099ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370774"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754235"
 ---
 # <a name="cmfclistctrl-class"></a>Clase CMFCListCtrl
 
@@ -94,7 +94,7 @@ En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase
 
 Marca las columnas ordenadas con un color de fondo diferente.
 
-```
+```cpp
 void EnableMarkSortedColumn(
     BOOL bMark = TRUE,
     BOOL bRedraw = TRUE);
@@ -116,7 +116,7 @@ void EnableMarkSortedColumn(
 
 Permite ordenar las filas de datos en el control de lista por varias columnas.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```
 
@@ -277,7 +277,7 @@ De forma predeterminada, `GetTextColor` este método llama independientemente de
 
 Quita una columna de ordenación de la lista de columnas ordenadas.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -294,7 +294,7 @@ Este método quita una columna de ordenación del control de encabezado. Llama a
 
 Establece la columna ordenada actual y el criterio de ordenación.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending = TRUE,
@@ -338,7 +338,7 @@ virtual void Sort(
 *Bagregar*<br/>
 [en] Un valor booleano que especifica si este método agrega la columna indicada por *iColumn* a la lista de columnas de ordenación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

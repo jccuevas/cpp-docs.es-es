@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: ab8d934ca0c40c7073f2fc6d88549eb8db595b3f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 99b4ff27a7686972bcbc85478998b52ed713ab5b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352237"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754263"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog (clase)
 
@@ -249,7 +249,7 @@ Puede llamar a [SetCurrentColor](#setcurrentcolor) desde dentro `OnColorOK` para
 
 Llame a esta `DoModal` función después de llamar para forzar la selección de color actual al valor de color especificado en *clr*.
 
-```
+```cpp
 void SetCurrentColor(COLORREF clr);
 ```
 
@@ -266,7 +266,7 @@ Se llama a esta función `OnColorOK`desde un controlador de mensajes o . El cuad
 
   Vea el ejemplo de [CColorDialog::OnColorOK](#oncolorok).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
