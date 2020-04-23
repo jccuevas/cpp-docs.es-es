@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375582"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753324"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager (clase)
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*info*<br/>
+*Información*<br/>
 [en] Una referencia a una estructura de información que contiene la alineación del panel de acoplamiento.
 
 *ppDockBar*<br/>
@@ -332,7 +332,7 @@ TRUESi el panel de acoplamiento se creó correctamente; FALSE en caso contrario.
 
 Agrega un identificador a un panel de barras a la lista de paneles de barras con pestañas MDI ocultos.
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ El parámetro *dwAlignment* puede tener uno de los siguientes valores:
 
 Cambia el tamaño de un panel de acoplamiento en modo de ocultación automática para que tome todo el ancho o alto del área de cliente del marco rodeado de sitios de acoplamiento.
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ NULL si no se creó la barra de herramientas de ocultación automática; de lo c
 
 Trae las barras acopladas que tienen la alineación especificada a la parte superior.
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 Agrega nombres de paneles de acoplamiento y barras de herramientas a un menú.
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 Calcula el rectángulo esperado de una ventana acoplada.
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ El estado de acoplamiento puede ser uno de los siguientes valores:
 
 Habilita o deshabilita la carga del diseño de acoplamiento desde el registro.
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ Llame a este método cuando debe conservar el diseño actual de los paneles de a
 
 Acopla un panel a otro panel o a una ventana de marco.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ De forma predeterminada, este menú no se muestra.
 
 Indica a la biblioteca que muestre un menú contextual especial que tenga una lista de barras de herramientas de la aplicación y paneles de acoplamiento cuando el usuario haga clic en el botón derecho del ratón y la biblioteca esté procesando el mensaje WM_CONTEXTMENU.
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ Rectángulo que contiene los bordes exteriores del marco.
 
 Devuelve una lista de paneles que pertenecen al administrador de acoplamiento. Esto incluye todos los paneles flotantes.
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ La clase que contiene los parámetros de acoplamiento inteligente para el admini
 
 Oculta un panel que está en modo de ocultación automática.
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*info*<br/>
+*Información*<br/>
 [en] Estructura que contiene la información de alineación sobre el panel de acoplamiento.
 
 *dwAlignToInsertAfter*<br/>
@@ -1221,7 +1221,7 @@ TRUESi el estado del administrador de acoplamiento se cargó correctamente; de l
 
 Bloquea la ventana dada.
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 Lo llama el marco cuando un menú emergente activo procesa un mensaje WM_DESTROY.
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ TRUESi el método se realiza correctamente; de lo contrario FALSO.
 
 Llamado por el marco de trabajo cuando crea un menú que tiene una lista de paneles.
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Libera los contenedores de panel vacíos.
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 Quita el panel de barras ocultas especificado.
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ TRUESi se quita el marco especificado; FALSE en caso contrario.
 
 Anula el registro de un panel y lo quita de la lista en el administrador de acoplamiento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ TRUESi el panel se reemplaza correctamente; FALSE en caso contrario.
 
 Resorts los marcos en la lista de mini marcos.
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,13 +1598,13 @@ VERDADERO siempre.
 
 Escribe el administrador de acoplamiento en un archivo.
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*ar*<br/>
+*Ar*<br/>
 [en] Una referencia a un objeto de archivado.
 
 ### <a name="remarks"></a>Observaciones
@@ -1615,7 +1615,7 @@ Escribir el administrador de acoplamiento en un archivo implica determinar el n�
 
 Establece el tamaño, el ancho y el alto de las barras de control y el panel especificado.
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 Establece el modo de vista previa de impresión de las barras que se muestran en la vista previa de impresión.
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ Para utilizar la búsqueda predeterminada de marcadores de acoplamiento intelige
 
 Muestra u oculta las ventanas de los minimarcos.
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ Siempre FALSE.
 
 Inicia el acoplamiento inteligente de la ventana especificada de acuerdo con la alineación del administrador de acoplamiento inteligente.
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 Detiene el acoplamiento inteligente.
 
-```
+```cpp
 void StopSDocking();
 ```
 
@@ -1764,7 +1764,7 @@ Devuelve uno de los siguientes valores enumerados: AFX_SDT_DEFAULT, AFX_SDT_VS20
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

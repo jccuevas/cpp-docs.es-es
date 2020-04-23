@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: b0118b47fd1bb1db15916d7deffbaa32dcfc9df7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e25a375f8bf5769a4a118318eac272db93062cbf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375301"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752502"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton (clase)
 
@@ -250,7 +250,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 Agrega un elemento de menú al menú emergente asociado al botón.
 
-```
+```cpp
 void AddSubItem(
     CMFCRibbonBaseElement* pSubItem,
     int nIndex=-1);
@@ -803,7 +803,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 Quita todos los elementos del menú emergente.
 
-```
+```cpp
 void RemoveAllSubItems();
 ```
 
@@ -852,7 +852,7 @@ Devuelve TRUE si se realiza correctamente; de lo contrario FALSO.
 
 Especifica si el botón muestra una imagen grande o pequeña cuando el usuario lo contrae.
 
-```
+```cpp
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```
 
@@ -865,7 +865,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 
 Habilita el comando predeterminado del botón de la cinta.
 
-```
+```cpp
 void SetDefaultCommand(BOOL bSet=TRUE);
 ```
 
@@ -894,7 +894,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 Asigna un índice a la imagen del botón.
 
-```
+```cpp
 void SetImageIndex(
     int nIndex,
     BOOL bLargeImage);
@@ -912,7 +912,7 @@ void SetImageIndex(
 
 Asigna un menú emergente al botón de la cinta.
 
-```
+```cpp
 void SetMenu(
     HMENU hMenu,
     BOOL bIsDefaultCommand=FALSE,
@@ -958,7 +958,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 Alinea el menú emergente con el borde del botón.
 
-```
+```cpp
 void SetRightAlignMenu(BOOL bSet=TRUE);
 ```
 
@@ -979,7 +979,7 @@ virtual void SetText(LPCTSTR lpszText);
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

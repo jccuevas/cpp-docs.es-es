@@ -1,15 +1,15 @@
 ---
-title: Puntos suspensivos y plantillas variádicas
+title: Plantillas de ellipsis y variadic
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366335"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031529"
 ---
-# <a name="ellipses-and-variadic-templates"></a>Puntos suspensivos y plantillas variádicas
+# <a name="ellipsis-and-variadic-templates"></a>Plantillas de ellipsis y variadic
 
 En este artículo se muestra cómo utilizar los puntos suspensivos (`...`) con plantillas variádicas de C++. Los puntos suspensivos han tenido muchos usos en C y C++. Entre ellos se incluyen listas de argumentos de variable para funciones. La función `printf()` de la biblioteca en tiempo de ejecución de C es uno de los ejemplos más conocidos.
 

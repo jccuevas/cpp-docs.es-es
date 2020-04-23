@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c22097c3a686857a6a5698033b7395c5d15f2570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366075"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753883"
 ---
 # <a name="coledispatchdriver-class"></a>Clase COleDispatchDriver
 
@@ -103,7 +103,7 @@ Para obtener más `COleDispatchDriver`información sobre el uso de , consulte lo
 
 Llame a la función miembro `AttachDispatch` para adjuntar un puntero `IDispatch` al objeto `COleDispatchDriver` . Para obtener más información, consulta [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -217,7 +217,7 @@ Para obtener más información acerca del tipo LPDISPATCH, vea [Implementar la i
 
 Obtiene la propiedad de objeto especificada por *dwDispID*.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -243,7 +243,7 @@ Dirección de la variable que recibirá el valor de propiedad. Debe coincidir co
 
 Llama al método o propiedad de objeto especificado por *dwDispID*, en el contexto especificado por *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -282,15 +282,15 @@ Los valores posibles para el argumento *vtRet* se toman de la enumeración VAREN
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
-|VT_I4|**Largo**|
-|VT_R4|**Flotador**|
+|VT_I4|**long**|
+|VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
 |VT_DATE|**Fecha**|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
-|VT_BOOL|**Bool**|
+|VT_BOOL|**BOOL**|
 |VT_VARIANT|**Variante**|
 |VT_UNKNOWN|LPUNKNOWN|
 
@@ -369,7 +369,7 @@ operator LPDISPATCH();
 
 Libera `IDispatch` la conexión. Para obtener más información, consulte [Implementación de la interfaz IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
@@ -385,7 +385,7 @@ Si se ha establecido la versión `IDispatch::Release` automática para esta cone
 
 Establece la propiedad de objeto OLE especificada por *dwDispID*.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366880"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750801"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (clase)
 
@@ -151,7 +151,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de tecla de acceso rápido. Aplique cualquier combinación de estilos de control. Para obtener más información, consulte [Estilos](/windows/win32/Controls/common-control-styles) de control comunes en el Windows SDK.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -254,7 +254,7 @@ El nombre de clave que devuelve esta función procede del controlador de teclado
 
 Establece el método abreviado de teclado para un control de tecla de acceso rápido.
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ El código de tecla virtual y las teclas modificadoras juntos definen el método
 
 Llame a esta función para definir las combinaciones no válidas y la combinación de modificadores predeterminada para un control de tecla de acceso rápido.
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);
@@ -319,7 +319,7 @@ Matriz de indicadores que especifica la combinación de teclas que se usará cua
 
 Cuando un usuario escribe una combinación de claves no válida, tal como se define en los indicadores especificados en *wInvalidComb*, el sistema utiliza el operador OR para combinar las claves introducidas por el usuario con las marcas especificadas en *wModifiers*. La combinación de teclas resultante se convierte en una cadena y, a continuación, se muestra en el control de tecla de acceso rápido.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

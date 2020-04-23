@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: e1ce6e13b9c6045881cc0bb4114a6e11d58365c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 86f12f78338d1c60e3dd13614ccedc2868f28d81
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368990"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754718"
 ---
 # <a name="cdaofieldexchange-class"></a>Clase CDaoFieldExchange
 
@@ -136,7 +136,7 @@ Contiene un puntero a la [CDaoRecordset](../../mfc/reference/cdaorecordset-class
 
 Llama `SetFieldType` a `CDaoRecordset` la `DoFieldExchange` anulación de tu clase.
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 
@@ -157,7 +157,7 @@ Si parametriza la clase de conjunto de registros, debe agregar llamadas DFX para
 
 En general, cada grupo de llamadas a funciones DFX asociadas con `SetFieldType`miembros de datos de campo o miembros de datos de parámetro deben ir precedidos de una llamada a . El *nFieldType* parámetro `SetFieldType` de cada llamada identifica el tipo de los miembros `SetFieldType` de datos representados por las llamadas de función DFX que siguen a la llamada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clase CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)

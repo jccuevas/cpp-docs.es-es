@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a3288949bd4867115c32d2cbffd09cf4f7c6b40b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367810"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754887"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager (Clase)
 
@@ -101,7 +101,7 @@ Dado que es una clase base para todos los administradores visuales, puede llamar
 
 Llamadas `CloseThemeData` para todos `UpdateSystemColors`los identificadores obtenidos en .
 
-```
+```cpp
 void CleanUpThemes();
 ```
 
@@ -400,7 +400,7 @@ El color del tema de Windows seleccionado actualmente. Puede ser uno de los sigu
 
 Llamadas `OpenThemeData` para obtener identificadores para dibujar varios controles: ventanas, barras de herramientas, botones, etc.
 
-```
+```cpp
 void UpdateSystemColors();
 ```
 
@@ -408,7 +408,7 @@ void UpdateSystemColors();
 
 Solo para uso interno.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

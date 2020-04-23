@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746594"
+ms.locfileid: "82032139"
 ---
 # <a name="cpatht-class"></a>Clase CPathT
 
@@ -102,8 +102,8 @@ La clase de cadena ATL/MFC que se va a utilizar para la ruta de acceso (consulte
 |[CPathT::Canonicalize](#canonicalize)|Llame a este método para convertir la ruta de acceso a forma canónica.|
 |[CPathT::Combinar](#combine)|Llame a este método para concatenar una cadena que representa un nombre de directorio y una cadena que representa un nombre de ruta de acceso de archivo en una ruta de acceso.|
 |[CPathT::CommonPrefix](#commonprefix)|Llame a este método para determinar si la ruta de acceso especificada comparte un prefijo común con la ruta de acceso actual.|
-|[CPathT::CompactPath](#compactpath)|Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un ancho de píxel determinado reemplazando los componentes de ruta de acceso con elipses.|
-|[CPathT::CompactPathEx](#compactpathex)|Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un número determinado de caracteres reemplazando los componentes de ruta de acceso por elipses.|
+|[CPathT::CompactPath](#compactpath)|Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un ancho de píxel determinado reemplazando los componentes de ruta de acceso con puntos suspensivos.|
+|[CPathT::CompactPathEx](#compactpathex)|Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un número determinado de caracteres reemplazando los componentes de ruta de acceso con puntos suspensivos.|
 |[CPathT::FileExists](#fileexists)|Llame a este método para comprobar si existe el archivo en este nombre de ruta de acceso.|
 |[CpathT::FindExtension](#findextension)|Llame a este método para encontrar la posición de la extensión de archivo dentro de la ruta de acceso.|
 |[CPathT::FindFileName](#findfilename)|Llame a este método para encontrar la posición del nombre de archivo dentro de la ruta de acceso.|
@@ -288,7 +288,7 @@ Un prefijo es uno de estos\\\\tipos: "C: ", ".", "..", ".... \\\\". Para obtener
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
 
-Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un ancho de píxel determinado reemplazando los componentes de ruta de acceso con elipses.
+Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un ancho de píxel determinado reemplazando los componentes de ruta de acceso con puntos suspensivos.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ Para obtener más información, consulte [PathCompactPath](/windows/win32/api/sh
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
 
-Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un número determinado de caracteres reemplazando los componentes de ruta de acceso por elipses.
+Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un número determinado de caracteres reemplazando los componentes de ruta de acceso con puntos suspensivos.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);

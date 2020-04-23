@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: 4e9700311bbc20ea017675357a91a56813cc4bde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d8bd56c0bfe4f9b35e34d067dd1042ed11066d5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376959"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751662"
 ---
 # <a name="database-macros-and-globals"></a>Macros y variables globales de base de datos
 
@@ -47,7 +47,7 @@ Para la compatibilidad con la base de datos MFC (o DAO) desde un archivo DLL de 
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void AFXAPI AfxDbInitModule( );
 ```
 
@@ -164,6 +164,6 @@ El identificador para el entorno ODBC actualmente en uso por MFC. Puede `SQL_HEN
 
   **Encabezado** afxdb.h
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Macros y variables globales](../../mfc/reference/mfc-macros-and-globals.md)

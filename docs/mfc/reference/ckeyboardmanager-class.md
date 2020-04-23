@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 5d0f544943cc8584960bb2668ee7ce326547e2fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8053ab33a2b49eb2c447cdaa1cb2b9e356bc696
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372315"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754929"
 ---
 # <a name="ckeyboardmanager-class"></a>Clase CKeyboardManager
 
@@ -256,7 +256,7 @@ Si no especifica una ventana predeterminada, se utilizará la ventana de marco p
 
 Vuelve a cargar las tablas de teclas de método abreviado desde el recurso de aplicación.
 
-```
+```cpp
 void ResetAll();
 ```
 
@@ -375,7 +375,7 @@ Distinto de cero si el método es correcto; de lo contrario 0.
 
 Utilice esta función para reemplazar la tabla de métodos abreviados existente con nuevas teclas de método abreviado para varios objetos de ventana de marco. La función recibe una plantilla de documento como parámetro para obtener acceso a todos los objetos de ventana de marco conectados a la plantilla de documento determinada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

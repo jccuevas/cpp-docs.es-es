@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367686"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752536"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl (clase)
 
@@ -184,7 +184,7 @@ El valor RGB del color seleccionado.
 
 Recupera los valores de matiz, luminancia y saturación del color que el usuario selecciona.
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ El componente de saturación del color seleccionado.
 
 Establece el color actual en el color definido por los componentes de color RGB especificados o el hexágono de celda especificado.
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -272,7 +272,7 @@ BOOL SelectCellHexagon(
 *B*<br/>
 [en] El componente de color azul.
 
-*X*<br/>
+*x*<br/>
 [en] Coordenada x del cursor, que apunta a un hexágono de celda.
 
 *y y*<br/>
@@ -292,7 +292,7 @@ La segunda sobrecarga de este método establece el color actual en el color del 
 
 Establece el color actual en el valor de color RGB especificado.
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 Establece el color actual en el valor de color HLS especificado.
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 Cambia el tono del color seleccionado actualmente.
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 Cambia la luminancia del color seleccionado actualmente.
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,13 +365,13 @@ void SetLuminance(double Luminance);
 
 Establece el ancho de la barra de luminancia en el control de selector de color.
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*W*<br/>
+*w*<br/>
 [en] El ancho de la barra de luminancia medida en píxeles.
 
 ### <a name="remarks"></a>Observaciones
@@ -382,7 +382,7 @@ Utilice este método para cambiar el tamaño de la barra de luminancia, que se e
 
 Establece el color seleccionado inicialmente.
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ Llame a este método cuando se inicializa el control selector de color.
 
 Establece la paleta de colores actual.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ La paleta de colores define la matriz de colores que se presenta en el control s
 
 Cambia la saturación del color seleccionado actualmente.
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 Establece el tipo de control selector de color que se va a mostrar.
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 
@@ -446,7 +446,7 @@ Los tipos se `CMFCColorPickerCtrl::COLORTYPE` definen mediante la enumeración. 
 
 Para especificar un tipo de control de selector de color, llame a este método antes de crear el control de Windows.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

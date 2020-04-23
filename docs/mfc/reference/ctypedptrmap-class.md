@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 41416c8223ac94364e8f83028ea93189e9f3f60c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 410f0101fd0f8cda271fe0f2353b06b9e8d773b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373251"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754367"
 ---
 # <a name="ctypedptrmap-class"></a>Clase CTypedPtrMap
 
@@ -82,7 +82,7 @@ Para obtener más `CTypedPtrMap`información sobre el uso de , vea los artículo
 
 Recupera el elemento `rNextPosition`de mapa `rNextPosition` en , a continuación, se actualiza para hacer referencia al siguiente elemento del mapa.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rPosition,
     KEY& rKey,
@@ -195,7 +195,7 @@ Para obtener comentarios más detallados, vea [CMapStringToOb::RemoveKey](../../
 
 Esta función `BASE_CLASS`miembro llama **a ::SetAt**.
 
-```
+```cpp
 void SetAt(KEY key, VALUE newValue);
 ```
 
@@ -214,7 +214,7 @@ Especifica el puntero de objeto que es el valor del nuevo elemento.
 
 Para obtener comentarios más detallados, vea [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [RECOPILACIÓN de muestras de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

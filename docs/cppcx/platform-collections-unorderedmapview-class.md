@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354392"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031490"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 
@@ -39,7 +39,7 @@ Un tipo que proporciona un objeto de función que puede comparar dos valores de 
 
 ### <a name="remarks"></a>Observaciones
 
-UnorderedMapView es una implementación concreta de C++ de la interfaz [de>\<Windows::Foundation::Collections::IMapView K,V](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) que se pasa a través de la interfaz binaria de la aplicación (ABI). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
+UnorderedMapView es una implementación concreta de C++ de la interfaz [de>\<Windows::Foundation::Collections::IMapView K,V](/uwp/api/windows.foundation.collections.imapview-2) que se pasa a través de la interfaz binaria de la aplicación (ABI). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Miembros
 
@@ -71,7 +71,7 @@ UnorderedMapView es una implementación concreta de C++ de la interfaz [de>\<Win
 
 ## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>UnorderedMapView::First Método
 
-Devuelve un iterador que especifica el primer elemento [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) en el mapa desordenado.
+Devuelve un iterador que especifica el primer elemento [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) en el mapa desordenado.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -87,7 +87,7 @@ Un iterador que especifica el primer elemento de la vista de mapa.
 
 ### <a name="remarks"></a>Observaciones
 
-Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo, `auto x = myMapView->First();`.
+Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo: `auto x = myMapView->First();`.
 
 ## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a>UnorderedMapView::HasKey Método
 
@@ -129,7 +129,7 @@ El valor que se empareja con `key`. El tipo del valor devuelto es typename *V*.
 
 ## <a name="unorderedmapviewsize-method"></a><a name="size"></a>UnorderedMapView::Size Método
 
-Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos en el UnorderedMapView.
+Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) elementos en el UnorderedMapView.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -218,7 +218,7 @@ UnorderedMapView(
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 Número de elementos para los que se preasigna espacio.
 
 *Init*<br/>
@@ -233,13 +233,13 @@ Tipo que proporciona un objeto de función que puede comparar dos claves para de
 *M*<br/>
 Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std::unordered_map](../standard-library/unordered-map-class.md) que se utiliza para inicializar el UnorderedMapView.
 
-*Primero*<br/>
+*first*<br/>
 Iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto UnorderedMapView.
 
-*Última*<br/>
+*last*<br/>
 Iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto UnorderedMapView.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Platform::Collections (Espacio de nombres)](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

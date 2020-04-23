@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 761d7e9db650c6d95e916c85bd7456d9b1c647c5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318533"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754403"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar (clase)
 
@@ -287,7 +287,7 @@ La posición actual es un valor relativo que depende del rango de desplazamiento
 
 Copia las posiciones actuales de la barra de desplazamiento mínima y máxima para la barra de desplazamiento especificada en las ubicaciones especificadas por *lpMinPos* y *lpMaxPos*.
 
-```
+```cpp
 void GetScrollRange(
     LPINT lpMinPos,
     LPINT lpMaxPos) const;
@@ -375,7 +375,7 @@ Establezca *bRedraw en* FALSE siempre que la barra de desplazamiento se vuelva a
 
 Establece los valores de posición mínimo y máximo de la barra de desplazamiento especificada.
 
-```
+```cpp
 void SetScrollRange(
     int nMinPos,
     int nMaxPos,
@@ -411,7 +411,7 @@ La diferencia entre los valores especificados por *nMinPos* y *nMaxPos* no debe 
 
 Muestra u oculta una barra de desplazamiento.
 
-```
+```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
 ```
 
@@ -428,7 +428,7 @@ Una aplicación no debe llamar a esta función para ocultar una barra de desplaz
 
   Vea el ejemplo de [CScrollBar::Create](#create).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

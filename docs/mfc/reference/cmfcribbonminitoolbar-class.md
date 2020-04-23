@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 10b1d35c331df6563d09be0bea3c97c73e89acaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e5ac6c923640b7584d89a9c6f75d941deadddf3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375086"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754079"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar (clase)
 
@@ -86,7 +86,7 @@ La minibarra de herramientas se hace transparente cuando el puntero del mouse es
 
 Establece la lista de comandos que se mostrarán en la barra de herramientas.
 
-```
+```cpp
 void SetCommands(
     CMFCRibbonBar* pRibbonBar,
     const CList<UINT,UINT>& lstCommands);
@@ -122,7 +122,7 @@ BOOL Show(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 [en] Especifica la posición horizontal de la mini barra de herramientas en coordenadas de pantalla.
 
 *y y*<br/>
@@ -146,7 +146,7 @@ BOOL ShowWithContextMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 [en] Especifica la posición horizontal del menú contextual en coordenadas de pantalla.
 
 *y y*<br/>
@@ -190,7 +190,7 @@ virtual BOOL IsRibbonMiniToolBar() const;
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

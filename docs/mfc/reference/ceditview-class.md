@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373966"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753197"
 ---
 # <a name="ceditview-class"></a>CEditView (clase)
 
@@ -259,7 +259,7 @@ Utilice esta función para determinar la fuente de impresora actual. Si no es la
 
 Llamada `GetSelectedText` para copiar el `CString` texto seleccionado en un objeto, hasta el final de la selección o el carácter que precede al primer carácter de retorno de carro de la selección.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,13 +423,13 @@ El `rect.bottom` elemento del objeto *rectLayout* se cambia para que las dimensi
 
 Llame `SerializeRaw` para `CArchive` que un objeto lea `CEditView` o escriba el texto del objeto en un archivo de texto.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*ar*<br/>
+*Ar*<br/>
 Referencia al `CArchive` objeto que almacena el texto serializado.
 
 ### <a name="remarks"></a>Observaciones
@@ -440,7 +440,7 @@ Referencia al `CArchive` objeto que almacena el texto serializado.
 
 Llame `SetPrinterFont` para establecer la fuente de la impresora en la fuente especificada por *pFont*.
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ Si desea que la vista utilice siempre una fuente `SetPrinterFont` determinada pa
 
 Llame a esta función para establecer las tabulaciones utilizadas para la visualización y la impresión.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ Este fragmento de código establece las tabulaciones del control en cada cuarto 
 
 Llame a esta función miembro para desbloquear el búfer.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 
@@ -490,7 +490,7 @@ void UnlockBuffer() const;
 
 Llame `UnlockBuffer` después de haber terminado de usar el puntero devuelto por [LockBuffer](#lockbuffer).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [Clase CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377148"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754683"
 ---
 # <a name="cdaorecordset-class"></a>Clase CDaoRecordset
 
@@ -626,7 +626,7 @@ Para obtener información relacionada, vea los temas "AddNew Method", "Edit Meth
 
 Llame a esta función miembro para almacenar en caché un número especificado de registros del conjunto de registros.
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ Para obtener información relacionada, vea el tema "Count Property" en la Ayuda 
 
 Llame a esta función miembro para obtener información sobre los campos de un conjunto de registros.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ Para obtener información relacionada, vea el tema "Propiedad de atributos" en l
 
 Llame a esta función miembro para obtener varios tipos de información sobre un índice definido en la tabla base subyacente a un conjunto de registros.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ Para obtener información relacionada, consulte los temas "Método de movimiento
 
 Llame a esta función miembro para que el primer registro del conjunto de registros (si existe) sea el registro actual.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ Para obtener información relacionada, consulte los temas "Método de movimiento
 
 Llame a esta función miembro para que el último registro (si existe) en el conjunto de registros el registro actual.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ Para obtener información relacionada, consulte los temas "Método de movimiento
 
 Llame a esta función miembro para que el siguiente registro en el conjunto de registros el registro actual.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ Para obtener información relacionada, consulte los temas "Método de movimiento
 
 Llame a esta función miembro para que el registro anterior en el conjunto de registros el registro actual.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ Para obtener información relacionada, consulte el tema "Método de búsqueda" e
 
 Establece el número de registro relativo del registro actual de un objeto de conjunto de registros.
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ Para obtener información relacionada, vea el tema "Propiedad AbsolutePosition" 
 
 Llame a esta función miembro para colocar el conjunto de registros en el registro que contiene el marcador especificado.
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ Para obtener información relacionada, vea los temas "Propiedad de marcador" y P
 
 Llame a esta función miembro para establecer el número de registros que se almacenarán en caché.
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ Para obtener información relacionada, vea el tema "CacheSize, CacheStart Proper
 
 Llame a esta función miembro para especificar el marcador del primer registro en el conjunto de registros que se va a almacenar en caché.
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ Para obtener información relacionada, vea el tema CacheSize, CacheStart Propert
 
 Llame a esta función miembro para establecer un índice en un conjunto de registros de tipo de tabla.
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ Para obtener información relacionada, vea el tema "Objeto de índice" y la defi
 
 Llame a esta función miembro para marcar un miembro de datos de campo del conjunto de registros como modificado o como sin cambios.
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ Esto significa que no puede establecer todos los `outputColumn` campos **param e
 
 Llame a esta función miembro para marcar un miembro de datos de campo del conjunto de registros como Null (específicamente no tiene ningún valor) o como no Null.
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ Para obtener información relacionada, vea los temas "Objeto de campo" y "Propie
 
 Llame a esta función miembro para establecer el campo en un Null valor.
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ Para obtener información relacionada, vea los temas "Objeto de campo" y "Propie
 
 Llame a esta función miembro para establecer el tipo de bloqueo para el conjunto de registros.
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2442,7 +2442,7 @@ virtual void SetParamValue(
 *nIndex*<br/>
 La posición numérica del parámetro en la colección Parameters de la definición de consulta.
 
-*Var*<br/>
+*var*<br/>
 El valor que se va a establecer; ver Comentarios.
 
 *lpszName*<br/>
@@ -2458,7 +2458,7 @@ Especifique el valor que `COleVariant` se va a establecer como un objeto. Para o
 
 Llame a esta función miembro para establecer el parámetro en un Null valor.
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ C++ NULL no es lo mismo que Null, que, en terminología de base de datos, signif
 
 Llame a esta función miembro para establecer un valor que cambia la ubicación aproximada del registro actual en el objeto de conjunto de registros en función de un porcentaje de los registros en el conjunto de registros.
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 
@@ -2525,7 +2525,7 @@ Cuando el objeto de conjunto de registros se bloquea de forma pesimista en un en
 
 Para obtener información relacionada, vea los temas "AddNew Method", "CancelUpdate Method", "Delete Method", "LastModified Property", "Update Method" y "EditMode Property" en la Ayuda de DAO.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

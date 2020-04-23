@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375607"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753340"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -881,7 +881,7 @@ Invalide este método en una clase derivada para personalizar la apariencia del 
 
 Habilita o deshabilita el modo de ocultación automática para este panel y para otros paneles del contenedor.
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ Invalide este método en una clase derivada para implementar efectos de ocultaci
 
 El marco de trabajo llama a este método cuando se desacopla un panel.
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ TRUESi el reemplazo se realiza correctamente; de lo contrario, FALSE.
 
 Cuando se deserializa un panel, el marco de trabajo llama a este método para restaurar el divisor de paneles predeterminado.
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ Llame a este método para cambiar un panel acoplable al modo de ocultación auto
 
 Establece el botón de ocultación automática y la barra de herramientas de ocultación automática para el panel.
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,13 +1542,13 @@ void SetAutoHideParents(
 
 Establece el porcentaje de espacio que ocupa un panel en su contenedor.
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 [en] Un **int** que especifica el porcentaje de espacio que ocupa el panel en su contenedor.
 
 ### <a name="remarks"></a>Observaciones
@@ -1559,7 +1559,7 @@ El marco de trabajo ajusta el panel para usar el nuevo valor cuando se vuelve a 
 
 Establece el divisor de panel predeterminado restaurado.
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ Se obtiene un divisor de panel predeterminado restaurado cuando se deserializa u
 
 Establece la información de clase en tiempo de ejecución para una ventana con fichas que se crea cuando dos paneles se acoplan.
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 
@@ -1682,7 +1682,7 @@ Debe desacoplar un panel antes de realizar cualquier operación externa que no r
 
 El marco de trabajo desacopla automáticamente los paneles antes de que se destruyan.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

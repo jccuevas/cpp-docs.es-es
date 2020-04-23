@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321915"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754609"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl (clase)
 
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 Cierra el control de selector de fecha y hora actual.
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Especifica la combinación de estilos de control de fecha y hora. Consulta [Estilos](/windows/win32/Controls/date-and-time-picker-control-styles) de control de selector de fecha y hora en el Windows SDK para obtener más información sobre los estilos de selector de fecha y hora.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT,](/previous-versions/dd162897\(v=vs.85\)) que es la posición y el tamaño del control de selector de fecha y hora.
+Una referencia a una estructura [RECT,](/windows/win32/api/windef/ns-windef-rect) que es la posición y el tamaño del control de selector de fecha y hora.
 
 *pParentWnd*<br/>
 Puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control selector de fecha y hora. No debe ser NULL.
@@ -474,7 +474,7 @@ Esta función miembro implementa el comportamiento del [mensaje de](/windows/win
 
 Establece la fuente que usará el control de calendario de mes secundario del control de selector de fecha y hora.
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369422"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754808"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager (clase)
 
@@ -187,7 +187,7 @@ Si este método encuentra un menú que `GetMenuByName` coincide con *lpszName*, 
 
 Devuelve la lista de nombres de menú agregados a [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -262,7 +262,7 @@ Utilice el método [CContextMenuManager::LoadState](#loadstate) para cargar los 
 
 Controla si el [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) cierra el menú emergente activo cuando muestra un nuevo menú emergente.
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
@@ -303,7 +303,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 *uiMenuResId*<br/>
 [en] El identificador de recurso del menú que mostrará este método.
 
-*X*<br/>
+*x*<br/>
 [en] El desplazamiento horizontal para el menú contextual en las coordenadas de cliente.
 
 *y y*<br/>
@@ -352,7 +352,7 @@ virtual UINT TrackPopupMenu(
 *hmenuPopup*<br/>
 [en] Identificador del menú contextual que muestra este método.
 
-*X*<br/>
+*x*<br/>
 [en] El desplazamiento horizontal para el menú contextual en las coordenadas de cliente.
 
 *y y*<br/>
@@ -372,7 +372,7 @@ El ID de comando de menú del comando que el usuario elige; 0 Si el usuario cier
 
 Este método funciona como una llamada modal para mostrar un menú contextual. La aplicación no continuará con la siguiente línea en el código hasta que el usuario cierre el menú contextual o seleccione un comando. Un método alternativo que puede utilizar para mostrar un menú contextual es [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Ese método no es una llamada modal y no devolverá el identificador del comando seleccionado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

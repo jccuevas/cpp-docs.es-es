@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 554b9fe364c6a213e038416a605c17cdd4f8e7d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb4e09eabab17061812ed22b2739d06accd57fee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368793"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753503"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane (clase)
 
@@ -259,7 +259,7 @@ virtual void OnFinishAnimation();
 
 Defina el texto más largo que se puede mostrar en el panel de la barra de estado sin truncamiento.
 
-```
+```cpp
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```
 
@@ -276,7 +276,7 @@ La biblioteca calcula el tamaño del texto que *lpszAlmostLargeText* especifica 
 
 Adjunta al panel de la barra de estado una lista de imágenes que se puede utilizar para la animación.
 
-```
+```cpp
 void SetAnimationList(
     HBITMAP hBmpAnimationList,
     int cxAnimation=16,
@@ -310,7 +310,7 @@ TRUESi la lista de imágenes se adjunta correctamente al panel de la barra de es
 
 Establece la alineación de texto de la etiqueta del panel de la barra de estado.
 
-```
+```cpp
 void SetTextAlign(int nAlign);
 ```
 
@@ -333,7 +333,7 @@ void SetTextAlign(int nAlign);
 
 Inicia la animación que se asigna al panel.
 
-```
+```cpp
 void StartAnimation(
     UINT nFrameDelay=500,
     UINT nDuration=-1);
@@ -355,11 +355,11 @@ Debe especificar un identificador para una `StartAnimation` lista `SetAnimationL
 
 Detiene la animación que asignó al panel de la barra de estado.
 
-```
+```cpp
 void StopAnimation();
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

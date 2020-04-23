@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 8339785fd10fa3dcef1c0fb573310762dc2d2405
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9abe4ae55d9d84ea435cd5d82925ff8b8a544480
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352829"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752964"
 ---
 # <a name="cbasetransition-class"></a>Clase CBaseTransition
 
@@ -180,7 +180,7 @@ CBaseTransition();
 
 Libera el objeto COM IUIAnimationTransition encapsulado.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -374,7 +374,7 @@ TRANSITION_TYPE m_type;
 
 Establece fotogramas clave para una transición.
 
-```
+```cpp
 void SetKeyframes(
     CBaseKeyFrame* pStart = NULL,
     CBaseKeyFrame* pEnd = NULL);
@@ -396,7 +396,7 @@ Este método indica a la transición que se inicie después del fotograma clave 
 
 Establece una relación entre la variable de animación y la transición.
 
-```
+```cpp
 void SetRelatedVariable(CAnimationVariable* pVariable);
 ```
 
@@ -421,6 +421,6 @@ enum TRANSITION_TYPE;
 
 Un tipo de transición se establece en el constructor de transición específica. Por ejemplo, CSinusoidalTransitionFromRange establece su tipo en SINUSOIDAL_FROM_RANGE.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

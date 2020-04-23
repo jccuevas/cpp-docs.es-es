@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: c1f14657350c08679868299ce4878cca2ae10eec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1e9be5d7cb81f2769b98d9baeae786873f5fa73d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373228"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751985"
 ---
 # <a name="cusertoolsmanager-class"></a>Clase CUserToolsManager
 
@@ -460,7 +460,7 @@ Normalmente, no es necesario llamar a este método directamente, [CWinAppEx::Sav
 
 Especifica la extensión predeterminada que utiliza el cuadro de diálogo **Abrir archivo** ( [Clase CFileDialog](../../mfc/reference/cfiledialog-class.md)) en el campo **Comando** de la ficha **Herramientas** del cuadro de diálogo **Personalizar.**
 
-```
+```cpp
 void SetDefExt(const CString& strDefExt);
 ```
 
@@ -477,7 +477,7 @@ Llame a este método para especificar una extensión de nombre de archivo predet
 
 Especifica el filtro de archivo que utiliza el cuadro de diálogo **Abrir archivo** ( [Clase CFileDialog](../../mfc/reference/cfiledialog-class.md)) en el campo **Comando** de la ficha **Herramientas** del cuadro de diálogo **Personalizar.**
 
-```
+```cpp
 void SetFilter(const CString& strFilter);
 ```
 
@@ -486,7 +486,7 @@ void SetFilter(const CString& strFilter);
 *strFilter*<br/>
 [en] Especifica el filtro.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

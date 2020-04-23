@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367532"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752383"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl Clase
 
@@ -133,7 +133,7 @@ En el ejemplo siguiente se muestra `CMFCEditBrowseCtrl` cómo `EnableFolderBrows
 
 Muestra o no muestra el botón Examinar en el control de exploración de edición actual.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ Si el *bEnable* parámetro es TRUE, el `BrowseMode_Default`modo de exploración 
 
 Muestra el botón Examinar en el control de exploración de edición actual y coloca el control en modo de *exploración* de archivos.
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ Para obtener una lista completa de los indicadores disponibles, consulte [Estruc
 
 Muestra el botón Examinar en el control de exploración de edición actual y coloca el control en modo de *exploración* de carpetas.
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ Invalide esta función en una clase derivada para personalizar la apariencia del
 
 Establece una imagen personalizada en el botón Examinar del control de exploración de edición.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);
@@ -337,7 +337,7 @@ Debe devolver FALSE si este nombre de archivo no se puede pasar más al cuadro d
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

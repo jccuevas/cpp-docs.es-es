@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de1705d47c5692d3563bc7d9cb2646531819197a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366862"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750923"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (clase)
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Especifica el estilo del control de encabezado. Para obtener una descripción de los estilos de control de encabezado, vea [Estilos](/windows/win32/Controls/header-control-styles) de control de encabezado en el Windows SDK.
 
 *Rect*<br/>
-Especifica el tamaño y la posición del control de encabezado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
+Especifica el tamaño y la posición del control de encabezado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/win32/api/windef/ns-windef-rect) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control `CDialog`de encabezado, normalmente un archivo . No debe ser NULL.
@@ -301,7 +301,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Estilo del control de encabezado. Para obtener una descripción de los estilos de control de encabezado, vea [Estilos](/windows/win32/Controls/header-control-styles) de control de encabezado en el Windows SDK. Consulte [Crear](#create) para obtener una lista de estilos adicionales.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*iItem*|[en] El índice de base cero de un elemento de encabezado cuyo estilo es HDF_SPLITBUTTON. Para obtener más `fmt` información, vea el miembro de la [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) estructura.|
-|*lpRect*|[fuera] Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) para recibir la información del rectángulo delimitador.|
+|*lpRect*|[fuera] Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) para recibir la información del rectángulo delimitador.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 El índice de base cero del elemento de control de encabezado.
 
 *lpRect*<br/>
-Puntero a la dirección de una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recibe la información del rectángulo delimitador.
+Puntero a la dirección de una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que recibe la información del rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*lpRect*|[fuera] Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recibe la información del rectángulo delimitador.|
+|*lpRect*|[fuera] Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que recibe la información del rectángulo delimitador.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -957,7 +957,7 @@ Esta función miembro implementa el comportamiento de la [macro win32 HDM_SETORD
 
   Vea el ejemplo de [CHeaderCtrl::GetOrderArray](#getorderarray).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

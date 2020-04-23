@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 83cd125fa7ab64aa39c606bc048022400d158e72
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f5740b3b073c4f564f9cac0fa04e5687ce1d8f00
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374759"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753673"
 ---
 # <a name="cpalette-class"></a>Clase CPalette
 
@@ -95,7 +95,7 @@ Para obtener más `CPalette`información sobre el uso de , consulte [Objetos gr�
 
 Reemplaza las entradas de la paleta `CPalette` lógica asociada al objeto.
 
-```
+```cpp
 void AnimatePalette(
     UINT nStartIndex,
     UINT nNumEntries,
@@ -324,7 +324,7 @@ Si la paleta lógica se selecciona en `SetPaletteEntries`un contexto de disposit
 
 Para obtener más información, consulte [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject (clase)](../../mfc/reference/cgdiobject-class.md)<br/>

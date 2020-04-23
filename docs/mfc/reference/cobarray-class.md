@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 7b923fd9231d3652d8d2f1750a8024d15287811e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c19715f62704bfc97059421451929cbbec2506ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360443"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754471"
 ---
 # <a name="cobarray-class"></a>Clase CObArray
 
@@ -219,7 +219,7 @@ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtene
 
 Llame a esta función miembro para sobrescribir los elementos de la matriz dada con los elementos de otra matriz del mismo tipo.
 
-```
+```cpp
 void Copy(const CObArray& src);
 ```
 
@@ -316,7 +316,7 @@ En la tabla siguiente se muestran otras funciones miembro que son similares a `C
 
 Libera cualquier memoria adicional que se haya asignado mientras se cultivaba la matriz.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -516,7 +516,7 @@ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtene
 
 Inserta un elemento (o todos los elementos de otra matriz) en un índice especificado.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     CObject* newElement,
@@ -626,7 +626,7 @@ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtene
 
 Quita todos los punteros de esta matriz, `CObject` pero en realidad no elimina los objetos.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -657,7 +657,7 @@ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtene
 
 Quita uno o varios elementos a partir de un índice especificado en una matriz.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -707,7 +707,7 @@ RemoveAt example: A CObArray with 1 elements
 
 Establece el elemento de matriz en el índice especificado.
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     CObject* newElement);
@@ -756,7 +756,7 @@ SetAt example: A CObArray with 2 elements
 
 Establece el elemento de matriz en el índice especificado.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     CObject* newElement);
@@ -805,7 +805,7 @@ SetAtGrow example: A CObArray with 4 elements
 
 Establece el tamaño de una matriz vacía o existente; asigna memoria si es necesario.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);
@@ -842,7 +842,7 @@ En la tabla siguiente se muestran otras funciones miembro que son similares a `C
 
   Vea el ejemplo de [CObArray::GetData](#getdata).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

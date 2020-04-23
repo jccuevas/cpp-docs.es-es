@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319752"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752819"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (clase)
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Especifica la combinación de estilos de Windows aplicados al control de calendario de mes. Consulte Estilos de control de calendario de [mes](/windows/win32/Controls/month-calendar-control-styles) en el Windows SDK para obtener más información acerca de los estilos.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT.](/previous-versions/dd162897\(v=vs.85\)) Contiene la posición y el tamaño del control de calendario de mes.
+Una referencia a una estructura [RECT.](/windows/win32/api/windef/ns-windef-rect) Contiene la posición y el tamaño del control de calendario de mes.
 
 *Pt*<br/>
-Una referencia a una estructura [POINT](/previous-versions/dd162805\(v=vs.85\)) que identifica la ubicación del control de calendario de mes.
+Una referencia a una estructura [POINT](/windows/win32/api/windef/ns-windef-point) que identifica la ubicación del control de calendario de mes.
 
 *pParentWnd*<br/>
 Puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control de calendario de mes. No debe ser NULL.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *pRect*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recibirá información de rectángulo delimitador. Este parámetro debe ser una dirección válida y no puede ser NULL.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que recibirá información de rectángulo delimitador. Este parámetro debe ser una dirección válida y no puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -808,7 +808,7 @@ Este método envía el [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurre
 
 Establece el ancho del borde del control de calendario del mes actual.
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
@@ -840,7 +840,7 @@ En el ejemplo de código siguiente se establece el ancho del borde del control d
 
 Establece el ancho predeterminado del borde del control de calendario del mes actual.
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -1219,7 +1219,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [MCM_SET
 
 Establece el control de calendario para el día actual.
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*lpRect*|[en] Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que define un rectángulo que contiene el número deseado de calendarios.|
+|*lpRect*|[en] Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que define un rectángulo que contiene el número deseado de calendarios.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que define un rectángulo cuyo tamaño es menor o igual que el rectángulo definido por el *parámetro lpRect.*
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que define un rectángulo cuyo tamaño es menor o igual que el rectángulo definido por el *parámetro lpRect.*
 
 ### <a name="remarks"></a>Observaciones
 
@@ -1302,7 +1302,7 @@ Este método calcula cuántos calendarios pueden caber en el rectángulo especif
 
 Este método envía el [mensaje MCM_SIZERECTTOMIN,](/windows/win32/Controls/mcm-sizerecttomin) que se describe en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

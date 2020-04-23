@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376258"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753058"
 ---
 # <a name="cstatusbar-class"></a>Clase CStatusBar
 
@@ -271,7 +271,7 @@ El identificador del indicador especificado por *nIndex*.
 
 Copia las coordenadas del indicador especificado por *nIndex* en la estructura señalada por *lpRect*.
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 Indice del indicador cuyas coordenadas rectangulares se van a recuperar.
 
 *lpRect*<br/>
-Apunta a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) o a un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que recibirá las coordenadas del indicador especificado por *nIndex*.
+Apunta a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) o a un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que recibirá las coordenadas del indicador especificado por *nIndex*.
 
 ### <a name="remarks"></a>Observaciones
 
@@ -293,7 +293,7 @@ Las coordenadas están en píxeles en relación con la esquina superior izquierd
 
 Establece *nID*, *nStyle*y *cxWidth* en el identificador, estilo y ancho del panel del indicador en la ubicación especificada por *nIndex*.
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 Establece el panel del indicador especificado en un nuevo identificador, estilo y ancho.
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ Se admiten los siguientes estilos de indicador:
 
 Llame a esta función miembro para establecer el estilo del panel de una barra de estado.
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);

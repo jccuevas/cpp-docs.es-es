@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: d30d26ecf0e72ee33affe3df5b88c438ff83bb6b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fa1fe8826543834872de5257a0f5d56b2ad9fc1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366006"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752673"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formato y presentación del cuadro de mensaje CString
 
@@ -78,7 +78,7 @@ Esta función devolverá FALSE si *lpszFullString* se establece en NULL o la fun
 
 Sustituye la cadena a la que apunta *lpsz1* por cualquier instancia de los caracteres "%1" en el recurso de cadena de plantilla identificado por *nIDS*.
 
-```
+```cpp
 void  AfxFormatString1(
     CString& rString,
     UINT nIDS,
@@ -114,7 +114,7 @@ Si los caracteres de formato "%1" aparecen en la cadena más de una vez, se real
 
 Sustituye la cadena señalada por *lpsz1* para cualquier instancia de los caracteres "%1", y la cadena señalada por *lpsz2* para cualquier instancia de los caracteres "%2", en el recurso de cadena de plantilla identificado por *nIDS*.
 
-```
+```cpp
 void AfxFormatString2(
     CString& rString,
     UINT nIDS,

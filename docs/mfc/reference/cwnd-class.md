@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 12ba4cc28d94cbc2961475944c62d2e942b20c05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2ea240ba736c95026b2b6d2af45296245881bab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365931"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751718"
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 
@@ -1576,7 +1576,7 @@ No llame `BeginPaint` a la función miembro excepto en respuesta a un [mensaje d
 
 Enlaza la propiedad enlazada simple predeterminada del objeto de llamada (como un control de edición), como se indica en la biblioteca de tipos, al cursor subyacente definido por las propiedades DataSource, UserName, Password y SQL del control de origen de datos.
 
-```
+```cpp
 void BindDefaultProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -1612,7 +1612,7 @@ El `CWnd` objeto en el que se llama a esta función debe ser un control enlazado
 
 Enlaza una propiedad enlazada al cursor en un control enlazado a datos (como un control de cuadrícula) a un control de origen de datos y registra esa relación con el administrador de enlace MFC.
 
-```
+```cpp
 void BindProperty(
     DISPID dwDispId,
     CWnd* pWndDSC);
@@ -1640,7 +1640,7 @@ El `CWnd` objeto en el que se llama a esta función debe ser un control enlazado
 
 Lleva `CWnd` al principio de una pila de ventanas superpuestas.
 
-```
+```cpp
 void BringWindowToTop();
 ```
 
@@ -1708,7 +1708,7 @@ TRUE para cancelar sugerencias de herramientas cuando se presiona una tecla y es
 
 Centra una ventana con respecto a su elemento primario.
 
-```
+```cpp
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
@@ -1746,7 +1746,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 Selecciona (coloca una marca de verificación junto a) o borra (elimina una marca de verificación de) un botón, o cambia el estado de un botón de tres estados.
 
-```
+```cpp
 void CheckDlgButton(
     int nIDButton,
     UINT nCheck);
@@ -1772,7 +1772,7 @@ La `CheckDlgButton` función envía un mensaje [BM_SETCHECK](/windows/win32/Cont
 
 Selecciona (añade una marca de verificación a) un botón de opción determinado en un grupo y borra (elimina una marca de verificación de) todos los demás botones de opción del grupo.
 
-```
+```cpp
 void CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
@@ -1843,7 +1843,7 @@ El `CWnd`* que se devuelve puede ser temporal y no debe almacenarse para su uso 
 
 Convierte a las coordenadas de cliente de un punto o rectángulo determinado en pantalla en las coordenadas de pantalla.
 
-```
+```cpp
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
@@ -1869,7 +1869,7 @@ La `ClientToScreen` función miembro supone que el punto o rectángulo dado est�
 
 Minimiza la ventana.
 
-```
+```cpp
 void CloseWindow();
 ```
 
@@ -1984,7 +1984,7 @@ Crea a un proxy de Active Accessibility para el objeto especificado.
 
 Crea una nueva forma para el símbolo de intercalación del sistema y reclama la propiedad del símbolo de intercalación.
 
-```
+```cpp
 void CreateCaret(CBitmap* pBitmap);
 ```
 
@@ -2150,7 +2150,7 @@ Puntero a una cadena terminada en null que contiene el nombre para mostrar de la
 *dwStyle*<br/>
 Combinación bit a bit (OR) de estilos de [ventana;](styles-used-by-mfc.md#window-styles) de lo contrario NULL para el estilo de ventana predeterminado.
 
-*X*<br/>
+*x*<br/>
 La distancia horizontal inicial de la ventana desde el lado izquierdo de la pantalla o la ventana principal.
 
 *y y*<br/>
@@ -2207,7 +2207,7 @@ El [CWnd::OnCreate](#oncreate) se llama `CreateEx` al método antes de que el m�
 
 Crea un rectángulo gris para el intercalador del sistema y reclama la propiedad del intercalador.
 
-```
+```cpp
 void CreateGrayCaret(
     int nWidth,
     int nHeight);
@@ -2241,7 +2241,7 @@ El informe del sistema es un recurso compartido. `CWnd`debe crear un intercalado
 
 Crea un rectángulo sólido para el intercalador del sistema y reclama la propiedad del intercalador.
 
-```
+```cpp
 void CreateSolidCaret(
     int nWidth,
     int nHeight);
@@ -2316,7 +2316,7 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje de Windows que se va a procesar.
 
 *wParam*<br/>
@@ -2373,7 +2373,7 @@ Si la ventana es el elemento primario de cualquier ventana, estas ventanas secun
 
 La `DestroyWindow` función miembro también destruye los cuadros de diálogo no quesean creados por [CDialog::Create](../../mfc/reference/cdialog-class.md#create).
 
-Si `CWnd` el que se destruye es una ventana secundaria y no tiene el [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) estilo establecido, el [mensaje WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) se envía al elemento primario.
+Si `CWnd` el que se destruye es una ventana secundaria y no tiene el [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) estilo establecido, el [mensaje WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify) se envía al elemento primario.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2626,7 +2626,7 @@ Para obtener más información sobre el intercambio y la validación de datos de
 
 Llame a esta función miembro `CWnd` desde dentro de una ventana, mediante un puntero, en la función [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) de la aplicación para indicar que la ventana acepta archivos eliminados desde el Administrador de archivos de Windows o el Explorador de archivos.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -2681,10 +2681,10 @@ BOOL DrawAnimatedRects(
 Especifica el tipo de animación. Si especifica IDANI_CAPTION, el título de la ventana se animará desde la posición especificada por *lprcFrom* hasta la posición especificada por *lprcTo*. El efecto es similar a minimizar o maximizar una ventana.
 
 *lprcFrom*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifique la ubicación y el tamaño del icono o ventana minimizada.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifique la ubicación y el tamaño del icono o ventana minimizada.
 
 *lprcTo*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifique la ubicación y el tamaño de la ventana restaurada
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifique la ubicación y el tamaño de la ventana restaurada
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2728,7 +2728,7 @@ Esta función miembro emula la funcionalidad de la función [DrawCaption](/windo
 
 Vuelve a dibujar la barra de menús.
 
-```
+```cpp
 void DrawMenuBar();
 ```
 
@@ -2744,7 +2744,7 @@ Si se cambia una barra de menús después de que Windows haya creado la ventana,
 
 Habilita las funciones de accesibilidad activa definidas por el usuario.
 
-```
+```cpp
 void EnableActiveAccessibility();
 ```
 
@@ -2756,7 +2756,7 @@ La compatibilidad predeterminada de la accesibilidad activa de MFC es suficiente
 
 Habilita o deshabilita al administrador de diseño dinámico. Si el diseño dinámico está habilitado, la posición y el tamaño de las ventanas secundarias se pueden ajustar dinámicamente cuando el usuario cambie el tamaño de la ventana.
 
-```
+```cpp
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
@@ -2773,7 +2773,7 @@ Si desea habilitar el diseño dinámico, no puede limitarse a llamar a este mét
 
 Habilita o deshabilita la compatibilidad D2D de ventana. Llame a este método antes de que se inicialice la ventana principal.
 
-```
+```cpp
 void EnableD2DSupport(
     BOOL bEnable = TRUE,
     BOOL bUseDCRenderTarget = FALSE);
@@ -2827,7 +2827,7 @@ Distinto de cero si las flechas están habilitadas o deshabilitadas según lo es
 
 Habilita o deshabilita la barra de desplazamiento de esta ventana.
 
-```
+```cpp
 void EnableScrollBarCtrl(
     int nBar,
     BOOL bEnable = TRUE);
@@ -2966,7 +2966,7 @@ virtual void EndModalState();
 
 Marca el final de la pintura en la ventana dada.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
@@ -3014,7 +3014,7 @@ TRUESi se ejecuta un recurso de cuadro de diálogo; de lo contrario FALSO.
 
 Llamado por el marco de trabajo para mostrar mensajes de información sobre herramientas.
 
-```
+```cpp
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
@@ -3699,7 +3699,7 @@ ID del botón de opción marcado, o 0 si no se selecciona ninguno.
 
 Copia las coordenadas `CWnd` de cliente del área cliente en la estructura señalada por *lpRect*.
 
-```
+```cpp
 void GetClientRect(LPRECT lpRect) const;
 ```
 
@@ -3821,7 +3821,7 @@ CDC* GetDCEx(
 *prgnClip*<br/>
 Identifica una región de recorte que se puede combinar con la región visible de la ventana del cliente.
 
-*Banderas*<br/>
+*flags*<br/>
 Puede tener uno de los siguientes valores predefinidos:
 
 - DCX_CACHE Devuelve un contexto de dispositivo de la memoria caché en lugar de la ventana OWNDC o CLASSDC. Reemplaza CS_OWNDC y CS_CLASSDC.
@@ -4460,7 +4460,7 @@ En cambio, la función [GetParent](#getparent) devuelve un puntero al elemento p
 
 Llame a esta función miembro para obtener la propiedad de control ActiveX especificada por *dwDispID*.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -4685,7 +4685,7 @@ La posición actual es un valor relativo que depende del rango de desplazamiento
 
 Copia las posiciones actuales de la barra de desplazamiento mínima y máxima para la barra de desplazamiento especificada en las ubicaciones especificadas por *lpMinPos* y *lpMaxPos*.
 
-```
+```cpp
 void GetScrollRange(
     int nBar,
     LPINT lpMinPos,
@@ -5050,7 +5050,7 @@ El `flags` miembro de la estructura [WINDOWPLACEMENT](/windows/win32/api/winuser
 
 Copia las dimensiones del rectángulo `CWnd` delimitador del objeto en la estructura a la que apunta *lpRect*.
 
-```
+```cpp
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
@@ -5160,7 +5160,7 @@ Esta función miembro hace que el `CWnd` mensaje de [WM_GETTEXTLENGTH](/windows/
 
 Quita el cursor de inserción de la presentación en pantalla para ocultarlo.
 
-```
+```cpp
 void HideCaret();
 ```
 
@@ -5234,7 +5234,7 @@ Consulte [CWinApp::HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp) para
 
 Llamado por el marco de trabajo para inicializar la presentación dinámica de una ventana.
 
-```
+```cpp
 void InitDynamicLayout();
 ```
 
@@ -5246,7 +5246,7 @@ No llame a este método directamente.
 
 Invalida toda el área `CWnd`de cliente de .
 
-```
+```cpp
 void Invalidate(BOOL bErase = TRUE);
 ```
 
@@ -5271,7 +5271,7 @@ Windows envía un mensaje `CWnd` de [WM_PAINT](#onpaint) siempre que la región 
 
 Invalida el área de cliente dentro del rectángulo `CWnd` dado agregando ese rectángulo a la región de actualización.
 
-```
+```cpp
 void InvalidateRect(
     LPCRECT lpRect,
     BOOL bErase = TRUE);
@@ -5297,7 +5297,7 @@ Windows envía un mensaje `CWnd` de [WM_PAINT](#onpaint) siempre que la región 
 
 Invalida el área de cliente dentro de la región `CWnd`dada agregándolo a la región de actualización actual de .
 
-```
+```cpp
 void InvalidateRgn(
     CRgn* pRgn,
     BOOL bErase = TRUE);
@@ -5325,7 +5325,7 @@ La región dada debe haber sido creada previamente por una de las funciones de l
 
 Llame a esta función miembro para invocar el método ActiveX Control o la propiedad especificada por *dwDispID*, en el contexto especificado por *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -5623,7 +5623,7 @@ El `m_hWnd` miembro de datos es una variable pública de tipo HWND.
 
 Convierte (asigna) un conjunto de puntos del espacio de coordenadas de `CWnd` al espacio de coordenadas de otra ventana.
 
-```
+```cpp
 void MapWindowPoints(
     CWnd* pwndTo,
     LPRECT lpRect) const;
@@ -5790,7 +5790,7 @@ Para modificar ventanas mediante estilos de ventana normales, vea [ModifyStyle](
 
 Cambia la posición y las cotas.
 
-```
+```cpp
 void MoveWindow(
     int x,
     int y,
@@ -5805,7 +5805,7 @@ void MoveWindow(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la nueva posición del lado `CWnd`izquierdo del archivo .
 
 *y y*<br/>
@@ -5837,7 +5837,7 @@ La `MoveWindow` función envía el [mensaje WM_GETMINMAXINFO.](#ongetminmaxinfo)
 
 Indica al sistema que se ha producido un evento predefinido. Si alguna aplicación cliente ha registrado una función de enlace para el evento, el sistema llama a la función de enlace del cliente.
 
-```
+```cpp
 void NotifyWinEvent(
     DWORD event,
     LONG idObjectType,
@@ -6195,7 +6195,7 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Un número de mensaje de Windows enviado a una ventana primaria.
 
 *wParam*<br/>
@@ -7915,7 +7915,7 @@ Especifica un puntero a la ventana primaria de nivel superior de la ventana que 
 *nHitTest*<br/>
 Especifica el código de área [de prueba de posicionación.](#onnchittest) Una prueba de posicionación es una prueba que determina la ubicación del cursor.
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el número de mensaje del mouse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -8116,7 +8116,7 @@ afx_msg void OnMove(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la nueva ubicación de la coordenada x de la esquina superior izquierda del área de cliente. Esta nueva ubicación se proporciona en coordenadas de pantalla para ventanas superposiciones y emergentes, y coordenadas padre-cliente para ventanas secundarias.
 
 *y y*<br/>
@@ -8579,7 +8579,7 @@ Este método recibe la notificación [WM_DWMNCRENDERINGCHANGED,](/windows/win32/
 
 El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en XBUTTON1 o XBUTTON2 mientras el cursor está en el área no cliente de una ventana.
 
-```
+```cpp
 void OnNcXButtonDblClk(
     short nHitTest,
     UINT nButton,
@@ -8849,7 +8849,7 @@ afx_msg void OnParentNotify(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el evento para el que se notifica al elemento primario y el identificador de la ventana secundaria. El evento es la palabra de *mensaje*de orden bajo. Si el evento es WM_CREATE o WM_DESTROY, la palabra de *mensaje* de orden superior es el identificador de la ventana secundaria; de lo contrario, la palabra de orden superior es indefinida. El evento (palabra de *mensaje*de orden bajo) puede ser cualquiera de estos valores:
 
 - WM_CREATE Se está creando la ventana secundaria.
@@ -9219,7 +9219,7 @@ Especifica un puntero a la ventana que contiene el cursor. El puntero puede ser 
 *nHitTest*<br/>
 Especifica el código de área [de prueba de posicionación.](#onnchittest) La prueba de posicionación determina la ubicación del cursor.
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el número de mensaje del mouse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -10267,7 +10267,7 @@ virtual BOOL OnWndMsg(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje que se va a enviar.
 
 *wParam*<br/>
@@ -10497,7 +10497,7 @@ BOOL PostMessage(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje que se va a registrar.
 
 *wParam*<br/>
@@ -10542,7 +10542,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>Parámetros
 
-*cs*<br/>
+*Cs*<br/>
 Una estructura [CREATESTRUCT.](/windows/win32/api/winuser/ns-winuser-createstructw)
 
 ### <a name="return-value"></a>Valor devuelto
@@ -10601,7 +10601,7 @@ Distinto de cero si el mensaje se tradujo y no se debe distribuir; 0 si el mensa
 
 Llame a esta función miembro para dibujar la ventana actual en el contexto de dispositivo especificado, que suele estar en un contexto de dispositivo de impresora.
 
-```
+```cpp
 void Print(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10647,7 +10647,7 @@ La función [CWnd::DefWindowProc](#defwindowproc) procesa este mensaje en funci�
 
 Llame a esta función miembro para dibujar cualquier ventana en el contexto de dispositivo especificado (normalmente un contexto de dispositivo de impresora).
 
-```
+```cpp
 void PrintClient(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10718,7 +10718,7 @@ Apunta a una [estructura RECT](/windows/win32/api/windef/ns-windef-rect) que con
 *prgnUpdate*<br/>
 Identifica la región de actualización. Si *prgnUpdate* y *lpRectUpdate* son NULL, todo el área de cliente se agrega a la región de actualización.
 
-*Banderas*<br/>
+*flags*<br/>
 Los siguientes indicadores se utilizan para invalidar la ventana:
 
 - RDW_ERASE Hace que la ventana reciba un [mensaje de WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) cuando se vuelve a pintar la ventana. También se debe especificar el RDW_INVALIDATE marca; de lo contrario, RDW_ERASE no tiene ningún efecto.
@@ -10773,7 +10773,7 @@ BOOL ReflectChildNotify(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje que se va a reflejar.
 
 *wParam*<br/>
@@ -10852,7 +10852,7 @@ La aplicación debe `ReleaseDC` llamar a la función miembro para cada llamada a
 
 Se llama para cambiar la posición y el tamaño de las barras de control en el área de cliente de una ventana.
 
-```
+```cpp
 void RepositionBars(UINT nIDFirst,
     UINT nIDLast,
     UINT nIDLeftOver,
@@ -10926,7 +10926,7 @@ De forma `ContinueModal` predeterminada, `EndModalLoop` devuelve FALSE after se 
 
 Convierte las coordenadas de pantalla de un punto o rectángulo determinado en pantalla en las coordenadas de pantalla.
 
-```
+```cpp
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
@@ -10950,7 +10950,7 @@ La `ScreenToClient` función miembro reemplaza las coordenadas de pantalla dadas
 
 Desplaza el contenido del área de `CWnd` cliente del objeto actual.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -11017,7 +11017,7 @@ Identifica la región que se modifica para mantener la región invalidada por de
 *lpRectUpdate*<br/>
 Apunta a `RECT` una estructura que recibirá los límites del rectángulo invalidados por desplazamiento. Este parámetro puede ser NULL.
 
-*Banderas*<br/>
+*flags*<br/>
 Puede tener uno de los siguientes valores:
 
 - SW_ERASE Cuando se especifica con SW_INVALIDATE, borra la región recién invalidada enviando un mensaje [de WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) a la ventana.
@@ -11082,7 +11082,7 @@ LRESULT SendDlgItemMessage(
 *nID*<br/>
 Especifica el identificador del control de cuadro de diálogo que recibirá el mensaje.
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje que se va a enviar.
 
 *wParam*<br/>
@@ -11118,7 +11118,7 @@ LRESULT SendMessage(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje que se va a enviar.
 
 *wParam*<br/>
@@ -11143,7 +11143,7 @@ La `SendMessage` función miembro llama al procedimiento de ventana directamente
 
 Llame a esta función miembro para enviar el mensaje de Windows especificado a todas las ventanas descendientes.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -11154,7 +11154,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje que se va a enviar.
 
 *wParam*<br/>
@@ -11192,7 +11192,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje que se va a enviar.
 
 *wParam*<br/>
@@ -11313,7 +11313,7 @@ La ventana puede ser cualquier ventana secundaria, no solo un control en un cuad
 
 Establece el texto de un control determinado en un cuadro de diálogo en la representación de cadena de un valor entero especificado.
 
-```
+```cpp
 void SetDlgItemInt(
     int nID,
     UINT nValue,
@@ -11343,7 +11343,7 @@ Especifica si el valor entero está firmado o sin signo. Si este parámetro es T
 
 Establece el título o el texto de un control propiedad de una ventana o cuadro de diálogo.
 
-```
+```cpp
 void SetDlgItemText(
     int nID,
     LPCTSTR lpszString);
@@ -11409,7 +11409,7 @@ Si la ventana actual está activa pero no tiene el foco (es decir, ninguna venta
 
 Envía el mensaje WM_SETFONT a la ventana para utilizar la fuente especificada.
 
-```
+```cpp
 void SetFont(
     CFont* pFont,
     BOOL bRedraw = TRUE);
@@ -11518,7 +11518,7 @@ Hace que la ventana se vuelva a dibujar para reflejar el cambio de menú.
 
 Establece el propietario de la ventana actual en el objeto de ventana especificado.
 
-```
+```cpp
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
@@ -11560,7 +11560,7 @@ Si la ventana secundaria está visible, Windows realiza el redibujo y el repinta
 
 Llame a esta función miembro para establecer la propiedad de control OLE especificada por *dwDispID*.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -11588,7 +11588,7 @@ Para obtener más información sobre el uso de esta función miembro con contene
 
 Una aplicación `SetRedraw` llama para permitir que se vuelvan a dibujar los cambios o para evitar que se vuelvan a dibujar los cambios.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
@@ -11684,7 +11684,7 @@ Establecer *bRedraw* en FALSE es útil siempre que la barra de desplazamiento se
 
 Establece los valores de posición mínimo y máximo de la barra de desplazamiento especificada.
 
-```
+```cpp
 void SetScrollRange(
     int nBar,
     int nMinPos,
@@ -11755,7 +11755,7 @@ Se especifica un valor de intervalo y cada vez que transcurre el intervalo, el s
 
 No es necesario que la función de devolución de llamada *lpfnTimer* se llame `TimerProc`, pero debe declararse como estática y definirse de la siguiente manera.
 
-```
+```cpp
 void CALLBACK TimerProc(
     HWND hWnd,   // handle of CWnd that called SetTimer
     UINT nMsg,   // WM_TIMER
@@ -11840,7 +11840,7 @@ Identifica el `CWnd` objeto que precederá (será `CWnd` mayor que) este objeto 
 
 Para obtener reglas sobre cómo usar este parámetro, consulte la sección "Comentarios" de este tema.
 
-*X*<br/>
+*x*<br/>
 Especifica la nueva posición del lado izquierdo de la ventana.
 
 *y y*<br/>
@@ -11949,7 +11949,7 @@ Después de `SetWindowRgn`una llamada correcta a , el sistema operativo posee la
 
 Establece el título de la ventana en el texto especificado.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
@@ -11972,7 +11972,7 @@ Esta función hace que se envíe un mensaje [de WM_SETTEXT](/windows/win32/winms
 
 Muestra el intercalador en la pantalla en la posición actual del intercalador.
 
-```
+```cpp
 void ShowCaret();
 ```
 
@@ -11994,7 +11994,7 @@ El intercalador es un recurso compartido. La ventana debe mostrar el intercalado
 
 Muestra u oculta todas las ventanas emergentes que pertenecen a esta ventana.
 
-```
+```cpp
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
@@ -12011,7 +12011,7 @@ Especifica si las ventanas emergentes deben mostrarse u ocultarse. Si este pará
 
 Muestra u oculta una barra de desplazamiento.
 
-```
+```cpp
 void ShowScrollBar(
     UINT nBar,
     BOOL bShow = TRUE);
@@ -12146,7 +12146,7 @@ Esta función miembro adjunta el `CWnd` control de Windows a `WndProc` `AfxWndPr
 
 Llame a esta función miembro para `CWnd::LockWindowUpdate`desbloquear una ventana que se bloqueó con .
 
-```
+```cpp
 void UnlockWindowUpdate();
 ```
 
@@ -12195,7 +12195,7 @@ El marco `UpdateData` de trabajo llama automáticamente con *bSaveAndValidate* e
 
 Llame a esta función miembro para actualizar el estado de los botones de cuadro de diálogo y otros controles en un cuadro de diálogo o ventana que usa el mecanismo de devolución de llamada [ON_UPDATE_COMMAND_UI.](message-map-macros-mfc.md#on_update_command_ui)
 
-```
+```cpp
 void UpdateDialogControls(
     CCmdTarget* pTarget,
     BOOL bDisableIfNoHndler);
@@ -12275,7 +12275,7 @@ Esta función miembro emula la funcionalidad de la función [UpdateLayeredWindow
 
 Actualiza el área de cliente enviando un [mensaje de WM_PAINT](/windows/win32/gdi/wm-paint) si la región de actualización no está vacía.
 
-```
+```cpp
 void UpdateWindow();
 ```
 
@@ -12291,7 +12291,7 @@ La `UpdateWindow` función miembro envía un mensaje de WM_PAINT directamente, o
 
 Valida el área de cliente dentro del rectángulo dado quitando el rectángulo de la región de actualización de la ventana.
 
-```
+```cpp
 void ValidateRect(LPCRECT lpRect);
 ```
 
@@ -12310,7 +12310,7 @@ Windows sigue generando mensajes WM_PAINT hasta que se valida la región de actu
 
 Valida el área de cliente dentro de la región dada quitando la región de la región de actualización actual de la ventana.
 
-```
+```cpp
 void ValidateRgn(CRgn* pRgn);
 ```
 
@@ -12359,7 +12359,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>Parámetros
 
-*Mensaje*<br/>
+*message*<br/>
 Especifica el mensaje de Windows que se va a procesar.
 
 *wParam*<br/>
@@ -12432,7 +12432,7 @@ virtual void ResizeDynamicLayout();
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

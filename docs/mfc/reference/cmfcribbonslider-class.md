@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: f2a05ca1433ca3a44b0459360e3f09fe7a274c68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 304581371c68817c6031153c3cec227137771c5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368829"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754065"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider Clase
 
@@ -212,7 +212,7 @@ virtual void OnDraw(CDC* pDC);
 
 Establezca la posición actual del control deslizante.
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw=TRUE);
@@ -230,7 +230,7 @@ void SetPos(
 
 Establezca el rango de valores para el control deslizante.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);
@@ -252,7 +252,7 @@ Especifica el intervalo de valores para el control deslizante estableciendo los 
 
 Mostrar u ocultar botones de zoom.
 
-```
+```cpp
 void SetZoomButtons(BOOL bSet=TRUE);
 ```
 
@@ -264,7 +264,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 
 Establezca el incremento de zoom para el control deslizante.
 
-```
+```cpp
 void SetZoomIncrement(int nZoomIncrement);
 ```
 
@@ -273,7 +273,7 @@ void SetZoomIncrement(int nZoomIncrement);
 *nZoomIncrement*<br/>
 [en] Especifica el incremento de zoom del control deslizante.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365100"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752199"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -164,7 +164,7 @@ Para obtener más `CToolTipCtrl`información sobre el uso de , vea [Controles](.
 
 Llame a esta función para activar o desactivar un control de información sobre herramientas.
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ Puntero a la ventana que contiene la herramienta.
 ID del recurso de cadena que contiene el texto de la herramienta.
 
 *lpRectTool*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que contiene coordenadas del rectángulo delimitador de la herramienta. Las coordenadas son relativas a la esquina superior izquierda del área cliente de la ventana identificada por *pWnd*.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene coordenadas del rectángulo delimitador de la herramienta. Las coordenadas son relativas a la esquina superior izquierda del área cliente de la ventana identificada por *pWnd*.
 
 *nIDTool*<br/>
 ID de la herramienta.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parámetros
 
 *lprc*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que contiene un rectángulo de ventana de información sobre herramientas o un rectángulo de visualización de texto.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene un rectángulo de ventana de información sobre herramientas o un rectángulo de visualización de texto.
 
 *bLarger*<br/>
 Si ES TRUE, *lprc* se utiliza para especificar un rectángulo de visualización de texto y recibe el rectángulo de ventana correspondiente. Si FALSE, *lprc* se utiliza para especificar un rectángulo de ventana y recibe el rectángulo de visualización de texto correspondiente.
@@ -352,7 +352,7 @@ Debe llamar `Create` después de construir el objeto.
 
 Quita la herramienta especificada por *pWnd* y *nIDTool* de la colección de herramientas admitidas por un control de información sobre herramientas.
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ Esta función miembro implementa el comportamiento del [mensaje de](/windows/win
 
 Recupera los márgenes superior, izquierdo, inferior y derecho establecidos para una ventana de información sobre herramientas.
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lprc*<br/>
-Dirección de `RECT` una estructura que recibirá la información de margen. Los miembros de la estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) no definen un rectángulo delimitador. A los efectos de este mensaje, los miembros de la estructura se interpretan de la siguiente manera:
+Dirección de `RECT` una estructura que recibirá la información de margen. Los miembros de la estructura [RECT](/windows/win32/api/windef/ns-windef-rect) no definen un rectángulo delimitador. A los efectos de este mensaje, los miembros de la estructura se interpretan de la siguiente manera:
 
 |Member|Representación|
 |------------|--------------------|
@@ -486,7 +486,7 @@ Esta función miembro implementa el comportamiento del mensaje Win32 [TTM_GETMAX
 
 Recupera el texto que mantiene un control de información sobre herramientas para una herramienta.
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ Esta función miembro implementa el comportamiento del [mensaje de](/windows/win
 
 Recupera el título del control de información sobre herramientas actual.
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 Elimina una ventana de información sobre herramientas mostrada de la vista.
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ Esta función miembro implementa el comportamiento de la [TTM_POP](/windows/win3
 
 Hace que el control de información sobre herramientas actual se muestre en las coordenadas del último mensaje del mouse.
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ En el ejemplo de código siguiente se muestra una ventana de información sobre 
 
 Pasa un mensaje del mouse a un control de información sobre herramientas para su procesamiento.
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ Un control de información sobre herramientas procesa sólo `RelayEvent`los sigu
 
 Establece el tiempo de retardo para un control de información sobre herramientas.
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ El tiempo de retardo es el tiempo que el cursor debe permanecer en una herramien
 
 Establece los márgenes superior, izquierdo, inferior y derecho de una ventana de información sobre herramientas.
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ Esta función miembro implementa el comportamiento del [mensaje win32 TTM_SETMAX
 
 Establece el color de fondo en una ventana de información sobre herramientas.
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [TTM_SET
 
 Establece el color del texto en una ventana de información sobre herramientas.
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [TTM_SET
 
 Establece la información que mantiene una información sobre herramientas para una herramienta.
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ Puntero a una estructura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-ttto
 
 Establece un nuevo rectángulo delimitador para una herramienta.
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ Puntero a la ventana que contiene la herramienta.
 ID de la herramienta.
 
 *lpRect*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifica el nuevo rectángulo delimitador.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifica el nuevo rectángulo delimitador.
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme
 
@@ -894,7 +894,7 @@ Esta función miembro emula la funcionalidad del [mensaje de TTM_SETWINDOWTHEME,
 
 Fuerza la redibujo de la herramienta actual.
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 Actualiza el texto de información sobre herramientas para las herramientas de este control.
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,
@@ -928,7 +928,7 @@ ID de la herramienta.
 *nIDText*<br/>
 ID del recurso de cadena que contiene el texto de la herramienta.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

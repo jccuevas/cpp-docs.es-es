@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365963"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752306"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (clase)
 
@@ -160,7 +160,7 @@ Para obtener más `CTabCtrl`información sobre el uso de , vea [Controles](../..
 
 Calcula el área de visualización de un control de ficha dado un rectángulo de ventana o calcula el rectángulo de ventana que correspondería a un área de visualización determinada.
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Indica qué operación realizar. Si este parámetro es TRUE, *lpRect* especifica un rectángulo de visualización y recibe el rectángulo de ventana correspondiente. Si este parámetro es FALSE, *lpRect* especifica un rectángulo de ventana y recibe el rectángulo de visualización correspondiente.
 
 *lpRect*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifica el rectángulo especificado y recibe el rectángulo calculado.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifica el rectángulo especificado y recibe el rectángulo calculado.
 
 ### <a name="example"></a>Ejemplo
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Especifica el estilo del control de ficha. Aplique cualquier combinación de estilos de control de [pestañas,](/windows/win32/Controls/tab-control-styles)que se describe en el Windows SDK. Consulte **Comentarios** para obtener una lista de estilos de ventana que también puede aplicar al control.
 
 *Rect*<br/>
-Especifica el tamaño y la posición del control de ficha. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
+Especifica el tamaño y la posición del control de ficha. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/win32/api/windef/ns-windef-rect) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control `CDialog`de ficha, normalmente un archivo . No debe ser NULL.
@@ -250,7 +250,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de ficha. Aplique cualquier combinación de estilos de control de [pestañas,](/windows/win32/Controls/tab-control-styles)que se describe en el Windows SDK. Consulte **Comentarios** en [Crear](#create) para obtener una lista de estilos de ventana que también puede aplicar al control.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -313,7 +313,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 Restablece los elementos de un control de ficha, borrando los que se presionaron.
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 El índice de base cero del elemento de ficha.
 
 *lpRect*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recibe el rectángulo delimitador de la pestaña. Estas coordenadas utilizan el modo de asignación actual de la ventana gráfica.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que recibe el rectángulo delimitador de la pestaña. Estas coordenadas utilizan el modo de asignación actual de la ventana gráfica.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -682,7 +682,7 @@ El índice de base cero de la nueva pestaña si se realiza correctamente; de lo 
 
 Quita la imagen especificada de la lista de imágenes de un control de ficha.
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ El control de ficha actualiza el índice de imagen de cada ficha para que cada f
 
 Establece el foco en una pestaña especificada en un control de ficha.
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -829,7 +829,7 @@ CSize SetItemSize(CSize size);
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 El nuevo ancho y alto, en píxeles, de los elementos de control de pestaña.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -892,20 +892,20 @@ Esta función miembro implementa el comportamiento del [mensaje de](/windows/win
 
 Establece la cantidad de espacio (relleno) alrededor del icono y la etiqueta de cada ficha en un control de ficha.
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 Establece la cantidad de espacio (relleno) alrededor del icono y la etiqueta de cada ficha en un control de ficha.
 
 ## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl::SetToolTips
 
 Asigna un control de información sobre herramientas a un control de ficha.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
@@ -922,7 +922,7 @@ Puede obtener el control de información sobre herramientas asociado `GetToolTip
 
   Vea el ejemplo de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363804"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032231"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView (Clase)
 
@@ -40,7 +40,7 @@ Especifica un predicado binario para probar la igualdad con valores de tipo `T`.
 
 ### <a name="remarks"></a>Observaciones
 
-La `VectorView` clase implementa la interfaz [de>Windows::Foundation::Collections::IVectorView\<T](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) y admite los iteradores de la biblioteca de plantillas estándar.
+La `VectorView` clase implementa la interfaz [de>Windows::Foundation::Collections::IVectorView\<T](/uwp/api/windows.foundation.collections.ivectorview-1) y admite los iteradores de la biblioteca de plantillas estándar.
 
 ### <a name="members"></a>Miembros
 
@@ -88,7 +88,7 @@ Un iterador que especifica el primer elemento del objeto VectorView.
 
 ### <a name="remarks"></a>Observaciones
 
-Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo, `auto x = myVectorView->First();`.
+Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo: `auto x = myVectorView->First();`.
 
 ## <a name="vectorviewgetat-method"></a><a name="getat"></a>VectorView::GetAt Método
 
@@ -128,7 +128,7 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parámetros
 
-*Startindex*<br/>
+*startIndex*<br/>
 Índice basado en cero del principio de los elementos que se van a recuperar.
 
 *dest*<br/>
@@ -250,7 +250,7 @@ Un [std::initializer_list](../standard-library/initializer-list-class.md) cuyos 
 *N*<br/>
 El número de elementos en una colección de objetos que se utiliza para inicializar el objeto VectorView actual.
 
-*Tamaño*<br/>
+*size*<br/>
 El número de elementos del objeto VectorView.
 
 *value*<br/>
@@ -268,13 +268,13 @@ Un [Platform::Array](../cppcx/platform-array-class.md) objeto que se utiliza par
 *Un*<br/>
 Un [std::array](../standard-library/array-class-stl.md) objeto que se utiliza para inicializar el VectorView actual.
 
-*Primero*<br/>
+*first*<br/>
 El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto VectorView actual. El tipo `first` de se pasa por medio de *reenvío perfecto.* Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*Última*<br/>
+*last*<br/>
 El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto VectorView actual. El tipo `last` de se pasa por medio de *reenvío perfecto.* Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Espacio de nombres de plataforma](platform-namespace-c-cx.md)<br/>
 [Crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 56e4e30e23262da677c014a18e9fb8b175a6903d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 941f32dfadffd97210586edd7c2aa63c3c1708cd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352936"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752990"
 ---
 # <a name="cbasepane-class"></a>CBasePane (clase)
 
@@ -377,7 +377,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 
 Agrega un panel al administrador de acoplamiento.
 
-```
+```cpp
 void AddPane(CBasePane* pBar);
 ```
 
@@ -774,7 +774,7 @@ Llame a esta función para acoplar un panel a otro panel o una barra de acoplami
 
 Acopla el panel mediante información de tipo en tiempo de ejecución.
 
-```
+```cpp
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
@@ -1740,7 +1740,7 @@ virtual void RecalcLayout();
 
 Anula el registro de un panel y lo quita de la lista en el administrador de acoplamiento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pBar,
     BOOL bDestroy = TRUE,
@@ -1837,7 +1837,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 Establece el modo de acoplamiento para el panel.
 
-```
+```cpp
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 
@@ -1919,7 +1919,7 @@ virtual HDWP SetWindowPos(
 *pWndInsertAfter*<br/>
 [en] Identifica el `CWnd` objeto que `CWnd` viene antes de este objeto en el orden Z. Para obtener más información, vea [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
-*X*<br/>
+*x*<br/>
 [en] Especifica la posición del lado izquierdo de la ventana.
 
 *y y*<br/>
@@ -2014,7 +2014,7 @@ Llame a este método para manipular el estado del panel o excluir el panel del d
 
 Si desea seguir utilizando este panel, llame a [CBasePane::DockPane](#dockpane) o [CBasePane::FloatPane](#floatpane) antes de llamar a este método.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

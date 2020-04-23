@@ -1,5 +1,5 @@
 ---
-title: Agregar una propiedad
+title: Incorporación de una propiedad
 ms.date: 11/09/2018
 f1_keywords:
 - vc.codewiz.prop.overview
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 79b05fde362a44453aac45aa8dc269c9689ea8fc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509530"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751185"
 ---
-# <a name="add-a-property"></a>Agregar una propiedad
+# <a name="add-a-property"></a>Incorporación de una propiedad
 
 Se puede usar el [Asistente para agregar propiedades](#names-add-property-wizard) para agregar un método a una interfaz del proyecto.
 
@@ -46,7 +46,7 @@ Los métodos `Get` y `Put` de la propiedad se muestran como dos iconos en la Vis
 
 ## <a name="in-this-section"></a>En esta sección
 
-- [Nombres, Asistente para agregar propiedades](#names-add-property-wizard)
+- [Nombres, agregue el asistente de propiedades](#names-add-property-wizard)
 - [Atributos IDL, Asistente para agregar propiedades](#idl-attributes-add-property-wizard)
 - [Propiedades estándar](#stock-properties)
 
@@ -62,24 +62,24 @@ Use este asistente para agregar una propiedad a una interfaz.
 
   Establece el nombre de la propiedad. Para las interfaces dispinterface de MFC asociadas a controles ActiveX, puede proporcionar un nombre propio o seleccionar un nombre de propiedad estándar en la lista predefinida. Si proporciona un nombre de propiedad propio, el tipo de implementación **Estándar** no está disponible. Vea [Propiedades estándar](#stock-properties) para obtener una descripción de las propiedades de la lista.
 
-  |Tipo de interfaz|DESCRIPCIÓN|
+  |Tipo de interfaz|Descripción|
   |--------------------|-----------------|
   |Interfaz dual de ATL, interfaz personalizada e interfaz personalizada local|Se proporciona un nombre de propiedad.|
   |Interfaz dispinterface de MFC, interfaz dispinterface de control ActiveX MFC|Se proporciona un nombre de propiedad o se selecciona una propiedad estándar de la lista. Si se selecciona una propiedad de la lista, el valor apropiado aparecerá en el cuadro **Tipo de propiedad**. Este tipo se puede cambiar, según la selección en **Tipo de implementación**.|
 
-- **Tipo de valor devuelto**
+- **Tipo de devolución**
 
   Solo interfaces de ATL. Establece el tipo de devolución para la propiedad. Para las interfaces duales `HRESULT` siempre es el tipo de valor devuelto, y este cuadro no está disponible. Para las interfaces personalizadas, puede seleccionar un tipo de valor devuelto de la lista. Se sigue recomendando `HRESULT`, ya que proporciona una manera estándar de devolver errores.
 
-- **Nombre de variable**
+- **Nombre de la variable**
 
   Solo para interfaces dispinterface de MFC. Disponible únicamente si se especifica **Variable miembro** en **Tipo de implementación**. Establece el nombre de la variable miembro con el que se asocia la propiedad. De forma predeterminada, el nombre de la variable se establece en `m_`*NombreDePropiedad*. Este nombre se puede modificar.
 
 - **Función de notificación**
 
-  Solo para interfaces dispinterface de MFC. Disponible únicamente si se especifica **Variable miembro** en **Tipo de implementación**. Establece el nombre de la función de notificación que se llama si cambia la propiedad. De forma predeterminada, el nombre de la función de notificación se establece en `On`*NombreDePropiedad*`Changed`. Este nombre se puede modificar.
+  Solo para interfaces dispinterface de MFC. Disponible únicamente si se especifica **Variable miembro** en **Tipo de implementación**. Establece el nombre de la función de notificación que se llama si cambia la propiedad. De forma predeterminada, el nombre de `On`la función de notificación se establece en *PropertyName*`Changed`. Este nombre se puede modificar.
 
-- **Get (función)**
+- **Función Get**
 
   Para interfaces dispinterface de MFC. Disponible únicamente si se especifica **Métodos Get/Set** en **Tipo de implementación**. Establece el nombre de la función para obtener la propiedad. De forma predeterminada, el nombre de la función `Get` se establece en `Get`*NombreDePropiedad*. Este nombre se puede modificar. Si se elimina el nombre, la función [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) se inserta en el mapa de envíos de interfaz. La función `Get`*NombreDePropiedad* especifica que la propiedad se puede leer.
 
@@ -91,13 +91,13 @@ Use este asistente para agregar una propiedad a una interfaz.
 
   Solo para interfaces dispinterface de MFC. Especifica cómo implementar la propiedad que se va a agregar.
 
-  |Tipo de implementación|DESCRIPCIÓN|
+  |Tipo de implementación|Descripción|
   |-------------------------|-----------------|
   |**Estándar**|Especifica una implementación estándar para la propiedad seleccionada en **Nombre de la propiedad**. El valor predeterminado. Para obtener más información, vea [Propiedades estándar](#stock-properties).<br /><br /> Si especifica **Estándar**, aparecen atenuados **Tipo de propiedad**, **Tipo de parámetro** y **Nombre de parámetro**.|
-  |**Variable miembro**|Especifica que la propiedad se agrega como una variable miembro. Se pueden agregar propiedades personalizadas o la mayoría de las propiedades estándar como variables miembro. No puede especificar **Variable miembro** para las propiedades `Caption`, `hWnd` y `Text`.<br /><br /> Proporciona nombres predeterminados bajo **Nombre de variable** y **Función de notificación**. Este nombre se puede modificar.|
-  |**Get/Set (métodos)**|Especifica que la propiedad se agrega como las funciones `Get`*NombreDePropiedad* y `Set`*NombreDePropiedad*, de forma predeterminada. Estos nombres aparecen en **Get (función)** y **Set (función)** .<br /><br /> Puede cambiar el valor predeterminado **Tipo de propiedad**, que pasa un valor para la función Get. Puede especificar parámetros para las funciones `Get` y `Set`.|
+  |**Variable miembro**|Especifica que la propiedad se agrega como una variable miembro. Se pueden agregar propiedades personalizadas o la mayoría de las propiedades estándar como variables miembro. No se puede especificar la `Caption` `hWnd`variable `Text` **Member** para las propiedades , , y .<br /><br /> Proporciona nombres predeterminados bajo **Nombre de variable** y **Función de notificación**. Este nombre se puede modificar.|
+  |**Get/Set (métodos)**|Especifica que la propiedad se agrega como las funciones `Get`*NombreDePropiedad* y `Set`*NombreDePropiedad*, de forma predeterminada. Estos nombres aparecen en **Get (función)** y **Set (función)**.<br /><br /> Puede cambiar el valor predeterminado **Tipo de propiedad**, que pasa un valor para la función Get. Puede especificar parámetros para las funciones `Get` y `Set`.|
 
-- **Get (función)**
+- **Función Get**
 
   Para las interfaces de ATL. Establece la propiedad como legible; es decir, crea el método `Get` para recuperar esta propiedad del objeto. Seleccione **Get**, **Put** o ambas.
 
@@ -105,16 +105,16 @@ Use este asistente para agregar una propiedad a una interfaz.
 
   Solo interfaces de ATL. Establece la propiedad como grabable; es decir, crea el método `Put` para establecer o "poner", esta propiedad del objeto. Seleccione **Get**, **Put** o ambas. Si se selecciona esta opción, se puede elegir entre las dos maneras siguientes de implementar el método:
 
-  |Opción|DESCRIPCIÓN|
+  |Opción|Descripción|
   |------------|-----------------|
   |**PropPut**|La función [PropPut](../windows/propput.md) devuelve una copia del objeto. Este es el valor predeterminado y la manera más común de convertir la propiedad en grabable.|
   |**PropPutRef**|La función [PropPutRef](../windows/propputref.md) devuelve una referencia al objeto, en lugar de devolver la copia del propio objeto. Considere el uso de esta opción para los objetos, como estructuras o matrices grandes, que puedan tener sobrecarga de inicialización.|
 
-- **Atributos de parámetro**
+- **Atributos de parámetros**
 
-  Solo interfaces de ATL. Establece si el parámetro especificado por **Nombre del parámetro** es `in`, `out`, ambos o ninguno.
+  Solo interfaces de ATL. Establece si el parámetro especificado `in`por `out` **Parameter name** es , , ambos o none.
 
-  |Opción|DESCRIPCIÓN|
+  |Opción|Descripción|
   |------------|-----------------|
   |`in`|Indica que el parámetro se pasa del procedimiento que realiza la llamada al procedimiento que se llama.|
   |`out`|Indica que el parámetro de puntero se devuelve desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|
@@ -123,7 +123,7 @@ Use este asistente para agregar una propiedad a una interfaz.
 
   Establece el tipo de datos del parámetro. Seleccione el tipo de la lista.
 
-- **Nombre del parámetro**
+- **Nombre de parámetro**
 
   Establece el nombre de un parámetro que se va a agregar para la propiedad, si esta tiene parámetros. Después de seleccionar **Agregar**, el nombre del parámetro aparece en **Lista de parámetros**.
 
@@ -131,7 +131,7 @@ Use este asistente para agregar una propiedad a una interfaz.
 
   Muestra la lista de atributos que se van a agregar a la propiedad. Cada elemento de la lista está formado por el nombre del parámetro, el tipo y los atributos. Haga clic en **Agregar** y **Quitar** para actualizar la lista.
 
-- **Add**
+- **Add (Agregar)**
 
   Agrega el parámetro especificado en **Nombre del parámetro** y **Tipo de parámetro** a la **Lista de parámetros**. Seleccione **Agregar** para agregar un parámetro a la lista.
 
@@ -163,7 +163,7 @@ Use esta página del Asistente para agregar propiedades para especificar la conf
 
 No todas las opciones están disponibles para todos los tipos de propiedad.
 
-|Opción|DESCRIPCIÓN|
+|Opción|Descripción|
 |------------|-----------------|
 |`bindable`|Indica que la propiedad admite enlace de datos. Vea [bindable](/windows/win32/Midl/bindable) en la *Referencia de MIDL*. Para la implementación estándar de la propiedad, esta opción se establece de forma predeterminada y no se puede cambiar.|
 |`defaultbind`|Indica que esta propiedad enlazable única representa mejor al objeto. Vea [defaultbind](/windows/win32/Midl/defaultbind) en la *Referencia de MIDL*.|
@@ -181,7 +181,7 @@ No todas las opciones están disponibles para todos los tipos de propiedad.
 
 Si va a agregar una propiedad a una interfaz dispinterface de MFC mediante el [Asistente para agregar propiedades](#idl-attributes-add-property-wizard), puede elegir una propiedad estándar de la lista **Nombre de la propiedad** en la página [Nombres](../ide/names-add-property-wizard.md) del asistente. Estas propiedades son las siguientes:
 
-|Nombre de la propiedad|DESCRIPCIÓN|
+|Nombre de propiedad|Descripción|
 |-------------------|-----------------|
 |`Appearance`|Devuelve o establece un valor que determina la apariencia del control. La propiedad `Appearance` del control puede incluir u omitir efectos de presentación tridimensionales. Se trata de una propiedad ambiente de lectura y escritura.|
 |`BackColor`|Devuelve o establece la propiedad `BackColor` de ambiente del control en un color de paleta (RGB) o un color del sistema predefinido. De forma predeterminada, su valor se corresponde al color de primer plano del contenedor del control. Se trata de una propiedad ambiente de lectura y escritura.|
@@ -191,5 +191,5 @@ Si va a agregar una propiedad a una interfaz dispinterface de MFC mediante el [A
 |`Font`|Devuelve o establece la fuente de ambiente del control. Es NULL si el control no tiene ninguna fuente.|
 |`ForeColor`|Devuelve o establece la propiedad `ForeColor` de ambiente del control.|
 |`hWnd`|Devuelve o establece la propiedad `hWnd` del control. `hWnd` no tiene ningún tipo de implementación **Variable miembro**.|
-|`ReadyState`|Devuelve o establece la propiedad `ReadyState` del control. Un control puede estar no inicializado, inicializado, cargando, interactivo o completo. Para obtener más información, vea [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) en el *SDK de Internet*.|
+|`ReadyState`|Devuelve o establece la propiedad `ReadyState` del control. Un control puede estar no inicializado, inicializado, cargando, interactivo o completo. Para obtener más información, vea [READYSTATE](/previous-versions/aa768362\(v=vs.85\)) en el *SDK de Internet*.|
 |`Text`|Devuelve o establece el texto contenido en un control. `Text` no tiene ningún tipo de implementación **Variable miembro**.|

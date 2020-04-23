@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354438"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750606"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView (Clase)
 
@@ -93,7 +93,7 @@ Un iterador que especifica el primer elemento de la vista de mapa.
 
 ### <a name="remarks"></a>Observaciones
 
-Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo, `auto x = myMapView->First();`.
+Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo: `auto x = myMapView->First();`.
 
 ## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView::HasKey Método
 
@@ -168,10 +168,10 @@ Objeto de función que puede comparar dos valores de elemento como claves de ord
 *M*<br/>
 Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un `map Class` que se utiliza para inicializar el MapView actual.
 
-*Primero*<br/>
+*first*<br/>
 El iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto MapView actual.
 
-*Última*<br/>
+*last*<br/>
 El iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto MapView actual.
 
 *Il*<br/>
@@ -197,7 +197,7 @@ Divide el objeto MapView actual en dos objetos MapView. Este método no es opera
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,
@@ -217,6 +217,6 @@ La segunda parte del objeto MapView original.
 
 Este método no es operativo; no realiza ninguna acción.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Espacio de nombres de plataforma](platform-namespace-c-cx.md)

@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369017"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754742"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase (clase)
 
@@ -315,7 +315,7 @@ Si omite la constante de cifrado, se crea una base de datos sin cifrar. Solo pue
 
 Llame a esta función miembro para establecer una relación entre uno o varios campos de una tabla principal de la base de datos y uno o varios campos de una tabla externa (otra tabla de la base de datos).
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ Para obtener información relacionada, vea el tema "Método CreateRelation" en l
 
 Llame a esta función miembro para eliminar la definición de consulta especificada (consulta guardada) de la `CDaoDatabase` colección QueryDefs del objeto.
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ Para obtener información sobre la creación de objetos de definición de consul
 
 Llame a esta función miembro para eliminar una relación existente de la colección Relations del objeto de base de datos.
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ Para obtener información relacionada, vea el tema "Método de eliminación" en 
 
 Llame a esta función miembro para eliminar la `CDaoDatabase` tabla especificada y todos sus datos de la colección TableDefs del objeto.
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ Para obtener información relacionada, vea el tema "Método de eliminación" en 
 
 Llame a esta función miembro para ejecutar una consulta de acción o ejecutar una instrucción SQL en la base de datos.
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ El número de consultas definidas en la base de datos.
 
 Llame a esta función miembro para obtener varios tipos de información sobre una consulta definida en la base de datos.
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ Para ilustrar el concepto de una relación, considere una tabla Suppliers y una 
 
 Llame a esta función miembro para obtener información sobre una relación especificada en la colección Relations de la base de datos.
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ El número de definiciones de tabla definidas en la base de datos.
 
 Llame a esta función miembro para obtener varios tipos de información sobre una tabla definida en la base de datos.
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ También puede utilizar la cadena de conexión para varios `CDaoDatabase` nivele
 
 Llame a esta función miembro para invalidar el número predeterminado de segundos para permitir antes de las operaciones posteriores en el tiempo de espera de la base de datos conectada.
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 
@@ -890,7 +890,7 @@ El valor predeterminado para los tiempos de espera de consulta es 60 segundos. N
 
 Para obtener información relacionada, vea el tema "Propiedad QueryTimeout" en la Ayuda de DAO.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

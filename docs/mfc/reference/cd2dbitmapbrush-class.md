@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369298"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754292"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Clase CD2DBitmapBrush
 
@@ -132,7 +132,7 @@ virtual ~CD2DBitmapBrush();
 
 Adjunta la interfaz de recursos existente al objeto
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -200,7 +200,7 @@ Puntero a una cadena terminada en null que contiene el nombre del archivo.
 
 Inicializa el objeto
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -346,7 +346,7 @@ Puntero a una interfaz ID2D1BitmapBrush o NULL si el objeto aún no se ha inicia
 
 Especifica el origen de mapa de bits que este pincel utiliza para pintar
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -359,7 +359,7 @@ El origen de mapa de bits utilizado por el pincel
 
 Especifica cómo el pincel teselas horizontalmente las áreas que se extienden más allá de su mapa de bits
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -372,7 +372,7 @@ Valor que especifica cómo el pincel teselas horizontalmente las áreas que se e
 
 Especifica cómo el pincel teselas verticalmente las áreas que se extienden más allá de su mapa de bits
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -385,7 +385,7 @@ Valor que especifica cómo el pincel teselas verticalmente aquellas áreas que s
 
 Especifica el modo de interpolación utilizado cuando se escala o gira el mapa de bits del pincel
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 
@@ -394,6 +394,6 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 *interpolaciónMode*<br/>
 El modo de interpolación utilizado cuando se escala o gira el mapa de bits del pincel
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

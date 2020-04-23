@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374825"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753710"
 ---
 # <a name="colevariant-class"></a>COleVariant (clase)
 
@@ -93,7 +93,7 @@ Para obtener más `COleVariant` información sobre la clase y su uso en la autom
 
 Llame a esta función para asociar `COleVariant` el objeto [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) especificado al objeto actual.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ Para obtener más información sobre SCODE, vea [Estructura de códigos de error
 
 Convierte el tipo de valor `COleVariant` de variante en este objeto.
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ Para obtener más información, vea las entradas [VARIANT](/windows/win32/api/oa
 
 Borra la colección `VARIANT`.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ Para obtener más información, vea las entradas [VARIANT](/windows/win32/api/oa
 
 Recupera una matriz de bytes de una matriz de variantes existente
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ El `COleVariant` operador**\<** de inserción ( ) admite el volcado de diagnóst
 
 Establece la cadena en un tipo determinado.
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 
@@ -399,6 +399,6 @@ El parámetro *vtSrc* debe estar VT_BSTR (UNICODE) o VT_BSTRT (ANSI). `SetString
 
 Un conjunto de registros DAO en una compilación que no es UNICODE espera que las cadenas sean ANSI. Por lo tanto, `COleVariant` para las funciones DAO que utilizan objetos, si no está creando un conjunto de registros UNICODE, debe usar la forma **COleVariant::COleVariant(** *lpszSrc* **,** *vtSrc* **)** de constructor con *vtSrc* establecido en VT_BSTRT (ANSI) o usar `SetString` con *vtSrc* establecido para VT_BSTRT para crear cadenas ANSI. Por ejemplo, `CDaoRecordset` las funciones [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) y [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) utilizan `COleVariant` objetos como parámetros. Estos objetos deben ser ANSI si el conjunto de registros DAO no es UNICODE.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

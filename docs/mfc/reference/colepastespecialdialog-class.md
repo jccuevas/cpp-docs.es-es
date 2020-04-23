@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 5e67a81f48b8cdf0dae6dc90fc2ded8dc44a73ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47fb421ef9dedcae7f92d33f55988dbbc2ea452d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376982"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753816"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog (Clase)
 
@@ -105,7 +105,7 @@ Para obtener más información acerca de los cuadros de diálogo específicos de
 
 Llame a esta función para agregar nuevos formatos a la lista de formatos que la aplicación puede admitir en una operación Pegar especial.
 
-```
+```cpp
 void AddFormat(
     const FORMATETC& formatEtc,
     LPTSTR lpszFormat,
@@ -131,7 +131,7 @@ Cadena que describe el formato para el usuario.
 *lpszResult*<br/>
 Cadena que describe el resultado si se elige este formato en el cuadro de diálogo.
 
-*Banderas*<br/>
+*flags*<br/>
 Las diferentes opciones de vinculación e incrustación disponibles para este formato. Este indicador es una combinación bit a bit de uno o varios de los valores diferentes en el tipo enumerado OLEUIPASTEFLAG.
 
 *Cf*<br/>
@@ -178,7 +178,7 @@ Estructura [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) 
 
 Llame a esta función para agregar los siguientes formatos de Portapapeles a la lista de formatos que la aplicación puede admitir en una operación Pegar especial:
 
-```
+```cpp
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 
@@ -381,7 +381,7 @@ Los miembros de esta estructura se pueden modificar directamente o a través de 
 
 Para obtener más información, vea la estructura [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog (clase)](../../mfc/reference/coledialog-class.md)<br/>

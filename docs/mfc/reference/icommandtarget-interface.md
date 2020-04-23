@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: 865a8a27d96f84f536e40ec5a7bbbbdd9837dfcd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be64f4e0367b9ecc1b24fa96f067f4acd45a9978
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81356910"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751454"
 ---
 # <a name="icommandtarget-interface"></a>Interfaz ICommandTarget
 
@@ -49,7 +49,7 @@ Para obtener más información sobre el uso de formularios Windows Forms, vea Us
 
 Inicializa el objeto de destino del comando.
 
-```
+```cpp
 void Initialize(ICommandSource^ cmdSource);
 ```
 
@@ -64,7 +64,7 @@ Cuando se hospeda un control de usuario en una vista MFC, CWinFormsView enruta c
 
 Este método inicializa el objeto de destino del comando y lo asocia con el objeto de origen de comando especificado cmdSource. Debe llamarse en la implementación de la clase de control de usuario. En la inicialización, debe registrar controladores de comandos con el objeto de origen de comandos mediante una llamada a ICommandSource::AddCommandHandler en el Initialize implementación. Consulte Cómo: Agregar enrutamiento de comandos al control de formularios Windows Forms para obtener un ejemplo de cómo usar Initialize para hacerlo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Cómo: Agregar enrutamientos de comandos al control de Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [Interfaz ICommandSource](../../mfc/reference/icommandsource-interface.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 6a053f127123a9ca21853189b9458738b217ee2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373813"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754985"
 ---
 # <a name="cfontholder-class"></a>CFontHolder (clase)
 
@@ -170,7 +170,7 @@ La versión sin parámetros devuelve un identificador a una fuente con el tamañ
 
 Inicializa un objeto `CFontHolder`.
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -204,7 +204,7 @@ LPFONT m_pFont;
 
 Recupera información sobre la fuente física `CFontHolder` representada por el objeto.
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -217,7 +217,7 @@ Puntero a una estructura [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textme
 
 Esta función `CFontHolder` desconecta `IFont` el objeto de su interfaz.
 
-```
+```cpp
 void ReleaseFont();
 ```
 
@@ -255,7 +255,7 @@ Consulte [GetFontHandle](#getfonthandle) para obtener una explicación de los pa
 
 Libera cualquier fuente existente `CFontHolder` y `IFont` conecta el objeto a una interfaz.
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 
@@ -264,7 +264,7 @@ void SetFont(LPFONT pNewFont);
 *pNewFont*<br/>
 Puntero a `IFont` la nueva interfaz.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clase CPropExchange](../../mfc/reference/cpropexchange-class.md)

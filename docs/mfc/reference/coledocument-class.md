@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 51169de521997890190aab52e4afd02ed383af3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1500035cb8be3036678090918154829aace48d2f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375029"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753877"
 ---
 # <a name="coledocument-class"></a>COleDocument (Clase)
 
@@ -195,7 +195,7 @@ COleDocument();
 
 Llame a esta función si desea almacenar el documento utilizando el formato de archivo compuesto.
 
-```
+```cpp
 void EnableCompoundFile(BOOL bEnable = TRUE);
 ```
 
@@ -542,7 +542,7 @@ virtual void UpdateModifiedFlag();
 
 Esto permite que el marco de trabajo solicite al usuario que guarde el documento antes de cerrarlo, incluso si los datos nativos del documento no se han modificado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CONTENEDOR de muestra de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>

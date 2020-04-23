@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375073"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754035"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar (Clase)
 
@@ -652,7 +652,7 @@ Invalide este método para proporcionar su propio `CMFCToolbar`diseño dinámico
 
 Recalcula el tamaño de la barra de herramientas.
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ El marco de trabajo llama a este método cuando se cierra una aplicación.
 
 Libera los recursos del sistema asignados para las imágenes de la barra de herramientas bloqueadas.
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ Invalide este método en una clase derivada de [CMFCToolBar](../../mfc/reference
 
 Habilita o deshabilita el botón Personalizar que aparece en la barra de herramientas.
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ Este método extiende la implementación de la clase base, [CBasePane::EnableDoc
 
 Habilita o deshabilita iconos grandes en los botones de la barra de herramientas.
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 Habilita o deshabilita la reflexión de comandos.
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ Para obtener más información acerca de la reflexión de comandos, vea [TN062: 
 
 Habilita o deshabilita las etiquetas de texto en las imágenes de los botones de la barra de herramientas.
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ Un puntero al botón de la barra de herramientas si existe; o NULL si no existe 
 
 Devuelve el identificador de comando, el estilo y el índice de imagen del botón en un índice especificado.
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -2169,7 +2169,7 @@ virtual int InsertButton(
 
 ### <a name="parameters"></a>Parámetros
 
-*Botón*<br/>
+*botón*<br/>
 [en] Especifica el botón que se va a insertar.
 
 *iInsertAt*<br/>
@@ -3063,7 +3063,7 @@ int ReplaceButton(
 *uiCmd*<br/>
 [en] El identificador de comando del botón que se va a reemplazar.
 
-*Botón*<br/>
+*botón*<br/>
 [en] Una referencia `CMFCToolBarButton` a la inserción.
 
 *Bola*<br/>
@@ -3211,7 +3211,7 @@ Consulte el Explorer ejemplo para obtener un ejemplo que utiliza este método.
 
 Establece el identificador de comando, el estilo y el identificador de imagen de un botón de barra de herramientas.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ Este método ajusta el diseño de y vuelve a dibujar cada barra de herramientas 
 
 Especifica si los botones no disponibles en la barra de herramientas están atenuados o si se utilizan imágenes que no están disponibles con botones.
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ De forma predeterminada, los botones no disponibles están atenuados.
 
 Establece la altura de la barra de herramientas.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 Especifica si los botones de la barra de herramientas se realizan un seguimiento en caliente.
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ Para obtener más información acerca de los botones de barra de herramientas de
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ Para obtener más información sobre el cuadro de diálogo **Personalizar,** vea
 
 Establece los tamaños de los botones bloqueados y las imágenes bloqueadas en la barra de herramientas.
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ Llame a la [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) método para r
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFCToolBar::SetMaskMode
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ Este método borra la lista anterior de comandos no permitidos. De forma predete
 
 Coloca la barra de herramientas y su elemento relacionado en la misma fila.
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ El marco de trabajo llama a la [CMFCToolBar::SetTwoRowsWithSibling](#settworowsw
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 Especifica si un usuario puede cerrar la barra de herramientas.
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ Llame a la [CMFCToolBar::CanBeClosed](#canbeclosed) método para determinar si u
 
 Especifica si el marco primario o el propietario envía comandos a la barra de herramientas.
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ Llame al método [CMFCToolBar::GetShowTooltips](#getshowtooltips) para determina
 
 Especifica el elemento del mismo n.o de la barra de herramientas.
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ Llame a la [CMFCToolBar::GetImageSize](#getimagesize) método para recuperar el 
 
 Especifica las propiedades de un botón de la barra de herramientas.
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ En compilaciones de depuración, este método genera un error de aserción si *n
 
 Coloca la barra de herramientas y su elemento relacionado en filas separadas.
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ El marco de trabajo llama a este método cuando se presiona una tecla junto con 
 
 Actualiza el estado del botón especificado.
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 
@@ -3898,7 +3898,7 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

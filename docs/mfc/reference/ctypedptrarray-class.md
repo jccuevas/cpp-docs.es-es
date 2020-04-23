@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: a996bca471ce82a7c2adaaad67670ddef417eda1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373279"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752066"
 ---
 # <a name="ctypedptrarray-class"></a>Clase CTypedPtrArray
 
@@ -144,7 +144,7 @@ Para obtener comentarios más detallados, vea [CObArray::Append](../../mfc/refer
 
 Esta función `BASE_CLASS`miembro llama **a ::Copy**.
 
-```
+```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```
 
@@ -215,7 +215,7 @@ Para obtener comentarios más detallados, consulte [CObArray::GetAt](../../mfc/r
 
 Esta función `BASE_CLASS`miembro llama **a ::InsertAt**.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     TYPE newElement,
@@ -280,7 +280,7 @@ La versión de depuración de la biblioteca afirma si el subíndice (ya sea en e
 
 Esta función `BASE_CLASS`miembro llama **a ::SetAt**.
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     TYPE ptr);
@@ -305,7 +305,7 @@ Para obtener comentarios más detallados, vea [CObArray::SetAt](../../mfc/refere
 
 Esta función `BASE_CLASS`miembro llama **a ::SetAtGrow**.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     TYPE newElement);
@@ -326,7 +326,7 @@ El puntero de objeto que se agregará a esta matriz. Se permite un valor **NULL.
 
 Para obtener comentarios más detallados, vea [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [RECOPILACIÓN de muestras de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 4ba37d481db73fb0556659ede267b3474c3f32f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53afaf7732811e25729944eb71130a88e4f17a87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373919"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755000"
 ---
 # <a name="cfile-class"></a>CFile (clase)
 
@@ -751,7 +751,7 @@ El controlador de excepciones para este método debe eliminar el objeto de excep
 
 Establece el valor del puntero de archivo al principio del archivo.
 
-```
+```cpp
 void SeekToBegin();
 ```
 
@@ -916,7 +916,7 @@ El número de bytes que se transferirán desde el búfer. Para los archivos de m
 
 Consulte también los ejemplos de [CFile::CFile](#cfile) y [CFile::Open](#open).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>

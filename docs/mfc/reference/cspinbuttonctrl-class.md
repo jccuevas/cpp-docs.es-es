@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318125"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753111"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Especifica el estilo del control de botón de giro. Aplique cualquier combinación de estilos de control de botón de giro al control. Estos estilos se describen en [Estilos](/windows/win32/Controls/up-down-control-styles) de control descendente en el Windows SDK.
 
 *Rect*<br/>
-Especifica el tamaño y la posición del control del botón de giro. Puede ser un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una estructura [RECT](/previous-versions/dd162897\(v=vs.85\))
+Especifica el tamaño y la posición del control del botón de giro. Puede ser un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una estructura [RECT](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Un puntero a la ventana primaria del control `CDialog`de botón de giro, normalmente un archivo . No debe ser NULL.
@@ -160,7 +160,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de botón de giro. Aplique cualquier combinación de estilos de control de botón de giro al control. Estos estilos se describen en [Estilos](/windows/win32/Controls/up-down-control-styles) de control descendente en el Windows SDK.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -375,7 +375,7 @@ La posición anterior (precisión de `SetPos`16 bits para `SetPos32`, precisión
 
 Establece los límites superior e inferior (rango) para un control de botón de giro.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);
@@ -397,7 +397,7 @@ La función `SetRange32` miembro establece el rango de 32 bits para el control d
 > [!NOTE]
 > El rango predeterminado para el botón de giro tiene el máximo establecido en cero (0) y el mínimo establecido en 100. Dado que el valor máximo es menor que el valor mínimo, al hacer clic en la flecha arriba disminuirá la posición y al hacer clic en la flecha hacia abajo se aumentará. Utilícelo `CSpinButtonCtrl::SetRange` para ajustar estos valores.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo cmNCTRL2 de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

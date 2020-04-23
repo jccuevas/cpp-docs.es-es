@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 62750f4fb1261f4f30286297c3a240ab67e6df1c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 05f77dfba442f1ce4a375c8f225908799ece1788
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369900"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751761"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar (clase)
 
@@ -315,7 +315,7 @@ Vea [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingrou
 
 ## <a name="cmfcautohidebarsetrecentvisiblestate"></a><a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState
 
-```
+```cpp
 void SetRecentVisibleState(BOOL bState);
 ```
 
@@ -384,7 +384,7 @@ Las clases derivadas pueden reemplazar este método para personalizar el comport
 
 Deshabilita el modo de ocultación automática para un grupo de barras de ocultación automática.
 
-```
+```cpp
 void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 ```
 
@@ -398,13 +398,13 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 
 El marco de trabajo la llama cuando es necesario volver a dibujar la barra de ocultación automática.
 
-```
+```cpp
 void UpdateVisibleState();
 ```
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

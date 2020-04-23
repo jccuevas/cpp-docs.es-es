@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 8c8ce90f5e36d6cdc2592233588bc3bd7bf2c9d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a872854af1695b8b2b347b21d73165d259b3a986
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371694"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753064"
 ---
 # <a name="csplitterwnd-class"></a>Clase CSplitterWnd
 
@@ -619,7 +619,7 @@ Devuelve el número actual de columnas en el divisor. Para un divisor estático,
 
 Devuelve información sobre la columna especificada.
 
-```
+```cpp
 void GetColumnInfo(
     int col,
     int& cxCur,
@@ -675,7 +675,7 @@ Devuelve el número actual de filas en la ventana divisora. Para una ventana div
 
 Devuelve información sobre la fila especificada.
 
-```
+```cpp
 void GetRowInfo(
     int row,
     int& cyCur,
@@ -896,7 +896,7 @@ Especifique el panel proporcionando fila y **columna, o** proporcionando *pWnd*.
 
 Llame para establecer la información de columna especificada.
 
-```
+```cpp
 void SetColumnInfo(
     int col,
     int cxIdeal,
@@ -928,7 +928,7 @@ Cuando el marco de trabajo muestra la ventana divisora, establece los paneles en
 
 Llame para establecer la información de fila especificada.
 
-```
+```cpp
 void SetRowInfo(
     int row,
     int cyIdeal,
@@ -956,7 +956,7 @@ Cuando el marco de trabajo muestra la ventana divisora, establece los paneles en
 
 Especifica el nuevo estilo de desplazamiento para la compatibilidad con la barra de desplazamiento compartida de la ventana divisora.
 
-```
+```cpp
 void SetScrollStyle(DWORD dwStyle);
 ```
 
@@ -1034,7 +1034,7 @@ Puntero a un contexto de dispositivo.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

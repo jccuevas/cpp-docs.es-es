@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 7ab02dba4bf10b04dddac4e2e954623223af42d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e384be534bdbb355554c28383e9e214e9084f217
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353026"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753031"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (clase)
 
@@ -1112,7 +1112,7 @@ Para obtener más información, consulte [Windows Sockets: Socket Notifications]
 
 Asigna un nuevo valor `CAsyncSocket` a un objeto.
 
-```
+```cpp
 void operator=(const CAsyncSocket& rSrc);
 ```
 
@@ -1835,7 +1835,7 @@ Devuelve `TRUE` si la operación se realiza correctamente; de lo contrario, devu
 
 Este método asigna un identificador de socket. No llama a [CAsyncSocket::Bind](#bind) para enlazar el socket a una `Bind` dirección especificada, por lo que debe llamar más adelante para enlazar el socket a una dirección especificada. Puede usar [CAsyncSocket::SetSockOpt](#setsockopt) para establecer la opción de socket antes de que se enlace.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

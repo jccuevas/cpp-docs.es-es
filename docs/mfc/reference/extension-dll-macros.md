@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365703"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751599"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macros y funciones para administrar archivos DLL
 
@@ -91,7 +91,7 @@ Para la compatibilidad con OLE desde un archivo DLL de MFC normal que está `CWi
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ Para la compatibilidad de sockets MFC desde un archivo DLL de MFC normal que est
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -244,7 +244,7 @@ Utilice esta función para establecer el indicador de estado por módulo, que af
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,7 +279,7 @@ Llame a esta función para permitir que MFC para limpiar el archivo DLL de exten
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 
@@ -333,7 +333,7 @@ Los archivos DLL de extensión MFC deben llamar `DllMain`a [AfxInitExtensionModu
 
 **Encabezado:** afxdll_.h
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Macros y variables globales](mfc-macros-and-globals.md)<br/>
 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>

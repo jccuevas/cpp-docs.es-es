@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376127"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753775"
 ---
 # <a name="coleserverdoc-class"></a>Clase COleServerDoc
 
@@ -192,7 +192,7 @@ Para obtener más información sobre los servidores, consulte el artículo [Serv
 
 Activa el documento DocObject asociado.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ Llama a [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), una función vir
 
 Llame `GetItemClipRect` a la función miembro para obtener las coordenadas de rectángulo de recorte del elemento que se está editando en su lugar.
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ El dibujo no debe producirse fuera del rectángulo delimitador. Normalmente, el 
 
 Llame `GetItemPosition` a la función miembro para obtener las coordenadas del elemento que se está editando en su lugar.
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ Distinto de `COleServerDoc` cero si el objeto está activo en su lugar; de lo co
 
 Llame a esta función para notificar a todos los elementos vinculados conectados al documento que el documento ha cambiado.
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ Normalmente, se llama a esta función después de que el usuario cambie algún a
 
 Llame a esta función para notificar a los contenedores que el documento se ha cerrado.
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ Cuando el usuario elige el cerrar comando `NotifyClosed` desde `COleServerDoc`el
 
 Llame a esta función después de que el usuario cambie el nombre del documento de servidor.
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ Cuando el usuario elige el guardar como `NotifyRename` comando desde `COleServer
 
 Llame a esta función después de que el usuario guarde el documento del servidor.
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ La implementación predeterminada llama a las funciones miembro [COleServerDoc::
 
 Llame a esta función miembro para que la aplicación contenedora cambie la posición del elemento.
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ Normalmente se llama a `UpdateAllItems`esta función (junto con ) cuando los dat
 
 Llame a esta función para indicar a la aplicación contenedora que guarde el objeto incrustado.
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ Los valores positivos indican que se desplaza hacia abajo y hacia la derecha; lo
 
 Llame a esta función para notificar a todos los elementos vinculados conectados al documento que el documento ha cambiado.
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,
@@ -941,7 +941,7 @@ Normalmente se llama a esta función después de que el usuario cambia el docume
 
 Esta función `OnUpdate` llama a la función miembro para cada uno de los elementos del documento excepto el elemento de envío, pasando *pHint*, *lHint*y *nDrawAspect*. Utilice estos parámetros para pasar información a los elementos sobre las modificaciones realizadas en el documento. Puede codificar información mediante *lHint* o `CObject`puede definir una clase derivada para almacenar información sobre las modificaciones y pasar un objeto de esa clase mediante *pHint*. Invalide `OnUpdate` la función miembro en la clase `COleServerItem`derivada para optimizar la actualización de cada elemento en función de si su presentación ha cambiado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleLinkingDoc (clase)](../../mfc/reference/colelinkingdoc-class.md)<br/>

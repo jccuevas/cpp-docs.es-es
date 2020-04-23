@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375682"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753373"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog (clase)
 
@@ -348,7 +348,7 @@ Puede invalidar esta función miembro para devolver una instancia de su propia c
 
 Intercambia datos entre una variable miembro y el valor de propiedad de un control ActiveX en una página HTML.
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -376,7 +376,7 @@ El id de envío de la propiedad con la que desea intercambiar datos.
 *szPropName*<br/>
 El nombre de la propiedad.
 
-*Var*<br/>
+*var*<br/>
 El miembro de datos, de tipo VARIANT, [COleVariant](../../mfc/reference/colevariant-class.md)o [CComVariant](../../atl/reference/ccomvariant-class.md), que contiene el valor intercambiado con la propiedad de control ActiveX.
 
 ### <a name="example"></a>Ejemplo
@@ -387,7 +387,7 @@ El miembro de datos, de tipo VARIANT, [COleVariant](../../mfc/reference/colevari
 
 Intercambia datos entre una variable miembro y una casilla de verificación en una página HTML.
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -413,7 +413,7 @@ El valor que se está intercambiando.
 
 Intercambia datos entre una variable miembro y cualquier propiedad de elemento HTML en una página HTML.
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -475,7 +475,7 @@ El valor que se está intercambiando.
 
 Intercambia datos entre una variable miembro y un botón de opción en una página HTML.
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -497,7 +497,7 @@ El valor que se está intercambiando.
 
 Obtiene o establece el índice de un cuadro de lista en una página HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -519,7 +519,7 @@ El valor que se está intercambiando.
 
 Obtiene o establece el texto para mostrar de una entrada de cuadro de lista (basada en el índice actual) en una página HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -541,7 +541,7 @@ El valor que se está intercambiando.
 
 Obtiene o establece el valor de una entrada de cuadro de lista (basada en el índice actual) en una página HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -567,7 +567,7 @@ El valor que se está intercambiando.
 
 Separa un cuadro de diálogo `CDHtmlDialog` no selector del objeto y destruye el objeto.
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ Las sobrecargas se enumeran de menos eficiente en la parte superior a más efici
 
 Recupera el Localizador uniforme de recursos (URL) asociado al documento actual.
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 Navega hasta el recurso identificado por la dirección URL especificada por *lpszURL*.
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ Devuelve E_NOTIMPL.
 
 Establece la propiedad de un control ActiveX en un nuevo valor.
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ Cadena que contiene el nombre de la propiedad que se va a establecer.
 
 Establece `innerHTML` la propiedad de un elemento HTML.
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ Puntero `IUnknown` de un elemento HTML.
 
 Establece una propiedad de un elemento HTML.
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ Valor nuevo de la propiedad.
 
 Establece `innerText` la propiedad de un elemento HTML.
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ Puntero `IUnknown` de un elemento HTML.
 
 Establece la interfaz del `IDispatch` host.
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ La `IDispatch` nueva interfaz.
 
 Establece los indicadores de la interfaz de usuario del host.
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 
@@ -1522,7 +1522,7 @@ Devuelve E_NOTIMPL.
 
 Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), como se describe en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC DHtmlExplore](../../overview/visual-cpp-samples.md)<br/>
 [DDX_DHtml (macros del asistente)](#ddx_dhtml_helper_macros)<br/>

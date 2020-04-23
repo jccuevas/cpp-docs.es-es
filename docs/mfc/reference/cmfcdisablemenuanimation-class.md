@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: 990f41d2dfa6491d246797322ee275c9648d52a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367571"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752417"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation (Clase)
 
@@ -75,7 +75,7 @@ En el ejemplo siguiente se muestra cómo utilizar la pila para deshabilitar temp
 
 Restaura la animación anterior que el marco de trabajo utiliza para mostrar un menú emergente.
 
-```
+```cpp
 void Restore ();
 ```
 
@@ -83,7 +83,7 @@ void Restore ();
 
 El destructor llama `CMFCDisableMenuAnimation` a este método para restaurar la animación anterior que el marco de trabajo utilizapara para mostrar un menú emergente.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

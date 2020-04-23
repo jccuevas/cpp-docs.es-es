@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 3a1e8890176fe686b54fe4756dfd578869cbcdfb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c42b1ccb51a3c290e0887717d900543b8d5b277a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367793"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752619"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (clase)
 
@@ -227,7 +227,7 @@ Devuelve FALSE a menos que se invalide.
 
 Habilita o deshabilita el botón de la barra de subtítulos.
 
-```
+```cpp
 void EnableButton(BOOL bEnable=TRUE);
 ```
 
@@ -473,7 +473,7 @@ Invalide este `CMFCCaptionBar` método en una clase derivada para personalizar l
 
 Elimina la imagen de mapa de bits de la barra de título.
 
-```
+```cpp
 void RemoveBitmap();
 ```
 
@@ -481,7 +481,7 @@ void RemoveBitmap();
 
 Elimina el botón de la barra de subtítulos.
 
-```
+```cpp
 void RemoveButton();
 ```
 
@@ -493,7 +493,7 @@ El diseño de los elementos de la barra de título se ajusta automáticamente.
 
 Elimina el icono de la barra de subtítulos.
 
-```
+```cpp
 void RemoveIcon();
 ```
 
@@ -501,7 +501,7 @@ void RemoveIcon();
 
 Elimina la etiqueta de texto de la barra de título.
 
-```
+```cpp
 void RemoveText();
 ```
 
@@ -509,7 +509,7 @@ void RemoveText();
 
 Establece la imagen de mapa de bits para la barra de título.
 
-```
+```cpp
 void SetBitmap(
     HBITMAP hBitmap,
     COLORREF clrTransparent,
@@ -557,7 +557,7 @@ El mapa de bits se alinea según lo especificado por el *bmpAlignment* parámetr
 
 Establece el tamaño del borde de la barra de título.
 
-```
+```cpp
 void SetBorderSize(int nSize);
 ```
 
@@ -570,7 +570,7 @@ void SetBorderSize(int nSize);
 
 Establece el botón de la barra de título.
 
-```
+```cpp
 void SetButton(
     LPCTSTR lpszLabel,
     UINT uiCmdUI,
@@ -596,7 +596,7 @@ TRUESi el botón muestra una flecha desplegable, FALSE en caso contrario.
 
 Especifica si el botón permanece pulsado.
 
-```
+```cpp
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```
 
@@ -609,7 +609,7 @@ TRUESi el botón mantiene su estado presionado, FALSE en caso contrario.
 
 Establece la información sobre herramientas del botón.
 
-```
+```cpp
 void SetButtonToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -627,7 +627,7 @@ void SetButtonToolTip(
 
 Establece el estilo de borde de la barra de título.
 
-```
+```cpp
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```
 
@@ -640,7 +640,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 
 Establece el icono de una barra de título.
 
-```
+```cpp
 void SetIcon(
     HICON hIcon,
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
@@ -672,7 +672,7 @@ El icono se alinea según el parámetro *iconAlignment.* Puede ser uno de `BarEl
 
 Establece la información sobre herramientas de la imagen en la barra de título.
 
-```
+```cpp
 void SetImageToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -690,7 +690,7 @@ void SetImageToolTip(
 
 Establece la distancia entre el borde del elemento de barra de título y el borde del control de barra de título.
 
-```
+```cpp
 void SetMargin(int nMargin);
 ```
 
@@ -703,7 +703,7 @@ void SetMargin(int nMargin);
 
 Establece la etiqueta de texto de la barra de título.
 
-```
+```cpp
 void SetText(
     const CString& strText,
     BarElementAlignment textAlignment=ALIGN_RIGHT);
@@ -729,7 +729,7 @@ La etiqueta de texto se alinea según lo especificado por el parámetro *textAli
 
 - ALIGN_CENTER
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

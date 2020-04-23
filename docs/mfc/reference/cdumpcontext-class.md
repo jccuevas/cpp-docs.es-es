@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: aa549e5347bf2bd357fa3c28e81a0309ea4f4aff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374002"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753215"
 ---
 # <a name="cdumpcontext-class"></a>Clase CDumpContext
 
@@ -145,7 +145,7 @@ Llame a esta función miembro para volcar el elemento del tipo especificado como
 
 Obliga a que los datos que queden en los búferes se escriban en el archivo adjunto al contexto de volcado.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -173,7 +173,7 @@ La profundidad del volcado `SetDepth`establecida por .
 
 Vuelca una matriz de bytes con formato de números hexadecimales.
 
-```
+```cpp
 void HexDump(
     LPCTSTR lpszLine,
     BYTE* pby,
@@ -249,7 +249,7 @@ Si utiliza la IMPLEMENT_DYNAMIC o IMPLEMENT_SERIAL macro en la implementación `
 
 Establece la profundidad del volcado.
 
-```
+```cpp
 void SetDepth(int nNewDepth);
 ```
 

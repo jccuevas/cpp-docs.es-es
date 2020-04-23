@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364008"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751124"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (clase)
 
@@ -149,7 +149,7 @@ Especifica el estilo del control de barra de progreso. Aplique cualquier combina
 - PBS_SMOOTH Muestra un relleno gradual y suave en el control de la barra de progreso. Sin esta marca, el control se llenará con bloques.
 
 *Rect*<br/>
-Especifica el tamaño y la posición del control de barra de progreso. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura. Dado que el control debe ser una ventana secundaria, las coordenadas especificadas son relativas al área de cliente de *pParentWnd*.
+Especifica el tamaño y la posición del control de barra de progreso. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/win32/api/windef/ns-windef-rect) estructura. Dado que el control debe ser una ventana secundaria, las coordenadas especificadas son relativas al área de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control de `CDialog`barra de progreso, normalmente un archivo . No debe ser NULL.
@@ -191,7 +191,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de barra de progreso. Aplique cualquier combinación de estilos de ventana descritos en [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) en el Windows SDK.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -263,7 +263,7 @@ La posición del control de la barra de progreso no es la ubicación física en 
 
 Obtiene los límites inferior y superior actual, o rango, del control de barra de progreso.
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -495,7 +495,7 @@ La posición del control de la barra de progreso no es la ubicación física en 
 
 Establece los límites superior e inferior del rango del control de barra de progreso y vuelve a dibujar la barra para reflejar los nuevos rangos.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

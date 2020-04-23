@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363947"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750973"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (clase)
 
@@ -165,7 +165,7 @@ Para obtener más información `CPropertySheet` acerca de cómo utilizar objetos
 
 Agrega la página proporcionada con la pestaña más a la derecha en la hoja de propiedades.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ Si llama `AddPage` después de mostrar la página de propiedades, la fila de pes
 
 Construye un objeto `CPropertySheet`.
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ Vea el ejemplo de [CPropertySheet::AddPage](#addpage).
 
 Indica si se deben apilar filas de pestañas en una hoja de propiedades.
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ Debe llamar `EnableStackedTabs` al crear una hoja de propiedades modal o no moda
 
 Termina la hoja de propiedades.
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ Para obtener más información sobre esta estructura, incluida una lista de sus 
 
 Convierte las unidades de cuadro de diálogo de un rectángulo en unidades de pantalla.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) o a un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contiene las coordenadas del cuadro de diálogo que se van a convertir.
+Apunta a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) o a un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contiene las coordenadas del cuadro de diálogo que se van a convertir.
 
 ### <a name="remarks"></a>Observaciones
 
@@ -641,7 +641,7 @@ No necesita una entrada de mapa de mensajes para esta función miembro.
 
 Simula la elección del botón especificado en una hoja de propiedades.
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ Una llamada `PressButton` a no enviará la notificación [PSN_APPLY](/windows/wi
 
 Quita una página de la hoja de propiedades y destruye la ventana asociada.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ Vea el ejemplo de [CPropertySheet::GetActivePage](#getactivepage).
 
 Establece el texto en el botón de comando Finalizar.
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ Llame `SetFinishText` para mostrar el texto en el botón de comando Finalizar y 
 
 Especifica el título de la hoja de propiedades (el texto que se muestra en la barra de título de una ventana de marco).
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ De forma predeterminada, una hoja de propiedades utiliza el parámetro caption e
 
 Habilita o deshabilita el botón Atrás, Siguiente o Finalizar en una hoja de propiedades del asistente.
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ A `CPropertySheet` tiene tres páginas `CColorPage`de `CShapePage`propiedades de
 
 Establece una página de propiedades como asistente.
 
-```
+```cpp
 void SetWizardMode();
 ```
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fd1cd2fec31f9da0c2bec36d08586780f4f95c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375102"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753569"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel (clase)
 
@@ -97,7 +97,7 @@ Agrega un elemento de la cinta de opciones al panel. Los elementos añadidos con
 
 Agrega una cadena de texto al menú de lista de archivos recientes.
 
-```
+```cpp
 void AddRecentFilesList(
     LPCTSTR lpszLabel,
     int nWidth = 300);
@@ -117,7 +117,7 @@ Especifica el ancho, en píxeles, del panel de lista de archivos recientes.
 
 Agrega un elemento de la cinta de opciones al panel inferior del panel de aplicación de la cinta de opciones.
 
-```
+```cpp
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```
 
@@ -132,7 +132,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 Agrega un elemento de la cinta de opciones al panel derecho del panel del botón de la aplicación.
 
-```
+```cpp
 void AddToRight(
     CMFCRibbonBaseElement* pElem,
     int nWidth = 300);
@@ -162,7 +162,7 @@ CRect GetCommandsFrame() const;
 
 Rectángulo que representa el área del panel principal de la cinta de opciones.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

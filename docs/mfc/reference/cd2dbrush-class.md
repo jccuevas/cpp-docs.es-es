@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: d03fb6f398e18957f68fc18c78d8a397efc67506
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 536d84fe2c2f68d62490e1ce2b65085426762e87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369275"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754195"
 ---
 # <a name="cd2dbrush-class"></a>Clase CD2DBrush
 
@@ -107,7 +107,7 @@ virtual ~CD2DBrush();
 
 Asocia la interfaz de recursos existente al objeto.
 
-```
+```cpp
 void Attach(ID2D1Brush* pResource);
 ```
 
@@ -186,7 +186,7 @@ Un valor entre cero y 1 que indica la opacidad del pincel. Este valor es un mult
 
 Obtiene la transformación actual del destino de representación
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```
 
@@ -239,7 +239,7 @@ Puntero a una interfaz ID2D1Brush o NULL si el objeto aún no se ha inicializado
 
 Establece el grado de opacidad de este pincel
 
-```
+```cpp
 void SetOpacity(FLOAT opacity);
 ```
 
@@ -252,7 +252,7 @@ Un valor entre cero y 1 que indica la opacidad del pincel. Este valor es un mult
 
 Aplica la transformación especificada al destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujo posteriores se producen en el espacio transformado.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -261,6 +261,6 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 *Transformar*<br/>
 La transformación que se aplicará al destino de representación
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

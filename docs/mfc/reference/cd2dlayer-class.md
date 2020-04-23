@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: aa6fb313bfcc2983f167936e5ad4f78be1e17a44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 30025d6097e439c07202d144a6e549845b78ffa6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369214"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754761"
 ---
 # <a name="cd2dlayer-class"></a>Clase CD2DLayer
 
@@ -98,7 +98,7 @@ virtual ~CD2DLayer();
 
 Adjunta la interfaz de recursos existente al objeto
 
-```
+```cpp
 void Attach(ID2D1Layer* pResource);
 ```
 
@@ -218,6 +218,6 @@ operator ID2D1Layer* ();
 
 Puntero a una interfaz ID2D1Layer o NULL si el objeto aún no se ha inicializado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

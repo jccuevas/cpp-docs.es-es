@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 05ad60855cd03115cf88ab2b51e56e6a26822035
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74b07dc8144e853714ea73c8235f1259538a0c12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352444"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752754"
 ---
 # <a name="cbutton-class"></a>CButton (clase)
 
@@ -664,7 +664,7 @@ Usted es responsable de liberar el mapa de bits cuando haya terminado con él.
 
 Cambia el estilo de un botón.
 
-```
+```cpp
 void SetButtonStyle(
     UINT nStyle,
     BOOL bRedraw = TRUE);
@@ -690,7 +690,7 @@ Utilice `GetButtonStyle` la función miembro para recuperar el estilo de botón.
 
 Establece o restablece el estado de comprobación de un botón de opción o casilla de verificación.
 
-```
+```cpp
 void SetCheck(int nCheck);
 ```
 
@@ -1074,7 +1074,7 @@ En el ejemplo de código siguiente se establece el estilo de la flecha desplegab
 
 Establece si un control de botón está resaltado o no.
 
-```
+```cpp
 void SetState(BOOL bHighlight);
 ```
 
@@ -1114,7 +1114,7 @@ Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
 Esta función miembro emula la funcionalidad del mensaje de BCM_SETTEXTMARGIN, como se describe en la sección [Botones](/windows/win32/controls/buttons) del Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

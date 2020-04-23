@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375643"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753367"
 ---
 # <a name="cdialog-class"></a>Clase CDialog
 
@@ -295,7 +295,7 @@ Si el usuario hace clic en uno de los pulsadores del cuadro de diálogo, como Ac
 
 Llame a esta función miembro para terminar un cuadro de diálogo modal.
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ Esto suele ser un botón OK.
 
 Mueve el foco al control especificado en el cuadro de diálogo.
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ Los cuadros de diálogo que contienen controles ActiveX requieren información a
 
 Llame para convertir las unidades de cuadro de diálogo de un rectángulo en unidades de pantalla.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ La `MapDialogRect` función miembro reemplaza las unidades de cuadro de diálogo
 
 Mueve el foco al siguiente control del cuadro de diálogo.
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ Normalmente, el editor de cuadros de diálogo establece la fuente del cuadro de 
 
 Establece el foco en el control anterior en el cuadro de diálogo.
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ Si el foco está en el primer control del cuadro de diálogo, se mueve al últim
 
 Cambia el control de pulsador predeterminado para un cuadro de diálogo.
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ Especifica el identificador del control pulsador que se convertirá en el valor 
 
 Establece un identificador de ayuda contextual para el cuadro de diálogo.
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 
@@ -556,7 +556,7 @@ void SetHelpID(UINT nIDR);
 *nIDR*<br/>
 Especifica el identificador de ayuda contextual.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC DLGTEMPL](../../overview/visual-cpp-samples.md)<br/>

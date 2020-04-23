@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368890"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753546"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel Clase
 
@@ -432,7 +432,7 @@ Un puntero válido al elemento de la cinta de opciones base situado en la posici
 
 Recupera todos los elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 Agrega elementos de la cinta de opciones que tienen el identificador de comando especificado a la matriz especificada.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ El índice de base cero del elemento de la cinta de opciones especificado si el 
 
 Recupera los elementos de comando para todos los elementos de la cinta de opciones en el panel de la cinta de opciones.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ Llame a este método para quitar un elemento del panel de la cinta de opciones.
 
 Elimina todos los elementos de la cinta de opciones del panel de la cinta de opciones.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ Para reemplazar un elemento de la cinta de opciones en función de la posición,
 
 Habilita o deshabilita el centrado de las posiciones verticales de los elementos de la cinta de opciones dentro de su rectángulo de visualización.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 Asocia datos definidos por el usuario con el panel de la cinta de opciones.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 Habilita o deshabilita el ajuste del ancho de los elementos de la cinta de opciones en la misma columna.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ Cuando esta característica está habilitada en un panel de la cinta de opciones
 
 Establece la información sobre teclas para el botón predeterminado del panel de la cinta de opciones.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ El menú emergente del panel de la cinta de opciones solo está disponible cuand
 
 Establece el foco en el elemento Ribbon especificado.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ Puntero a un elemento Ribbon que recibe el foco.
 
 Desplaza la galería para hacer visible el elemento Ribbon especificado.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ TRUESi la cinta de opciones primaria tiene aspecto de Windows 7; de lo contrario
 
 Recupera una matriz de elementos visibles.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);
@@ -1248,7 +1248,7 @@ Un puntero a un elemento enfocado o NULL.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

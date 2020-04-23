@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-ms.openlocfilehash: 3376b8febe8ae4586ce649f3f83386875acb678f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 69b94a4188804f47c950ca31fb5cba80d85176e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375505"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753300"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate (clase)
 
@@ -511,7 +511,7 @@ Distinto de cero si se realiza correctamente; de lo contrario 0.
 
 Determina los recursos de los contenedores OLE al editar un elemento OLE en contexto.
 
-```
+```cpp
 void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```
 
@@ -547,7 +547,7 @@ Para obtener información sobre el título `CDocTemplate::docName` predeterminad
 
 Determina los recursos y las clases cuando el documento del servidor se incrusta o edita in situ.
 
-```
+```cpp
 void SetServerInfo(
     UINT nIDOleEmbedding,
     UINT nIDOleInPlaceServer = 0,
@@ -603,7 +603,7 @@ Un puntero válido `CFrameWnd` a un objeto, o NULL si se produce un error en la 
 
 Configura el controlador de vista previa fuera de proceso.
 
-```
+```cpp
 void SetPreviewInfo(
     UINT nIDPreviewFrame,
     CRuntimeClass* pPreviewFrameClass = NULL,
@@ -623,7 +623,7 @@ Especifica un puntero a una estructura de información de clase en tiempo de eje
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 0d003bdacf13403ad8dc4be4ec7e6f71ea57d156
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 995d7d0db55889130e1cad9585b8fc87285ffd27
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372185"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754016"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton (Clase)
 
@@ -1116,7 +1116,7 @@ TRUESi el método controla el evento; de lo contrario, FALSE.
 
 Elimina todos los elementos de la lista y los cuadros de edición.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1205,7 +1205,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*ar*<br/>
+*Ar*<br/>
 [adentro, fuera] Objeto `CArchive` que se va a serializar.
 
 ### <a name="remarks"></a>Observaciones
@@ -1255,7 +1255,7 @@ De forma predeterminada, los botones del cuadro combinado se alinean con la part
 
 Establece el identificador de recurso del menú contextual para el botón del cuadro combinado.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -1268,7 +1268,7 @@ void SetContextMenuID(UINT uiResID);
 
 Establece la altura del cuadro de lista cuando se deja caer.
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
@@ -1319,7 +1319,7 @@ Para obtener una lista de estilos de botón de barra de herramientas, consulte [
 
 Establece el texto en el cuadro de edición del botón del cuadro combinado.
 
-```
+```cpp
 void SetText(LPCTSTR lpszText);
 ```
 
@@ -1328,7 +1328,7 @@ void SetText(LPCTSTR lpszText);
 *lpszText*<br/>
 [en] Puntero a una cadena que contiene el texto del cuadro de edición.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

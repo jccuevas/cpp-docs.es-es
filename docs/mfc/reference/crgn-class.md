@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 72ab4027880285a3c4cd24d586e163e1e01b98f2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e84526eec8f4fd4b1935fa39bc7f4ed3c4d5dd71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368303"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754477"
 ---
 # <a name="crgn-class"></a>Clase CRgn
 
@@ -699,7 +699,7 @@ int OffsetRgn(POINT point);
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica el número de unidades que se moverán a la izquierda o a la derecha.
 
 *y y*<br/>
@@ -762,7 +762,7 @@ BOOL PtInRegion(POINT point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del punto que se va a probar.
 
 *y y*<br/>
@@ -805,7 +805,7 @@ Distinto de cero si alguna parte del rectángulo especificado se encuentra dentr
 
 Crea una región rectangular.
 
-```
+```cpp
 void SetRectRgn(
     int x1,
     int y1,
@@ -838,7 +838,7 @@ Sin embargo, a diferencia de [CreateRectRgn,](#createrectrgn)no asigna ninguna m
 
 Utilice esta función `CreateRectRgn` en lugar de la función miembro para evitar llamadas al administrador de memoria local.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

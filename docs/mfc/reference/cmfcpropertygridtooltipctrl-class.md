@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 94d75f914e5f7928d08dd2a87997ab02c4f16832
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc5d6d99c326fba7020e8c5040c3bf28d09f8f0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361787"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754119"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl Clase
 
@@ -115,7 +115,7 @@ TRUESi la ventana se creó correctamente; de lo contrario, FALSE.
 
 Desactiva y oculta el control de información sobre herramientas.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -127,7 +127,7 @@ Este método establece la última posición y el texto en valores vacíos, por l
 
 Devuelve las coordenadas de la última posición del control de información sobre herramientas.
 
-```
+```cpp
 void GetLastRect(CRect& rect) const;
 ```
 
@@ -140,7 +140,7 @@ void GetLastRect(CRect& rect) const;
 
 Oculta el control de información sobre herramientas.
 
-```
+```cpp
 void Hide();
 ```
 
@@ -148,7 +148,7 @@ void Hide();
 
 Establece el espaciado entre el texto de información sobre herramientas y el borde de la ventana de información sobre herramientas.
 
-```
+```cpp
 void SetTextMargin(int nTextMargin);
 ```
 
@@ -161,7 +161,7 @@ void SetTextMargin(int nTextMargin);
 
 Muestra el control de información sobre herramientas.
 
-```
+```cpp
 void Track(
     CRect rect,
     const CString& strText);
@@ -179,7 +179,7 @@ void Track(
 
 Este método muestra el control de información sobre herramientas en la posición y el tamaño especificados por *rect*. Si la posición, el tamaño y el texto no han cambiado desde la última vez que se llamó a este método, este método no tiene ningún efecto.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

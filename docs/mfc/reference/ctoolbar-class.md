@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: fdbf343c91725783afd79bbebd73f66fdb1d67e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364284"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752206"
 ---
 # <a name="ctoolbar-class"></a>CToolBar (clase)
 
@@ -292,7 +292,7 @@ Llame a la [crear](#create) función miembro para crear la ventana de la barra d
 
 Esta función miembro recupera el identificador de control, el estilo y el índice de imagen del botón o separador de barra de herramientas en la ubicación especificada por *nIndex.*
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -522,7 +522,7 @@ Por ejemplo, `SetBitmap` llame para cambiar la imagen de mapa de bits después d
 
 Llame a esta función miembro para establecer el identificador de comando del botón, el estilo y el número de imagen.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -603,7 +603,7 @@ Si *lpIDArray* es NULL, esta función asigna espacio para el número de elemento
 
 Llame a esta función miembro para establecer el estilo de un botón o separador, o para agrupar botones.
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -672,7 +672,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 Esta función miembro establece el alto de la barra de herramientas en el valor, en píxeles, especificado en *cyHeight*.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -691,7 +691,7 @@ Si no se llama a esta función, el marco de trabajo utiliza el tamaño del botó
 
 Llame a esta función miembro para establecer los botones de la barra de herramientas en el tamaño, en píxeles, especificado en *sizeButton*.
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);

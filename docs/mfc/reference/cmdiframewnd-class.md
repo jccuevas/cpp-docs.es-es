@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370053"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754546"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (clase)
 
@@ -242,7 +242,7 @@ Invalide esta función miembro si tiene un menú Ventana que no utiliza los iden
 
 Activa una ventana secundaria MDI diferente.
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ Vea el ejemplo de [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).
 
 Organiza todas las ventanas secundarias MDI en un formato en cascada.
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ Vea el ejemplo de [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-c
 
 Organiza todas las ventanas secundarias de documentos minimizadas.
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ Vea el ejemplo de [CMDIFrameWnd::MDICascade](#mdicascade).
 
 Maximiza la ventana secundaria MDI especificada.
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ Vea el ejemplo de [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-c
 
 Activa la ventana secundaria inmediatamente detrás de la ventana secundaria activa actualmente y coloca la ventana secundaria activa actualmente detrás de todas las demás ventanas secundarias.
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ Si se maximiza la ventana secundaria MDI actualmente activa, la función miembro
 
 Activa la ventana secundaria anterior y coloca la ventana secundaria activa inmediatamente detrás de ella.
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ Si se maximiza la ventana secundaria MDI actualmente activa, la función miembro
 
 Restaura una ventana secundaria MDI de tamaño maximizado o minimizado.
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ No llame a esta función miembro si usa el marco de trabajo para administrar las
 
 Organiza todas las ventanas secundarias en un formato de mosaico.
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```
@@ -457,7 +457,7 @@ La primera `MDITile`versión de , sin parámetros, teselas las ventanas vertical
 
 Vea el ejemplo de [CMDIFrameWnd::MDICascade](#mdicascade).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>

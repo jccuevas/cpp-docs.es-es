@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 8ca8d3b2cb4ce3c5b070d883e0a418ebec3665b1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc0e80e80d61104a4d8cb5f1cfd4e26a64c42249
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352381"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752746"
 ---
 # <a name="cchecklistbox-class"></a>Clase CCheckListBox
 
@@ -209,7 +209,7 @@ Si los elementos de la casilla de verificación no `Create`tienen la misma altur
 
 Llame a esta función para habilitar o deshabilitar un elemento de casilla de verificación.
 
-```
+```cpp
 void Enable(
     int nIndex,
     BOOL bEnabled = TRUE);
@@ -326,7 +326,7 @@ La implementación predeterminada solo devuelve la posición`rectCheckBox`y el t
 
 Establece el estado de la casilla de verificación especificada.
 
-```
+```cpp
 void SetCheck(
     int nIndex,
     int nCheck);
@@ -354,7 +354,7 @@ En la tabla siguiente se enumeran los valores posibles para el parámetro *nChec
 
 Llame a esta función para establecer el estilo de las casillas de verificación en la casilla de verificación.
 
-```
+```cpp
 void SetCheckStyle(UINT nStyle);
 ```
 
@@ -377,7 +377,7 @@ Los estilos válidos son:
 
 Para obtener información sobre estos estilos, consulte Estilos de [botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox (clase)](../../mfc/reference/clistbox-class.md)<br/>

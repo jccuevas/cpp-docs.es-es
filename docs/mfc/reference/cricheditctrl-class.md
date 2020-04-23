@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 07c3c864e91d8aebc8d70f54fed4286a24986208
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c601d036d05048bff9b60f837140e8f7a873964
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368271"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754431"
 ---
 # <a name="cricheditctrl-class"></a>Clase CRichEditCtrl
 
@@ -377,7 +377,7 @@ Para obtener más información, consulte [EM_CHARFROMPOS](/windows/win32/Control
 
 Elimina (borra) la selección actual (si existe) en el control rich edit.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -397,7 +397,7 @@ Para obtener más información, consulte [WM_CLEAR](/windows/win32/dataxchg/wm-c
 
 Copia la selección actual (si existe) en el control de edición enriquecida en el Portapapeles.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -489,7 +489,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de edición. Aplique una combinación de los **estilos** de ventana enumerados en la sección Comentarios de [Crear](#create) y [editar estilos](/windows/win32/Controls/edit-control-styles)de control , que se describe en el Windows SDK.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -525,7 +525,7 @@ Use [Crear](#create) para construir el control de edición enriquecida de Window
 
 Eliminar (cortar) la selección actual (si existe) en el control de edición enriquecida y copia el texto eliminado en el Portapapeles.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -572,7 +572,7 @@ Para obtener más información, consulte [EM_DISPLAYBAND](/windows/win32/Control
 
 Restablece (borra) la marca de deshacer de este control de edición enriquecido.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -966,7 +966,7 @@ Esta función miembro solo está disponible con las versiones en idioma asiátic
 
 Recupera el rectángulo de `CRichEditCtrl` formato para este objeto.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -1005,7 +1005,7 @@ Los tipos de acciones que se pueden deshacer o rehacer incluyen las operaciones 
 
 Recupera los límites de la selección `CRichEditCtrl` actual en este objeto.
 
-```
+```cpp
 void GetSel(CHARRANGE& cr) const;
 
 void GetSel(
@@ -1256,7 +1256,7 @@ Esta función miembro solo está disponible para las versiones en idioma asiáti
 
 Cambia la visibilidad de la selección.
 
-```
+```cpp
 void HideSelection(
     BOOL bHide,
     BOOL bPerm);
@@ -1284,7 +1284,7 @@ Para obtener más información, consulte [EM_HIDESELECTION](/windows/win32/Contr
 
 Limita la longitud del texto que el usuario puede escribir en un control de edición.
 
-```
+```cpp
 void LimitText(long nChars = 0);
 ```
 
@@ -1391,7 +1391,7 @@ Para obtener más información, consulte [EM_LINELENGTH](/windows/win32/Controls
 
 Desplaza el texto de un control de edición de varias líneas.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -1421,7 +1421,7 @@ Para obtener más información, consulte [EM_LINESCROLL](/windows/win32/Controls
 
 Inserta los datos del Portapapeles en el `CRichEditCtrl` punto de inserción en el punto de inserción, la ubicación del intercalador.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1439,7 +1439,7 @@ Para obtener más información, consulte [WM_PASTE](/windows/win32/dataxchg/wm-p
 
 Pega datos en un formato `CRichEditCtrl` de Portapapeles específico en este objeto.
 
-```
+```cpp
 void PasteSpecial(
     UINT nClipFormat,
     DWORD dvAspect = 0,
@@ -1508,7 +1508,7 @@ Para obtener más información, consulte [EM_REDO](/windows/win32/Controls/em-re
 
 Reemplaza la selección actual `CRichEditCtrl` de este objeto por el texto especificado.
 
-```
+```cpp
 void ReplaceSel(
     LPCTSTR lpszNewText,
     BOOL bCanUndo = FALSE);
@@ -1540,7 +1540,7 @@ Para obtener más información, consulte [EM_REPLACESEL](/windows/win32/Controls
 
 Obliga `CRichEditCtrl` a este objeto a enviar mensajes de notificación EN_REQUESTRESIZE a su ventana primaria.
 
-```
+```cpp
 void RequestResize();
 ```
 
@@ -1667,7 +1667,7 @@ Para obtener más información, consulte [EM_SETEVENTMASK](/windows/win32/Contro
 
 Establece o desactiva la marca modificada para un control de edición.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1713,7 +1713,7 @@ Para obtener más información, vea [EM_SETOLECALLBACK](/windows/win32/Controls/
 
 Establece las opciones `CRichEditCtrl` para este objeto.
 
-```
+```cpp
 void SetOptions(
     WORD wOp,
     DWORD dwFlags);
@@ -1848,7 +1848,7 @@ Para obtener más información, consulte [EM_SETREADONLY](/windows/win32/Control
 
 Establece el rectángulo `CRichEditCtrl` de formato para este objeto.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1871,7 +1871,7 @@ Para obtener más información, consulte [EM_SETRECT](/windows/win32/Controls/em
 
 Establece la selección `CRichEditCtrl` dentro de este objeto.
 
-```
+```cpp
 void SetSel(
     long nStartChar,
     long nEndChar);
@@ -2076,7 +2076,7 @@ Este mensaje solo está disponible en versiones en idioma asiático del sistema 
 
 Impide que el control recopile acciones de escritura adicionales en la acción de deshacer actual.
 
-```
+```cpp
 void StopGroupTyping();
 ```
 
@@ -2196,7 +2196,7 @@ Para obtener más información, consulte [EM_UNDO](/windows/win32/Controls/em-un
 
   Vea el ejemplo de [CanUndo](#canundo).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

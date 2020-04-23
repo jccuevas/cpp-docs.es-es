@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 73319ad898bfebf4caf191954ebb3935bd4ebce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fd1bce7de7ac323dc3099ab4938306768eb95a35
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321966"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754622"
 ---
 # <a name="cdataexchange-class"></a>Clase CDataExchange
 
@@ -107,7 +107,7 @@ Construir `CDataExchange` un objeto usted mismo para almacenar información adic
 
 El marco de trabajo llama a esta función miembro cuando se produce un error en una operación de validación de datos de cuadro de diálogo (DDV).
 
-```
+```cpp
 void Fail();
 ```
 
@@ -228,7 +228,7 @@ Los implementadores de rutinas DDX o `PrepareOleCtrl` DDV personalizadas deben l
 
 Para obtener más información sobre cómo escribir sus propias rutinas DDX y DDV, consulte la [Nota técnica 26](../../mfc/tn026-ddx-and-ddv-routines.md). Para obtener información general sobre DDX y DDV, vea Intercambio de datos de cuadro de [diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md) y temas de cuadro de [diálogo](../../mfc/dialog-boxes.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

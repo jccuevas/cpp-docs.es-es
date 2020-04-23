@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: 790ce0f32c2325fa0ea92ca0bda64ddaa4c86c45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c07962c017d160cb3ce5841a75f1ae8a8761641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375704"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753396"
 ---
 # <a name="cdcrendertarget-class"></a>Clase CDCRenderTarget
 
@@ -83,7 +83,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 Adjunta la interfaz de destino de representación existente al objeto
 
-```
+```cpp
 void Attach(ID2D1DCRenderTarget* pTarget);
 ```
 
@@ -183,6 +183,6 @@ operator ID2D1DCRenderTarget*();
 
 Puntero a una interfaz ID2D1DCRenderTarget o NULL si el objeto aún no se ha inicializado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

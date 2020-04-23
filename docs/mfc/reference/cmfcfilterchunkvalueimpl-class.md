@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367509"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752362"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Clase CMFCFilterChunkValueImpl
 
@@ -129,7 +129,7 @@ hr á trozo. SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 Borra el ChunkValue.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -178,7 +178,7 @@ S_OK si se realiza correctamente; de lo contrario, un código de error.
 
 Inicializa este valor de fragmento desde el otro valor.
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
@@ -693,6 +693,6 @@ S_OK si se realiza correctamente; de lo contrario, un código de error.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367525"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752391"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Clase CMFCDynamicLayout
 
@@ -123,7 +123,7 @@ La posición y el tamaño de un control secundario cambian dinámicamente cuando
 
 Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ La posición y el tamaño de un control secundario cambian dinámicamente cuando
 
 Recupera el rectángulo de área de cliente actual de la ventana.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,13 +383,13 @@ Un [valor MoveSettings](#movesettings_structure) que encapsula la relación de m
 
 Establece el tamaño de la ventana por debajo del cual no se ajusta el diseño.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 El tamaño deseado por debajo del cual no se ajusta el diseño.
 
 ### <a name="remarks"></a>Observaciones
@@ -518,7 +518,7 @@ Un [valor SizeSettings](#sizesettings_structure) que encapsula la relación de t
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

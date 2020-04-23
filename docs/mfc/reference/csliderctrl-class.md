@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318211"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751276"
 ---
 # <a name="csliderctrl-class"></a>Clase CSliderCtrl
 
@@ -169,7 +169,7 @@ Para obtener más `CSliderCtrl`información sobre el uso de , vea [Controles](..
 
 Borra la selección actual en un control deslizante.
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ Vuelva a dibujar la bandera. Si este parámetro es TRUE, el control deslizante s
 
 Elimina las marcas de graduación actuales de un control deslizante.
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Especifica el estilo del control deslizante. Aplique cualquier combinación de estilos de [control deslizante,](/windows/win32/Controls/trackbar-control-styles)que se describen en el Windows SDK, al control.
 
 *Rect*<br/>
-Especifica el tamaño y la posición del control deslizante. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
+Especifica el tamaño y la posición del control deslizante. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/win32/api/windef/ns-windef-rect) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control `CDialog`deslizante, normalmente un archivo . No debe ser NULL.
@@ -251,7 +251,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control deslizante. Aplique cualquier combinación de estilos de [control deslizante,](/windows/win32/Controls/trackbar-control-styles)que se describen en el Windows SDK, al control.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -304,7 +304,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_GET
 
 Recupera el tamaño y la posición del rectángulo delimitador para el canal de un control deslizante.
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ Posición actual.
 
 Recupera las posiciones máxima y mínima del control deslizante en un control deslizante.
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ La posición mínima del control.
 
 Recupera las posiciones inicial y final de la selección actual en un control deslizante.
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ Este método envía el [mensaje TBM_GETTHUMBLENGTH,](/windows/win32/Controls/tbm
 
 Recupera el tamaño y la posición del rectángulo delimitador para el control deslizante (thumb) en un control deslizante.
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ El tamaño de página afecta a la cantidad que se mueve el control deslizante pa
 
 Establece la posición actual del control deslizante en un control deslizante.
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ Especifica la nueva posición del control deslizante.
 
 Establece el rango (posiciones mínima y máxima) para el control deslizante en un control deslizante.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ La bandera de redibujo. Si este parámetro es TRUE, el control deslizante se vue
 
 Establece el rango máximo para el control deslizante en un control deslizante.
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ La bandera de redibujo. Si este parámetro es TRUE, el control deslizante se vue
 
 Establece el rango mínimo para el control deslizante en un control deslizante.
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ La bandera de redibujo. Si este parámetro es TRUE, el control deslizante se vue
 
 Establece las posiciones inicial y final de la selección actual en un control deslizante.
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,7 +697,7 @@ Posición final del control deslizante.
 
 Establece la longitud del control deslizante en el control de barra de seguimiento actual.
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
@@ -746,7 +746,7 @@ Distinto de cero si se establece la marca de graduación; de lo contrario 0.
 
 Establece la frecuencia con la que se muestran las marcas de graduación en un control deslizante.
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 TBM_SETT
 
 Asigna un control de información sobre herramientas a un control deslizante.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
@@ -799,7 +799,7 @@ Puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto qu
 
 Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips), como se describe en el Windows SDK. Cuando se crea un control deslizante con el estilo TBS_TOOLTIPS, crea un control de información sobre herramientas predeterminado que aparece junto al control deslizante, mostrando la posición actual del control deslizante. Para obtener una descripción de los estilos de control deslizante, consulte [Estilos](/windows/win32/Controls/trackbar-control-styles) de control de barra de seguimiento en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo cmNCTRL2 de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

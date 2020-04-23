@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: 6249c121f7bcca0675a8138baef0e2cdc9e632d8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ba8c8819b47185315d67d732fc90ab2ffc0ad0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352596"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752932"
 ---
 # <a name="cbitmaprendertarget-class"></a>Clase CBitmapRenderTarget
 
@@ -80,7 +80,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 Adjunta la interfaz de destino de representación existente al objeto
 
-```
+```cpp
 void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```
 
@@ -158,6 +158,6 @@ operator ID2D1BitmapRenderTarget*();
 
 Puntero a una interfaz ID2D1BitmapRenderTarget o NULL si el objeto aún no se ha inicializado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

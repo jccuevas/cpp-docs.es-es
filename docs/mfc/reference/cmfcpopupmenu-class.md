@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 4749b043271518a40024d1da4f97b593ad882a78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74f161d68c3c58574d75ab64a1360fc7f571920d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375374"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751929"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu (clase)
 
@@ -375,7 +375,7 @@ Un parámetro MENUAREA_TYPE puede tener cualquiera de los siguientes valores.
 
 ## <a name="cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFCPopupMenu::CloseMenu
 
-```
+```cpp
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
@@ -426,7 +426,7 @@ virtual BOOL Create(
 *pWndParent*<br/>
 [en] La ventana primaria `CMFCPopupMenu`para el archivo .
 
-*X*<br/>
+*x*<br/>
 [en] Coordenada de pantalla horizontal para la ubicación del menú emergente
 
 *y y*<br/>
@@ -488,7 +488,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 Inicializa el logotipo para un menú emergente.
 
-```
+```cpp
 void EnableMenuLogo(
     int iLogoSize,
     LOGO_LOCATION nLogoLocation = MENU_LOGO_LEFT);
@@ -527,7 +527,7 @@ Si habilita el sonido, el marco de trabajo llama al método [PlaySound](/windows
 
 ## <a name="cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFCPopupMenu::EnableResize
 
-```
+```cpp
 void EnableResize(CSize sizeMinResize);
 ```
 
@@ -539,7 +539,7 @@ void EnableResize(CSize sizeMinResize);
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling
 
-```
+```cpp
 void EnableScrolling(BOOL = TRUE);
 ```
 
@@ -551,7 +551,7 @@ void EnableScrolling(BOOL = TRUE);
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize
 
-```
+```cpp
 void EnableVertResize(int nMinResize);
 ```
 
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Parámetros
 
-*Botón*<br/>
+*botón*<br/>
 [en] Una referencia al elemento de menú que se va a agregar.
 
 *iInsertAt*<br/>
@@ -1089,7 +1089,7 @@ TRUESi un menú emergente está visible; de lo contrario FALSO.
 
 ## <a name="cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFCPopupMenu::MoveTo
 
-```
+```cpp
 void MoveTo(const CPoint& pt);
 ```
 
@@ -1188,7 +1188,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Borra todos los elementos de un menú emergente.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1259,7 +1259,7 @@ Vea [CMFCPopupMenu::GetAnimationType](#getanimationtype) para obtener una lista 
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -1273,7 +1273,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 Establece el comando predeterminado para el menú emergente.
 
-```
+```cpp
 void SetDefaultItem(UINT uiCmd);
 ```
 
@@ -1324,7 +1324,7 @@ Cuando se llama a este método, establece una marca global en la aplicación. Es
 
 Establezca el ancho máximo para el menú emergente.
 
-```
+```cpp
 void SetMaxWidth(int iMaxWidth);
 ```
 
@@ -1339,7 +1339,7 @@ Si el texto asociado a un comando de menú no cabe en el ancho máximo, se trunc
 
 ## <a name="cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
@@ -1351,7 +1351,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement
 
-```
+```cpp
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -1363,7 +1363,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType
 
-```
+```cpp
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```
 
@@ -1375,7 +1375,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode
 
-```
+```cpp
 void SetQuickMode();
 ```
 
@@ -1385,7 +1385,7 @@ void SetQuickMode();
 
 Establece la alineación del menú para los menús emergentes.
 
-```
+```cpp
 void SetRightAlign(BOOL bRightAlign = TRUE);
 ```
 
@@ -1419,7 +1419,7 @@ Esta es una opción global para todos los menús emergentes de una aplicación. 
 
 Obliga al menú emergente a mostrar todos los comandos.
 
-```
+```cpp
 void ShowAllCommands();
 ```
 
@@ -1429,7 +1429,7 @@ Esta no es una configuración global y solo afecta al menú emergente actual.
 
 ## <a name="cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFCPopupMenu::TriggerResize
 
-```
+```cpp
 void TriggerResize();
 ```
 
@@ -1456,7 +1456,7 @@ Este método es útil cuando los menús emergentes se muestran sobre controles a
 
 Actualiza la sombra para el menú emergente.
 
-```
+```cpp
 void UpdateShadow(LPRECT lprectScreen = NULL);
 ```
 
@@ -1469,7 +1469,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 
 Llame a este método cuando un menú emergente que tiene una sombra se superpone a una imagen animada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

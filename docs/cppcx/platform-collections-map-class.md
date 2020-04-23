@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354444"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032452"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map (Clase)
 
-Representa una *asignación*, que es una colección de pares clave-valor. Implementa [Windows::Foundation::Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) para ayudar con el enlace de [datos](/windows/uwp/data-binding/data-binding-in-depth)XAML.
+Representa una *asignación*, que es una colección de pares clave-valor. Implementa [Windows::Foundation::Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) para ayudar con el enlace de [datos](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -63,7 +63,7 @@ Los tipos permitidos son:
 
 - clase de enumeración pública
 
-El objeto Map es básicamente un contenedor de [std::map](../standard-library/map-class.md). Es una implementación concreta de C++ de los tipos [Windows::Foundation::Collections::IMap<\<Windows::Foundation::Collections::IKeyValuePair K,V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) que se pasan a través de interfaces públicas de Windows Runtime. Si intentas usar un tipo `Platform::Collections::Map` en un valor devuelto o un parámetro público, se produce el error del compilador C3986. Puede corregir el error cambiando el tipo del parámetro o valor devuelto a [Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+El objeto Map es básicamente un contenedor de [std::map](../standard-library/map-class.md). Es una implementación concreta de C++ de los tipos [Windows::Foundation::Collections::IMap<\<Windows::Foundation::Collections::IKeyValuePair K,V>>](/uwp/api/windows.foundation.collections.imap-2) e [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) que se pasan a través de interfaces públicas de Windows Runtime. Si intentas usar un tipo `Platform::Collections::Map` en un valor devuelto o un parámetro público, se produce el error del compilador C3986. Puede corregir el error cambiando el tipo del parámetro o valor devuelto a [Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2).
 
 Para obtener más información, consulte [Colecciones](../cppcx/collections-c-cx.md).
 
@@ -132,11 +132,11 @@ Un iterador que especifica el primer elemento del mapa.
 
 ### <a name="remarks"></a>Observaciones
 
-Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo, `auto x = myMap->First();`.
+Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo: `auto x = myMap->First();`.
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>Map::GetView Método
 
-Devuelve una vista de solo lectura del mapa actual; es decir, una [clase Platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md), que implementa la interfaz [Windows::Foundation::Collections::IMapView\<K,V>]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Devuelve una vista de solo lectura del mapa actual; es decir, un [Platform::Collections::MapView (clase)](../cppcx/platform-collections-mapview-class.md), que implementa la interfaz [de>Windows::Foundation::Collections::IMapView\<K,V.](/uwp/api/windows.foundation.collections.imapview-2)
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -240,10 +240,10 @@ Tipo que proporciona un objeto de función que puede comparar dos valores de ele
 *M*<br/>
 Una referencia o valor `map Class` [r](../cpp/lvalues-and-rvalues-visual-cpp.md) a que se utiliza para inicializar el mapa actual.
 
-*Primero*<br/>
+*first*<br/>
 El iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto Map actual.
 
-*Última*<br/>
+*last*<br/>
 El iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto Map actual.
 
 ## <a name="mapmapchanged-event"></a><a name="mapchanged"></a>Evento Map::MapChanged
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
 
-Un [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contiene información sobre el objeto que generó el evento y el tipo de cambio que se produjo. Vea también [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) y [CollectionChange (enumeración).](/uwp/api/windows.foundation.collections.collectionchange)
+Un [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) que contiene información sobre el objeto que generó el evento y el tipo de cambio que se produjo. Vea también [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) y [CollectionChange (enumeración).](/uwp/api/windows.foundation.collections.collectionchange)
 
 ## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework
 
@@ -281,7 +281,7 @@ La parte de clave del par clave-valor. El tipo de *clave* es typename *K*.
 
 ## <a name="mapsize-method"></a><a name="size"></a>Mapa::Método de tamaño
 
-Devuelve el número de [elementos windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) en el mapa.
+Devuelve el número de [elementos windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) en el mapa.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -293,7 +293,7 @@ virtual property unsigned int Size;
 
 El número de elementos del objeto Map.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Colecciones (C++/CX)](collections-c-cx.md)<br/>
 [Espacio de nombres de plataforma](platform-namespace-c-cx.md)<br/>

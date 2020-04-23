@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354385"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032127"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector (Clase)
 
-Representa una colección secuencial de objetos a los que se puede tener acceso individualmente por un índice. Implementa [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) para ayudar con el enlace de [datos](/windows/uwp/data-binding/data-binding-in-depth)XAML.
+Representa una colección secuencial de objetos a los que se puede tener acceso individualmente por un índice. Implementa [Windows::Foundation::Collections::IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1) para ayudar con el enlace de [datos](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,9 +61,9 @@ Los tipos permitidos son:
 
 1. clase de enumeración pública
 
-La clase **Vector** es la implementación concreta de C++ de la interfaz [Windows::Foundation::Collections::IVector.](/uwp/api/Windows.Foundation.Collections.IVector_T_)
+La clase **Vector** es la implementación concreta de C++ de la interfaz [Windows::Foundation::Collections::IVector.](/uwp/api/windows.foundation.collections.ivector-1)
 
-Si intenta utilizar un tipo **Vector** en un valor devuelto público o parámetro, se genera el error del compilador C3986. Puedes corregir el error si cambias el tipo del parámetro o del valor devuelto a [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
+Si intenta utilizar un tipo **Vector** en un valor devuelto público o parámetro, se genera el error del compilador C3986. Puedes corregir el error si cambias el tipo del parámetro o del valor devuelto a [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Miembros
 
@@ -96,7 +96,7 @@ Si intenta utilizar un tipo **Vector** en un valor devuelto público o parámetr
 |||
 |-|-|
 |Nombre|Descripción|
-|evento [Windows::Foundation::Collection::VectorChangedEventHandler\<T>- VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produce cuando cambia el objeto Vector.|
+|evento [Windows::Foundation::Collection::VectorChangedEventHandler\<T>- VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Se produce cuando cambia el objeto Vector.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -149,7 +149,7 @@ Un iterador que apunta al primer elemento del objeto Vector.
 
 ### <a name="remarks"></a>Observaciones
 
-Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo, `auto x = myVector->First();`. El iterador conoce la longitud de la colección.
+Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo: `auto x = myVector->First();`. El iterador conoce la longitud de la colección.
 
 Cuando necesite un par de iteradores para pasar a una función STL, utilice las funciones gratuitas [Windows::Foundation::Collections::begin](../cppcx/begin-function.md) y [Windows::Foundation::Collections::end](../cppcx/end-function.md)
 
@@ -186,7 +186,7 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parámetros
 
-*Startindex*<br/>
+*startIndex*<br/>
 Índice basado en cero del principio de los elementos que se van a recuperar.
 
 *dest*<br/>
@@ -372,7 +372,7 @@ Un [std::initializer_list](../standard-library/initializer-list-class.md) de obj
 *N*<br/>
 El número de elementos en una colección de objetos que se utiliza para inicializar el objeto Vector actual.
 
-*Tamaño*<br/>
+*size*<br/>
 El número de elementos del objeto Vector.
 
 *value*<br/>
@@ -384,13 +384,13 @@ Un [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std::vect
 *Ptr*<br/>
 Puntero a un objeto `std::vector` que se usa para inicializar el objeto Vector actual.
 
-*Primero*<br/>
+*first*<br/>
 El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *primero* se pasa por medio de *reenvío perfecto.* Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*Última*<br/>
+*last*<br/>
 El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *último* se pasa por medio de *reenvío perfecto.* Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Colecciones (C++/CX)](collections-c-cx.md)<br/>
 [Espacio de nombres de plataforma](platform-namespace-c-cx.md)<br/>

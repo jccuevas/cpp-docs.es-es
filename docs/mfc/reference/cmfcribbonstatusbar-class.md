@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368820"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754060"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar (clase)
 
@@ -140,7 +140,7 @@ En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase
 
 Agrega un elemento dinámico a la barra de estado de la cinta de opciones.
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -157,7 +157,7 @@ A diferencia de los elementos normales, los elementos dinámicos no son personal
 
 Agrega un nuevo elemento de la cinta de opciones a la barra de estado de la cinta de opciones.
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -179,7 +179,7 @@ void AddElement(
 
 Agrega un elemento de la cinta de opciones al área extendida de la barra de estado de la cinta de opciones.
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -205,7 +205,7 @@ El área extendida está a la derecha del control de barra de estado.
 
 Agrega un separador a la barra de estado de la cinta de opciones.
 
-```
+```cpp
 void AddSeparator();
 ```
 
@@ -477,7 +477,7 @@ virtual void RecalcLayout();
 
 Quita todos los elementos de la barra de estado de la cinta de opciones.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -502,7 +502,7 @@ TRUESi se quita un elemento con el *uiID* especificado. FALSE en caso contrario.
 
 Habilita o deshabilita el modo de información para la barra de estado de la cinta de opciones.
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 
@@ -517,7 +517,7 @@ Utilice este método para colocar la barra de estado en el modo de información.
 
 Cuando lpszInfo es NULL, la barra de estado vuelve al modo normal.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

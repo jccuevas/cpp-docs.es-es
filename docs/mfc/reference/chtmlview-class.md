@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 14f92e51ecf776aad5312335dade7dfcd154c3eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9956537dbbbc34c69f6f6a6da8174ab594418386
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352034"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752663"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (clase)
 
@@ -390,7 +390,7 @@ Apunta a una cadena de caracteres terminada en null que representa el nombre de 
 Especifica los atributos de estilo de ventana. De forma predeterminada, se establecen los estilos WS_VISIBLE y WS_CHILD de Windows.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifica el tamaño y la posición de la ventana. El valor *rectDefault* permite a Windows especificar el tamaño y la posición de la nueva ventana.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifica el tamaño y la posición de la ventana. El valor *rectDefault* permite a Windows especificar el tamaño y la posición de la nueva ventana.
 
 *pParentWnd*<br/>
 Un puntero a la ventana primaria del control.
@@ -469,7 +469,7 @@ Un valor HRESULT estándar. Para obtener una lista completa de los valores posib
 
 Llame a esta función miembro para ejecutar un comando en el WebBrowser o Internet Explorer.
 
-```
+```cpp
 void ExecWB(
     OLECMDID cmdID,
     OLECMDEXECOPT cmdexecopt,
@@ -960,7 +960,7 @@ El ancho actual de la ventana, en píxeles.
 
 Navega hacia atrás un elemento de la lista de historial.
 
-```
+```cpp
 void GoBack();
 ```
 
@@ -972,7 +972,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Navega hacia delante un elemento de la lista de historial.
 
-```
+```cpp
 void GoForward();
 ```
 
@@ -980,7 +980,7 @@ void GoForward();
 
 Navega a la página principal o de inicio actual especificada en el cuadro de diálogo Opciones de Internet de Internet Explorer o en el cuadro de diálogo Propiedades de Internet, al que se accede desde el Panel de control.
 
-```
+```cpp
 void GoHome();
 ```
 
@@ -992,7 +992,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Navega a la página de búsqueda actual, como se especifica en el cuadro de diálogo Opciones de Internet Explorer o en el cuadro de diálogo Propiedades de Internet, al que se accede desde el Panel de control.
 
-```
+```cpp
 void GoSearch();
 ```
 
@@ -1029,7 +1029,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para navegar al recurso identificado por una dirección URL.
 
-```
+```cpp
 void Navigate(
     LPCTSTR URL,
     DWORD dwFlags = 0,
@@ -1067,7 +1067,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para navegar al recurso identificado por una dirección URL o al archivo identificado por una ruta de acceso completa.
 
-```
+```cpp
 void Navigate2(
     LPITEMIDLIST pIDL,
     DWORD dwFlags = 0,
@@ -1825,7 +1825,7 @@ Esto permite que la ventana host del control de objetos se comporte de la misma 
 
 Llame a esta función miembro para establecer la propiedad asociada a un objeto determinado.
 
-```
+```cpp
 void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
@@ -1935,7 +1935,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Vuelve a cargar la dirección URL o el archivo que el explorador web está mostrando actualmente.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -1949,7 +1949,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Vuelve a cargar el archivo que Internet Explorer está mostrando actualmente.
 
-```
+```cpp
 void Refresh2(int nLevel);
 ```
 
@@ -1968,7 +1968,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para mostrar u ocultar la barra de direcciones del objeto Internet Explorer.
 
-```
+```cpp
 void SetAddressBar(BOOL bNewValue);
 ```
 
@@ -1985,7 +1985,7 @@ Se aplica a Internet Explorer. Si usa esta llamada con un control WebBrowser, no
 
 Llame a esta función miembro para establecer Internet Explorer en modo de pantalla completa o normal de ventana.
 
-```
+```cpp
 void SetFullScreen(BOOL bNewValue);
 ```
 
@@ -2004,7 +2004,7 @@ Se aplica a Internet Explorer. Si usa esta llamada con un control WebBrowser, no
 
 Llame a esta función miembro para establecer el alto de la ventana principal de Internet Explorer.
 
-```
+```cpp
 void SetHeight(long nNewValue);
 ```
 
@@ -2021,7 +2021,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Establece la posición horizontal de la ventana principal de Internet Explorer.
 
-```
+```cpp
 void SetLeft(long nNewValue);
 ```
 
@@ -2034,7 +2034,7 @@ Coordenada de pantalla del borde izquierdo de la ventana principal.
 
 Llame a esta función miembro para mostrar u ocultar la barra de menús de Internet Explorer.
 
-```
+```cpp
 void SetMenuBar(BOOL bNewValue);
 ```
 
@@ -2051,7 +2051,7 @@ Se aplica a Internet Explorer. Si usa esta llamada con un control WebBrowser, no
 
 Llame a esta función miembro para establecer un valor que indica si el WebBrowser control está operando actualmente en modo sin conexión.
 
-```
+```cpp
 void SetOffline(BOOL bNewValue);
 ```
 
@@ -2070,7 +2070,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para establecer un valor que indica si el WebBrowser control está registrado como un explorador de nivel superior para la resolución de nombres de destino.
 
-```
+```cpp
 void SetRegisterAsBrowser(BOOL bNewValue);
 ```
 
@@ -2089,7 +2089,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para establecer un valor que indica si el WebBrowser control está registrado como un destino de colocación para la navegación.
 
-```
+```cpp
 void SetRegisterAsDropTarget(BOOL bNewValue);
 ```
 
@@ -2106,7 +2106,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para establecer un valor que indica si se puede mostrar algún cuadro de diálogo.
 
-```
+```cpp
 void SetSilent(BOOL bNewValue);
 ```
 
@@ -2123,7 +2123,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para mostrar la barra de estado.
 
-```
+```cpp
 void SetStatusBar(BOOL bNewValue);
 ```
 
@@ -2140,7 +2140,7 @@ Se aplica a Internet Explorer. Si usa esta llamada con un control WebBrowser, no
 
 Llame a esta función miembro para establecer un valor que indica si el WebBrowser control está en modo de teatro.
 
-```
+```cpp
 void SetTheaterMode(BOOL bNewValue);
 ```
 
@@ -2159,7 +2159,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para mostrar u ocultar la barra de herramientas de Internet Explorer.
 
-```
+```cpp
 void SetToolBar(int nNewValue);
 ```
 
@@ -2176,7 +2176,7 @@ Se aplica a Internet Explorer. Si usa esta llamada con un control WebBrowser, no
 
 Llame a esta función miembro para establecer la distancia entre el borde superior interno del control WebBrowser y el borde superior de su contenedor
 
-```
+```cpp
 void SetTop(long nNewValue);
 ```
 
@@ -2193,7 +2193,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Llame a esta función miembro para establecer el estado de visibilidad de la WebBrowser control.
 
-```
+```cpp
 void SetVisible(BOOL bNewValue);
 ```
 
@@ -2210,7 +2210,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 Establece el ancho de la ventana principal de Internet Explorer.
 
-```
+```cpp
 void SetWidth(long nNewValue);
 ```
 
@@ -2223,7 +2223,7 @@ El ancho, en píxeles, de la ventana principal de Internet Explorer.
 
 Llame a esta función miembro para cancelar cualquier operación de navegación o descarga pendiente y detener los elementos de página dinámica, como sonidos de fondo y animaciones.
 
-```
+```cpp
 void Stop();
 ```
 
@@ -2231,7 +2231,7 @@ void Stop();
 
 Se aplica a Internet Explorer y WebBrowser.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo MFCIE de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Clase CFormView](../../mfc/reference/cformview-class.md)<br/>

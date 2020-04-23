@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369471"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754823"
 ---
 # <a name="ccomboboxex-class"></a>Clase CComboBoxEx
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Especifica la combinación de estilos de cuadro combinado aplicados al cuadro combinado. Consulte **Comentarios** a continuación para obtener más información sobre los estilos.
 
 *Rect*<br/>
-Una referencia a un [Objeto CRect](../../atl-mfc-shared/reference/crect-class.md) o una estructura [RECT,](/previous-versions/dd162897\(v=vs.85\)) que es la posición y el tamaño del cuadro combinado.
+Una referencia a un [Objeto CRect](../../atl-mfc-shared/reference/crect-class.md) o una estructura [RECT,](/windows/win32/api/windef/ns-windef-rect) que es la posición y el tamaño del cuadro combinado.
 
 *pParentWnd*<br/>
 Puntero a un objeto [CWnd](../../mfc/reference/cwnd-class.md) que es la ventana `CDialog`primaria del cuadro combinado (normalmente un archivo ). No debe ser NULL.
@@ -210,7 +210,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 El estilo del control de cuadro combinado. Consulte [Crear](#create) para obtener una lista de estilos.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -468,7 +468,7 @@ No se utiliza el valor devuelto.
 
 Esta función miembro emula la funcionalidad del [mensaje de CBEM_SETWINDOWTHEME,](/windows/win32/Controls/cbem-setwindowtheme) como se describe en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo MFCIE de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CComboBox (clase)](../../mfc/reference/ccombobox-class.md)<br/>

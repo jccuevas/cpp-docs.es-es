@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: b34c441ac63b023ae6272a1646151aad4be1bfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 717e560035d42957c16168097577d0c8c589e3c7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375632"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753352"
 ---
 # <a name="cdialogex-class"></a>CDialogEx (clase)
 
@@ -105,7 +105,7 @@ CDialogEx(
 
 Establece el color de fondo del cuadro de diálogo.
 
-```
+```cpp
 void SetBackgroundColor(
     COLORREF color,
     BOOL bRepaint=TRUE);
@@ -113,7 +113,7 @@ void SetBackgroundColor(
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Un valor de color RGB.
 
 *bRepaint*<br/>
@@ -125,7 +125,7 @@ void SetBackgroundColor(
 
 Establece la imagen de fondo del cuadro de diálogo.
 
-```
+```cpp
 void SetBackgroundImage(
     HBITMAP hBitmap,
     BackgroundLocation location=BACKGR_TILE,
@@ -163,7 +163,7 @@ En la segunda sintaxis de sobrecarga de método, TRUE si el método es correcto;
 
 La imagen que especifique no se estira para ajustarse al área de cliente del cuadro de diálogo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377050"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755071"
 ---
 # <a name="canimationvariable-class"></a>Clase CAnimationVariable
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 Agrega una transición.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ Se llama a este método para agregar una transición a la lista interna de trans
 
 Agrega transiciones de la lista interna al guión gráfico.
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ Construye un objeto de variable de animación y establece su valor predeterminad
 
 Borra las transiciones.
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ El marco de trabajo llama a este método cuando necesita crear transiciones que 
 
 Habilita o deshabilita el evento IntegerValueChanged.
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ Cuando ValueChanged evento está habilitado, el marco de trabajo llama al métod
 
 Habilita o deshabilita el ValueChanged eventos.
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 Establece el valor predeterminado y libera IUIAnimationVariable objeto COM.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ Utilice este método para restablecer el valor predeterminado. Este método libe
 
 Establece la relación entre una variable de animación y un objeto de animación.
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 
@@ -444,6 +444,6 @@ Puntero a un objeto de animación que contiene esta variable.
 
 Este método se llama internamente para establecer una relación uno a uno entre una variable de animación y un objeto de animación que lo encapsula.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

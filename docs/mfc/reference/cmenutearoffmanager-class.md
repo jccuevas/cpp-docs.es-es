@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: f41937179dc055213f3af093e107bcb08c8a8fcc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6aef644cb7364184df91a6e8caee18cac65af4cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369962"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751808"
 ---
 # <a name="cmenutearoffmanager-class"></a>Clase CMenuTearOffManager
 
@@ -86,7 +86,7 @@ En el ejemplo siguiente se muestra `CMenuTearOffManager` cómo construir `CWinAp
 
 ## <a name="cmenutearoffmanagerbuild"></a><a name="build"></a>CMenuTearOffManager::Build
 
-```
+```cpp
 void Build(
     UINT uiTearOffBarID,
     CString& strText);
@@ -182,7 +182,7 @@ UINT Parse(CString& str);
 
 ## <a name="cmenutearoffmanagerreset"></a><a name="reset"></a>CMenuTearOffManager::Reset
 
-```
+```cpp
 void Reset(HMENU hmenu);
 ```
 
@@ -194,7 +194,7 @@ void Reset(HMENU hmenu);
 
 ## <a name="cmenutearoffmanagersetinuse"></a><a name="setinuse"></a>CMenuTearOffManager::SetInUse
 
-```
+```cpp
 void SetInUse(
     UINT uiCmdId,
     BOOL bUse = TRUE);
@@ -210,7 +210,7 @@ void SetInUse(
 
 ## <a name="cmenutearoffmanagersetuptearoffmenus"></a><a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus
 
-```
+```cpp
 void SetupTearOffMenus(HMENU hMenu);
 ```
 
@@ -220,7 +220,7 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

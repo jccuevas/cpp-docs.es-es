@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373988"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753220"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -299,7 +299,7 @@ Para obtener más información, consulte [EM_CHARFROMPOS](/windows/win32/Control
 
 Llame a esta función para eliminar (borrar) la selección actual (si existe) en el control de edición.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ Para obtener más información, consulte [WM_CLEAR](/windows/win32/dataxchg/wm-c
 
 Llame a esta función para coy la selección actual (si existe) en el control de edición en el Portapapeles en formato CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ Aplique los siguientes [estilos](styles-used-by-mfc.md#window-styles) de ventana
 
 Llame a esta función para eliminar (cortar) la selección actual (si existe) en el control de edición y copiar el texto eliminado en el Portapapeles en formato CF_TEXT.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ Para obtener más información, consulte [WM_CUT](/windows/win32/dataxchg/wm-cut
 
 Llame a esta función para restablecer (borrar) la marca de deshacer de un control de edición.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ Este método envía el [mensaje EM_GETPASSWORDCHAR,](/windows/win32/Controls/em-
 
 Llame a esta función para obtener el rectángulo de formato de un control de edición.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,7 +793,7 @@ Esta función envía el [mensaje EM_HIDEBALLOONTIP,](/windows/win32/Controls/em-
 
 Llame a esta función para limitar la longitud del texto que el usuario puede escribir en un control de edición.
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
@@ -910,7 +910,7 @@ Este método es compatible con el [mensaje de EM_LINELENGTH,](/windows/win32/Con
 
 Llame a esta función para desplazar el texto de un control de edición de varias líneas.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ Para obtener más información, consulte [EM_LINESCROLL](/windows/win32/Controls
 
 Llame a esta función para insertar `CEdit` los datos del Portapapeles en el punto de inserción.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ Para obtener más información, consulte [EM_POSFROMCHAR](/windows/win32/Control
 
 Llame a esta función para reemplazar la selección actual en un control de edición con el texto especificado por *lpszNewText*.
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ En el ejemplo siguiente se muestra el [CEdit::SetCueBanner](#setcuebanner) méto
 
 Llame a esta función para establecer el identificador en la memoria local que usará un control de edición de varias líneas.
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ Para obtener más información, vea [EM_SETHANDLE](/windows/win32/Controls/em-se
 
 Resalta un rango de texto que se muestra en el control de edición actual.
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ Este método envía el [mensaje EM_SETHILITE,](/windows/win32/Controls/em-sethil
 
 Llame a esta función miembro `CEdit` para establecer el límite de texto para este objeto.
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ Para obtener más información, consulte [EM_SETLIMITTEXT](/windows/win32/Contro
 
 Llame a este método para establecer los márgenes izquierdo y derecho de este control de edición.
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ Para obtener más información, consulte [EM_SETMARGINS](/windows/win32/Controls
 
 Llame a esta función para establecer o borrar el indicador modificado para un control de edición.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ Para obtener más información, consulte [EM_SETMODIFY](/windows/win32/Controls/
 
 Llame a esta función para establecer o quitar un carácter de contraseña que se muestra en un control de edición cuando el usuario escribe texto.
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ Para obtener más información, consulte [EM_SETREADONLY](/windows/win32/Control
 
 Llame a esta función para establecer las dimensiones de un rectángulo mediante las coordenadas especificadas.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ Para obtener más información, consulte [EM_SETRECT](/windows/win32/Controls/em
 
 Llame a esta función para establecer el rectángulo de formato de un control de edición de varias líneas.
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ Para obtener más información, consulte [EM_SETRECTNP](/windows/win32/Controls/
 
 Llame a esta función para seleccionar un intervalo de caracteres en un control de edición.
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ Para obtener más información, consulte [EM_SETSEL](/windows/win32/Controls/em-
 
 Llame a esta función para establecer las tabulaciones en un control de edición de varias líneas.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

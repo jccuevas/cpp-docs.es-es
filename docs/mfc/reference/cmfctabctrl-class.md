@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367359"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753451"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -256,7 +256,7 @@ En el ejemplo siguiente se muestra `CMFCTabCtrl` cómo utilizar `CMFCTabCtrl` va
 
 Muestra la ficha especificada del control de ficha actual y establece el foco en esa ficha.
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ Siempre TRUE.
 
 Especifica si el marco de trabajo es cambiar el tamaño del área de cliente de todas las ventanas de control de ficha cuando cambia un elemento de interfaz de usuario del control de ficha.
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parámetros
 
-*Estilo*<br/>
+*style*<br/>
 [en] El estilo del control de ficha. Para obtener más información, vea la sección Comentarios.
 
 *Rect*<br/>
@@ -381,7 +381,7 @@ Se llama a este método cuando se cambia la etiqueta de una pestaña. Este méto
 
 Muestra u oculta un botón Cerrar ( **X**) en la ficha activa.
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 Alterna entre una interfaz de usuario que utiliza dos botones para desplazarse por las pestañas de la ventana y una interfaz que muestra un menú emergente de ventanas con pestañas.
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ Utilice este método para tener acceso a la barra de desplazamiento incrustada d
 
 Recupera el rectángulo delimitador del área de etiqueta de ficha en la parte superior o inferior del control de ficha.
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 Recupera el límite del área de cliente del control de ficha actual.
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 Oculta la barra de desplazamiento horizontal, si existe, en la ventana activa.
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ Utilice este método para evitar que el control de ficha parátesis cuando el us
 
 Especifica si el marco de trabajo muestra ventanas de control de ficha inactivas.
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 Habilita o deshabilita el dibujo del área de ficha si no hay fichas visibles.
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parámetros
 
-*Estilo*<br/>
+*style*<br/>
 [en] Uno de los valores de enumeración que especifica la apariencia del control de ficha. Para obtener más información, consulte la tabla en Comentarios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 Establece la ficha actual de un control de ficha como la ficha activa en un grupo de fichas de interfaz de documento múltiple.
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ El `SetActiveTab` método llama automáticamente a la [CMFCTabCtrl::HideActiveWi
 
 Habilita o deshabilita el uso de una fuente en negrita en las pestañas activas.
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 Especifica si un rectángulo de marco se dibuja alrededor de una barra incrustada.
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 Especifica si se debe dibujar un marco plano o 3D alrededor del área de ficha.
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ Utilice el [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.m
 
 Especifica cómo se puede cambiar el tamaño del control de ficha actual y, a continuación, vuelve a mostrar el control.
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ El parámetro *resizeMode* puede ser `ResizeMode` uno de los siguientes valores 
 
 Especifica el ancho máximo de tabulación en una ventana con fichas.
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ Utilice este método para limitar el ancho de cada pestaña en una ventana con f
 
 Termina la operación de cambio de tamaño actual en el control de ficha.
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 
@@ -1135,7 +1135,7 @@ TRUESi este método se realiza correctamente; de lo contrario, FALSE.
 
 Este método solo afecta a un control de ficha que muestra fichas planas. La barra de desplazamiento influye en todas las pestañas al mismo tiempo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

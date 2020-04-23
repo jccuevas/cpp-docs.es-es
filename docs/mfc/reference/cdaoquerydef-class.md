@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368948"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754700"
 ---
 # <a name="cdaoquerydef-class"></a>Clase CDaoQueryDef
 
@@ -410,7 +410,7 @@ El número de campos definidos en la consulta.
 
 Llame a esta función miembro para obtener varios tipos de información sobre un campo definido en la definición de consulta.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ Para obtener información relacionada, vea los temas "Objeto de parámetro", "Co
 
 Llame a esta función miembro para obtener información sobre un parámetro definido en la definición de consulta.
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ Una vez que la definición de consulta está abierta, puede llamar a su [Execute
 
 Llame a esta función miembro para establecer la cadena de conexión del objeto querydef.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ Para obtener más información acerca de la estructura de la cadena de conexión
 
 Llame a esta función miembro si desea cambiar el nombre de una definición de consulta que no es temporal.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ Los nombres de definición de consulta son nombres únicos definidos por el usua
 
 Llame a esta función miembro para establecer el límite de tiempo antes de que se agota el tiempo de espera de una consulta en un origen de datos ODBC.
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ Especifique el valor que `COleVariant` se va a establecer como un objeto. Para o
 
 Llame a esta función miembro como parte del proceso de configuración de una consulta de paso a través de SQL a una base de datos externa.
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ En tal caso, debe crear la definición de `CDaoQueryDef` consulta y establecer s
 
 Llame a esta función miembro para establecer la instrucción SQL que ejecuta querydef.
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 
@@ -835,7 +835,7 @@ Cadena que contiene una instrucción SQL completa, adecuada para su ejecución. 
 
 Un uso `SetSQL` típico de es la configuración de un objeto querydef para su uso en una consulta de paso a través de SQL. (Para ver la sintaxis de las consultas de paso a través de SQL en el DBMS de destino, consulte la documentación del DBMS.)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

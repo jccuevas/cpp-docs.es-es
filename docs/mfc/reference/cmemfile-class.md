@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: 46937795499fd9f697f9778c263a1ee011777c0d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1bd88ad17bdb047de4c344ab96f3d9aecbe23c31
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370019"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752637"
 ---
 # <a name="cmemfile-class"></a>Clase CMemFile
 
@@ -121,7 +121,7 @@ La implementación predeterminada utiliza la función [malloc](../../c-runtime-l
 
 Llame a esta función para `CMemFile`adjuntar un bloque de memoria a .
 
-```
+```cpp
 void Attach(
     BYTE* lpBuffer,
     UINT nBufferSize,
@@ -288,7 +288,7 @@ Un puntero al bloque de memoria que se redondeó (y posiblemente se movió) o NU
 
 Invalide esta función para implementar la reasignación de memoria personalizada. Si invalida esta función, probablemente también querrá invalidar [Alloc](#alloc) y [Free.](#free)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CFile (clase)](../../mfc/reference/cfile-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

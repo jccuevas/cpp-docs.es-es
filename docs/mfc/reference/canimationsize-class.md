@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: 80a90dfa37bc1d2c3c84e6451ae23af7ded767c2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f4a5b8b52d8bd37d1ed83618e7451dd85f84c32
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369699"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755119"
 ---
 # <a name="canimationsize-class"></a>Clase CAnimationSize
 
@@ -102,7 +102,7 @@ La clase CAnimationSize encapsula dos objetos CAnimationVariable y puede represe
 
 Agrega transiciones para Anchura y Altura.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pCXTransition,
     CBaseTransition* pCYTransition);
@@ -272,7 +272,7 @@ Esta función llama internamente a GetValue. Si se produce un error en GetValue 
 
 Asigna szSrc a CAnimationSize.
 
-```
+```cpp
 void operator=(const CSize& szSrc);
 ```
 
@@ -289,7 +289,7 @@ Asigna szSrc a CAnimationSize. Se recomienda hacerlo antes del inicio de la anim
 
 Establece el valor predeterminado.
 
-```
+```cpp
 void SetDefaultValue(const CSize& szDefault);
 ```
 
@@ -302,6 +302,6 @@ Especifica el nuevo tamaño predeterminado.
 
 Utilice esta función para establecer un valor predeterminado en el objeto de animación. Este método asigna valores predeterminados a Width y Height de tamaño de animación. También vuelve a crear objetos COM subyacentes si se han creado. Si suscribió este objeto de animación a eventos (ValueChanged o IntegerValueChanged), debe volver a habilitar estos eventos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

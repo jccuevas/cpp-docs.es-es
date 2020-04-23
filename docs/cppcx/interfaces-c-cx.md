@@ -2,12 +2,12 @@
 title: Interfaces (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366037"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032361"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 
@@ -63,7 +63,7 @@ Cuando una clase ref implementa varias interfaces y esas interfaces tienen méto
 
 ## <a name="generic-interfaces"></a>Interfaces genéricas
 
-En C++/CX, `generic` la palabra clave se utiliza para representar un tipo parametrizado de Windows En tiempo de ejecución. Un tipo parametrizado se emite en metadatos y puede ser utilizado por código escrito en cualquier lenguaje que admita parámetros de tipo. Windows Runtime define algunas interfaces genéricas (por ejemplo, [Windows::Foundation::Collections::IVector\<T>), ](/uwp/api/Windows.Foundation.Collections.IVector_T_)pero no admite la creación de interfaces genéricas públicas definidas por el usuario en C++/CX. Sin embargo, puedes crear interfaces genéricas privadas.
+En C++/CX, `generic` la palabra clave se utiliza para representar un tipo parametrizado de Windows En tiempo de ejecución. Un tipo parametrizado se emite en metadatos y puede ser utilizado por código escrito en cualquier lenguaje que admita parámetros de tipo. Windows Runtime define algunas interfaces genéricas (por ejemplo, [Windows::Foundation::Collections::IVector\<T>), ](/uwp/api/windows.foundation.collections.ivector-1)pero no admite la creación de interfaces genéricas públicas definidas por el usuario en C++/CX. Sin embargo, puedes crear interfaces genéricas privadas.
 
 A continuación se muestra cómo se pueden usar los tipos de Windows Runtime para crear una interfaz genérica:
 
@@ -95,7 +95,7 @@ A continuación se muestra cómo se pueden usar los tipos de Windows Runtime par
 
 - Las clases ref con plantillas deben ser privadas. Pueden implementar interfaces genéricas y pueden pasar el parámetro de plantilla *T* al argumento genérico *T*. Cada creación de instancias de una clase ref con plantilla es en sí misma una clase ref.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
 [Referencia del lenguaje C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

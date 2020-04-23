@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 21d05fd8e805467f1a7a77d20c81d5ba0401455e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367732"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752564"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton (Clase)
 
@@ -147,7 +147,7 @@ CMFCColorButton();
 
 Active o desactive el botón "automático" de un control de selector de color y establezca el color automático (predeterminado).
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -171,7 +171,7 @@ void EnableAutomaticButton(
 
 Active o desactive el botón "otros", que aparece debajo de los botones de color normales.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -335,7 +335,7 @@ virtual void OnShowColorPopup();
 
 Inicializa el `m_pPalette` miembro de datos protegidos en la paleta especificada o en la paleta del sistema predeterminada.
 
-```
+```cpp
 void RebuildPalette(CPalette* pPal);
 ```
 
@@ -349,13 +349,13 @@ void RebuildPalette(CPalette* pPal);
 
 Especifica el color del botón.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Un valor RGB.
 
 ### <a name="remarks"></a>Observaciones
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Valor RGB del color.
 
 *strName*<br/>
@@ -386,7 +386,7 @@ La lista de nombres de color es global por aplicación. Por consiguiente, este m
 
 Define el número de columnas que se muestran en la tabla de colores que se presenta al usuario durante el proceso de selección de color del usuario.
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -403,7 +403,7 @@ El usuario puede seleccionar un color de una barra de color espopup que muestra 
 
 Especifica un conjunto de colores y el nombre del conjunto. El conjunto de colores se muestra mediante un [CMFCColorBar clase](../../mfc/reference/cmfccolorbar-class.md) objeto.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -425,7 +425,7 @@ Un `CMFCColorButton` objeto mantiene una lista de valores RGB que se transfieren
 
 Especifica los colores estándar que se mostrarán en la barra de colores emergente.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -465,14 +465,14 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Color seleccionado por el usuario.
 
 ### <a name="remarks"></a>Observaciones
 
 La `UpdateColor` función cambia el color del botón seleccionado actualmente y notifica a su elemento primario mediante el envío de un mensaje de WM_COMMAND con una notificación estándar BN_CLICKED. Utilice el [CMFCColorButton::GetColor](#getcolor) método para recuperar el color seleccionado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20d4586c1ae45e5f3f56c0adbb1ecb1757084fd7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352079"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752322"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView (clase)
 
@@ -106,7 +106,7 @@ Apunta a una cadena de caracteres terminada en null que representa el nombre de 
 Especifica los atributos de estilo de ventana. De forma predeterminada, se establecen los estilos WS_VISIBLE y WS_CHILD de Windows.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que especifica el tamaño y la posición de la ventana. El valor *rectDefault* permite a Windows especificar el tamaño y la posición de la nueva ventana.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que especifica el tamaño y la posición de la ventana. El valor *rectDefault* permite a Windows especificar el tamaño y la posición de la nueva ventana.
 
 *pParentWnd*<br/>
 Un puntero a la ventana primaria del control.
@@ -142,7 +142,7 @@ Recupera el nombre del documento predeterminado para esta vista.
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

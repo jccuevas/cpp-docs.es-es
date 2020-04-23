@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcdd07efb46c97d27a9f1349c297688b5705f176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369733"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755143"
 ---
 # <a name="canimationpoint-class"></a>Clase CAnimationPoint
 
@@ -102,7 +102,7 @@ La clase CAnimationPoint encapsula dos objetos CAnimationVariable y puede repres
 
 Añade transiciones para las coordenadas X e Y.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pXTransition,
     CBaseTransition* pYTransition);
@@ -270,7 +270,7 @@ Esta función llama internamente a GetValue. Si se produce un error en GetValue 
 
 Asigna ptSrc a CAnimationPoint.
 
-```
+```cpp
 void operator=(const CPoint& ptSrc);
 ```
 
@@ -287,7 +287,7 @@ Asigna ptSrc a CAnimationPoint. Se recomienda hacerlo antes del inicio de la ani
 
 Establece el valor predeterminado.
 
-```
+```cpp
 void SetDefaultValue(const POINT& ptDefault);
 ```
 
@@ -300,6 +300,6 @@ Especifica el valor de punto predeterminado.
 
 Utilice esta función para establecer un valor predeterminado en el objeto de animación. Este método asigna valores predeterminados a las coordenadas X e Y del punto de animación. También vuelve a crear objetos COM subyacentes si se han creado. Si suscribió este objeto de animación a eventos (ValueChanged o IntegerValueChanged), debe volver a habilitar estos eventos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

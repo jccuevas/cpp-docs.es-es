@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: f28ba975b060de149edaa5e3b93eac61d4cd6703
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375313"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752484"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement Clase
 
@@ -1893,7 +1893,7 @@ Este método notifica a la ventana primaria de la barra de la cinta de opciones 
 
 Cierra el menú emergente del elemento de la cinta de opciones y envía un mensaje de cierre al menú primario.
 
-```
+```cpp
 void PostMenuCommand(UINT uiCmdId);
 ```
 
@@ -1972,7 +1972,7 @@ En la tabla siguiente se resume la lógica de este método.
 
 Asocia un elemento de datos con el elemento de la cinta de opciones.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1985,7 +1985,7 @@ void SetData(DWORD_PTR dwData);
 
 Establece el elemento de la cinta de opciones para que aparezca como un comando emergente.
 
-```
+```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```
 
@@ -2129,7 +2129,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 Establece las dimensiones del rectángulo de visualización para el elemento de la cinta de opciones.
 
-```
+```cpp
 void SetRect(CRect rect);
 ```
 
@@ -2200,7 +2200,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 
 Establece la visibilidad del elemento de la cinta de opciones.
 
-```
+```cpp
 void SetVisible(BOOL bIsVisible);
 ```
 
@@ -2273,7 +2273,7 @@ TRUESi el elemento de la cinta de opciones está enfocado; de lo contrario FALSO
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

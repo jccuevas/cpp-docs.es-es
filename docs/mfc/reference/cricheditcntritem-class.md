@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: b8158105d09d5cfc7c25512567a98121b194a82a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b566fe7f1c0667dbcdb4976f79cd2e1597f48f6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368287"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752771"
 ---
 # <a name="cricheditcntritem-class"></a>Clase CRichEditCntrItem
 
@@ -95,7 +95,7 @@ Para obtener más información, consulte la estructura [REOBJECT](/windows/win32
 
 Llame a esta función para sincronizar el `CRichEditCntrltem` aspecto del dispositivo, [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), de esto con el especificado por *reo*.
 
-```
+```cpp
 void SyncToRichEditObject(REOBJECT& reo);
 ```
 
@@ -108,7 +108,7 @@ Referencia a una estructura [REOBJECT](/windows/win32/api/richole/ns-richole-reo
 
 Para obtener más información, consulte [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Clase COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

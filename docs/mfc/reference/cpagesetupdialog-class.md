@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 218ed24ccf56854622e20936299fcc2e8a3d0fa9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3664149ef0d7476b460ef06cddaf2b8145ade701
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374787"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753687"
 ---
 # <a name="cpagesetupdialog-class"></a>Clase CPageSetupDialog
 
@@ -253,7 +253,7 @@ Utilice un puntero `CString` al `GetDriverName` objeto devuelto `lpszDriverName`
 
 Llame a esta función después de una llamada para `DoModal` recuperar los márgenes del controlador del dispositivo de impresora.
 
-```
+```cpp
 void GetMargins(
     LPRECT lpRectMargins,
     LPRECT lpRectMinMargins) const;
@@ -403,7 +403,7 @@ Valor distinto de cero si se controla; de lo contrario 0.
 
 Reemplace esta función para personalizar el dibujo de la imagen. Si invalida esta función y devuelve TRUE, debe dibujar toda la imagen. Si invalida esta función y devuelve FALSE, el marco de trabajo dibuja toda la imagen predeterminada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Clase CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>

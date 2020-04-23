@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367777"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754871"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton (Clase)
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 Especifica si se debe mostrar el texto completo de una información sobre herramientas en una ventana de información sobre herramientas grande o una versión truncada del texto en una pequeña ventana de información sobre herramientas.
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 Especifica si la fuente de texto del botón es la misma que la fuente del menú de la aplicación.
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ Invalide este método para usar su propio código para recuperar la fuente.
 
 Establece un botón en modo de repetición automática.
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ Este método hace que el botón envíe constantemente mensajes de WM_COMMAND a l
 
 Establece la imagen de un botón activado.
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 Establece el color de fondo del texto del botón.
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ Utilice este método para definir un nuevo color de relleno para el fondo del bo
 
 Establece la imagen de un botón.
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ En el ejemplo siguiente se muestra `SetImage` cómo utilizar `CMFCButton` varias
 
 Establece la imagen del cursor.
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ En el ejemplo siguiente se `SetMouseCursor` muestra `CMFCButton` cómo utilizar 
 
 Establece el cursor en la imagen de una mano.
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ Utilice este método para asociar la imagen del cursor de una mano con el botón
 
 Utiliza `CMenuImages` un objeto para establecer la imagen del botón.
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -936,7 +936,7 @@ void SetStdImage(
 
 Establece el color del texto del botón para un botón que no está seleccionado.
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 Establece el color del texto del botón para un botón seleccionado.
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 Asocia una información sobre herramientas con un botón.
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 
@@ -998,7 +998,7 @@ Objeto `CSize` que contiene el nuevo tamaño del botón.
 
 De forma predeterminada, este método calcula un nuevo tamaño que incluye un margen horizontal de 10 píxeles y un margen vertical de 5 píxeles.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

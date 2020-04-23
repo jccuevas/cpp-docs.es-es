@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375711"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753430"
 ---
 # <a name="cdc-class"></a>Clase CDC
 
@@ -835,7 +835,7 @@ BOOL AngleArc(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del centro del círculo.
 
 *y y*<br/>
@@ -1059,7 +1059,7 @@ BOOL BitBlt(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo de destino.
 
 *y y*<br/>
@@ -1354,7 +1354,7 @@ Un contexto de dispositivo Windows.
 
 Utilice esta función cuando asigne tamaños HIMETRIC a OLE, convirtiendo píxeles a HIMETRIC.
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ Si el modo de asignación del objeto de contexto de dispositivo es MM_LOENGLISH,
 
 Convierte unidades de dispositivo en unidades lógicas.
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ La función asigna las coordenadas de cada punto, o dimensión de un tamaño, de
 
 Llame a esta función miembro para dibujar un rectángulo tridimensional.
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1428,7 +1428,7 @@ Especifica el color de los lados superior e izquierdo del rectángulo tridimensi
 *clrBottomRight*<br/>
 Especifica el color de los lados inferior y derecho del rectángulo tridimensional.
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo tridimensional.
 
 *y y*<br/>
@@ -1452,7 +1452,7 @@ El rectángulo se dibujará con los lados superior e izquierdo en el color espec
 
 Llame a esta función miembro repetidamente para volver a dibujar un rectángulo de arrastre.
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1467,7 +1467,7 @@ void DrawDragRect(
 *lpRect*<br/>
 Apunta a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) o a un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que especifica las coordenadas lógicas de un rectángulo, en este caso, la posición final del rectángulo que se va a dibujar.
 
-*Tamaño*<br/>
+*size*<br/>
 Especifica el desplazamiento desde la esquina superior izquierda del borde exterior hasta la esquina superior izquierda del borde interior (es decir, el grosor del borde) de un rectángulo.
 
 *lpRectLast*<br/>
@@ -1548,7 +1548,7 @@ Cuando una `DrawEscape`aplicación llama a , los datos identificados por *nInput
 
 Dibuja un rectángulo en el estilo utilizado para indicar que el rectángulo tiene el foco.
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -1665,7 +1665,7 @@ BOOL DrawIcon(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del icono.
 
 *y y*<br/>
@@ -1767,7 +1767,7 @@ BOOL DrawState(
 *Pt*<br/>
 Especifica la ubicación de la imagen.
 
-*Tamaño*<br/>
+*size*<br/>
 Especifica el tamaño de la imagen.
 
 *hBitmap*<br/>
@@ -2232,7 +2232,7 @@ BOOL ExtFloodFill(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del punto donde comienza el relleno.
 
 *y y*<br/>
@@ -2287,7 +2287,7 @@ BOOL ExtTextOut(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la celda de caracteres para el primer carácter de la cadena especificada.
 
 *y y*<br/>
@@ -2345,7 +2345,7 @@ Una vez que se llena su interior, la ruta se descarta del contexto del dispositi
 
 Llame a esta función miembro para rellenar un rectángulo determinado mediante el pincel especificado.
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ El pincel debe crearse `CBrush` utilizando las `CreateHatchBrush`funciones miemb
 
 Llame a esta función miembro para rellenar el rectángulo especificado con el color sólido especificado.
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2423,7 +2423,7 @@ Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar un pun
 
 *clr* Especifica el color que se utilizará para rellenar el rectángulo.
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo.
 
 *y y*<br/>
@@ -2467,7 +2467,7 @@ BOOL FloodFill(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del punto donde comienza el relleno.
 
 *y y*<br/>
@@ -2492,7 +2492,7 @@ La `ExtFloodFill` función proporciona una capacidad similar pero una mayor flex
 
 Dibuja un borde alrededor del rectángulo especificado por *lpRect*.
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2658,7 +2658,7 @@ UINT GetBoundsRect(
 *lpRectBounds*<br/>
 Apunta a un búfer que recibirá el rectángulo delimitador actual. El rectángulo se devuelve en coordenadas lógicas.
 
-*Banderas*<br/>
+*flags*<br/>
 Especifica si el rectángulo delimitador se va a borrar después de que se devuelve. Este parámetro debe ser cero o establecerse en el siguiente valor:
 
 - DCB_RESET Fuerza el rectángulo delimitador que se borrará después de devolverlo.
@@ -3559,7 +3559,7 @@ COLORREF GetPixel(POINT point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del punto que se va a examinar.
 
 *y y*<br/>
@@ -4089,7 +4089,7 @@ Especifica un puntero lejano a los datos que se pasarán a la función de salida
 *nCount*<br/>
 Especifica el número de caracteres que se van a generar. Si este parámetro `GrayString` es 0, calcula la longitud de la cadena (suponiendo que *lpData* es un puntero a la cadena). Si *nCount* es 1 y la función señalada por *lpfnOutput* devuelve 0, la imagen se muestra pero no se atenúa.
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la posición inicial del rectángulo que encierra la cadena.
 
 *y y*<br/>
@@ -4123,7 +4123,7 @@ Cuando el marco de trabajo está `GrayString` en modo de vista `TextOut` previa,
 
 Utilice esta función al convertir tamaños HIMETRIC de OLE a píxeles.
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ Si el modo de asignación del objeto de contexto de dispositivo es MM_LOENGLISH,
 
 Llame a esta función para convertir unidades HIMETRIC en unidades lógicas.
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI recorta toda la salida posterior para que quepa dentro del nuevo límite. La
 
 Invierte el contenido del rectángulo especificado.
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4272,7 +4272,7 @@ BOOL LineTo(POINT point);
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del punto final de la línea.
 
 *y y*<br/>
@@ -4297,7 +4297,7 @@ La línea se dibuja con el lápiz seleccionado. La posición actual se establece
 
 Convierte unidades lógicas en unidades de dispositivo.
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ Las coordenadas x e y de los puntos son enteros con signo de 2 bytes en el inter
 
 Llame a esta función para convertir unidades lógicas en unidades HIMETRIC.
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -4390,7 +4390,7 @@ BOOL MaskBlt(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo de destino.
 
 *y y*<br/>
@@ -4479,7 +4479,7 @@ CPoint MoveTo(POINT point);
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la nueva posición.
 
 *y y*<br/>
@@ -4510,13 +4510,13 @@ int OffsetClipRgn(SIZE size);
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica el número de unidades lógicas que se moverán a la izquierda o a la derecha.
 
 *y y*<br/>
 Especifica el número de unidades lógicas que se moverán hacia arriba o hacia abajo.
 
-*Tamaño*<br/>
+*size*<br/>
 Especifica la cantidad que se va a desfasar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4627,7 +4627,7 @@ BOOL PatBlt(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo que va a recibir el patrón.
 
 *y y*<br/>
@@ -5109,7 +5109,7 @@ BOOL PtVisible(POINT point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del punto.
 
 *y y*<br/>
@@ -5865,7 +5865,7 @@ UINT SetBoundsRect(
 *lpRectBounds*<br/>
 Apunta a `RECT` una `CRect` estructura u objeto que se utiliza para establecer el rectángulo delimitador. Las cotas rectangulares se indican en coordenadas lógicas. Este parámetro puede ser NULL.
 
-*Banderas*<br/>
+*flags*<br/>
 Especifica cómo se combinará el nuevo rectángulo con el rectángulo acumulado. Este parámetro puede ser una combinación de los siguientes valores:
 
 - DCB_ACCUMULATE Agregar el rectángulo especificado por *lpRectBounds* al rectángulo delimitador (mediante una operación de unión de rectángulos).
@@ -5902,7 +5902,7 @@ CPoint SetBrushOrg(POINT point);
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x (en unidades de dispositivo) del nuevo origen. Este valor debe estar en el rango 0-7.
 
 *y y*<br/>
@@ -6170,7 +6170,7 @@ COLORREF SetPixel(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del punto que se va a establecer.
 
 *y y*<br/>
@@ -6209,7 +6209,7 @@ BOOL SetPixelV(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x, en unidades lógicas, del punto que se va a establecer.
 
 *y y*<br/>
@@ -6493,7 +6493,7 @@ Especifica la extensión x de la ventana gráfica (en unidades de dispositivo).
 *Cy*<br/>
 Especifica la extensión y de la ventana gráfica (en unidades de dispositivo).
 
-*Tamaño*<br/>
+*size*<br/>
 Especifica las extensiones x e y de la ventana gráfica (en unidades de dispositivo).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -6531,7 +6531,7 @@ CPoint SetViewportOrg(POINT point);
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x (en unidades de dispositivo) del origen de la ventana gráfica. El valor debe estar dentro del rango del sistema de coordenadas del dispositivo.
 
 *y y*<br/>
@@ -6574,7 +6574,7 @@ Especifica la extensión x (en unidades lógicas) de la ventana.
 *Cy*<br/>
 Especifica la extensión y (en unidades lógicas) de la ventana.
 
-*Tamaño*<br/>
+*size*<br/>
 Especifica las extensiones x e y (en unidades lógicas) de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -6619,7 +6619,7 @@ CPoint SetWindowOrg(POINT point);
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del nuevo origen de la ventana.
 
 *y y*<br/>
@@ -6744,7 +6744,7 @@ BOOL StretchBlt(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada X (en unidades lógicas) de la esquina superior izquierda del rectángulo de destino.
 
 *y y*<br/>
@@ -6881,7 +6881,7 @@ CSize TabbedTextOut(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada x lógica del punto inicial de la cadena.
 
 *y y*<br/>
@@ -6936,7 +6936,7 @@ BOOL TextOut(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Especifica la coordenada X lógica del punto inicial del texto.
 
 *y y*<br/>
@@ -7029,7 +7029,7 @@ Para obtener más información, consulte [TransparentBlt](/windows/win32/api/win
 
 Actualiza el área de cliente del contexto del dispositivo haciendo coincidir los colores actuales del área de cliente con la paleta del sistema píxel por píxel.
 
-```
+```cpp
 void UpdateColors();
 ```
 
@@ -7057,7 +7057,7 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
 Esta función sólo tiene éxito si el lápiz actual `CreatePen` es un lápiz geométrico creado por `CreatePen` la segunda versión de la función miembro, o si el lápiz se crea con la primera versión de y tiene un ancho, en unidades de dispositivo, mayor que 1. El contexto del dispositivo debe contener una ruta de acceso cerrada. Las curvas Bzier del trazado se convierten en secuencias de líneas rectas que aproximan las curvas ensanchadas. Como tal, no quedan curvas de `WidenPath` Bzier en el trazado después de que se llama.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

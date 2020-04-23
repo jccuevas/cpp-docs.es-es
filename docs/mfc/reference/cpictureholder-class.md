@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 067ea7238c48f2698d7bfe469e9c4be10129c065
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edb93b05c1187d2c78f4c1120ee76282167c9b49
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364053"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753598"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder (clase)
 
@@ -287,7 +287,7 @@ LPPICTURE m_pPict;
 
 Representa la imagen en el rectángulo al que hace referencia *rcRender*.
 
-```
+```cpp
 void Render(
     CDC* pDC,
     const CRect& rcRender,
@@ -309,7 +309,7 @@ Rectángulo que representa el rectángulo delimitador del objeto que representa 
 
 Conecta `CPictureHolder` el objeto `IPictureDisp` a una interfaz.
 
-```
+```cpp
 void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```
 
@@ -318,7 +318,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 *pDisp*<br/>
 Puntero a `IPictureDisp` la nueva interfaz.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CFontHolder (clase)](../../mfc/reference/cfontholder-class.md)

@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369507"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754836"
 ---
 # <a name="ccombobox-class"></a>CComboBox (clase)
 
@@ -308,7 +308,7 @@ CComboBox();
 
 Elimina (borra) la selección actual, si existe, en el control de edición del cuadro combinado.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -357,7 +357,7 @@ De forma predeterminada, esta función miembro no hace nada. Si crea un cuadro c
 
 Copia la selección actual, si existe, en el control de edición del cuadro combinado en el Portapapeles en formato CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ Aplique los siguientes [estilos](../../mfc/reference/styles-used-by-mfc.md#windo
 
 Elimina (corta) la selección actual, si existe, en el control de edición de cuadro combinado y copia el texto eliminado en el Portapapeles en formato CF_TEXT.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ El índice de base cero del elemento seleccionado actualmente en el cuadro de li
 
 Llame `GetDroppedControlRect` a la función miembro para recuperar las coordenadas de pantalla del cuadro de lista visible (abajo) de un cuadro combinado desplegable.
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ El valor de 32 bits se puede establecer con el *dwItemData* parámetro de un [Se
 
 Recupera el valor de 32 bits proporcionado por la aplicación asociado al elemento de cuadro combinado especificado como un puntero (**void** <strong>\*</strong>).
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ Vea [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para 
 
 Inserta los datos del Portapapeles en el control de edición del cuadro combinado en la posición actual del cursor.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ Los datos solo se insertan si el Portapapeles contiene datos en formato CF_TEXT.
 
 Quita todos los elementos del cuadro de lista y edita el control de un cuadro combinado.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ El desplazamiento en el control estático está deshabilitado cuando la lista de
 
 Establece el ancho, en píxeles, por el que la parte del cuadro de lista del cuadro combinado se puede desplazar horizontalmente.
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ El sistema desplaza el cuadro de lista hasta que el elemento especificado por *n
 
 Muestra u oculta el cuadro de lista de un cuadro combinado que tiene el estilo [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o [CBS_DROPDOWNLIST.](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 
@@ -1555,7 +1555,7 @@ Esta función miembro no tiene ningún efecto en un cuadro combinado creado con 
 
   Vea el ejemplo de [CComboBox::GetDroppedState](#getdroppedstate).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CTRLBARS de ejemplo de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

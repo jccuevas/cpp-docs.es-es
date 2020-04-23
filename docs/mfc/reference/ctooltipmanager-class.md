@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365071"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752170"
 ---
 # <a name="ctooltipmanager-class"></a>Clase CTooltipManager
 
@@ -128,7 +128,7 @@ Llame a este método para cada [CToolTipCtrl clase](../../mfc/reference/ctooltip
 
 Personaliza la apariencia del control de información sobre herramientas para los tipos de control de Windows especificados.
 
-```
+```cpp
 void SetTooltipParams(
     UINT nTypes,
     CRuntimeClass* pRTC=RUNTIME_CLASS(CMFCToolTipCtrl),
@@ -198,13 +198,13 @@ El valor de *nType* debe ser el mismo valor que el *nType* parámetro de [CToolt
 
 Para obtener más información, vea el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\mfc** de la instalación de Visual Studio.
 
-```
+```cpp
 void UpdateTooltips();
 ```
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

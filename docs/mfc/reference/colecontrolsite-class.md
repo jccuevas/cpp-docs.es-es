@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366151"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753945"
 ---
 # <a name="colecontrolsite-class"></a>Clase COleControlSite
 
@@ -454,7 +454,7 @@ Distinto de cero si la ventana se deshabilitó anteriormente, de lo contrario 0.
 
 Especifica si el sitio de control controlará o omitirá los eventos desencadenados desde un control.
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ Si *bFreeze* es TRUE, el sitio de control solicita el control para detener los e
 
 Recupera información sobre los mnemotécnicos de teclado y el comportamiento del teclado de un control.
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -953,7 +953,7 @@ virtual void MoveWindow(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 La nueva posición del lado izquierdo de la ventana.
 
 *y y*<br/>
@@ -1017,7 +1017,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Establece el control como el botón predeterminado.
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 
@@ -1142,7 +1142,7 @@ virtual BOOL SetWindowPos(
 *pWndInsertAfter*<br/>
 Un puntero a la ventana.
 
-*X*<br/>
+*x*<br/>
 La nueva posición del lado izquierdo de la ventana.
 
 *y y*<br/>
@@ -1215,7 +1215,7 @@ Especifica cómo se va a mostrar el sitio de control. Debe ser uno de los siguie
 
 Distinto de cero si la ventana estaba visible anteriormente; 0 si la ventana estaba oculta anteriormente.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

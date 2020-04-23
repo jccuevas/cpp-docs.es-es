@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354423"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031503"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap (Clase)
 
@@ -52,7 +52,7 @@ Los tipos permitidos son:
 
 - clase de enumeración pública
 
-**UnorderedMap** es básicamente un contenedor para [std::unordered_map](../standard-library/unordered-map-class.md) que admite el almacenamiento de tipos de Windows Runtime. Es la implementación concreta de los tipos [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) que se pasan a través de interfaces públicas de Windows Runtime. Si intentas usar un tipo `Platform::Collections::UnorderedMap` en un valor devuelto o un parámetro público, se produce el error del compilador C3986. Puedes corregir el error si cambias el tipo del parámetro o el valor devuelto a [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** es básicamente un contenedor para [std::unordered_map](../standard-library/unordered-map-class.md) que admite el almacenamiento de tipos de Windows Runtime. Es la implementación concreta de los tipos [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2) e [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) que se pasan a través de interfaces públicas de Windows Runtime. Si intentas usar un tipo `Platform::Collections::UnorderedMap` en un valor devuelto o un parámetro público, se produce el error del compilador C3986. Puedes corregir el error si cambias el tipo del parámetro o el valor devuelto a [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2).
 
 Para obtener más información, consulte [Colecciones](../cppcx/collections-c-cx.md).
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>UnorderedMap::Primer método
 
-Devuelve un iterador que especifica el primer elemento [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) en el mapa desordenado.
+Devuelve un iterador que especifica el primer elemento [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) en el mapa desordenado.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -122,11 +122,11 @@ Un iterador que especifica el primer elemento del mapa.
 
 ### <a name="remarks"></a>Observaciones
 
-Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo, `auto x = myUnorderedMap->First();`.
+Una forma cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **automático.** Por ejemplo: `auto x = myUnorderedMap->First();`.
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>UnorderedMap::GetView Método
 
-Devuelve una vista de solo lectura del UnorderedMap actual; es decir, una [clase Platform::Collections::UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md) que implementa la interfaz [Windows::Foundation::Collections::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Devuelve una vista de solo lectura del UnorderedMap actual; es decir, un [Platform::Collections::UnorderedMapView clase](../cppcx/platform-collections-unorderedmapview-class.md) que implementa el [Windows::Foundation::Collections::IMapView::IMapView](/uwp/api/windows.foundation.collections.imapview-2) interfaz.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
 
-Un [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contiene información sobre el objeto que generó el evento y el tipo de cambio que se produjo. Vea también [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) y [CollectionChange (enumeración).](/uwp/api/windows.foundation.collections.collectionchange)
+Un [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) que contiene información sobre el objeto que generó el evento y el tipo de cambio que se produjo. Vea también [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) y [CollectionChange (enumeración).](/uwp/api/windows.foundation.collections.collectionchange)
 
 ## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework
 
@@ -241,7 +241,7 @@ La parte de clave del par clave-valor. El tipo de *clave* es typename *K*.
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>UnorderedMap::Método size
 
-Devuelve el número de [elementos Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) en UnorderedMap.
+Devuelve el número de [elementos Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) en UnorderedMap.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -355,13 +355,13 @@ Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a
 *Il*<br/>
 Un [std::initializer_list](../standard-library/initializer-list-class.md) de [std::pair](../standard-library/pair-structure.md) objetos que se utiliza para inicializar el mapa.
 
-*Primero*<br/>
+*first*<br/>
 El iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto UnorderedMap actual.
 
-*Última*<br/>
+*last*<br/>
 El iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto UnorderedMap actual.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Espacio de nombres de plataforma](platform-namespace-c-cx.md)<br/>
 [Platform::Collections (Espacio de nombres)](../cppcx/platform-collections-namespace.md)<br/>

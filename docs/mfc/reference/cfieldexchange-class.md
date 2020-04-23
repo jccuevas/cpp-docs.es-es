@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: d4b99a4992075072253d4f9b3182a926673bdfd0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de9db2713a25b232bbd7f936958d1c10e96c511a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373928"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753171"
 ---
 # <a name="cfieldexchange-class"></a>Clase CFieldExchange
 
@@ -90,7 +90,7 @@ Siga el modelo de las funciones RFX existentes.
 
 Necesita una llamada `SetFieldType` a la invalidación [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) o [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) de la clase de conjunto de registros.
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 
@@ -132,7 +132,7 @@ Este ejemplo muestra varias llamadas a funciones RFX con llamadas adjuntas a `Se
 
 [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clase CRecordset](../../mfc/reference/crecordset-class.md)

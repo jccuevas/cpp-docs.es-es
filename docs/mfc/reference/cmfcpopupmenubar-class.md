@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: b4693e316fd78948cfae262433fee8ca8b6ab23c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c0ba90246d19e8dd07c856eec6a518a8513ee665
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375359"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751921"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar (clase)
 
@@ -411,7 +411,7 @@ virtual void SetButtonStyle(
 
 Establece el desplazamiento de fila de la barra de menús emergente.
 
-```
+```cpp
 void SetOffset(int iOffset);
 ```
 
@@ -426,7 +426,7 @@ void SetOffset(int iOffset);
 
 Inicia el temporizador para un botón de menú emergente retrasado especificado.
 
-```
+```cpp
 void StartPopupMenuTimer(
     CMFCToolBarMenuButton* pMenuButton,
     int nDelayFactor = 1);
@@ -442,7 +442,7 @@ void StartPopupMenuTimer(
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

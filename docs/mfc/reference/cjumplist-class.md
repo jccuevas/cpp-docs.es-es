@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 98d6bec3d33c9060ebb741111dff793f64cc7cb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e45e2e58bd51d36b6412940b7ed01aa119017ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372330"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754941"
 ---
 # <a name="cjumplist-class"></a>Clase CJumpList
 
@@ -99,7 +99,7 @@ Destruye un objeto `CJumpList` .
 
 Anula una transacción de creación de listas sin confirmar.
 
-```
+```cpp
 void AbortList();
 ```
 
@@ -158,7 +158,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 
 ### <a name="parameters"></a>Parámetros
 
-*Categoría*<br/>
+*category*<br/>
 Especifica un tipo de categoría conocido. Puede ser KDC_RECENT, o KDC_KNOWN.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -256,7 +256,7 @@ Si este parámetro es FALSE, la lista no se confirma automáticamente en el dest
 
 Quita todas las tareas y destinos que se `CJumpList` han agregado a la instancia actual de hasta ahora.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -268,7 +268,7 @@ Este método borra y libera todos los datos y las interfaces internas.
 
 Quita todos los destinos que se han agregado a la instancia actual de CJumpList hasta ahora.
 
-```
+```cpp
 void ClearAllDestinations();
 ```
 
@@ -350,7 +350,7 @@ No es necesario llamar a este método explícitamente a `ICustomDestinationList`
 
 Establece el identificador de modelo de usuario de aplicación para la lista que se va a compilar.
 
-```
+```cpp
 void SetAppID(LPCTSTR strAppID);
 ```
 
@@ -359,6 +359,6 @@ void SetAppID(LPCTSTR strAppID);
 *strAppID*<br/>
 Cadena que especifica el identificador de modelo de usuario de aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

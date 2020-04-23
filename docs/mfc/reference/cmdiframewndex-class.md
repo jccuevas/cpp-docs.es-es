@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370043"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754538"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (clase)
 
@@ -296,7 +296,7 @@ En el ejemplo siguiente `CMDIFrameWndEx`se deriva una clase de . Este fragmento 
 
 Vuelve a calcular el diseño del elemento activo.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ Un puntero a la nueva ventana.
 
 Acopla el panel especificado a la ventana de marco.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ En el ejemplo `EnableDocking` siguiente se muestra cómo se utiliza el método e
 
 Muestra u oculta el menú principal en modo de pantalla completa.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Habilita el modo de pantalla completa para la ventana de marco.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ En el modo de pantalla completa, todas las barras de control de acoplamiento, ba
 
 Habilita o deshabilita la carga del estado de acoplamiento.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 Habilita o deshabilita la característica de grupos con pestañas MDI para la ventana de marco.
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ En el ejemplo `EnableMDITabbedGroups` siguiente se muestra cómo se usa en el [v
 
 Habilita o deshabilita la característica pestañas MDI para la ventana de marco MDI. Cuando está habilitada, la ventana de marco muestra una pestaña para cada ventana secundaria MDI.
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -719,7 +719,7 @@ Especifica la ubicación de las etiquetas de tabulación.
 *bTabCloseButton*<br/>
 Especifica si se mostrarán los botones de cierre de tabulación.
 
-*Estilo*<br/>
+*style*<br/>
 Especifica el estilo de las fichas. Use STYLE_3D_SCROLLED para pestañas o STYLE_3D_ONENOTE normales para las pestañas de Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -746,7 +746,7 @@ En el ejemplo `EnableMDITabs` siguiente se muestra cómo se utiliza en el [ejemp
 
 Especifica si la última pestaña activa debe abrirse cuando el usuario cierra la pestaña actual.
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ Se `EnableMDITabsLastActiveActivation` utiliza para habilitar la segunda forma d
 
 Habilita o deshabilita la creación y administración automáticas del menú del panel emergente, que muestra una lista de paneles de aplicación.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ En el ejemplo `EnablePaneMenu` siguiente se muestra cómo se usa en el [visualSt
 
 Inserta un elemento de menú cuyo identificador de comando llama a un [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) cuadro de diálogo.
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ En el ejemplo `LoadMDIState` siguiente se muestra cómo se usa en el [visualStud
 
 Mueve la pestaña activa de la ventana con pestañas activa actualmente al grupo con fichas siguiente o anterior.
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 Crea un nuevo grupo con fichas que tiene una sola ventana.
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ Este método reemplaza [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-c
 
 Anula el registro de un panel y lo quita del administrador de acoplamiento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ En el ejemplo `SaveMDIState` siguiente se muestra cómo se usa en el [visualStud
 
 Establece la ventana del marco de vista previa de impresión.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Modifica un objeto de barra de herramientas reemplazando elementos ficticios por elementos definidos por el usuario.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 Cambia el fotograma principal del modo normal al modo de pantalla completa.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 Muestra u oculta el panel especificado.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ En el ejemplo `ShowPane` siguiente se muestra cómo se usa en el [visualStudioDe
 
 Crea un [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) cuadro y lo abre.
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ En el ejemplo `TabbedDocumentToControlBar` siguiente se muestra cómo se usa en 
 
 Llamado por el marco de trabajo para actualizar el título del marco de ventana.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 Establece el icono de cada panel con fichas MDI.
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 
@@ -2024,7 +2024,7 @@ virtual void WinHelp(
 
 Este método invalida [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

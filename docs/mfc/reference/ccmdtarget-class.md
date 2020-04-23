@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352286"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752713"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (clase)
 
@@ -121,7 +121,7 @@ Los mapas de distribución, similares a `IDispatch` los mapas de mensajes, se us
 
 Llame a esta función para mostrar el cursor como un reloj de arena cuando espera que un comando tome un intervalo de tiempo notable para ejecutar.
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ Puntero a la estructura [MSG](/windows/win32/api/winuser/ns-winuser-msg) que des
 Identificador de la ventana de documento que contiene el objeto.
 
 *lpRect*<br/>
-Puntero a la estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que contiene las coordenadas, en píxeles, que definen el rectángulo delimitador de un objeto en *hwndParent*.
+Puntero a la estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene las coordenadas, en píxeles, que definen el rectángulo delimitador de un objeto en *hwndParent*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -183,7 +183,7 @@ Esta función miembro es básicamente una implementación de [IOleObject::DoVerb
 
 Llame a esta función para habilitar la automatización OLE para un objeto.
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ Normalmente se llama a esta función desde el constructor del objeto y solo se d
 
 Habilita la activación de eventos a través de puntos de conexión.
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ Para habilitar los puntos de conexión, llame a esta función miembro en el cons
 
 Habilita la biblioteca de tipos de un objeto.
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ Llame a esta función `CCmdTarget`miembro en el constructor de su -derived objet
 
 Llame a esta función `BeginWaitCursor` después de haber llamado a la función miembro para volver desde el cursor de reloj de arena al cursor anterior.
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Parámetros
 
 *pIID*<br/>
-Un puntero a un identificador de interfaz (un [GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Un puntero a un identificador de interfaz (un [GUID](/windows/win32/api/guiddef/ns-guiddef-guid.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -349,8 +349,8 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 Identificador de configuración `LCID`regional ( ).
 
-*Guid*<br/>
-Guid [GUID](/previous-versions/cc317743(v%3dmsdn.10)) de la descripción del tipo.
+*guid*<br/>
+El [GUID](/windows/win32/api/guiddef/ns-guiddef-guid de la descripción del tipo.
 
 *ppTypeInfo*<br/>
 Puntero a un `ITypeInfo` puntero a la interfaz.
@@ -514,7 +514,7 @@ Reemplace esta función para proporcionar un control especial para esta situaci�
 
 Llame a esta función para restaurar el cursor de reloj de arena adecuado después de que el cursor del sistema haya cambiado (por ejemplo, después de que se haya abierto y cerrado un cuadro de mensaje mientras se encuentra en medio de una operación prolongada).
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

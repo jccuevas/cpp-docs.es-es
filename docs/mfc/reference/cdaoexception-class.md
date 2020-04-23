@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: a8a789f4dba06ffe376d8a8e955b026bb23af924
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 935d7870d68554d702e2ad762e83343cb518b2b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369005"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754725"
 ---
 # <a name="cdaoexception-class"></a>Clase CDaoException
 
@@ -138,7 +138,7 @@ Esta información es útil para recorrer en bucle la colección Errors para recu
 
 Devuelve información de error sobre un objeto de error determinado en el Errors colección.
 
-```
+```cpp
 void GetErrorInfo(int nIndex);
 ```
 
@@ -211,7 +211,7 @@ Este es un código OLE. Rara vez tendrá que usar este valor porque, en casi tod
 
 Para obtener información acerca de SCODE, vea el tema [Estructura de códigos de error OLE](/windows/win32/com/structure-of-com-error-codes) en el Windows SDK. El tipo de datos SCODE se asigna al tipo de datos HRESULT.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CException](../../mfc/reference/cexception-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

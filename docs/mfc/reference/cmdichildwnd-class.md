@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370081"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754579"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (clase)
 
@@ -207,7 +207,7 @@ El marco devuelto es dos `CMDIChildWnd` elementos primarios quitados de y es `CM
 
 Llame a esta función miembro para activar una ventana secundaria MDI independientemente de la ventana de marco MDI.
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ Cuando el marco se activa, también se activará la ventana secundaria que se ac
 
 Llame a esta función miembro para destruir una ventana secundaria MDI.
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ La función miembro quita el título de la ventana secundaria de la ventana de m
 
 Llame a esta función miembro para maximizar una ventana secundaria MDI.
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ Cuando se maximiza una ventana secundaria, Windows la cambia de tamaño para que
 
 Llame a esta función miembro para restaurar una ventana secundaria MDI de tamaño maximizado o minimizado.
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 Establece los identificadores de los recursos de menú y acelerador.
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);
@@ -285,7 +285,7 @@ El identificador de un recurso acelerador.
 
 Llame a esta función para establecer los recursos de menú y acelerador utilizados por el objeto de ventana secundaria MDI.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>

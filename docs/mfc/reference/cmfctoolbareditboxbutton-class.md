@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: 52989f7b523bf0ba9a00da350242a968ca0db153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 064ebe1c8fe377064d410d09e5ef60ed628df2f3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360480"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753999"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton Clase
 
@@ -638,7 +638,7 @@ Distinto de cero si se estableció el texto; 0 si `CMFCToolBarEditBoxButton` el 
 
 Especifica el identificador de recurso del menú contextual asociado al botón.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -685,7 +685,7 @@ virtual void SetStyle(UINT nStyle);
 
 Este método establece [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) en *nStyle* También deshabilita el cuadro de texto cuando la aplicación está en modo Personalizar y lo habilita cuando la aplicación no está en modo de personalización (consulte [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) y [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). Consulte [Estilos](../../mfc/reference/toolbar-control-styles.md) de control de Barra de herramientas para obtener una lista de indicadores de estilo válidos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

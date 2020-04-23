@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375884"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753420"
 ---
 # <a name="cmfctaskspane-class"></a>Clase CMFCTasksPane
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ El menú emergente que crea este método contiene la lista de páginas del panel
 
 Habilita o deshabilita la animación que se produce cuando un grupo de tareas se expande o contrae.
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ De forma predeterminada, la animación que se produce cuando un grupo de tareas 
 
 Especifica si un usuario puede contraer grupos de tareas.
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ Un grupo de tareas contraído muestra solo el título del grupo; la lista de tar
 
 Habilita los menús desplegables de los botones de navegación **Siguiente** y **Anterior.**
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ Los menús contienen el historial de páginas de tareas que el usuario utilizó.
 
 Habilita o deshabilita la barra de herramientas de navegación.
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ De forma predeterminada, el marco de trabajo no muestra la barra de herramientas
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 Habilita los botones de desplazamiento en lugar de una barra de desplazamiento.
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ De forma predeterminada, el marco de trabajo muestra botones de desplazamiento e
 
 Habilita o deshabilita el ajuste de palabras para el texto en las etiquetas.
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ De forma predeterminada, el marco de trabajo no ajusta el texto en etiquetas. Cu
 
 Habilita o deshabilita el ajuste de palabras para el texto en las tareas.
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ El espaciado predeterminado entre un panel de tareas y el borde del área de cli
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane::GetNextPages
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ El número de páginas en el panel de tareas.
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane::RecalcLayout
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 Quita todos los grupos de la página especificada.
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ Quita todos los grupos de la página especificada por *nPageIdx*, o todos los gr
 
 Quita todas las páginas del panel de tareas excepto la página predeterminada (primera).
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 Quita todas las tareas del grupo especificado.
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 Quita un grupo.
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ Cuando el marco de trabajo quita un grupo, se destruyen todas las tareas y venta
 
 Quita una página especificada desde el panel de tareas.
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 Activa la página especificada en el panel de tareas.
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ Este método afirma si el *nPageIdx* no es válido.
 
 Establece el nombre del título de un panel de tareas.
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,13 +1643,13 @@ Si un panel de tareas tiene varias páginas, la página predeterminada tiene el 
 
 Establece la altura de un título de grupo.
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 [en] Especifica la altura del título.
 
 ### <a name="remarks"></a>Observaciones
@@ -1662,26 +1662,26 @@ Si *n* es -1, el marco de trabajo determina `CMFCVisualManager::GetTasksPaneGrou
 
 Establece el desplazamiento horizontal del título de un grupo.
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 [en] Especifica el desfase horizontal de la leyenda del grupo.
 
 ## <a name="cmfctaskspanesetgroupcaptionvertoffset"></a><a name="setgroupcaptionvertoffset"></a>CMFCTasksPane::SetGroupCaptionVertOffset
 
 Establece el desplazamiento vertical del título de un grupo.
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 [en] Especifica el desplazamiento vertical, en píxeles, del título del grupo.
 
 ## <a name="cmfctaskspanesetgroupname"></a><a name="setgroupname"></a>CMFCTasksPane::SetGroupName
@@ -1722,7 +1722,7 @@ BOOL SetGroupTextColor(
 *nGrupo*<br/>
 [en] Especifica el índice de base cero del grupo.
 
-*color*<br/>
+*Color*<br/>
 [en] Especifica el color del texto.
 
 *colorHot*<br/>
@@ -1736,13 +1736,13 @@ TRUESi el color del texto del grupo se ha cambiado correctamente; de lo contrari
 
 Establece el desplazamiento vertical de un grupo.
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 [en] Especifica el desfase vertical.
 
 ### <a name="remarks"></a>Observaciones
@@ -1755,13 +1755,13 @@ Llame a este método para personalizar los márgenes de los elementos del panel 
 
 Establece el margen horizontal.
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 [en] Especifica el margen, en píxeles.
 
 ### <a name="remarks"></a>Observaciones
@@ -1807,7 +1807,7 @@ Este método asocia una lista de imágenes con el control del panel de tareas. P
 
 Establece el texto del título de la página de un panel de tareas.
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,13 +1855,13 @@ TRUESi el nombre de la tarea se estableció correctamente; de lo contrario, FALS
 
 Establece el desplazamiento horizontal para las tareas.
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 [en] Especifica el desfase horizontal.
 
 ### <a name="remarks"></a>Observaciones
@@ -1874,7 +1874,7 @@ El desplazamiento horizontal predeterminado es de 12 píxeles.
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1916,7 +1916,7 @@ BOOL SetTaskTextColor(
 *nTask*<br/>
 [en] Especifica el índice de base cero de la tarea.
 
-*color*<br/>
+*Color*<br/>
 [en] Especifica el color del texto de la tarea.
 
 *colorHot*<br/>
@@ -1930,13 +1930,13 @@ TRUESi el color del texto de la tarea se estableció correctamente; de lo contra
 
 Establece el margen vertical.
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*N*<br/>
+*n*<br/>
 [en] Especifica el margen vertical que se va a establecer.
 
 ### <a name="remarks"></a>Observaciones
@@ -2069,7 +2069,7 @@ Este método actualiza el título del panel de tareas, ajusta la barra de despla
 
 Invalide este método en una clase derivada para ejecutar código personalizado cuando el marco de trabajo actualiza el panel de tareas.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 62015f384fa5f72ceeceed2605cbf9a6b646a1eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375327"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751833"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty Clase
 
@@ -103,7 +103,7 @@ CMFCPropertyGridColorProperty(
 *strName*<br/>
 [in] Nombre de la propiedad.
 
-*color*<br/>
+*Color*<br/>
 [en] El valor de color de la propiedad.
 
 *pPalette*<br/>
@@ -119,7 +119,7 @@ CMFCPropertyGridColorProperty(
 
 Activa el botón *automático* en el cuadro de diálogo de selección de color. (El botón automático estándar está etiquetado como **Automático**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -143,7 +143,7 @@ void EnableAutomaticButton(
 
 Habilita el *otro* botón en el cuadro de diálogo de selección de color. (El otro botón estándar está etiquetado como **Más colores**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -181,13 +181,13 @@ Un valor de color RGB.
 
 Establece un nuevo color para la propiedad.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*Color*<br/>
 [en] Un valor de color RGB.
 
 ### <a name="remarks"></a>Observaciones
@@ -196,7 +196,7 @@ void SetColor(COLORREF color);
 
 Especifica el número de columnas de la cuadrícula de propiedades de color actual.
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 
@@ -226,7 +226,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 
 Utilice el [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) método para restablecer el valor original de una propiedad editada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

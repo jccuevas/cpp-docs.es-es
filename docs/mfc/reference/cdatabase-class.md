@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376478"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754645"
 ---
 # <a name="cdatabase-class"></a>Clase CDatabase
 
@@ -186,7 +186,7 @@ En la invalidación, llame `SQLBindParameters` a las funciones ODBC relacionadas
 
 Llame a esta función miembro para solicitar que el origen de datos cancele una operación asincrónica en curso o un proceso de un segundo subproceso.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ Para obtener más información acerca de las transacciones, vea el artículo [Tr
 
 Llame a esta función miembro cuando necesite ejecutar un comando SQL directamente.
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ Después de una reversión, el registro que era actual antes de la reversión si
 
 Llame a esta función `OpenEx` `Open` miembro , antes de llamar o — para invalidar el número predeterminado de segundos permitidos antes de que se agota el tiempo de espera de una conexión de origen de datos intentada.
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ El valor predeterminado para los tiempos de espera de inicio de sesión es 15 se
 
 Llame a esta función miembro para invalidar el número predeterminado de segundos para permitir antes de las operaciones posteriores en el tiempo de espera del origen de datos conectado.
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 
@@ -640,7 +640,7 @@ Es posible que se agota el tiempo de espera de una operación debido a problemas
 
 El valor predeterminado para los tiempos de espera de consulta es 15 segundos. No todos los orígenes de datos admiten la capacidad de establecer un valor de tiempo de espera de consulta. Si establece un valor de tiempo de espera de consulta de 0, no se produce ningún tiempo de espera; la comunicación con el origen de datos puede dejar de responder. Este comportamiento puede ser útil durante el desarrollo. Si el origen de datos no admite el tiempo de espera, obtendrá la salida de seguimiento, pero no una excepción.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

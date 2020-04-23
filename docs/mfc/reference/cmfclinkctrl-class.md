@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 1ef4e390d88f81d738d2ee18be6ba02843633011
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79edff8be6e2c37baa938fc5b624253932609e17
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374402"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754249"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl (clase)
 
@@ -102,7 +102,7 @@ Invalide este método cuando desee usar su propio código para dibujar el rectá
 
 Muestra una dirección URL especificada como texto del botón.
 
-```
+```cpp
 void SetURL(LPCTSTR lpszURL);
 ```
 
@@ -117,7 +117,7 @@ void SetURL(LPCTSTR lpszURL);
 
 Establece el protocolo implícito (por ejemplo, "http:") de la dirección URL.
 
-```
+```cpp
 void SetURLPrefix(LPCTSTR lpszPrefix);
 ```
 
@@ -154,7 +154,7 @@ Un [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que contiene el
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

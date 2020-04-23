@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: 72b6e5d8d9d4823795a1fb053c5f2374cb80fba4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d1653e50fef03deb8eb23dd9a989d1ca2a529dd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320010"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755091"
 ---
 # <a name="canimationtimereventhandler-class"></a>Clase CAnimationTimerEventHandler
 
@@ -126,7 +126,7 @@ S_OK si el método se realiza correctamente; E_FAIL de lo contrario.
 
 Almacena un puntero al controlador de animación para enrutar eventos.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -135,6 +135,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 Un puntero al controlador de animación, que recibirá eventos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: a5e95efe1880f1177490d55988ca1fe42c606b15
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367550"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752429"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame Clase
 
@@ -104,7 +104,7 @@ virtual BOOL Create(
 |-|-|
 |Parámetro|Descripción|
 |*pWndParent*|[en] La ventana principal del marco desplegable.|
-|*X*|[en] Coordenada de pantalla horizontal para la ubicación del marco descendente.|
+|*x*|[en] Coordenada de pantalla horizontal para la ubicación del marco descendente.|
 |*y y*|[en] Coordenada de pantalla vertical para la ubicación del marco descendente.|
 |*pWndOriginToolbar*|[en] La barra de herramientas que tiene los botones desplegables que este método utiliza para rellenar el nuevo objeto de marco desplegable.|
 
@@ -173,7 +173,7 @@ El marco de trabajo llama a este método cuando se crea el marco desplegable o s
 
 Establece si la ventana de la barra de herramientas desplegable secundaria se destruye automáticamente.
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -186,7 +186,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 Si *bAutoDestroy* es TRUE, el `CMFCDropDownFrame` destructor destruye la ventana de barra de herramientas desplegable asociada. El valor predeterminado es TRUE.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 1f438d3344e90a16def2bd4c0f9cedcd47a64203
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e18b4504ddbfdd9a4399f33c34c6e6e9900233b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363557"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752860"
 ---
 # <a name="application-control"></a>Control de la aplicación
 
@@ -104,7 +104,7 @@ El usuario tiene el control de la aplicación cuando el usuario ha abierto o cre
 
 Establece o borra el indicador de control de usuario, `AfxOleGetUserCtrl`que se explica en la referencia para .
 
-```
+```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
@@ -127,7 +127,7 @@ Llame a esta función si otras acciones de la aplicación deben poner al usuario
 
 Incrementa el recuento global del marco de trabajo del número de objetos activos en la aplicación.
 
-```
+```cpp
 void AFXAPI AfxOleLockApp();
 ```
 
@@ -151,7 +151,7 @@ Llamada `AfxOleLockApp` desde cualquier objeto que expone interfaces OLE, si ser
 
 Disminuye el recuento de objetos activos del marco de trabajo en la aplicación.
 
-```
+```cpp
 void AFXAPI AfxOleUnlockApp();
 ```
 
@@ -284,7 +284,7 @@ Los símbolos se rellenan de la siguiente manera:
 
 Implementa la interfaz de usuario para el comando *typename* Object.
 
-```
+```cpp
 void AFXAPI AfxOleSetEditMenu(
     COleClientItem* pClient,
     CMenu* pMenu,
@@ -365,6 +365,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **Encabezado:** afxwin.h
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Macros y variables globales](mfc-macros-and-globals.md)<br/>

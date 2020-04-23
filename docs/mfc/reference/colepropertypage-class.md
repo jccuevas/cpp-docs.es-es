@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: dbdc889e244b33365756bcbae5b37cf657a6d900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374875"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753797"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage (clase)
 
@@ -187,7 +187,7 @@ Los controles y contenedores cooperan para que los usuarios puedan examinar y ed
 
 Determina qué controles no habilitan el botón Aplicar.
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
@@ -326,7 +326,7 @@ Si el estado de un control de página de propiedades está sucio cuando se cierr
 
 Establece el recurso de cuadro de diálogo de la página de propiedades.
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
@@ -339,7 +339,7 @@ Controlar el recurso de cuadro de diálogo de la página de propiedades.
 
 Especifica información sobre información sobre herramientas, el nombre de archivo de ayuda y el contexto de ayuda de la página de propiedades.
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
@@ -361,7 +361,7 @@ Contexto de ayuda para la página de propiedades.
 
 Indica si el usuario ha modificado la página de propiedades.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -374,7 +374,7 @@ Especifica el nuevo valor para la marca modificada de la página de propiedades.
 
 Establece el nombre de la página de propiedades, que el marco de propiedades normalmente se mostrará en la pestaña de la página.
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 
@@ -383,7 +383,7 @@ void SetPageName(LPCTSTR lpszPageName);
 *lpszPageName*<br/>
 Puntero a una cadena que contiene el nombre de la página de propiedades.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [PRUEBA DE MUESTRA DE MFC](../../overview/visual-cpp-samples.md)<br/>

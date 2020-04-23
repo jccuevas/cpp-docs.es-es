@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: c77e2fed1067091c139eee664fb291b83742eb54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57fbd1e1f574beebff8baab014e7ab615f56333f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375197"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754174"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage (clase)
 
@@ -83,7 +83,7 @@ En el ejemplo siguiente se `CMFCRibbonCustomizePropertyPage` muestra cómo const
 
 Agrega una categoría personalizada al cuadro combinado **Comandos.**
 
-```
+```cpp
 void AddCustomCategory(
     LPCTSTR lpszName,
     const CList<UINT, UINT>& lstIDS);
@@ -126,7 +126,7 @@ virtual void OnOK();
 
 La implementación predeterminada aplica las opciones seleccionadas en el cuadro de diálogo **Personalizar** a la barra de herramientas de acceso rápido.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 46d30e38674d10aecdfdbf7be91c48063ba9f493
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8b6ec9060e8c15dd45f8203dadd2a2aca9e168
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377064"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753100"
 ---
 # <a name="carchive-class"></a>CArchive (clase)
 
@@ -146,7 +146,7 @@ Para obtener `CArchive`más información sobre , vea los artículos [Serializaci
 
 Llame a esta función para cerrar el archivo sin producir una excepción.
 
-```
+```cpp
 void Abort ();
 ```
 
@@ -208,7 +208,7 @@ No puede `CFile` utilizar operaciones para modificar el estado del archivo hasta
 
 Vacía los datos restantes en el búfer, cierra el archivo y desconecta el archivo del archivo.
 
-```
+```cpp
 void Close();
 ```
 
@@ -226,7 +226,7 @@ La función `Close` miembro garantiza que todos los datos se transfieren desde e
 
 Obliga a que los datos que queden en el búfer de archivado se escriban en el archivo.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -346,7 +346,7 @@ Si `IsStoring` el estado de un archivo `IsLoading` es distinto de cero, su estad
 
 Llame a esta función miembro para colocar objetos en el mapa que no se serializan realmente en el archivo, pero que están disponibles para que los subobjetos hagan referencia.
 
-```
+```cpp
 void MapObject(const CObject* pOb);
 ```
 
@@ -676,7 +676,7 @@ En la versión de la función miembro con el *nMax* parámetro, el búfer conten
 
 Llame a esta función miembro cuando desee almacenar y cargar la información de versión de una clase base.
 
-```
+```cpp
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -703,7 +703,7 @@ Utilice la macro [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-servi
 
 Llame `SetLoadParams` cuando vaya a leer un `CObject`gran número de objetos derivados de un archivo.
 
-```
+```cpp
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
@@ -726,7 +726,7 @@ No debe `SetLoadParams` llamar después de cargar ningún objeto, o después de 
 
 Llame a esta función miembro para establecer el esquema de objeto almacenado en el objeto de archivo en *nSchema*.
 
-```
+```cpp
 void SetObjectSchema(UINT nSchema);
 ```
 
@@ -749,7 +749,7 @@ Uso `SetObjectSchema` para el control de versiones avanzado; por ejemplo, cuando
 
 Se `SetStoreParams` utiliza al almacenar `CObject`un gran número de objetos derivados en un archivo.
 
-```
+```cpp
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
@@ -775,7 +775,7 @@ No debe `SetStoreParams` llamar después de almacenar ningún objeto, o después
 
 Escribe un número especificado de bytes en el archivo.
 
-```
+```cpp
 void Write(const void* lpBuf, INT nMax);
 ```
 
@@ -801,7 +801,7 @@ Puede utilizar `Write` la función `Serialize` miembro dentro de la función par
 
 Se `WriteClass` utiliza para almacenar la información de versión y clase de una clase base durante la serialización de la clase derivada.
 
-```
+```cpp
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -828,7 +828,7 @@ Puede usar [SerializeClass](#serializeclass) `WriteClass`en lugar de , que contr
 
 Almacena el `CObject` especificado en el archivo.
 
-```
+```cpp
 void WriteObject(const CObject* pOb);
 ```
 
@@ -858,7 +858,7 @@ Para obtener una `CAge`definición de la clase , vea el ejemplo de [CObList::COb
 
 Utilice esta función miembro para escribir datos de `CArchive` un búfer en el archivo asociado al objeto.
 
-```
+```cpp
 void WriteString(LPCTSTR lpsz);
 ```
 

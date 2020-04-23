@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: f9f184542aaceb206d3eae110d3a088d5fbc95cf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fad986b7e7304075cacb0b5ced9feeb8af4664f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374947"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753840"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc (clase)
 
@@ -181,7 +181,7 @@ Si está `COleTemplateServer` utilizando en `Register` la aplicación, `COleLink
 
 Informa a los archivos DLL del sistema OLE que el documento ya no está abierto.
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -191,7 +191,7 @@ Llame a esta función para revocar el registro del documento con los archivos DL
 
 Debe llamar a esta función al cerrar un archivo con nombre, pero normalmente no es necesario llamarlo directamente. `Revoke`es llamado por `COleLinkingDoc`la implementación `OnNewDocument` `OnOpenDocument`de `OnCloseDocument` `OnSaveDocument`, , , y .
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument (Clase)](../../mfc/reference/coledocument-class.md)<br/>

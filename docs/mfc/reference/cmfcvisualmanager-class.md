@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319997"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752849"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager (Clase)
 
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -5011,7 +5011,7 @@ Utilice este método para cambiar el administrador visual que utiliza la aplicac
 
 Habilita o deshabilita el modo en relieve para las imágenes de la barra de herramientas deshabilitadas.
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ Utilice la función [CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabled
 
 Habilita o deshabilita el efecto de iluminación para imágenes inactivas en un menú o barra de herramientas.
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ Esta función controla si las imágenes inactivas aparecen descoloridas en un me
 
 Establece una marca que indica si los botones de menú aparecen planos. De lo contrario, aparecen tridimensionales.
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ De forma predeterminada, esta característica no está habilitada.
 
 Establece el ancho y el alto de la sombra del menú.
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ La altura y la anchura de la sombra del menú deben ser idénticas. El valor pre
 
 Establece un indicador que indica si [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) muestra sombras para las imágenes resaltadas.
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 
@@ -5092,7 +5092,7 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 
 De forma predeterminada, esta característica está deshabilitada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

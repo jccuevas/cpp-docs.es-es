@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367442"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750636"
 ---
 # <a name="crebarctrl-class"></a>Clase CReBarCtrl
 
@@ -223,7 +223,7 @@ Para obtener más información, consulte Uso de [CReBarCtrl](../../mfc/using-cre
 
 Implementa el comportamiento del mensaje De32 [RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag), como se describe en el Windows SDK.
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Especifica la combinación de estilos de control de armadura aplicados al control. Consulte [Estilos](/windows/win32/Controls/rebar-control-styles) de control de armadura en el Windows SDK para obtener una lista de estilos admitidos.
 
 *Rect*<br/>
-Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura, que es la posición y el tamaño del control de armadura.
+Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/windows/win32/api/windef/ns-windef-rect) estructura, que es la posición y el tamaño del control de armadura.
 
 *pParentWnd*<br/>
 Puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control de armadura. No debe ser NULL.
@@ -303,7 +303,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica la combinación de estilos de control de armadura aplicados al control. Para obtener una lista de estilos admitidos, vea [Estilos](/windows/win32/Controls/rebar-control-styles) de control de armadura en el Windows SDK.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -356,7 +356,7 @@ Distinto de cero si la banda se eliminó correctamente; de lo contrario cero.
 
 Implementa el comportamiento del mensaje Win32 [RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove), como se describe en el Windows SDK.
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ Un valor DWORD que contiene las nuevas coordenadas del mouse. La coordenada hori
 
 Implementa el comportamiento del [RB_ENDDRAG](/windows/win32/Controls/rb-enddrag)de mensajes de Win32, como se describe en el Windows SDK.
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 Implementa el comportamiento del mensaje de Win32 [RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders), como se describe en el Windows SDK.
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 El índice de base cero de la banda para la que se recuperarán los bordes.
 
 *Prc*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recibirá los bordes de la banda. Si el control de armadura tiene el estilo RBS_BANDBORDERS, cada miembro de esta estructura recibirá el número de píxeles, en el lado correspondiente de la banda, que constituyen el borde. Si el control de armadura no tiene el estilo RBS_BANDBORDERS, solo el miembro izquierdo de esta estructura recibe información válida. Para obtener una descripción de los estilos de control de armadura, vea [Estilos](/windows/win32/Controls/rebar-control-styles) de control de armadura en el Windows SDK.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que recibirá los bordes de la banda. Si el control de armadura tiene el estilo RBS_BANDBORDERS, cada miembro de esta estructura recibirá el número de píxeles, en el lado correspondiente de la banda, que constituyen el borde. Si el control de armadura no tiene el estilo RBS_BANDBORDERS, solo el miembro izquierdo de esta estructura recibe información válida. Para obtener una descripción de los estilos de control de armadura, vea [Estilos](/windows/win32/Controls/rebar-control-styles) de control de armadura en el Windows SDK.
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl::GetBandCount
 
@@ -429,7 +429,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Recupera los márgenes de la banda.
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 El índice de base cero de una banda en el control de armadura.
 
 *Prc*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que recibirá los límites de la banda de armadura.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que recibirá los límites de la banda de armadura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -723,7 +723,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Cambia el tamaño de una banda en un control de armadura a su tamaño más grande.
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ Implementa el comportamiento del [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-ma
 
 Cambia el tamaño de una banda en un control de armadura a su tamaño más pequeño.
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Implementa el comportamiento del mensaje [Win32 RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron), como se describe en el Windows SDK.
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ Una aplicación definió el valor de 32 bits. Consulte *lAppValue* en [RB_PUSHCH
 
 Cambia el tamaño de una banda en un control de armadura a su tamaño ideal.
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -931,7 +931,7 @@ Consulte este tema para obtener más información sobre cuándo establecer el co
 
 Establece el esquema de color para los botones de un control de armadura.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -1056,7 +1056,7 @@ Se proporciona para admitir la flexibilidad de color de texto en un control de a
 
 Asocia un control de información sobre herramientas con un control de armadura.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 
@@ -1133,7 +1133,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Tenga en cuenta que `CRect` esta función miembro `RECT` utiliza un objeto como un parámetro, en lugar de una estructura.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

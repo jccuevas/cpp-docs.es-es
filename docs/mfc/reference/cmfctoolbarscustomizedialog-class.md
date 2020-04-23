@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377361"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753402"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog (Clase)
 
@@ -120,7 +120,7 @@ En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase
 
 Inserta un botón de barra de herramientas en la lista de comandos de la página **Comandos.**
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [en] Especifica el identificador de categoría en el que se va a insertar el botón.
 
-*Botón*<br/>
+*botón*<br/>
 [en] Especifica el botón que se va a insertar.
 
 *iInsertBefore*<br/>
@@ -187,7 +187,7 @@ En la `AddMenuCommands`llamada a , *bPopup* es FALSE. Como resultado, ese métod
 
 Agrega elementos a la lista de comandos de la página **Comandos** para representar todos los elementos del menú especificado.
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ Llame `Create` al método solo después de inicializar completamente la clase.
 
 Habilita o deshabilita la creación de nuevas barras de herramientas mediante el cuadro de diálogo **Personalizar.**
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ La `CMFCMousePropertyPage` clase utiliza este método para rellenar el cuadro de
 
 Rellena el `CComboBox` objeto proporcionado con el nombre de cada categoría de comando en el cuadro de diálogo **Personalizar.**
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ Las `CMFCToolBarsKeyboardPropertyPage` `CMFCKeyMapDialog` clases y usan este mé
 
 Rellena el `CListBox` objeto proporcionado con el nombre de cada categoría de comando en el cuadro de diálogo **Personalizar.**
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ El nombre de la categoría debe ser único.
 
 Reemplaza un botón de barra de herramientas en el cuadro de lista de comandos de la página **Comandos.**
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [en] Especifica el comando del botón que se va a reemplazar.
 
-*Botón*<br/>
+*botón*<br/>
 [en] Una referencia **const** al objeto de botón de barra de herramientas que reemplaza el botón antiguo.
 
 ### <a name="remarks"></a>Observaciones
@@ -750,7 +750,7 @@ TRUESi el método se realiza correctamente; de lo contrario FALSO.
 
 El marco de trabajo no utiliza actualmente la configuración de categoría de usuario.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

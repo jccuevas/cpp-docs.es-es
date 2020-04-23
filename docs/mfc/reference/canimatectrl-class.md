@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: fcee569659d732c26e274c8ca189042a16f13557
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e570681c899d58e8659635d55da843c23d1e95ee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371071"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752886"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl (clase)
 
@@ -206,7 +206,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de animación. Aplique cualquier combinación de los estilos de control de ventana y animación descritos en [Estilos](/windows/win32/Controls/animation-control-styles) de control de animación en el Windows SDK.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -350,7 +350,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
   Vea el ejemplo de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

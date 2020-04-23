@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: d05a2e186f001a69310e99cec013193a4d1bff3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1394a1b47a86022e37b11e032b87ee2a2a369862
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319719"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752807"
 ---
 # <a name="cmousemanager-class"></a>Clase CMouseManager
 
@@ -184,7 +184,7 @@ Este método busca en vistas registradas mediante [CMouseManager::AddView](#addv
 
 Recupera una lista de todos los nombres de vista registrados.
 
-```
+```cpp
 void GetViewNames(CStringList& listOfNames) const;
 ```
 
@@ -247,7 +247,7 @@ En la mayoría de los casos, no es necesario llamar a esta función directamente
 
 Asocia un comando personalizado con una vista que se registra por primera vez con el administrador del mouse.
 
-```
+```cpp
 void SetCommandForDblClk(
     int iViewId,
     UINT uiCmd);
@@ -267,7 +267,7 @@ Para asociar un comando personalizado a una vista, primero debe registrar la vis
 
 Si *uiCmd* se establece en 0, la vista especificada ya no está asociada a un comando.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e020e3e123bb5dc96a623e7a41896d75c611b81e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321973"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755076"
 ---
 # <a name="canimationvalue-class"></a>Clase CAnimationValue
 
@@ -94,7 +94,7 @@ La clase CAnimationValue encapsula un único objeto CAnimationVariable y puede r
 
 Agrega una transición que se aplicará a un valor.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -239,7 +239,7 @@ Proporciona la conversión entre CAnimationValue e INT32. Este método llama int
 
 Asigna un valor DOUBLE a CAnimationValue.
 
-```
+```cpp
 void operator=(DOUBLE dblVal);
 void operator=(INT32 nVal);
 ```
@@ -260,7 +260,7 @@ Asigna un valor DOUBLE a CAnimationValue. Este valor se establece como valor pre
 
 Establece el valor predeterminado.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -273,6 +273,6 @@ Especifica el valor predeterminado.
 
 Utilice este método para establecer un valor predeterminado. Se devuelve un valor predeterminado a la aplicación cuando no se ha iniciado la animación o no se ha creado el objeto COM subyacente. Si el objeto COM subyacente encapsulado en CAnimationVarible ya se creó, este método lo vuelve a crear, por lo tanto, es posible que deba llamar a EnableValueChanged/EnableIntegerValueChanged métodos de nuevo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

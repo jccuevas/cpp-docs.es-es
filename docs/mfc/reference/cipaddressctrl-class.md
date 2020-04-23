@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 28aa0e7137647bc49406dab1e82b9c2b05ca3538
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372340"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754961"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl (clase)
 
@@ -96,7 +96,7 @@ CIPAddressCtrl();
 
 Borra el contenido del Control de direcciones IP.
 
-```
+```cpp
 void ClearAddress();
 ```
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Estilo del control de dirección IP. Aplique una combinación de estilos de ventana. Debe incluir el estilo WS_CHILD porque el control debe ser una ventana secundaria. Consulte [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) en el Windows SDK para obtener una lista de estilos de Windows.
 
 *Rect*<br/>
-Una referencia al tamaño y la posición del Control de direcciones IP. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
+Una referencia al tamaño y la posición del Control de direcciones IP. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/win32/api/windef/ns-windef-rect) estructura.
 
 *pParentWnd*<br/>
 Un puntero a la ventana primaria del control de dirección IP. No debe ser NULL.
@@ -166,7 +166,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Estilo del control de dirección IP. Aplique una combinación de estilos de ventana. Debe incluir el estilo WS_CHILD porque el control debe ser una ventana secundaria. Consulte [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) en el Windows SDK para obtener una lista de estilos de Windows.
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -248,7 +248,7 @@ Esta función miembro implementa el comportamiento del [mensaje de](/windows/win
 
 Establece los valores de dirección para los cuatro campos en el Control de direcciones IP.
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -290,7 +290,7 @@ Esta función miembro implementa el comportamiento de la [IPM_SETADDRESS](/windo
 
 Establece el foco del teclado en el campo especificado en el Control de direcciones IP.
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
@@ -307,7 +307,7 @@ Esta función miembro implementa el comportamiento del [mensaje de](/windows/win
 
 Establece el intervalo en el campo especificado en el Control de direcciones IP.
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,
@@ -329,7 +329,7 @@ Una referencia a un entero que recibe el límite superior del campo especificado
 
 Esta función miembro implementa el comportamiento del [mensaje Win32 IPM_SETRANGE](/windows/win32/Controls/ipm-setrange), como se describe en el Windows SDK. Utilice los dos parámetros, *nLower* y *nUpper*, para indicar los límites inferior y superior del campo, en lugar del parámetro *wRange* utilizado con el mensaje Win32.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

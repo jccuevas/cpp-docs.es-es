@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: d2178881ea18f9dc5300bde838b01a516e6bb395
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f23d5aff2bac65363086c077af45e35c3263f65
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370927"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750569"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo (clase)
 
@@ -91,7 +91,7 @@ Se crea un objeto `CRecentDockSiteInfo` cada vez que se crea un panel. Cada `CPa
 
 ## <a name="crecentdocksiteinfocleanup"></a><a name="cleanup"></a>CRecentDockSiteInfo::CleanUp
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -191,7 +191,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 
 ## <a name="crecentdocksiteinfoinit"></a><a name="init"></a>CRecentDockSiteInfo::Init
 
-```
+```cpp
 void Init();
 ```
 
@@ -227,7 +227,7 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 
 ## <a name="crecentdocksiteinfosavelistofrecentpanes"></a><a name="savelistofrecentpanes"></a>CRecentDockSiteInfo::SaveListOfRecentPanes
 
-```
+```cpp
 void SaveListOfRecentPanes(CList<HWND,
     HWND>& lstOrg,
     BOOL bForSlider);
@@ -271,7 +271,7 @@ virtual void StoreDockInfo(
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

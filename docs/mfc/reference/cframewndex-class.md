@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6073feb5cad5bda5e20f3ff5c16e1ed6d380bca7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373757"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752926"
 ---
 # <a name="cframewndex-class"></a>Clase CFrameWndEx
 
@@ -316,7 +316,7 @@ En el ejemplo siguiente se muestra `CFrameWndEx` cómo heredar una clase de la c
 
 Ajusta el diseño del elemento de cliente OLE y el área de cliente del marco.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -380,7 +380,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 Acopla el panel especificado a la ventana de marco.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -498,7 +498,7 @@ El parámetro *dwDockStyle* puede tener uno de los siguientes valores:
 
 Muestra u oculta el menú principal en modo de pantalla completa.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -511,7 +511,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Habilita el modo de pantalla completa para la ventana de marco.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -532,7 +532,7 @@ Si desea mantener el menú principal en la pantalla, llame a [CFrameWndEx::Enabl
 
 Habilita o deshabilita la carga del estado de acoplamiento.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
@@ -545,7 +545,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 Habilita o deshabilita el control automático del menú del panel.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -1712,7 +1712,7 @@ afx_msg void OnSizing(
 
 Llamado por el marco de trabajo cuando cambian los colores del sistema.
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1963,7 +1963,7 @@ Se llama a este método cuando el tamaño de la ventana de marco ha cambiado o c
 
 Anula el registro de un panel y lo quita del administrador de acoplamiento.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1999,7 +1999,7 @@ La [clase CDockingManager](../../mfc/reference/cdockingmanager-class.md) control
 
 Restaura el diseño de acoplamiento al estado de acoplamiento almacenado en el registro.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
@@ -2012,7 +2012,7 @@ El estado de acoplamiento. Este parámetro se ignora.
 
 Establece la ventana del marco de vista previa de impresión.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -2027,7 +2027,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Inserta comandos definidos por el usuario en un menú de la barra de herramientas.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -2053,7 +2053,7 @@ El marco de trabajo almacena comandos definidos por el usuario en una lista. Uti
 
 Cambia el fotograma principal entre el modo de pantalla completa y el modo normal.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -2061,7 +2061,7 @@ void ShowFullScreen();
 
 Muestra u oculta el panel especificado.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -2087,7 +2087,7 @@ void ShowPane(
 
 Llamado por el marco de trabajo para actualizar el título del marco de ventana.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -2113,7 +2113,7 @@ El comando de ayuda. Para obtener una lista de valores posibles, consulte [WinHe
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

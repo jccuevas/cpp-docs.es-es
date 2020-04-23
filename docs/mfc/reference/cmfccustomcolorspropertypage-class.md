@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: 01b73f44fcf26a820e43eb87a65e99c2ec186e64
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 468d947947fc89f9ebc832cda722d854bb8b4be2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367662"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752462"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage (Clase)
 
@@ -75,7 +75,7 @@ En el ejemplo siguiente se `CMFCCustomColorsPropertyPage` muestra cómo construi
 
 Establece los componentes de color de la página de propiedades.
 
-```
+```cpp
 void Setup(
     BYTE R,
     BYTE G,
@@ -95,7 +95,7 @@ void Setup(
 
 Este método actualiza los valores de color RGB actual y HLS asociados (hue, lightness y saturation) de la página de propiedades. El [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) método llama a este método cuando el marco de trabajo inicializa el cuadro de diálogo de color o el usuario presiona el botón izquierdo del mouse. Para obtener `CMFCColorDialog`más información sobre , vea [CMFCColorDialog (Clase)](../../mfc/reference/cmfccolordialog-class.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

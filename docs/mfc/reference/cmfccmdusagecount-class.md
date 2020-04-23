@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 1c03f0c62e508f9d00a352b71c8f3a18604e36c0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02b302ec38922128190a6f20ce2f156b52383b55
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367738"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752584"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount (Clase)
 
@@ -90,7 +90,7 @@ Puede conservar `CMFCCmdUsageCount` los datos de clase entre ejecuciones del pro
 
 Incrementa en uno el contador asociado al comando dado.
 
-```
+```cpp
 void AddCmd(UINT uiCmd);
 ```
 
@@ -179,7 +179,7 @@ Este método devuelve 0 si `m_nTotalUsage`el uso total del comando, , es 0. De l
 
 Borra el recuento de uso de todos los comandos.
 
-```
+```cpp
 void Reset();
 ```
 
@@ -200,7 +200,7 @@ virtual void Serialize(CArchive& ar);
 |||
 |-|-|
 |Parámetro|Descripción|
-|*ar*|[en] Objeto `CArchive` desde o desde el que serializar.|
+|*Ar*|[en] Objeto `CArchive` desde o desde el que serializar.|
 
 ### <a name="remarks"></a>Observaciones
 
@@ -236,7 +236,7 @@ Este método establece `CMFCCmdUsageCount` los `m_nStartCount` miembros de datos
 
 En Debug compila este método genera un error de aserción si el *nMinUsagePercentage* parámetro es mayor o igual que 100.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

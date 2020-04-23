@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb5d2b53fa5899ac84608dc4ace6a84a3e5a7575
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369239"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754766"
 ---
 # <a name="cd2dgeometrysink-class"></a>Clase CD2DGeometrySink
 
@@ -115,7 +115,7 @@ virtual ~CD2DGeometrySink();
 
 Añade un único arco a la geometría del trazado
 
-```
+```cpp
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```
 
@@ -128,7 +128,7 @@ El segmento de arco que se va a añadir a la figura
 
 Crea una curva Bézier cúbica entre el punto actual y el punto final especificado.
 
-```
+```cpp
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```
 
@@ -141,7 +141,7 @@ Estructura que describe los puntos de control y el punto final de la curva Bézi
 
 Crea una secuencia de curvas Bézier cúbicas y las agrega al sumidero de geometría.
 
-```
+```cpp
 void AddBeziers(
     const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
@@ -156,7 +156,7 @@ Matriz de segmentos de Bézier que describe las curvas de Bézier que se van a c
 
 Crea un segmento de línea entre el punto actual y el punto final especificado y lo agrega al sumidero de geometría.
 
-```
+```cpp
 void AddLine(CD2DPointF point);
 ```
 
@@ -169,7 +169,7 @@ El punto final de la línea que se desea dibujar.
 
 Crea una secuencia de líneas utilizando los puntos especificados y las agrega al receptor de geometría.
 
-```
+```cpp
 void AddLines(
     const CArray<CD2DPointF,
     CD2DPointF>& points);
@@ -184,7 +184,7 @@ Matriz de uno o más puntos que describen las líneas que se deben dibujar. Una 
 
 Crea una curva Bézier cuadrática entre el punto actual y el punto final especificado.
 
-```
+```cpp
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```
 
@@ -197,7 +197,7 @@ Estructura que describe el punto de control y el punto final de la curva Bézier
 
 Agrega una secuencia de segmentos Bézier cuadráticos como una matriz en una sola llamada.
 
-```
+```cpp
 void AddQuadraticBeziers(
     const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
@@ -212,7 +212,7 @@ Una matriz de una secuencia de segmentos Bézier cuadráticos.
 
 Inicia una nueva figura en el punto especificado.
 
-```
+```cpp
 void BeginFigure(
     CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
@@ -255,7 +255,7 @@ Distinto de cero si se realiza correctamente; de lo contrario FALSO.
 
 Finaliza la figura actual; opcionalmente, lo cierra.
 
-```
+```cpp
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```
 
@@ -312,7 +312,7 @@ Puntero a una interfaz ID2D1GeometrySink o NULL si el objeto aún no se ha inici
 
 Especifica el método utilizado para determinar qué puntos están dentro de la geometría descrita por este sumidero de geometría y qué puntos están fuera.
 
-```
+```cpp
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```
 
@@ -325,7 +325,7 @@ Método utilizado para determinar si un punto determinado forma parte de la geom
 
 Especifica las opciones de trazo y unión que se aplicarán a los nuevos segmentos agregados al receptor de geometría.
 
-```
+```cpp
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```
 
@@ -334,6 +334,6 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 *vertexFlags*<br/>
 Las opciones de trazo y unión se aplicarán a los nuevos segmentos añadidos al sumidero de geometría.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Clases](../../mfc/reference/mfc-classes.md)

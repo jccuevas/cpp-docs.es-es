@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 4e73bd7bc1a28317dbfc452df1f45541dfcbfd21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd74d2418bb874553fbbafa637f527a7b84b73bf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374433"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754271"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea (Clase)
 
@@ -112,7 +112,7 @@ Un [valor IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) qu
 
 Establece la imagen de mapa de bits para el área de imagen.
 
-```
+```cpp
 void SetBitmap(CBitmap* pBitmap);
 ```
 
@@ -131,7 +131,7 @@ Si *pBitmap* es NULL, este método establece el tamaño del área de pintura mod
 
 Establece el color de dibujo actual.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -152,7 +152,7 @@ El cuadro de diálogo del editor de imágenes utiliza el color de dibujo para to
 
 Establece el modo de dibujo actual.
 
-```
+```cpp
 void SetMode(IMAGE_EDIT_MODE mode);
 ```
 
@@ -163,7 +163,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |Parámetro|Descripción|
 |*Modo*|[en] Un [valor IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) que especifica el modo de dibujo actual.|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

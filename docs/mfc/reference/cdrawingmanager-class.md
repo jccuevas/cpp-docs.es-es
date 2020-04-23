@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374027"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753239"
 ---
 # <a name="cdrawingmanager-class"></a>Clase CDrawingManager
 
@@ -157,7 +157,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Parámetro|Descripción|
-|*Tamaño*|[en] Un [CSize](../../atl-mfc-shared/reference/csize-class.md) parámetro que indica el tamaño del mapa de bits.|
+|*size*|[en] Un [CSize](../../atl-mfc-shared/reference/csize-class.md) parámetro que indica el tamaño del mapa de bits.|
 |*pBits*|[fuera] Puntero a un puntero de datos que recibe la ubicación de los valores de bits del DIB.|
 |*Bits*|Un identificador del mapa de bits original|
 |*clrTransparent*|Valor RGB que especifica el color transparente del mapa de bits original.|
@@ -174,7 +174,7 @@ Para obtener más información sobre cómo crear un mapa de bits DIB, vea [Creat
 
 Muestra mapas de bits que tienen píxeles transparentes o semitransparentes.
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ Este método realiza la combinación alfa para dos mapas de bits. Para obtener m
 
 Dibuja una elipse con los colores de relleno y borde proporcionados.
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ El rectángulo definido por *rect* debe tener al menos 5 píxeles de ancho y 5 p
 
 Dibuja una línea.
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ Se produce un error en este método si *clrLine* es igual a -1.
 
 Dibuja un rectángulo con los colores de relleno y borde proporcionados.
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ En el ejemplo siguiente se `DrawShadow` muestra `CDrawingManager` cómo utilizar
 
 Rellena un área rectangular con dos degradados de color.
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ Este método genera un error de aserción si *nPercentage* es menor que 0 o más
 
 Rellena un área rectangular con el degradado de color especificado.
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ En el ejemplo siguiente se `FillGradient` muestra `CDrawingManager` cómo utiliz
 
 Rellena un área rectangular con un degradado de color especificado.
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -737,7 +737,7 @@ Para convertir un color HSV o HSL en una representación RGB, llame a uno de los
 
 Invierte un área rectangular.
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -924,7 +924,7 @@ static void __stdcall SetAlphaPixel(
 *Rect*<br/>
 [en] Un área rectangular en la aplicación. El gestor de dibujos dibuja una sombra debajo y a la derecha de esta área.
 
-*X*<br/>
+*x*<br/>
 [en] Coordenada horizontal del píxel a color.
 
 *y y*<br/>
@@ -970,9 +970,9 @@ static void __stdcall SetPixel(
 |*pBits*|[en] Un puntero a los valores de bits del mapa de bits.|
 |*Cx*|[en] El ancho total del mapa de bits.|
 |*Cy*|[en] La altura total del mapa de bits.|
-|*X*|[en] Coordenada x del píxel en el mapa de bits que se ha de cambiar.|
+|*x*|[en] Coordenada x del píxel en el mapa de bits que se ha de cambiar.|
 |*y y*|[en] Coordenada y del píxel en el mapa de bits que se ha de cambiar.|
-|*color*|[en] El nuevo color del píxel identificado por las coordenadas proporcionadas.|
+|*Color*|[en] El nuevo color del píxel identificado por las coordenadas proporcionadas.|
 
 ## <a name="cdrawingmanagersmartmixcolors"></a><a name="smartmixcolors"></a>CDrawingManager::SmartMixColors
 
@@ -1012,7 +1012,7 @@ La relación ponderada se calcula con la \* siguiente fórmula: \* (color1 k1 + 
 
 Gira un contenido de CONTROLADOR de origen dentro del rectángulo dado 90 grados.
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,
@@ -1032,7 +1032,7 @@ TRUE indica rotar +90 grados; FALSE indica rotar -90 grados.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372915"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032400"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos utilizados por MFC
 
@@ -418,7 +418,7 @@ Los estilos estáticos se aplican a los objetos [CStatic Class.](../../mfc/refer
 |SS_BLACKRECT|Especifica un rectángulo rellenado con el color utilizado para dibujar marcos de ventana. El valor predeterminado es negro.|
 |SS_CENTER|Designa un rectángulo simple y muestra el texto dado centrado en el rectángulo. El texto se formatea antes de que se muestre. Las palabras que se extenderían más allá del final de una línea se ajustan automáticamente al principio de la siguiente línea centrada.|
 |SS_CENTERIMAGE|Especifica que, si el mapa de bits o icono es menor que el área de cliente del control estático, el resto del área de cliente se rellena con el color del píxel en la esquina superior izquierda del mapa de bits o icono. Si el control estático contiene una sola línea de texto, el texto se centra verticalmente en el área de cliente del control.|
-|SS_ENDELLIPSIS|o SS_PATHELLIPSIS Reemplaza parte de la cadena dada con elipses, si es necesario, para que el resultado se ajuste al rectángulo especificado. <br /><br />Puede especificar SS_END_ELLIPSIS reemplazar caracteres al final de la cadena o SS_PATHELLIPSIS reemplazar caracteres en el centro de la cadena. Si la cadena contiene\\caracteres de barra diagonal inversa ( ), SS_PATHELLIPSIS conserva la mayor parte del texto posible después de la última barra diagonal inversa.|
+|SS_ENDELLIPSIS|o SS_PATHELLIPSIS Reemplaza parte de la cadena dada con puntos suspensivos, si es necesario, para que el resultado se ajuste al rectángulo especificado. <br /><br />Puede especificar SS_END_ELLIPSIS reemplazar caracteres al final de la cadena o SS_PATHELLIPSIS reemplazar caracteres en el centro de la cadena. Si la cadena contiene\\caracteres de barra diagonal inversa ( ), SS_PATHELLIPSIS conserva la mayor parte del texto posible después de la última barra diagonal inversa.|
 |SS_ENHMETAFILE|Especifica que se mostrará un metarchivo mejorado en el control estático. El texto dado es el nombre de un metarchivo. Un control estático de metarchivo mejorado tiene un tamaño fijo; el metarchivo se escala para ajustarse al área de cliente del control estático.|
 |SS_ETCHEDFRAME|Dibuja el marco del control estático mediante el estilo de borde EDGE_ETCHED.|
 |SS_ETCHEDHORZ|Dibuja los bordes superior e inferior del control estático mediante el estilo de borde EDGE_ETCHED.|
@@ -439,7 +439,7 @@ Los estilos estáticos se aplican a los objetos [CStatic Class.](../../mfc/refer
 |SS_USERITEM|Especifica un elemento definido por el usuario.|
 |SS_WHITEFRAME|Especifica un cuadro con un marco dibujado con el mismo color que el fondo de la ventana. El valor predeterminado es blanco.|
 |SS_WHITERECT|Especifica un rectángulo rellenado con el color utilizado para rellenar el fondo de la ventana. El valor predeterminado es blanco.|
-|SS_WORDELLIPSIS|Trunca el texto que no se ajusta y agrega elipses.|
+|SS_WORDELLIPSIS|Trunca el texto que no se ajusta y agrega puntos suspensivos.|
 
 ## <a name="window-styles"></a><a name="window-styles"></a>Estilos de ventana
 
@@ -504,7 +504,7 @@ Los estilos de ventana extendidos se aplican a los [objetos de clase CWnd.](../.
 |WS_EX_TRANSPARENT|Especifica que una ventana creada con este estilo debe ser transparente. Es decir, la ventana no tapa ninguna de las ventanas que estén debajo. Una ventana creada con este estilo recibe WM_PAINT mensajes solo después de que se hayan actualizado todas las ventanas del mismo nivel debajo de ella.|
 |WS_EX_WINDOWEDGE|Especifica que una ventana tiene un borde con un borde elevado.|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Descripción general de la clase MFC](../../mfc/class-library-overview.md)<br/>
 [CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>

@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365091"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752222"
 ---
 # <a name="ctoolbarctrl-class"></a>Clase CToolBarCtrl
 
@@ -523,7 +523,7 @@ No debe pasar `CString` un objeto a esta función, ya que `CString`no es posible
 
 Cambia el tamaño de todo el control de la barra de herramientas.
 
-```
+```cpp
 void AutoSize();
 ```
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Especifica el estilo del control de barra de herramientas. Las barras de herramientas siempre deben tener el estilo WS_CHILD. Además, puede especificar cualquier combinación de estilos de barra de herramientas y estilos de ventana como se describe en **Comentarios**.
 
 *Rect*<br/>
-Opcionalmente, especifica el tamaño y la posición del control de barra de herramientas. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
+Opcionalmente, especifica el tamaño y la posición del control de barra de herramientas. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/win32/api/windef/ns-windef-rect) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control de barra de herramientas. No debe ser NULL.
@@ -681,7 +681,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de barra de herramientas. Las barras de herramientas siempre deben tener el estilo WS_CHILD. Además, puede especificar cualquier combinación de estilos de barra de herramientas y estilos de ventana como se describe en la sección **Comentarios** de [Crear](#create).
 
 *Rect*<br/>
-Una referencia a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
+Una referencia a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntero a la ventana que es el elemento primario del control.
@@ -713,7 +713,7 @@ Debe llamar a [Crear](#create) para que la barra de herramientas sea utilizable.
 
 Muestra el cuadro de diálogo Personalizar barra de herramientas.
 
-```
+```cpp
 void Customize();
 ```
 
@@ -1040,7 +1040,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [TB_GETI
 
 Recupera la marca de inserción actual de la barra de herramientas.
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 El índice de base cero del botón para el que se va a recuperar información.
 
 *lpRect*<br/>
-Dirección de una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) o un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que recibe las coordenadas del rectángulo delimitador.
+Dirección de una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) o un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que recibe las coordenadas del rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1132,7 +1132,7 @@ El número máximo de filas de texto que se muestran en un botón de la barra de
 
 Recupera las métricas `CToolBarCtrl` del objeto.
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 El identificador de botón.
 
 *lpRect*<br/>
-Puntero a una estructura [RECT](/previous-versions/dd162897\(v=vs.85\)) para recibir la información del rectángulo delimitador.
+Puntero a una estructura [RECT](/windows/win32/api/windef/ns-windef-rect) para recibir la información del rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parámetros
 
 *Ppt*<br/>
-Puntero a una estructura [POINT](/previous-versions/dd162805\(v=vs.85\)) que contiene la coordenada `x` x de la prueba de posicionamiento `y` en el miembro y la coordenada y de la prueba de posicionamiento en el miembro. Las coordenadas son relativas al área de cliente de la barra de herramientas.
+Puntero a una estructura [POINT](/windows/win32/api/windef/ns-windef-point) que contiene la coordenada `x` x de la prueba de posicionamiento `y` en el miembro y la coordenada y de la prueba de posicionamiento en el miembro. Las coordenadas son relativas al área de cliente de la barra de herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parámetros
 
 *Ppt*<br/>
-Puntero a una estructura [POINT](/previous-versions/dd162805\(v=vs.85\)) que contiene las coordenadas de prueba de posicionación, en relación con el área de cliente de la barra de herramientas.
+Puntero a una estructura [POINT](/windows/win32/api/windef/ns-windef-point) que contiene las coordenadas de prueba de posicionación, en relación con el área de cliente de la barra de herramientas.
 
 *ptbim*<br/>
 Puntero a una estructura [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) que recibe la información de marca de inserción.
@@ -1567,7 +1567,7 @@ Considere la posibilidad de llamar a [GetState](#getstate) si desea recuperar m�
 
 Carga mapas de bits en la lista de imágenes de un control de barra de herramientas.
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1730,7 +1730,7 @@ En el ejemplo de código siguiente se reemplaza el mapa de bits de la barra de h
 
 Restaura el estado del control de barra de herramientas desde la ubicación en el registro especificado por los parámetros.
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1760,7 +1760,7 @@ Apunta a una cadena que contiene el nombre del valor que se va a recuperar. Si u
 
 Guarda el estado del control de barra de herramientas en la ubicación en el registro especificado por los parámetros.
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1817,7 +1817,7 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 Anchura y altura, en píxeles, de las imágenes de mapa de bits.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1864,7 +1864,7 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 Anchura y altura, en píxeles, de los botones.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1883,7 +1883,7 @@ El tamaño del botón siempre debe ser al menos tan grande como el tamaño de ma
 
 Especifica el tamaño `TBBUTTON` de la estructura.
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
@@ -1950,7 +1950,7 @@ Devuelve distinto de cero si se realiza correctamente; de lo contrario cero.
 
 Establece el esquema de color del control de barra de herramientas actual.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
@@ -2128,7 +2128,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Establece la marca de inserción actual para la barra de herramientas.
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
@@ -2183,7 +2183,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 Establece las métricas `CToolBarCtrl` del objeto.
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
@@ -2200,7 +2200,7 @@ Esta función miembro emula la funcionalidad del [mensaje de TB_SETMETRICS,](/wi
 
 Establece la ventana propietaria del control de barra de herramientas.
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
@@ -2279,7 +2279,7 @@ En el ejemplo de código siguiente se establece la lista de imágenes presionada
 
 Pide al control de barra de herramientas que se redimensione al número solicitado de filas.
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2295,7 +2295,7 @@ Número solicitado de filas.
 Indica si se deben utilizar más filas o menos filas si no se puede cambiar el tamaño de la barra de herramientas al número solicitado de filas.
 
 *lpRect*<br/>
-Apunta a la [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibirá el nuevo rectángulo delimitador de la barra de herramientas.
+Apunta a la [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/windows/win32/api/windef/ns-windef-rect) estructura que recibirá el nuevo rectángulo delimitador de la barra de herramientas.
 
 ### <a name="remarks"></a>Observaciones
 
@@ -2341,7 +2341,7 @@ Esta función es especialmente útil si desea establecer más de uno de los esta
 
 Establece los estilos de un control de barra de herramientas.
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
@@ -2354,7 +2354,7 @@ Un DWORD que contiene una combinación de estilos de control de barra de [herram
 
 Asocia un control de información sobre herramientas con un control de barra de herramientas.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 
@@ -2384,7 +2384,7 @@ No se utiliza el valor devuelto.
 
 Esta función miembro emula la funcionalidad del [mensaje de TB_SETWINDOWTHEME,](/windows/win32/Controls/tb-setwindowtheme) como se describe en el Windows SDK.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo MFCIE de MFC](../../overview/visual-cpp-samples.md)<br/>

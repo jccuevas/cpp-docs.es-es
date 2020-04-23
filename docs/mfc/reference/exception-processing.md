@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365714"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751614"
 ---
 # <a name="exception-processing"></a>Procesamiento de excepciones
 
@@ -38,7 +38,7 @@ Para obtener ejemplos y más detalles, consulte el artículo [Excepciones](../..
 
 |||
 |-|-|
-|[Tratar](#try)|Designa un bloque de código para el procesamiento de excepciones.|
+|[TRY](#try)|Designa un bloque de código para el procesamiento de excepciones.|
 |[atrapar](#catch)|Designa un bloque de código para detectar una excepción del bloque **TRY** anterior.|
 |[CATCH_ALL](#catch_all)|Designa un bloque de código para detectar todas las excepciones del bloque **TRY** anterior.|
 |[AND_CATCH](#and_catch)|Designa un bloque de código para detectar tipos de excepción adicionales del bloque **TRY** anterior.|
@@ -307,7 +307,7 @@ Vea el ejemplo de [CFile::Abort](../../mfc/reference/cfile-class.md#abort).
 
 Produce una excepción de archivo.
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
@@ -327,7 +327,7 @@ Apunta a una cadena que `CArchive` contiene el nombre del objeto que causó la e
 
 Produce una excepción de archivo.
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -359,7 +359,7 @@ Produce una excepción de argumento no válido.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ Se llama a esta función cuando se utilizan argumentos no válidos.
 
 Produce una excepción de memoria.
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ Llame a esta función si se produce un error en las llamadas a asignadores de me
 
 Produce una excepción que es el resultado de una solicitud de una característica no admitida.
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 Produce una excepción de recurso.
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ Normalmente se llama a esta función cuando no se puede cargar un recurso de Win
 
 Produce una excepción para detener una operación de usuario final.
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ Esta función se `AfxMessageBox` llama normalmente inmediatamente después de ha
 
 Utilice esta función para producir una excepción dentro de una función de automatización OLE.
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ La información proporcionada a esta función se puede mostrar mediante la aplic
 
 Crea un objeto `COleException` de tipo y produce una excepción.
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ La versión que toma un HRESULT como argumento convierte ese código de resultad
 
 Llame a esta función para producir una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md) desde su propio código.
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ Para obtener información acerca de las excepciones `CDaoException` relacionadas
 
 Llame a esta función `CDBException` para producir una excepción de tipo desde su propio código.
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ Para obtener información acerca de los valores RETCODE definidos por ODBC, vea 
 
 La función de terminación predeterminada proporcionada por MFC.
 
-```
+```cpp
 void  AfxAbort();
 ```
 
@@ -578,7 +578,7 @@ Vea el ejemplo de [CATCH](#catch).
 
   **Encabezado** afx.h
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Macros y variables globales](mfc-macros-and-globals.md)<br/>
 [Clase CException](cexception-class.md)<br/>

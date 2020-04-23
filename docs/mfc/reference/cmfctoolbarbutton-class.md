@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 5d6b964543a5cbd8a8896fe768e2d57a098ead97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e96740ba6755f489be07fbf8996cfa8b049314a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372215"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754026"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton (clase)
 
@@ -1575,7 +1575,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*ar*<br/>
+*Ar*<br/>
 [en] Objeto `CArchive` desde el que se va a serializar o al que se va a serializar.
 
 ### <a name="remarks"></a>Observaciones
@@ -1683,7 +1683,7 @@ La implementación predeterminada de este método no hace nada. Invalide este m�
 
 Establece el rectángulo delimitador del botón.
 
-```
+```cpp
 void SetRect(const CRect rect);
 ```
 
@@ -1717,7 +1717,7 @@ La implementación predeterminada establece el [CMFCToolBarButton::m_nStyle](#m_
 
 Especifica si el botón está visible.
 
-```
+```cpp
 void SetVisible(BOOL bShow=TRUE);
 ```
 
@@ -1734,7 +1734,7 @@ Utilice esta función para ocultar o mostrar un botón de barra de herramientas 
 
 Muestra u oculta el botón.
 
-```
+```cpp
 void Show(BOOL bShow);
 ```
 
@@ -1751,7 +1751,7 @@ Utilice el [CMFCToolBarButton::SetVisible](#setvisible) método para establecer 
 
 Este método llama a la [CMFCToolBarButton::OnShow](#onshow) método después de actualizar el estado de visibilidad del botón.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

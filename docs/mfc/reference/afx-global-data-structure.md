@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363677"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752872"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA (estructura)
 
@@ -170,7 +170,7 @@ TRUE indica que se admite la combinación alfa; de lo contrario, FALSE.
 
 Libera los recursos asignados por el marco, como pinceles, fuentes y archivos DLL.
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -288,7 +288,7 @@ Un tema define el estilo visual de una aplicación. No se utiliza un tema para d
 
 Habilita o deshabilita la compatibilidad con Microsoft Active Accessibility.
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -404,7 +404,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Parámetros
 
-*info*<br/>
+*Información*<br/>
 [adentro, fuera] Estructura [NONCLIENTMETRICS](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) que contiene las métricas escalables asociadas al área no cliente de una ventana no minimizada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -676,7 +676,7 @@ El `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor inicializa este miembro en 4 p
 
 Detecta el estado actual de las características del escritorio para la animación de menús y para ocultar automáticamente la barra de tareas.
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ Este método crea una fuente normal horizontal, una fuente subrayada y una fuent
 
 Reinicializa las fuentes lógicas utilizadas por el marco.
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ Para obtener más información `CFont::CreateFontIndirect`acerca de las fuentes 
 
 Inicializa los colores, la profundidad de color, los pinceles, los lápices y las imágenes utilizadas por el marco.
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ Valor entero con indicadores codificados que especifican posiciones de barras de
 
 Libera interfaces obtenidas `GetITaskbarList` `GetITaskbarList3` a través de los métodos y.
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 
@@ -895,7 +895,7 @@ Una referencia a un ID de interfaz.
 
 Devuelve S_OK si se realiza correctamente; un valor de error en caso contrario.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../hierarchy-chart.md)<br/>
 [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](structures-styles-callbacks-and-message-maps.md)<br/>

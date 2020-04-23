@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 9f3d86cf735c02b6021441c66d9fd64547f6d6c2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 165ba7c1918c3ccc5d5d7e0bc067fba86678a3e7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374908"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753805"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (clase)
 
@@ -281,7 +281,7 @@ Normalmente, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initin
 
 Revoca el registro de este generador de objetos con los archivos DLL del sistema OLE.
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -317,7 +317,7 @@ TRUE si es correcto; en caso contrario, FALSE.
 
 Registra todos los generadores de objetos de la aplicación con el registro del sistema OLE.
 
-```
+```cpp
 void UpdateRegistry(LPCTSTR lpszProgID = NULL);
 virtual BOOL UpdateRegistry(BOOL bRegister);
 ```
@@ -398,7 +398,7 @@ virtual BOOL VerifyUserLicense();
 
 Distinto de cero si la licencia en tiempo de diseño es válida; de lo contrario 0.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

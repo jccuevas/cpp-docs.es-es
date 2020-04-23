@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: ce7c48263ed511545757c94d61552e6206e74a00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b3ae0d69c385ba89cf75d682ce12c6f1f4e5112f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352853"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752970"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane (clase)
 
@@ -306,7 +306,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 Restaura el orden de tabulación interno a un estado predeterminado.
 
-```
+```cpp
 void FillDefaultTabsOrderArray();
 ```
 
@@ -440,7 +440,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 [fuera] Objeto `CSize` que se rellena con el tamaño mínimo permitido.
 
 ### <a name="remarks"></a>Observaciones
@@ -457,7 +457,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 [fuera] Objeto `CSize` que se rellena con el tamaño mínimo permitido.
 
 ### <a name="remarks"></a>Observaciones
@@ -601,7 +601,7 @@ Llame a este método para quitar el panel especificado por el *pBar* parámetro 
 
 Determina si la barra de control con pestañas se destruirá automáticamente.
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -700,7 +700,7 @@ El modo de ocultación automática se establece para cada panel desmontable en e
 
 Llame a este método para cambiar un panel con fichas al modo de ocultación automática mediante programación. El panel debe acoplarse a la ventana de marco principal ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) debe devolver un puntero válido a [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

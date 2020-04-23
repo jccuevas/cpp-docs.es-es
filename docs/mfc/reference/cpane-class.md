@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364162"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753670"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -340,7 +340,7 @@ La diferencia de anchura y altura entre *rectRequired* y el rectángulo de la ve
 
 Calcula el rectángulo interior de un panel, incluidos los bordes y pinzas.
 
-```
+```cpp
 void CalcInsideRect(
     CRect& rect,
     BOOL bHorz) const;
@@ -362,7 +362,7 @@ El marco de trabajo llama a este método cuando tiene que volver a calcular el d
 
 Calcula el rectángulo acoplado recientemente.
 
-```
+```cpp
 void CalcRecentDockedRect();
 ```
 
@@ -864,7 +864,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 [fuera] Objeto `CSize` que se rellena con el tamaño mínimo permitido.
 
 ### <a name="remarks"></a>Observaciones
@@ -890,7 +890,7 @@ El título del panel se muestra en el área de título cuando el panel está aco
 
 Recupera el *rectángulo virtual* del panel.
 
-```
+```cpp
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
@@ -1381,7 +1381,7 @@ Si `CMFCAutoHideButton::m_bOverlappingTabs` es FALSE, o si el panel no se encuen
 
 Establece los valores de borde del panel.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -1416,7 +1416,7 @@ Llame a esta función para establecer los tamaños de los bordes del panel.
 
 Establece la *zona activa* del panel.
 
-```
+```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
@@ -1471,13 +1471,13 @@ De forma predeterminada, todas las barras de herramientas tienen el modo de fila
 
 Establece el tamaño mínimo permitido para el panel.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Tamaño*<br/>
+*size*<br/>
 [en] Objeto `CSize` que contiene el tamaño mínimo permitido para el panel.
 
 ### <a name="remarks"></a>Observaciones
@@ -1486,7 +1486,7 @@ void SetMinSize(const CSize& size);
 
 Establece el *rectángulo virtual* del panel.
 
-```
+```cpp
 void SetVirtualRect(
     const CRect& rect,
     BOOL bMapToParent = TRUE);
@@ -1510,7 +1510,7 @@ No llame a métodos relacionados con rectángulos virtuales a menos que mueva pa
 
 Establece la información de clase en tiempo de ejecución para la ventana de marco pequeño predeterminada.
 
-```
+```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
@@ -1582,7 +1582,7 @@ Utilice este método para desacoplar mediante programación un panel.
 
 Actualiza el rectángulo virtual.
 
-```
+```cpp
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);
@@ -1604,7 +1604,7 @@ La segunda sobrecarga desplaza el rectángulo virtual por la cantidad especifica
 
 La tercera sobrecarga establece el rectángulo virtual mediante la posición actual del panel y el tamaño especificado por *sizeNew*.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
