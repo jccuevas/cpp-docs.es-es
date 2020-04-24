@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: a5ac8fec691a3bf8ba3725aa5be0ac9da5ef34b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08fd7f1ba11053358391e7f120eb5db80d764c87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361814"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754087"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty (Clase)
 
@@ -400,7 +400,7 @@ El área de valor de una propiedad consta de un cuadro de texto y posiblemente u
 
 Hace que una propiedad sea editable o de solo lectura.
 
-```
+```cpp
 void AllowEdit(BOOL bAllow=TRUE);
 ```
 
@@ -539,7 +539,7 @@ Llame a la [CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol) mé
 
 Habilita o deshabilita una propiedad.
 
-```
+```cpp
 void Enable(BOOL bEnable=TRUE);
 ```
 
@@ -554,7 +554,7 @@ void Enable(BOOL bEnable=TRUE);
 
 Habilita o deshabilita un control de botón de giro que se usa para modificar un valor de propiedad.
 
-```
+```cpp
 void EnableSpinControl(
     BOOL bEnable=TRUE,
     int nMin=0,
@@ -582,7 +582,7 @@ El tipo de propiedad, especificado por el *varValue* parámetro de la [CMFCPrope
 
 Expande o contrae una propiedad que contiene subpropiedades.
 
-```
+```cpp
 void Expand(BOOL bExpand=TRUE);
 ```
 
@@ -912,7 +912,7 @@ En la tabla siguiente se enumeran los valores que se pueden devolver al parámet
 
 Llamado por el marco de trabajo para inicializar un objeto de propiedad.
 
-```
+```cpp
 void Init();
 ```
 
@@ -1556,7 +1556,7 @@ Este método admite una propiedad que es una lista de valores o uno de los sigui
 
 Redibuja la propiedad.
 
-```
+```cpp
 void Redraw();
 ```
 
@@ -1566,7 +1566,7 @@ void Redraw();
 
 Quita todas las opciones (elementos) de una propiedad.
 
-```
+```cpp
 void RemoveAllOptions();
 ```
 
@@ -1612,7 +1612,7 @@ virtual void ResetOriginalValue();
 
 Asocia un valor DWORD a una propiedad.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1629,7 +1629,7 @@ Utilice el [CMFCPropertyGridProperty::GetData](#getdata) método para recuperar 
 
 Especifica el texto que describe la propiedad actual.
 
-```
+```cpp
 void SetDescription(const CString& strDescr);
 ```
 
@@ -1644,7 +1644,7 @@ void SetDescription(const CString& strDescr);
 
 Establece el nombre de una propiedad.
 
-```
+```cpp
 void SetName(
     LPCTSTR lpszName,
     BOOL bRedraw=TRUE);
@@ -1696,7 +1696,7 @@ virtual void SetValue(const _variant_t& varValue);
 
 Muestra u oculta una propiedad.
 
-```
+```cpp
 void Show(
     BOOL bShow=TRUE,
     BOOL bAdjustLayout=TRUE);
@@ -1710,7 +1710,7 @@ void Show(
 *bAdjustLayout*<br/>
 [en] TRUE para volver a calcular cómo dibujar la etiqueta y el valor de una propiedad y, a continuación, dibujar la propiedad; FALSE para usar cálculos existentes para dibujar la propiedad. El valor predeterminado es TRUE.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
