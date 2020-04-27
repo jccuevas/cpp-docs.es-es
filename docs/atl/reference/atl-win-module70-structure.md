@@ -1,5 +1,5 @@
 ---
-title: _ATL_WIN_MODULE70 (estructura)
+title: Estructura de _ATL_WIN_MODULE70
 ms.date: 11/04/2016
 f1_keywords:
 - _ATL_WIN_MODULE70
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_WIN_MODULE70 structure
 - ATL_WIN_MODULE70 structure
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
-ms.openlocfilehash: 0b636d328852daf821269230aae443cef084578b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e78e4ad87338528aa654f5ecaa08b45315846
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260758"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168558"
 ---
-# <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 (estructura)
+# <a name="_atl_win_module70-structure"></a>Estructura de _ATL_WIN_MODULE70
 
-Utilizado por el código basado en ventanas en ATL.
+Lo utiliza el código de ventana en ATL.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize;
     CRITICAL_SECTION m_csWindowCreate;
@@ -31,28 +31,28 @@ struct _ATL_WIN_MODULE70 {
 };
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 `cbSize`<br/>
-El tamaño de la estructura que se utiliza para el control de versiones.
+Tamaño de la estructura, que se usa para el control de versiones.
 
 `m_csWindowCreate`<br/>
-Se usa para serializar el acceso a código de registro de la ventana. Lo utiliza internamente ATL.
+Se usa para serializar el acceso al código de registro de la ventana. Lo utiliza internamente ATL.
 
 `m_pCreateWndList`<br/>
-Se usa para enlazar a sus objetos de windows. Lo utiliza internamente ATL.
+Se utiliza para enlazar Windows a sus objetos. Lo utiliza internamente ATL.
 
 `m_rgWindowClassAtoms`<br/>
-Se usa para realizar un seguimiento de los registros de clase de ventana para que se pueden anular el registro correctamente en la finalización. Lo utiliza internamente ATL.
+Se utiliza para realizar el seguimiento de los registros de clase de ventana para que se pueda anular correctamente el registro en la terminación. Lo utiliza internamente ATL.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) se define como un typedef de `_ATL_WIN_MODULE70`.
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) se define como una definición de `_ATL_WIN_MODULE70`tipo de.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clases y structs](../../atl/reference/atl-classes.md)
+[Clases y estructuras](../../atl/reference/atl-classes.md)
