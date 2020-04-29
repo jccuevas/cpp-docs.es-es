@@ -8,22 +8,22 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a1645c1116daa66c578a6d6e697ab168e4006af9
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 42c36259b14a7f0341e383bb3a7f2760bab165aa
+ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150958"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538597"
 ---
 # <a name="data-access-in-visual-c"></a>Acceso a datos en Visual C++
 
 Prácticamente todos los productos de base de datos, SQL y NoSQL, proporcionan una interfaz para aplicaciones nativas de C++. La interfaz estándar de la industria es ODBC, que se admite en los principales productos de base de datos SQL y en muchos productos NoSQL. Para productos que no son de Microsoft, consulte al proveedor para obtener más información. También existen bibliotecas de terceros con diferentes términos de licencia.
 
-Desde 2011, Microsoft cuenta con ODBC como el estándar de conexión para las aplicaciones nativas a bases de datos de Microsoft SQL Server, tanto locales como en la nube. Para más información, vea [Programación del acceso a datos \(MFC/ATL\)](data-access-programming-mfc-atl.md). Las bibliotecas de C++/CLI pueden usar los controladores nativos de ODBC o ADO.NET. Para más información, vea [Acceso a datos en ADO.NET(C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) y [Obtener acceso a los datos en Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
+Desde 2011, Microsoft cuenta con ODBC como el estándar de conexión para las aplicaciones nativas a bases de datos de Microsoft SQL Server, tanto locales como en la nube. Para más información, vea [Programación del acceso a datos \(MFC/ATL\)](data-access-programming-mfc-atl.md). Las bibliotecas de C++/CLI pueden usar los controladores nativos de ODBC o ADO.NET. Para obtener más información, vea [acceso a datos con ADO.net (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) y [obtener acceso a datos en Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Programación del acceso a datos (MFC/ATL)](data-access-programming-mfc-atl.md)<br/>
+[Programación de acceso a datos (MFC/ATL)](data-access-programming-mfc-atl.md)<br/>
 Describe la programación de acceso a datos heredados con Visual C++, donde se suele utilizar una de las bibliotecas de clases, como Active Template Library (ATL) o Microsoft Foundation Class (MFC), que simplifican el trabajo con las API de bases de datos.
 
 [Conectividad abierta de bases de datos (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
@@ -38,7 +38,7 @@ Interfaz principalmente heredada que todavía es necesaria en algunos escenarios
 Conexión a Azure SQL Database desde aplicaciones de C o C++.
 
 [Biblioteca de cliente de Microsoft Azure Storage para C++](https://github.com/Azure/azure-storage-cpp)<br/>
-[Azure Storage](/azure/storage/storage-introduction) es una solución de almacenamiento en la nube para aquellas aplicaciones modernas que necesitan durabilidad, disponibilidad y escalabilidad para satisfacer las necesidades de sus clientes. Conectarse a Azure Storage desde C++ mediante la biblioteca de cliente de Azure Storage para C++.
+[Azure Storage](/azure/storage/common/storage-introduction) es una solución de almacenamiento en la nube para aquellas aplicaciones modernas que necesitan durabilidad, disponibilidad y escalabilidad para satisfacer las necesidades de sus clientes. Conectarse a Azure Storage desde C++ mediante la biblioteca de cliente de Azure Storage para C++.
 
 [Controlador ODBC de SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
 El controlador ODBC más reciente proporciona un acceso a datos sólido a aplicaciones basadas en Microsoft SQL Server y Microsoft Azure SQL Database para C/C++. Proporciona compatibilidad con características, incluidas Always Encrypted, Azure Active Directory y Grupos de disponibilidad Always On. También está disponible para MacOS y Linux.
