@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
 ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157799"
 ---
 # <a name="string-literal-concatenation"></a>Concatenación de literales de cadena
 
@@ -29,7 +29,7 @@ es idéntico a la cadena
 
 Puede usar la concatenación de cadenas en cualquier lugar en el que antes utilizaba una barra diagonal inversa seguida de un carácter de nueva línea para escribir cadenas de más de una línea.
 
-Para forzar una nueva línea dentro de un literal de cadena, escriba la secuencia de escape de nueva línea (**\n**) en el punto de la cadena donde desee que se corte la línea, de la manera siguiente:
+Para forzar una nueva línea dentro de un literal de cadena, escriba la secuencia de escape de nueva línea ( **\n**) en el punto de la cadena donde desee que se corte la línea, de la manera siguiente:
 
 ```
 "Enter a number between 1 and 100\nOr press Return"
