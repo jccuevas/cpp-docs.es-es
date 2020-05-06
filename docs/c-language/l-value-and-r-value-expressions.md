@@ -8,15 +8,15 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
 ms.openlocfilehash: bd5f702588a11b7841f77de539d113206833cde9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325525"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Expresiones de valor L y valor R
 
-Las expresiones que hacen referencia a ubicaciones de memoria se denominan expresiones de “valor L”. Un valor L representa un valor de "localizador" de la región de almacenamiento o un valor "izquierdo", lo que implica que puede aparecer a la izquierda del signo igual (**=**). Los valores L suelen ser identificadores.
+Las expresiones que hacen referencia a ubicaciones de memoria se denominan expresiones de “valor L”. Un valor L representa un valor de "localizador" de la región de almacenamiento o un valor "izquierdo", lo que implica que puede aparecer a la izquierda del signo igual ( **=** ). Los valores L suelen ser identificadores.
 
 Las expresiones que hacen referencia a ubicaciones modificables se denominan “valores L modificables”. Un valor L modificable no puede tener un tipo de matriz, un tipo incompleto ni o un tipo con el atributo **const**. Para que las estructuras y las uniones sean valores L modificables, no deben tener ningún miembro con el atributo **const**. El nombre del identificador indica una ubicación de almacenamiento, mientras que el valor de la variable es el valor almacenado en esa ubicación.
 
@@ -26,9 +26,9 @@ Cualquiera de las siguientes expresiones de C pueden ser expresiones de valor L:
 
 - Un identificador de tipo entero, flotante, puntero, estructura o unión
 
-- Una expresión de subíndice (**[ ]**) que no se evalúe como una matriz
+- Una expresión de subíndice ( **[ ]** ) que no se evalúe como una matriz
 
-- Una expresión de selección de miembro (**->** o **.**)
+- Una expresión de selección de miembro ( **->** o **.** )
 
 - Una expresión de direccionamiento indirecto unario (<strong>\*</strong>) que no hace referencia a una matriz
 

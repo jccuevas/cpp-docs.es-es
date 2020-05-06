@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
 ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148457"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343417"
 ---
 # <a name="null-statement-c"></a>NULL (Instrucción) (C)
 
@@ -35,7 +35,7 @@ for ( i = 0; i < 10; line[i++] = 0 )
      ;
 ```
 
-En este ejemplo, la expresión de bucle de la instrucción **for** `line[i++] = 0` inicializa los 10 primeros elementos de `line` en 0. El cuerpo de la instrucción es una instrucción null, ya que no se requieren más instrucciones.
+En este ejemplo, la expresión de bucle de la instrucción **for**`line[i++] = 0` inicializa los 10 primeros elementos de `line` en 0. El cuerpo de la instrucción es una instrucción null, ya que no se requieren más instrucciones.
 
 ## <a name="see-also"></a>Vea también
 
