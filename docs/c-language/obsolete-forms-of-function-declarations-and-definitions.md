@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
 ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
 ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "81745877"
@@ -51,4 +51,4 @@ En la sección siguiente, [Definiciones de funciones de C](../c-language/c-funct
 
 ## <a name="see-also"></a>Vea también
 
-[Descripción general de las funciones](../c-language/overview-of-functions.md)
+[Información general de funciones](../c-language/overview-of-functions.md)
