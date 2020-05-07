@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
 ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299083"
@@ -18,15 +18,15 @@ En la tabla siguiente se muestra un resumen de características de duración y d
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Resumen de duración y visibilidad
 
-|Atributos:<br /><br /> Level|Elemento|Clase de almacenamiento<br /><br /> Especificador|Resultado:<br /><br /> Período de duración|Visibility|
+|Atributos:<br /><br /> Nivel|Elemento|Clase de almacenamiento<br /><br /> Especificador|Resultado: <br /><br /> Período de duración|Visibilidad|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |Ámbito de archivo|Definición de variable|**static**|Global|Resto del archivo de código fuente en el que aparece|
 ||Declaración de variables|**extern**|Global|Resto del archivo de código fuente en el que aparece|
 ||Prototipo o definición de función|**static**|Global|Archivo de código fuente único|
 ||Prototipo de función|**extern**|Global|Resto del archivo de código fuente|
-|Ámbito de bloque|Declaración de variables|**extern**|Global|Bloquear|
-||Definición de variable|**static**|Global|Bloquear|
-||Definición de variable|**auto** o **register**|Local|Bloquear|
+|Ámbito de bloque|Declaración de variables|**extern**|Global|Bloque|
+||Definición de variable|**static**|Global|Bloque|
+||Definición de variable|**auto** o **register**|Local|Bloque|
 
 ## <a name="example"></a>Ejemplo
 
