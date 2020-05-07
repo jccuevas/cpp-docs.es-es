@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 5d9481ecc8e574b602124103f8524e07270fe058
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343229"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919739"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -100,7 +100,7 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*C*<br/>
+*unidad*<br/>
 Carácter que se va a probar.
 
 *locale*<br/>
@@ -108,7 +108,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c* <a 255 y hay una rutina **de _ismbb** correspondiente (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum),** el resultado es el valor devuelto de la rutina **de _ismbb** correspondiente.
+Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c* <= 255 y hay una rutina de **_ismbb** correspondiente (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de la rutina de **_ismbb** correspondiente.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -118,18 +118,18 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 
 |Rutina|Condición de prueba (solo página de códigos 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS no-Kanji: 0x8140<a*c*<a 0x889E.|
-|**_ismbcl0_l**|JIS no-Kanji: 0x8140<a*c*<a 0x889E.|
-|**_ismbcl1**|NIVEL de JIS-1: 0x889F<a*c*<a 0x9872.|
-|**_ismbcl1_l**|NIVEL de JIS-1: 0x889F<a*c*<a 0x9872.|
-|**_ismbcl2**|NIVEL de JIS-2: 0x989F<a*c*<a 0xEAA4.|
-|**_ismbcl2_l**|NIVEL de JIS-2: 0x989F<a*c*<a 0xEAA4.|
+|**_ismbcl0**|JIS no kanji: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl0_l**|JIS no kanji: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl1**|JIS Level-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl1_l**|JIS Level-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl2**|JIS LEVEL-2:0x989F<=*c*<= 0xEAA4.|
+|**_ismbcl2_l**|JIS LEVEL-2:0x989F<=*c*<= 0xEAA4.|
 
 Las funciones comprueban que el valor especificado *c* coincide con las condiciones de prueba descritas anteriormente, pero no comprueban que *c* es un carácter multibyte válido. Si el byte inferior está en los intervalos 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, estas funciones devuelven un valor distinto de cero, lo que indica que el carácter cumple la condición de prueba. Use [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) para comprobar si el carácter multibyte está definido.
 
-**Fin de la página de código s 932 Específico**
+**Final de la página de códigos 932 específica**
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -144,7 +144,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc (Rutinas)](../../c-runtime-library/ismbc-routines.md)<br/>

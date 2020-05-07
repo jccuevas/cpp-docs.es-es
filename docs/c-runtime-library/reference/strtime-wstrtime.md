@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 827e5a579d801c12b932440fcbbaa18343ad7ece
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316878"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910921"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
@@ -80,13 +80,13 @@ Devuelve un puntero a la cadena de caracteres resultante *timestr*.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_strtime** copia la hora local actual en el búfer al que apunta *timestr*. La hora se formatea como **hh:mm:ss** donde **hh** es dos dígitos que representan la hora en notación de 24 horas, **mm** es dos dígitos que representan los minutos después de la hora, y **ss** es dos dígitos que representan segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos después de las 6 p.m. La longitud del búfer debe ser de 9 bytes como mínimo.
+La función **_strtime** copia la hora local actual en el búfer al que apunta *timestr*. La hora tiene el formato **HH: mm: SS** , donde **HH** es dos dígitos que representan la hora en notación de 24 horas, **mm** son dos dígitos que representan los minutos posteriores a la hora y **SS** son dos dígitos que representan segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos después de las 6 P.M. La longitud del búfer debe ser de 9 bytes como mínimo.
 
-**_wstrtime** es una versión de caracteres anchos de **_strtime;** el argumento y el valor devuelto de **_wstrtime** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual. Si *timestr* es un puntero **NULL** o si *timestr* tiene un formato incorrecto, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se permite que la excepción continúe, estas funciones devuelven un **valor NULL** y **establecen errno** en **EINVAL** si *timestr* era **NULL** o **establecen errno en** **ERANGE** si *timestr* tiene el formato incorrecto.
+**_wstrtime** es una versión con caracteres anchos de **_strtime**; el argumento y el valor devuelto de **_wstrtime** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual. Si *timestr* es un puntero **nulo** o si *timestr* tiene un formato incorrecto, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la excepción puede continuar, estas funciones devuelven un **valor null** y **establecen errno** en **EINVAL** si *Timestr* era **null** o estableció **errno** en **ERANGE** si *timestr* tiene un formato incorrecto.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

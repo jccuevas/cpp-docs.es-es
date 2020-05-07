@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 061c5647b2c5a5e79b017cf93989f62ad19cfc0a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7834049fe8d28f7294976ac29a3daa663a06cff6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338753"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919139"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -76,7 +76,7 @@ errno_t _wmktemp_s(
 Patrón de nombre de archivo.
 
 *sizeInChars*<br/>
-Tamaño del búfer en caracteres de un solo byte en **_mktemp_s**; caracteres anchos en **_wmktemp_s,** incluido el terminador nulo.
+Tamaño del búfer en caracteres de un solo byte en **_mktemp_s**; caracteres anchos en **_wmktemp_s**, incluido el terminador null.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -86,19 +86,19 @@ Ambas funciones devuelven cero si se realizan correctamente o un código de erro
 
 |*nameTemplate*|*sizeInChars*|Valor devuelto|Nuevo valor en *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**Null**|cualquiera|**EINVAL**|**Null**|
-|Formato incorrecto (consulte la sección Comentarios para el formato correcto)|cualquiera|**EINVAL**|cadena vacía|
+|**ACEPTA**|cualquiera|**EINVAL**|**ACEPTA**|
+|Formato incorrecto (consulte la sección Comentarios para obtener el formato correcto)|cualquiera|**EINVAL**|cadena vacía|
 |cualquiera|<= número de X|**EINVAL**|cadena vacía|
 
-Si se da alguna de las condiciones de error anteriores, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece **en EINVAL** y las funciones devuelven **EINVAL**.
+Si se da alguna de las condiciones de error anteriores, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y las funciones devuelven **EINVAL**.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_mktemp_s** crea un nombre de archivo único modificando el argumento *nameTemplate,* de modo que después de la llamada, el puntero *nameTemplate* apunte a una cadena que contenga el nuevo nombre de archivo. **_mktemp_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso por el sistema en tiempo de ejecución. **_wmktemp_s** es una versión de caracteres anchos de **_mktemp_s;** el argumento de **_wmktemp_s** es una cadena de caracteres anchos. **_wmktemp_s** y **_mktemp_s** se comportan de forma idéntica de lo contrario, excepto que **_wmktemp_s** no controla cadenas de caracteres multibyte.
+La función **_mktemp_s** crea un nombre de archivo único modificando el argumento *nameTemplate* , de modo que después de la llamada, el puntero *nameTemplate* señale a una cadena que contiene el nuevo nombre de archivo. **_mktemp_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso por el sistema en tiempo de ejecución. **_wmktemp_s** es una versión con caracteres anchos de **_mktemp_s**; el argumento de **_wmktemp_s** es una cadena de caracteres anchos. **_wmktemp_s** y **_mktemp_s** se comportan de manera idéntica, salvo que **_wmktemp_s** no controla las cadenas de caracteres multibyte.
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -106,9 +106,9 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-El argumento *nameTemplate* tiene el formulario **baseXXXXXX**, donde *base* es la parte del nuevo nombre de archivo que se proporciona y cada X es un marcador de posición para un carácter proporcionado por **_mktemp_s**. Cada carácter de marcador de posición en *nameTemplate* debe ser una X mayúscula **_mktemp_s** conserva *base* y reemplaza la primera X final con un carácter alfabético. **_mktemp_s** reemplaza las siguientes X finales por un valor de cinco dígitos; este valor es un número único que identifica el proceso de llamada, o en programas multiproceso, el subproceso de llamada.
+El argumento *nameTemplate* tiene el formato **baseXXXXXX**, donde *base* es la parte del nuevo nombre de archivo que se proporciona y cada X es un marcador de posición para un carácter proporcionado por **_mktemp_s**. Cada carácter de marcador de posición de *nameTemplate* debe ser una x mayúscula. **_mktemp_s** conserva la *base* y reemplaza la primera x final por un carácter alfabético. **_mktemp_s** reemplaza las X finales siguientes por un valor de cinco dígitos; Este valor es un número único que identifica el proceso de llamada o, en programas multiproceso, el subproceso que realiza la llamada.
 
-Cada llamada correcta a **_mktemp_s** modifica *nameTemplate*. En cada llamada posterior desde el mismo proceso o subproceso con el mismo *nameTemplate* argumento, **_mktemp_s** comprueba los nombres de archivo que coinciden con los nombres devueltos por **_mktemp_s** en llamadas anteriores. Si no existe ningún archivo para un nombre determinado, **_mktemp_s** devuelve ese nombre. Si existen archivos para todos los nombres devueltos anteriormente, **_mktemp_s** crea un nuevo nombre reemplazando el carácter alfabético que utilizó en el nombre devuelto anteriormente por la siguiente letra minúscula disponible, en orden, de 'a' a 'z'. Por ejemplo, si *la base* es:
+Cada llamada correcta a **_mktemp_s** modifica *nameTemplate*. En cada llamada subsiguiente del mismo proceso o subproceso con el mismo argumento *nameTemplate* , **_mktemp_s** comprueba los nombres de archivo que coinciden con los nombres devueltos por **_mktemp_s** en llamadas anteriores. Si no existe ningún archivo para un nombre determinado, **_mktemp_s** devuelve ese nombre. Si existen archivos para todos los nombres devueltos anteriormente, **_mktemp_s** crea un nuevo nombre reemplazando el carácter alfabético que se usa en el nombre devuelto anteriormente por la siguiente letra minúscula disponible, en orden, de la "a" a la "z". Por ejemplo, si *base* es:
 
 > **fn**
 
@@ -116,7 +116,7 @@ y el valor de cinco dígitos proporcionado por **_mktemp_s** es 12345, el primer
 
 > **fna12345**
 
-Si este nombre se utiliza para crear el archivo FNA12345 y este archivo todavía existe, el siguiente nombre devuelto en una llamada del mismo proceso o subproceso con la misma *base* para *nameTemplate* es:
+Si este nombre se usa para crear el archivo FNA12345 y este archivo todavía existe, el siguiente nombre devuelto en una llamada del mismo proceso o subproceso con la misma *base* para *nameTemplate* es:
 
 > **fnb12345**
 
@@ -124,7 +124,7 @@ Si FNA12345 no existe, el siguiente nombre devuelto vuelve a ser:
 
 > **fna12345**
 
-**_mktemp_s** puede crear un máximo de 26 nombres de archivo únicos para cualquier combinación determinada de valores *base* y *nameTemplate.* Por lo tanto, FNZ12345 es el último nombre de archivo único **que _mktemp_s** puede crear para los valores *base* y *nameTemplate* utilizados en este ejemplo.
+**_mktemp_s** puede crear un máximo de 26 nombres de archivo únicos para una combinación determinada de valores *base* y *nameTemplate* . Por lo tanto, FNZ12345 es el último nombre de archivo único **_mktemp_s** puede crear para los valores *base* y *nameTemplate* que se usan en este ejemplo.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
@@ -191,7 +191,7 @@ Unique filename is fnd03188
 Unique filename is fne03188
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

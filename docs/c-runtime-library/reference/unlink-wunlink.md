@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: ffc1a64c60d41246773d5e262523000355b0de3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: af6fd6c7065529b43f5e275ce1d745d0031ddfb7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361271"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909277"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
@@ -62,20 +62,20 @@ int _wunlink(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nombre*<br/>
+*extensión*<br/>
 Nombre del archivo que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si se realiza correctamente. De lo contrario, la función devuelve -1 y establece **errno en** **EACCES**, lo que significa que la ruta de acceso especifica un archivo de solo lectura o un directorio, o en **ENOENT**, lo que significa que no se encuentra el archivo o la ruta de acceso.
+Cada una de estas funciones devuelve 0 si se realiza correctamente. De lo contrario, la función devuelve-1 y establece **errno** en **EACCES**, lo que significa que la ruta de acceso especifica un archivo de solo lectura o un directorio, o **ENOENT**, lo que significa que no se encuentra el archivo o la ruta de acceso.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_unlink** elimina el archivo especificado por *filename*. **_wunlink** es una versión de caracteres anchos de **_unlink;** el argumento *filename* que **se va** a _wunlink es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+La función **_unlink** elimina el archivo especificado por *filename*. **_wunlink** es una versión con caracteres anchos de **_unlink**; el argumento *filename* para **_wunlink** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -122,7 +122,7 @@ This file will be deleted.
 Deleted 'CRT_UNLINK.TXT'
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

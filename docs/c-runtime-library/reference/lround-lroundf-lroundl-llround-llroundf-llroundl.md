@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341633"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911359"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -94,22 +94,22 @@ long long llroundl(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante que se va a redondear.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **lround** y **llround** devuelven el entero **largo** o **long** **largo** más cercano a *x*. Los valores que se encuentran a medio camino se redondean en cero, independientemente de la configuración del modo de redondeo del punto flotante. No se devuelve ningún error.
+Las funciones **lround** y **llround** devuelven **long** **el entero** **Long o Long Long** a *x*. Los valores que se encuentran a medio camino se redondean en cero, independientemente de la configuración del modo de redondeo del punto flotante. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|None|**_DOMAIN**|
+|± **QNAN**, **IND**|ninguno|**_DOMAIN**|
 
 ## <a name="remarks"></a>Observaciones
 
-Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **lround** o **llround** que toman y devuelven **valores float** y **long** **double.** En un programa C, **lround** y **llround** siempre toman y devuelven un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **lround** o **llround** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **lround** y **llround** siempre toman y devuelven un **valor Double**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

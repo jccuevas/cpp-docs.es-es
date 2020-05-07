@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: 46d07a8b3645ae0d68276d96271be0a246716f0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed79f66baebf71c89e537c8343779bef44ebfbb8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361220"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909199"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
@@ -51,14 +51,14 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parámetros
 
-*archivo*<br/>
+*filesystem*<br/>
 Identificador de archivo.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_unlock_file** desbloquea el archivo especificado por *el archivo*. El desbloqueo de un archivo permite que otros procesos accedan a él. No se debe llamar a esta función a menos que se haya llamado previamente **a _lock_file** en el puntero de *archivo.* Llamar a **_unlock_file** en un archivo que no está bloqueado puede dar lugar a un interbloqueo. A modo de ejemplo, vea [_lock_file](lock-file.md).
+La función **_unlock_file** desbloquea el archivo especificado por *archivo*. El desbloqueo de un archivo permite que otros procesos accedan a él. No se debe llamar a esta función a menos que se haya llamado previamente a **_lock_file** en el puntero de *archivo* . La llamada a **_unlock_file** en un archivo que no está bloqueado puede producir un interbloqueo. A modo de ejemplo, vea [_lock_file](lock-file.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -68,7 +68,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -66,19 +66,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 599c991e2e9b4cee1515decdaf1050311d844a68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0338d84cbea864eca561c37f1d107a08f1c1e01e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317236"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911139"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
 Establece los caracteres de una cadena en un carácter. Estas versiones de [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsset_s** y **_mbsset_s_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset_s** y **_mbsset_s_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -120,13 +120,13 @@ errno_t _mbsset_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Str*<br/>
+*CAD*<br/>
 Cadena terminada en NULL que se va a establecer.
 
 *numberOfElements*<br/>
-El tamaño del búfer *str.*
+Tamaño del búfer *Str* .
 
-*C*<br/>
+*unidad*<br/>
 Especificación de carácter.
 
 *locale*<br/>
@@ -136,17 +136,17 @@ Configuración regional que se va a usar.
 
 Cero si es correcto, código de error en caso contrario.
 
-Estas funciones validan sus argumentos. Si *str* es un puntero nulo, o el argumento *numberOfElements* es menor o igual que 0, o el bloque pasado no está terminado en null, se invoca el controlador de parámetros no válidos, como se describe en [validación](../../c-runtime-library/parameter-validation.md)de parámetros . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y **establecen errno en** **EINVAL**.
+Estas funciones validan sus argumentos. Si *Str* es un puntero nulo, o el argumento *numberOfElements* es menor o igual que 0, o el bloque que se pasa no termina en null, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_strset_s** establece todos los caracteres de *str* en *c* (convertido en **char**), excepto el carácter nulo de terminación. **_wcsset_s** y **_mbsset_s** son versiones de caracteres anchos y multibyte de **_strset_s.** Los tipos de datos de los argumentos y los valores devueltos varían en consecuencia. Por lo demás, estas funciones se comportan exactamente igual.
+La función **_strset_s** establece todos los caracteres de *Str* en *c* (convertidos en **Char**), excepto el carácter nulo de terminación. **_wcsset_s** y **_mbsset_s** son versiones de caracteres anchos y multibyte de **_strset_s**. Los tipos de datos de los argumentos y los valores devueltos varían en consecuencia. Por lo demás, estas funciones se comportan exactamente igual.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -191,8 +191,8 @@ After:  *******************************
 
 ## <a name="see-also"></a>Consulte también
 
-[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>

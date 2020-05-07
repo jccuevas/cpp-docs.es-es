@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: 3533e7897e9c460d3be73b8907a6bd3c96f6888f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345732"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910169"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -64,13 +64,13 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*Corriente*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 *offset*<br/>
 Número de bytes de *origin*.
 
-*Origen*<br/>
+*pescado*<br/>
 Posición inicial.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -79,9 +79,9 @@ Igual que [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md), respectiv
 
 ## <a name="remarks"></a>Observaciones
 
-Estas funciones son las versiones sin bloqueo de [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md), respectivamente. Estos son idénticos a [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md) excepto que no están protegidos de interferencias por otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Estas funciones son las versiones sin bloqueo de [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md), respectivamente. Son idénticos a [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md) , salvo que no están protegidas contra interferencias de otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -91,9 +91,9 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
-[Rebobinado](rewind.md)<br/>
+[rebobinar](rewind.md)<br/>

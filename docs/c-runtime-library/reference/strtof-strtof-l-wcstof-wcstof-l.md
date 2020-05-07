@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: f61aa0edeadd74a254f906dd745e18b059da7f24
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365146"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910867"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -93,17 +93,17 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**strtof** devuelve el valor del número de punto flotante, excepto cuando la representación provocaría un desbordamiento, en cuyo caso la función devuelve +/-**HUGE_VALF**. El signo de **HUGE_VALF** coincide con el signo del valor que no se puede representar. **strtof** devuelve 0 si no se puede realizar ninguna conversión o se produce un subdesbordamiento.
+**strtof** devuelve el valor del número de punto flotante, excepto cuando la representación provocaría un desbordamiento, en cuyo caso la función devuelve +/-**HUGE_VALF**. El signo de **HUGE_VALF** coincide con el signo del valor que no se puede representar. **strtof** devuelve 0 si no se puede realizar ninguna conversión o si se produce un subdesbordamiento.
 
-**wcstof** devuelve valores de forma análoga a **strtof**. Para ambas funciones, **errno** se establece en **ERANGE** si se produce un desbordamiento o subdesbordamiento y se invoca el controlador de parámetros no válidos, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md).
+**wcstof** devuelve valores de forma análoga a **strtof**. En ambas funciones, **errno** se establece en **ERANGE** si se produce desbordamiento o subdesbordamiento y se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 Para obtener más información sobre los códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Observaciones
 
-Cada función convierte la cadena de entrada *strSource* en un **float**. La función **strtof** convierte *strSource* en un valor de precisión única. **strtof** deja de leer la cadena *strSource* en el primer carácter que no puede reconocer como parte de un número. Este puede ser el carácter nulo de terminación. **wcstof** es una versión de caracteres anchos de **strtof**; su argumento *strSource* es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+Cada función convierte la cadena de entrada *strSource* en un valor **float**. La función **strtof** convierte *strSource* en un valor de precisión sencilla. **strtof** deja de leer la cadena *strSource* en el primer carácter que no reconoce como parte de un número. Este puede ser el carácter nulo de terminación. **wcstof** es una versión con caracteres anchos de **strtof**; su argumento *strSource* es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -112,17 +112,17 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-La **LC_NUMERIC** configuración de categoría de la configuración regional actual determina el reconocimiento del carácter de radio en *strSource*; Para obtener más información, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las funciones que no tienen el **_l** sufijo usan la configuración regional actual; los que tienen el sufijo son idénticos, excepto que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La configuración de la categoría **LC_NUMERIC** de la configuración regional actual determina el reconocimiento del carácter de base en *strSource*; para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las funciones que no tienen el sufijo **_L** usan la configuración regional actual; las que tienen el sufijo son idénticas, salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* no es **NULL**, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontró ningún dígito válido o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación a la que apunta *endptr*.
+Si *endptr* no es **null**, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontraron dígitos válidos o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación a la que apunta *endptr*.
 
-**strtof** espera que *strSource* apunte a una cadena de la siguiente forma:
+**strtof** espera que *strSource* señale a una cadena con el formato siguiente:
 
-[*espacio en blanco*] [*signo*] [*dígitos*] [__.__ *dígitos*] [e **&#124;** **E**-*[signo*] *dígitos*]
+[*espacio en blanco*] [*signo*] [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **e**} [*signo*] *dígitos*]
 
-Un *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten; *signo* es más**+**( )**-** o menos ( ); y *los dígitos* son uno o más dígitos decimales. Si no aparece ningún dígito antes del carácter de base, debe aparecer al menos uno después del carácter de base. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra introductoria (**e** o **E**) y un entero con signo opcional. Si no aparece ni una parte exponencial ni un carácter de base, se supone que un carácter de base sigue al último dígito de la cadena. El primer carácter que no se ajusta a este formato detiene el análisis.
+Un espacio en *blanco* puede constar de caracteres de espacio y tabulación, que se omiten; el *signo* es más (**+**) o menos (**-**); y los *dígitos* son uno o más dígitos decimales. Si no aparece ningún dígito antes del carácter de base, debe aparecer al menos uno después del carácter de base. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra de presentación (**e** o **e**) y un entero con signo opcional. Si no aparece ni una parte exponencial ni un carácter de base, se supone que un carácter de base sigue al último dígito de la cadena. El primer carácter que no se ajusta a este formato detiene el análisis.
 
-Las versiones UCRT de estas funciones no admiten la conversión de letras exponentes de estilo Fortran (**d** o **D).** Esta extensión no estándar era compatible con versiones anteriores de CRT y puede que sea un cambio decisivo para el código.
+Las versiones de UCRT de estas funciones no admiten la conversión de Letras de exponente de estilo Fortran (**d** o **d**). Esta extensión no estándar era compatible con versiones anteriores de CRT y puede que sea un cambio decisivo para el código.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -168,7 +168,7 @@ string = 3.14159This stopped it
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Funciones de conversión de valores de cadena en valores numéricos](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
