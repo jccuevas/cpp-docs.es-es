@@ -10,23 +10,23 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f5523eb22bd8a839da9b3f73dd6c3718b4fd63
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404460"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825801"
 ---
 # <a name="for-each-in"></a>for each, in
 
-Procesa una iteración a través de una matriz o colección. Esta palabra clave no estándar está disponible en C++/CLI y proyectos nativos de C++. Sin embargo, no se recomienda su uso. Considere el uso de un estándar [basada en intervalo para la instrucción (C++)](../cpp/range-based-for-statement-cpp.md) en su lugar.
+Procesa una iteración a través de una matriz o colección. Esta palabra clave no estándar está disponible en C++/CLI y proyectos nativos de C++. Sin embargo, no se recomienda su uso. Considere la posibilidad de usar en su lugar una [instrucción for estándar basada en intervalo (C++)](../cpp/range-based-for-statement-cpp.md) .
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
 ### <a name="syntax"></a>Sintaxis
 
-> **para cada una (** *tipo* *identificador* **en** *expresión* **) {}**<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;*Instrucciones*<br/>
+> **para cada (** *type* *identificador* **de tipo en** la *expresión* **) {**\
+> &nbsp;&nbsp;&nbsp;&nbsp;*afirma*\
 > **}**
 
 ### <a name="parameters"></a>Parámetros
@@ -34,22 +34,22 @@ Procesa una iteración a través de una matriz o colección. Esta palabra clave 
 *type*<br/>
 Tipo de `identifier`.
 
-*identifier*<br/>
+*identificador*<br/>
 Variable de iteración que representa el elemento de la colección.  Cuando `identifier` es un [operador de referencia de seguimiento](../extensions/tracking-reference-operator-cpp-component-extensions.md), puede modificar el elemento.
 
 *expression*<br/>
 Colección o expresión de matriz. El elemento de la colección debe ser de un tipo que el compilador pueda convertir en el tipo `identifier`.
 
-*statements*<br/>
+*afirma*<br/>
 Instrucción o instrucciones que se van a ejecutar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La instrucción `for each` se utiliza para procesar una iteración en una colección. Puede modificar los elementos de una colección, pero no puede agregar ni eliminar elementos.
 
-El *instrucciones* se ejecutan para cada elemento de la matriz o colección. Cuando la iteración se ha completado en todos los elementos de la colección, el control se transfiere a la instrucción que sigue al bloque `for each`.
+Las *instrucciones* se ejecutan para cada elemento de la matriz o colección. Cuando la iteración se ha completado en todos los elementos de la colección, el control se transfiere a la instrucción que sigue al bloque `for each`.
 
-`for each` y `in` son [palabras clave contextuales](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
+`for each`y `in` son [palabras clave contextuales](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 Para obtener más información:
 
@@ -107,14 +107,14 @@ Testing
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-**Comentarios**
+**Comentarios:**
 
-La sintaxis CLR es el mismo que el **todos los Runtimes** sintaxis, excepto por lo siguiente.
+La sintaxis de CLR es la misma que la sintaxis de **todos los Runtimes** , excepto como se indica a continuación.
 
 *expression*<br/>
-Expresión o colección de matriz administrada. El elemento de la colección debe ser de tipo que el compilador puede convertir desde <xref:System.Object> a la *identificador* tipo.
+Expresión o colección de matriz administrada. El elemento de la colección debe ser tal que el compilador <xref:System.Object> pueda convertirlo de al tipo de *identificador* .
 
-*expresión* se evalúa como un tipo que implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo que define un `GetEnumerator` método que devuelve un tipo que implementa <xref:System.Collections.IEnumerator> o declara todos los métodos que se definen en `IEnumerator`.
+*Expression* se evalúa <xref:System.Collections.IEnumerable>como un tipo que implementa, <xref:System.Collections.Generic.IEnumerable%601>o un tipo que define un `GetEnumerator` método que devuelve un tipo que implementa <xref:System.Collections.IEnumerator> o declara todos los métodos que se definen en. `IEnumerator`
 
 ### <a name="requirements"></a>Requisitos
 
@@ -157,6 +157,6 @@ abcd
 Testing
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes para plataformas de tiempo de ejecución](../extensions/component-extensions-for-runtime-platforms.md)
