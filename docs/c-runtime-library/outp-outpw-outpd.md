@@ -41,19 +41,19 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988376"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825933"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>OUTP, outpw, _outp, _outpw, _outpd
 
 Genera, en un puerto, un byte (`outp`, `_outp`), una palabra (`outpw`, `_outpw`) o una palabra doble (`_outpd`).
 
 > [!IMPORTANT]
-> Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT.  
+> Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT. \
 > Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
@@ -73,27 +73,27 @@ unsigned long _outpd(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-\ de *Puerto*
+*casilla*\
 Número de puerto.
 
-*byte de bits,\ de Word*
+*byte de bits, Word*\
 Valores de salida.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Las funciones devuelven el resultado de datos. No se devuelve ningún error.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Las funciones `_outp`, `_outpw`y `_outpd` escriben un byte, una palabra y una palabra doble, respectivamente, en el puerto de salida especificado. El argumento de *port* puede ser cualquier entero sin signo del intervalo comprendido entre 0 y 65 535; *databyte* puede ser cualquier entero del intervalo comprendido entre 0 y 255; y *dataword* puede ser cualquier valor del intervalo de un entero, un entero corto sin signo y un entero largo sin signo.
+Las funciones `_outp`, `_outpw`y `_outpd` escriben un byte, una palabra y una palabra doble, respectivamente, en el puerto de salida especificado. El argumento *Port* puede ser cualquier entero sin signo del intervalo comprendido entre 0 y 65.535; *byte* puede ser cualquier número entero comprendido en el intervalo 0-255; y *Word* pueden ser cualquier valor en el intervalo de un entero, un entero corto sin signo y un entero largo sin signo, respectivamente.
 
 Dado que estas funciones escriben directamente en un puerto de E/S, no se pueden usar en el código de usuario. Para obtener información sobre el uso de puertos de E/S en estos sistemas operativos, busque “Comunicaciones serie en Win32” en MSDN.
 
-Los nombres de `outp` y `outpw` son nombres antiguos y en desuso para las funciones `_outp` y `_outpw`. Para obtener más información, vea [nombres de funciones POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Los `outp` nombres `outpw` y son nombres más antiguos y desusados `_outp` para `_outpw` las funciones y. Para obtener más información, vea [nombres de funciones POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -107,7 +107,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibility](../c-ru
 
 Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[E/S de consola y de puerto](../c-runtime-library/console-and-port-i-o.md)\
+[E/s de consola y Puerto](../c-runtime-library/console-and-port-i-o.md)\
 [INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
