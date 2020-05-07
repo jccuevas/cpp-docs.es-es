@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: c9611c2bd55ebc1602a73e4c71518716ea100420
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343901"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919767"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -48,7 +48,7 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>Parámetros
 
-*Fd*<br/>
+*FD*<br/>
 Descriptor de archivo que hace referencia al dispositivo que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -57,11 +57,11 @@ Descriptor de archivo que hace referencia al dispositivo que se va a probar.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_isatty** determina si *fd* está asociado a un dispositivo de caracteres (un terminal, consola, impresora o puerto serie).
+La función **_isatty** determina si *FD* está asociado a un dispositivo de caracteres (un terminal, una consola, una impresora o un puerto serie).
 
-Esta función valida el parámetro *fd.* Si *fd* es un puntero de archivo incorrecto, se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno en** **EBADF**.
+Esta función valida el parámetro *FD* . Si *FD* es un puntero de archivo incorrecto, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** en **EBADF**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -101,6 +101,6 @@ int main( void )
 stdout has not been redirected to a file
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>

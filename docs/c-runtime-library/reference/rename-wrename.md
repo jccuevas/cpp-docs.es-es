@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 730458c5027f8f690e8238b29cbdb1056f09ed68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338102"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917802"
 ---
 # <a name="rename-_wrename"></a>rename, _wrename
 
@@ -74,7 +74,7 @@ Puntero al nombre nuevo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si se realiza correctamente. En un error, la función devuelve un valor distinto de cero y establece **errno** en uno de los siguientes valores:
+Cada una de estas funciones devuelve 0 si se realiza correctamente. En un error, la función devuelve un valor distinto de cero y establece **errno** en uno de los valores siguientes:
 
 |valor de errno|Condición|
 |-|-|
@@ -88,9 +88,9 @@ Para otros valores devueltos posibles, vea [_doserrno, _errno, syserrlist y _sys
 
 La función **rename** cambia el nombre del archivo o directorio especificado por *oldname* por el nombre proporcionado por *newname*. El nombre anterior debe ser la ruta de acceso de un archivo o directorio existente. El nombre nuevo no debe ser el nombre de un archivo o directorio existente. Puede usar **rename** para mover un archivo de un directorio o dispositivo a otro indicando una ruta de acceso diferente en el argumento *newname*. Sin embargo, no puede usar **rename** para mover un directorio. Se puede cambiar el nombre de los directorios, pero estos no se pueden mover.
 
-**_wrename** es una versión de caracteres anchos de **_rename;** los argumentos para **_wrename** son cadenas de caracteres anchos. **_wrename** y **_rename** comportarse de forma idéntica de lo contrario.
+**_wrename** es una versión con caracteres anchos de **_rename**; los argumentos para **_wrename** son cadenas de caracteres anchos. **_wrename** y **_rename** se comportan de manera idéntica.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -137,12 +137,12 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Salida
 
 ```Output
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>

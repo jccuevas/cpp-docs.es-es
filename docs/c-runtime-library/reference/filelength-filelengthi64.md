@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 1a830bedc8dca65410a2df49b96c6e3bf6e11b4a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5fea019591fc5a90aab07f0347aa3f02fe0d43f3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346885"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910212"
 ---
 # <a name="_filelength-_filelengthi64"></a>_filelength, _filelengthi64
 
@@ -59,16 +59,16 @@ __int64 _filelengthi64(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fd*<br/>
+*FD*<br/>
 Se destina al descriptor de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Tanto **_filelength** como **_filelengthi64** devuelven la longitud del archivo, en bytes, del archivo de destino asociado a *fd*. Si *fd* es un descriptor de archivo no válido, esta función invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, ambas funciones devuelven -1L para indicar un error y **establecen errno en** **EBADF**.
+Tanto **_filelength** como **_filelengthi64** devuelven la longitud del archivo, en bytes, del archivo de destino asociado a *FD*. Si *FD* es un descriptor de archivo no válido, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, ambas funciones devuelven-1L para indicar un error y establecer **errno** en **EBADF**.
 
 ## <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +83,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibility](../../c
 
 Consulte el ejemplo de [_chsize](chsize.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_chsize](chsize.md)<br/>

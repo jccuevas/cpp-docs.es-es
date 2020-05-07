@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: efcac6a64c01bee38a3753bdec378dae625db35e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a4a9bddfa861727e174325dc639868e3529162cd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345020"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918209"
 ---
 # <a name="_get_pgmptr"></a>_get_pgmptr
 
-Obtiene el valor actual de la variable global **_pgmptr.**
+Obtiene el valor actual de la variable global **_pgmptr** .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -52,17 +52,17 @@ errno_t _get_pgmptr(
 ### <a name="parameters"></a>Parámetros
 
 *pValue*<br/>
-Puntero a una cadena que se va a rellenar con el valor actual de la variable **_pgmptr.**
+Puntero a una cadena que se va a rellenar con el valor actual de la variable **_pgmptr** .
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si *pValue* es **NULL**, se invoca el controlador de parámetros no válidos como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno en** **EINVAL** y devuelve **EINVAL**.
+Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si *pValue* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **EINVAL**.
 
 ## <a name="remarks"></a>Observaciones
 
-Solo llame a **_get_pgmptr** si su programa tiene un punto de entrada estrecho, como **main()** o **WinMain()**. La variable global **_pgmptr** contiene la ruta de acceso completa al ejecutable asociado al proceso. Para obtener más información, consulte [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+Llame solo a **_get_pgmptr** si el programa tiene un punto de entrada estrecho, como **Main ()** o **winmain ()**. La variable global **_pgmptr** contiene la ruta de acceso completa al ejecutable asociado con el proceso. Para obtener más información, consulte [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -72,6 +72,6 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [_get_wpgmptr](get-wpgmptr.md)<br/>

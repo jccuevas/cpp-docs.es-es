@@ -29,7 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 7b1416147ed000dd3dd9a13bd52e41a474a8e9d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338563"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909334"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -95,36 +95,36 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante del que se va a comenzar.
 
-*y y*<br/>
+*sí*<br/>
 Valor de punto flotante al que se va.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el siguiente valor de punto flotante representable del tipo de valor devuelto después de *x* en la dirección de *y*. Si *x* e *y* son iguales, la función devuelve *y*, convertido al tipo de valor devuelto, sin excepción desencadenada. Si *x* no es igual a *y*, y el resultado es un **denormal** o cero, se establecen los estados de excepción de punto flotante FE_UNDERFLOW y **FE_INEXACT** y el resultado correcto. Si *x* o *y* es un NAN, entonces el valor devuelto es uno de los NANs de entrada. Si *x* es finito y el resultado es infinito o no representable en el tipo, se devuelve un infinito o NAN firmado correctamente, se establecen **los** estados de excepción de punto flotante FE_OVERFLOW y **FE_INEXACT** y **errno** se establece en **ERANGE**.
+Devuelve el siguiente valor de punto flotante que se va a representar del tipo de valor devuelto después de *x* en la dirección de *y*. Si *x* e *y* son iguales, la función devuelve *y*, convertido al tipo de valor devuelto, sin ninguna excepción desencadenada. Si *x* no es *igual a y y el*resultado es un valor desnormalizado o cero, se establecen los Estados de excepción de punto flotante **FE_UNDERFLOW** y **FE_INEXACT** , y se devuelve el resultado correcto. Si *x* o *y* es un Nan, el valor devuelto es uno de los Nan de entrada. Si *x* es finito y el resultado es infinito o no representable en el tipo, se devuelve un infinito o Nan firmado correctamente, se establecen los Estados de excepción de punto flotante **FE_OVERFLOW** y **FE_INEXACT** , y **errno** se establece en **ERANGE**.
 
 ## <a name="remarks"></a>Observaciones
 
-Las familias de funciones **nextafter** y **nexttoward** son equivalentes, excepto para el tipo de parámetro de *y*. Si *x* e *y* son iguales, el valor devuelto es *y* convertido al tipo de valor devuelto.
+Las familias de funciones **nextafter** y **nexttoward** son equivalentes, excepto el tipo de parámetro de *y*. Si *x* e *y son iguales* , el valor devuelto es *y* se convierte en el tipo de valor devuelto.
 
-Dado que C++ permite la \<sobrecarga, si incluye cmath> puede llamar a sobrecargas de **nextafter** y **nexttoward** que devuelven **float** y **long** **double** types. En un programa C, **después** y **siguiente** siempre devolver **doble**.
+Dado que C++ permite las sobrecargas, si \<incluye CMATH> puede llamar a las sobrecargas de **nextafter** y **nexttoward** que devuelven los tipos **float** y **Long** **Double** . En un programa de C, **nextafter** y **nexttoward** siempre devuelven el valor **Double**.
 
 Las funciones **_nextafter** y **_nextafterf** son específicas de Microsoft. La función **_nextafterf** solo está disponible cuando se compila para x64.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------------|-------------------------------|
-|**siguiente,** **siguiente,** **siguiente,** **siguiente, _nextafterf**, **siguiente,** **siguiente**, siguiente , **siguiente**|\<math.h>|\<math.h> o \<cmath>|
+|**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> o \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> o \<cfloat>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

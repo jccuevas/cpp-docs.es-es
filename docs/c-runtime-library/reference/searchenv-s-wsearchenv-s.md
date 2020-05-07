@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 3d526c546e1496b3b13b14a12c9025cbd0347cd2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5dd21013c8910ba07e2d23606af49bc80458dbc6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332402"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918995"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
@@ -87,17 +87,17 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nombre*<br/>
+*extensión*<br/>
 Nombre del archivo que se va a buscar.
 
-*Varname*<br/>
+*insertar*<br/>
 Entorno en el que se va a buscar.
 
 *Ruta*<br/>
 Búfer en el que se va a almacenar la ruta de acceso completa.
 
 *numberOfElements*<br/>
-Tamaño del búfer *pathname.*
+Tamaño del búfer de *ruta de directorio* .
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -107,27 +107,27 @@ Si *filename* es una cadena vacía, el valor devuelto es **ENOENT**.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*Nombre*|*Varname*|*Ruta*|*numberOfElements*|Valor devuelto|Contenido del nombre de *ruta*|
+|*extensión*|*insertar*|*Ruta*|*numberOfElements*|Valor devuelto|Contenido de *PathName*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|cualquiera|cualquiera|**Null**|cualquiera|**EINVAL**|N/D|
-|**Null**|cualquiera|cualquiera|cualquiera|**EINVAL**|no cambia|
+|cualquiera|cualquiera|**ACEPTA**|cualquiera|**EINVAL**|N/D|
+|**ACEPTA**|cualquiera|cualquiera|cualquiera|**EINVAL**|no cambia|
 |cualquiera|cualquiera|cualquiera|<= 0|**EINVAL**|no cambia|
 
-Si se da alguna de estas condiciones de error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven **EINVAL**.
+Si se da alguna de estas condiciones de error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EINVAL**.
 
 ## <a name="remarks"></a>Observaciones
 
-El **_searchenv_s** busca el archivo de destino en el dominio especificado. La variable *varname* puede ser cualquier entorno o variable definida por el usuario que especifique una lista de rutas de directorio, como **PATH**, **LIB**e **INCLUDE**. Dado que **_searchenv_s** distingue mayúsculas de minúsculas, *varname* debe coincidir con el caso de la variable de entorno. Si *varname* no coincide con el nombre de una variable de entorno definida en el entorno del proceso, la función devuelve cero y la variable *pathname* no cambia.
+La rutina **_searchenv_s** busca el archivo de destino en el dominio especificado. La *variable varname* puede ser cualquier variable de entorno o definida por el usuario que especifique una lista de rutas de **acceso**de directorio, como Path, **lib**e **include**. Dado que **_searchenv_s** distingue entre mayúsculas y minúsculas, *varname* debe coincidir con las mayúsculas y minúsculas de la variable de entorno. Si *varname* no coincide con el nombre de una variable de entorno definida en el entorno del proceso, la función devuelve cero y la variable *PathName* no cambia.
 
-La rutina busca el archivo primero en el directorio de trabajo actual. Si no encuentra el archivo, busca en los directorios especificados por la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso recién creada se copia en *pathname*. Si no se encuentra el archivo de nombre de *archivo,* *pathname* contiene una cadena vacía terminada en null.
+La rutina busca el archivo primero en el directorio de trabajo actual. Si no encuentra el archivo, busca en los directorios especificados por la variable de entorno. Si el archivo de destino se encuentra en uno de esos directorios, la ruta de acceso recién creada se copia en el *directorio*. Si no se encuentra el archivo *filename* , *PathName* contiene una cadena terminada en NULL vacía.
 
-El búfer *pathname* debe tener al menos **_MAX_PATH** caracteres de longitud para dar cabida a la longitud completa del nombre de ruta de acceso construido. De lo contrario, **_searchenv_s** podría invadición del búfer *pathname,* lo que provocará un comportamiento inesperado.
+El *búfer del nombre de ruta de* acceso debe tener al menos **_MAX_PATH** caracteres para dar cabida a la longitud total del nombre de ruta de acceso construido. De lo contrario, **_searchenv_s** podría saturar el búfer de *ruta de nombres* , lo que produce un comportamiento inesperado.
 
-**_wsearchenv_s** es una versión de caracteres anchos de **_searchenv_s;** los argumentos para **_wsearchenv_s** son cadenas de caracteres anchos. **_wsearchenv_s** y _searchenv_s comportarse **de** forma idéntica de lo contrario.
+**_wsearchenv_s** es una versión con caracteres anchos de **_searchenv_s**; los argumentos para **_wsearchenv_s** son cadenas de caracteres anchos. **_wsearchenv_s** y **_searchenv_s** se comportan de manera idéntica.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

@@ -27,7 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -61,19 +61,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: d726d2d33f8f775d09e6197dfeda6abb91106a53
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c023405043dea1c0a1d8e6d7f6fcc6505677583
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355324"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919990"
 ---
 # <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
 Compara cadenas usando información específica de la configuración regional.
 
 > [!IMPORTANT]
-> **_mbsicoll** y **_mbsicoll_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicoll** y **_mbsicoll_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -109,7 +109,7 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*string1*, *string2*<br/>
+*cadena1*, *cadena2*<br/>
 Cadenas terminadas en NULL que se van a comparar.
 
 *locale*<br/>
@@ -117,26 +117,26 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un valor que indica la relación de *string1* a *string2*, como se indica a continuación.
+Cada una de estas funciones devuelve un valor que indica la relación entre *string1* y *cadena2*, como se indica a continuación.
 
 |Valor devuelto|Relación de string1 y string2|
 |------------------|----------------------------------------|
-|< 0|*string1* menor que *string2*|
-|0|*string1* idéntico a *string2*|
-|> 0|*string1* mayor que *string2*|
+|< 0|*cadena1* menor que *cadena2*|
+|0|*cadena1* idéntico a *cadena2*|
+|> 0|*cadena1* mayor que *cadena2*|
 |**_NLSCMPERROR**|Se produjo un error.|
 
-Cada una de estas funciones devuelve **_NLSCMPERROR**. Para utilizar **_NLSCMPERROR** \<, incluya> \<string.h> o mbstring.h. **_wcsicoll** puede producir un error si *string1* o *string2* contienen códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsicoll** puede establecer **errno en** **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsicoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **_wcsicoll**.
+Cada una de estas funciones devuelve **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluya \<String. h> o \<mbstring. h>. **_wcsicoll** puede producir un error si *string1* o *cadena2* contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsicoll** puede establecer **errno** en **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsicoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **_wcsicoll**.
 
 ## <a name="remarks"></a>Observaciones
 
-Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de *string1* y *string2* según la página de códigos actualmente en uso. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos actual, y la diferencia influye en la comparación de cadenas.
+Cada una de estas funciones realiza una comparación sin distinción entre mayúsculas y minúsculas de *string1* y *String2* según la página de códigos actualmente en uso. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos actual, y la diferencia influye en la comparación de cadenas.
 
-**_stricmp** difiere de **_stricoll** en que la comparación **_stricmp** se ve afectada por **LC_CTYPE**, mientras que la comparación **_stricoll** se realiza según las categorías **LC_CTYPE** y **LC_COLLATE** de la configuración regional. Para obtener más información sobre la categoría **LC_COLLATE,** consulte [setlocale](setlocale-wsetlocale.md) y [Locale Categories](../../c-runtime-library/locale-categories.md). Las versiones de estas funciones sin el **_l** sufijo utilizan la configuración regional actual; las versiones con el sufijo **_l** son idénticas, excepto que utilizan la configuración regional pasada en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_stricmp** difiere de **_stricoll** en que la comparación de **_stricmp** se ve afectada por **LC_CTYPE**, mientras que la comparación de **_stricoll** se aplica según las categorías **LC_CTYPE** y **LC_COLLATE** de la configuración regional. Para obtener más información sobre la categoría **LC_COLLATE** , vea [setlocale](setlocale-wsetlocale.md) y [categorías de configuración regional](../../c-runtime-library/locale-categories.md). Las versiones de estas funciones sin el sufijo **_L** usan la configuración regional actual; las versiones con el sufijo **_L** son idénticas, salvo que usan en su lugar la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Todas estas funciones validan sus parámetros. Si *string1* o *string2* son punteros **NULL,** se invoca el controlador de parámetros no válidos, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y **establecen errno** en **EINVAL**.
+Todas estas funciones validan sus parámetros. Si *string1* o *cadena2* son punteros **nulos** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecen **errno** en **EINVAL**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -154,11 +154,11 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
-[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Funciones strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Funciones de strcoll (](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

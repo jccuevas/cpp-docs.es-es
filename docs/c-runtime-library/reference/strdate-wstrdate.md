@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 9b4b6d3b81dd1dda968cc42448ab2e53bdd44433
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361281"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911855"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -82,15 +82,15 @@ Cada una de estas funciones devuelve un puntero a la cadena de caracteres result
 
 Hay disponibles versiones más seguras de estas funciones; vea [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Se recomienda usar siempre que sea posible las funciones más seguras.
 
-La función **_strdate** copia la fecha actual del sistema en el búfer al que se señala *datestr*, con formato **mm**/**dd**/**yy**, donde **mm** es dos dígitos que representan el mes, **dd** es dos dígitos que representan el día y **yy** es los dos últimos dígitos del año. Por ejemplo, la cadena **12/05/99** representa el 5 de diciembre de 1999. La longitud del búfer debe ser de 9 bytes como mínimo.
+La **función _strdate** copia la fecha actual del sistema en el búfer señalado por *datestr*, con formato **mm**/**DD**/**AA**, donde **mm** es dos dígitos que representan el mes, **DD** son dos dígitos que representan el día y **YY** son los dos últimos dígitos del año. Por ejemplo, la cadena **12/05/99** representa el 5 de diciembre de 1999. La longitud del búfer debe ser de 9 bytes como mínimo.
 
-Si *datestr* es un puntero **NULL,** se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y **establecen errno en** **EINVAL**.
+Si *datestr* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
-**_wstrdate** es una versión de caracteres anchos de **_strdate;** el argumento y el valor devuelto de **_wstrdate** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+**_wstrdate** es una versión con caracteres anchos de **_strdate**; el argumento y el valor devuelto de **_wstrdate** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

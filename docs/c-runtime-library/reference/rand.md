@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338158"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919528"
 ---
 # <a name="rand"></a>rand
 
-Genera un número pseudoaleatorio mediante un algoritmo conocido y totalmente reproducible. Una versión más segura mediante programación de esta función está disponible; ver [rand_s](rand-s.md). Los números generados por **rand** no son criptográficamente seguros. Para una generación de números aleatorios más segura criptográficamente, utilice [rand_s](rand-s.md) o las funciones declaradas en la biblioteca estándar C++ en [ \<>aleatorios. ](../../standard-library/random.md)
+Genera un número pseudoaleatorios mediante un algoritmo conocido y totalmente reproducible. Hay disponible una versión más segura mediante programación de esta función; vea [rand_s](rand-s.md). Los números generados por **Rand** no son seguros criptográficamente. Para obtener una generación de números aleatorios criptográficamente segura, use [rand_s](rand-s.md) o las funciones declaradas en la biblioteca estándar de C++ en [ \<>aleatorios ](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,21 +50,21 @@ int rand( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-**rand** devuelve un número pseudoaleatorio, como se describió anteriormente. No se devuelve ningún error.
+**Rand** devuelve un número pseudoaleatorios, tal como se ha descrito anteriormente. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **rand** devuelve un entero pseudoaleatorio en el intervalo 0 a **RAND_MAX** (32767). Utilice la función [srand](srand.md) para sembrar el generador de números pseudoaleatorios antes de llamar a **rand**.
+La función **Rand** devuelve un entero pseudoaleatorio en el intervalo de 0 a **RAND_MAX** (32767). Utilice la función [srand](srand.md) para inicializar el generador de números pseudoaleatorios antes de llamar a **Rand**.
 
-La función **rand** genera una secuencia conocida y no es adecuada para su uso como función criptográfica. Para una generación de números aleatorios más segura criptográficamente, utilice [rand_s](rand-s.md) o las funciones declaradas en la biblioteca estándar C++ en [ \<>aleatorios. ](../../standard-library/random.md) Para obtener información sobre lo que \<está mal con **rand** y cómo> al azar aborda estas deficiencias, vea este video titulado [rand Considered Harmful](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+La función **Rand** genera una secuencia conocida y no es adecuada para su uso como una función criptográfica. Para obtener una generación de números aleatorios criptográficamente segura, use [rand_s](rand-s.md) o las funciones declaradas en la biblioteca estándar de C++ en [ \<>aleatorios ](../../standard-library/random.md). Para obtener información acerca de lo que **rand** es el problema \<con rand y cómo el> aleatorio soluciona estas deficiencias, vea este vídeo titulado [Rand considerado perjudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**Rand**|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
