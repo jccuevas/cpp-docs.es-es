@@ -13,7 +13,7 @@ api_location:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-ms.openlocfilehash: 8c6cc0a51d6ef2132172164306b84f73799da729
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65cce8b094a1508566e2de7162b9e8e76712742a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349363"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918328"
 ---
 # <a name="_citan"></a>_CItan
 
@@ -48,13 +48,13 @@ Esta versión de la función [tan](../c-runtime-library/reference/tan-tanf-tanl.
 
 El valor resultante se inserta en la parte superior de la pila de punto flotante.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 **Plataforma:** x86
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)<br/>

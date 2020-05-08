@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-ms.openlocfilehash: 4e06eec975f02744c4b49c1980383c2ab2338ddc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a0d012c89058209832d1e78867e89b4bd87bf226
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345582"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909928"
 ---
 # <a name="_ftime-_ftime32-_ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -63,26 +63,26 @@ void _ftime64( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Parámetros
 
 *timeptr*<br/>
-Puntero a una estructura **_timeb**, **__timeb32**o **__timeb64.**
+Puntero a una estructura **_timeb**, **__timeb32**o **__timeb64** .
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_ftime** obtiene la hora local actual y la almacena en la estructura señalada por *timeptr*. Las estructuras **_timeb**, **__timeb32**y \< **__timeb64** se definen en sys\\timeb.h>. Contienen cuatro campos, que se enumeran en la tabla siguiente.
+La función **_ftime** obtiene la hora local actual y la almacena en la estructura a la que apunta *timeptr*. Las estructuras **_timeb**, **__timeb32**y **__timeb64** se definen en \<la>\\sys timeb. h. Contienen cuatro campos, que se enumeran en la tabla siguiente.
 
 |Campo|Descripción|
 |-|-|
 |**dstflag**|Distinto de cero si el horario de verano está en vigor para la zona horaria local. (Consulte [_tzset](tzset.md) para obtener una explicación de cómo se determina el horario de verano).|
 |**millitm**|Fracción de segundo en milisegundos.|
 |**time**|La hora en segundos desde la medianoche (00:00:00) del 1 de enero de 1970, hora universal coordinada (UTC).|
-|**Timezone**|Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de **zona horaria** se establece a partir del valor de la variable global **_timezone** (consulte **_tzset**).|
+|**TimeZone**|Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de **TimeZone** se establece a partir del valor de la variable global **_timezone** (vea **_tzset**).|
 
-La función **_ftime64,** que utiliza la estructura **__timeb64,** permite que las fechas de creación de archivos se expresen hasta las 23:59:59, 31 de diciembre de 3000, UTC; mientras **que _ftime32** representa solamente las fechas hasta las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
+La función **_ftime64** , que usa la estructura **__timeb64** , permite expresar fechas de creación de archivos hasta 23:59:59, 31 de diciembre de 3000, UTC; mientras que **_ftime32** solo representa fechas hasta el 23:59:59 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
 
-La función **_ftime** es equivalente a **_ftime64**y **_timeb** contiene un tiempo de 64 bits a menos que se defina **_USE_32BIT_TIME_T,** en cuyo caso el comportamiento anterior está en vigor; **_ftime** utiliza un tiempo de 32 bits y **_timeb** contiene un tiempo de 32 bits.
+La función **_ftime** es equivalente a **_ftime64**y **_timeb** contiene un tiempo de 64 bits, a menos que se defina **_USE_32BIT_TIME_T** , en cuyo caso el comportamiento anterior está en vigor; **_ftime** usa un tiempo de 32 bits y **_timeb** contiene un tiempo de 32 bits.
 
-**_ftime** valida sus parámetros. Si se pasa un puntero nulo como *timeptr*, la función invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece **errno en** **EINVAL**.
+**_ftime** valida sus parámetros. Si se pasa un puntero nulo como *timeptr*, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece **errno** en **EINVAL**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

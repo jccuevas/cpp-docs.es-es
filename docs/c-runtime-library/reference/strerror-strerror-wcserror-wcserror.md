@@ -1,6 +1,6 @@
 ---
 title: strerror, _strerror, _wcserror, __wcserror
-description: Describe las funciones de Microsoft C Runtime Library (CRT) strerror, _strerror, _wcserror y __wcserror.
+description: Describe las funciones de la biblioteca en tiempo de ejecución de Microsoft C (CRT) strerror, _strerror, _wcserror y __wcserror.
 ms.date: 4/2/2020
 api_name:
 - strerror
@@ -23,7 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 9eecb7376cf476f0128dc20c8884746a3b4d47d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 30885974b9c9fbf0fdca0e52808fb8bd1dfbaffe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337326"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920031"
 ---
 # <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
@@ -81,7 +81,7 @@ wchar_t * __wcserror(
 
 ### <a name="parameters"></a>Parámetros
 
-*errnum*\
+*elementos errnum*\
 Número de error.
 
 *strErrMsg*\
@@ -93,26 +93,26 @@ Todas estas funciones devuelven un puntero a una cadena de mensaje de error, en 
 
 ## <a name="remarks"></a>Observaciones
 
-La función **strerror** asigna *errnum* a una cadena de mensaje de error y devuelve un puntero a la cadena. Las funciones **strerror** y **_strerror** no imprimen realmente el mensaje. Para imprimir, llame a una función de salida como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+La función **strerror** asigna *elementos errnum* a una cadena de mensaje de error y devuelve un puntero a la cadena. Las funciones **strerror** y **_strerror** no imprimen realmente el mensaje. Para imprimir, llame a una función de salida como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile", 2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Si *strErrMsg* se pasa como **NULL**, **_strerror** devuelve un puntero a una cadena. Contiene el mensaje de error del sistema para la última llamada de biblioteca que produjo un error. La cadena del mensaje de error termina con el carácter de línea nueva ('\n'). Cuando *strErrMsg* no es **NULL**, la cadena contiene, en orden: la cadena *strErrMsg,* dos puntos, un espacio, el mensaje de error del sistema y un carácter de nueva línea. El mensaje de cadena puede tener, como máximo, 94 caracteres de longitud, en caracteres estrechos **(_strerror)** o anchos **(__wcserror).**
+Si *strErrMsg* se pasa como **null**, **_strerror** devuelve un puntero a una cadena. Contiene el mensaje de error del sistema de la última llamada de biblioteca que generó un error. La cadena del mensaje de error termina con el carácter de línea nueva ('\n'). Cuando *strErrMsg* no es **null**, la cadena contiene, en orden: la cadena *strErrMsg* , dos puntos, un espacio, el mensaje de error del sistema y un carácter de nueva línea. El mensaje de cadena puede tener, como máximo, 94 caracteres de longitud, en caracteres estrechos (**_strerror**) o anchos (**__wcserror**).
 
-El número de error real de **_strerror** se almacena en la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Para producir resultados precisos, llame a **_strerror** inmediatamente después de que una rutina de biblioteca devuelva un error. De lo contrario, las llamadas posteriores a rutinas de biblioteca pueden sobrescribir el valor **errno.**
+El número de error real de **_strerror** se almacena en la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Para generar resultados precisos, llame a **_strerror** inmediatamente después de que una rutina de biblioteca devuelva un error. De lo contrario, las llamadas posteriores a las rutinas de biblioteca pueden sobrescribir el valor **errno** .
 
-**_wcserror** y **__wcserror** son versiones de caracteres anchos de **strerror** y **_strerror**, respectivamente.
+**_wcserror** y **__wcserror** son versiones con caracteres anchos de **strerror** y **_strerror**, respectivamente.
 
-**_strerror**, **_wcserror**y **__wcserror** son específicos de Microsoft, no parte de la biblioteca Estándar de C. No recomendamos que los use donde desee código portátil. Para la compatibilidad con C estándar, utilice **strerror** en su lugar.
+**_strerror**, **_wcserror**y **__wcserror** son específicos de Microsoft, no forman parte de la biblioteca estándar de C. No se recomienda usarlas donde quiera código portable. Para la compatibilidad estándar de C, use **strerror** en su lugar.
 
-Para obtener cadenas de error, se recomienda **strerror** o **_wcserror** en lugar de las macros en desuso [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) y [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) y las funciones internas en desuso **__sys_errlist** y **__sys_nerr**.
+Para obtener cadenas de error, se recomienda **strerror** o **_wcserror** en lugar de las macros en [desuso _sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) y [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) y las funciones internas en desuso **__sys_errlist** y **__sys_nerr**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
-### <a name="generic-text-routine-mappings"></a>Asignaciones rutinarias de texto genérico
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -132,9 +132,9 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 Vea el ejemplo de [perror](perror-wperror.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)\
-[más claro](clearerr.md)\
+[clearerr](clearerr.md)\
 [ferror](ferror.md)\
 [perror, _wperror](perror-wperror.md)

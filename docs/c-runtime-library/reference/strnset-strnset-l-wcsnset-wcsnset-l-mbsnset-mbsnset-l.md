@@ -25,7 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -73,19 +73,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 50b1a5157bd2a60d9819c92103a380ca1005be56
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364426"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911198"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
 Inicializa los caracteres de una cadena en un carácter dado. Hay disponibles versiones más seguras de estas funciones; vea [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsnset** y **_mbsnset_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset** y **_mbsnset_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -127,10 +127,10 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Str*<br/>
+*CAD*<br/>
 Cadena que se va a modificar.
 
-*C*<br/>
+*unidad*<br/>
 Especificación de carácter.
 
 *count*<br/>
@@ -145,15 +145,15 @@ Devuelve un puntero a la cadena modificada.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_strnset** establece, como máximo, los primeros caracteres de *recuento* de *str* a *c* (convertidos en **char**). Si *count* es mayor que la longitud de *str*, se utiliza la longitud de *str* en lugar de *count*.
+La función **_strnset** establece, como máximo, los primeros caracteres de *recuento* de *Str* en *c* (convertidos en **Char**). Si el *recuento* es mayor que la longitud de *Str*, se usa la longitud de *Str* en lugar de *Count*.
 
-**_wcsnset** y **_mbsnset** son versiones de caracteres anchos y multibyte de **_strnset.** Los argumentos de cadena y el valor devuelto de **_wcsnset** son cadenas de caracteres anchos; las de **_mbsnset** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**_wcsnset** y **_mbsnset** son versiones de caracteres anchos y multibyte de **_strnset**. Los argumentos de cadena y el valor devuelto de **_wcsnset** son cadenas de caracteres anchos; los de **_mbsnset** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-**_mbsnset** valida sus parámetros; si *str* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, **_mbsnset** devuelve **NULL** y establece **errno** en **EINVAL**. **_strnset** y **_wcsnset** no validan sus parámetros.
+**_mbsnset** valida sus parámetros; Si *Str* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, **_mbsnset** devuelve **null** y establece **errno** en **EINVAL**. **_strnset** y **_wcsnset** no validan sus parámetros.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -200,8 +200,8 @@ After:  **** is a test
 
 ## <a name="see-also"></a>Consulte también
 
-[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

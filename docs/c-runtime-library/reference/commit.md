@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: f8e13e7fc197c66395556d518ecbd1cd20ac1f77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 217bccbc4ebc937b89bca5cc127de72b7118481c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348626"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918530"
 ---
 # <a name="_commit"></a>_commit
 
@@ -52,20 +52,20 @@ int _commit(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fd*<br/>
+*FD*<br/>
 Descriptor de archivo que hace referencia al archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_commit** devuelve 0 si el archivo se ha vaciado correctamente en el disco. Un valor devuelto de -1 indica un error.
+**_commit** devuelve 0 si el archivo se ha vaciado correctamente en el disco. Un valor devuelto de-1 indica un error.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_commit** obliga al sistema operativo a escribir el archivo asociado con *fd* en el disco. Esta llamada se asegura de que el archivo especificado se vacíe inmediatamente, no a discreción del sistema operativo.
+La función **_commit** fuerza al sistema operativo a escribir el archivo asociado a *FD* en el disco. Esta llamada se asegura de que el archivo especificado se vacíe inmediatamente, no a discreción del sistema operativo.
 
-Si *fd* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** se establece en **EBADF**.
+Si *FD* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y **errno** se establece en **EBADF**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +75,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

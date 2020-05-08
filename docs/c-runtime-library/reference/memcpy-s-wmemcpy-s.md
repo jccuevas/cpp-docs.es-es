@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333332"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915407"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -82,17 +82,17 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |*dest*|*destSize*|*src*|*count*|Valor devuelto|Contenido de *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |cualquiera|cualquiera|cualquiera|0|0|No modificado|
-|**Null**|cualquiera|cualquiera|distinto de cero|**EINVAL**|No modificado|
-|cualquiera|cualquiera|**Null**|distinto de cero|**EINVAL**|*dest* se pone a cero|
-|cualquiera|< *Contar*|cualquiera|distinto de cero|**ERANGE**|*dest* se pone a cero|
+|**ACEPTA**|cualquiera|cualquiera|distinto de cero|**EINVAL**|No modificado|
+|cualquiera|cualquiera|**ACEPTA**|distinto de cero|**EINVAL**|*dest* está en cero|
+|cualquiera|< *recuento*|cualquiera|distinto de cero|**ERANGE**|*dest* está en cero|
 
 ## <a name="remarks"></a>Observaciones
 
-**memcpy_s** copias *cuentan* bytes de *src* a *dest*; **wmemcpy_s** copias *cuentan* caracteres anchos (dos bytes). Si el origen y el destino se superponen, el comportamiento de **memcpy_s** es indefinido. Utilice **memmove_s** para controlar las regiones superpuestas.
+**memcpy_s** copia el *número* de bytes de *src* a *dest*; **wmemcpy_s** copia el *número* de caracteres anchos (dos bytes). Si el origen y el destino se superponen, el comportamiento de **memcpy_s** es indefinido. Use **memmove_s** para administrar regiones superpuestas.
 
-Estas funciones validan sus parámetros. Si *count* es distinto de cero y *dest* o *src* es un puntero nulo, o *destSize* es menor que *count*, estas funciones invocan el controlador de parámetros no válidos, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** o **ERANGE** y **establecen errno** en el valor devuelto.
+Estas funciones validan sus parámetros. Si *Count* es distinto de cero y *dest* o *src* es un puntero nulo, o *destSize* es menor que *Count*, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** o **ERANGE** y establecen **errno** en el valor devuelto.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -27,7 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,19 +70,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 7c898fab606950824d6886757abd6389fd0180c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42333433277e1ac593bb2662967b73907ed13c92
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322986"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919953"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
 Cambia una cadena a minúsculas usando la configuración regional actual o un objeto de configuración regional que se pasa. Estas versiones de [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbslwr_s** y **_mbslwr_s_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr_s** y **_mbslwr_s_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -145,7 +145,7 @@ errno_t _wcslwr_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Str*<br/>
+*CAD*<br/>
 Cadena terminada en NULL que se va a cambiar a minúsculas.
 
 *numberOfElements*<br/>
@@ -158,11 +158,11 @@ Configuración regional que se va a usar.
 
 Devuelve cero si se ejecuta correctamente; devuelve un código de error de valor distinto de cero si se produce un error.
 
-Estas funciones validan sus parámetros. Si *str* no es una cadena válida terminada en null, se invoca el controlador de parámetros no válidos, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y **establecen errno en** **EINVAL**. Si *numberOfElements* es menor que la longitud de la cadena, las funciones también devuelven **EINVAL** y **establecen errno en** **EINVAL**.
+Estas funciones validan sus parámetros. Si *Str* no es una cadena terminada en NULL válida, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**. Si *numberOfElements* es menor que la longitud de la cadena, las funciones también devuelven **EINVAL** y establecen **errno** en **EINVAL**.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_strlwr_s** convierte, en su lugar, las letras mayúsculas en *str* a minúsculas. **_mbslwr_s** es una versión de caracteres multibyte de **_strlwr_s**. **_wcslwr_s** es una versión de caracteres anchos de **_strlwr_s**.
+La función **_strlwr_s** convierte, en contexto, cualquier letra mayúscula de *Str* a minúsculas. **_mbslwr_s** es una versión de caracteres multibyte de **_strlwr_s**. **_wcslwr_s** es una versión con caracteres anchos de **_strlwr_s**.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
@@ -170,7 +170,7 @@ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -229,7 +229,7 @@ Upper: THE STRING TO END ALL STRINGS!
 
 ## <a name="see-also"></a>Consulte también
 
-[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)<br/>

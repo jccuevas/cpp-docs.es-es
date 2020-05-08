@@ -18,18 +18,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 819ea45bb9d5775bb59764b587a75e368fa0e80d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343744"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909535"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
@@ -52,7 +52,7 @@ int _ismbbblank_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*C*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 *locale*<br/>
@@ -60,11 +60,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbblank** devuelve un valor distinto de cero si *c* representa un carácter de espacio (0x20), una tabulación horizontal (0x09) o un carácter específico de la configuración regional que se utiliza para separar palabras dentro de una línea de texto para la que **isspace** es true; de lo contrario, devuelve 0. **_ismbbblank** utiliza la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_ismbbblank_l** es idéntica, excepto que en su lugar usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** devuelve un valor distinto de cero si *c* representa un carácter de espacio (0x20), un carácter de tabulación horizontal (0x09) o un carácter específico de la configuración regional que se usa para separar las palabras dentro de una línea de texto para la que **isspace** es true; de lo contrario, devuelve 0. **_ismbbblank** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_ismbbblank_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +75,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>
-[rutinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

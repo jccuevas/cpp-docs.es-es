@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-ms.openlocfilehash: d3760102ca07c883ac711c66994ff470cb46cf84
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 24267a663af1aa68099861bfec1b0e5c18aa83be
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343870"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919745"
 ---
 # <a name="iscntrl-iswcntrl-_iscntrl_l-_iswcntrl_l"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
@@ -73,7 +73,7 @@ int _iswcntrl_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*C*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 *locale*<br/>
@@ -81,11 +81,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve distinto de cero si *c* es una representación determinada de un carácter de control. **iscntrl** devuelve un valor distinto de cero si *c* es un carácter de control (0x00 - 0x1F o 0x7F). **iswcntrl** devuelve un valor distinto de cero si *c* es un carácter ancho de control. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un carácter de control. **iscntrl** devuelve un valor distinto de cero si *c* es un carácter de control (0X00-0x1F o 0x7F). **iswcntrl** devuelve un valor distinto de cero si *c* es un carácter ancho de control. Cada una de estas rutinas devuelve 0 si *c* no cumple la condición de prueba.
 
-Las versiones de estas funciones que tienen el **sufijo _l** utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el sufijo **_L** utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-El comportamiento de **iscntrl** y **_iscntrl_l** es indefinido si *c* no es EOF o en el intervalo 0 a 0xFF, ambos inclusive. Cuando se utiliza una biblioteca CRT de depuración y *c* no es uno de estos valores, las funciones generan una aserción.
+El comportamiento de **iscntrl** y **_iscntrl_l** es undefined si *c* no es EOF o en el intervalo comprendido entre 0 y 0xFF, ambos incluidos. Cuando se usa una biblioteca CRT de depuración y *c* no es uno de estos valores, las funciones generan una aserción.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -96,7 +96,7 @@ El comportamiento de **iscntrl** y **_iscntrl_l** es indefinido si *c* no es EOF
 
 ## <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -109,8 +109,8 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>

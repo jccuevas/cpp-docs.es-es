@@ -36,7 +36,7 @@ api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -65,16 +65,16 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: 5c3ebd9ff3533439cde2f1b46d100976b18e02c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b8a094294abba46ae78e9d3529ccf3a7b0a31f39
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350996"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919892"
 ---
 # <a name="obsolete-functions"></a>Funciones obsoletas
 
-Algunas funciones de biblioteca son obsoletas y tienen equivalentes más recientes. Le recomendamos que cambie estas funciones a las versiones actualizadas. Otras funciones obsoletas se han quitado de CRT. En este artículo se enumeran las funciones en desuso como obsoletas y las funciones quitadas en una versión determinada de Visual Studio.
+Algunas funciones de biblioteca son obsoletas y tienen equivalentes más recientes. Se recomienda cambiar estas funciones a las versiones actualizadas. Otras funciones obsoletas se han quitado de CRT. En este artículo se enumeran las funciones desusadas como obsoletas y las funciones que se han quitado en una versión determinada de Visual Studio.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>En desuso como obsoleta en Visual Studio 2015
 
@@ -95,12 +95,12 @@ Algunas funciones de biblioteca son obsoletas y tienen equivalentes más recient
 |Función obsoleta|Alternativa|
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
-|[obtiene, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
+|[Obtiene _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
 |[_get_output_format](../c-runtime-library/get-output-format.md)|None|
 |[_heapadd](../c-runtime-library/heapadd.md)|None|
 |[_heapset](../c-runtime-library/heapset.md)|None|
-|[inp, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|None|
-|[outp, outpw, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|None|
+|[INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|None|
+|[OUTP, outpw, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|None|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|None|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Se ha quitado de CRT en versiones anteriores de Visual Studio

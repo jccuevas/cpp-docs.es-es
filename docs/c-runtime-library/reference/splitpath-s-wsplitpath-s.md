@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 364544a9423668494747405e801d59b73de4e6c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 984b55737e575656670f561c45f528265800f214
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355620"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920299"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -96,29 +96,29 @@ errno_t _wsplitpath_s(
 *path*<br/>
 Ruta de acceso completa.
 
-*Conducir*<br/>
-Letra de unidad, seguida de dos puntos (**:**). Puede pasar **NULL** para este parámetro si no necesita la letra de unidad.
+*dispositivo*<br/>
+Letra de unidad, seguida de dos puntos (**:**). Puede pasar **null** para este parámetro si no necesita la letra de la unidad.
 
 *driveNumberOfElements*<br/>
-El tamaño del búfer de *unidad* en caracteres anchos o de un solo byte. Si *la unidad* es **NULL**, este valor debe ser 0.
+Tamaño del búfer de la *unidad* en caracteres anchos o de un solo byte. Si la *unidad* es **null**, este valor debe ser 0.
 
 *dir*<br/>
-Ruta de directorio, incluida la barra diagonal final. Se pueden **/** utilizar barras diagonales diagonales ( ), barras diagonales inversas ( **\\** ) o ambas. Puede pasar **NULL** para este parámetro si no necesita la ruta de acceso del directorio.
+Ruta de directorio, incluida la barra diagonal final. Se pueden usar barras **/** diagonales (), barras **\\** diagonales inversas () o ambas. Puede pasar **null** para este parámetro si no necesita la ruta de acceso del directorio.
 
 *dirNumberOfElements*<br/>
-El tamaño del búfer *dir* en caracteres anchos o de un solo byte. Si *dir* es **NULL**, este valor debe ser 0.
+Tamaño del búfer de *dir* en caracteres anchos o de un solo byte. Si *dir* es **null**, este valor debe ser 0.
 
-*apellido*<br/>
-Nombre de archivo base (sin extensión). Puede pasar **NULL** para este parámetro si no necesita el nombre de archivo.
+*fname*<br/>
+Nombre de archivo base (sin extensión). Puede pasar **null** para este parámetro si no necesita el nombre de archivo.
 
 *nameNumberOfElements*<br/>
-El tamaño del búfer *fname* en caracteres anchos o de un solo byte. Si *fname* es **NULL**, este valor debe ser 0.
+Tamaño del búfer *fname* en caracteres anchos o de un solo byte. Si *fname* es **null**, este valor debe ser 0.
 
-*Ext*<br/>
-Extensión de nombre de archivo, incluido el período inicial (**.**). Puede pasar **NULL** para este parámetro si no necesita la extensión de nombre de archivo.
+*total*<br/>
+Extensión de nombre de archivo, incluido el punto inicial (**.**). Puede pasar **null** para este parámetro si no necesita la extensión de nombre de archivo.
 
 *extNumberOfElements*<br/>
-El tamaño del búfer *ext* en caracteres anchos o de un solo byte. Si *ext* es **NULL**, este valor debe ser 0.
+Tamaño del búfer de *ext* en caracteres anchos o de un solo byte. Si *ext* es **null**, este valor debe ser 0.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -128,25 +128,25 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |Condición|Valor devuelto|
 |---------------|------------------|
-|*ruta* de acceso es **NULL**|**EINVAL**|
-|*unidad* es **NULL**, *driveNumberOfElements* es distinto de cero|**EINVAL**|
-|*unidad* no es**NULL**, *driveNumberOfElements* es cero|**EINVAL**|
-|*dir* es **NULL**, *dirNumberOfElements* es distinto de cero|**EINVAL**|
-|*dir* no es**NULL**, *dirNumberOfElements* es cero|**EINVAL**|
-|*fname* es **NULL**, *nameNumberOfElements* es distinto de cero|**EINVAL**|
-|*fname* no es**NULL**, *nameNumberOfElements* es cero|**EINVAL**|
-|*ext* es **NULL**, *extNumberOfElements* es distinto de cero|**EINVAL**|
-|*ext* no es**NULL**, *extNumberOfElements* es cero|**EINVAL**|
+|la *ruta de acceso* es **null**|**EINVAL**|
+|la *unidad* es **null**, *driveNumberOfElements* es distinto de cero|**EINVAL**|
+|la *unidad* no es**null**, *driveNumberOfElements* es cero|**EINVAL**|
+|*dir* es **null**, *dirNumberOfElements* es distinto de cero|**EINVAL**|
+|*dir* no es**null**, *dirNumberOfElements* es cero|**EINVAL**|
+|*fname* es **null**, *nameNumberOfElements* es distinto de cero|**EINVAL**|
+|*fname* no es**null**, *nameNumberOfElements* es cero|**EINVAL**|
+|*ext* es **null**, *extNumberOfElements* es distinto de cero|**EINVAL**|
+|*ext* no es**null**, *extNumberOfElements* es cero.|**EINVAL**|
 
-Si se da alguna de las condiciones anteriores, se invoca al controlador de parámetros no válidos, tal como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven **EINVAL**.
+Si se da alguna de las condiciones anteriores, se invoca al controlador de parámetros no válidos, tal como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EINVAL**.
 
-Si alguno de los búferes es demasiado corto para contener el resultado, estas funciones borran todos los búferes en cadenas vacías, **establecen errno en** **ERANGE**y devuelven **ERANGE**.
+Si alguno de los búferes es demasiado corto para contener el resultado, estas funciones borran todos los búferes de las cadenas vacías, establecen **errno** en **ERANGE**y devuelven **ERANGE**.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_splitpath_s** divide una ruta en sus cuatro componentes. **_splitpath_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath_s** es una versión de caracteres anchos de **_splitpath_s**; los argumentos para **_wsplitpath_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+La función **_splitpath_s** divide una ruta de acceso en los cuatro componentes. **_splitpath_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath_s** es una versión con caracteres anchos de **_splitpath_s**; los argumentos para **_wsplitpath_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -184,7 +184,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 Vea el ejemplo de [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>
