@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: c1589c64127b47f4dd2a1147f2b4d549601db4fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347009"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912865"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -60,26 +60,26 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parámetros
 
-*Corriente*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fgetc** devuelve el carácter leído como **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho que corresponde al carácter leído o devuelve **WEOF** para indicar un error o el final del archivo. Para ambas funciones, utilice **feof** o **ferror** para distinguir entre un error y una condición de fin de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *stream* es **NULL**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven **EOF**.
+**fgetc** devuelve el carácter leído como un valor **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter que se lee o devuelve **WEOF** para indicar un error o el final del archivo. En ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de fin de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *Stream* es **null**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EOF**.
 
 ## <a name="remarks"></a>Observaciones
 
-Cada una de estas funciones lee un solo carácter de la posición actual del archivo asociado a *la secuencia.* A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
+Cada una de estas funciones Lee un solo carácter de la posición actual del archivo asociado a la *secuencia*. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
 
-**fgetc** es equivalente a **getc**, pero se implementa sólo como una función, en lugar de como una función y una macro.
+**fgetc** es equivalente a **GETC**, pero solo se implementa como una función, en lugar de como una función y una macro.
 
-**fgetwc** es la versión de caracteres anchos de **fgetc**; lee **c** como un carácter multibyte o un carácter ancho según si *la secuencia* se abre en modo de texto o en modo binario.
+**fgetwc** es la versión con caracteres anchos de **fgetc**; Lee **c** como carácter multibyte o carácter ancho en función de si la *secuencia* se abre en modo de texto o en modo binario.
 
 Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos.
 
 Para obtener más información sobre el procesamiento de caracteres anchos y caracteres multibyte en los modos binarios y de texto, consulte [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -140,14 +140,14 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Salida
 
 ```Output
 Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348372"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917603"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
@@ -63,7 +63,7 @@ int _cputws(
 
 ### <a name="parameters"></a>Parámetros
 
-*Str*<br/>
+*CAD*<br/>
 Cadena de salida
 
 ## <a name="return-value"></a>Valor devuelto
@@ -72,11 +72,11 @@ Si se realiza correctamente, **_cputs** devuelve 0. Si se produce un error en la
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_cputs** escribe la cadena terminada en null a la que apunta *str* directamente en la consola. No se anexa ninguna combinación de retorno de carro y salto de línea (CR-LF) automáticamente a la cadena.
+La función **_cputs** escribe la cadena terminada en null a la que apunta *Str* directamente en la consola. No se anexa ninguna combinación de retorno de carro y salto de línea (CR-LF) automáticamente a la cadena.
 
-Esta función valida su parámetro. Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve -1.
+Esta función valida su parámetro. Si *Str* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve-1.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -156,5 +156,5 @@ Hello world (courtesy of _cputws)!
 
 ## <a name="see-also"></a>Consulte también
 
-[E/S de consola y puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de consola y Puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch, _putwch](putch-putwch.md)<br/>

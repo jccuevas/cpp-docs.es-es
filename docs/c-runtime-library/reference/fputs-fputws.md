@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 0a6ac7770e88975a60e1e4aef522dddf901206fb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 718bcd227e5821c85517ff7c0a1f195bd24d230b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346212"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912736"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -60,25 +60,25 @@ int fputws(
 
 ### <a name="parameters"></a>Parámetros
 
-*Str*<br/>
+*CAD*<br/>
 Cadena de salida
 
-*Corriente*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un valor no negativo si se ejecuta correctamente. En un error, **fputs** y **fputws** devuelven **EOF**. Si *str* o *stream* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y, a continuación, **fputs** devuelve **EOF**y **fputws** devuelve **WEOF**.
+Cada una de estas funciones devuelve un valor no negativo si se ejecuta correctamente. En un error, **fputs** y **fputws** devuelven **EOF**. Si *Str* o *Stream* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y, a continuación, **fputs** devuelve **EOF**y **fputws** devuelve **WEOF**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Observaciones
 
-Cada una de estas funciones copia *str* en el *flujo* de salida en la posición actual. **fputws** copia el argumento de caracteres anchos *str* para *transmitir* como una cadena de caracteres multibyte o una cadena de caracteres anchos según si *la secuencia* se abre en modo de texto o en modo binario, respectivamente. Ninguna de las funciones copia el carácter de terminación NULL.
+Cada una de estas funciones copia *Str* en el *flujo* de salida en la posición actual. **fputws** copia el argumento de caracteres anchos *Str* en *Stream* como una cadena de caracteres multibyte o una cadena de caracteres anchos según si la *secuencia* se abre en modo de texto o en modo binario, respectivamente. Ninguna de las funciones copia el carácter de terminación NULL.
 
-Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **fputs** no admite actualmente la salida en una secuencia UNICODE.
+Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **fputs** no admite actualmente la salida en un flujo Unicode.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -93,7 +93,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la Plataforma universal de Windows (UWP). Los identificadores de secuencia estándar asociados a la consola **(stdin,** **stdout**y **stderr)** deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -118,5 +118,5 @@ Hello world from fputs.
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
-[obtiene, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[Obtiene _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

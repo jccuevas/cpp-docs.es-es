@@ -13,7 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: a85a9a90ee922c6100649f2aebb9eb4c68696a0d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 90a8fdac4b3b671853d2274de26040e3bf67def4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745775"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918042"
 ---
 # <a name="_ciexp"></a>_CIexp
 
@@ -48,13 +48,13 @@ Esta versión de la función `exp` tiene una convención de llamada especializad
 
 El valor resultante se inserta en la parte superior de la pila.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 **Plataforma:** x86
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)

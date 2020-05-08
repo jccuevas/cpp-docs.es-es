@@ -16,7 +16,7 @@ api_location:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: afffb691ca8bf8d180cac11ac5f16a84d871b1b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334412"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917428"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -71,7 +71,7 @@ wchar_t *_cgetws(
 
 #### <a name="parameters"></a>Parámetros
 
-*Búfer*<br/>
+*búfer*<br/>
 Ubicación de almacenamiento de los datos.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -86,7 +86,7 @@ Como todas las claves de edición están activas cuando se llama a `_cgets` o `_
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../c-runtime-library/secure-template-overloads.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -149,5 +149,5 @@ Text = A line of input.
 
 ## <a name="see-also"></a>Consulte también
 
-[E/S de consola y puerto](../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de consola y Puerto](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)

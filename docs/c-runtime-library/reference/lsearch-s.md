@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: 720b83dd48b42d77f35bce12f16e8ac79eb3b4d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d8c421eb3c7a6a617ce073cbf5f36416294c1874
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341649"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920444"
 ---
 # <a name="_lsearch_s"></a>_lsearch_s
 
@@ -65,13 +65,13 @@ Objeto que se va a buscar.
 *base*<br/>
 Puntero a la base de la matriz en la que se va a buscar.
 
-*number*<br/>
+*número*<br/>
 Número de elementos.
 
-*Tamaño*<br/>
+*size*<br/>
 Tamaño de cada elemento de la matriz expresado en bytes.
 
-*Comparar*<br/>
+*Compare*<br/>
 Puntero a la rutina de comparación. El segundo parámetro es un puntero a la clave de búsqueda. El tercer parámetro es un puntero a un elemento de la matriz que se va a comparar con la clave.
 
 *contextoo*<br/>
@@ -79,28 +79,28 @@ Un puntero a un objeto al que se podría obtener acceso en la función de compar
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se encuentra la *clave,* **_lsearch_s** devuelve un puntero al elemento de la matriz en *la base* que coincide con la *clave*. Si no se encuentra la *clave,* **_lsearch_s** devuelve un puntero al elemento recién agregado al final de la matriz.
+Si se encuentra la *clave* , **_lsearch_s** devuelve un puntero al elemento de la matriz en la *base* que coincide con la *clave*. Si no se encuentra la *clave* , **_lsearch_s** devuelve un puntero al elemento recién agregado al final de la matriz.
 
-Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **NULL**. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*key*|*base*|*Comparar*|*number*|*Tamaño*|**errno**|
+|*key*|*base*|*Compare*|*número*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
-|**Null**|cualquiera|cualquiera|cualquiera|cualquiera|**EINVAL**|
-|cualquiera|**Null**|cualquiera|!= 0|cualquiera|**EINVAL**|
+|**ACEPTA**|cualquiera|cualquiera|cualquiera|cualquiera|**EINVAL**|
+|cualquiera|**ACEPTA**|cualquiera|!= 0|cualquiera|**EINVAL**|
 |cualquiera|cualquiera|cualquiera|cualquiera|cero|**EINVAL**|
-|cualquiera|cualquiera|**Null**|an|cualquiera|**EINVAL**|
+|cualquiera|cualquiera|**ACEPTA**|an|cualquiera|**EINVAL**|
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_lsearch_s** realiza una búsqueda lineal de la *clave* de valor en una matriz de elementos *numéricos,* cada uno de bytes de *ancho.* A diferencia **de bsearch_s**, **_lsearch_s** no requiere que se ordene la matriz. Si no se encuentra la *clave,* **_lsearch_s** la agrega al final de la matriz e incrementa el *número*.
+La función **_lsearch_s** realiza una búsqueda lineal de la *clave* Value en una matriz de elementos *Number* , cada uno de los bytes de *ancho* . A diferencia de **bsearch_s**, **_lsearch_s** no requiere la ordenación de la matriz. Si no se encuentra la *clave* , **_lsearch_s** la agrega al final de la matriz e incrementa el *número*.
 
-La función *compare* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y devuelve un valor que especifica su relación. La función *compare* también toma el puntero al contexto como primer argumento. **_lsearch_s** llamadas *se comparan* una o más veces durante la búsqueda, pasando punteros a dos elementos de matriz en cada llamada. *comparar* debe comparar los elementos y, a continuación, devolver distinto de cero (lo que significa que los elementos son diferentes) o 0 (lo que significa que los elementos son idénticos).
+La función de *comparación* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica su relación. La función *Compare* también toma el puntero al contexto como primer argumento. las llamadas **_lsearch_s** *comparan* una o más veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. *Compare* debe comparar los elementos y, a continuación, devolver un valor distinto de cero (lo que significa que los elementos son diferentes) o 0 (lo que significa que los elementos son idénticos).
 
-El puntero de *contexto* puede ser útil si la estructura de datos buscada forma parte de un objeto y la función *de comparación* necesita tener acceso a los miembros del objeto. Por ejemplo, el código de la función *compare* puede convertir el puntero void en el tipo de objeto adecuado y tener acceso a los miembros de ese objeto. La adición del puntero de *contexto* **hace que _lsearch_s** sea más seguro porque se puede usar contexto adicional para evitar errores de reentrada asociados con el uso de variables estáticas para que los datos estén disponibles para la función de *comparación.*
+El puntero de *contexto* puede ser útil si la estructura de datos de búsqueda forma parte de un objeto y la función de *comparación* necesita acceder a los miembros del objeto. Por ejemplo, el código de la función *Compare* puede convertir el puntero void en el tipo de objeto adecuado y acceder a los miembros de ese objeto. La adición del puntero de *contexto* hace que **_lsearch_s** sea más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos estén disponibles para la función de *comparación* .
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -110,9 +110,9 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-[Búsqueda y clasificación](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>
 [_lfind_s](lfind-s.md)<br/>
 [_lsearch](lsearch.md)<br/>

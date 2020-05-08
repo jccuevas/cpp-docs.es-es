@@ -12,7 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr100.dll
 - msvcr80.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: 78562a29c89abe5b649444ae9223cf219488e009
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 67447823b0322e647784cdbe0f3f7228e1c5fb34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349196"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919245"
 ---
 # <a name="__pctype_func"></a>__pctype_func
 
@@ -48,7 +48,7 @@ Puntero a una matriz de información de clasificación de caracteres.
 
 La información de la tabla de clasificación de caracteres solo es para uso interno y sirve para diversas funciones que clasifican los caracteres de tipo `char`. Para obtener más información, consulte la sección `Remarks` de [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,6 +56,6 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 |-------------|---------------------|
 |__pctype_func|ctype.h|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)

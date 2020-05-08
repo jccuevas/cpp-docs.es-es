@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 30f8375814259cac8c3d7216c636b69acbc7e90a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348753"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913533"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -83,7 +83,7 @@ long _wtol_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Str*<br/>
+*CAD*<br/>
 Cadena que se va a convertir.
 
 *locale*<br/>
@@ -91,9 +91,9 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve el valor **largo** generado por la interpretación de los caracteres de entrada como un número. El valor devuelto es 0L para **atol** si la entrada no se puede convertir en un valor de ese tipo.
+Cada función devuelve el valor **Long** que se genera al interpretar los caracteres de entrada como un número. El valor devuelto es 0L para **atol** si la entrada no se puede convertir en un valor de ese tipo.
 
-En caso de desbordamiento con grandes valores integrales positivos, **atol** devuelve **LONG_MAX;** en caso de desbordamiento con grandes valores enteros negativos, se devuelve **LONG_MIN.** En todos los casos fuera de rango, **errno** se establece en **ERANGE**. Si el parámetro pasado es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven 0.
+En el caso del desbordamiento con valores enteros positivos grandes, **atol** devuelve **LONG_MAX**; en caso de desbordamiento con valores enteros negativos grandes, se devuelve **LONG_MIN** . En todos los casos fuera del intervalo, **errno** se establece en **ERANGE**. Si el parámetro pasado es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven 0.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -101,17 +101,17 @@ Estas funciones convierten una cadena de caracteres en un valor entero largo (**
 
 La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que termina la cadena.
 
-El argumento *str* a **atol** tiene la siguiente forma:
+El argumento *Str* para **atol** tiene el formato siguiente:
 
-> [*espacio en blanco*] [*signo*] [*dígitos]]*
+> [*espacio en blanco*] [*signo*] [*dígitos*]]
 
-Un *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *signo* es más (+) o menos (-); y *los dígitos* son uno o más dígitos.
+Un espacio en *blanco* consta de caracteres de espacio o tabulación, que se omiten; el *signo* es más (+) o menos (-); y los *dígitos* son uno o más dígitos.
 
-**_wtol** es idéntica a **atol** excepto que toma una cadena de caracteres anchos.
+**_wtol** es idéntica a **atol** , salvo que toma una cadena de caracteres anchos.
 
-Las versiones de estas funciones con el sufijo **_l** son idénticas, excepto que utilizan el parámetro de configuración regional pasado en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -129,7 +129,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra cómo los números almacenados como cadenas se pueden convertir en valores numéricos mediante la función **atol.**
+Este programa muestra cómo se pueden convertir los números almacenados como cadenas en valores numéricos mediante la función **atol** .
 
 ```C
 // crt_atol.c
@@ -176,11 +176,11 @@ Function: atol( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
