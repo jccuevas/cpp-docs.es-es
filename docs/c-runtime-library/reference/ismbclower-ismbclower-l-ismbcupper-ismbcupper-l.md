@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: 9a0991d974c33cff22044364f7a4351f160215a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f33bb4d882031221a80dc3b86670916a2e77af66
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342924"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915701"
 ---
 # <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -75,7 +75,7 @@ int _ismbcupper_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*C*<br/>
+*unidad*<br/>
 Carácter que se va a probar.
 
 *locale*<br/>
@@ -83,22 +83,22 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c*<a 255 y hay una rutina **de _ismbb** correspondiente (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum),** el resultado es el valor devuelto de la rutina **de _ismbb** correspondiente.
+Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c*<= 255 y hay una rutina de **_ismbb** correspondiente (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de la rutina de **_ismbb** correspondiente.
 
 ## <a name="remarks"></a>Observaciones
 
 Cada una de estas funciones prueba si un carácter multibyte dado cumple una condición determinada.
 
-Las versiones de estas funciones con el sufijo **_l** son idénticas, excepto que usan la configuración regional pasada en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que usan la configuración regional que se pasa en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 |Rutina|Condición de prueba|Ejemplo de la página de códigos 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Alfabético en minúscula|Devuelve distinto de cero si y solo si *c* es una representación de un solo byte de una letra en minúsculas ASCII en minúsculas: 0x61<a*c*<.0x7A.|
-|**_ismbclower_l**|Alfabético en minúscula|Devuelve distinto de cero si y solo si *c* es una representación de un solo byte de una letra en minúsculas ASCII en minúsculas: 0x61<a*c*<.0x7A.|
-|**_ismbcupper**|Alfabético en mayúscula|Devuelve distinto de cero si y solo si *c* es una representación de un solo byte de una letra en mayúsculas ASCII en mayúsculas: 0x41<a*c*<.0x5A.|
-|**_ismbcupper_l**|Alfabético en mayúscula|Devuelve distinto de cero si y solo si *c* es una representación de un solo byte de una letra en mayúsculas ASCII en mayúsculas: 0x41<a*c*<.0x5A.|
+|**_ismbclower**|Alfabético en minúscula|Devuelve un valor distinto de cero si y solo si *c* es una representación de un solo byte de una letra inglesa minúscula ASCII: 0x61<=*c*<= 0x7A.|
+|**_ismbclower_l**|Alfabético en minúscula|Devuelve un valor distinto de cero si y solo si *c* es una representación de un solo byte de una letra inglesa minúscula ASCII: 0x61<=*c*<= 0x7A.|
+|**_ismbcupper**|Alfabético en mayúscula|Devuelve un valor distinto de cero si y solo si *c* es una representación de un solo byte de una letra inglesa mayúscula ASCII: 0x41<=*c*<= 0x5A.|
+|**_ismbcupper_l**|Alfabético en mayúscula|Devuelve un valor distinto de cero si y solo si *c* es una representación de un solo byte de una letra inglesa mayúscula ASCII: 0x41<=*c*<= 0x5A.|
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -111,11 +111,11 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc (Rutinas)](../../c-runtime-library/ismbc-routines.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
-[rutinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

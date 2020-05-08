@@ -23,7 +23,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: f3c5631a34c35ed5f5b74e15dfc4225224215b89
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 430d72595aadc677fe51d9ed868e4388071decec
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365463"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912448"
 ---
 # <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 
-Convierta una cadena en un valor **de __int64** sin signo.
+Convierte una cadena en un valor de **__int64** sin signo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -104,19 +104,19 @@ Configuración regional que se va a usar.
 
 **_strtoui64** devuelve el valor representado en la cadena *strSource*, excepto cuando la representación provocaría un desbordamiento, en cuyo caso devuelve **_UI64_MAX**. **_strtoui64** devuelve 0 si no se puede realizar ninguna conversión.
 
-**_UI64_MAX** se define en LIMITES. H.
+**_UI64_MAX** se define en límites. C.
 
-Si *strSource* es **NULL** o la *base* es distinta de cero y es menor que 2 o mayor que 36, **errno** se establece **en EINVAL**.
+Si *strSource* es **null** o la *base* es distinta de cero y menor que 2 o mayor que 36, **errno** se establece en **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_strtoui64** convierte *strSource* en un **__int64** **sin signo** . **_wcstoui64** es una versión de caracteres anchos de **_strtoui64;** su argumento *strSource* es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+La función **_strtoui64** convierte *strSource* en un __int64 **sin signo** **__int64**. **_wcstoui64** es una versión con caracteres anchos de **_strtoui64**; su argumento *strSource* es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-Ambas funciones dejan de leer la cadena *strSource* en el primer carácter que no pueden reconocer como parte de un número. Puede ser el carácter nulo de terminación, o puede ser el primer carácter numérico mayor o igual que *base*.
+Ambas funciones dejan de leer la cadena *strSource* en el primer carácter que no reconocen como parte de un número. Puede tratarse del carácter nulo final o puede ser el primer carácter numérico mayor o igual que *base*.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -125,15 +125,15 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 |**_tcstoui64**|**_strtoui64**|**_strtoui64**|**_wstrtoui64**|
 |**_tcstoui64_l**|**_strtoui64_l**|**_strtoui64_l**|**_wstrtoui64_l**|
 
-La configuración de **categoría de LC_NUMERIC** de la configuración de configuración de configuración de configuración de LC_NUMERIC de la configuración regional actual determina el reconocimiento del carácter de radio en *strSource*; Para obtener más información, consulte [setlocale](setlocale-wsetlocale.md). Las funciones sin el sufijo _l utilizan la configuración regional actual; **_strtoui64_l** y **_wcstoui64_l** son idénticos a las funciones correspondientes sin el sufijo **_l,** excepto que utilizan la configuración regional pasada en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La configuración de la categoría **LC_NUMERIC** de la configuración regional actual determina el reconocimiento del carácter de base en *strSource*; para obtener más información, vea [setlocale](setlocale-wsetlocale.md). Las funciones sin el sufijo _l usan la configuración regional actual; **_strtoui64_l** y **_wcstoui64_l** son idénticos a las funciones correspondientes sin el sufijo **_L** , salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* no es **NULL**, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontró ningún dígito válido o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación señalada por *endptr*.
+Si *endptr* no es **null**, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontraron dígitos válidos o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación a la que apunta *endptr*.
 
-**_strtoui64** espera que *strSource* apunte a una cadena de la siguiente forma:
+**_strtoui64** espera que *strSource* señale a una cadena con el formato siguiente:
 
-> [*espacio en blanco*] **-**[&#124;]**+** [**0** [x **x** &#124; **X** ]] [*dígitos* &#124; *letras*]
+> [*espacio en blanco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*dígitos* &#124; *Letras*]
 
-Un *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten. *dígitos* son uno o más dígitos decimales. *letras* son una o más de las letras 'a' a 'z' (o 'A' a 'Z'). El primer carácter que no se ajusta a este formato detiene el análisis. Si *la base* está entre 2 y 36, entonces se utiliza como la base del número. Si *base* es 0, los caracteres iniciales de la cadena señalada por *strSource* se utilizan para determinar la base. Si el primer carácter es 0 y el segundo carácter no es 'x' ni 'X', la cadena se interpreta como entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter escaneado es '0', se asume un entero octal y un carácter '8' o '9' detendrá el análisis.
+Un espacio en *blanco* puede constar de caracteres de espacio y tabulación, que se omiten. los *dígitos* son uno o más dígitos decimales. las *Letras* son una o varias letras de la ' a ' a la ' z ' (o de la ' a ' a la ' z '). El primer carácter que no se ajusta a este formato detiene el análisis. Si *base* se encuentra entre 2 y 36, se utiliza como base del número. Si *base* es 0, los caracteres iniciales de la cadena a la que apunta *strSource* se usan para determinar la base. Si el primer carácter es 0 y el segundo carácter no es 'x' ni 'X', la cadena se interpreta como entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter examinado es "0", se supone un entero octal y un carácter "8" o "9" detendrá el examen.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -169,7 +169,7 @@ u = 18446744073709551615
 ## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [Funciones de conversión de valores de cadena en valores numéricos](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
