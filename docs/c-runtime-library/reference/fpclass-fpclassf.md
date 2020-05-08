@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346286"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914845"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -60,7 +60,7 @@ int _fpclassf(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -71,10 +71,10 @@ Las funciones **_fpclass** y **_fpclassf** devuelven un valor entero que indica 
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|NaN de señalización|
 |**_FPCLASS_QNAN**|NaN reservado|
-|**_FPCLASS_NINF**|Infinito negativo ( -INF)|
+|**_FPCLASS_NINF**|Infinito negativo (-INF)|
 |**_FPCLASS_NN**|Negativo normalizado distinto de cero|
 |**_FPCLASS_ND**|Negativo no normalizado|
-|**_FPCLASS_NZ**|Cero negativo ( - 0)|
+|**_FPCLASS_NZ**|Cero negativo (-0)|
 |**_FPCLASS_PZ**|Cero positivo (+0)|
 |**_FPCLASS_PD**|Positivo no normalizado|
 |**_FPCLASS_PN**|Positivo normalizado distinto de cero|
@@ -84,7 +84,7 @@ Las funciones **_fpclass** y **_fpclassf** devuelven un valor entero que indica 
 
 Las funciones **_fpclass** y **_fpclassf** son específicas de Microsoft. Son similares a [fpclassify](fpclassify.md), pero devuelven información más detallada sobre el argumento. La función **_fpclassf** solo está disponible cuando se compila para la plataforma x64.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -94,7 +94,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad y conformidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
