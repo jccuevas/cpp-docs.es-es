@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: e77e1811cb6f002c06e514b5f737b8a92ea84282
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333691"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913356"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -50,18 +50,18 @@ double _cabs(
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_cabs** devuelve el valor absoluto de su argumento si se realiza correctamente. Al desbordar, **_cabs** devuelve **HUGE_VAL** y establece **errno** en **ERANGE**. Puede cambiar el control de errores con [_matherr](matherr.md).
+**_cabs** devuelve el valor absoluto de su argumento si se realiza correctamente. En el desbordamiento, **_cabs** devuelve **HUGE_VAL** y establece **errno** en **ERANGE**. Puede cambiar el control de errores con [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_cabs** calcula el valor absoluto de un número complejo, que debe ser una estructura de tipo [_complex](../../c-runtime-library/standard-types.md). La estructura *z* se compone de un componente real *x* y un componente imaginario *y*. Una llamada a **_cabs** produce un valor `sqrt( z.x * z.x + z.y * z.y )`equivalente al de la expresión .
+La función **_cabs** calcula el valor absoluto de un número complejo, que debe ser una estructura de tipo [_complex](../../c-runtime-library/standard-types.md). La estructura *z* se compone de un componente real *x* y un componente imaginario *y*. Una llamada a **_cabs** genera un valor equivalente al de la expresión `sqrt( z.x * z.x + z.y * z.y )`.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

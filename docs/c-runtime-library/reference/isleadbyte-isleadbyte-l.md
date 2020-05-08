@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909539"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -57,22 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>Parámetros
 
-*C*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**isleadbyte** devuelve un valor distinto de cero si el argumento satisface la condición de prueba o 0 si no lo hace. En la configuración regional "C" y en las configuraciones regionales de juego de caracteres de un solo byte (SBCS), **isleadbyte** siempre devuelve 0.
+**isleadbyte** devuelve un valor distinto de cero si el argumento cumple la condición de prueba o 0 si no es así. En la configuración regional de "C" y en las configuraciones regionales de juegos de caracteres de un solo byte (SBCS), **isleadbyte** siempre devuelve 0.
 
 ## <a name="remarks"></a>Observaciones
 
-La macro **isleadbyte** devuelve un valor distinto de cero si su argumento es el primer byte de un carácter multibyte. **isleadbyte** produce un resultado significativo para cualquier argumento entero de -1 (**EOF**) a **UCHAR_MAX** (0xFF), ambos inclusive.
+La macro **isleadbyte** devuelve un valor distinto de cero si su argumento es el primer byte de un carácter multibyte. **isleadbyte** genera un resultado significativo para cualquier argumento de tipo entero comprendido entre-1 (**EOF**) y **UCHAR_MAX** (0xFF), ambos incluidos.
 
-El tipo de argumento esperado de **isleadbyte** es **int**; si se pasa un carácter firmado, el compilador puede convertirlo en un entero por extensión de signo, lo que produce resultados impredecibles.
+El tipo de argumento esperado de **isleadbyte** es **int**; Si se pasa un carácter con signo, el compilador puede convertirlo en un entero por la extensión de signo, lo que produce resultados imprevisibles.
 
-La versión de esta función con el sufijo **_l** es idéntica, excepto que utiliza la configuración regional pasada en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional.
+La versión de esta función con el sufijo **_L** es idéntica, salvo que usa la configuración regional que se pasa en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -89,8 +89,8 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
-[rutinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

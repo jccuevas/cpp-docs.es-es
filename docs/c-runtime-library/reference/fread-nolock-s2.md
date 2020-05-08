@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 3fb34a75a0281058a1d70ce41e1ce33b4b1bbb59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346136"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912729"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -50,19 +50,19 @@ size_t _fread_nolock_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*Búfer*<br/>
+*búfer*<br/>
 Ubicación de almacenamiento de los datos.
 
 *bufferSize*<br/>
 Tamaño del búfer de destino en bytes.
 
-*elementSize*<br/>
+*Elementos de elemento*<br/>
 Tamaño del elemento que se va a leer en bytes.
 
 *elementCount*<br/>
 Número máximo de elementos que se va a leer.
 
-*Corriente*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -71,9 +71,9 @@ Consulte [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Observaciones
 
-Esta función es una versión sin bloqueo de **fread_s**. Es idéntico a **fread_s** excepto que no está protegido de interferencias por otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Esta función es una versión que no es de bloqueo de **fread_s**. Es idéntico a **fread_s** , salvo que no está protegido frente a interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +83,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

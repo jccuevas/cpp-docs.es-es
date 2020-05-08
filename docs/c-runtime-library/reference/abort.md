@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,19 +27,19 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: 1f70f54783ce6f6d28fdda028af4fd5a205aeb0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f330d53df5af0efa41f4e3b3bb843bdc95210c70
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350927"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910905"
 ---
 # <a name="abort"></a>anular
 
 Anula el proceso actual y devuelve un código de error.
 
 > [!NOTE]
-> No uses este método para cerrar una aplicación de Microsoft Store o una aplicación de la Plataforma universal de Windows (UWP), excepto en escenarios de prueba o depuración. No se permiten formas de uso mediante programación o de interfaz de usuario para cerrar una aplicación de la Tienda de acuerdo con las directivas de [Microsoft Store.](/legal/windows/agreements/store-policies) Para obtener más información, consulta Ciclo de vida de la [aplicación para UWP](/windows/uwp/launch-resume/app-lifecycle).
+> No use este método para cerrar una aplicación Microsoft Store o Plataforma universal de Windows (UWP), excepto en escenarios de prueba o depuración. No se permiten las formas de cerrar una aplicación de la tienda mediante programación o la interfaz de usuario de acuerdo con las [directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte el ciclo de vida de las [aplicaciones para UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,39 +49,39 @@ void abort( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-**anular** no devuelve el control al proceso de llamada. De forma predeterminada, busca un controlador de señales de anulación y genera `SIGABRT` si se ha establecido uno. A **continuación, abortar** finaliza el proceso actual y devuelve un código de salida al proceso primario.
+**Abort** no devuelve el control al proceso que realiza la llamada. De forma predeterminada, busca un controlador de señales de anulación y genera `SIGABRT` si se ha establecido uno. A continuación, **Abort** finaliza el proceso actual y devuelve un código de salida al proceso primario.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-**Microsoft Specific**
+**Específicos de Microsoft**
 
-De forma predeterminada, cuando se compila una aplicación con la biblioteca `SIGABRT` en tiempo de ejecución de depuración, la rutina de **anulación** muestra un mensaje de error antes de que se genere. En el caso de aplicaciones de consola que se ejecuten en modo de consola, el mensaje se envía a `STDERR`. Las aplicaciones de escritorio de Windows y las aplicaciones de consola que se ejecutan en modo de ventana muestran el mensaje en un cuadro de mensaje. Para suprimir el mensaje, use [_set_abort_behavior](set-abort-behavior.md) para borrar la marca `_WRITE_ABORT_MSG`. El mensaje que aparece depende de la versión del entorno en tiempo de ejecución que se use. Para las aplicaciones creadas mediante las versiones más recientes de Visual C++, el mensaje se asemeja a esto:
+De forma predeterminada, cuando se compila una aplicación con la biblioteca en tiempo de **abort** ejecución de depuración, la `SIGABRT` rutina Abort muestra un mensaje de error antes de que se genere. En el caso de aplicaciones de consola que se ejecuten en modo de consola, el mensaje se envía a `STDERR`. Las aplicaciones de escritorio de Windows y las aplicaciones de consola que se ejecutan en modo de ventana muestran el mensaje en un cuadro de mensaje. Para suprimir el mensaje, use [_set_abort_behavior](set-abort-behavior.md) para borrar la marca `_WRITE_ABORT_MSG`. El mensaje que aparece depende de la versión del entorno en tiempo de ejecución que se use. En el caso de las aplicaciones compiladas con las versiones más recientes de Visual C++, el mensaje es similar al siguiente:
 
-> R6010 - abort() ha sido llamado
+> Se ha llamado a R6010-Abort ()
 
 En versiones anteriores de la biblioteca en tiempo de ejecución de C, se muestra este mensaje:
 
 > Esta aplicación solicitó la finalización del tiempo de ejecución de modo no habitual. Póngase en contacto con el equipo de asistencia técnica de la aplicación para obtener más información.
 
-Cuando el programa se compila en modo de depuración, el cuadro de mensaje muestra opciones para **Anular**, **Reintentar** u **Omitir**. Si el usuario elige **Anular**, el programa finaliza inmediatamente y devuelve un código de salida de 3. Si el usuario elige **Reintentar**, se invoca a un depurador para la depuración Just-In-Time, si está disponible. Si el usuario elige **Ignorar**, **abortar** continúa el procesamiento normal.
+Cuando el programa se compila en modo de depuración, el cuadro de mensaje muestra opciones para **Anular**, **Reintentar** u **Omitir**. Si el usuario elige **Anular**, el programa finaliza inmediatamente y devuelve un código de salida de 3. Si el usuario elige **Reintentar**, se invoca a un depurador para la depuración Just-In-Time, si está disponible. Si el usuario elige **omitir**, la **operación de anulación** continúa el procesamiento normal.
 
-En las compilaciones comerciales y de depuración, **abortar** comprueba si se ha establecido un controlador de señal de anulación. Si se establece un controlador **abort** de `raise(SIGABRT)`señal no predeterminado, anule las llamadas . Use la función [signal](signal.md) para asociar una función de controlador de señales de anulación a la señal `SIGABRT`. Puede realizar acciones personalizadas (por ejemplo, limpiar recursos o registrar información) y finalizar la aplicación con su propio código de error en la función de controlador. Si no se define ningún controlador de `SIGABRT` señal personalizado, **abortar** no aumenta la señal.
+En las compilaciones de depuración y comercial, **Abort** comprueba si se ha establecido un controlador de señales de anulación. Si se establece un controlador de señales no predeterminado, **Abort** llama `raise(SIGABRT)`a. Use la función [signal](signal.md) para asociar una función de controlador de señales de anulación a la señal `SIGABRT`. Puede realizar acciones personalizadas (por ejemplo, limpiar recursos o registrar información) y finalizar la aplicación con su propio código de error en la función de controlador. Si no se define ningún controlador de señal personalizado, **Abort** no genera `SIGABRT` la señal.
 
-De forma predeterminada, en compilaciones que no son de depuración de aplicaciones de escritorio o de consola, **abortar** y, a continuación, invocar el mecanismo de servicio de informes de errores de Windows (anteriormente conocido como Dr. Watson) para notificar errores a Microsoft. Este comportamiento se puede habilitar o deshabilitar mediante una llamada a `_set_abort_behavior` y al establecer o enmascarar la marca `_CALL_REPORTFAULT`. Cuando se establece la marca, Windows muestra un cuadro de mensaje cuyo texto es similar a "El programa dejó de funcionar correctamente por un problema". El usuario puede invocar un depurador con un botón **Depurar** o elegir el botón **Cerrar programa** para finalizar la aplicación con un código de error definido por el sistema operativo.
+De forma predeterminada, en las compilaciones que no son de depuración de aplicaciones de escritorio o de consola, **Abort** llama al mecanismo de servicio informe de errores de Windows (anteriormente conocido como Dr. Watson) para notificar los errores a Microsoft. Este comportamiento se puede habilitar o deshabilitar mediante una llamada a `_set_abort_behavior` y al establecer o enmascarar la marca `_CALL_REPORTFAULT`. Cuando se establece la marca, Windows muestra un cuadro de mensaje cuyo texto es similar a "El programa dejó de funcionar correctamente por un problema". El usuario puede invocar un depurador con un botón **Depurar** o elegir el botón **Cerrar programa** para finalizar la aplicación con un código de error definido por el sistema operativo.
 
-Si no se invoca el controlador de informes de errores de Windows, **anule** las llamadas [_exit](exit-exit-exit.md) para finalizar el proceso con el código de salida 3 y devuelve el control al proceso primario o al sistema operativo. `_exit` no vacía los búferes de secuencias ni realiza el procesamiento de `atexit`/`_onexit`.
+Si no se invoca el controlador de informe de errores de Windows, se **anulan** las llamadas a [_exit](exit-exit-exit.md) para finalizar el proceso con el código de salida 3 y se devuelve el control al proceso primario o al sistema operativo. `_exit` no vacía los búferes de secuencias ni realiza el procesamiento de `atexit`/`_onexit`.
 
 Para obtener más información sobre la depuración de CRT, consulte [Técnicas de depuración de CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-**Fin de Específicos de Microsoft**
+**Finalizar específico de Microsoft**
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**Aborta**|\<process.h> o \<stdlib.h>|
+|**aborta**|\<process.h> o \<stdlib.h>|
 
 ## <a name="example"></a>Ejemplo
 
@@ -119,15 +119,15 @@ int main( void )
 File could not be opened: No such file or directory
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Usar abort](../../cpp/using-abort.md)<br/>
 [abort (Función)](../../c-language/abort-function-c.md)<br/>
-[Control de Procesos y Medio Ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [raise](raise.md)<br/>
-[Señal](signal.md)<br/>
-[_spawn, funciones _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[signal](signal.md)<br/>
+[_spawn, _wspawn funciones](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [_DEBUG](../../c-runtime-library/debug.md)<br/>
 [_set_abort_behavior](set-abort-behavior.md)
