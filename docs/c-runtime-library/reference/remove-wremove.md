@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 6a3d7ea81b2f6b1a7e87c706ca883394e02dff3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338148"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917835"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
@@ -65,27 +65,27 @@ Ruta de acceso del archivo que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si el archivo se elimina correctamente. De lo contrario, devuelve -1 y establece **errno** en **EACCES** para indicar que la ruta de acceso especifica un archivo de solo lectura, especifica un directorio o el archivo está abierto, o en **ENOENT** para indicar que no se ha encontrado el nombre de archivo o la ruta de acceso.
+Cada una de estas funciones devuelve 0 si el archivo se elimina correctamente. De lo contrario, devuelve-1 y establece **errno** en **EACCES** para indicar que la ruta de acceso especifica un archivo de solo lectura, especifica un directorio o el archivo está abierto o en **ENOENT** para indicar que no se encontró el nombre de archivo o la ruta de acceso.
 
-Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
+Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **remove** elimina el archivo especificado por *path*. **_wremove** es una versión de caracteres anchos de **_remove;** el argumento *path* to **_wremove** es una cadena de caracteres anchos. **_wremove** y **_remove** comportarse de forma idéntica de lo contrario. Para poder eliminar un archivo, primero se deben cerrar todos los controladores correspondientes.
+La función **remove** elimina el archivo especificado por *path*. **_wremove** es una versión con caracteres anchos de **_remove**; el argumento de *ruta de acceso* para **_wremove** es una cadena de caracteres anchos. **_wremove** y **_remove** se comportan de manera idéntica. Para poder eliminar un archivo, primero se deben cerrar todos los controladores correspondientes.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tremove**|**quitar**|**quitar**|**_wremove**|
+|**_tremove**|**remove**|**remove**|**_wremove**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**quitar**|\<stdio.h> o \<io.h>|
+|**remove**|\<stdio.h> o \<io.h>|
 |**_wremove**|\<stdio.h> o \<wchar.h>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
@@ -123,7 +123,7 @@ This file will be deleted.
 Deleted 'CRT_REMOVE.TXT'
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_unlink, _wunlink](unlink-wunlink.md)<br/>

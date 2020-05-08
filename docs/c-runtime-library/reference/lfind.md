@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 287cbd8bc9cc567a4a0d5b9505d57098197bc545
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4721ba96e145b3c2fde4ce0bb73157bbbcab4dff
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342170"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916453"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -62,26 +62,26 @@ Objeto que se va a buscar.
 *base*<br/>
 Puntero a la base de los datos de búsqueda.
 
-*number*<br/>
+*número*<br/>
 Número de elementos de la matriz.
 
-*Ancho*<br/>
+*width*<br/>
 Ancho de los elementos de la matriz.
 
-*Comparar*<br/>
+*Compare*<br/>
 Puntero a la rutina de comparación. El primer parámetro es un puntero a la clave de búsqueda. El segundo parámetro es un puntero al elemento de la matriz que se va a comparar con la clave.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se encuentra la clave, **_lfind** devuelve un puntero al elemento de la matriz en *la base* que coincide con la *clave*. Si no se encuentra la clave, **_lfind** devuelve **NULL**.
+Si se encuentra la clave, **_lfind** devuelve un puntero al elemento de la matriz en la *base* que coincide con la *clave*. Si no se encuentra la clave, **_lfind** devuelve **null**.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_lfind** realiza una búsqueda lineal de la *clave* de valor en una matriz de elementos *numéricos,* cada uno de bytes de *ancho.* A diferencia de **bsearch**, **_lfind** no requiere que se ordene la matriz. El argumento *base* es un puntero a la base de la matriz que se va a buscar. El argumento *compare* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y, a continuación, devuelve un valor que especifica su relación. **_lfind** llama a la rutina de *comparación* una o más veces durante la búsqueda, pasando punteros a dos elementos de matriz en cada llamada. La rutina de *comparación* debe comparar los elementos y, a continuación, devolver distinto de cero (lo que significa que los elementos son diferentes) o 0 (lo que significa que los elementos son idénticos).
+La función **_lfind** realiza una búsqueda lineal de la *clave* Value en una matriz de elementos *Number* , cada uno de los bytes de *ancho* . A diferencia de **bsearch**, **_lfind** no requiere la ordenación de la matriz. El argumento *base* es un puntero a la base de la matriz que se va a buscar. El argumento *Compare* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y, a continuación, devuelve un valor que especifica su relación. **_lfind** llama a la rutina de *comparación* una o más veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. La rutina de *comparación* debe comparar los elementos y devolver un valor distinto de cero (es decir, los elementos son diferentes) o 0 (lo que significa que los elementos son idénticos).
 
-Esta función valida sus parámetros. Si *compare*, *key* o *number* es **NULL**, o si *base* es **NULL** y *number* es distinto de cero, o si *width* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece **en EINVAL** y la función devuelve **NULL**.
+Esta función valida sus parámetros. Si *comparar*, la *clave* o el *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -130,7 +130,7 @@ Hello found
 
 ## <a name="see-also"></a>Consulte también
 
-[Búsqueda y clasificación](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lsearch](lsearch.md)<br/>

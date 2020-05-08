@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: dc9406371da950eb76207d8ddb4a1be8c732098e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338068"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916926"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
@@ -68,7 +68,7 @@ Ruta de acceso del directorio que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente. Un valor devuelto de -1 indica un error y **errno** se establece en uno de los siguientes valores:
+Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente. Un valor devuelto de-1 indica un error y **errno** se establece en uno de los siguientes valores:
 
 |valor de errno|Condición|
 |-|-|
@@ -82,9 +82,9 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 La función **_rmdir** elimina el directorio especificado por *dirname*. El directorio debe estar vacío y no debe ser el directorio de trabajo actual ni el directorio raíz.
 
-**_wrmdir** es una versión de caracteres anchos de **_rmdir;** el argumento *dirname* que **se va** a _wrmdir es una cadena de caracteres anchos. **_wrmdir** y **_rmdir** comportarse de forma idéntica de lo contrario.
+**_wrmdir** es una versión con caracteres anchos de **_rmdir**; el argumento *dirname* para **_wrmdir** es una cadena de caracteres anchos. **_wrmdir** y **_rmdir** se comportan de manera idéntica.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -109,7 +109,7 @@ Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-ru
 
 Vea el ejemplo de [_mkdir](mkdir-wmkdir.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

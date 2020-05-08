@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 5d26b06da1dcf8c53abda5d4ff2ee06ec3e7cd11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2088ea83729a74a60e75d1710529480f34cd638
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341414"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919603"
 ---
 # <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
@@ -62,7 +62,7 @@ unsigned int _mbbtombc_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*C*<br/>
+*unidad*<br/>
 Carácter de byte único que se va a convertir.
 
 *locale*<br/>
@@ -70,17 +70,17 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **_mbbtombc** convierte correctamente *c*, devuelve un carácter multibyte; de lo contrario, devuelve *c*.
+Si **_mbbtombc** convierte correctamente *c*, devuelve un carácter multibyte. de lo contrario, devuelve *c*.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_mbbtombc** convierte un carácter multibyte de un solo byte determinado en un carácter multibyte de doble byte correspondiente. Los caracteres deben estar dentro del rango 0x20 - 0x7E o 0xA1 - 0xDF para convertirse.
+La función **_mbbtombc** convierte un carácter multibyte de un solo byte determinado en un carácter multibyte de doble byte correspondiente. Los caracteres deben estar dentro del intervalo 0x20-0x7E o 0xA1-0xDF que se va a convertir.
 
-El valor de salida se ve afectado por la configuración de la **LC_CTYPE** configuración de categoría de la configuración regional; ver [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de esta función son idénticas, excepto que **_mbbtombc** utiliza la configuración regional actual para este comportamiento dependiente de la configuración regional y **_mbbtombc_l** en su lugar utiliza el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional. vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de esta función son idénticas, salvo que **_mbbtombc** usa la configuración regional actual para este comportamiento dependiente de la configuración regional y **_mbbtombc_l** en su lugar usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En versiones anteriores, **_mbbtombc** se llamaba **hantozen**. Para el nuevo código, utilice **_mbbtombc**.
+En versiones anteriores, **_mbbtombc** se llamaba **hantozen**. Para el nuevo código, use **_mbbtombc**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -91,7 +91,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [_mbctombb, _mbctombb_l](mbctombb-mbctombb-l.md)<br/>

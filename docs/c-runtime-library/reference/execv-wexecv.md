@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: 638364afa75fa1b04b598370473dee48964c5763
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2c92321ebf31cf3dd1e446246674a437919e347b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347888"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919689"
 ---
 # <a name="_execv-_wexecv"></a>_execv, _wexecv
 
@@ -65,12 +65,12 @@ intptr_t _wexecv(
 *cmdname*<br/>
 Ruta de acceso del archivo que se va a ejecutar.
 
-*Argv*<br/>
+*argv*<br/>
 Matriz de punteros a parámetros.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de -1 indica un error, en cuyo caso se establece la variable global **errno.**
+Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de-1 indica un error, en cuyo caso se establece la variable global **errno** .
 
 |valor **errno**|Descripción|
 |-------------------|-----------------|
@@ -88,9 +88,9 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 Cada una de estas funciones carga y ejecuta un proceso nuevo, y pasa una matriz de punteros a los argumentos de la línea de comandos.
 
-Las funciones **_execv** validan sus parámetros. Si *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, puntero a una matriz vacía o si la matriz contiene una cadena vacía como primer argumento, las **funciones _execv** invocan el controlador de parámetros no válidos como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven -1. No se inicia ningún proceso.
+Las funciones **_execv** validan sus parámetros. Si *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, un puntero a una matriz vacía o si la matriz contiene una cadena vacía como primer argumento, las funciones de **_execv** invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven-1. No se inicia ningún proceso.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,13 +105,13 @@ Para obtener más información sobre compatibilidad, vea [Compatibility](../../c
 
 Consulte el ejemplo de [Funciones _exec y _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-[Control de Procesos y Medio Ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[Aborta](abort.md)<br/>
+[aborta](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, funciones _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn funciones](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

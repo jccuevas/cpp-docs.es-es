@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: e34fbe64d342205659a4b0bdaf703248e62ed733
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362412"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917489"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -70,7 +70,7 @@ errno_t _wtmpnam_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*Str*<br/>
+*CAD*<br/>
 Puntero que va a contener el nombre generado.
 
 *sizeInChars*<br/>
@@ -84,23 +84,23 @@ Ambas funciones devuelven 0 si se realizan correctamente o un número de error e
 
 |||||
 |-|-|-|-|
-|*Str*|*sizeInChars*|**Valor de devolución**|**Contenido de**  *str*|
-|**Null**|cualquiera|**EINVAL**|no modificado|
-|no **NULL** (señala a la memoria válida)|demasiado corto|**ERANGE**|no modificado|
+|*CAD*|*sizeInChars*|**Valor devuelto**|**Contenido de**  *Str*|
+|**ACEPTA**|cualquiera|**EINVAL**|no modificado|
+|not **null** (apunta a la memoria válida)|demasiado corto|**ERANGE**|no modificado|
 
-Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven **EINVAL**.
+Si *Str* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EINVAL**.
 
 ## <a name="remarks"></a>Observaciones
 
 Cada una de estas funciones devuelve el nombre de un archivo que no existe en este momento. **tmpnam_s** devuelve un nombre único en el directorio temporal de Windows designado devuelto por [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Tenga en cuenta que cuando un nombre de archivo va precedido por una barra diagonal inversa sin información de ruta de acceso, como \fname21, esto indica que el nombre es válido para el directorio de trabajo actual.
 
-Por **tmpnam_s**, puede almacenar este nombre de archivo generado en *str*. La longitud máxima de una cadena devuelta por **tmpnam_s** es **L_tmpnam_s**, definida en STDIO. H. Si *str* es **NULL**, **tmpnam_s** deja el resultado en un búfer estático interno. Por lo tanto, las siguientes llamadas destruyen este valor. El nombre generado por **tmpnam_s** consta de un nombre de archivo generado por el programa y, después de la primera llamada a **tmpnam_s**, una extensión de archivo de números secuenciales en la base 32 (.1-.1vvvvvu, cuando **TMP_MAX_S** en STDIO. H es **INT_MAX**).
+Por **tmpnam_s**, puede almacenar este nombre de archivo generado en *Str*. La longitud máxima de una cadena devuelta por **tmpnam_s** es **L_tmpnam_s**, que se define en stdio. C. Si *Str* es **null**, **tmpnam_s** deja el resultado en un búfer estático interno. Por lo tanto, las siguientes llamadas destruyen este valor. El nombre generado por **tmpnam_s** consta de un nombre de archivo generado por el programa y, después de la primera llamada a **tmpnam_s**, una extensión de archivo de números secuenciales en base 32 (. 1-. 1vvvvvu, cuando se **TMP_MAX_S** en stdio. H es **INT_MAX**).
 
-**tmpnam_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos OEM obtenida del sistema operativo. **_wtmpnam_s** es una versión de caracteres anchos de **tmpnam_s;** el argumento y el valor devuelto de **_wtmpnam_s** son cadenas de caracteres anchos. **_wtmpnam_s** y tmpnam_s se comportan **de** forma idéntica, excepto que **_wtmpnam_s** no controla cadenas de caracteres multibyte.
+**tmpnam_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos OEM obtenida del sistema operativo. **_wtmpnam_s** es una versión con caracteres anchos de **tmpnam_s**; el argumento y el valor devuelto de **_wtmpnam_s** son cadenas de caracteres anchos. **_wtmpnam_s** y **tmpnam_s** se comportan exactamente igual, salvo que **_wtmpnam_s** no controla las cadenas de caracteres multibyte.
 
 En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

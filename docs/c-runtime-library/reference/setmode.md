@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 36d2130d4039f1f87f7f54fc26ad02cb8d519b4a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915810"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -53,35 +53,35 @@ int _setmode (
 
 ### <a name="parameters"></a>Parámetros
 
-*Fd*<br/>
+*FD*<br/>
 Descriptor del archivo.
 
-*Modo*<br/>
+*mode*<br/>
 Nuevo modo de traducción.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Si es correcto, devuelve el modo de traducción anterior.
 
-Si se pasan parámetros no válidos a esta función, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** en **EBADF**, que indica un descriptor de archivo no válido, o **EINVAL**, que indica un argumento de *modo* no válido.
+Si se pasan parámetros no válidos a esta función, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve-1 y establece **errno** en **EBADF**, que indica un descriptor de archivo no válido, o **EINVAL**, que indica un argumento de *modo* no válido.
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_setmode** establece en *el modo* el modo de traducción del archivo dado por *fd*. Pasar **_O_TEXT** como *modo* establece el modo de texto (es decir, traducido). Las combinaciones de avance de línea de retorno de carro (CR-LF) se traducen en un carácter de avance de línea único en la entrada. Los caracteres de salto de línea se traducen a combinaciones CR-LF en la salida. Al pasar **_O_BINARY** establece el modo binario (sin traducir), en el que se suprimen estas traducciones.
+La función **_setmode** *establece en el modo de* traducción del archivo proporcionado por *FD*. Al pasar **_O_TEXT** como *modo* , se establece el modo de texto (es decir, traducido). Las combinaciones de retorno de carro y avance de línea (CR-LF) se traducen en un carácter de salto de línea único en la entrada. Los caracteres de salto de línea se traducen a combinaciones CR-LF en la salida. Al pasar **_O_BINARY** , se establece el modo binario (sin traducir), en el que se suprimen estas traducciones.
 
-También puede pasar **_O_U16TEXT**, **_O_U8TEXT**o **_O_WTEXT** para habilitar el modo Unicode, como se muestra en el segundo ejemplo más adelante en este documento.
+También puede pasar **_O_U16TEXT**, **_O_U8TEXT**o **_O_WTEXT** para habilitar el modo Unicode, tal como se muestra en el segundo ejemplo más adelante en este documento.
 
 > [!CAUTION]
-> El modo Unicode es para funciones de impresión amplias (por ejemplo, `wprintf`) y no es compatible con funciones de impresión estrechas. El uso de una función de impresión estrecha en una secuencia de modo Unicode desencadena una aserción.
+> El modo Unicode es para las funciones de impresión anchas `wprintf`(por ejemplo,) y no se admite para las funciones de impresión estrechas. El uso de una función de impresión estrecha en una secuencia en modo Unicode desencadena una aserción.
 
-**_setmode** se utiliza normalmente para modificar el modo de traducción predeterminado de **stdin** y **stdout**, pero se puede utilizar en cualquier archivo. Si aplica **_setmode** al descriptor de archivo de una secuencia, llame a **_setmode** antes de realizar cualquier operación de entrada o salida en la secuencia.
+Normalmente, **_setmode** se usa para modificar el modo de traducción predeterminado de **stdin** y **stdout**, pero se puede utilizar en cualquier archivo. Si aplica **_setmode** al descriptor de archivo de un flujo, llame a **_setmode** antes de realizar cualquier operación de entrada o salida en la secuencia.
 
 > [!CAUTION]
 > Si escribe datos en una secuencia de archivos, vacíe explícitamente el código mediante [fflush](fflush.md) antes de usar **_setmode** para cambiar el modo. Si no vuelca el código, podría producirse un comportamiento inesperado. Si no ha escrito datos en el flujo, no será necesario volcarlo.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

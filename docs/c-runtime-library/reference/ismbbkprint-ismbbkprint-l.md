@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: e59d06678b2601375bf3174fa84bc261c350c4dd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 183a883d259fd322c5ecd6712bba676b7ffe080c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343629"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915714"
 ---
 # <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -59,7 +59,7 @@ int _ismbbkprint_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*C*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 *locale*<br/>
@@ -67,11 +67,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbkprint** devuelve un valor distinto de cero si el entero *c* es un símbolo de puntuación que no es ASCII o no ASCII o 0 si no lo es. Por ejemplo, solo en la página de códigos 932, **_ismbbkprint** comprueba si hay caracteres o signos de puntuación katakana (intervalo: 0xA1 - 0xDF). **_ismbbkprint** utiliza la configuración regional actual para la configuración de caracteres dependiente de la configuración regional. **_ismbbkprint_l** es idéntica, excepto que utiliza la configuración regional pasada. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** devuelve un valor distinto de cero si el entero *c* es un texto no ASCII o un signo de puntuación no ASCII o 0 en caso contrario. Por ejemplo, solo en la página de códigos 932, **_ismbbkprint** comprueba si hay caracteres o signos de puntuación katakana (intervalo: 0xA1 - 0xDF). **_ismbbkprint** usa la configuración regional actual para los valores de caracteres dependientes de la configuración regional. **_ismbbkprint_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,7 +82,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>
-[rutinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

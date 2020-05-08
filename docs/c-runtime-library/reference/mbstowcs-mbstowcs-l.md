@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 11ff6920ea5f1dad2925a8010c9202e012fad87a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338848"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915468"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -88,24 +88,24 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **mbstowcs** convierte correctamente la cadena de origen, devuelve el número de caracteres multibyte convertidos. Si el argumento *wcstr* es **NULL**, la función devuelve el tamaño necesario (en caracteres anchos) de la cadena de destino. Si **mbstowcs** encuentra un carácter multibyte no válido, devuelve -1. Si el valor devuelto es *count*, la cadena de caracteres anchos no termina en null.
+Si **mbstowcs** convierte correctamente la cadena de origen, devuelve el número de caracteres multibyte convertidos. Si el argumento *wcstr* es **null**, la función devuelve el tamaño necesario (en caracteres anchos) de la cadena de destino. Si **mbstowcs** encuentra un carácter multibyte no válido, devuelve-1. Si el valor devuelto es *Count*, la cadena de caracteres anchos no termina en NULL.
 
 > [!IMPORTANT]
-> Asegúrese de que *wcstr* y *mbstr* no se superpongan y que *el recuento* refleje correctamente el número de caracteres multibyte que se convertirán.
+> Asegúrese de que *wcstr* y *mbstr* no se superponen y que el *recuento* refleja correctamente el número de caracteres multibyte que se van a convertir.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **mbstowcs** convierte hasta un número máximo de caracteres multibyte de *recuento* señalados por *mbstr* en una cadena de caracteres anchos correspondientes que están determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por *wcstr*. El resultado es similar a una serie de llamadas a [mbtowc](mbtowc-mbtowc-l.md). Si **mbstowcs** encuentra el carácter nulo de un solo byte ('-0') antes o cuando se produce el *recuento,* convierte el carácter nulo en un carácter nulo de caracteres anchos (L'-0') y se detiene. Por lo tanto, la cadena de caracteres anchos en *wcstr* es terminada en null solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento es indefinido.
+La función **mbstowcs** convierte hasta un número máximo de caracteres multibyte de *recuento* a los que apunta *mbstr* a una cadena de caracteres anchos correspondientes que vienen determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por *wcstr*. El resultado es similar a una serie de llamadas a [mbtowc](mbtowc-mbtowc-l.md). Si **mbstowcs** detecta el carácter nulo de un solo byte (' \ 0 ') antes o cuando se produce el *recuento* , convierte el carácter nulo en un carácter nulo de caracteres anchos (L ' \ 0 ') y se detiene. Por lo tanto, la cadena de caracteres anchos en *wcstr* está terminada en NULL solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento es indefinido.
 
-Si el argumento *wcstr* es **NULL**, **mbstowcs** devuelve el número de caracteres anchos que resultarían de la conversión, sin incluir un terminador nulo. La cadena de origen debe terminar en nulo para que se devuelva el valor correcto. Si necesita que la cadena de caracteres anchos resultante termine en nulo, agregue uno al valor devuelto.
+Si el argumento *wcstr* es **null**, **mbstowcs** devuelve el número de caracteres anchos que resultarían de la conversión, sin incluir un terminador null. La cadena de origen debe terminar en nulo para que se devuelva el valor correcto. Si necesita que la cadena de caracteres anchos resultante termine en nulo, agregue uno al valor devuelto.
 
-Si el argumento *mbstr* es **NULL**o si *count* es > **INT_MAX**, se invoca el controlador de parámetros no válidos, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, errno se establece **en EINVAL** y la función devuelve -1.
+Si el argumento *mbstr* es **null**, o si *Count* es > **INT_MAX**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, errno se establece en **EINVAL** y la función devuelve-1.
 
-**mbstowcs** utiliza la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_mbstowcs_l** es idéntica, excepto que utiliza la configuración regional pasada en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**mbstowcs** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_mbstowcs_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -214,7 +214,7 @@ Convert back to wide-character string:
 ## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

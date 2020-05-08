@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: c49a924a38aed3ff2d7953e150c4f3f1f3a5a25c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bfe26a988c491c4d137bfc1badc093d56cde4010
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342247"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916548"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -61,9 +61,9 @@ int _kbhit( void );
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_kbhit** comprueba la consola para ver si hay una pulsación de tecla reciente. Si la función devuelve un valor distinto de cero, hay una pulsación de tecla esperando en el búfer. A continuación, el programa puede llamar a **_getch** o **_getche** para obtener la pulsación de tecla.
+La función **_kbhit** comprueba si la consola tiene una pulsación de tecla reciente. Si la función devuelve un valor distinto de cero, hay una pulsación de tecla esperando en el búfer. A continuación, el programa puede llamar a **_getch** o **_getche** para obtener la pulsación de tecla.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -109,6 +109,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-[E/S de consola y puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de consola y Puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>

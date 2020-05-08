@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-ms.openlocfilehash: a017ed58b962520793d5b10b088793dbc9b8a83d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ca8a7fcd58e91ffa8982f30117b09af587d96cf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347430"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920184"
 ---
 # <a name="_fcvt"></a>_fcvt
 
@@ -60,7 +60,7 @@ Número que se va a convertir.
 *count*<br/>
 Número de dígitos después del separador decimal.
 
-*Diciembre*<br/>
+*Dec*<br/>
 Puntero a la posición del separador decimal almacenada.
 
 *sign*<br/>
@@ -68,23 +68,23 @@ Puntero al indicador de signo almacenado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_fcvt** devuelve un puntero a la cadena de dígitos, **NULL** en caso de error.
+**_fcvt** devuelve un puntero a la cadena de dígitos, **null** en el error.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_fcvt** convierte un número de punto flotante en una cadena de caracteres terminada en null. El parámetro *value* es el número de punto flotante que se va a convertir. **_fcvt** almacena los dígitos de *value* como una cadena y anexa un carácter nulo ('-0'). El parámetro *count* especifica el número de dígitos que se almacenarán después del punto decimal. Los dígitos sobrantes se redondean a lugares de *recuento.* Si hay menos dígitos de *precisión,* la cadena se rellena con ceros.
+La función **_fcvt** convierte un número de punto flotante en una cadena de caracteres terminada en NULL. El parámetro de *valor* es el número de punto flotante que se va a convertir. **_fcvt** almacena los dígitos del *valor* como una cadena y anexa un carácter nulo (' \ 0 '). El parámetro *Count* especifica el número de dígitos que se almacenarán después del separador decimal. Los dígitos sobrantes se redondean a los lugares de *recuento* . Si hay menos de dígitos de *número* de precisión, la cadena se rellena con ceros.
 
-El número total de dígitos devueltos por **_fcvt** no excederá **_CVTBUFSIZE**.
+El número total de dígitos devueltos por **_fcvt** no superará **_CVTBUFSIZE**.
 
-Solo se almacenan dígitos en la cadena. La posición del punto decimal y el signo de *valor* se pueden obtener de *dec* y sign después de la llamada. El parámetro *dec* apunta a un valor entero; este valor entero proporciona la posición del punto decimal con respecto al principio de la cadena. Un valor entero de cero o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El *signo* de parámetro apunta a un entero que indica el signo de *valor*. El entero se establece en 0 si *el valor* es positivo y se establece en un número distinto de cero si *el valor* es negativo.
+Solo se almacenan dígitos en la cadena. La posición del separador decimal y el signo de *valor* se pueden obtener de *Dec* y firmar después de la llamada. El parámetro *Dec* apunta a un valor entero; Este valor entero proporciona la posición del separador decimal con respecto al principio de la cadena. Un valor entero de cero o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El *signo* de parámetro señala a un entero que indica el signo del *valor*. El entero se establece en 0 si el *valor* es positivo y se establece en un número distinto de cero si el *valor* es negativo.
 
-La diferencia entre **_ecvt** y **_fcvt** está en la interpretación del parámetro *count.* **_ecvt** interpreta *count* como el número total de dígitos en la cadena de salida, mientras que **_fcvt** interpreta *count* como el número de dígitos después del punto decimal.
+La diferencia entre **_ecvt** y **_fcvt** está en la interpretación del parámetro *Count* . **_ecvt** interpreta *Count* como el número total de dígitos de la cadena de salida, mientras que **_fcvt** interpreta *Count* como el número de dígitos después del separador decimal.
 
-**_ecvt** y **_fcvt** utilizar un único búfer asignado estáticamente para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
+**_ecvt** y **_fcvt** usar un solo búfer asignado estáticamente para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
 
-Esta función valida sus parámetros. Si *dec* o *sign* es **NULL**, o *count* es 0, se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve **NULL.**
+Esta función valida sus parámetros. Si *Dec* o *Sign* es **null**, o *Count* es 0, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve **null** .
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

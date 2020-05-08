@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 10d2b9af45b78a3f5ed673bde3d37894ccb00168
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345371"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919424"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -64,7 +64,7 @@ errno_t _gcvt_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*Búfer*<br/>
+*búfer*<br/>
 Búfer en que se va a almacenar el resultado de la conversión.
 
 *sizeInBytes*<br/>
@@ -82,25 +82,25 @@ Cero si es correcto. Si se produce un error debido a un parámetro no válido (v
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*Búfer*|*sizeInBytes*|*value*|*dígitos*|Valor devuelto|Valor en *el búfer*|
+|*búfer*|*sizeInBytes*|*value*|*dígitos*|Valor devuelto|Valor en *búfer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**Null**|cualquiera|cualquiera|cualquiera|**EINVAL**|No se ha modificado.|
-|No **NULL** (señala a la memoria válida)|cero|cualquiera|cualquiera|**EINVAL**|No se ha modificado.|
-|No **NULL** (señala a la memoria válida)|cualquiera|cualquiera|>= *sizeInBytes*|**EINVAL**|No se ha modificado.|
+|**ACEPTA**|cualquiera|cualquiera|cualquiera|**EINVAL**|No se ha modificado.|
+|Not **null** (apunta a la memoria válida)|cero|cualquiera|cualquiera|**EINVAL**|No se ha modificado.|
+|Not **null** (apunta a la memoria válida)|cualquiera|cualquiera|>= *sizeInBytes*|**EINVAL**|No se ha modificado.|
 
 **Problemas de seguridad**
 
-**_gcvt_s** puede generar una infracción de acceso si *el búfer* no apunta a la memoria válida y no es **NULL**.
+**_gcvt_s** puede generar una infracción de acceso si el *búfer* no apunta a una memoria válida y no es **null**.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_gcvt_s** convierte un *valor* de punto flotante en una cadena de caracteres (que incluye un punto decimal y un posible byte de signo) y almacena la cadena en *el búfer.* *búfer* debe ser lo suficientemente grande como para dar cabida al valor convertido más un carácter nulo de terminación, que se anexa automáticamente. Un búfer de **longitud _CVTBUFSIZE** es suficiente para cualquier valor de punto flotante. Si se utiliza un tamaño de búfer de *dígitos* + 1, la función no sobrescribirá el final del búfer, así que asegúrese de proporcionar un búfer suficiente para esta operación. **_gcvt_s** intenta producir *dígitos* en formato decimal. Si no puede, produce *dígitos* en formato exponencial. Los ceros finales pueden suprimirse en la conversión.
+La función **_gcvt_s** convierte un *valor* de punto flotante en una cadena de caracteres (que incluye un separador decimal y un byte de signo posible) y almacena la cadena en el *búfer*. el *búfer* debe ser lo suficientemente grande como para alojar el valor convertido más un carácter nulo de terminación, que se anexa automáticamente. Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier valor de punto flotante. Si se usa un tamaño de búfer de *dígitos* + 1, la función no sobrescribirá el final del búfer, por lo que debe asegurarse de proporcionar un búfer suficiente para esta operación. **_gcvt_s** intenta producir dígitos de *dígitos* en formato decimal. Si no es posible, genera dígitos de *dígitos* en formato exponencial. Los ceros finales pueden suprimirse en la conversión.
 
 En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 La versión de depuración de esta función rellena primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 7567e5758e405235bca13bbae8a18c2d42ccbd3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333557"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917348"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -67,30 +67,30 @@ long double ceill(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **ceil** devuelven un valor de punto flotante que representa el entero más pequeño que es mayor o igual que *x*. No se devuelve ningún error.
+Las funciones **Ceil (** devuelven un valor de punto flotante que representa el entero más pequeño que sea mayor o igual que *x*. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|None|**_DOMAIN**|
+|± **QNAN**, **IND**|ninguno|**_DOMAIN**|
 
-**ceil** tiene una implementación que utiliza Streaming SIMD Extensions 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**Ceil (** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Observaciones
 
-Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **ceil** que toman **tipos float** o **long** **double.** En un programa C, **ceil** siempre toma y devuelve un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **Ceil (** que toman tipos **float** o **Long** **Double** . En un programa de C, **Ceil (** siempre toma y devuelve un **valor Double**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**ceil**, **ceilf**, **ceill**|\<math.h>|
+|**Ceil (**, **ceilf (**, **ceill**|\<math.h>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
@@ -98,7 +98,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 Consulte el ejemplo de [floor](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
