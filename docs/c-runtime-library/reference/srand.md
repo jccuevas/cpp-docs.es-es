@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: a8d018d429b2a484f88b7c1e0679f1f799983910
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f6f97ad9a3bd0d7e4e88ad1797d369f012bbe5e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355487"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913594"
 ---
 # <a name="srand"></a>srand
 
-Establece el valor inicial de la semilla para el generador de números pseudoaleatorio utilizado por la función **rand.**
+Establece el valor de inicialización inicial para el generador de números pseudoaleatorios utilizado por la función **Rand** .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -55,14 +55,14 @@ void srand(
 
 ### <a name="parameters"></a>Parámetros
 
-*Semilla*<br/>
+*seed*<br/>
 Valor de inicialización para la generación de números pseudoaleatorios
 
 ## <a name="remarks"></a>Observaciones
 
-La función **srand** establece el punto de partida para generar una serie de enteros pseudoaleatorios en el subproceso actual. Para reinicializar el generador para crear la misma secuencia de resultados, llame a la función **srand** y vuelva a utilizar el mismo argumento *de inicialización.* Cualquier otro valor para *la semilla* establece el generador en un punto de partida diferente en la secuencia pseudoaleatoria. **rand** recupera los números pseudoaleatorios que se generan. Llamar a **rand** antes de cualquier llamada a **srand** genera la misma secuencia que llamar a **srand** con *semilla* pasada como 1.
+La función **srand** establece el punto de partida para generar una serie de enteros pseudoaleatorios en el subproceso actual. Para reinicializar el generador y crear la misma secuencia de resultados, llame a la función **srand** y use de nuevo el mismo argumento de *inicialización* . Cualquier otro valor de *SEED* establece el generador en un punto inicial diferente en la secuencia pseudoaleatorio. **Rand** recupera los números pseudoaleatorios que se generan. Si se llama a **Rand** antes de cualquier llamada a **srand** , se genera la misma secuencia que si se llama a **srand** con la *inicialización* pasada como 1.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -76,7 +76,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 Vea el ejemplo de [rand](rand.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[Rand](rand.md)<br/>
+[rand](rand.md)<br/>

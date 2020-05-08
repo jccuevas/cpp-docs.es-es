@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355585"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913911"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -69,30 +69,30 @@ long double sqrtl(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante no negativo
 
 ## <a name="remarks"></a>Observaciones
 
-Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **sqrt** que toman **tipos float** o **long** **double.** En un programa C, **sqrt** siempre toma y devuelve **double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **sqrt** que toman tipos **float** o **Long** **Double** . En un programa de C, **sqrt** siempre toma y devuelve **Double**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **sqrt** devuelven la raíz cuadrada de *x*. De forma predeterminada, si *x* es negativo, **sqrt** devuelve un NaN indefinido.
+Las funciones **sqrt** devuelven la raíz cuadrada de *x*. De forma predeterminada, si *x* es negativo, **sqrt** devuelve un Nan indefinido.
 
-|Entrada|Excepción SEH|**_matherr** Excepción|
+|Entrada|Excepción SEH|**_matherr** Excepcional|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|None|_DOMAIN|
-|- ∞|None|_DOMAIN|
-|x<0|None|_DOMAIN|
+|± QNAN,IND|ninguno|_DOMAIN|
+|- ∞|ninguno|_DOMAIN|
+|x<0|ninguno|_DOMAIN|
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**, **sqrtf (**, **sqrtl**|\<math.h>|\<cmath>|
 
 Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 

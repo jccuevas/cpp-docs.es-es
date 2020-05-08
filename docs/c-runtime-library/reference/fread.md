@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: 26ffd56072f1a5fddc3131a42cd47c145e437b60
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ec5af25070e253f6c04d1aab13404306251ed716
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346064"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912698"
 ---
 # <a name="fread"></a>fread
 
@@ -53,33 +53,33 @@ size_t fread(
 
 ### <a name="parameters"></a>Parámetros
 
-*Búfer*<br/>
+*búfer*<br/>
 Ubicación de almacenamiento de los datos.
 
-*Tamaño*<br/>
+*size*<br/>
 Tamaño del elemento en bytes.
 
 *count*<br/>
 Número máximo de elementos que se va a leer.
 
-*Corriente*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fread** devuelve el número de elementos completos realmente leídos, que puede ser menor que *el recuento* si se produce un error o si se encuentra el final del archivo antes de llegar al *recuento*. Utilice la función **feof** o **ferror** para distinguir un error de lectura de una condición de fin de archivo. Si *size* o *count* es 0, **fread** devuelve 0 y el contenido del búfer no cambia. Si *stream* o *buffer* es un puntero nulo, **fread** invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno en** **EINVAL** y devuelve 0.
+**fread** devuelve el número de elementos completos leídos realmente, que puede ser menor que *Count* si se produce un error o si se encuentra el final del archivo antes de llegar al *recuento*. Utilice la función **feof** o **ferror** para distinguir un error de lectura de una condición de final de archivo. Si *size* o *Count* es 0, **fread** devuelve 0 y el contenido del búfer no cambia. Si *Stream* o *buffer* es un puntero nulo, **fread** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve 0.
 
-Consulte [ \_ \_doserrno, errno,\_sys \_errlist\_y sys nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos códigos de error.
+Vea [ \_doserrno, errno, \_sys\_errlist y \_sys\_NERR](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos códigos de error.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **fread** lee hasta para *contar* elementos de bytes de *tamaño* de la *secuencia* de entrada y los almacena en *el búfer.* El puntero de archivo asociado a *la secuencia* (si hay uno) se incrementa por el número de bytes realmente leídos. Si la secuencia dada se abre en [modo de texto,](../../c-runtime-library/text-and-binary-mode-file-i-o.md)las líneas nuevas de estilo de Windows se convierten en líneas nuevas de estilo Unix. Es decir, los pares de avance de línea de retorno de carro (CRLF) se reemplazan por caracteres de avance de línea única (LF). Este reemplazo no tiene ningún efecto en el puntero de archivo ni en el valor devuelto. Si se produce un error, la posición del puntero de archivo es indeterminada. No se puede determinar el valor de un elemento leído parcialmente.
+La función **fread** lee hasta el *número* de elementos de *tamaño* de bytes del *flujo* de entrada y los almacena en el *búfer*. El puntero de archivo asociado al *flujo* (si hay alguno) se incrementa según el número de bytes leídos realmente. Si la secuencia especificada se abre en [modo de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md), las líneas nuevas de estilo Windows se convierten en nuevas líneas de estilo Unix. Es decir, los pares de retorno de carro y avance de línea (CRLF) se reemplazan por caracteres de avance de línea (LF). Este reemplazo no tiene ningún efecto en el puntero de archivo ni en el valor devuelto. Si se produce un error, la posición del puntero de archivo es indeterminada. No se puede determinar el valor de un elemento leído parcialmente.
 
-Cuando se utiliza en una secuencia de modo de texto, si la cantidad de datos solicitados (es *decir,* \* *el recuento*de tamaños ) es mayor o igual que el tamaño de búfer de **archivo** \* interno (de forma predeterminada, se puede configurar mediante [setvbuf](../../c-runtime-library/reference/setvbuf.md)), los datos de la secuencia se copian directamente en el búfer proporcionado por el usuario y la conversión de nueva línea se realiza en ese búfer. Dado que los datos convertidos pueden ser más cortos que los datos de secuencia copiados en el búfer, los datos pasados *del búfer*\[*return_value* \* *tamaño*] (donde *return_value* es el valor devuelto de **fread**) pueden contener datos no convertidos del archivo. Por este motivo, se recomienda establecer datos de caracteres de terminación nula en el *búfer*\[*return_value* \* *tamaño*] si la intención del búfer es actuar como una cadena de estilo C. Consulte [fopen](fopen-wfopen.md) para obtener más información sobre los efectos del modo de texto y el modo binario.
+Cuando se usa en una secuencia en modo de texto, si la cantidad de datos solicitados (es decir, el *recuento*de *tamaño* \* ) es mayor o igual que el tamaño del búfer de **archivos** \* interno (de forma predeterminada, es 4096 bytes, que se pueden configurar mediante [setvbuf (](../../c-runtime-library/reference/setvbuf.md)), los datos de flujo se copian directamente en el búfer proporcionado por el usuario y la conversión de nueva línea se Dado que los datos convertidos pueden ser más cortos que los datos de secuencia copiados en el búfer, los datos pasados*RETURN_VALUE* \* *tamaño*del *búfer*\[] (donde *RETURN_VALUE* es el valor devuelto de **fread**) pueden contener datos no convertidos del archivo. Por esta razón, se recomienda que termine los datos de caracteres en el *búfer*\[*RETURN_VALUE* \* *tamaño*] si el propósito del búfer es actuar como una cadena de estilo C. Consulte [fopen](fopen-wfopen.md) para obtener más información sobre los efectos del modo de texto y el modo binario.
 
-Esta función bloquea otros subprocesos. Si necesita una versión sin bloqueo, utilice **_fread_nolock**.
+Esta función bloquea otros subprocesos. Si necesita una versión que no sea de bloqueo, use **_fread_nolock**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -142,7 +142,7 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
-[E/S de texto y archivos binarios](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[E/s de archivos binarios y de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
 [fopen](fopen-wfopen.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 34b7d0fdedb55241452f9a7f9937b64c58f7772c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348712"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913518"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Convierte una cadena en un entero **largo.** **long**
+Convierte una cadena **en un entero largo largo.** **long**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -73,7 +73,7 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Str*<br/>
+*CAD*<br/>
 Cadena que se va a convertir.
 
 *locale*<br/>
@@ -81,29 +81,29 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve el valor **largo y** **largo** que se produce interpretando los caracteres de entrada como un número. El valor devuelto para **atoll** es 0 si la entrada no se puede convertir en un valor de ese tipo.
+Cada función **devuelve el valor Long** **Long** que se genera al interpretar los caracteres de entrada como un número. El valor devuelto para **Atolón** es 0 si la entrada no se puede convertir en un valor de ese tipo.
 
-Para el desbordamiento con grandes valores enteros positivos, **atoll** devuelve **LLONG_MAX**y, para el desbordamiento con valores enteros negativos grandes, devuelve **LLONG_MIN**.
+Para el desbordamiento con valores enteros positivos grandes, **Atolón** devuelve **LLONG_MAX**y para el desbordamiento con valores enteros negativos grandes, devuelve **LLONG_MIN**.
 
-En todos los casos fuera de rango, **errno** se establece en **ERANGE**. Si el parámetro que se pasa es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven 0.
+En todos los casos fuera del intervalo, **errno** se establece en **ERANGE**. Si el parámetro que se pasa es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven 0.
 
 ## <a name="remarks"></a>Observaciones
 
-Estas funciones convierten una cadena de caracteres en un valor entero **largo.** **long**
+Estas funciones convierten una cadena de caracteres **en un valor entero largo largo.** **long**
 
 La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que finaliza la cadena.
 
-El argumento *str* al **atoll** tiene la siguiente forma:
+El argumento *Str* para **Atolón** tiene el formato siguiente:
 
 > [*espacio en blanco*] [*signo*] [*dígitos*]
 
-Un *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *signo* es más (+) o menos (-); y *los dígitos* son uno o más dígitos.
+Un espacio en *blanco* consta de caracteres de espacio o tabulación, que se omiten; el *signo* es más (+) o menos (-); y los *dígitos* son uno o más dígitos.
 
-**_wtoll** es idéntica al **atolán,** excepto que toma una cadena de caracteres anchos como parámetro.
+**_wtoll** es idéntico a **Atolón** , salvo que toma una cadena de caracteres anchos como parámetro.
 
-Las versiones de estas funciones que tienen el sufijo **_l** son idénticas a las versiones que no lo tienen, excepto que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el sufijo **_L** son idénticas a las versiones que no lo tienen, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -117,12 +117,12 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 |Rutinas|Encabezado necesario|
 |--------------|---------------------|
-|**atoll**, **_atoll_l**|\<stdlib.h>|
+|**Atolón**, **_atoll_l**|\<stdlib.h>|
 |**_wtoll**, **_wtoll_l**|\<stdlib.h> o \<wchar.h>|
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra cómo utilizar las funciones de **atoll** para convertir números almacenados como cadenas en valores numéricos.
+Este programa muestra cómo usar las funciones de **Atolón** para convertir números almacenados como cadenas en valores numéricos.
 
 ```C
 // crt_atoll.c
@@ -170,11 +170,11 @@ Function: atoll("3336402735171707160320") = 9223372036854775807
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

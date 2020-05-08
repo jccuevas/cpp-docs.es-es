@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338697"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914636"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -62,10 +62,10 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante.
 
-*Intptr*<br/>
+*IntPtr*<br/>
 Puntero a la parte entera almacenada.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -74,19 +74,19 @@ Esta función devuelve la parte fraccionaria con signo de *x*. No se devuelve ni
 
 ## <a name="remarks"></a>Observaciones
 
-Las funciones **modf** desglosan el valor de punto flotante *x* en partes fraccionarias y enteras, cada una de las cuales tiene el mismo signo que *x*. Se devuelve la parte fraccionaria firmada de *x.* La parte entera se almacena como un valor de punto flotante en *intptr*.
+Las funciones **MODF (** dividen el valor de punto flotante *x* en partes fraccionarias y enteros, cada uno de los cuales tiene el mismo signo que *x*. Se devuelve la parte fraccionaria con signo de *x* . La parte entera se almacena como un valor de punto flotante en *IntPtr*.
 
-**modf** tiene una implementación que utiliza Streaming SIMD Extensions 2 (SSE2). Vea [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
+**MODF (** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Vea [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
 
-C++ permite la sobrecarga, por lo que puede llamar a sobrecargas de **modf** que toman y devuelven **float** o **long** **double** parámetros. En un programa C, **modf** siempre toma dos valores dobles y devuelve un valor double.
+C++ permite las sobrecargas, por lo que puede llamar a las sobrecargas de **MODF (** que toman y devuelven parámetros de tipo **float** o **Long** **Double** . En un programa de C, **MODF (** siempre toma dos valores double y devuelve un valor Double.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: \<cmath> o \<math.h>|
+|**MODF (**, **modff (**, **modfl**|C: \<math.h><br /><br /> C++: \<cmath> o \<math.h>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: 3a27717d65714de54f477e4e2b3f243c4631fd8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332318"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920100"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -49,25 +49,25 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>Parámetros
 
 *newhandlermode*<br/>
-Nuevo modo de manejador para **malloc**; valor válido es 0 o 1.
+Nuevo modo de controlador para **malloc**; el valor válido es 0 o 1.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el modo de controlador anterior establecido para **malloc**. Un valor devuelto de 1 indica que, al no asignar memoria, **malloc** anteriormente llamó a la nueva rutina de controlador; un valor devuelto de 0 indica que no lo hizo. Si el argumento *newhandlermode* no es igual a 0 o 1, devuelve -1.
+Devuelve el modo de controlador anterior establecido para **malloc**. Un valor devuelto de 1 indica que, en caso de error de asignación de memoria, **malloc** anteriormente llamó a la rutina del nuevo controlador. un valor devuelto de 0 indica que no lo hizo. Si el argumento *newhandlermode* no es igual a 0 o 1, devuelve-1.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_set_new_mode** de C++ establece el nuevo modo de controlador para [malloc](malloc.md). El nuevo modo de controlador indica si, en caso de error, **malloc** debe llamar a la nueva rutina de controlador según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la nueva rutina de controlador al no asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **malloc** no puede asignar memoria, **malloc** llama a la nueva rutina de controlador de la misma manera que lo hace el **operador new** cuando se produce un error por el mismo motivo. Para obtener más información, vea los operadores [new](../../cpp/new-operator-cpp.md) y [delete](../../cpp/delete-operator-cpp.md) en *Referencia de lenguaje C++*. Para invalidar el valor predeterminado, llame a:
+La función **_set_new_mode** de C++ establece el nuevo modo de controlador para [malloc](malloc.md). El nuevo modo de controlador indica si, en caso de error, **malloc** es llamar a la rutina del nuevo controlador tal y como se establece en [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la rutina del nuevo controlador en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **malloc** no pueda asignar memoria, **malloc** llame a la rutina del nuevo controlador de la misma manera que el operador **New** cuando se produce un error por la misma razón. Para obtener más información, vea los operadores [new](../../cpp/new-operator-cpp.md) y [delete](../../cpp/delete-operator-cpp.md) en *Referencia de lenguaje C++*. Para invalidar el valor predeterminado, llame a:
 
 ```cpp
 _set_new_mode(1);
 ```
 
-al principio del programa o enlace con Newmode.obj (consulte Opciones de [enlace](../../c-runtime-library/link-options.md)).
+temprano en el programa o vincular con newmode. obj (vea [Opciones de vínculo](../../c-runtime-library/link-options.md)).
 
-Esta función valida su parámetro. Si *newhandlermode* es algo distinto de 0 o 1, la función invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, <strong>_set_new_mode</strong> devuelve -1 y establece **errno** `EINVAL`en .
+Esta función valida su parámetro. Si *newhandlermode* es distinto de 0 o 1, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, <strong>_set_new_mode</strong> devuelve-1 y establece **errno** en `EINVAL`.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,11 +77,11 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Asignación de memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Gratis](free.md)<br/>
+[ningún](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>
 [_query_new_mode](query-new-mode.md)<br/>

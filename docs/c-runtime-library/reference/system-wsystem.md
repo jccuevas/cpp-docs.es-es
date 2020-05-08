@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 21ce04d30da80a40a1162dce06ff378150008766
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362790"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912389"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -62,12 +62,12 @@ int _wsystem(
 
 ### <a name="parameters"></a>Parámetros
 
-*Comando*<br/>
+*.*<br/>
 Comando que se va a ejecutar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si *el comando* es **NULL** y se encuentra el intérprete de comandos, devuelve un valor distinto de cero. Si no se encuentra el intérprete de comandos, devuelve 0 y establece **errno** en **ENOENT**. Si *el comando* no es **NULL**, el **sistema** devuelve el valor devuelto por el intérprete de comandos. Devuelve el valor 0 únicamente si el intérprete de comandos devuelve el valor 0. Un valor devuelto de - 1 indica un error y **errno** se establece en uno de los siguientes valores:
+Si el *comando* es **null** y se encuentra el intérprete de comandos, devuelve un valor distinto de cero. Si no se encuentra el intérprete de comandos, devuelve 0 y establece **errno** en **ENOENT**. Si el *comando* no es **null**, el **sistema** devuelve el valor devuelto por el intérprete de comandos. Devuelve el valor 0 únicamente si el intérprete de comandos devuelve el valor 0. Un valor devuelto de-1 indica un error y **errno** se establece en uno de los siguientes valores:
 
 |||
 |-|-|
@@ -80,13 +80,13 @@ Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-d
 
 ## <a name="remarks"></a>Observaciones
 
-La función del **sistema** pasa el *comando* al intérprete de comandos, que ejecuta la cadena como un comando del sistema operativo. **utiliza** las variables de entorno **COMSPEC** y **PATH** para localizar el archivo de intérprete de comandos CMD.exe. Si *el comando* es **NULL**, la función solo comprueba si existe el intérprete de comandos.
+La función **del sistema** pasa el *comando* al intérprete de comandos, que ejecuta la cadena como un comando del sistema operativo. el **sistema** utiliza las variables de entorno **comspec** y **path** para buscar el archivo de intérprete de comandos cmd. exe. Si el *comando* es **null**, la función comprueba si el intérprete de comandos existe.
 
-Debe vaciar explícitamente, utilizando [fflush](fflush.md) o [_flushall](flushall.md), o cerrar cualquier secuencia antes de llamar al **sistema**.
+Debe vaciar explícitamente, mediante [fflush](fflush.md) o [_flushall](flushall.md), o bien cerrar cualquier flujo antes de llamar al **sistema**.
 
-**_wsystem** es una versión de caracteres anchos del **sistema;** el argumento *de comando* para **_wsystem** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+**_wsystem** es una versión de caracteres anchos del **sistema**; el argumento de *comando* para **_wsystem** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -105,7 +105,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se utiliza **el sistema** para TYPE un archivo de texto.
+En este ejemplo se usa **System** para escribir un archivo de texto.
 
 ```C
 // crt_system.c
@@ -125,17 +125,17 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Salida
 
 ```Output
 Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Control de Procesos y Medio Ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
-[_spawn, funciones _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn funciones](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

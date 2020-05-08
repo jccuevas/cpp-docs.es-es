@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: 239f857bb40c9609cb6f7ff373295a7a1f8523a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348111"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915212"
 ---
 # <a name="_dup-_dup2"></a>_dup, _dup2
 
-Crea un segundo descriptor de archivo para un archivo abierto (**_dup**), o reasigna un descriptor de archivo (**_dup2**).
+Crea un segundo descriptor de archivo para un archivo abierto (**_dup**) o reasigna un descriptor de archivo (**_dup2**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,7 +54,7 @@ int _dup2( int fd1, int fd2 );
 
 ### <a name="parameters"></a>Parámetros
 
-*fd*, *fd1*<br/>
+*FD*, *FD1*<br/>
 Descriptores de archivo que hacen referencia al archivo abierto.
 
 *fd2*<br/>
@@ -62,21 +62,21 @@ Cualquier descriptor de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_dup** devuelve un nuevo descriptor de archivo. **_dup2** devuelve 0 para indicar que se ha realizado correctamente. Si se produce un error, cada función devuelve -1 y establece **errno** en **EBADF** si el descriptor de archivo no es válido o en **EMFILE** si no hay más descriptores de archivo disponibles. En el caso de un descriptor de archivo no válido, la función invoca también al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
+**_dup** devuelve un nuevo descriptor de archivo. **_dup2** devuelve 0 para indicar que la operación se ha realizado correctamente. Si se produce un error, cada función devuelve-1 y establece **errno** en **EBADF** si el descriptor de archivo no es válido o en **EMFILE** si no hay más descriptores de archivo disponibles. En el caso de un descriptor de archivo no válido, la función invoca también al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Observaciones
 
-Las funciones **_dup** y **_dup2** asocian un segundo descriptor de archivo con un archivo abierto actualmente. Estas funciones se pueden utilizar para asociar un descriptor de archivo predefinido, como el de **stdout**, con un archivo diferente. Las operaciones en el archivo se pueden realizar con cualquiera de los dos descriptores de archivo. El tipo de acceso permitido al archivo no se ve afectado por la creación de un nuevo descriptor. **_dup** devuelve el siguiente descriptor de archivo disponible para el archivo especificado. **_dup2** fuerza *fd2* para hacer referencia al mismo archivo que *fd1*. Si *fd2* está asociado a un archivo abierto en el momento de la llamada, ese archivo se cierra.
+Las funciones **_dup** y **_dup2** asocian un segundo descriptor de archivo a un archivo abierto actualmente. Estas funciones se pueden usar para asociar un descriptor de archivo predefinido, como el de **stdout**, con un archivo diferente. Las operaciones en el archivo se pueden realizar con cualquiera de los dos descriptores de archivo. El tipo de acceso permitido al archivo no se ve afectado por la creación de un nuevo descriptor. **_dup** devuelve el siguiente descriptor de archivo disponible para el archivo especificado. **_dup2** fuerza a *FD2* a hacer referencia al mismo archivo que *FD1*. Si *FD2* está asociado a un archivo abierto en el momento de la llamada, dicho archivo se cierra.
 
-Tanto **_dup** como **_dup2** aceptan descriptores de archivo como parámetros. Para pasar una`FILE *`secuencia ( ) a cualquiera de estas funciones, utilice [_fileno](fileno.md). La rutina **fileno** devuelve el descriptor de archivo asociado actualmente a la secuencia dada. En el ejemplo siguiente se muestra cómo `FILE *` asociar **stderr** (definido como en Stdio.h) con un descriptor de archivo:
+Tanto **_dup** como **_dup2** aceptan descriptores de archivo como parámetros. Para pasar una secuencia (`FILE *`) a cualquiera de estas funciones, use [_fileno](fileno.md). La rutina **fileno** devuelve el descriptor de archivo asociado actualmente a la secuencia especificada. En el ejemplo siguiente se muestra cómo asociar **stderr** ( `FILE *` definido como en stdio. h) con un descriptor de archivo:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
 ```
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -85,7 +85,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-La consola no se admite en aplicaciones de la Plataforma universal de Windows (UWP). Los identificadores de secuencia estándar asociados a la consola, **stdin,** **stdout**y **stderr**, deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
