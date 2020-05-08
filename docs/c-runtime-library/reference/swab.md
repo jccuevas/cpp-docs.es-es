@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: f7fe23cd9c1b2eab52ebe50904d0bb18fe16cea6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362954"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912412"
 ---
 # <a name="_swab"></a>_swab
 
@@ -60,20 +60,20 @@ Datos que se van a copiar e intercambiar.
 *dest*<br/>
 Ubicación de almacenamiento de los datos intercambiados.
 
-*N*<br/>
+*n*<br/>
 Número de bytes que se van a copiar e intercambiar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La función **swab** no devuelve un valor. La función establece **errno en** **EINVAL** si el puntero *src* o *dest* es null o *n* es menor que cero y se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
+La función **hisopo** no devuelve un valor. La función establece **errno** en **EINVAL** si el puntero *src* o *dest* es null o *n* es menor que cero, y se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre este y otros códigos de retorno.
 
 ## <a name="remarks"></a>Observaciones
 
-Si *n* es par, la función **_swab** copia *n* bytes de *src*, intercambia cada par de bytes adyacentes y almacena el resultado en *dest*. Si *n* es impar, **_swab** copia e intercambia los primeros *n*-1 bytes de *src*y el byte final no se copia. La función **_swab** se utiliza normalmente para preparar datos binarios para su transferencia a una máquina que utiliza un orden de bytes diferente.
+Si *n* es par, la función **_swab** copia *n* bytes de *src*, intercambia cada par de bytes adyacentes y almacena el resultado en *dest*. Si *n* es impar, **_swab** copia e intercambia los primeros *n*-1 bytes de *src*y el byte final no se copia. La función **_swab** se usa normalmente para preparar los datos binarios para la transferencia a un equipo que utiliza un orden de bytes diferente.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

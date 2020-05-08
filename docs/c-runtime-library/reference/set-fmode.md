@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: ba8a4b3867eb0a18d4a14cb2f5480bc5800303c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337706"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913041"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -51,20 +51,20 @@ errno_t _set_fmode(
 
 ### <a name="parameters"></a>Parámetros
 
-*Modo*<br/>
-El modo de traducción de archivos deseado: **_O_TEXT** o **_O_BINARY**.
+*mode*<br/>
+Modo de traducción de archivo deseado: **_O_TEXT** o **_O_BINARY**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si *mode* no es **_O_TEXT** o **_O_BINARY** o **_O_WTEXT**, se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno en** **EINVAL** y devuelve **EINVAL**.
+Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si el *modo* no **es _O_TEXT** o **_O_BINARY** o **_O_WTEXT**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **EINVAL**.
 
 ## <a name="remarks"></a>Observaciones
 
-La función establece la variable global [_fmode](../../c-runtime-library/fmode.md). Esta variable especifica el modo de traducción de archivos predeterminado para las operaciones de E/S de archivo **_open** y **_pipe**.
+La función establece la variable global [_fmode](../../c-runtime-library/fmode.md). Esta variable especifica el modo de traducción de archivos predeterminado para las operaciones de e/s de archivo **_open** y **_pipe**.
 
-**_O_TEXT** y **_O_BINARY** se definen en Fcntl.h. **EINVAL** se define en Errno.h.
+**_O_TEXT** y **_O_BINARY** se definen en fcntl. h. **EINVAL** se define en errno. h.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -142,4 +142,4 @@ A   B   C   D   E   F   G   H   I   J   K   L
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[Texto y E/S de archivos en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[E/s de archivo en modo de texto y binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

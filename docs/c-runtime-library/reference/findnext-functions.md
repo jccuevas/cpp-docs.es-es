@@ -34,7 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -114,16 +114,16 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: 38243b48a97c038f36ada85e3ca2cda814f43fa8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: acb680db3b07b0f600b758401f1270deccf03da7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346737"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911659"
 ---
 # <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
-Busque el siguiente nombre, si existe, que coincida con el argumento *filespec* de una llamada anterior a [_findfirst](findfirst-functions.md)y, a continuación, modifique el contenido de la estructura *fileinfo* en consecuencia.
+Busque el siguiente nombre, si lo hay, que coincida con el argumento *filespec* en una llamada anterior a [_findfirst](findfirst-functions.md)y, a continuación, modifique el contenido de la estructura *FileInfo* en consecuencia.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -180,39 +180,39 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>Parámetros
 
-*Manejar*<br/>
+*asa*<br/>
 Identificador de búsqueda devuelto por una llamada anterior a **_findfirst**.
 
-*Fileinfo*<br/>
+*FileInfo*<br/>
 Búfer de información de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve 0. De lo contrario, devuelve -1 y establece **errno** en un valor que indica la naturaleza del error. En la siguiente tabla se muestran los posibles códigos de error.
+Si la operación se realiza correctamente, devuelve 0. De lo contrario, devuelve-1 y establece **errno** en un valor que indica la naturaleza del error. En la siguiente tabla se muestran los posibles códigos de error.
 
 |valor de errno|Condición|
 |-|-|
-| **EINVAL** | Parámetro no válido: *fileinfo* era **NULL**. O bien, el sistema operativo ha devuelto un error inesperado. |
+| **EINVAL** | Parámetro no válido: *FileInfo* era **null**. O bien, el sistema operativo ha devuelto un error inesperado. |
 | **ENOENT** | No se han encontrado más archivos coincidentes. |
-| **ENOMEM** | No se ha superado la suficiente memoria ni la longitud del nombre de archivo **MAX_PATH**. |
+| **ENOMEM** | Memoria insuficiente o la longitud del nombre de archivo superó **MAX_PATH**. |
 
 Si se pasa un parámetro no válido, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Observaciones
 
-Debe llamar a [_findclose](findclose.md) una vez que haya terminado de utilizar la función **_findfirst** o **_findnext** (o cualquier variante). Así se liberan los recursos que usan estas funciones de la aplicación.
+Debe llamar a [_findclose](findclose.md) cuando haya terminado de usar la función **_findfirst** o **_findnext** (o cualquier variante). Así se liberan los recursos que usan estas funciones de la aplicación.
 
-Las variaciones de estas funciones con el prefijo **w** son versiones de caracteres anchos; de lo contrario, son idénticos a las funciones de un solo byte correspondientes.
+Las variaciones de estas funciones con el prefijo **w** son versiones con caracteres anchos; de lo contrario, son idénticas a las funciones de un solo byte correspondientes.
 
-Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y tamaños de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tipo de tiempo utilizado; el segundo sufijo es **i32** o **i64,** lo que indica si el tamaño del archivo se representa como un entero de 32 bits o 64 bits. Para obtener información sobre las versiones que admiten tipos de tiempo y tamaños de archivo de 32 bits y 64 bits, consulte la tabla siguiente. Las variaciones que usan un tipo de tiempo de 64 bits permiten expresar fechas de creación de archivos hasta las 23:59:59 horas del 31 de diciembre de 3000, UTC; mientras que las que usan un tipo de tiempo de 32 bits solo representan fechas hasta las 23:59:59 horas del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
+Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y tamaños de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tipo de tiempo utilizado. el segundo sufijo es **I32** o **i64**, que indica si el tamaño del archivo se representa como un entero de 32 bits o 64 bits. Para obtener información sobre las versiones que admiten tipos de tiempo y tamaños de archivo de 32 bits y 64 bits, consulte la tabla siguiente. Las variaciones que usan un tipo de tiempo de 64 bits permiten expresar fechas de creación de archivos hasta las 23:59:59 horas del 31 de diciembre de 3000, UTC; mientras que las que usan un tipo de tiempo de 32 bits solo representan fechas hasta las 23:59:59 horas del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
 
-A menos que tenga una razón específica para utilizar las versiones que especifican explícitamente el tamaño de tiempo, utilice **_findnext** o **_wfindnext** o, si necesita admitir tamaños de archivo superiores a 3 GB, utilice **_findnexti64** o **_wfindnexti64**. Todas estas funciones usan el tipo de tiempo de 64 bits. En versiones anteriores, estas funciones usan un tipo de tiempo de 32 bits. Si se trata de un cambio importante para una aplicación, puede definir **_USE_32BIT_TIME_T** para obtener el comportamiento anterior. Si se define **_USE_32BIT_TIME_T,** **_findnext**, **_finnexti64** y sus versiones Unicode correspondientes utilizan un tiempo de 32 bits.
+A menos que tenga una razón concreta para usar las versiones que especifican el tamaño de tiempo de forma explícita, use **_findnext** o **_wfindnext** o, si necesita admitir tamaños de archivo superiores a 3 GB, use **_findnexti64** o **_wfindnexti64**. Todas estas funciones usan el tipo de tiempo de 64 bits. En versiones anteriores, estas funciones usan un tipo de tiempo de 32 bits. Si se trata de un cambio importante para una aplicación, puede definir **_USE_32BIT_TIME_T** para obtener el comportamiento anterior. Si se define **_USE_32BIT_TIME_T** , **_findnext**, **_finnexti64** y sus correspondientes versiones unicode usan un tiempo de 32 bits.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="time-type-and-file-length-type-variations-of-_findnext"></a>Variaciones de tipo de tiempo y tipo de longitud de archivo de _findnext
 
-|Functions|**_USE_32BIT_TIME_T** define?|Tipo de tiempo|Tipo de longitud de archivo|
+|Functions|¿ **_USE_32BIT_TIME_T** definido?|Tipo de tiempo|Tipo de longitud de archivo|
 |---------------|----------------------------------|---------------|----------------------|
 |**_findnext**, **_wfindnext**|No definida|64 bits|32 bits|
 |**_findnext**, **_wfindnext**|Definido|32 bits|32 bits|
@@ -257,7 +257,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibility](../../c
 
 Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Llamadas del sistema](../../c-runtime-library/system-calls.md)<br/>
 [Funciones de búsqueda de nombre de archivo](../../c-runtime-library/filename-search-functions.md)<br/>

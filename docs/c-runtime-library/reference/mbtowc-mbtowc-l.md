@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 99659def42cba4e832c26b1535706ea576931969
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338795"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915421"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -61,8 +61,8 @@ int _mbtowc_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*Wchar*<br/>
-Dirección de un carácter ancho (tipo **wchar_t**).
+*WCHAR*<br/>
+Dirección de un carácter ancho (escriba **wchar_t**).
 
 *mbchar*<br/>
 Dirección de una secuencia de bytes (un carácter multibyte).
@@ -75,13 +75,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **mbchar** no es **NULL** y si el objeto que *mbchar* apunta a forma un carácter multibyte válido, **mbtowc** devuelve la longitud en bytes del carácter multibyte. Si *mbchar* es **NULL** o el objeto al que apunta es un carácter nulo de caracteres anchos (L'-0'), la función devuelve 0. Si el objeto al que apunta *mbchar* no forma un carácter multibyte válido dentro de los primeros caracteres de *recuento,* devuelve -1.
+Si **mbchar** no es **null** y si el objeto al que apunta *mbchar* forma un carácter multibyte válido, **mbtowc** devuelve la longitud en bytes del carácter multibyte. Si *mbchar* es **null** o el objeto al que apunta es un carácter nulo de caracteres anchos (L ' \ 0 '), la función devuelve 0. Si el objeto al que apunta *mbchar* no forma un carácter multibyte válido en los primeros caracteres de *recuento* , devuelve-1.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **mbtowc** convierte *count* o menos bytes señalados por *mbchar*, si *mbchar* no es **NULL**, en un carácter ancho correspondiente. **mbtowc** almacena el carácter ancho resultante en *wchar,* si *wchar* no es **NULL**. **mbtowc** no examina más de **MB_CUR_MAX** bytes. **mbtowc** utiliza la configuración regional actual para el comportamiento dependiente de la configuración regional; **_mbtowc_l** es idéntica, excepto que utiliza la configuración regional pasada en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La función **mbtowc** convierte el *recuento* o menos bytes a los que apunta *mbchar*, si *mbchar* no es **null**, en el carácter ancho correspondiente. **mbtowc** almacena el carácter ancho resultante en *WCHAR,* si *WCHAR* no es **null**. **mbtowc** no examina más de **MB_CUR_MAX** bytes. **mbtowc** usa la configuración regional actual para el comportamiento dependiente de la configuración regional; **_mbtowc_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

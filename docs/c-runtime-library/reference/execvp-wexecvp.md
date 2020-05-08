@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-ms.openlocfilehash: 75b5c0ebe47c8f82ab8ad328dd21505c458a6ac8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 224649abffd836667641f3c83e5f777f8752d7bd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347803"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915930"
 ---
 # <a name="_execvp-_wexecvp"></a>_execvp, _wexecvp
 
@@ -65,12 +65,12 @@ intptr_t _wexecvp(
 *cmdname*<br/>
 Ruta de acceso del archivo que se va a ejecutar.
 
-*Argv*<br/>
+*argv*<br/>
 Matriz de punteros a parámetros.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de -1 indica un error, en cuyo caso se establece la variable global **errno.**
+Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de-1 indica un error, en cuyo caso se establece la variable global **errno** .
 
 |valor **errno**|Descripción|
 |-------------------|-----------------|
@@ -86,11 +86,11 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 ## <a name="remarks"></a>Observaciones
 
-Cada una de estas funciones carga y ejecuta un nuevo proceso, pasando una matriz de punteros a argumentos de línea de comandos y utilizando la variable de entorno **PATH** para buscar el archivo que se va a ejecutar.
+Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y usando la variable de entorno **path** para buscar el archivo que se va a ejecutar.
 
-Las funciones **_execvp** validan sus parámetros. Si *cmdname* es un puntero nulo, o *argv* es un puntero nulo, puntero a una matriz vacía o si la matriz contiene una cadena vacía como primer argumento, estas funciones invocan el controlador de parámetros no válidos como se describe en [Validación](../../c-runtime-library/parameter-validation.md)de parámetros . Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven -1. No se inicia ningún proceso.
+Las funciones **_execvp** validan sus parámetros. Si *cmdname* es un puntero nulo, o *argv* es un puntero nulo, un puntero a una matriz vacía o si la matriz contiene una cadena vacía como primer argumento, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven-1. No se inicia ningún proceso.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,13 +105,13 @@ Para obtener más información sobre compatibilidad, vea [Compatibility](../../c
 
 Consulte el ejemplo de [Funciones _exec y _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-[Control de Procesos y Medio Ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[Aborta](abort.md)<br/>
+[aborta](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, funciones _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn funciones](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

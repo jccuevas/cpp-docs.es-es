@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 73a519614f17b6a8f8b26b5eae2172c87ea7f817
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362629"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912378"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -63,29 +63,29 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **tan** devuelven la tangente de *x*. Si *x* es mayor o igual que 263, o menor o igual que -263, se produce una pérdida de significancia en el resultado.
+Las funciones **tan** devuelven la tangente de *x*. Si *x* es mayor o igual que 263, o menor o igual que-263, se produce una pérdida de significado en el resultado.
 
-|Entrada|Excepción SEH|**Matherr** Excepción|
+|Entrada|Excepción SEH|**Matherr** Excepcional|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|None|_DOMAIN|
-|• INF|**No válido**|_DOMAIN|
+|± QNAN,IND|ninguno|_DOMAIN|
+|± INF|**No válido**|_DOMAIN|
 
 ## <a name="remarks"></a>Observaciones
 
-Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **tan** que toman y devuelven **valores float** o **long** **double.** En un programa C, **tan** siempre toma y devuelve **double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **tan** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **tan** siempre toma y devuelve **Double**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------|-|
-|**bronceado,** **tanf,** **tanl**|\<math.h>|\<cmath> o \<math.h>|
+|**tan**, **TANF (**, **tanl**|\<math.h>|\<cmath> o \<math.h>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 

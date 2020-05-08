@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 1ddc9a991f28c4a2ea491f3ddd04d78f6345e255
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367252"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910444"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
@@ -73,9 +73,9 @@ Número de bytes o un código que indica el resultado.
 Dirección de un carácter multibyte.
 
 *sizeInBytes*<br/>
-Tamaño del *búfer mbchar*.
+Tamaño del búfer *mbchar*.
 
-*Wchar*<br/>
+*WCHAR*<br/>
 Carácter ancho.
 
 *locale*<br/>
@@ -89,7 +89,7 @@ Condiciones de error
 
 |*mbchar*|*sizeInBytes*|Valor devuelto|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**Null**|>0|**EINVAL**|no modificado|
+|**ACEPTA**|>0|**EINVAL**|no modificado|
 |cualquiera|>**INT_MAX**|**EINVAL**|no modificado|
 |cualquiera|demasiado pequeño|**EINVAL**|no modificado|
 
@@ -97,13 +97,13 @@ Si se da alguna de las condiciones de error anteriores, se invoca al controlador
 
 ## <a name="remarks"></a>Observaciones
 
-La función **wctomb_s** convierte su argumento *wchar* en el carácter multibyte correspondiente y almacena el resultado en *mbchar*. Puede llamar a la función desde cualquier ubicación de cualquier programa.
+La función **wctomb_s** convierte su argumento *WCHAR* en el carácter multibyte correspondiente y almacena el resultado en *mbchar*. Puede llamar a la función desde cualquier ubicación de cualquier programa.
 
-Si **wctomb_s** convierte el carácter ancho en un carácter multibyte, coloca el número de bytes (que nunca es mayor que **MB_CUR_MAX)** en el carácter ancho en el entero al que apunta *pRetValue*. Si *wchar* es el carácter nulo de caracteres anchos (L'-0'), **wctomb_s** rellena *pRetValue* con 1. Si el puntero de destino *mbchar* es **NULL**, **wctomb_s** coloca 0 en *pRetValue*. Si la conversión no es posible en la configuración regional actual, **wctomb_s** coloca -1 en *pRetValue*.
+Si **wctomb_s** convierte el carácter ancho en un carácter multibyte, coloca el número de bytes (que nunca es mayor que **MB_CUR_MAX**) en el carácter ancho en el entero al que apunta *pRetValue*. Si *WCHAR* es el carácter nulo de caracteres anchos (L ' \ 0 '), **wctomb_s** rellena *pRetValue* con 1. Si el puntero de destino *mbchar* es **null**, **wctomb_s** coloca 0 en *pRetValue*. Si la conversión no es posible en la configuración regional actual, **wctomb_s** coloca-1 en *pRetValue*.
 
-**wctomb_s** utiliza la configuración regional actual para la información dependiente de la configuración regional; **_wctomb_s_l** es idéntica, excepto que utiliza la configuración regional pasada en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**wctomb_s** usa la configuración regional actual para la información dependiente de la configuración regional; **_wctomb_s_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -116,7 +116,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 ## <a name="example"></a>Ejemplo
 
-Este programa ilustra el comportamiento de la función **wctomb.**
+Este programa muestra el comportamiento de la función **wctomb** .
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -142,10 +142,10 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

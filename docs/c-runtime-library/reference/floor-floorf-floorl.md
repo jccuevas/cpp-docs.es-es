@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346665"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911636"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -67,30 +67,30 @@ long double floorl(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **de suelo** devuelven un valor de punto flotante que representa el entero más grande que es menor o igual que *x*. No se devuelve ningún error.
+Las funciones de **piso** devuelven un valor de punto flotante que representa el entero más grande que es menor o igual que *x*. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|None|_DOMAIN|
+|± QNAN,IND|ninguno|_DOMAIN|
 
-**tiene** una implementación que utiliza Streaming SIMD Extensions 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**Floor** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Observaciones
 
-C++ permite la sobrecarga, por lo que puede llamar a sobrecargas de **suelo** que toman y devuelven **valores float** y **long** **double.** En un programa C, **el suelo** siempre toma y devuelve un **doble**.
+C++ permite las sobrecargas, de modo que puede llamar a las sobrecargas de **piso** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **Floor** siempre toma y devuelve un **valor Double**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado necesario|
 |--------------|---------------------|
-|**piso,** **floorf**, **floorl**|\<math.h>|
+|**Floor**, **floorf (**, **Floor**|\<math.h>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 

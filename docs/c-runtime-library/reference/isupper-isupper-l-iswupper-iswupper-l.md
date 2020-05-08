@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-ms.openlocfilehash: 713689649b33873796b7a73bad6a4ac6e8acc998
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 49aab47a72e7065cbd90935a431f59ec74b562ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342797"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910400"
 ---
 # <a name="isupper-_isupper_l-iswupper-_iswupper_l"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
@@ -72,7 +72,7 @@ int _iwsupper_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*C*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 *locale*<br/>
@@ -80,11 +80,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve distinto de cero si *c* es una representación particular de una letra mayúscula. **isupper** devuelve un valor distinto de cero si *c* es un carácter en mayúsculas (A - Z). **iswupper** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a una letra mayúscula, o si *c* es uno de un conjunto definido por la implementación de caracteres anchos para el que ninguno de **iswcntrl**, **iswdigit**, **iswpunct**o **iswspace** es distinto de cero. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de una letra mayúscula. **isupper** devuelve un valor distinto de cero si *c* es un carácter en mayúscula (a-Z). **iswupper** devuelve un valor distinto de cero *si c* es un carácter ancho que corresponde a una letra mayúscula, o si *c* es uno de un conjunto de caracteres anchos definido por la implementación para el que ninguno de **iswcntrl**, **iswdigit**, **iswpunct**o **iswspace** es distinto de cero. Cada una de estas rutinas devuelve 0 si *c* no cumple la condición de prueba.
 
-Las versiones de estas funciones que tienen el **_l** sufijo usan la configuración regional que se pasa en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el sufijo **_L** usan la configuración regional que se pasa en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-El comportamiento de **isupper** y **_isupper_l** es indefinido si *c* no es EOF o en el rango 0 a 0xFF, ambos inclusive. Cuando se utiliza una biblioteca CRT de depuración y *c* no es uno de estos valores, las funciones generan una aserción.
+El comportamiento de **isupper** y **_isupper_l** es undefined si *c* no es EOF o en el intervalo comprendido entre 0 y 0xFF, ambos incluidos. Cuando se usa una biblioteca CRT de depuración y *c* no es uno de estos valores, las funciones generan una aserción.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -95,7 +95,7 @@ El comportamiento de **isupper** y **_isupper_l** es indefinido si *c* no es EOF
 
 ## <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -108,8 +108,8 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>

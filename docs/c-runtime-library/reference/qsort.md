@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 09de57e206eb6fd4a75a0a9444332136aeee0e9d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338247"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913259"
 ---
 # <a name="qsort"></a>qsort
 
@@ -58,20 +58,20 @@ void qsort(
 *base*<br/>
 Inicio de la matriz de destino.
 
-*number*<br/>
+*número*<br/>
 Tamaño de la matriz en elementos.
 
-*Ancho*<br/>
+*width*<br/>
 Tamaño del elemento en bytes.
 
-*Comparar*<br/>
+*Compare*<br/>
 Puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica su relación.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **qsort** implementa un algoritmo de ordenación rápida para ordenar una matriz de elementos *numéricos,* cada uno de bytes de *ancho.* La *base* de argumentos es un puntero a la base de la matriz que se va a ordenar. **qsort** sobrescribe esta matriz utilizando los elementos ordenados.
+La función **qsort** implementa un algoritmo de ordenación rápida para ordenar una matriz de elementos *numéricos* , cada uno de los bytes de *ancho* . La *base* del argumento es un puntero a la base de la matriz que se va a ordenar. **qsort** sobrescribe esta matriz mediante los elementos ordenados.
 
-**qsort** llama a la rutina de *comparación* una o más veces durante la ordenación y pasa punteros a dos elementos de matriz en cada llamada.
+**qsort** llama a la rutina de *comparación* una o más veces durante la ordenación y pasa los punteros a dos elementos de la matriz en cada llamada.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -81,15 +81,15 @@ La rutina compara los elementos y devuelve uno de los siguientes valores.
 
 |Valor devuelto por la función de comparación|Descripción|
 |-----------------------------------|-----------------|
-|< 0|**elem1** menos que **elem2**|
-|0|**elem1** equivalente a **elem2**|
-|> 0|**elem1** mayor que **elem2**|
+|< 0|**Elem1** menor que **Elem2**|
+|0|**Elem1** equivalente a **Elem2**|
+|> 0|**Elem1** mayor que **Elem2**|
 
 La matriz se clasifica en orden ascendente, de acuerdo con la función de comparación. Para clasificar una matriz en orden decreciente, invierta el sentido de "mayor que" y "menor que" en la función de comparación.
 
-Esta función valida sus parámetros. Si *compare* o *number* es **NULL**, o si *base* es **NULL** y *number* es distinto de cero, o si *width* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** se establece en **EINVAL**.
+Esta función valida sus parámetros. Si *comparar* o *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** se establece en **EINVAL**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -145,6 +145,6 @@ boy deserves every favor good
 
 ## <a name="see-also"></a>Consulte también
 
-[Búsqueda y clasificación](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lsearch](lsearch.md)<br/>

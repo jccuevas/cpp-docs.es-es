@@ -20,18 +20,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341717"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911414"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -63,20 +63,20 @@ long double log2l(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 El valor del que se determina el logaritmo de base 2.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve return log2 *x*.
+Si se ejecuta correctamente, devuelve devolverá LOG2 *x*.
 
 De lo contrario, es posible que devuelva uno de los siguientes valores:
 
 |Problema|Valor devuelto|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* - 0|-INFINITY|
-|*x* á 1|+0|
+|*x* = ± 0|-INFINITY|
+|*x* = 1|+0|
 |+INFINITY|+INFINITY|
 |NaN|NaN|
 |error de dominio|NaN|
@@ -86,19 +86,19 @@ Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Observaciones
 
-Si x es un entero, esta función devuelve esencialmente el índice de base cero del bit 1 más significativo de *x*.
+Si x es un entero, esta función devuelve esencialmente el índice de base cero del valor de 1 bit más significativo de *x*.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
+|**LOG2**, **log2f (**, **Log2L**|\<math.h>|\<cmath>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>

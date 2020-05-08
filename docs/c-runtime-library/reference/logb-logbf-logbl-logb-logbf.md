@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341677"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911402"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -86,25 +86,25 @@ float _logbf(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**logb** devuelve el valor de exponente imparcial de *x* como un entero con signo representado como un valor de punto flotante.
+**logb** devuelve el valor de exponente no sesgado de *x* como un entero con signo representado como un valor de punto flotante.
 
 ## <a name="remarks"></a>Observaciones
 
-Las funciones **logb** extraen el valor exponencial del argumento de punto flotante *x*, como si *x* se representaran con un intervalo infinito. Si el argumento *x* está desnormalizado, se trata como si se normalizara.
+Las funciones **logb** extraen el valor exponencial del argumento de punto flotante *x*, como si se representara *x* con intervalo infinito. Si el argumento *x* está desnormalizado, se trata como si estuviera normalizado.
 
-Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **logb** que toman y devuelven **valores float** o **long** **double.** En un programa C, **logb** siempre toma y devuelve un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **logb** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **logb** siempre toma y devuelve un **valor Double**.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|None|_DOMAIN|
-|0|ZERODIVIDE|_SING|
+|± 0|ZERODIVIDE|_SING|
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -119,7 +119,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibility](../../c
 
 Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
