@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349124"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916895"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -65,7 +65,7 @@ errno_t _waccess_s(
 *path*<br/>
 Ruta de acceso del directorio o archivo.
 
-*Modo*<br/>
+*mode*<br/>
 Configuración de permisos.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -82,7 +82,7 @@ Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_
 
 ## <a name="remarks"></a>Observaciones
 
-Cuando se utiliza con archivos, la función **_access_s** determina si el archivo especificado existe y se puede acceder a ellos según lo especificado por el valor de *mode*. Cuando se utiliza con directorios, **_access_s** determina solo si existe el directorio especificado. En Windows 2000 y sistemas operativos posteriores, todos los directorios tienen acceso de lectura y escritura.
+Cuando se usa con archivos, la función **_access_s** determina si el archivo especificado existe y se puede obtener acceso a él según se especifica en el valor del *modo*. Cuando se usa con directorios, **_access_s** solo determina si existe el directorio especificado. En Windows 2000 y sistemas operativos posteriores, todos los directorios tienen acceso de lectura y escritura.
 
 |valor del modo|Comprueba el archivo para|
 |----------------|---------------------|
@@ -91,13 +91,13 @@ Cuando se utiliza con archivos, la función **_access_s** determina si el archiv
 |04|Permiso de lectura.|
 |06|Permisos de lectura y escritura.|
 
-Los permisos para leer o escribir en el archivo no bastan para garantizar la posibilidad de abrir un archivo. Por ejemplo, si otro proceso bloquea un archivo, es posible que no sea accesible aunque **_access_s** devuelve 0.
+Los permisos para leer o escribir en el archivo no bastan para garantizar la posibilidad de abrir un archivo. Por ejemplo, si un archivo está bloqueado por otro proceso, es posible que no se pueda obtener acceso a él aunque **_access_s** devuelva 0.
 
-**_waccess_s** es una versión de caracteres anchos de **_access_s**, donde el argumento *path* to **_waccess_s** es una cadena de caracteres anchos. De lo contrario, **_waccess_s** y **_access_s** se comportan de forma idéntica.
+**_waccess_s** es una versión de caracteres anchos de **_access_s**, donde el argumento de *ruta de acceso* que se va a **_waccess_s** es una cadena de caracteres anchos. De lo contrario, **_waccess_s** y **_access_s** se comportan exactamente igual.
 
-Estas funciones validan sus parámetros. Si *path* es NULL o *mode* no especifica un modo válido, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.
+Estas funciones validan sus parámetros. Si *path* es null o el *modo* no especifica un modo válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -114,7 +114,7 @@ De forma predeterminada, el estado global de esta función se limita a la aplica
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se usa **_access_s** para comprobar el archivo denominado crt_access_s.c para ver si existe y si se permite la escritura.
+En este ejemplo se usa **_access_s** para comprobar el archivo denominado crt_access_s. c para ver si existe y si se permite la escritura.
 
 ```C
 // crt_access_s.c
@@ -156,7 +156,7 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

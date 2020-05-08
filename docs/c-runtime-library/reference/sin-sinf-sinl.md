@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355000"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915768"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -62,12 +62,12 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **de pecado** devuelven el seno de *x*. Si *x* es mayor o igual que 263, o menor o igual que -263, se produce una pérdida de significancia en el resultado.
+Las funciones **sin** devuelven el seno de *x*. Si *x* es mayor o igual que 263, o menor o igual que-263, se produce una pérdida de significado en el resultado.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
@@ -78,15 +78,15 @@ Para obtener más información sobre los códigos de retorno, vea [errno, _doser
 
 ## <a name="remarks"></a>Observaciones
 
-Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **sin** que toman y devuelven **valores float** o **long** **double.** En un programa C, **el pecado** siempre toma y devuelve **el doble.**
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **sin** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **sin** siempre toma y devuelve **Double**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-|-|-|
-|**pecado,** **sinf**, **sinl**|\<math.h>|\<cmath> o \<math.h>|
+|**sin**, **sinf**, **Sinl**|\<math.h>|\<cmath> o \<math.h>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: 174c94136cdc8b603416ff1dd239703489925bae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc9ce31c4bdb0f7bedba461dd48b4072bfc50613
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350030"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916983"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -49,18 +49,18 @@ void clearerr(
 
 ### <a name="parameters"></a>Parámetros
 
-*Corriente*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **más clara** restablece el indicador de error y el indicador de fin de archivo para *la secuencia.* Los indicadores de error no se borran automáticamente; una vez que se establece el indicador de error para una secuencia especificada, las operaciones en esa secuencia siguen devolviendo un valor de error hasta que se llama a **clearerr,** [fseek](fseek-fseeki64.md), **fsetpos**o [rewind.](rewind.md)
+La función **clearerr** restablece el indicador de error y el indicador de fin de archivo para el *flujo*. Los indicadores de error no se borran automáticamente; una vez establecido el indicador de error para una secuencia especificada, las operaciones en esa secuencia seguirán devolviendo un valor de error hasta que se llame a **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**o [Rewind](rewind.md) .
 
-Si *stream* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno en** **EINVAL** y devuelve. Para obtener más información sobre **los códigos errno** y error, consulte [errno Constants](../../c-runtime-library/errno-constants.md).
+Si *Stream* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve. Para obtener más información sobre **errno** y los códigos de error, vea [errno (constantes](../../c-runtime-library/errno-constants.md)).
 
 Hay disponible una versión más segura de esta función; consulte [clearerr_s](clearerr-s.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -110,7 +110,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Salida
 
 ```Output
 Write error: No error
@@ -118,9 +118,9 @@ Will input cause an error? n
 No read error
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Manejo de errores](../../c-runtime-library/error-handling-crt.md)<br/>
+[Tratamiento de errores](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>

@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 6489b7ebed5246738fb660dffd07a0b8f8ed9743
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332761"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917718"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -60,29 +60,29 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante que se va a redondear.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **rint** devuelven un valor de punto flotante que representa el entero más cercano a *x*. Los valores a medias se redondean según la configuración actual del modo de redondeo de punto flotante, igual que las funciones **de cercana.** A diferencia de las funciones **nearbyint,** las funciones **de rint** pueden generar la **excepción de** punto flotante FE_INEXACT si el resultado difiere en valor del argumento. No se devuelve ningún error.
+Las funciones **rimir** devuelven un valor de punto flotante que representa el entero más cercano a *x*. Los valores de la mitad se redondean de acuerdo con la configuración actual del modo de redondeo de punto flotante, igual que las funciones de **nearbyint (** . A diferencia de las funciones **nearbyint (** , las funciones **rimir** pueden generar la **FE_INEXACT** excepción de punto flotante si el resultado difiere en el valor del argumento. No se devuelve ningún error.
 
-|Entrada|Excepción SEH|**_matherr** Excepción|
+|Entrada|Excepción SEH|**_matherr** Excepcional|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|None|None|
-|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|None|
+|± ∞, QNAN, IND|ninguno|ninguno|
+|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguno|
 
 ## <a name="remarks"></a>Observaciones
 
-Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **rint** que toman y devuelven **valores float** y **long** **double.** En un programa C, **rint** siempre toma y devuelve un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **rimir** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **rimir** siempre toma y devuelve un **valor Double**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rimir**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 

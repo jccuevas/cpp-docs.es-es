@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,12 +59,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d5121c795ed27c22d20087868f798a4b7f5f5b02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca7636f7054b6c7e228b57e0e776250f1b4ccb32
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348166"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914817"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -130,16 +130,16 @@ errno_t _wctime64_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*Búfer*<br/>
-Debe ser lo suficientemente grande como para contener 26 caracteres. Un puntero al resultado de la cadena de caracteres, o **NULL** si:
+*búfer*<br/>
+Debe ser lo suficientemente grande como para contener 26 caracteres. Un puntero al resultado de la cadena de caracteres o **null** si:
 
-- *sourceTime* representa una fecha antes de la medianoche, 1 de enero de 1970, UTC.
+- *sourceTime* representa una fecha anterior a la medianoche del 1 de enero de 1970, hora UTC.
 
-- Si utiliza **_ctime32_s** o **_wctime32_s** y *sourceTime* representa una fecha posterior a 23:59:59 18 de enero de 2038, UTC.
+- Si usa **_ctime32_s** o **_wctime32_s** y *sourceTime* representa una fecha posterior al 23:59:59 de enero de 2038, UTC.
 
-- Si utiliza **_ctime64_s** o **_wctime64_s** y *sourceTime* representa una fecha posterior a 23:59:59, 31 de diciembre de 3000, UTC.
+- Si usa **_ctime64_s** o **_wctime64_s** y *sourceTime* representa una fecha posterior al 23:59:59 de diciembre de 3000, hora UTC.
 
-- Si utiliza **_ctime_s** o **_wctime_s**, estas funciones son contenedores a las funciones anteriores. Consulte la sección Comentarios.
+- Si usa **_ctime_s** o **_wctime_s**, estas funciones son contenedores para las funciones anteriores. Consulte la sección Comentarios.
 
 *numberOfElements*<br/>
 Tamaño del búfer.
@@ -153,33 +153,33 @@ Cero si es correcto. Si hay un error debido a un parámetro no válido, se invoc
 
 ## <a name="error-conditions"></a>Condiciones de error
 
-|*Búfer*|*numberOfElements*|*sourceTime*|Valor devuelto|Valor en *el búfer*|
+|*búfer*|*numberOfElements*|*sourceTime*|Valor devuelto|Valor en *búfer*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**Null**|cualquiera|cualquiera|**EINVAL**|No modificado|
-|No **NULL** (señala a la memoria válida)|0|cualquiera|**EINVAL**|No modificado|
-|No **NULL**|0< tamaño < 26|cualquiera|**EINVAL**|cadena vacía.|
-|No **NULL**|>= 26|NULL|**EINVAL**|cadena vacía.|
-|No **NULL**|>= 26|< 0|**EINVAL**|cadena vacía.|
+|**ACEPTA**|cualquiera|cualquiera|**EINVAL**|No modificado|
+|Not **null** (apunta a la memoria válida)|0|cualquiera|**EINVAL**|No modificado|
+|No **null**|0< tamaño < 26|cualquiera|**EINVAL**|cadena vacía.|
+|No **null**|>= 26|NULL|**EINVAL**|cadena vacía.|
+|No **null**|>= 26|< 0|**EINVAL**|cadena vacía.|
 
 ## <a name="remarks"></a>Observaciones
 
-La función **ctime_s** convierte un valor de tiempo almacenado como una estructura [time_t](../../c-runtime-library/standard-types.md) en una cadena de caracteres. El valor *sourceTime* normalmente se obtiene de una llamada a la [hora,](time-time32-time64.md)que devuelve el número de segundos transcurridos desde la medianoche (00:00:00), 1 de enero de 1970, hora universal coordinada (UTC). La cadena del valor devuelto contiene exactamente 26 caracteres y tiene el formato:
+La función **ctime_s** convierte un valor de hora almacenado como una estructura de [time_t](../../c-runtime-library/standard-types.md) en una cadena de caracteres. El valor *sourceTime* se suele obtener de una llamada a [Time](time-time32-time64.md), que devuelve el número de segundos transcurridos desde la medianoche (00:00:00) del 1 de enero de 1970, hora universal coordinada (UTC). La cadena del valor devuelto contiene exactamente 26 caracteres y tiene el formato:
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 Se usa un reloj de 24 horas. Todos los campos tienen un ancho constante. El carácter de nueva línea ("\n") y el carácter nulo ("\0") ocupan las dos últimas posiciones de la cadena.
 
-La cadena de caracteres convertidos también se ajusta en función de la configuración de zona horaria local. Consulte las funciones [de hora,](time-time32-time64.md) [_ftime](ftime-ftime32-ftime64.md)y [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) para obtener información sobre cómo configurar la hora local y la función [_tzset](tzset.md) para obtener información sobre cómo definir el entorno de zona horaria y las variables globales.
+La cadena de caracteres convertidos también se ajusta en función de la configuración de zona horaria local. Vea las funciones [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)y [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) para obtener información sobre la configuración de la hora local y la función [_tzset](tzset.md) para obtener información sobre cómo definir el entorno de zona horaria y las variables globales.
 
-**_wctime32_s** y **_wctime64_s** son la versión de caracteres anchos de **_ctime32_s** y **_ctime64_s;** devolver un puntero a cadena de caracteres anchos. De lo contrario, **_ctime64_s**, **_wctime32_s**y **_wctime64_s** se comportan de forma idéntica a **_ctime32_s**.
+**_wctime32_s** y **_wctime64_s** son la versión con caracteres anchos de **_ctime32_s** y **_ctime64_s**; devolver un puntero a una cadena de caracteres anchos. De lo contrario, **_ctime64_s**, **_wctime32_s**y **_wctime64_s** se comportan de manera idéntica a **_ctime32_s**.
 
-**ctime_s** es una función en línea que se evalúa como **_ctime64_s** y **time_t** es equivalente a **__time64_t**. Si necesita forzar al compilador a interpretar **time_t** como el **antiguo time_t**de 32 bits, puede definir **_USE_32BIT_TIME_T**. Si lo hace, ctime_s evaluará **n.o** **_ctime32_s**. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.
+**ctime_s** es una función insertada que se evalúa como **_ctime64_s** y **time_t** es equivalente a **__time64_t**. Si necesita forzar al compilador a interpretar **time_t** como la **time_t**de 32 bits anterior, puede definir **_USE_32BIT_TIME_T**. Esto hará que **ctime_s** se evalúe como **_ctime32_s**. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.
 
 En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

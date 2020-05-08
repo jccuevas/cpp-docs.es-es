@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 5f304fd163c2ba1c57a4daee8c2a3307d8ba870a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348962"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920045"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Convierte una cadena en un double (**_atodbl**), long double (**_atoldbl**) o float (**_atoflt**).
+Convierte una cadena en un valor Double (**_atodbl**), Long double (**_atoldbl**) o Float (**_atoflt**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -86,7 +86,7 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 Valor double, long double o float que se genera al convertir la cadena en un valor de punto flotante. Estos valores se agrupan en una estructura.
 
-*Str*<br/>
+*CAD*<br/>
 Cadena que se va a analizar para convertirla en un valor de punto flotante.
 
 *locale*<br/>
@@ -94,17 +94,17 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve 0. Los posibles códigos de error se **_UNDERFLOW** \<o **_OVERFLOW**, que se definen en el archivo de encabezado math.h>.
+Si la operación se realiza correctamente, devuelve 0. Los códigos de error posibles son **_UNDERFLOW** o **_OVERFLOW**, que se definen en el \<archivo de encabezado Math. h>.
 
 ## <a name="remarks"></a>Observaciones
 
-Estas funciones convierten una cadena en un valor de punto flotante. La diferencia entre estas funciones y la familia de funciones **atof** es que estas funciones no generan código de punto flotante y no provocan excepciones de hardware. En lugar de ello, las condiciones de error se notifican como códigos de error.
+Estas funciones convierten una cadena en un valor de punto flotante. La diferencia entre estas funciones y la familia de funciones **atof** es que estas funciones no generan código de punto flotante y no producen excepciones de hardware. En lugar de ello, las condiciones de error se notifican como códigos de error.
 
-Si una cadena no tiene una interpretación válida como un valor de punto flotante, *el valor* se establece en cero y el valor devuelto es cero.
+Si una cadena no tiene una interpretación válida como valor de punto flotante, el *valor* se establece en cero y el valor devuelto es cero.
 
-Las versiones de estas funciones que tienen el sufijo **_l** son idénticas a las versiones que no tienen el sufijo, excepto que usan el parámetro *de configuración* regional que se pasa en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones que tienen el sufijo **_L** son idénticas a las versiones que no tienen el sufijo, salvo que utilizan el parámetro de *configuración regional* que se pasa en lugar de la configuración regional del subproceso actual.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -172,5 +172,5 @@ Return value: 3
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6fcb7feeae72ff15d7b1ed0d55c5abbb408135a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346557"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914967"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -77,21 +77,21 @@ Valores de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fmod** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0.0, **fmod** devuelve un NaN silencioso. Para obtener información sobre la representación de un NaN silencioso por parte de la familia **printf,** consulte [printf](printf-printf-l-wprintf-wprintf-l.md).
+**FMOD** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **FMOD** devuelve un Nan silencioso. Para obtener información sobre la representación de un NaN silencioso por la familia **printf** , vea [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Observaciones
 
-La función **fmod** calcula el resto de punto flotante *f* de *x* / *y* de modo que *x* = *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*, y el valor absoluto de *f* es menor que el valor absoluto de *y*.
+La **función FMOD** calcula el resto de punto flotante *f* de *x* / *y* como *x* = x*i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
 
-C++ permite la sobrecarga, por lo que puede llamar a sobrecargas de **fmod** que toman y devuelven **valores float** y **long** **double.** En un programa C, **fmod** siempre toma dos argumentos **dobles** y devuelve un **double**.
+C++ permite las sobrecargas, por lo que puede llamar a las sobrecargas de **FMOD** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **FMOD** siempre toma dos argumentos **Double** y devuelve un **valor Double**.
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado necesario|
 |--------------|---------------------|
-|**fmod**, **fmodf**, **fmodl**|\<math.h>|
+|**FMOD**, **fmodf (**, **fmodl**|\<math.h>|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 

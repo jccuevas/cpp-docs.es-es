@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348658"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913476"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -86,39 +86,39 @@ double _yn(
 
 ### <a name="parameters"></a>Parámetros
 
-*X*<br/>
+*x*<br/>
 Valor de punto flotante.
 
-*N*<br/>
+*n*<br/>
 Orden de enteros de la función Bessel.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve una función Bessel de *x*. Si *x* es negativo en las funciones **_y0**, **_y1**o **_yn,** la rutina establece **errno** en **EDOM**, imprime un mensaje de error **_DOMAIN** en **stderr**y devuelve **_HUGE_VAL**. Puede modificar el control de errores mediante **_matherr**.
+Cada una de estas rutinas devuelve una función Bessel de *x*. Si *x* es negativo en las **funciones _y0**, **_y1**o **_Yn** , la rutina establece **errno** en **EDOM**, imprime un mensaje de error de **_DOMAIN** en **stderr**y devuelve **_HUGE_VAL**. Puede modificar el control de errores mediante **_matherr**.
 
 ## <a name="remarks"></a>Observaciones
 
-Las **rutinas _j0**, **_j1**y **_jn** devuelven las funciones Bessel del primer tipo: las órdenes 0, 1 y n, respectivamente.
+Las rutinas **_j0**, **_j1**y **_Jn** devuelven funciones Bessel del primer tipo: ordena 0, 1 y n, respectivamente.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|**No válido**|**_DOMAIN**|
+|± **QNAN**, **IND**|**No válido**|**_DOMAIN**|
 
-Las rutinas **_y0**, **_y1**y **_yn** devuelven las funciones Bessel del segundo tipo: las órdenes 0, 1 y n, respectivamente.
+Las rutinas **_y0**, **_y1**y **_Yn** devuelven funciones Bessel del segundo tipo: orders 0, 1 y n, respectivamente.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|• **QNAN**, **IND**|**No válido**|**_DOMAIN**|
-|0|**ZERODIVIDE**|**_SING**|
+|± **QNAN**, **IND**|**No válido**|**_DOMAIN**|
+|± 0|**ZERODIVIDE**|**_SING**|
 |&#124;x&#124; < 0,0|**No válido**|**_DOMAIN**|
 
-De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**_j0**, **_j1** **_jn** **,**_y0 , **_y1**_y0 , **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
