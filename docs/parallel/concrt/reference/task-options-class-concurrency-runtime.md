@@ -1,17 +1,17 @@
 ---
-title: task_options (clase) (Runtime de simultaneidad)
+title: task_options (Clase) (Runtime de simultaneidad)
 ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: 5f60a07d709a79f3ce4845c8fbd1c40cb2ee7328
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e79dd7979b587ae807c8984a04b79be362b03758
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142546"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368606"
 ---
-# <a name="task_options-class-concurrency-runtime"></a>task_options (clase) (Runtime de simultaneidad)
+# <a name="task_options-class-concurrency-runtime"></a>task_options (Clase) (Runtime de simultaneidad)
 
 Representa las opciones permitidas para crear una tarea
 
@@ -21,25 +21,25 @@ Representa las opciones permitidas para crear una tarea
 class task_options;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[Constructor task_options:: task_options (Runtime de simultaneidad)](#ctor)|Sobrecargado. Lista predeterminada de opciones de creación de tareas|
+|[task_options::task_options (Constructor) (Runtime de simultaneidad)](#ctor)|Sobrecargado. Lista predeterminada de opciones de creación de tareas|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[Método task_options:: get_cancellation_token (Runtime de simultaneidad)](#get_cancellation_token)|Devuelve el token de cancelación|
-|[Método task_options:: get_continuation_context (Runtime de simultaneidad)](#get_continuation_context)|Devuelve el contexto de continuación|
-|[Método task_options:: get_scheduler (Runtime de simultaneidad)](#get_scheduler)|Devuelve el programador|
-|[Método task_options:: has_cancellation_token (Runtime de simultaneidad)](#has_cancellation_token)|Indica si el usuario especificó un token de cancelación|
-|[Método task_options:: has_scheduler (Runtime de simultaneidad)](#has_scheduler)|Indica si el usuario especificó un programador n|
-|[Método task_options:: set_cancellation_token (Runtime de simultaneidad)](#set_cancellation_token)|Establece el token determinado en las opciones|
-|[Método task_options:: set_continuation_context (Runtime de simultaneidad)](#set_continuation_context)|Establece el contexto de continuación determinado en las opciones|
+|[task_options::get_cancellation_token (Método) (Runtime de simultaneidad)](#get_cancellation_token)|Devuelve el token de cancelación|
+|[task_options::get_continuation_context (Método) (Runtime de simultaneidad)](#get_continuation_context)|Devuelve el contexto de continuación|
+|[task_options::get_scheduler (Método) (Runtime de simultaneidad)](#get_scheduler)|Devuelve el programador|
+|[task_options::has_cancellation_token (Método) (Runtime de simultaneidad)](#has_cancellation_token)|Indica si el usuario especificó un token de cancelación|
+|[task_options::has_scheduler (Método) (Runtime de simultaneidad)](#has_scheduler)|Indica si el usuario especificó un programador n|
+|[task_options::set_cancellation_token (Método) (Runtime de simultaneidad)](#set_cancellation_token)|Establece el token determinado en las opciones|
+|[task_options::set_continuation_context (Método) (Runtime de simultaneidad)](#set_continuation_context)|Establece el contexto de continuación determinado en las opciones|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -47,11 +47,11 @@ class task_options;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** ppltasks. h
+**Encabezado:** ppltasks.h
 
 **Espacio de nombres:** simultaneidad
 
-## <a name="get_cancellation_token"></a>Método task_options:: get_cancellation_token (Runtime de simultaneidad)
+## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>método task_options::get_cancellation_token (Runtime de simultaneidad)
 
 Devuelve el token de cancelación
 
@@ -61,7 +61,7 @@ cancellation_token get_cancellation_token() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-## <a name="get_continuation_context"></a>Método task_options:: get_continuation_context (Runtime de simultaneidad)
+## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a>método task_options::get_continuation_context (Runtime de simultaneidad)
 
 Devuelve el contexto de continuación
 
@@ -71,7 +71,7 @@ task_continuation_context get_continuation_context() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-## <a name="get_scheduler"></a>Método task_options:: get_scheduler (Runtime de simultaneidad)
+## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>método task_options::get_scheduler (Runtime de simultaneidad)
 
 Devuelve el programador
 
@@ -81,7 +81,7 @@ scheduler_ptr get_scheduler() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-## <a name="has_cancellation_token"></a>Método task_options:: has_cancellation_token (Runtime de simultaneidad)
+## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>método task_options::has_cancellation_token (Runtime de simultaneidad)
 
 Indica si el usuario especificó un token de cancelación
 
@@ -91,7 +91,7 @@ bool has_cancellation_token() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-## <a name="has_scheduler"></a>Método task_options:: has_scheduler (Runtime de simultaneidad)
+## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>método task_options::has_scheduler (Runtime de simultaneidad)
 
 Indica si el usuario especificó un programador n
 
@@ -101,7 +101,7 @@ bool has_scheduler() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-## <a name="set_cancellation_token"></a>Método task_options:: set_cancellation_token (Runtime de simultaneidad)
+## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>Método task_options::set_cancellation_token (Runtime de simultaneidad)
 
 Establece el token determinado en las opciones
 
@@ -113,7 +113,7 @@ void set_cancellation_token(cancellation_token _Token);
 
 `_Token`
 
-## <a name="set_continuation_context"></a>Método task_options:: set_continuation_context (Runtime de simultaneidad)
+## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a>task_options::set_continuation_context (Método) (Runtime de simultaneidad)
 
 Establece el contexto de continuación determinado en las opciones
 
@@ -125,7 +125,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 
 `_ContinuationContext`
 
-## <a name="ctor"></a>Constructor task_options:: task_options (Runtime de simultaneidad)
+## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a>Constructor task_options::task_options (runtime de simultaneidad)
 
 Lista predeterminada de opciones de creación de tareas
 
@@ -170,4 +170,4 @@ task_options(
 
 ## <a name="see-also"></a>Consulte también
 
-[concurrency (espacio de nombres)](concurrency-namespace.md)
+[espacio de nombres de simultaneidad](concurrency-namespace.md)

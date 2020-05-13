@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK4502
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
-ms.openlocfilehash: 47bb81827bb6ae1f580ff907be6c0acf7139a29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c5204239909e579fa93006e245e3841b7fb64eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299743"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197462"
 ---
 # <a name="bscmake-warning-bk4502"></a>Advertencia de BSCMAKE BK4502
 
-truncado. Archivos SBR 'filename' no está en nombre de archivo
+trunca. El archivo SBR ' nombredearchivo ' no está en el nombre de archivo
 
-Se especificó un archivo .sbr de longitud cero que inicialmente no formaba parte de un archivo .bsc durante una actualización.
+Se especificó un archivo. SBR de longitud cero que no formaba parte originalmente del archivo. BSC durante una actualización.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. Especificadas el nombre de archivo incorrecto.
+1. Se especificó un nombre de archivo incorrecto.
 
-1. Archivo eliminado. (Error [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) resultados.)
+1. Archivo eliminado. (Error [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) resultados).
 
-1. Archivo dañado, que requieren BSCMAKE que realice una compilación completa.
+1. Archivo dañado, que requiere que BSCMAKE realice una compilación completa.

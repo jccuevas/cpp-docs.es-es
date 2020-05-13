@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69496616"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032139"
 ---
 # <a name="cpatht-class"></a>Clase CPathT
 
 Esta clase representa una ruta de acceso.
 
 > [!IMPORTANT]
-> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -73,84 +73,84 @@ class CPathT
 #### <a name="parameters"></a>Parámetros
 
 *StringType*<br/>
-Clase de cadena de ATL/MFC que se va a utilizar para la ruta de acceso (vea [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
+La clase de cadena ATL/MFC que se va a utilizar para la ruta de acceso (consulte [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CPathT::P CXSTR](#pcxstr)|Tipo de cadena de constante.|
-|[CPathT::P XSTR](#pxstr)|Tipo de cadena.|
-|[CPathT::XCHAR](#xchar)|Tipo de carácter.|
+|[CpathT::PCXSTR](#pcxstr)|Un tipo de cadena constante.|
+|[Cpatht::PXSTR](#pxstr)|Tipo string.|
+|[CpathT::XCHAR](#xchar)|Tipo de carácter.|
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CPathT::CPathT](#cpatht)|Constructor para la ruta de acceso.|
+|[Cpatht::CpathT](#cpatht)|El constructor de la ruta de acceso.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CPathT::AddBackslash](#addbackslash)|Llame a este método para agregar una barra diagonal inversa al final de una cadena con el fin de crear la sintaxis correcta para una ruta de acceso.|
+|[CPathT::AddBackslash](#addbackslash)|Llame a este método para agregar una barra diagonal inversa al final de una cadena para crear la sintaxis correcta para una ruta de acceso.|
 |[CPathT::AddExtension](#addextension)|Llame a este método para agregar una extensión de archivo a una ruta de acceso.|
-|[CPathT:: Append](#append)|Llame a este método para anexar una cadena a la ruta de acceso actual.|
-|[CPathT:: objeto buildroot](#buildroot)|Llame a este método para crear una ruta de acceso raíz a partir de un número de unidad determinado.|
-|[CPathT:: Canonicalization](#canonicalize)|Llame a este método para convertir la ruta de acceso al formato canónico.|
-|[CPathT:: Combine](#combine)|Llame a este método para concatenar una cadena que represente un nombre de directorio y una cadena que represente un nombre de ruta de acceso de archivo en una ruta de acceso.|
+|[CPathT::Append](#append)|Llame a este método para anexar una cadena a la ruta de acceso actual.|
+|[CpathT::BuildRoot](#buildroot)|Llame a este método para crear una ruta de acceso raíz a partir de un número de unidad determinado.|
+|[CPathT::Canonicalize](#canonicalize)|Llame a este método para convertir la ruta de acceso a forma canónica.|
+|[CPathT::Combinar](#combine)|Llame a este método para concatenar una cadena que representa un nombre de directorio y una cadena que representa un nombre de ruta de acceso de archivo en una ruta de acceso.|
 |[CPathT::CommonPrefix](#commonprefix)|Llame a este método para determinar si la ruta de acceso especificada comparte un prefijo común con la ruta de acceso actual.|
-|[CPathT::CompactPath](#compactpath)|Llame a este método para truncar una ruta de acceso de archivo para ajustarse a un ancho de píxel determinado reemplazando los componentes de la ruta de acceso con puntos suspensivos.|
-|[CPathT::CompactPathEx](#compactpathex)|Llame a este método para truncar una ruta de acceso de archivo para ajustarse a un número determinado de caracteres reemplazando los componentes de la ruta de acceso con puntos suspensivos.|
-|[CPathT:: FileExists](#fileexists)|Llame a este método para comprobar si existe el archivo en este nombre de ruta de acceso.|
-|[CPathT::FindExtension](#findextension)|Llame a este método para buscar la posición de la extensión de archivo dentro de la ruta de acceso.|
-|[CPathT::FindFileName](#findfilename)|Llame a este método para buscar la posición del nombre de archivo dentro de la ruta de acceso.|
-|[CPathT::GetDriveNumber](#getdrivenumber)|Llame a este método para buscar en la ruta de acceso una letra de unidad en el intervalo de ' A ' a ' Z ' y devolver el número de unidad correspondiente.|
-|[CPathT:: GetExtension](#getextension)|Llame a este método para obtener la extensión de archivo de la ruta de acceso.|
-|[CPathT::IsDirectory](#isdirectory)|Llame a este método para comprobar si la ruta de acceso es un directorio válido.|
-|[CPathT::IsFileSpec](#isfilespec)|Llame a este método para buscar en una ruta de acceso todos los caracteres delimitadores de ruta de acceso (por ejemplo, ': ' o ' \\ '). Si no hay caracteres que delimiten la ruta de acceso, la ruta de acceso se considera una ruta de acceso de especificación de archivo.|
-|[CPathT::IsPrefix](#isprefix)|Llame a este método para determinar si una ruta de acceso contiene un prefijo válido del tipo pasado por *pszPrefix*.|
-|[CPathT::IsRelative](#isrelative)|Llame a este método para determinar si la ruta de acceso es relativa.|
-|[CPathT:: IsRoot](#isroot)|Llame a este método para determinar si la ruta de acceso es una raíz de directorio.|
-|[CPathT::IsSameRoot](#issameroot)|Llame a este método para determinar si otra ruta de acceso tiene un componente raíz común con la ruta de acceso actual.|
-|[CPathT::IsUNC](#isunc)|Llame a este método para determinar si la ruta de acceso es una ruta de acceso UNC (Convención de nomenclatura universal) válida para un servidor y un recurso compartido.|
-|[CPathT::IsUNCServer](#isuncserver)|Llame a este método para determinar si la ruta de acceso es una ruta de acceso UNC (Convención de nomenclatura universal) válida solo para un servidor.|
-|[CPathT::IsUNCServerShare](#isuncservershare)|Llame a este método para determinar si la ruta de acceso es una ruta de acceso compartida UNC (Convención de nomenclatura universal) válida, \\ \ *server* \ *share*.|
-|[CPathT::MakePretty](#makepretty)|Llame a este método para convertir una ruta de acceso a todos los caracteres en minúsculas para dar una apariencia coherente a la ruta de acceso.|
-|[CPathT::MatchSpec](#matchspec)|Llame a este método para buscar en la ruta de acceso una cadena que contenga un tipo de coincidencia de caracteres comodín.|
-|[CPathT::QuoteSpaces](#quotespaces)|Llame a este método para escribir la ruta de acceso entre comillas si contiene espacios.|
-|[CPathT::RelativePathTo](#relativepathto)|Llame a este método para crear una ruta de acceso relativa de un archivo o una carpeta a otra.|
-|[CPathT::RemoveArgs](#removeargs)|Llame a este método para quitar de la ruta de acceso los argumentos de la línea de comandos.|
+|[CPathT::CompactPath](#compactpath)|Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un ancho de píxel determinado reemplazando los componentes de ruta de acceso con puntos suspensivos.|
+|[CPathT::CompactPathEx](#compactpathex)|Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un número determinado de caracteres reemplazando los componentes de ruta de acceso con puntos suspensivos.|
+|[CPathT::FileExists](#fileexists)|Llame a este método para comprobar si existe el archivo en este nombre de ruta de acceso.|
+|[CpathT::FindExtension](#findextension)|Llame a este método para encontrar la posición de la extensión de archivo dentro de la ruta de acceso.|
+|[CPathT::FindFileName](#findfilename)|Llame a este método para encontrar la posición del nombre de archivo dentro de la ruta de acceso.|
+|[CPathT::GetDriveNumber](#getdrivenumber)|Llame a este método para buscar en la ruta de acceso una letra de unidad dentro del rango de 'A' a 'Z' y devolver el número de unidad correspondiente.|
+|[CPathT::GetExtension](#getextension)|Llame a este método para obtener la extensión de archivo de la ruta de acceso.|
+|[CpathT::IsDirectory](#isdirectory)|Llame a este método para comprobar si la ruta de acceso es un directorio válido.|
+|[CpathT::IsfileSpec](#isfilespec)|Llame a este método para buscar en una ruta de acceso cualquier\\carácter delimitador de ruta de acceso (por ejemplo, ':' o ' ' ). Si no hay caracteres delimitadores de ruta de acceso presentes, la ruta de acceso se considera una ruta de acceso de especificación de archivo.|
+|[CpathT::IsPrefix](#isprefix)|Llame a este método para determinar si una ruta de acceso contiene un prefijo válido del tipo pasado por *pszPrefix*.|
+|[Cpatht::IsRelative](#isrelative)|Llame a este método para determinar si la ruta de acceso es relativa.|
+|[Cpatht::Isroot](#isroot)|Llame a este método para determinar si la ruta de acceso es una raíz de directorio.|
+|[Cpatht::IsSameRoot](#issameroot)|Llame a este método para determinar si otra ruta de acceso tiene un componente raíz común con la ruta de acceso actual.|
+|[Cpatht::IsUNC](#isunc)|Llame a este método para determinar si la ruta de acceso es una ruta de acceso UNC (convención de nomenclatura universal) válida para un servidor y recurso compartido.|
+|[CPathT::IsUNCServer](#isuncserver)|Llame a este método para determinar si la ruta de acceso es una ruta de acceso UNC (convención de nomenclatura universal) válida solo para un servidor.|
+|[CpathT::IsUNCServerShare](#isuncservershare)|Llame a este método para determinar si la ruta de acceso \\ \ es una ruta de acceso de recurso compartido UNC (convención de nomenclatura universal) válida,*recurso compartido*de *servidor*\ .|
+|[Cpatht::MakePretty](#makepretty)|Llame a este método para convertir una ruta de acceso a todos los caracteres en minúsculas para dar a la ruta de acceso una apariencia coherente.|
+|[CPathT::MatchSpec](#matchspec)|Llame a este método para buscar en la ruta de acceso una cadena que contenga un tipo de coincidencia comodín.|
+|[CpathT::QuoteSpaces](#quotespaces)|Llame a este método para incluir la ruta entre comillas si contiene espacios.|
+|[Cpatht::RelativepathTo](#relativepathto)|Llame a este método para crear una ruta de acceso relativa de un archivo o carpeta a otro.|
+|[CPathT::RemoveArgs](#removeargs)|Llame a este método para quitar los argumentos de línea de comandos de la ruta de acceso.|
 |[CPathT::RemoveBackslash](#removebackslash)|Llame a este método para quitar la barra diagonal inversa final de la ruta de acceso.|
 |[CPathT::RemoveBlanks](#removeblanks)|Llame a este método para quitar todos los espacios iniciales y finales de la ruta de acceso.|
-|[CPathT::RemoveExtension](#removeextension)|Llame a este método para quitar la extensión de archivo de la ruta de acceso, si la hay.|
-|[CPathT::RemoveFileSpec](#removefilespec)|Llame a este método para quitar el nombre de archivo final y la barra diagonal inversa de la ruta de acceso, si los tiene.|
-|[CPathT::RenameExtension](#renameextension)|Llame a este método para reemplazar la extensión de nombre de archivo de la ruta de acceso por una nueva extensión. Si el nombre de archivo no contiene una extensión, la extensión se adjuntará al final de la cadena.|
-|[CPathT::SkipRoot](#skiproot)|Llame a este método para analizar una ruta de acceso, omitiendo las partes de la letra de unidad o del servidor UNC o de la ruta de acceso del recurso compartido.|
-|[CPathT::StripPath](#strippath)|Llame a este método para quitar la parte de la ruta de acceso de una ruta de acceso completa y un nombre de archivo.|
-|[CPathT::StripToRoot](#striptoroot)|Llame a este método para quitar todas las partes de la ruta de acceso excepto la información raíz.|
-|[CPathT::UnquoteSpaces](#unquotespaces)|Llame a este método para quitar las comillas del principio y el final de una ruta de acceso.|
+|[CPathT::RemoveExtension](#removeextension)|Llame a este método para quitar la extensión de archivo de la ruta de acceso, si hay uno.|
+|[CpathT::RemoveFileSpec](#removefilespec)|Llame a este método para quitar el nombre de archivo final y la barra diagonal inversa de la ruta de acceso, si los tiene.|
+|[CPathT::RenameExtension](#renameextension)|Llame a este método para reemplazar la extensión de nombre de archivo en la ruta de acceso con una nueva extensión. Si el nombre de archivo no contiene una extensión, la extensión se adjuntará al final de la cadena.|
+|[CpathT::SkipRoot](#skiproot)|Llame a este método para analizar una ruta de acceso, ignorando la letra de unidad o las partes de ruta de acceso UNC/share.|
+|[CpathT::StripPath](#strippath)|Llame a este método para quitar la parte de ruta de acceso de una ruta de acceso completa y el nombre de archivo.|
+|[Cpatht::StripToRoot](#striptoroot)|Llame a este método para quitar todas las partes de la ruta de acceso, excepto la información raíz.|
+|[CpathT::UnquoteSpaces](#unquotespaces)|Llame a este método para quitar comillas desde el principio y el final de una ruta de acceso.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CPathT:: Operator const StringType &](#operator_const_stringtype_amp)|Este operador permite que el objeto se trate como una cadena.|
-|[CPathT:: Operator CPathT::P CXSTR](#operator_cpatht__pcxstr)|Este operador permite que el objeto se trate como una cadena.|
-|[CPathT:: Operator StringType &](#operator_stringtype_amp)|Este operador permite que el objeto se trate como una cadena.|
-|[CPathT:: Operator + =](#operator_add_eq)|Este operador anexa una cadena a la ruta de acceso.|
+|[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Este operador permite que el objeto se trate como una cadena.|
+|[CPathT::operador CPathT::PCXSTR](#operator_cpatht__pcxstr)|Este operador permite que el objeto se trate como una cadena.|
+|[CPathT::operator StringType &](#operator_stringtype_amp)|Este operador permite que el objeto se trate como una cadena.|
+|[CPathT::operador +](#operator_add_eq)|Este operador anexa una cadena a la ruta de acceso.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CPathT::m_strPath](#m_strpath)|La ruta de acceso.|
+|[Cpatht::m_strPath](#m_strpath)|La ruta de acceso.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CPath`, `CPathA` y `CPathW` son instancias de `CPathT` definidas de la siguiente manera:
+`CPath`, `CPathA`, `CPathW` y son instancias de `CPathT` definido según sigue:
 
 `typedef CPathT< CString > CPath;`
 
@@ -160,21 +160,21 @@ Clase de cadena de ATL/MFC que se va a utilizar para la ruta de acceso (vea [CSt
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlpath. h
+**Encabezado:** atlpath.h
 
-##  <a name="addbackslash"></a>CPathT::AddBackslash
+## <a name="cpathtaddbackslash"></a><a name="addbackslash"></a>CPathT::AddBackslash
 
-Llame a este método para agregar una barra diagonal inversa al final de una cadena con el fin de crear la sintaxis correcta para una ruta de acceso. Si la ruta de acceso ya tiene una barra diagonal inversa al final, no se agregará ninguna barra diagonal inversa.
+Llame a este método para agregar una barra diagonal inversa al final de una cadena para crear la sintaxis correcta para una ruta de acceso. Si la ruta de acceso ya tiene una barra diagonal inversa final, no se agregará ninguna barra diagonal inversa.
 
-```
+```cpp
 void AddBackslash();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathAddBackSlash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
+Para obtener más información, consulte [PathAddBackSlash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
 
-##  <a name="addextension"></a>CPathT::AddExtension
+## <a name="cpathtaddextension"></a><a name="addextension"></a>CPathT::AddExtension
 
 Llame a este método para agregar una extensión de archivo a una ruta de acceso.
 
@@ -185,17 +185,17 @@ BOOL AddExtension(PCXSTR pszExtension);
 ### <a name="parameters"></a>Parámetros
 
 *pszExtension*<br/>
-Extensión de archivo que se va a agregar.
+La extensión de archivo que se va a agregar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si es correcto, FALSE en caso de error.
+Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).
 
-##  <a name="append"></a>CPathT:: Append
+## <a name="cpathtappend"></a><a name="append"></a>CPathT::Append
 
 Llame a este método para anexar una cadena a la ruta de acceso actual.
 
@@ -205,51 +205,51 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszMore*<br/>
+*pszMás*<br/>
 Cadena que se va a anexar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si es correcto, FALSE en caso de error.
+Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
+Para obtener más información, consulte [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
 
-##  <a name="buildroot"></a>CPathT:: objeto buildroot
+## <a name="cpathtbuildroot"></a><a name="buildroot"></a>CpathT::BuildRoot
 
 Llame a este método para crear una ruta de acceso raíz a partir de un número de unidad determinado.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*iDrive*<br/>
-El número de unidad (0 es:, 1 es B:, etc.).
+*Idrive*<br/>
+El número de unidad (0 es A:, 1 es B:, y así sucesivamente).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).
 
-##  <a name="canonicalize"></a>CPathT:: Canonicalization
+## <a name="cpathtcanonicalize"></a><a name="canonicalize"></a>CPathT::Canonicalize
 
-Llame a este método para convertir la ruta de acceso al formato canónico.
+Llame a este método para convertir la ruta de acceso a forma canónica.
 
-```
+```cpp
 void Canonicalize();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).
+Para obtener más información, consulte [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).
 
-##  <a name="combine"></a>CPathT:: Combine
+## <a name="cpathtcombine"></a><a name="combine"></a>CPathT::Combinar
 
-Llame a este método para concatenar una cadena que represente un nombre de directorio y una cadena que represente un nombre de ruta de acceso de archivo en una ruta de acceso.
+Llame a este método para concatenar una cadena que representa un nombre de directorio y una cadena que representa un nombre de ruta de acceso de archivo en una ruta de acceso.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -259,13 +259,13 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 Ruta de acceso al directorio.
 
 *pszFile*<br/>
-Ruta de acceso del archivo.
+La ruta de acceso del archivo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).
+Para obtener más información, consulte [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).
 
-##  <a name="commonprefix"></a>CPathT::CommonPrefix
+## <a name="cpathtcommonprefix"></a><a name="commonprefix"></a>CPathT::CommonPrefix
 
 Llame a este método para determinar si la ruta de acceso especificada comparte un prefijo común con la ruta de acceso actual.
 
@@ -275,20 +275,20 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszOther*<br/>
-Ruta de acceso que se va a comparar con la actual.
+*pszOtros*<br/>
+La ruta de acceso para comparar con la actual.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve el prefijo común.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Un prefijo es uno de estos tipos: "C: \\ \\", ".", "..", ".. \\ \\ ". Para obtener más información, vea [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
+Un prefijo es uno de estos\\\\tipos: "C: ", ".", "..", ".... \\\\". Para obtener más información, vea [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
-##  <a name="compactpath"></a>CPathT::CompactPath
+## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
 
-Llame a este método para truncar una ruta de acceso de archivo para ajustarse a un ancho de píxel determinado reemplazando los componentes de la ruta de acceso con puntos suspensivos.
+Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un ancho de píxel determinado reemplazando los componentes de ruta de acceso con puntos suspensivos.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -296,23 +296,23 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Parámetros
 
-*Cámaras*<br/>
-Contexto de dispositivo usado para las métricas de fuente.
+*Hdc*<br/>
+El contexto del dispositivo utilizado para las métricas de fuente.
 
-*nWidth*<br/>
-Ancho, en píxeles, que se forzará a que quepa la cadena.
+*nAncho*<br/>
+El ancho, en píxeles, que la cadena se verá obligado a encajar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si es correcto, FALSE en caso de error.
+Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).
+Para obtener más información, consulte [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).
 
-##  <a name="compactpathex"></a>CPathT::CompactPathEx
+## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
 
-Llame a este método para truncar una ruta de acceso de archivo para ajustarse a un número determinado de caracteres reemplazando los componentes de la ruta de acceso con puntos suspensivos.
+Llame a este método para truncar una ruta de acceso de archivo para que quepa dentro de un número determinado de caracteres reemplazando los componentes de ruta de acceso con puntos suspensivos.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
@@ -321,20 +321,20 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 ### <a name="parameters"></a>Parámetros
 
 *nMaxChars*<br/>
-Número máximo de caracteres que se van a incluir en la nueva cadena, incluido el carácter nulo de terminación.
+El número máximo de caracteres que se van a incluir en la nueva cadena, incluido el carácter NULL de terminación.
 
 *dwFlags*<br/>
 Reservado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si es correcto, FALSE en caso de error.
+Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).
+Para obtener más información, consulte [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).
 
-##  <a name="cpatht"></a>CPathT::CPathT
+## <a name="cpathtcpatht"></a><a name="cpatht"></a>Cpatht::CpathT
 
 El constructor.
 
@@ -347,12 +347,12 @@ CPathT() throw();
 ### <a name="parameters"></a>Parámetros
 
 *pszPath*<br/>
-Puntero a una cadena de ruta de acceso.
+El puntero a una cadena de ruta de acceso.
 
 *path*<br/>
-Cadena de ruta de acceso.
+La cadena de ruta de acceso.
 
-##  <a name="fileexists"></a>CPathT:: FileExists
+## <a name="cpathtfileexists"></a><a name="fileexists"></a>CPathT::FileExists
 
 Llame a este método para comprobar si existe el archivo en este nombre de ruta de acceso.
 
@@ -364,13 +364,13 @@ BOOL FileExists() const;
 
 Devuelve TRUE si el archivo existe, FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).
 
-##  <a name="findextension"></a>CPathT::FindExtension
+## <a name="cpathtfindextension"></a><a name="findextension"></a>CpathT::FindExtension
 
-Llame a este método para buscar la posición de la extensión de archivo dentro de la ruta de acceso.
+Llame a este método para encontrar la posición de la extensión de archivo dentro de la ruta de acceso.
 
 ```
 int FindExtension() const;
@@ -378,15 +378,15 @@ int FindExtension() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la posición del "." que precede a la extensión. Si no se encuentra ninguna extensión, devuelve-1.
+Devuelve la posición del "." anterior a la extensión. Si no se encuentra ninguna extensión, devuelve -1.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).
 
-##  <a name="findfilename"></a>CPathT::FindFileName
+## <a name="cpathtfindfilename"></a><a name="findfilename"></a>CPathT::FindFileName
 
-Llame a este método para buscar la posición del nombre de archivo dentro de la ruta de acceso.
+Llame a este método para encontrar la posición del nombre de archivo dentro de la ruta de acceso.
 
 ```
 int FindFileName() const;
@@ -394,15 +394,15 @@ int FindFileName() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la posición del nombre de archivo. Si no se encuentra ningún nombre de archivo, devuelve-1.
+Devuelve la posición del nombre de archivo. Si no se encuentra ningún nombre de archivo, devuelve -1.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).
 
-##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber
+## <a name="cpathtgetdrivenumber"></a><a name="getdrivenumber"></a>CPathT::GetDriveNumber
 
-Llame a este método para buscar en la ruta de acceso una letra de unidad en el intervalo de ' A ' a ' Z ' y devolver el número de unidad correspondiente.
+Llame a este método para buscar en la ruta de acceso una letra de unidad dentro del rango de 'A' a 'Z' y devolver el número de unidad correspondiente.
 
 ```
 int GetDriveNumber() const;
@@ -410,13 +410,13 @@ int GetDriveNumber() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el número de unidad como un entero comprendido entre 0 y 25 (correspondiente a ' A ' a ' Z ') si la ruta de acceso tiene una letra de unidad o-1 en caso contrario.
+Devuelve el número de unidad como un entero de 0 a 25 (correspondiente a 'A' a 'Z') si la ruta de acceso tiene una letra de unidad, o -1 en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).
 
-##  <a name="getextension"></a>CPathT:: GetExtension
+## <a name="cpathtgetextension"></a><a name="getextension"></a>CPathT::GetExtension
 
 Llame a este método para obtener la extensión de archivo de la ruta de acceso.
 
@@ -428,7 +428,7 @@ StringType GetExtension() const;
 
 Devuelve la extensión de archivo.
 
-##  <a name="isdirectory"></a>CPathT::IsDirectory
+## <a name="cpathtisdirectory"></a><a name="isdirectory"></a>CpathT::IsDirectory
 
 Llame a este método para comprobar si la ruta de acceso es un directorio válido.
 
@@ -438,15 +438,15 @@ BOOL IsDirectory() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un valor distinto de cero (16) si la ruta de acceso es un directorio; en caso contrario, FALSE.
+Devuelve un valor distinto de cero (16) si la ruta de acceso es un directorio, FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
 
-##  <a name="isfilespec"></a>CPathT::IsFileSpec
+## <a name="cpathtisfilespec"></a><a name="isfilespec"></a>CpathT::IsfileSpec
 
-Llame a este método para buscar en una ruta de acceso todos los caracteres delimitadores de ruta de acceso (por ejemplo, ': ' o ' \\ '). Si no hay caracteres que delimiten la ruta de acceso, la ruta de acceso se considera una ruta de acceso de especificación de archivo.
+Llame a este método para buscar en una ruta de acceso cualquier\\carácter delimitador de ruta de acceso (por ejemplo, ':' o ' ' ). Si no hay caracteres delimitadores de ruta de acceso presentes, la ruta de acceso se considera una ruta de acceso de especificación de archivo.
 
 ```
 BOOL IsFileSpec() const;
@@ -454,13 +454,13 @@ BOOL IsFileSpec() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si no hay caracteres de delimitación de la ruta de acceso en la ruta de acceso o FALSE si hay caracteres de delimitación de la ruta de acceso.
+Devuelve TRUE si no hay caracteres delimitadores de ruta de acceso dentro de la ruta de acceso, o FALSE si hay caracteres delimitadores de ruta de acceso.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).
 
-##  <a name="isprefix"></a>CPathT::IsPrefix
+## <a name="cpathtisprefix"></a><a name="isprefix"></a>CpathT::IsPrefix
 
 Llame a este método para determinar si una ruta de acceso contiene un prefijo válido del tipo pasado por *pszPrefix*.
 
@@ -471,17 +471,17 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>Parámetros
 
 *pszPrefix*<br/>
-Prefijo que se va a buscar. Un prefijo es uno de estos tipos: "C: \\ \\", ".", "..", ".. \\ \\ ".
+El prefijo para el que se va a buscar. Un prefijo es uno de estos\\\\tipos: "C: ", ".", "..", ".... \\\\".
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve TRUE si la ruta de acceso contiene el prefijo o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).
+Para obtener más información, consulte [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).
 
-##  <a name="isrelative"></a>CPathT::IsRelative
+## <a name="cpathtisrelative"></a><a name="isrelative"></a>Cpatht::IsRelative
 
 Llame a este método para determinar si la ruta de acceso es relativa.
 
@@ -493,11 +493,11 @@ BOOL IsRelative() const;
 
 Devuelve TRUE si la ruta de acceso es relativa o FALSE si es absoluta.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).
 
-##  <a name="isroot"></a>CPathT:: IsRoot
+## <a name="cpathtisroot"></a><a name="isroot"></a>Cpatht::Isroot
 
 Llame a este método para determinar si la ruta de acceso es una raíz de directorio.
 
@@ -509,11 +509,11 @@ BOOL IsRoot() const;
 
 Devuelve TRUE si la ruta de acceso es una raíz o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
+Para obtener más información, consulte [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
 
-##  <a name="issameroot"></a>CPathT::IsSameRoot
+## <a name="cpathtissameroot"></a><a name="issameroot"></a>Cpatht::IsSameRoot
 
 Llame a este método para determinar si otra ruta de acceso tiene un componente raíz común con la ruta de acceso actual.
 
@@ -523,20 +523,20 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pszOther*<br/>
-La otra ruta de acceso.
+*pszOtros*<br/>
+El otro camino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si ambas cadenas tienen el mismo componente raíz o FALSE en caso contrario.
+Devuelve TRUE si ambas cadenas tienen el mismo componente raíz, o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).
 
-##  <a name="isunc"></a>CPathT::IsUNC
+## <a name="cpathtisunc"></a><a name="isunc"></a>Cpatht::IsUNC
 
-Llame a este método para determinar si la ruta de acceso es una ruta de acceso UNC (Convención de nomenclatura universal) válida para un servidor y un recurso compartido.
+Llame a este método para determinar si la ruta de acceso es una ruta de acceso UNC (convención de nomenclatura universal) válida para un servidor y recurso compartido.
 
 ```
 BOOL IsUNC() const;
@@ -544,15 +544,15 @@ BOOL IsUNC() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si la ruta de acceso es una ruta de acceso UNC válida o FALSE en caso contrario.
+Devuelve TRUE si la ruta de acceso es una ruta de acceso UNC válida, o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
+Para obtener más información, consulte [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
 
-##  <a name="isuncserver"></a>CPathT::IsUNCServer
+## <a name="cpathtisuncserver"></a><a name="isuncserver"></a>CPathT::IsUNCServer
 
-Llame a este método para determinar si la ruta de acceso es una ruta de acceso UNC (Convención de nomenclatura universal) válida solo para un servidor.
+Llame a este método para determinar si la ruta de acceso es una ruta de acceso UNC (convención de nomenclatura universal) válida solo para un servidor.
 
 ```
 BOOL IsUNCServer() const;
@@ -560,15 +560,15 @@ BOOL IsUNCServer() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si la cadena es una ruta de acceso UNC válida para un servidor únicamente (sin nombre de recurso compartido) o FALSE en caso contrario.
+Devuelve TRUE si la cadena es una ruta de acceso UNC válida solo para un servidor (sin nombre de recurso compartido) o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
+Para obtener más información, consulte [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
 
-##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare
+## <a name="cpathtisuncservershare"></a><a name="isuncservershare"></a>CpathT::IsUNCServerShare
 
-Llame a este método para determinar si la ruta de acceso es una ruta de acceso compartida UNC (Convención de nomenclatura universal) válida, \\ \ *server* \ *share*.
+Llame a este método para determinar si la ruta de acceso \\ \ es una ruta de acceso de recurso compartido UNC (convención de nomenclatura universal) válida,*recurso compartido*de *servidor*\ .
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,13 +576,13 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si la ruta de acceso tiene el formato \\ \ *servidor* \ *recurso compartido*, o bien false en caso contrario.
+Devuelve TRUE si la ruta \\ \ de acceso está en el*recurso compartido*de *servidor*\ de formularios o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
+Para obtener más información, consulte [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
 
-##  <a name="m_strpath"></a>CPathT::m_strPath
+## <a name="cpathtm_strpath"></a><a name="m_strpath"></a>Cpatht::m_strPath
 
 La ruta de acceso.
 
@@ -590,13 +590,13 @@ La ruta de acceso.
 StringType m_strPath;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`StringType` es el parámetro de plantilla que se va a `CPathT`.
+`StringType`es el parámetro `CPathT`de plantilla para .
 
-##  <a name="makepretty"></a>CPathT::MakePretty
+## <a name="cpathtmakepretty"></a><a name="makepretty"></a>Cpatht::MakePretty
 
-Llame a este método para convertir una ruta de acceso a todos los caracteres en minúsculas para dar una apariencia coherente a la ruta de acceso.
+Llame a este método para convertir una ruta de acceso a todos los caracteres en minúsculas para dar a la ruta de acceso una apariencia coherente.
 
 ```
 BOOL MakePretty();
@@ -604,15 +604,15 @@ BOOL MakePretty();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si la ruta de acceso se ha convertido o FALSE en caso contrario.
+Devuelve TRUE si la ruta de acceso se ha convertido, o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
+Para obtener más información, consulte [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
 
-##  <a name="matchspec"></a>CPathT::MatchSpec
+## <a name="cpathtmatchspec"></a><a name="matchspec"></a>CPathT::MatchSpec
 
-Llame a este método para buscar en la ruta de acceso una cadena que contenga un tipo de coincidencia de caracteres comodín.
+Llame a este método para buscar en la ruta de acceso una cadena que contenga un tipo de coincidencia comodín.
 
 ```
 BOOL MatchSpec(PCXSTR pszSpec) const;
@@ -621,17 +621,17 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="parameters"></a>Parámetros
 
 *pszSpec*<br/>
-Puntero a una cadena terminada en NULL con el tipo de archivo que se va a buscar. Por ejemplo, para comprobar si el archivo de la ruta de acceso actual es un archivo de documento, *pszSpec* debe establecerse en "*. doc".
+Puntero a una cadena terminada en null con el tipo de archivo para el que se va a buscar. Por ejemplo, para probar si el archivo en la ruta de acceso actual es un archivo DOC, *pszSpec* debe establecerse en "*.doc".
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si la cadena coincide con, o FALSE en caso contrario.
+Devuelve TRUE si la cadena coincide, o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).
+Para obtener más información, consulte [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).
 
-##  <a name="operator_add_eq"></a>CPathT:: Operator + =
+## <a name="cpathtoperator-"></a><a name="operator_add_eq"></a>CPathT::operador +
 
 Este operador anexa una cadena a la ruta de acceso.
 
@@ -641,14 +641,14 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parámetros
 
-*pszMore*<br/>
+*pszMás*<br/>
 Cadena que se va a anexar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve la ruta de acceso actualizada.
 
-##  <a name="operator_const_stringtype_amp"></a>CPathT:: Operator const StringType &amp;
+## <a name="cpathtoperator-const-stringtype-amp"></a><a name="operator_const_stringtype_amp"></a>CPathT::operator const StringType&amp;
 
 Este operador permite que el objeto se trate como una cadena.
 
@@ -660,7 +660,7 @@ operator const StringType&() const throw();
 
 Devuelve una cadena que representa la ruta de acceso actual administrada por este objeto.
 
-##  <a name="operator_cpatht__pcxstr"></a>CPathT:: Operator CPathT::P CXSTR
+## <a name="cpathtoperator-cpathtpcxstr"></a><a name="operator_cpatht__pcxstr"></a>CPathT::operador CPathT::PCXSTR
 
 Este operador permite que el objeto se trate como una cadena.
 
@@ -672,7 +672,7 @@ operator PCXSTR() const throw();
 
 Devuelve una cadena que representa la ruta de acceso actual administrada por este objeto.
 
-##  <a name="operator_stringtype_amp"></a>CPathT:: Operator StringType &amp;
+## <a name="cpathtoperator-stringtype-amp"></a><a name="operator_stringtype_amp"></a>CPathT::operator StringType&amp;
 
 Este operador permite que el objeto se trate como una cadena.
 
@@ -684,45 +684,45 @@ operator StringType&() throw();
 
 Devuelve una cadena que representa la ruta de acceso actual administrada por este objeto.
 
-##  <a name="pcxstr"></a>CPathT::P CXSTR
+## <a name="cpathtpcxstr"></a><a name="pcxstr"></a>CpathT::PCXSTR
 
-Tipo de cadena de constante.
+Un tipo de cadena constante.
 
 ```
 typedef StringType::PCXSTR PCXSTR;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`StringType` es el parámetro de plantilla que se va a `CPathT`.
+`StringType`es el parámetro `CPathT`de plantilla para .
 
-##  <a name="pxstr"></a>CPathT::P XSTR
+## <a name="cpathtpxstr"></a><a name="pxstr"></a>Cpatht::PXSTR
 
-Tipo de cadena.
+Tipo string.
 
 ```
 typedef StringType::PXSTR PXSTR;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`StringType` es el parámetro de plantilla que se va a `CPathT`.
+`StringType`es el parámetro `CPathT`de plantilla para .
 
-##  <a name="quotespaces"></a>CPathT::QuoteSpaces
+## <a name="cpathtquotespaces"></a><a name="quotespaces"></a>CpathT::QuoteSpaces
 
-Llame a este método para escribir la ruta de acceso entre comillas si contiene espacios.
+Llame a este método para incluir la ruta entre comillas si contiene espacios.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
+Para obtener más información, consulte [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
 
-##  <a name="relativepathto"></a>CPathT::RelativePathTo
+## <a name="cpathtrelativepathto"></a><a name="relativepathto"></a>Cpatht::RelativepathTo
 
-Llame a este método para crear una ruta de acceso relativa de un archivo o una carpeta a otra.
+Llame a este método para crear una ruta de acceso relativa de un archivo o carpeta a otro.
 
 ```
 BOOL RelativePathTo(
@@ -735,74 +735,74 @@ BOOL RelativePathTo(
 ### <a name="parameters"></a>Parámetros
 
 *pszFrom*<br/>
-Inicio de la ruta de acceso relativa.
+El inicio de la ruta relativa.
 
 *dwAttrFrom*<br/>
-Atributos de archivo de *pszFrom*. Si este valor contiene FILE_ATTRIBUTE_DIRECTORY, se supone que *pszFrom* es un directorio; de lo contrario, se supone que *pszFrom* es un archivo.
+Los atributos File de *pszFrom*. Si este valor contiene FILE_ATTRIBUTE_DIRECTORY, se supone que *pszFrom* es un directorio; de lo contrario, se supone *que pszFrom* es un archivo.
 
 *pszTo*<br/>
-Punto final de la ruta de acceso relativa.
+El punto final de la ruta de acceso relativa.
 
 *dwAttrTo*<br/>
-Atributos de archivo de *pszTo*. Si este valor contiene FILE_ATTRIBUTE_DIRECTORY, se supone que *pszTo* es un directorio; de lo contrario, se supone que *pszTo* es un archivo.
+Los atributos File de *pszTo*. Si este valor contiene FILE_ATTRIBUTE_DIRECTORY, se supone que *pszTo* es un directorio; de lo contrario, se supone que *pszTo* es un archivo.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si es correcto, FALSE en caso de error.
+Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).
 
-##  <a name="removeargs"></a>CPathT::RemoveArgs
+## <a name="cpathtremoveargs"></a><a name="removeargs"></a>CPathT::RemoveArgs
 
-Llame a este método para quitar de la ruta de acceso los argumentos de la línea de comandos.
+Llame a este método para quitar los argumentos de línea de comandos de la ruta de acceso.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).
 
-##  <a name="removebackslash"></a>CPathT::RemoveBackslash
+## <a name="cpathtremovebackslash"></a><a name="removebackslash"></a>CPathT::RemoveBackslash
 
 Llame a este método para quitar la barra diagonal inversa final de la ruta de acceso.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).
 
-##  <a name="removeblanks"></a>CPathT::RemoveBlanks
+## <a name="cpathtremoveblanks"></a><a name="removeblanks"></a>CPathT::RemoveBlanks
 
 Llame a este método para quitar todos los espacios iniciales y finales de la ruta de acceso.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).
 
-##  <a name="removeextension"></a>CPathT::RemoveExtension
+## <a name="cpathtremoveextension"></a><a name="removeextension"></a>CPathT::RemoveExtension
 
-Llame a este método para quitar la extensión de archivo de la ruta de acceso, si la hay.
+Llame a este método para quitar la extensión de archivo de la ruta de acceso, si hay uno.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).
 
-##  <a name="removefilespec"></a>CPathT::RemoveFileSpec
+## <a name="cpathtremovefilespec"></a><a name="removefilespec"></a>CpathT::RemoveFileSpec
 
 Llame a este método para quitar el nombre de archivo final y la barra diagonal inversa de la ruta de acceso, si los tiene.
 
@@ -812,15 +812,15 @@ BOOL RemoveFileSpec();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si es correcto, FALSE en caso de error.
+Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).
 
-##  <a name="renameextension"></a>CPathT::RenameExtension
+## <a name="cpathtrenameextension"></a><a name="renameextension"></a>CPathT::RenameExtension
 
-Llame a este método para reemplazar la extensión de nombre de archivo de la ruta de acceso por una nueva extensión. Si el nombre de archivo no contiene una extensión, la extensión se adjuntará al final de la ruta de acceso.
+Llame a este método para reemplazar la extensión de nombre de archivo en la ruta de acceso con una nueva extensión. Si el nombre de archivo no contiene una extensión, la extensión se adjuntará al final de la ruta de acceso.
 
 ```
 BOOL RenameExtension(PCXSTR pszExtension);
@@ -829,19 +829,19 @@ BOOL RenameExtension(PCXSTR pszExtension);
 ### <a name="parameters"></a>Parámetros
 
 *pszExtension*<br/>
-La nueva extensión de nombre de archivo, precedida de un carácter ".".
+La nueva extensión de nombre de archivo, precedida por un carácter ".".
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si es correcto, FALSE en caso de error.
+Devuelve TRUE en caso de éxito, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).
 
-##  <a name="skiproot"></a>CPathT::SkipRoot
+## <a name="cpathtskiproot"></a><a name="skiproot"></a>CpathT::SkipRoot
 
-Llame a este método para analizar una ruta de acceso, omitiendo las partes de la letra de unidad o UNC (Convención de nomenclatura universal) o del recurso compartido.
+Llame a este método para analizar una ruta de acceso, ignorando la letra de unidad o las partes de ruta de acceso de servidor/recurso compartido UNC (convención de nomenclatura universal).
 
 ```
 int SkipRoot() const;
@@ -849,27 +849,27 @@ int SkipRoot() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la posición del principio del subtrazado que sigue a la raíz (letra de unidad o servidor o recurso compartido UNC).
+Devuelve la posición del principio de la subruta que sigue a la raíz (letra de unidad o servidor/recurso compartido UNC).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
+Para obtener más información, consulte [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
 
-##  <a name="strippath"></a>CPathT::StripPath
+## <a name="cpathtstrippath"></a><a name="strippath"></a>CpathT::StripPath
 
-Llame a este método para quitar la parte de la ruta de acceso de una ruta de acceso completa y un nombre de archivo.
+Llame a este método para quitar la parte de ruta de acceso de una ruta de acceso completa y el nombre de archivo.
 
-```
+```cpp
 void StripPath();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).
 
-##  <a name="striptoroot"></a>CPathT::StripToRoot
+## <a name="cpathtstriptoroot"></a><a name="striptoroot"></a>Cpatht::StripToRoot
 
-Llame a este método para quitar todas las partes de la ruta de acceso excepto la información raíz.
+Llame a este método para quitar todas las partes de la ruta de acceso, excepto la información raíz.
 
 ```
 BOOL StripToRoot();
@@ -877,25 +877,25 @@ BOOL StripToRoot();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ha encontrado una letra de unidad válida en la ruta de acceso o FALSE en caso contrario.
+Devuelve TRUE si se encontró una letra de unidad válida en la ruta de acceso, o FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información, vea [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).
 
-##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces
+## <a name="cpathtunquotespaces"></a><a name="unquotespaces"></a>CpathT::UnquoteSpaces
 
-Llame a este método para quitar las comillas del principio y el final de una ruta de acceso.
+Llame a este método para quitar comillas desde el principio y el final de una ruta de acceso.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).
+Para obtener más información, consulte [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).
 
-##  <a name="xchar"></a>CPathT::XCHAR
+## <a name="cpathtxchar"></a><a name="xchar"></a>CpathT::XCHAR
 
 Tipo de carácter.
 
@@ -903,11 +903,11 @@ Tipo de carácter.
 typedef StringType::XCHAR XCHAR;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`StringType` es el parámetro de plantilla que se va a `CPathT`.
+`StringType`es el parámetro `CPathT`de plantilla para .
 
 ## <a name="see-also"></a>Vea también
 
 [Clases](../../atl/reference/atl-classes.md)<br/>
-[CStringT (clase)](../../atl-mfc-shared/reference/cstringt-class.md)
+[Clase CStringT](../../atl-mfc-shared/reference/cstringt-class.md)

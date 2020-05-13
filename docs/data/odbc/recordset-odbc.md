@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: 011191b99170b8a8338b5ca1a440a32404c4d793
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7a55621f4875b24cc33a0fd49a5b8b4c88b34cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212828"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368637"
 ---
 # <a name="recordset-odbc"></a>Conjunto de registros (ODBC)
 
@@ -35,9 +35,9 @@ Un objeto [CRecordset](../../mfc/reference/crecordset-class.md) representa un co
 Un ejemplo de un conjunto de registros basado en una tabla es "todos los clientes", que accede a una tabla de clientes. Un ejemplo de consulta es "todas las facturas de Joe Smith". Un ejemplo de un conjunto de registros basado en un procedimiento almacenado (a veces denominado "consulta predefinida") es "todas las cuentas morosas", que invoca un procedimiento almacenado en la base de datos back-end. Un conjunto de registros puede combinar dos o más tablas del mismo origen de datos, pero no tablas de orígenes de datos diferentes.
 
 > [!NOTE]
->  Algunos controladores ODBC admiten vistas de la base de datos. En este sentido, una vista es una consulta creada originalmente con una instrucción `CREATE VIEW` de SQL.
+> Algunos controladores ODBC admiten vistas de la base de datos. En este sentido, una vista es una consulta creada originalmente con una instrucción `CREATE VIEW` de SQL.
 
-##  <a name="recordset-capabilities"></a><a name="_core_recordset_capabilities"></a> Funcionalidades del conjunto de registros
+## <a name="recordset-capabilities"></a><a name="_core_recordset_capabilities"></a> Funcionalidades del conjunto de registros
 
 Todos los objetos de conjunto de registros comparten las funcionalidades siguientes:
 
@@ -51,7 +51,7 @@ Todos los objetos de conjunto de registros comparten las funcionalidades siguien
 
 - Puede [parametrizar](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) el conjunto de registros para aprobar la selección del conjunto de registros en tiempo de ejecución.
 
-##  <a name="snapshots-and-dynasets"></a><a name="_core_snapshots_and_dynasets"></a> Instantáneas y dynasets
+## <a name="snapshots-and-dynasets"></a><a name="_core_snapshots_and_dynasets"></a> Instantáneas y dynasets
 
 Hay dos tipos principales de conjuntos de registros: [instantáneas](../../data/odbc/snapshot.md) y [dynasets](../../data/odbc/dynaset.md). Ambos son compatibles con la clase `CRecordset`. Cada uno de ellos comparte las características comunes de todos los conjuntos de registros, pero también extiende las funcionalidades comunes según su especialización. Las instantáneas proporcionan una vista estática de los datos y son útiles para los informes y otras situaciones en las que se quiere obtener una vista de los datos tal como se encontraban en un momento determinado. Los dynasets son útiles cuando se quiere que las actualizaciones realizadas por otros usuarios sean visibles en el conjunto de registros sin necesidad de volver a consultar o actualizar el conjunto de registros. Las instantáneas y los dynasets pueden ser actualizables o de solo lectura. Para reflejar los registros agregados o eliminados por otros usuarios, llame a [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery).
 
@@ -64,11 +64,11 @@ Hay dos tipos principales de conjuntos de registros: [instantáneas](../../data/
     > [!NOTE]
     >  Para obtener información sobre los requisitos del controlador ODBC para la compatibilidad con dynasets, vea [ODBC](../../data/odbc/odbc-basics.md). Vea [Lista de controladores ODBC](../../data/odbc/odbc-driver-list.md) para obtener una lista de los controladores ODBC incluidos en esta versión de Visual C++ e información sobre cómo obtener controladores adicionales.
 
-##  <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> Conjuntos de registros
+## <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> Conjuntos de registros
 
-Para cada tabla, vista o procedimiento almacenado al que quiere acceder, por lo general define una clase derivada de `CRecordset`. (La excepción es una combinación de base de datos, en la que un conjunto de registros representa las columnas de dos o más tablas). Al derivar una clase de conjunto de registros, se habilita el mecanismo de intercambio de campos de registros (RFX) o el mecanismo de intercambio masivo de campos de registro (RFX masivo), que son similares al mecanismo de intercambio de datos de cuadros de diálogo (DDX). RFX y RFX masivo simplifican la transferencia de datos del origen de datos al conjunto de registros. Además, RFX transfiere datos del conjunto de registros al origen de datos. Para obtener más información, vea [intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md) y [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Para cada tabla, vista o procedimiento almacenado al que quiere acceder, por lo general define una clase derivada de `CRecordset`. (La excepción es una combinación de base de datos, en la que un conjunto de registros representa columnas de dos o más tablas.) Cuando se deriva una clase de conjunto de registros, se habilita el mecanismo de intercambio de campos de registros (RFX) o el mecanismo de intercambio masivo de campos de registros (RFX masivo), que son similares al mecanismo de intercambio de datos de cuadro de diálogo (DDX). RFX y RFX masivo simplifican la transferencia de datos del origen de datos al conjunto de registros. Además, RFX transfiere datos del conjunto de registros al origen de datos. Para obtener más información, vea Intercambio de campos de registros [(RFX)](../../data/odbc/record-field-exchange-rfx.md) y [Conjunto de registros: obtención de registros en masa (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-Un objeto de conjunto de registros proporciona acceso a todos los registros seleccionados. Puede desplazarse por los diferentes registros seleccionados mediante funciones miembro `CRecordset`, como `MoveNext` y `MovePrev`. Al mismo tiempo, un objeto de conjunto de registros representa uno solo de los registros seleccionados: el registro actual. Para examinar los campos del registro actual, declare las variables de miembro de la clase de conjunto de registros que se correspondan con las columnas de la tabla o de los registros que se derivan de la consulta de la base de datos. Para obtener información sobre los miembros de datos del conjunto de registros, vea [conjunto de registros: arquitectura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
+Un objeto de conjunto de registros proporciona acceso a todos los registros seleccionados. Puede desplazarse por los diferentes registros seleccionados mediante funciones miembro `CRecordset`, como `MoveNext` y `MovePrev`. Al mismo tiempo, un objeto de conjunto de registros representa uno solo de los registros seleccionados: el registro actual. Para examinar los campos del registro actual, declare las variables de miembro de la clase de conjunto de registros que se correspondan con las columnas de la tabla o de los registros que se derivan de la consulta de la base de datos. Para obtener información acerca de los miembros de datos de conjunto de registros, vea [Conjunto de registros: arquitectura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
 
 En los siguientes temas se explica con más detalle el uso de los objetos de conjunto de registros. Los temas se muestran en categorías funcionales y en el orden natural de exploración para permitir una lectura secuencial.
 
@@ -120,6 +120,6 @@ En los siguientes temas se explica con más detalle el uso de los objetos de con
 
 ## <a name="see-also"></a>Consulte también
 
-[Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Conectividad de base de datos abierta (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Transacción (ODBC)](../../data/odbc/transaction-odbc.md)

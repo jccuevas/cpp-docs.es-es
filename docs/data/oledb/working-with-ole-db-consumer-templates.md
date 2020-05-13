@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395552"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209266"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Trabajar con plantillas de consumidor OLE DB
 
-Los temas siguientes proporcionan algunos ejemplos de cómo usar las plantillas de consumidor OLE DB en escenarios comunes:
+En los temas siguientes se proporcionan algunos ejemplos de cómo usar las plantillas de consumidor OLE DB en escenarios comunes:
 
 - [Simplificar el acceso a datos con atributos de base de datos](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -42,22 +42,22 @@ Los temas siguientes proporcionan algunos ejemplos de cómo usar las plantillas 
 
 - [Actualizar una columna cuando otra tabla contiene una referencia a la fila](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)
 
-- [Usar marcadores](../../data/oledb/using-bookmarks.md)
+- [Utilizar marcadores](../../data/oledb/using-bookmarks.md)
 
 - [Recuperar un objeto BLOB](../../data/oledb/retrieving-a-blob.md)
 
 - [Recibir notificaciones](../../data/oledb/receiving-notifications.md)
 
-Para obtener un ejemplo de creación e implementación de un consumidor OLE DB, consulte [crear un consumidor sencillo](../../data/oledb/creating-an-ole-db-consumer.md).
+Para obtener un ejemplo de cómo crear e implementar un consumidor OLE DB, vea [crear un consumidor sencillo](../../data/oledb/creating-an-ole-db-consumer.md).
 
 También puede encontrar ejemplos de cómo usar las plantillas de consumidor OLE DB en los ejemplos siguientes:
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [Ejemplos](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

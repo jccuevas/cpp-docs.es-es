@@ -1,21 +1,21 @@
 ---
-title: Usar los operadores &lt; de &lt;CArchive y &gt;&gt;
+title: Uso de &lt; &lt; CArchive y &gt; &gt; Operadores
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], loading from previously stored values
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 8e175f35f2218341c69571c818711596180df4a6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 91ea565867cc0cb3b27ad9d5597037b637cb6544
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368958"
 ---
-# <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Usar los operadores &lt; de &lt;CArchive y &gt;&gt;
+# <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Uso de &lt; &lt; CArchive y &gt; &gt; Operadores
 
-`CArchive` proporciona < operadores\< y > > para escribir y leer tipos de datos simples, así como `CObject`s hacia y desde un archivo.
+`CArchive`proporciona \< <y operadores >> para escribir `CObject`y leer tipos de datos simples, así como s a y desde un archivo.
 
 #### <a name="to-store-an-object-in-a-file-via-an-archive"></a>Para almacenar un objeto en un archivo a través de un archivo
 
@@ -23,37 +23,37 @@ ms.locfileid: "79442176"
 
    [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
-#### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Para cargar un objeto a partir de un valor almacenado previamente en un archivo
+#### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Para cargar un objeto desde un valor almacenado previamente en un archivo
 
-1. En el ejemplo siguiente se muestra cómo cargar un objeto a partir de un valor almacenado previamente en un archivo:
+1. En el ejemplo siguiente se muestra cómo cargar un objeto desde un valor almacenado anteriormente en un archivo:
 
    [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
-Normalmente, los datos se almacenan y se cargan desde y hacia un archivo a través de un archivo en las funciones de `Serialize` de clases derivadas de `CObject`, que se deben haber declarado con la macro DECLARE_SERIALIZE. Una referencia a un objeto `CArchive` se pasa a la función `Serialize`. Llame a la función `IsLoading` del objeto `CArchive` para determinar si se ha llamado a la función `Serialize` para cargar los datos del archivo o almacenar los datos en el archivo.
+Normalmente, se almacenan y cargan datos desde `Serialize` y `CObject`hacia un archivo a través de un archivo en las funciones de las clases derivadas, que debe haber declarado con la macro DECLARE_SERIALIZE. Se pasa `CArchive` una referencia a `Serialize` un objeto a la función. Llame a `IsLoading` la `CArchive` función del `Serialize` objeto para determinar si se ha llamado a la función para cargar datos desde el archivo o almacenar datos en el archivo.
 
-Normalmente, la función `Serialize` de una clase serializable `CObject`derivada tiene el formato siguiente:
+La `Serialize` función de `CObject`una clase derivada serializable normalmente tiene la siguiente forma:
 
 [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]
 
-La plantilla de código anterior es exactamente la misma que la que crea AppWizard para la función `Serialize` del documento (una clase derivada de `CDocument`). Esta plantilla de código le ayuda a escribir código que es más fácil de revisar, ya que el código de almacenamiento y el código de carga siempre deben ser paralelos, como en el ejemplo siguiente:
+La plantilla de código anterior es exactamente la `Serialize` misma que la que AppWizard `CDocument`crea para la función del documento (una clase derivada de ). Esta plantilla de código le ayuda a escribir código que es más fácil de revisar, porque el código de almacenamiento y el código de carga siempre deben ser paralelos, como en el ejemplo siguiente:
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-La biblioteca define **<operadores \<** y **>>** para `CArchive` como el primer operando y los siguientes tipos de datos y tipos de clase como segundo operando:
+La biblioteca ** < ** **>>** define `CArchive` y los operadores para como el primer operando y los siguientes tipos de datos y tipos de clase como el segundo operando:
 
 ||||
 |-|-|-|
-|`CObject*`|**Tamaño** y `CSize`|**float**|
-|**WORD**|`CString`|**Punto** y `CPoint`|
-|`DWORD`|**BYTE**|`RECT` y `CRect`|
-|**Doble**|**LONG**|`CTime` y `CTimeSpan`|
+|`CObject*`|**TALLA** Y`CSize`|**Flotador**|
+|**Palabra**|`CString`|**PUNTO** y`CPoint`|
+|`DWORD`|**Byte**|`RECT` y `CRect`|
+|**Double**|**Largo**|`CTime` y `CTimeSpan`|
 |`Int`|**COleCurrency**|`COleVariant`|
 |`COleDateTime`|`COleDateTimeSpan`||
 
 > [!NOTE]
->  Almacenar y cargar `CObject`s a través de un archivo requiere una consideración adicional. Para obtener más información, vea [almacenar y cargar CObjects a través de un archivo](../mfc/storing-and-loading-cobjects-via-an-archive.md).
+> Almacenar y `CObject`cargar s a través de un archivo requiere una consideración adicional. Para obtener más información, consulte Almacenamiento y carga de [CObjects a través](../mfc/storing-and-loading-cobjects-via-an-archive.md)de un archivo .
 
-Los operadores **<\<** y **>>** de CArchive siempre devuelven una referencia al objeto `CArchive`, que es el primer operando. Esto le permite encadenar los operadores, como se muestra a continuación:
+El **CArchive \< ** **>>** <y los operadores siempre devuelven una referencia al `CArchive` objeto, que es el primer operando. Esto le permite encadenar los operadores, como se ilustra a continuación:
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 

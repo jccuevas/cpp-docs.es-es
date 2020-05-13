@@ -1,9 +1,11 @@
 ---
 title: _mbctombb, _mbctombb_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctombb_l
 - _mbctombb
+- _o__mbctombb
+- _o__mbctombb_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: b449dfae04f875c819f34422b9a0ae92e2b8a7c2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d5fcae2a0e403d75383e2998b1ea127dd6f2ef89
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952525"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914280"
 ---
 # <a name="_mbctombb-_mbctombb_l"></a>_mbctombb, _mbctombb_l
 
@@ -59,7 +62,7 @@ unsigned int _mbctombb_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter multibyte que se va a convertir.
 
 *locale*<br/>
@@ -67,15 +70,17 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **_mbctombb** y **_mbctombb_l** devuelven el carácter de un solo byte que corresponde a *c*; en caso contrario, devuelve *c*.
+Si es correcto, **_mbctombb** y **_mbctombb_l** devuelve el carácter de un solo byte que corresponde a *c*; en caso contrario, devuelve *c*.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las funciones **_mbctombb** y **_mbctombb_l** convierten un carácter multibyte determinado en un carácter multibyte de un solo byte correspondiente. Los caracteres deben corresponder a caracteres de un solo byte del intervalo 0x20-0x7E o 0xA1-0xDF que se va a convertir.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el sufijo **_L** usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el sufijo **_L** es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En versiones anteriores, **_mbctombb** se llamaba **zentohan**. Use **_mbctombb** en su lugar.
+En versiones anteriores, **_mbctombb** se llamaba **zentohan**. En su lugar, use **_mbctombb** .
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,9 +89,9 @@ En versiones anteriores, **_mbctombb** se llamaba **zentohan**. Use **_mbctombb*
 |**_mbctombb**|\<mbstring.h>|
 |**_mbctombb_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

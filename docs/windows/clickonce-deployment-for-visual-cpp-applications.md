@@ -6,23 +6,23 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 4408db9d129c03ee5df9b006b03c6586df02afb1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4726fda8c5eca70ce7acde19f141a7c096395e95
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513768"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316606"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Implementación de ClickOnce para aplicaciones de Visual C++
 
-Visual Studio proporciona diferentes tecnologías para implementar aplicaciones Windows: las implementaciones de ClickOnce y de [Windows Installer](/windows/win32/Msi/windows-installer-portal).
+Visual Studio proporciona dos tecnologías diferentes para implementar aplicaciones Windows: implementación de ClickOnce o implementación de [Windows Installer](/windows/win32/Msi/windows-installer-portal).
 
 ## <a name="clickonce-deployment-in-c"></a>Implementación de ClickOnce en C++
 
-El entorno C++ de desarrollo visual no admite directamente la implementación de proyectos C++ de Visual Studio con ClickOnce, pero las herramientas están disponibles para usarlos.
+El entorno de desarrollo de Visual C++ no admite directamente la implementación de proyectos de Visual Studio C++ con ClickOnce, pero hay herramientas disponibles para usarlo.
 
 > [!NOTE]
->  Visual Studio es compatible con ClickOnce en los entornos de desarrollo de Visual C# y Visual Basic. Si el proyecto de C++ Visual Studio es una dependencia de un C# proyecto visual, puede publicar la aplicación (incluidas sus dependencias) mediante la implementación ClickOnce desde el C# entorno de desarrollo visual.
+> Visual Studio es compatible con ClickOnce en los entornos de desarrollo de Visual C# y Visual Basic. Si el proyecto de Visual Studio C++ es una dependencia de un proyecto de Visual C, puede publicar la aplicación (incluidas sus dependencias) mediante la implementación ClickOnce desde el entorno de desarrollo de Visual C.
 
 Para implementar una aplicación de Visual C++ con ClickOnce, primero tiene que generar un [manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest) y un [manifiesto de implementación de ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) mediante [Mage.exe (Herramienta de generación y edición de manifiestos)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) o su versión de interfaz gráfica de usuario (para obtener información, vea [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).
 
@@ -36,16 +36,16 @@ La implementación necesitará la instalación de las bibliotecas de Visual C++ 
 
 También puede que tenga que compilar un programa previo (instalador de requisitos previos) para que la aplicación implemente los componentes de requisito previo; para obtener información sobre el programa previo, vea [Crear paquetes de arranque](/visualstudio/deployment/creating-bootstrapper-packages).
 
-Para obtener una descripción más detallada de la tecnología, vea [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obtener un ejemplo detallado de la implementación ClickOnce, vea [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
+Para obtener una descripción más detallada de la tecnología, vea [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obtener un ejemplo detallado de implementación de ClickOnce, vea [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Mage.exe (Herramienta de generación y edición de manifiestos)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe (Herramienta de creación de certificados)](/windows/win32/SecCrypto/makecert)<br>
+[Makecert.exe (herramienta de creación de certificados)](/windows/win32/SecCrypto/makecert)<br>
 [Implementar aplicaciones de escritorio](deploying-native-desktop-applications-visual-cpp.md)<br>
 [Implementar aplicaciones, servicios y componentes](/visualstudio/deployment/deploying-applications-services-and-components)<br>
-[Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>
+[ClickOnce Seguridad e implementación](/visualstudio/deployment/clickonce-security-and-deployment)<br>
 [Crear paquetes de arranque](/visualstudio/deployment/creating-bootstrapper-packages)<br>
-[Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br>
+[Programación de .NET con C+/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br>
 [Interoperabilidad nativa y de .NET](../dotnet/native-and-dotnet-interoperability.md)

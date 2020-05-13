@@ -1,11 +1,13 @@
 ---
 title: strcmp, wcscmp, _mbscmp, _mbscmp_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - wcscmp
 - _mbscmp
 - _mbscmp_l
 - strcmp
+- _o__mbscmp
+- _o__mbscmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +23,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: 4bef0c61122e93bd45bc0d1238030743f1196d9e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 805e355fe12cb2f7ead6180edd45ad0748570141
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957958"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920388"
 ---
 # <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
@@ -93,17 +96,19 @@ Configuración regional que se va a usar.
 
 El valor devuelto para cada una de estas funciones indica la relación ordinal de *cadena1* a *cadena2*.
 
-|Valor|Relación de string1 y string2|
+|Value|Relación de string1 y string2|
 |-----------|----------------------------------------|
 |< 0|*string1* es menor que *cadena2*|
 |0|*string1* es idéntico a *cadena2*|
 |> 0|*string1* es mayor que *cadena2*|
 
-En un error de validación de parámetros, **_mbscmp** y **_mbscmp_l** devuelven **_NLSCMPERROR**, \<que se define en String \<. h > y mbstring. h >.
+En un error de validación de parámetros, **_mbscmp** y **_mbscmp_l** devuelven **_NLSCMPERROR**, \<que se define en string \<. h> y mbstring. h>.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **strcmp** realiza una comparación ordinal de *cadena1* y *cadena2* y devuelve un valor que indica su relación. **wcscmp** y **_mbscmp** son, respectivamente, versiones de caracteres anchos y multibyte de **strcmp**. **_mbscmp** reconoce las secuencias de caracteres multibyte según la página de códigos multibyte actual y devuelve **_NLSCMPERROR** en un error. **_mbscmp_l** tiene el mismo comportamiento, pero usa el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Además, si *string1* o *cadena2* es un puntero nulo, **_mbscmp** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbscmp** y **_mbscmp_l** devuelven **_NLSCMPERROR** y establecen **errno** en **EINVAL**. **strcmp** y **wcscmp** no validan sus parámetros. Por lo demás, estas funciones se comportan exactamente igual.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -117,7 +122,7 @@ En la configuración regional "C", el orden de los caracteres del juego de carac
 
 En las configuraciones regionales en las que el conjunto de caracteres y el orden de los caracteres lexicográfico difieren, puede usar **strcoll (** en lugar de **strcmp** para la comparación lexicográfico de cadenas. Como alternativa, puede usar **strxfrm** en las cadenas originales y, a continuación, usar **strcmp** en las cadenas resultantes.
 
-Las funciones de **strcmp** distinguen mayúsculas de minúsculas. stricmp, **wcsicmp y\_** **mbsicmp comparanlascadenasconvirtiéndolos\_** en sus formatos en minúsculas.  **\_** Dos cadenas que contienen caracteres que se encuentran entre ' Z ' y ' a ' en la tabla ASCII (' [', '\\', '] ', ' ^ ', ' _ ' y '\`') se comparan de forma diferente, dependiendo de su caso. Por ejemplo, las dos cadenas "ABCDe" y "ABCD ^" se comparan de una manera si la comparación es minúscula ("ABCDE" > "ABCD ^") y la otra ("ABCDe" < "ABCD ^") si la comparación está en mayúsculas.
+Las funciones de **strcmp** distinguen mayúsculas de minúsculas. stricmp, ** \_wcsicmp**y ** \_mbsicmp** comparan las cadenas convirtiéndolos en sus formatos en minúsculas. ** \_** Dos cadenas que contienen caracteres que se encuentran entre ' Z ' y ' a ' en la tabla ASCII (' [', '\\', '] ', ' ^ ', ' _ ' y '\`') se comparan de forma diferente, dependiendo de su caso. Por ejemplo, las dos cadenas "ABCDe" y "ABCD ^" se comparan de una manera si la comparación es minúscula ("ABCDE" > "ABCD ^") y la otra ("ABCDe" < "ABCD ^") si la comparación está en mayúsculas.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -127,7 +132,7 @@ Las funciones de **strcmp** distinguen mayúsculas de minúsculas. stricmp, **wc
 |**wcscmp**|\<string.h> o \<wchar.h>|
 |**_mbscmp**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -182,12 +187,12 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp, _memicmp_l](memicmp-memicmp-l.md)<br/>
-[strcoll (funciones)](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funciones de strcoll (](../../c-runtime-library/strcoll-functions.md)<br/>
 [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514610"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166814"
 ---
 # <a name="importlib"></a>importlib
 
@@ -28,9 +28,9 @@ Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén di
 *tlb_file*<br/>
 El nombre de un archivo .tlb, entre comillas, que desea importar en la biblioteca de tipos del proyecto actual.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El atributo **importlib** C++ hace que `importlib` se coloque una instrucción en el bloque de biblioteca del archivo. idl generado. El atributo **importlib** tiene la misma funcionalidad que el atributo MIDL [importlib](/windows/win32/Midl/importlib) .
+El atributo **importlib** C++ hace que se coloque una instrucción `importlib` en el bloque de biblioteca del archivo. idl generado. El atributo **importlib** tiene la misma funcionalidad que el atributo MIDL [importlib](/windows/win32/Midl/importlib) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -50,13 +50,13 @@ En el código siguiente se muestra un ejemplo de cómo usar **importlib**:
 |||
 |-|-|
 |**Se aplica a**|En cualquier lugar|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>

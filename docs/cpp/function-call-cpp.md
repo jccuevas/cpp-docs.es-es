@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - function call operator ()
 ms.assetid: 5094254a-045b-46f7-8653-69bc91e80dce
-ms.openlocfilehash: 0064b17f0adf5cadf732321fbb62403a1da5db76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7326b0f9c9592cb2b3be973a5ba1747a2015a0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154235"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179814"
 ---
 # <a name="function-call-c"></a>Llamada de función (C++)
 
@@ -28,7 +28,7 @@ El operador de llamada a función, invocado mediante paréntesis, es un operador
 primary-expression ( expression-list )
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En este contexto, `primary-expression` es el primer operando, y `expression-list` (una lista de argumentos que posiblemente esté vacía) es el segundo operando. El operador de llamada a función se utiliza para las operaciones que requieren varios parámetros. Esto funciona porque `expression-list` es una lista en lugar de un solo operando. El operador de llamada a función debe ser una función miembro no estática.
 
@@ -84,6 +84,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Sobrecarga de operadores](../cpp/operator-overloading.md)

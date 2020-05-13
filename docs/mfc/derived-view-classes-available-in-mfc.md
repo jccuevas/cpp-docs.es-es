@@ -7,39 +7,39 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12b31074e4fcc2ed6a83e3669e1044f5b9caedab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373502"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Clases de vistas derivadas disponibles en MFC
 
-La siguiente tabla muestra las clases de vista de MFC y sus relaciones entre sí. Las capacidades de la clase de vista dependen del que se deriva la clase de vista MFC.
+En la tabla siguiente se muestran las clases de vista de MFC y sus relaciones entre sí. Las capacidades de la clase de vista dependen de la clase de vista MFC de la que deriva.
 
-### <a name="view-classes"></a>Clases de vistas
+### <a name="view-classes"></a>Ver clases
 
 |Clase|Descripción|
 |-----------|-----------------|
 |[CView](../mfc/reference/cview-class.md)|Clase base de todas las vistas.|
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|Clase de base `CTreeView`, `CListView`, `CEditView`, y `CRichEditView`. Estas clases le permiten usar la arquitectura documento/vista con los controles comunes de Windows indicados.|
-|[CEditView](../mfc/reference/ceditview-class.md)|Una vista sencilla basada en el Windows editar control de cuadro. Permite escribir y editar texto y puede usarse como base para una aplicación de editor de texto simple. Vea también `CRichEditView`.|
-|[CRichEditView](../mfc/reference/cricheditview-class.md)|Una vista que contiene un [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) objeto. Esta clase es análoga a `CEditView`, pero a diferencia `CEditView`, `CRichEditView` controla texto con formato.|
+|[CCtrlView](../mfc/reference/cctrlview-class.md)|Clase base `CTreeView` `CListView`de `CEditView`, `CRichEditView`, y . Estas clases le permiten utilizar la arquitectura de documento/vista con los controles comunes de Windows indicados.|
+|[CEditView](../mfc/reference/ceditview-class.md)|Una vista simple basada en el control de cuadro de edición de Windows. Permite introducir y editar texto y se puede utilizar como base para una sencilla aplicación de editor de texto. Consulte también `CRichEditView`.|
+|[CRichEditView](../mfc/reference/cricheditview-class.md)|Vista que contiene un objeto [CRichEditCtrl.](../mfc/reference/cricheditctrl-class.md) Esta clase es `CEditView`análoga a , pero a diferencia `CEditView`de , `CRichEditView` controla el texto con formato.|
 |[CListView](../mfc/reference/clistview-class.md)|Una vista que contiene un [CListCtrl](../mfc/reference/clistctrl-class.md) objeto.|
-|[CTreeView](../mfc/reference/ctreeview-class.md)|Una vista que contiene un [CTreeCtrl](../mfc/reference/ctreectrl-class.md) objeto, para las vistas que son similares a la ventana Explorador de soluciones en Visual C++.|
-|[CScrollView](../mfc/reference/cscrollview-class.md)|Clase de base `CFormView`, `CRecordView`, y `CDaoRecordView`. Implementa el contenido de la vista de desplazamiento.|
-|[CFormView](../mfc/reference/cformview-class.md)|Una vista de formulario, una vista que contiene los controles. Una aplicación basada en formularios proporciona una o varias de estas interfaces de formulario.|
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|Una vista de explorador Web con la que los usuarios de la aplicación pueden examinar sitios en el World Wide Web, así como carpetas en el sistema de archivos local y en una red. La vista de explorador Web también puede funcionar como un contenedor de documentos activos.|
-|[CRecordView](../mfc/reference/crecordview-class.md)|Una vista de formulario que muestra registros de base de datos ODBC en controles. Si selecciona la compatibilidad ODBC en el proyecto, la clase de base de la vista es `CRecordView`. La vista está conectada a un `CRowset` objeto.|
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Una vista de formulario que muestra registros de base de datos DAO en controles. Si selecciona la compatibilidad DAO en el proyecto, la clase de base de la vista es `CDaoRecordView`. La vista está conectada a un `CDaoRecordset` objeto.|
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Una vista de formulario que muestra registros de OLE DB en controles. Si selecciona compatibilidad con OLE DB en el proyecto, la clase de base de la vista es `COleDBRecordView`. La vista está conectada a un `CRowset` objeto.|
+|[CTreeView](../mfc/reference/ctreeview-class.md)|Una vista que contiene un [CTreeCtrl](../mfc/reference/ctreectrl-class.md) objeto, para vistas que se asemejan a la ventana Explorador de soluciones en Visual C++.|
+|[CScrollView](../mfc/reference/cscrollview-class.md)|Clase base `CFormView` `CRecordView`de `CDaoRecordView`, , y . Implementa desplazar el contenido de la vista.|
+|[CFormView](../mfc/reference/cformview-class.md)|Una vista de formulario, una vista que contiene controles. Una aplicación basada en formularios proporciona una o varias interfaces de formulario.|
+|[CHtmlView](../mfc/reference/chtmlview-class.md)|Una vista del explorador web con la que el usuario de la aplicación puede examinar sitios en la World Wide Web, así como carpetas en el sistema de archivos local y en una red. La vista explorador web también puede funcionar como un contenedor de documentos activos.|
+|[CRecordView](../mfc/reference/crecordview-class.md)|Vista de formulario que muestra registros de base de datos ODBC en controles. Si selecciona compatibilidad con ODBC en el proyecto, `CRecordView`la clase base de la vista es . La vista está `CRowset` conectada a un objeto.|
+|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Vista de formulario que muestra registros de base de datos DAO en controles. Si selecciona compatibilidad con DAO en el proyecto, `CDaoRecordView`la clase base de la vista es . La vista está `CDaoRecordset` conectada a un objeto.|
+|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Vista de formulario que muestra registros OLE DB en controles. Si selecciona compatibilidad con OLE DB en el proyecto, la clase base de la vista es `COleDBRecordView`. La vista está `CRowset` conectada a un objeto.|
 
 > [!NOTE]
->  A partir de la versión 4.0, MFC `CEditView` se deriva de `CCtrlView`.
+> A partir de la `CEditView` versión 4.0 de MFC, se deriva de `CCtrlView`.
 
-Para utilizar estas clases en la aplicación, derivar las clases de vista de la aplicación de ellos. Para obtener información relacionada, consulte [desplazamiento y escalar vistas](../mfc/scrolling-and-scaling-views.md). Para obtener más información sobre las clases de base de datos, vea [información general: Programación de base de datos](../data/data-access-programming-mfc-atl.md).
+Para usar estas clases en la aplicación, derive las clases de vista de la aplicación de ellas. Para obtener información relacionada, consulte [Vistas de desplazamiento y escalado](../mfc/scrolling-and-scaling-views.md). Para obtener más información sobre las clases de base de datos, vea [Información general: Programación](../data/data-access-programming-mfc-atl.md)de bases de datos .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de vistas](../mfc/using-views.md)

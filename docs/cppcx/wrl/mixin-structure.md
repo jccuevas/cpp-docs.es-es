@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: 16fd6b46d616df7163a304afa7f32ac3c095d398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325363"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213700"
 ---
 # <a name="mixin-structure"></a>MixIn (estructura)
 
@@ -31,18 +31,18 @@ struct MixIn;
 
 ### <a name="parameters"></a>Parámetros
 
-*Derivados*<br/>
-Un tipo derivado de la [implementa](implements-structure.md) estructura.
+*Obtienen*<br/>
+Tipo derivado de la estructura [Implements](implements-structure.md) .
 
 *MixInType*<br/>
 Tipo base.
 
 *hasImplements*<br/>
-**True** si *MixInType* es derivado de la implementación actual del tipo base; **false** en caso contrario.
+**true** si *MixInType* se deriva de la implementación actual del tipo base; de lo contrario, **false** .
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si una clase se deriva de Windows en tiempo de ejecución y las interfaces de clases COM, la lista de declaración de clase primero debe mostrar ninguna interfaz de Windows en tiempo de ejecución y, a continuación, las interfaces de cualquier COM clásico. **MixIn** garantiza que las interfaces se especifican en el orden correcto.
+Si una clase se deriva de interfaces COM de Windows Runtime y de clase, la lista de declaraciones de clase debe enumerar primero cualquier interfaz Windows Runtime y, a continuación, cualquier interfaz COM clásica. **Mixin (** garantiza que las interfaces se especifican en el orden correcto.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -50,10 +50,10 @@ Si una clase se deriva de Windows en tiempo de ejecución y las interfaces de cl
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** implements.h
+**Encabezado:** implementa. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)

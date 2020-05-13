@@ -6,19 +6,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: dfe40d20fc8bb795b0e530b3288b1c2101bc55ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171884"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032309"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listas de argumentos de variables (...) (C++/CLI)
 
 En este ejemplo se muestra cómo puede usar la sintaxis `...` en C++/CLI para implementar las funciones con un número variable de argumentos.
 
 > [!NOTE]
-> Este tema corresponde a C++/CLI. Para obtener información sobre el uso de `...` en la norma ISO de C++, consulte [Puntos suspensivos y plantillas variádicas](../cpp/ellipses-and-variadic-templates.md). En cuanto a los puntos suspensivos y los argumentos predeterminados, consulte [Expresiones postfijas](../cpp/postfix-expressions.md).
+> Este tema corresponde a C++/CLI. Para obtener información `...` sobre el uso de la norma ISO C++, vea Plantillas de [ellipsis y variadic](../cpp/ellipses-and-variadic-templates.md) y Ellipsis y argumentos predeterminados en [Expresiones postfix .](../cpp/postfix-expressions.md)
 
 El parámetro que usa `...` debe ser el último de la lista de parámetros.
 
@@ -101,6 +101,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Matrices](arrays-cpp-component-extensions.md)

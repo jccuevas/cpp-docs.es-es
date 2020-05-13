@@ -1,6 +1,6 @@
 ---
-title: Enumeración EVENT_ID
-description: El C++ SDK de Build insights EVENT_ID referencia de enumeración.
+title: EVENT_ID enum
+description: El SDK de C++ Build Insights EVENT_ID referencia de enumeración.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6dba5d5dded4e08fc6a9fc2279827feefbf13393
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: bcc0bea145a835342c89ad344a0585960fcf0cb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335223"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325576"
 ---
-# <a name="event_id-enum"></a>Enumeración EVENT_ID
+# <a name="event_id-enum"></a>EVENT_ID enum
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Enumeración `EVENT_ID`.
+La `EVENT_ID` enumeración.
 
 ## <a name="members"></a>Miembros
 
-| Name | Valor | URL de detalles de evento |
+| Nombre | Value | URL de detalles del evento |
 |--|--|--|
 | `EVENT_ID_BACK_END_PASS` | 1 (0x00000001) | [BACK_END_PASS](../event-table.md#back-end-pass) |
 | `EVENT_ID_BOTTOM_UP` | 2 (0x00000002) | [BOTTOM_UP](../event-table.md#bottom-up) |
@@ -37,7 +37,7 @@ Enumeración `EVENT_ID`.
 | `EVENT_ID_C2_DLL` | 4 (0x00000004) | [C2_DLL](../event-table.md#c2-dll) |
 | `EVENT_ID_CODE_GENERATION` | 5 (0x00000005) | [CODE_GENERATION](../event-table.md#code-generation) |
 | `EVENT_ID_COMMAND_LINE` | 6 (0x00000006) | [COMMAND_LINE](../event-table.md#command-line) |
-| `EVENT_ID_COMPILER` | 7 (0x00000007) | [COMPILACIÓN](../event-table.md#compiler) |
+| `EVENT_ID_COMPILER` | 7 (0x00000007) | [Compilador](../event-table.md#compiler) |
 | `EVENT_ID_ENVIRONMENT_VARIABLE` | 8 (0x00000008) | [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) |
 | `EVENT_ID_EXECUTABLE_IMAGE_OUTPUT` | 9 (0x00000009) | [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output) |
 | `EVENT_ID_EXP_OUTPUT` | 10 (0x000000A) | [EXP_OUTPUT](../event-table.md#exp-output) |
@@ -45,10 +45,10 @@ Enumeración `EVENT_ID`.
 | `EVENT_ID_FORCE_INLINEE` | 12 (0x000000C) | [FORCE_INLINEE](../event-table.md#force-inlinee) |
 | `EVENT_ID_FRONT_END_FILE` | 13 (0x000000D) | [FRONT_END_FILE](../event-table.md#front-end-file) |
 | `EVENT_ID_FRONT_END_PASS` | 14 (0x000000E) | [FRONT_END_PASS](../event-table.md#front-end-pass) |
-| `EVENT_ID_FUNCTION` | 15 (0x000000F) | [FUNCTION](../event-table.md#function) |
+| `EVENT_ID_FUNCTION` | 15 (0x000000F) | [Función](../event-table.md#function) |
 | `EVENT_ID_IMP_LIB_OUTPUT` | 16 (0x00000010) | [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output) |
 | `EVENT_ID_LIB_OUTPUT` | 17 (0x00000011) | [LIB_OUTPUT](../event-table.md#lib-output) |
-| `EVENT_ID_LINKER` | 18 (0x00000012) | [DEL VINCULADOR](../event-table.md#linker) |
+| `EVENT_ID_LINKER` | 18 (0x00000012) | [Vinculador](../event-table.md#linker) |
 | `EVENT_ID_LTCG` | 19 (0x00000013) | [LTCG](../event-table.md#ltcg) |
 | `EVENT_ID_OBJ_OUTPUT` | 20 (0x00000014) | [OBJ_OUTPUT](../event-table.md#obj-output) |
 | `EVENT_ID_OPT_ICF` | 21 (0x00000015) | [OPT_ICF](../event-table.md#opt-icf) |
@@ -59,12 +59,12 @@ Enumeración `EVENT_ID`.
 | `EVENT_ID_PRE_LTCG_OPT_REF` | 26 (0x0000001A) | [PRE_LTCG_OPT_REF](../event-table.md#pre-ltcg-opt-ref) |
 | `EVENT_ID_SYMBOL_NAME` | 27 (0x0000001B) | [SYMBOL_NAME](../event-table.md#symbol-name) |
 | `EVENT_ID_TEMPLATE_INSTANTIATION` | 28 (0x0000001C) | [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) |
-| `EVENT_ID_THREAD` | 29 (0x0000001D) | [CONVERSACIONES](../event-table.md#thread) |
+| `EVENT_ID_THREAD` | 29 (0x0000001D) | [Hilo](../event-table.md#thread) |
 | `EVENT_ID_TOP_DOWN` | 30 (0x0000001E) | [TOP_DOWN](../event-table.md#top-down) |
 | `EVENT_ID_WHOLE_PROGRAM_ANALYSIS` | 31 (0x0000001F) | [WHOLE_PROGRAM_ANALYSIS](../event-table.md#whole-program-analysis) |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estos valores se usan con las funciones del SDK de C.
+Estos valores se utilizan con las funciones del SDK de C.
 
 ::: moniker-end

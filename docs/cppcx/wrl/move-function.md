@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398178"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213712"
 ---
 # <a name="move-function"></a>Move (función)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,24 +33,24 @@ inline typename RemoveReference<T>::Type&& Move(
 Tipo del argumento.
 
 *arg*<br/>
-Para mover un argumento.
+Argumento que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Parámetro *arg* después de rasgos de referencia o referencia de rvalue, si los hay, se quitaron.
+Se ha quitado el parámetro *arg* después de la referencia o los rasgos de referencia rvalue, si existen.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Mueve el argumento especificado de una ubicación a otra.
 
-Para obtener más información, consulte el **mover semántica** sección de [declarador de referencia Rvalue: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Para obtener más información, vea la sección sobre la **semántica de movimiento** del [declarador de referencia de valor r: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** internal.h
+**Encabezado:** Internal. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

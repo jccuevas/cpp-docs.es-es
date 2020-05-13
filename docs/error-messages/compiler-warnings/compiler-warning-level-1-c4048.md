@@ -1,22 +1,22 @@
 ---
-title: Compilador advertencia (nivel 1) C4048
+title: ADVERTENCIA del compilador (nivel 1) C4048
 ms.date: 11/04/2016
 f1_keywords:
 - C4048
 helpviewer_keywords:
 - C4048
 ms.assetid: 8429f513-4732-40f1-8e56-4c224e723bcb
-ms.openlocfilehash: 6ea9968c8dd116fada08b44c5f9274de63aa08bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b144658ede245c347ecd62f3b2411b592011ef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388623"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164162"
 ---
-# <a name="compiler-warning-level-1-c4048"></a>Compilador advertencia (nivel 1) C4048
+# <a name="compiler-warning-level-1-c4048"></a>ADVERTENCIA del compilador (nivel 1) C4048
 
-subíndices de matriz declaran diferentes: 'identificador1' y 'identificador2'
+distintos subíndices de matriz declarados: ' identificador1 ' y ' identificador2 '
 
-Una expresión contiene punteros a matrices de tamaño distinto. Los punteros se usan sin conversión.
+Una expresión implica punteros a matrices de tamaño diferente. Los punteros se utilizan sin conversión.
 
-Esta advertencia puede corregirse si se conversión explícitamente las matrices al tipo iguales o equivalente.
+Esta advertencia se puede corregir si se convierten explícitamente las matrices en el mismo tipo o en otro equivalente.

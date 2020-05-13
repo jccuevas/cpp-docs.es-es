@@ -10,17 +10,17 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 38a458eb6634d5075315c9c0bbd2cb215bc76eda
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075905"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368653"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: Obtener cálculos SUM y otros resultados agregados (ODBC)
 
 > [!NOTE]
-> El Asistente para consumidores ODBC de MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor de forma manual.
+> El Asistente para consumidores ODBC MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor manualmente.
 
 Este tema es aplicable a las clases ODBC de MFC.
 
@@ -36,10 +36,10 @@ En este tema se explica cómo obtener resultados agregados mediante las siguient
 
 - **COUNT** cuenta el número de registros de una columna de cualquier tipo de datos.
 
-Puede usar estas funciones SQL para obtener información estadística sobre los registros de un origen de datos, en lugar de extraer los registros de este. El conjunto de registros que se crea suele constar de un solo registro (si todas las columnas son agregados) que contiene un valor. (Puede haber más de un registro si utilizó una cláusula **Group by** ). Este valor es el resultado del cálculo o extracción realizado por la función SQL.
+Puede usar estas funciones SQL para obtener información estadística sobre los registros de un origen de datos, en lugar de extraer los registros de este. El conjunto de registros que se crea suele constar de un solo registro (si todas las columnas son agregados) que contiene un valor. (Puede haber más de un registro si usó una cláusula **GROUP BY.)** Este valor es el resultado del cálculo o extracción realizado por la función SQL.
 
 > [!TIP]
->  Para agregar una cláusula **GROUP BY** de SQL (y posiblemente una cláusula **HAVING**) a la instrucción SQL, debe anexarla al final de `m_strFilter`. Por ejemplo:
+> Para agregar una cláusula **GROUP BY** de SQL (y posiblemente una cláusula **HAVING**) a la instrucción SQL, debe anexarla al final de `m_strFilter`. Por ejemplo:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -48,7 +48,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 Puede limitar el número de registros que usa para obtener resultados agregados mediante el filtrado y la ordenación de las columnas.
 
 > [!CAUTION]
->  Algunos operadores de agregación devuelven un tipo de datos diferente de las columnas que están agregando.
+> Algunos operadores de agregación devuelven un tipo de datos diferente de las columnas que están agregando.
 
 - **SUM** y **AVG** podrían devolver el siguiente tipo de datos mayor (por ejemplo, una llamada con `int` devuelve **LONG** o **double**).
 
@@ -56,7 +56,7 @@ Puede limitar el número de registros que usa para obtener resultados agregados 
 
 - **MAX** y **MIN** devuelven el mismo tipo de datos que el de las columnas que calculan.
 
-     Por ejemplo, el Asistente para **Agregar clases** crea `long` `m_lSales` para alojar una columna de ventas, pero debe reemplazarlo por un miembro de datos de `double m_dblSumSales` para acomodar el resultado agregado. Consulte el ejemplo siguiente.
+     Por ejemplo, el Asistente para **agregar clase** crea `long` `m_lSales` para alojar una columna Sales, pero esto se debe reemplazar por un miembro de datos `double m_dblSumSales` para alojar el resultado agregado. Consulte el ejemplo siguiente.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Para obtener un resultado agregado para un conjunto de registros
 
@@ -77,7 +77,7 @@ Puede limitar el número de registros que usa para obtener resultados agregados 
 1. Abra el conjunto de registros. El resultado de la operación de agregación se deja en `m_dblSumSales`.
 
 > [!NOTE]
->  El asistente asigna los nombres de los miembros de datos sin prefijos de notación húngara. Por ejemplo, el asistente produciría `m_Sales` para una columna Sales, en lugar del nombre `m_lSales` usado anteriormente como ejemplo.
+> El asistente asigna los nombres de los miembros de datos sin prefijos de notación húngara. Por ejemplo, el asistente produciría `m_Sales` para una columna Sales, en lugar del nombre `m_lSales` usado anteriormente como ejemplo.
 
 Si usa una clase [CRecordView](../../mfc/reference/crecordview-class.md) para ver los datos, tendrá que cambiar la llamada de función DDX para mostrar el nuevo valor del miembro de datos. En este caso, cámbielo de:
 

@@ -1,9 +1,10 @@
 ---
 title: isascii, __isascii, iswascii
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswascii
 - __isascii
+- _o_iswascii
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857793"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919786"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -61,20 +63,22 @@ int iswascii(
 #define isascii __isascii
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Cada una de estas rutinas devuelve un valor distinto de cero si **c** es una representación concreta de un carácter ASCII. **__isascii** devuelve un valor distinto de cero si **c** es un carácter ASCII (en el intervalo de 0x00 a 0x7F). **iswascii** devuelve un valor distinto de cero si **c** es una representación de caracteres anchos de un carácter ASCII. Cada una de estas rutinas devuelve 0 si **c** no cumple la condición de prueba.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Tanto **__isascii** como **iswascii** se implementan como macros, a menos que se defina la macro de preprocesador _CTYPE_DISABLE_MACROS.
 
-Por compatibilidad con versiones anteriores, **isascii** se implementa como una macro solo si [ &#95; &#95;stdc&#95; ](../../preprocessor/predefined-macros.md) no está definido o está definido como 0; en caso contrario, no está definido.
+Por compatibilidad con versiones anteriores, **isascii** se implementa como una macro solo si [&#95;&#95;stdc&#95;&#95;](../../preprocessor/predefined-macros.md) no está definido o está definido como 0; en caso contrario, no está definido.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -82,7 +86,7 @@ Por compatibilidad con versiones anteriores, **isascii** se implementa como una 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -91,8 +95,8 @@ Por compatibilidad con versiones anteriores, **isascii** se implementa como una 
 
 Las funciones **isascii**, **__isascii** y **iswascii** son específicas de Microsoft. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
-[is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>

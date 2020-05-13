@@ -1,10 +1,11 @@
 ---
 title: cos, cosf, cosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cos
 - cosf
 - cosl
+- _o_cos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1aae123de5ef03af8bcaf8480a84327f88c457c5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170260"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917242"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -69,12 +71,14 @@ Coseno de *x*. Si *x* es mayor o igual que 263, o menor o igual que-263, se prod
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|None|**_DOMAIN**|
+|± QNAN, IND|ninguno|**_DOMAIN**|
 |± INF|**No válido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **cos** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **cos** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **cos** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **cos** siempre toma y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,13 +86,13 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **cos** 
 |-------------|---------------------|-|
 |**cos**, **cosh**, **cosf (**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo en [sin, sinf, Sinl](sin-sinf-sinl.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

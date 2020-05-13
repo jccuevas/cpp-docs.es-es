@@ -1,12 +1,17 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
+- _o__toupper
+- _o__toupper_l
+- _o__towupper_l
+- _o_toupper
+- _o_towupper
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +51,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957905"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913865"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -80,7 +86,7 @@ int _towupper_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter que se va a convertir.
 
 *locale*<br/>
@@ -96,7 +102,7 @@ No se reserva ningún valor devuelto para indicar un error.
 
 Para que **ToUpper** proporcione los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [islower](islower-iswlower-islower-l-iswlower-l.md) deben devolver un valor distinto de cero.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cada una de estas rutinas convierte una determinada letra minúscula en una letra mayúscula si es posible y pertinente. La conversión de mayúsculas y minúsculas de **towupper** es específica de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el sufijo **_L** usan la configuración regional establecida actualmente. Las versiones de estas funciones con el sufijo **_L** toman la configuración regional como parámetro y la usan en lugar de la configuración regional establecida en ese momento. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
@@ -104,11 +110,13 @@ Para que **ToUpper** proporcione los resultados esperados, [__isascii](isascii-i
 
 [Rutinas de conversión de datos](../../c-runtime-library/data-conversion.md)
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**ToUpper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
@@ -118,19 +126,19 @@ Para que **ToUpper** proporcione los resultados esperados, [__isascii](isascii-i
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**toupper**|\<ctype.h>|
+|**ToUpper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|
 |**towupper**|\<ctype.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [to (Funciones)](../../c-runtime-library/to-functions.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
 [to (funciones)](../../c-runtime-library/to-functions.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

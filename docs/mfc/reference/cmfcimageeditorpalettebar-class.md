@@ -1,5 +1,5 @@
 ---
-title: CMFCImageEditorPaletteBar (clase)
+title: CMFCImageEditorPaletteBar (Clase)
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCImageEditorPaletteBar
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-ms.openlocfilehash: 6812f3f425186484ef892d7f5c626c0dfce0f863
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33d4bc0c72718d028031ac11bc67da6aec5e4907
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378107"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374427"
 ---
-# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar (clase)
+# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar (Clase)
 
-Proporciona funcionalidad de la barra de paleta en un cuadro de diálogo del editor de imágenes.
+Proporciona funcionalidad de barra de paletas a un cuadro de diálogo del editor de imágenes.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,15 +33,15 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 |||
 |-|-|
-|Name|Descripción|
-|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Devuelve el alto de los botones de barra de herramientas. (Invalida [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina si la barra de herramientas puede mostrar botones que se han ampliado a los bordes. (Invalida [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|
+|Nombre|Descripción|
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Devuelve el alto de los botones de la barra de herramientas. (Reemplaza [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina si la barra de herramientas puede mostrar botones que tienen bordes extendidos. (Reemplaza [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta clase no está pensada para utilizarse directamente desde el código.
+Esta clase no está pensada para utilizarla directamente desde el código.
 
-El marco de trabajo utiliza esta clase para mostrar una barra de la paleta en un cuadro de diálogo del editor de imágenes. Para obtener más información sobre el cuadro de diálogo del editor de imágenes, consulte [CMFCImageEditorDialog (clase)](../../mfc/reference/cmfcimageeditordialog-class.md).
+El marco de trabajo utiliza esta clase para mostrar una barra de paletas en un cuadro de diálogo del editor de imágenes. Para obtener más información sobre el cuadro de diálogo del editor de imágenes, vea [CMFCImageEditorDialog (Clase)](../../mfc/reference/cmfcimageeditordialog-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -65,9 +65,9 @@ El marco de trabajo utiliza esta clase para mostrar una barra de la paleta en un
 
 **Encabezado:** afximageeditordialog.h
 
-##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight
+## <a name="cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight
 
-Devuelve el alto de los botones de barra de herramientas.
+Devuelve el alto de los botones de la barra de herramientas.
 
 ```
 virtual int GetRowHeight() const;
@@ -75,11 +75,11 @@ virtual int GetRowHeight() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El alto de cada botón en la barra de herramientas.
+La altura de cada botón de la barra de herramientas.
 
-##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
+## <a name="cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
 
-Determina si la barra de herramientas puede mostrar botones que se han ampliado a los bordes.
+Determina si la barra de herramientas puede mostrar botones que tienen bordes extendidos.
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -89,8 +89,8 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 Este método devuelve FALSE.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCImageEditorDialog (clase)](../../mfc/reference/cmfcimageeditordialog-class.md)
+[CMFCImageEditorDialog (Clase)](../../mfc/reference/cmfcimageeditordialog-class.md)

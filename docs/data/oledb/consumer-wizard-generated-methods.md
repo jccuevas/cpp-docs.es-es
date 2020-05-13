@@ -4,18 +4,18 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707721"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211515"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos generados por el Asistente para consumidores
 
 ::: moniker range="vs-2019"
 
-El Asistente para consumidores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente.
+El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente.
 
 ::: moniker-end
 
@@ -27,7 +27,7 @@ El **Asistente para consumidores OLE DB ATL** y el **Asistente para aplicaciones
 
 - `CloseAll` cierra todos los conjuntos de filas abiertos y libera todas las ejecuciones de comandos.
 
-- `OpenAll` llama a `OpenRowset` para abrir el conjunto de filas o los conjuntos de filas del consumidor.
+- `OpenRowset` llama a `OpenAll` para abrir el conjunto de filas o los conjuntos de filas del consumidor.
 
 - `GetRowsetProperties` recupera un puntero a la propiedad del conjunto de filas con las propiedades que se pueden establecer.
 
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si define un método `HasBookmark`, el código `OpenAll` establece la propiedad `DBPROP_IRowsetLocate`; asegúrese de que solo lo hace si su proveedor admite esa propiedad.
 
@@ -141,7 +141,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 No debe definir un método global `GetRowsetProperties` porque podría entrar en conflicto con el definido por el asistente. Se trata de un método generado por el asistente que se obtiene con proyectos de plantillas y atributos. Los atributos no insertan este código.
 
@@ -153,12 +153,12 @@ HRESULT OpenDataSource();
 void CloseDataSource();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El asistente define los métodos `OpenDataSource` y `CloseDataSource`; `OpenDataSource` llama a [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Crear un consumidor OLE DB mediante un asistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

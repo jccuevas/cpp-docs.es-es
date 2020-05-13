@@ -1,21 +1,21 @@
 ---
-title: importidl (atributo de COM de C++)
+title: importidl (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409439"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166827"
 ---
 # <a name="importidl"></a>importidl
 
-Inserta el archivo .idl especificado en el archivo .idl generado.
+Inserta el archivo. idl especificado en el archivo. idl generado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,13 +26,13 @@ Inserta el archivo .idl especificado en el archivo .idl generado.
 ### <a name="parameters"></a>Parámetros
 
 *idl_file*<br/>
-Identifica el nombre del archivo .idl que desea combinar con el archivo .idl que se generará para la aplicación.
+Identifica el nombre del archivo. idl que desea combinar con el archivo. idl que se generará para la aplicación.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **importidl** C++ atributo coloca la sección fuera del bloque de biblioteca (en *idl_file*) en el archivo .idl generado del programa y la sección de biblioteca (en *idl_file*) en la sección de la biblioteca del archivo .idl generado del programa.
+El atributo **importidl** C++ coloca la sección fuera del bloque de biblioteca (en *idl_file*) en el archivo. idl generado del programa y la sección Library (en *idl_file*) en la sección Library del archivo. idl generado del programa.
 
-Es posible que desee usar **importidl**, por ejemplo, si desea usar un archivo .idl codificadas con el archivo .idl generado.
+Puede que desee usar **importidl**, por ejemplo, si desea utilizar un archivo. idl codificado a mano con el archivo. idl generado.
 
 ## <a name="example"></a>Ejemplo
 
@@ -51,12 +51,12 @@ Es posible que desee usar **importidl**, por ejemplo, si desea usar un archivo .
 |-|-|
 |**Se aplica a**|En cualquier lugar|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>

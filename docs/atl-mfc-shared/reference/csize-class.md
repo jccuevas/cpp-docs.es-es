@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 26bb43355f4dff3f77a905068bea83dd1ceaf79c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: dc876781cca568a332072938bec2cda0afb2ac8b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491655"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746972"
 ---
 # <a name="csize-class"></a>Clase CSize
 
@@ -32,29 +32,29 @@ class CSize : public tagSIZE
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CSize::CSize](#csize)|Construye un objeto `CSize`.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CSize:: Operator-](#operator_-)|Resta dos tamaños.|
-|[CSize:: Operator! =](#operator_neq)|Comprueba la desigualdad entre `CSize` y un tamaño.|
-|[CSize:: Operator +](#operator_add)|Agrega dos tamaños.|
-|[CSize:: Operator + =](#operator_add_eq)|Agrega un tamaño a `CSize`.|
-|[CSize:: Operator-=](#operator_-_eq)|Resta un tamaño de `CSize`.|
-|[CSize::operator ==](#operator_eq_eq)|Comprueba la igualdad entre `CSize` y un tamaño.|
+|[CSize::operador -](#operator_-)|Resta dos tamaños.|
+|[CSize::operador !-](#operator_neq)|Comprueba la desigualdad `CSize` entre un tamaño y un tamaño.|
+|[CSize::operador +](#operator_add)|Añade dos tamaños.|
+|[CSize::operador +](#operator_add_eq)|Agrega un tamaño `CSize`a .|
+|[CSize::operador --](#operator_-_eq)|Resta un `CSize`tamaño de .|
+|[CSize::operador ?](#operator_eq_eq)|Comprueba la igualdad `CSize` entre un tamaño y un tamaño.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase se deriva de la `SIZE` estructura. Esto significa que puede pasar un `CSize` en un parámetro que llama a para `SIZE` un y que los miembros de datos `SIZE` de la estructura son miembros de `CSize`datos accesibles de.
+Esta clase se deriva `SIZE` de la estructura. Esto significa que `CSize` puede pasar un parámetro `SIZE` que llama a `SIZE` y que los `CSize`miembros de datos de la estructura son miembros de datos accesibles de .
 
-Los `cx` miembros `cy` y de `SIZE` ( y`CSize`) son públicos. Además, `CSize` implementa las funciones miembro para manipular la `SIZE` estructura.
+Los `cx` `cy` miembros `SIZE` y `CSize`miembros de (y ) son públicos. Además, `CSize` implementa funciones `SIZE` miembro para manipular la estructura.
 
 > [!NOTE]
-> Para obtener más información sobre las clases de utilidad `CSize`compartidas (como), vea [clases compartidas](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+> Para obtener más información sobre `CSize`las clases de utilidad compartidas (como ), vea [Clases compartidas](../../atl-mfc-shared/atl-mfc-shared-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -64,9 +64,9 @@ Los `cx` miembros `cy` y de `SIZE` ( y`CSize`) son públicos. Además, `CSize` i
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atltypes. h
+**Encabezado:** atltypes.h
 
-##  <a name="csize"></a>  CSize::CSize
+## <a name="csizecsize"></a><a name="csize"></a>CSize::CSize
 
 Construye un objeto `CSize`.
 
@@ -81,29 +81,29 @@ CSize( DWORD dwSize) throw();
 ### <a name="parameters"></a>Parámetros
 
 *initCX*<br/>
-Establece el `cx` miembro `CSize`para.
+Establece `cx` el miembro `CSize`para el archivo .
 
 *initCY*<br/>
-Establece el `cy` miembro `CSize`para.
+Establece `cy` el miembro `CSize`para el archivo .
 
 *initSize*<br/>
-Estructura [SIZE](/windows/win32/api/windef/ns-windef-size) u objeto `CSize` que se usa para inicializar `CSize`.
+[SIZE](/windows/win32/api/windef/ns-windef-size) estructura `CSize` u objeto `CSize`utilizado para inicializar .
 
 *initPt*<br/>
-Estructura [POINT](/windows/win32/api/windef/ns-windef-point) u objeto `CPoint` que se usa para inicializar `CSize`.
+[ESTRUCTURA](/windows/win32/api/windef/ns-windef-point) POINT `CPoint` u objeto `CSize`utilizado para inicializar .
 
 *dwSize*<br/>
-DWORD que se usa `CSize`para inicializar. La palabra de orden inferior es el `cx` miembro y la palabra de orden superior es el `cy` miembro.
+DWORD utilizado `CSize`para inicializar . La palabra de orden `cx` bajo es el miembro `cy` y la palabra de orden superior es el miembro.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si no se proporciona ningún argumento `cx` , `cy` y se inicializan en cero.
+Si no se proporciona `cx` `cy` ningún argumento y se inicializan en cero.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATLMFC_Utilities#97](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]
 
-##  <a name="operator_eq_eq"></a>CSize:: Operator = =
+## <a name="csizeoperator-"></a><a name="operator_eq_eq"></a>CSize::operador ?
 
 Comprueba la igualdad entre dos tamaños.
 
@@ -111,15 +111,15 @@ Comprueba la igualdad entre dos tamaños.
 BOOL operator==(SIZE size) const throw();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Devuelve un valor distinto de cero si los tamaños son iguales, otherwize 0.
+Devuelve distinto de cero si los tamaños son iguales, otherwize 0.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATLMFC_Utilities#98](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]
 
-##  <a name="operator_neq"></a>CSize:: Operator! =
+## <a name="csizeoperator-"></a><a name="operator_neq"></a>CSize::operador !-
 
 Comprueba la desigualdad entre dos tamaños.
 
@@ -127,19 +127,19 @@ Comprueba la desigualdad entre dos tamaños.
 BOOL operator!=(SIZE size) const throw();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Devuelve un valor distinto de cero si los tamaños no son iguales; de lo contrario, es 0.
+Devuelve distinto de cero si los tamaños no son iguales, en caso contrario 0.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATLMFC_Utilities#99](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]
 
-##  <a name="operator_add_eq"></a>CSize:: Operator + =
+## <a name="csizeoperator-"></a><a name="operator_add_eq"></a>CSize::operador +
 
-Agrega un tamaño a este `CSize`.
+Agrega un tamaño `CSize`a este archivo .
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 ```
 
@@ -147,11 +147,11 @@ void operator+=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>CSize:: Operator-=
+## <a name="csizeoperator--"></a><a name="operator_-_eq"></a>CSize::operador --
 
-Resta un tamaño de este `CSize`.
+Resta un tamaño `CSize`de este archivo .
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 ```
 
@@ -159,9 +159,9 @@ void operator-=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#101](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]
 
-##  <a name="operator_add"></a>CSize:: Operator +
+## <a name="csizeoperator-"></a><a name="operator_add"></a>CSize::operador +
 
-Estos operadores agregan `CSize` este valor al valor del parámetro.
+Estos operadores `CSize` agregan este valor al valor de parameter.
 
 ```
 CSize operator+(SIZE size) const throw();
@@ -169,29 +169,29 @@ CPoint operator+(POINT point) const throw();
 CRect operator+(const RECT* lpRect) const throw();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Vea las siguientes descripciones de los operadores individuales:
+Consulte las siguientes descripciones de los operadores individuales:
 
-- **operador + (** *tamaño* **)**
+- **operador +(** *tamaño* **)**
 
-  Esta operación agrega dos `CSize` valores.
+  Esta operación `CSize` agrega dos valores.
 
-- **operador + (** *punto* **)**
+- **operador +(** *punto* **)**
 
-  Esta operación desplazará (mueve) un valor de [punto](/previous-versions/dd162805\(v=vs.85\)) (o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) `CSize` por este valor. Los `cx` miembros `cy` y de este `CSize` valor se `x` agregan`y` a los miembros de datos y del valor.`POINT` Es análogo a la versión de [CPoint:: Operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) que toma un parámetro de [tamaño](/windows/win32/api/windef/ns-windef-size) .
+  Esta operación desfasa (mueve) un `CSize` valor [POINT](/windows/win32/api/windef/ns-windef-point) (o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) por este valor. Los `cx` `cy` miembros `CSize` y de este `x` `y` valor se `POINT` agregan a los miembros y datos del valor. Es análogo a la versión de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) que toma un parámetro [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
-- **operador + (** *lpRect* **)**
+- **operador +(** *lpRect* **)**
 
-   Esta operación desplazará (mueve) un valor [Rect](/previous-versions/dd162897\(v=vs.85\)) (o [CRect](../../atl-mfc-shared/reference/crect-class.md)) por `CSize` este valor. Los `cx` miembros `cy` y de este `CSize` valor se agregan a `left`los `top`miembros de datos `bottom` ,, `right`y del `RECT` valor. Es análogo a la versión de [CRect:: Operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) que toma un parámetro de [tamaño](/windows/win32/api/windef/ns-windef-size) .
+   Esta operación desfasa (mueve) un valor `CSize` [RECT](/windows/win32/api/windef/ns-windef-rect) (o [CRect](../../atl-mfc-shared/reference/crect-class.md)) por este valor. Los `cx` `cy` miembros `CSize` y miembros `left`de `top` `right`este `bottom` valor se `RECT` agregan a los miembros , , y data del valor. Es análogo a la versión de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) que toma un parámetro [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]
 
-##  <a name="operator_-"></a>CSize:: Operator-
+## <a name="csizeoperator--"></a><a name="operator_-"></a>CSize::operador -
 
-Los tres primeros operadores restan este `CSize` valor al valor del parámetro.
+Los tres primeros de `CSize` estos operadores restan este valor al valor del parámetro.
 
 ```
 CSize operator-(SIZE size) const throw();
@@ -200,33 +200,33 @@ CRect operator-(const RECT* lpRect) const throw();
 CSize operator-() const throw();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El cuarto operador, el unario menos, cambia el signo del `CSize` valor. Vea las siguientes descripciones de los operadores individuales:
+El cuarto operador, el menos unario, `CSize` cambia el signo del valor. Consulte las siguientes descripciones de los operadores individuales:
 
-- **operador-(** *tamaño* **)**
+- **operador -(** *tamaño* **)**
 
-  Esta operación resta dos `CSize` valores.
+  Esta operación `CSize` resta dos valores.
 
-- **operador-(** *punto* **)**
+- **operador -(** *punto* **)**
 
-  Esta operación desplaza (mueve) un valor de [punto](/previous-versions/dd162805\(v=vs.85\)) o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) por el inverso aditivo de este `CSize` valor. `y` `x` Y de este valor`CSize` se restan de los miembros de datos y del `POINT` valor. `cy` `cx` Es análogo a la versión de [CPoint:: Operator,](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) que toma un parámetro de [tamaño](/windows/win32/api/windef/ns-windef-size) .
+  Esta operación compensa (mueve) [un](/windows/win32/api/windef/ns-windef-point) POINT o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) `CSize` valor por el aditivo inverso de este valor. El `cx` `cy` y `CSize` de este valor `x` se `y` restan `POINT` de los miembros de datos y del valor. Es análogo a la versión de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) que toma un parámetro [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
-- **operador-(** *lpRect* **)**
+- **operador -(** *lpRect* **)**
 
-  Esta operación desplazará (mueve) un valor [Rect](/previous-versions/dd162897\(v=vs.85\)) o [CRect](../../atl-mfc-shared/reference/crect-class.md) por el inverso aditivo de este `CSize` valor. Los `cx` miembros `cy` y de este `CSize` valor se restan de los `left`miembros de `top`datos `right`,, `bottom` y del `RECT` valor. Es análogo a la versión de [CRect:: Operator,](../../atl-mfc-shared/reference/crect-class.md#operator_-) que toma un parámetro de [tamaño](/windows/win32/api/windef/ns-windef-size) .
+  Esta operación compensa (mueve) un valor [RECT](/windows/win32/api/windef/ns-windef-rect) o [CRect](../../atl-mfc-shared/reference/crect-class.md) por el aditivo inverso de este `CSize` valor. Los `cx` `cy` miembros `CSize` y de este `left`valor `top` `right`se `bottom` restan de `RECT` los miembros , , y los datos del valor. Es análogo a la versión de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) que toma un parámetro [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
-- **operator -()**
+- **operador -()**
 
-  Esta operación devuelve el inverso aditivo de este `CSize` valor.
+  Esta operación devuelve el `CSize` aditivo inverso de este valor.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATLMFC_Utilities#103](../../atl-mfc-shared/codesnippet/cpp/csize-class_7.cpp)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Ejemplo de MDI de MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[CRect (clase)](../../atl-mfc-shared/reference/crect-class.md)<br/>
-[CPoint (clase)](../../atl-mfc-shared/reference/cpoint-class.md)
+[Clase CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
+[Clase CPoint](../../atl-mfc-shared/reference/cpoint-class.md)

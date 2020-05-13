@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
 ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158130"
 ---
 # <a name="sizeof-operator-c"></a>sizeof (Operador) (C)
 
@@ -49,7 +49,7 @@ static char *strings[] = {
 const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 ```
 
-En este ejemplo, `strings` es una matriz de punteros a `char`. El número de punteros es el número de elementos de la matriz, pero no se especifica. Es fácil determinar el número de punteros utilizando el operador `sizeof` para calcular el número de elementos de la matriz. El valor entero **const** `string_no` se inicializa en este número. Como es un valor **const**, `string_no` no puede modificarse.
+En este ejemplo, `strings` es una matriz de punteros a `char`. El número de punteros es el número de elementos de la matriz, pero no se especifica. Es fácil determinar el número de punteros utilizando el operador `sizeof` para calcular el número de elementos de la matriz. El valor entero **const**`string_no` se inicializa en este número. Como es un valor **const**, `string_no` no puede modificarse.
 
 ## <a name="see-also"></a>Vea también
 

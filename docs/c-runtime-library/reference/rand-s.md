@@ -1,8 +1,9 @@
 ---
 title: rand_s
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand_s
+- _o_rand_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 652521ab472736783ba1b4498ca7d7c3f297e7ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949653"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919536"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -56,13 +58,15 @@ Un puntero a un entero que contiene el valor generado.
 
 Cero si es correcto, código de error en caso contrario. Si el puntero de entrada _randomValue_ es un puntero nulo, la función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** en **EINVAL**. Si se produce un error en la función por cualquier otro motivo, *_randomValue_ se establece en 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **rand_s** escribe un entero pseudoaleatorios en el intervalo de 0 a **UINT_MAX** en el puntero de entrada. La función **rand_s** utiliza el sistema operativo para generar números aleatorios criptográficamente seguros. No utiliza la inicialización generada por la función [srand](srand.md) , ni afecta a la secuencia de números aleatorios que usa [Rand](rand.md).
+La función **rand_s** escribe un entero pseudoaleatorio en el intervalo de 0 para **UINT_MAX** al puntero de entrada. La función **rand_s** utiliza el sistema operativo para generar números aleatorios criptográficamente seguros. No utiliza la inicialización generada por la función [srand](srand.md) , ni afecta a la secuencia de números aleatorios que usa [Rand](rand.md).
 
-La función **rand_s** requiere que se defina la constante **_CRT_RAND_S** antes de la instrucción de inclusión de la función que se va a declarar, como en el ejemplo siguiente:
+La función **rand_s** requiere que la constante **_CRT_RAND_S** definirse antes que la instrucción de inclusión de la función que se va a declarar, como en el ejemplo siguiente:
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
@@ -127,7 +131,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 10
@@ -153,7 +157,7 @@ int main( void )
 65.0712
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>

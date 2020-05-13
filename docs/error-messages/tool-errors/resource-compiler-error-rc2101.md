@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - RC2101
 ms.assetid: 580f9d74-162f-41e9-9438-ddbe3457c359
-ms.openlocfilehash: 595e87b73d79a01993e0e9b3aaa814332b21413f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3fb576758e447c54e4ddfe7ddb024a1fd35a65f2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345288"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191657"
 ---
 # <a name="resource-compiler-error-rc2101"></a>Error del compilador de recursos RC2101
 
 Directiva no válida en el archivo RC preprocesado
 
-El archivo del compilador de recursos contiene una **#pragma** directiva.
+El archivo del compilador de recursos contiene una directiva **#pragma** .
 
-Use la **#ifndef** directiva de preprocesador con la constante RC_INVOKED que define el compilador de recursos cuando se procesa un archivo de inclusión. Colocar el **#pragma** directiva dentro de un bloque de código que no se procesa cuando se define la constante RC_INVOKED. Código del bloque se procesa solo por el compilador de C/C ++ y no por el compilador de recursos. Ejemplo de código siguiente muestra esta técnica:
+Use la Directiva de preprocesador **#ifndef** con la constante RC_INVOKED que el compilador de recursos define cuando procesa un archivo de inclusión. Coloque la Directiva de **#pragma** dentro de un bloque de código que no se procese cuando se define la constante de RC_INVOKED. El código del bloque solo lo procesa el compiladorC++ de C/y no el compilador de recursos. En el código de ejemplo siguiente se muestra esta técnica:
 
 ```
 #ifndef RC_INVOKED
@@ -27,6 +27,6 @@ Use la **#ifndef** directiva de preprocesador con la constante RC_INVOKED que de
 #endif
 ```
 
-El **#pragma** directiva de preprocesador no tiene ningún significado una. Archivo RC. El **#include** directiva de preprocesador se usa con frecuencia en una. Archivo RC para incluir un archivo de encabezado (un archivo de encabezado personalizado basado en el proyecto o un archivo de encabezado estándar proporcionado por Microsoft con uno de sus productos). Algunos de estos archivos de inclusión contienen la **#pragma** directiva. Dado que un archivo de encabezado puede incluir uno o varios archivos de encabezado, el archivo que contiene la provoca el error **#pragma** directiva puede no ser evidente de inmediato.
+La Directiva de preprocesador **#pragma** no tiene ningún significado en. Archivo RC. La Directiva de preprocesador de **#include** se usa con frecuencia en. Archivo RC para incluir un archivo de encabezado (ya sea un archivo de encabezado personalizado basado en el proyecto o un archivo de encabezado estándar proporcionado por Microsoft con uno de sus productos). Algunos de estos archivos de inclusión contienen la directiva **#pragma** . Dado que un archivo de encabezado puede incluir uno o varios archivos de encabezado, es posible que el archivo que contiene la Directiva de **#pragma** infractora no sea obvio inmediatamente.
 
-El **#ifndef** RC_INVOKED puede controlar archivos de encabezado en archivos de encabezado basados en proyectos de inclusión.
+La técnica de RC_INVOKED de **#ifndef** puede controlar la inclusión de archivos de encabezado en archivos de encabezado basados en el proyecto.

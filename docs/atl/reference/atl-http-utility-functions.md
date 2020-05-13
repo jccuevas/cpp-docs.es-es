@@ -2,12 +2,12 @@
 title: Funciones de la utilidad HTTP de ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c95681503da0d661382e6da33bd33e8f2004838b
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423541"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168610"
 ---
 # <a name="atl-http-utility-functions"></a>Funciones de la utilidad HTTP de ATL
 
@@ -28,7 +28,7 @@ Estas funciones admiten la manipulación de direcciones URL.
 
 **Encabezado:** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 Llame a esta función para canonizar una dirección URL, que incluye la conversión de espacios y caracteres no seguros en secuencias de escape.
 
@@ -76,7 +76,7 @@ Devuelve TRUE si es correcto, FALSE en caso de error.
 
 Se comporta como la versión actual de [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) pero no requiere que se instale WinInet o Internet Explorer.
 
-## <a name="atlcombineurl"></a>AtlCombineUrl
+## <a name="atlcombineurl"></a><a name="atlcombineurl"></a>AtlCombineUrl
 
 Llame a esta función para combinar una dirección URL base y una dirección URL relativa en una única dirección URL canónica.
 
@@ -92,7 +92,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="parameters"></a>Parámetros
 
 *szBaseUrl*<br/>
-Dirección URL base.
+Identificador URL base.
 
 *szRelativeUrl*<br/>
 Dirección URL relativa a la dirección URL base.
@@ -114,7 +114,7 @@ Devuelve TRUE si es correcto, FALSE en caso de error.
 
 Se comporta como la versión actual de [InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) pero no requiere que se instale WinInet o Internet Explorer.
 
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a><a name="atlescapeurl"></a>AtlEscapeUrl
 
 Llame a esta función para convertir todos los caracteres no seguros en secuencias de escape.
 
@@ -155,11 +155,11 @@ ATL_URL marcas que controlan el comportamiento de esta función. Consulte [ATLCa
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-## <a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
+## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
 
 Llame a esta función para obtener el número de puerto predeterminado asociado a un protocolo de Internet o un esquema específicos.
 
-```
+```cpp
 inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ```
 
@@ -172,11 +172,11 @@ El valor [ATL_URL_SCHEME](atl-url-scheme-enum.md) que identifica el esquema para
 
 [ATL_URL_PORT](atl-typedefs.md#atl_url_port) asociado al esquema especificado o ATL_URL_INVALID_PORT_NUMBER si no se reconoce el esquema.
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
 Llame a esta función para comprobar si un carácter es seguro para usarlo en una dirección URL.
 
-```
+```cpp
 inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```
 
@@ -193,7 +193,7 @@ Devuelve TRUE si el carácter de entrada no es seguro, de lo contrario, es FALSE
 
 Los caracteres que no deben usarse en las direcciones URL se pueden probar mediante esta función y convertirse mediante [AtlCanonicalizeUrl](#atlcanonicalizeurl).
 
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a>AtlUnescapeUrl
 
 Llame a esta función para convertir de nuevo los caracteres de escape en sus valores originales.
 
@@ -233,7 +233,7 @@ Devuelve TRUE si es correcto, FALSE en caso de error.
 
 Invierte el proceso de conversión aplicado por [AtlEscapeUrl](#atlescapeurl).
 
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a><a name="rgbtohtml"></a>RGBToHtml
 
 Convierte un valor [COLORREF](/windows/win32/gdi/colorref) en el texto html correspondiente a ese valor de color.
 
@@ -246,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 Valor de color RGB.
 
 *pbOut*<br/>
@@ -263,7 +263,7 @@ Devuelve TRUE si es correcto, FALSE en caso de error.
 
 Un valor de color HTML es un signo de almohadilla seguido de un valor hexadecimal de 6 dígitos que usa 2 dígitos para cada uno de los componentes rojo, verde y azul del color (por ejemplo, #FFFFFF es blanco).
 
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 Llame a esta función para convertir una hora del sistema en una cadena con un formato adecuado para usarla en encabezados HTTP.
 
@@ -279,7 +279,7 @@ inline void SystemTimeToHttpDate(
 La hora del sistema que se va a obtener como una cadena de formato HTTP.
 
 *strTime*<br/>
-Referencia a una variable de cadena para recibir la fecha y hora HTTP tal como se define en RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) y RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
+Referencia a una variable de cadena para recibir la fecha y hora HTTP tal como se define en[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)RFC 2616 () y[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)RFC 1123 ().
 
 ## <a name="see-also"></a>Consulte también
 

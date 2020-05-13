@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88811e8070fdfe398bc12734221dee772515d8bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184484"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190543"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>Búsqueda de nombres dependientes de argumentos (Koenig) en las funciones
 
-El compilador puede utilizar la búsqueda de nombres dependiente de argumentos para encontrar la definición de una llamada de función incompleta. La búsqueda de nombres dependiente de argumentos también se denomina búsqueda de Koenig. El tipo de cada argumento de una función se define dentro de una jerarquía de espacios de nombres, clases, estructuras, uniones o plantillas. Al especificar una sin calificar [postfijo](../cpp/postfix-expressions.md) llamada de función, el compilador busca la definición de función en la jerarquía asociada con cada tipo de argumento.
+El compilador puede utilizar la búsqueda de nombres dependiente de argumentos para encontrar la definición de una llamada de función incompleta. La búsqueda de nombres dependiente de argumentos también se denomina búsqueda de Koenig. El tipo de cada argumento de una función se define dentro de una jerarquía de espacios de nombres, clases, estructuras, uniones o plantillas. Cuando se especifica una llamada a una función de [postfijo](../cpp/postfix-expressions.md) incompleta, el compilador busca la definición de función en la jerarquía asociada a cada tipo de argumento.
 
 ## <a name="example"></a>Ejemplo
 

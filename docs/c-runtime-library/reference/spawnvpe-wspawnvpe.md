@@ -1,9 +1,11 @@
 ---
 title: _spawnvpe, _wspawnvpe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _spawnvpe
 - _wspawnvpe
+- _o__spawnvpe
+- _o__wspawnvpe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 1ea71f5d7a9cd640e3d314eb48846bca995dca5c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8f974dcfe59551c2fd0fddd7d9c66fb3d46d9b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442698"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919709"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -80,7 +83,7 @@ Matriz de punteros a la configuración del entorno
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto de una **_spawnvpe** o **_wspawnvpe** sincrónica ( **_P_WAIT** especificado para el *modo*) es el estado de salida del nuevo proceso. El valor devuelto de una **_spawnvpe** o **_wspawnvpe** asincrónica ( **_P_NOWAIT** o **_P_NOWAITO** especificados para el *modo*) es el identificador del proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la rutina de **salida** con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de-1 indica un error (el nuevo proceso no se inicia). En este caso, **errno** se establece en uno de los valores siguientes:
+El valor devuelto de una **_spawnvpe** o **_wspawnvpe** sincrónica (**_P_WAIT** especificado para el *modo*) es el estado de salida del nuevo proceso. El valor devuelto de una **_spawnvpe** o **_wspawnvpe** asincrónica (**_P_NOWAIT** o **_P_NOWAITO** especificados para el *modo*) es el identificador del proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la rutina de **salida** con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de-1 indica un error (el nuevo proceso no se inicia). En este caso, **errno** se establece en uno de los valores siguientes:
 
 |||
 |-|-|
@@ -90,13 +93,15 @@ El valor devuelto de una **_spawnvpe** o **_wspawnvpe** sincrónica ( **_P_WAIT*
 | **ENOEXEC** | El archivo especificado no es ejecutable o no tiene un formato de archivo ejecutable válido. |
 | **ENOMEM** | Memoria insuficiente para ejecutar el nuevo proceso. |
 
-Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
+Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
 ## <a name="remarks"></a>Observaciones
 
 Cada una de estas funciones crea y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y una matriz de punteros a la configuración del entorno. Estas funciones usan la variable de entorno **path** para buscar el archivo que se va a ejecutar.
 
 Estas funciones validan sus parámetros. Si *cmdname* o *argv* es un puntero nulo, o si *argv* apunta a un puntero nulo, o *argv*[0] es una cadena vacía, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL**y devuelven-1. No se genera ningún proceso nuevo.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,17 +110,17 @@ Estas funciones validan sus parámetros. Si *cmdname* o *argv* es un puntero nul
 |**_spawnvpe**|\<stdio.h> o \<process.h>|
 |**_wspawnvpe**|\<stdio.h> o \<wchar.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md).
+Consulte el ejemplo de [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-[abort](abort.md)<br/>
+[aborta](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec, _wexec (funciones)](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

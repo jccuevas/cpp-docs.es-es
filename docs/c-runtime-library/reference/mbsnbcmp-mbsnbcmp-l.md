@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcmp, _mbsnbcmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcmp
 - _mbsnbcmp_l
+- _o__mbsnbcmp
+- _o__mbsnbcmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 512fd2dae54afa4a37b2b3d3103ab090d81909fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: edba674a0873b1f0a5f37457235c0dc1a8210ded
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952304"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911974"
 ---
 # <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
@@ -79,23 +82,25 @@ Configuración regional que se va a usar.
 
 El valor devuelto indica la relación ordinal entre las subcadenas de *string1* y *String2*.
 
-|Valor devuelto|DESCRIPCIÓN|
+|Valor devuelto|Descripción|
 |------------------|-----------------|
 |< 0|la subcadena *cadena1* es menor que *cadena2* subcadena.|
 |0|la subcadena *cadena1* es idéntica a la subcadena *cadena2* .|
 |> 0|la subcadena *cadena1* es mayor que *cadena2* subcadena.|
 
-En un error de validación de parámetros, **_mbsnbcmp** y **_mbsnbcmp_l** devuelven **_NLSCMPERROR**, \<que se define en String \<. h > y mbstring. h >.
+En un error de validación de parámetros, **_mbsnbcmp** y **_mbsnbcmp_l** devuelven **_NLSCMPERROR**, \<que se define en string \<. h> y mbstring. h>.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las funciones **_mbsnbcmp** comparan como máximo los primeros bytes de *recuento* en *cadena1* y *cadena2* y devuelven un valor que indica la relación entre las subcadenas. **_mbsnbcmp** es una versión de **_mbsnbicmp**que distingue mayúsculas de minúsculas. A diferencia de **_mbsnbcoll**, **_mbsnbcmp** no se ve afectado por el orden de intercalación de la configuración regional. **_mbsnbcmp** reconoce secuencias de caracteres multibyte según la [Página de códigos](../../c-runtime-library/code-pages.md)multibyte actual.
 
 **_mbsnbcmp** es similar a **_mbsncmp**, salvo que **_mbsncmp** compara las cadenas por caracteres en lugar de por bytes.
 
-El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional, que especifica los bytes iniciales y los bytes finales de los caracteres multibyte. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md). La función **_mbsnbcmp** usa la configuración regional actual para este comportamiento dependiente de la configuración regional. La función **_mbsnbcmp_l** es idéntica, salvo que usa el parámetro *locale* en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional, que especifica los bytes iniciales y finales de los caracteres multibyte. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md). La función **_mbsnbcmp** usa la configuración regional actual para este comportamiento dependiente de la configuración regional. La función **_mbsnbcmp_l** es idéntica, salvo que usa el parámetro *locale* en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Si *string1* o *cadena2* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven **_NLSCMPERROR** y **errno** se establece en **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -111,7 +116,7 @@ Si *string1* o *cadena2* es un puntero nulo, estas funciones invocan el controla
 |**_mbsnbcmp**|\<mbstring.h>|
 |**_mbsnbcmp_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -150,7 +155,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Compare strings:
@@ -171,5 +176,5 @@ Result:   String 1 is equal to string 2
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

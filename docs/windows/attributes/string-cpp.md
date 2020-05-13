@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514007"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166170"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -23,7 +23,7 @@ Indica que la matriz **Char**, **wchar_t**, `byte` (o equivalente) unidimensiona
 [string]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo de **cadena** C++ tiene la misma funcionalidad que el atributo MIDL de [cadena](/windows/win32/Midl/string) .
 
@@ -51,13 +51,13 @@ __interface IFireTabCtrl
 |||
 |-|-|
 |**Se aplica a**|Matriz o puntero a una matriz, parámetro de interfaz, método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de matriz](array-attributes.md)<br/>

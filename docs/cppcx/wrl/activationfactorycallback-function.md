@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0be4bebcc561cdf1df3f2502c8cc1927bdc65564
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214219"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (función)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,28 +29,28 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 
 ### <a name="parameters"></a>Parámetros
 
-*activationId*<br/>
+*Activationid (*<br/>
 Identificador de una cadena que especifica un nombre de clase en tiempo de ejecución.
 
 *ppFactory*<br/>
-Cuando finalice esta operación, un generador de activación que corresponde al parámetro *activationId*.
+Cuando se completa esta operación, un generador de activación que corresponde al parámetro *activationid (* .
 
 ## <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error. Valores HRESULT de error probable son CLASS_E_CLASSNOTAVAILABLE y E_INVALIDARG.
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error. Los valores HRESULT de error probables son CLASS_E_CLASSNOTAVAILABLE y E_INVALIDARG.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Obtiene el generador de activación para el identificador de activación especificado.
 
-El tiempo de ejecución de Windows llama a esta función de devolución de llamada para solicitar un objeto especificado por su nombre de clase en tiempo de ejecución.
+El Windows Runtime llama a esta función de devolución de llamada para solicitar un objeto especificado por su nombre de clase en tiempo de ejecución.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** module.h
+**Encabezado:** Module. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

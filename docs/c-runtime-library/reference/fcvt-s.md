@@ -1,8 +1,9 @@
 ---
 title: _fcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fcvt_s
+- _o__fcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 557a1d359c389f0eb7477aab4bf9cbb51558703a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623832"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920201"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -62,19 +64,19 @@ errno_t _fcvt_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*buffer*<br/>
+*búfer*<br/>
 Búfer proporcionado que contendrá el resultado de la conversión.
 
 *sizeInBytes*<br/>
 Tamaño del búfer en bytes.
 
-*valor*<br/>
+*value*<br/>
 Número que se va a convertir.
 
 *count*<br/>
 Número de dígitos después del separador decimal.
 
-*dec*<br/>
+*Dec*<br/>
 Puntero a la posición del separador decimal almacenada.
 
 *sign*<br/>
@@ -82,24 +84,24 @@ Puntero al indicador de signo almacenado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcta. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h. Para obtener una lista de estos errores, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Cero si es correcto. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h. Para obtener una lista de estos errores, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 En el caso de un parámetro no válido, como se muestra en la siguiente tabla, esta función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **EINVAL**.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*sizeInBytes*|valor|count|dec|sign|Volver|Valor en *búfer*|
+|*búfer*|*sizeInBytes*|value|count|dec|Firma|Valor devuelto|Valor en *búfer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|any|any|any|any|any|**EINVAL**|No se ha modificado.|
-|Not **null** (apunta a la memoria válida)|<=0|any|any|any|any|**EINVAL**|No se ha modificado.|
-|any|any|any|any|**NULL**|any|**EINVAL**|No se ha modificado.|
-|any|any|any|any|any|**NULL**|**EINVAL**|No se ha modificado.|
+|**ACEPTA**|cualquiera|cualquiera|cualquiera|cualquiera|cualquiera|**EINVAL**|No se ha modificado.|
+|Not **null** (apunta a la memoria válida)|<=0|cualquiera|cualquiera|cualquiera|cualquiera|**EINVAL**|No se ha modificado.|
+|cualquiera|cualquiera|cualquiera|cualquiera|**ACEPTA**|cualquiera|**EINVAL**|No se ha modificado.|
+|cualquiera|cualquiera|cualquiera|cualquiera|cualquiera|**ACEPTA**|**EINVAL**|No se ha modificado.|
 
 ## <a name="security-issues"></a>Problemas de seguridad
 
 **_fcvt_s** puede generar una infracción de acceso si el *búfer* no apunta a una memoria válida y no es **null**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_fcvt_s** convierte un número de punto flotante en una cadena de caracteres terminada en NULL. El parámetro de *valor* es el número de punto flotante que se va a convertir. **_fcvt_s** almacena los dígitos del *valor* como una cadena y anexa un carácter nulo (' \ 0 '). El parámetro *Count* especifica el número de dígitos que se almacenarán después del separador decimal. Los dígitos sobrantes se redondean a los lugares de *recuento* . Si hay menos de dígitos de *número* de precisión, la cadena se rellena con ceros.
 
@@ -112,6 +114,8 @@ La diferencia entre **_ecvt_s** y **_fcvt_s** está en la interpretación del pa
 En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 La versión de depuración de esta función rellena primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -155,7 +159,7 @@ int main()
 Converted value: 120000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>

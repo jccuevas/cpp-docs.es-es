@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-ms.openlocfilehash: 342980ac9a7cae8a98ffd0f367c666487e34e5de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7753c1ad41f12fa8c14d2f10c9e2f91e043a5846
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231315"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213608"
 ---
 # <a name="removereference-structure"></a>RemoveReference (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,17 +34,17 @@ struct RemoveReference<T&&>;
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-Una clase.
+Clase.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Elimina el rasgo de referencia o referencia de rvalue desde el parámetro de plantilla de clase especificada.
+Quita la referencia o el rasgo de referencia rvalue del parámetro de plantilla de clase especificado.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`Type`|Sinónimo del parámetro de plantilla de clase.|
 
@@ -54,10 +54,10 @@ Elimina el rasgo de referencia o referencia de rvalue desde el parámetro de pla
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** internal.h
+**Encabezado:** Internal. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

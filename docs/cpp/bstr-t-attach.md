@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 8601ebbea6a9ab837c07518b018e83e8c0df226d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385068"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749701"
 ---
-# <a name="bstrtattach"></a>_bstr_t::Attach
+# <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
 Vincula un contenedor `_bstr_t` a un `BSTR`.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Attach(
    BSTR s
 );
@@ -32,15 +32,15 @@ void Attach(
 *s*<br/>
 `BSTR` que se va a asociar con, o asignar a, la variable `_bstr_t`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Si `_bstr_t` se ha asociado previamente a otro `BSTR`, `_bstr_t` limpiará el recurso de `BSTR`, si ninguna otra variable `_bstr_t` está utilizando `BSTR`.
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [_bstr_t:: Assign](../cpp/bstr-t-assign.md) para obtener un ejemplo con **adjuntar**.
+Consulte [_bstr_t::Asignar](../cpp/bstr-t-assign.md) para obtener un ejemplo mediante **Adjuntar**.
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
 ## <a name="see-also"></a>Vea también
 

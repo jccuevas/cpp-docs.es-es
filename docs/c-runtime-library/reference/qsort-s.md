@@ -1,8 +1,9 @@
 ---
 title: qsort_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort_s
+- _o_qsort_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 934801531804345a8cede6ed1ac4abb06bae45b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949750"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913275"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -56,19 +58,19 @@ void qsort_s(
 *base*<br/>
 Inicio de la matriz de destino.
 
-*number*<br/>
+*número*<br/>
 Tamaño de la matriz en elementos.
 
 *width*<br/>
 Tamaño del elemento en bytes.
 
-*compare*<br/>
+*Compare*<br/>
 Función de comparación. El primer argumento es el puntero de *contexto* . El segundo argumento es un puntero a la *clave* de la búsqueda. El tercer argumento es un puntero al elemento de la matriz que se va a comparar con la *clave*.
 
-*context*<br/>
+*contextoo*<br/>
 Un puntero a un contexto, que puede ser cualquier objeto al que la rutina de *comparación* necesite tener acceso.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **qsort_s** implementa un algoritmo de ordenación rápida para ordenar una matriz de elementos *numéricos* , cada uno de los bytes de *ancho* . La *base* del argumento es un puntero a la base de la matriz que se va a ordenar. **qsort_s** sobrescribe esta matriz con los elementos ordenados. El argumento *Compare* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica su relación. **qsort_s** llama a la rutina de *comparación* una o más veces durante la ordenación, pasando punteros a dos elementos de la matriz en cada llamada:
 
@@ -78,7 +80,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 La rutina debe comparar los elementos y luego devolver uno de los siguientes valores:
 
-|Valor devuelto|DESCRIPCIÓN|
+|Valor devuelto|Descripción|
 |------------------|-----------------|
 |< 0|**Elem1** menor que **Elem2**|
 |0|**Elem1** equivalente a **Elem2**|
@@ -86,18 +88,20 @@ La rutina debe comparar los elementos y luego devolver uno de los siguientes val
 
 La matriz se clasifica en orden ascendente, de acuerdo con la función de comparación. Para clasificar una matriz en orden decreciente, invierta el sentido de "mayor que" y "menor que" en la función de comparación.
 
-Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** se establece en **EINVAL**. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** se establece en **EINVAL**. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|key|base|compare|num|ancho|errno|
+|key|base|compare|num|width|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|any|any|any|any|**EINVAL**|
-|any|**NULL**|any|!= 0|any|**EINVAL**|
-|any|any|any|any|<= 0|**EINVAL**|
-|any|any|**NULL**|any|any|**EINVAL**|
+|**ACEPTA**|cualquiera|cualquiera|cualquiera|cualquiera|**EINVAL**|
+|cualquiera|**ACEPTA**|cualquiera|!= 0|cualquiera|**EINVAL**|
+|cualquiera|cualquiera|cualquiera|cualquiera|<= 0|**EINVAL**|
+|cualquiera|cualquiera|**ACEPTA**|cualquiera|cualquiera|**EINVAL**|
 
-**qsort_s** tiene el mismo comportamiento que **qsort** pero tiene el parámetro de *contexto* y establece **errno**. Al pasar un parámetro de *contexto* , las funciones de comparación pueden utilizar un puntero de objeto para tener acceso a la funcionalidad del objeto u otra información no accesible a través de un puntero de elemento. La adición del parámetro de *contexto* hace que **qsort_s** sea más seguro porque el *contexto* se puede usar para evitar errores de reentrada introducidos mediante variables estáticas para que la información compartida esté disponible para la función de *comparación* .
+**qsort_s** tiene el mismo comportamiento que **qsort** pero tiene el parámetro de *contexto* y establece **errno**. Al pasar un parámetro de *contexto* , las funciones de comparación pueden utilizar un puntero de objeto para tener acceso a la funcionalidad del objeto u otra información no accesible a través de un puntero de elemento. La adición del parámetro de *contexto* hace **qsort_s** más seguro porque el *contexto* se puede usar para evitar errores de reentrada introducidos mediante variables estáticas para que la información compartida esté disponible para la función de *comparación* .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,9 +109,9 @@ Si se pasan parámetros no válidos a la función, se invoca el controlador de p
 |-------------|---------------------|
 |**qsort_s**|\<stdlib.h> y \<search.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-**Libre** Todas las versiones de las características de la [biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -250,7 +254,7 @@ int main( )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Unsorted input:
@@ -263,7 +267,7 @@ España Español espantado
 table tablet tableux
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

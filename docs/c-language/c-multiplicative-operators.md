@@ -11,35 +11,35 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: e06ef25c14f8073d2b8753b57c9593af7bb6c69f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857130"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334997"
 ---
 # <a name="c-multiplicative-operators"></a>Operadores de multiplicación de C
 
-Los operadores multiplicativos realizan operaciones de multiplicación (<strong>\*</strong>), división ( **/** ) y resto ( **%** ).
+Los operadores multiplicativos<strong>\*</strong>realizan**/** operaciones de**%** multiplicación ( ), división ( ) y resto ( ).
 
 ## <a name="syntax"></a>Sintaxis
 
-*multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
+*multiplicative-expression* &nbsp; &nbsp; &nbsp; &nbsp;: *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **/** *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **%** *cast-expression cast-expression expression*
 
-Los operandos del operador de resto ( **%** ) deben ser enteros. Los operadores de multiplicación (<strong>\*</strong>) y división ( **/** ) pueden tomar operandos de tipo entero o flotante; los tipos de los operandos pueden ser diferentes.
+Los operandos del operador**%** restante ( ) deben ser integrales. Los operadores<strong>\*</strong>de multiplicación ( ) y división (**/**) pueden tomar operandos de tipo integral o flotante; los tipos de operandos pueden ser diferentes.
 
 Los operadores multiplicativos realizan las conversiones aritméticas usuales en los operandos. El tipo del resultado es el tipo de los operandos después de la conversión.
 
 > [!NOTE]
->  Como las conversiones realizadas por los operadores multiplicativos no proporcionan condiciones de desbordamiento o subdesbordamiento, la información puede perderse si el resultado de una operación multiplicativa no se puede representar en el tipo de los operandos después de la conversión.
+> Como las conversiones realizadas por los operadores multiplicativos no proporcionan condiciones de desbordamiento o subdesbordamiento, la información puede perderse si el resultado de una operación multiplicativa no se puede representar en el tipo de los operandos después de la conversión.
 
 A continuación se describen los operadores multiplicativos de C:
 
-|"??"|Descripción|
+|Operator|Descripción|
 |--------------|-----------------|
 |<strong>\*</strong>|El operador de multiplicación hace que se multipliquen sus dos operandos.|
-|**/**|El operador de división hace que el primer operando se divida por el segundo. Si se dividen dos operandos enteros y el resultado no es un entero, se trunca según las reglas siguientes:<br/><br/>- El resultado de la división por 0 es indefinido según el estándar ANSI C. El compilador de C de Microsoft genera un error en tiempo de compilación o en tiempo de ejecución.<br/><br/>- Si ambos operandos son positivos o sin signo, el resultado se trunca hacia 0.<br/><br/>- Si alguno de los operandos es negativo, la implementación define si el resultado de la operación es el entero más grande menor o igual que el cociente algebraico o es el entero más pequeño mayor o igual que el cociente algebraico. (Vea la sección específica de Microsoft más adelante).|
-|**%**|El resultado del operador de resto es el resto cuando el primer operando se divide por el segundo. Cuando la división es inexacta, el resultado viene determinado por las reglas siguientes:<br/><br/>- Si el operando derecho es cero, el resultado es indefinido.<br/><br/>- Si ambos operandos son positivos o sin signo, el resultado es positivo.<br/><br/>- Si algún operando es negativo y el resultado es inexacto, el resultado lo define la implementación. (Vea la sección específica de Microsoft más adelante).|
+|**/**|El operador de división hace que el primer operando se divida por el segundo. Si se dividen dos operandos enteros y el resultado no es un entero, se trunca según las reglas siguientes:<br/><br/>- El resultado de la división por 0 es indefinido según el estándar ANSI C. El compilador de C de Microsoft genera un error en tiempo de compilación o en tiempo de ejecución.<br/><br/>- Si ambos operandos son positivos o sin signo, el resultado se trunca hacia 0.<br/><br/>- Si alguno de los operandos es negativo, la implementación define si el resultado de la operación es el entero más grande menor o igual que el cociente algebraico o es el entero más pequeño mayor o igual que el cociente algebraico. (Consulte la sección específica de Microsoft a continuación.)|
+|**%**|El resultado del operador de resto es el resto cuando el primer operando se divide por el segundo. Cuando la división es inexacta, el resultado viene determinado por las reglas siguientes:<br/><br/>- Si el operando derecho es cero, el resultado es indefinido.<br/><br/>- Si ambos operandos son positivos o sin signo, el resultado es positivo.<br/><br/>- Si algún operando es negativo y el resultado es inexacto, el resultado lo define la implementación. (Consulte la sección específica de Microsoft a continuación.)|
 
 ### <a name="microsoft-specific"></a>Específico de Microsoft
 
@@ -76,7 +76,7 @@ n = i % j;
 
 Esta instrucción asigna `n` al resto entero, 1, cuando 10 se divide por 3.
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
 El signo del resto es igual que el signo del dividendo. Por ejemplo:
 
@@ -87,8 +87,8 @@ El signo del resto es igual que el signo del dividendo. Por ejemplo:
 
 En cada caso, `50` y `2` tienen el mismo signo.
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Operadores de multiplicación y el operador de módulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+[Operadores multiplicativos y el operador de módulos](../cpp/multiplicative-operators-and-the-modulus-operator.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointU [MFC], CD2DPointU
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
-ms.openlocfilehash: 6289d33aa0672d1ee423d91b11527dccfc868da7
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 8c6db55f1dde1fd054a1f75590f5969c097b2f90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369142"
 ---
 # <a name="cd2dpointu-class"></a>Clase CD2DPointU
 
@@ -29,15 +29,15 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CD2DPointU::CD2DPointU](#cd2dpointu)|Sobrecargado. Construye un objeto `CD2DPointU` a partir `D2D1_POINT_2U` de un objeto de objeto.|
+|[CD2DPointU::CD2DPointU](#cd2dpointu)|Sobrecargado. Construye un `CD2DPointU` objeto `D2D1_POINT_2U` de objeto from.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CD2DPointU::operator CPoint](#operator_cpoint)|`CD2DPointU` Convierte en`CPoint` objeto.|
+|[CD2DPointU::operador CPoint](#operator_cpoint)|Convierte `CD2DPointU` en `CPoint` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -47,9 +47,9 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxrendertarget. h
+**Encabezado:** afxrendertarget.h
 
-##  <a name="cd2dpointu"></a>  CD2DPointU::CD2DPointU
+## <a name="cd2dpointucd2dpointu"></a><a name="cd2dpointu"></a>CD2DPointU::CD2DPointU
 
 Construye un objeto CD2DPointU a partir del objeto CPoint.
 
@@ -62,18 +62,18 @@ CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*pt*<br/>
-punto de origen
+*Pt*<br/>
+punto fuente
 
-*uX*<br/>
-origen X
+*Ux*<br/>
+fuente X
 
-*uY*<br/>
-Y de origen
+*Uy*<br/>
+fuente Y
 
-##  <a name="operator_cpoint"></a>  CD2DPointU::operator CPoint
+## <a name="cd2dpointuoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointU::operador CPoint
 
-Convierte CD2DPointU en el objeto CPoint.
+Convierte CD2DPointU en CPoint objeto.
 
 ```
 operator CPoint();
@@ -83,6 +83,6 @@ operator CPoint();
 
 Valor actual del punto D2D.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

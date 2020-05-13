@@ -1,9 +1,11 @@
 ---
 title: fgets, fgetws
-ms.date: 07/11/2018
+ms.date: 4/2/2020
 api_name:
 - fgets
 - fgetws
+- _o_fgets
+- _o_fgetws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: 3f68bee181ebb20eb7a0a2eaca02a72c4dc03616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5c1d63eea6561af6ab7f51c147c92e184d3d11f8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957401"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912063"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -60,13 +63,13 @@ wchar_t *fgetws(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Ubicación de almacenamiento de los datos.
 
 *numChars*<br/>
 Número máximo de caracteres que se van a leer.
 
-*stream*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -75,13 +78,15 @@ Cada una de estas funciones devuelve *Str*. Se devuelve **null** para indicar un
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **fgets** Lee una cadena del argumento de *flujo* de entrada y la almacena en *Str*. **fgets** Lee los caracteres de la posición actual de la secuencia hasta el primer carácter de nueva línea, hasta el final de la secuencia, o hasta que el número de caracteres leídos sea igual a *numChars* -1, lo que suceda primero. El resultado almacenado en *Str* se anexa con un carácter nulo. El carácter de nueva línea, cuando se lee, se incluye en la cadena.
 
 **fgetws** es una versión con caracteres anchos de **fgets**.
 
 **fgetws** lee el argumento de caracteres anchos *Str* como una cadena de caracteres multibyte o una cadena de caracteres anchos en función de si la *secuencia* se abre en modo de texto o en modo binario, respectivamente. Para obtener más información sobre el uso de los modos de texto y binario en E/S de secuencias Unicode y multibyte, consulte [E/S de archivo en modo texto y en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -96,7 +101,7 @@ La función **fgets** Lee una cadena del argumento de *flujo* de entrada y la al
 |**fgets**|\<stdio.h>|
 |**fgetws**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -130,7 +135,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Line one.
@@ -140,5 +145,5 @@ Line one.
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
-[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[Obtiene _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lrint
 - lrintl
@@ -8,6 +8,12 @@ api_name:
 - llrint
 - llrintf
 - llrintl
+- _o_llrint
+- _o_llrintf
+- _o_llrintl
+- _o_lrint
+- _o_lrintf
+- _o_lrintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857754"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911370"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -100,7 +107,7 @@ long long int llrintl(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *x*<br/>
 el valor que se va a redondear.
@@ -109,19 +116,21 @@ el valor que se va a redondear.
 
 Si es correcto, devuelve el valor entero redondeado de *x*.
 
-|Problema|Volver|
+|Problema|Valor devuelto|
 |-----------|------------|
-|*x* está fuera del intervalo del tipo de valor devuelto<br /><br /> *x* = ±∞<br /><br /> *x* = Nan|Genera **FE_INVALID** y devuelve cero (0).|
+|*x* está fuera del intervalo del tipo de valor devuelto<br /><br /> *x* = ± ∞<br /><br /> *x* = Nan|Genera **FE_INVALID** y devuelve cero (0).|
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **lrint** y **llrint** que toman tipos **float** y **Long** **Double** . En un programa de C, **lrint** y **llrint** siempre toman un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **lrint** y **llrint** que toman tipos **float** y **Long** **Double** . En un programa de C, **lrint** y **llrint** siempre toman un **valor Double**.
 
 Si *x* no representa el equivalente de punto flotante de un valor entero, estas funciones generan **FE_INEXACT**.
 
 **Específico de Microsoft**: cuando el resultado está fuera del intervalo del tipo de valor devuelto, o cuando el parámetro es un Nan o infinito, el valor devuelto se define como implementación. El compilador de Microsoft devuelve un valor cero (0).
 
-## <a name="requirements"></a>Requisitos de
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
@@ -129,6 +138,6 @@ Si *x* no representa el equivalente de punto flotante de un valor entero, estas 
 
 Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>

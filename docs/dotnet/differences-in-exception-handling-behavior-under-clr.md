@@ -1,24 +1,24 @@
 ---
-title: Diferencias en el comportamiento del control de excepciones en-CLR
+title: Diferencias en el comportamiento del control de excepciones en -CLR
 ms.date: 11/04/2016
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 2e307bbbf79e6340d4090e471fe643726b5366f9
-ms.sourcegitcommit: a9f1a1ba078c2b8c66c3d285accad8e57dc4539a
+ms.openlocfilehash: 940d297ff77248ba9e9980f7032b5d722d95c7eb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "79544776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364372"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Diferencias en el comportamiento del control de excepciones en /CLR
 
-[En conceptos básicos sobre el uso de excepciones administradas](../dotnet/basic-concepts-in-using-managed-exceptions.md) se describe el control de excepciones en aplicaciones administradas. En este tema, se describen en detalle las diferencias con el comportamiento estándar del control de excepciones y algunas restricciones. Para obtener más información, vea [la función _set_se_translator](../c-runtime-library/reference/set-se-translator.md).
+[Conceptos básicos en el uso de excepciones administradas](../dotnet/basic-concepts-in-using-managed-exceptions.md) describe el control de excepciones en aplicaciones administradas. En este tema, las diferencias con respecto al comportamiento estándar del control de excepciones y algunas restricciones se describen en detalle. Para obtener más información, consulte [La función _set_se_translator](../c-runtime-library/reference/set-se-translator.md).
 
-##  <a name="jumping-out-of-a-finally-block"></a><a name="vcconjumpingoutofafinallyblock"></a>Saltar fuera de un bloque Finally
+## <a name="jumping-out-of-a-finally-block"></a><a name="vcconjumpingoutofafinallyblock"></a>Saltar de un bloque finally
 
-En C/C++ Code nativo, se permite saltar fuera de un bloque _ _**Finally** mediante el control de excepciones estructurado (SEH), aunque genera una advertencia.  En [/CLR](../build/reference/clr-common-language-runtime-compilation.md), al saltar fuera de un bloque **Finally** se produce un error:
+En el código nativo de C/C++, se permite saltar de un bloque __**finally** mediante el control de excepciones estructurado (SEH), aunque produce una advertencia.  En [/clr](../build/reference/clr-common-language-runtime-compilation.md), saltar de un bloque **finally** produce un error:
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -31,11 +31,11 @@ int main() {
 }   // C3276
 ```
 
-##  <a name="raising-exceptions-within-an-exception-filter"></a><a name="vcconraisingexceptionswithinanexceptionfilter"></a>Generar excepciones dentro de un filtro de excepciones
+## <a name="raising-exceptions-within-an-exception-filter"></a><a name="vcconraisingexceptionswithinanexceptionfilter"></a>Aumento de excepciones dentro de un filtro de excepciones
 
-Cuando se produce una excepción durante el procesamiento de un [filtro de excepción](../cpp/writing-an-exception-filter.md) en el código administrado, la excepción se detecta y se trata como si el filtro devuelva 0.
+Cuando se produce una excepción durante el procesamiento de un filtro de [excepción](../cpp/writing-an-exception-filter.md) dentro del código administrado, la excepción se detecta y se trata como si el filtro devuelve 0.
 
-Esto contrasta con el comportamiento en código nativo en el que se produce una excepción anidada, se establece el campo **ExceptionRecord** de la estructura **EXCEPTION_RECORD** (devuelto por [GetExceptionInformation](/windows/win32/Debug/getexceptioninformation)) y el campo **ExceptionFlags** establece el bit 0x10. En el ejemplo siguiente se muestra esta diferencia en el comportamiento:
+Esto contrasta con el comportamiento en código nativo donde se genera una excepción anidada, se establece el campo **ExceptionRecord** de la estructura **EXCEPTION_RECORD** (devuelta por [GetExceptionInformation](/windows/win32/Debug/getexceptioninformation)) y el campo **ExceptionFlags** establece el bit 0x10. En el ejemplo siguiente se muestra esta diferencia de comportamiento:
 
 ```cpp
 // clr_exception_handling_5.cpp
@@ -95,11 +95,11 @@ Caught a nested exception
 We should execute this handler if compiled to native
 ```
 
-##  <a name="disassociated-rethrows"></a><a name="vccondisassociatedrethrows"></a>Reinicios desasociados
+## <a name="disassociated-rethrows"></a><a name="vccondisassociatedrethrows"></a>Rethrows desasociados
 
-**/CLR** no admite el reinicio de una excepción fuera de un controlador catch (conocido como reinicio desasociado). Las excepciones de este tipo se tratan como un C++ reinicio estándar. Si se encuentra un reinicio desasociado cuando hay una excepción administrada activa, la excepción se ajusta como una C++ excepción y, a continuación, se vuelve a iniciar. Las excepciones de este tipo solo se pueden detectar como una excepción del tipo <xref:System.Runtime.InteropServices.SEHException>.
+**/clr** no admite volver a producir una excepción fuera de un controlador catch (conocido como un relanzamiento desasociado). Las excepciones de este tipo se tratan como un relanzamiento estándar de C++. Si se encuentra un relanzamiento desasociado cuando hay una excepción administrada activa, la excepción se ajusta como una excepción de C++ y, a continuación, se vuelve a producir. Las excepciones de este tipo solo se <xref:System.Runtime.InteropServices.SEHException>pueden detectar como una excepción de tipo .
 
-En el ejemplo siguiente se muestra una excepción administrada que se C++ ha vuelto a producir como una excepción:
+En el ejemplo siguiente se muestra una excepción administrada que se vuelve a producir como una excepción C++:
 
 ```cpp
 // clr_exception_handling_6.cpp
@@ -147,9 +147,9 @@ int main() {
 caught an SEH Exception
 ```
 
-##  <a name="exception-filters-and-exception_continue_execution"></a><a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtros de excepciones y EXCEPTION_CONTINUE_EXECUTION
+## <a name="exception-filters-and-exception_continue_execution"></a><a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtros de excepción y EXCEPTION_CONTINUE_EXECUTION
 
-Si un filtro devuelve `EXCEPTION_CONTINUE_EXECUTION` en una aplicación administrada, se trata como si el filtro devolviera `EXCEPTION_CONTINUE_SEARCH`. Para obtener más información sobre estas constantes, vea [instrucción try-except](../cpp/try-except-statement.md).
+Si un `EXCEPTION_CONTINUE_EXECUTION` filtro devuelve en una aplicación administrada, `EXCEPTION_CONTINUE_SEARCH`se trata como si el filtro devolviera . Para obtener más información sobre estas constantes, vea [try-except Statement](../cpp/try-except-statement.md).
 
 En el ejemplo siguiente se muestra esta diferencia:
 
@@ -188,9 +188,9 @@ int main() {
 Counter=-3
 ```
 
-##  <a name="the-_set_se_translator-function"></a><a name="vcconthe_set_se_translatorfunction"></a>La función _set_se_translator
+## <a name="the-_set_se_translator-function"></a><a name="vcconthe_set_se_translatorfunction"></a>La función _set_se_translator
 
-La función de traductor, establecida por una llamada a `_set_se_translator`, solo afecta a las capturas en código no administrado. En el ejemplo siguiente se muestra esta limitación:
+La función de traductor, `_set_se_translator`establecida por una llamada a , solo afecta a las capturas en código no administrado. En el ejemplo siguiente se muestra esta limitación:
 
 ```cpp
 // clr_exception_handling_8.cpp
@@ -279,4 +279,4 @@ Caught an SEH exception with exception code: e0000101
 
 [Control de excepciones](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
-[Control de excepciones en MSVC](../cpp/exception-handling-in-visual-cpp.md)
+[Manejo de Excepciones en MSVC](../cpp/exception-handling-in-visual-cpp.md)

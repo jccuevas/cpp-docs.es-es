@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6d85e9b10831bc964706ef94d715b7a5d4ab4c50
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688304"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366356"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution (Clase)
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *RealType*
-El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, por defecto **es double**. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-@No__t_1 *URNG*
-Motor del generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*Urng*\
+El motor generador de números aleatorios uniforme. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La plantilla de clase describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución Chi cuadrado. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que produce valores de un tipo de punto flotante especificado por el usuario, o escriba **double** si no se proporciona ninguno, distribuido según la distribución Chi-Squared. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información acerca de las clases de distribución y sus miembros, vea [ \<>aleatorias ](../standard-library/random.md).
 
 Para obtener información detallada sobre la distribución chi cuadrado, vea el artículo de Wolfram MathWorld sobre la [distribución chi cuadrado](https://go.microsoft.com/fwlink/p/?linkid=400528).
 
@@ -224,7 +224,7 @@ Distribution for 10 samples:
 
 **Espacio de nombres:** std
 
-## <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution
+## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution::chi_squared_distribution
 
 Construye la distribución.
 
@@ -235,21 +235,21 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*n*\
+*N*\
 El parámetro de distribución `n`.
 
-\ *PARM*
+*Parmesana*\
 La estructura de parámetros utilizada para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `0.0 < n`
+**Condición previa:**`0.0 < n`
 
 El primer constructor crea un objeto cuyo valor `n` almacenado contiene el valor *n*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="param_type"></a>  chi_squared_distribution::param_type
+## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution::param_type
 
 Almacena los parámetros de la distribución.
 
@@ -266,18 +266,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*n*\
+*N*\
 El parámetro de distribución `n`.
 
-\ *derecha*
+*Correcto*\
 El objeto `param_type` que se va a comparar con este.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `0.0 < n`
+**Condición previa:**`0.0 < n`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)
+[\<>al azar](../standard-library/random.md)

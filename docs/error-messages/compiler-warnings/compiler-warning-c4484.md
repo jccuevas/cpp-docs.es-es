@@ -1,25 +1,25 @@
 ---
-title: ADVERTENCIA del compilador C4484
+title: Advertencia del compilador C4484
 ms.date: 11/04/2016
 f1_keywords:
 - C4484
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c168c91f8259b744ed10dd72701d34fd60b98681
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623632"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165163"
 ---
-# <a name="compiler-warning-c4484"></a>ADVERTENCIA del compilador C4484
+# <a name="compiler-warning-c4484"></a>Advertencia del compilador C4484
 
 ' override_function ': coincide con el método de clase Ref base ' base_class_function ', pero no está marcado como ' virtual ', ' New ' u ' override '; se presupone ' New ' (y no ' virtual ')
 
 Cuando se compila con **/CLR**, el compilador no reemplazará implícitamente una función de clase base, lo que significa que la función obtendrá una nueva ranura en la tabla vtable. Para resolverlo, especifique explícitamente si una función es una invalidación.
 
-Para obtener más información, consulte:
+Para más información, consulte:
 
 - [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 

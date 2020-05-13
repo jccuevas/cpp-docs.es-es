@@ -1,9 +1,11 @@
 ---
 title: mbstowcs, _mbstowcs_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbstowcs
 - _mbstowcs_l
+- _o__mbstowcs_l
+- _o_mbstowcs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952032"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915468"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -90,7 +93,7 @@ Si **mbstowcs** convierte correctamente la cadena de origen, devuelve el número
 > [!IMPORTANT]
 > Asegúrese de que *wcstr* y *mbstr* no se superponen y que el *recuento* refleja correctamente el número de caracteres multibyte que se van a convertir.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **mbstowcs** convierte hasta un número máximo de caracteres multibyte de *recuento* a los que apunta *mbstr* a una cadena de caracteres anchos correspondientes que vienen determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por *wcstr*. El resultado es similar a una serie de llamadas a [mbtowc](mbtowc-mbtowc-l.md). Si **mbstowcs** detecta el carácter nulo de un solo byte (' \ 0 ') antes o cuando se produce el *recuento* , convierte el carácter nulo en un carácter nulo de caracteres anchos (L ' \ 0 ') y se detiene. Por lo tanto, la cadena de caracteres anchos en *wcstr* está terminada en NULL solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento es indefinido.
 
@@ -100,7 +103,9 @@ Si el argumento *mbstr* es **null**, o si *Count* es > **INT_MAX**, se invoca el
 
 **mbstowcs** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_mbstowcs_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -109,7 +114,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -206,10 +211,10 @@ Convert back to wide-character string:
    Hex value of first 2 wide characters: 0x3042 0x3043
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

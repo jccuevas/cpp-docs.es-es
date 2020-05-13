@@ -1,10 +1,13 @@
 ---
 title: tgamma, tgammaf, tgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - tgamma
 - tgammaf
 - tgammal
+- _o_tgamma
+- _o_tgammaf
+- _o_tgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946212"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912231"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -77,11 +81,11 @@ Valor para buscar el valor gamma de.
 
 Si es correcto, devuelve el gamma de *x*.
 
-Puede producirse un error de intervalo si la magnitud de *x* es demasiado grande o demasiado pequeña para el tipo de datos. Puede producirse un error de dominio o un error de intervalo si *x* < = 0.
+Puede producirse un error de intervalo si la magnitud de *x* es demasiado grande o demasiado pequeña para el tipo de datos. Puede producirse un error de dominio o un error de intervalo si *x* <= 0.
 
-|Problema|Volver|
+|Problema|Valor devuelto|
 |-----------|------------|
-|x = ±0|± INFINITO|
+|x = ± 0|± INFINITO|
 |x = entero negativo|NaN|
 |x = infinito|NaN|
 |x = +INFINITY|+INFINITY|
@@ -93,21 +97,23 @@ Puede producirse un error de intervalo si la magnitud de *x* es demasiado grande
 
 Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **tgamma** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **tgamma** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **tgamma** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **tgamma** siempre toma y devuelve un **valor Double**.
 
 Si x es un número natural, esta función devuelve el factorial de (x-1).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**tgamma**, **tgammaf (** , **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**, **tgammaf (**, **tgammal**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

@@ -2,12 +2,12 @@
 title: Interfaces (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 263feb7b9c8a472a6077236596107bdeff26a5a4
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740188"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032361"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 
@@ -25,7 +25,7 @@ Una interfaz tiene estas características:
 
 - No permiten campos ni miembros estáticos.
 
-- Los tipos que se utilizan como propiedades, parámetros de método o valores devueltos solo pueden ser Windows Runtime tipos; Esto incluye los tipos fundamentales y los tipos de clase de enumeración.
+- Los tipos que se usan como propiedades, parámetros de método o valores devueltos solo pueden ser tipos de Windows Runtime; esto incluye los tipos fundamentales y los tipos de clase enum.
 
 ## <a name="declaration-and-usage"></a>Declaración y uso
 
@@ -63,9 +63,9 @@ Cuando una clase ref implementa varias interfaces y esas interfaces tienen méto
 
 ## <a name="generic-interfaces"></a>Interfaces genéricas
 
-En C++/CX, la `generic` palabra clave se usa para representar un Windows Runtime tipo parametrizado. Un tipo parametrizado se emite en metadatos y puede ser utilizado por código escrito en cualquier lenguaje que admita parámetros de tipo. El Windows Runtime define algunas interfaces genéricas, por ejemplo, [Windows:: Foundation:: Collections:\<: IVector T >](Windows::Foundation::Collections::IVector), pero no admite la creación de interfaces genéricas públicas definidas por C++el usuario en/CX. Sin embargo, puedes crear interfaces genéricas privadas.
+En C++/CX, `generic` la palabra clave se utiliza para representar un tipo parametrizado de Windows En tiempo de ejecución. Un tipo parametrizado se emite en metadatos y puede ser utilizado por código escrito en cualquier lenguaje que admita parámetros de tipo. Windows Runtime define algunas interfaces genéricas (por ejemplo, [Windows::Foundation::Collections::IVector\<T>), ](/uwp/api/windows.foundation.collections.ivector-1)pero no admite la creación de interfaces genéricas públicas definidas por el usuario en C++/CX. Sin embargo, puedes crear interfaces genéricas privadas.
 
-Aquí se muestra cómo se pueden usar Windows Runtime tipos para crear una interfaz genérica:
+A continuación se muestra cómo se pueden usar los tipos de Windows Runtime para crear una interfaz genérica:
 
 - Una `interface class` genérica definida por el usuario en un componente no se puede emitir en su archivo de metadatos de Windows; por consiguiente, no puede tener accesibilidad pública y el código de cliente de otros archivos .winmd no puede implementarla. Puede ser implementada por clases ref no públicas en el mismo componente. Una clase ref pública puede tener un tipo de interfaz genérica como miembro privado.
 
@@ -89,11 +89,11 @@ Aquí se muestra cómo se pueden usar Windows Runtime tipos para crear una inter
 
 - Una interfaz genérica cerrada tiene un UUID generado implícitamente. Un usuario no puede especificar el UUID.
 
-- En la interfaz, se supone que cualquier referencia a la actual interfaz (en un parámetro de método, un valor devuelto o una propiedad) hace referencia a la instancia actual. Por ejemplo, *IMyIntf* significa *IMyIntf\<T >* .
+- En la interfaz, se supone que cualquier referencia a la actual interfaz (en un parámetro de método, un valor devuelto o una propiedad) hace referencia a la instancia actual. Por ejemplo, *IMyIntf* significa *IMyIntf\<T>*.
 
 - Cuando el tipo de un parámetro de método es un parámetro de tipo, la declaración de ese parámetro o variable usa el nombre del parámetro de tipo sin ningún puntero, referencia nativa o declaradores de identificador. Es decir, nunca has de escribir “T^”.
 
-- Las clases ref con plantillas deben ser privadas. Pueden implementar interfaces genéricas y pueden pasar el parámetro de plantilla *t* al argumento genérico *t*. Cada instancia de una clase ref con plantillas es una clase ref.
+- Las clases ref con plantillas deben ser privadas. Pueden implementar interfaces genéricas y pueden pasar el parámetro de plantilla *T* al argumento genérico *T*. Cada creación de instancias de una clase ref con plantilla es en sí misma una clase ref.
 
 ## <a name="see-also"></a>Vea también
 

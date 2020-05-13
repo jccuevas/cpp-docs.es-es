@@ -5,12 +5,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d7df6b3c5dc0d0d493d17b3e9995bc4758ffd6d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426940"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370584"
 ---
 # <a name="lthash_setgt-functions"></a>Funciones de &lt;hash_set&gt;
 
@@ -18,7 +18,7 @@ ms.locfileid: "79426940"
 |-|-|
 |[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a>Intercambio
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_set](../standard-library/unordered-set-class.md).
@@ -33,25 +33,25 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *derecha*
-Hash_set que proporciona los elementos que se van a intercambiar o la hash_set cuyos elementos se van a intercambiar con los de la hash_set *izquierda*.
+*Correcto*\
+El hash_set que proporciona los elementos a intercambiar, o el hash_set cuyos elementos deben intercambiarse con los de la hash_set *izquierda.*
 
-\ *izquierda*
-Hash_set cuyos elementos se van a intercambiar con los de la hash_set *derecha*.
+*Izquierda*\
+La hash_set cuyos elementos deben intercambiarse con los del *derecho*hash_set .
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla `swap` es un algoritmo especializado en la clase contenedor hash_set para ejecutar la función miembro `left.`[swap](../standard-library/hash-set-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, entonces el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
+La `swap` función de plantilla es un algoritmo especializado en `left.`la`right`clase contenedora hash_set para ejecutar el [intercambio](../standard-library/hash-set-class.md#swap)de función miembro ( ). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, entonces el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
 
 **template \<class T> void swap(T&, T&),**
 
-de la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
+en la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada en cada contenedor es mucho más rápida dado que puede funcionar con la representación interna de la clase contenedora.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de código de la clase miembro [hash_set::swap](../standard-library/hash-set-class.md#swap) para obtener un ejemplo del uso de la versión de plantilla de `swap`.
 
-## <a name="swap_hash_multiset"></a>  swap (hash_multiset)
+## <a name="swap-hash_multiset"></a><a name="swap_hash_multiset"></a>intercambio (hash_multiset)
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_set](../standard-library/unordered-set-class.md).
@@ -64,19 +64,19 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parámetros
 
-\ *derecha*
-Hash_multiset que proporciona los elementos que se van a intercambiar o la hash_multiset cuyos elementos se van a intercambiar con los de la hash_multiset *izquierda*.
+*Correcto*\
+El hash_multiset que proporciona los elementos a intercambiar, o el hash_multiset cuyos elementos se van a intercambiar con los de la hash_multiset *izquierda.*
 
-\ *izquierda*
-Hash_multiset cuyos elementos se van a intercambiar con los de la hash_multiset *derecha*.
+*Izquierda*\
+El hash_multiset cuyos elementos deben intercambiarse con los del *derecho*hash_multiset .
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla `swap` es un algoritmo especializado en la clase contenedor hash_multiset para ejecutar la función miembro `left.`[swap](../standard-library/hash-multiset-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, entonces el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
+La `swap` función de plantilla es un algoritmo especializado en `left.`la`right`clase contenedora hash_multiset para ejecutar el [intercambio](../standard-library/hash-multiset-class.md#swap)de función miembro ( ). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, entonces el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
 
 **template \<class T> void swap(T&, T&),**
 
-de la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
+en la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada en cada contenedor es mucho más rápida dado que puede funcionar con la representación interna de la clase contenedora.
 
 ### <a name="example"></a>Ejemplo
 

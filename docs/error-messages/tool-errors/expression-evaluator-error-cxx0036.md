@@ -7,35 +7,35 @@ helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 164fd9ee00071e218e5bb4f3ab00febc618725a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397034"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195505"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Error del evaluador de expresiones CXX0036
 
-contexto no válido {...} especificación
+contexto no válido {...} specification
 
-Este mensaje puede generarse por varios errores en el uso del operador de contexto (**{}**).
+Este mensaje puede ser generado por cualquiera de los diversos errores en el uso del operador de contexto ( **{}** ).
 
-- La sintaxis del operador de contexto (**{}**) se asignó incorrectamente.
+- La sintaxis del operador de contexto ( **{}** ) no se proporcionó correctamente.
 
    La sintaxis del operador de contexto es:
 
-     {*function*,*module*,*dll*}*expression*
+     {*function*,*Module*,*dll*} *expresión* de
 
-   Especifica el contexto de *expresión*. El operador de contexto tiene la misma prioridad y uso como una conversión de tipo.
+   Esto especifica el contexto de la *expresión*. El operador de contexto tiene la misma precedencia y uso que una conversión de tipo.
 
-   Pueden omitir las comas finales. Si cualquiera de *función*, *módulo*, o *dll* contiene una coma literal, se debe encerrar el nombre completo entre paréntesis.
+   Se pueden omitir las comas finales. Si alguna de las *funciones*, *módulos*o *dll* contiene una coma literal, debe escribir el nombre completo entre paréntesis.
 
-- El nombre de función se ha escrito incorrectamente, o no existe en el módulo especificado o la biblioteca de vínculos dinámicos.
+- El nombre de la función se ha escrito incorrectamente o no existe en el módulo especificado o en la biblioteca de vínculos dinámicos.
 
-   Dado que C es un lenguaje que distingue mayúsculas de minúsculas, *función* deben proporcionarse en las mayúsculas como se define en el origen.
+   Dado que C es un lenguaje que distingue entre mayúsculas y minúsculas, la *función* se debe proporcionar en el caso exacto, ya que se define en el origen.
 
-- No se encontró el módulo o DLL.
+- No se pudo encontrar el módulo o la DLL.
 
-   Compruebe el nombre de ruta de acceso completa del archivo DLL o módulo especificado.
+   Compruebe el nombre de la ruta de acceso completa del módulo o DLL especificado.
 
 Este error es idéntico a CAN0036.

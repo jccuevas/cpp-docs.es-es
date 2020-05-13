@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8724ae4d018948c0f6aa9456f229db96878d7bf2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270729"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328279"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Habilitar vinculación en el nivel de función)
 
@@ -30,34 +30,34 @@ Permite que el compilador empaquete las funciones individuales con formato de fu
 /Gy[-]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El vinculador requiere que las funciones se empaqueta por separado como COMDAT para excluir u ordenar funciones individuales en un archivo .exe o DLL.
+El vinculador requiere que las funciones se empaquetan por separado como COMDAT para excluir u ordenar funciones individuales en un archivo DLL o .exe.
 
-Puede usar la opción del vinculador [/OPT (optimizaciones)](opt-optimizations.md) para excluir las funciones empaquetadas desde el archivo .exe.
+Puede utilizar la opción del vinculador [/OPT (Optimizaciones)](opt-optimizations.md) para excluir las funciones empaquetadas sin referencia del archivo .exe.
 
-Puede usar la opción del vinculador [/ORDER (colocar funciones en orden)](order-put-functions-in-order.md) para incluir funciones empaquetadas en un orden especificado en el archivo .exe.
+Puede utilizar la opción del vinculador [/ORDER (Put Functions in Order)](order-put-functions-in-order.md) para incluir funciones empaquetadas en un orden especificado en el archivo .exe.
 
-Las funciones inline siempre se empaquetan si sus instancias se crean como llamadas (lo que ocurre, por ejemplo, si la inserción es o si se toma una dirección de función). Además, las funciones de miembro de C++ definidas en la declaración de clase se empaquetan de manera automática; otras funciones no son, y al seleccionar esta opción es necesaria para compilarlos como funciones empaquetadas.
+Las funciones en línea siempre se empaquetan si se crean instancias como llamadas (lo que se produce, por ejemplo, si la inserción está desactivada o si se toma una dirección de función). Además, las funciones miembro de C++ definidas en la declaración de clase se empaquetan automáticamente; otras funciones no lo son, y es necesario seleccionar esta opción para compilarlas como funciones empaquetadas.
 
 > [!NOTE]
->  El [/Zi](z7-zi-zi-debug-information-format.md) opción, se utiliza para editar y continuar, se establece automáticamente la **/Gy** opción.
+> La opción [/ZI,](z7-zi-zi-debug-information-format.md) utilizada para Editar y continuar, establece automáticamente la opción **/Gy.**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
-1. Haga clic en el **generación de código** página de propiedades.
+1. Haga clic en la página de propiedades **Generación de código.**
 
-1. Modificar el **habilitar vinculación en el nivel de función** propiedad.
+1. Modifique la propiedad **Habilitar vinculación de nivel de función.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
 - Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones del compilador de MSVC](compiler-options.md)<br/>
-[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

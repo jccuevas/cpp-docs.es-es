@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK1504
 ms.assetid: e6d1a171-1472-4b7e-a04b-1a68a561675f
-ms.openlocfilehash: b213944f26932ec3b3934e82953573c1b8050532
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38cbc3173cbb9436a9b2e7f0d0c38af0b2caf4e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226762"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197839"
 ---
 # <a name="bscmake-error-bk1504"></a>Error de BSCMAKE BK1504
 
-no se puede ubicar en el archivo 'filename' [: motivo]
+no se puede colocar en el archivo ' nombredearchivo ' [: razón]
 
-BSCMAKE no se pudo mover a una ubicación en el archivo.
+BSCMAKE no puede moverse a una ubicación del archivo.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. Disco lleno.
+1. Un disco completo.
 
-1. Error de hardware.
+1. Un error de hardware.
 
-1. Truncamiento de archivos debido a espacio en disco insuficiente o a una interrupción del compilador al crear el archivo .sbr.
+1. Truncamiento de archivos debido a que no hay suficiente espacio en disco o interrupción del compilador al crear el archivo. SBR.

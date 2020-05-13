@@ -1,8 +1,9 @@
 ---
 title: _setmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _setmode
+- _o__setmode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948588"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915810"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -51,7 +53,7 @@ int _setmode (
 
 ### <a name="parameters"></a>Parámetros
 
-*fd*<br/>
+*FD*<br/>
 Descriptor del archivo.
 
 *mode*<br/>
@@ -65,19 +67,21 @@ Si se pasan parámetros no válidos a esta función, se invoca al controlador de
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_setmode** *establece en el modo de* traducción del archivo proporcionado por *FD*. Al pasar **_O_TEXT** como *modo* , se establece el modo de texto (es decir, traducido). Las combinaciones de retorno de carro y avance de línea (CR-LF) se traducen en un carácter de salto de línea único en la entrada. Los caracteres de salto de línea se traducen a combinaciones CR-LF en la salida. El paso de **_O_BINARY** establece el modo binario (sin traducir), en el que se suprimen estas traducciones.
+La función **_setmode** *establece en el modo de* traducción del archivo proporcionado por *FD*. Al pasar **_O_TEXT** como *modo* , se establece el modo de texto (es decir, traducido). Las combinaciones de retorno de carro y avance de línea (CR-LF) se traducen en un carácter de salto de línea único en la entrada. Los caracteres de salto de línea se traducen a combinaciones CR-LF en la salida. Al pasar **_O_BINARY** , se establece el modo binario (sin traducir), en el que se suprimen estas traducciones.
 
 También puede pasar **_O_U16TEXT**, **_O_U8TEXT**o **_O_WTEXT** para habilitar el modo Unicode, tal como se muestra en el segundo ejemplo más adelante en este documento.
 
 > [!CAUTION]
 > El modo Unicode es para las funciones de impresión anchas `wprintf`(por ejemplo,) y no se admite para las funciones de impresión estrechas. El uso de una función de impresión estrecha en una secuencia en modo Unicode desencadena una aserción.
 
-**_setmode** se usa normalmente para modificar el modo de traducción predeterminado de **stdin** y **stdout**, pero se puede usar en cualquier archivo. Si aplica **_setmode** al descriptor de archivo de un flujo, llame a **_setmode** antes de realizar cualquier operación de entrada o salida en la secuencia.
+Normalmente, **_setmode** se usa para modificar el modo de traducción predeterminado de **stdin** y **stdout**, pero se puede utilizar en cualquier archivo. Si aplica **_setmode** al descriptor de archivo de un flujo, llame a **_setmode** antes de realizar cualquier operación de entrada o salida en la secuencia.
 
 > [!CAUTION]
 > Si escribe datos en una secuencia de archivos, vacíe explícitamente el código mediante [fflush](fflush.md) antes de usar **_setmode** para cambiar el modo. Si no vuelca el código, podría producirse un comportamiento inesperado. Si no ha escrito datos en el flujo, no será necesario volcarlo.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -85,7 +89,7 @@ También puede pasar **_O_U16TEXT**, **_O_U8TEXT**o **_O_WTEXT** para habilitar 
 |-------------|---------------------|----------------------|
 |**_setmode**|\<io.h>|\<fcntl.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -135,7 +139,7 @@ int main(void) {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: bd13ba4d0dd60f65372b2c1f51d70d338566301e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 58bb37e9de40f4bc711b417eab107aa55b8ff0e8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916259"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750118"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Clase CAnimationManagerEventHandler
 
@@ -35,21 +35,21 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|Construye un objeto `CAnimationManagerEventHandler`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Crea una instancia del `CAnimationManagerEventHandler` objeto.|
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Se llama cuando cambia el estado del administrador de animaciones. (Invalida `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`).|
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Almacena un puntero a un controlador de animación para enrutar los eventos.|
+|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Crea una `CAnimationManagerEventHandler` instancia de object.|
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Se llama cuando ha cambiado el estado del administrador de animaciones. (Invalida `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`).|
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Almacena un puntero al controlador de animación para enrutar eventos.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Este controlador de eventos se crea y se pasa al método IUIAnimationManager:: SetManagerEventHandler, cuando se llama a CAnimationController:: EnableAnimationManagerEvent.
+Este controlador de eventos se crea y se pasa a IUIAnimationManager::SetManagerEventHandler método, cuando se llama a CAnimationController::EnableAnimationManagerEvent.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -63,21 +63,21 @@ Este controlador de eventos se crea y se pasa al método IUIAnimationManager:: S
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler
+## <a name="canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler
 
 Se requiere Visual Studio 2010 SP1.
 
-Construye un objeto CAnimationManagerEventHandler.
+Construye un CAnimationManagerEventHandler objeto.
 
 ```
 CAnimationManagerEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance
+## <a name="canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance
 
 Se requiere Visual Studio 2010 SP1.
 
-Crea una instancia del objeto CAnimationManagerEventHandler.
+Crea una instancia de CAnimationManagerEventHandler objeto.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -88,20 +88,20 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="parameters"></a>Parámetros
 
 *pAnimationController*<br/>
-Un puntero a un controlador de animación, que recibirá eventos.
+Un puntero al controlador de animación, que recibirá eventos.
 
 *ppManagerEventHandler*<br/>
-Genere. Si el método se ejecuta correctamente, contiene un puntero a un objeto COM que controlará las actualizaciones de estado de un administrador de animaciones.
+Salida. Si el método se realiza correctamente, contiene un puntero al objeto COM que controlará las actualizaciones de estado de un administrador de animaciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si el método se ejecuta correctamente, Devuelve S_OK. De lo contrario, devuelve un código de error HRESULT.
+Si el método se realiza correctamente, devuelve S_OK. De lo contrario, devuelve un código de error HRESULT.
 
-##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged
+## <a name="canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged
 
 Se requiere Visual Studio 2010 SP1.
 
-Se llama cuando cambia el estado del administrador de animaciones.
+Se llama cuando ha cambiado el estado del administrador de animaciones.
 
 ```
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -114,27 +114,27 @@ IFACEMETHOD(OnManagerStatusChanged)(
 *newStatus*<br/>
 Nuevo estado.
 
-*previousStatus*<br/>
+*previousEstado*<br/>
 Estado anterior.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La implementación actual siempre Devuelve S_OK;
+La implementación actual siempre devuelve S_OK;
 
-##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController
+## <a name="canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController
 
 Se requiere Visual Studio 2010 SP1.
 
-Almacena un puntero a un controlador de animación para enrutar los eventos.
+Almacena un puntero al controlador de animación para enrutar eventos.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pAnimationController*<br/>
-Un puntero a un controlador de animación, que recibirá eventos.
+Un puntero al controlador de animación, que recibirá eventos.
 
 ## <a name="see-also"></a>Vea también
 

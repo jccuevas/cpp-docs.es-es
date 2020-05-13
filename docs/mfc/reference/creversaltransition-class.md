@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-ms.openlocfilehash: 4bd60ca13ff4a162ddd674e271291a1a3f09a856
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73d12fb6bbaefcfac1437248ebe11f3a5c24c45b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372132"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368311"
 ---
 # <a name="creversaltransition-class"></a>Clase CReversalTransition
 
@@ -33,25 +33,25 @@ class CReversalTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CReversalTransition::CReversalTransition](#creversaltransition)|Construye un objeto de la transición de inversión e inicializa su duración.|
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Construye un objeto de transición de inversión e inicializa su duración.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CReversalTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CReversalTransition::Create](#create)|Llama a la biblioteca de transición para crear un objeto COM de transición encapsulado. (Reemplaza [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CReversalTransition::m_duration](#m_duration)|La duración de la transición.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Una transición de inversión cambia suavemente dirección durante un período determinado. El valor final será el mismo que el valor inicial y la velocidad final será el valor negativo de la velocidad inicial. Dado que todas las transiciones se borran automáticamente, se recomienda asignada a ellos mediante el operador nuevo. El objeto COM IUIAnimationTransition encapsulado se crea por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.
+Una transición de inversión cambia suavemente la dirección durante una duración determinada. El valor final será el mismo que el valor inicial y la velocidad final será el negativo de la velocidad inicial. Dado que todas las transiciones se borran automáticamente, se recomienda asignarlas mediante el operador new. CAnimationController::AnimateGroup crea el objeto COM IUIAnimationTransition encapsulado, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -65,9 +65,9 @@ Una transición de inversión cambia suavemente dirección durante un período d
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CReversalTransition::Create
+## <a name="creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Create
 
-Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.
+Llama a la biblioteca de transición para crear un objeto COM de transición encapsulado.
 
 ```
 virtual BOOL Create(
@@ -78,15 +78,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *pLibrary*<br/>
-Un puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándares.
+Un puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la transición se crea correctamente; en caso contrario, FALSE.
+TRUESi la transición se crea correctamente; de lo contrario FALSO.
 
-##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition
+## <a name="creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition
 
-Construye un objeto de la transición de inversión e inicializa su duración.
+Construye un objeto de transición de inversión e inicializa su duración.
 
 ```
 CReversalTransition(UI_ANIMATION_SECONDS duration);
@@ -94,10 +94,10 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*<br/>
+*duration*<br/>
 La duración de la transición.
 
-##  <a name="m_duration"></a>  CReversalTransition::m_duration
+## <a name="creversaltransitionm_duration"></a><a name="m_duration"></a>CReversalTransition::m_duration
 
 La duración de la transición.
 
@@ -105,6 +105,6 @@ La duración de la transición.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

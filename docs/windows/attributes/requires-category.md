@@ -1,21 +1,21 @@
 ---
-title: requires_category (C++ atributo COM)
+title: requires_category (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a454a8bfc959d7d97959d765dbf68d0f766ca1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407372"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214557"
 ---
-# <a name="requirescategory"></a>requires_category
+# <a name="requires_category"></a>requires_category
 
-Especifica las categorías de los componentes necesarios de la clase de destino.
+Especifica las categorías de componente necesarias de la clase de destino.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,17 +27,17 @@ Especifica las categorías de los componentes necesarios de la clase de destino.
 ### <a name="parameters"></a>Parámetros
 
 *requires_category*<br/>
-El identificador de la categoría necesaria.
+IDENTIFICADOR de la categoría requerida.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **requires_category** C++ atributo especifica las categorías de componentes requeridas por la clase de destino. Para obtener más información, consulte [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
+El atributo **requires_category** C++ especifica las categorías de componentes que requiere la clase de destino. Para obtener más información, vea [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
 
 Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente requiere que el objeto implementa la categoría de Control.
+El código siguiente requiere que el objeto implemente la categoría de control.
 
 ```cpp
 // cpp_attr_ref_requires_category.cpp
@@ -61,12 +61,12 @@ class CMyClass {};
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|Uno o varios de los siguientes: `coclass`, `progid`o `vi_progid`.|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos COM](com-attributes.md)<br/>
 [implements_category](implements-category.md)

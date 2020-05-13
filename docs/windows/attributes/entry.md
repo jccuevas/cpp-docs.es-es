@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 71abf4f183255fa137b43ac9cabd88d15c3fc85d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9bdfc64506f26ee4e9876920821883a0fa12bc7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167100"
 ---
-# <a name="entry"></a>entry
+# <a name="entry"></a>entrada
 
 Especifica una función o una constante exportadas en un módulo mediante la identificación del punto de entrada en el archivo DLL.
 
@@ -28,7 +28,7 @@ Especifica una función o una constante exportadas en un módulo mediante la ide
 *id*<br/>
 IDENTIFICADOR del punto de entrada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo de **entrada** C++ tiene la misma funcionalidad que el atributo MIDL de [entrada](/windows/win32/Midl/entry) .
 
@@ -42,13 +42,13 @@ Vea el ejemplo de [idl_module](idl-module.md) para obtener un ejemplo de uso de 
 
 |||
 |-|-|
-|**Se aplica a**|`idl_module`atribui|
-|**Reiterativo**|Sin|
+|**Se aplica a**|Atributo `idl_module`|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)

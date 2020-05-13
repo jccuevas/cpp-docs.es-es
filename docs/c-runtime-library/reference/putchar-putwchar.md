@@ -1,9 +1,11 @@
 ---
 title: putchar, putwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - putchar
 - putwchar
+- _o_putchar
+- _o_putwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 88d1181fc2718d49533f3179c8fd0bfd818d589a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f8b6573b2907ec8fffa5ff4d3d76b8430748f60a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949917"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918890"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -55,7 +58,7 @@ wint_t putwchar(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter que se va a escribir.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -64,11 +67,13 @@ Devuelve el carácter escrito. Para indicar un error o una condición de fin de 
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La rutina **putc** escribe el carácter *c* único en el *flujo* de salida en la posición actual. Cualquier entero se puede pasar a **putc**, pero solo se escriben los 8 bits inferiores. La rutina **putchar** es idéntica a `putc( c, stdout )`. Para cada rutina, si se produce un error de lectura, se establece el indicador de error para el flujo. **putc** y **putchar** son similares a **fputc** y **_fputchar**, respectivamente, pero se implementan como funciones y como macros (vea [elegir entre funciones y macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** y **putwchar** son versiones de caracteres anchos de **putc** y **putchar**, respectivamente.
 
 Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Pueden ser más rápidas, porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -83,7 +88,7 @@ Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no est�
 |**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -113,7 +118,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 This is the line of output

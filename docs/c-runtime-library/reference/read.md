@@ -1,8 +1,9 @@
 ---
 title: _read
-ms.date: 02/13/2019
+ms.date: 4/2/2020
 api_name:
 - _read
+- _o__read
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 32238923aeef14230f68def15e27c676753faf61
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2f43fc54a0092afc6ab5855c160a7879747faef7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949531"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919518"
 ---
 # <a name="_read"></a>_read
 
@@ -52,10 +54,10 @@ int _read(
 
 ### <a name="parameters"></a>Parámetros
 
-*fd*<br/>
+*FD*<br/>
 Descriptor de archivo que hace referencia al archivo abierto.
 
-*buffer*<br/>
+*búfer*<br/>
 Ubicación de almacenamiento de los datos.
 
 *buffer_size*<br/>
@@ -63,7 +65,7 @@ Número máximo de bytes que se van a leer.
 
 ## <a name="return-value"></a>Valor devuelto
 
-_ **Read** devuelve el número de bytes leídos, que puede ser menor que *buffer_size* si quedan menos de *buffer_size* bytes en el archivo, o si el archivo se abrió en modo de texto. En el modo de texto, cada par `\r\n` de retorno de carro y avance de línea se reemplaza por un carácter `\n`de salto de línea único. Solo se cuenta el carácter de avance de línea en el valor devuelto. El reemplazo no afecta al puntero de archivo.
+**_read** devuelve el número de bytes leídos, que puede ser menor que *buffer_size* si hay menos de *buffer_size* bytes restantes en el archivo, o si el archivo se abrió en modo de texto. En el modo de texto, cada par `\r\n` de retorno de carro y avance de línea se reemplaza por `\n`un carácter de salto de línea único. Solo se cuenta el carácter de avance de línea en el valor devuelto. El reemplazo no afecta al puntero de archivo.
 
 Si la función intenta leer al final del archivo, devuelve 0. Si *FD* no es válido, el archivo no está abierto para lectura o el archivo está bloqueado, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y establece **errno** en **EBADF**.
 
@@ -71,11 +73,13 @@ Si *buffer* es **null**, o si *buffer_size* > **INT_MAX**, se invoca el controla
 
 Para más información sobre este y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función _ **Read** Lee un máximo de *buffer_size* bytes en el *búfer* del archivo asociado a *FD*. La operación de lectura se inicia en la posición actual del puntero de archivo asociado al archivo en cuestión. Después de la operación de lectura, el puntero de archivo señala al siguiente carácter no leído.
+La función **_read** Lee un máximo de *buffer_size* bytes en el *búfer* del archivo asociado a *FD*. La operación de lectura se inicia en la posición actual del puntero de archivo asociado al archivo en cuestión. Después de la operación de lectura, el puntero de archivo señala al siguiente carácter no leído.
 
-Si el archivo se abrió en modo de texto, la lectura finaliza cuando _ **Read** encuentra un carácter Ctrl + Z, que se trata como un indicador de fin de archivo. Use [_lseek](lseek-lseeki64.md) para borrar el indicador de fin de archivo.
+Si el archivo se abrió en modo de texto, la lectura finaliza cuando **_read** encuentra un carácter Ctrl + Z, que se trata como un indicador de fin de archivo. Use [_lseek](lseek-lseeki64.md) para borrar el indicador de fin de archivo.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +87,7 @@ Si el archivo se abrió en modo de texto, la lectura finaliza cuando _ **Read** 
 |-------------|---------------------|
 |**_read**|\<io.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -136,7 +140,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Read 19 bytes from file

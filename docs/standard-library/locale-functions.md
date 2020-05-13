@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6ebb1b1c80d5c2da19610a15e628fcbab5220719
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425572"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351723"
 ---
 # <a name="ltlocalegt-functions"></a>Funciones de &lt;locale&gt;
 
@@ -48,10 +48,10 @@ ms.locfileid: "79425572"
 |[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
 |[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
 |[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
+|[esespacio](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
 
-## <a name="has_facet"></a>  has_facet
+## <a name="has_facet"></a><a name="has_facet"></a>has_facet
 
 Comprueba si una faceta determinada se almacena en una configuración regional especificada.
 
@@ -62,7 +62,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *Loc*
+*Loc*\
 Configuración regional en la que se va a comprobar la presencia de una faceta.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -94,7 +94,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a>  isalnum
+## <a name="isalnum"></a><a name="isalnum"></a>isalnum
 
 Comprueba si un elemento de una configuración regional es un carácter alfabético o numérico.
 
@@ -105,10 +105,10 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento alfanumérico que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento alfanumérico que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -161,7 +161,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a>  isalpha
+## <a name="isalpha"></a><a name="isalpha"></a>isalpha
 
 Comprueba si un elemento de una configuración regional es un carácter alfabético.
 
@@ -172,10 +172,10 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento alfabético que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -184,7 +184,7 @@ Configuración regional que contiene el elemento alfabético que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Alpha**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -226,7 +226,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a>  iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a>iscntrl
 
 Comprueba si un elemento de una configuración regional es un carácter de control.
 
@@ -237,10 +237,10 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -249,7 +249,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Ctrl**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a>  isdigit
+## <a name="isdigit"></a><a name="isdigit"></a>isdigit
 
 Comprueba si un elemento de una configuración regional es un carácter numérico.
 
@@ -302,10 +302,10 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -314,7 +314,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -356,7 +356,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a>  isgraph
+## <a name="isgraph"></a><a name="isgraph"></a>isgrafía
 
 Comprueba si un elemento de una configuración regional es un carácter alfabético o un signo de puntuación.
 
@@ -367,10 +367,10 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -379,7 +379,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Graph**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -421,7 +421,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a>  islower
+## <a name="islower"></a><a name="islower"></a>es más lento
 
 Comprueba si un elemento de una configuración regional está en minúsculas.
 
@@ -432,10 +432,10 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -444,7 +444,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Lower**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -486,7 +486,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a>  isprint
+## <a name="isprint"></a><a name="isprint"></a>isprint
 
 Comprueba si un elemento de una configuración regional es un carácter imprimible.
 
@@ -497,10 +497,10 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -509,7 +509,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Print**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -550,7 +550,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a>  ispunct
+## <a name="ispunct"></a><a name="ispunct"></a>ispunct
 
 Comprueba si un elemento de una configuración regional es un carácter de signo de puntuación.
 
@@ -561,10 +561,10 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -573,7 +573,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)`<` `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -615,7 +615,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a>  isspace
+## <a name="isspace"></a><a name="isspace"></a>esespacio
 
 Comprueba si un elemento de una configuración regional es un carácter de espacio en blanco.
 
@@ -626,10 +626,10 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -638,7 +638,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Space**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -680,7 +680,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a>  isupper
+## <a name="isupper"></a><a name="isupper"></a>isupper
 
 Comprueba si un elemento de una configuración regional está en mayúsculas.
 
@@ -691,10 +691,10 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -703,7 +703,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Upper**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -745,7 +745,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a>  isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
 
 Comprueba si un elemento de una configuración regional es un carácter usado para representar un número hexadecimal.
 
@@ -756,10 +756,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 Elemento que se va a probar.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -768,7 +768,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).
 
 Los dígitos hexadecimales usan la base 16 para representar números, con los números del 0 al 9 y las letras de la A a la F sin distinción entre mayúsculas y minúsculas para representar los números decimales del 0 al 15.
 
@@ -812,7 +812,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a>  tolower
+## <a name="tolower"></a><a name="tolower"></a>tolower
 
 Pasa un carácter a minúsculas.
 
@@ -823,10 +823,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 El carácter que se va a convertir en minúscula.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -835,7 +835,7 @@ Carácter convertido en minúscula.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [amenor](../standard-library/ctype-class.md#tolower) `Ch`( ).
 
 ### <a name="example"></a>Ejemplo
 
@@ -861,7 +861,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a>  toupper
+## <a name="toupper"></a><a name="toupper"></a>toupper
 
 Pasa un carácter a mayúsculas.
 
@@ -872,10 +872,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *CH*
+*Ch*\
 El carácter que se va a convertir en mayúscula.
 
-\ *Loc*
+*Loc*\
 Configuración regional que contiene el carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -884,7 +884,7 @@ Carácter convertido en mayúscula.
 
 ### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
+La función template devuelve [use_facet](../standard-library/locale-functions.md#use_facet)<  `Loc`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [toupper](../standard-library/ctype-class.md#toupper) `Ch`( ).
 
 ### <a name="example"></a>Ejemplo
 
@@ -910,7 +910,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a>  use_facet
+## <a name="use_facet"></a><a name="use_facet"></a>use_facet
 
 Devuelve una referencia a una faceta de un tipo especificado almacenado en una configuración regional.
 
@@ -921,7 +921,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *Loc*
+*Loc*\
 Configuración regional const que contiene el tipo de faceta al que se hace referencia.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>Consulte también
 
-[\<locale>](../standard-library/locale.md)
+[\<>de la localidad](../standard-library/locale.md)

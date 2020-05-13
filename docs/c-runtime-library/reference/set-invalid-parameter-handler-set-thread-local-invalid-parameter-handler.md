@@ -1,9 +1,11 @@
 ---
 title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
+- _o__set_invalid_parameter_handler
+- _o__set_thread_local_invalid_parameter_handler
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: d2e8dab92c70189533656bac359c794de2ad8002
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 404a865cceb5e4014969b15e9877761187af777b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857780"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914006"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -52,7 +55,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *pNew*<br/>
 El puntero de función al nuevo controlador de parámetros no válidos.
@@ -61,7 +64,7 @@ El puntero de función al nuevo controlador de parámetros no válidos.
 
 Puntero al controlador de parámetros no válidos antes de la llamada.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Muchas funciones de tiempo de ejecución de C comprueban la validez de los argumentos pasados. Si se pasa un argumento no válido, la función puede establecer el número de error **errno** o devolver un código de error. En estos casos, también se llama al controlador de parámetros no válidos. El tiempo de ejecución de C proporciona un controlador de parámetros no válidos global predeterminado que finaliza el programa y muestra un mensaje de error en tiempo de ejecución. Puede usar la **_set_invalid_parameter_handler** para establecer su propia función como el controlador de parámetros no válidos global. El tiempo de ejecución de C también admite un controlador de parámetros no válidos de subproceso local. Si se establece un controlador de parámetros local para el subproceso en un subproceso mediante **_set_thread_local_invalid_parameter_handler**, las funciones de tiempo de ejecución de C a las que se llama desde el subproceso usan ese controlador en lugar del controlador global. Solo se puede especificar una función a la vez como controlador global de argumentos no válidos. Solo se puede especificar una función como controlador de argumentos no válidos de subproceso local por cada subproceso, aunque puede haber diferentes subprocesos que tengan diferentes controladores de subproceso local. De esta manera, puede cambiar el controlador usado en una parte del código sin que afecte al comportamiento de otros subprocesos.
 
@@ -81,13 +84,15 @@ void _invalid_parameter(
 
 El argumento *Expression* es una representación de cadena ancha de la expresión de argumento que provocó el error. El argumento de la *función* es el nombre de la función de CRT que recibió el argumento no válido. El argumento *File* es el nombre del archivo de código fuente CRT que contiene la función. El argumento *line* es el número de línea del archivo. Se reserva el último argumento. Todos los parámetros tienen el valor **null** a menos que se use una versión de depuración de la biblioteca CRT.
 
-## <a name="requirements"></a>Requisitos de
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> o \<stdlib.h>|
 
-Las funciones **_set_invalid_parameter_handler** y **_set_thread_local_invalid_parameter_handler** son específicas de Microsoft. Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Las funciones **_set_invalid_parameter_handler** y **_set_thread_local_invalid_parameter_handler** son específicas de Microsoft. Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -135,7 +140,7 @@ Invalid parameter detected in function common_vfprintf. File: minkernel\crts\ucr
 Expression: format != nullptr
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>
 [Versiones de funciones de CRT con seguridad mejorada](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>

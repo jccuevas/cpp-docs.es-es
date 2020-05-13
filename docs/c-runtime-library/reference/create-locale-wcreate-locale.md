@@ -1,10 +1,12 @@
 ---
 title: _create_locale, _wcreate_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _create_locale
 - __create_locale
 - _wcreate_locale
+- _o__create_locale
+- _o__wcreate_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 31bde3d032bdb47d63db5730ba53016de573332c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473831"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912093"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -78,7 +81,7 @@ El argumento *Category* especifica las partes del comportamiento específico de 
 | marca de *categoría* | Afecta a |
 |-----------------|---------|
 | **LC_ALL** |Todas las categorías, como se indica a continuación. |
-| **LC_COLLATE** |Las funciones **strcoll (** , **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**y **wcsxfrm** . |
+| **LC_COLLATE** |Las funciones **strcoll (**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**y **wcsxfrm** . |
 | **LC_CTYPE** | Las funciones de control de caracteres (excepto **isdigit**, **isxdigit**, **mbstowcs**y **mbtowc**, que no se ven afectadas). |
 | **LC_MONETARY** | Información de formato de moneda devuelta por la función **localeconv** . |
 | **LC_NUMERIC** | Carácter de separador decimal para las rutinas de salida con formato (por ejemplo, **printf**), para las rutinas de conversión de datos y para la información de formato no monetaria devuelta por **localeconv**. Además del carácter de separador decimal, **LC_NUMERIC** establece el separador de miles y la cadena de control de agrupación devueltas por [localeconv](localeconv.md). |
@@ -94,6 +97,8 @@ Para obtener más información sobre la configuración regional, consulte [setlo
 
 El nombre anterior de esta función, **__create_locale** (con dos subrayados iniciales), ha quedado en desuso.
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
@@ -101,7 +106,7 @@ El nombre anterior de esta función, **__create_locale** (con dos subrayados ini
 |**_create_locale**|\<locale.h>|
 |**_wcreate_locale**|\<locale.h> o \<wchar.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -168,12 +173,12 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 ## <a name="see-also"></a>Consulte también
 
 [Nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Cadenas de idioma](../../c-runtime-library/language-strings.md)<br/>
-[Country/Region Strings](../../c-runtime-library/country-region-strings.md)<br/>
+[Language Strings](../../c-runtime-library/language-strings.md)<br/>
+[Cadenas de país y región](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
@@ -181,7 +186,7 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [_setmbcp](setmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[strcoll (funciones)](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funciones de strcoll (](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

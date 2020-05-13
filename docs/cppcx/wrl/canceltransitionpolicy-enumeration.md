@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398763"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214128"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy (Enumeración)
 
-Indica cómo una operación asincrónica de intentar realizar la transición a un estado terminal de completado o error debería comportarse con respecto a un estado cancelado solicitada por el cliente.
+Indica cómo se debe comportar un intento de transición de una operación asincrónica a un estado de terminal completado o de error con respecto a un estado cancelado solicitado por el cliente.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,21 +26,21 @@ Indica cómo una operación asincrónica de intentar realizar la transición a u
 enum CancelTransitionPolicy;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="values"></a>Valores
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|`RemainCanceled`|Si la operación asincrónica está actualmente en un estado cancelado solicitada por el cliente, esto indica que permanecerá en el estado cancelado en lugar de realizar la transición a un terminal completado o el estado de error.|
-|`TransitionFromCanceled`|Si la operación asincrónica está actualmente en un estado cancelado solicitada por el cliente, esto indica que debe pasar estado desde que se completó estado cancelado en el estado del terminal o error según lo determinado por la llamada que usa esta marca.|
+|`RemainCanceled`|Si la operación asincrónica se encuentra actualmente en un estado cancelado solicitado por el cliente, esto indica que permanecerá en el estado cancelado, en lugar de pasar a un terminal completado o a un estado de error.|
+|`TransitionFromCanceled`|Si la operación asincrónica se encuentra actualmente en un estado cancelado solicitado por el cliente, esto indica que el estado debe pasar de ese estado cancelado al estado de terminal completado o error, según lo determinado por la llamada que use esta marca.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** async.h
+**Encabezado:** Async. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)

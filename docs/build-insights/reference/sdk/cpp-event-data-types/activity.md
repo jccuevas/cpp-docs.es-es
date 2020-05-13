@@ -1,6 +1,6 @@
 ---
 title: Clase de la actividad
-description: Referencia C++ de clase de actividad del SDK de Build Insights.
+description: La referencia de clase de actividad del SDK de C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6de411c375b42e4acfb44bf0fac9d28ad57f1ca7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2ea04150aec9c0b2366d97e6e4c15de557a4f47c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335031"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325247"
 ---
 # <a name="activity-class"></a>Clase de la actividad
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La clase `Activity` se usa con las funciones [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)y [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Úselo para que coincida con cualquier evento de actividad. Consulte la [tabla de eventos](../event-table.md) para ver todos los eventos que pueden coincidir con la clase `Activity`.
+La `Activity` clase se utiliza con las funciones [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)y [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilícelo para que coincida con cualquier evento de actividad. Consulte la [tabla](../event-table.md) de eventos para ver todos `Activity` los eventos que puede coincidir con la clase.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -52,37 +52,37 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Varias funciones miembro de la clase `Activity` devuelven un recuento de pasos. C++Build Insights usa el contador de rendimiento de Windows como un origen de TICs. Un recuento de pasos debe usarse con una frecuencia de graduación para convertirla en una unidad de tiempo como segundos. Se puede llamar a la función miembro `TickFrequency`, disponible en la clase base de [evento](event.md) , para obtener la frecuencia de la marca de graduación. En la página [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) se muestra un ejemplo de conversión de TICs en una unidad de tiempo.
+Varias funciones `Activity` miembro de la clase devuelven un recuento de ticks. C++ Build Insights utiliza el contador de rendimiento de Windows como fuente de ticks. Se debe utilizar un recuento de ticks con una frecuencia de ticks para convertirlo en una unidad de tiempo como segundos. La `TickFrequency` función miembro, disponible en la clase base [Event,](event.md) se puede llamar para obtener la frecuencia de tick. La página [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) muestra un ejemplo de conversión de ticks en una unidad de tiempo.
 
-Si no desea convertir los tics en las unidades de tiempo, la clase `Activity` proporciona funciones miembro que devuelven valores de hora en nanosegundos. Use la biblioteca C++ de `chrono` estándar para convertirlas en otras unidades de tiempo.
+Si no desea convertir ticks en unidades `Activity` de tiempo usted mismo, la clase proporciona funciones miembro que devuelven valores de tiempo en nanosegundos. Utilice la biblioteca `chrono` C++ estándar para convertirlas en otras unidades de tiempo.
 
 ## <a name="members"></a>Miembros
 
-Junto con sus miembros heredados de la clase base de [evento](event.md) , la clase `Activity` contiene los siguientes miembros:
+Junto con sus miembros heredados `Activity` de la clase base [Event,](event.md) la clase contiene los siguientes miembros:
 
 ### <a name="constructor"></a>Constructor
 
 [Actividad](#activity)
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
-\ [CPUTicks](#cpu-ticks)
-\ [CPUTime](#cpu-time)
+[CPUTicks](#cpu-ticks)\
+[CPUTime](#cpu-time)\
 [Duración](#duration)\
-\ [ExclusiveCPUTicks](#exclusive-cpu-ticks)
-\ [ExclusiveCPUTime](#exclusive-cpu-time)
-\ [ExclusiveDuration](#exclusive-duration)
-\ [ExclusiveDurationTicks](#exclusive-duration-ticks)
-\ [ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)
-\ [ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)
-\ [StartTimestamp](#start-timestamp)
-\ [StopTimestamp](#stop-timestamp)
-\ [WallClockTimeResponsibility](#wall-clock-time-responsibility)
+[ExclusiveCPUTicks](#exclusive-cpu-ticks)\
+[ExclusiveCPUTime](#exclusive-cpu-time)\
+[ExclusiveDuration](#exclusive-duration)\
+[ExclusiveDurationTicks](#exclusive-duration-ticks)\
+[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
+[ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
+[StartTimestamp](#start-timestamp)\
+[StopTimestamp](#stop-timestamp)\
+[WallClockTimeResponsibility](#wall-clock-time-responsibility)\
 [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
 
-## <a name="activity"></a>Proceso
+## <a name="activity"></a><a name="activity"></a> Actividad
 
 ```cpp
 Activity(const RawEvent& event);
@@ -90,10 +90,10 @@ Activity(const RawEvent& event);
 
 ### <a name="parameters"></a>Parámetros
 
-*event*\
+*Evento*\
 Cualquier evento de actividad.
 
-## <a name="cpu-ticks"></a>CPUTicks
+## <a name="cputicks"></a><a name="cpu-ticks"></a>CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
@@ -101,9 +101,9 @@ const long long& CPUTicks() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de TICs de CPU que se produjeron durante esta actividad. Una marca de la CPU es diferente de una marca normal. Los tics de CPU solo se cuentan cuando la CPU ejecuta código en una actividad. Los tics de CPU no se cuentan cuando el subproceso asociado a la actividad está en suspensión.
+El número de ticks de CPU que se produjeron durante esta actividad. Un tick de CPU es diferente de un tick normal. Los ticks de CPU solo se cuentan cuando la CPU está ejecutando código en una actividad. Los ticks de CPU no se cuentan cuando el subproceso asociado a la actividad está en suspensión.
 
-## <a name="cpu-time"></a>CPUTime
+## <a name="cputime"></a><a name="cpu-time"></a>CPUTime
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
@@ -113,7 +113,7 @@ std::chrono::nanoseconds CPUTime()() const;
 
 La cantidad de tiempo que la CPU estaba ejecutando código dentro de esta actividad. Este valor puede ser mayor que la duración de la actividad si las actividades secundarias se ejecutan en subprocesos independientes. El valor se devuelve en nanosegundos.
 
-## <a name="duration"></a>Duration
+## <a name="duration"></a><a name="duration"></a>Duración
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -123,7 +123,7 @@ std::chrono::nanoseconds Duration() const;
 
 La duración de la actividad en nanosegundos.
 
-## <a name="exclusive-cpu-ticks"></a>ExclusiveCPUTicks
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>ExclusiveCPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
@@ -131,9 +131,9 @@ const long long& ExclusiveCPUTicks() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Igual que [CPUTicks](#cpu-ticks), pero sin incluir los tics de la CPU que se produjeron en las actividades secundarias.
+Igual que [CPUTicks](#cpu-ticks), pero sin incluir los ticks de CPU que se produjeron en las actividades secundarias.
 
-## <a name="exclusive-cpu-time"></a>ExclusiveCPUTime
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>ExclusiveCPUTime
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
@@ -141,9 +141,9 @@ std::chrono::nanoseconds ExclusiveCPUTime() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Igual que [CPUTime](#cpu-time), salvo que no se incluye el tiempo de CPU de las actividades secundarias.
+Igual que [CPUTime](#cpu-time), excepto que no se incluye el tiempo de CPU de las actividades secundarias.
 
-## <a name="exclusive-duration"></a>ExclusiveDuration
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>ExclusiveDuration
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
@@ -151,9 +151,9 @@ std::chrono::nanoseconds ExclusiveDuration() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La duración de la actividad en nanosegundos, sin incluir la cantidad de tiempo dedicado a las actividades secundarias.
+La duración de la actividad en nanosegundos, sin incluir la cantidad de tiempo que se pasó en las actividades infantiles.
 
-## <a name="exclusive-duration-ticks"></a>ExclusiveDurationTicks
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>ExclusiveDurationTicks
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
@@ -161,9 +161,9 @@ const long long& ExclusiveDurationTicks() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de pasos que se produjeron en esta actividad, excepto el número de pasos que se produjeron en las actividades secundarias.
+El número de ticks que se produjeron en esta actividad, excluyendo el número de ticks que se produjeron en las actividades secundarias.
 
-## <a name="exclusive-wall-clock-time-responsibility"></a>ExclusiveWallClockTimeResponsibility
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>ExclusiveWallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
@@ -171,9 +171,9 @@ std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Igual que [WallClockTimeResponsibility](#wall-clock-time-responsibility), pero sin incluir la responsabilidad de la hora de la pared de las actividades secundarias.
+Igual que [WallClockTimeResponsibility](#wall-clock-time-responsibility), pero sin incluir la responsabilidad de la hora del reloj de pared de las actividades secundarias.
 
-## <a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusiveWallClockTimeResponsibilityTicks
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusiveWallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
@@ -181,9 +181,9 @@ const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Igual que [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), pero sin incluir los tics de responsabilidad de la hora de reloj de la pared de las actividades secundarias.
+Igual que [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), pero sin incluir los ticks de responsabilidad de tiempo de reloj de pared de las actividades secundarias.
 
-## <a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -191,9 +191,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor de tick capturado en el momento en que se inició la actividad.
+Un valor de tick capturado en el momento en que se inició la actividad.
 
-## <a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -201,9 +201,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor de tick capturado en el momento en que se detuvo la actividad.
+Un valor de tick capturado en el momento en que se detuvo la actividad.
 
-## <a name="wall-clock-time-responsibility"></a>WallClockTimeResponsibility
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>WallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
@@ -211,9 +211,9 @@ std::chrono::nanoseconds WallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La responsabilidad en el reloj de la pared de esta actividad, en nanosegundos. Para obtener más información sobre qué significa la responsabilidad de la hora del reloj, vea [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
+La responsabilidad del tiempo del reloj de pared de esta actividad, en nanosegundos. Para obtener más información sobre lo que significa la responsabilidad de tiempo de reloj de pared, vea [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
 
-## <a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeResponsibilityTicks
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
@@ -221,6 +221,6 @@ const long long& WallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Recuento de pasos que representa la contribución de esta actividad a la hora general del reloj de la pared. Un paso de responsabilidad de reloj en la pared es diferente de un TIC normal. Los tics de responsabilidad de reloj en la pared tienen en cuenta el paralelismo entre las actividades. Dos actividades paralelas pueden tener una duración de 50 TICs y la misma hora de inicio y detención. En este caso, Get asigna una responsabilidad de tiempo de reloj de 25 TICs.
+Un recuento de ticks que representa la contribución de esta actividad al tiempo general del reloj de pared. Un tick de responsabilidad de tiempo de reloj de pared es diferente de un tick normal. Las garrapatas de responsabilidad de tiempo de reloj de pared tienen en cuenta el paralelismo entre las actividades. Dos actividades paralelas pueden tener una duración de 50 ticks, y la misma hora de inicio y parada. En este caso, a ambos se les asigna una responsabilidad de tiempo de reloj de pared de 25 ticks.
 
 ::: moniker-end

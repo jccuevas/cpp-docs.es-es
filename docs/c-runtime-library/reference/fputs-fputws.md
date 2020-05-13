@@ -1,9 +1,11 @@
 ---
 title: fputs, fputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fputs
 - fputws
+- _o_fputs
+- _o_fputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 7470901fda72e74caea12758bed4f23fcc087a33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 718bcd227e5821c85517ff7c0a1f195bd24d230b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956914"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912736"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -57,10 +60,10 @@ int fputws(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena de salida
 
-*stream*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -69,11 +72,13 @@ Cada una de estas funciones devuelve un valor no negativo si se ejecuta correcta
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cada una de estas funciones copia *Str* en el *flujo* de salida en la posición actual. **fputws** copia el argumento de caracteres anchos *Str* en *Stream* como una cadena de caracteres multibyte o una cadena de caracteres anchos según si la *secuencia* se abre en modo de texto o en modo binario, respectivamente. Ninguna de las funciones copia el carácter de terminación NULL.
 
 Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **fputs** no admite actualmente la salida en un flujo Unicode.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -88,7 +93,7 @@ Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **fputs**
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -109,9 +114,9 @@ int main( void )
 Hello world from fputs.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
-[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[Obtiene _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

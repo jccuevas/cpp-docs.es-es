@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516010"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181803"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed  (C++/CLI y C++/CX)
 
@@ -39,13 +39,13 @@ Nombre de la función o clase.
 *return-type*<br/>
 Tipo devuelto por una función.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En el primer ejemplo de sintaxis, una clase está sellada. En el segundo ejemplo, una función virtual está sellada.
 
 Use la palabra clave **sealed** para las clases de referencia y sus funciones miembro virtuales. Para obtener más información, consulte el artículo sobre [los especificadores de invalidación y las compilaciones nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-Puede detectar en tiempo de compilación si un tipo está sellado usando el rasgo de tipo `__is_sealed(type)`. Para obtener más información, consulte [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Compatibilidad de compilador con rasgos de tipo).
+Puede detectar en tiempo de compilación si un tipo está sellado usando el rasgo de tipo `__is_sealed(type)`. Para más información, consulte [Compatibilidad del compilador con rasgos de tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 **sealed** es una palabra clave contextual.  Para obtener más información, consulte [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md) (Palabras clave contextuales).
 
@@ -138,6 +138,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

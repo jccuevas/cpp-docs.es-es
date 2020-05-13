@@ -2,19 +2,19 @@
 title: B. Códigos auxiliares para funciones de biblioteca en tiempo de ejecución
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9089bd6ef1f0a8f2f2ed94a7c496943c9bdd5e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215064"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Códigos auxiliares para funciones de biblioteca en tiempo de ejecución
 
-Esta sección proporciona código auxiliar para las funciones de biblioteca en tiempo de ejecución definidas de OpenMP C y la API de C++. Se proporcionan los códigos auxiliares para habilitar la portabilidad a las plataformas que no son compatibles con el de OpenMP C y C++ API. En estas plataformas, programas de OpenMP deben vincularse con una biblioteca que contiene estas funciones de código auxiliar. Las funciones de código auxiliar se suponen que se omiten las directivas en el programa de OpenMP. Por lo tanto, imitan la semántica de la serie.
+En esta sección se proporcionan códigos auxiliares para las funciones de la biblioteca en tiempo de ejecución C++ definidas en la API y C de OpenMP. Los códigos auxiliares se proporcionan para habilitar la portabilidad a las plataformas que no admiten C++ la API y C de OpenMP. En estas plataformas, los programas de OpenMP deben estar vinculados con una biblioteca que contenga estas funciones de código auxiliar. Las funciones de código auxiliar suponen que se omiten las directivas del programa OpenMP. Como tal, emulan la semántica en serie.
 
 > [!NOTE]
-> Debe tener acceso a la variable de bloqueo que aparece en las funciones de bloqueo exclusivamente a través de estas funciones. Debe no inicializado o en caso contrario, puede modificar en el programa de usuario. Los usuarios no deben realizar suposiciones acerca de los mecanismos que utilizan las implementaciones de OpenMP C y C++ para implementar bloqueos según el esquema utilizado por las funciones de código auxiliar.
+> Se debe tener acceso a la variable de bloqueo que aparece en las funciones de bloqueo exclusivamente a través de estas funciones. No debe inicializarse ni modificarse en el programa del usuario. Los usuarios no deben realizar suposiciones sobre los mecanismos utilizados por las C++ implementaciones de OpenMP C y para implementar bloqueos basados en el esquema utilizado por las funciones de código auxiliar.
 
 ## <a name="code"></a>Código
 

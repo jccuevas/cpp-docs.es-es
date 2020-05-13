@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386140"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371382"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -110,37 +110,37 @@ El tipo de interfaz de delegado.
 El tipo de la función de controlador de eventos.
 
 *argCount*<br/>
-El número de argumentos en una `InvokeHelper` especialización.
+El número de argumentos en una especialización. `InvokeHelper`
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Proporciona una implementación de la `Invoke()` método según el número especificado y el tipo de argumentos.
+Proporciona una implementación del `Invoke()` método en función del número especificado y el tipo de argumentos.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-Name     | Descripción
+Nombre     | Descripción
 -------- | -----------------------------------------------------------------------------
-`Traits` | Un sinónimo de la clase que define el tipo de cada argumento de controlador de eventos.
+`Traits` | Sinónimo de la clase que define el tipo de cada argumento de controlador de eventos.
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-Name                                        | Descripción
+Nombre                                        | Descripción
 ------------------------------------------- | -------------------------------------------------------
 [InvokeHelper::InvokeHelper](#invokehelper) | Inicializa una nueva instancia de la clase `InvokeHelper`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                            | Descripción
+Nombre                            | Descripción
 ------------------------------- | -----------------------------------------------------------------------------------
 [InvokeHelper::Invoke](#invoke) | Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-Name                                 | Descripción
+Nombre                                 | Descripción
 ------------------------------------ | ----------------------------------------------------------
-[InvokeHelper::callback_](#callback) | Representa el controlador de eventos al que llamar cuando se produce un evento.
+[InvokeHelper::callback_](#callback) | Representa el controlador de eventos que se va a llamar cuando se produce un evento.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -150,25 +150,25 @@ Name                                 | Descripción
 
 **Encabezado:** event.h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft::WRL::Details
 
-## <a name="callback"></a>InvokeHelper::callback_
+## <a name="invokehelpercallback_"></a><a name="callback"></a>InvokeHelper::callback_
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 TCallback callback_;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Representa el controlador de eventos al que llamar cuando se produce un evento.
+Representa el controlador de eventos que se va a llamar cuando se produce un evento.
 
-El `TCallback` parámetro de plantilla especifica el tipo del controlador de eventos.
+El `TCallback` parámetro template especifica el tipo del controlador de eventos.
 
-## <a name="invoke"></a>InvokeHelper::Invoke
+## <a name="invokehelperinvoke"></a><a name="invoke"></a>InvokeHelper::Invoke
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 STDMETHOD(
@@ -215,34 +215,34 @@ Argumento 2.
 Argumento 3.
 
 *arg4*<br/>
-Argumento de 4.
+Argumento 4.
 
 *arg5*<br/>
-Argumento de 5.
+Argumento 5.
 
 *arg6*<br/>
 Argumento 6.
 
 *arg7*<br/>
-Argumento de 7.
+Argumento 7.
 
 *arg8*<br/>
-Argumento de 8.
+Argumento 8.
 
 *arg9*<br/>
-Argumento de 9.
+Argumento 9.
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que describe el error.
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.
 
-## <a name="invokehelper"></a>InvokeHelper::InvokeHelper
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>InvokeHelper::InvokeHelper
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 explicit InvokeHelper(
@@ -252,11 +252,11 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>Parámetros
 
-*callback*<br/>
+*devolución de llamada*<br/>
 Un controlador de eventos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Inicializa una nueva instancia de la clase `InvokeHelper`.
 
-El `TCallback` parámetro de plantilla especifica el tipo del controlador de eventos.
+El `TCallback` parámetro template especifica el tipo del controlador de eventos.

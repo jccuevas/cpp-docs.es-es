@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 2056b93fd6c1d32b72996970352e87670ff406de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408945"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210618"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl (Clase)
 
-Proporciona una implementación de la [IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85)) objeto.
+Proporciona una implementación del objeto [IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85)) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,13 +35,13 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-La clase derivada de `IGetDataSourceImpl`.
+La clase, derivada de `IGetDataSourceImpl`.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldb.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Métodos de interfaz
 
@@ -49,11 +49,11 @@ La clase derivada de `IGetDataSourceImpl`.
 |-|-|
 |[GetDataSource](#getdatasource)|Devuelve un puntero de interfaz en el objeto de origen de datos que creó la sesión.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esto es una interfaz obligatoria en la sesión para obtener un puntero de interfaz al objeto de origen de datos.
+Se trata de una interfaz obligatoria en la sesión para obtener un puntero de interfaz al objeto de origen de datos.
 
-## <a name="getdatasource"></a> IGetDataSourceImpl::GetDataSource
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>Igetdatasourceimpl (:: GetDataSource
 
 Devuelve un puntero de interfaz en el objeto de origen de datos que creó la sesión.
 
@@ -66,13 +66,13 @@ STDMETHOD(GetDataSource)(REFIID riid,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IGetDataSource:: GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Resulta útil si necesita tener acceso a propiedades en el objeto de origen de datos.
+Resulta útil si necesita tener acceso a las propiedades en el objeto de origen de datos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

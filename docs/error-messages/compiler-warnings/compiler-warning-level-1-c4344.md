@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4344
 ms.assetid: cd20859d-f07f-4c70-904b-cb756a53b1ed
-ms.openlocfilehash: 0a3a1f6144c0429c3a9d96fdee4a7d9f4cab1ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5247c104a3326e58647b772fa9c26cbf2b805c51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187279"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162886"
 ---
 # <a name="compiler-warning-level-1-c4344"></a>Advertencia del compilador (nivel 1) C4344
 
-cambio de comportamiento: uso de los resultados de argumentos de plantilla explícitos en la llamada a 'function'
+cambio de comportamiento: el uso de argumentos de plantilla explícitos da como resultado una llamada a ' función '
 
-Una llamada a una función con argumentos de plantilla explícitos llama a una función diferente a como lo haría si no se hubiera especificado argumentos explícitos
+Una llamada a una función que usa argumentos de plantilla explícitos llama a una función diferente que si no se hubieran especificado argumentos explícitos

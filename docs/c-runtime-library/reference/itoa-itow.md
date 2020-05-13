@@ -1,6 +1,6 @@
 ---
 title: _itoa, _itow funciones
-ms.date: 08/19/2019
+ms.date: 4/2/2020
 api_name:
 - itoa
 - _itoa
@@ -15,6 +15,16 @@ api_name:
 - _ultow
 - _i64tow
 - _ui64tow
+- _o__i64toa
+- _o__i64tow
+- _o__itoa
+- _o__itow
+- _o__ltoa
+- _o__ltow
+- _o__ui64toa
+- _o__ui64tow
+- _o__ultoa
+- _o__ultow
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -28,6 +38,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -102,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: a4e429b51e4157b49086d2425bec2698a724a0e0
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898784"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914668"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -166,15 +177,15 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
    int radix );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Número que se va a convertir.
 
-*buffer*<br/>
+*búfer*<br/>
 Búfer que contiene el resultado de la conversión.
 
-*radix*<br/>
+*fijo*<br/>
 Base que se va a usar para la conversión de *valor*, que debe estar en el intervalo 2-36.
 
 *size*<br/>
@@ -184,9 +195,9 @@ Longitud del búfer en unidades del tipo de carácter. Este parámetro se deduce
 
 Cada una de estas funciones devuelve un puntero al *búfer*. No se devuelve ningún error.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Las funciones **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**y **_ui64toa** convierten los dígitos del argumento de *valor* dado en una cadena de caracteres terminada en NULL y almacenan el resultado (hasta 33 caracteres para **_itoa**, **_ltoa**y **_ultoa**y 65 para **_i64toa** y **_ui64toa**) en el *búfer*. Si la *base* es igual a 10 y el *valor* es negativo, el primer carácter de la cadena almacenada es el signo menos ( **-** ). Las funciones **_itow**, **_ltow**, **_ultow**, **_i64tow**y **_ui64tow** son versiones de caracteres anchos de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**y **_ui64toa**, respectivamente.
+Las funciones **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**y **_ui64toa** convierten los dígitos del argumento de *valor* dado en una cadena de caracteres terminada en NULL y almacenan el resultado (hasta 33 caracteres para **_itoa**, **_ltoa**y **_ultoa**y 65 para **_i64toa** y **_ui64toa**) en el *búfer*. Si la *base* es igual a 10 y el *valor* es negativo, el primer carácter de la cadena almacenada es**-** el signo menos (). Las funciones **_itow**, **_ltow**, **_ultow**, **_i64tow**y **_ui64tow** son versiones de caracteres anchos de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**y **_ui64toa**, respectivamente.
 
 > [!IMPORTANT]
 > Estas funciones pueden escribir más allá del final de un búfer que es demasiado pequeño. Para evitar las saturaciones del búfer, asegúrese de que el *búfer* sea lo suficientemente grande como para contener los dígitos convertidos más el carácter nulo final y un carácter de signo. El uso incorrecto de estas funciones puede provocar serios problemas de seguridad en el código.
@@ -196,13 +207,15 @@ Debido a su potencial de problemas de seguridad, de forma predeterminada, estas 
 Para usar estas funciones sin la advertencia de desuso, defina la macro de preprocesador **_CRT_SECURE_NO_WARNINGS** antes de incluir los encabezados de CRT. Puede hacerlo en la línea de comandos en un símbolo del sistema para desarrolladores agregando la opción del compilador **/D_CRT_SECURE_NO_WARNINGS** al comando **cl** . En caso contrario, defina la macro en los archivos de código fuente. Si usa encabezados precompilados, defina la macro en la parte superior del encabezado precompilado include File, *PCH. h* (*stdafx. h* en Visual Studio 2017 y versiones anteriores). Para definir la macro en el código fuente, use una directiva de **#define** antes de incluir cualquier encabezado de CRT, como en este ejemplo:
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan sus homólogos más seguros. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-Los nombres POSIX **itoa**, **ltoa**y **ultoa** existen como alias para las funciones **_itoa**, **_ltoa**y **_ultoa** . Los nombres POSIX están en desuso porque no siguen las convenciones de nombre de función global específicas de la implementación de ISO C. De forma predeterminada, estas funciones causan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **el nombre POSIX de este elemento está en desuso. En su lugar, use ISO C y C++ el nombre compatible:** *new_name*. Se recomienda cambiar el código fuente para usar las versiones más seguras de estas funciones, **_itoa_s**, **_ltoa_s**o **_ultoa_s**. Para obtener más información, vea [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
+Los nombres POSIX **itoa**, **ltoa**y **ultoa** existen como alias para las funciones **_itoa**, **_ltoa**y **_ultoa** . Los nombres POSIX están en desuso porque no siguen las convenciones de nombre de función global específicas de la implementación de ISO C. De forma predeterminada, estas funciones causan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **el nombre POSIX de este elemento está en desuso. En su lugar, use el nombre compatible con ISO C y C++:** *new_name*. Se recomienda cambiar el código fuente para usar las versiones más seguras de estas funciones, **_itoa_s**, **_ltoa_s**o **_ultoa_s**. Para obtener más información, vea [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
 
 En cuanto a la portabilidad del código fuente, puede que prefiera conservar los nombres POSIX en el código. Para usar estas funciones sin la advertencia de desuso, defina las macros de preprocesador **_CRT_NONSTDC_NO_WARNINGS** y **_CRT_SECURE_NO_WARNINGS** antes de incluir los encabezados de CRT. Puede hacerlo en la línea de comandos en un símbolo del sistema para desarrolladores agregando las opciones del compilador **/D_CRT_SECURE_NO_WARNINGS** y **/D_CRT_NONSTDC_NO_WARNINGS** al comando **cl** . En caso contrario, defina las macros en los archivos de código fuente. Si usa encabezados precompilados, defina las macros en la parte superior del archivo de inclusión del encabezado precompilado. Para definir las macros en el código fuente, utilice las directivas de **#define** antes de incluir cualquier encabezado de CRT, como en este ejemplo:
 
@@ -220,7 +233,7 @@ Para usar una de estas macros en una función de conversión de cadenas, declare
 
 ||||
 |-|-|-|
-|Funciones|radix|Macros|
+|Functions|radix|Macros|
 |**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
@@ -249,7 +262,7 @@ int main()
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
 |**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -336,7 +349,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [_itoa_s, _itow_s funciones](itoa-s-itow-s.md)<br/>

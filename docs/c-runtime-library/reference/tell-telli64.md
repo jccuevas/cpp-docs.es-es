@@ -1,9 +1,11 @@
 ---
 title: _tell, _telli64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _telli64
 - _tell
+- _o__tell
+- _o__telli64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443676"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912242"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -71,13 +74,15 @@ Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-d
 
 La función **_tell** obtiene la posición actual del puntero de archivo (si existe) asociado al argumento de *identificador* . La posición se expresa como el número de bytes desde el principio del archivo. En el caso de la función **_telli64** , este valor se expresa como un entero de 64 bits.
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -119,13 +124,13 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Salida
 
 ```Output
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

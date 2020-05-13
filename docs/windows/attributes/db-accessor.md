@@ -1,21 +1,21 @@
 ---
-title: db_accessor (C++ atributo COM)
+title: db_accessor (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_accessor
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e9725dad39974b828d87bd8b4cdeac623f4e12f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214869"
 ---
-# <a name="dbaccessor"></a>db_accessor
+# <a name="db_accessor"></a>db_accessor
 
-Grupos `db_column` atributos que participan en `IAccessor`-enlace basado en.
+Agrupa `db_column` atributos que participan en el enlace basado en `IAccessor`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,24 +26,24 @@ Grupos `db_column` atributos que participan en `IAccessor`-enlace basado en.
 #### <a name="parameters"></a>Parámetros
 
 *num*<br/>
-Especifica el número de descriptor de acceso (un índice entero basado en cero). Debe especificar números de descriptor de acceso en aumentar orden, utilizando enteros o valores definen.
+Especifica el número de descriptor de acceso (un índice de entero de base cero). Debe especificar los números de descriptor de acceso en orden ascendente, utilizando enteros o valores definidos.
 
 *auto*<br/>
-Un valor booleano que especifica si el descriptor de acceso se recuperan automáticamente (TRUE) o no (FALSE) recuperado.
+Valor booleano que especifica si el descriptor de acceso se recupera automáticamente (TRUE) o no (FALSE).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**db_accessor** define el descriptor de acceso de OLE DB subyacente para posteriores `db_column` y `db_param` atributos dentro de la misma clase o función. **db_accessor** se puede usar en el nivel de miembro y se usa al grupo `db_column` atributos que participan en OLE DB `IAccessor`-enlace basado en. Se usa junto con el `db_table` o `db_command` atributos. Llamar a este atributo es similar a llamar a la [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) y [END_ACCESSOR](../../data/oledb/end-accessor.md) macros.
+**db_accessor** define el descriptor de acceso de OLE DB subyacente para los atributos `db_column` y `db_param` subsiguientes dentro de la misma clase o función. **db_accessor** se puede usar en el nivel de miembro y se utiliza para agrupar los atributos de `db_column` que participan en OLE DB enlace basado en `IAccessor`. Se usa junto con los atributos `db_table` o `db_command`. Llamar a este atributo es similar a llamar a las macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) y [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-**db_accessor** genera un conjunto de filas y lo enlaza a las asignaciones de descriptor de acceso correspondiente. Si no se llama **db_accessor**0 del descriptor de acceso se genera automáticamente y todos los enlaces de columna se asignarán a este bloque descriptor de acceso.
+**db_accessor** genera un conjunto de filas y lo enlaza a las asignaciones de descriptores de acceso correspondientes. Si no llama a **db_accessor**, el descriptor de acceso 0 se generará automáticamente y todos los enlaces de columna se asignarán a este bloque de descriptores de acceso.
 
-**db_accessor** enlaces de columna en los descriptores de acceso de uno o varios grupos de la base de datos. Para obtener una explicación de los escenarios en los que es necesario utilizar varios descriptores de acceso, consulte [utilizar varios descriptores de acceso en un conjunto de filas](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Vea también "Usuario registro soporte para varios descriptores de acceso" en [registros de usuario](../../data/oledb/user-records.md).
+**db_accessor** agrupa los enlaces de columnas de base de datos en uno o más descriptores de acceso. Para obtener una explicación de los escenarios en los que es necesario utilizar varios descriptores de acceso, vea [utilizar varios descriptores de acceso en un conjunto de filas](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Vea también "compatibilidad con registros de usuario para varios descriptores de acceso" en [registros de usuario](../../data/oledb/user-records.md).
 
-Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *NombreClase*descriptor de acceso, donde *NombreClase* es el nombre que asignó el clase y el compilador también creará una clase denominada *NombreClase*, que se deriva de \_ *NombreClase*descriptor de acceso.  En Vista de clases verá ambas clases.
+Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_descriptor de acceso *NombreClase descriptoracceso*, donde *NombreClase descriptoracceso* es el nombre que asignó a la clase, y el compilador también creará una clase denominada *NombreClase descriptoracceso*, que se deriva de \_descriptor de acceso *NombreClase descriptoracceso*.  En Vista de clases verá ambas clases.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se usa **db_accessor** para agrupar las columnas en la tabla Orders de la base de datos Northwind en dos descriptores de acceso. 0 de descriptor de acceso es automática y no es el descriptor de acceso 1.
+En el ejemplo siguiente se usa **db_accessor** para agrupar las columnas de la tabla Orders de la base de datos Northwind en dos descriptores de acceso. Descriptor de acceso 0 es un descriptor de acceso automático y el descriptor de acceso 1 no.
 
 ```cpp
 // cpp_attr_ref_db_accessor.cpp
@@ -73,11 +73,11 @@ public:
 |-|-|
 |**Se aplica a**|Bloques de atributos|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de consumidor OLE DB](ole-db-consumer-attributes.md)

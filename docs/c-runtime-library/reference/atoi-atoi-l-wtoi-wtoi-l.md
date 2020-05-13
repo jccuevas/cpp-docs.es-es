@@ -1,11 +1,15 @@
 ---
 title: atoi, _atoi_l, _wtoi, _wtoi_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wtoi
 - _wtoi_l
 - atoi
 - _atoi_l
+- _o__atoi_l
+- _o__wtoi
+- _o__wtoi_l
+- _o_atoi
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +23,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: 8d66a219aea1451e745e32f7affbfb59b73ff796
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943733"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919864"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -76,7 +81,7 @@ int _wtoi_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena que se va a convertir.
 
 *locale*<br/>
@@ -88,7 +93,7 @@ Cada función devuelve el valor **int** generado al interpretar los caracteres d
 
 En caso de desbordamiento con valores enteros negativos grandes, se devuelve **LONG_MIN** . **atoi** y **_wtoi** devuelven **INT_MAX** y **INT_MIN** en estas condiciones. En todos los casos fuera del intervalo, **errno** se establece en **ERANGE**. Si el parámetro pasado es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Estas funciones convierten una cadena de caracteres en un valor entero (**atoi** y **_wtoi**). La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que termina la cadena.
 
@@ -99,6 +104,8 @@ El argumento *Str* para **atoi** y **_wtoi** tiene el formato siguiente:
 Un espacio en *blanco* consta de caracteres de espacio o tabulación, que se omiten; el *signo* es más (+) o menos (-); y los *dígitos* son uno o más dígitos.
 
 Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -162,11 +169,11 @@ Function: atoi( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

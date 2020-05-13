@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - is_execution_policy class
 - is_execution_policy struct
-ms.openlocfilehash: b1be749d731f15b465f74e68d9cfa922017bf629
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 899e14dcbae4f734867260af934ce0c8724ecaa6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268977"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371628"
 ---
-# <a name="isexecutionpolicy-struct"></a>is_execution_policy Struct
+# <a name="is_execution_policy-struct"></a>is_execution_policy Struct
 
-Detecta las directivas de ejecución con el fin de excluir las firmas de función de la participación de resolución de sobrecarga ambigua en caso contrario.
+Detecta directivas de ejecución con el fin de excluir las firmas de función de la participación en la resolución de sobrecarga senambia.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template<class T> struct is_execution_policy { see below };
 ```

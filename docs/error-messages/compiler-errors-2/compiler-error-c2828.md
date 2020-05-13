@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2828
 ms.assetid: d8df6ed4-5954-46c2-b59b-52881d4e923d
-ms.openlocfilehash: d6dc742a181d8aebc041d9ffadd6256d3b7c9348
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5984573074b07ae4cbd961ad7d8821173e0b04b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406865"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201927"
 ---
 # <a name="compiler-error-c2828"></a>Error del compilador C2828
 
-'operator operator' no se puede invalidar globalmente por un tipo binario
+' operator Operator ' no se puede invalidar globalmente con un formato binario
 
 El operador no puede tener un formato binario fuera de un objeto.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones
 
-1. Realice el operador sobrecargado local en un objeto.
+1. Haga que el operador sobrecargado sea local en un objeto.
 
-1. Elija un operador unario adecuado a la sobrecarga.
+1. Elija un operador unario adecuado para sobrecargar.

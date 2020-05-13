@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513644"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214375"
 ---
 # <a name="version-information-editor-c"></a>Editor de información deC++versión ()
 
@@ -50,11 +50,11 @@ El **Editor de información de versión** le permite:
 
 Seleccione el elemento una vez para seleccionarlo y, a continuación, vuelva a empezar a editarlo. Realice los cambios directamente en la tabla de **información de versión** o en el [ventana Propiedades](/visualstudio/ide/reference/properties-window). Los cambios que realice se reflejarán en ambos lugares.
 
-Al editar la `FILEFLAGS` clave en el **Editor de información de versión**, tenga en cuenta que no puede establecer las propiedades depuración, **compilación privada**o **compilación especial** en la ventana **propiedades** de los archivos. RC:
+Al editar la clave `FILEFLAGS` en el **Editor de información de versión**, tenga en cuenta que no puede establecer las propiedades **depuración**, **compilación privada**o **compilación especial** en la ventana **propiedades** de los archivos. RC:
 
-   - El **Editor de información de versión** establece la propiedad **Debug** con un `#ifdef` en el script de recursos, basado en la `_DEBUG` marca de compilación.
+- El **Editor de información de versión** establece la propiedad **Debug** con un `#ifdef` en el script de recursos, basado en la marca de compilación `_DEBUG`.
 
-  - Si la `Private Build` clave tiene un **valor** establecido en la tabla de **información de versión** , la propiedad de **compilación privada** correspondiente en la ventana `FILEFLAGS` **propiedades** de la clave será **true**. Si el **valor** está vacío, la propiedad será **false**. Del mismo modo, la clave de **compilación especial** en la tabla de **información de versión** está vinculada a `FILEFLAGS` la propiedad de **compilación especial** para la clave.
+- Si la clave de `Private Build` tiene un **valor** establecido en la tabla de **información de versión** , la propiedad de **compilación privada** correspondiente en la ventana **propiedades** de la clave `FILEFLAGS` será **true**. Si el **valor** está vacío, la propiedad será **false**. Del mismo modo, la clave de **compilación especial** en la tabla de **información de versión** está vinculada a la propiedad de **compilación especial** para la clave de `FILEFLAGS`.
 
 Puede ordenar la secuencia de información del bloque de cadena seleccionando los encabezados de columna **clave** o **valor** . Estos encabezados reorganizan automáticamente la información en la secuencia seleccionada.
 
@@ -84,7 +84,7 @@ Si quiere tener acceso a la información de versión desde su programa, use la f
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
 [Menús y otros recursos](/windows/win32/menurc/resources)<br/>

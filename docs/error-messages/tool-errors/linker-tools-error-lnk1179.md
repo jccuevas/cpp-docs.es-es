@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: a267019f1be08cc8dcffdff3b4ba0b73357cccd4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d85693cec11ef53a6bbbb60d8ced716d2a0bb131
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183962"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754336"
 ---
 # <a name="linker-tools-error-lnk1179"></a>Error de las herramientas del vinculador LNK1179
 
-archivo no válido o dañado: COMDAT ' nombredearchivo ' duplicado
+archivo no válido o corrupto: duplicado COMDAT 'nombre de archivo'
 
 Un módulo de objeto contiene dos o más COMDAT con el mismo nombre.
 
-Este error puede deberse al uso de [/h](../../build/reference/h-restrict-length-of-external-names.md), que limita la longitud de los nombres externos y a [/GY](../../build/reference/gy-enable-function-level-linking.md), que empaqueta las funciones en COMDAT.
+Este error puede deberse al uso de [/H](../../build/reference/h-restrict-length-of-external-names.md), que limita la longitud de los nombres externos, y [/Gy](../../build/reference/gy-enable-function-level-linking.md), que empaqueta las funciones en COMDAT.
 
 ## <a name="example"></a>Ejemplo
 
-En el código siguiente, `function1` y `function2` son idénticos en los primeros ocho caracteres. La compilación con **/GY** y **/H8** produce un error de vínculo.
+En el código `function1` `function2` siguiente, y son idénticos en los primeros ocho caracteres. La compilación con **/Gy** y **/H8** produce un error de vínculo.
 
-```
+```cpp
 void function1(void);
 void function2(void);
 

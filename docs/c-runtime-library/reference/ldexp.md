@@ -1,11 +1,12 @@
 ---
 title: ldexp, ldexpf, ldexpl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
+- _o_ldexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953504"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916542"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -78,7 +80,7 @@ long double ldexpl(
 *x*<br/>
 Valor de punto flotante.
 
-*exp*<br/>
+*consumo*<br/>
 Exponente de entero.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -87,17 +89,19 @@ Las funciones **ldexp** devuelven el valor de *x* \* 2<sup>*exp*</sup> si se rea
 
 Para obtener más información sobre **errno** y los posibles valores devueltos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **ldexp** que toman tipos **float** o **Long** **Double** . En un programa de C, **ldexp** siempre toma un **valor Double** y un **entero** y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **ldexp** que toman tipos **float** o **Long** **Double** . En un programa de C, **ldexp** siempre toma un **valor Double** y un **entero** y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**, **ldexpf (**, **ldexpl**|\<math.h>|\<cmath>|
 
-Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -117,7 +121,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Resultados
+## <a name="output"></a>Salida
 
 ```Output
 4.0 times two to the power of 3 is 32.0

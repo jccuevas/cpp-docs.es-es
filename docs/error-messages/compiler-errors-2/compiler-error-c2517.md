@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2517
 ms.assetid: d79348d5-e271-4aad-b973-8264515f8e90
-ms.openlocfilehash: 63523670fe1292d23327112f627e7d1a9dafeca6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66b7657869c70b6f6175e7f3cccc1dfb4d2614f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395500"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202657"
 ---
 # <a name="compiler-error-c2517"></a>Error del compilador C2517
 
-'identifier': derecho de '::' no está definido
+' Identifier ': el derecho de ':: ' no está definido
 
-El identificador de la derecha del operador de resolución de ámbito (`::`) debe ser un miembro definido de la clase, estructura o unión situada a la izquierda. Si no es el nombre de ninguna clase, estructura o unión, el identificador de la derecha debe declararse con ámbito global.
+El identificador de la derecha del operador de resolución de ámbito (`::`) debe ser un miembro definido de la clase, estructura o unión de la izquierda. Si no se llama a una clase, estructura o Unión, el identificador de la derecha se debe declarar con ámbito global.

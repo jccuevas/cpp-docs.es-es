@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3173
 ms.assetid: edf79e10-e8cf-4f76-8d33-ab9d05e974e9
-ms.openlocfilehash: aeec64f8e724b92262d322b83de07ccfe57ac2bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b9b1b74bb8b4484026873f5c6052b5624c4f69
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176473"
 ---
 # <a name="compiler-error-c3173"></a>Error del compilador C3173
 
-Error de coincidencia de versión en la combinación de idl
+discrepancia de versiones en la combinación IDL
 
-Este error se produce cuando un archivo objeto contiene idl incrustado que se generó con una versión anterior del compilador. El compilador codifica un número de versión para asegurarse de que el compilador usado para generar el contenido de idl incrustado en los archivos .obj también es el mismo compilador utilizado para combinar el idl incrustado.
+Este error se produce cuando un archivo objeto contiene IDL incrustado que se generó con una versión anterior del compilador. El compilador codifica un número de versión para asegurarse de que el mismo compilador utilizado para generar el contenido IDL que está incrustado en los archivos. obj es también el mismo compilador que se usa para combinar el IDL incrustado.
 
-Actualizar la instalación de Visual C++ para que todas las herramientas son de la versión más reciente.
+Actualice la instalación C++ de visual para que todas las herramientas sean de la versión más reciente.

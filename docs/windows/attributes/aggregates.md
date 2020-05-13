@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168504"
 ---
 # <a name="aggregates"></a>agregados
 
@@ -28,17 +28,17 @@ Indica que el objeto agrega el objeto especificado por el CLSID.
 
 ### <a name="parameters"></a>Parámetros
 
-*clsid*<br/>
+*CLSID*<br/>
 Especifica el CLSID del objeto agregable.
 
 *variable_name*<br/>
 El nombre de la variable que se va a insertar. Esta variable contiene el `IUnknown` del objeto que se va a agregar.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cuando se aplica a un objeto, el atributo C++ **aggregates** implementa un contenedor externo para el objeto que se va a agregar (especificado por `clsid`).
 
-Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
+Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si se aplica `progid`, también se aplican `vi_progid` y `coclass`.
 
 ### <a name="atl-projects"></a>Proyectos ATL
 
@@ -90,11 +90,11 @@ struct CObject : IObject
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos COM](com-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Agregación](/windows/win32/com/aggregation)<br/>
-[Aggregatable](/windows/win32/Midl/aggregatable)<br/>
+[Agregable](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

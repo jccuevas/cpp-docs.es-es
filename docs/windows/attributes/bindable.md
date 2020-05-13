@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501822"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167360"
 ---
 # <a name="bindable"></a>bindable
 
@@ -23,17 +23,17 @@ Indica que la propiedad admite enlace de datos.
 [bindable]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El C++ atributo enlazable tiene la misma funcionalidad que el atributo MIDL [enlazable](/windows/win32/Midl/bindable) . Puede utilizarlo en las propiedades definidas con los atributos [propget](propget.md), [PROPPUT](propput.md)o [PROPPUTREF](propputref.md) , o puede definir manualmente un método enlazable.
+El **bindable** C++ atributo enlazable tiene la misma funcionalidad que el atributo MIDL [enlazable](/windows/win32/Midl/bindable) . Puede utilizarlo en las propiedades definidas con los atributos [propget](propget.md), [PROPPUT](propput.md)o [PROPPUTREF](propputref.md) , o puede definir manualmente un método enlazable.
 
 Los siguientes ejemplos de MFC muestran el uso de **Bindable**:
 
-- [Ejemplos de controles: Controles ActiveX basados en MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Ejemplos de controles: controles ActiveX basados en MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Ejemplo CIRC: Control ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Ejemplo CIRC: control ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Ejemplo TESTHELP: Control ActiveX con información sobre herramientas y ayuda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Ejemplo TESTHELP: control ActiveX con información sobre herramientas y ayuda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Ejemplo
 
@@ -65,13 +65,13 @@ __interface IPropDemo : IDispatch {
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

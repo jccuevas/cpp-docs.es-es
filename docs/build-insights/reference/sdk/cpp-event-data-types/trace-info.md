@@ -1,6 +1,6 @@
 ---
 title: Clase TraceInfo
-description: Referencia C++ de la clase TRACEINFO del SDK de Build Insights.
+description: La referencia de la clase TraceInfo del SDK de Compilación de C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5cf32c8dc954a803a11888231d35b1050ac81cc3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 75d53937e3999f5692dee0ecf419e0ce5f49a274
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334503"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324172"
 ---
 # <a name="traceinfo-class"></a>Clase TraceInfo
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La clase `TraceInfo` se utiliza para tener acceso a propiedades útiles sobre un seguimiento que se está analizando o reregistrando.
+La `TraceInfo` clase se utiliza para tener acceso a propiedades útiles sobre un seguimiento que se está analizando o reregistrando.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,11 +45,11 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Reste el `StartTimestamp` de `StopTimestamp` para obtener el número de pasos transcurridos durante todo el seguimiento. Utilice `TickFrequency` para convertir el valor resultante en una unidad de tiempo. Para obtener un ejemplo de cómo convertir TICs en Time, vea [EVENT_DATA](../c-event-data-types/event-data-struct.md).
+Restar `StartTimestamp` `StopTimestamp` el para obtener el número de ticks transcurridos durante todo el seguimiento. Se `TickFrequency` utiliza para convertir el valor resultante en una unidad de tiempo. Para obtener un ejemplo de conversión de ticks a tiempo, consulte [EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-Si no desea convertir los tics por su cuenta, la clase `TraceInfo` proporciona una función miembro que devuelve la duración del seguimiento en nanosegundos. Use la biblioteca C++ de `chrono` estándar para convertir este valor en otras unidades de tiempo.
+Si no desea convertir los ticks `TraceInfo` usted mismo, la clase proporciona una función miembro que devuelve la duración del seguimiento en nanosegundos. Utilice la biblioteca `chrono` C++ estándar para convertir este valor en otras unidades de tiempo.
 
 ## <a name="members"></a>Miembros
 
@@ -57,15 +57,15 @@ Si no desea convertir los tics por su cuenta, la clase `TraceInfo` proporciona u
 
 [TraceInfo](#trace-info)
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
-[Duration](#duration)
+[Duración](#duration)
 [LogicalProcessorCount](#logical-processor-count)
 [StartTimestamp](#start-timestamp)
 [StopTimestamp](#stop-timestamp)
 [TickFrequency](#tick-frequency)
 
-## <a name="duration"></a>Duration
+## <a name="duration"></a><a name="duration"></a>Duración
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -75,7 +75,7 @@ std::chrono::nanoseconds Duration() const;
 
 La duración de la actividad en nanosegundos.
 
-## <a name="logical-processor-count"></a>LogicalProcessorCount
+## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a>LogicalProcessorCount
 
 ```cpp
 const unsigned long& LogicalProcessorCount() const;
@@ -83,9 +83,9 @@ const unsigned long& LogicalProcessorCount() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de procesadores lógicos en el equipo en el que se recopiló el seguimiento.
+El número de procesadores lógicos en la máquina donde se recopiló el seguimiento.
 
-## <a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -95,7 +95,7 @@ const long long& StartTimestamp() const;
 
 Un valor de tick capturado en el momento en que se inició el seguimiento.
 
-## <a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -103,9 +103,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor de tick capturado en el momento en que se detuvo el seguimiento.
+Un valor de tick capturado en el momento en que se detuvo el seguimiento.
 
-## <a name="tick-frequency"></a>TickFrequency
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>TickFrequency
 
 ```cpp
 const long long& TickFrequency() const;
@@ -113,9 +113,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Número de TICs por segundo que se van a usar al evaluar una duración medida en pasos.
+El número de ticks por segundo que se utilizarán al evaluar una duración medida en ticks.
 
-## <a name="trace-info"></a>TraceInfo
+## <a name="traceinfo"></a><a name="trace-info"></a>TraceInfo
 
 ```cpp
 TraceInfo(const TRACE_INFO_DATA& data);
@@ -123,7 +123,7 @@ TraceInfo(const TRACE_INFO_DATA& data);
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *datos*
-Datos que contienen la información sobre el seguimiento.
+*Datos*\
+Los datos que contienen la información sobre el seguimiento.
 
 ::: moniker-end

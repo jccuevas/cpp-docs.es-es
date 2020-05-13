@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: ab71ada5b1fb8b604b94ed098a46820b86a65c63
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689607"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370684"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution (Clase)
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *RealType*
-El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, por defecto **es double**. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-@No__t_1 *URNG*
-Motor del generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*Urng*\
+El motor generador de números aleatorios uniforme. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La plantilla de clase describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución gamma. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que produce valores de un tipo de punto flotante especificado por el usuario, o escriba **double** si no se proporciona ninguno, distribuido según la distribución gamma. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información acerca de las clases de distribución y sus miembros, vea [ \<>aleatorias ](../standard-library/random.md).
 
 Para obtener más información sobre la distribución gamma, vea el artículo de Wolfram MathWorld sobre la [distribución gamma](https://go.microsoft.com/fwlink/p/?linkid=401111).
 
@@ -188,7 +188,7 @@ Distribution for 10 samples:
 
 **Espacio de nombres:** std
 
-## <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution::gamma_distribution
 
 Construye la distribución.
 
@@ -199,16 +199,16 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *alfa*
+*Alfa*\
 El parámetro de distribución `alpha`.
 
-\ *beta*
+*Beta*\
 El parámetro de distribución `beta`.
 
-\ *PARM*
+*Parmesana*\
 La estructura de parámetros utilizada para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **Condición previa:** `0.0 < alpha` y `0.0 < beta`
 
@@ -216,7 +216,7 @@ El primer constructor crea un objeto cuyo valor `alpha` almacenado contiene el v
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="param_type"></a>  gamma_distribution::param_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::param_type
 
 Almacena los parámetros de la distribución.
 
@@ -234,21 +234,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-\ *alfa*
+*Alfa*\
 El parámetro de distribución `alpha`.
 
-\ *beta*
+*Beta*\
 El parámetro de distribución `beta`.
 
-\ *derecha*
+*Correcto*\
 La instancia `param_type` que comparar con esta.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **Condición previa:** `0.0 < alpha` y `0.0 < beta`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)
+[\<>al azar](../standard-library/random.md)

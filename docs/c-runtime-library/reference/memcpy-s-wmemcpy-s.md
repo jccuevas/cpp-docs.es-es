@@ -1,9 +1,11 @@
 ---
 title: memcpy_s, wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952801"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915407"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -78,16 +81,18 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |*dest*|*destSize*|*src*|*count*|Valor devuelto|Contenido de *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|any|any|any|0|0|No modificado|
-|**NULL**|any|any|distinto de cero|**EINVAL**|No modificado|
-|any|any|**NULL**|distinto de cero|**EINVAL**|*dest* está en cero|
-|any|< *contabiliza*|any|distinto de cero|**ERANGE**|*dest* está en cero|
+|cualquiera|cualquiera|cualquiera|0|0|No modificado|
+|**ACEPTA**|cualquiera|cualquiera|distinto de cero|**EINVAL**|No modificado|
+|cualquiera|cualquiera|**ACEPTA**|distinto de cero|**EINVAL**|*dest* está en cero|
+|cualquiera|< *recuento*|cualquiera|distinto de cero|**ERANGE**|*dest* está en cero|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 **memcpy_s** copia el *número* de bytes de *src* a *dest*; **wmemcpy_s** copia el *número* de caracteres anchos (dos bytes). Si el origen y el destino se superponen, el comportamiento de **memcpy_s** es indefinido. Use **memmove_s** para administrar regiones superpuestas.
 
 Estas funciones validan sus parámetros. Si *Count* es distinto de cero y *dest* o *src* es un puntero nulo, o *destSize* es menor que *Count*, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** o **ERANGE** y establecen **errno** en el valor devuelto.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -96,7 +101,7 @@ Estas funciones validan sus parámetros. Si *Count* es distinto de cero y *dest*
 |**memcpy_s**|\<memory.h> o \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -138,7 +143,7 @@ int main()
 0 1 4 9 16 25 36 49 64 81
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación del búfer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

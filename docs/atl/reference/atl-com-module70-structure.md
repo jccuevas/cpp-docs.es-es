@@ -1,5 +1,5 @@
 ---
-title: _ATL_COM_MODULE70 (estructura)
+title: Estructura de _ATL_COM_MODULE70
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_ATL_COM_MODULE70
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_COM_MODULE70 structure
 - ATL_COM_MODULE70 structure
 ms.assetid: 5b0b2fd0-bdeb-4c7e-8870-78fa69ace6e6
-ms.openlocfilehash: c6361fc5374ed732cd9ccbfbbd1d3d1c2fc8f1f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2e9e3d6695a7fbbcc87c489edf2e96fcdffb835
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261044"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168636"
 ---
-# <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 (estructura)
+# <a name="_atl_com_module70-structure"></a>Estructura de _ATL_COM_MODULE70
 
-Utilizado por el código relacionado con COM de ATL.
+Lo usa el código relacionado con COM en ATL.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInstTypeLib;
@@ -32,31 +32,31 @@ struct _ATL_COM_MODULE70 {
 };
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 `cbSize`<br/>
-El tamaño de la estructura que se utiliza para el control de versiones.
+Tamaño de la estructura, que se usa para el control de versiones.
 
 `m_hInstTypeLib`<br/>
-La instancia de identificador a la biblioteca de tipos para este módulo.
+La instancia del identificador a la biblioteca de tipos para este módulo.
 
 `m_ppAutoObjMapFirst`<br/>
-Dirección del elemento de matriz que indica el principio de las entradas de asignación de objeto para este módulo.
+Dirección del elemento de la matriz que indica el principio de las entradas del mapa de objetos para este módulo.
 
 `m_ppAutoObjMapLast`<br/>
-Dirección del elemento de matriz que indica el final de las entradas de asignación de objeto para este módulo.
+Dirección del elemento de la matriz que indica el final de las entradas del mapa de objetos para este módulo.
 
 `m_csObjMap`<br/>
-Sección crítica para serializar el acceso a las entradas de asignación de objeto. Lo utiliza internamente ATL.
+Sección crítica para serializar el acceso a las entradas de asignación de objetos. Lo utiliza internamente ATL.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) se define como un typedef de _ATL_COM_MODULE70.
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) se define como una definición de tipo de _ATL_COM_MODULE70.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clases y structs](../../atl/reference/atl-classes.md)
+[Clases y estructuras](../../atl/reference/atl-classes.md)

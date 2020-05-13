@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 55860a65fc77f834ed699f3a5114768b7efdde6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688346"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366732"
 ---
 # <a name="cache_suballoc-class"></a>cache_suballoc (Clase)
 
@@ -32,13 +32,13 @@ class cache_suballoc
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*SZ*|El número de elementos de la matriz que se van a asignar.|
+|*Sz*|El número de elementos de la matriz que se van a asignar.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La plantilla de clase cache_suballoc almacena los bloques de memoria desasignados en una lista libre con una longitud sin enlazar, utilizando `freelist<sizeof(Type), max_unbounded>` y subasigna bloques de memoria de un fragmento más grande asignado con el **operador New** cuando la lista libre está vacía.
+La plantilla de clase cache_suballoc almacena bloques de memoria desasignados en una lista libre con longitud sin enlazar, utilizando `freelist<sizeof(Type), max_unbounded>`y subasigna bloques de memoria de un fragmento más grande asignado con el operador **new** cuando la lista gratuita está vacía.
 
-Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que el **operador New** y el **operador Delete** requieren. Nunca se liberarán los fragmentos asignados.
+Cada fragmento `Sz * Nelts` contiene bytes de memoria utilizable y los datos que requieren **el operador new** y el operador **delete.** Nunca se liberarán los fragmentos asignados.
 
 ### <a name="constructors"></a>Constructores
 
@@ -48,9 +48,9 @@ Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
-|[allocate](#allocate)|Asigna un bloque de memoria.|
+|[Asignar](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
 
 ## <a name="requirements"></a>Requisitos
@@ -59,7 +59,7 @@ Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que
 
 **Espacio de nombres:** stdext
 
-## <a name="allocate"></a>  cache_suballoc::allocate
+## <a name="cache_suballocallocate"></a><a name="allocate"></a>cache_suballoc::asignar
 
 Asigna un bloque de memoria.
 
@@ -77,9 +77,9 @@ void *allocate(std::size_t count);
 
 Un puntero al objeto asignado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
+## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a>cache_suballoc::cache_suballoc
 
 Construye un objeto de tipo `cache_suballoc`.
 
@@ -87,9 +87,9 @@ Construye un objeto de tipo `cache_suballoc`.
 cache_suballoc();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="deallocate"></a>  cache_suballoc::deallocate
+## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a>cache_suballoc::deallocate
 
 Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*Ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<asignadores>](../standard-library/allocators-header.md)

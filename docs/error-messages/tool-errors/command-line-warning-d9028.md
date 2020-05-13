@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - D9028
 ms.assetid: 03852b51-fa59-4114-ab1f-2af0509119af
-ms.openlocfilehash: 007c0a9e9a0f51740b1d6b668905fa20d7ef2964
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e65881159176ba0d144a8abc5f395ce1b96402f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196656"
 ---
 # <a name="command-line-warning-d9028"></a>Advertencia de la línea de comandos D9028
 
-> Error de recompilación mínimo, revirtiendo a la compilación normal
+> error de regeneración mínima, revirtiendo a la compilación normal
 
-El archivo .idb del proyecto está dañado. Elimine el archivo y volver a generar.
+El archivo Project. IDB está dañado. Elimine el archivo y vuelva a generarlo.
 
-Para obtener más información sobre regeneraciones mínimas y el archivo .idb, vea el desuso [opción del compilador /Gm](../../build/reference/gm-enable-minimal-rebuild.md).
+Para obtener más información sobre las recompilaciones mínimas y el archivo. IDB, vea la [opción de compilador/GM](../../build/reference/gm-enable-minimal-rebuild.md)en desuso.

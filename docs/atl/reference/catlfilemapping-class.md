@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMapping (clase)
+title: Clase CAtlFileMapping
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFileMapping
@@ -7,43 +7,43 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7516349e4ec54d8cb90fa6ff23b0ded954aa043b
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247179"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168129"
 ---
-# <a name="catlfilemapping-class"></a>CAtlFileMapping (clase)
+# <a name="catlfilemapping-class"></a>Clase CAtlFileMapping
 
-Esta clase representa un archivo asignado a memoria, adición de un operador de conversión a los métodos de [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
+Esta clase representa un archivo asignado a la memoria, agregando un operador de conversión a los métodos de [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template <typename T = char>
 class CAtlFileMapping : public CAtlFileMappingBase
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-El tipo de datos utilizados para el operador de conversión.
+El tipo de datos utilizado para el operador de conversión.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CAtlFileMapping::operator T *](#operator_t_star)|Permite la conversión implícita de `CAtlFileMapping` objetos `T*`.|
+|[CAtlFileMapping:: Operator T *](#operator_t_star)|Permite la conversión implícita `CAtlFileMapping` de objetos `T*`en.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase agrega un operador de conversión única para permitir la conversión implícita de `CAtlFileMapping` objetos `T*`. Otros miembros proporcionados por la clase base, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
+Esta clase agrega un operador de conversión único para permitir la conversión `CAtlFileMapping` implícita de `T*`objetos a. La clase base, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md), proporciona otros miembros.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -53,13 +53,13 @@ Esta clase agrega un operador de conversión única para permitir la conversión
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlfile.h
+**Encabezado:** atlfile. h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping:: Operator T *
 
-Permite la conversión implícita de `CAtlFileMapping` objetos `T*`.
+Permite la conversión implícita `CAtlFileMapping` de objetos `T*`en.
 
-```
+```cpp
 operator T*() const throw();
 ```
 
@@ -67,11 +67,11 @@ operator T*() const throw();
 
 Devuelve un `T*` puntero al principio del archivo asignado a la memoria.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las llamadas [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) y vuelve a interpretar el puntero devuelto como un `T*` donde *T* es el tipo utilizado como parámetro de plantilla de esta clase.
+Llama a [CAtlFileMappingBase:: GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) y reinterpreta el puntero devuelto como `T*` donde *T* es el tipo que se usa como parámetro de plantilla de esta clase.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CAtlFileMappingBase (clase)](../../atl/reference/catlfilemappingbase-class.md)<br/>
+[Clase CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

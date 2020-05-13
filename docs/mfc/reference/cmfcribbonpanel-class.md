@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonPanel
+title: CMFCRibbonPanel Clase
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonPanel
@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425770"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753546"
 ---
-# <a name="cmfcribbonpanel-class"></a>Clase CMFCRibbonPanel
+# <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel Clase
 
 Implementa un panel que contiene un conjunto de elementos de cinta. Cuando se dibuja el panel, muestra tantos elementos como es posible, dado el tamaño del panel.
 
-Para obtener más información, consulte el código fuente que se encuentra en la **\\VC\\src\\MFC** de la instalación de Visual Studio.
+Para obtener más información, vea el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\mfc** de la instalación de Visual Studio.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -133,81 +133,81 @@ Para obtener más información, consulte el código fuente que se encuentra en l
 class CMFCRibbonPanel : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="protected-constructors"></a>Constructores protegidos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CMFCRibbonPanel:: CMFCRibbonPanel](#cmfcribbonpanel)|Construye e inicializa un objeto `CMFCRibbonPanel`.|
+|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Construye e inicializa un objeto `CMFCRibbonPanel`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CMFCRibbonPanel:: Add](#add)|Agrega un elemento de la cinta de opciones al panel.|
-|[CMFCRibbonPanel:: AddSeparator](#addseparator)|Agrega un separador al panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: AddToolBar](#addtoolbar)|Agrega una barra de herramientas al panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: FindByData](#findbydata)||
-|[CMFCRibbonPanel:: FindByID](#findbyid)|Devuelve un elemento identificado por un identificador de comando especificado.|
-|[CMFCRibbonPanel:: GetCaptionHeight](#getcaptionheight)||
-|[CMFCRibbonPanel:: GetCount](#getcount)|Devuelve el número de elementos del panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: GetData](#getdata)|Devuelve los datos definidos por el usuario asociados al panel.|
-|[CMFCRibbonPanel:: GetDefaultButton](#getdefaultbutton)||
-|[CMFCRibbonPanel:: GetDroppedDown](#getdroppeddown)||
-|[CMFCRibbonPanel:: GetElement](#getelement)|Devuelve el elemento de la cinta de opciones situado en un índice especificado.|
-|[CMFCRibbonPanel:: GetElements](#getelements)|Recupera todos los elementos contenidos en el panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: GetElementsByID](#getelementsbyid)||
-|[CMFCRibbonPanel:: GetFocused](#getfocused)|Devuelve un elemento que tiene el foco.|
-|[CMFCRibbonPanel:: GetGalleryRect](#getgalleryrect)|Devuelve un rectángulo delimitador del elemento Gallery.|
-|[CMFCRibbonPanel:: GetHighlighted](#gethighlighted)||
-|[CMFCRibbonPanel:: GetIndex](#getindex)||
-|[CMFCRibbonPanel:: GetItemIDsList](#getitemidslist)||
-|[CMFCRibbonPanel:: GetName](#getname)||
-|[CMFCRibbonPanel:: GetParentButton](#getparentbutton)||
-|[CMFCRibbonPanel:: GetParentCategory](#getparentcategory)|Devuelve la categoría primaria del panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: GetParentMenuBar](#getparentmenubar)||
-|[CMFCRibbonPanel:: GetPreferedMenuLocation](#getpreferedmenulocation)||
-|[CMFCRibbonPanel:: GetPressed](#getpressed)||
-|[CMFCRibbonPanel:: GetRect](#getrect)||
-|[CMFCRibbonPanel:: GetVisibleElements](#getvisibleelements)|Obtiene una matriz de elementos visibles.|
-|[CMFCRibbonPanel:: HasElement](#haselement)||
-|[CMFCRibbonPanel:: HitTest](#hittest)||
-|[CMFCRibbonPanel:: HitTestEx](#hittestex)||
-|[CMFCRibbonPanel:: Insert](#insert)|Inserta un elemento de la cinta de opciones en la posición especificada.|
-|[CMFCRibbonPanel:: InsertSeparator](#insertseparator)|Inserta un separador en la posición especificada.|
-|[CMFCRibbonPanel:: IsCenterColumnVert](#iscentercolumnvert)|Especifica si todos los elementos del panel se deben centrar (alinear) verticalmente, por columna.|
-|[CMFCRibbonPanel:: IsCollapsed](#iscollapsed)||
-|[CMFCRibbonPanel:: IsHighlighted](#ishighlighted)||
-|[CMFCRibbonPanel:: IsJustifyColumns](#isjustifycolumns)|Especifica si todas las columnas del panel tienen el mismo ancho.|
-|[CMFCRibbonPanel:: IsMainPanel](#ismainpanel)||
-|[CMFCRibbonPanel:: IsMenuMode](#ismenumode)||
-|[CMFCRibbonPanel:: MakeGalleryItemVisible](#makegalleryitemvisible)|Desplaza la galería para que el elemento de la cinta de opciones especificado sea visible.|
-|[CMFCRibbonPanel:: OnKey](#onkey)||
-|[CMFCRibbonPanel:: RecalcWidths](#recalcwidths)||
-|[CMFCRibbonPanel:: Remove](#remove)|Quita y, opcionalmente, elimina un elemento situado en el índice especificado.|
-|[CMFCRibbonPanel:: RemoveAll](#removeall)|Quita todos los elementos del panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: Replace](#replace)|Reemplaza un elemento por otro basándose en sus valores de índice respectivos.|
-|[CMFCRibbonPanel:: ReplaceByID](#replacebyid)|Reemplaza un elemento por otro basándose en un identificador de comando especificado.|
-|[CMFCRibbonPanel:: SetCenterColumnVert](#setcentercolumnvert)|Ordena el panel para alinear los elementos verticalmente, por columna.|
-|[CMFCRibbonPanel:: SetData](#setdata)|Asocia los datos definidos por el usuario con el panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: SetElementMenu](#setelementmenu)|Asigna un menú emergente al elemento que tiene el identificador de comando especificado.|
-|[CMFCRibbonPanel:: SetElementRTC](#setelementrtc)|Agrega un elemento de cinta especificado por la información de clase en tiempo de ejecución proporcionada al panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: SetElementRTCByID](#setelementrtcbyid)|Agrega un elemento de cinta especificado por la información de clase en tiempo de ejecución proporcionada al panel de la cinta de opciones.|
-|[CMFCRibbonPanel:: SetFocused](#setfocused)|Establece el foco en el elemento de cinta especificado.|
-|[CMFCRibbonPanel:: SetJustifyColumns](#setjustifycolumns)|Habilita o deshabilita la justificación de la columna.|
-|[CMFCRibbonPanel:: SetKeys](#setkeys)|Establece el método abreviado de teclado que muestra el panel de la cinta.|
-|[CMFCRibbonPanel:: ShowPopup](#showpopup)||
+|[CMFCRibbonPanel::Add](#add)|Agrega un elemento de la cinta de opciones al panel.|
+|[CMFCRibbonPanel::AddSeparator](#addseparator)|Agrega un separador al panel de la cinta de opciones.|
+|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Agrega una barra de herramientas al panel de la cinta de opciones.|
+|[CMFCRibbonPanel::FindByData](#findbydata)||
+|[CMFCRibbonPanel::FindByID](#findbyid)|Devuelve un elemento identificado por un identificador de comando especificado.|
+|[CMFCRibbonPanel::GetCaptionHeight](#getcaptionheight)||
+|[CMFCRibbonPanel::GetCount](#getcount)|Devuelve el número de elementos del panel de la cinta de opciones.|
+|[CMFCRibbonPanel::GetData](#getdata)|Devuelve los datos definidos por el usuario asociados al panel.|
+|[CMFCRibbonPanel::GetDefaultButton](#getdefaultbutton)||
+|[CMFCRibbonPanel::GetDroppedDown](#getdroppeddown)||
+|[CMFCRibbonPanel::GetElement](#getelement)|Devuelve el elemento de la cinta de opciones ubicado en un índice especificado.|
+|[CMFCRibbonPanel::GetElements](#getelements)|Recupera todos los elementos contenidos en el panel de la cinta de opciones.|
+|[CMFCRibbonPanel::GetElementsByID](#getelementsbyid)||
+|[CMFCRibbonPanel::GetFocused](#getfocused)|Devuelve un elemento que tiene el foco.|
+|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Devuelve un rectángulo delimitador del elemento Gallery.|
+|[CMFCRibbonPanel::GetHighlighted](#gethighlighted)||
+|[CMFCRibbonPanel::GetIndex](#getindex)||
+|[CMFCRibbonPanel::GetItemIDsList](#getitemidslist)||
+|[CMFCRibbonPanel::GetName](#getname)||
+|[CMFCRibbonPanel::GetParentButton](#getparentbutton)||
+|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Devuelve la categoría primaria del panel de la cinta de opciones.|
+|[CMFCRibbonPanel::GetParentMenuBar](#getparentmenubar)||
+|[CMFCRibbonPanel::GetPreferedMenuLocation](#getpreferedmenulocation)||
+|[CMFCRibbonPanel::GetPressed](#getpressed)||
+|[CMFCRibbonPanel::GetRect](#getrect)||
+|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|Obtiene una matriz de elementos visibles.|
+|[CMFCRibbonPanel::HasElement](#haselement)||
+|[CMFCRibbonPanel::HitTest](#hittest)||
+|[CMFCRibbonPanel::HitTestEx](#hittestex)||
+|[CMFCRibbonPanel::Insertar](#insert)|Inserta un elemento de cinta de opciones en la posición dada.|
+|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Inserta un separador en la posición dada.|
+|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Especifica si todos los elementos del panel deben estar centrados (alineados) verticalmente, por columna.|
+|[CMFCRibbonPanel::IsCollapsed](#iscollapsed)||
+|[CMFCRibbonPanel::IsHighlighted](#ishighlighted)||
+|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|Especifica si todas las columnas del panel tienen el mismo ancho.|
+|[CMFCRibbonPanel::IsMainPanel](#ismainpanel)||
+|[CMFCRibbonPanel::IsMenuMode](#ismenumode)||
+|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Desplaza la galería para hacer visible el elemento Ribbon especificado.|
+|[CMFCRibbonPanel::OnKey](#onkey)||
+|[CMFCRibbonPanel::RecalcWidths](#recalcwidths)||
+|[CMFCRibbonPanel::Quitar](#remove)|Quita y, opcionalmente, elimina un elemento ubicado en el índice especificado.|
+|[CMFCRibbonPanel::RemoveAll](#removeall)|Quita todos los elementos del panel de la cinta de opciones.|
+|[CMFCRibbonPanel::Reemplazar](#replace)|Reemplaza un elemento por otro en función de sus respectivos valores de índice.|
+|[CMFCRibbonPanel::ReplaceByID](#replacebyid)|Reemplaza un elemento por otro basado en un identificador de comando especificado.|
+|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|Ordena al panel que alinee los elementos verticalmente, por columna.|
+|[CMFCRibbonPanel::SetData](#setdata)|Asocia datos definidos por el usuario con el panel de la cinta de opciones.|
+|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Asigna un menú emergente al elemento que tiene el identificador de comando especificado.|
+|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Agrega un elemento de la cinta de opciones especificado por la información de clase en tiempo de ejecución proporcionada al panel de la cinta de opciones.|
+|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Agrega un elemento de la cinta de opciones especificado por la información de clase en tiempo de ejecución proporcionada al panel de la cinta de opciones.|
+|[CMFCRibbonPanel::SetFocused](#setfocused)|Establece el foco en el elemento Ribbon especificado.|
+|[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|Habilita o deshabilita la justificación de columnas.|
+|[CMFCRibbonPanel::SetKeys](#setkeys)|Establece el método abreviado de teclado que muestra el panel de la cinta de opciones.|
+|[CMFCRibbonPanel::ShowPopup](#showpopup)||
 
 ## <a name="remarks"></a>Observaciones
 
-Los paneles de la cinta son agrupaciones lógicas de tareas relacionadas que se crean dentro de las categorías de la cinta de opciones. A medida que cambia el tamaño de la cinta de opciones, el diseño del panel se ajusta automáticamente para mostrar tantos elementos como sea posible.
+Los paneles de la cinta de opciones son agrupaciones lógicas de tareas relacionadas que se crean dentro de las categorías de la cinta de opciones. A medida que cambia el tamaño de la cinta de opciones, el diseño del panel se ajusta automáticamente para mostrar tantos elementos como sea posible.
 
-Puede obtener los paneles de la cinta de opciones contenidos en una categoría de la cinta de opciones llamando al método [CMFCRibbonCategory:: GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) .
+Puede obtener un panel de la cinta de opciones que se encuentra en una categoría de la cinta de opciones mediante una llamada a la [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) método.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar un objeto de `CMFCRibbonPanel` mediante el uso de varios métodos en la clase `CMFCRibbonPanel`. En el ejemplo se muestra cómo establecer el método abreviado de teclado que muestra el panel de la cinta de opciones, alinear verticalmente los elementos del panel por columna y habilitar la justificación de la columna. Este fragmento de código forma parte del [ejemplo de demostración de MS Office 2007](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se `CMFCRibbonPanel` muestra cómo configurar `CMFCRibbonPanel` un objeto mediante varios métodos en la clase. En el ejemplo se muestra cómo establecer el método abreviado de teclado que muestra el panel de la cinta de opciones, alinear elementos en el panel verticalmente por columna y habilitar la justificación de columna. Este fragmento de código forma parte del ejemplo de demostración de [MS Office 2007.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 
@@ -219,11 +219,11 @@ En el ejemplo siguiente se muestra cómo configurar un objeto de `CMFCRibbonPane
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxRibbonPanel. h
+**Encabezado:** afxRibbonPanel.h
 
-##  <a name="add"></a>CMFCRibbonPanel:: Add
+## <a name="cmfcribbonpaneladd"></a><a name="add"></a>CMFCRibbonPanel::Add
 
-Anexa el elemento de cinta especificado a la matriz de elementos de la cinta de opciones que se encuentra en el panel de la cinta de opciones.
+Anexa el elemento de la cinta de opciones especificado a la matriz de elementos de la cinta de opciones que se encuentra en el panel de la cinta de opciones.
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -232,11 +232,11 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Parámetros
 
 *pElem*<br/>
-[in, out] Puntero a un elemento de la cinta.
+[adentro, fuera] Puntero a un elemento de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="addseparator"></a>CMFCRibbonPanel:: AddSeparator
+## <a name="cmfcribbonpaneladdseparator"></a><a name="addseparator"></a>CMFCRibbonPanel::AddSeparator
 
 Agrega un separador al panel de la cinta de opciones.
 
@@ -246,9 +246,9 @@ virtual void AddSeparator();
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método para agregar un separador al panel de la cinta de opciones. El separador se agregará junto al elemento de la cinta de opciones que agregó la llamada anterior a [CMFCRibbonPanel:: Add](#add). Para insertar un separador en una posición determinada, llame a [CMFCRibbonPanel:: InsertSeparator](#insertseparator).
+Llame a este método para agregar un separador al panel de la cinta de opciones. El separador se agregará junto al elemento de la cinta de opciones que se agregó mediante la llamada anterior a [CMFCRibbonPanel::Add](#add). Para insertar un separador en una posición determinada, llame a [CMFCRibbonPanel::InsertSeparator](#insertseparator).
 
-##  <a name="addtoolbar"></a>CMFCRibbonPanel:: AddToolBar
+## <a name="cmfcribbonpaneladdtoolbar"></a><a name="addtoolbar"></a>CMFCRibbonPanel::AddToolBar
 
 Agrega una barra de herramientas al panel de la cinta de opciones.
 
@@ -263,28 +263,28 @@ UINT uiDisabledResID = 0);
 ### <a name="parameters"></a>Parámetros
 
 *uiToolbarResID*<br/>
-de Especifica el identificador de recurso de la barra de herramientas que se va a agregar.
+[en] Especifica el identificador de recurso de la barra de herramientas que se va a agregar.
 
 *uiColdResID*<br/>
-de Especifica el identificador de recurso de las imágenes frías de la barra de herramientas.
+[en] Especifica el identificador de recurso de las imágenes frías de la barra de herramientas.
 
 *uiHotResID*<br/>
-de Especifica el identificador de recurso de las imágenes activas de la barra de herramientas.
+[en] Especifica el identificador de recurso de las imágenes calientes de la barra de herramientas.
 
 *uiDisabledResID*<br/>
-de Especifica el identificador de recurso de las imágenes deshabilitadas de la barra de herramientas.
+[en] Especifica el identificador de recurso de las imágenes deshabilitadas de la barra de herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Llame a este método para agregar una barra de herramientas al panel de la cinta de opciones. La barra de herramientas se agregará junto al elemento de la cinta de opciones agregada por la llamada anterior a [CMFCRibbonPanel:: Add](#add).
+Llame a este método para agregar una barra de herramientas al panel de la cinta de opciones. La barra de herramientas se agregará junto al elemento de la cinta de opciones agregado por la llamada anterior a [CMFCRibbonPanel::Add](#add).
 
 ### <a name="remarks"></a>Observaciones
 
-Para obtener más información acerca de las barras de herramientas, las imágenes activas, las imágenes frías y las imágenes deshabilitadas, consulte [clase CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
+Para obtener más información acerca de las barras de herramientas, las imágenes en caliente, las imágenes en frío y las imágenes [deshabilitadas, vea CMFCToolBar (Clase)](../../mfc/reference/cmfctoolbar-class.md).
 
-##  <a name="cmfcribbonpanel"></a>CMFCRibbonPanel:: CMFCRibbonPanel
+## <a name="cmfcribbonpanelcmfcribbonpanel"></a><a name="cmfcribbonpanel"></a>CMFCRibbonPanel::CMFCRibbonPanel
 
-Construye e inicializa un objeto [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) .
+Construye e inicializa un [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) objeto.
 
 ```
 CMFCRibbonPanel(
@@ -297,17 +297,17 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ### <a name="parameters"></a>Parámetros
 
 *lpszName*<br/>
-de Nombre del panel de la cinta de opciones.
+[en] El nombre del panel de la cinta de opciones.
 
 *hIcon*<br/>
-de Identificador del icono del botón predeterminado del panel de la cinta de opciones.
+[en] Controle el icono del botón predeterminado del panel de la cinta de opciones.
 
 *pPaletteButton*<br/>
-de Puntero a una galería de la cinta de opciones para el panel de la cinta.
+[en] Puntero a una galería de la cinta de opciones para el panel de la cinta de opciones.
 
-##  <a name="findbydata"></a>CMFCRibbonPanel:: FindByData
+## <a name="cmfcribbonpanelfindbydata"></a><a name="findbydata"></a>CMFCRibbonPanel::FindByData
 
-Recupera el elemento de la cinta de opciones que está asociado a los datos especificados.
+Recupera el elemento de la cinta de opciones asociado a los datos especificados.
 
 ```
 CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
@@ -316,17 +316,17 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ### <a name="parameters"></a>Parámetros
 
 *dwData*<br/>
-de Los datos asociados a un elemento de la cinta de opciones.
+[en] Los datos asociados a un elemento de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a un elemento de la cinta de opciones si el método se realizó correctamente; de lo contrario, NULL.
+Puntero a un elemento de la cinta de opciones si el método se realizó correctamente; NULL.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="findbyid"></a>CMFCRibbonPanel:: FindByID
+## <a name="cmfcribbonpanelfindbyid"></a><a name="findbyid"></a>CMFCRibbonPanel::FindByID
 
-Recupera el elemento de la cinta de opciones que se identifica mediante el identificador de comando especificado.
+Recupera el elemento de la cinta de opciones identificado por el identificador de comando especificado.
 
 ```
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
@@ -335,13 +335,13 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ### <a name="parameters"></a>Parámetros
 
 *uiCmdID*<br/>
-de IDENTIFICADOR de comando de un elemento de la cinta de opciones.
+[en] El identificador de comando de un elemento de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El elemento de la cinta de opciones que se identifica mediante el identificador de comando especificado. de lo contrario, es NULL si no se identifica ningún elemento de la cinta con el identificador de comando especificado.
+El elemento de la cinta de opciones que se identifica mediante el identificador de comando especificado; de lo contrario NULL si no se identifica ningún elemento de la cinta de opciones con el identificador de comando especificado.
 
-##  <a name="getcaptionheight"></a>CMFCRibbonPanel:: GetCaptionHeight
+## <a name="cmfcribbonpanelgetcaptionheight"></a><a name="getcaptionheight"></a>CMFCRibbonPanel::GetCaptionHeight
 
 Recupera el alto de un título para el panel de la cinta de opciones.
 
@@ -351,13 +351,13 @@ int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Alto, en píxeles, de un título para el panel de la cinta de opciones.
+Altura, en píxeles, de un título para el panel de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getcount"></a>CMFCRibbonPanel:: GetCount
+## <a name="cmfcribbonpanelgetcount"></a><a name="getcount"></a>CMFCRibbonPanel::GetCount
 
-Recupera el número de elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
+Recupera el número de elementos de la cinta de opciones que se encuentran en el panel de la cinta de opciones.
 
 ```
 int GetCount() const;
@@ -365,9 +365,9 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
+El número de elementos de la cinta de opciones que se encuentran en el panel de la cinta de opciones.
 
-##  <a name="getdata"></a>CMFCRibbonPanel:: GetData
+## <a name="cmfcribbonpanelgetdata"></a><a name="getdata"></a>CMFCRibbonPanel::GetData
 
 Devuelve los datos definidos por el usuario asociados al panel.
 
@@ -379,9 +379,9 @@ DWORD_PTR GetData() const;
 
 Los datos definidos por el usuario asociados al panel.
 
-##  <a name="getdefaultbutton"></a>CMFCRibbonPanel:: GetDefaultButton
+## <a name="cmfcribbonpanelgetdefaultbutton"></a><a name="getdefaultbutton"></a>CMFCRibbonPanel::GetDefaultButton
 
-Recupera el botón predeterminado del panel de la cinta de opciones.
+Recupera el botón predeterminado para el panel de la cinta de opciones.
 
 ```
 CMFCRibbonButton& GetDefaultButton();
@@ -389,15 +389,15 @@ CMFCRibbonButton& GetDefaultButton();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Botón predeterminado del panel de la cinta de opciones.
+El botón predeterminado para el panel de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-El botón predeterminado se muestra cuando un panel de la cinta de opciones no tiene espacio suficiente para mostrar sus elementos de la cinta.
+El botón predeterminado se muestra cuando un panel de la cinta de opciones no tiene espacio suficiente para mostrar sus elementos de la cinta de opciones.
 
-##  <a name="getdroppeddown"></a>CMFCRibbonPanel:: GetDroppedDown
+## <a name="cmfcribbonpanelgetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonPanel::GetDroppedDown
 
-Recupera un puntero a un elemento de la cinta de opciones si se quita el menú emergente.
+Recupera un puntero a un elemento de la cinta de opciones si se coloca su menú emergente.
 
 ```
 CMFCRibbonBaseElement* GetDroppedDown() const;
@@ -405,15 +405,15 @@ CMFCRibbonBaseElement* GetDroppedDown() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al elemento de la cinta de opciones que tiene su menú emergente desplegado; de lo contrario, es NULL si no hay ningún elemento de la cinta de opciones desplegado en el menú emergente.
+Puntero al elemento de la cinta de opciones que tiene su menú emergente caído; DE lo contrario NULL si ningún elemento de la cinta de opciones tiene su menú emergente caído.
 
 ### <a name="remarks"></a>Observaciones
 
 Solo se prueban los elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
 
-##  <a name="getelement"></a>CMFCRibbonPanel:: GetElement
+## <a name="cmfcribbonpanelgetelement"></a><a name="getelement"></a>CMFCRibbonPanel::GetElement
 
-Devuelve el elemento de la cinta de opciones situado en un índice especificado.
+Devuelve el elemento de la cinta de opciones ubicado en un índice especificado.
 
 ```
 CMFCRibbonBaseElement* GetElement(int nIndex) const;
@@ -422,32 +422,32 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-de Especifica el índice de base cero del elemento que se va a recuperar.
+[en] Especifica el índice de base cero del elemento que se va a recuperar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero válido al elemento de la cinta de opciones base situado en la posición *NINDEX* en el panel de la cinta de opciones, o null si no hay ningún elemento en el índice especificado.
+Un puntero válido al elemento de la cinta de opciones base situado en la posición *nIndex* en el panel de la cinta de opciones, o NULL si no hay ningún elemento en el índice especificado.
 
-##  <a name="getelements"></a>CMFCRibbonPanel:: GetElements
+## <a name="cmfcribbonpanelgetelements"></a><a name="getelements"></a>CMFCRibbonPanel::GetElements
 
 Recupera todos los elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *arElements*<br/>
-enuncia Matriz que se va a rellenar con todos los elementos de la cinta de opciones contenidos en el panel de la cinta.
+[fuera] Matriz para rellenar con todos los elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getelementsbyid"></a>CMFCRibbonPanel:: GetElementsByID
+## <a name="cmfcribbonpanelgetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonPanel::GetElementsByID
 
 Agrega elementos de la cinta de opciones que tienen el identificador de comando especificado a la matriz especificada.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -456,18 +456,18 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ### <a name="parameters"></a>Parámetros
 
 *uiCmdID*<br/>
-de IDENTIFICADOR de comando para un elemento de la cinta de opciones.
+[en] Identificador de comando para un elemento de la cinta de opciones.
 
 *arElements*<br/>
-de Matriz de elementos de la cinta de opciones.
+[en] Matriz de elementos de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
 Solo se prueban los elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
 
-##  <a name="gethighlighted"></a>CMFCRibbonPanel:: GetHighlighted
+## <a name="cmfcribbonpanelgethighlighted"></a><a name="gethighlighted"></a>CMFCRibbonPanel::GetHighlighted
 
-Recupera el elemento de la cinta de opciones que está resaltado en el panel de la cinta.
+Recupera el elemento de la cinta de opciones que se resalta en el panel de la cinta de opciones.
 
 ```
 CMFCRibbonBaseElement* GetHighlighted() const;
@@ -475,13 +475,13 @@ CMFCRibbonBaseElement* GetHighlighted() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al elemento de la cinta de opciones que está resaltado en el panel de la cinta.
+Puntero al elemento de la cinta de opciones que se resalta en el panel de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getindex"></a>CMFCRibbonPanel:: GetIndex
+## <a name="cmfcribbonpanelgetindex"></a><a name="getindex"></a>CMFCRibbonPanel::GetIndex
 
-Recupera el índice de base cero del elemento de la cinta especificado de la matriz de elementos Ribbon contenidos en el panel de la cinta de opciones.
+Recupera el índice de base cero del elemento de cinta de opciones especificado de la matriz de elementos de la cinta de opciones que se encuentran en el panel de la cinta de opciones.
 
 ```
 virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
@@ -490,30 +490,30 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ### <a name="parameters"></a>Parámetros
 
 *pElem*<br/>
-de Puntero a un elemento de la cinta.
+[en] Puntero a un elemento de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero del elemento de la cinta de opciones especificado si el método se realizó correctamente; de lo contrario,-1.
+El índice de base cero del elemento de la cinta de opciones especificado si el método se realizó correctamente; de lo contrario -1.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getitemidslist"></a>CMFCRibbonPanel:: GetItemIDsList
+## <a name="cmfcribbonpanelgetitemidslist"></a><a name="getitemidslist"></a>CMFCRibbonPanel::GetItemIDsList
 
-Recupera los identificadores de comando de todos los elementos de la cinta de opciones en el panel de la cinta.
+Recupera los elementos de comando para todos los elementos de la cinta de opciones en el panel de la cinta de opciones.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lstItems*<br/>
-enuncia Lista de identificadores de comando para los elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
+[fuera] Lista de elementos de comando para los elementos de la cinta de opciones que se encuentran en el panel de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getname"></a>CMFCRibbonPanel:: GetName
+## <a name="cmfcribbonpanelgetname"></a><a name="getname"></a>CMFCRibbonPanel::GetName
 
 Recupera el nombre del panel de la cinta de opciones.
 
@@ -523,11 +523,11 @@ LPCTSTR GetName() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Nombre del panel de la cinta de opciones.
+El nombre del panel de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getparentbutton"></a>CMFCRibbonPanel:: GetParentButton
+## <a name="cmfcribbonpanelgetparentbutton"></a><a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton
 
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
@@ -537,7 +537,7 @@ CMFCRibbonBaseElement* GetParentButton() const;
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getparentcategory"></a>CMFCRibbonPanel:: GetParentCategory
+## <a name="cmfcribbonpanelgetparentcategory"></a><a name="getparentcategory"></a>CMFCRibbonPanel::GetParentCategory
 
 Devuelve la categoría primaria del panel de la cinta de opciones.
 
@@ -547,9 +547,9 @@ CMFCRibbonCategory* GetParentCategory() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a la categoría de la cinta de opciones que contiene este panel de la cinta.
+Puntero a la categoría de la cinta de opciones que contiene este panel de la cinta de opciones.
 
-##  <a name="getparentmenubar"></a>CMFCRibbonPanel:: GetParentMenuBar
+## <a name="cmfcribbonpanelgetparentmenubar"></a><a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -559,9 +559,9 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getpreferedmenulocation"></a>CMFCRibbonPanel:: GetPreferedMenuLocation
+## <a name="cmfcribbonpanelgetpreferedmenulocation"></a><a name="getpreferedmenulocation"></a>CMFCRibbonPanel::GetPreferedMenuLocation
 
-Recupera el rectángulo de presentación preferido para el menú emergente del panel de la cinta de opciones.
+Recupera el rectángulo de visualización preferido para el menú emergente del panel de la cinta de opciones.
 
 ```
 virtual BOOL GetPreferedMenuLocation(CRect& rect);
@@ -570,7 +570,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ### <a name="parameters"></a>Parámetros
 
 *Rect*<br/>
-enuncia Este parámetro no se utiliza.
+[fuera] Este parámetro no se utiliza.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -578,9 +578,9 @@ Siempre devuelve FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Este método siempre devuelve FALSE. Invalide este método para recuperar el rectángulo de presentación preferido para el menú emergente del panel de la cinta de opciones.
+Este método siempre devuelve FALSE. Invalide este método para recuperar el rectángulo de visualización preferido para el menú emergente del panel de la cinta de opciones.
 
-##  <a name="getpressed"></a>CMFCRibbonPanel:: GetPressed
+## <a name="cmfcribbonpanelgetpressed"></a><a name="getpressed"></a>CMFCRibbonPanel::GetPressed
 
 Recupera un puntero a un elemento de la cinta de opciones en el panel de la cinta de opciones si el usuario lo presiona actualmente.
 
@@ -590,13 +590,13 @@ CMFCRibbonBaseElement* GetPressed() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un elemento de la cinta de opciones si el usuario lo presiona actualmente; de lo contrario, NULL.
+Un puntero a un elemento de la cinta de opciones si el usuario lo presiona actualmente; NULL.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getrect"></a>CMFCRibbonPanel:: GetRect
+## <a name="cmfcribbonpanelgetrect"></a><a name="getrect"></a>CMFCRibbonPanel::GetRect
 
-Recupera el rectángulo de presentación del panel de la cinta de opciones.
+Recupera el rectángulo de visualización para el panel de la cinta de opciones.
 
 ```
 const CRect& GetRect() const;
@@ -604,13 +604,13 @@ const CRect& GetRect() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Rectángulo de presentación del panel de la cinta de opciones.
+El rectángulo de visualización para el panel de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="haselement"></a>CMFCRibbonPanel:: HasElement
+## <a name="cmfcribbonpanelhaselement"></a><a name="haselement"></a>CMFCRibbonPanel::HasElement
 
-Indica si el panel de la cinta de opciones contiene el elemento de cinta especificado.
+Indica si el panel de la cinta de opciones contiene el elemento de la cinta de opciones especificado.
 
 ```
 BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
@@ -619,17 +619,17 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ### <a name="parameters"></a>Parámetros
 
 *pElem*<br/>
-de Puntero a un elemento de la cinta.
+[en] Puntero a un elemento de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel de la cinta de opciones contiene el elemento de cinta especificado; en caso contrario, FALSE.
+TRUESi el panel de la cinta de opciones contiene el elemento de la cinta de opciones especificado; de lo contrario FALSO.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="highlight"></a>CMFCRibbonPanel:: Resalte
+## <a name="cmfcribbonpanelhighlight"></a><a name="highlight"></a>CMFCRibbonPanel::Highlight
 
-Establece el color de resaltado para el panel de la cinta seleccionado y para el elemento de la cinta de opciones especificado por el punto.
+Establece el color de resaltado para el panel de la cinta de opciones seleccionado y para el elemento de la cinta de opciones especificado por el punto.
 
 ```
 virtual void Highlight(
@@ -639,15 +639,15 @@ CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHighlight*<br/>
-de TRUE para resaltar el panel de la cinta de opciones; FALSE para anular el resaltado del panel de la cinta.
+*bResaltar*<br/>
+[en] TRUE para resaltar el panel de la cinta de opciones; FALSE para desresaltar el panel de la cinta de opciones.
 
-*Elija*<br/>
-de Las coordenadas x e y del puntero, con respecto a la esquina superior izquierda de la ventana.
+*Punto*<br/>
+[en] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="hittest"></a>CMFCRibbonPanel:: HitTest
+## <a name="cmfcribbonpanelhittest"></a><a name="hittest"></a>CMFCRibbonPanel::HitTest
 
 Recupera un elemento de la cinta de opciones si el punto especificado se encuentra en él.
 
@@ -659,23 +659,23 @@ BOOL bCheckPanelCaption = FALSE);
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-de Las coordenadas x e y del puntero, con respecto a la esquina superior izquierda de la ventana.
+*Punto*<br/>
+[en] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 *bCheckPanelCaption*<br/>
-de TRUE para probar el título del panel de la cinta de opciones; en caso contrario, FALSE.
+[en] TRUE para probar el título del panel de la cinta de opciones; de lo contrario FALSO.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a un elemento de la cinta de opciones si se encuentra en él el punto especificado; de lo contrario, NULL.
+Puntero a un elemento de la cinta de opciones si el punto especificado se encuentra en él; NULL.
 
 ### <a name="remarks"></a>Observaciones
 
 Solo se prueban los elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
 
-##  <a name="hittestex"></a>CMFCRibbonPanel:: HitTestEx
+## <a name="cmfcribbonpanelhittestex"></a><a name="hittestex"></a>CMFCRibbonPanel::HitTestEx
 
-Recupera el índice de base cero del elemento de la cinta de opciones que tiene el punto especificado que se encuentra en él.
+Recupera el índice de base cero del elemento de la cinta de opciones que tiene el punto especificado ubicado en él.
 
 ```
 virtual int HitTestEx(CPoint point) const;
@@ -683,20 +683,20 @@ virtual int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-de Las coordenadas x e y del puntero, con respecto a la esquina superior izquierda de la ventana.
+*Punto*<br/>
+[en] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero del elemento de la cinta de opciones que tiene el punto especificado que se encuentra en él. de lo contrario,-1.
+El índice de base cero del elemento de la cinta de opciones que tiene el punto especificado ubicado en él; de lo contrario -1.
 
 ### <a name="remarks"></a>Observaciones
 
 Solo se prueban los elementos de la cinta de opciones contenidos en el panel de la cinta de opciones.
 
-##  <a name="insert"></a>CMFCRibbonPanel:: Insert
+## <a name="cmfcribbonpanelinsert"></a><a name="insert"></a>CMFCRibbonPanel::Insertar
 
-Inserta el elemento de cinta especificado en la posición especificada de la matriz de elementos de la cinta de opciones que se encuentra en el panel de la cinta de opciones.
+Inserta el elemento de cinta de opciones especificado en la posición especificada en la matriz de elementos de la cinta de opciones que se encuentra en el panel de la cinta de opciones.
 
 ```
 virtual BOOL Insert(
@@ -707,22 +707,22 @@ int nIndex);
 ### <a name="parameters"></a>Parámetros
 
 *pElem*<br/>
-[in, out] Puntero a un elemento de la cinta.
+[adentro, fuera] Puntero a un elemento de la cinta de opciones.
 
 *nIndex*<br/>
-de Valor basado en cero, comprendido entre-1 y el número de elementos de la cinta de opciones contenidos en la matriz.
+[en] Valor de base cero, que va desde -1 hasta el número de elementos de la cinta de opciones que se encuentran en la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el elemento de la cinta se insertó correctamente; en caso contrario, FALSE.
+TRUESi el elemento de la cinta de opciones se insertó correctamente; de lo contrario FALSO.
 
 ### <a name="remarks"></a>Observaciones
 
-Si el valor de *NINDEX* es-1, o si *NINDEX* es igual al número de elementos de la cinta de opciones de la matriz, el elemento de cinta especificado se agrega al final de la matriz. Si el valor de *NINDEX* está fuera del intervalo, se producirá un error en el método.
+Si el valor de *nIndex* es -1, o si *nIndex* es igual al número de elementos de la cinta de opciones de la matriz, el elemento de la cinta de opciones especificado se agrega al final de la matriz. Si el valor de *nIndex* está fuera del intervalo, se producirá un error en el método.
 
-##  <a name="insertseparator"></a>CMFCRibbonPanel:: InsertSeparator
+## <a name="cmfcribbonpanelinsertseparator"></a><a name="insertseparator"></a>CMFCRibbonPanel::InsertSeparator
 
-Inserta un separador en la posición especificada.
+Inserta un separador en la posición dada.
 
 ```
 virtual BOOL InsertSeparator(int nIndex);
@@ -731,19 +731,19 @@ virtual BOOL InsertSeparator(int nIndex);
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-de Especifica el índice de base cero donde se inserta el separador.
+[en] Especifica el índice de base cero donde se inserta el separador.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el separador se ha insertado correctamente; en caso contrario, FALSE.
+TRUESi el separador se ha insertado correctamente; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método para insertar un separador en la posición especificada por *NINDEX*. Para insertar un separador junto al elemento de la cinta de opciones agregado más recientemente, llame a [CMFCRibbonPanel:: AddSeparator](#addseparator).
+Llame a este método para insertar un separador en la posición especificada por *nIndex*. Para insertar un separador junto al elemento de la cinta de opciones agregado más recientemente, llame a [CMFCRibbonPanel::AddSeparator](#addseparator).
 
-##  <a name="iscentercolumnvert"></a>CMFCRibbonPanel:: IsCenterColumnVert
+## <a name="cmfcribbonpaneliscentercolumnvert"></a><a name="iscentercolumnvert"></a>CMFCRibbonPanel::IsCenterColumnVert
 
-Indica si las posiciones verticales de los elementos de la cinta de opciones se centran en su rectángulo de presentación.
+Indica si las posiciones verticales de los elementos de la cinta de opciones están centradas dentro de su rectángulo de visualización.
 
 ```
 BOOL IsCenterColumnVert() const;
@@ -751,11 +751,11 @@ BOOL IsCenterColumnVert() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si las posiciones verticales de los elementos de la cinta se centran en su rectángulo de presentación; en caso contrario, FALSE.
+TRUESi las posiciones verticales de los elementos de la cinta de opciones se centran dentro de su rectángulo de visualización; de lo contrario FALSO.
 
-##  <a name="iscollapsed"></a>CMFCRibbonPanel:: IsCollapsed
+## <a name="cmfcribbonpaneliscollapsed"></a><a name="iscollapsed"></a>CMFCRibbonPanel::IsCollapsed
 
-Indica si el tamaño de presentación del panel de la cinta está minimizado en la dirección horizontal.
+Indica si el tamaño de visualización del panel de la cinta de opciones se minimiza en la dirección horizontal.
 
 ```
 BOOL IsCollapsed() const;
@@ -763,15 +763,15 @@ BOOL IsCollapsed() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el tamaño de presentación del panel de la cinta está minimizado en la dirección horizontal; en caso contrario, FALSE.
+TRUESi el tamaño de visualización del panel de la cinta de opciones se minimiza en la dirección horizontal; de lo contrario FALSO.
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando se contrae un panel de la cinta de opciones, solo se muestra el botón predeterminado, su nombre y una flecha desplegable.
+Cuando un panel de la cinta de opciones está contraído, solo muestra su botón predeterminado, su nombre y una flecha desplegable.
 
-##  <a name="ishighlighted"></a>CMFCRibbonPanel:: IsHighlighted
+## <a name="cmfcribbonpanelishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonPanel::IsHighlighted
 
-Indica si se ha resaltado la presentación del panel de la cinta de opciones.
+Indica si la visualización del panel de la cinta de opciones está resaltada.
 
 ```
 BOOL IsHighlighted() const;
@@ -779,15 +779,15 @@ BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se resalta la presentación del panel de la cinta de opciones; en caso contrario, FALSE.
+TRUESi se resalta la visualización del panel de la cinta de opciones; de lo contrario FALSO.
 
 ### <a name="remarks"></a>Observaciones
 
-La presentación de un panel de la cinta de opciones se resalta cuando el puntero se sitúa sobre él.
+La visualización de un panel de la cinta de opciones se resalta cuando el puntero está sobre él.
 
-##  <a name="isjustifycolumns"></a>CMFCRibbonPanel:: IsJustifyColumns
+## <a name="cmfcribbonpanelisjustifycolumns"></a><a name="isjustifycolumns"></a>CMFCRibbonPanel::IsJustifyColumns
 
-Indica si las dimensiones de presentación de los elementos de la cinta de opciones que se encuentran en la misma columna del panel de la cinta de opciones se establecen en el mismo ancho.
+Indica si las dimensiones de visualización de los elementos de la cinta de opciones que se encuentran en la misma columna del panel de la cinta de opciones se establecen en el mismo ancho.
 
 ```
 BOOL IsJustifyColumns() const;
@@ -795,9 +795,9 @@ BOOL IsJustifyColumns() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si las dimensiones de la pantalla de los elementos de la cinta de opciones que se encuentran en la misma columna del panel de la cinta se establecen en el mismo ancho; en caso contrario, FALSE.
+TRUESi las dimensiones de visualización de los elementos de la cinta de opciones que están en la misma columna en el panel de la cinta de opciones se establecen en el mismo ancho; de lo contrario FALSO.
 
-##  <a name="ismainpanel"></a>CMFCRibbonPanel:: IsMainPanel
+## <a name="cmfcribbonpanelismainpanel"></a><a name="ismainpanel"></a>CMFCRibbonPanel::IsMainPanel
 
 Indica si el panel de la cinta de opciones es el panel principal de la cinta de opciones.
 
@@ -811,11 +811,11 @@ Siempre devuelve FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Este método siempre devuelve FALSE. Invalide este método para indicar si el panel de la cinta es el panel principal de la cinta de opciones.
+Este método siempre devuelve FALSE. Invalide este método para indicar si el panel de la cinta de opciones es el panel principal de la cinta de opciones.
 
-El panel principal de la cinta de opciones se muestra cuando el usuario selecciona el botón aplicación.
+El panel principal de la cinta de opciones se muestra cuando el usuario selecciona el botón de la aplicación.
 
-##  <a name="ismenumode"></a>CMFCRibbonPanel:: IsMenuMode
+## <a name="cmfcribbonpanelismenumode"></a><a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode
 
 ```
 BOOL IsMenuMode() const;
@@ -825,7 +825,7 @@ BOOL IsMenuMode() const;
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="onkey"></a>CMFCRibbonPanel:: OnKey
+## <a name="cmfcribbonpanelonkey"></a><a name="onkey"></a>CMFCRibbonPanel::OnKey
 
 ```
 virtual BOOL OnKey(UINT nChar);
@@ -833,15 +833,15 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Parámetros
 
-de *nChar*<br/>
+[en] *nChar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="recalcwidths"></a>CMFCRibbonPanel:: RecalcWidths
+## <a name="cmfcribbonpanelrecalcwidths"></a><a name="recalcwidths"></a>CMFCRibbonPanel::RecalcWidths
 
-Vuelve a calcular el ancho de cada configuración de diseño de pantalla del panel de la cinta de opciones.
+Vuelve a calcular el ancho de cada configuración de diseño de visualización para el panel de la cinta de opciones.
 
 ```
 virtual void RecalcWidths(
@@ -852,18 +852,18 @@ int nHeight);
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-de Puntero a un contexto de dispositivo para el panel de la cinta de opciones.
+[en] Puntero a un contexto de dispositivo para el panel de la cinta de opciones.
 
-*nHeight*<br/>
-de Alto del panel de la cinta de opciones.
+*nAltura*<br/>
+[en] La altura del panel de la cinta.
 
 ### <a name="remarks"></a>Observaciones
 
-Un panel de la cinta cambia su configuración de diseño A medida que cambia el ancho disponible.
+Un panel de la cinta de opciones cambia su configuración de diseño a medida que cambia el ancho disponible.
 
-##  <a name="remove"></a>CMFCRibbonPanel:: Remove
+## <a name="cmfcribbonpanelremove"></a><a name="remove"></a>CMFCRibbonPanel::Quitar
 
-Quita y, opcionalmente, elimina un elemento situado en el índice especificado.
+Quita y, opcionalmente, elimina un elemento ubicado en el índice especificado.
 
 ```
 BOOL Remove(
@@ -874,34 +874,34 @@ BOOL bDelete = TRUE);
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-de Especifica el índice de base cero del elemento que se quita del panel de la cinta de opciones.
+[en] Especifica el índice de base cero del elemento que se quita del panel de la cinta de opciones.
 
 *bEliminar*<br/>
-de TRUE para eliminar el elemento que se va a quitar; en caso contrario, FALSE.
+[en] TRUE para eliminar el elemento que se va a quitar; de lo contrario, FALSE.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el elemento se ha quitado y eliminado (si *bEliminar* es true); FALSE si el elemento no se quitó o si no hay ningún elemento de la cinta de opciones en *NINDEX*.
+TRUESi el elemento se ha quitado y eliminado (si *bDelete* es TRUE); FALSE si el elemento no se quitó o si no hay ningún elemento de la cinta de opciones situado en *nIndex*.
 
 ### <a name="remarks"></a>Observaciones
 
 Llame a este método para quitar un elemento del panel de la cinta de opciones.
 
-##  <a name="removeall"></a>CMFCRibbonPanel:: RemoveAll
+## <a name="cmfcribbonpanelremoveall"></a><a name="removeall"></a>CMFCRibbonPanel::RemoveAll
 
-Elimina todos los elementos de la cinta de opciones del panel de la cinta.
+Elimina todos los elementos de la cinta de opciones del panel de la cinta de opciones.
 
-```
+```cpp
 void RemoveAll();
 ```
 
 ### <a name="remarks"></a>Observaciones
 
-Todos los elementos de la cinta se eliminan del panel de la cinta y se destruyen.
+Todos los elementos de la cinta de opciones se eliminan del panel de la cinta de opciones y se destruyen.
 
-##  <a name="replace"></a>CMFCRibbonPanel:: Replace
+## <a name="cmfcribbonpanelreplace"></a><a name="replace"></a>CMFCRibbonPanel::Reemplazar
 
-Reemplaza un elemento por otro basándose en su valor de índice.
+Reemplaza un elemento por otro en función de su valor de índice.
 
 ```
 BOOL Replace(
@@ -912,22 +912,22 @@ CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-de Especifica el índice de base cero del elemento que se va a reemplazar.
+[en] Especifica el índice de base cero del elemento que se va a reemplazar.
 
 *pElem*<br/>
-[in, out] Puntero válido al elemento que reemplaza el elemento original.
+[adentro, fuera] Un puntero válido al elemento que reemplaza el elemento original.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el elemento de la cinta de opciones original se ha reemplazado correctamente por el nuevo elemento Ribbon; FALSE si el elemento de la cinta de opciones no se ha reemplazado o si no hay ningún elemento en el índice especificado.
+TRUESi el elemento de la cinta de opciones original se ha reemplazado correctamente por el nuevo elemento de la cinta de opciones; FALSE si el elemento de la cinta de opciones no se ha reemplazado o si no hay ningún elemento en el índice especificado.
 
 ### <a name="remarks"></a>Observaciones
 
-Para reemplazar un elemento de la cinta por el identificador de comando, llame a [CMFCRibbonPanel:: ReplaceByID](#replacebyid).
+Para reemplazar un elemento de la cinta de opciones por identificador de comando, llame a [CMFCRibbonPanel::ReplaceByID](#replacebyid).
 
-##  <a name="replacebyid"></a>CMFCRibbonPanel:: ReplaceByID
+## <a name="cmfcribbonpanelreplacebyid"></a><a name="replacebyid"></a>CMFCRibbonPanel::ReplaceByID
 
-Reemplaza un elemento por otro basándose en un identificador de comando especificado.
+Reemplaza un elemento por otro basado en un identificador de comando especificado.
 
 ```
 BOOL ReplaceByID(
@@ -938,52 +938,52 @@ CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Parámetros
 
 *uiCmdID*<br/>
-de Especifica el identificador de comando del elemento que se va a reemplazar.
+[en] Especifica el identificador de comando del elemento que se va a reemplazar.
 
 *pElem*<br/>
-[in, out] Puntero válido al elemento que reemplazará el elemento original.
+[adentro, fuera] Un puntero válido al elemento que reemplazará el elemento original.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el elemento de la cinta de opciones original se ha reemplazado correctamente por el nuevo elemento Ribbon; FALSE si el elemento de la cinta de opciones no se ha reemplazado o si no existe realmente ningún elemento con el identificador de comando especificado.
+TRUESi el elemento de la cinta de opciones original se ha reemplazado correctamente por el nuevo elemento de la cinta de opciones; FALSE si el elemento de la cinta de opciones no se ha reemplazado o si realmente existe ningún elemento con el identificador de comando especificado.
 
 ### <a name="remarks"></a>Observaciones
 
-Para reemplazar un elemento de la cinta de opciones en función de su posición, llame a [CMFCRibbonPanel:: Replace](#replace).
+Para reemplazar un elemento de la cinta de opciones en función de la posición, llame a [CMFCRibbonPanel::Replace](#replace).
 
-##  <a name="setcentercolumnvert"></a>CMFCRibbonPanel:: SetCenterColumnVert
+## <a name="cmfcribbonpanelsetcentercolumnvert"></a><a name="setcentercolumnvert"></a>CMFCRibbonPanel::SetCenterColumnVert
 
-Habilita o deshabilita el centro de las posiciones verticales de los elementos de la cinta de opciones dentro del rectángulo mostrado.
+Habilita o deshabilita el centrado de las posiciones verticales de los elementos de la cinta de opciones dentro de su rectángulo de visualización.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bSet*<br/>
-de TRUE para centrar las posiciones verticales de los elementos de la cinta de opciones dentro de su rectángulo de presentación; FALSE para deshabilitar esta característica.
+*Bset*<br/>
+[en] TRUE para centrar las posiciones verticales de los elementos de la cinta de opciones dentro de su rectángulo de visualización; FALSE para deshabilitar esta característica.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="setdata"></a>CMFCRibbonPanel:: SetData
+## <a name="cmfcribbonpanelsetdata"></a><a name="setdata"></a>CMFCRibbonPanel::SetData
 
-Asocia los datos definidos por el usuario con el panel de la cinta de opciones.
+Asocia datos definidos por el usuario con el panel de la cinta de opciones.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *dwData*<br/>
-de Especifica los datos definidos por el usuario que se van a establecer.
+[en] Especifica los datos definidos por el usuario que se va a establecer.
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método para asociar los datos definidos por el usuario con el panel de la cinta de opciones.
+Llame a este método para asociar datos definidos por el usuario con el panel de la cinta de opciones.
 
-##  <a name="setelementmenu"></a>CMFCRibbonPanel:: SetElementMenu
+## <a name="cmfcribbonpanelsetelementmenu"></a><a name="setelementmenu"></a>CMFCRibbonPanel::SetElementMenu
 
 Asigna un menú emergente al elemento que tiene el identificador de comando especificado.
 
@@ -1004,31 +1004,31 @@ BOOL bRightAlign = FALSE);
 ### <a name="parameters"></a>Parámetros
 
 *uiCmdID*<br/>
-de Especifica el identificador de comando del elemento de la cinta de opciones donde se agrega el menú.
+[en] Especifica el identificador de comando del elemento de la cinta de opciones donde se agrega el menú.
 
-*hMenu*<br/>
-de Especifica el identificador del menú de Windows que se va a agregar al panel de la cinta de opciones.
+*hMenú*<br/>
+[en] Especifica el identificador del menú De Windows que se va a agregar al panel de la cinta de opciones.
 
 *bIsDefautCommand*<br/>
-de TRUE para especificar que se debe ejecutar el comando asociado al elemento de la cinta de opciones si se hace clic en el elemento de la cinta. En este caso, el menú solo se abre cuando el usuario hace clic en la flecha situada junto al elemento de la cinta de opciones. FALSE para especificar que el comando asociado al elemento de la cinta no debe ejecutarse si se hace clic en el elemento de la cinta. En este caso, el menú emergente aparece independientemente del lugar en el que el usuario haga clic en el elemento.
+[en] TRUE para especificar que el comando asociado con el elemento de la cinta de opciones se debe ejecutar si se hace clic en el elemento de la cinta de opciones. En este caso, el menú solo se abre cuando el usuario hace clic en la flecha situada junto al elemento de la cinta de opciones. FALSE para especificar que el comando asociado con el elemento de la cinta de opciones no se debe ejecutar si se hace clic en el elemento de la cinta de opciones. En este caso, el menú emergente aparece independientemente de dónde haga clic el usuario en el elemento.
 
 *bRightAlign*<br/>
-de TRUE para especificar que el menú emergente está alineado a la derecha; en caso contrario, FALSE.
+[en] TRUE para especificar que el menú emergente está alineado a la derecha; de lo contrario, FALSE.
 
 *uiMenuResID*<br/>
-de Especifica el identificador de recurso del menú que se va a agregar al panel de la cinta de opciones.
+[en] Especifica el identificador de recurso del menú que se va a agregar al panel de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el menú se ha asignado al elemento de la cinta de opciones; en caso contrario, FALSE.
+TRUESi el menú se ha asignado al elemento de la cinta de opciones; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
 Llame a este método para asignar un menú emergente al elemento de la cinta de opciones que tiene el identificador de comando especificado.
 
-##  <a name="setelementrtc"></a>CMFCRibbonPanel:: SetElementRTC
+## <a name="cmfcribbonpanelsetelementrtc"></a><a name="setelementrtc"></a>CMFCRibbonPanel::SetElementRTC
 
-Agrega el elemento de la cinta de opciones especificado por la información de clase en tiempo de ejecución proporcionada al panel de la cinta.
+Agrega el elemento de la cinta de opciones especificado por la información de clase en tiempo de ejecución proporcionada al panel de la cinta de opciones.
 
 ```
 CMFCRibbonBaseElement* SetElementRTC(
@@ -1039,22 +1039,22 @@ CRuntimeClass* pRTC);
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-de Especifica el índice de base cero del elemento de la cinta que se va a agregar.
+[en] Especifica el índice de base cero del elemento de la cinta de opciones que se va a agregar.
 
 *pRTC*<br/>
-[in, out] Puntero a la información de clase en tiempo de ejecución para el elemento de la cinta de opciones que se agrega al panel de la cinta.
+[adentro, fuera] Puntero a la información de clase en tiempo de ejecución para el elemento de la cinta de opciones que se agrega al panel de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El elemento de la cinta de opciones que se creó mediante la información de clase en tiempo de ejecución especificada.
+El elemento de la cinta de opciones que se creó mediante la información de clase de tiempo de ejecución especificada.
 
 ### <a name="remarks"></a>Observaciones
 
-Si desea agregar un elemento personalizado (por ejemplo, un botón de color) al panel de la cinta de opciones, debe especificar la información de la clase en tiempo de ejecución del elemento personalizado. La cinta de opciones almacena esta información, crea el elemento personalizado y reemplaza un elemento existente que se encuentra (identificado por) el identificador de comando especificado. A continuación, la cinta de opciones devuelve un puntero al elemento recién creado.
+Si desea agregar un elemento personalizado (por ejemplo, un botón de color) al panel de la cinta de opciones, debe especificar la información de clase en tiempo de ejecución del elemento personalizado. La cinta de opciones almacena esta información, crea el elemento personalizado y reemplaza un elemento existente que se encuentra (identificado por) el identificador de comando especificado. A continuación, la cinta de opciones devuelve un puntero al elemento recién creado.
 
-##  <a name="setelementrtcbyid"></a>CMFCRibbonPanel:: SetElementRTCByID
+## <a name="cmfcribbonpanelsetelementrtcbyid"></a><a name="setelementrtcbyid"></a>CMFCRibbonPanel::SetElementRTCByID
 
-Agrega al panel de la cinta de opciones un elemento de la cinta de opciones especificado por la información de clase en tiempo de ejecución proporcionada.
+Agrega un elemento de la cinta de opciones especificado por la información de clase en tiempo de ejecución proporcionada al panel de la cinta de opciones.
 
 ```
 CMFCRibbonBaseElement* SetElementRTCByID(
@@ -1065,22 +1065,22 @@ CRuntimeClass* pRTC);
 ### <a name="parameters"></a>Parámetros
 
 *uiCmdID*<br/>
-de Especifica el identificador de comando del elemento de la cinta que se va a agregar.
+[en] Especifica el identificador de comando del elemento de la cinta de opciones que se va a agregar.
 
 *pRTC*<br/>
-[in, out] Puntero a la información de la clase en tiempo de ejecución asociada al elemento de la cinta de opciones que se agrega al panel de la cinta.
+[adentro, fuera] Puntero a la información de clase en tiempo de ejecución asociada al elemento de la cinta de opciones que se agrega al panel de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El elemento de la cinta de opciones que se creó mediante la información de clase en tiempo de ejecución especificada.
+El elemento de la cinta de opciones que se creó mediante la información de clase de tiempo de ejecución especificada.
 
 ### <a name="remarks"></a>Observaciones
 
-Si desea agregar un elemento personalizado (por ejemplo, un botón de color) al panel de la cinta de opciones, debe especificar la información de la clase en tiempo de ejecución del elemento personalizado. La cinta de opciones almacena esta información, crea el elemento personalizado y reemplaza un elemento existente ubicado por el identificador de comando especificado. A continuación, devuelve un puntero al elemento recién creado.
+Si desea agregar un elemento personalizado (por ejemplo, un botón de color) al panel de la cinta de opciones, debe especificar la información de clase en tiempo de ejecución del elemento personalizado. La cinta de opciones almacena esta información, crea el elemento personalizado y reemplaza un elemento existente ubicado por el identificador de comando especificado. A continuación, devuelve un puntero al elemento recién creado.
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar el método `SetElementRTCByID`:
+En el ejemplo siguiente `SetElementRTCByID` se muestra cómo utilizar el método:
 
 ```
 
@@ -1104,43 +1104,43 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
     0));
 ```
 
-##  <a name="setjustifycolumns"></a>CMFCRibbonPanel:: SetJustifyColumns
+## <a name="cmfcribbonpanelsetjustifycolumns"></a><a name="setjustifycolumns"></a>CMFCRibbonPanel::SetJustifyColumns
 
 Habilita o deshabilita el ajuste del ancho de los elementos de la cinta de opciones en la misma columna.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bSet*<br/>
-de TRUE para ajustar el ancho de los elementos de la cinta de la misma columna al ancho del elemento de la cinta más grande de la columna; FALSE para deshabilitar este ajuste de ancho.
+*Bset*<br/>
+[en] TRUE para ajustar el ancho de los elementos de la cinta de opciones en la misma columna al ancho del elemento de cinta de opciones más grande de la columna; FALSE para deshabilitar este ajuste de ancho.
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando esta característica está habilitada en un panel de la cinta, los anchos de los elementos de la cinta de opciones de la misma columna se ajustan al ancho del elemento de la cinta más grande de la misma columna.
+Cuando esta característica está habilitada en un panel de la cinta de opciones, los anchos de los elementos de la cinta de opciones de la misma columna se ajustan al ancho del elemento de cinta de opciones más grande de la misma columna.
 
-##  <a name="setkeys"></a>CMFCRibbonPanel:: SetKeys
+## <a name="cmfcribbonpanelsetkeys"></a><a name="setkeys"></a>CMFCRibbonPanel::SetKeys
 
-Establece el KeyTip para el botón predeterminado del panel de la cinta de opciones.
+Establece la información sobre teclas para el botón predeterminado del panel de la cinta de opciones.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lpszKeys*<br/>
-de KeyTip del botón predeterminado del panel de la cinta de opciones.
+[en] La información sobre teclas para el botón predeterminado del panel de la cinta de opciones.
 
 ### <a name="remarks"></a>Observaciones
 
-El botón predeterminado se muestra cuando un panel de la cinta de opciones no tiene espacio suficiente para mostrar sus elementos de la cinta.
+El botón predeterminado se muestra cuando un panel de la cinta de opciones no tiene espacio suficiente para mostrar sus elementos de la cinta de opciones.
 
-##  <a name="showpopup"></a>CMFCRibbonPanel:: ShowPopup
+## <a name="cmfcribbonpanelshowpopup"></a><a name="showpopup"></a>CMFCRibbonPanel::ShowPopup
 
-Crea y muestra un menú emergente del panel de la cinta de opciones.
+Crea y muestra un menú emergente para el panel de la cinta de opciones.
 
 ```
 CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
@@ -1149,49 +1149,49 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ### <a name="parameters"></a>Parámetros
 
 *pButton*<br/>
-de Puntero al botón predeterminado del panel de la cinta de opciones.
+[en] Puntero al botón predeterminado del panel de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al menú emergente del panel de la cinta de opciones si el método se realizó correctamente; de lo contrario, NULL.
+Puntero al menú emergente del panel de la cinta de opciones si el método se realizó correctamente; NULL.
 
 ### <a name="remarks"></a>Observaciones
 
-El menú emergente del panel de la cinta de opciones solo está disponible cuando se contrae la pantalla del panel de la cinta de opciones.
+El menú emergente del panel de la cinta de opciones solo está disponible cuando la visualización del panel de la cinta de opciones está contraída.
 
-##  <a name="setfocused"></a>CMFCRibbonPanel:: SetFocused
+## <a name="cmfcribbonpanelsetfocused"></a><a name="setfocused"></a>CMFCRibbonPanel::SetFocused
 
-Establece el foco en el elemento de cinta especificado.
+Establece el foco en el elemento Ribbon especificado.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pNewFocus*<br/>
-Un puntero a un elemento de la cinta de opciones que recibe el foco.
+Puntero a un elemento Ribbon que recibe el foco.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="makegalleryitemvisible"></a>CMFCRibbonPanel:: MakeGalleryItemVisible
+## <a name="cmfcribbonpanelmakegalleryitemvisible"></a><a name="makegalleryitemvisible"></a>CMFCRibbonPanel::MakeGalleryItemVisible
 
-Desplaza la galería para que el elemento de la cinta de opciones especificado sea visible.
+Desplaza la galería para hacer visible el elemento Ribbon especificado.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pItem*<br/>
-Un puntero a un elemento de la cinta que se va a mostrar.
+Un puntero a un elemento Ribbon para mostrar.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="iswindows7look"></a>CMFCRibbonPanel:: IsWindows7Look
+## <a name="cmfcribbonpaneliswindows7look"></a><a name="iswindows7look"></a>CMFCRibbonPanel::IsWindows7Look
 
-Indica si la cinta de opciones primaria tiene el aspecto de Windows 7 (botón de aplicación rectangular pequeña).
+Indica si la cinta de opciones principal tiene aspecto de Windows 7 (botón de aplicación rectangular pequeño).
 
 ```
 BOOL IsWindows7Look() const;
@@ -1199,15 +1199,15 @@ BOOL IsWindows7Look() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la cinta de opciones primaria tiene el aspecto de Windows 7; en caso contrario, FALSE.
+TRUESi la cinta de opciones primaria tiene aspecto de Windows 7; de lo contrario FALSO.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getvisibleelements"></a>CMFCRibbonPanel:: GetVisibleElements
+## <a name="cmfcribbonpanelgetvisibleelements"></a><a name="getvisibleelements"></a>CMFCRibbonPanel::GetVisibleElements
 
 Recupera una matriz de elementos visibles.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);
@@ -1216,13 +1216,13 @@ CMFCRibbonBaseElement*>& arElements);
 ### <a name="parameters"></a>Parámetros
 
 *arElements*<br/>
-Cuando la función devuelve, este parámetro contiene una matriz de elementos visibles.
+Cuando se devuelve la función, este parámetro contiene una matriz de elementos visibles.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getgalleryrect"></a>CMFCRibbonPanel:: GetGalleryRect
+## <a name="cmfcribbonpanelgetgalleryrect"></a><a name="getgalleryrect"></a>CMFCRibbonPanel::GetGalleryRect
 
-Devuelve un rectángulo delimitador de un elemento de la galería.
+Devuelve un rectángulo delimitador de un Elemento Gallery.
 
 ```
 CRect GetGalleryRect();
@@ -1230,11 +1230,11 @@ CRect GetGalleryRect();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Tamaño y posición del elemento de la Galería dentro de este panel.
+Tamaño y posición del elemento Galería dentro de este panel.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="getfocused"></a>CMFCRibbonPanel:: GetFocused
+## <a name="cmfcribbonpanelgetfocused"></a><a name="getfocused"></a>CMFCRibbonPanel::GetFocused
 
 Devuelve un elemento que tiene el foco.
 
@@ -1244,14 +1244,14 @@ CMFCRibbonBaseElement* GetFocused() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un elemento con foco o NULL.
+Un puntero a un elemento enfocado o NULL.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
-[CMFCRibbonCategory (clase)](../../mfc/reference/cmfcribboncategory-class.md)<br/>
-[CMFCRibbonBaseElement (clase)](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[Clase CObject](../../mfc/reference/cobject-class.md)<br/>
+[CMFCRibbonCategory (Clase)](../../mfc/reference/cmfcribboncategory-class.md)<br/>
+[CMFCRibbonBaseElement Clase](../../mfc/reference/cmfcribbonbaseelement-class.md)

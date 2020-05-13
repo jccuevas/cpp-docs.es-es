@@ -1,6 +1,6 @@
 ---
 title: MatchEventStack
-description: La C++ referencia de la función MATCHEVENTSTACK del SDK de Build Insights.
+description: Referencia de la función MatchEventStack del SDK de C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 445c2d00c24da10754d32256de0c691e82b557e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a223d420e8c48667fbd1c6569f02d0486f597b5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334365"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323871"
 ---
 # <a name="matcheventstack"></a>MatchEventStack
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La función `MatchEventStack` se usa para hacer coincidir una pila de eventos con una jerarquía de eventos específica. Las jerarquías coincidentes se reenvían a un controlador para su posterior procesamiento. Para obtener más información sobre eventos, pilas de eventos y jerarquías, vea [tabla de eventos](../event-table.md).
+La `MatchEventStack` función se utiliza para hacer coincidir una pila de eventos con una jerarquía de eventos específica. Las jerarquías coincidentes se reenvían a un controlador para su posterior procesamiento. Para obtener más información sobre eventos, pilas de eventos y jerarquías, consulte Tabla de [eventos](../event-table.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,36 +43,36 @@ bool MatchEventStack(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *TEvent*
-Tipo del elemento primario de Eldest que debe coincidir en la pila de eventos.
+*TEvent*\
+El tipo del elemento primario mayor que coincide en la pila de eventos.
 
-\ *TEvents*
-Los tipos restantes que desea buscar en la pila de eventos.
+*TEvents*\
+Los tipos restantes que desea que coincidan en la pila de eventos.
 
-\ *TCallable*
-Tipo que admite `operator()`. Para obtener más información sobre qué argumentos se pasan a este operador, vea la descripción del parámetro al que se *puede llamar* .
+*TCallable*\
+Un tipo `operator()`que admite . Para obtener más información sobre qué argumentos se pasan a este operador, vea la descripción del parámetro *invocable.*
 
-\ *TExtraArgs*
-Tipos de los argumentos adicionales pasados a `MatchEventStack`.
+*TExtraArgs*\
+Los tipos de los argumentos adicionales pasados a `MatchEventStack`.
 
-\ *eventStack*
-Pila de eventos que debe coincidir con la jerarquía de tipos de evento descrita por *TEvent* y *TEvents*.
+*eventStack*\
+La pila de eventos que debe coincidir con la jerarquía de tipos de evento descrita por *TEvent* y *TEvents*.
 
-\ *invocable*
-Tras hacer coincidir correctamente la pila de eventos con la jerarquía de tipos de evento descrita por *TEvent* y *TEvents*, `MatchEventStack` invoca a *Callable*. Pasa a un argumento de valor *r para cada* tipo en la jerarquía de eventos. El paquete de parámetros de *extraargs* se reenvía de forma perfecta en el resto de los parámetros de a los que se *puede llamar*.
+*Accesible*\
+Al hacer coincidir correctamente la pila de eventos con la `MatchEventStack` jerarquía de tipos de eventos descrita por *TEvent* y *TEvents*, invoca *el valor invocable*. Pasa a un argumento de valor r *invocable* para cada tipo en la jerarquía de eventos. El paquete de parámetros *extraArgs* se reenvía perfectamente en los parámetros restantes de *callable*.
 
-\ *Extraargs*
-Los argumentos que se reenvían de la ruta a la que se *puede llamar* junto con el tipo de evento coincidente.
+*extraArgs*\
+Los argumentos que se reenvían perfectamente a *invocables* junto con el tipo de evento coincidente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor **booleano** que es **true** si la coincidencia se realizó correctamente, o **false** en caso contrario.
+Un valor **bool** que es **true** si la coincidencia se realizó correctamente, o **false** en caso contrario.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El último evento de *eventStack* siempre coincide con la última entrada de la lista de tipos concatenados de la \[*TEvent*, *TEvents...* \]. Todas las demás entradas de *TEvent* y *TEvents* pueden coincidir con cualquier posición en *eventStack* excepto en la última, siempre que estén en el mismo orden.
+El último evento de *eventStack* siempre coincide con la \[última entrada del *TEvent*concatenado, *TEvents...* \] tipo lista. Todas las demás entradas *de TEvent* y *TEvents* pueden coincidir con cualquier posición en *eventStack* excepto la última, siempre que estén en el mismo orden.
 
-Los tipos de evento que se van a usar para los parámetros *TEvent* y *TEvents* se seleccionan de una lista de *clases de captura*. Para obtener una lista de eventos y las clases de captura que puede usar para hacerlos coincidir, consulte [tabla de eventos](../event-table.md).
+Los tipos de eventos que se van a utilizar para los parámetros *TEvent* y *TEvents* se seleccionan de una lista de clases de *captura.* Para obtener una lista de eventos y las clases de captura que puede usar para hacer coincidirlos, consulte [la tabla](../event-table.md)de eventos .
 
 ## <a name="example"></a>Ejemplo
 

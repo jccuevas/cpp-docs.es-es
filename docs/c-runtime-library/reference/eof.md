@@ -1,8 +1,9 @@
 ---
 title: _eof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _eof
+- _o__eof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941998"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915053"
 ---
 # <a name="_eof"></a>_eof
 
@@ -50,16 +52,18 @@ int _eof(
 
 ### <a name="parameters"></a>Parámetros
 
-*fd*<br/>
+*FD*<br/>
 Descriptor de archivo que hace referencia al archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto
 
 **_eof** devuelve 1 si la posición actual es el final del archivo, o 0 si no lo es. Un valor devuelto de-1 indica un error; en este caso, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EBADF**, lo que indica que el descriptor de archivo no es válido.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_eof** determina si se ha alcanzado el final del archivo asociado a *FD* .
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -67,7 +71,7 @@ La función **_eof** determina si se ha alcanzado el final del archivo asociado 
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -115,7 +119,7 @@ int main( void )
 This file contains some text.
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Number of bytes read = 29
@@ -123,7 +127,7 @@ Number of bytes read = 29
 
 ## <a name="see-also"></a>Vea también
 
-[Control de errores](../../c-runtime-library/error-handling-crt.md)<br/>
+[Tratamiento de errores](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [feof](feof.md)<br/>

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16c02bb58681ecb241d3552f57e0b05f2d6711b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223038"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208813"
 ---
 # <a name="application-domains-and-visual-c"></a>Dominios de aplicación y Visual C++
 
-Si tiene un `__clrcall` función virtual, que será la vtable por dominio de aplicación (appdomain). Si crea un objeto en un appdomain, sólo puede llamar a la función virtual desde dentro de ese appdomain. En modo mixto (**/CLR**) tendrá vtables por proceso si el tipo no tiene ningún `__clrcall` funciones virtuales. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+Si tiene una función virtual `__clrcall`, el vtable será por dominio de aplicación (AppDomain). Si crea un objeto en un AppDomain, solo puede llamar a la función virtual desde dentro de ese AppDomain. En modo mixto ( **/CLR**) tendrá vtables por proceso si el tipo no tiene `__clrcall` funciones virtuales. Las opciones del compilador **/clr: Pure** y **/clr: Safe** están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017.
 
-Para obtener más información, consulte:
+Para más información, consulte:
 
 - [appdomain](../cpp/appdomain.md)
 
@@ -27,6 +27,6 @@ Para obtener más información, consulte:
 
 - [process](../cpp/process.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md)

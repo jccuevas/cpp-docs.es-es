@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213582"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType (enumeración)
 
-Especifica el tipo de [RuntimeClass](runtimeclass-class.md) instancia que se admite.
+Especifica el tipo de instancia de [RuntimeClass](runtimeclass-class.md) que se admite.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,25 +24,25 @@ Especifica el tipo de [RuntimeClass](runtimeclass-class.md) instancia que se adm
 enum RuntimeClassType;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="values"></a>Valores
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|`ClassicCom`|Una clase de tiempo de ejecución COM clásica.|
+|`ClassicCom`|Una clase en tiempo de ejecución COM clásica.|
 |`Delegate`|Equivalente a `ClassicCom`.|
-|`InhibitFtmBase`|Deshabilita `FtmBase` compatibilidad con mientras `__WRL_CONFIGURATION_LEGACY__` no está definido.|
-|`InhibitWeakReference`|Deshabilita la compatibilidad de la referencia débil.|
-|`WinRt`|Una clase en tiempo de ejecución de Windows.|
+|`InhibitFtmBase`|Deshabilita la compatibilidad con `FtmBase` mientras no se define `__WRL_CONFIGURATION_LEGACY__`.|
+|`InhibitWeakReference`|Deshabilita la compatibilidad con referencias débiles.|
+|`WinRt`|Una clase Windows Runtime.|
 |`WinRtClassicComMix`|Combinación de `WinRt` y `ClassicCom`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** implements.h
+**Encabezado:** implementa. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)

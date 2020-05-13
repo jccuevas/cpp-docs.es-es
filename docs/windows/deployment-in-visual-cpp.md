@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 67d5c7b0772eda55d1b653bd73f95ac93e31e644
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c4b75a65fcfb34a4988b176ffcb5b2afcb7ea13
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514811"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377375"
 ---
 # <a name="deployment-in-visual-c"></a>Implementación en Visual C++
 
@@ -26,7 +26,7 @@ Para implementar de forma centralizada las bibliotecas de Visual C++, puede usar
 
 - Archivos de *paquete redistribuible*, que son archivos ejecutables de la línea de comandos independientes que contienen todas las bibliotecas redistribuibles de Visual C++ en formato comprimido, o bien
 
-- *Módulos de combinación redistribuibles (archivos .msm)* , que se pueden usar para implementar bibliotecas específicas, y que se incluyen en el archivo de Windows Installer (.msi) de la aplicación.
+- *Módulos de combinación redistribuibles* (archivos .msm), que puede usar para implementar bibliotecas específicas y que se incluyen en el archivo de Windows Installer (.msi) de la aplicación.
 
 Un archivo de paquete redistribuible instala todas las bibliotecas de Visual C++ para una arquitectura del sistema concreta. Por ejemplo, si la aplicación se compila para x64, se puede usar el paquete redistribuible vcredist_x64.exe para instalar todas las bibliotecas de Visual C++ que usa la aplicación. Se puede programar el instalador de la aplicación para que ejecute el paquete redistribuible como un requisito previo antes de instalar la aplicación.
 
@@ -50,7 +50,7 @@ Además de las bibliotecas vinculadas dinámicamente, Visual Studio proporciona 
 
 El orden de carga de las bibliotecas de Visual C++ depende del sistema. Para diagnosticar los problemas de cargador, utilice depends.exe o where.exe. Para obtener más información, vea [Dynamic-Link Library Search Order (Windows)](/windows/win32/Dlls/dynamic-link-library-search-order) (Orden de búsqueda de las bibliotecas de vínculos dinámicos [Windows]).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Implementar aplicaciones de escritorio](deploying-native-desktop-applications-visual-cpp.md)
 - [Implementación de CRT universal](universal-crt-deployment.md)

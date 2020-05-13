@@ -1,8 +1,9 @@
 ---
 title: bsearch
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch
+- _o_bsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811088"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913379"
 ---
 # <a name="bsearch"></a>bsearch
 
-Realiza una búsqueda binaria de una matriz ordenada. Existe una versión más segura disponible de esta función; vea [bsearch_s](bsearch-s.md).
+Realiza una búsqueda binaria de una matriz ordenada. Hay disponible una versión más segura de esta función; consulte [bsearch_s](bsearch-s.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,26 +53,26 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *clave*
+*clave*\
 Puntero a la clave que se va a buscar.
 
-*base*\
+*básica*\
 Puntero a la base de los datos de búsqueda.
 
-*número*\
+*number*\
 Número de elementos.
 
-*ancho*\
+*Ancho*\
 Ancho de los elementos.
 
-*comparar*\
+*Compare*\
 Función de devolución de llamada que compara dos elementos. El primero es un puntero a la clave de la búsqueda y el segundo es un puntero al elemento de la matriz que se va a comparar con la clave.
 
 ## <a name="return-value"></a>Valor devuelto
 
 **bsearch** devuelve un puntero a una aparición de *clave* en la matriz a la que apunta la *base*. Si no se encuentra la *clave* , la función devuelve **null**. Si la matriz no está en orden ascendente o contiene registros duplicados con claves idénticas, el resultado es impredecible.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **bsearch** realiza una búsqueda binaria de una matriz ordenada de elementos *numéricos* , cada uno de los cuales tiene un tamaño de bytes de *ancho* . El valor *base* es un puntero a la base de la matriz que se va a buscar y *key* es el valor que se busca. El parámetro *Compare* es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada con un elemento de matriz. Devuelve uno de los siguientes valores que especifican su relación:
 
@@ -78,9 +80,11 @@ La función **bsearch** realiza una búsqueda binaria de una matriz ordenada de 
 |-----------------------------------------|-----------------|
 |\< 0|El valor de clave es menor que el elemento de matriz.|
 |0|El valor de clave es igual al elemento de matriz.|
-|> 0|La clave es mayor que el elemento de matriz.|
+|> 0|El valor de clave es mayor que el elemento de matriz.|
 
-Esta función valida sus parámetros. Si *comparar*, *la clave* o el *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es cero, la función invoca el controlador de parámetros no válidos, como se describe en el [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en `EINVAL` y la función devuelve **null**.
+Esta función valida sus parámetros. Si *comparar*, la *clave* o el *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es cero, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en `EINVAL` y la función devuelve **null**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -135,7 +139,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

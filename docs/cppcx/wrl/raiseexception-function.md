@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213634"
 ---
 # <a name="raiseexception-function"></a>RaiseException (función)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,24 +28,24 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Parámetros
 
-*hr*<br/>
-El código de excepción de la excepción; es decir, el valor HRESULT de una operación con errores.
+*hora*<br/>
+Código de excepción de la excepción que se está generando; es decir, el valor HRESULT de una operación con errores.
 
 *dwExceptionFlags*<br/>
-Una marca que indica una excepción crítico (el valor de la marca es cero), o una excepción noncontinuable (el valor de la marca es distinto de cero). De forma predeterminada, la excepción es que no dejaba continuar.
+Marca que indica una excepción continua (el valor de la marca es cero) o una excepción no continua (el valor de la marca es distinto de cero). De forma predeterminada, la excepción no es continuable.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Genera una excepción en el subproceso de llamada.
+Genera una excepción en el subproceso que realiza la llamada.
 
-Para obtener más información, consulte el Windows `RaiseException` función.
+Para obtener más información, vea la función `RaiseException` de Windows.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** internal.h
+**Encabezado:** Internal. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

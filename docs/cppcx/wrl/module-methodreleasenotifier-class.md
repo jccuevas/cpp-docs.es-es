@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325070"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371285"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier (Clase)
 
-Invoca un controlador de eventos cuando se libera el último objeto del módulo actual. El controlador de eventos se especifica mediante un objeto y su miembro de puntero al método.
+Invoca un controlador de eventos cuando se libera el último objeto del módulo actual. El controlador de eventos se especifica mediante un objeto y su puntero a un método miembro.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,22 +42,22 @@ El tipo del objeto cuya función miembro es el controlador de eventos.
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-Name                                                                                                 | Descripción
+Nombre                                                                                                 | Descripción
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
 [Module::MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | Inicializa una nueva instancia de la clase `Module::MethodReleaseNotifier`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                                                                   | Descripción
+Nombre                                                                   | Descripción
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | Llama al controlador de eventos asociado con el actual `Module::MethodReleaseNotifier` objeto.
+[Module::MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | Llama al controlador de `Module::MethodReleaseNotifier` eventos asociado al objeto actual.
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-Name                                                                    | Descripción
+Nombre                                                                    | Descripción
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Contiene un puntero al controlador de eventos actual `Module::MethodReleaseNotifier` objeto.
-[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Contiene un puntero al objeto cuya función miembro es el controlador de eventos actual `Module::MethodReleaseNotifier` objeto.
+[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Mantiene un puntero al controlador de `Module::MethodReleaseNotifier` eventos para el objeto actual.
+[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Contiene un puntero al objeto cuya función miembro `Module::MethodReleaseNotifier` es el controlador de eventos para el objeto actual.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -69,25 +69,25 @@ Name                                                                    | Descri
 
 **Encabezado:** module.h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="methodreleasenotifier-invoke"></a>Module::MethodReleaseNotifier::Invoke
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>Module::MethodReleaseNotifier::Invoke
 
-Llama al controlador de eventos asociado con el actual `Module::MethodReleaseNotifier` objeto.
+Llama al controlador de `Module::MethodReleaseNotifier` eventos asociado al objeto actual.
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
 
-Contiene un puntero al controlador de eventos actual `Module::MethodReleaseNotifier` objeto.
+Mantiene un puntero al controlador de `Module::MethodReleaseNotifier` eventos para el objeto actual.
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier
 
 Inicializa una nueva instancia de la clase `Module::MethodReleaseNotifier`.
 
@@ -103,17 +103,17 @@ MethodReleaseNotifier(
 ### <a name="parameters"></a>Parámetros
 
 *object*<br/>
-Objeto cuya función miembro es un controlador de eventos.
+Un objeto cuya función miembro es un controlador de eventos.
 
-*Método*<br/>
-La función miembro de parámetro *objeto* que es el controlador de eventos.
+*method*<br/>
+La función miembro del *objeto* de parámetro que es el controlador de eventos.
 
-*release*<br/>
-Especificar `true` para habilitar una llamada subyacente [módulo:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) método; en caso contrario, especifique `false`.
+*Lanzamiento*<br/>
+Especificar `true` para habilitar la llamada al método [subyacente Module::ReleaseNotifier::Release();](module-releasenotifier-class.md#releasenotifier-release) de lo `false`contrario, especifique .
 
-## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
 
-Contiene un puntero al objeto cuya función miembro es el controlador de eventos actual `Module::MethodReleaseNotifier` objeto.
+Contiene un puntero al objeto cuya función miembro `Module::MethodReleaseNotifier` es el controlador de eventos para el objeto actual.
 
 ```cpp
 T* object_;

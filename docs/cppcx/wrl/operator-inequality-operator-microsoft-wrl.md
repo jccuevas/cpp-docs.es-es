@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 6068a7ddad78e3347f6987b30cc2884dc3f648fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213662"
 ---
 # <a name="operator-operator-microsoftwrl"></a>Operador operator!= (Microsoft::WRL)
 
-Operador de desigualdad para [ComPtr](comptr-class.md) y [ComPtrRef](comptrref-class.md) objetos.
+Operador de desigualdad para objetos [ComPtr](comptr-class.md) y [ComPtrRef](comptrref-class.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -63,14 +63,14 @@ Objeto derecho.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**True** si los objetos no son iguales; en caso contrario, **false**.
+**true** si los objetos no son iguales; en caso contrario, **false**.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** client.h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)

@@ -1,9 +1,11 @@
 ---
 title: _access_s, _waccess_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access_s
 - _waccess_s
+- _o__access_s
+- _o__waccess_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171325"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916895"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -75,7 +78,7 @@ Cada función devuelve 0 si el archivo tiene el modo especificado. La función d
 `ENOENT`|No se encuentra el nombre o la ruta de acceso del archivo.
 `EINVAL`|Parámetro no válido.
 
-Para obtener más información, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Observaciones
 
@@ -93,6 +96,8 @@ Los permisos para leer o escribir en el archivo no bastan para garantizar la pos
 **_waccess_s** es una versión de caracteres anchos de **_access_s**, donde el argumento de *ruta de acceso* que se va a **_waccess_s** es una cadena de caracteres anchos. De lo contrario, **_waccess_s** y **_access_s** se comportan exactamente igual.
 
 Estas funciones validan sus parámetros. Si *path* es null o el *modo* no especifica un modo válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -151,7 +156,7 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

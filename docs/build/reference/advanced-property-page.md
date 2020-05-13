@@ -4,16 +4,16 @@ ms.date: 07/19/2019
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: fae3c76d4a62e3b0409664b3630ad76ab601c52b
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 8ce62b768f5cda30501e791bcd040a40b18bfb23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68315534"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328426"
 ---
 # <a name="advanced-property-page"></a>Página de propiedades avanzadas
 
-La página de propiedades avanzadas está disponible en Visual Studio 2019 y versiones posteriores.
+La página de propiedades Avanzadas está disponible en Visual Studio 2019 y versiones posteriores.
 
 ::: moniker range="vs-2019"
 
@@ -21,7 +21,7 @@ La página de propiedades avanzadas está disponible en Visual Studio 2019 y ver
 
 - **Extensión de archivo de destino**
 
-   Especifica la extensión de archivo que se va a usar para la salida de la compilación. El valor predeterminado es **. exe** para las aplicaciones, **. lib** para las bibliotecas estáticas y **. dll** para archivos dll.
+   Especifica la extensión de archivo que se usará para la salida de compilación. El valor predeterminado **es .exe** para aplicaciones, **.lib** para bibliotecas estáticas y **.dll** para archivos DLL.
 
 - **Extensiones para eliminar al limpiar**
 
@@ -33,19 +33,19 @@ La página de propiedades avanzadas está disponible en Visual Studio 2019 y ver
 
    Permite especificar una ubicación no predeterminada para el archivo de registro que se crea cada vez que se compila un proyecto. La ubicación predeterminada se especifica mediante las macros $(IntDir)$(MSBuildProjectName).log.
 
-   Puede utilizar macros de proyecto para cambiar la ubicación del directorio. Vea [macros comunes para propiedades y comandos de compilación](common-macros-for-build-commands-and-properties.md).
+   Puede utilizar macros de proyecto para cambiar la ubicación del directorio. Consulte [Macros comunes para crear comandos y propiedades.](common-macros-for-build-commands-and-properties.md)
 
-- **Arquitectura de la herramienta de compilación preferida**
+- **Arquitectura de herramientas de construcción preferida**
 
-   Especifica si se van a usar las herramientas de compilación x86 o x64.
+   Especifica si se deben utilizar las herramientas de compilación x86 o x64.
 
 - **Usar bibliotecas de depuración**
 
-   Especifica si se va a crear una compilación de depuración o de versión.
+   Especifica si se debe crear una compilación DEBUG o RELEASE.
 
-- **Habilitar la compilación de Unity (gigante)**
+- **Habilitar la compilación de Unity (JUMBO)**
 
-   Habilita un proceso de compilación en C++ el que muchos archivos de código fuente se combinan en uno o varios archivos "Unity" antes de la compilación para mejorar el rendimiento de la compilación. No está relacionado con el motor de juegos de Unity.
+   Habilita un proceso de compilación en el que muchos archivos de origen de C++ se combinan en uno o varios archivos de "unidad" antes de la compilación para mejorar el rendimiento de compilación. No relacionado con el motor de juego de Unity.
 
 - **Uso de MFC**
 
@@ -63,11 +63,11 @@ La página de propiedades avanzadas está disponible en Visual Studio 2019 y ver
 
    Especifica la opción [/GL](gl-whole-program-optimization.md) del compilador y la opción [/LTCG](ltcg-link-time-code-generation.md) del vinculador. De forma predeterminada, esto se deshabilita para las configuraciones de depuración y se habilita para las comerciales.
 
-- **Versión del conjunto de herramientas MSVC**
+- **Versión de conjunto de herramientas MSVC**
 
-   Especifica la versión completa del conjunto de herramientas de MSVC que se usará para compilar el proyecto. Si tiene instaladas varias versiones de vista previa y actualización de un conjunto de herramientas, puede especificar cuál desea usar aquí.
+   Especifica la versión completa del conjunto de herramientas MSVC que se usará para compilar el proyecto. Si tiene varias versiones de actualización y vista previa de un conjunto de herramientas instalados, puede especificar cuál utilizar aquí.
 
-## <a name="ccli-properties"></a>C++Propiedades/CLI
+## <a name="ccli-properties"></a>Propiedades de C++/CLI
 
 - **Compatible con Common Language Runtime**
 

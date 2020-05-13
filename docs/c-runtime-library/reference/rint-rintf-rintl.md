@@ -1,10 +1,13 @@
 ---
 title: rint, rintf, rintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - rintf
 - rintl
 - rint
+- _o_rint
+- _o_rintf
+- _o_rintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170896"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917718"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -65,12 +69,14 @@ Las funciones **rimir** devuelven un valor de punto flotante que representa el e
 
 |Entrada|Excepción SEH|**_matherr** Excepcional|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|None|None|
-|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|None|
+|± ∞, QNAN, IND|ninguno|ninguno|
+|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguno|
 
 ## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **rimir** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **rimir** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **rimir** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **rimir** siempre toma y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,7 +84,7 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **rimir*
 |--------------|--------------|------------------|
 |**rimir**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,9 +1,11 @@
 ---
 title: _mbccpy_s, _mbccpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbccpy_s
 - _mbccpy_s_l
+- _o__mbccpy_s
+- _o__mbccpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952632"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920319"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -101,7 +104,7 @@ Configuración regional que se va a usar.
 
 Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si *src* o *dest* es **null**, o si se copian más de **buffSizeinBytes** bytes en *dest*, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven **EINVAL** y **errno** se establece en **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_mbccpy_s** copia un carácter multibyte de *src* a *dest*. Si *src* no apunta al byte inicial de un carácter multibyte según lo determinado por una llamada implícita a [_ismbblead](ismbblead-ismbblead-l.md), se copia el byte único al *que apunta.* Si *src* apunta a un byte inicial pero el siguiente byte es 0 y, por tanto, es no válido, se copia 0 en *dest*, **errno** se establece en **EILSEQ**y la función devuelve **EILSEQ**.
 
@@ -118,9 +121,11 @@ El valor de *pCopied* se rellena con el número de bytes copiados. Los valores p
 
 Observe que la segunda fila simplemente es un caso especial de la primera. Tenga en cuenta también que la tabla presupone *buffSizeInBytes* >= *pCopied*.
 
-**_mbccpy_s** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_mbccpy_s_l** es idéntico a **_mbccpy_s** , salvo que **_mbccpy_s_l** usa la configuración regional que se pasa para cualquier comportamiento dependiente de la configuración regional.
+**_mbccpy_s** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_mbccpy_s_l** es idéntica a **_mbccpy_s** , salvo que **_mbccpy_s_l** usa la configuración regional que se pasa para cualquier comportamiento dependiente de la configuración regional.
 
-En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -135,10 +140,10 @@ En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantill
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

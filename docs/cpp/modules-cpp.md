@@ -4,48 +4,48 @@ ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
-description: Los módulos de C++ 20 proporcionan una alternativa moderna a los archivos de encabezado.
-ms.openlocfilehash: 286d2ec8a26dbd0a85e8f8721ad6fd7f12f45a31
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+description: Los módulos de C++20 proporcionan una alternativa moderna a los archivos de encabezado.
+ms.openlocfilehash: cd45be1dee888c8caeb65b7ff002ac8fee1ecbe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078040"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370756"
 ---
 # <a name="overview-of-modules-in-c"></a>Información general de los módulos en C++
 
-C++ 20 presenta *módulos*, una solución moderna para la componentización C++ de bibliotecas y programas. Un módulo es un conjunto de archivos de código fuente que se compilan de forma independiente de las [unidades de traducción](https://wikipedia.org/wiki/Translation_unit_(programming)) que los importan. Los módulos eliminan o reducen considerablemente muchos de los problemas asociados con el uso de archivos de encabezado y también pueden reducir los tiempos de compilación. Las macros, las directivas de preprocesador y los nombres no exportados declarados en un módulo no son visibles y, por lo tanto, no tienen ningún efecto en la compilación de la unidad de traducción que importa el módulo. Puede importar módulos en cualquier orden sin preocuparse por las redefiniciones de macros. Las declaraciones de la unidad de traducción de importación no participan en la resolución de sobrecarga o en la búsqueda de nombres en el módulo importado. Después de compilar un módulo una vez, los resultados se almacenan en un archivo binario que describe todos los tipos, funciones y plantillas exportados. Ese archivo se puede procesar mucho más rápido que un archivo de encabezado y el compilador puede reutilizarlo cada lugar en el que se importe el módulo en un proyecto.
+C++20 presenta *módulos,* una solución moderna para la componenteización de bibliotecas y programas C++. Un módulo es un conjunto de archivos de código fuente que se compilan independientemente de las [unidades](https://wikipedia.org/wiki/Translation_unit_(programming)) de traducción que los importan. Los módulos eliminan o reducen en gran medida muchos de los problemas asociados con el uso de archivos de encabezado, y también reducen potencialmente los tiempos de compilación. Las macros, las directivas de preprocesador y los nombres no exportados declarados en un módulo no son visibles y, por lo tanto, no tienen ningún efecto en la compilación de la unidad de traducción que importa el módulo. Puede importar módulos en cualquier orden sin preocuparse por las redefiniciones de macros. Las declaraciones de la unidad de traducción de importación no participan en la resolución de sobrecargas ni en la búsqueda de nombres en el módulo importado. Después de compilar un módulo una vez, los resultados se almacenan en un archivo binario que describe todos los tipos, funciones y plantillas exportados. Ese archivo se puede procesar mucho más rápido que un archivo de encabezado y el compilador puede reutilizarlo en cada lugar donde se importe el módulo en un proyecto.
 
-Los módulos se pueden usar en paralelo con los archivos de encabezado. Un C++ archivo de origen puede importar módulos y también #include archivos de encabezado. En algunos casos, el preprocesador puede importar un archivo de encabezado como un módulo en lugar de #included textualmente. Se recomienda que los nuevos proyectos usen módulos en lugar de archivos de encabezado lo máximo posible. En el caso de los proyectos existentes de mayor tamaño en desarrollo activo, se recomienda experimentar con la conversión de encabezados heredados a módulos para ver si obtiene una reducción significativa en los tiempos de compilación.
+Los módulos se pueden utilizar uno al lado del otro con los archivos de encabezado. Un archivo de origen C++ puede importar módulos y también #include archivos de encabezado. En algunos casos, un archivo de encabezado se puede importar como un módulo en lugar de textualmente #included por el preprocesador. Recomendamos que los nuevos proyectos usen módulos en lugar de archivos de encabezado tanto como sea posible. Para proyectos existentes más grandes en desarrollo activo, le sugerimos que experimente con la conversión de encabezados heredados en módulos para ver si obtiene una reducción significativa en los tiempos de compilación.
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Habilitar módulos en el compilador de Microsoft C++
 
-A partir de la versión 16,2 de Visual Studio 2019, los módulos no se implementan totalmente en el compilador de Microsoft C++ . Puede usar la característica módulos para crear módulos de una sola partición e importar los módulos de la biblioteca estándar que proporciona Microsoft. Para habilitar la compatibilidad con los módulos, compile con [/experimental: module](../build/reference/experimental-module.md) y [/STD: c + + latest](../build/reference/std-specify-language-standard-version.md). En un proyecto de Visual Studio, haga clic con el botón secundario en el nodo del proyecto en **Explorador de soluciones** y elija **propiedades**. Establezca la lista desplegable **configuración** en **todas las configuraciones**y, a continuación, elija **propiedades de configuración** > **lenguaje** **C/C++**  >  > **habilitar C++ módulos (experimental)** .
+A partir de Visual Studio 2019 versión 16.2, los módulos no se implementan completamente en el compilador de Microsoft C++. Puede utilizar la característica de módulos para crear módulos de partición única e importar los módulos de biblioteca estándar proporcionados por Microsoft. Para habilitar la compatibilidad con módulos, compile con [/experimental:module](../build/reference/experimental-module.md) y [/std:c++latest](../build/reference/std-specify-language-standard-version.md). En un proyecto de Visual Studio, haga clic con el botón secundario en el nodo del proyecto en el **Explorador** de soluciones y elija **Propiedades**. Establezca el menú desplegable **Configuración** en **Todas las configuraciones**y, a continuación, elija Propiedades > de **configuración****C/C++** > **Language** > **Enable C++ Modules (experimental)**.
 
 Un módulo y el código que lo consume deben compilarse con las mismas opciones del compilador.
 
-## <a name="consume-the-c-standard-library-as-modules"></a>Usar la C++ biblioteca estándar como módulos
+## <a name="consume-the-c-standard-library-as-modules"></a>Consumir la biblioteca estándar C++ como módulos
 
-Aunque no se especifica en el estándar C++ 20, Microsoft permite que la implementación C++ de la biblioteca estándar se importe como módulos. Al importar la C++ biblioteca estándar como módulos en lugar de #including a través de los archivos de encabezado, puede acelerar los tiempos de compilación según el tamaño del proyecto. La biblioteca se pone en componente en los siguientes módulos:
+Aunque no se especifica mediante el estándar C++20, Microsoft permite importar su implementación de la biblioteca estándar C++ como módulos. Al importar la biblioteca estándar C++ como módulos en lugar de #including a través de archivos de encabezado, puede acelerar potencialmente los tiempos de compilación en función del tamaño del proyecto. La biblioteca se divide en los siguientes módulos:
 
-- STD. Regex proporciona el contenido del encabezado \<regex >
-- STD. FileSystem proporciona el contenido del encabezado \<filesystem >
-- STD. Memory proporciona el contenido del encabezado \<memoria >
-- STD. Threading proporciona el contenido de los encabezados \<> atómicos, \<condition_variable >, \<> futuros, \<mutex >, \<shared_mutex > y \<subproceso >
-- STD. Core proporciona todo lo demás en C++ la biblioteca estándar
+- std.regex proporciona el \<contenido del encabezado regex>
+- std.filesystem proporciona el \<contenido del sistema de archivos de encabezado>
+- std.memory proporciona el \<contenido de la memoria de encabezado>
+- std.threading proporciona el contenido \<de \<los encabezados> atómicos, condition_variable>, \<> \<futuro,> de exclusión mutua, \<> de shared_mutex y \<> de subprocesos
+- std.core proporciona todo lo demás en la Biblioteca Estándar C++
 
-Para consumir estos módulos, basta con agregar una declaración de importación en la parte superior del archivo de código fuente. Por ejemplo:
+Para consumir estos módulos, simplemente agregue una declaración de importación a la parte superior del archivo de código fuente. Por ejemplo:
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-Para consumir el módulo de la biblioteca estándar de Microsoft, compile el programa con las opciones [/EHsc](../build/reference/eh-exception-handling-model.md) y [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
+Para consumir el módulo Biblioteca estándar de Microsoft, compile el programa con las opciones [/EHsc](../build/reference/eh-exception-handling-model.md) y [/MD.](../build/reference/md-mt-ld-use-run-time-library.md)
 
 ## <a name="basic-example"></a>Ejemplo básico
 
-En el ejemplo siguiente se muestra una definición de módulo simple en un archivo de código fuente denominado **foo. IXX**. La extensión **. IXX** es necesaria para los archivos de interfaz de módulo en Visual Studio. En este ejemplo, el archivo de interfaz contiene la definición de función, así como la declaración. Sin embargo, las definiciones también se pueden colocar en uno o varios archivos independientes (como se muestra en un ejemplo posterior). La instrucción **Export Module foo** indica que este archivo es la interfaz principal de un módulo denominado `Foo`. El modificador de **exportación** en `f()` indica que esta función estará visible cuando otro programa o módulo importe `Foo`. Tenga en cuenta que el módulo hace referencia a un espacio de nombres `Bar`.
+En el ejemplo siguiente se muestra una definición de módulo simple en un archivo de origen denominado **Foo.ixx**. La extensión **.ixx** es necesaria para los archivos de interfaz de módulo en Visual Studio. En este ejemplo, el archivo de interfaz contiene la definición de función, así como la declaración. Sin embargo, las definiciones también se pueden colocar en uno o varios archivos independientes (como se muestra en un ejemplo posterior). La instrucción **Foo del módulo** de exportación indica `Foo`que este archivo es la interfaz principal para un módulo llamado . El modificador `f()` **de exportación** activado indica `Foo` que esta función será visible cuando se importe por otro programa o módulo. Tenga en cuenta que `Bar`el módulo hace referencia a un espacio de nombres .
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-El archivo **. cpp** usa la declaración de **importación** para obtener acceso al nombre que se exporta mediante `Foo`. Tenga en cuenta que el nombre `Bar` es visible aquí, pero no todos sus miembros. Tenga en cuenta también que la macro `ANSWER` no es visible.
+El archivo **MyProgram.cpp** utiliza la declaración de `Foo` **importación** para tener acceso al nombre exportado por . Tenga en `Bar` cuenta que el nombre es visible aquí, pero no todos sus miembros. Tenga en cuenta `ANSWER` también que la macro no está visible.
 
 ```cpp
 
@@ -84,43 +84,43 @@ int main()
 
 La declaración de importación solo puede aparecer en el ámbito global.
 
-## <a name="implementing-modules"></a>Implementar módulos
+## <a name="implementing-modules"></a>Implementación de módulos
 
-Puede crear un módulo con un solo archivo de interfaz (. IXX) que exporta nombres e incluye implementaciones de todos los tipos y funciones. También puede colocar las implementaciones en uno o varios archivos de implementación independientes, de forma similar a como se usan los archivos. h y. cpp. La palabra clave **Export** solo se usa en el archivo de interfaz. Un archivo de implementación puede **importar** otro módulo, pero no puede **exportar** ningún nombre. Los archivos de implementación se pueden denominar con cualquier extensión. Un archivo de interfaz y el conjunto de archivos de implementación que respaldan se tratan como una clase especial de unidad de traducción denominada *unidad de módulo*. Un nombre que se declara en cualquier archivo de implementación es visible automáticamente en todos los demás archivos de la misma unidad de módulo.
+Puede crear un módulo con un único archivo de interfaz (.ixx) que exporte nombres e incluya implementaciones de todas las funciones y tipos. También puede colocar las implementaciones en uno o varios archivos de implementación independientes, de forma similar a cómo se utilizan los archivos .h y .cpp. La palabra clave **export** solo se utiliza en el archivo de interfaz. Un archivo de implementación puede **importar** otro módulo, pero no puede **exportar** ningún nombre. Los archivos de implementación se pueden nombrar con cualquier extensión. Un archivo de interfaz y el conjunto de archivos de implementación que lo respaldan se tratan como un tipo especial de unidad de traducción llamada unidad de *módulo.* Un nombre que se declara en cualquier archivo de implementación es visible automáticamente en todos los demás archivos dentro de la misma unidad de módulo.
 
-En el caso de los módulos de mayor tamaño, puede dividir el módulo en varias unidades de módulo denominadas *particiones*. Cada partición consta de un archivo de interfaz respaldado por uno o varios archivos de implementación. (A partir de la versión 16,2 de Visual Studio 2019, las particiones aún no están totalmente implementadas).
+Para módulos más grandes, puede dividir el módulo en varias unidades de módulo *llamadas particiones.* Cada partición consta de un archivo de interfaz respaldado por uno o más archivos de implementación. (A partir de Visual Studio 2019 versión 16.2, las particiones aún no están completamente implementadas.)
 
 ## <a name="modules-namespaces-and-argument-dependent-lookup"></a>Módulos, espacios de nombres y búsqueda dependiente de argumentos
 
-Las reglas para los espacios de nombres en los módulos son las mismas que en cualquier otro código. Si se exporta una declaración dentro de un espacio de nombres, el espacio de nombres envolvente (excepto los miembros no exportados) también se exporta implícitamente. Si un espacio de nombres se exporta explícitamente, se exportan todas las declaraciones dentro de esa definición de espacio de nombres.
+Las reglas para espacios de nombres en módulos son las mismas que en cualquier otro código. Si se exporta una declaración dentro de un espacio de nombres, el espacio de nombres envolvente (excluyendo los miembros no exportados) también se exporta implícitamente. Si un espacio de nombres se exporta explícitamente, se exportan todas las declaraciones dentro de esa definición de espacio de nombres.
 
-Al realizar una búsqueda dependiente de argumentos para las resoluciones de sobrecarga en la unidad de traducción de importación, el compilador tiene en cuenta las funciones que se declaran en la misma unidad de traducción (incluidas las interfaces de módulo) que el tipo de los argumentos de la función. se definen.
+Al realizar la búsqueda dependiente de argumentos para las resoluciones de sobrecarga en la unidad de traducción de importación, el compilador considera las funciones que se declaran en la misma unidad de traducción (incluidas las interfaces de módulo) como donde se definen el tipo de argumentos de la función.
 
-### <a name="module-partitions"></a>Particiones de módulos
+### <a name="module-partitions"></a>Particiones de módulo
 
 > [!NOTE]
-> Esta sección se proporciona por integridad. Las particiones aún no se han implementado C++ en el compilador de Microsoft.
+> Esta sección se proporciona para su integridad. Las particiones aún no se implementan en el compilador de Microsoft C++.
 
-Un módulo se puede dividir en *particiones*, cada uno de los cuales consta de un archivo de interfaz y cero o más archivos de implementación. Una partición de módulo es similar a un módulo, salvo que comparte la propiedad de todas las declaraciones en todo el módulo. Todos los nombres exportados por los archivos de la interfaz de partición se importan y se vuelven a exportar mediante el archivo de interfaz principal. El nombre de una partición debe comenzar con el nombre del módulo seguido de un signo de dos puntos. Las declaraciones en cualquiera de las particiones están visibles en todo el módulo. No se necesitan precauciones especiales para evitar errores de la regla de una definición (ODR). Puede declarar un nombre (función, clase, etc.) en una partición y definirlo en otro. Un archivo de implementación de partición comienza de la siguiente manera:
+Un módulo se puede dividir en *particiones,* cada una de las dos consta de un archivo de interfaz y cero o más archivos de implementación. Una partición de módulo es similar a un módulo, excepto que comparte la propiedad de todas las declaraciones de todo el módulo. Todos los nombres exportados por archivos de interfaz de partición se importan y se vuelven a exportar mediante el archivo de interfaz principal. El nombre de una partición debe comenzar con el nombre del módulo seguido de dos puntos. Las declaraciones en cualquiera de las particiones son visibles en todo el módulo. No se necesitan precauciones especiales para evitar errores de una regla de definición (ODR). Puede declarar un nombre (función, clase, etc.) en una partición y definirlo en otra. Un archivo de implementación de partición comienza así:
 
 ```cpp
 module Foo:part1
 ```
 
-y el archivo de interfaz de partición se inicia de la siguiente manera:
+y el archivo de interfaz de partición comienza así:
 
 ```cpp
 export module Foo:part1
 ```
 
-Para obtener acceso a las declaraciones de otra partición, una partición debe importarla, pero solo puede usar el nombre de la partición, no el nombre del módulo:
+Para acceder a las declaraciones en otra partición, una partición debe importarla, pero solo puede utilizar el nombre de la partición, no el nombre del módulo:
 
 ```cpp
 module Foo:part2;
 import :part1;
 ```
 
-La unidad de interfaz principal debe importar y volver a exportar todos los archivos de partición de la interfaz del módulo de la siguiente manera:
+La unidad de interfaz principal debe importar y reexportar todos los archivos de partición de interfaz del módulo de la siguiente manera:
 
 ```cpp
 export import :part1
@@ -128,11 +128,11 @@ export import :part2
 ...
 ```
 
-La unidad de interfaz principal puede importar archivos de implementación de particiones, pero no puede exportarlos porque no se permite que los nombres exporten ningún nombre. Esto permite a un módulo mantener los detalles de implementación internos en el módulo.
+La unidad de interfaz principal puede importar archivos de implementación de partición, pero no puede exportarlos porque esos archivos no pueden exportar ningún nombre. Esto permite que un módulo mantenga los detalles de implementación internos al módulo.
 
 ## <a name="modules-and-header-files"></a>Módulos y archivos de encabezado
 
-Puede incluir los archivos de encabezado en un archivo de origen de módulo si coloca la Directiva `#include` antes de la declaración del módulo. Estos archivos se consideran en el fragmento de *módulo global*. Un módulo solo puede ver los nombres en el *fragmento de módulo global* que se encuentran en los encabezados que incluye explícitamente. El fragmento de módulo global solo contiene los símbolos que se usan realmente.
+Puede incluir archivos de encabezado en un `#include` archivo de origen de módulo colocando la directiva antes de la declaración de módulo. Estos archivos se consideran en el fragmento de *módulo global.* Un módulo solo puede ver los nombres en el fragmento de *módulo global* que se encuentran en encabezados que incluye explícitamente. El fragmento de módulo global solo contiene símbolos que se utilizan realmente.
 
 ```cpp
 // MyModuleA.cpp
@@ -146,7 +146,7 @@ import MyModuleB;
 //... rest of file
 ```
 
-Puede usar un archivo de encabezado tradicional para controlar los módulos que se importan:
+Puede utilizar un archivo de encabezado tradicional para controlar qué módulos se importan:
 
 ```cpp
 // MyProgram.h
@@ -159,9 +159,9 @@ import std.filesystem;
 ### <a name="imported-header-files"></a>Archivos de encabezado importados
 
 > [!NOTE]
-> Esta sección solo es meramente informativa. Las importaciones heredadas todavía no se han C++ implementado en el compilador de Microsoft.
+> Esta sección es sólo informativa. Las importaciones heredadas aún no se implementan en el compilador de Microsoft C++.
 
-Algunos encabezados son suficientemente independientes para que se les permita usar la palabra clave **Import** . La diferencia principal entre un encabezado importado y un módulo importado es que las definiciones de preprocesador del encabezado están visibles en el programa de importación inmediatamente después de la instrucción Import. (Las definiciones de preprocesador de los archivos incluidos en ese encabezado *no* son visibles).
+Algunos encabezados son lo suficientemente autónomos como para que se les permita entrar mediante la palabra clave **import.** La principal diferencia entre un encabezado importado y un módulo importado es que las definiciones de preprocesador en el encabezado son visibles en el programa de importación inmediatamente después de la instrucción de importación. (Las definiciones de preprocesador en los archivos incluidos por ese encabezado *no* son visibles.)
 
 ```cpp
 import <vector>
@@ -170,4 +170,4 @@ import "myheader.h"
 
 ## <a name="see-also"></a>Consulte también
 
-[módulo, importación y exportación](import-export-module.md)
+[módulo, importar, exportar](import-export-module.md)

@@ -2,12 +2,12 @@
 title: Tipos triviales, de diseño estándar, POD y literales
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: b31fefd31b32a5fc4aa3f655b90d39f60a524ca4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fe237386e63fcdd96621edabf2b0b66ce72e4f8
+ms.sourcegitcommit: 435133128b18cdd02d33d929b16c33e7ec40e9eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188069"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81664137"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Tipos triviales, de diseño estándar, POD y literales
 
@@ -32,17 +32,17 @@ En los siguientes ejemplos se muestran tipos triviales. En Trivial2, la presenci
 ```cpp
 struct Trivial
 {
-      int i;
+   int i;
 private:
    int j;
-   };
+};
 
 struct Trivial2
 {
    int i;
    Trivial2(int a, int b) : i(a), j(b) {}
    Trivial2() = default;
-   private:
+private:
    int j;   // Different access control
 };
 ```
@@ -137,15 +137,15 @@ protected:
 // Neither trivial nor standard-layout
 struct A : B
 {
-      int a;
+   int a;
    int b;
    void Foo() override {} // Virtual function
 };
 
 // Trivial but not standard-layout
 struct C
-   {
-      int a;
+{
+   int a;
 private:
    int b;   // Different access control
 };
@@ -187,9 +187,9 @@ int main()
 
 Un tipo literal es aquel cuyo diseño se puede determinar en tiempo de compilación. Estos son los tipos literales:
 
-- nulo
+- void
 - tipos escalares
-- referencias
+- references
 - Matrices de void, tipos escalares o referencias.
 - Una clase que tiene un destructor trivial y uno o varios constructores constexpr que no son constructores de movimiento ni de copias. Además, todos sus miembros de datos no estáticos y sus clases base deben ser tipos literales y no volátiles.
 

@@ -1,9 +1,11 @@
 ---
 title: _mbsbtype, _mbsbtype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsbtype_l
 - _mbsbtype
+- _o__mbsbtype
+- _o__mbsbtype_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: c474cad9027b7914a08816346e38e954a7200bb5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1431a2d0886ffd3d16b43abf82b7342c166273a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952391"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909469"
 ---
 # <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
@@ -72,7 +75,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_mbsbtype** y **_mbsbtype_l** devuelven un valor entero que indica el resultado de la prueba en el byte especificado. Las constantes de manifiesto de la siguiente tabla se definen en Mbctype.h.
+**_mbsbtype** y **_mbsbtype_l** devuelve un valor entero que indica el resultado de la prueba en el byte especificado. Las constantes de manifiesto de la siguiente tabla se definen en Mbctype.h.
 
 |Valor devuelto|Tipo de byte|
 |------------------|---------------|
@@ -81,13 +84,15 @@ Configuración regional que se va a usar.
 |**_MBC_TRAIL** (2)|Byte final de un carácter multibyte. Por ejemplo, en la página de códigos 932, **_mbsbtype** devuelve 2 Si el byte especificado está dentro del intervalo 0X40-0x7e o 0X80-0xFC.|
 |**_MBC_ILLEGAL** (-1)|Cadena **nula** , carácter no válido o byte nulo encontrado antes del *número* de bytes en desplazamiento en *mbstr*.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_mbsbtype** determina el tipo de un byte en una cadena de caracteres multibyte. La función solo examina el byte en el *recuento* de desplazamiento en *mbstr*, omitiendo los caracteres no válidos antes del byte especificado.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el sufijo **_L** usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el sufijo **_L** es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Si la cadena de entrada es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **_MBC_ILLEGAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -98,8 +103,8 @@ Si la cadena de entrada es **null**, se invoca el controlador de parámetros no 
 
 \* En el caso de las constantes de manifiesto usadas como valores devueltos.
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>

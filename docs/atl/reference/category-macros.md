@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2b677ac6e7dac4eed5fc920ece064d94119ceb97
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423499"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168441"
 ---
 # <a name="category-macros"></a>Macros de categoría
 
@@ -29,11 +29,11 @@ Estas macros definen las asignaciones de categorías.
 
 **Encabezado:** atlcom. h
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 Marca el principio del mapa de categorías.
 
-```
+```cpp
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
@@ -51,7 +51,7 @@ Agregue una entrada [IMPLEMENTED_CATEGORY](#implemented_category) a la asignaci�
 Las categorías de componentes enumeradas en el mapa se registrarán automáticamente cuando el módulo se registre si la clase tiene una [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)asociados.
 
 > [!NOTE]
->  ATL utiliza el administrador de categorías de componentes estándar para registrar categorías de componentes. Si el administrador no está presente en el sistema cuando se registra el módulo, el registro se realiza correctamente, pero las categorías de componentes no se registrarán para esa clase.
+> ATL utiliza el administrador de categorías de componentes estándar para registrar categorías de componentes. Si el administrador no está presente en el sistema cuando se registra el módulo, el registro se realiza correctamente, pero las categorías de componentes no se registrarán para esa clase.
 
 Para obtener más información sobre las categorías de componentes, vea [¿Qué son las categorías de componentes y cómo funcionan](/windows/win32/com/component-categories-and-how-they-work) en el Windows SDK.
 
@@ -59,11 +59,11 @@ Para obtener más información sobre las categorías de componentes, vea [¿Qué
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>END_CATEGORY_MAP
+## <a name="end_category_map"></a><a name="end_category_map"></a>END_CATEGORY_MAP
 
 Marca el final del mapa de categorías.
 
-```
+```cpp
 END_CATEGORY_MAP()
 ```
 
@@ -71,11 +71,11 @@ END_CATEGORY_MAP()
 
 Vea el ejemplo de [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
 Agregue una macro IMPLEMENTED_CATEGORY a la asignación de [categorías](#begin_category_map) del componente para especificar que se debe registrar como la implementación de la categoría identificada por el parámetro *CATID* .
 
-```
+```cpp
 IMPLEMENTED_CATEGORY(catID)
 ```
 
@@ -108,11 +108,11 @@ Para obtener más información sobre las categorías de componentes, vea [¿Qué
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>REQUIRED_CATEGORY
+## <a name="required_category"></a><a name="required_category"></a>REQUIRED_CATEGORY
 
 Agregue una macro REQUIRED_CATEGORY a la asignación de [categorías](#begin_category_map) del componente para especificar que se debe registrar como un requisito de la categoría identificada por el parámetro *CATID* .
 
-```
+```cpp
 REQUIRED_CATEGORY( catID )
 ```
 

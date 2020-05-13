@@ -1,10 +1,12 @@
 ---
 title: gmtime_s, _gmtime32_s, _gmtime64_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _gmtime32_s
 - gmtime_s
 - _gmtime64_s
+- _o__gmtime32_s
+- _o__gmtime64_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: bcfc512022393c6a3e8a9cd97efe96d03b4877ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954845"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916227"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -76,19 +79,19 @@ Puntero a la hora almacenada. La hora se representa como los segundos transcurri
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h; para obtener una lista de estos errores, vea [errno](../../c-runtime-library/errno-constants.md).
+Cero si es correcto. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en errno. h; para obtener una lista de estos errores, vea [errno](../../c-runtime-library/errno-constants.md).
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*tmDest*|*sourceTime*|Volver|Valor en *tmDest*|
+|*tmDest*|*sourceTime*|Valor devuelto|Valor en *tmDest*|
 |-----------|------------|------------|--------------------|
-|**NULL**|any|**EINVAL**|No modificado.|
-|Not **null** (apunta a la memoria válida)|**NULL**|**EINVAL**|Todos los campos establecidos en -1.|
+|**ACEPTA**|cualquiera|**EINVAL**|No se ha modificado.|
+|Not **null** (apunta a la memoria válida)|**ACEPTA**|**EINVAL**|Todos los campos establecidos en -1.|
 |No **null**|< 0|**EINVAL**|Todos los campos establecidos en -1.|
 
 En el caso de las dos primeras condiciones de error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_gmtime32_s** divide el valor de *sourceTime* y lo almacena en una estructura de tipo **TM**, definida en Time. h. La dirección de la estructura se pasa en *tmDest*. El valor de *sourceTime* se suele obtener de una llamada a la función [Time](time-time32-time64.md) .
 
@@ -97,7 +100,7 @@ La función **_gmtime32_s** divide el valor de *sourceTime* y lo almacena en una
 
 Cada uno de los campos de la estructura es de tipo **int**, tal y como se muestra en la tabla siguiente.
 
-|Campo|DESCRIPCIÓN|
+|Campo|Descripción|
 |-|-|
 |**tm_sec**|Segundos después del minuto (0-59).|
 |**tm_min**|Minutos después de la hora (0-59).|
@@ -109,17 +112,19 @@ Cada uno de los campos de la estructura es de tipo **int**, tal y como se muestr
 |**tm_yday**|Día del año (0-365; 1 de enero = 0).|
 |**tm_isdst**|Siempre es 0 para **gmtime_s**.|
 
-**_gmtime64_s**, que usa la estructura **__time64_t** , permite expresar fechas hasta 23:59:59, 31 de diciembre de 3000, UTC; mientras que los **gmtime32_s** solo representan fechas 23:59:59 hasta el 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para ambas funciones.
+**_gmtime64_s**, que usa la estructura de **__time64_t** , permite expresar fechas hasta 23:59:59, 31 de diciembre de 3000, UTC; mientras que **gmtime32_s** solo representan fechas hasta el 23:59:59 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para ambas funciones.
 
-**gmtime_s** es una función insertada que se evalúa como **_gmtime64_s** y **time_t** es equivalente a **__time64_t**. Si necesita forzar al compilador a interpretar **time_t** como el antiguo de 32 bits **time_t**, puede definir **_USE_32BIT_TIME_T**. Esto hará que **gmtime_s** esté alineado con **_gmtime32_s**. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.
+**gmtime_s** es una función insertada que se evalúa como **_gmtime64_s** y **time_t** es equivalente a **__time64_t**. Si necesita forzar al compilador a interpretar **time_t** como la **time_t**de 32 bits anterior, puede definir **_USE_32BIT_TIME_T**. Esto hará que **gmtime_s** estén alineados con **_gmtime32_s**. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C necesario|Encabezado C++ necesario|
 |-------------|---------------------|-|
-|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<> ctime o \<Time. h >|
+|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<> ctime o \<Time. h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -165,9 +170,9 @@ int main( void )
 Coordinated universal time is Fri Apr 25 20:12:33 2003
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>

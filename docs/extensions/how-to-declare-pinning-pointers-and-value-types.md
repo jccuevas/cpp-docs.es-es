@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Declaración de punteros anclados y tipos de valor
+title: 'Cómo: Declarar punteros anclados y tipos de valor'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - value types, declaring
 - pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-ms.openlocfilehash: 901980c76aac5dd364f2fa2fae0e007f5d25f3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 88ef7e82161703a272a571392fd66e6055371c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515740"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181972"
 ---
-# <a name="how-to-declare-pinning-pointers-and-value-types"></a>Procedimiento Declaración de punteros anclados y tipos de valor
+# <a name="how-to-declare-pinning-pointers-and-value-types"></a>Cómo: Declarar punteros anclados y tipos de valor
 
 A un tipo de valor se le puede aplicar la conversión boxing de manera implícita. A continuación, puede declarar un puntero anclado al propio objeto de tipo de valor y usar un variable **pin_ptr** para el tipo de valor con conversión boxing.
 
@@ -45,6 +45,6 @@ int main() {
 7
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)

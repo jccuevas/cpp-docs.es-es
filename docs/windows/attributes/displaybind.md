@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 168db224e7b15656308259f9507e1079744f1a73
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9ca5c84e859d395d71b7f37a34b1158800bceed7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490884"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168257"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -23,7 +23,7 @@ Indica una propiedad que se debe mostrar al usuario como enlazable.
 [displaybind]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **displaybind** C++ tiene la misma funcionalidad que el atributo MIDL [displaybind](/windows/win32/Midl/displaybind) .
 
@@ -38,13 +38,13 @@ Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de cómo usar **di
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

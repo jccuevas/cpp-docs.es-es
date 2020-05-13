@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 42e8cc9a20c96e65ed3ddf73d562fe014bd9fa28
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "79544403"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350004"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial (C++/CLI y C++/CX)
 
@@ -25,7 +25,7 @@ La palabra clave **partial** permite que diferentes partes de la misma clase de 
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-Para que una clase de referencia tenga dos definiciones parciales, la palabra clave **partial** se aplica a la primera aparición de la definición, y esto se realiza normalmente mediante código generado automáticamente, por lo que un codificador humano no usará la palabra clave muy a menudo. En todas las definiciones parciales subsiguientes de la clase, omita el modificador **partial** de la palabra clave *class-key* y el identificador de clase. Cuando el compilador encuentra una clase de referencia y un identificador de clase definidos previamente pero ninguna palabra clave **partial**, combina internamente todas las partes de la definición de clase referencia en una misma definición.
+Para una clase ref que tiene dos definiciones parciales, la palabra clave **partial** se aplica a la primera aparición de la definición, y esto se realiza normalmente mediante código generado automáticamente, de modo que un codificador humano no usa la palabra clave muy a menudo. En todas las definiciones parciales subsiguientes de la clase, omita el modificador **partial** de la palabra clave *class-key* y el identificador de clase. Cuando el compilador encuentra una clase de referencia y un identificador de clase definidos previamente pero ninguna palabra clave **partial**, combina internamente todas las partes de la definición de clase referencia en una misma definición.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -46,26 +46,26 @@ class-key identifier {
 *class-key*<br/>
 Una palabra clave que declara una clase o un struct que se admite en Windows Runtime. **ref class**, **value class**, **ref struct** o **value struct**.
 
-*identifier*<br/>
+*Identificador*<br/>
 El nombre del tipo definido.
 
 ### <a name="remarks"></a>Observaciones
 
 Una clase parcial admite escenarios donde se modifica una parte de una definición de clase en un archivo y el software de generación automática de código, por ejemplo, el Diseñador XAML, modifica el código de la misma clase en otro archivo. Mediante una clase parcial, se puede evitar que el generador automático de código sobrescriba el código. En un proyecto de Visual Studio, el modificador **partial** se aplica automáticamente al archivo generado.
 
-Contenido: con dos excepciones, una definición de clase parcial puede contener todo lo que la definición de clase completa podría contener si se omitiera la palabra clave **partial** . Sin embargo, no se puede especificar la accesibilidad de clase (por ejemplo, `public partial class X { ... };`), o un elemento **declspec**.
+Contenido: con dos excepciones, una definición de clase parcial puede contener cualquier cosa que la definición de clase completa podría contener si se omitiera la palabra clave **partial.** Sin embargo, no se puede especificar la accesibilidad de clase (por ejemplo, `public partial class X { ... };`), o un elemento **declspec**.
 
 Los especificadores de acceso usados en una definición de clase parcial para *identifier* no afectan a la accesibilidad predeterminada en una posterior definición de clase total o parcial de *identifier*. Se permiten definiciones insertadas de miembros de datos estáticos.
 
-Declaración: una definición parcial de un *identificador* de clase solo introduce el *identificador*de nombre, pero el *identificador* no se puede usar de forma que requiera una definición de clase. El nombre *identifier* no se puede usar para conocer el tamaño de *identifier*, ni para usar una base o miembro de *identifier* hasta que el compilador encuentre la definición completa de *identifier*.
+Declaración: una definición parcial de un *identificador* de clase solo introduce el *identificador*de nombre, pero el *identificador* no se puede usar de una manera que requiera una definición de clase. El nombre *identifier* no se puede usar para conocer el tamaño de *identifier*, ni para usar una base o miembro de *identifier* hasta que el compilador encuentre la definición completa de *identifier*.
 
-Número y ordenación: puede haber cero o más definiciones de clase parcial para el *identificador*. Cada definición de clase parcial de *identifier* debe preceder léxicamente a la definición completa de *identifier* (si hay una definición completa; de lo contrario, la clase no se puede usar salvo si se declara adelantada), pero no debe preceder declaraciones adelantadas de *identifier*. Todas las claves de clase deben coincidir.
+Número y ordenación: puede haber cero o más definiciones de clase parciales para el *identificador*. Cada definición de clase parcial de *identifier* debe preceder léxicamente a la definición completa de *identifier* (si hay una definición completa; de lo contrario, la clase no se puede usar salvo si se declara adelantada), pero no debe preceder declaraciones adelantadas de *identifier*. Todas las claves de clase deben coincidir.
 
-Definición completa: en el punto de la definición completa del *identificador*de clase, el comportamiento es el mismo que si la definición de *identificador* hubiera declarado todas las clases base, miembros, etc. en el orden en que se encontraron y se definieron en las clases parciales.
+Definición completa: en el punto de la definición completa del *identificador*de clase, el comportamiento es el mismo que si la definición de *identificador* hubiera declarado todas las clases base, miembros, etc. en el orden en que se encontraron y definieron en las clases parciales.
 
 Plantillas: una clase parcial no puede ser una plantilla.
 
-Genéricos: una clase parcial puede ser genérica si la definición completa puede ser genérica. Pero todas las clases parciales y totales deben tener exactamente los mismos parámetros genéricos, incluidos los nombres de parámetros formales.
+Genéricos: una clase parcial puede ser genérica si la definición completa podría ser genérica. Pero todas las clases parciales y totales deben tener exactamente los mismos parámetros genéricos, incluidos los nombres de parámetros formales.
 
 Para más información sobre cómo usar la palabra clave **partial**, consulte [Clases parciales (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023).
 

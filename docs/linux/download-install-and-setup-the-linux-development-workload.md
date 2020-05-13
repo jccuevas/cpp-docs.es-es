@@ -3,12 +3,12 @@ title: Instalación de la carga de trabajo de Linux para C++ en Visual Studio
 description: En este artículo se describe cómo descargar, instalar y configurar la carga de trabajo de Linux para C++ en Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8e10521ab35f3d85ced8bffd771b4e101d4d4fe6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364340"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Descargar, instalar y configurar la carga de trabajo de Linux
 
@@ -36,7 +36,7 @@ Para cualquiera de estos escenarios, se requiere la carga de trabajo de **desarr
 
    ![Cuadro de búsqueda de Windows](media/visual-studio-installer-search.png)
 
-2. Busque el instalador en los resultados de la categoría **Aplicaciones** y haga doble clic en este. Cuando se abra el instalador, elija **Modificar** y después haga clic en la pestaña **Cargas de trabajo**. Desplácese hacia abajo hasta **Otros conjuntos de herramientas** y seleccione la carga de trabajo **Desarrollo de Linux con C++** .
+1. Busque el instalador en los resultados de la categoría **Aplicaciones** y haga doble clic en este. Cuando se abra el instalador, elija **Modificar** y después haga clic en la pestaña **Cargas de trabajo**. Desplácese hacia abajo hasta **Otros conjuntos de herramientas** y seleccione la carga de trabajo **Desarrollo de Linux con C++** .
 
    ![Carga de trabajo Visual C++ for Linux Development](media/linuxworkload.png)
 
@@ -62,6 +62,7 @@ Los proyectos de Linux en Visual Studio requieren que se instalen las siguiente
 - **make**
 - **openssh-server** (solo para sistemas Linux remotos): Visual Studio se conecta a los sistemas Linux remotos a través de una conexión SSH segura.
 - **CMake** (solo proyectos de CMake): puede instalar los [archivos binarios CMake vinculados estáticamente para Linux](https://github.com/microsoft/CMake/releases) de Microsoft.
+- **ninja-build** (solo proyectos de CMake): [Ninja](https://ninja-build.org/) es el generador predeterminado para configuraciones de Linux y WSL en Visual Studio 2019, versión 16.6 o posteriores.
 
 Los comandos siguientes suponen que está usando g++ en lugar de Clang.
 
@@ -84,10 +85,10 @@ Los proyectos de Linux en Visual Studio requieren que se instalen las siguiente
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Instalación de Linux: Ubuntu en WSL
 
-Cuando el destino sea WSL, no hay ninguna necesidad de agregar una conexión remota o configurar SSH con el fin de compilar y depurar. **zip** y **rsync** son necesarios para sincronizar automáticamente los encabezados de Linux con Visual Studio para la compatibilidad con IntelliSense. Si las aplicaciones necesarias aún no están instaladas, puede hacerlo como sigue:
+Cuando el destino sea WSL, no hay ninguna necesidad de agregar una conexión remota o configurar SSH con el fin de compilar y depurar. **zip** y **rsync** son necesarios para sincronizar automáticamente los encabezados de Linux con Visual Studio para la compatibilidad con IntelliSense. Si las aplicaciones necesarias aún no están instaladas, puede hacerlo como se indica a continuación. **ninja-build** solo es necesario para los proyectos de CMake.
 
 ```bash
-sudo apt-get install g++ gdb make rsync zip
+sudo apt-get install g++ gdb make ninja-build rsync zip
 ```
 
 ::: moniker-end
@@ -96,12 +97,12 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu en sistemas Linux remotos
 
-El sistema Linux de destino debe tener **openssh-server**, **g++** , **gdb** y **make** instalados, y el demonio de ssh debe estar en ejecución. **zip** y **rsync** son necesarios para realizar la sincronización automática de encabezados remotos con el equipo local para la compatibilidad con IntelliSense. Si estas aplicaciones aún no están instaladas, puede hacerlo como sigue:
+El sistema Linux de destino debe tener instalados **openssh-server**, **g++** , **gdb**, **ninja-build** (solo proyectos de CMake) y **make**, y el demonio de ssh debe estar en ejecución. **zip** y **rsync** son necesarios para realizar la sincronización automática de encabezados remotos con el equipo local para la compatibilidad con IntelliSense. Si estas aplicaciones aún no están instaladas, puede hacerlo como sigue:
 
 1. En un símbolo del sistema del shell del equipo Linux, ejecute:
 
    ```bash
-   sudo apt-get install openssh-server g++ gdb make rsync zip
+   sudo apt-get install openssh-server g++ gdb make ninja-build rsync zip
    ```
 
    Debido al comando sudo, es posible que se le pida la contraseña raíz.  Si es así, escríbala y continúe. Una vez que finalice, estarán instaladas las herramientas y los servicios requeridos.
@@ -120,13 +121,13 @@ El sistema Linux de destino debe tener **openssh-server**, **g++** , **gdb** y *
 
 ## <a name="fedora-on-wsl"></a>Fedora en WSL
 
-Fedora usa el instalador de paquetes **dnf**. Para descargar **g++** , **gdb**, **make**, **rsync** y **zip**, ejecute lo siguiente:
+Fedora usa el instalador de paquetes **dnf**. Para descargar **g++** , **gdb**, **make**, **rsync**, **ninja-build** y **zip**, ejecute lo siguiente:
 
    ```bash
-   sudo dnf install gcc-g++ gdb rsync make zip
+   sudo dnf install gcc-g++ gdb rsync ninja-build make zip
    ```
 
-**zip** y **rsync** son necesarios para sincronizar automáticamente los encabezados de Linux con Visual Studio para la compatibilidad con IntelliSense.
+**zip** y **rsync** son necesarios para sincronizar automáticamente los encabezados de Linux con Visual Studio para la compatibilidad con IntelliSense. **ninja-build** solo es necesario para los proyectos de CMake.
 
 ::: moniker-end
 
@@ -134,12 +135,12 @@ Fedora usa el instalador de paquetes **dnf**. Para descargar **g++** , **gdb**, 
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora en sistemas Linux remotos
 
-La máquina de destino en la que se ejecuta Fedora usa el instalador de paquetes **dnf**. Para descargar **openssh-server**, **g++** , **gdb**, **make**, **rsync** y **zip** y reiniciar el demonio de ssh, siga estas instrucciones:
+La máquina de destino en la que se ejecuta Fedora usa el instalador de paquetes **dnf**. Para descargar **openssh-server**, **g++** , **gdb**, **make**, **ninja-build**, **rsync** y **zip** y reiniciar el demonio de ssh, siga estas instrucciones: **ninja-build** solo es necesario para los proyectos de CMake.
 
 1. En un símbolo del sistema del shell del equipo Linux, ejecute:
 
    ```bash
-   sudo dnf install openssh-server gcc-g++ gdb make rsync zip
+   sudo dnf install openssh-server gcc-g++ gdb ninja-build make rsync zip
    ```
 
    Debido al comando sudo, es posible que se le pida la contraseña raíz.  Si es así, escríbala y continúe. Una vez que finalice, estarán instaladas las herramientas y los servicios requeridos.

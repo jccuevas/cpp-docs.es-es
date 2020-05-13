@@ -5,17 +5,17 @@ helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
 ms.openlocfilehash: 13d6044269f60dc426a8b0b9b03463f387dfaa10
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313342"
 ---
 # <a name="c-sequence-points"></a>Puntos de secuencia de C
 
 Entre "puntos de secuencia" consecutivos, una expresión solo puede modificar una vez el valor de un objeto. El lenguaje C define los puntos de secuencia siguientes:
 
-- Operando izquierdo del operador AND lógico (**&&**). El operando izquierdo del operador AND lógico se evalúa totalmente y todos los efectos secundarios se completan antes de continuar. Si el operando izquierdo se evalúa como false (0), el otro operando no se evalúa.
+- Operando izquierdo del operador AND lógico ( **&&** ). El operando izquierdo del operador AND lógico se evalúa totalmente y todos los efectos secundarios se completan antes de continuar. Si el operando izquierdo se evalúa como false (0), el otro operando no se evalúa.
 
 - Operando izquierdo del operador OR lógico (`||`). El operando izquierdo del operador OR lógico se evalúa totalmente y todos los efectos secundarios se completan antes de continuar. Si el operando izquierdo se evalúa como true (distinto de cero), el otro operando no se evalúa.
 
@@ -27,7 +27,7 @@ Entre "puntos de secuencia" consecutivos, una expresión solo puede modificar un
 
 - El final de una expresión completa de inicialización (es decir, una expresión que no forma parte de otra expresión tal como el final de una inicialización en una instrucción de declaración).
 
-- La expresión de una instrucción de expresión. Las instrucciones de expresión constan de una expresión opcional seguida de un punto y coma (**;**). La expresión se evalúa para sus efectos secundarios y hay un punto de secuencia después de esta evaluación.
+- La expresión de una instrucción de expresión. Las instrucciones de expresión constan de una expresión opcional seguida de un punto y coma ( **;** ). La expresión se evalúa para sus efectos secundarios y hay un punto de secuencia después de esta evaluación.
 
 - La expresión de control de una instrucción de selección (**if** o `switch`). La expresión se evalúa completamente y todos los efectos secundarios se completan antes de que se ejecute el código dependiente de la selección.
 

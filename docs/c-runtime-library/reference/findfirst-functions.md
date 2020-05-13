@@ -1,6 +1,6 @@
 ---
 title: _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _findfirst
 - _wfindfirst
@@ -14,6 +14,14 @@ api_name:
 - _wfindfirst64i32
 - _findfirsti64
 - _wfindfirsti64
+- _o__findfirst32
+- _o__findfirst32i64
+- _o__findfirst64
+- _o__findfirst64i32
+- _o__wfindfirst32
+- _o__wfindfirst32i64
+- _o__wfindfirst64
+- _o__wfindfirst64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -103,12 +112,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: f84c70a6b2d9e6f7adf862bdb1622a603c1fdc4c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 879a84b14f612992ae7ed3a96211637aaf5c4783
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957198"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911740"
 ---
 # <a name="_findfirst-_findfirst32-_findfirst32i64-_findfirst64-_findfirst64i32-_findfirsti64-_wfindfirst-_wfindfirst32-_wfindfirst32i64-_wfindfirst64-_wfindfirst64i32-_wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
@@ -172,12 +181,12 @@ intptr_t _wfindfirst64i32(
 *filespec*<br/>
 Especificación de archivo de destino (puede incluir caracteres comodín).
 
-*fileinfo*<br/>
+*FileInfo*<br/>
 Búfer de información de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **_findfirst** devuelve un identificador de búsqueda único que identifica el archivo o grupo de archivos que coinciden con la especificación de *filespec* , que se puede usar en una llamada subsiguiente a [_findnext](findnext-functions.md) o a [_findclose](findclose.md). De lo contrario, **_findfirst** devuelve-1 y establece **errno** en uno de los valores siguientes.
+Si es correcto, **_findfirst** devuelve un identificador de búsqueda único que identifica el archivo o grupo de archivos que coinciden con la especificación de *filespec* , que se puede usar en una llamada posterior a [_findnext](findnext-functions.md) o [_findclose](findclose.md). De lo contrario, **_findfirst** devuelve-1 y establece **errno** en uno de los valores siguientes.
 
 | valor de errno | Condición |
 |-|-|
@@ -190,7 +199,7 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 Si se pasa un parámetro no válido, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Debe llamar a [_findclose](findclose.md) una vez que haya terminado con la función **_findfirst** o [_findnext](findnext-functions.md) (o cualquier variante). Así se liberan los recursos que usan estas funciones de la aplicación.
 
@@ -204,9 +213,11 @@ Las variaciones que usan un tipo de tiempo de 64 bits permiten expresar fechas d
 
 A menos que tenga una razón concreta para usar las versiones que especifican el tamaño de tiempo de forma explícita, use **_findfirst** o **_wfindfirst** o, si necesita admitir tamaños de archivo de más de 3 GB, use **_findfirsti64** o **_wfindfirsti64**. Todas estas funciones usan el tipo de tiempo de 64 bits. En versiones anteriores, estas funciones usan un tipo de tiempo de 32 bits. Si se trata de un cambio importante para una aplicación, puede definir **_USE_32BIT_TIME_T** para revertir al comportamiento anterior. Si se define **_USE_32BIT_TIME_T** , **_findfirst**, **_finfirsti64**y sus correspondientes versiones unicode usan un tiempo de 32 bits.
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ### <a name="time-type-and-file-length-type-variations-of-_findfirst"></a>Variaciones de tipo de tiempo y tipo de longitud de archivo de _findfirst
 
-|Funciones|¿ **_USE_32BIT_TIME_T** definido?|Tipo de tiempo|Tipo de longitud de archivo|
+|Functions|¿ **_USE_32BIT_TIME_T** definido?|Tipo de tiempo|Tipo de longitud de archivo|
 |---------------|----------------------------------|---------------|----------------------|
 |**_findfirst**, **_wfindfirst**|No definida|64 bits|32 bits|
 |**_findfirst**, **_wfindfirst**|Definido|32 bits|32 bits|
@@ -245,9 +256,9 @@ A menos que tenga una razón concreta para usar las versiones que especifican el
 |**_wfindfirst32i64**|\<io.h> o \<wchar.h>|
 |**_wfindfirst64i32**|\<io.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Llamadas del sistema](../../c-runtime-library/system-calls.md)<br/>
 [Funciones de búsqueda de nombre de archivo](../../c-runtime-library/filename-search-functions.md)<br/>

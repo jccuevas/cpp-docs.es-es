@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.openlocfilehash: f663034cdc7985dd440a1cdfdd659358c4e250f4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 13996a8ec4ab56fc56a78606d1a2ce8d76994c0d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375852"
 ---
 # <a name="thread-class"></a>thread (Clase)
 
@@ -40,7 +40,7 @@ Define un objeto que se utiliza para observar y administrar un subproceso de eje
 class thread;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Puede usar un objeto de **subproceso** para observar y administrar un subproceso de ejecución dentro de una aplicación. Un objeto thread creado con el constructor predeterminado no está asociado a ningún subproceso de ejecución. Un objeto thread construido mediante un objeto al que se puede llamar crea un nuevo subproceso de ejecución y llama al objeto al que se puede llamar en ese subproceso. Los objetos thread se pueden mover pero no copiar. Por tanto, un subproceso de ejecución solo se puede asociar a un objeto thread.
 
@@ -50,41 +50,41 @@ Cada subproceso de ejecución tiene un identificador único de tipo `thread::id`
 
 ### <a name="public-classes"></a>Clases públicas
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[thread::id (Clase)](#id_class)|Identifica de forma única el subproceso asociado.|
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[thread](#thread)|Construye un objeto de **subproceso** .|
+|[subproceso](#thread)|Construye un objeto **de subproceso.**|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[detach](#detach)|Desasocia el subproceso asociado del objeto de **subproceso** .|
+|[Separar](#detach)|Separa el subproceso asociado del objeto de **subproceso.**|
 |[get_id](#get_id)|Devuelve el identificador único del subproceso asociado.|
-|[hardware_concurrency](#hardware_concurrency)|Estático. Devuelve una estimación del número de contextos de subprocesos de hardware.|
+|[hardware_concurrency](#hardware_concurrency)|Estática. Devuelve una estimación del número de contextos de subprocesos de hardware.|
 |[join](#join)|Se bloquea hasta que el subproceso asociado se completa.|
-|[joinable](#joinable)|Especifica si se puede unir el subproceso asociado.|
+|[se puede unir](#joinable)|Especifica si se puede unir el subproceso asociado.|
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador de subproceso.|
 |[swap](#swap)|Intercambia el estado del objeto con un objeto de **subproceso** especificado.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[thread::operator=](#op_eq)|Asocia un subproceso al objeto de **subproceso** actual.|
+|[hilo::operador ?](#op_eq)|Asocia un subproceso con el objeto de **subproceso** actual.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<subproceso >
+**Encabezado:** \<> de subprocesos
 
 **Espacio de nombres:** std
 
-## <a name="detach"></a>  thread::detach
+## <a name="threaddetach"></a><a name="detach"></a>thread::detach
 
 Desasocia el subproceso asociado. El sistema operativo pasa a ser responsable de liberar los recursos de subproceso al finalizar.
 
@@ -92,7 +92,7 @@ Desasocia el subproceso asociado. El sistema operativo pasa a ser responsable de
 void detach();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Después de llamar a `detach`, las siguientes llamadas a [get_id](#get_id) devuelven [id](#id_class).
 
@@ -100,7 +100,7 @@ Si el subproceso que está asociado con el objeto de llamada no se puede unir, l
 
 Si el subproceso que está asociado con el objeto de llamada no es válido, la función produce un `system_error` que tiene un código de error de `no_such_process`.
 
-## <a name="get_id"></a>  thread::get_id
+## <a name="threadget_id"></a><a name="get_id"></a>hilo::get_id
 
 Devuelve un identificador único para el subproceso asociado.
 
@@ -112,7 +112,7 @@ id get_id() const noexcept;
 
 Un objeto [thread::id](#id_class) que identifica de forma única el subproceso asociado, o `thread::id()` si ningún subproceso está asociado con el objeto.
 
-## <a name="hardware_concurrency"></a>  thread::hardware_concurrency
+## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a>thread::hardware_concurrency
 
 Un método estático que devuelve una estimación del número de contextos de subprocesos de hardware.
 
@@ -124,7 +124,7 @@ static unsigned int hardware_concurrency() noexcept;
 
 Una estimación del número de contextos de subprocesos de hardware. Si el valor no se puede calcular o no está bien definido, este método devuelve 0.
 
-## <a name="id_class"></a>  thread::id (Clase)
+## <a name="threadid-class"></a><a name="id_class"></a>thread::id Clase
 
 Proporciona un identificador único para cada subproceso de ejecución en el proceso.
 
@@ -134,13 +134,13 @@ class thread::id {
 };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor predeterminado crea un objeto que no se compara como igual al objeto `thread::id` de cualquier subproceso existente.
 
 Todos los objetos `thread::id` construidos de forma predeterminada son iguales.
 
-## <a name="join"></a>  thread::join
+## <a name="threadjoin"></a><a name="join"></a>thread::join
 
 Se bloquea hasta que finaliza el subproceso de ejecución que está asociado con el objeto de llamada.
 
@@ -148,13 +148,13 @@ Se bloquea hasta que finaliza el subproceso de ejecución que está asociado con
 void join();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si la llamada se realiza correctamente, las llamadas siguientes a [get_id](#get_id) para el objeto que realiza la llamada devuelven un [thread::id](#id_class) predeterminado que no es igual que el `thread::id` de cualquier subproceso existente. Si la llamada no se realiza correctamente, el valor devuelto por `get_id` no cambia.
 
-## <a name="joinable"></a>  thread::joinable
+## <a name="threadjoinable"></a><a name="joinable"></a>thread::joinable
 
-Especifica si se puede *unir* el subproceso asociado.
+Especifica si el subproceso asociado se *puede unir.*
 
 ```cpp
 bool joinable() const noexcept;
@@ -162,13 +162,13 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el subproceso asociado es *combinable*; en caso contrario, **false**.
+**true** si el subproceso asociado se *puede unir;* de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un objeto de subproceso se puede *unir* si `get_id() != id()`.
 
-## <a name="native_handle"></a>Thread:: native_handle
+## <a name="threadnative_handle"></a><a name="native_handle"></a>hilo::native_handle
 
 Devuelve el tipo específico de la implementación que representa el identificador de subproceso. El identificador de subproceso puede usarse en aspectos específicos de la implementación.
 
@@ -180,7 +180,7 @@ native_handle_type native_handle();
 
 `native_handle_type` se define como un `HANDLE` de Win32 que se convierte en `void *`.
 
-## <a name="op_eq"></a>  thread::operator=
+## <a name="threadoperator"></a><a name="op_eq"></a>hilo::operador ?
 
 El subproceso de un objeto especificado se asocia con el objeto actual.
 
@@ -190,20 +190,20 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Distinta*\
-Objeto de **subproceso** .
+*Otro*\
+Un objeto **de subproceso.**
 
 ### <a name="return-value"></a>Valor devuelto
 
 `*this`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las llamadas de método se separan si el objeto que realiza la llamada se puede unir.
 
 Una vez realizada la asociación, `Other` se establece en un estado construido de forma predeterminada.
 
-## <a name="swap"></a>  thread::swap
+## <a name="threadswap"></a><a name="swap"></a>thread::swap
 
 Intercambia el estado del objeto con el de un objeto de **subproceso** especificado.
 
@@ -213,12 +213,12 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Distinta*\
-Objeto de **subproceso** .
+*Otro*\
+Un objeto **de subproceso.**
 
-## <a name="thread"></a>  thread::thread (Constructor)
+## <a name="threadthread-constructor"></a><a name="thread"></a>thread::thread Constructor
 
-Construye un objeto de **subproceso** .
+Construye un objeto **de subproceso.**
 
 ```cpp
 thread() noexcept;
@@ -230,24 +230,24 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*FORMATO*\
+*F*\
 Una función definida por la aplicación que va a ejecutar el subproceso.
 
-*UN*\
-Lista de argumentos que se van a pasar a *F*.
+*Un*\
+Una lista de argumentos que se pasarán a *F*.
 
-*Distinta*\
-Objeto de **subproceso** existente.
+*Otro*\
+Un objeto **de subproceso** existente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer constructor crea un objeto que no está asociado con un subproceso de ejecución. El valor devuelto por una llamada a `get_id` para el objeto construido es `thread::id()`.
 
-El segundo constructor crea un objeto que está asociado a un nuevo subproceso de ejecución y ejecuta la pseudofunción `INVOKE` que se define en [\<functional>](../standard-library/functional.md). Si no hay suficientes recursos disponibles para iniciar un nuevo subproceso, la función produce un objeto [system_error](../standard-library/system-error-class.md) que tiene un código de error `resource_unavailable_try_again`. Si la llamada a *F* finaliza con una excepción no detectada, se llama a [Terminate](../standard-library/exception-functions.md#terminate) .
+El segundo constructor construye un objeto que está asociado a un nuevo `INVOKE` subproceso de ejecución y ejecuta la pseudofunción definida en [ \<>funcional ](../standard-library/functional.md). Si no hay suficientes recursos disponibles para iniciar un nuevo subproceso, la función produce un objeto [system_error](../standard-library/system-error-class.md) que tiene un código de error `resource_unavailable_try_again`. Si la llamada a *F* termina con una excepción no detectada, se llama a [terminate.](../standard-library/exception-functions.md#terminate)
 
 El tercer constructor crea un objeto que está asociado con el subproceso que está asociado a `Other`. Después, `Other` se establece en un estado construido de forma predeterminada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
-[\<thread>](../standard-library/thread.md)
+[\<>de hilo](../standard-library/thread.md)

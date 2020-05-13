@@ -1,10 +1,12 @@
 ---
 title: setlocale, _wsetlocale
-description: Describe las funciones de la biblioteca en tiempo de ejecución de Microsoft C (CRT) setlocale y _wsetlocale.
-ms.date: 01/28/2020
+description: Describe las funciones setlocale de la biblioteca en tiempo de ejecución de _wsetlocaleMicrosoft C (CRT) y.
+ms.date: 4/2/2020
 api_name:
 - _wsetlocale
 - setlocale
+- _o__wsetlocale
+- _o_setlocale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 312fd8e9f794368d334ea353e2c92241d701ab0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473860"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918848"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -63,10 +66,10 @@ wchar_t *_wsetlocale(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *categoría*
+*Categoría*\
 Categoría afectada por la configuración regional.
 
-\ de *configuración regional*
+*configuración regional*\
 Especificador de la configuración regional.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -93,6 +96,8 @@ Use la función **setlocale** para establecer, cambiar o consultar toda o parte 
 
 **_wsetlocale** es una versión con caracteres anchos de **setlocale**; el argumento de *configuración regional* y el valor devuelto de **_wsetlocale** son cadenas de caracteres anchos. **_wsetlocale** y **setlocale** se comportan de manera idéntica.
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
@@ -104,7 +109,7 @@ El argumento *categoría* especifica las partes de la información de configurac
 |marca de *categoría*|Afecta a|
 |-|-|
 | **LC_ALL** | Todas las categorías, como se indica a continuación. |
-| **LC_COLLATE** | Las funciones **strcoll (** , **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**y **wcsxfrm** . |
+| **LC_COLLATE** | Las funciones **strcoll (**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**y **wcsxfrm** . |
 | **LC_CTYPE** | Las funciones de control de caracteres (excepto **isdigit**, **isxdigit**, **mbstowcs**y **mbtowc**, que no se ven afectadas). |
 | **LC_MONETARY** | Información de formato de moneda devuelta por la función **localeconv** . |
 | **LC_NUMERIC** | Carácter de separador decimal para las rutinas de salida con formato (por ejemplo, **printf**), para las rutinas de conversión de datos y para la información de formato no monetaria devuelta por **localeconv**. Además del carácter de separador decimal, **LC_NUMERIC** establece el separador de miles y la cadena de control de agrupación devueltas por [localeconv](localeconv.md). |
@@ -154,15 +159,15 @@ Los ejemplos siguientes pertenecen a la categoría **LC_ALL** . Cualquiera de la
 
 - `setlocale( LC_ALL, "<localename>" );`
 
-   Establece la configuración regional en el nombre de configuración regional que se indica en *\<localename>* . La página de códigos se establece en el valor de [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para el nombre de configuración regional especificado mediante [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Establece la configuración regional en el nombre de la configuración regional que se indica mediante * \<localename>*. La página de códigos se establece en el valor de [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para el nombre de configuración regional especificado mediante [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>" );`
 
-   Establece la configuración regional en el idioma y el país o región indicados por *\<language>* y *\<country>* , junto con la página de códigos predeterminada obtenida del sistema operativo host. La página de códigos se establece en el valor de [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para el nombre de configuración regional especificado mediante [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Establece la configuración regional en el idioma y el país o región indicados por * \<el idioma>* y * \<el país>*, junto con la página de códigos predeterminada obtenida del sistema operativo host. La página de códigos se establece en el valor de [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) para el nombre de configuración regional especificado mediante [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Establece la configuración regional en el idioma, el país o la región y la página de códigos indicados por el *> de idioma\<* , *\<país >* y *\<* code_page cadenas >. Puede utilizar distintas combinaciones de idioma, país o región y página de códigos. Por ejemplo, esta llamada establece la configuración regional en francés de Canadá con la página de códigos 1252:
+   Establece la configuración regional en el idioma, el país o la región y la página de códigos indicados por las * \<cadenas Language>*, * \<Country>* y * \<code_page>* . Puede utilizar distintas combinaciones de idioma, país o región y página de códigos. Por ejemplo, esta llamada establece la configuración regional en francés de Canadá con la página de códigos 1252:
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -176,7 +181,7 @@ Los ejemplos siguientes pertenecen a la categoría **LC_ALL** . Cualquiera de la
 
 - `setlocale( LC_ALL, "<language>" );`
 
-   Establece la configuración regional en el idioma que se indica mediante *\<language>* , y utiliza el país o región predeterminados para el idioma especificado, además de la página de códigos ANSI predeterminada del usuario para ese país o región, tal y como se obtiene del sistema operativo del host. Por ejemplo, las siguientes llamadas a **setlocale** son funcionalmente equivalentes:
+   Establece la configuración regional en el idioma que se indica mediante * \<>de idioma *, y utiliza el país o región predeterminados para el idioma especificado y la página de códigos ANSI predeterminada del usuario para ese país o región, tal y como se obtiene del sistema operativo host. Por ejemplo, las siguientes llamadas a **setlocale** son funcionalmente equivalentes:
 
    `setlocale( LC_ALL, "en-US" );`
 
@@ -188,7 +193,7 @@ Los ejemplos siguientes pertenecen a la categoría **LC_ALL** . Cualquiera de la
 
 - `setlocale( LC_ALL, ".<code_page>" );`
 
-   Establece la página de códigos en el valor indicado por *<página_codigos>* , junto con el país o región y el idioma predeterminados (definidos por el sistema operativo host) para la página de códigos especificada.
+   Establece la página de códigos en el valor indicado por *<página_codigos>*, junto con el país o región y el idioma predeterminados (definidos por el sistema operativo host) para la página de códigos especificada.
 
 La categoría debe ser **LC_ALL** o **LC_CTYPE** para que se aplique un cambio de página de códigos. Por ejemplo, si el país o la región y el idioma predeterminados del sistema operativo host son "Estados Unidos" y "English", las dos llamadas siguientes a **setlocale** son funcionalmente equivalentes:
 
@@ -207,7 +212,7 @@ La función [_configthreadlocale](configthreadlocale.md) se utiliza para control
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> o \<wchar.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -320,12 +325,12 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)\
 [Configuración regional](../../c-runtime-library/locale.md)\
 [localeconv](localeconv.md)\
-[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)\
+[_mbclen, mblen _mblen_l](mbclen-mblen-mblen-l.md)\
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
 [_setmbcp](setmbcp.md)\
-[strcoll (Funciones)](../../c-runtime-library/strcoll-functions.md)\
+[Funciones de strcoll (](../../c-runtime-library/strcoll-functions.md)\
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\

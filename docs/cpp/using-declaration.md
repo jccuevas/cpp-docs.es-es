@@ -1,5 +1,5 @@
 ---
-title: using (declaración)
+title: declaración using
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using declaration
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301280"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187848"
 ---
-# <a name="using-declaration"></a>using (declaración)
+# <a name="using-declaration"></a>declaración using
 
 La declaración **using** introduce un nombre en la región declarativa en la que aparece la declaración using.
 
@@ -25,7 +25,7 @@ using [typename] nested-name-specifier unqualified-id ;
 using declarator-list ;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *Nested-Name-Specifier* Secuencia de nombres de espacio de nombres, clase o enumeración y operadores de resolución de ámbito (::), terminada por un operador de resolución de ámbito. Se puede usar un solo operador de resolución de ámbito para introducir un nombre del espacio de nombres global. La palabra clave **TypeName** es opcional y se puede usar para resolver nombres dependientes cuando se introducen en una plantilla de clase de una clase base.
 
@@ -33,7 +33,7 @@ using declarator-list ;
 
 *lista de declaradores* Lista separada por comas de [**TypeName**] *declaradores* de nombre-de- *especificador Nested-Name-Specifier* , seguido opcionalmente por puntos suspensivos.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Una declaración Using introduce un nombre no completo como sinónimo de una entidad declarada en otro lugar. Permite usar un nombre único de un espacio de nombres específico sin la calificación explícita en la región de declaración en la que aparece. Esto contrasta con la [directiva using](../cpp/namespaces-cpp.md#using_directives), que permite usar *todos* los nombres de un espacio de nombres sin calificación. La palabra clave **using** también se utiliza para los [alias de tipo](../cpp/aliases-and-typedefs-cpp.md).
 
@@ -325,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacios de nombres](../cpp/namespaces-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

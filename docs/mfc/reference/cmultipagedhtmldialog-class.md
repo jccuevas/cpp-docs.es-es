@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89e4830c3b5c6cb663ca2d2935adaaae3f356958
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366906"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319666"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog (clase)
 
@@ -29,18 +29,18 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Construye un objeto de cuadro de diálogo de varias páginas (Asistente de estilo) DHTML.|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Destruye un objeto de cuadro de diálogo DHTML varias páginas.|
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Construye un objeto de diálogo DHTML de varias páginas (estilo asistente).|
+|[CMultiPageDHtmlDialog::-CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Destruye un objeto de cuadro de diálogo DHTML de varias páginas.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El mecanismo para hacerlo es un [mapa de eventos DHTML y la dirección URL](dhtml-event-maps.md), que contiene incrustado mapas de eventos para cada página.
+El mecanismo para hacer esto es un mapa de eventos [DHTML y URL,](dhtml-event-maps.md)que contiene mapas de eventos incrustados para cada página.
 
 ## <a name="example"></a>Ejemplo
 
-Este cuadro de diálogo de varias páginas se da por supuesto tres recursos HTML que definen la funcionalidad de asistente simple. La primera página tiene un **siguiente** button, el segundo un **Prev** y **siguiente** botón y el tercero un **Prev** botón. Cuando se presiona uno de los botones, llama una función de controlador [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) para cargar la nueva página adecuada.
+Este cuadro de diálogo de varias páginas supone tres recursos HTML que definen una funcionalidad sencilla similar a un asistente. La primera página tiene un botón **Siguiente,** la segunda un botón **Anterior** y **Siguiente,** y la tercera un botón **Anterior.** Cuando se presiona uno de los botones, una función de controlador llama a [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) para cargar la nueva página adecuada.
 
 Las partes pertinentes de la declaración de clase (en CMyMultiPageDlg.h):
 
@@ -76,9 +76,9 @@ Las partes pertinentes de la implementación de la clase (en CMyMultipageDlg.cpp
 
 **Encabezado:** afxdhtml.h
 
-##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 
-Construye un objeto de cuadro de diálogo de varias páginas (Asistente de estilo) DHTML.
+Construye un objeto de diálogo DHTML de varias páginas (estilo asistente).
 
 ```
 CMultiPageDHtmlDialog(
@@ -97,28 +97,28 @@ CMultiPageDHtmlDialog();
 ### <a name="parameters"></a>Parámetros
 
 *lpszTemplateName*<br/>
-La cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.
+Cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.
 
 *szHtmlResID*<br/>
-La cadena terminada en null que es el nombre de un recurso HTML.
+Cadena terminada en null que es el nombre de un recurso HTML.
 
 *pParentWnd*<br/>
-Un puntero al objeto de ventana principal o propietaria (de tipo [CWnd](../../mfc/reference/cwnd-class.md)) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del objeto de cuadro de diálogo se establece en la ventana principal de la aplicación.
+Puntero al objeto de ventana primario o propietario (de tipo [CWnd](../../mfc/reference/cwnd-class.md)) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del objeto de cuadro de diálogo se establece en la ventana principal de la aplicación.
 
 *nIDTemplate*<br/>
-Contiene el número de Id. de un recurso de plantilla de cuadro de diálogo.
+Contiene el número de identificador de un recurso de plantilla de cuadro de diálogo.
 
 *nHtmlResID*<br/>
-Contiene el número de Id. de un recurso HTML.
+Contiene el número de identificador de un recurso HTML.
 
-##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::-CMultiPageDHtmlDialog
 
-Destruye un objeto de cuadro de diálogo DHTML varias páginas.
+Destruye un objeto de cuadro de diálogo DHTML de varias páginas.
 
 ```
 virtual ~CMultiPageDHtmlDialog();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [CDHtmlDialog (clase)](../../mfc/reference/cdhtmldialog-class.md)

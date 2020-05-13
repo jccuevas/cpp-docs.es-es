@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 03/25/2019
+ms.date: 4/2/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -8,6 +8,10 @@ api_name:
 - _mbstok
 - strtok
 - _wcstok_l
+- _o__mbstok
+- _o__mbstok_l
+- _o_strtok
+- _o_wcstok
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957655"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912634"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -109,7 +114,7 @@ Configuración regional que se va a usar.
 
 Devuelve un puntero al siguiente token que se encuentra en *strToken*. Las funciones devuelven **null** cuando no se encuentran más tokens. Cada llamada modifica *strToken* sustituyendo un carácter nulo por el primer delimitador que aparece después del token devuelto.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **strtok** busca el siguiente token en *strToken*. El conjunto de caracteres de *strDelimit* especifica los delimitadores posibles del token que se va a encontrar en *strToken* en la llamada actual. **wcstok** y **_mbstok** son versiones de caracteres anchos y multibyte de **strtok**. Los argumentos y el valor devuelto de **wcstok** son cadenas de caracteres anchos; los de **_mbstok** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
@@ -124,6 +129,8 @@ Las versiones de estas funciones sin el sufijo **_L** usan la configuración reg
 
 > [!NOTE]
 > Cada función usa una variable estática local de subproceso para dividir la cadena en tokens. Por consiguiente, varios subprocesos pueden llamar simultáneamente a estas funciones sin que se produzcan efectos no deseados. Sin embargo, dentro de un único subproceso, la intercalación de llamadas a una de estas funciones generará probablemente daños en los datos y resultados poco precisos. Al analizar diferentes cadenas, termine de analizar una cadena antes de empezar a analizar la siguiente. Además, tenga en cuenta el riesgo que puede existir al llamar a una de estas funciones dentro de un bucle donde se llama a otra función. Si la otra función usa una de estas funciones, se producirá una secuencia intercalada de llamadas y se generarán daños en los datos.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -140,7 +147,7 @@ Las versiones de estas funciones sin el sufijo **_L** usan la configuración reg
 |**wcstok**|\<string.h> o \<wchar.h>|
 |**_mbstok**, **_mbstok_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -188,10 +195,10 @@ more
 tokens
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

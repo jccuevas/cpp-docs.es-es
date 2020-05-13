@@ -1,6 +1,6 @@
 ---
 title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -8,6 +8,10 @@ api_name:
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
+- _o__mbsnbcnt
+- _o__mbsnbcnt_l
+- _o__mbsnccnt
+- _o__mbsnccnt_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947298"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914207"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -100,7 +105,7 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena que se va a examinar.
 
 *count*<br/>
@@ -115,7 +120,7 @@ Configuración regional que se va a usar.
 
 **_strncnt** devuelve el número de caracteres en el primer *número* de bytes de la cadena de un solo byte *Str*. **_wcsncnt** devuelve el número de caracteres en el primer número de caracteres anchos de la cadena de *caracteres anchos* *Str*.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 **_mbsnbcnt** y **_mbsnbcnt_l** cuentan el número de bytes que se encuentran en el primer *recuento* de caracteres multibyte de *Str*. **_mbsnbcnt** y **_mbsnbcnt_l** reemplazan a **mtob** y deben usarse en lugar de **mtob**.
 
@@ -124,6 +129,8 @@ Configuración regional que se va a usar.
 Si *Str* es un puntero **nulo** o *Count* es 0, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), **errno** se establece en **EINVAL**y la función devuelve 0.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -146,7 +153,7 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 |**_strncnt**|\<tchar.h>|
 |**_wcsncnt**|\<tchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -169,7 +176,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 The first 10 characters are single-byte.
@@ -178,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>Vea también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

@@ -1,10 +1,11 @@
 ---
 title: acos, acosf, acosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acosf
 - acos
 - acosl
+- _o_acos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171299"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916888"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -72,12 +74,14 @@ De forma predeterminada, si *x* es menor que-1 o mayor que 1, **ACOS** devuelve 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|None|_DOMAIN|
+|± QNAN,IND|ninguno|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **ACOS** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **ACOS** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **ACOS** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **ACOS** siempre toma y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -135,7 +139,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

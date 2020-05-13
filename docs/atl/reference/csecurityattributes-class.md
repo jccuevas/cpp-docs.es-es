@@ -1,5 +1,5 @@
 ---
-title: Clase información
+title: Clase CSecurityAttributes
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e0ac813008a028bb233adfb4c7409a0ad62a6b78
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496499"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746504"
 ---
-# <a name="csecurityattributes-class"></a>Clase información
+# <a name="csecurityattributes-class"></a>Clase CSecurityAttributes
 
 Esta clase es un contenedor fino para la estructura de atributos de seguridad.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,21 +33,21 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|El constructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Llame a este método para establecer los atributos del `CSecurityAttributes` objeto.|
+|[CSecurityAttributes::Set](#set)|Llame a este método para `CSecurityAttributes` establecer los atributos del objeto.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La `SECURITY_ATTRIBUTES` estructura contiene un descriptor de [seguridad](/windows/win32/api/winnt/ns-winnt-security_descriptor) que se usa para la creación de un objeto y especifica si el identificador recuperado mediante la especificación de esta estructura es heredable.
+La `SECURITY_ATTRIBUTES` estructura contiene un descriptor de [seguridad](/windows/win32/api/winnt/ns-winnt-security_descriptor) utilizado para la creación de un objeto y especifica si el identificador recuperado especificando esta estructura es heredable.
 
-Para obtener una introducción al modelo de control de acceso de Windows, consulte [Access Control](/windows/win32/SecAuthZ/access-control) en el Windows SDK.
+Para obtener una introducción al modelo de control de acceso en Windows, vea Control de [acceso](/windows/win32/SecAuthZ/access-control) en el Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -57,9 +57,9 @@ Para obtener una introducción al modelo de control de acceso de Windows, consul
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** ATLSecurity. h
+**Encabezado:** atlsecurity.h
 
-##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
+## <a name="csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes
 
 El constructor.
 
@@ -76,11 +76,11 @@ Referencia a un descriptor de seguridad.
 *bInheritsHandle*<br/>
 Especifica si se hereda el identificador devuelto cuando se crea un nuevo proceso. Si este miembro es true, el nuevo proceso hereda el identificador.
 
-##  <a name="set"></a>  CSecurityAttributes::Set
+## <a name="csecurityattributesset"></a><a name="set"></a>CSecurityAttributes::Set
 
-Llame a este método para establecer los atributos del `CSecurityAttributes` objeto.
+Llame a este método para `CSecurityAttributes` establecer los atributos del objeto.
 
-```
+```cpp
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
 ```
 
@@ -92,14 +92,14 @@ Referencia a un descriptor de seguridad.
 *bInheritHandle*<br/>
 Especifica si se hereda el identificador devuelto cuando se crea un nuevo proceso. Si este miembro es true, el nuevo proceso hereda el identificador.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El constructor utiliza este método para inicializar el `CSecurityAttributes` objeto.
+El constructor utiliza este método `CSecurityAttributes` para inicializar el objeto.
 
 ## <a name="see-also"></a>Vea también
 
 [Ejemplo de seguridad](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
 [descriptor de seguridad](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
-[Información general sobre clases](../../atl/atl-class-overview.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)

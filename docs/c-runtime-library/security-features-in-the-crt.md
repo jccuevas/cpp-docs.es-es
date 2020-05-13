@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746948"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361005"
 ---
 # <a name="security-features-in-the-crt"></a>Características de seguridad de CRT
 
@@ -52,7 +52,7 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-Al definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1, se elimina la advertencia cambiando la llamada a `strcpy` por `strcpy_s`, lo que evita las saturaciones del búfer. Para obtener más información, consulta [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+Al definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1, se elimina la advertencia cambiando la llamada a `strcpy` por `strcpy_s`, lo que evita las saturaciones del búfer. Para obtener más información, vea [Sobrecargas de plantilla seguras](../c-runtime-library/secure-template-overloads.md).
 
 En el caso de estas funciones en desuso sin sobrecargas de plantillas seguras, debe considerar en última instancia actualizar manualmente el código para usar las versiones seguras.
 
@@ -62,13 +62,13 @@ Otro origen de las advertencias sobre desuso, no relacionadas con la seguridad, 
 
 Entre las características de seguridad, se incluyen las siguientes:
 
-- `Parameter Validation`. Se validan los parámetros transferidos a las funciones de CRT, tanto en las funciones seguras como en muchas versiones preexistentes de las funciones. Estas validaciones incluyen:
+- `Parameter Validation`. Se validan los parámetros transferidos a las funciones de CRT, tanto en las funciones seguras como en muchas versiones preexistentes de las funciones. Estas validaciones incluyen lo siguiente:
 
-   - Comprobar los valores **NULL** que se pasan a las funciones.
+  - Comprobar los valores **NULL** que se pasan a las funciones.
 
-   - Comprobar la validez de los valores enumerados.
+  - Comprobar la validez de los valores enumerados.
 
-   - Comprobar si los valores de enteros se encuentran en intervalos válidos.
+  - Comprobar si los valores de enteros se encuentran en intervalos válidos.
 
 - Para más información, consulte [Validación de parámetros](../c-runtime-library/parameter-validation.md).
 
@@ -86,8 +86,8 @@ Entre las características de seguridad, se incluyen las siguientes:
 
 - `Format string syntax checking`. Se detectan cadenas no válidas, por ejemplo, con el uso de caracteres de campo de tipo incorrecto en las cadenas de formato `printf`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Validación de parámetros](../c-runtime-library/parameter-validation.md)<br/>
-[Sobrecargas de plantilla seguras](../c-runtime-library/secure-template-overloads.md)<br/>
+[Sobrecargas seguras de plantillas](../c-runtime-library/secure-template-overloads.md)<br/>
 [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md)

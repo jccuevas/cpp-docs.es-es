@@ -4,12 +4,12 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: a37a23296159de2632f6a218eb81315ee2d6a646
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 19d95c9519670db39f3ca467aff794233823d7ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222510"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180893"
 ---
 # <a name="classes-and-structs-c"></a>Clases y structs (C++)
 
@@ -17,7 +17,7 @@ En esta sección se presentan las clases y structs de C++. Las dos construccione
 
 Las clases y los structs son las construcciones con las que define sus propios tipos. Las clases y los structs pueden contener miembros de datos y funciones miembro, lo que permite describir el comportamiento y el estado del tipo.
 
-Se incluyen los temas siguientes:
+Se tratan los siguientes temas:
 
 - [class](../cpp/class-cpp.md)
 
@@ -33,7 +33,7 @@ Se incluyen los temas siguientes:
 
 - [Conversiones de tipos definidos por el usuario](../cpp/user-defined-type-conversions-cpp.md)
 
-- [Mutable (especificador mutable) de los miembros de datos](../cpp/mutable-data-members-cpp.md)
+- [Miembros de datos mutables (especificador mutable)](../cpp/mutable-data-members-cpp.md)
 
 - [Declaraciones de clase anidadas](../cpp/nested-class-declarations.md)
 
@@ -45,18 +45,18 @@ Se incluyen los temas siguientes:
 
 - [Campos de bits de C++](../cpp/cpp-bit-fields.md)
 
-Los tres tipos de clase son estructura, clase, y unión. Se declaran mediante la [struct](../cpp/struct-cpp.md), [clase](../cpp/class-cpp.md), y [unión](../cpp/unions.md) palabras clave. En la tabla siguiente se muestran las diferencias entre los tres tipos de clase.
+Los tres tipos de clase son estructura, clase, y unión. Se declaran mediante las palabras clave [struct](../cpp/struct-cpp.md), [Class](../cpp/class-cpp.md)y [Union](../cpp/unions.md) . En la tabla siguiente se muestran las diferencias entre los tres tipos de clase.
 
-Para obtener más información sobre las uniones, vea [uniones](../cpp/unions.md). Para obtener información sobre las clases y structs en C++ / c++ / CLI y c++ / CX, consulte [clases y Structs](../extensions/classes-and-structs-cpp-component-extensions.md).
+Para obtener más información sobre las uniones, vea [uniones](../cpp/unions.md). Para obtener información sobre las clases y los C++Structs C++en/CLI y/CX, vea [clases y Structs](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Control de acceso y restricciones de las estructuras, clases y uniones
 
 |Estructuras|Clases|Uniones|
 |----------------|-------------|------------|
-|clave de clase es **struct**|clave de clase es **clase**|clave de clase es **union**|
+|la clave de clase es **struct**|la clave de clase es **Class**|la clave de clase es **Union**|
 |El acceso predeterminado es público|El acceso predeterminado es privado|El acceso predeterminado es público|
 |No hay ninguna restricción de uso|No hay ninguna restricción de uso|Usan solo un miembro cada vez|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)

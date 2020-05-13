@@ -1,11 +1,15 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
+- _o__atof_l
+- _o__wtof
+- _o__wtof_l
+- _o_atof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939571"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909117"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -81,7 +86,7 @@ double _wtof_l(
 
 ## <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena que se va a convertir.
 
 *locale*<br/>
@@ -93,7 +98,7 @@ Cada función devuelve el valor **Double** generado al interpretar los caractere
 
 En todos los casos fuera del intervalo, **errno** se establece en **ERANGE**. Si el parámetro pasado es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Estas funciones convierten una cadena de caracteres en un valor de punto flotante de doble precisión.
 
@@ -101,13 +106,15 @@ La cadena de entrada es una secuencia de caracteres que se puede interpretar com
 
 El argumento *Str* para **atof** y **_wtof** tiene el formato siguiente:
 
-[*espacio en blanco*] [*signo*] [*dígitos*] [ __.__ *dígitos*] [{**e** &#124; **e** } [*signo*]*dígitos*]
+[*espacio en blanco*] [*signo*] [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **e** } [*signo*]*dígitos*]
 
 Un espacio en *blanco* consta de caracteres de espacio o tabulación, que se omiten; el *signo* es más (+) o menos (-); y los *dígitos* son uno o más dígitos decimales. Si no aparece ningún dígito antes del separador decimal, debe aparecer al menos uno después. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra de presentación (**e**, o **e**) y un entero decimal con signo opcional.
 
 Las versiones de UCRT de estas funciones no admiten la conversión de Letras de exponente de estilo Fortran (**d** o **d**). Esta extensión no estándar era compatible con versiones anteriores de CRT y puede que sea un cambio decisivo para el código.
 
 Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de *configuración regional* que se pasa en lugar de la configuración regional actual.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -174,11 +181,11 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

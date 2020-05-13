@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857325"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178854"
 ---
 # <a name="semantics-of-expressions"></a>Semántica de las expresiones
 
@@ -20,7 +20,7 @@ Las expresiones se evalúan según la prioridad y agrupación de sus operadores.
 
 ## <a name="order-of-evaluation"></a>Orden de evaluación
 
-Considere este ejemplo:
+En este ejemplo:
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -70,7 +70,7 @@ El lenguaje C++ indica ciertas compatibilidades al especificar operandos. En la 
 |Tipo esperado|Tipos permitidos|
 |-------------------|-------------------|
 |*type*|*tipo* de `const`<br /> *tipo* de `volatile`<br /> *type*&<br /> `const` *tipo*&<br /> `volatile` *tipo*&<br /> *tipo* de `volatile const`<br /> `volatile const` *tipo*&|
-|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
+|*escribir* \*|*escribir* \*<br /> `const` *tipo* \*<br /> `volatile` *tipo* \*<br /> `volatile const` *tipo* \*|
 |*tipo* de `const`|*type*<br /> *tipo* de `const`<br />`const` *tipo*&|
 |*tipo* de `volatile`|*type*<br /> *tipo* de `volatile`<br /> `volatile` *tipo*&|
 
@@ -116,6 +116,6 @@ La definición del lenguaje C++ no especifica actualmente puntos de secuencia. M
 
 - La expresión de una instrucción return. La expresión se evalúa completamente y se aplican todos los efectos secundarios antes de devolver el control a la función de llamada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones](../cpp/expressions-cpp.md)

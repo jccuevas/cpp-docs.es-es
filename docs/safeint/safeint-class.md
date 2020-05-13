@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076817"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373467"
 ---
 # <a name="safeint-class"></a>SafeInt (Clase)
 
 Amplía las primitivas de enteros para ayudar a evitar el desbordamiento de enteros y permite comparar diferentes tipos de enteros.
 
 > [!NOTE]
-> La versión más reciente de esta biblioteca se encuentra en [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
+> La última versión de [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)esta biblioteca se encuentra en .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,10 +42,10 @@ class SafeInt;
 | Parámetro  |  Descripción |
 |---------|-----------------|
 | *rhs*      |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
-| *i*        |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
+| *Ⅰ*        |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
 | *bits*     |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
@@ -257,10 +257,10 @@ SafeInt (
 
 ### <a name="parameters"></a>Parámetros
 
-*i*<br/>
+*Ⅰ*<br/>
 [in] El valor del nuevo objeto `SafeInt`. Debe ser un parámetro de tipo T o U, según el constructor.
 
-*b*<br/>
+*B*<br/>
 [in] El valor booleano del nuevo objeto `SafeInt`.
 
 *u*<br/>

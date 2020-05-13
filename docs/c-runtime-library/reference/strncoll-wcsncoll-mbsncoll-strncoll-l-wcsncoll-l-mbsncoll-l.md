@@ -1,6 +1,6 @@
 ---
 title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strncoll
 - _mbsncoll_l
@@ -8,6 +8,12 @@ api_name:
 - _wcsncoll_l
 - _mbsncoll
 - _strncoll_l
+- _o__mbsncoll
+- _o__mbsncoll_l
+- _o__strncoll
+- _o__strncoll_l
+- _o__wcsncoll
+- _o__wcsncoll_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -63,12 +70,12 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-ms.openlocfilehash: e5120b37cd06266752194ec826a173474f6902fd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7abe5ce96d0fa3d198834f6923724321d60d666
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947262"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919303"
 ---
 # <a name="_strncoll-_wcsncoll-_mbsncoll-_strncoll_l-_wcsncoll_l-_mbsncoll_l"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
@@ -136,13 +143,15 @@ Cada una de estas funciones devuelve un valor que indica la relación de las sub
 |0|*string1* es idéntico a *cadena2*.|
 |> 0|*string1* es mayor que *cadena2*.|
 
-Cada una de estas funciones devuelve **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluya String. h o MBSTRING. h. se puede producir un error en **_wcsncoll** si *string1* o *cadena2* contiene códigos de caracteres anchos que están fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsncoll** puede establecer **errno** en **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsncoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **_wcsncoll**.
+Cada una de estas funciones devuelve **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluya String. h o MBSTRING. h. **_wcsncoll** puede producir un error si *string1* o *cadena2* contiene códigos de caracteres anchos que están fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsncoll** puede establecer **errno** en **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsncoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **_wcsncoll**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cada una de estas funciones realiza una comparación con distinción entre mayúsculas y minúsculas de los primeros caracteres de *recuento* de *cadena1* y *cadena2*, según la página de códigos que esté actualmente en uso. Use estas funciones solo cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos sean distintos en la página de códigos y cuando la diferencia influya en la comparación de cadenas. El orden del conjunto de caracteres depende de la configuración regional. Las versiones de estas funciones que no tienen el sufijo **_L** usan la configuración regional actual, pero las versiones que tienen el sufijo **_L** usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Todas estas funciones validan sus parámetros. Si *string1* o *cadena2* es un puntero nulo, o *Count* es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecen **errno** en **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -159,13 +168,13 @@ Todas estas funciones validan sus parámetros. Si *string1* o *cadena2* es un pu
 |**_wcsncoll**, **_wcsncoll_l**|\<wchar.h> o \<string.h>|
 |**_mbsncoll**, **_mbsncoll_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[strcoll (funciones)](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funciones de strcoll (](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

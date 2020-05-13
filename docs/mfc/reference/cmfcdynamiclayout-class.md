@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: f1ddf35b514d9b89f53d5f1307a6ecb7132d2854
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177514"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752391"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Clase CMFCDynamicLayout
 
@@ -36,17 +36,17 @@ class CMFCDynamicLayout : public CObject
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |`CMFCDynamicLayout::CMFCDynamicLayout`|Construye un objeto `CMFCDynamicLayout`.|
 |`CMFCDynamicLayout::~CMFCDynamicLayout`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCDynamicLayout::AddItem](#additem)|Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.|
-|[CMFCDynamicLayout:: ADJUST](#adjust)|Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.|
+|[CMFCDynamicLayout::Adjust](#adjust)|Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.|
 |[CMFCDynamicLayout::Create](#create)|Almacena y valida la ventana host.|
 |[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|Devuelve un puntero a una ventana host.|
 |[CMFCDynamicLayout::GetMinSize](#getminsize)|Devuelve el tamaño de la ventana por debajo del cual no se ajusta el diseño.|
@@ -54,24 +54,24 @@ class CMFCDynamicLayout : public CObject
 |[CMFCDynamicLayout::HasItem](#hasitem)|Comprueba si se agregó un control secundario al diseño dinámico.|
 |[CMFCDynamicLayout::IsEmpty](#isempty)|Comprueba si un diseño dinámico no tiene ventanas secundarias agregadas.|
 |[CMFCDynamicLayout::LoadResource](#loadresource)|Lee el diseño dinámico del recurso AFX_DIALOG_LAYOUT y después aplica el diseño a la ventana del host.|
-|[CMFCDynamicLayout estático:: MoveHorizontal](#movehorizontal)|Obtiene un valor [MoveSettings](#movesettings_structure) que define cuánto se mueve horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.|
-|[CMFCDynamicLayout estático:: MoveHorizontalAndVertical](#movehorizontalandvertical)|Obtiene un valor [MoveSettings](#movesettings_structure) que define cuánto se mueve horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.|
-|[CMFCDynamicLayout estático:: MoveNone](#movenone)|Obtiene un valor [MoveSettings](#movesettings_structure) que no representa ningún movimiento, vertical u horizontal, de un control secundario.|
-|[CMFCDynamicLayout estático:: MoveVertical](#movevertical)|Obtiene un valor [MoveSettings](#movesettings_structure) que define cuánto se mueve verticalmente un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.|
+|[cMFCDynamicLayout estático::MoveHorizontal](#movehorizontal)|Obtiene un [MoveSettings](#movesettings_structure) valor que define cuánto un control secundario se mueve horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.|
+|[cMFCDynamicLayout estático::MoveHorizontalAndVertical](#movehorizontalandvertical)|Obtiene un [MoveSettings](#movesettings_structure) valor que define cuánto un control secundario se mueve horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.|
+|[cMFCDynamicLayout estático::MoveNone](#movenone)|Obtiene un [MoveSettings](#movesettings_structure) valor que representa ningún movimiento, vertical u horizontal, para un control secundario.|
+|[cMFCDynamicLayout estático::MoveVertical](#movevertical)|Obtiene un [MoveSettings](#movesettings_structure) valor que define cuánto se mueve un control secundario verticalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.|
 |[CMFCDynamicLayout::SetMinSize](#setminsize)|Establece el tamaño de la ventana por debajo del cual no se ajusta el diseño.|
-|[CMFCDynamicLayout estático:: SizeHorizontal](#sizehorizontal)|Obtiene un valor [SizeSettings](#sizesettings_structure) que define la cantidad de tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.|
-|[CMFCDynamicLayout estático:: SizeHorizontalAndVertical](#sizehorizontalandvertical)|Obtiene un valor [SizeSettings](#sizesettings_structure) que define la cantidad de tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.|
-|[CMFCDynamicLayout estático:: SizeNone](#sizenone)|Obtiene un valor [SizeSettings](#sizesettings_structure) que no representa ningún cambio en el tamaño de un control secundario.|
-|[CMFCDynamicLayout estático:: SizeVertical](#sizevertical)|Obtiene un valor [SizeSettings](#sizesettings_structure) que define la cantidad de tamaño vertical de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.|
+|[cMFCDynamicLayout estático::SizeHorizontal](#sizehorizontal)|Obtiene un [SizeSettings](#sizesettings_structure) valor que define cuánto se cambia el tamaño de un control secundario horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.|
+|[cMFCDynamicLayout estático::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Obtiene un [SizeSettings](#sizesettings_structure) valor que define cuánto se cambia el tamaño de un control secundario horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.|
+|[cMFCDynamicLayout estático::SizeNone](#sizenone)|Obtiene un [SizeSettings](#sizesettings_structure) valor que representa ningún cambio en el tamaño de un control secundario.|
+|[cMFCDynamicLayout estático::SizeVertical](#sizevertical)|Obtiene un [SizeSettings](#sizesettings_structure) valor que define cuánto se cambia el tamaño de un control secundario verticalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.|
 
 ## <a name="nested-types"></a>Tipos anidados
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CMFCDynamicLayout:: MoveSettings (estructura)](#movesettings_structure)|Encapsula los datos de movimiento de los controles de un diseño dinámico.|
-|[CMFCDynamicLayout:: SizeSettings (estructura)](#sizesettings_structure)|Encapsula los datos de cambio de tamaño de los controles de un diseño dinámico.|
+|[CMFCDynamicLayout::MoveSettings (Estructura)](#movesettings_structure)|Encapsula los datos de movimiento de los controles de un diseño dinámico.|
+|[Estructura de CMFCDynamicLayout::SizeSettings](#sizesettings_structure)|Encapsula los datos de cambio de tamaño de los controles de un diseño dinámico.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -81,9 +81,9 @@ class CMFCDynamicLayout : public CObject
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxlayout. h
+**Encabezado:** afxlayout.h
 
-##  <a name="additem"></a>  CMFCDynamicLayout::AddItem
+## <a name="cmfcdynamiclayoutadditem"></a><a name="additem"></a>CMFCDynamicLayout::AddItem
 
 Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.
 
@@ -99,7 +99,7 @@ BOOL AddItem(
 
 ### <a name="parameters"></a>Parámetros
 
-*hwnd*<br/>
+*Hwnd*<br/>
 Controlador de la ventana que se va a agregar.
 
 *nID*<br/>
@@ -115,23 +115,23 @@ Estructura que describe cómo debe cambiar el tamaño del control a medida que c
 
 Es TRUE si se agregó correctamente el elemento; de lo contrario, es FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La posición y el tamaño de un control secundario cambian dinámicamente cuando una ventana de hospedaje cambia de tamaño.
 
-##  <a name="adjust"></a>CMFCDynamicLayout:: ADJUST
+## <a name="cmfcdynamiclayoutadjust"></a><a name="adjust"></a>CMFCDynamicLayout::Ajustar
 
 Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.
 
-```
+```cpp
 void Adjust();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La posición y el tamaño de un control secundario cambian dinámicamente cuando una ventana de hospedaje cambia de tamaño.
 
-##  <a name="create"></a>CMFCDynamicLayout:: Create
+## <a name="cmfcdynamiclayoutcreate"></a><a name="create"></a>CMFCDynamicLayout::Create
 
 Almacena y valida la ventana host.
 
@@ -148,9 +148,9 @@ Un puntero a la ventana host.
 
 Es TRUE si la creación se realizó correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gethostwnd"></a>  CMFCDynamicLayout::GetHostWnd
+## <a name="cmfcdynamiclayoutgethostwnd"></a><a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd
 
 Devuelve un puntero a una ventana host.
 
@@ -162,11 +162,11 @@ CWnd* GetHostWnd();
 
 Un puntero a la ventana host.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, la posición de todos los controles secundarios se recalcula con respecto a esta ventana.
 
-##  <a name="getminsize"></a>  CMFCDynamicLayout::GetMinSize
+## <a name="cmfcdynamiclayoutgetminsize"></a><a name="getminsize"></a>CMFCDynamicLayout::GetMinSize
 
 Devuelve el tamaño de la ventana por debajo del cual no se ajusta el diseño.
 
@@ -178,26 +178,26 @@ CSize GetMinSize();
 
 Tamaño de la ventana por debajo del cual no se ajusta el diseño.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La posición y el tamaño de un control secundario cambian dinámicamente cuando se cambia el tamaño de una ventana de hospedaje, pero hay un tamaño mínimo por debajo del cual no se ajusta el diseño. El usuario puede reducir el tamaño de la ventana, pero habrá partes de la ventana ocultas a la vista.
 
-##  <a name="getwindowrect"></a>  CMFCDynamicLayout::GetWindowRect
+## <a name="cmfcdynamiclayoutgetwindowrect"></a><a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect
 
 Recupera el rectángulo de área de cliente actual de la ventana.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*rect*<br/>
+*Rect*<br/>
 Después de la devolución de la función, este parámetro contiene el rectángulo delimitador del área de presentación. Se trata de un parámetro de salida; el valor de entrada se sobrescribe.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem
+## <a name="cmfcdynamiclayouthasitem"></a><a name="hasitem"></a>CMFCDynamicLayout::HasItem
 
 Comprueba si se agregó un control secundario al diseño dinámico.
 
@@ -207,16 +207,16 @@ BOOL HasItem(HWND hwnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*hwnd*<br/>
+*Hwnd*<br/>
 El identificador de ventana para el control.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si el diseño ya tiene este elemento; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isempty"></a>CMFCDynamicLayout:: IsEmpty
+## <a name="cmfcdynamiclayoutisempty"></a><a name="isempty"></a>CMFCDynamicLayout::IsEmpty
 
 Comprueba si un diseño dinámico no tiene ventanas secundarias agregadas.
 
@@ -228,9 +228,9 @@ BOOL IsEmpty();
 
 TRUE si el diseño no tiene elementos; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="loadresource"></a>CMFCDynamicLayout:: LoadResource
+## <a name="cmfcdynamiclayoutloadresource"></a><a name="loadresource"></a>CMFCDynamicLayout::LoadResource
 
 Lee el diseño dinámico del recurso AFX_DIALOG_LAYOUT y después aplica el diseño a la ventana del host.
 
@@ -255,11 +255,11 @@ El tamaño del búfer en bytes.
 
 TRUE si el recurso se carga y se aplica a la ventana del host; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="movehorizontal"></a>CMFCDynamicLayout:: MoveHorizontal
+## <a name="cmfcdynamiclayoutmovehorizontal"></a><a name="movehorizontal"></a>CMFCDynamicLayout::MoveHorizontal
 
-Obtiene un valor [MoveSettings](#movesettings_structure) que define cuánto se mueve horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
+Obtiene un [MoveSettings](#movesettings_structure) valor que define cuánto un control secundario se mueve horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.
 
 ```
 static MoveSettings MoveHorizontal(int nRatio);
@@ -272,13 +272,13 @@ Define como un porcentaje hasta qué punto se desplaza horizontalmente un contro
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor [MoveSettings](#movesettings_structure) que encapsula la relación de movimiento solicitada.
+Un [valor MoveSettings](#movesettings_structure) que encapsula la relación de movimiento solicitada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="movehorizontalandvertical"></a>CMFCDynamicLayout:: MoveHorizontalAndVertical
+## <a name="cmfcdynamiclayoutmovehorizontalandvertical"></a><a name="movehorizontalandvertical"></a>CMFCDynamicLayout::MoveHorizontalAndVertical
 
-Obtiene un valor [MoveSettings](#movesettings_structure) que define cuánto se mueve horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
+Obtiene un [MoveSettings](#movesettings_structure) valor que define cuánto un control secundario se mueve horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.
 
 ```
 static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
@@ -294,13 +294,13 @@ Define, como un porcentaje, hasta qué punto se desplaza verticalmente un contro
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor [MoveSettings](#movesettings_structure) que encapsula la relación de movimiento solicitada.
+Un [valor MoveSettings](#movesettings_structure) que encapsula la relación de movimiento solicitada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="movenone"></a>CMFCDynamicLayout:: MoveNone
+## <a name="cmfcdynamiclayoutmovenone"></a><a name="movenone"></a>CMFCDynamicLayout::MoveNone
 
-Obtiene un valor [MoveSettings](#movesettings_structure) que no representa ningún movimiento, vertical u horizontal, de un control secundario.
+Obtiene un [MoveSettings](#movesettings_structure) valor que representa ningún movimiento, vertical u horizontal, para un control secundario.
 
 ```
 static MoveSettings MoveNone();
@@ -308,11 +308,11 @@ static MoveSettings MoveNone();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor [MoveSettings](#movesettings_structure) que corrige el control en contexto, de modo que no se mueva A medida que el usuario cambie el tamaño de la ventana host.
+Un [MoveSettings](#movesettings_structure) valor que corrige el control en su lugar, para que no se mueva como el usuario cambia el tamaño de la ventana host.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="movesettings_structure"></a>CMFCDynamicLayout:: MoveSettings (estructura)
+## <a name="cmfcdynamiclayoutmovesettings-structure"></a><a name="movesettings_structure"></a>CMFCDynamicLayout::MoveSettings Estructura
 
 Encapsula los datos de movimiento de los controles de un diseño dinámico.
 
@@ -320,7 +320,7 @@ Encapsula los datos de movimiento de los controles de un diseño dinámico.
 struct CMFCDynamicLayout::MoveSettings;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Se trata de una clase anidada dentro de `CMFCDynamicLayout`.
 
@@ -360,9 +360,9 @@ BOOL IsVertical() const
 
 Es TRUE si el objeto `MoveSettings` especifica un movimiento vertical distinto de cero.
 
-##  <a name="movevertical"></a>CMFCDynamicLayout:: MoveVertical
+## <a name="cmfcdynamiclayoutmovevertical"></a><a name="movevertical"></a>CMFCDynamicLayout::MoveVertical
 
-Obtiene un valor [MoveSettings](#movesettings_structure) que define cuánto se mueve verticalmente un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
+Obtiene un [MoveSettings](#movesettings_structure) valor que define cuánto se mueve un control secundario verticalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.
 
 ```
 static MoveSettings MoveVertical(int nRatio);
@@ -375,15 +375,15 @@ Define, como un porcentaje, hasta qué punto se desplaza verticalmente un contro
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor [MoveSettings](#movesettings_structure) que encapsula la relación de movimiento solicitada.
+Un [valor MoveSettings](#movesettings_structure) que encapsula la relación de movimiento solicitada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="setminsize"></a>  CMFCDynamicLayout::SetMinSize
+## <a name="cmfcdynamiclayoutsetminsize"></a><a name="setminsize"></a>CMFCDynamicLayout::SetMinSize
 
 Establece el tamaño de la ventana por debajo del cual no se ajusta el diseño.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
@@ -392,13 +392,13 @@ void SetMinSize(const CSize& size);
 *size*<br/>
 El tamaño deseado por debajo del cual no se ajusta el diseño.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La posición y el tamaño de un control secundario cambian dinámicamente cuando se cambia el tamaño de una ventana de hospedaje, pero hay un tamaño mínimo por debajo del cual no se ajusta el diseño. El usuario puede reducir el tamaño de la ventana, pero habrá partes de la ventana ocultas a la vista.
 
-##  <a name="sizehorizontal"></a>CMFCDynamicLayout:: SizeHorizontal
+## <a name="cmfcdynamiclayoutsizehorizontal"></a><a name="sizehorizontal"></a>CMFCDynamicLayout::SizeHorizontal
 
-Obtiene un valor [SizeSettings](#sizesettings_structure) que define la cantidad de tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
+Obtiene un [SizeSettings](#sizesettings_structure) valor que define cuánto se cambia el tamaño de un control secundario horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.
 
 ```
 static SizeSettings SizeHorizontal(int nRatio);
@@ -411,13 +411,13 @@ Define como un porcentaje hasta qué punto se cambia el tamaño horizontal de un
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor [SizeSettings](#sizesettings_structure) que encapsula la relación de tamaño solicitada.
+Un [valor SizeSettings](#sizesettings_structure) que encapsula la relación de tamaño solicitada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout:: SizeHorizontalAndVertical
+## <a name="cmfcdynamiclayoutsizehorizontalandvertical"></a><a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical
 
-Obtiene un valor [SizeSettings](#sizesettings_structure) que define la cantidad de tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
+Obtiene un [SizeSettings](#sizesettings_structure) valor que define cuánto se cambia el tamaño de un control secundario horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.
 
 ```
 static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
@@ -433,13 +433,13 @@ Define como un porcentaje hasta qué punto se cambia el tamaño vertical de un c
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor [SizeSettings](#sizesettings_structure) que encapsula la relación de tamaño solicitada.
+Un [valor SizeSettings](#sizesettings_structure) que encapsula la relación de tamaño solicitada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="sizenone"></a>CMFCDynamicLayout:: SizeNone
+## <a name="cmfcdynamiclayoutsizenone"></a><a name="sizenone"></a>CMFCDynamicLayout::SizeNone
 
-Obtiene un valor [SizeSettings](#sizesettings_structure) que no representa ningún cambio en el tamaño de un control secundario.
+Obtiene un [SizeSettings](#sizesettings_structure) valor que representa ningún cambio en el tamaño de un control secundario.
 
 ```
 static SizeSettings SizeNone();
@@ -447,11 +447,11 @@ static SizeSettings SizeNone();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor [SizeSettings](#sizesettings_structure) que corrige el control con un determinado tamaño, de modo que no cambia de tamaño cuando el usuario cambia el tamaño de la ventana host.
+Un [valor SizeSettings](#sizesettings_structure) que corrige el control en un tamaño determinado, para que no cambie de tamaño a medida que el usuario cambia el tamaño de la ventana host.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="sizesettings_structure"></a>CMFCDynamicLayout:: SizeSettings (estructura)
+## <a name="cmfcdynamiclayoutsizesettings-structure"></a><a name="sizesettings_structure"></a>CMFCDynamicLayout::SizeSettings Estructura
 
 Encapsula los datos de cambio de tamaño de los controles de un diseño dinámico.
 
@@ -459,7 +459,7 @@ Encapsula los datos de cambio de tamaño de los controles de un diseño dinámic
 struct CMFCDynamicLayout::SizeSettings;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Se trata de una clase anidada dentro de `CMFCDynamicLayout`.
 
@@ -499,9 +499,9 @@ BOOL IsVertical() const
 
 Es TRUE si el objeto `SizeSettings` especifica un cambio de tamaño vertical distinto de cero.
 
-##  <a name="sizevertical"></a>CMFCDynamicLayout:: SizeVertical
+## <a name="cmfcdynamiclayoutsizevertical"></a><a name="sizevertical"></a>CMFCDynamicLayout::SizeVertical
 
-Obtiene un valor [SizeSettings](#sizesettings_structure) que define la cantidad de tamaño vertical de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
+Obtiene un [SizeSettings](#sizesettings_structure) valor que define cuánto se cambia el tamaño de un control secundario verticalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.
 
 ```
 static SizeSettings SizeVertical(int nRatio);
@@ -514,9 +514,9 @@ Define como un porcentaje hasta qué punto se cambia el tamaño vertical de un c
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor [SizeSettings](#sizesettings_structure) que encapsula la relación de tamaño solicitada.
+Un [valor SizeSettings](#sizesettings_structure) que encapsula la relación de tamaño solicitada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="see-also"></a>Vea también
 

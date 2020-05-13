@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514348"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214697"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -23,7 +23,7 @@ Especifica un parámetro opcional para una función miembro.
 [optional]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **opcional** C++ tiene la misma funcionalidad que el atributo MIDL [opcional](/windows/win32/Midl/optional) .
 
@@ -51,13 +51,13 @@ __interface IFireTabCtrl : IDispatch
 |||
 |-|-|
 |**Se aplica a**|Parámetro de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)

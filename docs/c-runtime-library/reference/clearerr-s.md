@@ -1,8 +1,9 @@
 ---
 title: clearerr_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr_s
+- _o_clearerr_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3e300562a52029fe835ebd4fe34e9a7ef247a76a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939146"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917207"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -47,18 +49,20 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*misiones*<br/>
 Puntero a la estructura de **archivo**
 
 ## <a name="return-value"></a>Valor devuelto
 
 Cero si es correcto; **EINVAL** si *Stream* es **null**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **clearerr_s** restablece el indicador de error y el indicador de fin de archivo para el *flujo*. Los indicadores de error no se borran automáticamente; una vez establecido el indicador de error para una secuencia especificada, las operaciones en esa secuencia seguirán devolviendo un valor de error hasta que se llame a **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**o [Rewind](rewind.md) .
 
 Si *Stream* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -116,7 +120,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Write error: Bad file descriptor
@@ -125,7 +129,7 @@ Will input cause an error? n
 
 ## <a name="see-also"></a>Vea también
 
-[Control de errores](../../c-runtime-library/error-handling-crt.md)<br/>
+[Tratamiento de errores](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>

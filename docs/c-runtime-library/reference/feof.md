@@ -1,8 +1,9 @@
 ---
 title: feof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - feof
+- _o_feof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941143"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920165"
 ---
 # <a name="feof"></a>feof
 
@@ -46,7 +48,7 @@ int feof(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -55,11 +57,13 @@ La función **feof** devuelve un valor distinto de cero si una operación de lec
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La rutina **feof** (implementada como una función y como una macro) determina si se ha pasado el final de la *secuencia* . Cuando se pasa el final del archivo, las operaciones de lectura devuelven un indicador de fin de archivo hasta que se cierra la secuencia o hasta que se llama a [rebobinar](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)o **clearerr** .
 
 Por ejemplo, si un archivo contiene 10 bytes y Lee 10 bytes del archivo, **feof** devolverá 0 porque, aunque el puntero de archivo está al final del archivo, no ha intentado leer más allá del final. Solo después de intentar leer un undécimo byte, **feof** devolverá un valor distinto de cero.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -116,7 +120,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Number of bytes read = 19
@@ -124,7 +128,7 @@ Number of bytes read = 19
 
 ## <a name="see-also"></a>Vea también
 
-[Control de errores](../../c-runtime-library/error-handling-crt.md)<br/>
+[Tratamiento de errores](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>

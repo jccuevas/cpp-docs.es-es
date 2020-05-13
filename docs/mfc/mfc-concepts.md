@@ -3,12 +3,12 @@ title: Conceptos de MFC
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178527"
 ---
 # <a name="mfc-concepts"></a>Conceptos de MFC
 
@@ -20,7 +20,7 @@ En esta sección se proporcionan temas conceptuales y basados en tareas para ayu
 Describe los detalles técnicos de la biblioteca MFC.
 
 [Uso de CObject](../mfc/using-cobject.md)<br/>
-Proporciona vínculos a mediante `CObject`, la clase base para la mayoría de las clases de MFC.
+Proporciona vínculos al uso de `CObject`, la clase base para la mayoría de las clases de MFC.
 
 [Colecciones](../mfc/collections.md)<br/>
 Describe las clases de colección creadas a partir de y C++ que no se crean a partir de plantillas.
@@ -29,7 +29,7 @@ Describe las clases de colección creadas a partir de y C++ que no se crean a pa
 Proporciona vínculos a temas que explican el uso de fecha y hora con MFC.
 
 [Archivos](../mfc/files-in-mfc.md)<br/>
-`CFile` Describe y cómo controlar los archivos en MFC.
+Describe `CFile` y cómo administrar archivos en MFC.
 
 [Administración de memoria (MFC)](../mfc/memory-management.md)<br/>
 Describe cómo sacar partido de los servicios de uso general relacionados con la administración de memoria.
@@ -66,5 +66,5 @@ Trata la implementación de MFC de Windows Sockets.
 [Referencia de MFC](../mfc/mfc-desktop-applications.md)<br/>
 Proporciona material de referencia para la Biblioteca MFC, un conjunto de clases que constituyen el marco de trabajo de una aplicación escrita para la API de Windows.
 
-[Ejemplos de MFC](../overview/visual-cpp-samples.md)<br/>
+[Ejemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Proporciona vínculos a ejemplos que muestran cómo utilizar MFC en aplicaciones de escritorio, archivos dll, aplicaciones de base de datos, controles, aplicaciones Web, etc.

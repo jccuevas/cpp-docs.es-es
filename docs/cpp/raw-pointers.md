@@ -1,21 +1,28 @@
 ---
-title: Punteros sin formatoC++()
-description: Cómo usar punteros sin formato enC++
-ms.date: 11/19/2019
+title: Punteros sin procesar (C++)
+description: Cómo usar punteros sin procesar en C++
+ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+no-loc:
+- void
+- nullptr
+- const
+- char
+- new
+- delete
+ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077142"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032101"
 ---
-# <a name="raw-pointers-c"></a>Punteros sin formatoC++()
+# <a name="raw-pointers-c"></a>Punteros sin procesar (C++)
 
-Un puntero es un tipo de variable que almacena la dirección de un objeto en la memoria y que se utiliza para tener acceso a ese objeto. Un *puntero sin formato* es un puntero cuya duración no está controlada por un objeto de encapsulado como un [puntero inteligente](smart-pointers-modern-cpp.md). A un puntero sin formato se le puede asignar la dirección de otra variable que no sea de puntero o se le puede asignar un valor de [nullptr](nullptr.md). Un puntero al que no se le ha asignado un valor contiene datos aleatorios.
+Un *puntero* es un tipo de variable. Almacena la dirección de un objeto en la memoria y se utiliza para tener acceso a ese objeto. Un *puntero sin formato* es un puntero cuya duración no está controlada por un objeto de encapsulación, como un puntero [inteligente.](smart-pointers-modern-cpp.md) A un puntero sin formato se le puede asignar la dirección [nullptr](nullptr.md)de otra variable que no sea de puntero, o se le puede asignar un valor de . Un puntero al que no se le ha asignado un valor contiene datos aleatorios.
 
-También se puede *desreferenciar* un puntero para recuperar el valor del objeto al que apunta. El *operador de acceso a miembros* proporciona acceso a los miembros de un objeto.
+También se puede *desreferenciar* un puntero para recuperar el valor del objeto al que apunta. El operador de *acceso miembro* proporciona acceso a los miembros de un objeto.
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -23,19 +30,17 @@ También se puede *desreferenciar* un puntero para recuperar el valor del objeto
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
-
 ```
 
-Un puntero puede apuntar a un objeto con tipo o a **void**. Cuando un programa asigna un nuevo objeto en el [montón](https://wikipedia.org/wiki/Heap) en memoria, recibe la dirección de ese objeto en forma de puntero. Estos punteros se denominan *punteros propietarios*; un puntero propietario (o una copia de él) debe usarse para eliminar explícitamente el objeto asignado por el montón cuando ya no se necesite. Si no se elimina la memoria, se producirá una *fuga de memoria* y la ubicación de memoria no estará disponible para ningún otro programa del equipo. Para obtener más información, vea [operadores New y DELETE](new-and-delete-operators.md).
+Un puntero puede apuntar a un **void** objeto con tipo o a . Cuando un programa asigna un objeto en el [montón](https://wikipedia.org/wiki/Heap) en memoria, recibe la dirección de ese objeto en forma de puntero. Estos punteros se denominan *punteros propietarios*. Se debe usar un puntero propietario (o una copia de él) para liberar explícitamente el objeto asignado al montón cuando ya no sea necesario. Si no se libera la memoria, se produce una pérdida de *memoria*y se hace que la ubicación de memoria no esté disponible para ningún otro programa del equipo. La memoria **new** asignada mediante debe **delete** liberarse mediante (o ** delete \[]**). Para obtener más información, consulte [ new delete y operadores](new-and-delete-operators.md).
 
 ```cpp
-
     MyClass* mc = new MyClass(); // allocate object on the heap
     mc->print(); // access class member
     delete mc; // delete object (please don't forget!)
 ```
 
-Un puntero (si no se declara como **const**) puede aumentarse o reducirse para que apunte a una nueva ubicación en la memoria. Esto se denomina *aritmética de puntero* y se usa en la programación de estilo C para recorrer en iteración los elementos de matrices u otras estructuras de datos. No se puede hacer que un puntero **const** señale a una ubicación de memoria diferente y, en ese sentido, es muy similar a una [referencia](references-cpp.md). Para obtener más información, vea [punteros const y volatile](const-and-volatile-pointers.md).
+Un puntero (si no se **const** declara como ) se puede incrementar o disminuir para apuntar a otra ubicación en la memoria. Esta operación se denomina *aritmética de puntero*. Se utiliza en la programación de estilo C para iterar elementos en matrices u otras estructuras de datos. No **const** se puede hacer que un puntero apunte a una ubicación de memoria diferente y, en ese sentido, es similar a una [referencia.](references-cpp.md) Para obtener más información, consulte [ const punteros volátiles](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +54,13 @@ Un puntero (si no se declara como **const**) puede aumentarse o reducirse para q
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-En los sistemas operativos de 64 bits, un puntero tiene un tamaño de 64 bits; el tamaño del puntero del sistema determina la cantidad de memoria direccionable que puede tener. Todas las copias de un puntero apuntan a la misma ubicación de memoria. Los punteros (junto con referencias) se usan ampliamente en C++ para pasar objetos más grandes a las funciones, ya que normalmente es mucho más eficaz copiar la dirección de 64 bits de un objeto que copiar un objeto completo. Al definir una función, especifique los parámetros de puntero como **const** a menos que desee que la función modifique el objeto. En general, las referencias **const** son la manera preferida de pasar objetos a las funciones, a menos que el valor del objeto pueda ser **nullptr**.
+En sistemas operativos de 64 bits, un puntero tiene un tamaño de 64 bits. El tamaño del puntero de un sistema determina la cantidad de memoria direccionable que puede tener. Todas las copias de un puntero apuntan a la misma ubicación de memoria. Los punteros (junto con las referencias) se utilizan ampliamente en C++ para pasar objetos más grandes hacia y desde funciones. Esto se debe a que a menudo es más eficaz copiar la dirección de un objeto que copiar todo el objeto. Al definir una función, **const** especifique los parámetros de puntero como a menos que desee que la función modifique el objeto. En general, **const** las referencias son la forma preferida de pasar objetos a funciones a menos que el valor del objeto pueda ser **nullptr**.
 
-Los [punteros a funciones](#pointers_to_functions) permiten pasar funciones a otras funciones y se utilizan para "devoluciones de llamada" en la programación de estilo C. Moderno C++ usa [expresiones lambda](lambda-expressions-in-cpp.md) para este propósito.
+[Los punteros a funciones](#pointers_to_functions) permiten que las funciones se pasen a otras funciones y se utilizan para "callbacks" en la programación de estilo C. C++ moderno utiliza [expresiones lambda](lambda-expressions-in-cpp.md) para este propósito.
 
 ## <a name="initialization-and-member-access"></a>Inicialización y acceso a miembros
 
-En el ejemplo siguiente se muestra cómo declarar un puntero sin formato e inicializarlo con un objeto asignado en el montón y, a continuación, cómo utilizarlo. También se muestran algunos de los peligros asociados a los punteros sin formato. (Recuerde que se trata de una programación de estilo C y C++no moderna).
+En el ejemplo siguiente se muestra cómo declarar, inicializar y usar un puntero sin formato. Se inicializa utilizando **new** para apuntar un objeto asignado en el **delete** montón, que debe explícitamente . El ejemplo también muestra algunos de los peligros asociados con punteros sin procesar. (Recuerde, este ejemplo es programación de estilo C y no moderno C ++!)
 
 ```cpp
 #include <iostream>
@@ -119,13 +124,13 @@ int main()
     pmc2->print(); // "Erika, 108"
 
     // Pass the pointer to a function.
-    func_A(mc);
+    func_A(pmc);
     pmc->print(); // "Erika, 3"
     pmc2->print(); // "Erika, 3"
 
     // Dereference the pointer and pass a copy
     // of the pointed-to object to a function
-    func_B(*mc);
+    func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
     delete(pmc); // don't forget to give memory back to operating system!
@@ -133,14 +138,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Aritmética de punteros y matrices
+## <a name="pointer-arithmetic-and-arrays"></a>Aritmética de puntero y matrices
 
-Los punteros y las matrices están estrechamente relacionados. Cuando una matriz se pasa por valor a una función, se pasa como un puntero al primer elemento. En el ejemplo siguiente se muestran las siguientes propiedades importantes de los punteros y las matrices:
+Los punteros y matrices están estrechamente relacionados. Cuando se pasa una matriz por valor a una función, se pasa como un puntero al primer elemento. En el ejemplo siguiente se muestran las siguientes propiedades importantes de punteros y matrices:
 
-- el operador `sizeof` devuelve el tamaño total en bytes de una matriz.
-- para determinar el número de elementos, divida el número total de bytes por el tamaño de un elemento
-- Cuando una matriz se pasa a una función, *decaer* en un tipo de puntero
-- el operador `sizeof` cuando se aplica a un puntero devuelve el tamaño del puntero, 4 bytes en x86 u 8 bytes en x64
+- el `sizeof` operador devuelve el tamaño total en bytes de una matriz
+- para determinar el número de elementos, divida los bytes totales por el tamaño de un elemento
+- cuando una matriz se pasa a una función, *se descompone* a un tipo de puntero
+- el `sizeof` operador cuando se aplica a un puntero devuelve el tamaño del puntero, 4 bytes en x86 u 8 bytes en x64
 
 ```cpp
 #include <iostream>
@@ -166,9 +171,9 @@ int main()
 }
 ```
 
-Se pueden realizar ciertas operaciones aritméticas en punteros no const para que señalen a una nueva ubicación de memoria. Un puntero se puede incrementar y disminuir mediante los operadores **++** , **+=** , **-=** y **--** . Esta técnica se puede utilizar en matrices y es especialmente útil en búferes de datos sin tipo. Un **\*nulo** incrementa en función del tamaño de un **carácter** (1 byte). Un puntero con tipo se incrementa según el tamaño del tipo al que señala.
+Ciertas operaciones aritméticas se pueden utilizar enconst punteros que no sean para que apunten a otra ubicación de memoria. Los punteros se incrementan y **++** disminuyen **+=** **-=** mediante **--** los operadores , , y . Esta técnica se puede utilizar en matrices y es especialmente útil en búferes de datos sin tipo. A ** void ** se incrementa por el **char** tamaño de un (1 byte). Un puntero con tipo se incrementa por el tamaño del tipo al que apunta.
 
-En el ejemplo siguiente se muestra cómo se puede usar la aritmética de puntero para tener acceso a píxeles individuales en un mapa de bits de Windows. Observe el uso de **New** y **Delete**, y el operador de desreferencia.
+En el ejemplo siguiente se muestra cómo se puede utilizar la aritmética de punteros para tener acceso a píxeles individuales en un mapa de bits en Windows. Tenga en **new** cuenta **delete** el uso de y , y el operador de desreferencia.
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void * punteros
+## <a name="opno-locvoid-pointers"></a>void* punteros
 
-Un puntero a **void** simplemente apunta a una ubicación de memoria sin procesar. A veces es necesario usar punteros **void\*** , por ejemplo, al pasar entre C++ funciones de código y de C.
+Un puntero **void** a simplemente apunta a una ubicación de memoria sin procesar. A veces es ** void ** necesario utilizar punteros, por ejemplo, al pasar entre el código C+ + y las funciones C.
 
-Cuando un puntero con tipo se convierte en un puntero void, no se cambia el contenido de la ubicación de memoria, pero se pierde la información de tipo, por lo que no se pueden realizar operaciones de incremento o decremento. Una ubicación de memoria se puede convertir, por ejemplo, de MyClass * a void * y de nuevo a MyClass *. Estas operaciones son intrínsecamente propensas a errores y requieren una gran atención para evitar errores. Moderno C++ desaconseja el uso de punteros void a menos que sea absolutamente necesario.
+Cuando un puntero con tipo void se convierte en un puntero, el contenido de la ubicación de memoria no cambia. Sin embargo, la información de tipo se pierde, por lo que no se pueden realizar operaciones de incremento o disminución. Una ubicación de memoria se puede `MyClass*` `void*` convertir, por `MyClass*`ejemplo, de hacia y de nuevo a . Estas operaciones son intrínsecamente propensas a errores y requieren un gran cuidado para evitar errores. Modern C++ desalienta void el uso de punteros en casi todas las circunstancias.
 
 ```cpp
 
@@ -279,7 +284,8 @@ int main()
 
     // use operator new to allocate untyped memory block
     void* pvoid = operator new(1000);
-    for(char* c = static_cast<char*>(pvoid); pvoid < &pvoid + 1000; ++c)
+    char* pchar = static_cast<char*>(pvoid);
+    for(char* c = pchar; c < pchar + 1000; ++c)
     {
         *c = 0x00;
     }
@@ -292,7 +298,7 @@ int main()
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Punteros a funciones
 
-En la programación de estilo C, los punteros de función se utilizan principalmente para pasar funciones a otras funciones. En este escenario, el autor de la llamada puede personalizar el comportamiento de una función sin modificarla. En moderno C++, las [expresiones lambda](lambda-expressions-in-cpp.md) proporcionan la misma capacidad con mayor seguridad de tipos y otras ventajas.
+En la programación de estilo C, los punteros de función se utilizan principalmente para pasar funciones a otras funciones. Esta técnica permite al autor de la llamada personalizar el comportamiento de una función sin modificarla. En C+++ moderno, las [expresiones lambda](lambda-expressions-in-cpp.md) proporcionan la misma capacidad con mayor seguridad de tipos y otras ventajas.
 
 Una declaración de puntero de función especifica la firma que debe tener la función señalada:
 
@@ -310,7 +316,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-En el ejemplo siguiente se muestra una función `combine` que toma como parámetro cualquier función que acepte un `std::string` y devuelva un `std::string`. Dependiendo de la función que se pase a `combine`, anteponerá o anexará una cadena.
+En el ejemplo `combine` siguiente se muestra una función `std::string` que toma `std::string`como parámetro cualquier función que acepte a y devuelve un archivo . Dependiendo de la función `combine`que se pasa a , antepone o anexa una cadena.
 
 ```cpp
 #include <iostream>
@@ -342,9 +348,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Punteros inteligentes](smart-pointers-modern-cpp.md)
-[operador de direccionamiento indirecto: *](indirection-operator-star.md)<br/>
+[Operador](smart-pointers-modern-cpp.md)
+de direccionamiento indirecto de punteros[inteligentes: *](indirection-operator-star.md)<br/>
 [address-of (Operador): &](address-of-operator-amp.md)</br>
-[Bienvenido de nuevo aC++](welcome-back-to-cpp-modern-cpp.md)
+[Bienvenido de nuevo a C++](welcome-back-to-cpp-modern-cpp.md)

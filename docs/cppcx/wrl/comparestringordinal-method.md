@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-ms.openlocfilehash: a1ac0576bdd374daa5cbd445af480e7652b61e45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1291084395b02602b7a3de9013df6720d2e237fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398711"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214102"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal (Método)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,30 +26,30 @@ inline INT32 CompareStringOrdinal(
 
 ### <a name="parameters"></a>Parámetros
 
-*lhs*<br/>
-La primera HSTRING para comparar.
+*LHS*<br/>
+Primer HSTRING que se va a comparar.
 
 *rhs*<br/>
-El segundo HSTRING para comparar.
+Segundo HSTRING que se va a comparar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-|Valor|Condición|
+|Value|Condición|
 |-----------|---------------|
-|-1|*LHS* es menor que *rhs*.|
-|0|*LHS* es igual a *rhs*.|
-|1|*LHS* es mayor que *rhs*.|
+|-1|*LHS* es menor que *RHS*.|
+|0|*LHS* es igual a *RHS*.|
+|1|*LHS* es mayor que *RHS*.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Compara dos objetos HSTRING especificados y devuelve un entero que indica su posición relativa en un criterio de ordenación.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** corewrappers.h
+**Encabezado:** corewrappers. h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers::Details
+**Espacio de nombres:** Microsoft:: WRL:: wrappers::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Wrappers::Details (espacio de nombres)](microsoft-wrl-wrappers-details-namespace.md)

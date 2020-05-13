@@ -1,10 +1,11 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ceilf
 - ceil
 - ceill
+- _o_ceil
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 0be81354c19da646fa96f6eb58fbc7c76eeddb33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943188"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917348"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -74,27 +76,29 @@ Las funciones **Ceil (** devuelven un valor de punto flotante que representa el 
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|± **QNAN**, **IND**|ninguno|**_DOMAIN**|
 
 **Ceil (** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Ceil (** que toman tipos **float** o **Long** **Double** . En un programa de C, **Ceil (** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **Ceil (** que toman tipos **float** o **Long** **Double** . En un programa de C, **Ceil (** siempre toma y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**ceil**, **ceilf**, **ceill**|\<math.h>|
+|**Ceil (**, **ceilf (**, **ceill**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Consulte el ejemplo de [floor](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

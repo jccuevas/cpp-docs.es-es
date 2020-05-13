@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: 2402f3fef77b19c0420f0c4a52407a730b53b1d5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334573"
 ---
 # <a name="function-calls"></a>Llamadas de función
 
@@ -25,7 +25,7 @@ donde *expression* es un nombre de función o se evalúa como una dirección de 
 Si existe una declaración antes de la llamada a función pero no se proporciona ninguna información sobre los parámetros, los argumentos sin declarar simplemente se someten a las conversiones aritméticas habituales.
 
 > [!NOTE]
->  Las expresiones de la lista de argumentos de función se pueden evaluar en cualquier orden, por lo que los argumentos cuyos valores pueden cambiar debido a efectos secundarios de otro argumento tienen valores sin definir. El punto de secuencia definido por el operador de llamada a función solo garantiza que todos los efectos secundarios en la lista de argumentos se evalúen antes de que el control pase a la función llamada. (Observe que el orden de inserción de los argumentos en la pila es otra cuestión). Vea [Puntos de secuencia de C](../c-language/c-sequence-points.md) para obtener más información.
+> Las expresiones de la lista de argumentos de función se pueden evaluar en cualquier orden, por lo que los argumentos cuyos valores pueden cambiar debido a efectos secundarios de otro argumento tienen valores sin definir. El punto de secuencia definido por el operador de llamada a función solo garantiza que todos los efectos secundarios en la lista de argumentos se evalúen antes de que el control pase a la función llamada. (Observe que el orden de inserción de los argumentos en la pila es otra cuestión). Vea [Puntos de secuencia de C](../c-language/c-sequence-points.md) para obtener más información.
 
 El único requisito de cualquier llamada a función es que la expresión que va antes del paréntesis se debe evaluar como una dirección de función. Esto significa que una función se puede llamar a través de cualquier expresión de puntero a función.
 

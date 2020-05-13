@@ -8,11 +8,11 @@ helpviewer_keywords:
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
 ms.openlocfilehash: 23da055b56e2ae77fed796d9ba8e7f227e572a9f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232857"
 ---
 # <a name="integer-types"></a>Tipos enteros
 
@@ -36,7 +36,7 @@ A cada constante entera se le asigna un tipo basado en su valor y en la manera e
 778866LU
 ```
 
-El tipo que se asigna a una constante depende del valor que representa la constante. El valor de una constante debe estar en el intervalo de valores representables para su tipo. El tipo de una constante determina qué conversiones se realizan cuando se usa la constante en una expresión o cuando se aplica el signo menos (**-**). En esta lista se resumen las reglas de conversión para constantes de tipo entero.
+El tipo que se asigna a una constante depende del valor que representa la constante. El valor de una constante debe estar en el intervalo de valores representables para su tipo. El tipo de una constante determina qué conversiones se realizan cuando se usa la constante en una expresión o cuando se aplica el signo menos ( **-** ). En esta lista se resumen las reglas de conversión para constantes de tipo entero.
 
 - El tipo para una constante decimal sin sufijo es `int`, **long int** o **unsigned long int**. El primero de estos tres tipos en los que se puede representar el valor de la constante es el tipo asignado a la constante.
 

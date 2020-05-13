@@ -1,9 +1,10 @@
 ---
 title: _swab
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _swab
 - stdlib/_swab
+- _o__swab
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946289"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912412"
 ---
 # <a name="_swab"></a>_swab
 
@@ -67,9 +69,11 @@ La función **hisopo** no devuelve un valor. La función establece **errno** en 
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre este y otros códigos de retorno.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si *n* es par, la función **_swab** copia *n* bytes de *src*, intercambia cada par de bytes adyacentes y almacena el resultado en *dest*. Si *n* es impar, **_swab** copia e intercambia los primeros *n*-1 bytes de *src*y el byte final no se copia. La función **_swab** se usa normalmente para preparar los datos binarios para la transferencia a un equipo que usa un orden de bytes diferente.
+Si *n* es par, la función **_swab** copia *n* bytes de *src*, intercambia cada par de bytes adyacentes y almacena el resultado en *dest*. Si *n* es impar, **_swab** copia e intercambia los primeros *n*-1 bytes de *src*y el byte final no se copia. La función **_swab** se usa normalmente para preparar los datos binarios para la transferencia a un equipo que utiliza un orden de bytes diferente.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,7 +81,7 @@ Si *n* es par, la función **_swab** copia *n* bytes de *src*, intercambia cada 
 |-------------|---------------------|
 |**_swab**|C: \<stdlib.h> C++: \<cstdlib> o \<stdlib.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -106,6 +110,6 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
         ABCDEFGHIJKLMNOPQRSTUVWXYZ.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación del búfer](../../c-runtime-library/buffer-manipulation.md)<br/>

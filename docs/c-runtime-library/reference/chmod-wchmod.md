@@ -1,9 +1,11 @@
 ---
 title: _chmod, _wchmod
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chmod
 - _wchmod
+- _o__chmod
+- _o__wchmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939199"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917009"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
@@ -52,7 +55,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*<br/>
+*extensión*<br/>
 Nombre del archivo existente.
 
 *pmode*<br/>
@@ -62,21 +65,23 @@ Configuración de permisos del archivo.
 
 Estas funciones devuelven 0 si la configuración de permisos se ha modificado correctamente. Un valor devuelto de-1 indica un error. Si no se encuentra el archivo especificado, **errno** se establece en **ENOENT**; Si un parámetro no es válido, **errno** se establece en **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_chmod** cambia la configuración de permisos del archivo especificado por *filename*. La configuración de permisos controla el acceso de lectura y escritura al archivo. La expresión de entero *PMODE* contiene una o las dos constantes de manifiesto siguientes, definidas en SYS\Stat.h.
 
 | *pmode* | Significado |
 |-|-|
-| **\_S\_IREAD** | Solo se permite la lectura. |
+| **\_S\_iRead** | Solo se permite la lectura. |
 | **\_S\_IWRITE** | Escritura permitida. (De hecho, se permiten la lectura y escritura). |
-| **\_S\_IREAD** &#124; **SIWRITE\_ \_** | Lectura y escritura permitidas. |
+| **\_S\_iRead** &#124; ** \_s\_IWRITE** | Lectura y escritura permitidas. |
 
-Cuando se proporcionan ambas constantes, se unen con el operador bit a bit or ( **\|** ). Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Tenga en cuenta que todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** \| **_S_IWRITE** son equivalentes.
+Cuando se proporcionan ambas constantes, se unen con el operador bit a bit or (**\|**). Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Tenga en cuenta que todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** \| **_S_IWRITE** son equivalentes.
 
 **_wchmod** es una versión con caracteres anchos de **_chmod**; el argumento *filename* para **_wchmod** es una cadena de caracteres anchos. **_wchmod** y **_chmod** se comportan de manera idéntica.
 
 Esta función valida sus parámetros. Si *PMODE* no es una combinación de una de las constantes del manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente las omite. Si *filename* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve-1.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -91,7 +96,7 @@ Esta función valida sus parámetros. Si *PMODE* no es una combinación de una d
 |**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 |**_wchmod**|\<io.h> o \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -169,7 +174,7 @@ Access is denied.
 Mode set to read/write
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

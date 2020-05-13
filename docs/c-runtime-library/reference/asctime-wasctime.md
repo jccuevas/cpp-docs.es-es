@@ -1,9 +1,11 @@
 ---
 title: asctime, _wasctime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime
 - asctime
+- _o__wasctime
+- _o_asctime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939670"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909425"
 ---
 # <a name="asctime-_wasctime"></a>asctime, _wasctime
 
@@ -64,13 +67,13 @@ Estructura de fecha y hora.
 
 **asctime** devuelve un puntero al resultado de la cadena de caracteres; **_wasctime** devuelve un puntero al resultado de la cadena de caracteres anchos. No hay ningún error de valor devuelto.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Hay disponibles versiones más seguras de estas funciones; consulte [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
 La función **asctime** convierte una hora almacenada como una estructura en una cadena de caracteres. El valor de *timeptr* se suele obtener de una llamada a **gmtime** o **localtime**, que devuelven un puntero a una estructura de **TM** , definidos en el tiempo. C.
 
-|miembro de timeptr|Valor|
+|miembro de timeptr|Value|
 |--------------------|-----------|
 |**tm_hour**|Horas desde la medianoche (0-23)|
 |**tm_isdst**|Positivo si el horario de verano está en vigor; 0 si el horario de verano no está en vigor; negativo si se desconoce el estado del horario de verano. La biblioteca en tiempo de ejecución de C usa las reglas de Estados Unidos para implementar el cálculo del horario de verano (DST).|
@@ -89,6 +92,8 @@ El resultado de la cadena producido por **asctime** contiene exactamente 26 cara
 **_wasctime** es una versión con caracteres anchos de **asctime**. **_wasctime** y **asctime** se comportan de manera idéntica.
 
 Estas funciones validan sus parámetros. Si *timeptr* es un puntero nulo, o si contiene valores fuera del intervalo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **null** y establece **errno** en **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Asignación de rutina de texto genérico
 
@@ -135,9 +140,9 @@ int main( void )
 Current date and time: Sun Feb 03 11:38:58 2002
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

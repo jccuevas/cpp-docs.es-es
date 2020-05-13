@@ -1,9 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951792"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914098"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -78,15 +80,17 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |*dest*|*numberOfElements*|*src*|Valor devuelto|Contenido de *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|any|any|**EINVAL**|no modificado|
-|any|any|**NULL**|**EINVAL**|no modificado|
-|any|< *contabiliza*|any|**ERANGE**|no modificado|
+|**ACEPTA**|cualquiera|cualquiera|**EINVAL**|no modificado|
+|cualquiera|cualquiera|**ACEPTA**|**EINVAL**|no modificado|
+|cualquiera|< *recuento*|cualquiera|**ERANGE**|no modificado|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Copia los bytes de *número* de caracteres de *src* a *dest*. Si algunas regiones del área de origen y de destino se superponen, **memmove_s** garantiza que se copian los bytes de origen originales en la región superpuesta antes de que se sobrescriban.
 
 Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -95,7 +99,7 @@ Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado 
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -126,7 +130,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Before: 0123456789

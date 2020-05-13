@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - SetString method [C++]
 ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
-ms.openlocfilehash: 0cd300a09c29668c496d93109d1bc862947e948c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 60ad1c1bd95eb35f2a4f2800f79d0326c68a1176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187562"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745848"
 ---
 # <a name="_variant_tsetstring"></a>_variant_t::SetString
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
 Asigna una cadena a este objeto `_variant_t`.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void SetString(const char* pSrc);
 ```
 
@@ -34,8 +34,8 @@ Puntero a la cadena de caracteres.
 
 Convierte una cadena de caracteres ANSI en una cadena `BSTR` Unicode y la asigna a este objeto `_variant_t`.
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[_variant_t (Clase)](../cpp/variant-t-class.md)
+[Clase _variant_t](../cpp/variant-t-class.md)

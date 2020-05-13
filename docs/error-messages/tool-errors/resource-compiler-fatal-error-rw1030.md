@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1030
 ms.assetid: 10727997-9ded-4afc-93b3-58fb435c3da8
-ms.openlocfilehash: 44554c32ed4fca9ba95f1512db04ee704028a857
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e10e12e110ddc766e0601b83941ecfd1ce02c74d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346306"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182453"
 ---
 # <a name="resource-compiler-fatal-error-rw1030"></a>Error irrecuperable del compilador de recursos RW1030
 
 Error de salida
 
-Este error puede deberse a si el compilador de recursos no ha podido crear el archivo de destino. Asegúrese de que hay suficiente espacio en disco y que tiene permiso de escritura en el volumen.
+Este error puede deberse a que el compilador de recursos no pudo crear el archivo de destino. Asegúrese de que hay suficiente espacio en disco y de que tiene permiso de escritura en el volumen.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: fbff6123c810251109dd48d74a5bd4632793be6f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 540daa5bafa28b1d56c55daf33f0b5f5461c8ed6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320234"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,30 +19,30 @@ Define instalaciones para generar números aleatorios, lo que permite crear núm
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado**: \<random >
+**Encabezado** \<:> aleatorio
 
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La biblioteca de > de \<random usa la instrucción ' #include < initializer_list > '.
+> La \<biblioteca de> aleatoria utiliza la instrucción '#include <initializer_list>'.
 
 ## <a name="summary"></a>Resumen
 
-Un *generador de números aleatorios* es un objeto que crea una secuencia de valores seudoaleatorios. Un generador que crea valores distribuidos uniformemente en un rango especificado es un *generador de números aleatorios uniformes* (URNG). Una plantilla de clase diseñada para funcionar como URNG se conoce como *motor* si esa clase tiene ciertos rasgos comunes, que se describen más adelante en este artículo. Un URNG se puede combinar (de hecho, suele combinarse) con una *distribución* si el URNG se pasa como un argumento al `operator()` de la distribución con el fin de generar valores que se distribuyen de la manera especificada por la distribución.
+Un *generador de números aleatorios* es un objeto que crea una secuencia de valores seudoaleatorios. Un generador que crea valores distribuidos uniformemente en un rango especificado es un *generador de números aleatorios uniformes* (URNG). Una plantilla de clase diseñada para funcionar como un URNG se conoce como un *motor* si esa clase tiene ciertos rasgos comunes, que se describen más adelante en este artículo. Un URNG se puede combinar (de hecho, suele combinarse) con una *distribución* si el URNG se pasa como un argumento al `operator()` de la distribución con el fin de generar valores que se distribuyen de la manera especificada por la distribución.
 
 Estos vínculos llevan a las secciones principales de este artículo:
 
 - [Ejemplos](#code)
 
-- [Lista por categorías](#listing)
+- [Listado categorizado](#listing)
 
 - [Motores y distribuciones](#engdist)
 
-- [Comentarios](#comments)
+- [Comentarios:](#comments)
 
 ### <a name="quick-tips"></a>Sugerencias
 
-Estas son algunas sugerencias que deben tenerse en cuenta al usar \<random >:
+Estos son algunos consejos a \<tener en cuenta al usar> al azar:
 
 - En la mayoría de los casos, los URNG generan bits sin formato a los que las distribuciones deben dar forma. (Una excepción significativa a este respecto es [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), ya que usa un URNG directamente).
 
@@ -52,9 +52,9 @@ Estas son algunas sugerencias que deben tenerse en cuenta al usar \<random >:
 
 - El emparejamiento más útil en la mayoría de los casos es la del motor `mt19937` con `uniform_int_distribution`, tal y como se muestra en el [código de ejemplo](#code) que aparece más adelante en este artículo.
 
-Hay muchas opciones entre las que elegir en el encabezado \<random > y cualquiera de ellas es preferible a la función de tiempo de ejecución de C no actualizada `rand()`. Para obtener información sobre el problema con `rand()` y cómo \<random > aborda estas deficiencias, vea [este vídeo](https://go.microsoft.com/fwlink/p/?linkid=397615).
+Hay muchas opciones para elegir \<en el encabezado de> aleatorio, y cualquiera `rand()`de ellas es preferible a la función de tiempo de ejecución de C desactualizada. Para obtener información sobre `rand()` qué \<tiene que ver con el> y cómo se abordan las deficiencias aleatorias, consulte [este vídeo](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
-## <a name="code"></a> Ejemplos
+## <a name="examples"></a><a name="code"></a>Ejemplos
 
 En el ejemplo de código siguiente, se muestra cómo generar algunos números aleatorios (en este caso, cinco) con un generador creado con valores de inicialización no deterministas.
 
@@ -209,9 +209,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 En este código se muestran dos aleatorizaciones distintas (la aleatorización de un vector de enteros y la selección aleatoria de una matriz de datos indexados) con una función de plantilla de prueba. En la primera llamada a la función de prueba usa el URNG no reiterativo, no propagable, no determinista y criptográficamente seguro `random_device`. En la segunda serie de pruebas se usa `mersenne_twister_engine` como URNG con un valor de inicialización constante de 32 bits, lo que significa que los resultados son reiterativos. En la tercera serie de pruebas se propaga `mersenne_twister_engine` con un resultado no determinista de 32 bits de `random_device`. En la cuarta serie de pruebas esto se expande por medio de una [secuencia de propagación](../standard-library/seed-seq-class.md) rellena con resultados de `random_device`, con lo que se consigue eficazmente una aleatoriedad no determinista de más de 32 bits (aunque sigue sin ser criptográficamente seguro). Siga leyendo para obtener más información.
 
-## <a name="listing"></a> Lista por categorías
+## <a name="categorized-listing"></a><a name="listing"></a> Lista por categorías
 
-###  <a name="urngs"></a> Generadores de números aleatorios uniformes
+### <a name="uniform-random-number-generators"></a><a name="urngs"></a> Generadores de números aleatorios uniformes
 
 A menudo, los URNG se describen según los siguientes aspectos:
 
@@ -221,15 +221,15 @@ A menudo, los URNG se describen según los siguientes aspectos:
 
 3. **Calidad**: cercanía de la secuencia generada a los números aleatorios auténticos. Esto se suele conocer como "*aleatoriedad*".
 
-En las secciones siguientes se enumeran los generadores de números aleatorios uniformes (URNG) que se proporcionan en el encabezado de > de \<random.
+En las secciones siguientes se enumeran los generadores uniformes de números aleatorios (URNG) proporcionados en el \<encabezado de> aleatorio.
 
-####  <a name="rd"></a> Generador no determinista
+#### <a name="non-deterministic-generator"></a><a name="rd"></a> Generador no determinista
 
 |||
 |-|-|
-|[random_device (Clase)](../standard-library/random-device-class.md)|Genera una secuencia aleatoria criptográficamente segura y no determinista mediante un dispositivo externo. Se suele usar para propagar un motor. Bajo rendimiento y calidad extremadamente alta. Para obtener más información, vea [Comentarios](#comments).|
+|[Clase random_device](../standard-library/random-device-class.md)|Genera una secuencia aleatoria criptográficamente segura y no determinista mediante un dispositivo externo. Se suele usar para propagar un motor. Bajo rendimiento y calidad extremadamente alta. Para obtener más información, consulte [Comentarios](#comments).|
 
-####  <a name="typedefs"></a> Definiciones de tipo de motor con parámetros predefinidos
+#### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Definiciones de tipo de motor con parámetros predefinidos
 
 Para crear instancias de motores y adaptadores de motores. Para obtener más información, vea [Motores y distribuciones](#engdist).
 
@@ -305,7 +305,7 @@ Para crear instancias de motores y adaptadores de motores. Para obtener más inf
     typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
     ```
 
-####  <a name="eng"></a> Plantillas de motor
+#### <a name="engine-templates"></a><a name="eng"></a> Plantillas de motor
 
 Las plantillas de motor se usan como URNG independientes o como motores base que se pasan a los [adaptadores de motor](#engadapt). Por lo general, se suelen crear instancias de ellas con una [definición de tipo de motor predefinida](#typedefs) y pasarse a una [distribución](#distributions). Para obtener más información, vea la sección [Motores y distribuciones](#engdist).
 
@@ -313,30 +313,30 @@ Las plantillas de motor se usan como URNG independientes o como motores base que
 |-|-|
 |[linear_congruential_engine (Clase)](../standard-library/linear-congruential-engine-class.md)|Genera una secuencia aleatoria mediante un algoritmo congruencial lineal. Es la de mayor simpleza y calidad más baja.|
 |[mersenne_twister_engine (Clase)](../standard-library/mersenne-twister-engine-class.md)|Genera una secuencia aleatoria mediante un algoritmo Mersenne Twister. La más compleja y de mayor calidad, salvo en el caso de la clase random_device. Rendimiento muy rápido.|
-|[subtract_with_carry_engine (Clase)](../standard-library/subtract-with-carry-engine-class.md)|Genera una secuencia aleatoria mediante un algoritmo de resta llevando. Constituye una mejora con respecto a `linear_congruential_engine`, si bien la calidad y rendimiento son muy inferiores a `mersenne_twister_engine`.|
+|[Clase subtract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)|Genera una secuencia aleatoria mediante un algoritmo de resta llevando. Constituye una mejora con respecto a `linear_congruential_engine`, si bien la calidad y rendimiento son muy inferiores a `mersenne_twister_engine`.|
 
-####  <a name="engadapt"></a> Plantillas de adaptador de motor
+#### <a name="engine-adaptor-templates"></a><a name="engadapt"></a> Plantillas de adaptador de motor
 
 Los adaptadores de motor son plantillas que adaptan otros motores (base). Por lo general, se suelen crear instancias de ellas con una [definición de tipo de motor predefinida](#typedefs) y pasarse a una [distribución](#distributions). Para obtener más información, vea la sección [Motores y distribuciones](#engdist).
 
 |||
 |-|-|
-|[discard_block_engine (Clase)](../standard-library/discard-block-engine-class.md)|Genera una secuencia aleatoria descartando valores devueltos por su motor base.|
-|[independent_bits_engine (Clase)](../standard-library/independent-bits-engine-class.md)|Genera una secuencia aleatoria con un número específico de bits, para lo cual vuelve a empaquetar los bits de los valores que devuelve su motor base.|
-|[shuffle_order_engine (Clase)](../standard-library/shuffle-order-engine-class.md)|Genera una secuencia aleatoria reordenando los valores que devuelve su motor base.|
+|[Clase discard_block_engine](../standard-library/discard-block-engine-class.md)|Genera una secuencia aleatoria descartando valores devueltos por su motor base.|
+|[Clase independent_bits_engine](../standard-library/independent-bits-engine-class.md)|Genera una secuencia aleatoria con un número específico de bits, para lo cual vuelve a empaquetar los bits de los valores que devuelve su motor base.|
+|[Clase shuffle_order_engine](../standard-library/shuffle-order-engine-class.md)|Genera una secuencia aleatoria reordenando los valores que devuelve su motor base.|
 
 [[Plantillas de motor](#eng)]
 
-###  <a name="distributions"></a> Distribuciones de números aleatorios
+### <a name="random-number-distributions"></a><a name="distributions"></a> Distribuciones de números aleatorios
 
-En las secciones siguientes se enumeran las distribuciones proporcionadas en el encabezado de > de \<random. Las distribuciones son un mecanismo de procesamiento posterior que suelen usar una salida de URNG como entrada y distribuir esa salida mediante una función de densidad de probabilidad estadística definida. Para obtener más información, vea la sección [Motores y distribuciones](#engdist).
+En las secciones siguientes se \<enumeran las distribuciones proporcionadas en el encabezado de> aleatorio. Las distribuciones son un mecanismo de procesamiento posterior que suelen usar una salida de URNG como entrada y distribuir esa salida mediante una función de densidad de probabilidad estadística definida. Para obtener más información, vea la sección [Motores y distribuciones](#engdist).
 
 #### <a name="uniform-distributions"></a>Distribuciones uniformes
 
 |||
 |-|-|
-|[uniform_int_distribution (Clase)](../standard-library/uniform-int-distribution-class.md)|Genera una distribución uniforme de valores enteros por un rango en el intervalo cerrado \[a, b] (inclusivo-inclusivo).|
-|[uniform_real_distribution (Clase)](../standard-library/uniform-real-distribution-class.md)|Genera una distribución uniforme de valores reales (punto flotante) por un rango en el intervalo semiabierto [a, b) (inclusivo-exclusivo).|
+|[Clase uniform_int_distribution](../standard-library/uniform-int-distribution-class.md)|Genera una distribución uniforme de valores enteros por un rango en el intervalo cerrado \[a, b] (inclusivo-inclusivo).|
+|[Clase uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)|Genera una distribución uniforme de valores reales (punto flotante) por un rango en el intervalo semiabierto [a, b) (inclusivo-exclusivo).|
 |[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Genera una distribución uniforme de valores reales (punto flotante) de una determinada precisión a lo largo de [0, 1] (inclusivo-exclusivo).|
 
 [[Distribuciones de números aleatorios](#distributions)]
@@ -345,10 +345,10 @@ En las secciones siguientes se enumeran las distribuciones proporcionadas en el 
 
 |||
 |-|-|
-|[bernoulli_distribution (Clase)](../standard-library/bernoulli-distribution-class.md)|Genera una distribución de Bernoulli de valores **bool** .|
-|[binomial_distribution (Clase)](../standard-library/binomial-distribution-class.md)|Genera una distribución binomial de valores enteros.|
-|[geometric_distribution (Clase)](../standard-library/geometric-distribution-class.md)|Genera una distribución geométrica de valores enteros.|
-|[negative_binomial_distribution (Clase)](../standard-library/negative-binomial-distribution-class.md)|Genera una distribución binomial negativa de valores enteros.|
+|[Clase bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produce una distribución Bernoulli de los valores **bool.**|
+|[Clase binomial_distribution](../standard-library/binomial-distribution-class.md)|Genera una distribución binomial de valores enteros.|
+|[Clase geometric_distribution](../standard-library/geometric-distribution-class.md)|Genera una distribución geométrica de valores enteros.|
+|[Clase negative_binomial_distribution](../standard-library/negative-binomial-distribution-class.md)|Genera una distribución binomial negativa de valores enteros.|
 
 [[Distribuciones de números aleatorios](#distributions)]
 
@@ -358,10 +358,10 @@ En las secciones siguientes se enumeran las distribuciones proporcionadas en el 
 |-|-|
 |[cauchy_distribution (Clase)](../standard-library/cauchy-distribution-class.md)|Genera una distribución de Cauchy de valores reales (punto flotante).|
 |[chi_squared_distribution (Clase)](../standard-library/chi-squared-distribution-class.md)|Genera una distribución chi-cuadrado de valores reales (punto flotante).|
-|[fisher_f_distribution (Clase)](../standard-library/fisher-f-distribution-class.md)|Genera una distribución F (también conocida como distribución F de Snedecor o la distribución de Fisher-Snedecor) de valores reales (punto flotante).|
-|[lognormal_distribution (Clase)](../standard-library/lognormal-distribution-class.md)|Genera una distribución log-normal de valores reales (punto flotante).|
-|[normal_distribution (Clase)](../standard-library/normal-distribution-class.md)|Genera una distribución normal (Gaussiana) de valores reales (punto flotante).|
-|[student_t_distribution (Clase)](../standard-library/student-t-distribution-class.md)|Genera una distribución *t* de Student de valores reales (punto flotante).|
+|[Clase fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Produce una distribución F (también conocida como distribución F de Snedecor o la distribución Fisher-Snedecor) de valores reales (punto flotante).|
+|[Clase lognormal_distribution](../standard-library/lognormal-distribution-class.md)|Genera una distribución log-normal de valores reales (punto flotante).|
+|[Clase normal_distribution](../standard-library/normal-distribution-class.md)|Genera una distribución normal (Gaussiana) de valores reales (punto flotante).|
+|[Clase student_t_distribution](../standard-library/student-t-distribution-class.md)|Genera una distribución *t* de Student de valores reales (punto flotante).|
 
 [[Distribuciones de números aleatorios](#distributions)]
 
@@ -369,11 +369,11 @@ En las secciones siguientes se enumeran las distribuciones proporcionadas en el 
 
 |||
 |-|-|
-|[exponential_distribution (Clase)](../standard-library/exponential-distribution-class.md)|Genera una distribución de exponencial de valores reales (punto flotante).|
-|[extreme_value_distribution (Clase)](../standard-library/extreme-value-distribution-class.md)|Genera una distribución de valores extremos de valores reales (punto flotante).|
-|[gamma_distribution (Clase)](../standard-library/gamma-distribution-class.md)|Genera una distribución gamma de valores reales (punto flotante).|
-|[poisson_distribution (Clase)](../standard-library/poisson-distribution-class.md)|Genera una distribución de Poisson de valores enteros.|
-|[weibull_distribution (Clase)](../standard-library/weibull-distribution-class.md)|Genera una distribución de Weibull de valores reales (punto flotante).|
+|[Clase exponential_distribution](../standard-library/exponential-distribution-class.md)|Genera una distribución de exponencial de valores reales (punto flotante).|
+|[Clase extreme_value_distribution](../standard-library/extreme-value-distribution-class.md)|Genera una distribución de valores extremos de valores reales (punto flotante).|
+|[Clase gamma_distribution](../standard-library/gamma-distribution-class.md)|Genera una distribución gamma de valores reales (punto flotante).|
+|[Clase poisson_distribution](../standard-library/poisson-distribution-class.md)|Genera una distribución de Poisson de valores enteros.|
+|[Clase weibull_distribution](../standard-library/weibull-distribution-class.md)|Genera una distribución de Weibull de valores reales (punto flotante).|
 
 [[Distribuciones de números aleatorios](#distributions)]
 
@@ -381,15 +381,15 @@ En las secciones siguientes se enumeran las distribuciones proporcionadas en el 
 
 |||
 |-|-|
-|[discrete_distribution (Clase)](../standard-library/discrete-distribution-class.md)|Genera una distribución discreta de enteros.|
-|[piecewise_constant_distribution (Clase)](../standard-library/piecewise-constant-distribution-class.md)|Genera una distribución constante a trozos de valores reales (punto flotante).|
-|[piecewise_linear_distribution (Clase)](../standard-library/piecewise-linear-distribution-class.md)|Genera una distribución lineal a trozos de valores reales (punto flotante).|
+|[Clase discrete_distribution](../standard-library/discrete-distribution-class.md)|Genera una distribución discreta de enteros.|
+|[Clase piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md)|Genera una distribución constante a trozos de valores reales (punto flotante).|
+|[Clase piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)|Genera una distribución lineal a trozos de valores reales (punto flotante).|
 
 [[Distribuciones de números aleatorios](#distributions)]
 
-### <a name="utility-functions"></a>Funciones de utilidad
+### <a name="utility-functions"></a>Funciones de la utilidad
 
-En esta sección se enumeran las funciones de utilidad generales que se proporcionan en el encabezado \<random >.
+En esta sección se enumeran \<las funciones de utilidad generales proporcionadas en el encabezado de> aleatorio.
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ En esta sección se enumeran las funciones de utilidad generales que se proporci
 
 ### <a name="operators"></a>Operadores
 
-En esta sección se enumeran los operadores que se proporcionan en el encabezado \<random >.
+En esta sección se \<enumeran los operadores proporcionados en el encabezado de> aleatorio.
 
 |||
 |-|-|
@@ -406,25 +406,25 @@ En esta sección se enumeran los operadores que se proporcionan en el encabezado
 |`operator<<`|Escribe información de estado en un flujo.|
 |`operator>>`|Extrae información de estado de un flujo.|
 
-## <a name="engdist"></a> Motores y distribuciones
+## <a name="engines-and-distributions"></a><a name="engdist"></a>Motores y distribuciones
 
-Consulte las secciones siguientes para obtener información sobre cada una de estas categorías de plantillas de clase definidas en \<random >. Ambas categorías de plantillas de clase toman un tipo como argumento y usan nombres de parámetro de plantilla compartidos para describir las propiedades del tipo que se permiten como un tipo de argumento real, como se indica a continuación:
+Consulte las secciones siguientes para obtener información sobre \<cada una de estas categorías de plantilla de clase definidas en> aleatorio. Ambas categorías de plantilla de clase toman un tipo como argumento y usan nombres de parámetros de plantilla compartida para describir las propiedades del tipo que se permiten como un tipo de argumento real, como se indica a continuación:
 
-- `IntType` indica **Short**, **int**, **Long**, Long **Long**, **unsigned short**, **unsigned int**, **unsigned Long**o **unsigned Long Long**.
+- `IntType`indica un **short**, **int**, **long**, **long long**, **unsigned short**, **unsigned int**, **unsigned long,** o **unsigned long long**.
 
-- `UIntType` indica **unsigned short**, **unsigned int**, **unsigned Long**o **unsigned Long Long**.
+- `UIntType`indica **unsigned short**, **unsigned int**, **unsigned long**, o **unsigned long long long**.
 
-- `RealType` indica un valor de tipo **float**, **Double**o **Long Double**.
+- `RealType`indica un **float**, **double,** o **long double**.
 
 ### <a name="engines"></a>Motores
 
 Las [Plantillas de motor](#eng) y las [Plantillas de adaptador de motor](#engadapt) son plantillas cuyos parámetros personalizan el generador que se ha creado.
 
-Un *motor* es una clase o plantilla de clase cuyas instancias (generadores) actúan como origen de números aleatorios distribuidos uniformemente entre un valor mínimo y un valor máximo. Un *adaptador de motor* proporciona una secuencia de valores con distintas propiedades de aleatoriedad, para lo cual toma los valores generados por cualquier otro motor de números aleatorios y aplica a algunos de ellos un algoritmo de un tipo determinado.
+Un *motor* es una clase o plantilla de clase cuyas instancias (generadores) actúan como una fuente de números aleatorios distribuidos uniformemente entre un valor mínimo y máximo. Un *adaptador de motor* proporciona una secuencia de valores con distintas propiedades de aleatoriedad, para lo cual toma los valores generados por cualquier otro motor de números aleatorios y aplica a algunos de ellos un algoritmo de un tipo determinado.
 
 Todos los motores y adaptadores de motor tienen los siguientes miembros:
 
-- `typedef` `numeric-type` `result_type` es el tipo que el `operator()` del generador devuelve. El `numeric-type` se pasa como un parámetro de plantilla al crear las instancias.
+- `typedef`es el tipo que devuelve el generador `operator()` `numeric-type` `result_type` El `numeric-type` se pasa como un parámetro de plantilla al crear las instancias.
 
 - `result_type operator()` devuelve valores que se distribuyen de manera uniforme entre `min()` y `max()`.
 
@@ -434,13 +434,13 @@ Todos los motores y adaptadores de motor tienen los siguientes miembros:
 
 - `void seed(result_type s)` propaga el generador con el valor de inicialización `s`. En los motores, la signatura es `void seed(result_type s = default_seed)` para la compatibilidad de parámetros predeterminada (los adaptadores de motor definen otro `void seed()`, consulte la siguiente subsección).
 
-- `template <class Seq> void seed(Seq& q)` propaga el generador mediante [seed_seq](../standard-library/seed-seq-class.md)`Seq`.
+- `template <class Seq> void seed(Seq& q)`semillas del generador mediante el uso de un [seed_seq](../standard-library/seed-seq-class.md)`Seq`.
 
 - Un constructor explícito con el argumento `result_type x` que crea un generador propagado como si se llamara a `seed(x)`.
 
 - Un constructor explícito con el argumento `seed_seq& seq` que crea un generador propagado como si se llamara a `seed(seq)`.
 
-- `void discard(unsigned long long count)` llama eficazmente a `operator()``count` veces y descarta cada valor.
+- `void discard(unsigned long long count)`efectivamente `operator()` `count` llama a los tiempos y descarta cada valor.
 
 Los **adaptadores de motor** admiten también estos miembros (`Engine` es el primer parámetro de plantilla de un adaptador de motor y designa el tipo del motor base):
 
@@ -458,15 +458,15 @@ Cada motor mantiene un *estado* que indica la secuencia de valores que se va a g
 
 ### <a name="distributions"></a>Distribuciones
 
-Las [distribuciones de números aleatorios](#distributions) son una clase o una plantilla de clase cuyas instancias transforman un flujo de números aleatorios distribuidos uniformemente obtenidos de un motor en un flujo de números aleatorios que tienen una distribución determinada. Todas las distribuciones tienen los siguientes miembros:
+Distribuciones de [números aleatorios](#distributions) es una clase o plantilla de clase cuyas instancias transforman una secuencia de números aleatorios distribuidos uniformemente obtenidos de un motor en una secuencia de números aleatorios que tienen una distribución determinada. Todas las distribuciones tienen los siguientes miembros:
 
-- `typedef` `numeric-type` `result_type` es el tipo que el `operator()` de la distribución devuelve. El `numeric-type` se pasa como un parámetro de plantilla al crear las instancias.
+- `typedef`es el tipo devuelto por la distribución `operator()` `numeric-type` `result_type` El `numeric-type` se pasa como un parámetro de plantilla al crear las instancias.
 
 - `template <class URNG> result_type operator()(URNG& gen)` devuelve valores que se distribuyen según la definición de la distribución, para lo cual se usa `gen` como origen de los valores aleatorios distribuidos uniformemente y los *parámetros de la distribución* almacenados.
 
 - `template <class URNG> result_type operator()(URNG& gen, param_type p)` devuelve valores que se distribuyen según la definición de la distribución, para lo cual se usa `gen` como origen de los valores aleatorios distribuidos uniformemente y la estructura de parámetros `p`.
 
-- `typedef` `unspecified-type` `param_type` es el paquete de parámetros que se pasa opcionalmente a `operator()` y que se usa en lugar de los parámetros almacenados para generar su valor de retorno.
+- `typedef`es el paquete de parámetros que se pasa opcionalmente y `operator()` se utiliza en lugar de los parámetros almacenados para generar su valor devuelto. `unspecified-type` `param_type`
 
 - Un constructor `const param&` inicializa los parámetros almacenados desde su argumento.
 
@@ -480,9 +480,9 @@ Las [distribuciones de números aleatorios](#distributions) son una clase o una 
 
 - `void reset()` descarta cualquier valor almacenado en caché, de modo que la siguiente llamada a `operator()` no depende de ningún valor obtenido del motor antes de la llamada.
 
-Una estructura de parámetros es un objeto donde se almacenan todos los parámetros necesarios para una distribución. Contiene lo siguiente:
+Una estructura de parámetros es un objeto donde se almacenan todos los parámetros necesarios para una distribución. Contiene:
 
-- `typedef` `distribution-type` `distribution_type`, que es el tipo de su distribución.
+- `typedef``distribution-type` , que es el tipo de su distribución. `distribution_type`
 
 - Uno o más constructores que toman las mismas listas de parámetros que los constructores de la distribución.
 
@@ -492,7 +492,7 @@ Una estructura de parámetros es un objeto donde se almacenan todos los parámet
 
 Para más información, vea los subtemas de referencia cuyos vínculos aparecen recogidos anteriormente en este artículo.
 
-## <a name="comments"></a> Comentarios
+## <a name="remarks"></a>Comentarios para <a name="comments"></a>
 
 Visual Studio dispone de dos URNG de extrema utilidad: `mt19937` y `random_device`, comparados en la siguiente tabla:
 
@@ -503,10 +503,10 @@ Visual Studio dispone de dos URNG de extrema utilidad: `mt19937` y `random_devi
 
 <sup>* Cuando se proporciona con un valor de inicialización conocido.</sup>
 
-En Visual Studio, `random_device` se implementa de forma que es seguro criptográficamente, aunque la norma ISO C++ no lo requiera. (El término “seguro criptográficamente” no implica ninguna garantía, sino que hace referencia al nivel mínimo de entropía —y, por lo tanto, el grado de posibilidad de predicción— que proporciona un algoritmo de aleatorización. Para obtener más información, vea el artículo de Wikipedia sobre el [generador de números pseudoaleatorios seguros de forma criptográfica](https://go.microsoft.com/fwlink/p/?linkid=398017)). Dado que el C++ estándar ISO no lo requiere, otras plataformas pueden implementar `random_device` como un generador de números pseudoaleatorios simple (no seguro criptográficamente) y solo puede ser adecuado como origen de inicialización para otro generador. Consulte la documentación de esas plataformas cuando use `random_device` en código con varias plataformas.
+En Visual Studio, `random_device` se implementa de forma que es seguro criptográficamente, aunque la norma ISO C++ no lo requiera. (El término “seguro criptográficamente” no implica ninguna garantía, sino que hace referencia al nivel mínimo de entropía —y, por lo tanto, el grado de posibilidad de predicción— que proporciona un algoritmo de aleatorización. Para obtener más información, consulte el artículo de Wikipedia Generador de [números pseudoaleatorios criptográficamente seguro](https://go.microsoft.com/fwlink/p/?linkid=398017).) Debido a que el estándar ISO C++ `random_device` no requiere esto, otras plataformas pueden implementarse como un simple generador de números pseudoaleatorios (no criptográficamente seguro) y solo puede ser adecuado como fuente de semillas para otro generador. Consulte la documentación de esas plataformas cuando use `random_device` en código con varias plataformas.
 
 Por definición, los resultados de `random_device` no son reproducibles. Un efecto secundario de esto es que puede que se ejecute de forma significativamente más lenta que otros URNG. La mayoría de las aplicaciones que no tienen que ser seguras criptográficamente usan `mt19937` o un motor similar, aunque probablemente quiera propagarlo con una llamada a `random_device`, como se muestra en el [código de ejemplo](#code).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

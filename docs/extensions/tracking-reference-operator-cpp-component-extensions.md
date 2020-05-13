@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516020"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368236"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Operador de referencia de seguimiento (C++/CLI y C++/CX)
 
-Una *referencia de seguimiento* (`%`) se comporta como una referencia de C++ normal (`&`) excepto en que, cuando se asigna un objeto a una referencia de seguimiento, se incrementa el recuento de referencias del objeto.
+Una *referencia* `%`de seguimiento ( ) se comporta`&`como una referencia C++ normal ( ) excepto que cuando se asigna un objeto a una referencia de seguimiento, se incrementa el recuento de referencias del objeto.
 
 ## <a name="all-platforms"></a>Todas las plataformas
 
 Una referencia de seguimiento tiene las siguientes características.
 
-- La asignación de un objeto a una referencia de seguimiento hace que el recuento de referencias del objeto se incremente.
+- La asignación de un objeto a una referencia de seguimiento hace que se incremente el recuento de referencias del objeto.
 
 - Una referencia nativa (`&`) es el resultado de deshacer una referencia de `*`. Una referencia de seguimiento (`%`) es el resultado de deshacer una referencia de `^`. Siempre que tenga `%` para un objeto, el objeto permanecerá activo en memoria.
 

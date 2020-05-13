@@ -1,9 +1,11 @@
 ---
 title: asctime_s, _wasctime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime_s
 - asctime_s
+- _o__wasctime_s
+- _o_asctime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624788"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909412"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -71,7 +74,7 @@ errno_t _wasctime_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*buffer*<br/>
+*búfer*<br/>
 Un puntero a un búfer para almacenar el resultado de la cadena de caracteres. Esta función presupone un puntero a una ubicación de memoria válida con un tamaño especificado por *numberOfElements*.
 
 *numberOfElements*<br/>
@@ -82,26 +85,26 @@ Estructura de fecha y hora. Esta función presupone un puntero a un objeto **str
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcta. Si hay un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, el valor devuelto es un código de error. Los códigos de error se definen en ERRNO.H. Para obtener más información, consulte [errno (Constantes)](../../c-runtime-library/errno-constants.md). Los códigos de error reales devueltos para cada condición de error se muestran en la tabla siguiente.
+Cero si es correcto. Si hay un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, el valor devuelto es un código de error. Los códigos de error se definen en ERRNO.H. Para obtener más información, consulte [errno (Constantes)](../../c-runtime-library/errno-constants.md). Los códigos de error reales devueltos para cada condición de error se muestran en la tabla siguiente.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*numberOfElements*|*tmSource*|Volver|Valor en *búfer*|
+|*búfer*|*numberOfElements*|*tmSource*|Valor devuelto|Valor en *búfer*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Cualquiera|Cualquiera|**EINVAL**|No modificado|
-|Not **null** (apunta a la memoria válida)|0|Cualquiera|**EINVAL**|No modificado|
-|No **null**|0< tamaño < 26|Cualquiera|**EINVAL**|Cadena vacía|
-|No **null**|>= 26|**NULL**|**EINVAL**|Cadena vacía|
-|No **null**|>= 26|Estructura de hora no válida o valores fuera del intervalo para los componentes del tiempo|**EINVAL**|Cadena vacía|
+|**ACEPTA**|Any|Any|**EINVAL**|No modificado|
+|Not **null** (apunta a la memoria válida)|0|Any|**EINVAL**|No modificado|
+|No **null**|0< tamaño < 26|Any|**EINVAL**|cadena vacía.|
+|No **null**|>= 26|**ACEPTA**|**EINVAL**|cadena vacía.|
+|No **null**|>= 26|Estructura de hora no válida o valores fuera del intervalo para los componentes del tiempo|**EINVAL**|cadena vacía.|
 
 > [!NOTE]
-> Las condiciones de error para **wasctime_s** son similares a **asctime_s** , con la excepción de que el límite de tamaño se mide en palabras.
+> Las condiciones de error para **wasctime_s** son similares a **asctime_s** con la excepción de que el límite de tamaño se mide en palabras.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **asctime** convierte una hora almacenada como una estructura en una cadena de caracteres. El valor *tmSource* se suele obtener de una llamada a **gmtime** o **localtime**. Ambas funciones se pueden usar para rellenar una estructura de **TM** , tal y como se define en el tiempo. C.
 
-|miembro de timeptr|Valor|
+|miembro de timeptr|Value|
 |--------------------|-----------|
 |**tm_hour**|Horas desde la medianoche (0-23)|
 |**tm_isdst**|Positivo si el horario de verano está en vigor; 0 si el horario de verano no está en vigor; negativo si se desconoce el estado del horario de verano. La biblioteca en tiempo de ejecución de C usa las reglas de Estados Unidos para implementar el cálculo del horario de verano (DST).|
@@ -115,11 +118,13 @@ La función **asctime** convierte una hora almacenada como una estructura en una
 
 La cadena de caracteres convertidos también se ajusta en función de la configuración de zona horaria local. Vea las funciones [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) y [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) para obtener información sobre cómo configurar la hora local y la función [_tzset](tzset.md) para obtener información sobre cómo definir el entorno de zona horaria y variables globales.
 
-El resultado de la cadena producido por **asctime_s** contiene exactamente 26 caracteres y tiene el formato `Wed Jan 02 02:03:55 1980\n\0`. Se usa un reloj de 24 horas. Todos los campos tienen un ancho constante. El carácter de nueva línea y el carácter nulo ocupan las dos últimas posiciones de la cadena. El valor que se pase como segundo parámetro debe ser al menos igual de grande. Si es menor, se devolverá un código de error, **EINVAL**.
+El resultado de la cadena producido por **asctime_s** contiene exactamente 26 caracteres y tiene `Wed Jan 02 02:03:55 1980\n\0`el formato. Se usa un reloj de 24 horas. Todos los campos tienen un ancho constante. El carácter de nueva línea y el carácter nulo ocupan las dos últimas posiciones de la cadena. El valor que se pase como segundo parámetro debe ser al menos igual de grande. Si es menor, se devolverá un código de error, **EINVAL**.
 
 **_wasctime_s** es una versión con caracteres anchos de **asctime_s**. **_wasctime_s** y **asctime_s** se comportan de manera idéntica.
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Asignación de rutina de texto genérico
 
@@ -178,9 +183,9 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>

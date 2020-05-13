@@ -1,8 +1,9 @@
 ---
-title: free
-ms.date: 11/04/2016
+title: libre
+ms.date: 4/2/2020
 api_name:
 - free
+- _o_free
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e0a53dd9d24634442c8dd456e4f9d38f742e292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956730"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920420"
 ---
-# <a name="free"></a>free
+# <a name="free"></a>libre
 
 Desasigna o libera un bloque de memoria.
 
@@ -49,7 +51,7 @@ void free(
 *memblock*<br/>
 Bloque de memoria anteriormente asignada que se va a liberar.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **Free** desasigna un bloque de memoria (*memblock*) que se asignó previamente mediante una llamada a **calloc**, **malloc**o **realloc**. El número de bytes liberados es equivalente al número de bytes solicitado al asignar (o reasignar) el bloque, en el caso de **realloc**. Si *memblock* es **null**, el puntero se omite y se **libera** inmediatamente. Intentar liberar un puntero no válido (un puntero a un bloque de memoria que no fue asignado por **calloc**, **malloc**o **realloc**) puede afectar a las solicitudes de asignación posteriores y producir errores.
 
@@ -63,19 +65,21 @@ Cuando la aplicación se vincula con una versión de depuración de las bibliote
 
 Para liberar la memoria asignada con [_malloca](malloca.md), use [_freea](freea.md).
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado necesario|
 |--------------|---------------------|
-|**free**|\<stdlib.h> y \<malloc.h>|
+|**ningún**|\<stdlib.h> y \<malloc.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Consulte el ejemplo de [malloc](malloc.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Asignación de memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [_alloca](alloca.md)<br/>

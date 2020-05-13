@@ -1,5 +1,5 @@
 ---
-title: Make (Función)
+title: Make (función)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398202"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213816"
 ---
-# <a name="make-function"></a>Make (Función)
+# <a name="make-function"></a>Make (función)
 
-Inicializa la clase en tiempo de ejecución de Windows especificada. Utilice esta función para crear una instancia de un componente que se define en el mismo módulo.
+Inicializa la clase de Windows Runtime especificada. Utilice esta función para crear una instancia de un componente que se define en el mismo módulo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -168,73 +168,73 @@ ComPtr<T> Make();
 Una clase especificada por el usuario que hereda de `WRL::RuntimeClass`.
 
 *TArg1*<br/>
-Tipo de argumento 1 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 1 que se pasa a la clase en tiempo de ejecución especificada.
 
 *TArg2*<br/>
-Tipo de argumento 2 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 2 que se pasa a la clase en tiempo de ejecución especificada.
 
 *TArg3*<br/>
-Tipo de argumento 3 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 3 que se pasa a la clase en tiempo de ejecución especificada.
 
 *TArg4*<br/>
-Tipo de argumento 4 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 4 que se pasa a la clase en tiempo de ejecución especificada.
 
 *TArg5*<br/>
-Tipo de argumento 5 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 5 que se pasa a la clase en tiempo de ejecución especificada.
 
 *TArg6*<br/>
-Tipo de argumento 6 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 6 que se pasa a la clase en tiempo de ejecución especificada.
 
 *TArg7*<br/>
-Tipo de argumento 7 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 7 que se pasa a la clase en tiempo de ejecución especificada.
 
 *TArg8*<br/>
-Tipo de argumento 8 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 8 que se pasa a la clase en tiempo de ejecución especificada.
 
 *TArg9*<br/>
-Tipo de argumento 9 que se pasa a la clase en tiempo de ejecución especificado.
+Tipo de argumento 9 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg1*<br/>
-Argumento 1 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 1 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg2*<br/>
-Argumento 2 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 2 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg3*<br/>
-Argumento 3 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 3 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg4*<br/>
-Argumento 4 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 4 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg5*<br/>
-Argumento 5 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 5 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg6*<br/>
-Argumento 6 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 6 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg7*<br/>
-Argumento 7 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 7 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg8*<br/>
-Argumento 8 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 8 que se pasa a la clase en tiempo de ejecución especificada.
 
 *arg9*<br/>
-Argumento 9 que se pasa a la clase en tiempo de ejecución especificado.
+Argumento 9 que se pasa a la clase en tiempo de ejecución especificada.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un `ComPtr<T>` objeto si es correcto; en caso contrario, `nullptr`.
+Objeto `ComPtr<T>` si es correcto; de lo contrario, `nullptr`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Vea [Cómo: Crear instancias directamente de los componentes de WRL](how-to-instantiate-wrl-components-directly.md) para obtener información sobre las diferencias entre esta función y [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)y para obtener un ejemplo.
+Consulte [Cómo: crear instancias de componentes WRL directamente](how-to-instantiate-wrl-components-directly.md) para obtener información sobre las diferencias entre esta función y [Microsoft:: WRL::D etalles:: MakeAndInitialize](makeandinitialize-function.md), y para obtener un ejemplo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** implements.h
+**Encabezado:** implementa. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)

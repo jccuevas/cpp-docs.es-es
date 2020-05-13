@@ -1,22 +1,22 @@
 ---
-title: Compilador advertencia (nivel 3) C4192
+title: ADVERTENCIA del compilador (nivel 3) C4192
 ms.date: 11/04/2016
 f1_keywords:
 - C4192
 helpviewer_keywords:
 - C4192
 ms.assetid: ea5f91fa-8c96-4f3f-ac42-0c8a86d4e5df
-ms.openlocfilehash: 56b27596296b87edcc6de406e7b6621d5723815d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38b346e0a90729bda431b9cb578a03806be1ea4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402234"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198983"
 ---
-# <a name="compiler-warning-level-3-c4192"></a>Compilador advertencia (nivel 3) C4192
+# <a name="compiler-warning-level-3-c4192"></a>ADVERTENCIA del compilador (nivel 3) C4192
 
-exclusión automática durante la importación de biblioteca de tipos 'library' de 'name'
+se excluye ' name ' automáticamente al importar la biblioteca de tipos ' Library '
 
-Un `#import` biblioteca contiene un elemento, *nombre*, que se define también en los encabezados de sistema de Win32. Debido a limitaciones de las bibliotecas de tipos, nombres como **IUnknown** o GUID a menudo se definen en una biblioteca de tipos, duplicando la definición de los encabezados de sistema. `#import` detectará estos elementos e incorporarlos en los archivos de encabezado .tlh y. TLI.
+Una biblioteca `#import` contiene un elemento, *nombre*, que también se define en los encabezados del sistema Win32. Debido a las limitaciones de las bibliotecas de tipos, los nombres como **IUnknown** o GUID se definen a menudo en una biblioteca de tipos, duplicando la definición de los encabezados del sistema. `#import` detectará estos elementos y rechazará su incorporación en los archivos de encabezado. TLH y. TLI.
 
-Para invalidar este comportamiento, use `#import` atributos [no_auto_exclude](../../preprocessor/no-auto-exclude.md) y [include()](../../preprocessor/include-parens.md).
+Para invalidar este comportamiento, use `#import` atributos [no_auto_exclude](../../preprocessor/no-auto-exclude.md) e [incluya ()](../../preprocessor/include-parens.md).

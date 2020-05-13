@@ -1,8 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch_s
+- _o_bsearch_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811145"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913388"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -52,41 +54,41 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *clave*
+*clave*\
 Puntero a la clave que se va a buscar.
 
-*base*\
+*básica*\
 Puntero a la base de los datos de búsqueda.
 
-*número*\
+*number*\
 Número de elementos.
 
-*ancho*\
+*Ancho*\
 Ancho de los elementos.
 
-*comparar*\
+*Compare*\
 Función de devolución de llamada que compara dos elementos. El primer argumento es el puntero de *contexto* . El segundo argumento es un puntero a la *clave* de la búsqueda. El tercer argumento es un puntero al elemento de la matriz que se va a comparar con la *clave*.
 
-\ de *contexto*
+*contexto*\
 Un puntero a un objeto al que se puede acceder en la función de comparación.
 
 ## <a name="return-value"></a>Valor devuelto
 
 **bsearch_s** devuelve un puntero a una aparición de *clave* en la matriz a la que apunta la *base*. Si no se encuentra la *clave* , la función devuelve **null**. Si la matriz no está en orden ascendente o contiene registros duplicados con claves idénticas, el resultado es impredecible.
 
-Si se pasan parámetros no válidos a la función, invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**. Para obtener más información, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si se pasan parámetros no válidos a la función, invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="error-conditions"></a>Condiciones de error
+### <a name="error-conditions"></a>Condiciones del error
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*números*|*width*|**errno**|
-|**NULL**|any|any|any|any|**EINVAL**|
-|any|**NULL**|any|!= 0|any|**EINVAL**|
-|any|any|any|any|= 0|**EINVAL**|
-|any|any|**NULL**|an|any|**EINVAL**|
+|*key*|*base*|*Compare*|*número*|*width*|**errno**|
+|**ACEPTA**|cualquiera|cualquiera|cualquiera|cualquiera|**EINVAL**|
+|cualquiera|**ACEPTA**|cualquiera|!= 0|cualquiera|**EINVAL**|
+|cualquiera|cualquiera|cualquiera|cualquiera|= 0|**EINVAL**|
+|cualquiera|cualquiera|**ACEPTA**|an|cualquiera|**EINVAL**|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **bsearch_s** realiza una búsqueda binaria de una matriz ordenada de elementos *numéricos* , cada uno de los cuales tiene un tamaño de bytes de *ancho* . El valor *base* es un puntero a la base de la matriz que se va a buscar y *key* es el valor que se busca. El parámetro *Compare* es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada con un elemento de matriz y devuelve uno de los siguientes valores que especifican su relación:
 
@@ -94,9 +96,11 @@ La función **bsearch_s** realiza una búsqueda binaria de una matriz ordenada d
 |-----------------------------------------|-----------------|
 |\< 0|El valor de clave es menor que el elemento de matriz.|
 |0|El valor de clave es igual al elemento de matriz.|
-|> 0|La clave es mayor que el elemento de matriz.|
+|> 0|El valor de clave es mayor que el elemento de matriz.|
 
-El puntero de *contexto* puede ser útil si la estructura de datos de búsqueda forma parte de un objeto y la función de comparación necesita acceder a los miembros del objeto. La función de *comparación* puede convertir el puntero void en el tipo de objeto adecuado y acceder a los miembros de ese objeto. La adición del parámetro de *contexto* hace que **bsearch_s** sea más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos estén disponibles para la función de *comparación* .
+El puntero de *contexto* puede ser útil si la estructura de datos de búsqueda forma parte de un objeto y la función de comparación necesita acceder a los miembros del objeto. La función de *comparación* puede convertir el puntero void en el tipo de objeto adecuado y acceder a los miembros de ese objeto. La adición del parámetro de *contexto* hace que **bsearch_s** más seguro, ya que se puede utilizar contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos estén disponibles para la función de *comparación* .
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -108,7 +112,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 ## <a name="example"></a>Ejemplo
 
-Este programa ordena una matriz de cadenas con [qsort_s](qsort-s.md)y, luego, usa bsearch_s para buscar la palabra "cat".
+Este programa ordena una matriz de cadenas con [qsort_s](qsort-s.md) y luego usa bsearch_s para buscar la palabra "cat".
 
 ```cpp
 // crt_bsearch_s.cpp
@@ -192,7 +196,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

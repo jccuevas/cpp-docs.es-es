@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: 03bfed00147daef22fe91e6f061ea6720834090f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a7b4c19bbcdd4161e9078274f18f96a48f9e7d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213855"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,49 +41,49 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="parameters"></a>Parámetros
 
-*T0*<br/>
-Parámetro de plantilla 0, que es necesario.
+*To*<br/>
+Parámetro de plantilla 0, que es obligatorio.
 
 *T1*<br/>
-Parámetro de plantilla 1, que no se especifica de forma predeterminada.
+Parámetro de plantilla 1, que, de forma predeterminada, no se especifica.
 
 *T2*<br/>
-Parámetro de plantilla 2, que no se especifica de forma predeterminada. El tercer parámetro de plantilla.
+Parámetro de plantilla 2, que, de forma predeterminada, no se especifica. El tercer parámetro de plantilla.
 
 *T3*<br/>
-Parámetro de plantilla 3, que no se especifica de forma predeterminada.
+Parámetro de plantilla 3, que, de forma predeterminada, no se especifica.
 
 *T4*<br/>
-Parámetro de plantilla 4, que no se especifica de forma predeterminada.
+Parámetro de plantilla 4, que, de forma predeterminada, no se especifica.
 
 *T5*<br/>
-Parámetro de plantilla 5, que no se especifica de forma predeterminada.
+Parámetro de plantilla 5, que, de forma predeterminada, no se especifica.
 
 *T6*<br/>
-Parámetro de plantilla 6, que no se especifica de forma predeterminada.
+Parámetro de plantilla 6, que, de forma predeterminada, no se especifica.
 
 *T7*<br/>
-Parámetro de plantilla 7, que no se especifica de forma predeterminada.
+Parámetro de plantilla 7, que, de forma predeterminada, no se especifica.
 
 *T8*<br/>
-Parámetro de plantilla 8, que no se especifica de forma predeterminada.
+Parámetro de plantilla 8, que, de forma predeterminada, no se especifica.
 
 *T9*<br/>
-Parámetro de plantilla 9, que no se especifica de forma predeterminada.
+Parámetro de plantilla 9, que, de forma predeterminada, no se especifica.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Compila una `InterfaceList` tipo mediante la aplicación de los argumentos de parámetro de plantilla especificado recursiva.
+Compila un tipo de `InterfaceList` mediante la aplicación de los argumentos de parámetro de plantilla especificados de forma recursiva.
 
-El **InterfaceListHelper** plantilla usa el parámetro de plantilla *T0* para definir el primer miembro de datos en un `InterfaceList` estructura y, a continuación, de forma recursiva se aplica el  **InterfaceListHelper** plantilla los parámetros de plantilla restantes. **InterfaceListHelper** se detiene cuando no hay ningún parámetro de plantilla restantes.
+La plantilla **interfacelisthelper (** usa el parámetro de plantilla *T0* para definir el primer miembro de datos en una estructura de `InterfaceList` y, a continuación, aplica de forma recursiva la plantilla **interfacelisthelper (** a cualquier parámetro de plantilla restante. **Interfacelisthelper (** se detiene cuando no hay ningún parámetro de plantilla restante.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|`TypeT`|Un sinónimo del tipo InterfaceList.|
+|`TypeT`|Sinónimo del tipo Interfacelist (.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -91,10 +91,10 @@ El **InterfaceListHelper** plantilla usa el parámetro de plantilla *T0* para de
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** implements.h
+**Encabezado:** implementa. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

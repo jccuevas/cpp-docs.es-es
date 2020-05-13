@@ -1,10 +1,13 @@
 ---
 title: fma, fmaf, fmal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fma
 - fmaf
 - fmal
+- _o_fma
+- _o_fmaf
+- _o_fmal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957108"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914948"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -83,7 +87,7 @@ long double fmal(
 *x*<br/>
 Primer valor que se va a multiplicar.
 
-*y*<br/>
+*sí*<br/>
 Segundo valor que se va a multiplicar.
 
 *z*<br/>
@@ -95,7 +99,7 @@ Devuelve `(x * y) + z`. El valor devuelto se redondea después con el formato de
 
 De lo contrario, es posible que devuelva uno de los siguientes valores:
 
-|Problema|Volver|
+|Problema|Valor devuelto|
 |-----------|------------|
 |*x* = Infinity, *y* = 0 o<br /><br /> *x* = 0, *y* = infinito|NaN|
 |*x* o *y* = Exact ± Infinity, *z* = Infinity con el signo opuesto|NaN|
@@ -106,21 +110,23 @@ De lo contrario, es posible que devuelva uno de los siguientes valores:
 
 Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **FMA** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **FMA** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **FMA** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **FMA** siempre toma y devuelve un **valor Double**.
 
 Esta función calcula el valor como si fuera de precisión infinita y luego redondea el resultado final.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**FMA**, **fmaf (**, **fmal**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>

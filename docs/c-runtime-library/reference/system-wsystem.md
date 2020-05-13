@@ -1,9 +1,11 @@
 ---
 title: system, _wsystem
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - system
 - _wsystem
+- _o__wsystem
+- _o_system
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957674"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912389"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -59,7 +62,7 @@ int _wsystem(
 
 ### <a name="parameters"></a>Parámetros
 
-*command*<br/>
+*.*<br/>
 Comando que se va a ejecutar.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -75,7 +78,7 @@ Si el *comando* es **null** y se encuentra el intérprete de comandos, devuelve 
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos códigos de retorno.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **del sistema** pasa el *comando* al intérprete de comandos, que ejecuta la cadena como un comando del sistema operativo. el **sistema** utiliza las variables de entorno **comspec** y **path** para buscar el archivo de intérprete de comandos cmd. exe. Si el *comando* es **null**, la función comprueba si el intérprete de comandos existe.
 
@@ -83,20 +86,22 @@ Debe vaciar explícitamente, mediante [fflush](fflush.md) o [_flushall](flushall
 
 **_wsystem** es una versión de caracteres anchos del **sistema**; el argumento de *comando* para **_wsystem** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsystem**|**system**|**system**|**_wsystem**|
+|**_tsystem**|**sistema**|**sistema**|**_wsystem**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**system**|\<process.h> o \<stdlib.h>|
+|**sistema**|\<process.h> o \<stdlib.h>|
 |**_wsystem**|\<process.h> o \<stdlib.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -120,7 +125,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Line one.
@@ -129,8 +134,8 @@ Line two.
 
 ## <a name="see-also"></a>Vea también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec, _wexec (funciones)](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
-[_spawn, _wspawn (funciones)](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn funciones](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: _getche_nolock, _getwche_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getche_nolock
 - _getwche_nolock
+- _o__getche_nolock
+- _o__getwche_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: 23f16199314ef1c9834e559631b7299dd1c55c2e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 901c823d2e6539d7c07e3521c5d372b7816eb9b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955297"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910761"
 ---
 # <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock, _getwche_nolock
 
@@ -62,9 +65,11 @@ wint_t _getwche_nolock( void );
 
 Devuelve el carácter leído. No se devuelve ningún error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**_getche_nolock** y **_getwche_nolock** son idénticos a **_getche** y **_getwche** , salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_getche_nolock** y **_getwche_nolock** son idénticos a **_getche** y **_getwche** , salvo que no están protegidos frente a interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -79,7 +84,7 @@ Devuelve el carácter leído. No se devuelve ningún error.
 |**_getche_nolock**|\<conio.h>|
 |**_getwche_nolock**|\<conio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -117,9 +122,9 @@ abcdefy
 Type 'Y' when finished typing keys: abcdefyY
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de consola y Puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>

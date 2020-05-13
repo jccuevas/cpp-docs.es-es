@@ -48,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322956"
 ---
 # <a name="_spawn-_wspawn-functions"></a>Funciones _spawn y _wspawn
 
@@ -68,14 +68,14 @@ Cada una de las funciones `_spawn` crea y ejecuta un nuevo proceso:
 
 Las últimas letras del nombre de función determinan la variación.
 
-|Carta|Variante|
+|Carta|Variant|
 |-|-|
 | `e`  | `envp`, una matriz de punteros a la configuración de entorno, se pasa al nuevo proceso.  |
 | `l`  | Los argumentos de la línea de comandos se pasan individualmente a la función `_spawn`. Este sufijo suele usarse cuando el número de parámetros para el nuevo proceso se conoce de antemano.  |
 | `p`  | La variable de entorno `PATH` se usa para buscar el archivo que se va a ejecutar.  |
 | `v`  | `argv`, una matriz de punteros a los argumentos de la línea de comandos, se pasa a la función `_spawn`. Este sufijo suele usarse cuando el número de parámetros para el nuevo proceso es variable.  |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Cada una de las funciones `_spawn` crea y ejecuta un nuevo proceso. Controlan automáticamente argumentos de cadenas de caracteres multibyte según corresponda, reconociendo secuencias de caracteres multibyte en función de la página de códigos multibyte actualmente en uso. Las funciones `_wspawn` son versiones de caracteres anchos de las funciones `_spawn`; no controlan cadenas de caracteres multibyte. De lo contrario, las funciones `_wspawn` se comportan de forma idéntica a sus `_spawn` equivalentes.
 
@@ -110,27 +110,27 @@ Si `cmdname` contiene un especificador de unidad o barras diagonales (es decir, 
 En el pasado, algunas de estas funciones establecían `errno` en cero si se realizaba correctamente; el comportamiento actual es dejar `errno` sin modificar si se realiza correctamente, tal y como especifica el estándar de C. Si necesita emular el comportamiento antiguo, establezca `errno` en cero inmediatamente antes de llamar a estas funciones.
 
 > [!NOTE]
->  Para asegurarse de la inicialización y finalización correctas de la superposición, no use las funciones `setjmp` ni `longjmp` para entrar o salir de una rutina de superposición.
+> Para asegurarse de la inicialización y finalización correctas de la superposición, no use las funciones `setjmp` ni `longjmp` para entrar o salir de una rutina de superposición.
 
 ## <a name="arguments-for-the-spawned-process"></a>Argumentos para el proceso generado
 
 Para pasar argumentos al nuevo proceso, asigne uno o varios punteros a cadenas de caracteres como argumentos en la llamada a `_spawn`. Estas cadenas de caracteres forman la lista de argumentos para el proceso generado. La longitud conjunta de las cadenas que forman la lista de argumentos para el nuevo proceso no debe superar los 1024 bytes. El carácter nulo final ("\0") de cada cadena no se incluye en el recuento, pero los caracteres de espacio (que se insertan automáticamente para separar los argumentos) sí se cuentan.
 
 > [!NOTE]
->  Los espacios insertados en cadenas pueden generar un comportamiento inesperado; por ejemplo, si se pasa a `_spawn` la cadena `"hi there"`, el nuevo proceso obtendrá dos argumentos, `"hi"` y `"there"`. Si se deseaba que el nuevo proceso abriera un archivo denominado “hi there”, el proceso produciría un error. Para evitarlo, escriba la cadena entre comillas: `"\"hi there\""`.
+> Los espacios insertados en cadenas pueden generar un comportamiento inesperado; por ejemplo, si se pasa a `_spawn` la cadena `"hi there"`, el nuevo proceso obtendrá dos argumentos, `"hi"` y `"there"`. Si se deseaba que el nuevo proceso abriera un archivo denominado “hi there”, el proceso produciría un error. Para evitarlo, escriba la cadena entre comillas: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  No pase datos proporcionados por el usuario a `_spawn` sin comprobar expresamente su contenido. `_spawn` dará lugar a una llamada a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), por lo que debe tener presente que los nombres de ruta de acceso incompletos podrían dar lugar a vulnerabilidades de seguridad.
+> No pase datos proporcionados por el usuario a `_spawn` sin comprobar expresamente su contenido. `_spawn` dará lugar a una llamada a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), por lo que debe tener presente que los nombres de ruta de acceso incompletos podrían dar lugar a vulnerabilidades de seguridad.
 
 Puede pasar punteros de argumento como argumentos independientes (en `_spawnl`, `_spawnle`, `_spawnlp` y `_spawnlpe`) o como una matriz de punteros (en `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe`). Debe pasar al menos un argumento, `arg0` o `argv`[0], al proceso generado. Por convención, este argumento es el nombre del programa que se escribiría en la línea de comandos. Un valor diferente no genera un error.
 
 Las llamadas a `_spawnl`, `_spawnle`, `_spawnlp` y `_spawnlpe` se suelen usar en aquellos casos en los que el número de argumentos se conoce de antemano. El argumento `arg0` suele ser un puntero a `cmdname`. Los argumentos `arg1` a `argn` son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. Después de `argn`, debe haber un puntero **NULL** para marcar el final de la lista de argumentos.
 
-Las llamadas a `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe` resultan útiles cuando existe un número variable de argumentos para el nuevo proceso. Los punteros a los argumentos se pasan como matriz, `argv` *.* El argumento `argv`[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido; de `argv`[1] a `argv`[`n`] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento `argv`[`n` +1] debe ser un puntero **NULL** para marcar el final de la lista de argumentos.
+Las llamadas a `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe` resultan útiles cuando existe un número variable de argumentos para el nuevo proceso. Los punteros a los argumentos se pasan como matriz, `argv`*.* El argumento `argv`[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido; de `argv`[1] a `argv`[`n`] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento `argv`[`n` +1] debe ser un puntero **NULL** para marcar el final de la lista de argumentos.
 
 ## <a name="environment-of-the-spawned-process"></a>Entorno del proceso generado
 
-Los archivos que están abiertos cuando se realiza una llamada a `_spawn` permanecen abiertos en el nuevo proceso. En las llamadas a `_spawnl`, `_spawnlp`, `_spawnv` y `_spawnvp`, el nuevo proceso hereda el entorno del proceso de llamada. Puede usar las llamadas a `_spawnle`, `_spawnlpe`, `_spawnve` y `_spawnvpe` para modificar el entorno del nuevo proceso pasando una lista de configuración de entorno con el argumento `envp`. El argumento `envp` es una matriz de punteros de caracteres, en la que cada elemento (salvo el elemento final) señala a una cadena finalizada en NULL que define una variable de entorno. Esta cadena suele tener el formato `NAME`=`value`, donde `NAME` es el nombre de una variable de entorno y `value` es el valor de cadena en el que se establece la variable. (Tenga en cuenta que `value` no está entre comillas dobles). El último elemento de la matriz de `envp` debe ser **null**. Cuando `envp` es **NULL**, el proceso generado hereda la configuración del entorno del proceso primario.
+Los archivos que están abiertos cuando se realiza una llamada a `_spawn` permanecen abiertos en el nuevo proceso. En las llamadas a `_spawnl`, `_spawnlp`, `_spawnv` y `_spawnvp`, el nuevo proceso hereda el entorno del proceso de llamada. Puede usar las llamadas a `_spawnle`, `_spawnlpe`, `_spawnve` y `_spawnvpe` para modificar el entorno del nuevo proceso pasando una lista de configuración de entorno con el argumento `envp`. El argumento `envp` es una matriz de punteros de caracteres, en la que cada elemento (salvo el elemento final) señala a una cadena finalizada en NULL que define una variable de entorno. Esta cadena suele tener el formato `NAME`=`value`, donde `NAME` es el nombre de una variable de entorno y `value` es el valor de cadena en el que se establece la variable. (Tenga `value` en cuenta que no está entre comillas dobles.) El elemento final `envp` de la matriz debe ser **NULL**. Cuando `envp` es **NULL**, el proceso generado hereda la configuración del entorno del proceso primario.
 
 Las funciones `_spawn` pueden pasar toda la información sobre los archivos abiertos, incluido el modo de traducción, al nuevo proceso. Esta información se pasa en modo real a través de la entrada `C_FILE_INFO` del entorno. El código de inicio normalmente procesa esta entrada y luego la elimina del entorno. En cambio, si una función `_spawn` genera un proceso que no sea de C, esta entrada permanece en el entorno. Al imprimir el entorno se muestran caracteres gráficos en la cadena de definición de esta entrada porque la información del entorno se pasa en formato binario en modo real. No debe tener ningún otro efecto en las operaciones normales. En modo protegido, la información del entorno se pasa en forma de texto y, por tanto, no contiene ningún carácter gráfico.
 
@@ -229,12 +229,12 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de proceso y de entorno](../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](../c-runtime-library/reference/abort.md)<br/>
+[Control de Procesos y Medio Ambiente](../c-runtime-library/process-and-environment-control.md)<br/>
+[Aborta](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[_exec, _wexec (funciones)](../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec funciones](../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_flushall](../c-runtime-library/reference/flushall.md)<br/>
 [_getmbcp](../c-runtime-library/reference/getmbcp.md)<br/>

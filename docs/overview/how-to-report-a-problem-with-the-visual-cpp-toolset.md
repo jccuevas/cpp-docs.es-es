@@ -6,10 +6,10 @@ ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "71685697"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Notificación de un problema con la documentación o el conjunto de herramientas de Microsoft C++
@@ -310,7 +310,7 @@ Cuando haya generado el archivo preprocesado, es recomendable que se asegure de 
 
 1. En la ventana de la consola del símbolo del sistema para desarrolladores, vuelva al directorio que contiene el proyecto de reproducción.
 
-1. Escriba el comando **cl** *arguments* **/TP** *filename*i., tal y como se indica anteriormente, para compilar el archivo preprocesado como si fuera un archivo de código fuente de C++.
+1. Escriba el comando **cl** *arguments* **/TP** *filename*.i, tal como se indica anteriormente, para compilar el archivo preprocesado como si fuera un archivo de código fuente de C++.
 
 1. Confirme que el archivo preprocesado todavía reproduce el problema.
 

@@ -1,8 +1,9 @@
 ---
 title: rand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand
+- _o_rand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949550"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919528"
 ---
 # <a name="rand"></a>rand
 
-Genera un número pseudoaleatorios mediante un algoritmo conocido y totalmente reproducible. Hay disponible una versión más segura mediante programación de esta función; vea [rand_s](rand-s.md). Los números generados por **Rand** no son seguros criptográficamente. Para obtener una generación de números aleatorios criptográficamente segura, use [rand_s](rand-s.md) o las funciones C++ declaradas en la biblioteca estándar en [ \<> aleatorios](../../standard-library/random.md).
+Genera un número pseudoaleatorios mediante un algoritmo conocido y totalmente reproducible. Hay disponible una versión más segura mediante programación de esta función; vea [rand_s](rand-s.md). Los números generados por **Rand** no son seguros criptográficamente. Para obtener una generación de números aleatorios criptográficamente segura, use [rand_s](rand-s.md) o las funciones declaradas en la biblioteca estándar de C++ en [ \<>aleatorios ](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,11 +52,13 @@ int rand( void );
 
 **Rand** devuelve un número pseudoaleatorios, tal como se ha descrito anteriormente. No se devuelve ningún error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **Rand** devuelve un entero pseudoaleatorio en el intervalo de 0 a **RAND_MAX** (32767). Utilice la función [srand](srand.md) para inicializar el generador de números pseudoaleatorios antes de llamar a **Rand**.
 
-La función **Rand** genera una secuencia conocida y no es adecuada para su uso como una función criptográfica. Para obtener una generación de números aleatorios criptográficamente segura, use [rand_s](rand-s.md) o las funciones C++ declaradas en la biblioteca estándar en [ \<> aleatorios](../../standard-library/random.md). Para obtener información acerca de lo que es el problema \<con Rand y cómo el > aleatorio soluciona estas deficiencias, vea este vídeo titulado [Rand considerado perjudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+La función **Rand** genera una secuencia conocida y no es adecuada para su uso como una función criptográfica. Para obtener una generación de números aleatorios criptográficamente segura, use [rand_s](rand-s.md) o las funciones declaradas en la biblioteca estándar de C++ en [ \<>aleatorios ](../../standard-library/random.md). Para obtener información acerca de lo que **rand** es el problema \<con rand y cómo el> aleatorio soluciona estas deficiencias, vea este vídeo titulado [Rand considerado perjudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -62,7 +66,7 @@ La función **Rand** genera una secuencia conocida y no es adecuada para su uso 
 |-------------|---------------------|
 |**rand**|\<stdlib.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -134,7 +138,7 @@ int main( void )
    66
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>

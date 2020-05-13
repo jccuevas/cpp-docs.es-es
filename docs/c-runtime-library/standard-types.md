@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500637"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367935"
 ---
 # <a name="standard-types"></a>Tipos estándar
 
@@ -173,7 +173,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 
 ### <a name="fixed-width-integral-types-stdinth"></a>Tipos enteros de ancho fijo (stdint.h)
 
-|nombre|Tipo integrado equivalente|
+|Nombre|Tipo integrado equivalente|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|signed char, unsigned char|
 |int16\_t, uint16\_t|short, unsigned short|
@@ -189,7 +189,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|
 |intmax_t, uintmax_t|long long, unsigned long long|
 
-|Tipo|DESCRIPCIÓN|Declarado en|
+|Tipo|Descripción|Declarado en|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|Almacena valores de hora. Usado por [clock](../c-runtime-library/reference/clock.md).|TIME.H|
 |`_complex` (estructura)|Almacena partes reales e imaginarias de números complejos. Usado por [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|
@@ -198,7 +198,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |`_CrtMemState` (estructura)|Proporciona información sobre el estado actual del montón de depuración en tiempo de ejecución de C.|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Definición de tipo para una función de devolución de llamada a la que se llamará en [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Los parámetros para esta función son: tipo de informe, mensaje de salida y el valor devuelto de la función de devolución de llamada.|CRTDBG.H|
 |`dev_t`, `_dev_t` corto o entero sin signo|Representa identificadores de dispositivo.|SYS\TYPES.H|
-|`_diskfree_t` (estructura)|Contiene información sobre una unidad de disco. Utilizado por [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) **.**|DOS.H y DIRECT.H|
+|`_diskfree_t` (estructura)|Contiene información sobre una unidad de disco. Utilizado por [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H y DIRECT.H|
 |Estructuras de `div_t`, `ldiv_t` y `lldiv_t`|Almacena los valores devueltos por [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) y [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivamente.|STDLIB.H|
 |Entero de `errno_t`|Se usa para un tipo de valor devuelto o un parámetro de la función que se ocupa de los códigos de error de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception` (estructura)|Almacena información de error para [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
@@ -217,7 +217,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |Matriz `jmp_buf`|Usado por [setjmp](../c-runtime-library/reference/setjmp.md) y [longjmp](../c-runtime-library/reference/longjmp.md) para guardar y restaurar el entorno del programa.|SETJMP.H|
 |`lconv` (estructura)|Contiene reglas de formato para valores numéricos en distintos países o regiones. Usado por [localeconv](../c-runtime-library/reference/localeconv.md).|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (doble largo o matriz de caracteres sin signo)|Se usa para representar un valor doble largo.|STDLIB.H|
-|`_locale_t` (estructura)|Almacena valores de la configuración regional actual. Se usa en todas las bibliotecas en tiempo de ejecución de C específicas de la configuración regional.|CRTDEF.H|
+|`_locale_t` (estructura)|Almacena valores de la configuración regional actual. Se usa en todas las bibliotecas en tiempo de ejecución de C específicas de la configuración regional.|CRTDEFS.H|
 |`mbstate_t`|Realiza el seguimiento del estado de una conversión de caracteres multibyte.|WCHAR.H|
 |Entero largo de `off_t`, `_off_t`|Representa el valor de desplazamiento de archivo.|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> Puntero `_onexit_m_t`|Devuelto por [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md).|STDLIB.H|
@@ -253,6 +253,6 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |Entero de `wctype_t`|Puede representar todos los caracteres del juego de caracteres de cualquier idioma.|WCHAR.H,<br /><br /> CRTDEFS.H|
 |Entero de `wint_t`|Tipo de objeto de datos que puede contener cualquier carácter ancho o valor final de archivo ancho.|WCHAR.H,<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de la biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md)

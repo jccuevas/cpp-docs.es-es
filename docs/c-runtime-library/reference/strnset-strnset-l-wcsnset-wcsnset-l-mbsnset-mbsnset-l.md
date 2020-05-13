@@ -1,6 +1,6 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset
 - _strnset
@@ -8,6 +8,9 @@ api_name:
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
+- _o__mbsnset
+- _o__mbsnset_l
+- _o__wcsnset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -69,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946971"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911198"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -123,10 +127,10 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena que se va a modificar.
 
-*c*<br/>
+*unidad*<br/>
 Especificación de carácter.
 
 *count*<br/>
@@ -139,7 +143,7 @@ Configuración regional que se va a usar.
 
 Devuelve un puntero a la cadena modificada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_strnset** establece, como máximo, los primeros caracteres de *recuento* de *Str* en *c* (convertidos en **Char**). Si el *recuento* es mayor que la longitud de *Str*, se usa la longitud de *Str* en lugar de *Count*.
 
@@ -148,6 +152,8 @@ La función **_strnset** establece, como máximo, los primeros caracteres de *re
 **_mbsnset** valida sus parámetros; Si *Str* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, **_mbsnset** devuelve **null** y establece **errno** en **EINVAL**. **_strnset** y **_wcsnset** no validan sus parámetros.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -166,7 +172,7 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 |**_wcsnset_l**|\<tchar.h>|
 |**_mbsnset**, **_mbsnset_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -192,10 +198,10 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

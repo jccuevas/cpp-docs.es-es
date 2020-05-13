@@ -1,61 +1,112 @@
 ---
 title: Proyecto de ejemplo de C++ para el análisis de código
-ms.date: 11/04/2016
+description: Cómo crear una solución de ejemplo para su uso en el tutorial de análisis de código para Microsoft C++ en Visual Studio.
+ms.date: 04/14/2020
 ms.topic: sample
 helpviewer_keywords:
 - demo sample [Visual Studio ALM]
 - code analysis, samples
 ms.assetid: 09e1b9f7-5916-4ed6-a001-5c2d7e710682
-ms.openlocfilehash: 1966e9cec5825ae37728bbf28c0f21ff4eed62fc
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: c2a1b8c80b7e7aebd1f1530c66ade5859b392028
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467224"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372062"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>Proyecto de ejemplo de C++ para el análisis de código
 
-En los procedimientos siguientes se muestra cómo crear el ejemplo para [Tutorial: analizar C/C++ Code en busca de defectos](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). El procedimiento crea:
+Los procedimientos siguientes muestran cómo crear el ejemplo para [Tutorial: Analizar código C/C++ para defectos](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). El procedimiento crea:
 
-- Una solución de Visual Studio denominada CppDemo.
+- Una solución de Visual Studio denominada *CppDemo*.
 
-- Un proyecto de biblioteca estática denominado CodeDefects.
+- Un proyecto de biblioteca estática denominado *CodeDefects*.
 
-- Un proyecto de biblioteca estática denominado Annotations.
+- Un proyecto de biblioteca estática denominado *Anotaciones*.
 
 Los procedimientos también proporcionan el código para el encabezado y los archivos *.cpp* para las bibliotecas estáticas.
 
 ## <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>Crear la solución CppDemo y el proyecto CodeDefects
 
-1. Abra Visual Studio y seleccione **crear un nuevo proyecto** .
+::: moniker range=">=vs-2019"
 
-1. Cambie el filtro de lenguaje a **C++** .
+1. Abra Visual Studio y seleccione **Crear un nuevo proyecto**
 
-1. Seleccione **Proyecto vacío** y haga clic en **Siguiente**.
+1. En el cuadro de diálogo **Crear un nuevo proyecto,** cambie el filtro de idioma a **C++**.
 
-1. En el cuadro de texto **Nombre de proyecto**, escriba **CodeDefects**.
+1. Seleccione **Asistente para escritorio** de Windows y elija el botón **Siguiente.**
 
-1. En el cuadro de texto **Nombre de la solución**, escriba **CppDemo**.
+1. En la página Configurar el **nuevo proyecto,** en el cuadro de texto Nombre del **proyecto,** escriba *CodeDefects*.
 
-1. Haga clic en **Crear**
+1. En el cuadro de texto Nombre de la **solución** , escriba *CppDemo*.
 
-## <a name="configure-the-codedefects-project-as-a-static-library"></a>Configurar el proyecto CodeDefects como una biblioteca estática
+1. Seleccione **Create**.
 
-1. En Explorador de soluciones, haga clic con el botón derecho en **CodeDefects** y luego haga clic en **Propiedades**.
+1. En el cuadro de diálogo Proyecto de escritorio de **Windows,** cambie el **Tipo** de aplicación a **Biblioteca estática (.lib).**
 
-1. Expanda **Propiedades de configuración** y haga clic en **General**.
+1. En **Opciones adicionales**, seleccione **Proyecto vacío**.
 
-1. En la lista **General**, cambie **Tipo de configuración** por **Biblioteca estática (.lib)** .
+1. Elija **Aceptar** para crear la solución y el proyecto.
 
-1. En la lista **Opciones avanzadas**, cambie **Extensión de nombre de archivo** a **.lib**.
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. Abra Visual Studio. En la barra de menús, elija **Archivo** > **nuevo** > **proyecto**.
+
+1. En el cuadro de diálogo **Nuevo proyecto,** seleccione **Visual C++** > Escritorio de **Windows**.
+
+1. Seleccione **Asistente para escritorio**de Windows .
+
+1. En el cuadro de texto **Nombre** , escriba *CodeDefects*.
+
+1. En el cuadro de texto Nombre de la **solución** , escriba *CppDemo*.
+
+1. Elija **Ok**.
+
+1. En el cuadro de diálogo Proyecto de escritorio de **Windows,** cambie el **Tipo** de aplicación a **Biblioteca estática (.lib).**
+
+1. En **Opciones adicionales**, seleccione **Proyecto vacío**.
+
+1. Elija **Aceptar** para crear la solución y el proyecto.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+1. Abra Visual Studio. En la barra de menús, elija **Archivo** > **nuevo** > **proyecto**.
+
+1. En el cuadro de diálogo **Nuevo proyecto,** seleccione **Plantillas** > **Visual C++** > **Win32**.
+
+1. Seleccione Aplicación de **consola Win32**.
+
+1. En el cuadro de texto **Nombre** , escriba *CodeDefects*.
+
+1. En el cuadro de texto Nombre de la **solución** , escriba *CppDemo*.
+
+1. Elija **Ok**.
+
+1. En el cuadro de diálogo **Asistente para aplicaciones Win32,** elija el botón **Siguiente.**
+
+1. Cambie el **tipo de aplicación** a Biblioteca **estática**.
+
+1. En **Opciones adicionales**, anule la selección de Encabezado **precompilado**.
+
+1. Elija **Finalizar** para crear la solución y el proyecto.
+
+::: moniker-end
 
 ## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>Agregar el archivo de encabezado y código fuente al proyecto CodeDefects
 
-1. En Explorador de soluciones, expanda **CodeDefects**, haga clic con el botón derecho en **Archivos de encabezado**, haga clic en **Agregar** y luego en **Nuevo elemento**.
+1. En el Explorador de soluciones, expanda **CodeDefects**.
 
-1. En el cuadro de diálogo **Agregar nuevo elemento**, haga clic en **Código** y luego en **Archivo de encabezado (.h)** .
+1. Haga clic con el botón derecho para abrir el menú contextual **de Archivos de encabezado**. Elija Add New Item ( **Agregar** > **nuevo elemento**.
 
-1. En el cuadro **Nombre**, escriba **Bug.h** y haga clic en **Agregar**.
+1. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione**Código** **Visual C++** > y, a continuación, seleccione Archivo de **encabezado (.h)**.
+
+1. En el cuadro de edición **Nombre,** escriba *Bug.h*y, a continuación, elija el botón **Agregar.**
+
+1. En la ventana de edición *de Bug.h*, seleccione y elimine el contenido.
 
 1. Copie el código siguiente y péguelo en el archivo *Bug.h* en el editor.
 
@@ -64,9 +115,8 @@ Los procedimientos también proporcionan el código para el encabezado y los arc
 
     #include <windows.h>
 
-    // These functions are consumed by the sample
-    // but are not defined. This project cannot be linked!
-    bool CheckDomain(LPCTSTR);
+    // Function prototypes
+    bool CheckDomain(wchar_t const *);
     HRESULT ReadUserAccount();
 
     // These constants define the common sizes of the
@@ -75,11 +125,11 @@ Los procedimientos también proporcionan el código para el encabezado y los arc
     const int ACCOUNT_DOMAIN_LEN = 128;
     ```
 
-1. En Explorador de soluciones, haga clic con el botón derecho en **Archivos de código fuente**, seleccione **Nuevo** y haga clic en **Nuevo elemento**.
+1. En el Explorador de soluciones, haga clic con el botón derecho para abrir el menú contextual **de Archivos**de origen . Elija Add New Item ( **Agregar** > **nuevo elemento**.
 
-1. En el cuadro de diálogo **Agregar nuevo elemento**, haga clic en **Archivo C++ (.cpp)** .
+1. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo C++ (.cpp)**.
 
-1. En el cuadro **Nombre**, escriba **Bug.cpp** y haga clic en **Agregar**.
+1. En el cuadro de edición **Nombre,** escriba *Bug.cpp*y, a continuación, elija el botón **Agregar.**
 
 1. Copie el código siguiente y péguelo en el archivo *Bug.cpp* en el editor.
 
@@ -87,12 +137,22 @@ Los procedimientos también proporcionan el código para el encabezado y los arc
     #include "Bug.h"
 
     // the user account
-    TCHAR g_userAccount[USER_ACCOUNT_LEN] = {};
+    wchar_t g_userAccount[USER_ACCOUNT_LEN] = { L"domain\\user" };
     int len = 0;
+
+    bool CheckDomain(wchar_t const* domain)
+    {
+        return (wcsnlen_s(domain, USER_ACCOUNT_LEN) > 0);
+    }
+
+    HRESULT ReadUserAccount()
+    {
+        return S_OK;
+    }
 
     bool ProcessDomain()
     {
-        TCHAR* domain = new TCHAR[ACCOUNT_DOMAIN_LEN];
+        wchar_t* domain = new wchar_t[ACCOUNT_DOMAIN_LEN];
         // ReadUserAccount gets a 'domain\user' input from
         //the user into the global 'g_userAccount'
         if (ReadUserAccount())
@@ -101,14 +161,14 @@ Los procedimientos también proporcionan el código para el encabezado y los arc
             // character onto the 'domain' buffer
             for (len = 0; (len < ACCOUNT_DOMAIN_LEN) && (g_userAccount[len] != L'\0'); len++)
             {
-                if (g_userAccount[len] == '\\')
+                if (g_userAccount[len] == L'\\')
                 {
                     // Stops copying on the domain and user separator ('\')
                     break;
                 }
                 domain[len] = g_userAccount[len];
             }
-            if ((len = ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
+            if ((len = ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != L'\\'))
             {
                 // '\' was not found. Invalid domain\user string.
                 delete[] domain;
@@ -116,7 +176,7 @@ Los procedimientos también proporcionan el código para el encabezado y los arc
             }
             else
             {
-                domain[len] = '\0';
+                domain[len] = L'\0';
             }
             // Process domain string
             bool result = CheckDomain(domain);
@@ -139,31 +199,77 @@ Los procedimientos también proporcionan el código para el encabezado y los arc
     }
     ```
 
-1. Haga clic en el menú **Archivo** y luego en **Guardar todo**.
+1. En la barra de menús, elija **Archivo** > **Guardar todo**.
 
 ## <a name="add-the-annotations-project-and-configure-it-as-a-static-library"></a>Agregar el proyecto Annotations y configurarlo como una biblioteca estática
 
-1. En Explorador de soluciones, haga clic en **CppDemo**, seleccione **Agregar** y haga clic en **Nuevo proyecto**.
+::: moniker range=">=vs-2019"
 
-1. En el cuadro de diálogo **Agregar un nuevo proyecto**, cambie el filtro de lenguaje a **C++** y seleccione **Proyecto vacío**; a continuación, haga clic en **Siguiente**.
+1. En el Explorador de soluciones, haga clic con el botón secundario en **CppDemo** para abrir el menú contextual. Elija **Agregar** > **nuevo proyecto**.
 
-1. En el cuadro de texto **Nombre de proyecto**, escriba **Anotaciones** y haga clic en **Crear**.
+1. En el cuadro de diálogo **Agregar un nuevo proyecto,** seleccione **Asistente para escritorio**de Windows y, a continuación, elija el botón **Siguiente.**
 
-1. En Explorador de soluciones, haga clic con el botón derecho en **Annotations** y luego haga clic en **Propiedades**.
+1. En la página **Configure your new project (Configurar** el nuevo proyecto), en el cuadro de texto Project name **(Nombre** del proyecto), escriba *Annotations (Anotaciones)* y, a continuación, elija **Create (Crear).**
 
-1. Expanda **Propiedades de configuración** y haga clic en **General**.
+1. En el cuadro de diálogo Proyecto de escritorio de **Windows,** cambie el **Tipo** de aplicación a **Biblioteca estática (.lib).**
 
-1. En la lista **General**, cambie a **Tipo de configuración** y, a continuación, haga clic en **Biblioteca estática (.lib)** .
+1. En **Opciones adicionales**, seleccione **Proyecto vacío**.
 
-1. En la lista **Avanzado**, seleccione el texto de la columna situada junto a **Extensión de archivo de destino** y, después, escriba **.lib**.
+1. Elija **Aceptar** para crear el proyecto.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. En el Explorador de soluciones, haga clic con el botón secundario en **CppDemo** para abrir el menú contextual. Elija **Agregar** > **nuevo proyecto**.
+
+1. En el cuadro de diálogo **Agregar nuevo proyecto,** seleccione **Visual C++** > **Windows Desktop**.
+
+1. Seleccione **Asistente para escritorio**de Windows .
+
+1. En el cuadro de texto **Nombre** , escriba *Anotaciones*y, a continuación, elija **Aceptar**.
+
+1. En el cuadro de diálogo Proyecto de escritorio de **Windows,** cambie el **Tipo** de aplicación a **Biblioteca estática (.lib).**
+
+1. En **Opciones adicionales**, seleccione **Proyecto vacío**.
+
+1. Elija **Aceptar** para crear el proyecto.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+1. En el Explorador de soluciones, haga clic con el botón secundario en **CppDemo** para abrir el menú contextual. Elija **Agregar** > **nuevo proyecto**.
+
+1. En el cuadro de diálogo **Agregar nuevo proyecto** , seleccione Visual **C++** > **Win32**.
+
+1. Seleccione Aplicación de **consola Win32**.
+
+1. En el cuadro de texto **Nombre,** escriba *Anotaciones*.
+
+1. Elija **Ok**.
+
+1. En el cuadro de diálogo **Asistente para aplicaciones Win32,** elija el botón **Siguiente.**
+
+1. Cambie el **tipo de aplicación** a Biblioteca **estática**.
+
+1. En **Opciones adicionales**, anule la selección de Encabezado **precompilado**.
+
+1. Elija **Finalizar** para crear el proyecto.
+
+::: moniker-end
 
 ## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>Agregar el archivo de encabezado y código fuente al proyecto Annotations
 
-1. En Explorador de soluciones, expanda **Annotations**, haga clic con el botón derecho en **Archivos de encabezado**, haga clic en **Agregar** y luego en **Nuevo elemento**.
+1. En el Explorador de soluciones, expanda **Anotaciones**.
 
-1. En el cuadro de diálogo **Agregar nuevo elemento**, haga clic en **Archivo de encabezado (.h)** .
+1. Haga clic con el botón derecho para abrir el menú contextual **de Archivos** de encabezado en **Anotaciones**. Elija Add New Item ( **Agregar** > **nuevo elemento**.
 
-1. En el cuadro **Nombre**, escriba **annotations.h** y haga clic en **Agregar**.
+1. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione**Código** **Visual C++** > y, a continuación, seleccione Archivo de **encabezado (.h)**.
+
+1. En el cuadro de edición **Nombre,** escriba *annotations.h*y, a continuación, elija el botón **Agregar.**
+
+1. En la ventana de edición de *annotations.h*, seleccione y elimine el contenido.
 
 1. Copie el código siguiente y péguelo en el archivo *annotations.h* en el editor.
 
@@ -182,16 +288,23 @@ Los procedimientos también proporcionan el código para el encabezado y los arc
     _Ret_maybenull_ LinkedList* AllocateNode();
     ```
 
-1. En Explorador de soluciones, haga clic con el botón derecho en **Archivos de código fuente**, seleccione **Nuevo** y haga clic en **Nuevo elemento**.
+1. En el Explorador de soluciones, haga clic con el botón derecho para abrir el menú contextual **de Archivos** de origen en **Anotaciones**. Elija Add New Item ( **Agregar** > **nuevo elemento**.
 
-1. En el cuadro de diálogo **Agregar nuevo elemento**, haga clic en **Código** y luego en **Archivo C++ (.cpp)** .
+1. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo C++ (.cpp)**.
 
-1. En el cuadro **Nombre**, escriba **annotations.cpp** y haga clic en **Agregar**.
+1. En el cuadro de edición **Nombre,** escriba *annotations.cpp*y, a continuación, elija el botón **Agregar.**
 
 1. Copie el código siguiente y péguelo en el archivo *annotations.cpp* en el editor.
 
     ```cpp
     #include "annotations.h"
+    #include <malloc.h>
+
+    _Ret_maybenull_ LinkedList* AllocateNode()
+    {
+        LinkedList* result = static_cast<LinkedList*>(malloc(sizeof(LinkedList)));
+        return result;
+    }
 
     LinkedList* AddTail(LinkedList* node, int value)
     {
@@ -211,6 +324,13 @@ Los procedimientos también proporcionan el código para el encabezado y los arc
     }
     ```
 
-1. Haga clic en el menú **Archivo** y luego en **Guardar todo**.
+1. En la barra de menús, elija **Archivo** > **Guardar todo**.
 
 La solución ya está completa y debe compilarse sin errores.
+
+::: moniker range="vs-2017"
+
+> [!NOTE]
+> En Visual Studio 2017, es posible `E1097 unknown attribute "no_init_all"` que vea una advertencia falsa en el motor de IntelliSense. Puede omitir esta advertencia sin problemas.
+
+::: moniker-end

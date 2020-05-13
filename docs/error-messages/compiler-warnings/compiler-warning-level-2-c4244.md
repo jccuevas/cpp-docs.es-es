@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 2) C4244
+title: Advertencia del compilador (nivel 2) C4244
 ms.date: 11/04/2016
 f1_keywords:
 - C4244
 helpviewer_keywords:
 - C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-ms.openlocfilehash: 43d8a992801d556ce85577f5f9da1bec584cb173
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: a07adf37314a11cceb72d6675a66d82f7554bbb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052125"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162067"
 ---
-# <a name="compiler-warning-level-2-c4244"></a>ADVERTENCIA del compilador (nivel 2) C4244
+# <a name="compiler-warning-level-2-c4244"></a>Advertencia del compilador (nivel 2) C4244
 
 ' argument ': conversión de ' tipo1 ' a ' tipo2 ', posible pérdida de datos
 

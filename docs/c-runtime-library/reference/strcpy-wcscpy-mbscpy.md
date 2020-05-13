@@ -1,10 +1,11 @@
 ---
 title: strcpy, wcscpy, _mbscpy
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strcpy
 - wcscpy
 - _mbscpy
+- _o_wcscpy
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958264"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915268"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Copia una cadena. Hay disponibles versiones más seguras de estas funciones; vea [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** no se puede usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -99,7 +101,7 @@ Cadena de origen terminada en NULL.
 
 Cada una de estas funciones devuelve la cadena de destino. No se reserva ningún valor devuelto para indicar un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **strcpy** copia *strSource*, incluido el carácter nulo de terminación, en la ubicación especificada por *strDestination*. El comportamiento de **strcpy** es indefinido si las cadenas de origen y de destino se superponen.
 
@@ -108,7 +110,9 @@ La función **strcpy** copia *strSource*, incluido el carácter nulo de terminac
 
 **wcscpy** y **_mbscpy** son, respectivamente, versiones de caracteres anchos y multibyte de **strcpy**. Los argumentos y el valor devuelto de **wcscpy** son cadenas de caracteres anchos; los de **_mbscpy** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -124,7 +128,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**wcscpy**|\<string.h> o \<wchar.h>|
 |**_mbscpy**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -161,7 +165,7 @@ int main( void )
 String = Hello world from strcpy and strcat!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

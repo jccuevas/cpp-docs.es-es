@@ -4,27 +4,27 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: f13532b67fa129d0fed402deef2696c0bc25f585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c704c61c057def706aef774b8a6e34671a68fbec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441933"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366511"
 ---
 # <a name="using-cmonthcalctrl"></a>Usar CMonthCalCtrl
 
-El control de calendario mensual ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementa una interfaz de usuario similar a un calendario. Esto proporciona al usuario un método muy intuitivo y reconocible de escribir o seleccionar una fecha. El control también proporciona a la aplicación los medios para obtener y establecer la información de fecha en el control usando los tipos de datos existentes. De forma predeterminada, el control de calendario mensual muestra el día y el mes actuales. Sin embargo, el usuario puede desplazarse a los meses anterior y siguiente y seleccionar un mes o un año específicos.
+El control de calendario de mes ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementa una interfaz de usuario de tipo calendario. Esto proporciona al usuario un método muy intuitivo y reconocible para introducir o seleccionar una fecha. El control también proporciona a la aplicación los medios para obtener y establecer la información de fecha en el control mediante tipos de datos existentes. De forma predeterminada, el control de calendario de mes muestra el día y el mes actuales. Sin embargo, el usuario puede desplazarse a los meses anteriores y siguientes y seleccionar un mes y/o año específico.
 
 > [!NOTE]
->  Para usar la clase `CMonthCalCtrl` en el proyecto, debe incluir AFXDTCTL. H, normalmente en *stdafx. h*.
+> Para usar `CMonthCalCtrl` la clase en el proyecto, debe incluir AFXDTCTL. H, por lo general en *stdafx.h*.
 
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué quieres saber más sobre
 
-- [Creación del control de calendario mensual](../mfc/creating-the-month-calendar-control.md)
+- [Crear el control de calendario mensual](../mfc/creating-the-month-calendar-control.md)
 
-- [Ejemplos de control de calendario mensual](../mfc/month-calendar-control-examples.md)
+- [Ejemplo de control de calendario mensual](../mfc/month-calendar-control-examples.md)
 
-- [Procesamiento de mensajes de notificación en los controles de calendario mensual](../mfc/processing-notification-messages-in-month-calendar-controls.md)
+- [Procesar mensajes de notificación en los controles de calendario mensual](../mfc/processing-notification-messages-in-month-calendar-controls.md)
 
 - [Establecimiento de Day State en un control de calendario mensual](../mfc/setting-the-day-state-of-a-month-calendar-control.md)
 

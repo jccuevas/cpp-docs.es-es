@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - BK1506
 ms.assetid: f51f8cea-f8fc-4323-bcf2-b7bd119792ee
-ms.openlocfilehash: d1f74a90657985a87accc13bc2b576c1d7fd5a4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b272a12e1d729e33794b550c911fd2e56f1af006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279819"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197800"
 ---
 # <a name="bscmake-error-bk1506"></a>Error de BSCMAKE BK1506
 
-no se puede abrir el archivo 'filename' [: motivo]
+no se puede abrir el archivo ' nombredearchivo ' [: razón]
 
 BSCMAKE no puede abrir el archivo.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. Archivo bloqueado por otro proceso. Si `reason` dice **ha denegado el permiso**, el explorador puede estar usando el archivo. Cierre la ventana del explorador y vuelva a intentar la compilación.
+1. Archivo bloqueado por otro proceso. Si `reason` indica **Permiso denegado**, es posible que el explorador esté usando el archivo. Cierre la ventana examinar y vuelva a intentar la compilación.
 
-1. Disco lleno.
+1. Un disco completo.
 
-1. Error de hardware.
+1. Un error de hardware.
 
-1. El archivo de salida especificado tiene el mismo nombre que un subdirectorio.
+1. El archivo de salida especificado tiene el mismo nombre que un subdirectorio existente.

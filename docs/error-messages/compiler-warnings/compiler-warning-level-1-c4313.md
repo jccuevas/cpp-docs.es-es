@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4313
+title: Advertencia del compilador (nivel 1) C4313
 ms.date: 11/04/2016
 f1_keywords:
 - C4313
 helpviewer_keywords:
 - C4313
 ms.assetid: bcf64191-e2cf-452e-97b4-423fcec2d07c
-ms.openlocfilehash: 4000ba2254c868bf9959a6f0fb6f8e76255f7590
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 14ac938d62b4c5b6f22957268721aea9c3ffef22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966078"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163055"
 ---
-# <a name="compiler-warning-level-1-c4313"></a>ADVERTENCIA del compilador (nivel 1) C4313
+# <a name="compiler-warning-level-1-c4313"></a>Advertencia del compilador (nivel 1) C4313
 
 'function': 'format specifier' en cadena de formato entra en conflicto con el número de argumento de tipo 'type'
 

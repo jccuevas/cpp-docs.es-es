@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426580"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215220"
 ---
 # <a name="how-to-manage-resources-c"></a>Cómo: administrar recursos (C++)
 
@@ -46,7 +46,7 @@ Puede copiar recursos de un archivo a otro sin cambiarlos o cambiar el idioma o 
 Puede copiar fácilmente los recursos de un recurso o archivo ejecutable existente en el archivo de recursos actual. Para copiar recursos, abra los dos archivos que contienen recursos al mismo tiempo y arrastre los elementos de un archivo a otro o copie y pegue los dos archivos. Este método funciona para archivos de script de recursos (. RC) y archivos de plantilla de recursos (. RCT), así como archivos ejecutables (. exe).
 
 > [!NOTE]
-> Visual C++ incluye archivos de recursos de ejemplo que puede usar en su propia aplicación. Para obtener más información, consulte [CLIPART: Common Resources](https://github.com/Microsoft/VCSamples).
+> Visual C++ incluye archivos de recursos de ejemplo que puede usar en su propia aplicación. Para obtener más información, consulte [CLIPART: Common Resources](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general).
 
 No se puede arrastrar y colocar, copiar, cortar ni pegar entre archivos de recursos en el proyecto (**vista de recursos**) y los archivos. RC independientes se abren en ventanas de documento. Podría hacer esto en versiones anteriores del producto. Use el método de arrastrar y colocar entre los archivos. RC que están abiertos fuera del proyecto.
 
@@ -130,4 +130,4 @@ Win32
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Cómo: crear recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Procedimiento para incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Procedimiento para incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)

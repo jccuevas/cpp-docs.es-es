@@ -1,8 +1,9 @@
 ---
 title: _lfind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lfind
+- _o__lfind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4721ba96e145b3c2fde4ce0bb73157bbbcab4dff
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442921"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916453"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -66,7 +68,7 @@ Número de elementos de la matriz.
 *width*<br/>
 Ancho de los elementos de la matriz.
 
-*compare*<br/>
+*Compare*<br/>
 Puntero a la rutina de comparación. El primer parámetro es un puntero a la clave de búsqueda. El segundo parámetro es un puntero al elemento de la matriz que se va a comparar con la clave.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -79,13 +81,15 @@ La función **_lfind** realiza una búsqueda lineal de la *clave* Value en una m
 
 Esta función valida sus parámetros. Si *comparar*, la *clave* o el *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**.
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**_lfind**|\<search.h>|
 
-Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

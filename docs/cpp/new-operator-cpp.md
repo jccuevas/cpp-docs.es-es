@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac89bf37b8aaaa9d77393b714a233f8a4c998139
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367872"
 ---
 # <a name="new-operator-c"></a>new (Operador) (C++)
 
-Asigna memoria para un objeto o una matriz de objetos de *nombre de tipo* del almacén disponible y devuelve un puntero con tipo adecuado distinto de cero al objeto.
+Asigna memoria para un objeto o matriz de objetos de *tipo-nombre* del almacén libre y devuelve un puntero distinto de cero con tipo adecuada al objeto.
 
 > [!NOTE]
->  Extensiones de componentes de Microsoft C++ proporciona compatibilidad para la **nuevo** palabra clave para agregar entradas de ranura de vtable. Para obtener más información, consulte [new (nueva ranura en vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
+> Microsoft C++ Extensiones de componentes proporciona compatibilidad con la **nueva** palabra clave para agregar entradas de ranura vtable. Para obtener más información, consulte [new (nueva ranura en vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,50 +25,50 @@ Asigna memoria para un objeto o una matriz de objetos de *nombre de tipo* del al
 [::] new [placement] ( type-name ) [new-initializer]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si no lo consigue, **nueva** devuelve cero o produce una excepción; vea [el nuevo y eliminar operadores](../cpp/new-and-delete-operators.md) para obtener más información. Puede cambiar este comportamiento predeterminado escribiendo una rutina de control de excepciones personalizada y llamando a la [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) función de biblioteca en tiempo de ejecución con el nombre de función como su argumento.
+Si no se realiza correctamente, **new** devuelve cero o produce una excepción; consulte [Los operadores nuevos y eliminados](../cpp/new-and-delete-operators.md) para obtener más información. Puede cambiar este comportamiento predeterminado escribiendo una rutina de control de excepciones personalizada y llamando a la [función](../c-runtime-library/reference/set-new-handler.md) de biblioteca en tiempo de ejecución de _set_new_handler con el nombre de la función como argumento.
 
 Para obtener información sobre cómo crear un objeto en el montón administrado, consulte [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
-Cuando **nuevo** es usa para asignar memoria para un objeto de clase de C++, el constructor del objeto se llama después de que se asigna la memoria.
+Cuando se usa **new** para asignar memoria para un objeto de clase C++, se llama al constructor del objeto después de asignar la memoria.
 
-Use la [eliminar](../cpp/delete-operator-cpp.md) operador para desasignar la memoria asignada con el **nuevo** operador.
+Utilice el operador [delete](../cpp/delete-operator-cpp.md) para desasignar la memoria asignada con el operador **new.**
 
-En el ejemplo siguiente se asigna y se libera una matriz bidimensional de caracteres de tamaño `dim` por 10. Al asignar una matriz multidimensional, todas las dimensiones excepto la primera deben ser expresiones constantes que se evalúen como valores positivos; la dimensión de la matriz del extremo izquierdo puede ser cualquier expresión que se evalúe como un valor positivo. Al asignar una matriz mediante la **nueva** operador, la primera dimensión puede ser cero, el **nuevo** operador devuelve un puntero único.
+En el ejemplo siguiente se asigna y se libera una matriz bidimensional de caracteres de tamaño `dim` por 10. Al asignar una matriz multidimensional, todas las dimensiones excepto la primera deben ser expresiones constantes que se evalúen como valores positivos; la dimensión de la matriz del extremo izquierdo puede ser cualquier expresión que se evalúe como un valor positivo. Al asignar una matriz mediante el operador **new,** la primera dimensión puede ser cero: el operador **new** devuelve un puntero único.
 
 ```cpp
 char (*pchar)[10] = new char[dim][10];
 delete [] pchar;
 ```
 
-El *nombre de tipo* no puede contener **const**, **volátil**, declaraciones de clase ni declaraciones de enumeración. Por consiguiente, la siguiente expresión no es válida:
+El *nombre-tipo* no puede contener **const**, **volatile**, declaraciones de clase o declaraciones de enumeración. Por consiguiente, la siguiente expresión no es válida:
 
 ```cpp
 volatile char *vch = new volatile char[20];
 ```
 
-El **nuevo** operador no asigna los tipos de referencia porque no son objetos.
+El operador **new** no asigna tipos de referencia porque no son objetos.
 
-El **nuevo** operador no se puede usar para asignar una función, pero se puede usar para asignar punteros a funciones. En el ejemplo siguiente se asigna y se libera una matriz de siete punteros a funciones que devuelven enteros.
+El **operador new** no se puede utilizar para asignar una función, pero se puede utilizar para asignar punteros a funciones. En el ejemplo siguiente se asigna y se libera una matriz de siete punteros a funciones que devuelven enteros.
 
 ```cpp
 int (**p) () = new (int (*[7]) ());
 delete *p;
 ```
 
-Si usa el operador **nueva** sin ningún argumento adicional y compilar con la [/GX](../build/reference/gx-enable-exception-handling.md), [/EHa](../build/reference/eh-exception-handling-model.md), o [/EHs](../build/reference/eh-exception-handling-model.md) opción, el compilador creará generar código para llamar al operador **eliminar** si el constructor produce una excepción.
+Si usa el operador **new** sin ningún argumento adicional y compila con la opción [/GX](../build/reference/gx-enable-exception-handling.md), [/EHa](../build/reference/eh-exception-handling-model.md)o [/EHs,](../build/reference/eh-exception-handling-model.md) el compilador generará código para llamar a **operator delete** si el constructor produce una excepción.
 
-En la lista siguiente se describe los elementos de gramática de **nuevo**:
+La siguiente lista describe los elementos gramaticales de **new:**
 
-*placement*<br/>
-Proporciona una manera de pasar argumentos adicionales si sobrecarga **nuevo**.
+*Colocación*<br/>
+Proporciona una forma de pasar argumentos adicionales si sobrecarga **new**.
 
-*type-name*<br/>
+*nombre-tipo*<br/>
 Especifica el tipo que se va a asignar; puede ser un tipo integrado o un tipo definido por el usuario. Si la especificación de tipo es compleja, puede ir entre paréntesis para forzar el orden de enlace.
 
 *initializer*<br/>
-Proporciona un valor para el objeto inicializado. No se pueden especificar inicializadores para matrices. El **nuevo** operador creará las matrices de objetos solo si la clase tiene un constructor predeterminado.
+Proporciona un valor para el objeto inicializado. No se pueden especificar inicializadores para matrices. El **operador new** creará matrices de objetos solo si la clase tiene un constructor predeterminado.
 
 ## <a name="example"></a>Ejemplo
 
@@ -117,7 +117,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Si usa el formato de la nueva ubicación de la **nueva** operador, el formato con argumentos además del tamaño de la asignación, el compilador no admite un formato de ubicación de la **eliminar** operador si el constructor produce una excepción. Por ejemplo:
+Si usa la nueva forma de ubicación del **operador new,** el formulario con argumentos además del tamaño de la asignación, el compilador no admite una forma de ubicación del operador **delete** si el constructor produce una excepción. Por ejemplo:
 
 ```cpp
 // expre_new_Operator2.cpp
@@ -153,7 +153,7 @@ int main() {
 
 ## <a name="initializing-object-allocated-with-new"></a>Inicializar objetos asignados con new
 
-Opcional *inicializador* campo se incluye en la gramática de la **nuevo** operador. Esto permite que los nuevos objetos se inicialicen con constructores definidos por el usuario. Para obtener más información acerca de cómo se realiza la inicialización, vea [inicializadores](../cpp/initializers.md). El ejemplo siguiente muestra cómo usar una expresión de inicialización con el **nuevo** operador:
+Se incluye un campo *de inicializador* opcional en la gramática del **operador new.** Esto permite que los nuevos objetos se inicialicen con constructores definidos por el usuario. Para obtener más información sobre cómo se realiza la inicialización, vea [Inicializadores](../cpp/initializers.md). En el ejemplo siguiente se muestra cómo utilizar una expresión de inicialización con el operador **new:**
 
 ```cpp
 // expre_Initializing_Objects_Allocated_with_new.cpp
@@ -177,23 +177,23 @@ int main()
 }
 ```
 
-En este ejemplo, el objeto `CheckingAcct` se asigna mediante el **nuevo** se especifica el operador, pero ninguna inicialización predeterminada. Por lo tanto, se llama al constructor predeterminado para la clase, `Acct()`. El objeto `SavingsAcct` se asigna de la misma manera, salvo que se inicializa explícitamente en 34,98. Dado que 34,98 es de tipo **doble**, se llama al constructor que toma un argumento de ese tipo para controlar la inicialización. Finalmente, el tipo `HowMuch` que no es de clase se inicializa en 43,0.
+En este ejemplo, `CheckingAcct` el objeto se asigna mediante el operador **new,** pero no se especifica ninguna inicialización predeterminada. Por lo tanto, se llama al constructor predeterminado para la clase, `Acct()`. El objeto `SavingsAcct` se asigna de la misma manera, salvo que se inicializa explícitamente en 34,98. Dado que 34.98 es de tipo **double**, se llama al constructor que toma un argumento de ese tipo para controlar la inicialización. Finalmente, el tipo `HowMuch` que no es de clase se inicializa en 43,0.
 
-Si un objeto es de un tipo de clase y esa clase tiene constructores (como se muestra en el ejemplo anterior), se puede inicializar el objeto por el **nuevo** operador solo si se cumple una de estas condiciones:
+Si un objeto es de un tipo de clase y esa clase tiene constructores (como en el ejemplo anterior), el operador **new** solo puede inicializar el objeto si se cumple una de estas condiciones:
 
 - Los argumentos proporcionados en el inicializador concuerdan con los de un constructor.
 
 - La clase tiene un constructor predeterminado (un constructor al que se puede llamar sin argumentos).
 
-No se puede realizar ninguna inicialización explícita por elemento al asignar matrices mediante la **nuevo** operador; solo el constructor predeterminado, si está presente, se llama. Consulte [argumentos predeterminados](../cpp/default-arguments.md) para obtener más información.
+No se puede realizar ninguna inicialización explícita por elemento al asignar matrices mediante el operador **new;** solo se llama al constructor predeterminado, si está presente. Consulte [Argumentos predeterminados](../cpp/default-arguments.md) para obtener más información.
 
-Si se produce un error en la asignación de memoria (**operador new** devuelve un valor de 0), se realiza ninguna inicialización. Esto protege contra intentos de inicializar datos que no existen.
+Si se produce un error en la asignación de memoria **(el operador new** devuelve un valor de 0), no se realiza ninguna inicialización. Esto protege contra intentos de inicializar datos que no existen.
 
-Como sucede con las llamadas a funciones, no se define el orden en que se evalúan las expresiones inicializadas. Además, no debe dar por hecho que estas expresiones se hayan evaluado totalmente antes de que se realice la asignación de memoria. Si se produce un error en la asignación de memoria y el **nuevo** operador devuelve cero, algunas expresiones en el inicializador no se pueden evaluar por completo.
+Como sucede con las llamadas a funciones, no se define el orden en que se evalúan las expresiones inicializadas. Además, no debe dar por hecho que estas expresiones se hayan evaluado totalmente antes de que se realice la asignación de memoria. Si se produce un error en la asignación de memoria y el **operador new** devuelve cero, es posible que algunas expresiones del inicializador no se evalúen completamente.
 
 ## <a name="lifetime-of-objects-allocated-with-new"></a>Duración de objetos asignados con new
 
-Objetos asignados con el **nuevo** operador no se destruyen cuando se sale del ámbito en el que se definen. Dado que el **nuevo** operador devuelve un puntero a los objetos que asigna, el programa debe definir un puntero con el ámbito adecuado para tener acceso a esos objetos. Por ejemplo:
+Los objetos asignados con el **operador new** no se destruyen cuando se cierra el ámbito en el que se definen. Dado que el **operador new** devuelve un puntero a los objetos que asigna, el programa debe definir un puntero con el ámbito adecuado para tener acceso a esos objetos. Por ejemplo:
 
 ```cpp
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp
@@ -222,38 +222,38 @@ Una vez que el puntero `AnotherArray` sale del ámbito en el ejemplo, el objeto 
 
 ## <a name="how-new-works"></a>Cómo funciona new
 
-El *expresión de asignación* : la expresión que contiene el **nuevo** operador: hace tres cosas:
+La *expresión de asignación* —la expresión que contiene el **operador new—** hace tres cosas:
 
 - Busca y reserva el almacenamiento para el objeto o los objetos a asignar. Cuando se completa esta fase, se asigna la cantidad correcta de almacenamiento, pero no es todavía un objeto.
 
 - Inicializa los objetos. Una vez completada la inicialización, hay suficiente información presente para que el almacenamiento asignado sea un objeto.
 
-- Devuelve un puntero a los objetos de un tipo de puntero derivado de *nuevo nombre de tipo* o *nombre de tipo*. El programa usa este puntero para tener acceso al objeto recién asignado.
+- Devuelve un puntero a los objetos de un tipo de puntero derivado de *new-type-name* o *type-name*. El programa usa este puntero para tener acceso al objeto recién asignado.
 
-El **nueva** operador invoca la función **new (operador)**. Para las matrices de cualquier tipo y para los objetos que no son de **clase**, **struct**, o **unión** tipos, una función global, **:: new (operador)**, es se llama para asignar el almacenamiento. Objetos de tipo de clase pueden definir sus propios **operador new** función miembro estática por clase.
+El operador **new** invoca el operador de función **new**. Para matrices de cualquier tipo y para objetos que no son de tipos de **clase**, **struct**o **union,** se llama a una función global, **::operator new**, para asignar almacenamiento. Los objetos de tipo de clase pueden definir su propia función miembro estática de **operador nueva** por clase.
 
-Cuando el compilador encuentra la **nueva** operador para asignar un objeto de tipo **tipo**, emite una llamada a `type` **:: operador new (sizeof (** `type` **))** o, si no definido por el usuario **new (operador)** está definido, **:: operador new (sizeof (** `type` **))**. Por lo tanto, el **nuevo** operador puede asignar la cantidad de memoria correcta para el objeto.
-
-> [!NOTE]
->  El argumento **new (operador)** es de tipo `size_t`. Este tipo se define en \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, y \<time.h >.
-
-Una opción en la gramática permite la especificación de *colocación* (vea la gramática para [nuevo operador](../cpp/new-operator-cpp.md)). El *colocación* parámetro puede usarse solo para las implementaciones definidas por el usuario de **new (operador)**; permite que la información adicional que se pasarán al **new (operador)**. Una expresión con un *colocación* campo como `T *TObject = new ( 0x0040 ) T;` se traduce a `T *TObject = T::operator new( sizeof( T ), 0x0040 );` si la clase T tiene el operador de miembro nueva, en caso contrario, para `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.
-
-La intención original de la *colocación* campo era permitir que los objetos dependientes de hardware se asignen a las direcciones especificadas por el usuario.
+Cuando el compilador encuentra el operador **new** para asignar un objeto `type`de tipo **type**, emite una llamada a **::operator new( sizeof(** `type` **) )** o, si no se define ningún operador **nuevo** definido por el usuario, **::operator new( sizeof(** `type` **) )**. Por lo tanto, el **operador new** puede asignar la cantidad correcta de memoria para el objeto.
 
 > [!NOTE]
->  Aunque en el ejemplo anterior muestra un único argumento en el *colocación* campo, no hay ninguna restricción sobre cuántos argumentos adicionales se pueden pasar a **new (operador)** de este modo.
+> El argumento a **operator** `size_t`new es de tipo . Este tipo se \<define en \<direct.h>, \<malloc.h \<>, memory.h \<>, search.h \<>, stddef.h>, stdio.h>, \<stdlib.h>, \<string.h> y \<time.h>.
 
-Incluso cuando **operador new** se ha definido para un tipo de clase, puede utilizarse el operador global mediante el uso de la forma de este ejemplo:
+Una opción en la gramática permite la especificación de *la colocación* (consulte la gramática para [el nuevo operador](../cpp/new-operator-cpp.md)). El parámetro *placement* solo se puede utilizar para implementaciones definidas por el usuario del **operador new**; permite que se pase información adicional al **operador new**. Una expresión con un `T *TObject = new ( 0x0040 ) T;` campo de `T *TObject = T::operator new( sizeof( T ), 0x0040 );` *ubicación* como se traduce a `T *TObject = ::operator new( sizeof( T ), 0x0040 );`si la clase T tiene el operador miembro new, de lo contrario a .
+
+La intención original del campo de *ubicación* era permitir que los objetos dependientes del hardware se asignaran en direcciones especificadas por el usuario.
+
+> [!NOTE]
+> Aunque el ejemplo anterior muestra solo un argumento en el campo *de ubicación,* no hay ninguna restricción en cuanto a cuántos argumentos adicionales se pueden pasar al **operador nuevo** de esta manera.
+
+Incluso cuando se ha definido operator **new** para un tipo de clase, el operador global se puede utilizar utilizando la forma de este ejemplo:
 
 ```cpp
 T *TObject =::new TObject;
 ```
 
-El operador de resolución de ámbito (`::`) fuerza el uso de la información global **nuevo** operador.
+El operador de`::`resolución de ámbito ( ) fuerza el uso del **nuevo** operador global.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
-[nuevo y eliminar operadores](../cpp/new-and-delete-operators.md)
+[nuevos y eliminar operadores](../cpp/new-and-delete-operators.md)

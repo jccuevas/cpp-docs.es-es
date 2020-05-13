@@ -1,6 +1,6 @@
 ---
 title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strlwr_s_l
 - _mbslwr_s_l
@@ -8,6 +8,12 @@ api_name:
 - _wcslwr_s
 - _strlwr_s
 - _wcslwr_s_l
+- _o__mbslwr_s
+- _o__mbslwr_s_l
+- _o__strlwr_s
+- _o__strlwr_s_l
+- _o__wcslwr_s
+- _o__wcslwr_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -63,12 +70,12 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 5790cf6c36faa0669fd12d6875b7e7488e819b12
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 42333433277e1ac593bb2662967b73907ed13c92
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625802"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919953"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
@@ -138,7 +145,7 @@ errno_t _wcslwr_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena terminada en NULL que se va a cambiar a minúsculas.
 
 *numberOfElements*<br/>
@@ -153,7 +160,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error de valor
 
 Estas funciones validan sus parámetros. Si *Str* no es una cadena terminada en NULL válida, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**. Si *numberOfElements* es menor que la longitud de la cadena, las funciones también devuelven **EINVAL** y establecen **errno** en **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_strlwr_s** convierte, en contexto, cualquier letra mayúscula de *Str* a minúsculas. **_mbslwr_s** es una versión de caracteres multibyte de **_strlwr_s**. **_wcslwr_s** es una versión con caracteres anchos de **_strlwr_s**.
 
@@ -162,6 +169,8 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -218,9 +227,9 @@ Lower: the string to end all strings!
 Upper: THE STRING TO END ALL STRINGS!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)<br/>

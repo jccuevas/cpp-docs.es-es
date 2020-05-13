@@ -1,5 +1,5 @@
 ---
-title: CMFCDisableMenuAnimation (clase)
+title: CMFCDisableMenuAnimation (Clase)
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345609"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752417"
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation (clase)
+# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation (Clase)
 
-Deshabilita la animación de menús emergentes.
+Deshabilita la animación del menú emergente.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,7 +31,7 @@ class CMFCDisableMenuAnimation
 
 |||
 |-|-|
-|Name|Descripción|
+|Nombre|Descripción|
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Construye un objeto `CMFCDisableMenuAnimation`.|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Destructor.|
 
@@ -39,27 +39,27 @@ class CMFCDisableMenuAnimation
 
 |||
 |-|-|
-|Name|Descripción|
-|[CMFCDisableMenuAnimation::Restore](#restore)|Restaura la animación anterior que el marco de trabajo que se usa para mostrar un menú emergente.|
+|Nombre|Descripción|
+|[CMFCDisableMenuAnimation::Restore](#restore)|Restaura la animación anterior que el marco de trabajo utiliza para mostrar un menú emergente.|
 
 ### <a name="data-members"></a>Miembros de datos
 
 |||
 |-|-|
-|Name|Descripción|
-|`CMFCDisableMenuAnimation::m_animType`|Almacena el tipo de animación anterior de un menú emergente.|
+|Nombre|Descripción|
+|`CMFCDisableMenuAnimation::m_animType`|Almacena el tipo de animación del menú emergente anterior.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice esta clase auxiliar para deshabilitar temporalmente la animación de menús emergentes (por ejemplo, al procesar los comandos del mouse o teclado).
+Utilice esta clase auxiliar para deshabilitar temporalmente la animación del menú emergente (por ejemplo, al procesar comandos de mouse o teclado).
 
-Un `CMFCDisableMenuAnimation` objeto deshabilita la animación de menús emergentes durante su vigencia. El constructor almacena el tipo de animación emergente de menú actual en el `m_animType` campo y escriba la animación actual a los conjuntos de `CMFCPopupMenu::NO_ANIMATION`. El destructor restaura el tipo de animación anterior.
+Un `CMFCDisableMenuAnimation` objeto deshabilita la animación del menú emergente durante su vigencia. El constructor almacena el tipo de animación de menú emergente actual en el `m_animType` campo y establece el tipo de animación actual `CMFCPopupMenu::NO_ANIMATION`en . El destructor restaura el tipo de animación anterior.
 
-Puede crear un `CMFCDisableMenuAnimation` objeto de la pila para deshabilitar la animación de menús emergentes a lo largo de una sola función. Si desea deshabilitar la animación de menús emergente entre funciones, cree un `CMFCDisableMenuAnimation` en el montón de objeto y, a continuación, eliminarlo cuando desee restaurar la animación de menús emergentes.
+Puede crear `CMFCDisableMenuAnimation` un objeto en la pila para deshabilitar la animación del menú emergente en una sola función. Si desea deshabilitar la animación del menú `CMFCDisableMenuAnimation` emergente entre funciones, cree un objeto en el montón y, a continuación, elimínelo cuando desee restaurar la animación del menú emergente.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo usar la pila para deshabilitar temporalmente la animación de menús.
+En el ejemplo siguiente se muestra cómo utilizar la pila para deshabilitar temporalmente la animación de menú.
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
@@ -71,17 +71,17 @@ El ejemplo siguiente muestra cómo usar la pila para deshabilitar temporalmente 
 
 **Encabezado:** afxpopupmenu.h
 
-##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Restore
 
-Restaura la animación anterior que el marco de trabajo que se usa para mostrar un menú emergente.
+Restaura la animación anterior que el marco de trabajo utiliza para mostrar un menú emergente.
 
-```
+```cpp
 void Restore ();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método es invocado por el `CMFCDisableMenuAnimation` destructor para restaurar la animación anterior que el marco de trabajo que se usa para mostrar un menú emergente.
+El destructor llama `CMFCDisableMenuAnimation` a este método para restaurar la animación anterior que el marco de trabajo utilizapara para mostrar un menú emergente.
 
 ## <a name="see-also"></a>Vea también
 

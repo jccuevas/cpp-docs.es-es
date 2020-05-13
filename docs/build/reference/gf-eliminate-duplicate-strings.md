@@ -14,16 +14,16 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: e0d23004c7b710f51065db52410fbb15b7cca040
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449546"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320488"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Eliminar cadenas duplicadas)
 
-Permite al compilador crear una copia única de cadenas idénticas en la imagen del programa y en la memoria durante la ejecución. Se trata de una optimización denominada *agrupación de cadenas* que puede crear programas más pequeños.
+Permite al compilador crear una sola copia de cadenas idénticas en la imagen del programa y en la memoria durante la ejecución. Se trata de una optimización denominada *agrupación* de cadenas que puede crear programas más pequeños.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,13 +31,13 @@ Permite al compilador crear una copia única de cadenas idénticas en la imagen 
 /GF
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si usas **/GF**, el sistema operativo no intercambia la parte de la cadena de la memoria y puede leer las cadenas de realizar una copia del archivo de imagen.
+Si utiliza **/GF**, el sistema operativo no intercambia la parte de la cadena de memoria y puede leer las cadenas desde el archivo de imagen.
 
-**/GF** agrupa las cadenas como de solo lectura. Si intenta modificar las cadenas bajo **/GF**, se produce un error de aplicación.
+**/GF** agrupa cadenas como de solo lectura. Si intenta modificar cadenas en **/GF**, se produce un error de aplicación.
 
-Agrupación de cadenas permite lo que se pretendía como punteros de varios a varios búferes varios punteros a un único búfer. En el código siguiente, `s` y `t` se inicializan con la misma cadena. Para que apunten a la misma memoria hace que la agrupación de cadenas:
+La agrupación de cadenas permite que lo que se pretendía como varios punteros a varios búferes sean varios punteros a un único búfer. En el código `s` `t` siguiente y se inicializan con la misma cadena. La agrupación de cadenas hace que apunten a la misma memoria:
 
 ```
 char *s = "This is a character buffer";
@@ -45,28 +45,28 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  El [/Zi](z7-zi-zi-debug-information-format.md) opción, se utiliza para editar y continuar, se establece automáticamente la **/GF** opción.
+> La opción [/ZI,](z7-zi-zi-debug-information-format.md) utilizada para Editar y continuar, establece automáticamente la opción **/GF.**
 
 > [!NOTE]
->  El **/GF** opción del compilador crea una sección direccionable para cada cadena único. Y, de forma predeterminada, un archivo objeto puede contener hasta 65.536 secciones direccionables. Si el programa contiene más de 65.536 cadenas, utilice el [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) opción del compilador para crear más secciones.
+> La opción del compilador **/GF** crea una sección direccionable para cada cadena única. Y de forma predeterminada, un archivo de objeto puede contener hasta 65.536 secciones direccionables. Si el programa contiene más de 65.536 cadenas, utilice la opción del compilador [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) para crear más secciones.
 
-**/GF** cuando [/O1](o1-o2-minimize-size-maximize-speed.md) o [/O2](o1-o2-minimize-size-maximize-speed.md) se utiliza.
+**/GF** está en vigor cuando se utiliza [/O1](o1-o2-minimize-size-maximize-speed.md) u [/O2.](o1-o2-minimize-size-maximize-speed.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
-1. Haga clic en el **generación de código** página de propiedades.
+1. Haga clic en la página de propiedades **Generación de código.**
 
-1. Modificar el **habilitar agrupación de cadenas** propiedad.
+1. Modifique la propiedad **Habilitar agrupación de cadenas.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
 - Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones del compilador de MSVC](compiler-options.md)<br/>
-[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

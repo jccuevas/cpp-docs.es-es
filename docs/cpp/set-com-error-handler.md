@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 226dce24de68edd66ca68c43e41ce0cb5b8a1b48
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: debad733f351c710ada342e29fa95a4d1ff03b7d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857299"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749798"
 ---
 # <a name="_set_com_error_handler"></a>_set_com_error_handler
 
-Reemplaza la función predeterminada que se utiliza para el control de errores de COM. **_set_com_error_handler** es específico de Microsoft.
+Reemplaza la función predeterminada que se utiliza para el control de errores de COM. **_set_com_error_handler** es específica de Microsoft.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void __stdcall _set_com_error_handler(
    void (__stdcall *pHandler)(
       HRESULT hr,
@@ -26,20 +26,20 @@ void __stdcall _set_com_error_handler(
 );
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Parámetros
 
 *pHandler*<br/>
 Puntero a la función de reemplazo.
 
-*hr*<br/>
+*Hr*<br/>
 Información de HRESULT.
 
 *perrinfo*<br/>
-`IErrorInfo` existente.
+Objeto `IErrorInfo`.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-De forma predeterminada, [_com_raise_error](../cpp/com-raise-error.md) controla todos los errores de com. Puede cambiar este comportamiento mediante el uso de **_set_com_error_handler** para llamar a su propia función de control de errores.
+De forma predeterminada, [_com_raise_error](../cpp/com-raise-error.md) controla todos los errores COM. Puede cambiar este comportamiento mediante **_set_com_error_handler** para llamar a su propia función de control de errores.
 
 La función de reemplazo debe tener una firma que sea equivalente a la de `_com_raise_error`.
 
@@ -84,11 +84,11 @@ int main()
 Exception raised: Unable to establish the connection!
 ```
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<comdef. h >
+**Encabezado:** \<> comdef.h
 
-**Lib:** Si se especifica la opción del compilador **/Zc: wchar_t** (valor predeterminado), use omsuppw. lib o comsuppwd. lib. Si se especifica la opción de compilador **/Zc: wchar_t** , use comsupp. lib. Para obtener más información, incluida la forma de establecer esta opción en el IDE, vea [/Zc: wchar_t (Wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Si se especifica la opción del compilador **/Zc:wchar_t** (valor predeterminado), utilice comsuppw.lib o comsuppwd.lib. Si se especifica la opción del compilador **/Zc:wchar_t-,** utilice comsupp.lib. Para obtener más información, incluido cómo establecer esta opción en el IDE, vea [/Zc:wchar_t (wchar_t es tipo nativo).](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
 
 ## <a name="see-also"></a>Vea también
 

@@ -5,21 +5,21 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5830c9e459c0d778e85c5ab5900d39c3190df178
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424720"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368570"
 ---
 # <a name="lthash_setgt-operators"></a>Operadores de &lt;hash_set&gt;
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator==](#op_eq_eq)|
-|[operator== (hash_multiset)](#op_eq_eq_hash_multiset)|
+|[¡Operador!](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operadora](#op_eq_eq)|
+|[operador (hash_multiset)](#op_eq_eq_hash_multiset)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>¡Operador!
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_set](../standard-library/unordered-set-class.md).
@@ -32,10 +32,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parámetros
 
-\ *izquierda*
+*Izquierda*\
 Objeto de tipo `hash_set`.
 
-\ *derecha*
+*Correcto*\
 Objeto de tipo `hash_set`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -46,7 +46,7 @@ Objeto de tipo `hash_set`.
 
 La comparación entre los objetos hash_set se basa en una comparación en pares de sus elementos. Dos objetos hash_set son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
-Los miembros de los [< hash_map >](../standard-library/hash-map.md) y [< hash_set](../standard-library/hash-set.md) archivos de encabezado > se encuentran en el [espacio de nombres stdext](../standard-library/stdext-namespace.md).
+Los miembros de los archivos de encabezado de>>[hash_map](../standard-library/hash-map.md) y [hash_set<](../standard-library/hash-set.md)<se encuentran en el espacio de nombres [stdext](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -87,7 +87,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operadora
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_set](../standard-library/unordered-set-class.md).
@@ -100,10 +100,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parámetros
 
-\ *izquierda*
+*Izquierda*\
 Objeto de tipo `hash_set`.
 
-\ *derecha*
+*Correcto*\
 Objeto de tipo `hash_set`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="op_neq_hash_multiset"></a>  operator!= (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>operador! (hash_multiset)
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_set](../standard-library/unordered-set-class.md).
@@ -166,10 +166,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parámetros
 
-\ *izquierda*
+*Izquierda*\
 Objeto de tipo `hash_multiset`.
 
-\ *derecha*
+*Correcto*\
 Objeto de tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="op_eq_eq_hash_multiset"></a>  operator== (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>operador (hash_multiset)
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_set](../standard-library/unordered-set-class.md).
@@ -232,10 +232,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parámetros
 
-\ *izquierda*
+*Izquierda*\
 Objeto de tipo `hash_multiset`.
 
-\ *derecha*
+*Correcto*\
 Objeto de tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valor devuelto

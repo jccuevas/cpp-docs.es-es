@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 6ae61d17084cc744cac8819ac2c0ca48eb59add7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 93ce7b99728d1ce89c8124efd6c74aea7ff66d22
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460116"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320145"
 ---
-# <a name="recursivetimedmutex-class"></a>recursive_timed_mutex (Clase)
+# <a name="recursive_timed_mutex-class"></a>recursive_timed_mutex (Clase)
 
-Representa un *tipo de exclusión mutua cronometrado*. Los objetos de este tipo se usan para aplicar una exclusión mutua mediante un bloqueo limitado por tiempo dentro de un programa. A diferencia de los objetos de tipo [timed_mutex](../standard-library/timed-mutex-class.md), el efecto de llamar a métodos de bloqueo de objetos `recursive_timed_mutex` está bien definido.
+Representa un *tipo de exclusión mutua temporizada.* Los objetos de este tipo se usan para aplicar una exclusión mutua mediante un bloqueo limitado por tiempo dentro de un programa. A diferencia de los objetos de tipo [timed_mutex](../standard-library/timed-mutex-class.md), el efecto de llamar a métodos de bloqueo de objetos `recursive_timed_mutex` está bien definido.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,28 +39,28 @@ class recursive_timed_mutex;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[recursive_timed_mutex](#recursive_timed_mutex)|Crea un objeto `recursive_timed_mutex` que no está bloqueado.|
-|[~recursive_timed_mutex (Destructor)](#dtorrecursive_timed_mutex_destructor)|Libera todos los recursos usados por el objeto `recursive_timed_mutex`.|
+|[Destructor de recursive_timed_mutex](#dtorrecursive_timed_mutex_destructor)|Libera todos los recursos usados por el objeto `recursive_timed_mutex`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[lock](#lock)|Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.|
+|[Cerradura](#lock)|Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.|
 |[try_lock](#try_lock)|Intenta obtener la propiedad de `mutex` sin bloquearlo.|
 |[try_lock_for](#try_lock_for)|Intenta obtener la propiedad de `mutex` para un intervalo de tiempo especificado.|
 |[try_lock_until](#try_lock_until)|Intenta obtener la propiedad de `mutex` hasta una hora especificada.|
-|[unlock](#unlock)|Libera la propiedad de `mutex`.|
+|[Desbloquear](#unlock)|Libera la propiedad de `mutex`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<exclusión mutua >
+**Encabezado:** \<> de exclusión mutua
 
 **Espacio de nombres:** std
 
-## <a name="lock"></a> lock
+## <a name="lock"></a><a name="lock"></a>Cerradura
 
 Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.
 
@@ -68,11 +68,11 @@ Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad
 void lock();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el subproceso que realiza la llamada ya posee `mutex`, el método se devuelve inmediatamente, y el bloqueo anterior permanece vigente.
 
-## <a name="recursive_timed_mutex"></a> recursive_timed_mutex (Constructor)
+## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>Constructor recursive_timed_mutex
 
 Crea un objeto `recursive_timed_mutex` que no está bloqueado.
 
@@ -80,7 +80,7 @@ Crea un objeto `recursive_timed_mutex` que no está bloqueado.
 recursive_timed_mutex();
 ```
 
-## <a name="dtorrecursive_timed_mutex_destructor"></a> ~recursive_timed_mutex (Destructor)
+## <a name="recursive_timed_mutex-destructor"></a><a name="dtorrecursive_timed_mutex_destructor"></a> ~recursive_timed_mutex (Destructor)
 
 Libera todos los recursos usados por el objeto `recursive_timed_mutex`.
 
@@ -88,11 +88,11 @@ Libera todos los recursos usados por el objeto `recursive_timed_mutex`.
 ~recursive_timed_mutex();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el objeto está bloqueado cuando se ejecuta el destructor, el comportamiento es indefinido.
 
-## <a name="try_lock"></a> try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
 Intenta obtener la propiedad de `mutex` sin bloquearlo.
 
@@ -102,13 +102,13 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el método obtuvo correctamente la propiedad de `mutex` o si el subproceso que realiza la `mutex`llamada ya posee el; en caso contrario, **false**.
+**true** si el método obtuvo `mutex` correctamente la propiedad de o `mutex`si el subproceso de llamada ya posee el ; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si el subproceso que realiza la `mutex`llamada ya posee, la función devuelve inmediatamente **true**y el bloqueo anterior permanece en vigor.
+Si el subproceso que `mutex`realiza la llamada ya posee el valor , la función devuelve inmediatamente **true**y el bloqueo anterior permanece en vigor.
 
-## <a name="try_lock_for"></a> try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
 Intenta obtener la propiedad de `mutex` sin bloquearlo.
 
@@ -124,13 +124,13 @@ Un objeto [chrono::duration](../standard-library/duration-class.md) que especifi
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el método obtiene correctamente la propiedad de `mutex` o si el subproceso que realiza la llamada ya posee el  `mutex`; en caso contrario, false.
+**true** si el método obtiene correctamente `mutex` la propiedad de la `mutex`o si el subproceso de llamada ya posee el ; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si el subproceso que realiza la `mutex`llamada ya posee, el método devuelve inmediatamente **true**y el bloqueo anterior permanece en vigor.
+Si el subproceso que `mutex`realiza la llamada ya posee el valor , el método devuelve inmediatamente **true**y el bloqueo anterior permanece en vigor.
 
-## <a name="try_lock_until"></a> try_lock_until
+## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
 
 Intenta obtener la propiedad de `mutex` sin bloquearlo.
 
@@ -148,13 +148,13 @@ Punto en el tiempo que especifica el umbral después del cual el método ya no i
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el método obtiene correctamente la propiedad de `mutex` o si el subproceso que realiza la llamada ya posee el  `mutex`; en caso contrario, false.
+**true** si el método obtiene correctamente `mutex` la propiedad de la `mutex`o si el subproceso de llamada ya posee el ; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si el subproceso que realiza la `mutex`llamada ya posee, el método devuelve inmediatamente **true**y el bloqueo anterior permanece en vigor.
+Si el subproceso que `mutex`realiza la llamada ya posee el valor , el método devuelve inmediatamente **true**y el bloqueo anterior permanece en vigor.
 
-## <a name="unlock"></a> unlock
+## <a name="unlock"></a><a name="unlock"></a>Desbloquear
 
 Libera la propiedad de `mutex`.
 
@@ -162,13 +162,13 @@ Libera la propiedad de `mutex`.
 void unlock();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método libera la propiedad de `mutex` solo después de que se llame tantas veces como se ha llamado a [lock](#lock), [try_lock](#try_lock), [try_lock_for](#try_lock_for) y [try_lock_until](#try_lock_until) correctamente en el objeto `recursive_timed_mutex`.
 
 Si el subproceso que realiza la llamada no posee `mutex`, el comportamiento es indefinido.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[\<>de exclusión mutua](../standard-library/mutex.md)

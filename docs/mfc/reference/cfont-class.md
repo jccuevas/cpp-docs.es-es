@@ -1,5 +1,5 @@
 ---
-title: Clase Cfont (
+title: Clase CFont
 ms.date: 11/04/2016
 f1_keywords:
 - CFont
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 36fd469b182d5f3e0d3449112d04c1a8623d7526
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424396"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373841"
 ---
-# <a name="cfont-class"></a>Clase Cfont (
+# <a name="cfont-class"></a>Clase CFont
 
 Encapsula una fuente de la Interfaz de dispositivo gráfico (GDI) de Windows y proporciona funciones miembro para manipular la fuente.
 
@@ -37,38 +37,38 @@ Encapsula una fuente de la Interfaz de dispositivo gráfico (GDI) de Windows y p
 class CFont : public CGdiObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[Cfont (:: Cfont (](#cfont)|Construye un objeto `CFont`.|
+|[CFont::CFont](#cfont)|Construye un objeto `CFont`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[Cfont (:: CreateFont](#createfont)|Inicializa un `CFont` con las características especificadas.|
-|[Cfont (:: CreateFontIndirect](#createfontindirect)|Inicializa un objeto `CFont` con las características proporcionadas en una estructura de `LOGFONT`.|
-|[Cfont (:: CreatePointFont](#createpointfont)|Inicializa un `CFont` con el alto especificado, medido en décimas de punto y tipo de letra.|
-|[Cfont (:: CreatePointFontIndirect](#createpointfontindirect)|Igual que `CreateFontIndirect`, salvo que el alto de la fuente se mide en décimas de punto en lugar de unidades lógicas.|
-|[Cfont (:: FromHandle](#fromhandle)|Devuelve un puntero a un objeto `CFont` cuando se proporciona un HFONT de Windows.|
-|[Cfont (:: GetLogFont](#getlogfont)|Rellena un `LOGFONT` con información sobre la fuente lógica asociada al objeto `CFont`.|
+|[CFont::CreateFont](#createfont)|Inicializa a `CFont` con las características especificadas.|
+|[CFont::CreateFontIndirect](#createfontindirect)|Inicializa un `CFont` objeto con las `LOGFONT` características dadas en una estructura.|
+|[CFont::CreatePointFont](#createpointfont)|Inicializa a `CFont` con la altura especificada, medida en décimas de punto y tipo de letra.|
+|[CFont::CreatePointFontIndirect](#createpointfontindirect)|Igual `CreateFontIndirect` que excepto que la altura de la fuente se mide en décimas de punto en lugar de unidades lógicas.|
+|[CFont::FromHandle](#fromhandle)|Devuelve un puntero `CFont` a un objeto cuando se le da un HFONT de Windows.|
+|[CFont::GetLogFont](#getlogfont)|Rellena una `LOGFONT` con información sobre la `CFont` fuente lógica adjunta al objeto.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[Cfont (:: Operator HFONT](#operator_hfont)|Devuelve el identificador de fuente de Windows GDI asociado al objeto de `CFont`.|
+|[CFont::operador HFONT](#operator_hfont)|Devuelve el identificador de fuente `CFont` GDI de Windows asociado al objeto.|
 
 ## <a name="remarks"></a>Observaciones
 
-Para usar un objeto de `CFont`, construya un objeto `CFont` y adjunte una fuente de Windows con [CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont)o [CreatePointFontIndirect](#createpointfontindirect)y, a continuación, use las funciones miembro del objeto para manipular la fuente.
+Para utilizar `CFont` un objeto, construya un `CFont` objeto y adjúntelo una fuente de Windows con [CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont)o [CreatePointFontIndirect](#createpointfontindirect)y, a continuación, utilice las funciones miembro del objeto para manipular la fuente.
 
-Las funciones `CreatePointFont` y `CreatePointFontIndirect` suelen ser más fáciles de usar que `CreateFont` o `CreateFontIndirect` ya que realizan la conversión para el alto de la fuente a partir de un tamaño de punto a unidades lógicas automáticamente.
+Las `CreatePointFont` `CreatePointFontIndirect` funciones y a `CreateFont` menudo `CreateFontIndirect` son más fáciles de usar que o ya que realizan automáticamente la conversión para la altura de la fuente de un tamaño de punto a unidades lógicas.
 
-Para obtener más información sobre `CFont`, vea [objetos gráficos](../../mfc/graphic-objects.md).
+Para obtener `CFont`más información sobre , consulte [Objetos gráficos](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -82,7 +82,7 @@ Para obtener más información sobre `CFont`, vea [objetos gráficos](../../mfc/
 
 **Encabezado:** afxwin.h
 
-##  <a name="cfont"></a>Cfont (:: Cfont (
+## <a name="cfontcfont"></a><a name="cfont"></a>CFont::CFont
 
 Construye un objeto `CFont`.
 
@@ -92,15 +92,15 @@ CFont();
 
 ### <a name="remarks"></a>Observaciones
 
-El objeto resultante debe inicializarse con `CreateFont`, `CreateFontIndirect`, `CreatePointFont`o `CreatePointFontIndirect` antes de poder usarse.
+El objeto resultante debe `CreateFont`inicializarse `CreatePointFont`con `CreatePointFontIndirect` , `CreateFontIndirect`, , o antes de que se pueda utilizar.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]
 
-##  <a name="createfont"></a>Cfont (:: CreateFont
+## <a name="cfontcreatefont"></a><a name="createfont"></a>CFont::CreateFont
 
-Inicializa un objeto `CFont` con las características especificadas.
+Inicializa un `CFont` objeto con las características especificadas.
 
 ```
 BOOL CreateFont(
@@ -122,57 +122,57 @@ BOOL CreateFont(
 
 ### <a name="parameters"></a>Parámetros
 
-*nHeight*<br/>
-Especifica el alto deseado (en unidades lógicas) de la fuente. Vea el `lfHeight` miembro de la estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)en el Windows SDK para obtener una descripción. El valor absoluto de *nHeight* no debe superar las 16.384 unidades de dispositivo una vez convertido. Para todas las comparaciones de alto, el asignador de fuentes busca la fuente más grande que no supere el tamaño solicitado o la fuente más pequeña si todas las fuentes superan el tamaño solicitado.
+*nAltura*<br/>
+Especifica la altura deseada (en unidades lógicas) de la fuente. Consulte `lfHeight` el miembro de la estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)en el Windows SDK para obtener una descripción. El valor absoluto de *nHeight* no debe superar las 16.384 unidades de dispositivo después de convertirlo. Para todas las comparaciones de altura, el asignador de fuentes busca la fuente más grande que no supere el tamaño solicitado o la fuente más pequeña si todas las fuentes superan el tamaño solicitado.
 
-*nWidth*<br/>
-Especifica el ancho medio (en unidades lógicas) de caracteres de la fuente. Si *nWidth* es 0, la relación de aspecto del dispositivo se comparará con la relación de aspecto de digitalización de las fuentes disponibles para encontrar la coincidencia más cercana, que viene determinada por el valor absoluto de la diferencia.
+*nAncho*<br/>
+Especifica el ancho medio (en unidades lógicas) de los caracteres de la fuente. Si *nWidth* es 0, la relación de aspecto del dispositivo se hará coincidir con la relación de aspecto de digitalización de las fuentes disponibles para encontrar la coincidencia más cercana, que viene determinada por el valor absoluto de la diferencia.
 
 *nEscapement*<br/>
-Especifica el ángulo (en unidades de 0,1 grados) entre el vector de escape y el eje x de la superficie de la pantalla. El vector de escape es la línea a través de los orígenes del primer y el último carácter de una línea. El ángulo se mide en sentido contrario a las agujas del reloj desde el eje x. Vea el miembro `lfEscapement` en la estructura `LOGFONT` de la Windows SDK para obtener más información.
+Especifica el ángulo (en unidades de 0,1 grados) entre el vector de escape y el eje X de la superficie de visualización. El vector de escape es la línea a través de los orígenes del primer y último carácter de una línea. El ángulo se mide en sentido antihorario desde el eje X. Consulte `lfEscapement` el miembro `LOGFONT` de la estructura en el Windows SDK para obtener más información.
 
-*nOrientation*<br/>
-Especifica el ángulo (en unidades de 0,1 grados) entre la línea de base de un carácter y el eje x. El ángulo se mide en sentido contrario a las agujas del reloj desde el eje x para los sistemas de coordenadas en los que la dirección y está baja y en el sentido de las agujas del reloj desde el eje x para los sistemas de coordenadas en los que la dirección y está activa.
+*nOrientación*<br/>
+Especifica el ángulo (en unidades de 0,1 grados) entre la línea base de un carácter y el eje X. El ángulo se mide en sentido antihorario desde el eje X para los sistemas de coordenadas en los que la dirección Y está hacia abajo y en el sentido de las agujas del reloj desde el eje X para los sistemas de coordenadas en los que la dirección Y está hacia arriba.
 
-*nWeight*<br/>
-Especifica el espesor de la fuente (en píxeles dibujados por 1000). Para obtener más información, vea el miembro *lfWeight* de la estructura `LOGFONT` en el Windows SDK. Los valores descritos son aproximados; la apariencia real depende del tipo de letra. Algunas fuentes solo tienen FW_NORMAL, FW_REGULAR y pesos FW_BOLD. Si se especifica FW_DONTCARE, se usa una ponderación predeterminada.
+*nPeso*<br/>
+Especifica el peso de fuente (en píxeles con tinta por 1000). Consulte el miembro *lfWeight* en la `LOGFONT` estructura del Windows SDK para obtener más información. Los valores descritos son aproximados; la apariencia real depende del tipo de letra. Algunas fuentes solo tienen pesos FW_NORMAL, FW_REGULAR y FW_BOLD. Si se especifica FW_DONTCARE, se utiliza un peso predeterminado.
 
 *bItalic*<br/>
 Especifica si la fuente está en cursiva.
 
-*bUnderline*<br/>
+*bSubrayado*<br/>
 Especifica si la fuente está subrayada.
 
 *cStrikeOut*<br/>
-Especifica si se tachan los caracteres de la fuente. Especifica una fuente de tachado si se establece en un valor distinto de cero.
+Especifica si los caracteres de la fuente se desmayan. Especifica una fuente de tachado si se establece en un valor distinto de cero.
 
 *nCharSet*<br/>
-Especifica el conjunto de caracteres de la fuente que se va a `lfCharSet` miembro de la estructura `LOGFONT` de la Windows SDK para obtener una lista de valores.
+Especifica el juego de caracteres `lfCharSet` de `LOGFONT` la fuenteVer el miembro en la estructura en el Windows SDK para obtener una lista de valores.
 
 El juego de caracteres OEM depende del sistema.
 
-Puede haber fuentes con otros juegos de caracteres en el sistema. Una aplicación que utiliza una fuente con un juego de caracteres desconocido no debe intentar traducir ni interpretar cadenas que se van a representar con esa fuente. En su lugar, las cadenas deben pasarse directamente al controlador de dispositivo de salida.
+Las fuentes con otros conjuntos de caracteres pueden existir en el sistema. Una aplicación que utiliza una fuente con un juego de caracteres desconocido no debe intentar traducir o interpretar cadenas que se van a representar con esa fuente. En su lugar, las cadenas deben pasarse directamente al controlador del dispositivo de salida.
 
-El asignador de fuentes no utiliza el valor DEFAULT_CHARSET. Una aplicación puede utilizar este valor para permitir que el nombre y el tamaño de una fuente describan por completo la fuente lógica. Si no existe una fuente con el nombre especificado, se puede sustituir una fuente de cualquier juego de caracteres por la fuente especificada. Para evitar resultados inesperados, las aplicaciones deben usar el valor DEFAULT_CHARSET con moderación.
+El asignador de fuentes no utiliza el valor DEFAULT_CHARSET. Una aplicación puede utilizar este valor para permitir que el nombre y el tamaño de una fuente describan completamente la fuente lógica. Si no existe una fuente con el nombre especificado, se puede sustituir una fuente de cualquier juego de caracteres por la fuente especificada. Para evitar resultados inesperados, las aplicaciones deben usar el valor DEFAULT_CHARSET con moderación.
 
 *nOutPrecision*<br/>
-Especifica la precisión de salida deseada. La precisión de salida define la profundidad con la que la salida debe coincidir con la altura, el ancho, la orientación de caracteres, el escape y el paso de la fuente solicitada. Vea el miembro `lfOutPrecision` en la estructura `LOGFONT` de la Windows SDK para obtener una lista de valores y más información.
+Especifica la precisión de salida deseada. La precisión de salida define la precisión de salida que debe coincidir con la altura, el ancho, la orientación del carácter, el escape y el tono de la fuente solicitada. Consulte `lfOutPrecision` el miembro `LOGFONT` de la estructura en el Windows SDK para obtener una lista de valores y más información.
 
 *nClipPrecision*<br/>
-Especifica la precisión de recorte deseada. La precisión de recorte define cómo se recortan los caracteres que están parcialmente fuera de la región de recorte. Vea el miembro `lfClipPrecision` en la estructura `LOGFONT` de la Windows SDK para obtener una lista de valores.
+Especifica la precisión de recorte deseada. La precisión de recorte define cómo recortar caracteres que están parcialmente fuera de la región de recorte. Consulte `lfClipPrecision` el miembro `LOGFONT` de la estructura en el Windows SDK para obtener una lista de valores.
 
-Para usar una fuente incrustada de solo lectura, una aplicación debe especificar CLIP_ENCAPSULATE.
+Para utilizar una fuente incrustada de solo lectura, una aplicación debe especificar CLIP_ENCAPSULATE.
 
-Para lograr un giro coherente de las fuentes de dispositivo, TrueType y vectoriales, una aplicación puede usar el operador OR para combinar el valor CLIP_LH_ANGLES con cualquiera de los demás valores de *nClipPrecision* . Si se establece el bit de CLIP_LH_ANGLES, el giro de todas las fuentes depende de si la orientación del sistema de coordenadas es zurdo o diestro. (Para obtener más información sobre la orientación de los sistemas de coordenadas, vea la descripción del parámetro *nOrientation* ). Si no se establece CLIP_LH_ANGLES, las fuentes del dispositivo siempre giran en sentido contrario a las agujas del reloj, pero el giro de otras fuentes depende de la orientación del sistema de coordenadas.
+Para lograr una rotación coherente de dispositivos, TrueType y fuentes vectoriales, una aplicación puede usar el operador OR para combinar el valor CLIP_LH_ANGLES con cualquiera de los otros valores *nClipPrecision.* Si se establece el bit CLIP_LH_ANGLES, la rotación de todas las fuentes depende de si la orientación del sistema de coordenadas es zurda o diestra. (Para obtener más información sobre la orientación de los sistemas de coordenadas, consulte la descripción del parámetro *nOrientation.)* Si no se establece CLIP_LH_ANGLES, las fuentes del dispositivo siempre giran en sentido contrario a las agujas del reloj, pero la rotación de otras fuentes depende de la orientación del sistema de coordenadas.
 
-*nQuality*<br/>
-Especifica la calidad de salida de la fuente, que define la precisión con la que GDI debe intentar hacer coincidir los atributos de fuente lógica con los de una fuente física real. Vea el miembro `lfQuality` en la estructura `LOGFONT` de la Windows SDK para obtener una lista de valores.
+*nCalidad*<br/>
+Especifica la calidad de salida de la fuente, que define la cuidadosa relación con la que la GDI debe intentar hacer coincidir los atributos de fuente lógica con los de una fuente física real. Consulte `lfQuality` el miembro `LOGFONT` de la estructura en el Windows SDK para obtener una lista de valores.
 
 *nPitchAndFamily*<br/>
-Especifica el paso y la familia de la fuente. Vea el miembro `lfPitchAndFamily` en la estructura `LOGFONT` de la Windows SDK para obtener una lista de valores y más información.
+Especifica el paso y la familia de la fuente. Consulte `lfPitchAndFamily` el miembro `LOGFONT` de la estructura en el Windows SDK para obtener una lista de valores y más información.
 
 *lpszFacename*<br/>
-`CString` o puntero a una cadena terminada en null que especifica el nombre del tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. La función [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) de Windows se puede utilizar para enumerar todas las fuentes disponibles actualmente. Si *lpszFacename* es null, el GDI utiliza un tipo de letra independiente del dispositivo.
+A `CString` o puntero a una cadena terminada en null que especifica el nombre de tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. La función [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) de Windows se puede utilizar para enumerar todas las fuentes disponibles actualmente. Si *lpszFacename* es NULL, el GDI utiliza un tipo de letra independiente del dispositivo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -182,19 +182,19 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 La fuente se puede seleccionar posteriormente como fuente para cualquier contexto de dispositivo.
 
-La función `CreateFont` no crea una nueva fuente de Windows GDI. Simplemente selecciona la coincidencia más cercana de las fuentes físicas disponibles para la GDI.
+La `CreateFont` función no crea una nueva fuente GDI de Windows. Simplemente selecciona la coincidencia más cercana de las fuentes físicas disponibles para el GDI.
 
-Las aplicaciones pueden utilizar la configuración predeterminada para la mayoría de los parámetros al crear una fuente lógica. Los parámetros a los que se les debe asignar siempre valores específicos son *nHeight* y *lpszFacename*. Si la aplicación no establece *nHeight* y *lpszFacename* , la fuente lógica que se crea depende del dispositivo.
+Las aplicaciones pueden utilizar la configuración predeterminada para la mayoría de los parámetros al crear una fuente lógica. Los parámetros que siempre se deben asignar valores específicos son *nHeight* y *lpszFacename*. Si la aplicación no establece *nHeight* y *lpszFacename,* la fuente lógica que se crea depende del dispositivo.
 
-Cuando termine con el `CFont` objeto creado por la función `CreateFont`, use `CDC::SelectObject` para seleccionar una fuente diferente en el contexto del dispositivo y, a continuación, elimine el objeto `CFont` que ya no es necesario.
+Cuando termine con `CFont` el objeto `CreateFont` creado `CDC::SelectObject` por la función, utilice para seleccionar `CFont` una fuente diferente en el contexto del dispositivo y, a continuación, elimine el objeto que ya no es necesario.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]
 
-##  <a name="createfontindirect"></a>Cfont (:: CreateFontIndirect
+## <a name="cfontcreatefontindirect"></a><a name="createfontindirect"></a>CFont::CreateFontIndirect
 
-Inicializa un objeto `CFont` con las características proporcionadas en una estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw).
+Inicializa un `CFont` objeto con las características proporcionadas en una estructura [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
 
 ```
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
@@ -203,7 +203,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="parameters"></a>Parámetros
 
 *lpLogFont*<br/>
-Apunta a una estructura de `LOGFONT` que define las características de la fuente lógica.
+Apunta a `LOGFONT` una estructura que define las características de la fuente lógica.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -213,17 +213,17 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 La fuente se puede seleccionar posteriormente como la fuente actual para cualquier dispositivo.
 
-Esta fuente tiene las características especificadas en la estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) . Cuando se selecciona la fuente mediante la función miembro [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) , el asignador de fuentes de GDI intenta hacer coincidir la fuente lógica con una fuente física existente. Si el asignador de fuentes no encuentra una coincidencia exacta para la fuente lógica, proporciona una fuente alternativa cuyas características coinciden con tantas características solicitadas como sea posible.
+Esta fuente tiene las características especificadas en la estructura [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw) Cuando se selecciona la fuente mediante la función miembro [CDC::SelectObject,](../../mfc/reference/cdc-class.md#selectobject) el asignador de fuentes GDI intenta hacer coincidir la fuente lógica con una fuente física existente. Si el asignador de fuentes no encuentra una coincidencia exacta para la fuente lógica, proporciona una fuente alternativa cuyas características coinciden con tantas características solicitadas como sea posible.
 
-Cuando ya no necesite el objeto de `CFont` creado por la función `CreateFontIndirect`, use `CDC::SelectObject` para seleccionar una fuente diferente en el contexto del dispositivo y, a continuación, elimine el objeto `CFont` que ya no es necesario.
+Cuando ya no `CFont` necesite el `CreateFontIndirect` objeto `CDC::SelectObject` creado por la función, utilice para `CFont` seleccionar una fuente diferente en el contexto del dispositivo y, a continuación, elimine el objeto que ya no es necesario.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]
 
-##  <a name="createpointfont"></a>Cfont (:: CreatePointFont
+## <a name="cfontcreatepointfont"></a><a name="createpointfont"></a>CFont::CreatePointFont
 
-Esta función proporciona una manera sencilla de crear una fuente de un tipo de letra y un tamaño de punto especificados.
+Esta función proporciona una forma sencilla de crear una fuente de un tipo de letra y un tamaño de punto especificados.
 
 ```
 BOOL CreatePointFont(
@@ -235,31 +235,31 @@ BOOL CreatePointFont(
 ### <a name="parameters"></a>Parámetros
 
 *nPointSize*<br/>
-Alto de fuente solicitado en décimas de punto. (Por ejemplo, pase 120 para solicitar una fuente de 12 puntos).
+Altura de fuente solicitada en décimas de punto. (Por ejemplo, pase 120 para solicitar una fuente de 12 puntos.)
 
 *lpszFaceName*<br/>
-`CString` o puntero a una cadena terminada en null que especifica el nombre del tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. La función EnumFontFamilies de Windows se puede utilizar para enumerar todas las fuentes disponibles actualmente. Si *lpszFaceName* es null, el GDI utiliza un tipo de letra independiente del dispositivo.
+A `CString` o puntero a una cadena terminada en null que especifica el nombre de tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. La función 'EnumFontFamilies de Windows se puede utilizar para enumerar todas las fuentes disponibles actualmente. Si *lpszFaceName* es NULL, el GDI utiliza un tipo de letra independiente del dispositivo.
 
 *pDC*<br/>
-Puntero al objeto [CDC](../../mfc/reference/cdc-class.md) que se va a utilizar para convertir el alto de *nPointSize* en unidades lógicas. Si es NULL, se usa un contexto de dispositivo de pantalla para la conversión.
+Puntero al objeto [CDC](../../mfc/reference/cdc-class.md) que se usará para convertir el alto en *nPointSize* en unidades lógicas. Si ES NULL, se usa un contexto de dispositivo de pantalla para la conversión.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es distinto de cero si es correcto; de lo contrario, es 0.
+Distinto de cero si se realiza correctamente, de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
-Convierte automáticamente el alto de *nPointSize* en unidades lógicas mediante el objeto CDC al que apunta *pDC*.
+Convierte automáticamente el alto en *nPointSize* en unidades lógicas mediante el objeto CDC al que apunta *pDC*.
 
-Cuando termine con el `CFont` objeto creado por la función `CreatePointFont`, seleccione primero la fuente del contexto del dispositivo y, a continuación, elimine el objeto `CFont`.
+Cuando termine con `CFont` el objeto `CreatePointFont` creado por la función, seleccione primero `CFont` la fuente fuera del contexto del dispositivo y, a continuación, elimine el objeto.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]
 
-##  <a name="createpointfontindirect"></a>Cfont (:: CreatePointFontIndirect
+## <a name="cfontcreatepointfontindirect"></a><a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect
 
-Esta función es igual que [CreateFontIndirect](#createfontindirect) , salvo que el miembro `lfHeight` del `LOGFONT` se interpreta en décimas de punto en lugar de unidades de dispositivo.
+Esta función es la misma que [CreateFontIndirect](#createfontindirect) excepto que el `lfHeight` miembro de la `LOGFONT` se interpreta en décimas de punto en lugar de unidades de dispositivo.
 
 ```
 BOOL CreatePointFontIndirect(
@@ -270,28 +270,28 @@ BOOL CreatePointFontIndirect(
 ### <a name="parameters"></a>Parámetros
 
 *lpLogFont*<br/>
-Apunta a una estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) que define las características de la fuente lógica. El miembro `lfHeight` de la estructura de `LOGFONT` se mide en décimas de punto en lugar de unidades lógicas. (Por ejemplo, establezca `lfHeight` en 120 para solicitar una fuente de 12 puntos).
+Apunta a una estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) que define las características de la fuente lógica. El `lfHeight` miembro `LOGFONT` de la estructura se mide en décimas de punto en lugar de unidades lógicas. (Por ejemplo, `lfHeight` establezca en 120 para solicitar una fuente de 12 puntos.)
 
 *pDC*<br/>
-Puntero al objeto [CDC](../../mfc/reference/cdc-class.md) que se va a utilizar para convertir el alto de `lfHeight` en unidades lógicas. Si es NULL, se usa un contexto de dispositivo de pantalla para la conversión.
+Puntero al objeto [CDC](../../mfc/reference/cdc-class.md) que se utilizará `lfHeight` para convertir la altura en unidades lógicas. Si ES NULL, se usa un contexto de dispositivo de pantalla para la conversión.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es distinto de cero si es correcto; de lo contrario, es 0.
+Distinto de cero si se realiza correctamente, de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
-Esta función convierte automáticamente el alto de `lfHeight` en unidades lógicas usando el objeto CDC al que apunta *pDC* antes de pasar la estructura de `LOGFONT` a Windows.
+Esta función convierte automáticamente `lfHeight` la altura en unidades lógicas mediante `LOGFONT` el objeto CDC al que apunta *pDC* antes de pasar la estructura a Windows.
 
-Cuando termine con el `CFont` objeto creado por la función `CreatePointFontIndirect`, seleccione primero la fuente del contexto del dispositivo y, a continuación, elimine el objeto `CFont`.
+Cuando termine con `CFont` el objeto `CreatePointFontIndirect` creado por la función, seleccione primero `CFont` la fuente fuera del contexto del dispositivo y, a continuación, elimine el objeto.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]
 
-##  <a name="fromhandle"></a>Cfont (:: FromHandle
+## <a name="cfontfromhandle"></a><a name="fromhandle"></a>CFont::FromHandle
 
-Devuelve un puntero a un objeto `CFont` cuando se proporciona un identificador HFONT a un objeto de fuente de Windows GDI.
+Devuelve un puntero `CFont` a un objeto cuando se le da un identificador HFONT a un objeto de fuente GDI de Windows.
 
 ```
 static CFont* PASCAL FromHandle(HFONT hFont);
@@ -300,23 +300,23 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="parameters"></a>Parámetros
 
 *hFont*<br/>
-Identificador de HFONT de una fuente de Windows.
+Identificador HFONT de una fuente de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un objeto de `CFont` si se realiza correctamente; de lo contrario, NULL.
+Un puntero `CFont` a un objeto si se realiza correctamente; NULL.
 
 ### <a name="remarks"></a>Observaciones
 
-Si un objeto de `CFont` no está ya asociado al identificador, se crea y se adjunta un objeto de `CFont` temporal. Este objeto `CFont` temporal solo es válido hasta la próxima vez que la aplicación tenga tiempo de inactividad en su bucle de eventos, momento en el que se eliminarán todos los objetos gráficos temporales. Otra forma de decir esto es que el objeto temporal solo es válido durante el procesamiento de un mensaje de ventana.
+Si `CFont` un objeto aún no está asociado `CFont` al identificador, se crea y adjunta un objeto temporal. Este `CFont` objeto temporal solo es válido hasta la próxima vez que la aplicación tenga tiempo de inactividad en su bucle de eventos, momento en el que se eliminan todos los objetos gráficos temporales. Otra forma de decir esto es que el objeto temporal sólo es válido durante el procesamiento de un mensaje de ventana.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]
 
-##  <a name="getlogfont"></a>Cfont (:: GetLogFont
+## <a name="cfontgetlogfont"></a><a name="getlogfont"></a>CFont::GetLogFont
 
-Llame a esta función para recuperar una copia de la estructura de `LOGFONT` para `CFont`.
+Llame a esta función `LOGFONT` para `CFont`recuperar una copia de la estructura para .
 
 ```
 int GetLogFont(LOGFONT* pLogFont);
@@ -325,19 +325,19 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="parameters"></a>Parámetros
 
 *pLogFont*<br/>
-Puntero a la estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) para recibir la información de la fuente.
+Puntero a la estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) para recibir la información de fuente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es distinto de cero si la función se ejecuta correctamente, de lo contrario, es 0.
+Distinto de cero si la función se realiza correctamente, de lo contrario 0.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]
 
-##  <a name="operator_hfont"></a>Cfont (:: Operator HFONT
+## <a name="cfontoperator-hfont"></a><a name="operator_hfont"></a>CFont::operador HFONT
 
-Utilice este operador para obtener el identificador de GDI de Windows de la fuente asociada al objeto de `CFont`.
+Utilice este operador para obtener el identificador GDI `CFont` de Windows de la fuente adjunta al objeto.
 
 ```
 operator HFONT() const;
@@ -345,13 +345,13 @@ operator HFONT() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Identificador del objeto de fuente de la GDI de Windows asociado a `CFont` si es correcto; de lo contrario, NULL.
+El identificador del objeto de fuente `CFont` GDI de Windows asociado si se realiza correctamente; NULL.
 
 ### <a name="remarks"></a>Observaciones
 
-Puesto que este operador se usa automáticamente para las conversiones de `CFont` a [fuentes y texto](/windows/win32/gdi/fonts-and-text), puede pasar `CFont` objetos a las funciones que esperan HFONTs.
+Puesto que este operador se `CFont` utiliza automáticamente para las `CFont` conversiones de fuentes y [texto](/windows/win32/gdi/fonts-and-text), puede pasar objetos a funciones que esperan HIFON.
 
-Para obtener más información sobre el uso de objetos gráficos, vea [objetos gráficos](/windows/win32/gdi/graphic-objects) en el Windows SDK.
+Para obtener más información sobre el uso de objetos gráficos, vea [Objetos gráficos](/windows/win32/gdi/graphic-objects) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 

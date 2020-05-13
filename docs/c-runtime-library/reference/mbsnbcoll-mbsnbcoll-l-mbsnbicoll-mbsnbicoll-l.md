@@ -1,11 +1,15 @@
 ---
 title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
 - _mbsnbcoll
 - _mbsnbicoll
+- _o__mbsnbcoll
+- _o__mbsnbcoll_l
+- _o__mbsnbicoll
+- _o__mbsnbicoll_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - _tcsncoll_l function
 - _tcsnicoll_l function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: d759bda0133a95406a586011d39d69074283bf97
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 491a652f19e9e1895aa62092c5c890923008f6e1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438210"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911910"
 ---
 # <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
@@ -113,7 +118,9 @@ En el caso de algunas páginas de códigos y los juegos de caracteres correspond
 
 Dado que las funciones de **Intercalación** intercalan cadenas lexicográficamente para su comparación, mientras que las funciones **CMP** simplemente prueban la igualdad de cadenas, las funciones de **Intercalación** son mucho más lentas que las versiones de **CMP** correspondientes. Por lo tanto, las funciones de **Intercalación** deben usarse solo cuando hay una diferencia entre el orden del juego de caracteres y el orden de los caracteres lexicográfico en la página de códigos actual y esta diferencia es de interés para la comparación.
 
-El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para más información, vea [Configuración regional](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -133,14 +140,14 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 |**_mbsnbicoll**|\<mbstring.h>|
 |**_mbsnbicoll_l**|\<mbstring.h>|
 
-Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
-[strcoll (funciones)](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funciones de strcoll (](../../c-runtime-library/strcoll-functions.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>

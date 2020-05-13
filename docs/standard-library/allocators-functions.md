@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424084"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364969"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; (macros)
 
@@ -28,7 +28,7 @@ ms.locfileid: "79424084"
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
-## <a name="allocator_decl"></a>  ALLOCATOR_DECL
+## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
 Produce una plantilla de clase de asignador.
 
@@ -38,7 +38,7 @@ Produce una plantilla de clase de asignador.
 
 ### <a name="remarks"></a>Observaciones
 
-La macro produce una definición de plantilla `template <class Type> class name {.....}` y una especialización `template <> class name<void> {.....}` que, juntos, definen una plantilla de clase de asignador que usa el filtro de sincronización `sync` y una memoria caché de tipo `cache`.
+La macro produce una `template <class Type> class name {.....}` definición `template <> class name<void> {.....}` de plantilla y una especialización que `sync` en conjunto `cache`definen una plantilla de clase de asignador que utiliza el filtro de sincronización y una memoria caché de tipo .
 
 En el caso de los compiladores que pueden compilar reenlaces, la definición de plantilla resultante tiene el siguiente aspecto:
 
@@ -68,7 +68,7 @@ public:
 };
 ```
 
-## <a name="cache_chunklist"></a>  CACHE_CHUNKLIST
+## <a name="cache_chunklist"></a><a name="cache_chunklist"></a>CACHE_CHUNKLIST
 
 Produce `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
@@ -78,7 +78,7 @@ Produce `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="cache_freelist"></a>  CACHE_FREELIST
+## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
 
 Produce `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
@@ -88,7 +88,7 @@ Produce `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
+## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
 
 Produce `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
@@ -98,7 +98,7 @@ Produce `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Observaciones
 
-## <a name="sync_default"></a>  SYNC_DEFAULT
+## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
 
 Da como resultado un filtro de sincronización.
 
@@ -112,4 +112,4 @@ Si un compilador admite la compilación de aplicaciones de un único subproceso 
 
 ## <a name="see-also"></a>Consulte también
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<asignadores>](../standard-library/allocators-header.md)

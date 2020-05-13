@@ -10,26 +10,26 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad421b0c90ad55126f69a899503d6a73184979f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320530"
 ---
 # <a name="dumpbin-reference"></a>Referencia de DUMPBIN
 
-La herramienta Microsoft COFF Binary File Dumper (DUMPBIN. (EXE) muestra información acerca de los archivos binarios de formato de archivo de objeto común (COFF). Puede utilizar DUMPBIN para examinar archivos de objeto COFF, bibliotecas estándar de objetos COFF, archivos ejecutables y bibliotecas de vínculos dinámicos (DLL).
+El dumper de archivos binarios de Microsoft COFF (DUMPBIN. EXE) muestra información sobre los archivos binarios de formato de archivo de objeto común (COFF). Puede utilizar DUMPBIN para examinar archivos de objetos COFF, bibliotecas estándar de objetos COFF, archivos ejecutables y bibliotecas de vínculos dinámicos (DLL).
 
 > [!NOTE]
->  Puede iniciar esta herramienta solo desde el símbolo del sistema de Visual Studio. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.
+> Puede iniciar esta herramienta solo desde el símbolo del sistema de Visual Studio. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.
 
-Solo el [/HEADERS](headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](gl-whole-program-optimization.md) opción del compilador.
+En los archivos producidos con la opción del compilador [/GL](gl-whole-program-optimization.md), solo está disponible la opción [/HEADERS DUMPBIN](headers.md).
 
 - [Línea de comandos DUMPBIN](dumpbin-command-line.md)
 
-- [Opciones de DUMPBIN](dumpbin-options.md)
+- [Opciones dumpbin](dumpbin-options.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Herramientas de generación MSVC adicionales](c-cpp-build-tools.md)
+[Herramientas de compilación de MSVC adicionales](c-cpp-build-tools.md)

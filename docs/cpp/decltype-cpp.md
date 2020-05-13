@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1ed07b8987df7b621ea2809409069cc1121fa24f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180217"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
-El **decltype** especificador de tipo produce el tipo de una expresión especificada. El **decltype** especificador, de tipo junto con el [palabra clave auto](../cpp/auto-cpp.md), es útil principalmente para los desarrolladores que crean bibliotecas de plantillas. Use **automática** y **decltype** para declarar una función de plantilla cuyo valor devuelto tipo depende de los tipos de sus argumentos de plantilla. O bien, use **automática** y **decltype** para declarar una función de plantilla que contiene una llamada a otra función y, a continuación, devuelve el tipo de valor devuelto de la función encapsulada.
+El especificador de tipo **decltype** produce el tipo de una expresión especificada. El especificador de tipo **decltype** , junto con la [palabra clave auto](../cpp/auto-cpp.md), resulta útil principalmente para los desarrolladores que escriben bibliotecas de plantillas. Use **auto** y **decltype** para declarar una función de plantilla cuyo tipo de valor devuelto depende de los tipos de sus argumentos de plantilla. O bien, use **auto** y **decltype** para declarar una función de plantilla que contiene una llamada a otra función y, a continuación, devuelve el tipo de valor devuelto de la función ajustada.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,25 +30,25 @@ decltype( expression )
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*expression*|Una expresión. Para obtener más información, consulte [expresiones](../cpp/expressions-cpp.md).|
+|*expression*|Expresión. Para obtener más información, vea [expresiones](../cpp/expressions-cpp.md).|
 
 ## <a name="return-value"></a>Valor devuelto
 
-El tipo de la *expresión* parámetro.
+Tipo del parámetro de *expresión* .
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **decltype** especificador de tipo se admite en Visual Studio 2010 o versiones posteriores y se puede usar con código nativo o administrado. `decltype(auto)` (C++14) se admite en Visual Studio de 2015 y versiones posteriores.
+El especificador de tipo **decltype** es compatible con Visual Studio 2010 o versiones posteriores, y se puede usar con código nativo o administrado. `decltype(auto)` (C++14) se admite en Visual Studio de 2015 y versiones posteriores.
 
-El compilador usa las siguientes reglas para determinar el tipo de la *expresión* parámetro.
+El compilador usa las siguientes reglas para determinar el tipo del parámetro *Expression* .
 
-- Si el *expresión* parámetro es un identificador o un [acceso a miembros de clase](../cpp/member-access-operators-dot-and.md), `decltype(expression)` es el tipo de entidad designado por *expresión*. Si no hay ninguna entidad o la *expresión* parámetro designa un conjunto de funciones sobrecargadas, el compilador produce un mensaje de error.
+- Si el parámetro *Expression* es un identificador o un [acceso de miembro de clase](../cpp/member-access-operators-dot-and.md), `decltype(expression)` es el tipo de la entidad denominada by *Expression*. Si no hay tal entidad o el parámetro de *expresión* nombra un conjunto de funciones sobrecargadas, el compilador produce un mensaje de error.
 
-- Si el *expresión* parámetro es una llamada a una función o un operador sobrecargado, `decltype(expression)` es el tipo de valor devuelto de la función. Los paréntesis alrededor de un operador sobrecargado se omiten.
+- Si el parámetro *Expression* es una llamada a una función o una función de operador sobrecargada, `decltype(expression)` es el tipo de valor devuelto de la función. Los paréntesis alrededor de un operador sobrecargado se omiten.
 
-- Si el *expresión* parámetro es un [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` es el tipo de *expresión*. Si el *expresión* parámetro es un [lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` es un [referencia lvalue](../cpp/lvalue-reference-declarator-amp.md) al tipo de *expresión*.
+- Si el parámetro de *expresión* es un valor [r](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` es el tipo de *expresión*. Si el parámetro de *expresión* es un valor [l](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` es una referencia de valor [l](../cpp/lvalue-reference-declarator-amp.md) al tipo de *expresión*.
 
-En el ejemplo de código siguiente se muestra algunos usos de la **decltype** especificador de tipo. En primer lugar, suponga que ha incluido las siguientes instrucciones en el código.
+En el ejemplo de código siguiente se muestran algunos usos del especificador de tipo **decltype** . En primer lugar, suponga que ha incluido las siguientes instrucciones en el código.
 
 ```cpp
 int var;
@@ -57,33 +57,33 @@ struct A { double x; }
 const A* a = new A();
 ```
 
-A continuación, examine los tipos devueltos por los cuatro **decltype** instrucciones en la tabla siguiente.
+A continuación, examine los tipos devueltos por las cuatro instrucciones **decltype** en la tabla siguiente.
 
-|Instrucción|Tipo|Notas|
+|.|Tipo|Notas|
 |---------------|----------|-----------|
-|`decltype(fx());`|`const int&&`|Un [referencia rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) a un **const int**.|
+|`decltype(fx());`|`const int&&`|Referencia a un valor [r](../cpp/rvalue-reference-declarator-amp-amp.md) a **const int**.|
 |`decltype(var);`|**int**|El tipo de variable `var`.|
 |`decltype(a->x);`|**double**|El tipo del acceso a miembros.|
-|`decltype((a->x));`|`const double&`|Los paréntesis internos hacen que la instrucción se evalúe como una expresión en lugar de como un acceso a miembros. Y dado que `a` se declara como un `const` puntero, el tipo es una referencia a **doble const**.|
+|`decltype((a->x));`|`const double&`|Los paréntesis internos hacen que la instrucción se evalúe como una expresión en lugar de como un acceso a miembros. Y como `a` se declara como un puntero `const`, el tipo es una referencia a **const Double**.|
 
 ## <a name="decltype-and-auto"></a>Decltype y Auto
 
-En C ++ 14, puede usar `decltype(auto)` con ningún tipo de valor devuelto final para declarar una función de plantilla cuyo tipo de valor devuelto depende de los tipos de sus argumentos de plantilla.
+En C++ 14, puede usar `decltype(auto)` sin ningún tipo de valor devuelto final para declarar una función de plantilla cuyo tipo de valor devuelto depende de los tipos de sus argumentos de plantilla.
 
-En C ++ 11, puede usar el **decltype** especificador en un tipo de valor devuelto final, de tipo junto con el **automática** palabra clave, para declarar una función de plantilla cuyo tipo de valor devuelto depende de los tipos de su plantilla argumentos. Considere, por ejemplo el ejemplo de código siguiente en el que el tipo de valor devuelto de la función de plantilla depende de los tipos de los argumentos de plantilla. En el ejemplo de código, el *desconocido* marcador de posición indica que no se puede especificar el tipo de valor devuelto.
+En C++ 11, puede usar el especificador de tipo **decltype** en un tipo de valor devuelto final, junto con la palabra clave **auto** , para declarar una función de plantilla cuyo tipo de valor devuelto depende de los tipos de sus argumentos de plantilla. Considere, por ejemplo el ejemplo de código siguiente en el que el tipo de valor devuelto de la función de plantilla depende de los tipos de los argumentos de plantilla. En el ejemplo de código, el marcador de posición *Unknown* indica que no se puede especificar el tipo de valor devuelto.
 
 ```cpp
 template<typename T, typename U>
 UNKNOWN func(T&& t, U&& u){ return t + u; };
 ```
 
-La introducción de la **decltype** especificador de tipo permite que un desarrollador obtener el tipo de la expresión que devuelve la función de plantilla. Use la *sintaxis de declaración de función alternativa* que se muestra más adelante, el **automática** palabra clave y el **decltype** escriba especificador para declarar un  *en tiempo de ejecución especificado* tipo de valor devuelto. El tipo de valor devuelto especificado en tiempo de compilación se determina cuando se compila la declaración, en lugar de cuando se codifica.
+La introducción del especificador de tipo **decltype** permite a un desarrollador obtener el tipo de la expresión que devuelve la función de plantilla. Use la *Sintaxis de declaración de función alternativa* que se muestra más adelante, la palabra clave **auto** y el especificador de tipo **decltype** para declarar un tipo de valor devuelto *especificado en tiempo de ejecución* . El tipo de valor devuelto especificado en tiempo de compilación se determina cuando se compila la declaración, en lugar de cuando se codifica.
 
-El prototipo siguiente muestra la sintaxis de una declaración de función alternativa. Tenga en cuenta que el **const** y **volátil** calificadores y el **throw** [especificación de excepción](../cpp/exception-specifications-throw-cpp.md) son opcionales. El *function_body* marcador de posición representa una instrucción compuesta que especifica lo que hace la función. Como procedimiento recomendado, de codificación el *expresión* marcador de posición en el **decltype** instrucción debe coincidir con la expresión especificada por el **devolver** instrucción, si existe alguno, en el *function_body*.
+El prototipo siguiente muestra la sintaxis de una declaración de función alternativa. Tenga en cuenta que los calificadores **const** y **volatile** , y la especificación **Throw** [Exception](../cpp/exception-specifications-throw-cpp.md) son opcionales. El marcador de posición *function_body* representa una instrucción compuesta que especifica lo que hace la función. Como práctica recomendada de codificación, el marcador de posición de *expresión* en la instrucción **decltype** debe coincidir con la expresión especificada por la instrucción **Return** , si existe, en el *function_body*.
 
-**Auto** *function_name* **(** *parámetros*<sub>opt</sub> **)**  **Const**<sub>opt</sub> **volátil**<sub>opt</sub> **->** **decltype (** *expresión* **)** **throw**<sub>opt</sub> **{** *function_body* **};**
+**auto** *function_name* **(** *parámetros*<sub>OPC</sub> **)** **const**<sub>OPC</sub> **volatile**<sub>OPC</sub> **->** **decltype (** *expresión* **)** **Throw**<sub>OPT</sub> **{** *function_body* **};**
 
-En el ejemplo de código siguiente, el tipo de valor devuelto especificado en tiempo de compilación de la función de plantilla `myFunc` viene determinado por los tipos de los argumentos de plantilla `t` y `u`. Como práctica de codificación, el ejemplo de código también usa las referencias rvalue y `forward` plantilla de función, que son compatibles con *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+En el ejemplo de código siguiente, el tipo de valor devuelto especificado en tiempo de compilación de la función de plantilla `myFunc` viene determinado por los tipos de los argumentos de plantilla `t` y `u`. Como práctica recomendada de codificación, en el ejemplo de código también se utilizan referencias rvalue y la plantilla de función `forward`, que admiten el *reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ```cpp
 //C++11
@@ -101,11 +101,11 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 Las funciones de reenvío encapsulan llamadas a otras funciones. Considere una plantilla de función que reenvía sus argumentos, o los resultados de una expresión en la que participan estos argumentos, a otra función. Además, la función de reenvío devuelve el resultado de la llamada a otra función. En este escenario, el tipo de valor devuelto de la función de reenvío debe ser el mismo que el tipo de valor devuelto de la función encapsulada.
 
-En este escenario, no se puede escribir una expresión de tipo adecuada sin el **decltype** especificador de tipo. El **decltype** especificador de tipo permite funciones de reenvío genéricas porque no pierde la información necesaria sobre si una función devuelve un tipo de referencia. Para obtener un ejemplo de código de una función de reenvío, vea el ejemplo anterior de la función de plantilla `myFunc`.
+En este escenario, no se puede escribir una expresión de tipo adecuada sin el especificador de tipo **decltype** . El especificador de tipo **decltype** habilita las funciones de reenvío genéricas porque no pierde información necesaria sobre si una función devuelve un tipo de referencia. Para obtener un ejemplo de código de una función de reenvío, vea el ejemplo anterior de la función de plantilla `myFunc`.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo de código siguiente se declara el tipo de valor devuelto especificado en tiempo de compilación de la función de plantilla `Plus()`. El `Plus` función procesa sus operandos con el **operator +** sobrecargar. Por consiguiente, la interpretación de operador más (+) y el tipo de valor devuelto de la función `Plus` depende de los tipos de los argumentos de la función.
+En el ejemplo de código siguiente se declara el tipo de valor devuelto especificado en tiempo de compilación de la función de plantilla `Plus()`. La función `Plus` procesa sus dos operandos con **Operator +** Overload. Por consiguiente, la interpretación de operador más (+) y el tipo de valor devuelto de la función `Plus` depende de los tipos de los argumentos de la función.
 
 ```cpp
 // decltype_1.cpp
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>Ejemplo
 
-**Visual Studio 2017 y versiones posterior:** El compilador analiza argumentos decltype cuando las plantillas se declara en lugar de crear una instancia. Por consiguiente, si se detecta una especialización no dependiente en el argumento decltype, no se aplaza hasta el momento de la creación de instancias, sino que se procesa inmediatamente y los errores resultantes se diagnostican en ese momento.
+**Visual Studio 2017 y versiones posteriores:** El compilador analiza los argumentos de decltype cuando se declaran las plantillas en lugar de crear una instancia. Por consiguiente, si se detecta una especialización no dependiente en el argumento decltype, no se aplaza hasta el momento de la creación de instancias, sino que se procesa inmediatamente y los errores resultantes se diagnostican en ese momento.
 
 En el ejemplo siguiente se muestra este tipo de error del compilador que se genera en el punto de declaración:
 

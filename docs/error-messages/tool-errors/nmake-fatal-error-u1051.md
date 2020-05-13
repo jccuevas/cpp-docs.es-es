@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1051
 ms.assetid: fede5cd5-dac3-47b7-b86d-e1acfb78699f
-ms.openlocfilehash: ddf1d262fb8dfc6e63b0bf5cc098b7b140539310
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6b939c97f993e42049677292374377d825d474
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367205"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193685"
 ---
 # <a name="nmake-fatal-error-u1051"></a>Error grave de NMAKE U1051
 
-No hay memoria suficiente
+memoria insuficiente
 
-NMAKE se quedó sin memoria, incluida la memoria virtual, porque el archivo MAKE era demasiado grande o compleja.
+NMAKE se quedó sin memoria, incluida la memoria virtual, porque el archivo make era demasiado grande o complejo.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones
 
 1. Libere espacio en disco.
 
-1. Aumentar el tamaño del archivo de paginación de Windows NT o el archivo de intercambio de Windows.
+1. Aumente el tamaño del archivo de paginación de Windows NT o del archivo de intercambio de Windows.
 
-1. Si solo se utiliza la parte del archivo MAKE, divida el archivo MAKE en archivos independientes o usar **! IF** preprocesar directivas para limitar la cantidad que debe procesar NMAKE. El **! IF** directivas incluyen **! IF**, `!IFDEF`, **! IFNDEF**, **! ELSE IF**, **! ELSE** `IFDEF`, y **! ELSE** `IFNDEF`.
+1. Si solo se usa una parte del archivo make, divida el archivo make en archivos independientes o use **! Si** las directivas de preprocesamiento limitan la cantidad que NMAKE debe procesar. El  **Si** las directivas incluyen **! Si**es, `!IFDEF`, **! IFNDEF**, **! en caso contrario**, **! ELSE** `IFDEF`y **!** En caso contrario `IFNDEF`.

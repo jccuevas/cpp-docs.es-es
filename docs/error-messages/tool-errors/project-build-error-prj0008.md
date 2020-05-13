@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0008
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
-ms.openlocfilehash: 5741b7ef8cb9a7ae53d64874d3531e9271c09e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d1c11ab7539f25d371c0bfbd2853b6155c9661c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359493"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192964"
 ---
 # <a name="project-build-error-prj0008"></a>Error PRJ0008 al compilar el proyecto
 
-No se pudo eliminar el archivo 'archivo'.
+No se pudo eliminar el archivo ' archivo '.
 
 **Asegúrese de que el archivo no está abierto por otro proceso y no está protegido contra escritura.**
 
-Durante una regeneración o limpiar, Visual C++ elimina todos los archivos conocidos de intermedios y de salida de la compilación, así como los archivos que cumplan las especificaciones del comodín en el **extensiones para eliminar al limpiar** propiedad en el [General Página de propiedades de opciones de configuración](../../build/reference/general-property-page-project.md).
+Durante una recompilación o limpieza, C++ visual elimina todos los archivos intermedios y de salida conocidos de la compilación, así como cualquier archivo que cumpla las especificaciones de caracteres comodín de la propiedad **extensiones para eliminar al limpiar** en la [Página de propiedades opciones de configuración generales](../../build/reference/general-property-page-project.md).
 
-Verá este error si no puede eliminar un archivo de Visual C++. Para resolver el error, asegúrese del archivo y su directorio de escritura para el usuario que se va a generar.
+Verá este error si visual C++ no puede eliminar un archivo. Para resolver el error, haga que el archivo y su directorio sean grabables para el usuario que realiza la compilación.

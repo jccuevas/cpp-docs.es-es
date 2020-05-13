@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182024"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfaces genéricas (C++/CLI)
 
@@ -30,9 +30,9 @@ Para más información sobre las interfaces, consulte [Clase de interfaz](interf
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-*Atributos*<br/>
+*attributes*<br/>
 (Opcional) Información declarativa adicional. Para más información sobre atributos y clases de atributos, consulte **Atributos**.
 
 *class-key*<br/>
@@ -42,7 +42,7 @@ Para más información sobre las interfaces, consulte [Clase de interfaz](interf
 Lista separada por comas de identificadores.
 
 *type-parameter-constraints-clauses*<br/>
-Toma la forma especificada en [Restricciones en parámetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
+Toma la forma especificada en el artículo sobre [las restricciones en parámetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
 
 *accessibility-modifiers*<br/>
 (Opcional) Modificadores de accesibilidad (por ejemplo, **public, private**).
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Genéricos](generics-cpp-component-extensions.md)

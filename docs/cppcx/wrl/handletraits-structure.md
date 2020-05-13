@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 4dd2cde62d36c46926e703e6fb649e2ae4ef7811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371446"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits (estructura)
 
-Define las características comunes de un controlador.
+Define las características comunes de un identificador.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,15 +32,15 @@ struct HANDLETraits;
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-Name   | Descripción
+Nombre   | Descripción
 ------ | ---------------------
-`Type` | Un sinónimo de identificador.
+`Type` | Sinónimo de HANDLE.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                                              | Descripción
+Nombre                                              | Descripción
 ------------------------------------------------- | -----------------------------
-[HANDLETraits::Close](#close)                     | Cierra el identificador especificado.
+[HANDLETraits::Cerrar](#close)                     | Cierra el identificador especificado.
 [HANDLETraits::GetInvalidValue](#getinvalidvalue) | Representa un identificador no válido.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
@@ -51,9 +51,9 @@ Name                                              | Descripción
 
 **Encabezado:** corewrappers.h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers::HandleTraits
+**Espacio de nombres:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="close"></a>HANDLETraits::Close
+## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits::Cerrar
 
 Cierra el identificador especificado.
 
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parámetros
 
-*h*<br/>
-Para cerrar el identificador.
+*H*<br/>
+El mango para cerrar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si controlar *h* cerrado correctamente; en caso contrario, **false**.
+**true** si el manejador *h* cerró correctamente; de lo contrario, **false**.
 
-## <a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
 
 Representa un identificador no válido.
 
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Always returns INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE se define por Windows).
+Siempre devuelve INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE está definido por Windows.)

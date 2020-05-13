@@ -1,24 +1,24 @@
 ---
-title: Trabajar con archivos de recursosC++()
+title: Trabajar con archivos de recursos (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513589"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165891"
 ---
 # <a name="working-with-resource-files"></a>Trabajar con archivos de recursos
 
 > [!WARNING]
 > Esta sección se aplica a aplicaciones de escritorio de Windows escritas en C++.
 >
-> Para obtener información sobre los recursos de Plataforma universal de Windows aplicaciones C++escritas en, consulte [definir recursos](/windows/uwp/app-resources/)de la aplicación o C++agregar recursos a los proyectos de/CLI (administrados), vea [recursos de aplicaciones de escritorio](/dotnet/framework/resources/index) en el .NET Framework del desarrollador. Guíe.
+> Para obtener información sobre los recursos de Plataforma universal de Windows aplicaciones C++escritas en, consulte [definir recursos](/windows/uwp/app-resources/)de la aplicación o C++agregar recursos a los proyectos de/CLI (administrados), vea [recursos de aplicaciones de escritorio](/dotnet/framework/resources/index) en la guía del desarrollador de .NET Framework.
 
 Los recursos pueden estar compuestos por una amplia gama de elementos, como:
 
@@ -55,7 +55,7 @@ Proporciona vínculos a la documentación de Visual C++.
 [Hable con nosotros](/visualstudio/ide/talk-to-us)<br/>
 Proporciona vínculos a información acerca del uso del conjunto de documentación, el contacto con el servicio de soporte técnico y el uso de características de accesibilidad.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Aplicaciones de escritorio de Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menús y otros recursos](/windows/win32/menurc/resources)

@@ -2,12 +2,12 @@
 title: Información general sobre posibles problemas de actualización (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 44fcb6776118e829fe7c96e54f3f51615604ac31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627239"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368485"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Información general sobre posibles problemas de actualización (Visual C++)
 
@@ -33,7 +33,7 @@ C++ no tiene una interfaz binaria de aplicaciones (ABI) estable, pero Visual Stu
 
 Si dispone de un archivo objeto con símbolos externos y vinculación de C++, dicho archivo objeto podría no estar vinculado correctamente a los archivos objeto generados mediante otra versión principal del conjunto de herramientas. Existen muchos resultados posibles: el vínculo puede no funcionar en absoluto (por ejemplo, si se cambia la decoración de nombre); el vínculo puede ser correcto, pero las cosas podrían no funcionar en tiempo de ejecución (por ejemplo, si ha cambiado el diseño de tipo), o, en muchos casos, las cosas funcionan y nada sale mal. Además, tenga en cuenta que, aunque la ABI de C++ no es estable, la ABI de C y el subconjunto de la ABI de C++ requeridos para COM son estables.
 
-Si establece un vínculo con una biblioteca de importación, las versiones posteriores de las bibliotecas redistribuibles de Visual Studio que conserven la compatibilidad con ABI se podrán usar en el entorno de ejecución. Por ejemplo, si la aplicación se compila y vincula con el conjunto de herramientas de Visual Studio 2015 Update 3, podrá utilizar cualquier biblioteca redistribuible de Visual Studio 2017 o Visual Studio 2019, puesto que las bibliotecas de las versiones 2015, 2017 y 2019 conservan la compatibilidad binaria con versiones anteriores. Lo contrario no es cierto: no puede usar un redistribuible para una versión anterior del conjunto de herramientas que usó para compilar el código, aunque tenga una ABI compatible.
+Si establece un vínculo con una biblioteca de importación, las versiones posteriores de las bibliotecas redistribuibles de Visual Studio que conserven la compatibilidad con ABI se podrán usar en el entorno de ejecución. Por ejemplo, si la aplicación se compila y vincula con el conjunto de herramientas de Visual Studio 2015 Update 3, podrá utilizar cualquier biblioteca redistribuible de Visual Studio 2017 o Visual Studio 2019, puesto que las bibliotecas de las versiones 2015, 2017 y 2019 conservan la compatibilidad binaria con versiones anteriores. Lo contrario no es cierto: no se puede usar una versión redistribuible para una versión anterior del conjunto de herramientas que solía compilar el código, incluso si tienen una ABI compatible.
 
 ### <a name="libraries"></a>Bibliotecas
 
@@ -51,15 +51,15 @@ Si tiene una biblioteca estática que se ha compilado con una versión anterior 
 
 1. Si no puede (o no quiere) recompilar la biblioteca estática, puede intentar vincularla con legacy\_stdio\_definitions.lib. Si satisface las dependencias en tiempo de vínculo de la biblioteca estática, puede que le interese probar exhaustivamente la biblioteca estática como se usa en el binario, para asegurarse de que no se ve afectada negativamente por alguno de los [cambios de comportamiento que se realizaron en CRT universal](visual-cpp-change-history-2003-2015.md#BK_CRT).
 
-1. Si legacy\_stdio\_definitions.lib no cumple las dependencias de la biblioteca estática o si esta no funciona con CRT universal debido a los cambios de comportamiento mencionados anteriormente, recomendamos encapsular la biblioteca estática en un archivo DLL y vincularlo con la versión correcta del entorno de ejecución de Microsoft C. Por ejemplo, si la biblioteca estática se compiló con Visual Studio 2013, es posible que quiera compilar dicho DLL, así como las bibliotecas de C++ de Visual Studio 2013, con Visual Studio 2013. Al compilar la biblioteca en una DLL, encapsula el detalle de implementación que es su dependencia en una versión determinada del tiempo de ejecución de Microsoft C. (Deberá procurar que no se produzca una pérdida por parte de la interfaz DLL de los detalles del tiempo de ejecución de C que usa, por ejemplo, al devolver un archivo* a través del límite de DLL o al devolver un puntero asignado por malloc y esperar a que el autor de la llamada lo libere).
+1. Si las dependencias de la biblioteca\_estática no\_están satisfechas por stdio definitions.lib heredado o si la biblioteca no funciona con el CRT universal debido a los cambios de comportamiento mencionados anteriormente, se recomienda encapsular la biblioteca estática en un archivo DLL que se vincula con la versión correcta del tiempo de ejecución de Microsoft C. Por ejemplo, si la biblioteca estática se compiló con Visual Studio 2013, es posible que quiera compilar dicho DLL, así como las bibliotecas de C++ de Visual Studio 2013, con Visual Studio 2013. Al compilar la biblioteca en una DLL, encapsula el detalle de implementación que es su dependencia en una versión determinada del tiempo de ejecución de Microsoft C. (Deberá procurar que no se produzca una pérdida por parte de la interfaz DLL de los detalles del tiempo de ejecución de C que usa, por ejemplo, al devolver un archivo* a través del límite de DLL o al devolver un puntero asignado por malloc y esperar a que el autor de la llamada lo libere).
 
-El uso de varios CRT en un mismo proceso no es en sí mismo problemático (de hecho, la mayoría de los procesos acaban cargando varias DLL de CRT; por ejemplo, los componentes del sistema operativo Windows dependen de msvcrt.dll y CLR depende de su propio CRT privado). Los problemas se producen cuando se mezcla el estado de diferentes CRT. Por ejemplo, no debe asignar memoria mediante msvcr110.dll!malloc e intentar desasignarla mediante msvcr120.dll!free, y no debe intentar abrir un archivo con msvcr110!fopen e intentar leer desde ese archivo mediante msvcr120!fread. Mientras no mezcle el estado de diferentes CRT, no hay problema en que se carguen varios CRT en un mismo proceso.
+El uso de varios CRT en un mismo proceso no es en sí mismo problemático (de hecho, la mayoría de los procesos acaban cargando varias DLL de CRT; por ejemplo, los componentes del sistema operativo Windows dependen de msvcrt.dll y CLR depende de su propio CRT privado). Los problemas se producen cuando se mezcla el estado de diferentes CRT. Por ejemplo, no debe asignar memoria mediante msvcr110.dll!malloc e intentar desasignarla mediante msvcr120.dll!free, y no debe intentar abrir un archivo con msvcr110!fopen e intentar leer desde ese archivo mediante msvcr120!fread. Siempre y cuando no se mezcle el estado de diferentes CRT, puede tener varios CRT cargados de forma segura en un solo proceso.
 
 Para obtener más información, vea [Upgrade your code to the Universal CRT](upgrade-your-code-to-the-universal-crt.md) (Actualizar código a CRT universal).
 
 ## <a name="errors-due-to-project-settings"></a>Errores debidos a la configuración del proyecto
 
-Para comenzar el proceso de actualización, abra un proyecto, solución o área de trabajo antiguos en la versión más reciente de Visual Studio. Visual Studio creará un proyecto nuevo basado en la configuración del proyecto antiguo. Si el proyecto antiguo tiene una biblioteca o incluye rutas de acceso codificadas de forma rígida en ubicaciones no estándar, es posible que los archivos situados en esas rutas de acceso no estén visibles para el compilador cuando el proyecto usa la configuración predeterminada. Para obtener más información, vea [Configuración de OutputFile del vinculador](porting-guide-spy-increment.md#linker_output_settings).
+Para comenzar el proceso de actualización, abra un proyecto, solución o área de trabajo antiguos en la versión más reciente de Visual Studio. Visual Studio creará un proyecto nuevo basado en la configuración del proyecto antiguo. Si el proyecto anterior tiene biblioteca o incluye rutas de acceso que están codificadas de forma rígida en ubicaciones no estándar, es posible que los archivos de esas rutas de acceso no sean visibles para el compilador cuando el proyecto use la configuración predeterminada. Para obtener más información, vea [Configuración de OutputFile del vinculador](porting-guide-spy-increment.md#linker_output_settings).
 
 En general, ahora es un buen momento para organizar correctamente el código del proyecto a fin de simplificar el mantenimiento del proyecto y ayudar a compilar el código actualizado de la manera más rápida posible. Si el código fuente ya está bien organizado y el proyecto antiguo está compilado con Visual Studio 2010 o versiones posteriores, puede editar manualmente el archivo de proyecto nuevo para admitir la compilación en el compilador antiguo y en el nuevo. En el ejemplo siguiente se muestra cómo se compila para Visual Studio 2015 y Visual Studio 2017:
 
@@ -72,13 +72,13 @@ En general, ahora es un buen momento para organizar correctamente el código del
 
 En el caso de los símbolos sin resolver, es posible que tenga que corregir la configuración del proyecto.
 
-- Si el archivo de código fuente se encuentra en una ubicación no predeterminada, ¿ha agregado la ruta de acceso a los directorios de inclusión del proyecto?
+- Si el archivo de origen está en una ubicación no predeterminada, ¿agregó la ruta de acceso a los directorios de inclusión del proyecto?
 
 - Si el externo está definido en un archivo .lib, ¿ha especificado la ruta de acceso de lib en las propiedades del proyecto y se encuentra allí la versión correcta del archivo .lib?
 
 - ¿Está intentando vincular un archivo .lib compilado con una versión diferente de Visual Studio? Si es así, consulte la sección anterior sobre las dependencias de biblioteca y de conjunto de herramientas.
 
-- ¿Coinciden realmente los tipos de los argumentos en el sitio de llamada con una sobrecarga existente de la función? Compruebe que los tipos subyacentes de las definiciones de tipo de la firma de la función y del código que llama a la función son los esperados.
+- ¿Coinciden realmente los tipos de los argumentos en el sitio de llamada con una sobrecarga existente de la función? Compruebe que los tipos subyacentes para cualquier typedefs en la firma de la función y en el código que llama a la función son los que espera que sean.
 
 Para solucionar errores de símbolo sin resolver, puede probar a usar dumpbin.exe para examinar los símbolos definidos en un archivo binario. Pruebe la siguiente línea de comandos para ver los símbolos definidos en una biblioteca:
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t es un tipo nativo)
 
-(En Microsoft Visual C++ 6,0 y versiones anteriores, **wchar_t** no se implementó como un tipo integrado, pero se declaró en WCHAR. h como TypeDef para unsigned short). El C++ estándar requiere que **wchar_t** sea un tipo integrado. Si usa la versión de definición de tipo, pueden producirse problemas de portabilidad. Si actualiza desde versiones anteriores de Visual Studio y encuentra un error del compilador C2664 porque el código intenta convertir implícitamente **wchar_t** en un **entero corto sin signo**, es recomendable cambiar el código para corregir el error, en lugar de establecer `/Zc:wchar_t-`. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(En Microsoft Visual C++ 6.0 y versiones anteriores, **wchar_t** no se implementó como un tipo integrado, sino que se declaró en wchar.h como typedef para unsigned short.) El estándar C++ requiere que **wchar_t** sea un tipo integrado. Si usa la versión de definición de tipo, pueden producirse problemas de portabilidad. Si actualiza desde versiones anteriores de Visual Studio y encuentra un error del compilador C2664 porque el código intenta convertir implícitamente **wchar_t** en un **entero corto sin signo**, es recomendable cambiar el código para corregir el error, en lugar de establecer `/Zc:wchar_t-`. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Actualizar con las opciones del enlazador /NODEFAULTLIB, /ENTRY y /NOENTRY
 
@@ -96,7 +96,7 @@ La opción `/NODEFAULTLIB` del enlazador (o la propiedad del enlazador Omitir to
 
 Los proyectos que usan esta opción presentan un problema al actualizar, ya que el contenido de algunas de las bibliotecas predeterminadas se ha refactorizado. Dado que cada biblioteca tiene que aparecer en la propiedad **Dependencias adicionales** o en la línea de comandos del enlazador, deberá actualizar la lista de bibliotecas para que use todos los nombres actuales.
 
-En la siguiente tabla se muestran las bibliotecas cuyo contenido ha cambiado a partir de Visual Studio 2015. Para actualizar, debe agregar los nuevos nombres de biblioteca de la segunda columna a las bibliotecas de la primera columna. Algunas de las bibliotecas son bibliotecas de importación, pero esto no importa.
+En la siguiente tabla se muestran las bibliotecas cuyo contenido ha cambiado a partir de Visual Studio 2015. Para actualizar, debe agregar los nuevos nombres de biblioteca de la segunda columna a las bibliotecas de la primera columna. Algunas de estas bibliotecas son bibliotecas de importación, pero eso no debería importar.
 
 |||
 |-|-|
@@ -124,13 +124,13 @@ El encabezado \<stdint.h> define definiciones de tipos y macros que, a diferenci
 
 Si el error es C2371 y está implicado un tipo `stdint`, probablemente significa que el tipo está definido en un encabezado, ya sea en el código o en un archivo lib de terceros. Al actualizar, debe eliminar todas las definiciones personalizadas de tipos \<stdint.h>, pero primero compare las definiciones personalizadas con las definiciones estándar actuales para asegurarse de que no incorpora nuevos problemas.
 
-Puede pulsar **F12** (**Ir a definición**) para ver dónde está definido el tipo en cuestión.
+Puede presionar **F12** (**Ir a definición**) para ver dónde se define el tipo en cuestión.
 
-La opción del compilador [/showIncludes](../build/reference/showincludes-list-include-files.md) puede resultar útil en este caso. En el cuadro de diálogo **Páginas de propiedades** del proyecto, abra la página **C/C++**  > **Avanzadas** y establezca **Mostrar inclusiones** en **Sí**. Después, recompile el proyecto y vea la lista de `#include` en la ventana de salida. Se aplica sangría a cada encabezado bajo el encabezado que lo incluye.
+La opción del compilador [/showIncludes](../build/reference/showincludes-list-include-files.md) puede resultar útil en este caso. En el cuadro de diálogo **Páginas de propiedades** del proyecto, abra la página **C/C++** > **Avanzadas** y establezca **Mostrar inclusiones** en **Sí**. Después, recompile el proyecto y vea la lista de `#include` en la ventana de salida. Se aplica sangría a cada encabezado bajo el encabezado que lo incluye.
 
 ## <a name="errors-involving-crt-functions"></a>Errores relacionados con funciones de CRT
 
-A lo largo de los años, se han realizado muchos cambios en el tiempo de ejecución de C. Se han agregado muchas versiones seguras de funciones y algunas se han quitado. Además, como se describe anteriormente en este artículo, la implementación de CRT por parte de Microsoft se ha refactorizado en Visual Studio 2015 en nuevos binarios y archivos .lib asociados.
+A lo largo de los años, se han realizado muchos cambios en el tiempo de ejecución de C. Se han agregado muchas versiones seguras de funciones y algunas se han quitado. Además, como se describió anteriormente en este artículo, la implementación de Microsoft de CRT se refactorizó en Visual Studio 2015 en nuevos archivos binarios y archivos .lib asociados.
 
 Si un error está relacionado con una función de CRT, vea [Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md) o [C++ conformance improvements in Visual Studio](../overview/cpp-conformance-improvements.md) (Mejoras de conformidad de C++ en Visual Studio) para ver si los artículos contienen información adicional. Si el error es LNK2019: externo sin resolver, asegúrese de que no se ha quitado la función. Si está seguro de que la función todavía existe y el código de llamada es correcto, compruebe si el proyecto usa `/NODEFAULTLIB`. Si es así, debe actualizar la lista de bibliotecas para que el proyecto use las nuevas bibliotecas universales (UCRT). Para más información, vea la sección anterior sobre la biblioteca y las dependencias.
 
@@ -150,7 +150,7 @@ El estándar de C++ ahora especifica que las conversiones de valores enteros sin
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>Advertencias para usar funciones de CRT seguras
 
-A lo largo de los años, se han introducido versiones seguras de funciones de tiempo de ejecución de C. Aunque las versiones no seguras antiguas siguen estando disponibles, se recomienda que cambie el código para usar las versiones seguras. El compilador emitirá una advertencia del uso de versiones no seguras. Puede decidir deshabilitar u omitir estas advertencias. Para deshabilitar la advertencia en todos los proyectos de la solución, abra **Ver** > **Administrador de propiedades**, seleccione los proyectos, haga clic con el botón derecho en los elementos seleccionados y elija **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, en **Propiedades de configuración** > **C/C++**  > **Avanzadas**, seleccione **Deshabilitar advertencias específicas**. Haga clic en la flecha desplegable y, después, en **Editar**. Escriba 4996 en el cuadro de texto. (No incluya el prefijo "C"). Para obtener más información, vea [migrar para usar la seguridad de CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
+A lo largo de los años, se han introducido versiones seguras de funciones de tiempo de ejecución de C. Aunque las versiones no seguras antiguas siguen estando disponibles, se recomienda que cambie el código para usar las versiones seguras. El compilador emitirá una advertencia del uso de versiones no seguras. Puede decidir deshabilitar u omitir estas advertencias. Para deshabilitar la advertencia para todos los proyectos de la solución, abra **View** > **Property Manager**, seleccione todos los proyectos para los que desee deshabilitar la advertencia y, a continuación, haga clic con el botón derecho en los elementos seleccionados y elija **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, en **Propiedades de configuración** > **C/C++** > **Avanzadas**, seleccione **Deshabilitar advertencias específicas**. Haga clic en la flecha desplegable y, a continuación, haga clic en **Editar**. Escriba 4996 en el cuadro de texto. (No incluya el prefijo 'C'.) Para obtener más información, consulte [Portting para usar Secure CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>Errores debidos a cambios en las API de Windows o SDK obsoletos
 
@@ -180,11 +180,11 @@ Además, debe ser consciente de los posibles problemas en tiempo de compilación
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode frente a MBCS/ASCII
 
-Antes de que se estandarizase Unicode, muchos programas usaban el juego de caracteres multibyte (MBCS) para representar los caracteres que no estaban incluidos en el juego de caracteres ASCII. En proyectos de MFC antiguos, MBCS era la configuración predeterminada y, al actualizar el programa, verá advertencias que aconsejan que use Unicode en su lugar. Puede deshabilitar o ignorar la advertencia si decide que la conversión a Unicode es un coste de desarrollo que no merece la pena. Para deshabilitarla en todos los proyectos de la solución, abra **Ver** > **Administrador de propiedades**, seleccione todos los proyectos, haga clic con el botón derecho en los elementos seleccionados y elija **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, seleccione **Propiedades de configuración** > **C/C++**  > **Avanzadas**. En la propiedad **Deshabilitar advertencias específicas**, abra la flecha desplegable y elija **Editar**. Escriba 4996 en el cuadro de texto. (No incluya el prefijo "C"). Elija **Aceptar** para guardar la propiedad y, después, haga clic en **Aceptar** para guardar los cambios.
+Antes de que se estandarizase Unicode, muchos programas usaban el juego de caracteres multibyte (MBCS) para representar los caracteres que no estaban incluidos en el juego de caracteres ASCII. En proyectos de MFC antiguos, MBCS era la configuración predeterminada y, al actualizar el programa, verá advertencias que aconsejan que use Unicode en su lugar. Puede deshabilitar o ignorar la advertencia si decide que la conversión a Unicode es un coste de desarrollo que no merece la pena. Para deshabilitarla para todos los proyectos de la solución, abra **View** > **Property Manager**, seleccione todos los proyectos para los que desee deshabilitar la advertencia, haga clic con el botón derecho en los elementos seleccionados y elija **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, seleccione **Propiedades de configuración** > **C/C++** > **Avanzadas**. En la propiedad **Deshabilitar advertencias específicas**, abra la flecha desplegable y elija **Editar**. Escriba 4996 en el cuadro de texto. (No incluya el prefijo 'C'.) Elija **Aceptar** para guardar la propiedad y, a continuación, elija **Aceptar** para guardar los cambios.
 
-Para obtener más información, vea [Migrar de MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Para obtener información general sobre MBCS frente a Unicode, vea [texto y cadenas en C++ visual](../text/text-and-strings-in-visual-cpp.md) y [internacionalización](../c-runtime-library/internationalization.md) .
+Para obtener más información, vea [Migrar de MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Para obtener información general sobre MBCS frente a Unicode, vea [Texto y cadenas en Visual C+](../text/text-and-strings-in-visual-cpp.md) e [Internacionalización](../c-runtime-library/internationalization.md) .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Actualizar proyectos desde versiones anteriores de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Actualización de proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Mejoras de conformidad de C++ en Visual Studio](../overview/cpp-conformance-improvements.md)

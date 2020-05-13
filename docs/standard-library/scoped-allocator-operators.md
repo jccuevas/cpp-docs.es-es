@@ -5,20 +5,20 @@ f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 071fc3b73cd3378b110d6d412bb7575e35a77478
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 45da89793c3f4ea131404fc3392413e7aea9ef3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373381"
 ---
 # <a name="ltscoped_allocatorgt-operators"></a>&lt;scoped_allocator&gt; (operadores)
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[¡Operador!](#op_neq)|[operadora](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>¡Operador!
 
 Comprueba si dos objetos `scoped_allocator_adaptor` no son iguales.
 
@@ -31,17 +31,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *izquierda*
+*Izquierda*\
 Objeto `scoped_allocator_adaptor` izquierdo.
 
-\ *derecha*
+*Correcto*\
 Objeto `scoped_allocator_adaptor` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `!(left == right)`
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operadora
 
 Comprueba si dos objetos `scoped_allocator_adaptor` son iguales.
 
@@ -54,10 +54,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *izquierda*
+*Izquierda*\
 Objeto `scoped_allocator_adaptor` izquierdo.
 
-\ *derecha*
+*Correcto*\
 Objeto `scoped_allocator_adaptor` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -66,4 +66,4 @@ Objeto `scoped_allocator_adaptor` derecho.
 
 ## <a name="see-also"></a>Consulte también
 
-[<scoped_allocator>](../standard-library/scoped-allocator.md)
+[>de scoped_allocator<](../standard-library/scoped-allocator.md)

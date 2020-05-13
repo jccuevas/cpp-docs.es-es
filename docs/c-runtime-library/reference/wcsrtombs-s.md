@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs_s
+- _o_wcsrtombs_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 68f5b6f6b87fb3ad21899035dfc82d997d90cf38
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: c804d232dbcce67b8d467eaa37ccf2b15282881a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518314"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910595"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
@@ -58,7 +60,7 @@ errno_t wcsrtombs_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *pReturnValue*<br/>
 Tamaño en bytes de la cadena convertida, incluido el terminador null.
@@ -90,7 +92,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 Si se produce alguna de estas condiciones, se invoca la excepción de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve un código de error y establece **errno** como se indica en la tabla.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La función **wcsrtombs_s** convierte una cadena de caracteres anchos a la que apunta *wcstr* en caracteres multibyte almacenados en el búfer al que apunta *mbstr*, utilizando el estado de conversión contenido en *mbstate*. La conversión continuará para cada carácter hasta que se cumpla alguna de estas condiciones:
 
@@ -104,9 +106,9 @@ La cadena de destino siempre termina en nulo (aun en caso de error).
 
 Si *Count* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **wcsrtombs_s** convierte la parte de la cadena que quepa en el búfer de destino, a la vez que deja espacio para un terminador null.
 
-Si **wcsrtombs_s** convierte correctamente la cadena de origen, pone el tamaño en bytes de la cadena convertida, incluido el terminador null, en  *&#42;pReturnValue* (siempre que *pReturnValue* no sea **null**). Esto ocurre incluso si el argumento *mbstr* es **null** y proporciona una manera de determinar el tamaño de búfer necesario. Tenga en cuenta que si *mbstr* es **null**, *Count* se omite.
+Si **wcsrtombs_s** convierte correctamente la cadena de origen, coloca el tamaño en bytes de la cadena convertida, incluido el terminador null, en *&#42;PReturnValue* (proporcionado *pReturnValue* no es **null**). Esto ocurre incluso si el argumento *mbstr* es **null** y proporciona una manera de determinar el tamaño de búfer necesario. Tenga en cuenta que si *mbstr* es **null**, *Count* se omite.
 
-Si **wcsrtombs_s** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, pone-1 en *\*pReturnValue*, establece el búfer de destino en una cadena vacía, establece **errno** en **EILSEQ**y devuelve **EILSEQ**.
+Si **wcsrtombs_s** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, pone-1 en * \*pReturnValue*, establece el búfer de destino en una cadena vacía, establece **errno** en **EILSEQ**y devuelve **EILSEQ**.
 
 Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcsrtombs_s** es indefinido. **wcsrtombs_s** se ve afectado por la categoría LC_TYPE de la configuración regional actual.
 
@@ -116,6 +118,8 @@ Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamie
 La función **wcsrtombs_s** difiere de [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) por su reinicio. El estado de la conversión se almacena en *mbstate* para las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** en lugar de **wcslen**, si se utiliza una llamada subsiguiente a **wcsrtombs_s** en lugar de **wcstombs_s**.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Excepciones
 
@@ -168,16 +172,16 @@ int main()
 The string was successfully converted.
 ```
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**wcsrtombs_s**|\<wchar.h>|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>

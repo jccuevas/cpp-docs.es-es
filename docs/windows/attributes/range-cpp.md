@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214622"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -31,7 +31,7 @@ Valor de intervalo inferior.
 *high*<br/>
 Valor de intervalo alto.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo de **intervalo** C++ tiene la misma funcionalidad que el atributo MIDL de [intervalo](/windows/win32/Midl/range) .
 
@@ -58,13 +58,13 @@ __interface ICustom {
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz, parámetro de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - D8016
 ms.assetid: eec51312-7471-4f92-94b2-d517cafc8ef5
-ms.openlocfilehash: c1e2e3e28f8556416f58d68f8ef1df4b220bc54c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bdef16b14488be86aff880db7c049f4bcddcdb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196968"
 ---
 # <a name="command-line-error-d8016"></a>Error de la línea de comandos D8016
 
-Opciones de línea de comandos 'opción1' y 'opción2' son incompatibles
+las opciones de línea de comandos ' Opción1 ' y ' opción2 ' son incompatibles
 
-Las opciones de línea de comandos no pueden especificarse juntos.
+Las opciones de línea de comandos no se pueden especificar juntas.
 
-Compruebe las variables de entorno, como CL, especificaciones de opción.
+Compruebe las variables de entorno, como CL, para conocer las especificaciones de las opciones.
 
-**/ CLR** implica **/EHa**, y no se puede especificar cualquier otro **/EH** opción del compilador con **/CLR**. Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+**/CLR** implica **/EHA**, y no se puede especificar ninguna otra opción del compilador **/EH** con **/CLR**. Para obtener más información, consulta [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-D8016 puede aparecer después de actualizar un proyecto de Visual C++ 6.0: puede habilitar el proceso del Asistente para actualización de proyecto **/RTC** para cada archivo de código fuente en el proyecto, que reemplaza el **/RTC** establecer para el proyecto.  Para resolver, cambie el **/RTC** establecer para cada archivo de código fuente en el proyecto en la configuración predeterminada, lo que significa que la configuración del proyecto para **/RTC** entrará en vigor para cada archivo.
+Puede obtener D8016 después de actualizar un proyecto C++ de Visual 6,0: el proceso del Asistente para actualización de proyectos puede habilitar **/RTC** en cada archivo de código fuente del proyecto, lo que invalida el valor **/RTC** para el proyecto.  Para resolverlo, cambie el valor de **/RTC** de cada archivo de código fuente del proyecto a la configuración predeterminada, lo que significa que la configuración del proyecto para **/RTC** estará en vigor para cada archivo.
 
-Consulte [/RTC (comprobaciones de errores de tiempo de ejecución)](../../build/reference/rtc-run-time-error-checks.md) para obtener información acerca de cómo cambiar la **/RTC** configuración de la propiedad.
+Vea [/RTC (comprobaciones de errores en tiempo de ejecución)](../../build/reference/rtc-run-time-error-checks.md) para obtener información sobre cómo cambiar el valor de la propiedad **/RTC** .

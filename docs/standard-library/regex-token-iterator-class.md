@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5ada2ad69cbcac15e09968045e54095dfb2623d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689056"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366399"
 ---
 # <a name="regex_token_iterator-class"></a>regex_token_iterator (Clase)
 
@@ -45,24 +45,24 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Parámetros
 
-@No__t_1 *BidIt*
+*BidIt*\
 El tipo de iterador para subcoincidencias.
 
-@No__t_1 *Elem*
+*Elem*\
 Tipo de los elementos que debe coincidir.
 
-@No__t_1 *RXtraits*
+*RXtraits*\
 Clase Traits para los elementos.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La plantilla de clase describe un objeto de iterador hacia delante constante. Conceptualmente, contiene un objeto `regex_iterator` que usa para buscar coincidencias de expresiones regulares en una secuencia de caracteres. Extrae objetos del tipo `sub_match<BidIt>` que representan las subcoincidencias identificadas por los valores de índice en el vector almacenado `subs` para cada coincidencia de expresión regular.
+La plantilla de clase describe un objeto de iterador de avance constante. Conceptualmente, contiene un objeto `regex_iterator` que usa para buscar coincidencias de expresiones regulares en una secuencia de caracteres. Extrae objetos del tipo `sub_match<BidIt>` que representan las subcoincidencias identificadas por los valores de índice en el vector almacenado `subs` para cada coincidencia de expresión regular.
 
 Un valor de índice de -1 señala la secuencia de caracteres que empieza inmediatamente después del final de la coincidencia de expresión regular anterior (o comienza al principio de la secuencia de caracteres si no había ninguna coincidencia de expresión regular anterior) y que se extiende, aunque sin incluirlo, al primer carácter de la coincidencia de expresión regular actual o hasta el final de la secuencia de caracteres si no hay una coincidencia actual. Cualquier otro valor de índice `idx` señala el contenido del grupo de capturas incluido en `it.match[idx]`.
 
 ### <a name="members"></a>Miembros
 
-|Miembro|Default Value|
+|Member|Valor predeterminado|
 |-|-|
 |`private regex_iterator<BidIt, Elem, RXtraits> it`||
 |`private vector<int> subs`||
@@ -74,26 +74,26 @@ Un valor de índice de -1 señala la secuencia de caracteres que empieza inmedia
 |-|-|
 |[regex_token_iterator](#regex_token_iterator)|Construye el iterador.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[difference_type](#difference_type)|El tipo de diferencia de un iterador.|
 |[iterator_category](#iterator_category)|Tipo de la categoría del iterador.|
-|[pointer](#pointer)|El tipo de un puntero a una coincidencia.|
-|[reference](#reference)|El tipo de una referencia a una subcoincidencia.|
+|[puntero](#pointer)|El tipo de un puntero a una coincidencia.|
+|[Referencia](#reference)|El tipo de una referencia a una subcoincidencia.|
 |[regex_type](#regex_type)|El tipo de expresión regular que debe coincidir.|
 |[value_type](#value_type)|El tipo de una subcoincidencia.|
 
 ### <a name="operators"></a>Operadores
 
-|"??"|Descripción|
+|Operator|Descripción|
 |-|-|
-|[operator!=](#op_neq)|Compara iteradores para buscar desigualdad.|
-|[operator*](#op_star)|Tiene acceso a la subcoincidencia designada.|
-|[operator++](#op_add_add)|Incrementa el iterador almacenado.|
-|[operator==](#op_eq_eq)|Compara iteradores para buscar igualdad.|
-|[operator->](#op_arrow)|Tiene acceso a la subcoincidencia designada.|
+|[¡Operador!](#op_neq)|Compara iteradores para buscar desigualdad.|
+|[operador*](#op_star)|Tiene acceso a la subcoincidencia designada.|
+|[operador++](#op_add_add)|Incrementa el iterador almacenado.|
+|[operadora](#op_eq_eq)|Compara iteradores para buscar igualdad.|
+|[>operador](#op_arrow)|Tiene acceso a la subcoincidencia designada.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -197,7 +197,7 @@ match == aa
 match == z
 ```
 
-## <a name="difference_type"></a>  regex_token_iterator::difference_type
+## <a name="regex_token_iteratordifference_type"></a><a name="difference_type"></a>regex_token_iterator::difference_type
 
 El tipo de diferencia de un iterador.
 
@@ -205,11 +205,11 @@ El tipo de diferencia de un iterador.
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de `std::ptrdiff_t`.
 
-## <a name="iterator_category"></a>  regex_token_iterator::iterator_category
+## <a name="regex_token_iteratoriterator_category"></a><a name="iterator_category"></a>regex_token_iterator::iterator_category
 
 Tipo de la categoría del iterador.
 
@@ -217,11 +217,11 @@ Tipo de la categoría del iterador.
 typedef std::forward_iterator_tag iterator_category;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de `std::forward_iterator_tag`.
 
-## <a name="op_neq"></a>  regex_token_iterator::operator!=
+## <a name="regex_token_iteratoroperator"></a><a name="op_neq"></a>regex_token_iterator::operador!
 
 Compara iteradores para buscar desigualdad.
 
@@ -231,14 +231,14 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *derecha*
+*Correcto*\
 Iterador con el que se compara.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve `!(*this == right)`.
 
-## <a name="op_star"></a>  regex_token_iterator::operator*
+## <a name="regex_token_iteratoroperator"></a><a name="op_star"></a>regex_token_iterator::operador*
 
 Tiene acceso a la subcoincidencia designada.
 
@@ -246,11 +246,11 @@ Tiene acceso a la subcoincidencia designada.
 const sub_match<BidIt>& operator*();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve un objeto `sub_match<BidIt>` que representa el grupo de capturas identificado por el valor de índice `subs[pos]`.
 
-## <a name="op_add_add"></a>  regex_token_iterator::operator++
+## <a name="regex_token_iteratoroperator"></a><a name="op_add_add"></a>regex_token_iterator::operador++
 
 Incrementa el iterador almacenado.
 
@@ -260,13 +260,13 @@ regex_token_iterator& operator++();
 regex_token_iterator& operator++(int);
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el iterador almacenado `it` es un iterador de final de secuencia, el primer operador establece el valor almacenado `pos` en el valor de `subs.size()` (lo que lo convierte en un iterador de fin de secuencia). En caso contrario, el operador incrementa el valor almacenado `pos`; si el resultado es igual al valor `subs.size()`, establece el valor almacenado `pos` en cero e incrementa el iterador almacenado `it`. Si al incrementar el iterador almacenado no queda igual que un iterador de final de secuencia, el operador no hace nada más. De lo contrario, si el final de la coincidencia precedente no estaba al final de la secuencia de caracteres, el operador establece el valor almacenado de `pos` en `subs.size()`. De lo contrario, el operador incrementa repetidamente el valor almacenado `pos` hasta `pos == subs.size()` o `subs[pos] == -1` (lo que garantiza que la siguiente desreferencia del iterador devolverá el final de la secuencia de caracteres si uno de los valores de índice es -1). En todos los casos, el operador devuelve el objeto.
 
 El segundo operador realiza una copia del objeto, incrementa el objeto y devuelve la copia.
 
-## <a name="op_eq_eq"></a>  regex_token_iterator::operator==
+## <a name="regex_token_iteratoroperator"></a><a name="op_eq_eq"></a>regex_token_iterator::operador
 
 Compara iteradores para buscar igualdad.
 
@@ -276,14 +276,14 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *derecha*
+*Correcto*\
 Iterador con el que se compara.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve `it == right.it && subs == right.subs && pos == right.pos`.
 
-## <a name="op_arrow"></a>  regex_token_iterator::operator-&gt;
+## <a name="regex_token_iteratoroperator-gt"></a><a name="op_arrow"></a>regex_token_iterator::operador-&gt;
 
 Tiene acceso a la subcoincidencia designada.
 
@@ -291,11 +291,11 @@ Tiene acceso a la subcoincidencia designada.
 const sub_match<BidIt> * operator->();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve un puntero al objeto `sub_match<BidIt>` que representa el grupo de capturas identificado por el valor de índice `subs[pos]`.
 
-## <a name="pointer"></a>  regex_token_iterator::pointer
+## <a name="regex_token_iteratorpointer"></a><a name="pointer"></a>regex_token_iterator::pointer
 
 El tipo de un puntero a una coincidencia.
 
@@ -303,11 +303,11 @@ El tipo de un puntero a una coincidencia.
 typedef sub_match<BidIt> *pointer;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de `sub_match<BidIt>*`, donde `BidIt` es el parámetro de plantilla.
 
-## <a name="reference"></a>  regex_token_iterator::reference
+## <a name="regex_token_iteratorreference"></a><a name="reference"></a>regex_token_iterator::referencia
 
 El tipo de una referencia a una subcoincidencia.
 
@@ -315,11 +315,11 @@ El tipo de una referencia a una subcoincidencia.
 typedef sub_match<BidIt>& reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de `sub_match<BidIt>&`, donde `BidIt` es el parámetro de plantilla.
 
-## <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator
+## <a name="regex_token_iteratorregex_token_iterator"></a><a name="regex_token_iterator"></a>regex_token_iterator::regex_token_iterator
 
 Construye el iterador.
 
@@ -342,19 +342,19 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*Primero*\
 Principio de la secuencia que debe coincidir.
 
-*última* \
+*Última*\
 Final de la secuencia que debe coincidir.
 
-*\*
+*re*\
 Expresión regular para las coincidencias.
 
-\ *f*
+*F*\
 Marcadores para coincidencias.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer constructor crea un iterador de final de secuencia.
 
@@ -364,7 +364,7 @@ El tercer constructor crea un objeto cuyo iterador almacenado `it` se inicializa
 
 El cuarto constructor crea un objeto cuyo iterador almacenado `it` se inicializa en `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, cuyo vector almacenado `subs` contiene los valores de `N` señalados por el argumento `submatches`de constructor y cuyo valor almacenado `pos` es cero.
 
-## <a name="regex_type"></a>  regex_token_iterator::regex_type
+## <a name="regex_token_iteratorregex_type"></a><a name="regex_type"></a>regex_token_iterator::regex_type
 
 El tipo de expresión regular que debe coincidir.
 
@@ -372,11 +372,11 @@ El tipo de expresión regular que debe coincidir.
 typedef basic_regex<Elem, RXtraits> regex_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La definición de tipo es un sinónimo de `basic_regex<Elem, RXtraits>`.
 
-## <a name="value_type"></a>  regex_token_iterator::value_type
+## <a name="regex_token_iteratorvalue_type"></a><a name="value_type"></a>regex_token_iterator::value_type
 
 El tipo de una subcoincidencia.
 
@@ -384,17 +384,17 @@ El tipo de una subcoincidencia.
 typedef sub_match<BidIt> value_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de `sub_match<BidIt>`, donde `BidIt` es el parámetro de plantilla.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<regex>](../standard-library/regex.md)\
-\ de la [clase regex_constants](../standard-library/regex-constants-class.md)
-\ de la [clase regex_error](../standard-library/regex-error-class.md)
-[\<regex > funciones](../standard-library/regex-functions.md) \
-\ de la [clase regex_iterator](../standard-library/regex-iterator-class.md)
-[operadores de > de \<regex](../standard-library/regex-operators.md) \
-\ de la [clase regex_traits](../standard-library/regex-traits-class.md)
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)
+[Clase regex_constants](../standard-library/regex-constants-class.md)\
+[Clase regex_error](../standard-library/regex-error-class.md)\
+[\<funciones de> regex](../standard-library/regex-functions.md)\
+[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores de> regex](../standard-library/regex-operators.md)\
+[Clase regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

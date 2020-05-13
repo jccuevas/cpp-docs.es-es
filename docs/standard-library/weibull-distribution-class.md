@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 01640cd700f54facba06f65f63e172abc668a5be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366380"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution (Clase)
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parámetros
 
-\ *RealType*
-El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, por defecto **es double**. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Observaciones
 
-La plantilla de clase describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o un tipo **Double** si no se proporciona ninguno, distribuido según la distribución de Weibull. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que produce valores de un tipo de punto flotante especificado por el usuario, o escriba **double** si no se proporciona ninguno, distribuido según la distribución de Weibull. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -92,7 +92,7 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información acerca de las clases de distribución y sus miembros, vea [ \<>aleatorias ](../standard-library/random.md).
 
 Para obtener más detalles sobre la distribución de Weibull, vea el artículo de Wolfram MathWorld sobre la [distribución de Weibull](https://mathworld.wolfram.com/WeibullDistribution.html).
 
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<> aleatorio
+**Encabezado:** \<random>
 
 **Espacio de nombres:** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -222,13 +222,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*un*\
+*Un*\
 El parámetro de distribución `a`.
 
-*b*\
+*B*\
 El parámetro de distribución `b`.
 
-\ *PARM*
+*Parmesana*\
 La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Observaciones
@@ -239,7 +239,7 @@ El primer constructor crea un objeto cuyo valor `a` almacenado contiene el valor
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>  weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::param_type
 
 Almacena los parámetros de la distribución.
 
@@ -257,13 +257,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*un*\
+*Un*\
 El parámetro de distribución `a`.
 
-*b*\
+*B*\
 El parámetro de distribución `b`.
 
-\ *derecha*
+*Correcto*\
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Observaciones
@@ -274,4 +274,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)
+[\<>al azar](../standard-library/random.md)

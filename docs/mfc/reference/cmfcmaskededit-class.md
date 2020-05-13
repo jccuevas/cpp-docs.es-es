@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26617f10605fe2a8a94adcc477cccab7e2ba4919
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410153"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754223"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit (clase)
 
-La `CMFCMaskedEdit` clase es compatible con un control de edición enmascarado, que valida la entrada de usuario en una máscara y muestra los resultados validados de acuerdo con una plantilla.
+La `CMFCMaskedEdit` clase admite un control de edición enmascarado, que valida la entrada del usuario con una máscara y muestra los resultados validados según una plantilla.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,50 +45,50 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Constructor predeterminado.|
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CMFCMaskedEdit::DisableMask](#disablemask)|Deshabilita la validación de entrada del usuario.|
-|[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Especifica si el `GetWindowText` método recupera solo los caracteres enmascarados.|
-|[CMFCMaskedEdit::EnableMask](#enablemask)|Inicializa la máscara de control de edición.|
-|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|Especifica si el control de edición con máscara selecciona grupos concretos de entrada del usuario, o todos los usuarios de entrada.|
-|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|Especifica si el texto se valida comparándola con solo enmascarar caracteres, o con la máscara completa.|
-|`CMFCMaskedEdit::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
-|[CMFCMaskedEdit::GetWindowText](#getwindowtext)|Recupera texto desde el control de edición enmascarada puede validar.|
+|[CMFCMaskedEdit::DisableMask](#disablemask)|Deshabilita la validación de la entrada del usuario.|
+|[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Especifica si `GetWindowText` el método recupera solo caracteres enmascarados.|
+|[CMFCMaskedEdit::EnableMask](#enablemask)|Inicializa el control de edición enmascarado.|
+|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|Especifica si el control de edición enmascarado selecciona determinados grupos de entrada de usuario o todas las entradas del usuario.|
+|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|Especifica si el texto se valida solo con caracteres enmascarados o con toda la máscara.|
+|`CMFCMaskedEdit::GetThisClass`|Utilizado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|
+|[CMFCMaskedEdit::GetWindowText](#getwindowtext)|Recupera texto validado del control de edición enmascarado.|
 |[CMFCMaskedEdit::SetValidChars](#setvalidchars)|Especifica una cadena de caracteres válidos que el usuario puede escribir.|
-|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|Muestra un símbolo del sistema en el control de edición con máscara.|
+|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|Muestra una solicitud en el control de edición enmascarado.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Lo llama el marco de trabajo para validar el carácter especificado en el carácter de máscara correspondiente.|
+|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Llamado por el marco de trabajo para validar el carácter especificado con el carácter de máscara correspondiente.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Realice los pasos siguientes para usar el `CMFCMaskedEdit` control en la aplicación:
+Realice los pasos `CMFCMaskedEdit` siguientes para utilizar el control en la aplicación:
 
-1. Incrustar un `CMFCMaskedEdit` objeto en la clase de ventana.
+1. Incruste un `CMFCMaskedEdit` objeto en la clase de ventana.
 
-2. Llame a la [CMFCMaskedEdit::EnableMask](#enablemask) método para especificar la máscara.
+2. Llame al método [CMFCMaskedEdit::EnableMask](#enablemask) para especificar la máscara.
 
-3. Llame a la [CMFCMaskedEdit::SetValidChars](#setvalidchars) método para especificar la lista de caracteres válidos.
+3. Llame al método [CMFCMaskedEdit::SetValidChars](#setvalidchars) para especificar la lista de caracteres válidos.
 
-4. Llame a la [CMFCMaskedEdit::SetWindowText](#setwindowtext) método para especificar el texto predeterminado para el control de edición de la máscara.
+4. Llame a la [CMFCMaskedEdit::SetWindowText](#setwindowtext) método para especificar el texto predeterminado para el control de edición enmascarado.
 
-5. Llame a la [CMFCMaskedEdit::GetWindowText](#getwindowtext) método para recuperar el texto validado.
+5. Llame al método [CMFCMaskedEdit::GetWindowText](#getwindowtext) para recuperar el texto validado.
 
-Si no se llame a uno o varios métodos para inicializar la máscara, los caracteres válidos y texto de forma predeterminada, el control de edición con máscara se comporta igual que se comporta el control de edición estándar.
+Si no llama a uno o más métodos para inicializar la máscara, los caracteres válidos y el texto predeterminado, el control de edición enmascarado se comporta igual que el control de edición estándar se comporta.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar una máscara (por ejemplo, un número de teléfono) mediante el `EnableMask` método para crear la máscara de control de edición el enmascarado el `SetValidChars` método para especificar una cadena de caracteres válidos que el usuario puede escribir y `SetWindowText` método para mostrar un símbolo del sistema en la máscara de control de edición. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo configurar una máscara (por ejemplo, un número de teléfono) mediante el `EnableMask` método para crear la máscara para el control de edición enmascarado, el `SetValidChars` método para especificar una cadena de caracteres válidos que el usuario puede escribir y `SetWindowText` el método para mostrar un mensaje en el control de edición enmascarado. Este ejemplo forma parte del [ejemplo Nuevos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]
@@ -109,40 +109,40 @@ En el ejemplo siguiente se muestra cómo configurar una máscara (por ejemplo, u
 
 **Encabezado:** afxmaskededit.h
 
-##  <a name="disablemask"></a>  CMFCMaskedEdit::DisableMask
+## <a name="cmfcmaskededitdisablemask"></a><a name="disablemask"></a>CMFCMaskedEdit::DisableMask
 
-Deshabilita la validación de entrada del usuario.
+Deshabilita la validación de la entrada del usuario.
 
-```
+```cpp
 void DisableMask();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si se deshabilita la validación de entrada de usuario, el control de edición con máscara se comporta como el estándar de control de edición.
+Si la validación de entrada de usuario está deshabilitada, el control de edición enmascarado se comporta como el control de edición estándar.
 
-##  <a name="enablegetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableGetMaskedCharsOnly
+## <a name="cmfcmaskededitenablegetmaskedcharsonly"></a><a name="enablegetmaskedcharsonly"></a>CMFCMaskedEdit::EnableGetMaskedCharsOnly
 
-Especifica si el `GetWindowText` método recupera solo los caracteres enmascarados.
+Especifica si `GetWindowText` el método recupera solo caracteres enmascarados.
 
-```
+```cpp
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
-[in] TRUE para especificar que el [CMFCMaskedEdit::GetWindowText](#getwindowtext) método retrieve enmascara solo caracteres; FALSE para especificar que el método recuperar todo el texto. El valor predeterminado es TRUE.
+*bHabilitar*<br/>
+[en] TRUE para especificar que el [CMFCMaskedEdit::GetWindowText](#getwindowtext) método recuperar sólo caracteres enmascarados; FALSE para especificar que el método recuperar todo el texto. El valor predeterminado es TRUE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice este método para habilitar la recuperación caracteres enmascarados. A continuación, cree un control de edición con máscara que se corresponde con el número de teléfono, como (425) 555-0187. Si se llama a la `GetWindowText` método, devuelve "4255550187". Si deshabilita recuperar caracteres enmascarados, el `GetWindowText` método devuelve el texto que se muestra en el control de edición, por ejemplo, "(425) 555-0187".
+Utilice este método para habilitar la recuperación de caracteres enmascarados. A continuación, cree un control de edición enmascarado que corresponda al número de teléfono, como (425) 555-0187. Si llama `GetWindowText` al método, devuelve "4255550187". Si deshabilita la recuperación de `GetWindowText` caracteres enmascarados, el método devuelve el texto que se muestra en el control de edición, por ejemplo "(425) 555-0187".
 
-##  <a name="enablemask"></a>  CMFCMaskedEdit::EnableMask
+## <a name="cmfcmaskededitenablemask"></a><a name="enablemask"></a>CMFCMaskedEdit::EnableMask
 
-Inicializa la máscara de control de edición.
+Inicializa el control de edición enmascarado.
 
-```
+```cpp
 void EnableMask(
     LPCTSTR lpszMask,
     LPCTSTR lpszInputTemplate,
@@ -153,54 +153,54 @@ void EnableMask(
 ### <a name="parameters"></a>Parámetros
 
 *lpszMask*<br/>
-[in] Una cadena de máscara que especifica el tipo de caracteres que pueden aparecer en cada posición en la entrada del usuario. La longitud de la *lpszInputTemplate* y *lpszMask* cadenas del parámetro deben ser el mismo. Vea la sección Comentarios para obtener más detalles sobre los caracteres de máscara.
+[en] Cadena de máscara que especifica el tipo de carácter que puede aparecer en cada posición de la entrada del usuario. La longitud de las cadenas de parámetro *lpszInputTemplate* y *lpszMask* debe ser la misma. Consulte la sección Comentarios para obtener más detalles sobre los caracteres de máscara.
 
 *lpszInputTemplate*<br/>
-[in] Una cadena de plantilla de máscara que especifica que el literal de caracteres que puede aparecer en cada posición en la entrada del usuario. Use el carácter de subrayado ('_') como marcador de posición de carácter. La longitud de la *lpszInputTemplate* y *lpszMask* cadenas del parámetro deben ser el mismo.
+[en] Cadena de plantilla de máscara que especifica los caracteres literales que pueden aparecer en cada posición de la entrada del usuario. Utilice el carácter de subrayado ('_') como marcador de posición de caracteres. La longitud de las cadenas de parámetro *lpszInputTemplate* y *lpszMask* debe ser la misma.
 
 *chMaskInputTemplate*<br/>
-[in] Un carácter predeterminado que se sustituye por el marco de trabajo para cada carácter no válido en la entrada del usuario. El valor predeterminado de este parámetro es un carácter de subrayado ('_').
+[en] Carácter predeterminado que el marco de trabajo sustituye para cada carácter no válido en la entrada del usuario. El valor predeterminado de este parámetro es el carácter de subrayado ('_').
 
 *lpszValid*<br/>
-[in] Cadena que contiene un conjunto de caracteres válidos. NULL indica que todos los caracteres son válidos. El valor predeterminado de este parámetro es NULL.
+[en] Cadena que contiene un conjunto de caracteres válidos. NULL indica que todos los caracteres son válidos. El valor predeterminado de este parámetro es NULL.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice este método para crear la máscara para el control de edición con máscara. Derive una clase de la `CMFCMaskedEdit` clase e invalidar la [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) método debe utilizar su propio código para el procesamiento de máscara personalizado.
+Utilice este método para crear la máscara para el control de edición enmascarado. Derive una clase `CMFCMaskedEdit` de la clase e invalide el método [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) para usar su propio código para el procesamiento de máscaras personalizadas.
 
-La tabla siguiente se enumeran los caracteres de máscara de forma predeterminada:
+En la tabla siguiente se enumeran los caracteres de máscara predeterminados:
 
-|Carácter de máscara|Definición|
+|Personaje de máscara|Definición|
 |--------------------|----------------|
-|D|Dígito.|
+|D|Dígitos.|
 |d|Dígito o espacio.|
-|+|Signo más ('+ '), menos ('-'), o espacio.|
+|+|Más ('+'), menos ('-') o espacio.|
 |C|Carácter alfabético.|
-|c|Carácter alfabético o un espacio.|
-|A|Carácter alfanumérico.|
-|a|Carácter alfanumérico o un espacio.|
+|c|Carácter o espacio alfabético.|
+|Un|Carácter alfanumérico.|
+|a|Carácter alfanumérico o espacio.|
 |*|Un carácter imprimible.|
 
-##  <a name="enableselectbygroup"></a>  CMFCMaskedEdit::EnableSelectByGroup
+## <a name="cmfcmaskededitenableselectbygroup"></a><a name="enableselectbygroup"></a>CMFCMaskedEdit::EnableSelectByGroup
 
-Especifica si el control de edición con máscara permite al usuario que seleccione grupos concretos entrada o todas las entradas.
+Especifica si el control de edición enmascarado permite al usuario seleccionar una entrada de grupos concretos o todas las entradas.
 
-```
+```cpp
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
-[in] TRUE para seleccionar únicamente grupos; FALSE para seleccionar todo el texto. El valor predeterminado es TRUE.
+*bHabilitar*<br/>
+[en] TRUE para seleccionar solo grupos; FALSE para seleccionar todo el texto. El valor predeterminado es TRUE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Use esta función para especificar si el control de edición con máscara permite al usuario seleccionar por grupo o todo el texto.
+Utilice esta función para especificar si el control de edición enmascarado permite a un usuario seleccionar por grupo o todo el texto.
 
-De forma predeterminada, se habilita la selección por grupo. En este caso, el usuario puede seleccionar solo los grupos de caracteres válidos continua.
+De forma predeterminada, la selección por grupo está habilitada. En este caso, el usuario solo puede seleccionar grupos continuos de caracteres válidos.
 
-Por ejemplo, puede usar el control de edición enmascarado siguientes para validar un número de teléfono:
+Por ejemplo, puede utilizar el siguiente control de edición enmascarado para validar un número de teléfono:
 
 ```cpp
 m_wndMaskEdit.EnableMask(
@@ -213,24 +213,24 @@ m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.
 m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt
 ```
 
-Si se habilita la selección por grupo, el usuario puede recuperar solo el "425", "555" o "0187" grupos de cadena. Si se deshabilita la selección de grupos del usuario puede recuperar todo el texto del número de teléfono: "(425) 555-0187".
+Si la selección por grupo está habilitada, el usuario solo puede recuperar los grupos de cadenas "425", "555" o "0187". Si la selección de grupo está deshabilitada, el usuario puede recuperar el texto completo del número de teléfono: "(425) 555-0187".
 
-##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly
+## <a name="cmfcmaskededitenablesetmaskedcharsonly"></a><a name="enablesetmaskedcharsonly"></a>CMFCMaskedEdit::EnableSetMaskedCharsOnly
 
-Especifica si el texto se valida con solo los caracteres enmascarados o de la máscara completa.
+Especifica si el texto se valida solo con los caracteres enmascarados o con toda la máscara.
 
-```
+```cpp
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
-[in] TRUE para validar la entrada con solo enmascarar caracteres; del usuario FALSE para validar la máscara completa. El valor predeterminado es TRUE.
+*bHabilitar*<br/>
+[en] TRUE para validar la entrada del usuario con solo caracteres enmascarados; FALSE para validar con toda la máscara. El valor predeterminado es TRUE.
 
-##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText
+## <a name="cmfcmaskededitgetwindowtext"></a><a name="getwindowtext"></a>CMFCMaskedEdit::GetWindowText
 
-Recupera texto desde el control de edición enmascarada puede validar.
+Recupera texto validado del control de edición enmascarado.
 
 ```
 int GetWindowText(
@@ -243,27 +243,27 @@ void GetWindowText(CString& rstrString) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpszStringBuf*<br/>
-[out] Un puntero a un búfer que recibe el texto desde el control de edición.
+[fuera] Puntero a un búfer que recibe el texto del control de edición.
 
 *nMaxCount*<br/>
-[in] El número máximo de caracteres que se va a recibir.
+[en] El número máximo de caracteres que se recibirán.
 
 *rstrString*<br/>
-[out] Una referencia al objeto de cadena que recibe el texto desde el control de edición.
+[fuera] Una referencia al objeto de cadena que recibe el texto del control de edición.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera sobrecarga del método devuelve el número de bytes de la cadena que se copia en el *lpszStringBuf* búfer de parámetro; 0 si el control de edición con máscara no tiene ningún texto.
+La primera sobrecarga del método devuelve el número de bytes de la cadena que se copia en el búfer de *parámetrolpszStringBuf;* 0 si el control de edición enmascarado no tiene texto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método copia el texto del control de edición con máscara para el *lpszStringBuf* búfer o la *rstrString* cadena.
+Este método copia el texto del control de edición enmascarado en el búfer *lpszStringBuf* o la cadena *rstrString.*
 
-Este método vuelve a definir [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).
+Este método redefine [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).
 
-##  <a name="ismaskedchar"></a>  CMFCMaskedEdit::IsMaskedChar
+## <a name="cmfcmaskededitismaskedchar"></a><a name="ismaskedchar"></a>CMFCMaskedEdit::IsMaskedChar
 
-Lo llama el marco de trabajo para validar el carácter especificado en el carácter de máscara correspondiente.
+Llamado por el marco de trabajo para validar el carácter especificado con el carácter de máscara correspondiente.
 
 ```
 virtual BOOL IsMaskedChar(
@@ -274,37 +274,37 @@ virtual BOOL IsMaskedChar(
 ### <a name="parameters"></a>Parámetros
 
 *chChar*<br/>
-[in] El carácter que se va a validarse.
+[en] El carácter que se va a validar.
 
 *chMaskChar*<br/>
-[in] El carácter correspondiente de la cadena de máscara.
+[en] El carácter correspondiente de la cadena de máscara.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el *chChar* parámetro es el tipo de caracteres permitido por el *chMaskChar* parámetro; en caso contrario, FALSE.
+TRUESi el *parámetro chChar* es el tipo de carácter permitido por el parámetro *chMaskChar;* de lo contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Invalide este método para validar los caracteres de entrada por su cuenta. Para obtener más información sobre los caracteres de máscara, consulte el [CMFCMaskedEdit::EnableMask](#enablemask) método.
+Invalide este método para validar los caracteres de entrada por su cuenta. Para obtener más información acerca de los caracteres de máscara, vea el [CMFCMaskedEdit::EnableMask](#enablemask) método.
 
-##  <a name="setvalidchars"></a>  CMFCMaskedEdit::SetValidChars
+## <a name="cmfcmaskededitsetvalidchars"></a><a name="setvalidchars"></a>CMFCMaskedEdit::SetValidChars
 
 Especifica una cadena de caracteres válidos que el usuario puede escribir.
 
-```
+```cpp
 void SetValidChars(LPCTSTR lpszValid=NULL);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lpszValid*<br/>
-[in] Cadena que contiene el conjunto de caracteres de entrada válidos. NULL significa que todos los caracteres son válidos. El valor predeterminado de este parámetro es NULL.
+[en] Cadena que contiene el conjunto de caracteres de entrada válidos. NULL significa que todos los caracteres son válidos. El valor predeterminado de este parámetro es NULL.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice este método para definir una lista de caracteres válidos. Si un carácter de entrada no está en esta lista, control de edición enmascarado no lo aceptará.
+Utilice este método para definir una lista de caracteres válidos. Si un carácter de entrada no está en esta lista, el control de edición enmascarado no lo aceptará.
 
-El siguiente ejemplo de código acepta solo los números hexadecimales.
+En el ejemplo de código siguiente solo se aceptan números hexadecimales.
 
 ```cpp
 //Mask: 0xFFFF
@@ -317,27 +317,27 @@ m_wndMaskEdit.EnableMask(
 m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));
 ```
 
-##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText
+## <a name="cmfcmaskededitsetwindowtext"></a><a name="setwindowtext"></a>CMFCMaskedEdit::SetWindowText
 
-Muestra un símbolo del sistema en el control de edición con máscara.
+Muestra una solicitud en el control de edición enmascarado.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lpszString*<br/>
-[in] Apunta a una cadena terminada en null que se usará como un símbolo del sistema.
+[en] Apunta a una cadena terminada en null que se usará como solicitud.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método establece el texto del control.
 
-Este método vuelve a definir [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).
+Este método redefine [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).
 
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CEdit (clase)](../../mfc/reference/cedit-class.md)
+[CEdit Class](../../mfc/reference/cedit-class.md)

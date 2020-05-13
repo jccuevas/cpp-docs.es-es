@@ -10,55 +10,55 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 927b9f5031bb6262c2f4a071b535802eb9e6990a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a710034c5d94a8fb093a2b6a2a52373e2bab2d6d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497959"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168506"
 ---
 # <a name="ca2wex-class"></a>Clase CA2WEX
 
 Esta clase la usan las macros de conversión de cadenas CA2TEX, CA2CTEX, CT2WEX y CT2CWEX, y la definición de tipo CA2W.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template <int t_nBufferLength = 128>
 class CA2WEX
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *t_nBufferLength*<br/>
 Tamaño del búfer usado en el proceso de traducción. La longitud predeterminada es 128 bytes.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CA2WEX::CA2WEX](#ca2wex)|El constructor.|
-|[CA2WEX::~CA2WEX](#dtor)|Destructor.|
+|[CA2WEX:: ~ CA2WEX](#dtor)|Destructor.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CA2WEX:: Operator LPWSTR](#operator_lpwstr)|Operador de conversión.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CA2WEX::m_psz](#m_psz)|Miembro de datos que almacena la cadena de origen.|
-|[CA2WEX::m_szBuffer](#m_szbuffer)|Búfer estático, que se usa para almacenar la cadena convertida.|
+|[CA2WEX:: m_psz](#m_psz)|Miembro de datos que almacena la cadena de origen.|
+|[CA2WEX:: m_szBuffer](#m_szbuffer)|Búfer estático, que se usa para almacenar la cadena convertida.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 A menos que se requiera funcionalidad adicional, use CA2TEX, CA2CTEX, CT2WEX, CT2CWEX o CA2W en el código.
 
@@ -92,11 +92,11 @@ Vea [macros de conversión de cadenas de ATL y MFC](string-conversion-macros.md)
 
 **Encabezado:** atlconv. h
 
-##  <a name="ca2wex"></a>  CA2WEX::CA2WEX
+## <a name="ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX
 
 El constructor.
 
-```
+```cpp
 CA2WEX(LPCSTR psz, UINT nCodePage) throw(...);
 CA2WEX(LPCSTR psz) throw(...);
 ```
@@ -109,43 +109,43 @@ Cadena de texto que se va a convertir.
 *nCodePage*<br/>
 La página de códigos que se usa para realizar la conversión. Vea la descripción del parámetro de la página de códigos de la función Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) para obtener más detalles.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Asigna el búfer usado en el proceso de traducción.
 
-##  <a name="dtor"></a>  CA2WEX::~CA2WEX
+## <a name="ca2wexca2wex"></a><a name="dtor"></a>CA2WEX:: ~ CA2WEX
 
 Destructor.
 
-```
+```cpp
 ~CA2WEX() throw();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Libera el búfer asignado.
 
-##  <a name="m_psz"></a>  CA2WEX::m_psz
+## <a name="ca2wexm_psz"></a><a name="m_psz"></a>CA2WEX:: m_psz
 
 Miembro de datos que almacena la cadena de origen.
 
-```
+```cpp
 LPWSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CA2WEX::m_szBuffer
+## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a>CA2WEX:: m_szBuffer
 
 Búfer estático, que se usa para almacenar la cadena convertida.
 
-```
+```cpp
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpwstr"></a>CA2WEX:: Operator LPWSTR
+## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX:: Operator LPWSTR
 
 Operador de conversión.
 
-```
+```cpp
 operator LPWSTR() const throw();
 ```
 
@@ -153,11 +153,11 @@ operator LPWSTR() const throw();
 
 Devuelve la cadena de texto como tipo LPWSTR.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CA2AEX (clase)](../../atl/reference/ca2aex-class.md)<br/>
-[CA2CAEX (clase)](../../atl/reference/ca2caex-class.md)<br/>
-[CW2AEX (clase)](../../atl/reference/cw2aex-class.md)<br/>
-[CW2CWEX (clase)](../../atl/reference/cw2cwex-class.md)<br/>
-[CW2WEX (clase)](../../atl/reference/cw2wex-class.md)<br/>
-[Información general sobre clases](../../atl/atl-class-overview.md)
+[Clase CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Clase CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Clase CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Clase CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Clase CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)

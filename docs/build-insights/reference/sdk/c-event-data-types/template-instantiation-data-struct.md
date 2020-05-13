@@ -1,6 +1,6 @@
 ---
-title: Estructura de TEMPLATE_INSTANTIATION_DATA
-description: El C++ SDK de Build insights TEMPLATE_INSTANTIATION_DATA referencia de estructura.
+title: estructura TEMPLATE_INSTANTIATION_DATA
+description: El SDK de C++ Build Insights TEMPLATE_INSTANTIATION_DATA referencia de estructura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9aa669d715dbe56ce7e889330f46f307f520710f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a38d19368e7c0a9912907f1da6e7a2e31ffe8d90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325327"
 ---
-# <a name="template_instantiation_data-structure"></a>Estructura de TEMPLATE_INSTANTIATION_DATA
+# <a name="template_instantiation_data-structure"></a>estructura TEMPLATE_INSTANTIATION_DATA
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La estructura `TEMPLATE_INSTANTIATION_DATA` describe una creación de instancias de plantilla.
+La `TEMPLATE_INSTANTIATION_DATA` estructura describe una creación de instancias de plantilla.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,12 +43,12 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 
 |  |  |
 |--|--|
-| `SpecializationSymbolKey` | Clave para el tipo de especialización de la plantilla. Este valor es único en el seguimiento que se está analizando. |
-| `PrimaryTemplateSymbolKey` | Clave para el tipo de plantilla principal que se ha especializado. Este valor es único en el seguimiento que se está analizando. |
-| `KindCode` | Tipo de la creación de instancias de la plantilla. Para obtener más información, vea [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
+| `SpecializationSymbolKey` | La clave para el tipo de especialización de plantilla. Este valor es único dentro del seguimiento que se está analizando. |
+| `PrimaryTemplateSymbolKey` | La clave para el tipo de plantilla principal que estaba especializado. Este valor es único dentro del seguimiento que se está analizando. |
+| `KindCode` | Tipo de creación de instancias de plantilla. Para obtener más información, consulte [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Las claves de la estructura `TEMPLATE_INSTANTIATION_DATA` son únicas dentro del seguimiento que se está analizando. Sin embargo, dos claves diferentes que provienen de diferentes fases de front-end del compilador pueden apuntar a dos tipos idénticos. Al consumir `TEMPLATE_INSTANTIATION_DATA` información de varias fases de front-end del compilador, utilice los eventos [SYMBOL_NAME](../event-table.md#symbol-name) para determinar si dos tipos son iguales. `SymbolName` eventos se emiten al final de una fase de front-end del compilador, después de que se hayan realizado todas las creaciones de instancias de la plantilla.
+Las claves `TEMPLATE_INSTANTIATION_DATA` de la estructura son únicas dentro del seguimiento que se está analizando. Sin embargo, dos claves diferentes procedentes de pases de front-end del compilador diferentes pueden apuntar a dos tipos idénticos. Al `TEMPLATE_INSTANTIATION_DATA` consumir información de varias pasadas de front-end del compilador, use los eventos [SYMBOL_NAME](../event-table.md#symbol-name) para determinar si dos tipos son iguales. `SymbolName`los eventos se emiten al final de un paso de front-end del compilador, después de que se hayan realizado todas las instancias de plantilla.
 
 ::: moniker-end

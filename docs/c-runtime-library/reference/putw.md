@@ -1,8 +1,9 @@
 ---
 title: _putw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putw
+- _o__putw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443724"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916083"
 ---
 # <a name="_putw"></a>_putw
 
@@ -52,7 +54,7 @@ int _putw(
 *binint*<br/>
 Entero binario que se generará.
 
-*stream*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -65,13 +67,15 @@ Para obtener información sobre estos y otros códigos de error, vea [_doserrno,
 
 La función **_putw** escribe un valor binario de tipo **int** en la posición actual de la *secuencia.* **_putw** no afecta a la alineación de los elementos de la secuencia ni supone ninguna alineación especial. **_putw** es principalmente para la compatibilidad con bibliotecas anteriores. Pueden producirse problemas de portabilidad con **_putw** porque el tamaño de un **int** y el orden de los bytes dentro de un **int** difieren entre los sistemas.
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -109,13 +113,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Salida
 
 ```Output
 Wrote ten words
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

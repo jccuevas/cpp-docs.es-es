@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4160
 ms.assetid: a9610cb7-cac4-4a74-8b4e-049030ebb92b
-ms.openlocfilehash: 988c1fcbe0826582dceaa527811c688711fd8906
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb53d3f00c717df0e657ede3de6dd71d4a0bb47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391847"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176174"
 ---
 # <a name="compiler-warning-level-1-c4160"></a>Advertencia del compilador (nivel 1) C4160
 
-> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (pop,...): no se encontró el identificador insertado anteriormente '*identificador*'
+> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (pop,...): no se encontró el identificador insertado anteriormente '*Identifier*'
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Una instrucción pragma en el código fuente intenta extraer un identificador que no se ha insertado. Para evitar esta advertencia, asegúrese de que el identificador que se vaya a extraer se haya insertado correctamente.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C4160 y muestra cómo corregirlo:
+En el ejemplo siguiente se genera C4160 y se muestra cómo corregirlo:
 
 ```cpp
 // C4160.cpp

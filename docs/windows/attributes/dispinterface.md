@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501623"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168244"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -23,7 +23,7 @@ Coloca una interfaz en el archivo .idl como interfaz de envío.
 [dispinterface]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cuando el atributo de C++ **dispinterface** precede a una interfaz, hace que esta se coloque dentro del bloque de biblioteca del archivo .idl generado.
 
@@ -49,13 +49,13 @@ Consulte el ejemplo de [bindable](bindable.md) para ver un ejemplo de cómo usar
 |||
 |-|-|
 |**Se aplica a**|**interface**|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos por uso](attributes-by-usage.md)<br/>

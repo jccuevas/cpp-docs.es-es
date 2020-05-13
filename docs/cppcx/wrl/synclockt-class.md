@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT, destructor
 - Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-ms.openlocfilehash: d27e6ba8601d0e822113bf3a4a65269c89437271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4404fa28f680a9a7a4592d03f535e8406d1a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398165"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374281"
 ---
 # <a name="synclockt-class"></a>SyncLockT (clase)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,39 +40,39 @@ class SyncLockT;
 *SyncTraits*<br/>
 El tipo que puede tomar posesión de un recurso.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Representa un tipo que puede tardar exclusivo o propiedad compartida de un recurso.
+Representa un tipo que puede tomar la propiedad exclusiva o compartida de un recurso.
 
-El `SyncLockT` clase se utiliza, por ejemplo, para ayudar a implementar el [SRWLock](srwlock-class.md) clase.
+La `SyncLockT` clase se utiliza, por ejemplo, para ayudar a implementar la clase [SRWLock.](srwlock-class.md)
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-Name                                      | Descripción
+Nombre                                      | Descripción
 ----------------------------------------- | ----------------------------------------------------
 [SyncLockT::SyncLockT](#synclockt)        | Inicializa una nueva instancia de la clase `SyncLockT`.
-[SyncLockT::~SyncLockT](#tilde-synclockt) | Desinicializa una instancia de la `SyncLockT` clase.
+[SyncLockT::-SyncLockT](#tilde-synclockt) | Desinicializa una instancia `SyncLockT` de la clase.
 
 ### <a name="protected-constructors"></a>Constructores protegidos
 
-Name                               | Descripción
+Nombre                               | Descripción
 ---------------------------------- | ----------------------------------------------------
 [SyncLockT::SyncLockT](#synclockt) | Inicializa una nueva instancia de la clase `SyncLockT`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                             | Descripción
+Nombre                             | Descripción
 -------------------------------- | --------------------------------------------------------------------------------------------------------------
-[SyncLockT::IsLocked](#islocked) | Indica si el actual `SyncLockT` objeto posee un recurso; es decir, el `SyncLockT` objeto es *bloqueado*.
-[SyncLockT::Unlock](#unlock)     | Devuelve el control de los recursos mantenidos por el actual `SyncLockT` objeto, si existe.
+[SyncLockT::IsLocked](#islocked) | Indica si el `SyncLockT` objeto actual posee un recurso; es decir, `SyncLockT` el objeto está *bloqueado.*
+[SyncLockT::Desbloquear](#unlock)     | Libera el control del recurso `SyncLockT` mantenido por el objeto actual, si existe.
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-Name                      | Descripción
+Nombre                      | Descripción
 ------------------------- | -------------------------------------------------------------------
-[SyncLockT::sync_](#sync) | Contiene el recurso subyacente representado por la `SyncLockT` clase.
+[SyncLockT::sync_](#sync) | Contiene el recurso subyacente representado `SyncLockT` por la clase.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -82,25 +82,25 @@ Name                      | Descripción
 
 **Encabezado:** corewrappers.h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers::Details
+**Espacio de nombres:** Microsoft::WRL::Wrappers::Details
 
-## <a name="tilde-synclockt"></a>SyncLockT::~SyncLockT
+## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a>SyncLockT::-SyncLockT
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 ~SyncLockT();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Desinicializa una instancia de la `SyncLockT` clase.
+Desinicializa una instancia `SyncLockT` de la clase.
 
-Este destructor también desbloquea actual `SyncLockT` instancia.
+Este destructor también desbloquea `SyncLockT` la instancia actual.
 
-## <a name="islocked"></a>SyncLockT::IsLocked
+## <a name="synclocktislocked"></a><a name="islocked"></a>SyncLockT::IsLocked
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 bool IsLocked() const;
@@ -108,27 +108,27 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el `SyncLockT` objeto está bloqueado; en caso contrario, **false**.
+**true** si `SyncLockT` el objeto está bloqueado; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Indica si el actual `SyncLockT` objeto posee un recurso; es decir, el `SyncLockT` objeto es *bloqueado*.
+Indica si el `SyncLockT` objeto actual posee un recurso; es decir, `SyncLockT` el objeto está *bloqueado.*
 
-## <a name="sync"></a>SyncLockT::sync_
+## <a name="synclocktsync_"></a><a name="sync"></a>SyncLockT::sync_
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 typename SyncTraits::Type sync_;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Contiene el recurso subyacente representado por la `SyncLockT` clase.
+Contiene el recurso subyacente representado `SyncLockT` por la clase.
 
-## <a name="synclockt"></a>SyncLockT::SyncLockT
+## <a name="synclocktsynclockt"></a><a name="synclockt"></a>SyncLockT::SyncLockT
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 SyncLockT(
@@ -142,26 +142,26 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>Parámetros
 
-*other*<br/>
-Una referencia rvalue a otro `SyncLockT` objeto.
+*Otro*<br/>
+Una referencia rvalue `SyncLockT` a otro objeto.
 
-*sync*<br/>
-Una referencia a otro `SyncLockWithStatusT` objeto.
+*Sincronizar*<br/>
+Una referencia `SyncLockWithStatusT` a otro objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Inicializa una nueva instancia de la clase `SyncLockT`.
 
-El primer constructor inicializa actual `SyncLockT` objeto desde otro `SyncLockT` objeto especificado por el parámetro *otros*y, a continuación, se invalidan otro `SyncLockT` objeto. Es el segundo constructor `protected`e inicializa actual `SyncLockT` objeto a un estado no válido.
+El primer constructor inicializa `SyncLockT` el `SyncLockT` objeto actual desde otro objeto especificado por `SyncLockT` el parámetro *other*y, a continuación, invalida el otro objeto. El segundo `protected`constructor es , `SyncLockT` e inicializa el objeto actual en un estado no válido.
 
-## <a name="unlock"></a>SyncLockT::Unlock
+## <a name="synclocktunlock"></a><a name="unlock"></a>SyncLockT::Desbloquear
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 void Unlock();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Devuelve el control de los recursos mantenidos por el actual `SyncLockT` objeto, si existe.
+Libera el control del recurso `SyncLockT` mantenido por el objeto actual, si existe.

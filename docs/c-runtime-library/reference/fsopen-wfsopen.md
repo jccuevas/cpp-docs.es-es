@@ -1,9 +1,11 @@
 ---
 title: _fsopen, _wfsopen
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wfsopen
 - _fsopen
+- _o__fsopen
+- _o__wfsopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 1ffc3aa5801ff2ed63ecf815f3351e4d7a8cf459
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7c7f079d8867416ab4f091d7c95a01ab9e40c0e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956481"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910151"
 ---
 # <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
@@ -66,7 +69,7 @@ FILE *_wfsopen(
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*<br/>
+*extensión*<br/>
 Nombre del archivo que se va a abrir.
 
 *mode*<br/>
@@ -81,7 +84,7 @@ Cada una de estas funciones devuelve un puntero al flujo. Un valor de puntero nu
 
 Para obtener más información sobre estos y otros códigos error, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_fsopen** abre el archivo especificado por *filename* como una secuencia y prepara el archivo para la lectura o escritura compartida posterior, tal como se define en los argumentos Mode y *shflag* . **_wfsopen** es una versión con caracteres anchos de **_fsopen**; los argumentos *filename* y *mode* de **_wfsopen** son cadenas de caracteres anchos. **_wfsopen** y **_fsopen** se comportan de manera idéntica.
 
@@ -89,22 +92,22 @@ El *modo* de cadena de caracteres especifica el tipo de acceso solicitado para e
 
 |Término|Definición|
 |----------|----------------|
-|**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra, se produce un error en la llamada a **_fsopen** .|
-|**"w"**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.|
-|**"a"**|Se abre para escribir al final del archivo (anexo); primero crea el archivo si no existe.|
-|**"r+"**|Abre para lectura y escritura. (El archivo debe existir.)|
-|**"w+"**|Abre un archivo vacío para lectura y escritura. Si el archivo especificado existe, se destruye su contenido.|
-|**"a+"**|Se abre para leer y anexar; primero crea el archivo si no existe.|
+|**c**|Abre para lectura. Si el archivo no existe o no se encuentra, se produce un error en la llamada **_fsopen** .|
+|**con**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.|
+|**un**|Se abre para escribir al final del archivo (anexo); primero crea el archivo si no existe.|
+|**"r +"**|Abre para lectura y escritura. (El archivo debe existir.)|
+|**"w +"**|Abre un archivo vacío para lectura y escritura. Si el archivo especificado existe, se destruye su contenido.|
+|**"a +"**|Se abre para leer y anexar; primero crea el archivo si no existe.|
 
 Use los tipos **"w"** y **"w +"** con cuidado, ya que pueden destruir archivos existentes.
 
-Cuando un archivo se abre con el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede cambiar de posición con [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero siempre se vuelve a mover al final del archivo antes de que se realice cualquier operación de escritura. Por consiguiente, los datos existentes no pueden sobrescribirse. Cuando se especifica el tipo de acceso **"r +"** , **"w +"** o **"a +"** , se permiten la lectura y la escritura (se dice que el archivo está abierto para la actualización). En cambio, si se cambia entre lectura y escritura, debe haber una operación intermedia [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md). Si se desea, se puede especificar la posición actual para la operación [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) . Además de los valores anteriores, se puede incluir uno de los siguientes caracteres en el *modo* para especificar el modo de traducción de las nuevas líneas y para la administración de archivos.
+Cuando un archivo se abre con el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede cambiar de posición con [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero siempre se vuelve a mover al final del archivo antes de que se realice cualquier operación de escritura. Por lo tanto, los datos existentes no se pueden sobrescribir. Cuando se especifica el tipo de acceso **"r +"**, **"w +"** o **"a +"** , se permiten la lectura y la escritura (se dice que el archivo está abierto para la actualización). En cambio, si se cambia entre lectura y escritura, debe haber una operación intermedia [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md). Si se desea, se puede especificar la posición actual para la operación [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) . Además de los valores anteriores, se puede incluir uno de los siguientes caracteres en el *modo* para especificar el modo de traducción de las nuevas líneas y para la administración de archivos.
 
 |Término|Definición|
 |----------|----------------|
-|**t**|Abre un archivo en modo de texto (traducido). En este modo, las combinaciones de retorno de carro y avance de línea (CR-LF) se convierten en avances de una línea (LF) en la entrada y los caracteres de LF se traducen en combinaciones de CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura o lectura/escritura, **_fsopen** comprueba si hay un Ctrl + Z al final del archivo y lo quita, si es posible. Esto se hace porque el uso de [fseek](fseek-fseeki64.md) y [ftell](ftell-ftelli64.md) para desplace dentro de un archivo que finaliza con Ctrl + Z puede hacer que [fseek](fseek-fseeki64.md) se comporte de forma incorrecta cerca del final del archivo.|
+|**h**|Abre un archivo en modo de texto (traducido). En este modo, las combinaciones de retorno de carro y avance de línea (CR-LF) se convierten en avances de una línea (LF) en la entrada y los caracteres de LF se traducen en combinaciones de CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura o lectura/escritura, **_fsopen** comprueba si hay un Ctrl + Z al final del archivo y lo quita, si es posible. Esto se hace porque el uso de [fseek](fseek-fseeki64.md) y [ftell](ftell-ftelli64.md) para desplace dentro de un archivo que finaliza con Ctrl + Z puede hacer que [fseek](fseek-fseeki64.md) se comporte de forma incorrecta cerca del final del archivo.|
 |**b**|Abre un archivo en modo binario (sin traducir); las conversiones anteriores se suprimen.|
-|**S**|Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco.|
+|**Seg**|Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco.|
 |**R**|Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco.|
 |**T**|Especifica un archivo como temporal. Si es posible, no se vuelca en el disco.|
 |**D**|Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo.|
@@ -120,6 +123,8 @@ El argumento *shflag* es una expresión constante formada por una de las constan
 |**_SH_DENYRD**|Deniega el acceso de lectura al archivo.|
 |**_SH_DENYRW**|Deniega el acceso de lectura y escritura al archivo.|
 |**_SH_DENYWR**|Deniega el acceso de escritura al archivo.|
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -166,7 +171,7 @@ int main( void )
 No one else in the network can write to this file until we are done.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

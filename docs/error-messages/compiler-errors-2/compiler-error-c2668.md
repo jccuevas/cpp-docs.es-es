@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: 1920af8873578c63ab768dae4bcdf4d91fe7cd57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164818"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177162"
 ---
 # <a name="compiler-error-c2668"></a>Error del compilador C2668
 
-'function': llamada ambigua a una función sobrecargada
+' función ': llamada ambigua a una función sobrecargada
 
-No se pudo resolver la llamada de función sobrecargada especificada. Es posible que desee convertir explícitamente uno o varios de los parámetros reales.
+No se pudo resolver la llamada de función sobrecargada especificada. Puede que desee convertir explícitamente uno o varios parámetros reales.
 
-También puede obtener este error mediante el uso de la plantilla. En la misma clase, si tiene una función miembro normal y una función miembro con plantilla con la misma firma, alguna debe aparecer en primer lugar. Esta es una limitación de la implementación actual de Visual C++.
+También puede obtener este error a través del uso de la plantilla. Si, en la misma clase, tiene una función miembro normal y una función miembro con plantilla con la misma firma, debe aparecer primero la plantilla. Se trata de una limitación de la implementación actual de C++visual.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2668:
+En el ejemplo siguiente se genera C2668:
 
 ```cpp
 // C2668.cpp
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Es otra manera de resolver este error con un [mediante declaración](../../cpp/using-declaration.md):
+Otra manera de resolver este error es mediante una [declaración Using](../../cpp/using-declaration.md):
 
 ```cpp
 // C2668b.cpp
@@ -86,9 +86,9 @@ class MyTestCase : public AppTestCase {
 
 ## <a name="example"></a>Ejemplo
 
-Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: conversión ambigua de la constante 0.
+Este error también se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003: conversión ambigua en la conversión de constante 0.
 
-La conversión mediante la constante 0 es ambigua, ya que int requiere conversiones a long y void *. Para resolver este error, convierta 0 para el tipo exacto del parámetro de función que se usa para por lo que ninguna conversión debe tener lugar (este código será válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++).
+La conversión en una conversión con la constante 0 es ambigua, ya que int requiere una conversión tanto a Long como a void *. Para resolver este error, convierta 0 al tipo exacto del parámetro de función para el que se usa para que no sea necesario realizar ninguna conversión (este código será válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++).
 
 ```cpp
 // C2668c.cpp
@@ -110,7 +110,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Este error puede producirse porque el CRT tiene ahora formas float y double de todas las funciones matemáticas.
+Este error puede producirse porque CRT ahora tiene formatos float y Double de todas las funciones matemáticas.
 
 ```cpp
 // C2668d.cpp
@@ -125,7 +125,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Este error puede producirse porque el pow (int, int) se ha quitado de math.h en CRT.
+Este error puede producirse porque se ha quitado Pow (int, int) de Math. h en CRT.
 
 ```cpp
 // C2668e.cpp
@@ -138,7 +138,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Este código funciona correctamente en Visual Studio 2015, pero se produce un error en Visual Studio 2017 y versiones posteriores con C2668. En Visual Studio 2015, el compilador trataba erróneamente la inicialización de lista de copia como si fuera inicialización de copia regular; solo consideraba la conversión de constructores para la resolución de sobrecarga.
+Este código se ejecuta correctamente en Visual Studio 2015, pero produce un error en Visual Studio 2017 y versiones posteriores con C2668. En Visual Studio 2015, el compilador trataba erróneamente la inicialización de lista de copia como si fuera inicialización de copia regular; solo consideraba la conversión de constructores para la resolución de sobrecarga.
 
 ```cpp
 struct A {

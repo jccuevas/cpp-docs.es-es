@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: d729e2cf5b08ae227d0cc2e4d5ab7f8ac865cdc4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 31efa36bcd61caa154cd3e4c147ad5ed8728b04c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210995"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Determinar qué tipo de descriptor de acceso se debe utilizar
 
@@ -28,7 +28,7 @@ En la tabla siguiente se enumeran los tipos de descriptores de acceso proporcion
 |`CDynamicAccessor`|Automático.|No.|Resulta útil si desconoce el tipo de datos en un conjunto de filas.|
 |`CDynamicParameterAccessor`|Automático, pero se puede [invalidar](../../data/oledb/overriding-a-dynamic-accessor.md).|Sí, si el proveedor admite `ICommandWithParameters`. Los parámetros se enlazan automáticamente.|Más lento que `CDynamicAccessor`, pero útil para llamar a procedimientos almacenados genéricos.|
 |`CDynamicStringAccessor[A,W]`|Automático.|No.|Recupera los datos a los que se accede desde el almacén de datos como datos de cadena.|
-|`CManualAccessor`|Manual mediante `AddBindEntry`.|Manualmente mediante `AddParameterEntry`.|Rápido; los parámetros y las columnas se enlazan solo una vez. Determina el tipo de datos que se va a usar. (Vea el ejemplo [DBVIEWER](https://github.com/Microsoft/VCSamples) para obtener un ejemplo). Requiere más código que `CDynamicAccessor` o `CAccessor`. Es más parecido a llamar directamente a OLE DB.|
+|`CManualAccessor`|Manual mediante `AddBindEntry`.|Manualmente mediante `AddParameterEntry`.|Rápido; los parámetros y las columnas se enlazan solo una vez. Determina el tipo de datos que se va a usar. (Vea el ejemplo [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) para obtener un ejemplo). Requiere más código que `CDynamicAccessor` o `CAccessor`. Es más parecido a llamar directamente a OLE DB.|
 |`CXMLAccessor`|Automático.|No.|Recupera los datos a los que se accede desde el almacén de datos como datos de cadena y se les aplica formato de etiquetas XML.|
 
 ## <a name="see-also"></a>Consulte también

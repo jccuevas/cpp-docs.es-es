@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: 5e10edba60832112a9023f796be56d88afd52042
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8817d0042c3055b5bbf9b111e6f02b9d9a4c152c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514198"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166450"
 ---
 # <a name="propput"></a>propput
 
@@ -23,7 +23,7 @@ Especifica una función de valor de propiedad.
 [propput]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **PROPPUT** C++ tiene la misma funcionalidad que el atributo MIDL de [PROPPUT](/windows/win32/Midl/propput) .
 
@@ -38,13 +38,13 @@ Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de uso de **PROPPU
 |||
 |-|-|
 |**Se aplica a**|Método|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|`propget`, `propputref`|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

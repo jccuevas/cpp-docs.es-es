@@ -1,11 +1,13 @@
 ---
 title: _strninc, _wcsninc, _mbsninc, _mbsninc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsninc
 - _mbsninc_l
 - _wcsninc
 - _strninc
+- _o__mbsninc
+- _o__mbsninc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: b03ca4c9515bd2c70a1ce2574850e23b3add44c5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fe35d3b37d5aadfbeae69de5ff00c349a2263e30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947069"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914195"
 ---
 # <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
@@ -83,7 +86,7 @@ unsigned char *_mbsninc(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena de origen.
 
 *count*<br/>
@@ -96,9 +99,11 @@ Configuración regional que se va a usar.
 
 Cada una de estas rutinas devuelve un puntero a *Str* después de haber aumentado *Str* por caracteres de *recuento* o **null** si el puntero proporcionado es **null**. Si *Count* es mayor o igual que el número de caracteres de *Str*, el resultado es undefined.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_mbsninc** incrementa los caracteres multibyte de *Str* por *número* . **_mbsninc** reconoce secuencias de caracteres multibyte según la [Página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -106,7 +111,7 @@ La función **_mbsninc** incrementa los caracteres multibyte de *Str* por *núme
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc** y **_wcsninc** son versiones de cadena de caracteres de un solo byte y de cadena de caracteres anchos de **_mbsninc**. **_wcsninc** y **_strninc** se proporcionan solo para esta asignación y no se deben usar en caso contrario. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strninc** y **_wcsninc** son versiones de cadena de caracteres de un solo byte y de cadena de caracteres anchos de **_mbsninc**. **_wcsninc** y **_strninc** se proporcionan solo para esta asignación y no se deben utilizar en caso contrario. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
 **_mbsninc_l** es idéntico, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
@@ -119,12 +124,12 @@ La función **_mbsninc** incrementa los caracteres multibyte de *Str* por *núme
 |**_strninc**|\<tchar.h>|
 |**_wcsninc**|\<tchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>

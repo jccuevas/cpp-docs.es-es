@@ -1,11 +1,13 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
+- _o__mbsncmp
+- _o__mbsncmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +23,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: deae95f8cf7d538dfe22ebbe0e86524765d9d234
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947340"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919313"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -111,23 +114,25 @@ Configuración regional que se va a usar.
 
 El valor devuelto indica la relación de las subcadenas de *string1* y *String2* de la siguiente manera.
 
-|Valor devuelto|DESCRIPCIÓN|
+|Valor devuelto|Descripción|
 |------------------|-----------------|
 |< 0|*cadena1* subcadena inferior a *cadena2* subcadena|
 |0|la subcadena *cadena1* es idéntica a la subcadena *cadena2*|
 |> 0|la subcadena *cadena1* es mayor que *cadena2* subcadena|
 
-En un error de validación de parámetros, **_mbsncmp** y **_mbsncmp_l** devuelven **_NLSCMPERROR**, \<que se define en String \<. h > y mbstring. h >.
+En un error de validación de parámetros, **_mbsncmp** y **_mbsncmp_l** devuelven **_NLSCMPERROR**, \<que se define en string \<. h> y mbstring. h>.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **strncmp** realiza una comparación ordinal de, como máximo, los primeros caracteres de *recuento* de *cadena1* y *cadena2* , y devuelve un valor que indica la relación entre las subcadenas. **strncmp** es una versión de **_strnicmp**que distingue mayúsculas de minúsculas. **wcsncmp** y **_mbsncmp** son versiones con distinción de mayúsculas y minúsculas de **_wcsnicmp** y **_mbsnicmp**.
 
 **wcsncmp** y **_mbsncmp** son versiones de caracteres anchos y multibyte de **strncmp**. Los argumentos de **wcsncmp** son cadenas de caracteres anchos; los de **_mbsncmp** son cadenas de caracteres multibyte. **_mbsncmp** reconoce las secuencias de caracteres multibyte según una página de códigos multibyte y devuelve **_NLSCMPERROR** en un error.
 
-Además, **_mbsncmp** y **_mbsncmp_l** validan los parámetros. Si *string1* o *cadena2* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsncmp** y **_mbsncmp_l** devuelven **_NLSCMPERROR** y establecen **errno** en **EINVAL**. **strncmp** y **wcsncmp** no validan sus parámetros. Por lo demás, estas funciones se comportan exactamente igual.
+Además, **_mbsncmp** y **_mbsncmp_l** validar parámetros. Si *string1* o *cadena2* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsncmp** y **_mbsncmp_l** devuelven **_NLSCMPERROR** y establecen **errno** en **EINVAL**. **strncmp** y **wcsncmp** no validan sus parámetros. Por lo demás, estas funciones se comportan exactamente igual.
 
 El comportamiento de comparación de **_mbsncmp** y **_mbsncmp_l** se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional. Esta opción controla la detección de los bytes iniciales y finales de caracteres multibyte. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md). La función **_mbsncmp** usa la configuración regional actual para este comportamiento dependiente de la configuración regional. La función **_mbsncmp_l** es idéntica, salvo que usa el parámetro *locale* en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md). Si la configuración regional es una configuración regional de un solo byte, el comportamiento de estas funciones es idéntico a **strncmp**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -146,7 +151,7 @@ El comportamiento de comparación de **_mbsncmp** y **_mbsncmp_l** se ve afectad
 |**wcsncmp**|\<string.h> o \<wchar.h>|
 |**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -197,15 +202,15 @@ Function:   strnicmp _strnicmp (first 10 characters only)
 Result:      String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[strcoll (funciones)](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funciones de strcoll (](../../c-runtime-library/strcoll-functions.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

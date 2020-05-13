@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: fb7f103d8ea647f554d9bbf26c2e218d34f6b1ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d37cdddda8cf8894016ed80b9055fe106b1600f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398451"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371515"
 ---
 # <a name="ftmbase-class"></a>FtmBase (clase)
 
@@ -46,35 +46,35 @@ class FtmBase :
     >;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Para obtener más información, consulte [RuntimeClass (clase)](runtimeclass-class.md).
+Para obtener más información, vea [RuntimeClass (Clase)](runtimeclass-class.md).
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-| Name                         | Descripción                                        |
+| Nombre                         | Descripción                                        |
 | ---------------------------- | -------------------------------------------------- |
 | [FtmBase::FtmBase](#ftmbase) | Inicializa una nueva instancia de la clase `FtmBase`. |
 
 ### <a name="public-methods"></a>Métodos públicos
 
-| Name                                                               | Descripción                                                                                                                                                          |
+| Nombre                                                               | Descripción                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | Crea una tabla de interfaz global (GIT).                                                                                                                              |
-| [FtmBase::DisconnectObject](#disconnectobject)                     | Forzosamente libera todas las conexiones externas a un objeto. Servidor del objeto llama a la implementación del objeto de este método antes de apagar.                |
-| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | Obtenga el límite superior en el número de bytes necesarios para serializar el puntero de interfaz especificado en el objeto especificado.                                                |
-| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | Obtiene el CLSID que COM que se utiliza para localizar el archivo DLL que contiene el código para el proxy correspondiente. COM carga este archivo DLL para crear una instancia del proxy no inicializada. |
-| [FtmBase::MarshalInterface](#marshalinterface)                     | Escribe los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente en una secuencia.                                                                          |
-| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Destruye un paquete de cálculo de referencias de datos.                                                                                                                                    |
-| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | Inicializa a un proxy recién creado y devuelve un puntero de interfaz a ese proxy.                                                                                    |
+| [FtmBase::DisconnectObject](#disconnectobject)                     | Libera forzosamente todas las conexiones externas a un objeto. El servidor del objeto llama a la implementación de este método del objeto antes de cerrar.                |
+| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | Obtenga el límite superior en el número de bytes necesarios para calcular las referencias del puntero de interfaz especificado en el objeto especificado.                                                |
+| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | Obtiene el CLSID que COM utiliza para buscar el archivo DLL que contiene el código para el proxy correspondiente. COM carga este archivo DLL para crear una instancia no inicializada del proxy. |
+| [FtmBase::MarshalInterface](#marshalinterface)                     | Escribe en una secuencia los datos necesarios para inicializar un objeto proxy en algún proceso de cliente.                                                                          |
+| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Destruye un paquete de datos serializados.                                                                                                                                    |
+| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | Inicializa un proxy recién creado y devuelve un puntero de interfaz a ese proxy.                                                                                    |
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-| Name                                | Descripción                                       |
+| Nombre                                | Descripción                                       |
 | ----------------------------------- | ------------------------------------------------- |
-| [FtmBase::marshaller_](#marshaller) | Contiene una referencia para el contador de referencias de subproceso libre. |
+| [FtmBase::marshaller_](#marshaller) | Contiene una referencia al serializador de subprocesos libres. |
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -84,9 +84,9 @@ Para obtener más información, consulte [RuntimeClass (clase)](runtimeclass-cla
 
 **Encabezado:** ftm.h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
 
 Crea una tabla de interfaz global (GIT).
 
@@ -98,20 +98,20 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parámetros
 
-*git*<br/>
+*Git*<br/>
 Cuando se completa esta operación, un puntero a una tabla de interfaz global.
 
 ### <a name="return-value"></a>Valor devuelto
 
 S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, consulte el `IGlobalInterfaceTable` tema en el `COM Interfaces` subtema del `COM Reference` tema en MSDN Library.
+Para obtener más `IGlobalInterfaceTable` información, `COM Interfaces` consulte el `COM Reference` tema en el subtema del tema en MSDN Library.
 
-## <a name="disconnectobject"></a>FtmBase::DisconnectObject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::DisconnectObject
 
-Forzosamente libera todas las conexiones externas a un objeto. Servidor del objeto llama a la implementación del objeto de este método antes de apagar.
+Libera forzosamente todas las conexiones externas a un objeto. El servidor del objeto llama a la implementación de este método del objeto antes de cerrar.
 
 ```cpp
 STDMETHODIMP DisconnectObject(
@@ -128,7 +128,7 @@ Reservado para uso futuro; debe ser cero.
 
 S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
 
-## <a name="ftmbase"></a>FtmBase::FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase::FtmBase
 
 Inicializa una nueva instancia de la clase `FtmBase`.
 
@@ -136,9 +136,9 @@ Inicializa una nueva instancia de la clase `FtmBase`.
 FtmBase();
 ```
 
-## <a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
 
-Obtenga el límite superior en el número de bytes necesarios para serializar el puntero de interfaz especificado en el objeto especificado.
+Obtenga el límite superior en el número de bytes necesarios para calcular las referencias del puntero de interfaz especificado en el objeto especificado.
 
 ```cpp
 STDMETHODIMP GetMarshalSizeMax(
@@ -154,34 +154,34 @@ STDMETHODIMP GetMarshalSizeMax(
 ### <a name="parameters"></a>Parámetros
 
 *riid*<br/>
-Referencia al identificador de la interfaz que se van a calcular.
+Referencia al identificador de la interfaz que se va a serializar.
 
-*pv*<br/>
-Puntero de interfaz se van a calcular; puede ser NULL.
+*Pv*<br/>
+Puntero de interfaz que se va a serializar; puede ser NULL.
 
 *dwDestContext*<br/>
-Contexto de destino donde se puede deserializar la interfaz especificada.
+Contexto de destino donde se va a desclasificar la interfaz especificada.
 
-Especifique uno o más valores de enumeración MSHCTX.
+Especifique uno o varios valores de enumeración MSHCTX.
 
-Actualmente, la resolución de referencias puede producirse en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
+Actualmente, el desclasificar puede producirse en otro apartamento del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
 Reservado para uso futuro; debe ser NULL.
 
 *mshlflags*<br/>
-Marca que indica si los datos se van a calcular están que se transmitan al proceso de cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar varios clientes. Especifique uno o más valores de enumeración MSHLFLAGS.
+Marcador que indica si los datos que se van a serializar se transmitirán de vuelta al proceso de cliente (el caso típico) o se escribirán en una tabla global, donde varios clientes pueden recuperarlos. Especifique uno o varios valores de enumeración MSHLFLAGS.
 
 *pSize*<br/>
-Cuando se completa esta operación, el puntero para el límite superior de la cantidad de datos se escriban en la secuencia de serialización.
+Cuando se complete esta operación, puntero al límite superior en la cantidad de datos que se escribirán en la secuencia de cálculo de referencias.
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; en caso contrario, E_FAIL o E_NOINTERFACE.
+S_OK si se realiza correctamente; de lo contrario, E_FAIL o E_NOINTERFACE.
 
-## <a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
 
-Obtiene el CLSID que COM que se utiliza para localizar el archivo DLL que contiene el código para el proxy correspondiente. COM carga este archivo DLL para crear una instancia del proxy no inicializada.
+Obtiene el CLSID que COM utiliza para buscar el archivo DLL que contiene el código para el proxy correspondiente. COM carga este archivo DLL para crear una instancia no inicializada del proxy.
 
 ```cpp
 STDMETHODIMP GetUnmarshalClass(
@@ -197,33 +197,33 @@ STDMETHODIMP GetUnmarshalClass(
 ### <a name="parameters"></a>Parámetros
 
 *riid*<br/>
-Referencia al identificador de la interfaz que se van a calcular.
+Referencia al identificador de la interfaz que se va a serializar.
 
-*pv*<br/>
-Puntero a la interfaz que se van a calcular; puede ser NULL si el llamador no tiene un puntero a la interfaz deseada.
+*Pv*<br/>
+Puntero a la interfaz que se va a serializar; puede ser NULL si el llamador no tiene un puntero a la interfaz deseada.
 
 *dwDestContext*<br/>
-Contexto de destino donde se puede deserializar la interfaz especificada.
+Contexto de destino donde se va a desclasificar la interfaz especificada.
 
-Especifique uno o más valores de enumeración MSHCTX.
+Especifique uno o varios valores de enumeración MSHCTX.
 
-Resolución de referencias puede producirse en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
+El desclasificar puede producirse en otro apartamento del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
 Reservado para uso futuro; debe ser NULL.
 
 *mshlflags*<br/>
-Cuando se completa esta operación, puntero al CLSID que se usará para crear un proxy en el proceso del cliente.
+Cuando se completa esta operación, puntero al CLSID que se usará para crear un proxy en el proceso de cliente.
 
 *pCid*
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; en caso contrario, S_FALSE.
+S_OK si se realiza correctamente; de lo contrario, S_FALSE.
 
-## <a name="marshalinterface"></a>FtmBase::MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase::MarshalInterface
 
-Escribe los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente en una secuencia.
+Escribe en una secuencia los datos necesarios para inicializar un objeto proxy en algún proceso de cliente.
 
 ```cpp
 STDMETHODIMP MarshalInterface(
@@ -239,48 +239,48 @@ STDMETHODIMP MarshalInterface(
 ### <a name="parameters"></a>Parámetros
 
 *pStm*<br/>
-Puntero a la secuencia que se usará durante la serialización.
+Puntero a la secuencia que se usará durante el cálculo de referencias.
 
 *riid*<br/>
-Referencia al identificador de la interfaz que se van a calcular. Esta interfaz debe derivarse de la `IUnknown` interfaz.
+Referencia al identificador de la interfaz que se va a serializar. Esta interfaz debe derivarse de la interfaz `IUnknown` .
 
-*pv*<br/>
-Puntero al puntero de interfaz que se van a calcular; puede ser NULL si el llamador no tiene un puntero a la interfaz deseada.
+*Pv*<br/>
+Puntero al puntero de interfaz que se va a serializar; puede ser NULL si el llamador no tiene un puntero a la interfaz deseada.
 
 *dwDestContext*<br/>
-Contexto de destino donde se puede deserializar la interfaz especificada.
+Contexto de destino donde se va a desclasificar la interfaz especificada.
 
-Especifique uno o más valores de enumeración MSHCTX.
+Especifique uno o varios valores de enumeración MSHCTX.
 
-Resolución de referencias puede ocurrir en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
+El desclasificar puede producirse en otro apartamento del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
 Reservado para uso futuro; debe ser cero.
 
 *mshlflags*<br/>
-Especifica si los datos se van a calcular están que se transmitan al proceso de cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar varios clientes.
+Especifica si los datos que se van a serializar se transmitirán de vuelta al proceso de cliente (el caso típico) o se escribirán en una tabla global, donde varios clientes pueden recuperarlos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK el puntero de interfaz se serializó correctamente.
+S_OK El puntero de interfaz se ha serializado correctamente.
 
-E_NOINTERFACE no se admite la interfaz especificada.
+E_NOINTERFACE No se admite la interfaz especificada.
 
-STG_E_MEDIUMFULL la secuencia está lleno.
+STG_E_MEDIUMFULL La secuencia está llena.
 
-No se pudo E_FAIL la operación.
+E_FAIL Error en la operación.
 
-## <a name="marshaller"></a>FtmBase::marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase::marshaller_
 
-Contiene una referencia para el contador de referencias de subproceso libre.
+Contiene una referencia al serializador de subprocesos libres.
 
 ```cpp
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
 
-Destruye un paquete de cálculo de referencias de datos.
+Destruye un paquete de datos serializados.
 
 ```cpp
 STDMETHODIMP ReleaseMarshalData(
@@ -297,9 +297,9 @@ Puntero a una secuencia que contiene el paquete de datos que se va a destruir.
 
 S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
 
-## <a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
 
-Inicializa a un proxy recién creado y devuelve un puntero de interfaz a ese proxy.
+Inicializa un proxy recién creado y devuelve un puntero de interfaz a ese proxy.
 
 ```cpp
 STDMETHODIMP UnmarshalInterface(
@@ -312,14 +312,14 @@ STDMETHODIMP UnmarshalInterface(
 ### <a name="parameters"></a>Parámetros
 
 *pStm*<br/>
-Puntero a la secuencia desde la que se puede deserializar el puntero de interfaz.
+Puntero a la secuencia desde la que se va a desclasificar el puntero de interfaz.
 
 *riid*<br/>
-Referencia al identificador de la interfaz que puede deserializar.
+Referencia al identificador de la interfaz que se va a desclasificar.
 
-*ppv*<br/>
-Cuando finalice esta operación, la dirección de una variable de puntero que recibe el puntero de interfaz solicitado en *riid*. Si esta operación se realiza correctamente, **ppv* contiene el puntero de interfaz solicitada de la interfaz que puede deserializar.
+*Ppv*<br/>
+Cuando se completa esta operación, la dirección de una variable de puntero que recibe el puntero de interfaz solicitado en *riid*. Si esta operación se realiza correctamente, **ppv* contiene el puntero de interfaz solicitado de la interfaz que se va a desclasificar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; en caso contrario, E_NOINTERFACE o E_FAIL.
+S_OK si se realiza correctamente; de lo contrario, E_NOINTERFACE o E_FAIL.

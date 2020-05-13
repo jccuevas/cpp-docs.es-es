@@ -1,9 +1,11 @@
 ---
 title: _ismbbalpha, _ismbbalpha_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbalpha
 - _ismbbalpha_l
+- _o__ismbbalpha
+- _o__ismbbalpha_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: fe60eec2eb7f93d866340aabe382bf32d6b04b21
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fa92d8e0f0ed331110666add1015fbdacf20f07
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954255"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917499"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
@@ -55,7 +58,7 @@ int _ismbbalpha_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 *locale*<br/>
@@ -69,6 +72,10 @@ Configuración regional que se va a usar.
 
 es distinto de cero para *c*, o 0 si no lo es. **_ismbbalpha** usa la configuración regional actual para los valores de caracteres dependientes de la configuración regional. **_ismbbalpha_l** es idéntico, salvo que usa la configuración regional que se pasa.
 
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
@@ -76,13 +83,13 @@ es distinto de cero para *c*, o 0 si no lo es. **_ismbbalpha** usa la configurac
 |**_ismbbalpha**|\<mbctype.h>|
 |**_ismbbalpha_l**|\<mbctype.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
 Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

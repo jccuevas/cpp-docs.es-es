@@ -12,16 +12,16 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231000"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211876"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor (Clase)
 
-Permite obtener acceso a un origen de datos cuando no tiene conocimiento del esquema de base de datos (estructura subyacente de la base de datos).
+Permite tener acceso a un origen de datos cuando no se conoce el esquema de la base de datos (la estructura subyacente de la base de datos).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,7 +34,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 **Encabezado**: atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
@@ -43,19 +43,19 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 |[GetString](#getstring)|Recupera los datos de la columna especificada como una cadena.|
 |[SetString](#setstring)|Establece los datos de la columna especificada como una cadena.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Mientras [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) solicita datos en el formato nativo notificado por el proveedor, `CDynamicStringAccessor` solicita que el proveedor recupere todos los datos que se obtiene acceso desde el almacén de datos como datos de cadena. Esto es especialmente útil para tareas sencillas que no requieren el cálculo de valores en el almacén de datos, como mostrar o imprimir el contenido del almacén de datos.
+Mientras que [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) solicita datos en el formato nativo que el proveedor ha indicado, `CDynamicStringAccessor` solicita que el proveedor recupere todos los datos a los que se tiene acceso desde el almacén de datos como datos de cadena. Esto es especialmente útil para tareas sencillas que no requieren el cálculo de valores en el almacén de datos, como la visualización o la impresión del contenido del almacén de datos.
 
-No importa el tipo de datos de columna en el almacén de datos nativo. siempre que el proveedor puede admitir la conversión de datos, proporcionará los datos en formato de cadena. Si el proveedor no admite la conversión de tipo de datos nativo a una cadena (que no es habitual), la llamada de solicitud devolverá el valor de éxito DB_S_ERRORSOCCURED y el estado de la columna correspondiente indicará un problema de conversión con DBSTATUS_E_CANTCONVERTVALUE.
+No importa el tipo nativo de datos de columna en el almacén de datos; siempre que el proveedor pueda admitir la conversión de datos, proporcionará los datos en formato de cadena. Si el proveedor no admite la conversión del tipo de datos nativo a una cadena (lo que no es habitual), la llamada que realiza la solicitud devolverá el valor correcto DB_S_ERRORSOCCURED y el estado de la columna correspondiente indicará un problema de conversión con DBSTATUS_E_CANTCONVERTVALUE.
 
-Use `CDynamicStringAccessor` métodos para obtener información de columna. Utilice esta información de columna para crear un descriptor de acceso de forma dinámica en tiempo de ejecución.
+Use métodos `CDynamicStringAccessor` para obtener información de columnas. Esta información de columna se usa para crear un descriptor de acceso dinámicamente en tiempo de ejecución.
 
-La información de columna se almacena en un búfer creado y administrado por esta clase. Obtener datos desde el búfer mediante [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), o lo almacena en el búfer mediante [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+La información de la columna se almacena en un búfer creado y administrado por esta clase. Obtenga datos del búfer mediante [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)o almacénelos en el búfer mediante [setString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
-Para obtener una explicación y ejemplos del uso de las clases de descriptor de acceso dinámico, consulte [utilizar descriptores de acceso dinámico](../../data/oledb/using-dynamic-accessors.md).
+Para obtener una explicación y ejemplos del uso de las clases de descriptor de acceso dinámico, vea usar descriptores de [acceso dinámicos](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="getstring"></a> CDynamicStringAccessor::GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
 
 Recupera los datos de la columna especificada como una cadena.
 
@@ -72,20 +72,20 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 #### <a name="parameters"></a>Parámetros
 
 *nColumn*<br/>
-[in] El número de columna. Números de columna empiezan por 1. Un valor de 0 hace referencia a la columna de marcador, si existe.
+de El número de columna. Los números de columna empiezan por 1. Un valor de 0 hace referencia a la columna de marcador, si existe.
 
 *pColumnName*<br/>
-[in] Un puntero a una cadena de caracteres que contiene el nombre de columna.
+de Puntero a una cadena de caracteres que contiene el nombre de la columna.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Recupera un puntero al valor de cadena de la columna especificada. El valor es de tipo `BaseType`, que será **CHAR** o **WCHAR** dependiendo de si se define _UNICODE o no. Devuelve NULL si no se encuentra la columna especificada.
+Puntero al valor de cadena recuperado de la columna especificada. El valor es de tipo `BaseType`, que será **Char** o **WCHAR** dependiendo de si _UNICODE está definido o no. Devuelve NULL si no se encuentra la columna especificada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La segunda invalidación formulario toma el nombre de columna como una cadena ANSI. La tercera invalidar formulario toma el nombre de columna como una cadena Unicode.
+El segundo formulario de invalidación toma el nombre de la columna como una cadena ANSI. El tercer formulario de invalidación toma el nombre de la columna como una cadena Unicode.
 
-## <a name="setstring"></a> CDynamicStringAccessor::SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: SetString
 
 Establece los datos de la columna especificada como una cadena.
 
@@ -105,25 +105,25 @@ HRESULT SetString(const WCHAR* pColumnName,
 #### <a name="parameters"></a>Parámetros
 
 *nColumn*<br/>
-[in] El número de columna. Números de columna empiezan por 1. El valor especial 0 hace referencia a la columna de marcador, si existe.
+de El número de columna. Los números de columna empiezan por 1. El valor especial de 0 hace referencia a la columna de marcador, si existe.
 
 *pColumnName*<br/>
-[in] Un puntero a una cadena de caracteres que contiene el nombre de columna.
+de Puntero a una cadena de caracteres que contiene el nombre de la columna.
 
 *data*<br/>
-[in] Un puntero a los datos de cadena se escriban en la columna especificada.
+de Puntero a los datos de cadena que se van a escribir en la columna especificada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al valor de cadena que se va a establecer la columna especificada. El valor es de tipo `BaseType`, que será **CHAR** o **WCHAR** dependiendo de si se define _UNICODE o no.
+Puntero al valor de cadena en el que se va a establecer la columna especificada. El valor es de tipo `BaseType`, que será **Char** o **WCHAR** dependiendo de si _UNICODE está definido o no.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El segundo invalidar formulario toma el nombre de columna como una cadena ANSI y la tercera invalidar formulario toma el nombre de columna como una cadena Unicode.
+El segundo formulario de invalidación toma el nombre de columna como una cadena ANSI y el tercer formulario de invalidación toma el nombre de columna como una cadena Unicode.
 
-Si _SECURE_ATL se define con un valor distinto de cero, se generará un error de aserción en tiempo de ejecución si la entrada *datos* cadena es mayor que la longitud máxima permitida de la columna de datos que se hace referencia. En caso contrario, la cadena de entrada se truncará si es mayor que la longitud máxima permitida.
+Si se define _SECURE_ATL para tener un valor distinto de cero, se generará un error de aserción en tiempo de ejecución si la cadena de *datos* de entrada es mayor que la longitud máxima permitida de la columna de datos a la que se hace referencia. De lo contrario, la cadena de entrada se truncará si es mayor que la longitud máxima permitida.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

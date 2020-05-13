@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5aded4588614eb4171e31a588f125ea8aa8de7ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514047"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166346"
 ---
 # <a name="retval"></a>retval
 
@@ -23,7 +23,7 @@ Designa el parámetro que recibe el valor devuelto del miembro.
 [retval]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **retval** C++ tiene la misma funcionalidad que el atributo MIDL [retval](/windows/win32/Midl/retval) .
 
@@ -40,13 +40,13 @@ Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de uso de **retval
 |||
 |-|-|
 |**Se aplica a**|Parámetro de interfaz, método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|**out**|
 |**Atributos no válidos**|**in**|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>

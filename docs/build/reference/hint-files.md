@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8037cb8025cc85a8479528490e1512531cbcc035
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075204"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322311"
 ---
 # <a name="hint-files"></a>Archivos de indicaciones
 
@@ -36,8 +36,9 @@ Un archivo de indicaciones contiene indicaciones personalizables por el usuario,
 
 > [!IMPORTANT]
 > Si modifica o agrega un archivo de indicaciones, deberá realizar pasos adicionales para que los cambios surtan efecto:
-> - En versiones anteriores a la versión 15,6 de Visual Studio 2017: Elimine el archivo. sdf o el archivo VC. dB de la solución para todos los cambios.
-> - En Visual Studio 2017 versión 15,6 y versiones posteriores: cierre y vuelva a abrir la solución después de agregar nuevos archivos de sugerencia.
+>
+> - En versiones anteriores a Visual Studio 2017 versión 15.6: elimine el archivo .sdf o el archivo VC.db en la solución para todos los cambios.
+> - En Visual Studio 2017 versión 15.6 y versiones posteriores: cierre y vuelva a abrir la solución después de agregar nuevos archivos de sugerencia.
 
 ## <a name="scenario"></a>Escenario
 
@@ -92,17 +93,17 @@ A partir de la versión 15.8 de Visual Studio 2017, hay varias características 
 
 - Hay una acción rápida para crear un archivo de indicaciones que incluye la macro resaltada. En el caso de que ya haya un archivo de indicaciones, la acción rápida permite agregar la macro al archivo de indicaciones.
 
-![Macro resaltada.](media/hint-squiggle-and-actions.png "Sugerencia y acciones rápidas en zigzag")
+![Macro resaltada.](media/hint-squiggle-and-actions.png "Consejo squiggle y acciones rápidas")
 
 Después de ejecutar una acción rápida, el analizador vuelve a analizar los archivos afectados por el archivo de indicaciones.
 
-De forma predeterminada, se resalta la macro de problema como una sugerencia. El resaltado se puede cambiar a un elemento más visible, como un subrayado ondulado de color rojo o verde. Use la opción **Macros de regiones de navegación omitidas** en la sección **Subrayados ondulados de código**, que encontrará en **Herramientas** > **Opciones** > **Editor de texto** > **C/C++**  > **Ver**.
+De forma predeterminada, se resalta la macro de problema como una sugerencia. El resaltado se puede cambiar a un elemento más visible, como un subrayado ondulado de color rojo o verde. Use la opción **Macros de regiones de navegación omitidas** en la sección **Subrayados ondulados de código**, que encontrará en **Herramientas** > **Opciones** > **Editor de texto** > **C/C++** > **Ver**.
 
-![Macros en la opción regiones de exploración omitidas.](media/skipped-regions-squiggle-option.png "Se omitió la opción en zigzag de regiones.")
+![Macros en la opción Regiones de exploración omitidas.](media/skipped-regions-squiggle-option.png "Las regiones omitidas se ondulan opción.")
 
 ## <a name="display-browsing-database-errors"></a>Visualizar errores de la base de datos de exploración
 
-El comando de menú **Proyecto** > **Visualizar errores de la base de datos de exploración** permite visualizar todas las regiones que no se pudieron analizar en la **Lista de errores**. Este comando está pensado para simplificar la creación del archivo de indicaciones inicial. Pero el analizador no puede determinar si la causa del error es una macro problemática, por lo que debe evaluar cada error. Ejecute el comando **Visualizar errores de la base de datos de exploración** y navegue a cada error para cargar el archivo afectado en el editor. Una vez cargado el archivo, se resaltarán las macros que formen parte de la región. Puede invocar las acciones rápidas para agregarlas a un archivo de indicaciones. Después de actualizar el archivo de indicaciones, la lista de errores se actualizará automáticamente. Si quiere modificar el archivo de indicaciones manualmente, también puede usar el comando **Volver a analizar la solución** para desencadenar una actualización.
+ > El **Project**comando de menú Errores de base de datos de**exploración** de visualización de proyecto muestra todas las regiones que no se pudieron analizar en la lista de **errores**. Este comando está pensado para simplificar la creación del archivo de indicaciones inicial. Pero el analizador no puede determinar si la causa del error es una macro problemática, por lo que debe evaluar cada error. Ejecute el comando **Visualizar errores de la base de datos de exploración** y navegue a cada error para cargar el archivo afectado en el editor. Una vez cargado el archivo, se resaltarán las macros que formen parte de la región. Puede invocar las acciones rápidas para agregarlas a un archivo de indicaciones. Después de actualizar el archivo de indicaciones, la lista de errores se actualizará automáticamente. Si quiere modificar el archivo de indicaciones manualmente, también puede usar el comando **Volver a analizar la solución** para desencadenar una actualización.
 
 ## <a name="architecture"></a>Architecture
 
@@ -150,12 +151,12 @@ Las sugerencias usan esta sintaxis:
 
 |Sintaxis|Significado|
 |------------|-------------|
-|`#define` *Hint-Name* *-cadena de reemplazo*<br /><br /> `#define` *Hint-name* `(` *parámetro*,...`)` *-cadena de reemplazo*|Una directiva de preprocesador que define una indicación nueva o vuelve a definir una indicación existente. Después de la directiva, el preprocesador reemplaza cada aparición de *nombre_de_la_indicación* en el código fuente con *cadena_de_reemplazo*.<br /><br /> El segundo formato de sintaxis define una indicación similar a una función. Si en el código fuente aparece una indicación de tipo de función, en primer lugar el preprocesador reemplaza cada aparición de *parámetro* en *cadena_de_reemplazo* con el argumento correspondiente en el código fuente y, después, reemplaza *nombre_de_la_indicación* con *cadena_de_reemplazo*.|
+|`#define` *nombre_de_la_indicación* *cadena_de_reemplazo*<br /><br /> `#define` *nombre_de_la_indicación* `(` *parámetro*, ...`)`*cadena_de_reemplazo*|Una directiva de preprocesador que define una indicación nueva o vuelve a definir una indicación existente. Después de la directiva, el preprocesador reemplaza cada aparición de *nombre_de_la_indicación* en el código fuente con *cadena_de_reemplazo*.<br /><br /> El segundo formato de sintaxis define una indicación similar a una función. Si en el código fuente aparece una indicación de tipo de función, en primer lugar el preprocesador reemplaza cada aparición de *parámetro* en *cadena_de_reemplazo* con el argumento correspondiente en el código fuente y, después, reemplaza *nombre_de_la_indicación* con *cadena_de_reemplazo*.|
 |`@<`|Una *cadena_de_reemplazo* específica del archivo de indicaciones que indica el inicio de un conjunto de elementos de mapa.|
 |`@=`|Una *cadena_de_reemplazo* específica del archivo de indicaciones que indica un elemento de mapa intermedio. Un mapa puede tener varios elementos de mapa.|
 |`@>`|Una *cadena_de_reemplazo* específica del archivo de indicaciones que indica el final de un conjunto de elementos de mapa.|
-|`#undef` *Hint-Name*|La directiva de preprocesador que elimina una indicación existente. El nombre de la indicación lo proporciona el identificador de *nombre_de_la_indicación*.|
-|`//` *Comentario*|Comentario en una sola línea.|
+|`#undef` *nombre_de_la_indicación*|La directiva de preprocesador que elimina una indicación existente. El nombre de la indicación lo proporciona el identificador de *nombre_de_la_indicación*.|
+|`//`*comentario*|Comentario en una sola línea.|
 |`/*` *comentario* `*/`|Un comentario multilínea.|
 
 ## <a name="example"></a>Ejemplo
@@ -166,7 +167,7 @@ En la ilustración se muestran algunos de los directorios físicos de un proyect
 
 ### <a name="hint-file-directories"></a>Directorios de archivos de indicaciones
 
-![Directorios de archivos&#45;de sugerencia comunes y específicos del proyecto.](media/hintfile.png "HintFile")
+![Común y de proyecto&#45;directorios de archivos de sugerencias específicos.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Directorios y contenido del archivo de indicaciones
 
@@ -245,6 +246,6 @@ Estas notas se aplican a la lista anterior:
 ## <a name="see-also"></a>Consulte también
 
 [Tipos de archivos creados para proyectos de C++ de Visual Studio](file-types-created-for-visual-cpp-projects.md)<br>
-[#define (directiva) (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
-[#undef (directiva) (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[Directiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
+[#undef (Directiva) (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Anotaciones SAL](../../c-runtime-library/sal-annotations.md)<br>

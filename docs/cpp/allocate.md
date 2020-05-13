@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: a2284395b09c34b0d22c4499bf804cfcc3a74c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155282"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181530"
 ---
 # <a name="allocate"></a>allocate
 
 **Específicos de Microsoft**
 
-El **asignar** especificador de declaración nombra un segmento de datos en el que se va a asignar el elemento de datos.
+El especificador de declaración de **asignación** nombra un segmento de datos en el que se asignará el elemento de datos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,9 +26,9 @@ El **asignar** especificador de declaración nombra un segmento de datos en el q
    __declspec(allocate("segname")) declarator
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El nombre *segname* deben declararse mediante una de las instrucciones pragma siguientes:
+El nombre *segname* se debe declarar mediante una de las siguientes pragmas:
 
 - [code_seg](../preprocessor/code-seg.md)
 
@@ -53,7 +53,7 @@ int main() {
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

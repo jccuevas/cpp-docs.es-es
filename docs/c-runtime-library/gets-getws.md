@@ -1,9 +1,11 @@
 ---
 title: gets, _getws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getws
 - gets
+- _o__getws
+- _o_gets
 api_location:
 - msvcr80.dll
 - msvcr90.dll
@@ -13,6 +15,7 @@ api_location:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,22 +34,22 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 1c60cf14334a0dcc0492b23da10a36c3219bb699
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300279"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919901"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
 Obtiene una línea del flujo `stdin` . Hay disponibles versiones más seguras de estas funciones; vea [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
->  Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT. Las versiones seguras de estas funciones, gets_s y _getws_s, siguen estando disponibles. Para obtener información sobre estas funciones alternativas, vea [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
+> Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT. Las versiones seguras de estas funciones, gets_s y _getws_s, siguen estando disponibles. Para obtener información sobre estas funciones alternativas, vea [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -67,23 +70,25 @@ wchar_t *_getws(
 ); // C++ only
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Parámetros
 
-*buffer*<br/>
+*búfer*<br/>
 Ubicación de almacenamiento de la cadena de entrada.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Devuelve su argumento si se realiza correctamente. Un puntero **NULL** indica una condición de error o de fin de archivo. Utilice [ferror](../c-runtime-library/reference/ferror.md) o [feof](../c-runtime-library/reference/feof.md) para determinar qué resultado se ha producido. Si `buffer` es **NULL**, estas funciones invocan un controlador de parámetros no válido, tal y como se describe en [Validación de parámetros](../c-runtime-library/parameter-validation.md). Si se permite que la ejecución continúe, estas funciones devuelven **NULL** y establecen errno en `EINVAL`.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La función `gets` lee una línea del flujo de entrada estándar `stdin` y la almacena en `buffer`. La línea consta de todos los caracteres hasta el primer carácter de línea nueva ('\n'), este último incluido. A continuación,`gets` reemplaza el carácter de línea nueva con un carácter nulo ('\0') antes de devolver la línea. Por su parte, la función `fgets` conserva el carácter de línea nueva. `_getws` es una versión con caracteres anchos de `gets`; el argumento y el valor devuelto son cadenas de caracteres anchos.
 
 > [!IMPORTANT]
->  No hay forma de limitar el número de caracteres que gets lee, por lo que una entrada que no sea de confianza puede producir fácilmente saturaciones del búfer. Utilice `fgets` en su lugar.
+> No hay forma de limitar el número de caracteres que gets lee, por lo que una entrada que no sea de confianza puede producir fácilmente saturaciones del búfer. En su lugar, use `fgets`.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -91,7 +96,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -125,7 +130,7 @@ Observe que una entrada de más 20 caracteres saturará el búfer de líneas y p
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [E/S de secuencia](../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>

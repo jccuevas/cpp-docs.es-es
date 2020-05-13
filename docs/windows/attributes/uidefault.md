@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 55e88ab4dfaaa4157a99c4dc523f205370f78c46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214466"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -23,7 +23,7 @@ Indica que el miembro de información de tipo es el miembro predeterminado que s
 [uidefault]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **uidefault** C++ tiene la misma funcionalidad que el atributo MIDL [uidefault](/windows/win32/Midl/uidefault) .
 
@@ -55,13 +55,13 @@ __interface ICustom{
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)

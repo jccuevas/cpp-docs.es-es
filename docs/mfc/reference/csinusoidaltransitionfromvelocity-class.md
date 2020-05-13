@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-ms.openlocfilehash: f61effb6dacdd1076784de8e825a3acec192474c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df9ca6d140cb9e3ec85be3ce32760a66599c5d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318248"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>Clase CSinusoidalTransitionFromVelocity
 
@@ -35,26 +35,26 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Construye un objeto de transición.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CSinusoidalTransitionFromVelocity::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSinusoidalTransitionFromVelocity::Create](#create)|Llama a la biblioteca de transición para crear un objeto COM de transición encapsulado. (Reemplaza [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|La duración de la transición.|
 |[CSinusoidalTransitionFromVelocity::m_period](#m_period)|El período de oscilación de la onda sinusoidal en segundos.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El valor de la variable de animación oscila alrededor del valor inicial a través de toda la duración de una transición de intervalo sinusoidal. La amplitud de la oscilación viene determinada por la velocidad de la variable de animación cuando se inicia la transición. Dado que todas las transiciones se borran automáticamente, se recomienda asignada a ellos mediante el operador nuevo. El objeto COM IUIAnimationTransition encapsulado se crea por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.
+El valor de la variable de animación oscila alrededor del valor inicial durante toda la duración de una transición de rango sinusoidal. La amplitud de la oscilación viene determinada por la velocidad de la variable de animación cuando comienza la transición. Dado que todas las transiciones se borran automáticamente, se recomienda asignarlas mediante el operador new. CAnimationController::AnimateGroup crea el objeto COM IUIAnimationTransition encapsulado, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -68,9 +68,9 @@ El valor de la variable de animación oscila alrededor del valor inicial a trav�
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create
+## <a name="csinusoidaltransitionfromvelocitycreate"></a><a name="create"></a>CSinusoidalTransitionFromVelocity::Create
 
-Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.
+Llama a la biblioteca de transición para crear un objeto COM de transición encapsulado.
 
 ```
 virtual BOOL Create(
@@ -81,13 +81,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *pLibrary*<br/>
-Un puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándares.
+Un puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la transición se crea correctamente; en caso contrario, FALSE.
+TRUESi la transición se crea correctamente; de lo contrario FALSO.
 
-##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+## <a name="csinusoidaltransitionfromvelocitycsinusoidaltransitionfromvelocity"></a><a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
 
 Construye un objeto de transición.
 
@@ -99,13 +99,13 @@ CSinusoidalTransitionFromVelocity(
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*<br/>
+*duration*<br/>
 La duración de la transición.
 
-*period*<br/>
+*Período*<br/>
 El período de oscilación de la onda sinusoidal en segundos.
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration
+## <a name="csinusoidaltransitionfromvelocitym_duration"></a><a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration
 
 La duración de la transición.
 
@@ -113,7 +113,7 @@ La duración de la transición.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period
+## <a name="csinusoidaltransitionfromvelocitym_period"></a><a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period
 
 El período de oscilación de la onda sinusoidal en segundos.
 
@@ -121,6 +121,6 @@ El período de oscilación de la onda sinusoidal en segundos.
 UI_ANIMATION_SECONDS m_period;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

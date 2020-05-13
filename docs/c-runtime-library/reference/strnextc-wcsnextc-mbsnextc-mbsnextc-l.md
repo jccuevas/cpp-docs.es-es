@@ -1,11 +1,13 @@
 ---
 title: _strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strnextc
 - _mbsnextc_l
 - _mbsnextc
 - _wcsnextc
+- _o__mbsnextc
+- _o__mbsnextc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-ms.openlocfilehash: 0cf7055c0454971c8fbab85d54d695e3e5cffdec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4017dc4f72a0072df8d0969406169a26c1da43ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947237"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919262"
 ---
 # <a name="_strnextc-_wcsnextc-_mbsnextc-_mbsnextc_l"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
@@ -81,7 +84,7 @@ unsigned int _mbsnextc_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena de origen.
 
 *locale*<br/>
@@ -91,7 +94,7 @@ Configuración regional que se va a usar.
 
 Cada una de estas funciones devuelve el valor entero del siguiente carácter en *Str*.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_mbsnextc** devuelve el valor entero del siguiente carácter multibyte en *Str*, sin avanzar el puntero de cadena. **_mbsnextc** reconoce secuencias de caracteres multibyte según la [Página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso.
 
@@ -99,13 +102,15 @@ Si *Str* es **null**, se invoca el controlador de parámetros no válidos, tal y
 
 **Nota de seguridad** Esta API crea la posible amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc** y **_wcsnextc** son versiones de cadena de caracteres de un solo byte y de cadena de caracteres anchos de **_mbsnextc**. **_wcsnextc** devuelve el valor entero del siguiente carácter ancho en *Str*; **_strnextc** devuelve el valor entero del siguiente carácter de un solo byte en *Str*. **_strnextc** y **_wcsnextc** se proporcionan solo para esta asignación y no se deben usar en caso contrario. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strnextc** y **_wcsnextc** son versiones de cadena de caracteres de un solo byte y de cadena de caracteres anchos de **_mbsnextc**. **_wcsnextc** devuelve el valor entero del siguiente carácter ancho en *Str*; **_strnextc** devuelve el valor entero del siguiente carácter de un solo byte en *Str*. **_strnextc** y **_wcsnextc** se proporcionan solo para esta asignación y no se deben utilizar en caso contrario. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
 **_mbsnextc_l** es idéntico, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
@@ -118,12 +123,12 @@ Si *Str* es **null**, se invoca el controlador de parámetros no válidos, tal y
 |**_strnextc**|\<tchar.h>|
 |**_wcsnextc**|\<tchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atan2f
 - atan2l
@@ -8,6 +8,8 @@ api_name:
 - atanf
 - atan
 - atanl
+- _o_atan
+- _o_atan2
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +44,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939603"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920075"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -85,21 +88,23 @@ Cualquier número.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|± **QNAN**, **IND**|ninguno|**_DOMAIN**|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **atan** calcula el arcotangente (la función tangente inversa) de *x*. **ATAN2** calcula el arco tangente de *y*/*x* (si *x* es igual a 0, **ATAN2** devuelve π/2 Si *y* es positivo,-π/2 Si *y* es negativo, o 0 si *y* es 0).
 
 **atan** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **atan** y **ATAN2** que toman argumentos de tipo **float** o **Long** **Double** . En un programa de C, **atan** y **ATAN2** siempre toman argumentos **dobles** y devuelven un valor **Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **atan** y **ATAN2** que toman argumentos de tipo **float** o **Long** **Double** . En un programa de C, **atan** y **ATAN2** siempre toman argumentos **dobles** y devuelven un valor **Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------|-|
-|**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> o \<math.h>|
+|**atan**, **ATAN2**, **atanf (**, **atan2f (**, **atanl**, **atan2l**|\<math.h>|\<cmath> o \<math.h>|
 
 ## <a name="example"></a>Ejemplo
 
@@ -132,7 +137,7 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

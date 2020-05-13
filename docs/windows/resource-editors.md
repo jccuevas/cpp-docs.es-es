@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444994"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167893"
 ---
 # <a name="resource-editors-c"></a>Editores de recursosC++()
 
@@ -42,12 +42,12 @@ Al crear o abrir un recurso, se abre automáticamente el editor correspondiente.
 |[Editor de aceleradores](../windows/accelerator-editor.md)|Tablas de aceleradores en C++ proyectos de Visual Studio.|
 |[Binary Editor](binary-editor.md)|Información de datos binarios y recursos personalizados en proyectos de Visual C++, Visual Basic o Visual C#.|
 |[Editor de cuadros de diálogo](../windows/dialog-editor.md)|Cuadros de diálogo en proyectos C++ de Visual Studio.|
-|[Image Editor](../windows/image-editor-for-icons.md)|Mapas de bits, iconos, cursores y otros archivos de imagen en proyectos de Visual C++, Visual Basic o Visual C#.|
+|[Editor de imágenes](../windows/image-editor-for-icons.md)|Mapas de bits, iconos, cursores y otros archivos de imagen en proyectos de Visual C++, Visual Basic o Visual C#.|
 |[Editor de menús](../windows/menu-editor.md)|Recursos de menús en proyectos C++ de Visual Studio.|
 |[Editor de Ribbon](../mfc/ribbon-designer-mfc.md)|Recursos de cinta de opciones en proyectos de MFC.|
 |[Editor de cadenas](../windows/string-editor.md)|Tablas de cadenas en proyectos C++ de Visual Studio.|
 |[Editor de barras de herramientas](../windows/toolbar-editor.md)|Recursos de la barra de C++ herramientas en proyectos de Visual Studio. El **Editor** de la barra de herramientas forma parte del **Editor de imágenes**.|
-|[Editor de información de versión](../windows/version-information-editor.md)|Información de versión en proyectos C++ de Visual Studio.|
+|[Editor de la información de versión](../windows/version-information-editor.md)|Información de versión en proyectos C++ de Visual Studio.|
 
 > [!NOTE]
 > Si el proyecto aún no contiene un archivo. rc, consulte [Cómo: crear recursos](../windows/how-to-create-a-resource-script-file.md).
@@ -73,7 +73,7 @@ Puede tener acceso a los recursos de Win32 en el panel [vista de recursos](how-t
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Para ver un recurso de Win32 en un editor de recursos
 
-1. Vaya a la **vista**de menú  > **otras ventanas** > **vista de recursos**.
+1. Vaya a la **vista** de menú > otras > de **Windows** **vista de recursos**.
 
 1. Si la ventana de **vista de recursos** no es la ventana de nivel superior, seleccione la pestaña **vista de recursos** para colocarla en la parte superior.
 
@@ -118,15 +118,15 @@ Los siguientes recursos no proporcionan una vista previa visual: acelerador, man
 1. En el [ventana Propiedades](/visualstudio/ide/reference/properties-window), seleccione el botón **páginas de propiedades** .
 
    > [!TIP]
-   > Usar un acceso directo, vaya a la **vista**de menú  > **páginas de propiedades**.
+   > Use un acceso directo, vaya a la **vista** de menú > **páginas de propiedades**.
 
    Se abre la página de **propiedades** del recurso que muestra una vista previa de ese recurso. Puede utilizar las teclas de dirección **arriba** y **abajo** para navegar por el control de árbol en **vista de recursos** o en la ventana de documento. La página de **propiedades** permanecerá abierta y mostrará cualquier recurso que tenga el foco y se podrá obtener una vista previa.
 
 ## <a name="requirements"></a>Requisitos
 
-Ninguno
+None
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>

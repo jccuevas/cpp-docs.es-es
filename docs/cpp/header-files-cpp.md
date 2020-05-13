@@ -1,34 +1,34 @@
 ---
-title: Archivos de encabezadoC++()
+title: Archivos de encabezado (C++)
 ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 4ab6a2b2626cde94f35678bc9ec789b80d493b8f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301488"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367240"
 ---
-# <a name="header-files-c"></a>Archivos de encabezadoC++()
+# <a name="header-files-c"></a>Archivos de encabezado (C++)
 
-Los nombres de los elementos de programa, como variables, funciones, clases, etc., se deben declarar antes de que se puedan utilizar. Por ejemplo, no puede simplemente escribir `x = 42` sin declarar primero "x".
+Los nombres de elementos de programa como variables, funciones, clases, etc. deben declararse antes de que se puedan utilizar. Por ejemplo, no puede `x = 42` escribir sin declarar primero 'x'.
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
-La declaración indica al compilador si el elemento es un **tipo int**, **Double**, una **función**, una **clase** u otra cosa.  Además, cada nombre se debe declarar (directa o indirectamente) en cada archivo. cpp en el que se usa. Al compilar un programa, cada archivo. cpp se compila de forma independiente en una unidad de compilación. El compilador no tiene conocimiento de los nombres que se declaran en otras unidades de compilación. Esto significa que si define una clase o una función o una variable global, debe proporcionar una declaración de ese elemento en cada archivo. cpp adicional que lo use. Cada declaración de ese elemento debe ser exactamente idéntica en todos los archivos. Una ligera incoherencia producirá errores, o un comportamiento no deseado, cuando el vinculador intente fusionar mediante combinación todas las unidades de compilación en un único programa.
+La declaración indica al compilador si el elemento es un **int**, un **double**, una **función,** una **clase** o alguna otra cosa.  Además, cada nombre debe declararse (directa o indirectamente) en cada archivo .cpp en el que se utiliza. Al compilar un programa, cada archivo .cpp se compila de forma independiente en una unidad de compilación. El compilador no tiene conocimiento de qué nombres se declaran en otras unidades de compilación. Esto significa que si define una clase o función o variable global, debe proporcionar una declaración de ese objeto en cada archivo .cpp adicional que lo utilice. Cada declaración de esa cosa debe ser exactamente idéntica en todos los archivos. Una ligera incoherencia provocará errores, o un comportamiento no intencionado, cuando el vinculador intente combinar todas las unidades de compilación en un solo programa.
 
-Para minimizar la posibilidad de errores, C++ ha adoptado la Convención de usar *archivos de encabezado* para contener declaraciones. Las declaraciones se realizan en un archivo de encabezado y, a continuación, se usa la Directiva #include en todos los archivos. cpp u otro archivo de encabezado que requiera dicha declaración. La Directiva #include inserta una copia del archivo de encabezado directamente en el archivo. cpp antes de la compilación.
+Para minimizar la posibilidad de errores, C++ ha adoptado la convención de usar archivos de *encabezado* para contener declaraciones. Las declaraciones se realizan en un archivo de encabezado y, a continuación, se usa la directiva #include en cada archivo .cpp u otro archivo de encabezado que requiera esa declaración. La directiva #include inserta una copia del archivo de encabezado directamente en el archivo .cpp antes de la compilación.
 
 > [!NOTE]
-> En Visual Studio 2019, la característica de *módulos* de c++ 20 se presenta como una mejora y un reemplazo eventual de los archivos de encabezado. Para obtener más información, vea [información general sobre C++los módulos de ](modules-cpp.md).
+> En Visual Studio 2019, la característica de *módulos* C++20 se presenta como una mejora y reemplazo final para los archivos de encabezado. Para obtener más información, consulte [Información general de los módulos en C++](modules-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra una manera común de declarar una clase y, a continuación, usarla en un archivo de código fuente diferente. Comenzaremos con el archivo de encabezado, `my_class.h`. Contiene una definición de clase, pero tenga en cuenta que la definición está incompleta. no se ha definido la función miembro `do_something`:
+En el ejemplo siguiente se muestra una forma común de declarar una clase y, a continuación, usarla en un archivo de origen diferente. Comenzaremos con el archivo `my_class.h`de encabezado, . Contiene una definición de clase, pero tenga en cuenta que la definición está incompleta; la función `do_something` miembro no está definida:
 
 ```cpp
 // my_class.h
@@ -43,9 +43,9 @@ namespace N
 }
 ```
 
-A continuación, cree un archivo de implementación (normalmente con una extensión. cpp o similar). Llamaremos al archivo my_class. cpp y proporcionaremos una definición para la declaración de miembro. Agregamos una directiva de `#include` para el archivo "my_class. h" para que la declaración de my_class se inserte en este punto en el archivo. cpp e incluimos `<iostream>` para extraer la declaración de `std::cout`. Tenga en cuenta que las comillas se usan para los archivos de encabezado en el mismo directorio que el archivo de código fuente, y se usan corchetes angulares para los encabezados de la biblioteca estándar. Además, muchos encabezados de la biblioteca estándar no tienen. h ni cualquier otra extensión de archivo.
+A continuación, cree un archivo de implementación (normalmente con una extensión .cpp o similar). Llamaremos al archivo my_class.cpp y proporcionaremos una definición para la declaración de miembro. Agregamos `#include` una directiva para el archivo "my_class.h" con el fin de que la declaración `<iostream>` de my_class inserten en este momento en el archivo .cpp, e incluimos para extraer la declaración para `std::cout`. Tenga en cuenta que las comillas se utilizan para los archivos de encabezado en el mismo directorio que el archivo de origen, y los corchetes angulares se utilizan para los encabezados de biblioteca estándar. Además, muchos encabezados de biblioteca estándar no tienen .h ni ninguna otra extensión de archivo.
 
-En el archivo de implementación, se puede usar opcionalmente una instrucción **using** para evitar tener que calificar cada mención de "my_class" o "cout" con "N::" o "STD::".  No incluya instrucciones **using** en los archivos de encabezado.
+En el archivo de implementación, opcionalmente podemos usar una instrucción **using** para evitar tener que calificar cada mención de "my_class" o "cout" con "N::" o "std::".  ¡No **ponga** sin instrucciones using en los archivos de encabezado!
 
 ```cpp
 // my_class.cpp
@@ -61,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-Ahora podemos usar `my_class` en otro archivo. cpp. #Include el archivo de encabezado para que el compilador Extraiga la declaración. Todo el compilador debe saber que my_class es una clase que tiene una función miembro pública llamada `do_something()`.
+Ahora podemos `my_class` usar en otro archivo .cpp. Hemos #include el archivo de encabezado para que el compilador extraiga la declaración. Todo lo que el compilador necesita saber es que my_class `do_something()`es una clase que tiene una función miembro pública llamada .
 
 ```cpp
 // my_program.cpp
@@ -77,11 +77,11 @@ int main()
 }
 ```
 
-Una vez que el compilador termina de compilar cada archivo. cpp en archivos. obj, pasa los archivos. obj al enlazador. Cuando el vinculador combina los archivos objeto, encuentra exactamente una definición para my_class; está en el archivo. obj generado para my_class. cpp y la compilación se realiza correctamente.
+Una vez que el compilador termina de compilar cada archivo .cpp en archivos .obj, pasa los archivos .obj al vinculador. Cuando el vinculador combina los archivos de objeto, encuentra exactamente una definición para my_class; se encuentra en el archivo .obj generado para my_class.cpp y la compilación se realiza correctamente.
 
-## <a name="include-guards"></a>Incluir protecciones
+## <a name="include-guards"></a>Incluir guardias
 
-Normalmente, los archivos de encabezado tienen una *protección de inclusión* o una directiva de `#pragma once` para asegurarse de que no se insertan varias veces en un único archivo. cpp.
+Normalmente, los archivos de encabezado `#pragma once` tienen una protección de *inclusión* o una directiva para asegurarse de que no se insertan varias veces en un único archivo .cpp.
 
 ```cpp
 // my_class.h
@@ -100,24 +100,25 @@ namespace N
 #endif /* MY_CLASS_H */
 ```
 
-## <a name="what-to-put-in-a-header-file"></a>Qué se debe incluir en un archivo de encabezado
+## <a name="what-to-put-in-a-header-file"></a>Qué poner en un archivo de encabezado
 
-Dado que un archivo de encabezado podría estar incluido potencialmente en varios archivos, no puede contener definiciones que puedan generar varias definiciones del mismo nombre. Los siguientes elementos no están permitidos o se consideran muy incorrectos:
+Dado que varios archivos pueden incluir un archivo de encabezado, no puede contener definiciones que puedan generar varias definiciones del mismo nombre. No se permite lo siguiente, o se consideran muy malas prácticas:
 
-- definiciones de tipos integrados en un espacio de nombres o ámbito global
-- definiciones de funciones no insertadas
+- Definiciones de tipo integradas en el espacio de nombres o ámbito global
+- definiciones de funciones no en línea
 - definiciones de variables no const
-- definiciones de agregado
+- definiciones agregadas
 - espacios de nombres sin nombre
 - Directivas using
 
-El uso de la directiva **using** no producirá necesariamente un error, pero puede causar un problema porque pone el espacio de nombres en el ámbito de cada archivo. cpp que incluye directa o indirectamente ese encabezado.
+El uso de la directiva **using** no necesariamente provocará un error, pero puede provocar un problema porque pone el espacio de nombres en el ámbito de cada archivo .cpp que incluye directa o indirectamente ese encabezado.
 
 ## <a name="sample-header-file"></a>Archivo de encabezado de ejemplo
 
 En el ejemplo siguiente se muestran los distintos tipos de declaraciones y definiciones que se permiten en un archivo de encabezado:
 
 ```cpp
+// sample.h
 #pragma once
 #include <vector> // #include directive
 #include <string>

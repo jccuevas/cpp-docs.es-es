@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: ca289a7ebd4578d5c67bb5d3e403d2a9a2756520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516130"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182180"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Palabras clave contextuales (C++/CLI y C++/CX)
 
@@ -20,7 +20,7 @@ Las *palabras clave contextuales* son elementos del lenguaje que solo se reconoc
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 A continuación se muestra una lista de palabras clave contextuales:
 
@@ -42,7 +42,7 @@ A continuación se muestra una lista de palabras clave contextuales:
 
 - [override](override-cpp-component-extensions.md)
 
-- [propiedad](property-cpp-component-extensions.md)
+- [property](property-cpp-component-extensions.md)
 
 - [sealed](sealed-cpp-component-extensions.md)
 
@@ -52,7 +52,7 @@ Para fines de legibilidad, es recomendable restringir el uso de palabras clave c
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 (No hay ninguna observación específica de la plataforma para esta característica).
 
@@ -62,7 +62,7 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 (No hay ninguna observación específica de la plataforma para esta característica).
 
@@ -99,6 +99,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

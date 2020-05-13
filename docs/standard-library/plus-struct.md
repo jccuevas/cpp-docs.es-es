@@ -1,5 +1,5 @@
 ---
-title: plus (struct)
+title: plus (Struct)
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::plus
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240505"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372069"
 ---
-# <a name="plus-struct"></a>plus (struct)
+# <a name="plus-struct"></a>plus (Struct)
 
 Objeto de función predefinido que realiza la operación de suma (`operator+` binario) sobre sus argumentos.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -43,10 +43,10 @@ struct plus<void>
 Tipo que admite un `operator+` binario que toma operandos de los tipos especificados o deducidos.
 
 *Izquierda*\
-Operando izquierdo de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
+Operando izquierdo de la operación de suma. La plantilla no especializada toma un argumento de referencia lvalue de tipo *Type*. La plantilla especializada realiza un reenvío perfecto de argumentos de referencia lvalue y rvalue de tipo deducido *T*.
 
 *Correcto*\
-Operando derecho de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
+Operando derecho de la operación de suma. La plantilla no especializada toma un argumento de referencia lvalue de tipo *Type*. La plantilla especializada realiza un reenvío perfecto de argumentos de referencia lvalue y rvalue de tipo deducido *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 

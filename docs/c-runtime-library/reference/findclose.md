@@ -1,8 +1,9 @@
 ---
 title: _findclose
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _findclose
+- _o__findclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dffe2ff71f1eecaec78c75867ebb7e34a963ee3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957318"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911807"
 ---
 # <a name="_findclose"></a>_findclose
 
@@ -47,12 +49,16 @@ int _findclose(
 
 ### <a name="parameters"></a>Parámetros
 
-*handle*<br/>
+*asa*<br/>
 Identificador de búsqueda devuelto por una llamada anterior a **_findfirst**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Si se realiza correctamente, **_findclose** devuelve 0. De lo contrario, devuelve-1 y establece **errno** en **ENOENT**, lo que indica que no se encontraron más archivos coincidentes.
+
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -60,9 +66,9 @@ Si se realiza correctamente, **_findclose** devuelve 0. De lo contrario, devuelv
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Llamadas del sistema](../../c-runtime-library/system-calls.md)<br/>
 [Funciones de búsqueda de nombre de archivo](../../c-runtime-library/filename-search-functions.md)<br/>

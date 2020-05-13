@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
 ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233753"
 ---
 # <a name="expressions-in-parentheses"></a>Expresiones entre paréntesis
 
@@ -22,7 +22,7 @@ Puede agregar cualquier operando entre paréntesis sin cambiar el tipo o el valo
 ( 10 + 5 ) / 5
 ```
 
-Los paréntesis alrededor de `10 + 5` indican que el valor de `10 + 5` se evalúa primero y se convierte en el operando izquierdo del operador de división (**/**). El resultado de `( 10 + 5 ) / 5` es 3. Sin paréntesis, `10 + 5 / 5` se evaluaría como 11.
+Los paréntesis alrededor de `10 + 5` indican que el valor de `10 + 5` se evalúa primero y se convierte en el operando izquierdo del operador de división ( **/** ). El resultado de `( 10 + 5 ) / 5` es 3. Sin paréntesis, `10 + 5 / 5` se evaluaría como 11.
 
 Aunque los paréntesis afectan a la manera en que los operandos se agrupan en una expresión, no se puede garantizar un orden concreto de evaluación en todos los casos. Por ejemplo, ni los paréntesis ni la agrupación de izquierda a derecha de la expresión siguiente garantiza cuál será el valor de `i` en cualquiera de las subexpresiones:
 

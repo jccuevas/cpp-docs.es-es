@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 184513bc63975bd8eaaf0e53300e5a6be7986389
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320265"
 ---
-# <a name="randomdevice-class"></a>random_device (Clase)
+# <a name="random_device-class"></a>random_device (Clase)
 
 Genera una secuencia aleatoria desde un dispositivo externo.
 
@@ -53,10 +53,10 @@ public:
 
 |||
 |-|-|
-|[random_device](#random_device)|[entropía](#entropy)|
+|[random_device](#random_device)|[Entropía](#entropy)|
 |[random_device::operator()](#op_call)||
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La clase describe un origen de números aleatorios y puede ser (aunque no es obligatorio) no determinista o segura criptográficamente según la norma ISO C++. En la implementación de Visual Studio, los valores generados son no deterministas y seguros criptográficamente, pero se ejecutan con mayor lentitud que los generadores creados a partir de motores y adaptadores de motor (como el [motor Mersenne Twister](../standard-library/mersenne-twister-engine-class.md), que constituye la opción de motor más rápida y de mejor calidad la mayoría de las veces).
 
@@ -64,7 +64,7 @@ Los resultados de `random_device` se distribuyen uniformemente en el intervalo c
 
 No está garantizado que `random_device` resulte en una llamada de no bloqueo.
 
-`random_device` se suele usar para propagar otros generadores creados con motores o adaptadores de motor. Para obtener más información, vea [\<random>](../standard-library/random.md).
+`random_device` se suele usar para propagar otros generadores creados con motores o adaptadores de motor. Para obtener más información, consulte [ \<>aleatorias ](../standard-library/random.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -100,7 +100,7 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-Este ejemplo es simplista y no representa el caso de uso general de este generador. Para obtener un código de ejemplo representativo, vea [\<random>](../standard-library/random.md).
+Este ejemplo es simplista y no representa el caso de uso general de este generador. Para obtener un ejemplo [ \< ](../standard-library/random.md)de código más representativo, vea>aleatorios.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -108,7 +108,7 @@ Este ejemplo es simplista y no representa el caso de uso general de este generad
 
 **Espacio de nombres:** std
 
-## <a name="random_device"></a> random_device::random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device::random_device
 
 Construye el generador.
 
@@ -116,11 +116,11 @@ Construye el generador.
 random_device(const std::string& = "");
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor inicializa el generador según sea necesario, omitiendo el parámetro de cadena. Genera un valor de un tipo definido en la implementación que se deriva de una [excepción](../standard-library/exception-class.md) si `random_device` no se pudo inicializar.
 
-## <a name="entropy"></a> random_device::entropy
+## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device::entropía
 
 Estima la aleatoriedad del origen.
 
@@ -128,11 +128,11 @@ Estima la aleatoriedad del origen.
 double entropy() const noexcept;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve una estimación de la aleatoriedad del origen, medida en bits.
 
-## <a name="op_call"></a> random_device::operator()
+## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device::operador()
 
 Devuelve un valor aleatorio.
 
@@ -140,10 +140,10 @@ Devuelve un valor aleatorio.
 result_type operator()();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Devuelve valores distribuidos uniformemente en el intervalo cerrado [`min, max`] como lo determinan las funciones miembro `min()` y `max()`. Inicia un valor de un tipo definido por la implementación derivado de la [excepción](../standard-library/exception-class.md) si no se ha podido obtener un número aleatorio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)
+[\<>al azar](../standard-library/random.md)

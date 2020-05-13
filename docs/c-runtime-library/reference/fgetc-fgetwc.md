@@ -1,9 +1,11 @@
 ---
 title: fgetc, fgetwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fgetwc
 - fgetc
+- _o_fgetc
+- _o_fgetwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: 92f44c65802f3baed37078574577bf108bbcd09a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940889"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912865"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -57,14 +60,14 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fgetc** devuelve el carácter leído como un valor **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho que corresponde al carácter Read o devuelve **WEOF** para indicar un error o el final del archivo. En ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de fin de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *Stream* es **null**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EOF**.
+**fgetc** devuelve el carácter leído como un valor **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter que se lee o devuelve **WEOF** para indicar un error o el final del archivo. En ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de fin de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *Stream* es **null**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EOF**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cada una de estas funciones Lee un solo carácter de la posición actual del archivo asociado a la *secuencia*. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
 
@@ -75,6 +78,8 @@ Cada una de estas funciones Lee un solo carácter de la posición actual del arc
 Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos.
 
 Para obtener más información sobre el procesamiento de caracteres anchos y caracteres multibyte en los modos binarios y de texto, consulte [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -89,7 +94,7 @@ Para obtener más información sobre el procesamiento de caracteres anchos y car
 |**fgetc**|\<stdio.h>|
 |**fgetwc**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -135,7 +140,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Salida
 
 ```Output
 Line one.

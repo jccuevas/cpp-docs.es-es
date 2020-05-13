@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8bc578fd9657fb964bc6148e3acc24b0cb5328
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396059"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213530"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation (Espacio de nombres)
 
-Habilita la funcionalidad fundamental de Windows en tiempo de ejecución, como la creación de objetos y fábrica.
+Habilita la funcionalidad de Windows Runtime fundamental, como la creación de objetos y generadores.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,11 +25,11 @@ Habilita la funcionalidad fundamental de Windows en tiempo de ejecución, como l
 namespace Windows::Foundation;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[ActivateInstance (función)](activateinstance-function.md)|Registra y recupera una instancia de un tipo especificado definido en un identificador de clase especificado.|
 |[GetActivationFactory (función)](getactivationfactory-function.md)|Recupera un generador de activación para el tipo especificado por el parámetro de plantilla.|
@@ -38,8 +38,8 @@ namespace Windows::Foundation;
 
 **Encabezado:** client.h
 
-**Espacio de nombres**: Windows
+**Espacio de nombres:** Windows
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Espacios de nombres UWP de Windows](/uwp/api/)
+[Espacios de nombres de UWP de Windows](/uwp/api/)

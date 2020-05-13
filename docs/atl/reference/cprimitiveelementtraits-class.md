@@ -1,5 +1,5 @@
 ---
-title: CPrimitiveElementTraits (clase)
+title: Clase CPrimitiveElementTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CPrimitiveElementTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-ms.openlocfilehash: 53d039b15c9f4a79956bd86fbb93600854f90e5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b45d93420d1832091cc451a3e6eb309f61d07a3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331434"
 ---
-# <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits (clase)
+# <a name="cprimitiveelementtraits-class"></a>Clase CPrimitiveElementTraits
 
-Esta clase proporciona métodos de forma predeterminada y las funciones de una clase de colección formado por tipos de datos primitivos.
+Esta clase proporciona métodos y funciones predeterminados para una clase de colección compuesta de tipos de datos primitivos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,22 +30,22 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 #### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-El tipo de datos que se almacenará en el objeto de clase de colección.
+El tipo de datos que se almacenarán en el objeto de clase de colección.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CPrimitiveElementTraits::INARGTYPE](#inargtype)|El tipo de datos que se usará para agregar elementos al objeto de clase de colección.|
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.|
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|El tipo de datos que se va a utilizar para recuperar elementos del objeto de clase de colección.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase proporciona métodos para mover, copiar, comparar y hash almacenados en un objeto de clase de colección de elementos de tipo de datos primitivos y funciones estáticas de forma predeterminada.
+Esta clase proporciona funciones estáticas predeterminadas y métodos para mover, copiar, comparar y aplicar hash a elementos de tipo de datos primitivos almacenados en un objeto de clase de colección.
 
-Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).
+Para obtener más información, vea Clases de [colección ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -63,7 +63,7 @@ Para obtener más información, consulte [clases de colección ATL](../../atl/at
 
 **Encabezado:** atlcoll.h
 
-##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE
+## <a name="cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE
 
 El tipo de datos que se usará para agregar elementos al objeto de clase de colección.
 
@@ -71,15 +71,15 @@ El tipo de datos que se usará para agregar elementos al objeto de clase de cole
 typedef T INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE
+## <a name="cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE
 
-El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.
+El tipo de datos que se va a utilizar para recuperar elementos del objeto de clase de colección.
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CDefaultElementTraits (clase)](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[Clase CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

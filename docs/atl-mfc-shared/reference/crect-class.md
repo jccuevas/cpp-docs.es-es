@@ -34,16 +34,16 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b99eca7fe3a9c84f8b79ef3d694e27b6dd74dcd9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423601"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747056"
 ---
 # <a name="crect-class"></a>Clase CRect
 
-Similar a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) de Windows.
+Similar a una estructura [RECT de](/windows/win32/api/windef/ns-windef-rect) Windows.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,76 +51,76 @@ Similar a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) de Win
 class CRect : public tagRECT
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CRect:: CRect](#crect)|Construye un objeto `CRect`.|
+|[CRect::CRect](#crect)|Construye un objeto `CRect`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CRect:: BottomRight](#bottomright)|Devuelve el punto inferior derecho de `CRect`.|
-|[CRect:: CenterPoint](#centerpoint)|Devuelve el CenterPoint de `CRect`.|
-|[CRect:: CopyRect](#copyrect)|Copia las dimensiones de un rectángulo de origen en `CRect`.|
-|[CRect::D eflateRect](#deflaterect)|Disminuye el ancho y el alto de `CRect`.|
-|[CRect:: EqualRect](#equalrect)|Determina si `CRect` es igual al rectángulo especificado.|
-|[CRect:: height](#height)|Calcula el alto de `CRect`.|
-|[CRect:: InflateRect](#inflaterect)|Aumenta el ancho y el alto de `CRect`.|
-|[CRect:: IntersectRect](#intersectrect)|Establece `CRect` igual a la intersección de dos rectángulos.|
-|[CRect:: IsRectEmpty](#isrectempty)|Determina si `CRect` está vacío. `CRect` está vacío si el ancho o el alto son 0.|
-|[CRect:: IsRectNull](#isrectnull)|Determina si las variables miembro `top`, `bottom`, `left`y `right` son iguales a 0.|
-|[CRect:: MoveToX](#movetox)|Mueve `CRect` a la coordenada x especificada.|
-|[CRect:: MoveToXY](#movetoxy)|Mueve `CRect` a las coordenadas x e y especificadas.|
-|[CRect:: MoveToY](#movetoy)|Mueve `CRect` a la coordenada y especificada.|
-|[CRect:: NormalizeRect](#normalizerect)|Normaliza el alto y el ancho de `CRect`.|
-|[CRect:: OffsetRect](#offsetrect)|Mueve `CRect` en función de los desplazamientos especificados.|
-|[CRect::P tInRect](#ptinrect)|Determina si el punto especificado se encuentra dentro de `CRect`.|
-|[CRect:: SetRect](#setrect)|Establece las dimensiones de `CRect`.|
-|[CRect:: SetRectEmpty](#setrectempty)|Establece `CRect` en un rectángulo vacío (todas las coordenadas son iguales a 0).|
-|[CRect:: Size](#size)|Calcula el tamaño de `CRect`.|
-|[CRect:: SubtractRect](#subtractrect)|Resta un rectángulo de otro.|
-|[CRect:: enleft](#topleft)|Devuelve el punto superior izquierdo de `CRect`.|
-|[CRect:: UnionRect](#unionrect)|Establece `CRect` igual a la Unión de dos rectángulos.|
-|[CRect:: width](#width)|Calcula el ancho de `CRect`.|
+|[CRect::BottomRight](#bottomright)|Devuelve el punto inferior `CRect`derecho de .|
+|[CRect::CenterPoint](#centerpoint)|Devuelve el punto `CRect`central de .|
+|[CRect::CopyRect](#copyrect)|Copia las dimensiones de `CRect`un rectángulo de origen en .|
+|[CRect::DeflateRect](#deflaterect)|Disminuye la anchura y `CRect`la altura de .|
+|[CRect::EqualRect](#equalrect)|Determina si `CRect` es igual al rectángulo especificado.|
+|[CRect::Altura](#height)|Calcula la altura `CRect`de .|
+|[CRect::InflateRect](#inflaterect)|Aumenta la anchura y `CRect`la altura de .|
+|[CRect::IntersectRect](#intersectrect)|Establece `CRect` igual a la intersección de dos rectángulos.|
+|[CRect::IsRectEmpty](#isrectempty)|Determina si `CRect` está vacío. `CRect`está vacío si el ancho y/o la altura son 0.|
+|[CRect::IsRectNull](#isrectnull)|Determina si `top`las `bottom` `left`variables `right` , , y member son todas iguales a 0.|
+|[CRect::MoveToX](#movetox)|Se `CRect` mueve a la coordenada x especificada.|
+|[CRect::MoveToxY](#movetoxy)|Se `CRect` desplaza a las coordenadas x e y especificadas.|
+|[CRect::MoveToY](#movetoy)|Se `CRect` mueve a la coordenada y especificada.|
+|[CRect::NormalizeRect](#normalizerect)|Estandariza la altura y `CRect`la anchura de .|
+|[CRect::OffsetRect](#offsetrect)|Se `CRect` mueve por los desplazamientos especificados.|
+|[CRect::PtInRect](#ptinrect)|Determina si el punto especificado `CRect`se encuentra dentro de .|
+|[CRect::SetRect](#setrect)|Establece las `CRect`dimensiones de .|
+|[CRect::SetRectEmpty](#setrectempty)|Se `CRect` establece en un rectángulo vacío (todas las coordenadas iguales a 0).|
+|[CRect::Tamaño](#size)|Calcula el tamaño `CRect`de .|
+|[CRect::SubtractRect](#subtractrect)|Resta un rectángulo de otro.|
+|[CRect::TopLeft](#topleft)|Devuelve el punto superior `CRect`izquierdo de .|
+|[CRect::UnionRect](#unionrect)|Establece `CRect` igual a la unión de dos rectángulos.|
+|[CRect::Ancho](#width)|Calcula el ancho `CRect`de .|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CRect:: Operator-](#operator_-)|Resta los desplazamientos especificados de `CRect` o desinfla `CRect` y devuelve el `CRect`resultante.|
-|[CRect:: Operator LPCRECT](#operator_lpcrect)|Convierte `CRect` en `LPCRECT`.|
-|[CRect:: Operator LPRECT](#operator_lprect)|Convierte `CRect` en `LPRECT`.|
-|[CRect:: Operator! =](#operator_neq)|Determina si `CRect` no es igual que un rectángulo.|
-|[CRect:: Operator &amp;](#operator_amp)|Crea la intersección de `CRect` y un rectángulo y devuelve el `CRect`resultante.|
-|[CRect:: Operator &amp;=](#operator_amp_eq)|Establece `CRect` igual a la intersección de `CRect` y un rectángulo.|
-|[CRect:: Operator&#124;](#operator_or)|Crea la Unión de `CRect` y un rectángulo y devuelve el `CRect`resultante.|
-|[CRect:: Operator &#124;=](#operator_or_eq)|Establece `CRect` igual a la Unión de `CRect` y un rectángulo.|
-|[CRect:: Operator +](#operator_add)|Agrega los desplazamientos especificados a `CRect` o infla `CRect` y devuelve el `CRect`resultante.|
-|[CRect:: Operator + =](#operator_add_eq)|Agrega los desplazamientos especificados a `CRect` o infla `CRect`.|
-|[CRect:: Operator =](#operator_eq)|Copia las dimensiones de un rectángulo en `CRect`.|
-|[CRect:: Operator-=](#operator_-_eq)|Resta los desplazamientos especificados de `CRect` o desinfla `CRect`.|
-|[CRect:: Operator = =](#operator_eq_eq)|Determina si `CRect` es igual a un rectángulo.|
+|[CRect::operador -](#operator_-)|Resta los desplazamientos `CRect` dados `CRect` de o `CRect`desinfla y devuelve el resultado .|
+|[CRect::operador LPCRECT](#operator_lpcrect)|Convierte `CRect` en `LPCRECT`.|
+|[CRect::operador LPRECT](#operator_lprect)|Convierte `CRect` en `LPRECT`.|
+|[CRect::operador !o](#operator_neq)|Determina si `CRect` no es igual a un rectángulo.|
+|[CRect::operador&amp;](#operator_amp)|Crea la `CRect` intersección de y `CRect`un rectángulo y devuelve el resultado .|
+|[CRect::operador&amp;=](#operator_amp_eq)|Establece `CRect` igual a `CRect` la intersección de y un rectángulo.|
+|[CRect::operador &#124;](#operator_or)|Crea la `CRect` unión de y `CRect`un rectángulo y devuelve el resultado .|
+|[CRect::operador &#124;](#operator_or_eq)|Establece `CRect` igual a `CRect` la unión de y un rectángulo.|
+|[CRect::operador +](#operator_add)|Agrega los desplazamientos `CRect` dados o `CRect` infla y `CRect`devuelve el resultado .|
+|[CRect::operador +](#operator_add_eq)|Agrega los desfases `CRect` especificados `CRect`o infla .|
+|[CRect::operador ?](#operator_eq)|Copia las dimensiones `CRect`de un rectángulo en .|
+|[CRect::operador --](#operator_-_eq)|Resta los desfases especificados o `CRect` desinfla `CRect`.|
+|[CRect::operador ?](#operator_eq_eq)|Determina si `CRect` es igual a un rectángulo.|
 
 ## <a name="remarks"></a>Observaciones
 
-`CRect` también incluye funciones miembro para manipular objetos `CRect` y estructuras `RECT` de Windows.
+`CRect`también incluye funciones `CRect` miembro `RECT` para manipular objetos y estructuras de Windows.
 
-Un objeto `CRect` se puede pasar como un parámetro de función siempre que se pueda pasar una estructura `RECT`, `LPCRECT`o `LPRECT`.
+Un `CRect` objeto se puede pasar como `RECT` un `LPCRECT`parámetro `LPRECT` de función dondequiera que una estructura, o se puede pasar.
 
 > [!NOTE]
-> Esta clase se deriva de la estructura `tagRECT`. (El nombre `tagRECT` es un nombre que se usa con menos frecuencia para la estructura de `RECT`). Esto significa que los miembros de datos (`left`, `top`, `right`y `bottom`) de la estructura `RECT` son miembros de datos accesibles de `CRect`.
+> Esta clase se deriva `tagRECT` de la estructura. (El `tagRECT` nombre es un nombre menos utilizado `RECT` para la estructura.) Esto significa que los`left` `top`miembros de datos ( `right`, , , `bottom`y ) de la `RECT` estructura son miembros de datos accesibles de `CRect`.
 
-Un `CRect` contiene variables de miembro que definen los puntos superior izquierdo e inferior derecho de un rectángulo.
+A `CRect` contiene variables miembro que definen los puntos superior izquierdo e inferior derecho de un rectángulo.
 
-Al especificar un `CRect`, debe tener cuidado de construirlo para que se normalice, es decir, que el valor de la coordenada izquierda sea menor que el derecho y que la parte superior sea menor que la parte inferior. Por ejemplo, una parte superior izquierda de (10, 10) e inferior derecha de (20, 20) define un rectángulo normalizado, pero una parte superior izquierda de (20, 20) e inferior derecha de (10, 10) define un rectángulo no normalizado. Si no se normaliza el rectángulo, muchas `CRect` funciones miembro pueden devolver resultados incorrectos. (Vea [CRect:: NormalizeRect](#normalizerect) para obtener una lista de estas funciones). Antes de llamar a una función que requiera rectángulos normalizados, puede normalizar los rectángulos no normalizados llamando a la función `NormalizeRect`.
+Al especificar `CRect`un , debe tener cuidado de construirlo para que se normaliza, es decir, de modo que el valor de la coordenada izquierda sea menor que el derecho y la parte superior sea menor que la inferior. Por ejemplo, una parte superior izquierda de (10,10) y la parte inferior derecha de (20,20) define un rectángulo normalizado, pero una parte superior izquierda de (20,20) y la parte inferior derecha de (10,10) define un rectángulo no normalizado. Si el rectángulo no está `CRect` normalizado, muchas funciones miembro pueden devolver resultados incorrectos. (Consulte [CRect::NormalizeRect](#normalizerect) para obtener una lista de estas funciones.) Antes de llamar a una función que requiere rectángulos normalizados, puede `NormalizeRect` normalizar rectángulos no normalizados llamando a la función.
 
-Tenga precaución al manipular un `CRect` con las funciones miembro [CDC::D ptolp](../../mfc/reference/cdc-class.md#dptolp) y [CDC:: LPtoDP](../../mfc/reference/cdc-class.md#lptodp) . Si el modo de asignación de un contexto de presentación es tal que la extensión y es negativa, como en `MM_LOENGLISH`, `CDC::DPtoLP` transformará el `CRect` de forma que su superior sea mayor que la parte inferior. Las funciones como `Height` y `Size` devolverán valores negativos para el alto de la `CRect`transformada y el rectángulo no se normalizará.
+Tenga cuidado al `CRect` manipular un con las funciones miembro [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) y [CDC::LPtoDP.](../../mfc/reference/cdc-class.md#lptodp) Si el modo de asignación de un contexto de visualización `CDC::DPtoLP` es tal `CRect` que la extensión y es negativa, como en `MM_LOENGLISH`, entonces transformará la para que su parte superior sea mayor que la inferior. Funciones `Height` como `Size` y, a continuación, devolverán `CRect`valores negativos para el alto de la transformada, y el rectángulo no se normalizará.
 
-Al usar operadores `CRect` sobrecargados, el primer operando debe ser un `CRect`; el segundo puede ser una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o un objeto `CRect`.
+Cuando se `CRect` utilizan operadores sobrecargados, `CRect`el primer operando debe ser un ; el segundo puede ser una estructura `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o un objeto.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -130,11 +130,11 @@ Al usar operadores `CRect` sobrecargados, el primer operando debe ser un `CRect`
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atltypes. h
+**Encabezado:** atltypes.h
 
-##  <a name="bottomright"></a>CRect:: BottomRight
+## <a name="crectbottomright"></a><a name="bottomright"></a>CRect::BottomRight
 
-Las coordenadas se devuelven como una referencia a un objeto [CPoint](cpoint-class.md) contenido en `CRect`.
+Las coordenadas se devuelven como referencia a un `CRect`objeto [CPoint](cpoint-class.md) que se encuentra en .
 
 ```
 CPoint& BottomRight() throw();
@@ -143,11 +143,11 @@ const CPoint& BottomRight() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Coordenadas de la esquina inferior derecha del rectángulo.
+Las coordenadas de la esquina inferior derecha del rectángulo.
 
 ### <a name="remarks"></a>Observaciones
 
-Puede usar esta función para obtener o establecer la esquina inferior derecha del rectángulo. Establezca la esquina mediante esta función en el lado izquierdo del operador de asignación.
+Puede utilizar esta función para obtener o establecer la esquina inferior derecha del rectángulo. Establezca la esquina utilizando esta función en el lado izquierdo del operador de asignación.
 
 ### <a name="example"></a>Ejemplo
 
@@ -175,9 +175,9 @@ rect2.BottomRight() = ptLow;
 ASSERT(rect2 == CRect(10, 10, 180, 180));
 ```
 
-##  <a name="centerpoint"></a>CRect:: CenterPoint
+## <a name="crectcenterpoint"></a><a name="centerpoint"></a>CRect::CenterPoint
 
-Calcula el CenterPoint de `CRect` agregando los valores izquierdo y derecho, y dividiendo por dos, y agregando los valores superior e inferior, y dividiendo por dos.
+Calcula el punto `CRect` central de agregando los valores izquierdo y derecho y dividiendo por dos, y agregando los valores superior e inferior y dividiendo por dos.
 
 ```
 CPoint CenterPoint() const throw();
@@ -185,7 +185,7 @@ CPoint CenterPoint() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Objeto `CPoint` que es el CenterPoint de `CRect`.
+Objeto `CPoint` que es el `CRect`punto central de .
 
 ### <a name="example"></a>Ejemplo
 
@@ -238,18 +238,18 @@ void CMyDlg::OnPaint()
 }
 ```
 
-##  <a name="copyrect"></a>CRect:: CopyRect
+## <a name="crectcopyrect"></a><a name="copyrect"></a>CRect::CopyRect
 
-Copia el rectángulo `lpSrcRect` en `CRect`.
+Copia `lpSrcRect` el `CRect`rectángulo en .
 
-```
+```cpp
 void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lpSrcRect*<br/>
-Apunta a la estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o al `CRect` objeto que se va a copiar.
+Apunta a la estructura `CRect` o objeto [RECT](/windows/win32/api/windef/ns-windef-rect) que se va a copiar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -273,7 +273,7 @@ rectDest.CopyRect(&rectSource2);
 // rectDest is now set to (0, 0, 640, 480)
 ```
 
-##  <a name="crect"></a>CRect:: CRect
+## <a name="crectcrect"></a><a name="crect"></a>CRect::CRect
 
 Construye un objeto `CRect`.
 
@@ -288,41 +288,41 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*l*<br/>
-Especifica la posición izquierda de `CRect`.
+*L*<br/>
+Especifica la posición `CRect`izquierda de .
 
 *t*<br/>
-Especifica la parte superior de `CRect`.
+Especifica la parte `CRect`superior de .
 
 *r*<br/>
-Especifica la posición derecha de `CRect`.
+Especifica la posición `CRect`correcta de .
 
-*b*<br/>
-Especifica la parte inferior de `CRect`.
+*B*<br/>
+Especifica la parte `CRect`inferior de .
 
 *srcRect*<br/>
-Hace referencia a la estructura [Rect](/windows/win32/api/windef/ns-windef-rect) con las coordenadas de `CRect`.
+Hace referencia a la estructura [RECT](/windows/win32/api/windef/ns-windef-rect) con las coordenadas de `CRect`.
 
 *lpSrcRect*<br/>
-Apunta a la estructura `RECT` con las coordenadas de `CRect`.
+Apunta a `RECT` la estructura con `CRect`las coordenadas de .
 
-*Elija*<br/>
+*Punto*<br/>
 Especifica el punto de origen del rectángulo que se va a construir. Corresponde a la esquina superior izquierda.
 
 *size*<br/>
-Especifica el desplazamiento de la esquina superior izquierda a la esquina inferior derecha del rectángulo que se va a construir.
+Especifica el desplazamiento desde la esquina superior izquierda hasta la esquina inferior derecha del rectángulo que se va a construir.
 
-*a la izquierda*<br/>
-Especifica la posición superior izquierda de `CRect`.
+*topLeft*<br/>
+Especifica la posición superior `CRect`izquierda de .
 
-*PivotDetailRange*<br/>
-Especifica la posición inferior derecha de `CRect`.
+*bottomRight*<br/>
+Especifica la posición inferior `CRect`derecha de .
 
 ### <a name="remarks"></a>Observaciones
 
-Si no se especifica ningún argumento, no se inicializan los miembros `left`, `top`, `right`y `bottom`.
+Si no se proporciona `left` `top`ningún `right`argumento, , , , y `bottom` los miembros no se inicializan.
 
-Los constructores `CRect`(`const RECT&`) y `CRect`(`LPCRECT`) realizan una [CopyRect](#copyrect). Los demás constructores inicializan directamente las variables de miembro del objeto.
+Los `CRect``const RECT&`constructores `CRect``LPCRECT`( ) y ( ) realizan un [archivo CopyRect](#copyrect). Los otros constructores inicializan las variables miembro del objeto directamente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -362,11 +362,11 @@ CRect rect5(pt, ptBottomRight);
 ASSERT(rect5 == rect4);
 ```
 
-##  <a name="deflaterect"></a>CRect::D eflateRect
+## <a name="crectdeflaterect"></a><a name="deflaterect"></a>CRect::DeflateRect
 
-`DeflateRect` desinfla `CRect` moviendo sus lados hacia su centro.
+`DeflateRect`se desinfla `CRect` moviendo sus lados hacia su centro.
 
-```
+```cpp
 void DeflateRect(int x, int y) throw();
 void DeflateRect(SIZE size) throw();
 void DeflateRect(LPCRECT lpRect) throw();
@@ -376,34 +376,34 @@ void DeflateRect(int l, int t, int r, int b) throw();
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Especifica el número de unidades para DEFLATE los lados izquierdo y derecho de `CRect`.
+Especifica el número de unidades que se desinflan los lados izquierdo y derecho de `CRect`.
 
-*y*<br/>
-Especifica el número de unidades para DEFLATE la parte superior e inferior de `CRect`.
+*y y*<br/>
+Especifica el número de unidades que se `CRect`desinflan la parte superior e inferior de .
 
 *size*<br/>
-[Tamaño](/windows/win32/api/windef/ns-windef-size) o [CSize](csize-class.md) que especifica el número de unidades que se van a deinflar `CRect`. El valor `cx` especifica el número de unidades para DEFLATE los lados izquierdo y derecho, y el valor `cy` especifica el número de unidades que se van a deflatar en la parte superior e inferior.
+Un [SIZE](/windows/win32/api/windef/ns-windef-size) o [CSize](csize-class.md) que especifica el número `CRect`de unidades que se van a desinflar. El `cx` valor especifica el número de unidades para desinflar los lados izquierdo y derecho y el `cy` valor especifica el número de unidades para desinflar la parte superior e inferior.
 
 *lpRect*<br/>
-Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` que especifica el número de unidades que se va a deflatar cada lado.
+Apunta a una estructura `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o que especifica el número de unidades que se van a desinflar cada lado.
 
-*l*<br/>
-Especifica el número de unidades para DEFLATE el lado izquierdo de `CRect`.
+*L*<br/>
+Especifica el número de unidades que se `CRect`desinflan el lado izquierdo de .
 
 *t*<br/>
-Especifica el número de unidades para DEFLATE la parte superior de `CRect`.
+Especifica el número de unidades que `CRect`se desinflan la parte superior de .
 
 *r*<br/>
-Especifica el número de unidades para DEFLATE el lado derecho de `CRect`.
+Especifica el número de unidades que se `CRect`desinflan el lado derecho de .
 
-*b*<br/>
-Especifica el número de unidades para DEFLATE la parte inferior de `CRect`.
+*B*<br/>
+Especifica el número de unidades que `CRect`se van a desinflar en la parte inferior de .
 
 ### <a name="remarks"></a>Observaciones
 
-Para ello, `DeflateRect` agrega unidades a la izquierda y a la parte superior y resta las unidades de la parte derecha e inferior. Los parámetros de `DeflateRect` son valores con signo; los valores positivos deflaten `CRect` y los valores negativos para inflarlos.
+Para ello, `DeflateRect` añade unidades a la izquierda y a la parte superior y resta unidades de la derecha y la parte inferior. Los parámetros de `DeflateRect` son valores firmados; valores positivos `CRect` se desinflan y los valores negativos lo inflan.
 
-Las dos primeras sobrecargas detienen ambos pares de lados opuestos de `CRect` para que el ancho total se reduzca en dos veces *x* (o `cx`) y su alto total se reduzca en dos veces *y* (o `cy`). Las otras dos sobrecargas deflatan cada lado de `CRect` independientemente de las demás.
+Las dos primeras sobrecargas desinflan `CRect` ambos pares de lados opuestos de `cx`modo que su anchura total se reduce `cy`en dos veces *x* (o ) y su altura total se reduce dos veces *y* (o ). Las otras dos sobrecargas desinflan cada lado de `CRect` forma independiente de las otras.
 
 ### <a name="example"></a>Ejemplo
 
@@ -420,7 +420,7 @@ ASSERT(rect2.left == 11 && rect2.right == 47);
 ASSERT(rect2.top == 12 && rect2.bottom == 46);
 ```
 
-##  <a name="equalrect"></a>CRect:: EqualRect
+## <a name="crectequalrect"></a><a name="equalrect"></a>CRect::EqualRect
 
 Determina si `CRect` es igual al rectángulo especificado.
 
@@ -431,14 +431,14 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` objeto que contiene las coordenadas de la esquina superior izquierda e inferior derecha de un rectángulo.
+Apunta a una estructura `CRect` u objeto [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene las coordenadas de esquina superior izquierda e inferior derecha de un rectángulo.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si los dos rectángulos tienen los mismos valores superior, izquierdo, inferior y derecho. de lo contrario, es 0.
+Distinto de cero si los dos rectángulos tienen los mismos valores superior, izquierdo, inferior y derecho; de lo contrario 0.
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -459,9 +459,9 @@ test.bottom = 25;
 ASSERT(rect1.EqualRect(&test));
 ```
 
-##  <a name="height"></a>CRect:: height
+## <a name="crectheight"></a><a name="height"></a>CRect::Altura
 
-Calcula el alto de `CRect` restando el valor superior del valor inferior.
+Calcula la altura `CRect` de restando el valor superior del valor inferior.
 
 ```
 int Height() const throw();
@@ -469,14 +469,14 @@ int Height() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Alto de `CRect`.
+La altura `CRect`de .
 
 ### <a name="remarks"></a>Observaciones
 
 El valor resultante puede ser negativo.
 
 > [!NOTE]
->  El rectángulo debe normalizarse o puede producirse un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
+> El rectángulo debe normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -488,11 +488,11 @@ int nHt = rect.Height();
 ASSERT(nHt == 40);
 ```
 
-##  <a name="inflaterect"></a>CRect:: InflateRect
+## <a name="crectinflaterect"></a><a name="inflaterect"></a>CRect::InflateRect
 
-`InflateRect` infla `CRect` moviendo sus lados de su centro.
+`InflateRect``CRect` inflaalmoviendo moviendo sus lados lejos de su centro.
 
-```
+```cpp
 void InflateRect(int x, int y) throw();
 void InflateRect(SIZE size) throw();
 void InflateRect(LPCRECT lpRect) throw();
@@ -502,34 +502,34 @@ void InflateRect(int l, int t, int r,  int b) throw();
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Especifica el número de unidades para inflar los lados izquierdo y derecho de `CRect`.
+Especifica el número de unidades para inflar `CRect`los lados izquierdo y derecho de .
 
-*y*<br/>
-Especifica el número de unidades para inflar la parte superior e inferior de `CRect`.
+*y y*<br/>
+Especifica el número de unidades que se `CRect`inflan la parte superior e inferior de .
 
 *size*<br/>
-[Tamaño](/windows/win32/api/windef/ns-windef-size) o [CSize](csize-class.md) que especifica el número de unidades que se van a aumentar `CRect`. El valor `cx` especifica el número de unidades que se van a aumentar los lados izquierdo y derecho, y el valor `cy` especifica el número de unidades que se van a aumentar e inferior.
+Un [SIZE](/windows/win32/api/windef/ns-windef-size) o [CSize](csize-class.md) que especifica el `CRect`número de unidades que se va a inflar . El `cx` valor especifica el número de unidades para inflar los lados izquierdo y derecho y el `cy` valor especifica el número de unidades para inflar la parte superior e inferior.
 
 *lpRect*<br/>
-Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` que especifica el número de unidades que se van a aumentar cada lado.
+Apunta a una estructura `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o que especifica el número de unidades para inflar cada lado.
 
-*l*<br/>
-Especifica el número de unidades para aumentar el lado izquierdo de `CRect`.
+*L*<br/>
+Especifica el número de unidades para `CRect`inflar el lado izquierdo de .
 
 *t*<br/>
-Especifica el número de unidades para inflar la parte superior de `CRect`.
+Especifica el número de unidades que `CRect`se inflan en la parte superior de .
 
 *r*<br/>
-Especifica el número de unidades para aumentar el lado derecho de `CRect`.
+Especifica el número de unidades para `CRect`inflar el lado derecho de .
 
-*b*<br/>
-Especifica el número de unidades para inflar la parte inferior de `CRect`.
+*B*<br/>
+Especifica el número de unidades que `CRect`se inflan en la parte inferior de .
 
 ### <a name="remarks"></a>Observaciones
 
-Para ello, `InflateRect` resta unidades de la izquierda y la parte superior, y agrega unidades a la parte derecha e inferior. Los parámetros de `InflateRect` son valores con signo; los valores positivos implanan `CRect` y los valores negativos lo deflaten.
+Para ello, `InflateRect` resta unidades de la izquierda y la parte superior y añade unidades a la derecha y a la parte inferior. Los parámetros de `InflateRect` son valores firmados; los valores `CRect` positivos inflan y los valores negativos lo desinflan.
 
-Las dos primeras sobrecargas inflan ambos pares de lados opuestos de `CRect` de modo que el ancho total se aumente en dos veces *x* (o `cx`) y su alto total se incremente en dos veces *y* (o `cy`). Las otras dos sobrecargas implanan cada lado de `CRect` independientemente de las demás.
+Las dos primeras sobrecargas inflan `CRect` ambos pares de lados opuestos de `cx`modo que su anchura total se `cy`incrementa en dos veces *x* (o ) y su altura total se incrementa dos veces *y* (o ). Las otras dos sobrecargas inflan cada lado independientemente `CRect` de las otras.
 
 ### <a name="example"></a>Ejemplo
 
@@ -541,9 +541,9 @@ rect.InflateRect(50, 200);
 ASSERT(rect == CRect(-50, -200, 350, 500));
 ```
 
-##  <a name="intersectrect"></a>CRect:: IntersectRect
+## <a name="crectintersectrect"></a><a name="intersectrect"></a>CRect::IntersectRect
 
-Hace que un `CRect` igual a la intersección de dos rectángulos existentes.
+Hace `CRect` un igual a la intersección de dos rectángulos existentes.
 
 ```
 BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
@@ -552,10 +552,10 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parámetros
 
 *lpRect1*<br/>
-Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o a `CRect` objeto que contiene un rectángulo de origen.
+Apunta a una estructura `CRect` o objeto [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene un rectángulo de origen.
 
 *lpRect2*<br/>
-Apunta a una estructura `RECT` o a un objeto `CRect` que contiene un rectángulo de origen.
+Apunta a `RECT` una `CRect` estructura u objeto que contiene un rectángulo de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -563,10 +563,10 @@ Distinto de cero si la intersección no está vacía; 0 si la intersección est�
 
 ### <a name="remarks"></a>Observaciones
 
-La intersección es el rectángulo más grande contenido en los dos rectángulos existentes.
+La intersección es el rectángulo más grande contenido en ambos rectángulos existentes.
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -584,7 +584,7 @@ rectInter2 &= rectTwo;
 ASSERT(rectInter2 == CRect(125, 75, 150, 95));
 ```
 
-##  <a name="isrectempty"></a>CRect:: IsRectEmpty
+## <a name="crectisrectempty"></a><a name="isrectempty"></a>CRect::IsRectEmpty
 
 Determina si `CRect` está vacío.
 
@@ -594,14 +594,14 @@ BOOL IsRectEmpty() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si `CRect` está vacío; 0 si `CRect` no está vacío.
+Distinto de `CRect` cero si está vacío; 0 `CRect` si no está vacío.
 
 ### <a name="remarks"></a>Observaciones
 
-Un rectángulo está vacío si el ancho o el alto son 0 o negativo. Difiere de `IsRectNull`, que determina si todas las coordenadas del rectángulo son cero.
+Un rectángulo está vacío si el ancho y/o alto son 0 o negativos. Difiere de `IsRectNull`, que determina si todas las coordenadas del rectángulo son cero.
 
 > [!NOTE]
->  El rectángulo debe normalizarse o puede producirse un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
+> El rectángulo debe normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -614,9 +614,9 @@ CRect rectEmpty(35, 35, 35, 35);
 ASSERT(rectEmpty.IsRectEmpty());
 ```
 
-##  <a name="isrectnull"></a>CRect:: IsRectNull
+## <a name="crectisrectnull"></a><a name="isrectnull"></a>CRect::IsRectNull
 
-Determina si los valores superior, izquierdo, inferior y derecho de `CRect` son iguales a 0.
+Determina si los valores superior, izquierdo, `CRect` inferior y derecho de son todos iguales a 0.
 
 ```
 BOOL IsRectNull() const throw();
@@ -624,7 +624,7 @@ BOOL IsRectNull() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el valor de los valores superior, izquierdo, inferior y derecho de `CRect`es igual a 0; de lo contrario, es 0.
+Distinto de `CRect`cero si los valores 's top, left, bottom y right son todos iguales a 0; de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
@@ -643,18 +643,18 @@ CRect rectNotNull(0, 0, 35, 50);
 ASSERT(!rectNotNull.IsRectNull());
 ```
 
-##  <a name="movetox"></a>CRect:: MoveToX
+## <a name="crectmovetox"></a><a name="movetox"></a>CRect::MoveToX
 
-Llame a esta función para desplace el rectángulo a la coordenada x absoluta especificada por *x*.
+Llame a esta función para mover el rectángulo a la coordenada x absoluta especificada por *x*.
 
-```
+```cpp
 void MoveToX(int x) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Coordenada x absoluta de la esquina superior izquierda del rectángulo.
+Coordenada x absoluta para la esquina superior izquierda del rectángulo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -666,11 +666,11 @@ rect.MoveToX(10);
 ASSERT(rect == CRect(10, 0, 110, 100));
 ```
 
-##  <a name="movetoxy"></a>CRect:: MoveToXY
+## <a name="crectmovetoxy"></a><a name="movetoxy"></a>CRect::MoveToxY
 
-Llame a esta función para desplace el rectángulo a las coordenadas x e y absolutas especificadas.
+Llame a esta función para mover el rectángulo a las coordenadas x e y absolutas especificadas.
 
-```
+```cpp
 void MoveToXY(int x, int y) throw();
 void MoveToXY(POINT point) throw();
 ```
@@ -678,12 +678,12 @@ void MoveToXY(POINT point) throw();
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Coordenada x absoluta de la esquina superior izquierda del rectángulo.
+Coordenada x absoluta para la esquina superior izquierda del rectángulo.
 
-*y*<br/>
-Coordenada y absoluta de la esquina superior izquierda del rectángulo.
+*y y*<br/>
+Coordenada y absoluta para la esquina superior izquierda del rectángulo.
 
-*Elija*<br/>
+*Punto*<br/>
 Estructura `POINT` que especifica la esquina superior izquierda absoluta del rectángulo.
 
 ### <a name="example"></a>Ejemplo
@@ -695,18 +695,18 @@ rect.MoveToXY(10, 10);
 ASSERT(rect == CRect(10, 10, 110, 110));
 ```
 
-##  <a name="movetoy"></a>CRect:: MoveToY
+## <a name="crectmovetoy"></a><a name="movetoy"></a>CRect::MoveToY
 
-Llame a esta función para desplace el rectángulo a la coordenada y absoluta especificada por *y*.
+Llame a esta función para mover el rectángulo a la coordenada y absoluta especificada por *y*.
 
-```
+```cpp
 void MoveToY(int y) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*y*<br/>
-Coordenada y absoluta de la esquina superior izquierda del rectángulo.
+*y y*<br/>
+Coordenada y absoluta para la esquina superior izquierda del rectángulo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -717,20 +717,20 @@ rect.MoveToY(10);
 ASSERT(rect == CRect(0, 10, 100, 110));
 ```
 
-##  <a name="normalizerect"></a>CRect:: NormalizeRect
+## <a name="crectnormalizerect"></a><a name="normalizerect"></a>CRect::NormalizeRect
 
-Normaliza `CRect` de modo que el alto y el ancho sean positivos.
+Normaliza `CRect` para que tanto la altura como la anchura sean positivas.
 
-```
+```cpp
 void NormalizeRect() throw();
 ```
 
 ### <a name="remarks"></a>Observaciones
 
-El rectángulo se normaliza para el posicionamiento del cuarto cuadrante, que normalmente usa Windows para las coordenadas. `NormalizeRect` compara los valores superior e inferior, y los intercambia si la parte superior es mayor que la parte inferior. Del mismo modo, intercambia los valores izquierdo y derecho si la izquierda es mayor que la derecha. Esta función es útil cuando se trabaja con diferentes modos de asignación y rectángulos invertidos.
+El rectángulo se normaliza para el posicionamiento del cuarto cuadrante, que Windows utiliza normalmente para las coordenadas. `NormalizeRect`compara los valores superior e inferior, y los intercambia si la parte superior es mayor que la inferior. Del mismo modo, intercambia los valores izquierdo y derecho si la izquierda es mayor que la derecha. Esta función es útil cuando se trata de diferentes modos de asignación y rectángulos invertidos.
 
 > [!NOTE]
-> Las siguientes funciones miembro de `CRect` requieren rectángulos normalizados para que funcionen correctamente [: height](#height), [width](#width), [size](#size), [IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [Operator = =](#operator_eq_eq), [Operator! =](#operator_neq), [ &#124;Operator, Operator ](#operator_or) [ &#124;=](#operator_or_eq), [Operator &](#operator_amp)y [Operator & =](#operator_amp_eq).
+> Las `CRect` siguientes funciones miembro requieren rectángulos normalizados para funcionar correctamente: [Alto](#height), [Ancho](#width), [Tamaño](#size), [IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [operador](#operator_eq_eq), [operador !](#operator_neq), [operador &#124;](#operator_or), [operador &#124;](#operator_or_eq), operador [&](#operator_amp), y [operador &](#operator_amp_eq).
 
 ### <a name="example"></a>Ejemplo
 
@@ -742,11 +742,11 @@ rect2.NormalizeRect();
 ASSERT(rect1 == rect2);
 ```
 
-##  <a name="offsetrect"></a>CRect:: OffsetRect
+## <a name="crectoffsetrect"></a><a name="offsetrect"></a>CRect::OffsetRect
 
-Mueve `CRect` en función de los desplazamientos especificados.
+Se `CRect` mueve por los desplazamientos especificados.
 
-```
+```cpp
 void OffsetRect(int x, int y) throw();
 void OffsetRect(POINT point) throw();
 void OffsetRect(SIZE size) throw();
@@ -755,20 +755,20 @@ void OffsetRect(SIZE size) throw();
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Especifica la cantidad de desplazamiento a la izquierda o a la derecha. Debe ser negativo para moverse a la izquierda.
+Especifica la cantidad que se va a mover a la izquierda o a la derecha. Debe ser negativo moverse a la izquierda.
 
-*y*<br/>
-Especifica la cantidad de movimiento hacia arriba o hacia abajo. Debe ser negativo para subir.
+*y y*<br/>
+Especifica la cantidad que se va a mover hacia arriba o hacia abajo. Debe ser negativo subir.
 
-*Elija*<br/>
-Contiene una estructura de [punto](/windows/win32/api/windef/ns-windef-point) o un objeto [CPoint](cpoint-class.md) que especifica las dos dimensiones por las que se va a desplace.
+*Punto*<br/>
+Contiene una estructura [POINT](/windows/win32/api/windef/ns-windef-point) o un objeto [CPoint](cpoint-class.md) que especifica ambas dimensiones por las que se va a mover.
 
 *size*<br/>
-Contiene una estructura de [tamaño](/windows/win32/api/windef/ns-windef-size) o un objeto [CSize](csize-class.md) que especifica las dos dimensiones por las que se va a desplace.
+Contiene una estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o un objeto [CSize](csize-class.md) que especifica ambas dimensiones por las que se va a mover.
 
 ### <a name="remarks"></a>Observaciones
 
-Mueve `CRect`unidades *x* a lo largo del eje x y las unidades *y* a lo largo del eje y. Los parámetros x *e y son* valores con signo, por lo que `CRect` puede moverse hacia la izquierda o hacia la derecha y hacia arriba o hacia abajo.
+Mueve `CRect` *x* unidades a lo largo del eje X y las unidades *y* a lo largo del eje Y. Los parámetros *x* e *y* son valores con signo, por lo que `CRect` se pueden mover a la izquierda o a la derecha y hacia arriba o hacia abajo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -780,7 +780,7 @@ rect.OffsetRect(230, 230);
 ASSERT(rect == CRect(230, 230, 265, 265));
 ```
 
-##  <a name="operator_lpcrect"></a>CRect:: Operator LPCRECT convierte una `CRect` en una [LPCRECT](../../mfc/reference/data-types-mfc.md).
+## <a name="crectoperator-lpcrect-converts-a-crect-to-an-lpcrect"></a><a name="operator_lpcrect"></a>CRect::operator LPCRECT Convierte `CRect` a en un [LPCRECT](../../mfc/reference/data-types-mfc.md).
 
 ```
 operator LPCRECT() const throw();
@@ -788,11 +788,11 @@ operator LPCRECT() const throw();
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando se usa esta función, no se necesita el operador Address-of ( **&** ). Este operador se usará automáticamente al pasar un objeto `CRect` a una función que espera un `LPCRECT`.
+Cuando se utiliza esta función, no se**&** necesita el operador address-of ( ). Este operador se utilizará automáticamente `CRect` cuando pase un objeto `LPCRECT`a una función que espera un archivo .
 
-##  <a name="operator_lprect"></a>CRect:: Operator LPRECT
+## <a name="crectoperator-lprect"></a><a name="operator_lprect"></a>CRect::operador LPRECT
 
-Convierte un `CRect` en un [LPRECT](../../mfc/reference/data-types-mfc.md).
+Convierte `CRect` a en un [LPRECT](../../mfc/reference/data-types-mfc.md).
 
 ```
 operator LPRECT() throw();
@@ -800,24 +800,24 @@ operator LPRECT() throw();
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando se usa esta función, no se necesita el operador Address-of ( **&** ). Este operador se usará automáticamente al pasar un objeto `CRect` a una función que espera un `LPRECT`.
+Cuando se utiliza esta función, no se**&** necesita el operador address-of ( ). Este operador se utilizará automáticamente `CRect` cuando pase un objeto `LPRECT`a una función que espera un archivo .
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CRect:: Operator LPCRECT](#operator_lpcrect).
+Vea el ejemplo de [CRect::operator LPCRECT](#operator_lpcrect).
 
-##  <a name="operator_eq"></a>CRect:: Operator =
+## <a name="crectoperator-"></a><a name="operator_eq"></a>CRect::operador ?
 
-Asigna *srcRect* a `CRect`.
+Asigna *srcRect* `CRect`a .
 
-```
+```cpp
 void operator=(const RECT& srcRect) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *srcRect*<br/>
-Hace referencia a un rectángulo de origen. Puede ser un [rectángulo](/windows/win32/api/windef/ns-windef-rect) o un `CRect`.
+Hace referencia a un rectángulo de origen. Puede ser un `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o .
 
 ### <a name="example"></a>Ejemplo
 
@@ -829,9 +829,9 @@ rect2 = rect;
 ASSERT(rect2 == CRect(0, 0, 127, 168));
 ```
 
-##  <a name="operator_eq_eq"></a>CRect:: Operator = =
+## <a name="crectoperator-"></a><a name="operator_eq_eq"></a>CRect::operador ?
 
-Determina si `rect` es igual a `CRect` comparando las coordenadas de las esquinas superior izquierda e inferior derecha.
+Determina si `rect` es `CRect` igual a comparando las coordenadas de sus esquinas superior izquierda e inferior derecha.
 
 ```
 BOOL operator==(const RECT& rect) const throw();
@@ -840,16 +840,16 @@ BOOL operator==(const RECT& rect) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *Rect*<br/>
-Hace referencia a un rectángulo de origen. Puede ser un [rectángulo](/windows/win32/api/windef/ns-windef-rect) o un `CRect`.
+Hace referencia a un rectángulo de origen. Puede ser un `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o .
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si es igual a; de lo contrario, es 0.
+Distinto de cero si es igual; de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -869,9 +869,9 @@ test.bottom = 25;
 ASSERT(rect1 == test);
 ```
 
-##  <a name="operator_neq"></a>CRect:: Operator! =
+## <a name="crectoperator-"></a><a name="operator_neq"></a>CRect::operador !o
 
-Determina si *Rect* no es igual a `CRect` comparando las coordenadas de las esquinas superior izquierda e inferior derecha.
+Determina si *rect* no `CRect` es igual a comparando las coordenadas de sus esquinas superior izquierda e inferior derecha.
 
 ```
 BOOL operator!=(const RECT& rect) const throw();
@@ -880,16 +880,16 @@ BOOL operator!=(const RECT& rect) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *Rect*<br/>
-Hace referencia a un rectángulo de origen. Puede ser un [rectángulo](/windows/win32/api/windef/ns-windef-rect) o un `CRect`.
+Hace referencia a un rectángulo de origen. Puede ser un `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o .
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si no es igual a; de lo contrario, es 0.
+Distinto de cero si no es igual; de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -909,11 +909,11 @@ test.bottom = 25;
 ASSERT(rect3 != test);
 ```
 
-##  <a name="operator_add_eq"></a>CRect:: Operator + =
+## <a name="crectoperator-"></a><a name="operator_add_eq"></a>CRect::operador +
 
-Las dos primeras sobrecargas mueven `CRect` por los desplazamientos especificados.
+Las dos primeras `CRect` sobrecargas se mueven por los desplazamientos especificados.
 
-```
+```cpp
 void operator+=(POINT point) throw();
 void operator+=(SIZE size) throw();
 void operator+=(LPCRECT lpRect) throw();
@@ -921,20 +921,20 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-Estructura de [punto](/windows/win32/api/windef/ns-windef-point) o objeto [CPoint](cpoint-class.md) que especifica el número de unidades que se va a desplace el rectángulo.
+*Punto*<br/>
+Una estructura [POINT](/windows/win32/api/windef/ns-windef-point) o un objeto [CPoint](cpoint-class.md) que especifica el número de unidades para mover el rectángulo.
 
 *size*<br/>
-Estructura de [tamaño](/windows/win32/api/windef/ns-windef-size) o objeto [CSize](csize-class.md) que especifica el número de unidades que se va a desplace el rectángulo.
+Una estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o [cSize](csize-class.md) objeto que especifica el número de unidades para mover el rectángulo.
 
 *lpRect*<br/>
-Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` objeto que contiene el número de unidades que se va a aumentar cada lado de `CRect`.
+Apunta a una estructura `CRect` u objeto [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene el `CRect`número de unidades para inflar cada lado de .
 
 ### <a name="remarks"></a>Observaciones
 
-Los valores *x* e y *(o* `cx` y `cy`) del parámetro se agregan a `CRect`.
+Los valores *x* *y* e y `cx` `cy`(o y) `CRect`del parámetro se agregan a .
 
-La tercera sobrecarga aumenta `CRect` por el número de unidades especificado en cada miembro del parámetro.
+La tercera sobrecarga `CRect` se infla por el número de unidades especificadas en cada miembro del parámetro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -947,11 +947,11 @@ rect1 += pt;
 ASSERT(rect1 == rect2);
 ```
 
-##  <a name="operator_-_eq"></a>CRect:: Operator-=
+## <a name="crectoperator--"></a><a name="operator_-_eq"></a>CRect::operador --
 
-Las dos primeras sobrecargas mueven `CRect` por los desplazamientos especificados.
+Las dos primeras `CRect` sobrecargas se mueven por los desplazamientos especificados.
 
-```
+```cpp
 void operator-=(POINT point) throw();
 void operator-=(SIZE size) throw();
 void operator-=(LPCRECT lpRect) throw();
@@ -959,20 +959,20 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-Estructura de [punto](/windows/win32/api/windef/ns-windef-point) o objeto [CPoint](cpoint-class.md) que especifica el número de unidades que se va a desplace el rectángulo.
+*Punto*<br/>
+Una estructura [POINT](/windows/win32/api/windef/ns-windef-point) o un objeto [CPoint](cpoint-class.md) que especifica el número de unidades para mover el rectángulo.
 
 *size*<br/>
-Estructura de [tamaño](/windows/win32/api/windef/ns-windef-size) o objeto [CSize](csize-class.md) que especifica el número de unidades que se va a desplace el rectángulo.
+Una estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o [cSize](csize-class.md) objeto que especifica el número de unidades para mover el rectángulo.
 
 *lpRect*<br/>
-Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` objeto que contiene el número de unidades que se va a deflatar cada lado de `CRect`.
+Apunta a una estructura `CRect` u objeto [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene el `CRect`número de unidades que se van a desinflar a cada lado de .
 
 ### <a name="remarks"></a>Observaciones
 
-Los valores *x* *e y* (o `cx` y `cy`) del parámetro se restan de `CRect`.
+Los valores *x* *y* e y `cx` `cy`(o y) `CRect`del parámetro se restan de .
 
-La tercera sobrecarga desinfla `CRect` por el número de unidades especificado en cada miembro del parámetro. Tenga en cuenta que esta sobrecarga funciona como [DeflateRect](#deflaterect).
+La tercera sobrecarga `CRect` se desinfla por el número de unidades especificadas en cada miembro del parámetro. Tenga en cuenta que esta sobrecarga funciona como [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Ejemplo
 
@@ -985,49 +985,49 @@ CRect   rectResult(65, 170, 165, 270);
 ASSERT(rect1 == rectResult);
 ```
 
-##  <a name="operator_amp_eq"></a>CRect:: Operator &amp;=
+## <a name="crectoperator-amp"></a><a name="operator_amp_eq"></a>CRect::operador&amp;=
 
-Establece `CRect` igual a la intersección de `CRect` y `rect`.
+Establece `CRect` igual a `CRect` la `rect`intersección de y .
 
-```
+```cpp
 void operator&=(const RECT& rect) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *Rect*<br/>
-Contiene un [rectángulo](/windows/win32/api/windef/ns-windef-rect) o un `CRect`.
+Contiene un [RECT](/windows/win32/api/windef/ns-windef-rect) o `CRect`.
 
 ### <a name="remarks"></a>Observaciones
 
 La intersección es el rectángulo más grande que se encuentra en ambos rectángulos.
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CRect:: IntersectRect](#intersectrect).
+Vea el ejemplo de [CRect::IntersectRect](#intersectrect).
 
-##  <a name="operator_or_eq"></a>CRect:: Operator &#124;=
+## <a name="crectoperator-124"></a><a name="operator_or_eq"></a>CRect::operador &#124;
 
-Establece `CRect` igual a la Unión de `CRect` y `rect`.
+Establece `CRect` igual a `CRect` la `rect`unión de y .
 
-```
+```cpp
 void operator|=(const RECT& rect) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *Rect*<br/>
-Contiene un `CRect` o un [Rect](/windows/win32/api/windef/ns-windef-rect).
+Contiene `CRect` un o [RECT](/windows/win32/api/windef/ns-windef-rect).
 
 ### <a name="remarks"></a>Observaciones
 
-La Unión es el rectángulo más pequeño que contiene ambos rectángulos de origen.
+La unión es el rectángulo más pequeño que contiene ambos rectángulos de origen.
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1040,9 +1040,9 @@ CRect   rectResult(0, 0, 300, 300);
 ASSERT(rectResult == rect1);
 ```
 
-##  <a name="operator_add"></a>CRect:: Operator +
+## <a name="crectoperator-"></a><a name="operator_add"></a>CRect::operador +
 
-Las dos primeras sobrecargas devuelven un objeto `CRect` que es igual a `CRect` desplazados por los desplazamientos especificados.
+Las dos primeras `CRect` sobrecargas devuelven `CRect` un objeto que es igual a desplazado por los desplazamientos especificados.
 
 ```
 CRect operator+(POINT point) const throw();
@@ -1052,24 +1052,24 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-Estructura de [punto](/windows/win32/api/windef/ns-windef-point) o objeto [CPoint](cpoint-class.md) que especifica el número de unidades que se va a devolver el valor devuelto.
+*Punto*<br/>
+Estructura [POINT](/windows/win32/api/windef/ns-windef-point) o [cPoint](cpoint-class.md) objeto que especifica el número de unidades para mover el valor devuelto.
 
 *size*<br/>
-Estructura de [tamaño](/windows/win32/api/windef/ns-windef-size) o objeto [CSize](csize-class.md) que especifica el número de unidades que se va a devolver el valor devuelto.
+Una estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o un objeto [CSize](csize-class.md) que especifica el número de unidades para mover el valor devuelto.
 
 *lpRect*<br/>
-Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o a `CRect` objeto que contiene el número de unidades que se va a aumentar cada lado del valor devuelto.
+Apunta a una estructura `CRect` u objeto [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene el número de unidades para inflar cada lado del valor devuelto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El `CRect` resultante de mover o inflar `CRect` por el número de unidades especificadas en el parámetro.
+El `CRect` resultado de moverse `CRect` o inflar se mueve por el número de unidades especificado en el parámetro.
 
 ### <a name="remarks"></a>Observaciones
 
-Los parámetros *x* e y *(o* `cx` y `cy`) del parámetro se agregan a la posición de `CRect`.
+Los parámetros *x* e `cx` *y* (o y) `cy`del parámetro se agregan a `CRect`la posición 's.
 
-La tercera sobrecarga devuelve un nuevo `CRect` que es igual a `CRect` inflado por el número de unidades especificado en cada miembro del parámetro.
+La tercera sobrecarga `CRect` devuelve un `CRect` nuevo que es igual a inflado por el número de unidades especificado en cada miembro del parámetro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1083,9 +1083,9 @@ CRect   rectResult(135, 300, 235, 400);
 ASSERT(rectResult == rect2);
 ```
 
-##  <a name="operator_-"></a>CRect:: Operator-
+## <a name="crectoperator--"></a><a name="operator_-"></a>CRect::operador -
 
-Las dos primeras sobrecargas devuelven un objeto `CRect` que es igual a `CRect` desplazados por los desplazamientos especificados.
+Las dos primeras `CRect` sobrecargas devuelven `CRect` un objeto que es igual a desplazado por los desplazamientos especificados.
 
 ```
 CRect operator-(POINT point) const throw();
@@ -1095,24 +1095,24 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-Estructura de [punto](/windows/win32/api/windef/ns-windef-point) o objeto de `CPoint` que especifica el número de unidades para el que se va a desplace el valor devuelto.
+*Punto*<br/>
+Estructura [POINT](/windows/win32/api/windef/ns-windef-point) u `CPoint` objeto POINT que especifica el número de unidades para mover el valor devuelto.
 
 *size*<br/>
-Estructura de [tamaño](/windows/win32/api/windef/ns-windef-size) o objeto de `CSize` que especifica el número de unidades que se va a trasladar al valor devuelto.
+Estructura [SIZE](/windows/win32/api/windef/ns-windef-size) o `CSize` objeto SIZE que especifica el número de unidades para mover el valor devuelto.
 
 *lpRect*<br/>
-Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` objeto que contiene el número de unidades que se va a deflatar cada lado del valor devuelto.
+Apunta a una estructura `CRect` u objeto [RECT](/windows/win32/api/windef/ns-windef-rect) que contiene el número de unidades que se van a desinflar a cada lado del valor devuelto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El `CRect` resultante de mover o desinflar `CRect` por el número de unidades especificadas en el parámetro.
+El `CRect` resultado de moverse `CRect` o desinflarse por el número de unidades especificadas en el parámetro.
 
 ### <a name="remarks"></a>Observaciones
 
-Los parámetros *x* *e y* (o `cx` y `cy`) del parámetro se restan de la posición del `CRect`.
+Los parámetros *x* e `cx` *y* (o y) `CRect` `cy`del parámetro se restan de la posición de 's.
 
-La tercera sobrecarga devuelve un nuevo `CRect` que es igual a `CRect` desinflado por el número de unidades especificado en cada miembro del parámetro. Tenga en cuenta que esta sobrecarga funciona como [DeflateRect](#deflaterect), no [SubtractRect](#subtractrect).
+La tercera sobrecarga `CRect` devuelve un `CRect` nuevo que es igual a desinflado por el número de unidades especificado en cada miembro del parámetro. Tenga en cuenta que esta sobrecarga funciona como [DeflateRect](#deflaterect), no [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Ejemplo
 
@@ -1126,9 +1126,9 @@ CRect   rectResult(65, 170, 165, 270);
 ASSERT(rect2 == rectResult);
 ```
 
-##  <a name="operator_amp"></a>CRect:: Operator &amp;
+## <a name="crectoperator-amp"></a><a name="operator_amp"></a>CRect::operador&amp;
 
-Devuelve un `CRect` que es la intersección de `CRect` y *rect2*.
+Devuelve `CRect` a que es `CRect` la intersección de y *rect2*.
 
 ```
 CRect operator&(const RECT& rect2) const throw();
@@ -1137,18 +1137,18 @@ CRect operator&(const RECT& rect2) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *rect2*<br/>
-Contiene un [rectángulo](/windows/win32/api/windef/ns-windef-rect) o un `CRect`.
+Contiene un [RECT](/windows/win32/api/windef/ns-windef-rect) o `CRect`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`CRect` que es la intersección de `CRect` y *rect2*.
+A `CRect` que es `CRect` la intersección de y *rect2*.
 
 ### <a name="remarks"></a>Observaciones
 
 La intersección es el rectángulo más grande que se encuentra en ambos rectángulos.
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1162,9 +1162,9 @@ CRect   rectResult(100, 100, 200, 200);
 ASSERT(rectResult == rect3);
 ```
 
-##  <a name="operator_or"></a>CRect:: Operator&#124;
+## <a name="crectoperator-124"></a><a name="operator_or"></a>CRect::operador &#124;
 
-Devuelve un `CRect` que es la Unión de `CRect` y *rect2*.
+Devuelve `CRect` a que es `CRect` la unión de y *rect2*.
 
 ```
 CRect operator|(const RECT&
@@ -1174,18 +1174,18 @@ rect2) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *rect2*<br/>
-Contiene un [rectángulo](/windows/win32/api/windef/ns-windef-rect) o un `CRect`.
+Contiene un [RECT](/windows/win32/api/windef/ns-windef-rect) o `CRect`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`CRect` que es la Unión de `CRect` y *rect2*.
+A `CRect` que es `CRect` la unión de y *rect2*.
 
 ### <a name="remarks"></a>Observaciones
 
-La Unión es el rectángulo más pequeño que contiene ambos rectángulos.
+La unión es el rectángulo más pequeño que contiene ambos rectángulos.
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1199,9 +1199,9 @@ CRect   rectResult(0, 0, 300, 300);
 ASSERT(rectResult == rect3);
 ```
 
-##  <a name="ptinrect"></a>CRect::P tInRect
+## <a name="crectptinrect"></a><a name="ptinrect"></a>CRect::PtInRect
 
-Determina si el punto especificado se encuentra dentro de `CRect`.
+Determina si el punto especificado `CRect`se encuentra dentro de .
 
 ```
 BOOL PtInRect(POINT point) const throw();
@@ -1209,19 +1209,19 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-Contiene una estructura de [punto](/windows/win32/api/windef/ns-windef-point) o un objeto [CPoint](cpoint-class.md) .
+*Punto*<br/>
+Contiene un [POINT](/windows/win32/api/windef/ns-windef-point) estructura o [CPoint](cpoint-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el punto se encuentra dentro de `CRect`; de lo contrario, es 0.
+Distinto de cero si `CRect`el punto se encuentra dentro de ; de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
-Un punto está dentro de `CRect` si se encuentra en el lado izquierdo o superior o en los cuatro lados. Un punto del lado derecho o inferior está fuera de `CRect`.
+Un punto `CRect` está dentro si se encuentra en el lado izquierdo o superior o está dentro de los cuatro lados. Un punto en el lado `CRect`derecho o inferior está fuera.
 
 > [!NOTE]
->  El rectángulo debe normalizarse o puede producirse un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
+> El rectángulo debe normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1251,26 +1251,26 @@ pt.y = 50;
 ASSERT(rect.PtInRect(pt));
 ```
 
-##  <a name="setrect"></a>CRect:: SetRect
+## <a name="crectsetrect"></a><a name="setrect"></a>CRect::SetRect
 
-Establece las dimensiones de `CRect` en las coordenadas especificadas.
+Establece las `CRect` dimensiones de las coordenadas especificadas.
 
-```
+```cpp
 void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda.
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda.
 
-*RCA*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha.
 
-*a2*<br/>
+*y2*<br/>
 Especifica la coordenada y de la esquina inferior derecha.
 
 ### <a name="example"></a>Ejemplo
@@ -1281,11 +1281,11 @@ rect.SetRect(256, 256, 512, 512);
 ASSERT(rect == CRect(256, 256, 512, 512));
 ```
 
-##  <a name="setrectempty"></a>CRect:: SetRectEmpty
+## <a name="crectsetrectempty"></a><a name="setrectempty"></a>CRect::SetRectEmpty
 
-Hace que `CRect` un rectángulo nulo estableciendo todas las coordenadas en cero.
+Crea `CRect` un rectángulo nulo estableciendo todas las coordenadas en cero.
 
-```
+```cpp
 void SetRectEmpty() throw();
 ```
 
@@ -1299,9 +1299,9 @@ rect.SetRectEmpty();
 ASSERT(rect.IsRectEmpty());
 ```
 
-##  <a name="size"></a>CRect:: SIZE
+## <a name="crectsize"></a><a name="size"></a>CRect::SIZE
 
-Los miembros `cx` y `cy` del valor devuelto contienen el alto y el ancho de `CRect`.
+Los `cx` `cy` miembros y del valor devuelto `CRect`contienen el alto y el ancho de .
 
 ```
 CSize Size() const throw();
@@ -1309,14 +1309,14 @@ CSize Size() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Objeto [CSize](csize-class.md) que contiene el tamaño de `CRect`.
+Un [CSize](csize-class.md) objeto que `CRect`contiene el tamaño de .
 
 ### <a name="remarks"></a>Observaciones
 
-El alto o el ancho pueden ser negativos.
+La altura o la anchura pueden ser negativas.
 
 > [!NOTE]
->  El rectángulo debe normalizarse o puede producirse un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
+> El rectángulo debe normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1326,9 +1326,9 @@ CSize sz = rect.Size();
 ASSERT(sz.cx == 40 && sz.cy == 40);
 ```
 
-##  <a name="subtractrect"></a>CRect:: SubtractRect
+## <a name="crectsubtractrect"></a><a name="subtractrect"></a>CRect::SubtractRect
 
-Hace que las dimensiones de la `CRect` igual a la resta de `lpRectSrc2` de `lpRectSrc1`.
+Hace que las `CRect` dimensiones de `lpRectSrc2` igual `lpRectSrc1`a la resta de from .
 
 ```
 BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
@@ -1337,10 +1337,10 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>Parámetros
 
 *lpRectSrc1*<br/>
-Apunta a la estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` objeto desde el que se va a restar un rectángulo.
+Apunta a la estructura `CRect` o objeto [RECT](/windows/win32/api/windef/ns-windef-rect) del que se va a restar un rectángulo.
 
 *lpRectSrc2*<br/>
-Apunta a la estructura `RECT` o `CRect` objeto que se va a restar del rectángulo señalado por el parámetro *lpRectSrc1* .
+Apunta a `RECT` la `CRect` estructura u objeto que se va a restar del rectángulo al que apunta el parámetro *lpRectSrc1.*
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1350,14 +1350,14 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
 La resta es el rectángulo más pequeño que contiene todos los puntos de *lpRectScr1* que no están en la intersección de *lpRectScr1* y *lpRectScr2*.
 
-El rectángulo especificado por *lpRectSrc1* no se modificará si el rectángulo especificado por *lpRectSrc2* no se superpone completamente al rectángulo especificado por *lpRectSrc1* en al menos una de las direcciones x o y.
+El rectángulo especificado por *lpRectSrc1* no cambiará si el rectángulo especificado por *lpRectSrc2* no se superpone completamente al rectángulo especificado por *lpRectSrc1* en al menos una de las direcciones x o y.
 
-Por ejemplo, si *lpRectSrc1* eran (10, 10, 100.100) y *lpRectSrc2* eran (50, 50, 150.150), el rectángulo al que señala *lpRectSrc1* sería sin cambiar cuando se devolviera la función. Si *lpRectSrc1* eran (10, 10, 100.100) y *lpRectSrc2* eran (50, 10, 150.150), sin embargo, el rectángulo señalado por *lpRectSrc1* contendría las coordenadas (10, 10, 50.100) cuando se devolviera la función.
+Por ejemplo, si *lpRectSrc1* fueran (10,10, 100,100) y *lpRectSrc2* (50,50, 150,150), el rectángulo al que apunta *lpRectSrc1* no cambiaría cuando se devolviera la función. Si *lpRectSrc1* fueran (10,10, 100,100) y *lpRectSrc2* eran (50,10, 150,150), sin embargo, el rectángulo señalado por *lpRectSrc1* contendría las coordenadas (10,10, 50,100) cuando se devolviera la función.
 
-`SubtractRect` no es igual que [Operator-](#operator_-) ni [Operator-=](#operator_-_eq). Ninguno de estos operadores llama nunca `SubtractRect`.
+`SubtractRect`no es lo mismo que [el operador -](#operator_-) ni el operador [-](#operator_-_eq). Ninguno de estos `SubtractRect`operadores llama a .
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1393,9 +1393,9 @@ rectOut.SubtractRect(rect1, rect2);
 ASSERT(rectResult == rectOut);
 ```
 
-##  <a name="topleft"></a>CRect:: enleft
+## <a name="crecttopleft"></a><a name="topleft"></a>CRect::TopLeft
 
-Las coordenadas se devuelven como una referencia a un objeto [CPoint](cpoint-class.md) contenido en `CRect`.
+Las coordenadas se devuelven como referencia a un `CRect`objeto [CPoint](cpoint-class.md) que se encuentra en .
 
 ```
 CPoint& TopLeft() throw();
@@ -1404,19 +1404,19 @@ const CPoint& TopLeft() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Coordenadas de la esquina superior izquierda del rectángulo.
+Las coordenadas de la esquina superior izquierda del rectángulo.
 
 ### <a name="remarks"></a>Observaciones
 
-Puede usar esta función para obtener o establecer la esquina superior izquierda del rectángulo. Establezca la esquina mediante esta función en el lado izquierdo del operador de asignación.
+Puede utilizar esta función para obtener o establecer la esquina superior izquierda del rectángulo. Establezca la esquina utilizando esta función en el lado izquierdo del operador de asignación.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CRect:: CenterPoint](#centerpoint).
+Vea el ejemplo de [CRect::CenterPoint](#centerpoint).
 
-##  <a name="unionrect"></a>CRect:: UnionRect
+## <a name="crectunionrect"></a><a name="unionrect"></a>CRect::UnionRect
 
-Hace que las dimensiones de `CRect` iguales a la Unión de los dos rectángulos de origen.
+Hace que `CRect` las dimensiones sean iguales a la unión de los dos rectángulos de origen.
 
 ```
 BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
@@ -1425,23 +1425,23 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parámetros
 
 *lpRect1*<br/>
-Apunta a un [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` que contiene un rectángulo de origen.
+Apunta a un `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) o que contiene un rectángulo de origen.
 
 *lpRect2*<br/>
-Apunta a una `RECT` o `CRect` que contiene un rectángulo de origen.
+Apunta a `RECT` `CRect` un o que contiene un rectángulo de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la Unión no está vacía; 0 si la Unión está vacía.
+Distinto de cero si la unión no está vacía; 0 si la unión está vacía.
 
 ### <a name="remarks"></a>Observaciones
 
-La Unión es el rectángulo más pequeño que contiene ambos rectángulos de origen.
+La unión es el rectángulo más pequeño que contiene ambos rectángulos de origen.
 
-Windows omite las dimensiones de un rectángulo vacío; es decir, un rectángulo que no tiene ningún alto o que no tiene ancho.
+Windows omite las dimensiones de un rectángulo vacío; es decir, un rectángulo que no tiene altura o no tiene anchura.
 
 > [!NOTE]
->  Ambos rectángulos se deben normalizar o se puede producir un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
+> Ambos rectángulos deben normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar los rectángulos antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1455,9 +1455,9 @@ CRect   rectResult(0, 0, 300, 300);
 ASSERT(rectResult == rect3);
 ```
 
-##  <a name="width"></a>CRect:: width
+## <a name="crectwidth"></a><a name="width"></a>CRect::Ancho
 
-Calcula el ancho de `CRect` restando el valor izquierdo del valor derecho.
+Calcula el ancho `CRect` de restando el valor izquierdo del valor derecho.
 
 ```
 int Width() const throw();
@@ -1465,14 +1465,14 @@ int Width() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Ancho de `CRect`.
+La anchura `CRect`de .
 
 ### <a name="remarks"></a>Observaciones
 
 El ancho puede ser negativo.
 
 > [!NOTE]
->  El rectángulo debe normalizarse o puede producirse un error en esta función. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
+> El rectángulo debe normalizarse o esta función puede fallar. Puede llamar a [NormalizeRect](#normalizerect) para normalizar el rectángulo antes de llamar a esta función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1485,6 +1485,6 @@ ASSERT(nWid == 60);
 
 ## <a name="see-also"></a>Consulte también
 
-[CPoint (clase)](cpoint-class.md)<br/>
-[CSize (clase)](csize-class.md)<br/>
-[RECT](/windows/win32/api/windef/ns-windef-rect)
+[Clase CPoint](cpoint-class.md)<br/>
+[Clase CSize](csize-class.md)<br/>
+[Rect](/windows/win32/api/windef/ns-windef-rect)

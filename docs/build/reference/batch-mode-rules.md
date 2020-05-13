@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295024"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328410"
 ---
 # <a name="batch-mode-rules"></a>Reglas de modo por lotes
 
@@ -20,18 +20,18 @@ ms.locfileid: "62295024"
    commands
 ```
 
-Las reglas de inferencia de modo por lotes proporcionan sólo una llamada de la regla de inferencia cuando los comandos N pasan por esta regla de inferencia. Sin reglas de inferencia de modo por lotes, es necesario que los comandos de N que se debe invocar. N es el número de elementos dependientes que desencadenan la regla de inferencia.
+Las reglas de inferencia de modo por lotes proporcionan solo una invocación de la regla de inferencia cuando los comandos N pasan por esta regla de inferencia. Sin reglas de inferencia de modo por lotes, requeriría que se invocaran comandos N. N es el número de dependientes que desencadenan la regla de inferencia.
 
-Archivos MAKE que contienen las reglas de inferencia de modo por lotes deben usar NMAKE versión 1.62 o superior. Para comprobar la versión NMAKE, ejecute la macro _NMAKE_VER que está disponible con la versión de NMAKE 1.62 o superior. Esta macro devuelve una cadena que representa la versión de producto de Visual C++.
+Los archivos Make que contienen reglas de inferencia de modo por lotes deben usar NMAKE versión 1.62 o superior. Para comprobar la versión NMAKE, ejecute la macro de _NMAKE_VER disponible con NMAKE versión 1.62 o superior. Esta macro devuelve una cadena que representa la versión del producto Visual C++.
 
-La única diferencia sintáctica de la regla de inferencia estándar es que la regla de inferencia de modo por lotes se termina con dos puntos dobles (::).
+La única diferencia sintáctica de la regla de inferencia estándar es que la regla de inferencia de modo por lotes se termina con dos puntos (::).
 
 > [!NOTE]
->  La herramienta que se va a invocar debe ser capaz de controlar varios archivos. Debe usar la regla de inferencia de modo por lotes `$<` como la macro para tener acceso a los archivos dependientes.
+> La herramienta que se invoca debe ser capaz de controlar varios archivos. La regla de inferencia `$<` de modo por lotes debe utilizarse como macro para tener acceso a archivos dependientes.
 
-Las reglas de inferencia de modo por lotes pueden acelerar el proceso de compilación. Resulta más rápido que proporcione archivos al compilador en proceso por lotes, ya que el controlador del compilador se invoca una sola vez. Por ejemplo, el compilador de C y C++ funciona mejor cuando el control de un conjunto de archivos porque puede permanecer en memoria durante el proceso.
+Las reglas de inferencia de modo por lotes pueden acelerar el proceso de compilación. Es más rápido proporcionar archivos al compilador por lotes, porque el controlador del compilador se invoca solo una vez. Por ejemplo, el compilador C y C++ funciona mejor al controlar un conjunto de archivos porque puede permanecer residente de memoria durante el proceso.
 
-El ejemplo siguiente muestra cómo usar las reglas de inferencia de modo por lotes:
+En el ejemplo siguiente se muestra cómo utilizar reglas de inferencia de modo por lotes:
 
 ```
 #
@@ -56,7 +56,7 @@ $(Objs) :
 #end of makefile
 ```
 
-NMAKE genera el siguiente resultado sin reglas de inferencia de modo por lotes:
+NMAKE produce la salida siguiente sin reglas de inferencia de modo por lotes:
 
 ```
 E:\tmp> nmake -f test.mak -a NOBatch=1
@@ -73,7 +73,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE genera el siguiente resultado con las reglas de inferencia de modo por lotes:
+NMAKE produce el siguiente resultado con las reglas de inferencia de modo por lotes:
 
 ```
 E:\tmp> nmake -f test.mak -a
@@ -89,6 +89,6 @@ foo4.cpp
 Generating Code...
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Reglas de inferencia](inference-rules.md)

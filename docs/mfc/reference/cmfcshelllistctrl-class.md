@@ -1,5 +1,5 @@
 ---
-title: Clase objeto cmfcshelllistctrl
+title: CMFCShellListCtrl (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCShellListCtrl
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 02d4883c6b5445515d891c5e76ccf10b6bb35bba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 445556535217b0887a02227a0773c287911922a2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504919"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753477"
 ---
-# <a name="cmfcshelllistctrl-class"></a>Clase objeto cmfcshelllistctrl
+# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl (clase)
 
-La `CMFCShellListCtrl` clase proporciona la funcionalidad de control de lista de Windows y la expande mediante la inclusión de la capacidad de mostrar una lista de elementos de Shell.
+La `CMFCShellListCtrl` clase proporciona funcionalidad de control de lista de Windows y la expande mediante la inclusión de la capacidad de mostrar una lista de elementos de shell.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -63,36 +63,36 @@ class CMFCShellListCtrl : public CMFCListCtrl
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCShellListCtrl::DisplayFolder](#displayfolder)|Muestra una lista de elementos contenidos en una carpeta proporcionada.|
-|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|Muestra una lista de elementos contenidos en la carpeta primaria de la carpeta que se muestra actualmente.|
+|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|Muestra una lista de elementos que se encuentran en la carpeta que es el elemento primario de la carpeta que se muestra actualmente.|
 |[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Habilita o deshabilita el menú contextual.|
 |[CMFCShellListCtrl::GetCurrentFolder](#getcurrentfolder)|Recupera la ruta de acceso de la carpeta actual.|
 |[CMFCShellListCtrl::GetCurrentFolderName](#getcurrentfoldername)|Recupera el nombre de la carpeta actual.|
 |[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|Devuelve el PIDL del elemento de control de lista actual.|
-|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|Devuelve un puntero a la carpeta de Shell actual.|
+|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|Devuelve un puntero a la carpeta Shell actual.|
 |[CMFCShellListCtrl::GetItemPath](#getitempath)|Devuelve la ruta de acceso textual de un elemento.|
-|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|Devuelve los tipos de elemento de Shell que se muestran en el control de lista.|
-|[CMFCShellListCtrl::IsDesktop](#isdesktop)|Comprueba si la carpeta seleccionada actualmente es la carpeta del escritorio.|
-|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|El marco de trabajo llama a este método cuando compara dos elementos. (Invalida [CMFCListCtrl:: OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems)).|
+|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|Devuelve los tipos de elemento Shell que muestra el control de lista.|
+|[CMFCShellListCtrl::IsDesktop](#isdesktop)|Comprueba si la carpeta seleccionada actualmente es la carpeta de escritorio.|
+|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|El marco de trabajo llama a este método cuando compara dos elementos. (Reemplaza [CMFCListCtrl::OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems).)|
 |[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|Se llama cuando el marco de trabajo recupera la fecha de archivo que muestra el control de lista.|
 |[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|Se llama cuando el marco de trabajo convierte el tamaño de archivo de un control de lista.|
 |[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|Se llama cuando el marco de trabajo recupera el icono de un elemento de control de lista.|
 |[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|Se llama cuando el marco de trabajo convierte el texto de un elemento de control de lista.|
-|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|Lo llama el marco de trabajo cuando establece los nombres de las columnas.|
-|[CMFCShellListCtrl::Refresh](#refresh)|Actualiza y vuelve a dibujar el control de lista.|
+|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|Llamado por el marco de trabajo cuando establece los nombres de las columnas.|
+|[CMFCShellListCtrl::Refresh](#refresh)|Actualiza y vuelve a pintar el control de lista.|
 |[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|Establece el tipo de elementos mostrados por el control de lista.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La `CMFCShellListCtrl` clase extiende la funcionalidad de la [clase CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md) al permitir que el programa Enumere los elementos de Windows Shell. El formato de presentación que se usa es similar al de una vista de lista para una ventana del explorador.
+La `CMFCShellListCtrl` clase extiende la funcionalidad de la [CMFCListCtrl clase](../../mfc/reference/cmfclistctrl-class.md) habilitando el programa para enumerar los elementos de shell de Windows. El formato de visualización que se utiliza es similar al de una vista de lista para una ventana del Explorador.
 
-Un objeto [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) se puede asociar a `CMFCShellListCtrl` un objeto para crear una ventana completa del explorador. A continuación, si selecciona un elemento `CMFCShellTreeCtrl` en el, `CMFCShellListCtrl` el objeto mostrará el contenido del elemento seleccionado.
+Un [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objeto se `CMFCShellListCtrl` puede asociar a un objeto para crear una ventana completa del Explorador. A continuación, si `CMFCShellTreeCtrl` selecciona un `CMFCShellListCtrl` elemento en el, el objeto mostrará la lista del contenido del elemento seleccionado.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo crear un objeto de `CMFCShellListCtrl` la clase y cómo mostrar la carpeta primaria de la carpeta que se muestra actualmente. Este fragmento de código forma parte del [ejemplo de explorador](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se muestra `CMFCShellListCtrl` cómo crear un objeto de la clase y cómo mostrar la carpeta primaria de la carpeta que se muestra actualmente. Este fragmento de código forma parte del [ejemplo Explorer](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#2](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]
@@ -114,9 +114,9 @@ En el ejemplo siguiente se muestra cómo crear un objeto de `CMFCShellListCtrl` 
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxshelllistCtrl. h
+**Encabezado:** afxshelllistCtrl.h
 
-##  <a name="displayfolder"></a>  CMFCShellListCtrl::DisplayFolder
+## <a name="cmfcshelllistctrldisplayfolder"></a><a name="displayfolder"></a>CMFCShellListCtrl::DisplayFolder
 
 Muestra una lista de elementos contenidos en la carpeta proporcionada.
 
@@ -128,18 +128,18 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ### <a name="parameters"></a>Parámetros
 
 *lpszPath*<br/>
-de Cadena que contiene la ruta de acceso de una carpeta.
+[en] Cadena que contiene la ruta de acceso de una carpeta.
 
 *lpItemInfo*<br/>
-de Puntero a una `LPAFX_SHELLITEMINFO` estructura que describe la carpeta que se va a mostrar.
+[en] Puntero a `LPAFX_SHELLITEMINFO` una estructura que describe una carpeta que se va a mostrar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; E_FAIL en caso contrario.
+S_OK si se realiza correctamente; E_FAIL de lo contrario.
 
-##  <a name="displayparentfolder"></a>  CMFCShellListCtrl::DisplayParentFolder
+## <a name="cmfcshelllistctrldisplayparentfolder"></a><a name="displayparentfolder"></a>CMFCShellListCtrl::DisplayParentFolder
 
-Actualiza el objeto [objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) para mostrar la carpeta primaria de la carpeta que se muestra actualmente.
+Actualiza el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto para mostrar la carpeta primaria de la carpeta que se muestra actualmente.
 
 ```
 virtual HRESULT DisplayParentFolder();
@@ -147,24 +147,24 @@ virtual HRESULT DisplayParentFolder();
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; E_FAIL en caso contrario.
+S_OK si se realiza correctamente; E_FAIL de lo contrario.
 
-##  <a name="enableshellcontextmenu"></a>  CMFCShellListCtrl::EnableShellContextMenu
+## <a name="cmfcshelllistctrlenableshellcontextmenu"></a><a name="enableshellcontextmenu"></a>CMFCShellListCtrl::EnableShellContextMenu
 
 Habilita el menú contextual.
 
-```
+```cpp
 void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
-de Un valor booleano que especifica si el marco de trabajo habilita el menú contextual.
+*bHabilitar*<br/>
+[en] Un valor booleano que especifica si el marco de trabajo habilita el menú contextual.
 
-##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder
+## <a name="cmfcshelllistctrlgetcurrentfolder"></a><a name="getcurrentfolder"></a>CMFCShellListCtrl::GetCurrentFolder
 
-Recupera la ruta de acceso de la carpeta actualmente seleccionada en el objeto [objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Recupera la ruta de acceso de la carpeta seleccionada actualmente en el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.
 
 ```
 BOOL GetCurrentFolder(CString& strPath) const;
@@ -173,19 +173,19 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ### <a name="parameters"></a>Parámetros
 
 *strPath*<br/>
-enuncia Referencia a un parámetro de cadena donde el método escribe la ruta de acceso.
+[fuera] Una referencia a un parámetro de cadena donde el método escribe la ruta de acceso.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Distinto de cero si se realiza correctamente; 0 en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método produce un error si no hay ninguna carpeta seleccionada `CMFCShellListCtrl`en.
+Este método falla si no hay `CMFCShellListCtrl`ninguna carpeta seleccionada en el archivo .
 
-##  <a name="getcurrentfoldername"></a>  CMFCShellListCtrl::GetCurrentFolderName
+## <a name="cmfcshelllistctrlgetcurrentfoldername"></a><a name="getcurrentfoldername"></a>CMFCShellListCtrl::GetCurrentFolderName
 
-Recupera el nombre de la carpeta actualmente seleccionada en el objeto [objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Recupera el nombre de la carpeta seleccionada actualmente en el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.
 
 ```
 BOOL GetCurrentFolderName(CString& strName) const;
@@ -194,19 +194,19 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ### <a name="parameters"></a>Parámetros
 
 *strName*<br/>
-enuncia Referencia a un parámetro de cadena donde el método escribe el nombre.
+[fuera] Una referencia a un parámetro de cadena donde el método escribe el nombre.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Distinto de cero si se realiza correctamente; 0 en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método produce un error si no hay ninguna carpeta seleccionada `CMFCShellListCtrl`en.
+Este método falla si no hay `CMFCShellListCtrl`ninguna carpeta seleccionada en el archivo .
 
-##  <a name="getcurrentitemidlist"></a>  CMFCShellListCtrl::GetCurrentItemIdList
+## <a name="cmfcshelllistctrlgetcurrentitemidlist"></a><a name="getcurrentitemidlist"></a>CMFCShellListCtrl::GetCurrentItemIdList
 
-Devuelve el PIDL del elemento actualmente seleccionado.
+Devuelve el PIDL del elemento seleccionado actualmente.
 
 ```
 LPITEMIDLIST GetCurrentItemIdList() const;
@@ -214,11 +214,11 @@ LPITEMIDLIST GetCurrentItemIdList() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-PIDL del elemento actual.
+El PIDL del elemento actual.
 
-##  <a name="getcurrentshellfolder"></a>  CMFCShellListCtrl::GetCurrentShellFolder
+## <a name="cmfcshelllistctrlgetcurrentshellfolder"></a><a name="getcurrentshellfolder"></a>CMFCShellListCtrl::GetCurrentShellFolder
 
-Obtiene un puntero al elemento actualmente seleccionado en el objeto [objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Obtiene un puntero al elemento seleccionado actualmente en el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.
 
 ```
 const IShellFolder* GetCurrentShellFolder() const;
@@ -226,13 +226,13 @@ const IShellFolder* GetCurrentShellFolder() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a la [interfaz IShellFolder](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) para el objeto seleccionado.
+Un puntero a la [interfaz IShellFolder](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) para el objeto seleccionado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método devuelve NULL si no hay ningún objeto seleccionado actualmente.
 
-##  <a name="getitempath"></a>  CMFCShellListCtrl::GetItemPath
+## <a name="cmfcshelllistctrlgetitempath"></a><a name="getitempath"></a>CMFCShellListCtrl::GetItemPath
 
 Recupera la ruta de acceso de un elemento.
 
@@ -245,22 +245,22 @@ BOOL GetItemPath(
 ### <a name="parameters"></a>Parámetros
 
 *strPath*<br/>
-enuncia Referencia a una cadena que recibe la ruta de acceso.
+[fuera] Una referencia a una cadena que recibe la ruta de acceso.
 
 *iItem*<br/>
-de Índice del elemento de lista.
+[en] El índice del elemento de lista.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si es correcto; De lo contrario, FALSE.
+TRUESi se realiza correctamente; FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El índice proporcionado por *iItem* se basa en los elementos mostrados actualmente por el objeto de la [clase objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+El índice proporcionado por *iItem* se basa en los elementos que muestra actualmente el [CMFCShellListCtrl clase](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.
 
-##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes
+## <a name="cmfcshelllistctrlgetitemtypes"></a><a name="getitemtypes"></a>CMFCShellListCtrl::GetItemTypes
 
-Devuelve el tipo de elementos que muestra el objeto [objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Devuelve el tipo de elementos mostrados por el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.
 
 ```
 SHCONTF GetItemTypes() const;
@@ -268,15 +268,15 @@ SHCONTF GetItemTypes() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor de [SHCONTF](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf) que contiene el tipo de elementos enumerados en `CMFCShellListCtrl`.
+Un valor [SHCONTF](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf) que contiene el `CMFCShellListCtrl`tipo de elementos enumerados en el archivo .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para establecer el tipo de elementos enumerados en `CMFCShellListCtrl`, llame a [objeto cmfcshelllistctrl:: SetItemTypes](#setitemtypes).
+Para establecer el tipo de `CMFCShellListCtrl`elementos enumerados en un archivo , llame a [CMFCShellListCtrl::SetItemTypes](#setitemtypes).
 
-##  <a name="isdesktop"></a>  CMFCShellListCtrl::IsDesktop
+## <a name="cmfcshelllistctrlisdesktop"></a><a name="isdesktop"></a>CMFCShellListCtrl::IsDesktop
 
-Determina si la carpeta que se muestra en el objeto [objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) es la carpeta del escritorio.
+Determina si la carpeta que se muestra en el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto es la carpeta de escritorio.
 
 ```
 BOOL IsDesktop() const;
@@ -284,11 +284,11 @@ BOOL IsDesktop() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la carpeta mostrada es la carpeta de escritorio; De lo contrario, FALSE.
+TRUESi la carpeta mostrada es la carpeta de escritorio; FALSE en caso contrario.
 
-##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems
+## <a name="cmfcshelllistctrloncompareitems"></a><a name="oncompareitems"></a>CMFCShellListCtrl::OnCompareItems
 
-Para obtener más información, consulte el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\MFC** de la instalación de Visual Studio.
+Para obtener más información, vea el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\mfc** de la instalación de Visual Studio.
 
 ```
 virtual int OnCompareItems(
@@ -299,15 +299,15 @@ virtual int OnCompareItems(
 
 ### <a name="parameters"></a>Parámetros
 
-de *lParam1*<br/>
-de *lParam2*<br/>
-de *iColumn*<br/>
+[en] *lParam1*<br/>
+[en] *lParam2*<br/>
+[en] *iColumn*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onformatfiledate"></a>  CMFCShellListCtrl::OnFormatFileDate
+## <a name="cmfcshelllistctrlonformatfiledate"></a><a name="onformatfiledate"></a>CMFCShellListCtrl::OnFormatFileDate
 
 El marco de trabajo llama a este método cuando debe convertir la fecha asociada a un objeto en una cadena.
 
@@ -320,16 +320,16 @@ virtual void OnFormatFileDate(
 ### <a name="parameters"></a>Parámetros
 
 *tmFile*<br/>
-de Fecha asociada a un archivo.
+[en] La fecha asociada a un archivo.
 
-*str*<br/>
-enuncia Cadena que contiene la fecha de archivo con formato.
+*Str*<br/>
+[fuera] Cadena que contiene la fecha del archivo con formato.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando un objeto de [clase objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) muestra la fecha asociada a un archivo, debe convertir esa fecha en un formato de cadena. `CMFCShellListCtrl` Utiliza este método para hacer esa conversión. De forma predeterminada, este método usa la configuración regional actual para dar formato a la fecha en una cadena.
+Cuando un [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) clase objeto muestra la fecha asociada a un archivo, debe convertir esa fecha a un formato de cadena. El `CMFCShellListCtrl` utiliza este método para realizar esa conversión. De forma predeterminada, este método utiliza la configuración regional actual para dar formato a la fecha en una cadena.
 
-##  <a name="onformatfilesize"></a>  CMFCShellListCtrl::OnFormatFileSize
+## <a name="cmfcshelllistctrlonformatfilesize"></a><a name="onformatfilesize"></a>CMFCShellListCtrl::OnFormatFileSize
 
 El marco de trabajo llama a este método cuando convierte el tamaño de un objeto en una cadena.
 
@@ -342,18 +342,18 @@ virtual void OnFormatFileSize(
 ### <a name="parameters"></a>Parámetros
 
 *lFileSize*<br/>
-de Tamaño del archivo que mostrará el marco de trabajo.
+[en] El tamaño del archivo que mostrará el marco de trabajo.
 
-*str*<br/>
-enuncia Cadena que contiene el tamaño de archivo con formato.
+*Str*<br/>
+[fuera] Cadena que contiene el tamaño de archivo con formato.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando un objeto de [clase objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) necesita mostrar el tamaño de un archivo, debe convertir el tamaño de archivo en un formato de cadena. `CMFCShellListCtrl` Utiliza este método para hacer esa conversión. De forma predeterminada, este método convierte el tamaño del archivo de bytes a kilobytes y, a continuación, usa la configuración regional actual para dar formato al tamaño en una cadena.
+Cuando un [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) clase objeto necesita mostrar el tamaño de un archivo, debe convertir el tamaño de archivo en un formato de cadena. El `CMFCShellListCtrl` utiliza este método para realizar esa conversión. De forma predeterminada, este método convierte el tamaño del archivo de bytes a kilobytes y, a continuación, usa la configuración regional actual para dar formato al tamaño en cadena.
 
-##  <a name="ongetitemicon"></a>  CMFCShellListCtrl::OnGetItemIcon
+## <a name="cmfcshelllistctrlongetitemicon"></a><a name="ongetitemicon"></a>CMFCShellListCtrl::OnGetItemIcon
 
-El marco de trabajo llama a este método para recuperar el icono asociado a un elemento de lista de Shell.
+El marco de trabajo llama a este método para recuperar el icono asociado a un elemento de lista de shell.
 
 ```
 virtual int OnGetItemIcon(
@@ -364,24 +364,24 @@ virtual int OnGetItemIcon(
 ### <a name="parameters"></a>Parámetros
 
 *iItem*<br/>
-de Índice del elemento.
+[en] El índice de elementos.
 
 *pItem*<br/>
-de Un parámetro LPAFX_SHELLITEMINFO que describe el elemento.
+[en] Un parámetro LPAFX_SHELLITEMINFO que describe el elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de la imagen de icono si se realiza correctamente; -1 si se produce un error en la función.
+El índice de la imagen del icono si se realiza correctamente; -1 si la función falla.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El índice de la imagen de icono se basa en la lista de imágenes del sistema.
+El índice de imagen de icono se basa en la lista de imágenes del sistema.
 
-De forma predeterminada, este método se basa en el parámetro *pItem* . El valor de *iItem* no se utiliza en la implementación predeterminada. Puede usar *iItem* para implementar el comportamiento personalizado.
+De forma predeterminada, este método se basa en el *pItem* parámetro. El valor de *iItem* no se utiliza en la implementación predeterminada. Puede usar *iItem* para implementar un comportamiento personalizado.
 
-##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText
+## <a name="cmfcshelllistctrlongetitemtext"></a><a name="ongetitemtext"></a>CMFCShellListCtrl::OnGetItemText
 
-El marco de trabajo llama a este método cuando debe recuperar el texto de un elemento de Shell.
+El marco de trabajo llama a este método cuando debe recuperar el texto de un elemento de shell.
 
 ```
 virtual CString OnGetItemText(
@@ -393,25 +393,25 @@ virtual CString OnGetItemText(
 ### <a name="parameters"></a>Parámetros
 
 *iItem*<br/>
-de Índice del elemento.
+[en] El índice de elementos.
 
 *iColumn*<br/>
-de Columna de interés.
+[en] La columna de interés.
 
 *pItem*<br/>
-de Un parámetro LPAFX_SHELLITEMINFO que describe el elemento.
+[en] Un parámetro LPAFX_SHELLITEMINFO que describe el elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`CString` Que contiene el texto asociado al elemento.
+A `CString` que contiene el texto asociado al elemento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cada elemento `CMFCShellListCtrl` del objeto puede tener texto en una o varias columnas. Cuando el marco de trabajo llama a este método, especifica la columna en la que está interesado. Si llama a esta función manualmente, también debe especificar la columna que le interese.
+Cada elemento `CMFCShellListCtrl` del objeto puede tener texto en una o más columnas. Cuando el marco de trabajo llama a este método, especifica la columna que le interesa. Si llama a esta función manualmente, también debe especificar la columna que le interesa.
 
-De forma predeterminada, este método se basa en el parámetro *pItem* para determinar qué elemento se va a procesar. El valor de *iItem* no se utiliza en la implementación predeterminada.
+De forma predeterminada, este método se basa en el *pItem* parámetro para determinar qué elemento para procesar. El valor de *iItem* no se utiliza en la implementación predeterminada.
 
-##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns
+## <a name="cmfcshelllistctrlonsetcolumns"></a><a name="onsetcolumns"></a>CMFCShellListCtrl::OnSetColumns
 
 El marco de trabajo llama a este método cuando establece los nombres de las columnas.
 
@@ -419,13 +419,13 @@ El marco de trabajo llama a este método cuando establece los nombres de las col
 virtual void OnSetColumns();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el marco de trabajo crea cuatro `CMFCShellListCtrl` columnas en un objeto. Los nombres de estas columnas son **nombre**, **tamaño**, **tipo**y **modificado**. Puede invalidar este método para personalizar el número de columnas y sus nombres.
+De forma predeterminada, el marco `CMFCShellListCtrl` de trabajo crea cuatro columnas en un objeto. Los nombres de estas columnas son **Nombre**, **Tamaño**, **Tipo**y **Modificado**. Puede invalidar este método para personalizar el número de columnas y sus nombres.
 
-##  <a name="refresh"></a>  CMFCShellListCtrl::Refresh
+## <a name="cmfcshelllistctrlrefresh"></a><a name="refresh"></a>CMFCShellListCtrl::Refresh
 
-Actualiza y vuelve a dibujar el objeto [objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Actualiza y vuelve a pintar el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.
 
 ```
 virtual HRESULT Refresh();
@@ -433,32 +433,32 @@ virtual HRESULT Refresh();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`S_OK`Si es correcto; de lo contrario, un valor de error.
+`S_OK`si tiene éxito; de lo contrario un valor de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a este método para actualizar la lista de elementos que muestra `CMFCShellListCtrl` el objeto.
+Llame a este método para actualizar la `CMFCShellListCtrl` lista de elementos mostrados por el objeto.
 
-##  <a name="setitemtypes"></a>  CMFCShellListCtrl::SetItemTypes
+## <a name="cmfcshelllistctrlsetitemtypes"></a><a name="setitemtypes"></a>CMFCShellListCtrl::SetItemTypes
 
-Establece el tipo de elementos que se enumeran en el objeto [objeto cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Establece el tipo de elementos que se enumeran en el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.
 
-```
+```cpp
 void SetItemTypes(SHCONTF nTypes);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nTypes*<br/>
-de Una lista de tipos de elemento que `CMFCShellListCtrl` admite el objeto.
+*nTipos*<br/>
+[en] Una lista de tipos `CMFCShellListCtrl` de elementos que admite el objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información sobre la lista de tipos de elemento, vea [SHCONTF](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf).
+Para obtener más información acerca de la lista de tipos de elementos, vea [SHCONTF](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf).
 
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCListCtrl (clase)](../../mfc/reference/cmfclistctrl-class.md)<br/>
-[CMFCShellTreeCtrl (clase)](../../mfc/reference/cmfcshelltreectrl-class.md)
+[Clase CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)<br/>
+[CMFCShellTreeCtrl Clase](../../mfc/reference/cmfcshelltreectrl-class.md)

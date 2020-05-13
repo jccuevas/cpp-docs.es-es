@@ -1,9 +1,11 @@
 ---
 title: wcstombs, _wcstombs_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcstombs
 - _wcstombs_l
+- _o__wcstombs_l
+- _o_wcstombs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: e4aa09ec8e6d97762d39e63aa05b0eb0cc159d17
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 33c7554f1ab5c9822a1908a4b50d0ee0764615ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945123"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910640"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -91,7 +94,7 @@ Configuración regional que se va a usar.
 
 Si **wcstombs** convierte correctamente la cadena multibyte, devuelve el número de bytes escritos en la cadena de salida multibyte, sin incluir el carácter null de terminación (si existe). Si el argumento *mbstr* es **null**, **wcstombs** devuelve el tamaño necesario en bytes de la cadena de destino. Si **wcstombs** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, devuelve-1 convertido al tipo **size_t** y establece **errno** en **EILSEQ**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **wcstombs** convierte la cadena de caracteres anchos a la que apunta *wcstr* en los caracteres multibyte correspondientes y almacena los resultados en la matriz *mbstr* . El parámetro *Count* indica el número máximo de bytes que se pueden almacenar en la cadena de salida multibyte (es decir, el tamaño de *mbstr*). En general, no se conoce el número de bytes que se necesitarán al convertir una cadena de caracteres anchos. Algunos caracteres anchos necesitarán un solo byte de la cadena de salida; otros necesitarán dos. Si hay dos bytes en la cadena de salida multibyte para cada carácter ancho de la cadena de entrada (incluido el carácter ancho nulo), se garantiza que el resultado cabe.
 
@@ -103,7 +106,9 @@ Si el argumento *mbstr* es **null**, **wcstombs** devuelve el tamaño necesario 
 
 **wcstombs** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_wcstombs_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -112,7 +117,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**wcstombs**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -156,10 +161,10 @@ Convert wide-character string:
     Multibyte character: Hello, world.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _write
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _write
+- _o__write
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821797"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916703"
 ---
 # <a name="_write"></a>_write
 
@@ -47,12 +49,12 @@ int _write(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-*fd*<br/>
+*FD*<br/>
 Descriptor de archivo del archivo en el que se van a escribir datos.
 
-*buffer*<br/>
+*búfer*<br/>
 Datos que se van a escribir.
 
 *count*<br/>
@@ -66,15 +68,17 @@ Para más información sobre estos y otros códigos devueltos, vea [errno, _dose
 
 Si el archivo se abre en modo de texto, cada carácter de avance de línea se reemplaza por un par de retorno de carro y avance de línea en la salida. El reemplazo no afecta al valor devuelto.
 
-Cuando el archivo se abre en el modo de conversión Unicode (por ejemplo, si se abre *FD* con **_open** o **_sopen** y un parámetro de modo que incluye **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o si se abre mediante **fopen** y un parámetro de modo que incluye **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**, o si el modo se cambia a un modo de conversión Unicode mediante **_setmode**; el*búfer* se interpreta como un puntero a un matriz de **wchar_t** que contiene datos **UTF-16** . Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.
+Cuando el archivo se abre en el modo de conversión Unicode (por ejemplo, si se abre *FD* con **_open** o **_sopen** y un parámetro de modo que incluye **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o si se abre mediante **fopen** y un parámetro de modo que incluye **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**, o si el modo se cambia a un modo de conversión Unicode mediante **_setmode**; el*búfer* se interpreta como un puntero a una matriz de **wchar_t** que contiene datos **UTF-16** . Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La función **_write** escribe bytes de *recuento* desde el *búfer* en el archivo asociado a *FD*. La operación de escritura se inicia en la posición actual del puntero de archivo (si existe) asociado al archivo en cuestión. Si el archivo se abre para anexarlo, la operación comenzará en el final actual del archivo. Después de la operación de escritura, el puntero de archivo aumenta en función del número de bytes escritos.
 
 Cuando se escribe en archivos abiertos en modo de texto, **_write** trata un carácter Ctrl + Z como el final lógico del archivo. Al escribir en un dispositivo, **_write** trata un carácter Ctrl + Z en el búfer como un terminador de salida.
 
-## <a name="requirements"></a>Requisitos de
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -140,7 +144,7 @@ int main( void )
 Wrote 36 bytes to file.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

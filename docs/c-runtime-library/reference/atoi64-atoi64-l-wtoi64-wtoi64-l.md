@@ -1,11 +1,15 @@
 ---
 title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _atoi64_l
 - _wtoi64
 - _atoi64
 - _wtoi64_l
+- _o__atoi64
+- _o__atoi64_l
+- _o__wtoi64
+- _o__wtoi64_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 950774e74462e8d1f301a1d5b933e57feaa9f840
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939483"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913569"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -81,7 +86,7 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena que se va a convertir.
 
 *locale*<br/>
@@ -89,13 +94,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve el **valor _** _ Int64 generado al interpretar los caracteres de entrada como un número. El valor devuelto es 0 para **_atoi64** si la entrada no se puede convertir en un valor de ese tipo.
+Cada función devuelve el valor de **__int64** generado al interpretar los caracteres de entrada como un número. El valor devuelto es 0 para **_atoi64** si la entrada no se puede convertir en un valor de ese tipo.
 
 En caso de desbordamiento con valores enteros positivos grandes, **_atoi64** devuelve **I64_MAX** y **I64_MIN** en caso de desbordamiento con valores enteros negativos grandes.
 
 En todos los casos fuera del intervalo, **errno** se establece en **ERANGE**. Si el parámetro pasado es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Estas funciones convierten una cadena de caracteres en un valor entero de 64 bits.
 
@@ -107,9 +112,11 @@ El argumento *Str* para **_atoi64** tiene el formato siguiente:
 
 Un espacio en *blanco* consta de caracteres de espacio o tabulación, que se omiten; el *signo* es más (+) o menos (-); y los *dígitos* son uno o más dígitos.
 
-**_wtoi64** es idéntico a **_atoi64** , salvo que toma una cadena de caracteres anchos como parámetro.
+**_wtoi64** es idéntica a **_atoi64** , salvo que toma una cadena de caracteres anchos como parámetro.
 
 Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -174,11 +181,11 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

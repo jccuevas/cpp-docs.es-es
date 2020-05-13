@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: 43aa34153f0e71dd665090243ff2288bff704404
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214232"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance (función)
 
@@ -32,24 +32,24 @@ inline HRESULT ActivateInstance(
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-Un tipo que se va a activar.
+Tipo que se va a activar.
 
 *activatableClassId*<br/>
-El nombre de la Id. de clase que define el parámetro *T*.
+Nombre del identificador de clase que define el parámetro *T*.
 
-*instance*<br/>
-Cuando finalice esta operación, una referencia a una instancia de *T*.
+*instancia*<br/>
+Cuando se completa esta operación, se realiza una referencia a una instancia de *T*.
 
 ## <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; en caso contrario, un error HRESULT que indica la causa del error.
+S_OK si se realiza correctamente; de lo contrario, devuelve un error HRESULT que indica la causa del error.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** client.h
 
-**Espacio de nombres**: Windows::Foundation
+**Espacio de nombres:** Windows:: Foundation
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Windows::Foundation (espacio de nombres)](windows-foundation-namespace.md)

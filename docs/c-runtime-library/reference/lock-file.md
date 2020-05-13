@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953311"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911527"
 ---
 # <a name="_lock_file"></a>_lock_file
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parámetros
 
-*file*<br/>
+*filesystem*<br/>
 Identificador de archivo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_lock_file** bloquea el objeto de **archivo** especificado por el *archivo*. El archivo subyacente no está bloqueado por **_lock_file**. Use [_unlock_file](unlock-file.md) para liberar el bloqueo en el archivo. Las llamadas a **_lock_file** y **_unlock_file** deben coincidir en un subproceso.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -59,7 +63,7 @@ La función **_lock_file** bloquea el objeto de **archivo** especificado por el 
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

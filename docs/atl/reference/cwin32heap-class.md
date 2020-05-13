@@ -16,19 +16,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: ce3585310198ee3e2d7b2b8b829f4202b1021284
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2d79de308b1afb3059cf04ad40b63b6e603073c8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496199"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746033"
 ---
 # <a name="cwin32heap-class"></a>Clase CWin32Heap
 
-Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) con las funciones de asignación del montón de Win32.
+Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación de montón Win32.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,32 +40,32 @@ class CWin32Heap : public IAtlMemMgr
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CWin32Heap::CWin32Heap](#cwin32heap)|El constructor.|
-|[CWin32Heap::~CWin32Heap](#dtor)|Destructor.|
+|[CWin32Heap::-CWin32Heap](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CWin32Heap::Allocate](#allocate)|Asigna un bloque de memoria del objeto de montón.|
-|[CWin32Heap::Attach](#attach)|Adjunta el objeto heap a un montón existente.|
-|[CWin32Heap::Detach](#detach)|Desasocia el objeto heap de un montón existente.|
-|[CWin32Heap::Free](#free)|Libera memoria previamente asignada del montón.|
-|[CWin32Heap::GetSize](#getsize)|Devuelve el tamaño de un bloque de memoria asignado desde el objeto heap.|
+|[CWin32Heap::Asignar](#allocate)|Asigna un bloque de memoria del objeto de montón.|
+|[CWin32Heap::Attach](#attach)|Asocia el objeto de montón a un montón existente.|
+|[CWin32Heap::Detach](#detach)|Separa el objeto de montón de un montón existente.|
+|[CWin32Heap::Gratis](#free)|Libera memoria previamente asignada del montón.|
+|[CWin32Heap::GetSize](#getsize)|Devuelve el tamaño de un bloque de memoria asignado desde el objeto de montón.|
 |[CWin32Heap::Reallocate](#reallocate)|Reasigna un bloque de memoria del objeto de montón.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Marca que se usa para determinar la propiedad actual del identificador del montón.|
-|[CWin32Heap::m_hHeap](#m_hheap)|Identificador del objeto de montón.|
+|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Marca utilizada para determinar la propiedad actual del identificador de montón.|
+|[CWin32Heap::m_hHeap](#m_hheap)|Controlar el objeto de montón.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CWin32Heap`implementa los métodos de asignación de memoria mediante las funciones de asignación del montón de Win32, incluidas [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc) y [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree). A diferencia de otras clases heap `CWin32Heap` , requiere que se proporcione un identificador de montón válido antes de que se asigne la memoria: las otras clases tienen como valor predeterminado el montón del proceso. El identificador se puede proporcionar al constructor o al método [CWin32Heap:: Attach](#attach) . Vea el método [CWin32Heap:: CWin32Heap](#cwin32heap) para obtener más detalles.
+`CWin32Heap`implementa métodos de asignación de memoria mediante las funciones de asignación de montón de Win32, incluidos [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc) y [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree). A diferencia de `CWin32Heap` otras clases de montón, requiere que se proporcione un identificador de montón válido antes de asignar memoria: las otras clases utilizan el montón de procesos de forma predeterminada. El identificador se puede proporcionar al constructor o a la [CWin32Heap::Attach](#attach) método. Consulte el [método CWin32Heap::CWin32Heap](#cwin32heap) para obtener más detalles.
 
 ## <a name="example"></a>Ejemplo
 
@@ -79,9 +79,9 @@ Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlmem. h
+**Encabezado:** atlmem.h
 
-##  <a name="allocate"></a>  CWin32Heap::Allocate
+## <a name="cwin32heapallocate"></a><a name="allocate"></a>CWin32Heap::Asignar
 
 Asigna un bloque de memoria del objeto de montón.
 
@@ -98,17 +98,17 @@ Número de bytes solicitado en el nuevo bloque de memoria.
 
 Devuelve un puntero al bloque de memoria recién asignado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a [CWin32Heap:: Free](#free) o [CWin32Heap::](#reallocate) allocate para liberar la memoria asignada por este método.
+Llame a [CWin32Heap::Free](#free) o [CWin32Heap::Reallocate](#reallocate) para liberar la memoria asignada por este método.
 
-Implementado mediante [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc).
+Se implementa mediante [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc).
 
-##  <a name="attach"></a>  CWin32Heap::Attach
+## <a name="cwin32heapattach"></a><a name="attach"></a>CWin32Heap::Attach
 
-Adjunta el objeto heap a un montón existente.
+Asocia el objeto de montón a un montón existente.
 
-```
+```cpp
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ```
 
@@ -118,13 +118,13 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 Un identificador de montón existente.
 
 *bTakeOwnership*<br/>
-Marca que indica si el `CWin32Heap` objeto va a tomar posesión de los recursos del montón.
+Marca que indica `CWin32Heap` si el objeto debe tomar posesión sobre los recursos del montón.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si *bTakeOwnership* es true, el `CWin32Heap` objeto es responsable de eliminar el identificador del montón.
+Si *bTakeOwnership* es `CWin32Heap` TRUE, el objeto es responsable de eliminar el identificador de montón.
 
-##  <a name="cwin32heap"></a>  CWin32Heap::CWin32Heap
+## <a name="cwin32heapcwin32heap"></a><a name="cwin32heap"></a>CWin32Heap::CWin32Heap
 
 El constructor.
 
@@ -151,7 +151,7 @@ Tamaño inicial del montón.
 *nMaxSize*<br/>
 Tamaño máximo del montón.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Antes de asignar memoria, es necesario proporcionar el objeto `CWin32Heap` con un identificador de montón válido. El modo más sencillo de hacerlo es usar el montón de procesos:
 
@@ -159,17 +159,17 @@ Antes de asignar memoria, es necesario proporcionar el objeto `CWin32Heap` con u
 
 También se puede proporcionar un identificador de montón existente al constructor, en cuyo caso el nuevo objeto no asumirá la propiedad del montón. El identificador del montón original seguirá siendo válido cuando se elimine el objeto `CWin32Heap`.
 
-También se puede adjuntar un montón existente al nuevo objeto, mediante [CWin32Heap:: Attach](#attach).
+Un montón existente también se puede asociar al nuevo objeto, mediante [CWin32Heap::Attach](#attach).
 
 Si se necesita un montón en las operaciones que se realizan en un único subproceso, la mejor manera de hacerlo es crear el objeto del modo siguiente:
 
 [!code-cpp[NVC_ATL_Utilities#93](../../atl/codesnippet/cpp/cwin32heap-class_2.cpp)]
 
-El parámetro HEAP_NO_SERIALIZE especifica que la exclusión mutua no se utilizará cuando las funciones del montón asignan y liberan memoria, con un aumento en el rendimiento.
+El parámetro HEAP_NO_SERIALIZE especifica que la exclusión mutua no se utilizará cuando las funciones del montón asignen y liberen memoria, con el correspondiente aumento de rendimiento.
 
 El tercer parámetro se establece en 0 de forma predeterminada, lo que permite al montón crecer según sea necesario. Consulte [HeapCreate](/windows/win32/api/heapapi/nf-heapapi-heapcreate) para obtener una explicación de los tamaños de memoria y las marcas.
 
-##  <a name="dtor"></a>  CWin32Heap::~CWin32Heap
+## <a name="cwin32heapcwin32heap"></a><a name="dtor"></a>CWin32Heap::-CWin32Heap
 
 Destructor.
 
@@ -177,13 +177,13 @@ Destructor.
 ~CWin32Heap() throw();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Destruye el identificador del montón si el `CWin32Heap` objeto tiene la propiedad del montón.
+Destruye el identificador de `CWin32Heap` montón si el objeto tiene la propiedad del montón.
 
-##  <a name="detach"></a>  CWin32Heap::Detach
+## <a name="cwin32heapdetach"></a><a name="detach"></a>CWin32Heap::Detach
 
-Desasocia el objeto heap de un montón existente.
+Separa el objeto de montón de un montón existente.
 
 ```
 HANDLE Detach() throw();
@@ -191,11 +191,11 @@ HANDLE Detach() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el identificador del montón al que se adjuntó el objeto previamente.
+Devuelve el identificador al montón al que se adjuntó previamente el objeto.
 
-##  <a name="free"></a>  CWin32Heap::Free
+## <a name="cwin32heapfree"></a><a name="free"></a>CWin32Heap::Gratis
 
-Libera memoria previamente asignada del montón por [CWin32Heap::](#allocate) allocate o [CWin32Heap::](#reallocate)allocate.
+Libera memoria previamente asignada del montón por [CWin32Heap::Allocate](#allocate) o [CWin32Heap::Reallocate](#reallocate).
 
 ```
 virtual void Free(void* p) throw();
@@ -203,12 +203,12 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*p*<br/>
-Puntero al bloque de memoria que se va a liberar. NULL es un valor válido y no hace nada.
+*P*<br/>
+Puntero al bloque de memoria para liberar. NULL es un valor válido y no hace nada.
 
-##  <a name="getsize"></a>  CWin32Heap::GetSize
+## <a name="cwin32heapgetsize"></a><a name="getsize"></a>CWin32Heap::GetSize
 
-Devuelve el tamaño de un bloque de memoria asignado desde el objeto heap.
+Devuelve el tamaño de un bloque de memoria asignado desde el objeto de montón.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -216,34 +216,34 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*p*<br/>
-Puntero al bloque de memoria cuyo tamaño obtendrá el método. Se trata de un puntero devuelto por [CWin32Heap::](#allocate) allocate o [CWin32Heap::](#reallocate)allocate.
+*P*<br/>
+Puntero al bloque de memoria cuyo tamaño obtendrá el método. Se trata de un puntero devuelto por [CWin32Heap::Allocate](#allocate) o [CWin32Heap::Reallocate](#reallocate).
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve el tamaño, en bytes, del bloque de memoria asignado.
 
-##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap
+## <a name="cwin32heapm_bownheap"></a><a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap
 
-Marca que se usa para determinar la propiedad actual del identificador del montón almacenado en [m_hHeap](#m_hheap).
+Marca utilizada para determinar la propiedad actual del identificador de montón almacenado en [m_hHeap](#m_hheap).
 
 ```
 bool m_bOwnHeap;
 ```
 
-##  <a name="m_hheap"></a>  CWin32Heap::m_hHeap
+## <a name="cwin32heapm_hheap"></a><a name="m_hheap"></a>CWin32Heap::m_hHeap
 
-Identificador del objeto de montón.
+Controlar el objeto de montón.
 
 ```
 HANDLE m_hHeap;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Variable que se usa para almacenar un identificador en el objeto de montón.
+Variable utilizada para almacenar un identificador en el objeto de montón.
 
-##  <a name="reallocate"></a>  CWin32Heap::Reallocate
+## <a name="cwin32heapreallocate"></a><a name="reallocate"></a>CWin32Heap::Reallocate
 
 Reasigna un bloque de memoria del objeto de montón.
 
@@ -253,7 +253,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*p*<br/>
+*P*<br/>
 Puntero al bloque de memoria que se va a reasignar.
 
 *nBytes*<br/>
@@ -263,15 +263,15 @@ Nuevo tamaño en bytes del bloque asignado. El bloque se puede hacer mayor o men
 
 Devuelve un puntero al bloque de memoria recién asignado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si *p* es null, se supone que el bloque de memoria aún no se ha asignado y se llama a [CWin32Heap::](#allocate) allocate, con un argumento de *nBytes*.
+Si *p* es NULL, se supone que el bloque de memoria aún no se ha asignado y se llama a [CWin32Heap::Allocate,](#allocate) con un argumento de *nBytes*.
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre clases](../../atl/atl-class-overview.md)<br/>
-[IAtlMemMgr (clase)](../../atl/reference/iatlmemmgr-class.md)<br/>
-[CLocalHeap (clase)](../../atl/reference/clocalheap-class.md)<br/>
-[CGlobalHeap (clase)](../../atl/reference/cglobalheap-class.md)<br/>
-[CCRTHeap (clase)](../../atl/reference/ccrtheap-class.md)<br/>
-[CComHeap (clase)](../../atl/reference/ccomheap-class.md)
+[Información general de clases](../../atl/atl-class-overview.md)<br/>
+[Clase IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)<br/>
+[Clase CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
+[Clase CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
+[Clase CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
+[Clase CComHeap](../../atl/reference/ccomheap-class.md)

@@ -1,9 +1,11 @@
 ---
 title: _fullpath, _wfullpath
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fullpath
 - _wfullpath
+- _o__fullpath
+- _o__wfullpath
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: 30e62716c496ebb1a39b53a420f372a6e743c2c0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956270"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909942"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,19 +71,21 @@ Puntero a un búfer que contiene el nombre de la ruta de acceso absoluta o compl
 Nombre de ruta de acceso relativa.
 
 *maxLength*<br/>
-Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Esta longitud está en bytes para **_fullpath** , pero en caracteres anchos (**wchar_t**) para **_wfullpath**.
+Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Esta longitud está en bytes para **_fullpath** pero en caracteres anchos (**wchar_t**) para **_wfullpath**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un puntero a un búfer que contiene el nombre de ruta de acceso absoluta (*absPath*). Si se produce un error (por ejemplo, si el valor pasado en *relPath* incluye una letra de unidad que no es válida o no se puede encontrar, o si la longitud del nombre de ruta de acceso absoluta creado (*absPath*) es mayor que *MaxLength*), la función devuelve **Null**.
+Cada una de estas funciones devuelve un puntero a un búfer que contiene el nombre de ruta de acceso absoluta (*absPath*). Si se produce un error (por ejemplo, si el valor pasado en *relPath* incluye una letra de unidad que no es válida o no se puede encontrar, o si la longitud del nombre de ruta de acceso absoluta creado (*absPath*) es mayor que *MaxLength*), la función devuelve **null**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_fullpath** expande el nombre de la ruta de acceso relativa en *relPath* a su ruta de acceso completa o absoluta y almacena este nombre en *absPath*. Si *absPath* es **null**, se usa **malloc** para asignar un búfer de longitud suficiente para contener el nombre de la ruta de acceso. Es responsabilidad del autor de llamada liberar este búfer. Un nombre de ruta de acceso relativa especifica una ruta de acceso a otra ubicación desde la ubicación actual (como el directorio de trabajo actual: "."). Un nombre de ruta de acceso absoluta es la expansión de un nombre de ruta de acceso relativa que indica toda la ruta de acceso necesaria para llegar a la ubicación que se quiere desde la raíz del sistema de archivos. A diferencia de **_makepath**, **_fullpath** se puede usar para obtener el nombre de ruta de acceso absoluta para las rutas de acceso relativas (*relPath*) que incluyen "./" o ".. /"en sus nombres.
 
 Por ejemplo, para usar rutinas en tiempo de ejecución de C, la aplicación debe incluir los archivos de encabezado que contienen las declaraciones de las rutinas. Cada archivo de encabezado incluye una instrucción que hace referencia a la ubicación del archivo de forma relativa (desde el directorio de trabajo de la aplicación):
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <stdlib.h>
 ```
 
@@ -88,9 +93,9 @@ cuando la ruta de acceso absoluta (ubicación real del sistema de archivos) del 
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wfullpath** es una versión con caracteres anchos de **_fullpath**; los argumentos de cadena de **_wfullpath** son cadenas de caracteres anchos. **_wfullpath** y **_fullpath** se comportan exactamente igual, salvo que **_wfullpath** no controla las cadenas de caracteres multibyte.
+**_fullpath** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wfullpath** es una versión con caracteres anchos de **_fullpath**; los argumentos de cadena para **_wfullpath** son cadenas de caracteres anchos. **_wfullpath** y **_fullpath** se comportan exactamente igual, salvo que **_wfullpath** no controla las cadenas de caracteres multibyte.
 
-Si se define **_ Debug y _** **crtdbg_map_alloc** , las llamadas a **_fullpath** y **_wfullpath** se reemplazan por llamadas a **_fullpath_dbg** y **_wfullpath_dbg** para permitir la depuración de asignaciones de memoria. Para obtener más información, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
+Si se definen **_DEBUG** y **_CRTDBG_MAP_ALLOC** , las llamadas a **_fullpath** y **_wfullpath** se reemplazan por llamadas a **_fullpath_dbg** y **_wfullpath_dbg** para permitir la depuración de asignaciones de memoria. Para obtener más información, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
 Esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), si *Maxlen* es menor o igual que 0. Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **null**.
 
@@ -109,7 +114,7 @@ Si el búfer de *absPath* es **null**, **_fullpath** llama a [malloc](malloc.md)
 |**_fullpath**|\<stdlib.h>|
 |**_wfullpath**|\<stdlib.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -146,7 +151,7 @@ Full path is: C:\test
 Full path is: C:\Documents and Settings\user\test
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>

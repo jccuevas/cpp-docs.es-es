@@ -1,11 +1,15 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
+- _o__isctype
+- _o__isctype_l
+- _o__iswctype_l
+- _o_iswctype
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2261eab574a8bc206a02f9e505beff88cf4c7fcf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954401"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918952"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
@@ -77,10 +82,10 @@ int _iswctype_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
-*desc*<br/>
+*multilínea*<br/>
 Propiedad que se va a probar. Normalmente se recupera mediante ctype o [wctype](wctype.md).
 
 *locale*<br/>
@@ -90,7 +95,7 @@ Configuración regional que se va a usar para las pruebas dependientes de la con
 
 **_isctype** y **iswctype** devuelven un valor distinto de cero si *c* tiene la propiedad especificada por *DESC* en la configuración regional actual o 0 si no lo está. Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que usan la configuración regional que se pasa en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-El comportamiento de **_isctype** y **_isctype_l** es undefined si *c* no es EOF o en el intervalo de 0 a 0xFF, ambos incluidos. Cuando se usa una biblioteca CRT de depuración y *c* no es uno de estos valores, las funciones generan una aserción.
+El comportamiento de **_isctype** y **_isctype_l** es undefined si *c* no es EOF o en el intervalo comprendido entre 0 y 0xFF, ambos incluidos. Cuando se usa una biblioteca CRT de depuración y *c* no es uno de estos valores, las funciones generan una aserción.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -98,6 +103,10 @@ El comportamiento de **_isctype** y **_isctype_l** es undefined si *c* no es EOF
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |N/D|**_isctype**|N/D|**_iswctype**|
 |N/D|**_isctype_l**|N/D|**_iswctype_l**|
+
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -108,14 +117,14 @@ El comportamiento de **_isctype** y **_isctype_l** es undefined si *c* no es EOF
 |**_isctype_l**|\<ctype.h>|
 |**_iswctype_l**|\<ctype.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
 Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
-[is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>

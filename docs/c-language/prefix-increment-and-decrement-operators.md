@@ -7,15 +7,15 @@ helpviewer_keywords:
 - decrement operators
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
 ms.openlocfilehash: 041c44829b8a267ca053dc85da0333e86db6b7b7
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325499"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>Operadores de incremento y decremento prefijos
 
-A los operadores unarios (`++` y **--**) se les denomina operadores de incremento o decremento de "prefijo" cuando los operadores de incremento o decremento aparecen delante del operando. El incremento y decremento de postfijo tiene una prioridad mayor que el incremento y decremento de prefijo. El tipo del operando debe ser entero, flotante o de puntero y debe ser una expresión de valor L modificable (una expresión sin el atributo **const**). El resultado es un valor L.
+A los operadores unarios (`++` y **--** ) se les denomina operadores de incremento o decremento de "prefijo" cuando los operadores de incremento o decremento aparecen delante del operando. El incremento y decremento de postfijo tiene una prioridad mayor que el incremento y decremento de prefijo. El tipo del operando debe ser entero, flotante o de puntero y debe ser una expresión de valor L modificable (una expresión sin el atributo **const**). El resultado es un valor L.
 
 Cuando el operador aparece delante de su operando, el operando se incrementa o se reduce y su nuevo valor es el resultado de la expresión.
 

@@ -1,8 +1,9 @@
 ---
 title: _get_tzname
-ms.date: 10/22/2018
+ms.date: 4/2/2020
 api_name:
 - _get_tzname
+- _o__get_tzname
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 9f86a4997c328e86597e3bad8a7f7a3a5f5f50b6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955622"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919681"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -60,10 +62,10 @@ La dirección de una cadena de caracteres para la representación del nombre de 
 *sizeInBytes*<br/>
 Tamaño de la cadena de caracteres *TimeZoneName* en bytes.
 
-*index*<br/>
+*índice*<br/>
 Índice de uno de los dos nombres de zona horaria que se van a recuperar.
 
-|*index*|Contenido de *TimeZoneName*|valor predeterminado de *TimeZoneName*|
+|*índice*|Contenido de *TimeZoneName*|valor predeterminado de *TimeZoneName*|
 |-|-|-|
 |0|Nombre de zona horaria|"PST"|
 |1|Nombre de zona de hora estándar de horario de verano|"PDT"|
@@ -79,21 +81,23 @@ Si *TimeZoneName* es **null**, o *sizeInBytes* es cero o menor que cero (pero no
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Valor devuelto|Contenido de *TimeZoneName*|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*índice*|Valor devuelto|Contenido de *TimeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|tamaño de nombre de ZH|**NULL**|0|0 o 1|0|no modificado|
-|tamaño de nombre de ZH|any|> 0|0 o 1|0|Nombre de ZH|
-|no modificado|**NULL**|> 0|any|**EINVAL**|no modificado|
-|no modificado|any|cero|any|**EINVAL**|no modificado|
-|no modificado|any|> 0|> 1|**EINVAL**|no modificado|
+|tamaño de nombre de ZH|**ACEPTA**|0|0 o 1|0|no modificado|
+|tamaño de nombre de ZH|cualquiera|> 0|0 o 1|0|Nombre de ZH|
+|no modificado|**ACEPTA**|> 0|cualquiera|**EINVAL**|no modificado|
+|no modificado|cualquiera|cero|cualquiera|**EINVAL**|no modificado|
+|no modificado|cualquiera|> 0|> 1|**EINVAL**|no modificado|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_get_tzname** recupera la representación de la cadena de caracteres del nombre de la zona horaria actual o el nombre de la zona horaria estándar de horario de verano (DST) en la dirección de *TimeZoneName* según el valor de índice, junto con el tamaño de la cadena en *pReturnValue*. Si *TimeZoneName* es **null** y *sizeInBytes* es cero, se devuelve el tamaño de la cadena necesaria para contener la zona horaria especificada y un valor null de terminación en bytes en *pReturnValue*. Los valores de índice deben ser 0 para la zona horaria estándar o 1 para la zona horaria estándar de horario de verano; cualquier otro valor de *index* tiene resultados indeterminados.
+La función **_get_tzname** recupera la representación de la cadena de caracteres del nombre de zona horaria actual o el nombre de la zona horaria estándar de horario de verano (DST) en la dirección de *TimeZoneName* en función del valor de índice, junto con el tamaño de la cadena en *pReturnValue*. Si *TimeZoneName* es **null** y *sizeInBytes* es cero, se devuelve el tamaño de la cadena necesaria para contener la zona horaria especificada y un valor null de terminación en bytes en *pReturnValue*. Los valores de índice deben ser 0 para la zona horaria estándar o 1 para la zona horaria estándar de horario de verano; cualquier otro valor de *index* tiene resultados indeterminados.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se llama a **_get_tzname** para obtener el tamaño de búfer necesario para mostrar el nombre de la zona horaria estándar de horario de verano actual, se asigna un búfer de ese tamaño, se llama de nuevo a **_get_tzname** para cargar el nombre en el búfer y se imprime en la consola.
+Este ejemplo llama a **_get_tzname** para obtener el tamaño de búfer necesario para mostrar el nombre de la zona horaria estándar de horario de verano actual, asigna un búfer de ese tamaño, llama a **_get_tzname** de nuevo para cargar el nombre en el búfer y lo imprime en la consola.
 
 ```C
 // crt_get_tzname.c
@@ -129,7 +133,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Output
 
 ```Output
 The current Daylight standard time zone name is PDT.
@@ -143,9 +147,9 @@ The current Daylight standard time zone name is PDT.
 
 Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>

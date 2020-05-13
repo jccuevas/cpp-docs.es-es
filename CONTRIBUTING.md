@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b15a09fa450995c55cc6e7313c51db4a3ba3f48a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316624"
+---
 # <a name="contributing"></a>Contribución
 
 Le agradecemos su interés en colaborar con la documentación de Visual C++.
@@ -6,11 +14,11 @@ En este tema, comprobará cuál es el proceso básico para agregar o actualizar 
 
 Abordaremos lo siguiente:
 
-* [Proceso de contribución](#process-for-contributing)
-* [Qué se debe hacer y qué no](#dos-and-donts)
-* [Creación de los documentos](#building-the-docs)
-* [Contribución a los ejemplos](#contributing-to-samples)
-* [Contrato de licencia de colaboración](#contributor-license-agreement)
+- [Proceso de contribución](#process-for-contributing)
+- [Qué se debe hacer y qué no](#dos-and-donts)
+- [Creación de los documentos](#building-the-docs)
+- [Contribución a los ejemplos](#contributing-to-samples)
+- [Contrato de licencia de colaboración](#contributor-license-agreement)
 
 ## <a name="process-for-contributing"></a>Proceso de contribución
 
@@ -19,7 +27,7 @@ El contenido de la carpeta **docs** se organiza en secciones por área de conten
 
 Si los cambios son pequeños, puede omitir este primer paso.
 
-**Paso 2:** bifurque el repositorio de `MicrosoftDocs/cpp-docs`.
+**Paso 2:** bifurque el repositorio `MicrosoftDocs/cpp-docs`.
 
 **Paso 3:** cree una rama (`branch`) para el artículo.
 
@@ -34,21 +42,23 @@ Agregue las imágenes y otros recursos estáticos a la subcarpeta denominada `me
 
 Asegúrese de seguir la sintaxis de Markdown adecuada. Consulte la [guía de estilo](./styleguide/template.md) para obtener más información.
 
-### <a name="example-structure"></a>Ejemplo de estructura
+### <a name="example-structure"></a>Estructura de ejemplo
 
-    docs
-        /standard-library
-            wstring-convert-class.md
-            /media
-                wstring-conversion.png
+```
+docs
+    /standard-library
+        wstring-convert-class.md
+        /media
+            wstring-conversion.png
+```
 
-**Paso 5:** envíe una solicitud de incorporación de cambios (PR) desde su rama a `MicrosoftDocs/cpp-docs/master`.
+**Paso 5:** Envíe una solicitud de incorporación de cambios (PR) desde su rama a `MicrosoftDocs/cpp-docs/master`.
 
-Si su solicitud aborda un asunto existente, agregue la palabra clave `Fixes #Issue_Number` al mensaje de confirmación o a la descripción de la solicitud de incorporación de cambios. De este modo, el asunto podrá cerrarse automáticamente cuando se combine la solicitud. Para obtener más información, consulte [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/) (Cerrar asuntos mediante mensajes de confirmación).
+Si la solicitud aborda un asunto existente, agregue la palabra clave `Fixes #Issue_Number` al mensaje de confirmación o a la descripción de la solicitud de incorporación de cambios. De este modo, el asunto se podrá cerrar automáticamente cuando se combine la solicitud. Para obtener más información, consulte [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/) (Cerrar asuntos mediante mensajes de confirmación).
 
 El equipo de Visual Studio revisará su solicitud y le notificará si el cambio es correcto o si son necesarias otras modificaciones para aprobarlo.
 
-**Paso 6:** realice los cambios necesarios que haya acordado con el equipo en la rama.
+**Paso 6:** Realice las actualizaciones necesarias a la rama que haya acordado con el equipo.
 
 Los encargados del mantenimiento combinarán la solicitud con la rama principal una vez que se hayan aplicado los comentarios y el cambio no presente problemas.
 

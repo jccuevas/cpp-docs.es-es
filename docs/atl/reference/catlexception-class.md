@@ -1,5 +1,5 @@
 ---
-title: CAtlException (clase)
+title: Clase CAtlException
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlException
@@ -9,58 +9,58 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: a6ed6062be02fddc111e4eda4d26226b7a7a0c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f09d9b2f46233cf356f5ade8a5b90e08a213d276
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260680"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168207"
 ---
-# <a name="catlexception-class"></a>CAtlException (clase)
+# <a name="catlexception-class"></a>Clase CAtlException
 
-Esta clase define una excepción de ATL.
+Esta clase define una excepción ATL.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class CAtlException
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CAtlException::CAtlException](#catlexception)|El constructor.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CAtlException::operator HRESULT](#operator_hresult)|Convierte el objeto actual en un valor HRESULT.|
+|[CAtlException:: Operator HRESULT](#operator_hresult)|Convierte el objeto actual en un valor HRESULT.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CAtlException::m_hr](#m_hr)|La variable de tipo HRESULT creado por el objeto y se usa para almacenar la condición de error.|
+|[CAtlException:: m_hr](#m_hr)|Variable de tipo HRESULT creada por el objeto y utilizada para almacenar la condición de error.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Un `CAtlException` objeto representa una condición de excepción relacionada con una operación de ATL. La `CAtlException` clase incluye un miembro de datos públicos que almacena el código de estado que indica el motivo de la excepción y un operador de conversión que permite tratar la excepción como si fuese un HRESULT.
+Un `CAtlException` objeto representa una condición de excepción relacionada con una operación ATL. La `CAtlException` clase incluye un miembro de datos público que almacena el código de estado que indica el motivo de la excepción y un operador de conversión que le permite tratar la excepción como si fuera un HRESULT.
 
 En general, llamará `AtlThrow` en lugar de crear un `CAtlException` objeto directamente.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlexcept.h
+**Encabezado:** atlexcept. h
 
-##  <a name="catlexception"></a>  CAtlException::CAtlException
+## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>CAtlException::CAtlException
 
 El constructor.
 
-```
+```cpp
 CAtlException(HRESULT hr) throw();
 CAtlException() throw();
 ```
@@ -68,29 +68,29 @@ CAtlException() throw();
 ### <a name="parameters"></a>Parámetros
 
 *hr*<br/>
-El código de error HRESULT.
+Código de error HRESULT.
 
-##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT
+## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException:: Operator HRESULT
 
 Convierte el objeto actual en un valor HRESULT.
 
-```
+```cpp
 operator HRESULT() const throw ();
 ```
 
-##  <a name="m_hr"></a>  CAtlException::m_hr
+## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>CAtlException:: m_hr
 
 El miembro de datos HRESULT.
 
-```
+```cpp
 HRESULT m_hr;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El miembro de datos que almacena la condición de error. El valor HRESULT es establecido por el constructor, [CAtlException::CAtlException](#catlexception).
+Miembro de datos que almacena la condición de error. El valor HRESULT lo establece el constructor, [CAtlException:: CAtlException](#catlexception).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

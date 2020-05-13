@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e716d4952bdb9634cc0d195285d3a65c5c06b0a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126453"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336803"
 ---
 # <a name="out_of_memory-class"></a>out_of_memory (clase)
 
@@ -25,13 +25,13 @@ La excepción se produce cuando un método produce un error debido a la falta de
 class out_of_memory : public runtime_exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[Constructor de out_of_memory](#ctor)|Inicializa una nueva instancia de la clase `out_of_memory`.|
+|[Constructor out_of_memory](#ctor)|Inicializa una nueva instancia de la clase `out_of_memory`.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -43,10 +43,11 @@ class out_of_memory : public runtime_exception;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amprt. h
+**Encabezado:** amprt.h
 
-**Espacio de nombres:** Concurrency
-## <a name="ctor"></a>out_of_memory
+**Espacio de nombres:** Concurrencia
+
+## <a name="out_of_memory"></a><a name="ctor"></a>out_of_memory
 
 Inicializa una nueva instancia de la clase.
 

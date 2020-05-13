@@ -1,8 +1,9 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapchk
+- _o__heapchk
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954820"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916213"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -60,9 +62,11 @@ int _heapchk( void );
 
 Además, si se produce un error, **_heapchk** establece **errno** en **ENOSYS**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_heapchk** ayuda a depurar los problemas relacionados con el montón comprobando la coherencia mínima del montón. Si el sistema operativo no es compatible con **_heapchk**(por ejemplo, Windows 98), la función devuelve **_HEAPOK** y establece **errno** en **ENOSYS**.
+La función **_heapchk** ayuda a depurar los problemas relacionados con el montón comprobando la coherencia mínima del montón. Si el sistema operativo no admite **_heapchk**(por ejemplo, Windows 98), la función devuelve **_HEAPOK** y establece **errno** en **ENOSYS**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -70,7 +74,7 @@ La función **_heapchk** ayuda a depurar los problemas relacionados con el mont�
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -115,7 +119,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asignación de memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>

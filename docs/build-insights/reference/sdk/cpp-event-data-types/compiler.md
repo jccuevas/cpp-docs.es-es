@@ -1,6 +1,6 @@
 ---
 title: Clase de compilador
-description: Referencia C++ de la clase del compilador del SDK de Build Insights.
+description: La referencia de clase del compilador del SDK de C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a63a0bad1ab6063d5986fec77b5135f500ded1ce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 9b0a2622c4bc0bc19d7222977fe24c060ee8709e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334947"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325025"
 ---
 # <a name="compiler-class"></a>Clase de compilador
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La clase `Compiler` se usa con las funciones [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)y [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Úselo para que coincida con un evento [del compilador](../event-table.md#compiler) .
+La `Compiler` clase se utiliza con las funciones [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)y [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilícelo para que coincida con un evento [COMPILER.](../event-table.md#compiler)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Miembros
 
-Junto con los miembros heredados de la clase base de [invocación](invocation.md) , la clase `Compiler` contiene los siguientes miembros:
+Junto con los miembros heredados de `Compiler` su clase base [Invocation,](invocation.md) la clase contiene los siguientes miembros:
 
 ### <a name="constructors"></a>Constructores
 
-[Compilación](#compiler)
+[Compilador](#compiler)
 
-## <a name="compiler"></a>Compilación
+## <a name="compiler"></a><a name="compiler"></a>Compilador
 
 ```cpp
 Compiler(const RawEvent& event);
@@ -53,7 +53,7 @@ Compiler(const RawEvent& event);
 
 ### <a name="parameters"></a>Parámetros
 
-*event*\
-Un evento [del compilador](../event-table.md#compiler) .
+*Evento*\
+Un evento [COMPILER.](../event-table.md#compiler)
 
 ::: moniker-end

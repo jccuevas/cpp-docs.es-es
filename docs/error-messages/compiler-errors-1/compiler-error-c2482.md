@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-ms.openlocfilehash: 481920fa2d8c32bc872e7b8805188cc674e6fe28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afa81369b2cf329baae02bc1309587015946409
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375059"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205158"
 ---
 # <a name="compiler-error-c2482"></a>Error del compilador C2482
 
->'*identificador*': inicialización dinámica de datos 'thread' no se permite en código administrado o WinRT
+>'*Identifier*': no se permite la inicialización dinámica de datos ' Thread ' en código administrado o WinRT
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-En administrados o WinRT de código, las variables declaradas con el [__declspec (Thread)](../../cpp/thread.md) atributos de modificador de clase de almacenamiento o la [thread_local](../../cpp/storage-classes-cpp.md#thread_local) especificador de clase de almacenamiento no se puede inicializar con una expresión que requiere la evaluación en tiempo de ejecución. Se requiere una expresión estática para inicializar `__declspec(thread)` o `thread_local` datos en estos entornos en tiempo de ejecución.
+En código administrado o WinRT, las variables declaradas mediante el atributo modificador de clase de almacenamiento [__declspec (Thread)](../../cpp/thread.md) o el especificador de clase de almacenamiento [thread_local](../../cpp/storage-classes-cpp.md#thread_local) no se pueden inicializar con una expresión que requiera evaluación en tiempo de ejecución. Se requiere una expresión estática para inicializar `__declspec(thread)` o `thread_local` datos en estos entornos en tiempo de ejecución.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2482 en administrado (**/CLR**) y, en WinRT (**/ZW**) código:
+En el ejemplo siguiente se genera C2482 en el código administrado ( **/CLR**) y en WinRT ( **/ZW**):
 
 ```cpp
 // C2482.cpp
@@ -36,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-Para corregir este problema, inicialice el almacenamiento local de subprocesos mediante el uso de una constante, **constexpr**, o una expresión estática. Realizar cualquier inicialización específica de subprocesos por separado.
+Para corregir este problema, inicialice el almacenamiento local de subprocesos mediante una constante, **constexpr**o una expresión estática. Realice cualquier inicialización específica del subproceso por separado.

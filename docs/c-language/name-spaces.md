@@ -11,11 +11,11 @@ helpviewer_keywords:
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
 ms.openlocfilehash: 76ad9b797a4f192e8f22f8c040f5a308371a461b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325772"
 ---
 # <a name="name-spaces"></a>Espacios de nombres
 
@@ -30,7 +30,7 @@ Etiquetas de instrucción: las etiquetas de instrucción con nombre forman parte
 
 Etiquetas de estructura, unión y enumeración: estas etiquetas forman parte de los especificadores de tipo de estructura, unión y enumeración y, si están presentes, siempre siguen inmediatamente a las palabras reservadas **struct**, **union**, o **enum**. Los nombres de etiqueta deben ser distintos del resto de las etiquetas de estructura, enumeración o unión con la misma visibilidad.
 
-Miembros de estructuras o uniones: los nombres de miembro se asignan en espacios de nombres asociados a cada tipo de estructura y unión. Es decir, el mismo identificador puede ser un nombre de componente en cualquier número de estructuras o de uniones al mismo tiempo. Las definiciones de nombres de componentes siempre aparecen dentro de especificadores de estructura o tipo de unión. Los usos de nombres de componente siempre siguen inmediatamente a los operadores de selección de miembros (**->** y **.**). El nombre de un miembro debe ser único dentro de la estructura o unión, pero no tiene que ser distinto de otros nombres del programa, incluidos los nombres de los miembros de diferentes estructuras y uniones o el nombre de la propia estructura.
+Miembros de estructuras o uniones: los nombres de miembro se asignan en espacios de nombres asociados a cada tipo de estructura y unión. Es decir, el mismo identificador puede ser un nombre de componente en cualquier número de estructuras o de uniones al mismo tiempo. Las definiciones de nombres de componentes siempre aparecen dentro de especificadores de estructura o tipo de unión. Los usos de nombres de componente siempre siguen inmediatamente a los operadores de selección de miembros ( **->** y **.** ). El nombre de un miembro debe ser único dentro de la estructura o unión, pero no tiene que ser distinto de otros nombres del programa, incluidos los nombres de los miembros de diferentes estructuras y uniones o el nombre de la propia estructura.
 
 Identificadores normales: el resto de los nombres pertenecen a un espacio de nombres que incluye variables, funciones (incluyendo parámetros formales y variables locales) y constantes de enumeración. Los nombres de identificador tienen visibilidad anidada, por lo que puede volver a definirlos dentro de bloques.
 
@@ -46,7 +46,7 @@ struct student {
    } student;
 ```
 
-Cuando `student` aparece después de la palabra clave **struct**, el compilador la reconoce como una etiqueta de estructura. Cuando `student` aparece después de un operador de selección de miembros (**->** o **.**), el nombre hace referencia al miembro de estructura. En otros contextos, `student` hace referencia a la variable de estructura. Sin embargo, no se recomienda sobrecargar el espacio de nombres de etiqueta porque se oculta el significado.
+Cuando `student` aparece después de la palabra clave **struct**, el compilador la reconoce como una etiqueta de estructura. Cuando `student` aparece después de un operador de selección de miembros ( **->** o **.** ), el nombre hace referencia al miembro de estructura. En otros contextos, `student` hace referencia a la variable de estructura. Sin embargo, no se recomienda sobrecargar el espacio de nombres de etiqueta porque se oculta el significado.
 
 ## <a name="see-also"></a>Vea también
 

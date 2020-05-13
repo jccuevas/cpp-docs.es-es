@@ -1,111 +1,111 @@
 ---
-title: 'Windows Sockets: Byte Ordering'
+title: 'Windows Sockets: Orden de bytes'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - byte order issues in sockets programming
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50548202483c4d9d4471ad2c600270c4df4503e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217576"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371057"
 ---
-# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Byte Ordering
+# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Orden de bytes
 
-En este artículo y dos artículos complementarios explican varios problemas en la programación de Windows Sockets. Este artículo describe el orden de bytes. Los otros temas se tratan en los artículos: [Windows Sockets: Bloqueo](../mfc/windows-sockets-blocking.md) y [Windows Sockets: Convertir cadenas](../mfc/windows-sockets-converting-strings.md).
+Este artículo y dos artículos complementarios explican varios problemas en la programación de Windows Sockets. En este artículo se trata el orden de bytes. Los otros problemas se tratan en los artículos: [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md) y [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).
 
-Si usa o derivar de la clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md), tendrá que administrar estos problemas por su cuenta. Si usa o derivar de la clase [CSocket](../mfc/reference/csocket-class.md), MFC administra automáticamente.
+Si usa o deriva de la clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md), deberá administrar estos problemas usted mismo. Si utiliza o deriva de la clase [CSocket](../mfc/reference/csocket-class.md), MFC los administra por usted.
 
-## <a name="byte-ordering"></a>Byte Ordering
+## <a name="byte-ordering"></a>ordenación de bytes
 
-Las arquitecturas de diferentes máquinas a veces, almacenan de datos mediante órdenes de bytes diferentes. Por ejemplo, las máquinas de basados en Intel almacenan datos en orden inverso de las máquinas de Macintosh (Motorola). El orden de bytes de Intel, denominado "little-Endian," también es el inverso del orden estándar de red de "big Endian". La siguiente tabla explica estos términos.
+Diferentes arquitecturas de máquina a veces almacenan datos utilizando diferentes órdenes de bytes. Por ejemplo, las máquinas basadas en Intel almacenan datos en el orden inverso de las máquinas Macintosh (Motorola). El orden de bytes de Intel, llamado "little-Endian", es también el reverso del orden "big-Endian" estándar de red. En la tabla siguiente se explican estos términos.
 
-### <a name="big--and-little-endian-byte-ordering"></a>Orden de bytes big y Little-Endian
+### <a name="big--and-little-endian-byte-ordering"></a>Orden de bytes grandes y pequeños endian
 
-|Orden de bytes|Significado|
+|Ordenación de bytes|Significado|
 |-------------------|-------------|
-|Big-Endian|Es el byte más significativo en el extremo izquierdo de una palabra.|
-|Little-Endian|Es el byte más significativo en el extremo derecho de una palabra.|
+|Big-Endian|El byte más significativo está en el extremo izquierdo de una palabra.|
+|Little-Endian|El byte más significativo está en el extremo derecho de una palabra.|
 
-Normalmente, no tiene que preocuparse acerca de la conversión de orden de bytes de datos que envían y reciben a través de la red, pero hay situaciones en que debe convertir las ordenaciones de bytes.
+Normalmente, no tiene que preocuparse por la conversión de orden de bytes para los datos que envía y recibe a través de la red, pero hay situaciones en las que debe convertir pedidos de bytes.
 
-## <a name="when-you-must-convert-byte-orders"></a>Cuándo debe convertir las órdenes de bytes
+## <a name="when-you-must-convert-byte-orders"></a>When You Must Convert Byte Orders
 
-Deberá convertir las ordenaciones de bytes en las situaciones siguientes:
+Debe convertir órdenes de bytes en las siguientes situaciones:
 
-- Se pasa la información que necesita para interpretar la red, a diferencia de los datos que se va a enviar a otra máquina. Por ejemplo, podría pasar los puertos y direcciones, que debe entender la red.
+- Está pasando información que necesita ser interpretada por la red, a diferencia de los datos que está enviando a otra máquina. Por ejemplo, puede pasar puertos y direcciones, que la red debe comprender.
 
-- La aplicación de servidor con el que se está comunicando no es una aplicación MFC (y no tiene código fuente para él). Esto se llama para las conversiones de orden de bytes si las dos máquinas no comparten el mismo orden de bytes.
+- La aplicación de servidor con la que se está comunicando no es una aplicación MFC (y no tiene código fuente para ella). Esto requiere conversiones de orden de bytes si las dos máquinas no comparten el mismo orden de bytes.
 
-## <a name="when-you-do-not-have-to-convert-byte-orders"></a>Cuando no tiene que convertir el orden de bytes little
+## <a name="when-you-do-not-have-to-convert-byte-orders"></a>Cuando no tiene que convertir órdenes de bytes
 
-Puede evitar el trabajo de conversión de ordenación de bytes en las situaciones siguientes:
+Puede evitar el trabajo de convertir órdenes de bytes en las siguientes situaciones:
 
-- Las máquinas en ambos extremos pueden aceptar la no intercambiar bytes y ambos equipos utilizan el mismo orden de bytes.
+- Las máquinas en ambos extremos pueden acordar no intercambiar bytes y ambas máquinas usan el mismo orden de bytes.
 
-- El servidor con que se comunican es una aplicación MFC.
+- El servidor con el que se está comunicando es una aplicación MFC.
 
-- Tiene código fuente para el servidor que se está comunicando con, por lo que puede indicar explícitamente si debe convertir las órdenes de bytes o no.
+- Tiene código fuente para el servidor con el que se está comunicando, por lo que puede saber explícitamente si debe convertir órdenes de bytes o no.
 
-- Puede trasladar el servidor a MFC. Esto es bastante fácil de hacer, y el resultado suele ser código más rápido y más pequeños.
+- Puede migrar el servidor a MFC. Esto es bastante fácil de hacer, y el resultado suele ser un código más pequeño y más rápido.
 
-Trabajar con [CAsyncSocket](../mfc/reference/casyncsocket-class.md), debe administrar las conversiones necesarias de orden de bytes. Windows Sockets normaliza el modelo de orden de bytes "big Endian" y proporciona funciones para convertir entre este orden y otros. [CArchive](../mfc/reference/carchive-class.md), sin embargo, que se usa con [CSocket](../mfc/reference/csocket-class.md), utiliza el orden contrario ("little-Endian"), pero `CArchive` se encarga de los detalles de las conversiones de orden de bytes. Mediante esta ordenación estándar en sus aplicaciones, o mediante funciones de conversión de Windows Sockets: orden de bytes, puede hacer que su código más portable.
+Al trabajar con [CAsyncSocket](../mfc/reference/casyncsocket-class.md), debe administrar las conversiones de orden de bytes necesarias usted mismo. Windows Sockets estandariza el modelo de orden de bytes "big-Endian" y proporciona funciones para convertir entre este orden y otros. [CArchive](../mfc/reference/carchive-class.md), sin embargo, que se utiliza con [CSocket](../mfc/reference/csocket-class.md), `CArchive` utiliza el orden opuesto ("little-Endian"), pero se encarga de los detalles de las conversiones de orden de bytes para usted. Mediante este orden estándar en las aplicaciones o mediante las funciones de conversión de orden de bytes de Windows Sockets, puede hacer que el código sea más portátil.
 
-El caso ideal para utilizar sockets de MFC es cuando se escribe en ambos extremos de la comunicación y se usa MFC en ambos extremos. Si está escribiendo una aplicación que se comunican con las aplicaciones no basados en MFC, como un servidor FTP, probablemente necesitará administrar el intercambio de bytes antes de pasar datos al objeto de archivo, utilizando las rutinas de conversión de Windows Sockets **ntohs**, **ntohl**, **htons**, y **htonl**. Un ejemplo de estas funciones que se usa para establecer comunicación con una aplicación MFC no aparece más adelante en este artículo.
+El caso ideal para utilizar sockets de MFC es cuando se escribe en ambos extremos de la comunicación y se usa MFC en ambos extremos. Si está escribiendo una aplicación que se comunicará con aplicaciones que no son MFC, como un servidor FTP, probablemente tendrá que administrar el intercambio de bytes antes de pasar datos al objeto de archivado, utilizando las rutinas de conversión de Windows Sockets **ntohs**, **ntohl**, **htons**y **htonl**. Un ejemplo de estas funciones utilizadas en la comunicación con una aplicación que no es MFC aparece más adelante en este artículo.
 
 > [!NOTE]
->  Cuando el otro extremo de la comunicación no es una aplicación MFC, también se debe evitar los objetos de C++ que se deriva de transmisión por secuencias `CObject` en el archivo porque el receptor no podrá controlarlos. Vea la nota de [Windows Sockets: Usar Sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md).
+> Cuando el otro extremo de la comunicación no es una aplicación MFC, `CObject` también debe evitar la transmisión por secuencias de objetos C++ derivados del archivo porque el receptor no podrá controlarlos. Consulte la nota en [Windows Sockets: Uso](../mfc/windows-sockets-using-sockets-with-archives.md)de sockets con archivos .
 
-Para obtener más información acerca de los pedidos de bytes, vea la especificación de Windows Sockets, disponible en el SDK de Windows.
+Para obtener más información acerca de los pedidos de bytes, vea la especificación de Windows Sockets, disponible en el Windows SDK.
 
 ## <a name="a-byte-order-conversion-example"></a>Un ejemplo de conversión de orden de bytes
 
-El ejemplo siguiente muestra una función de serialización para un `CSocket` objeto que usa un archivo. También muestra el uso de las funciones de conversión de orden de bytes de la API de Windows Sockets.
+En el ejemplo siguiente se `CSocket` muestra una función de serialización para un objeto que utiliza un archivo. También ilustra el uso de las funciones de conversión de orden de bytes en la API de Windows Sockets.
 
-En este ejemplo se presenta un escenario en el que está escribiendo a un cliente que se comunica con una aplicación de servidor no basados en MFC para que no tiene acceso al código fuente. En este escenario, se debe suponer que el servidor de no MFC utiliza el orden de bytes de red estándar. En cambio, la aplicación de cliente MFC usa una `CArchive` objeto con un `CSocket` objeto, y `CArchive` utiliza el orden de bytes "little-Endian", lo opuesto de la red estándar.
+En este ejemplo se presenta un escenario en el que se escribe un cliente que se comunica con una aplicación de servidor que no es MFC para la que no tiene acceso al código fuente. En este escenario, debe suponer que el servidor que no es MFC utiliza el orden de bytes de red estándar. En cambio, la aplicación `CArchive` cliente MFC `CSocket` utiliza `CArchive` un objeto con un objeto y usa el orden de bytes "little-Endian", lo contrario que el estándar de red.
 
-Supongamos que el servidor no basados en MFC con la que va a comunicar tiene un protocolo establecido para el paquete de un mensaje similar al siguiente:
+Supongamos que el servidor que no es MFC con el que va a comunicarse tiene un protocolo establecido para un paquete de mensajes como el siguiente:
 
 [!code-cpp[NVC_MFCSimpleSocket#5](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_1.cpp)]
 
-En términos MFC, esto se expresaría como sigue:
+En términos MFC, esto se expresaría de la siguiente manera:
 
 [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]
 
-En C++, un **struct** es básicamente lo mismo que una clase. El `Message` estructura puede tener funciones miembro, como la `Serialize` función miembro declarado anteriormente. El `Serialize` función miembro podría tener este aspecto:
+En C++, una **estructura** es esencialmente lo mismo que una clase. La `Message` estructura puede tener funciones `Serialize` miembro, como la función miembro declarada anteriormente. La `Serialize` función miembro podría tener este aspecto:
 
 [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]
 
-Este ejemplo se llama para las conversiones de orden de bytes de datos porque hay una correspondencia clara entre el orden de bytes de la aplicación de servidor no basados en MFC en un extremo y la `CArchive` utilizados en la aplicación de cliente MFC en el otro extremo. El ejemplo ilustra algunas de las funciones de conversión de orden de bytes que proporciona Windows Sockets. En la tabla siguiente se describe estas funciones.
+En este ejemplo se llama a las conversiones de orden de bytes de datos porque hay una `CArchive` clara discordancia entre el orden de bytes de la aplicación de servidor que no es MFC en un extremo y el utilizado en la aplicación cliente MFC en el otro extremo. En el ejemplo se muestran varias de las funciones de conversión de orden de bytes que proporciona Windows Sockets. En la tabla siguiente se describen estas funciones.
 
 ### <a name="windows-sockets-byte-order-conversion-functions"></a>Funciones de conversión de orden de bytes de Windows Sockets
 
-|Función|Finalidad|
+|Función|Propósito|
 |--------------|-------------|
-|**ntohs**|Convierte una cantidad de 16 bits de orden de bytes de red al orden de bytes del host (de big-Endian a little-Endian).|
-|**ntohl**|Convierte una cantidad de 32 bits de orden de bytes de red al orden de bytes del host (de big-Endian a little-Endian).|
-|**Htons**|Convierte una cantidad de 16 bits de orden de bytes del host al orden de bytes de red (de little-Endian a big-Endian).|
-|**Htonl**|Convierte una cantidad de 32 bits de orden de bytes del host al orden de bytes de red (de little-Endian a big-Endian).|
+|**ntohs**|Convierta una cantidad de 16 bits del orden de bytes de red en orden de bytes de host (big-Endian a little-Endian).|
+|**ntohl**|Convierta una cantidad de 32 bits del orden de bytes de red en orden de bytes de host (big-Endian a little-Endian).|
+|**Htons**|Convierta una cantidad de 16 bits del orden de bytes del host al orden de bytes de red (little-Endian a big-Endian).|
+|**Htonl**|Convierta una cantidad de 32 bits del orden de bytes del host al orden de bytes de red (little-Endian a big-Endian).|
 
-Otro aspecto de este ejemplo es que cuando la aplicación de socket en el otro extremo de la comunicación es una aplicación no basados en MFC, debe evitar hacer algo parecido a lo siguiente:
+Otro punto de este ejemplo es que cuando la aplicación de socket en el otro extremo de la comunicación es una aplicación que no es MFC, debe evitar hacer algo como lo siguiente:
 
 `ar << pMsg;`
 
-donde `pMsg` es un puntero a un objeto de C++ derivado de la clase `CObject`. Esto enviará información de MFC adicional asociada a objetos y el servidor no comprenderá, como lo haría si se tratara de una aplicación MFC.
+donde `pMsg` es un puntero a un objeto `CObject`C++ derivado de la clase . Esto enviará información adicional de MFC asociada a objetos y el servidor no lo entenderá, como lo haría si fuera una aplicación MFC.
 
-Para obtener más información, consulte:
+Para más información, consulte:
 
-- [Windows Sockets: usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: fondo](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Nociones](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: sockets de secuencias](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Sockets de secuencias](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sockets de datagramas](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)

@@ -1,10 +1,13 @@
 ---
 title: log1p, log1pf, log1pl2
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log1p
 - log1pf
 - log1pl
+- _o_log1p
+- _o_log1pf
+- _o_log1pl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953215"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911427"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -82,8 +86,8 @@ De lo contrario, es posible que devuelva uno de los siguientes valores:
 |Entrada|Resultado|Excepción SEH|errno|
 |-----------|------------|-------------------|-----------|
 |+inf|+inf|||
-|Desnormalizados|Igual que la entrada|UNDERFLOW||
-|±0|Igual que la entrada|||
+|Desnormalizados|Igual que la entrada|DESBORDAMIENTO||
+|± 0|Igual que la entrada|||
 |-1|-inf|DIVBYZERO|ERANGE|
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
@@ -92,23 +96,25 @@ De lo contrario, es posible que devuelva uno de los siguientes valores:
 
 El valor **errno** se establece en ERANGE si *x* =-1. El valor **errno** se establece en **EDOM** si *x* <-1.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las funciones **log1p (** pueden ser más precisas que `log(x + 1)` cuando *x* está cerca de 0.
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **log1p (** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **log1p (** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **log1p (** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **log1p (** siempre toma y devuelve un **valor Double**.
 
 Si *x* es un número natural, esta función devuelve el logaritmo del factorial de (*x* -1).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
+|**log1p (**, **log1pf (**, **log1pl**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>

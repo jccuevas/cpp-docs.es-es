@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4581
+title: Advertencia del compilador (nivel 1) C4581
 ms.date: 11/04/2016
 f1_keywords:
 - C4581
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 5931516e3f4eba91c3b7a3ab4d0ca4979ce1ed84
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 491121bc236c54ce5b74c76abfa6a650ff7a99ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965925"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162171"
 ---
-# <a name="compiler-warning-level-1-c4581"></a>ADVERTENCIA del compilador (nivel 1) C4581
+# <a name="compiler-warning-level-1-c4581"></a>Advertencia del compilador (nivel 1) C4581
 
 comportamiento en desuso: ' "string1" ' se ha reemplazado por ' cadena2 ' para procesar el atributo
 

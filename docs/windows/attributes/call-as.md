@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501805"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167344"
 ---
 # <a name="call_as"></a>call_as
 
@@ -28,13 +28,13 @@ Habilita una función [local](local-cpp.md) que se va a asignar a una función r
 *function*<br/>
 Función local a la que se va a llamar cuando se invoque una función remota.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **call_as** C++ tiene la misma funcionalidad que el atributo MIDL [call_as](/windows/win32/Midl/call-as) .
 
 ## <a name="example"></a>Ejemplo
 
-En el código siguiente se muestra cómo se puede usar **call_as** para asignar una función`f1`no utilizables () a una función`Remf1`de uso remoto ():
+En el código siguiente se muestra cómo puede usar **call_as** para asignar una función no utilizables (`f1`) a una función de uso remoto (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -55,13 +55,13 @@ __interface IMInterface {
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

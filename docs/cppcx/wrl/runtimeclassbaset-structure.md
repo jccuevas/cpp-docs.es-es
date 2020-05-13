@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-ms.openlocfilehash: 5d93b3e86e7ba105a42ccbedbbf44c51ada97bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a9f73e00d541b0e5bcbe20c57befe4a67c5132
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375720"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT (Estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,20 +32,20 @@ friend struct Details::RuntimeClassBaseT;
 ### <a name="parameters"></a>Parámetros
 
 *RuntimeClassTypeT*<br/>
-Un campo de marcas que especifica uno o más [RuntimeClassType](runtimeclasstype-enumeration.md) enumeradores.
+Campo de indicadores que especifica uno o varios enumeradores [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Proporciona métodos auxiliares para `QueryInterface` operaciones y obtener los identificadores de interfaz.
+Proporciona métodos `QueryInterface` auxiliares para las operaciones y la obtención de iDs de interfaz.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-Name                                                         | Descripción
+Nombre                                                         | Descripción
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
 [RuntimeClassBaseT::AsIID](#asiid)                           | Recupera un puntero al identificador de interfaz especificado.
-[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | Recupera una matriz de identificadores que se implementan mediante un tipo especificado de interfaz.
+[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | Recupera una matriz de iDs de interfaz que se implementan mediante un tipo especificado.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -55,11 +55,11 @@ Name                                                         | Descripción
 
 **Encabezado:** implements.h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft::WRL::Details
 
-## <a name="asiid"></a>RuntimeClassBaseT::AsIID
+## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a>RuntimeClassBaseT::AsIID
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 template<typename T>
@@ -73,28 +73,28 @@ __forceinline static HRESULT AsIID(
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-Un tipo que implementa el identificador de interfaz especificado por el parámetro *riid*.
+Tipo que implementa el identificador de interfaz especificado por el parámetro *riid*.
 
-*implements*<br/>
-Una variable del tipo especificado por el parámetro de plantilla *T*.
+*implementa*<br/>
+Variable del tipo especificado por el parámetro de plantilla *T*.
 
 *riid*<br/>
-Para recuperar el identificador de interfaz.
+El ID de interfaz que se va a recuperar.
 
 *ppvObject*<br/>
-Si esta operación se realiza correctamente, un puntero a una de puntero a la interfaz especificada por el parámetro *riid*.
+Si esta operación se realiza correctamente, un puntero a un puntero a la interfaz especificada por el parámetro *riid*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que describe el error.
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Recupera un puntero al identificador de interfaz especificado.
 
-## <a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementedIIDS
+## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementedIIDS
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 template<typename T>
@@ -108,21 +108,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-El tipo de la *implementa* parámetro.
+El tipo del parámetro *implements.*
 
-*implements*<br/>
+*implementa*<br/>
 Puntero al tipo especificado por el parámetro *T*.
 
 *iidCount*<br/>
-El número máximo de identificadores de interfaz para recuperar.
+El número máximo de interfaces que se van a recuperar.
 
 *iids*<br/>
-Si esta operación completa correctamente, una matriz de la interfaz implementadas por el tipo de identificadores *T*.
+Si esta operación se completa correctamente, una matriz de los iD de interfaz implementada por el tipo *T*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que describe el error.
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Recupera una matriz de identificadores que se implementan mediante un tipo especificado de interfaz.
+Recupera una matriz de iDs de interfaz que se implementan mediante un tipo especificado.

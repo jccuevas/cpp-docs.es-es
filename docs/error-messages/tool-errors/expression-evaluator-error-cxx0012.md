@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0012
 - CAN0012
 ms.assetid: bf547e21-6708-4854-ad23-2ae5a889fd82
-ms.openlocfilehash: 400c4e219ba7c6699b3b531ad93909d0db682c64
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d8de83673c892146cb6d9e2c26e0ca9a4fadd62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397190"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196136"
 ---
 # <a name="expression-evaluator-error-cxx0012"></a>Error del evaluador de expresiones CXX0012
 
-Falta la llave de apertura
+falta llave izquierda
 
-La expresión contiene una llave no. Vuelva a escribir la expresión con llaves coincidentes.
+La expresión contiene una llave desequilibrada. Vuelva a escribir la expresión con llaves equilibradas.
 
 Este error es idéntico a CAN0012.

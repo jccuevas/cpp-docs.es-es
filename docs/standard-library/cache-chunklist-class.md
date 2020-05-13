@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688364"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366757"
 ---
 # <a name="cache_chunklist-class"></a>cache_chunklist (Clase)
 
@@ -32,13 +32,13 @@ class cache_chunklist
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*SZ*|El número de elementos de la matriz que se van a asignar.|
+|*Sz*|El número de elementos de la matriz que se van a asignar.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta plantilla de clase usa el **operador New** para asignar fragmentos de memoria sin formato, bloques de subasignación para asignar almacenamiento para un bloque de memoria cuando sea necesario. almacena los bloques de memoria desasignados en una lista libre independiente para cada fragmento y usa el **operador Delete** para desasignar un fragmento cuando no se usa ninguno de los bloques de memoria.
+Esta plantilla de clase utiliza **el operador new** para asignar fragmentos de memoria sin procesar, subasignando bloques para asignar almacenamiento para un bloque de memoria cuando sea necesario; almacena bloques de memoria desasignados en una lista libre independiente para cada fragmento y utiliza **operator delete** para desasignar un fragmento cuando ninguno de sus bloques de memoria está en uso.
 
-Cada bloque de memoria contiene *SZ* bytes de memoria utilizable y un puntero al fragmento al que pertenece. Cada fragmento contiene `Nelts` bloques de memoria, tres punteros, un valor int y los datos que el **operador New** y el **operador Delete** requieren.
+Cada bloque de memoria contiene *sz* bytes de memoria utilizable y un puntero al fragmento al que pertenece. Cada fragmento `Nelts` contiene bloques de memoria, tres punteros, un int y los datos que requieren **el operador new** y el operador **delete.**
 
 ### <a name="constructors"></a>Constructores
 
@@ -48,9 +48,9 @@ Cada bloque de memoria contiene *SZ* bytes de memoria utilizable y un puntero al
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
-|[allocate](#allocate)|Asigna un bloque de memoria.|
+|[Asignar](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
 
 ## <a name="requirements"></a>Requisitos
@@ -59,7 +59,7 @@ Cada bloque de memoria contiene *SZ* bytes de memoria utilizable y un puntero al
 
 **Espacio de nombres:** stdext
 
-## <a name="allocate"></a>  cache_chunklist::allocate
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist::asignar
 
 Asigna un bloque de memoria.
 
@@ -77,9 +77,9 @@ void *allocate(std::size_t count);
 
 Un puntero al objeto asignado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
 
 Construye un objeto de tipo `cache_chunklist`.
 
@@ -87,9 +87,9 @@ Construye un objeto de tipo `cache_chunklist`.
 cache_chunklist();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="deallocate"></a>  cache_chunklist::deallocate
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::deallocate
 
 Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*Ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<asignadores>](../standard-library/allocators-header.md)

@@ -1,10 +1,11 @@
 ---
 title: asin, asinf, asinl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinf
 - asinl
 - asin
+- _o_asin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943649"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909267"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -69,25 +71,27 @@ De forma predeterminada, si *x* es menor que-1 o mayor que 1, **Asin** devuelve 
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**INVALID**|**_DOMAIN**|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
-|&#124;x&#124;>1|**INVALID**|**_DOMAIN**|
+|± ∞|**No válido**|**_DOMAIN**|
+|± **QNAN**, **IND**|ninguno|**_DOMAIN**|
+|&#124;x&#124;>1|**No válido**|**_DOMAIN**|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Asin** con valores **float** y **Long** **Double** . En un programa de C, **Asin** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **Asin** con valores **float** y **Long** **Double** . En un programa de C, **Asin** siempre toma y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------|-|
-|**asin**, **asinf**, **asinl**|\<math.h>|\<cmath> o \<math.h>|
+|**Asin**, **asinf (**, **asinl**|\<math.h>|\<cmath> o \<math.h>|
 
 ## <a name="example"></a>Ejemplo
 
 Para obtener más información, consulte [acos, acosf, acosl](acos-acosf-acosl.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

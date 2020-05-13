@@ -4,35 +4,35 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: ad880c5302fd2274c5d46719e912461fd7497f10
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fa1fe8826543834872de5257a0f5d56b2ad9fc1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426520"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752673"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formato y presentación del cuadro de mensaje CString
 
-Se proporcionan varias funciones para dar formato y analizar `CString` objetos. Puede usar estas funciones siempre que tenga que manipular `CString` objetos, pero resultan especialmente útiles para dar formato a las cadenas que aparecerán en el texto del cuadro de mensaje.
+Se proporcionan varias funciones para `CString` dar formato y analizar objetos. Puede utilizar estas funciones siempre `CString` que tenga que manipular objetos, pero son especialmente útiles para dar formato a las cadenas que aparecerán en el texto del cuadro de mensaje.
 
 Este grupo de funciones también incluye una rutina global para mostrar un cuadro de mensaje.
 
-### <a name="cstring-functions"></a>Funciones de CString
+### <a name="cstring-functions"></a>Funciones CString
 
 |||
 |-|-|
-|[AfxExtractSubString](#afxextractsubstring)|Extrae las subcadenas separadas por un único carácter de una cadena de origen determinada.|
-|[AfxFormatString1](#afxformatstring1)|Sustituye una cadena determinada por los caracteres de formato "%1" en una cadena incluida en la tabla de cadenas.|
-|[AfxFormatString2](#afxformatstring2)|Sustituye dos cadenas para los caracteres de formato "%1" y "%2" en una cadena incluida en la tabla de cadenas.|
+|[AfxExtractSubString](#afxextractsubstring)|Extrae subcadenas separadas por un solo carácter de una cadena de origen determinada.|
+|[AfxFormatString1](#afxformatstring1)|Sustituye una cadena determinada por los caracteres de formato "%1" en una cadena contenida en la tabla de cadenas.|
+|[AfxFormatString2](#afxformatstring2)|Sustituye dos cadenas por los caracteres de formato "%1" y "%2" en una cadena contenida en la tabla de cadenas.|
 |[AfxMessageBox](#afxmessagebox)|Muestra un cuadro de mensaje.|
 
 ### <a name="requirements"></a>Requisitos
 
-  **Encabezado** AFXWIN. h
+  **Encabezado** afxwin.h
 
-##  <a name="afxextractsubstring"></a>AfxExtractSubString
+## <a name="afxextractsubstring"></a><a name="afxextractsubstring"></a>AfxExtractSubString
 
-Esta función global se puede usar para extraer una subcadena de una cadena de origen determinada.
+Esta función global se puede utilizar para extraer una subcadena de una cadena de origen determinada.
 
 ```
 BOOL AFXAPI AfxExtractSubString (
@@ -45,26 +45,26 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="parameters"></a>Parámetros
 
 *rString*<br/>
-Referencia a un objeto [CString](../../atl-mfc-shared/using-cstring.md) que recibirá una subcadena individual.
+Referencia a un [CString](../../atl-mfc-shared/using-cstring.md) objeto que recibirá una subcadena individual.
 
 *lpszFullString*<br/>
 Cadena que contiene el texto completo de la cadena de la que se va a extraer.
 
 *iSubString*<br/>
-Índice de base cero de la subcadena que se va a extraer de *lpszFullString*.
+El índice de base cero de la subcadena que se va a extraer de *lpszFullString*.
 
 *chSep*<br/>
-Carácter separador utilizado para delimitar las subcadenas.
+Carácter separador utilizado para delimitar subcadenas.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la función extrajo correctamente la subcadena en el índice proporcionado; en caso contrario, FALSE.
+TRUESi la función extrajo correctamente la subcadena en el índice proporcionado; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Esta función es útil para extraer varias subcadenas de una cadena de origen cuando un carácter individual conocido separa cada subcadena. Esta función realiza una búsqueda desde el principio del parámetro *lpszFullString* cada vez que se llama.
+Esta función es útil para extraer varias subcadenas de una cadena de origen cuando un carácter único conocido separa cada subcadena. Esta función busca desde el principio del parámetro *lpszFullString* cada vez que se llama.
 
-Esta función devolverá FALSE si *lpszFullString* está establecido en null o la función alcanza el final de *LpszFullString* sin encontrar *iSubString*+ 1 repeticiones del carácter separador especificado. El parámetro *rString* no se modificará de su valor original si *lpszFullString* se estableció en null; de lo contrario, el parámetro *rString* se establece en la cadena vacía si no se pudo extraer la subcadena para el índice especificado.
+Esta función devolverá FALSE si *lpszFullString* se establece en NULL o la función alcanza el final de *lpszFullString* sin encontrar *iSubString*+1 apariciones del carácter separador especificado. El parámetro *rString* no se modificará desde su valor original si *lpszFullString* se estableció en NULL; de lo contrario, el parámetro *rString* se establece en la cadena vacía si no se pudo extraer la subcadena para el índice especificado.
 
 ### <a name="example"></a>Ejemplo
 
@@ -72,13 +72,13 @@ Esta función devolverá FALSE si *lpszFullString* está establecido en null o l
 
 ### <a name="requirements"></a>Requisitos
 
-  **Encabezado** AFXWIN. h
+  **Encabezado** afxwin.h
 
-##  <a name="afxformatstring1"></a>AfxFormatString1
+## <a name="afxformatstring1"></a><a name="afxformatstring1"></a>AfxFormatString1
 
-Sustituye la cadena a la que señala *lpsz1* por cualquier instancia de los caracteres "%1" en el recurso de cadena de plantilla identificado por *nIDS*.
+Sustituye la cadena a la que apunta *lpsz1* por cualquier instancia de los caracteres "%1" en el recurso de cadena de plantilla identificado por *nIDS*.
 
-```
+```cpp
 void  AfxFormatString1(
     CString& rString,
     UINT nIDS,
@@ -88,17 +88,17 @@ void  AfxFormatString1(
 ### <a name="parameters"></a>Parámetros
 
 *rString*<br/>
-Referencia a un objeto `CString` que contendrá la cadena resultante una vez realizada la sustitución.
+Una referencia `CString` a un objeto que contendrá la cadena resultante después de realizar la sustitución.
 
-*nIDS*<br/>
+*Nids*<br/>
 El identificador de recurso de la cadena de plantilla en la que se realizará la sustitución.
 
 *lpsz1*<br/>
-Cadena que reemplazará los caracteres de formato "%1" en la cadena de la plantilla.
+Cadena que reemplazará los caracteres de formato "%1" en la cadena de plantilla.
 
 ### <a name="remarks"></a>Observaciones
 
-La cadena recién formada se almacena en *rString*. Por ejemplo, si la cadena de la tabla de cadenas es "File %1 not found", y *lpsz1* es igual a "C:\MYFILE. TXT ", *rString* contendrá la cadena" File C:\MYFILE. TXT no encontrado ". Esta función es útil para dar formato a las cadenas enviadas a los cuadros de mensaje y a otras ventanas.
+La cadena recién formada se almacena en *rString*. Por ejemplo, si la cadena de la tabla de cadenas es "Archivo %1 no encontrado" y *lpsz1* es igual a "C:-MYFILE. TXT", a continuación, *rString* contendrá la cadena "Archivo C:-MYFILE. TXT no encontrado". Esta función es útil para dar formato a cadenas enviadas a cuadros de mensaje y otras ventanas.
 
 Si los caracteres de formato "%1" aparecen en la cadena más de una vez, se realizarán varias sustituciones.
 
@@ -108,13 +108,13 @@ Si los caracteres de formato "%1" aparecen en la cadena más de una vez, se real
 
 ### <a name="requirements"></a>Requisitos
 
-  **Encabezado** AFXWIN. h
+  **Encabezado** afxwin.h
 
-##  <a name="afxformatstring2"></a>AfxFormatString2
+## <a name="afxformatstring2"></a><a name="afxformatstring2"></a>AfxFormatString2
 
-Sustituye la cadena a la que señala *lpsz1* para cualquier instancia de los caracteres "%1" y la cadena a la que apunta *lpsz2* para cualquier instancia de los caracteres "%2", en el recurso de cadena de plantilla identificado por *nIDS*.
+Sustituye la cadena señalada por *lpsz1* para cualquier instancia de los caracteres "%1", y la cadena señalada por *lpsz2* para cualquier instancia de los caracteres "%2", en el recurso de cadena de plantilla identificado por *nIDS*.
 
-```
+```cpp
 void AfxFormatString2(
     CString& rString,
     UINT nIDS,
@@ -125,22 +125,22 @@ void AfxFormatString2(
 ### <a name="parameters"></a>Parámetros
 
 *rString*<br/>
-Referencia al `CString` que contendrá la cadena resultante una vez realizada la sustitución.
+Una referencia `CString` a la que contendrá la cadena resultante después de realizar la sustitución.
 
-*nIDS*<br/>
-IDENTIFICADOR de la tabla de cadenas de la cadena de la plantilla en la que se realizará la sustitución.
+*Nids*<br/>
+El identificador de tabla de cadenas de la cadena de plantilla en la que se realizará la sustitución.
 
 *lpsz1*<br/>
-Cadena que reemplazará los caracteres de formato "%1" en la cadena de la plantilla.
+Cadena que reemplazará los caracteres de formato "%1" en la cadena de plantilla.
 
 *lpsz2*<br/>
-Cadena que reemplazará los caracteres de formato "%2" en la cadena de la plantilla.
+Cadena que reemplazará los caracteres de formato "%2" en la cadena de plantilla.
 
 ### <a name="remarks"></a>Observaciones
 
-La cadena recién formada se almacena en *rString*. Por ejemplo, si la cadena de la tabla de cadenas es "File %1 not found in Directory %2", *lpsz1* señala a "Perfile. TXT ", y *lpsz2* apuntan a" c:\MiDir "; luego, *rString* contendrá la cadena" File Perfile. TXT no encontrado en el directorio C:\MIDIR "
+La cadena recién formada se almacena en *rString*. Por ejemplo, si la cadena de la tabla de cadenas es "Archivo %1 no se encuentra en el directorio %2", *lpsz1* apunta a "MYFILE. TXT", y *lpsz2* apunta a "C:-MYDIR", a continuación, *rString* contendrá la cadena "File MYFILE. TXT no se encuentra en el directorio C:-MYDIR"
 
-Si los caracteres de formato "%1" o "%2" aparecen en la cadena más de una vez, se realizarán varias sustituciones. No es necesario que estén en orden numérico.
+Si los caracteres de formato "%1" o "%2" aparecen en la cadena más de una vez, se realizarán varias sustituciones. No tienen que estar en orden numérico.
 
 ### <a name="example"></a>Ejemplo
 
@@ -148,9 +148,9 @@ Si los caracteres de formato "%1" o "%2" aparecen en la cadena más de una vez, 
 
 ### <a name="requirements"></a>Requisitos
 
-  **Encabezado** AFXWIN. h
+  **Encabezado** afxwin.h
 
-##  <a name="afxmessagebox"></a>AfxMessageBox
+## <a name="afxmessagebox"></a><a name="afxmessagebox"></a>AfxMessageBox
 
 Muestra un cuadro de mensaje en la pantalla.
 
@@ -169,44 +169,44 @@ int AFXAPI AfxMessageBox(
 ### <a name="parameters"></a>Parámetros
 
 *lpszText*<br/>
-Señala a un objeto `CString` o a una cadena terminada en null que contiene el mensaje que se va a mostrar en el cuadro de mensaje.
+Apunta a `CString` un objeto o cadena terminada en null que contiene el mensaje que se mostrará en el cuadro de mensaje.
 
 *nType*<br/>
-Estilo del cuadro de mensaje. Aplique cualquiera de los [estilos de cuadro de mensaje](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) al cuadro.
+El estilo del cuadro de mensaje. Aplique cualquiera de los [estilos de cuadro de mensaje](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) al cuadro.
 
 *nIDHelp*<br/>
-IDENTIFICADOR del contexto de ayuda para el mensaje; 0 indica que se utilizará el contexto de ayuda predeterminado de la aplicación.
+El identificador de contexto de ayuda para el mensaje; 0 indica que se usará el contexto de Ayuda predeterminado de la aplicación.
 
 *nIDPrompt*<br/>
-IDENTIFICADOR único que se usa para hacer referencia a una cadena en la tabla de cadenas.
+Identificador único que se usa para hacer referencia a una cadena de la tabla de cadenas.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Cero si no hay suficiente memoria para mostrar el cuadro de mensaje; de lo contrario, se devuelve uno de los valores siguientes:
+Cero si no hay suficiente memoria para mostrar el cuadro de mensaje; de lo contrario, se devuelve uno de los siguientes valores:
 
-- IDABORT se seleccionó el botón anular.
+- IDABORT Se ha seleccionado el botón Anular.
 
-- IDCANCEL se seleccionó el botón Cancelar.
+- IDCANCEL Se ha seleccionado el botón Cancelar.
 
-- IDIGNORE se seleccionó el botón Omitir.
+- IDIGNORE Se ha seleccionado el botón Ignorar.
 
-- IDNO se seleccionó el botón no.
+- IDNO Se ha seleccionado el botón No.
 
-- IDOK se seleccionó el botón Aceptar.
+- IDOK Se ha seleccionado el botón Aceptar.
 
-- IDRETRY se seleccionó el botón Reintentar.
+- IDRETRY Se ha seleccionado el botón Reintentar.
 
-- IDYES se seleccionó el botón sí.
+- IDYES Se ha seleccionado el botón Sí.
 
-Si un cuadro de mensaje tiene un botón Cancelar, el valor IDCANCEL se devolverá si se presiona la tecla ESC o se selecciona el botón Cancelar. Si el cuadro de mensaje no tiene un botón Cancelar, presionar la tecla ESC no tiene ningún efecto.
+Si un cuadro de mensaje tiene un botón Cancelar, se devolverá el valor IDCANCEL si se pulsa la tecla ESC o se selecciona el botón Cancelar. Si el cuadro de mensaje no tiene ningún botón Cancelar, presionar la tecla ESC no tiene ningún efecto.
 
 Las funciones [AfxFormatString1](#afxformatstring1) y [AfxFormatString2](#afxformatstring2) pueden ser útiles para dar formato al texto que aparece en un cuadro de mensaje.
 
 ### <a name="remarks"></a>Observaciones
 
-La primera forma de esta función sobrecargada muestra una cadena de texto a la que señala *lpszText* en el cuadro de mensaje y usa *nIDHelp* para describir un contexto de ayuda. El contexto de ayuda se usa para saltar a un tema de ayuda asociado cuando el usuario presiona la tecla de ayuda (normalmente F1).
+La primera forma de esta función sobrecargada muestra una cadena de texto señalada por *lpszText* en el cuadro de mensaje y usa *nIDHelp* para describir un contexto de Ayuda. El contexto de Ayuda se usa para saltar a un tema de Ayuda asociado cuando el usuario presiona la tecla Ayuda (normalmente F1).
 
-La segunda forma de la función utiliza el recurso de cadena con el identificador *nIDPrompt* para mostrar un mensaje en el cuadro de mensaje. La página de ayuda asociada se encuentra en el valor de *nIDHelp*. Si se usa el valor predeterminado de *nIDHelp* (-1), se usa el identificador de recurso de cadena, *nIDPrompt*, para el contexto de ayuda. Para obtener más información sobre cómo definir contextos de ayuda, vea la [Nota técnica 28](../../mfc/tn028-context-sensitive-help-support.md).
+La segunda forma de la función utiliza el recurso de cadena con el identificador *nIDPrompt* para mostrar un mensaje en el cuadro de mensaje. La página de Ayuda asociada se encuentra a través del valor de *nIDHelp*. Si se utiliza el valor predeterminado de *nIDHelp* (-1), el identificador de recurso de cadena, *nIDPrompt*, se utiliza para el contexto de ayuda. Para obtener más información sobre la definición de contextos de ayuda, consulte [Nota técnica 28](../../mfc/tn028-context-sensitive-help-support.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -215,4 +215,4 @@ La segunda forma de la función utiliza el recurso de cadena con el identificado
 ## <a name="see-also"></a>Consulte también
 
 [Macros y variables globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CStringT (clase)](../../atl-mfc-shared/reference/cstringt-class.md)
+[Clase CStringT](../../atl-mfc-shared/reference/cstringt-class.md)

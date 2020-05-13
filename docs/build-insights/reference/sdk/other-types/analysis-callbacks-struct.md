@@ -1,6 +1,6 @@
 ---
-title: Estructura de ANALYSIS_CALLBACKS
-description: El C++ SDK de Build insights ANALYSIS_CALLBACKS referencia de estructura.
+title: estructura ANALYSIS_CALLBACKS
+description: El SDK de C++ Build Insights ANALYSIS_CALLBACKS referencia de estructura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8c35e740d97488969a6b69467d54412297e49227
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 3c6de999b19657f999f884075ee53e21a4d2f2b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334149"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323509"
 ---
-# <a name="analysis_callbacks-structure"></a>Estructura de ANALYSIS_CALLBACKS
+# <a name="analysis_callbacks-structure"></a>estructura ANALYSIS_CALLBACKS
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La estructura de `ANALYSIS_CALLBACKS` se utiliza al inicializar un objeto [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) o [RELOG_DESCRIPTOR](relog-descriptor-struct.md) . Especifica las funciones a las que se llama durante el análisis o el registro de un seguimiento de seguimiento de eventos para Windows (ETW).
+La `ANALYSIS_CALLBACKS` estructura se utiliza al inicializar un objeto [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) o [RELOG_DESCRIPTOR.](relog-descriptor-struct.md) Especifica qué funciones llamar durante el análisis o el reregistro de un seguimiento de seguimiento de eventos para Windows (ETW).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,19 +49,19 @@ typedef struct ANALYSIS_CALLBACKS_TAG
 |--|--|
 | `OnStartActivity` | Se llama para procesar un evento de inicio de actividad. |
 | `OnStopActivity` | Se llama para procesar un evento de detención de actividad. |
-| `OnSimpleEvent` | Se llama para procesar un evento simple. |
-| `OnTraceInfo` | En el caso de las sesiones de análisis, se llama al principio de cada paso del análisis. En el caso de las sesiones de registro, se llama al principio de cada fase de análisis y de nuevo al principio del paso de registro. Solo se llama a esta función después de que se haya llamado a OnBeginAnalysisPass. |
-| `OnBeginAnalysis` | En el caso de las sesiones de análisis, se llama a antes de que haya comenzado cualquier paso del análisis. En el caso de las sesiones de registro, se llama dos veces antes de que se inicie la fase de análisis: una vez para anunciar el inicio de la sesión de registro y otra vez para anunciar el comienzo de la fase de análisis. |
-| `OnEndAnalysis` | En las sesiones de análisis, se llama a esta función una vez finalizados todos los pasos del análisis. En el caso de las sesiones de registro, se llama a esta función cuando han finalizado todos los pasos de análisis de la fase de análisis. A continuación, se llama de nuevo una vez finalizada la fase de reregistro. |
-| `OnBeginAnalysisPass` | Se llama cuando se inicia un paso de análisis o el paso de registro, antes de procesar cualquier evento. |
-| `OnEndAnalysisPass` | Se llama al finalizar un paso de análisis o el paso de registro, después de procesar todos los eventos. |
+| `OnSimpleEvent` | Llamado para procesar un evento simple. |
+| `OnTraceInfo` | Para sesiones de análisis, llamadas al principio de cada paso de análisis. Para las sesiones de reregistro, se llama al principio de cada paso de análisis y de nuevo al principio del pase de relogging. Esta función sólo se llama después de OnBeginAnalysisPass se ha llamado. |
+| `OnBeginAnalysis` | Para sesiones de análisis, llamadas antes de que se haya iniciado cualquier paso de análisis. Para las sesiones de relogging, llamadas dos veces antes de que se haya iniciado la fase de análisis: una vez para anunciar el inicio de la sesión de relogging, y una vez más para anunciar el comienzo de la fase de análisis. |
+| `OnEndAnalysis` | Para las sesiones de análisis, se llama a esta función una vez finalizados todos los pases de análisis. Para las sesiones de reregistro, se llama a esta función cuando todos los pases de análisis de la fase de análisis han finalizado. Luego, se llama de nuevo después de que el pase de relogging haya terminado. |
+| `OnBeginAnalysisPass` | Se llama al iniciar un pase de análisis o el paso de relogging, antes de procesar cualquier evento. |
+| `OnEndAnalysisPass` | Se llama al finalizar un paso de análisis o el paso de relogging, después de procesar todos los eventos. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La fase de análisis de una sesión de registro se considera parte de la sesión de reregistro y puede contener varios pasos de análisis. Por esta razón, se llama a `OnBeginAnalysis` dos veces en una fila al principio de una sesión de reinicio. al final de la fase de análisis, se llama a `OnEndAnalysis` antes de iniciar la fase de reregistro y, una vez más, al final de la fase de reregistro. La fase de reregistro siempre contiene un único paso de registro.
+La fase de análisis de una sesión de reregistro se considera parte de la sesión de recorrección y puede contener varias pasadas de análisis. Por este `OnBeginAnalysis` motivo, se llama dos veces seguidas al principio de una sesión de reslogging. `OnEndAnalysis`se llama al final de la fase de análisis, antes de iniciar la fase de reregistro, y una vez más al final de la fase de reregistro. La fase de reregistro siempre contiene una sola pasada de recorrección.
 
-Es posible que los analizadores formen parte del análisis y de la fase de reregistro de una sesión de reinicio. Estos analizadores pueden determinar qué fase está actualmente en curso realizando un seguimiento de los pares de llamadas OnBeginAnalysis y `OnEndAnalysis`. Dos llamadas `OnBeginAnalysis` sin ninguna llamada `OnEndAnalysis` significa que la fase de análisis está en curso. Dos llamadas `OnBeginAnalysis` y una llamada `OnEndAnalysis` significa que la fase de reregistro está en curso. Dos llamadas a OnBeginAnalysis y dos `OnEndAnalysis` significan que ambas fases han finalizado.
+Es posible que los analizadores formen parte tanto del análisis como de la fase de reregistro de una sesión de relogging. Estos analizadores pueden determinar qué fase está actualmente en `OnEndAnalysis` curso mediante el seguimiento de los pares OnBeginAnalysis y call. Dos `OnBeginAnalysis` llamadas `OnEndAnalysis` sin ninguna llamada significa que la fase de análisis está en curso. Dos `OnBeginAnalysis` llamadas `OnEndAnalysis` y una llamada significa que la fase de relogging está en curso. Dos OnBeginAnalysis `OnEndAnalysis` y dos llamadas significa que ambas fases han finalizado.
 
-Todos los miembros de la estructura `ANALYSIS_CALLBACKS` deben apuntar a una función válida. Para obtener más información sobre las firmas de funciones aceptadas, vea [OnAnalysisEventFunc](on-analysis-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)y [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
+Todos los `ANALYSIS_CALLBACKS` miembros de la estructura deben apuntar a una función válida. Para obtener más información sobre las firmas de función aceptadas, vea [OnAnalysisEventFunc](on-analysis-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)y [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
 
 ::: moniker-end

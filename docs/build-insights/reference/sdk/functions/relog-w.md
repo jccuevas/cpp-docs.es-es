@@ -1,6 +1,6 @@
 ---
 title: RelogW
-description: La C++ referencia de la función RELOGW del SDK de Build Insights.
+description: Referencia de la función RelogW del SDK de C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 563b1aa92877ff5bc1216bc914c1c661de06dfc0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c5d5f6e35c7cd24d2324ce1d8a0434d9048b1d85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334293"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323812"
 ---
 # <a name="relogw"></a>RelogW
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La función `RelogW` se usa para leer eventos MSVC desde un seguimiento de seguimiento de eventos de entrada para Windows (ETW) y escribirlos en un seguimiento ETW nuevo y modificado.
+La `RelogW` función se utiliza para leer eventos MSVC desde un seguimiento de seguimiento de eventos para Windows (ETW) de entrada y escribirlos en un nuevo seguimiento ETW modificado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,17 +38,17 @@ enum RESULT_CODE RelogW(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *inputLogFile*
-Seguimiento de ETW de entrada del que desea leer eventos.
+*inputLogFile*\
+El seguimiento ETW de entrada desde el que desea leer eventos.
 
-\ *outputLogFile*
-Archivo en el que se van a escribir los nuevos eventos.
+*outputLogFile*\
+El archivo en el que se escribiron los nuevos eventos.
 
-\ *relogDescriptor*
-Puntero a un objeto de [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) . Utilice este objeto para configurar la sesión de registro.
+*relogDescriptor*\
+Puntero a un objeto [RELOG_DESCRIPTOR.](../other-types/relog-descriptor-struct.md) Utilice este objeto para configurar la sesión de recorrección.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Código de resultado de la enumeración [RESULT_CODE](../other-types/result-code-enum.md) .
+Un código de resultado de la [enumeración de RESULT_CODE.](../other-types/result-code-enum.md)
 
 ::: moniker-end

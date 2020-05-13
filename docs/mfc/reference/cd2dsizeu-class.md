@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-ms.openlocfilehash: 45625331d0c1be8ca7c663d12c53516dc7bd77c7
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: a5b87fe2ddd8fb32ddbbb2884c630952afdb079c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177187"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359290"
 ---
 # <a name="cd2dsizeu-class"></a>Clase CD2DSizeU
 
-Un contenedor para D2D1_SIZE_U.
+Un envoltorio para D2D1_SIZE_U.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,21 +31,21 @@ class CD2DSizeU : public D2D1_SIZE_U;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Sobrecargado. Construye un objeto `CD2DSizeU` a partir `D2D1_SIZE_U` de un objeto.|
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Sobrecargado. Construye un `CD2DSizeU` objeto `D2D1_SIZE_U` a partir de un objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CD2DSizeU::IsNull](#isnull)|Devuelve un valor **booleano** que indica si una expresión no contiene datos válidos (NULL).|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CD2DSizeU:: Operator CSize](#operator_csize)|`CD2DSizeU` Convierte en`CSize` objeto.|
+|[CD2DSizeU::operator CSize](#operator_csize)|Convierte `CD2DSizeU` en `CSize` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -55,11 +55,11 @@ class CD2DSizeU : public D2D1_SIZE_U;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxrendertarget. h
+**Encabezado:** afxrendertarget.h
 
-##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU
+## <a name="cd2dsizeucd2dsizeu"></a><a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU
 
-Construye un objeto CD2DSizeU a partir del objeto CSize.
+Construye un CD2DSizeU objeto a partir de CSize objeto.
 
 ```
 CD2DSizeU(const CSize& size);
@@ -73,18 +73,18 @@ CD2DSizeU(
 
 ### <a name="parameters"></a>Parámetros
 
-*size*<br/>
-tamaño de origen
+*Tamaño*<br/>
+tamaño de la fuente
 
-*cx*<br/>
-ancho de origen
+*Cx*<br/>
+ancho de fuente
 
-*cy*<br/>
-alto de origen
+*Cy*<br/>
+altura de la fuente
 
-##  <a name="isnull"></a>  CD2DSizeU::IsNull
+## <a name="cd2dsizeuisnull"></a><a name="isnull"></a>CD2DSizeU::IsNull
 
-Devuelve un valor booleano que indica si una expresión no contiene datos válidos (NULL).
+Devuelve un valor booleano que indica si una expresión no contiene datos válidos (Null).
 
 ```
 BOOL IsNull() const;
@@ -92,11 +92,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el ancho y el alto están vacíos; en caso contrario, FALSE.
+TRUESi width y height están vacíos; de lo contrario FALSO.
 
-##  <a name="operator_csize"></a>CD2DSizeU:: Operator CSize
+## <a name="cd2dsizeuoperator-csize"></a><a name="operator_csize"></a>CD2DSizeU::operator CSize
 
-Convierte CD2DSizeU en el objeto CSize.
+Convierte CD2DSizeU en CSize objeto.
 
 ```
 operator CSize();
@@ -104,8 +104,8 @@ operator CSize();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor actual del tamaño de D2D.
+Valor actual del tamaño D2D.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

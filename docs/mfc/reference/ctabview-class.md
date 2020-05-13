@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ad30cbbf5de195708d2d357a76c38b661d095c2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346251"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365923"
 ---
 # <a name="ctabview-class"></a>CTabView (clase)
 
-El `CTabView` clase simplifica el uso de la clase de control de pestaña ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) en las aplicaciones que utilizan la arquitectura documento/vista de MFC.
+La `CTabView` clase simplifica el uso de la clase de control de ficha ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) en aplicaciones que usan la arquitectura de documento/vista de MFC.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,33 +43,33 @@ class CTabbedView : public CView
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CTabView::AddView](#addview)|Agrega una nueva vista para el control de ficha.|
+|[CTabView::AddView](#addview)|Agrega una nueva vista al control de ficha.|
 |[CTabView::FindTab](#findtab)|Devuelve el índice de la vista especificada en el control de ficha.|
-|[CTabView::GetActiveView](#getactiveview)|Devuelve un puntero a la vista activa|
+|[CTabView::GetActiveView](#getactiveview)|Devuelve un puntero a la vista activa actualmente|
 |[CTabView::GetTabControl](#gettabcontrol)|Devuelve una referencia al control de ficha asociado a la vista.|
 |[CTabView::RemoveView](#removeview)|Quita la vista del control de ficha.|
-|[CTabView::SetActiveView](#setactiveview)|Una vista activa.|
+|[CTabView::SetActiveView](#setactiveview)|Activa una vista.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CTabView::IsScrollBar](#isscrollbar)|Lo llama el marco de trabajo al crear una vista de ficha para determinar si la vista tiene una barra de desplazamiento horizontal compartida.|
-|[CTabView::OnActivateView](#onactivateview)|Lo llama el marco de trabajo cuando se realiza la vista de ficha activo o inactivo.|
+|[CTabView::IsScrollBar](#isscrollbar)|Llamado por el marco de trabajo al crear una vista de ficha para determinar si la vista de ficha tiene una barra de desplazamiento horizontal compartida.|
+|[CTabView::OnActivateView](#onactivateview)|Llamado por el marco de trabajo cuando la vista de ficha se activa o inactiva.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase facilita la poner una vista con pestañas en una aplicación de documento/vista. `CTabView` es un `CView`-clase derivada que contiene incrustado `CMFCTabCtrl` objeto. `CTabView` administra todos los mensajes necesarios para admitir la `CMFCTabCtrl` objeto. Simplemente derive una clase de `CTabView` y conectarlo a la aplicación y, después, agregar `CView`-las clases derivadas utilizando el `AddView` método. El control de ficha mostrará esas vistas como pestañas.
+Esta clase facilita la colocación de una vista con pestañas en una aplicación de documento/vista. `CTabView`es `CView`una clase derivada que contiene `CMFCTabCtrl` un objeto incrustado. `CTabView`controla todos los `CMFCTabCtrl` mensajes necesarios para admitir el objeto. Simplemente derive una `CTabView` clase de la aplicación `CView`y conéctela a `AddView` ella y, a continuación, agregue clases derivadas mediante el método. El control de ficha mostrará esas vistas como fichas.
 
-Por ejemplo, podría tener un documento que se puede representar de maneras diferentes: como una hoja de cálculo, un gráfico, un formulario modificable y así sucesivamente. Puede crear vistas individuales de los datos de dibujo según sea necesario, insertarlos en su `CTabView`-objeto derivado y tenerlos por pestañas sin ninguna codificación adicional.
+Por ejemplo, puede tener un documento que se puede representar de diferentes maneras: como una hoja de cálculo, un gráfico, un formulario editable, etc. Puede crear vistas individuales dibujando los datos `CTabView`según sea necesario, insertarlos en el objeto derivado y tenerlos tabulados sin ningún tipo de codificación adicional.
 
-[Ejemplo de TabbedView: Aplicación de vista de MFC con fichas](../../overview/visual-cpp-samples.md) se muestra el uso de `CTabView`.
+Ejemplo de [TabbedView: Aplicación](../../overview/visual-cpp-samples.md) de `CTabView`vista con pestañas MFC ilustra el uso de .
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `CTabView` se usa en el ejemplo TabbedView.
+En el ejemplo `CTabView` siguiente se muestra cómo se usa en el TabbedView ejemplo.
 
 [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]
 
@@ -77,9 +77,9 @@ El ejemplo siguiente se muestra cómo `CTabView` se usa en el ejemplo TabbedView
 
 **Encabezado:** afxTabView.h
 
-##  <a name="addview"></a>  CTabView::AddView
+## <a name="ctabviewaddview"></a><a name="addview"></a>CTabView::AddView
 
-Agrega una vista para el control de ficha.
+Agrega una vista al control de ficha.
 
 ```
 int AddView(
@@ -92,26 +92,26 @@ int AddView(
 ### <a name="parameters"></a>Parámetros
 
 *pViewClass*<br/>
-[in] Un puntero a una clase en tiempo de ejecución de la vista insertada.
+[en] Puntero a una clase en tiempo de ejecución de la vista insertada.
 
 *strViewLabel*<br/>
-[in] Especifica el texto de la pestaña.
+[en] Especifica el texto de la ficha.
 
 *iIndex*<br/>
-[in] Especifica la posición de base cero donde se inserta en la vista. Si la posición es -1 se inserta la nueva pestaña al final.
+[en] Especifica la posición de base cero en la que se va a insertar la vista. Si la posición es -1, la nueva pestaña se inserta al final.
 
 *pContext*<br/>
-[in] Un puntero a la `CCreateContext` de la vista.
+[en] Un puntero `CCreateContext` a la vista.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un índice de la vista si este método se realiza correctamente. En caso contrario, es -1.
+Un índice de vista si este método se realiza correctamente. En caso contrario, -1.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a esta función para agregar una vista para el control de ficha que se incrusta en un marco.
+Llame a esta función para agregar una vista al control de ficha que está incrustado en un marco.
 
-##  <a name="findtab"></a>  CTabView::FindTab
+## <a name="ctabviewfindtab"></a><a name="findtab"></a>CTabView::FindTab
 
 Devuelve el índice de la vista especificada en el control de ficha.
 
@@ -122,17 +122,17 @@ int FindTab(HWND hWndView) const;
 ### <a name="parameters"></a>Parámetros
 
 *hWndView*<br/>
-[in] El identificador de la vista.
+[en] El identificador de la vista.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El índice de la vista si se encuentra; en caso contrario, es -1.
+El índice de la vista si se encuentra; de lo contrario, -1.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Llame a esta función para recuperar el índice de una vista que tiene un identificador especificado.
 
-##  <a name="getactiveview"></a>  CTabView::GetActiveView
+## <a name="ctabviewgetactiveview"></a><a name="getactiveview"></a>CTabView::GetActiveView
 
 Devuelve un puntero a la vista activa actualmente.
 
@@ -144,9 +144,9 @@ CView* GetActiveView() const;
 
 Un puntero válido a la vista activa, o NULL si no hay ninguna vista activa.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gettabcontrol"></a>  CTabView::GetTabControl
+## <a name="ctabviewgettabcontrol"></a><a name="gettabcontrol"></a>CTabView::GetTabControl
 
 Devuelve una referencia al control de ficha asociado a la vista.
 
@@ -158,9 +158,9 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 
 Una referencia al control de ficha asociado a la vista.
 
-##  <a name="isscrollbar"></a>  CTabView::IsScrollBar
+## <a name="ctabviewisscrollbar"></a><a name="isscrollbar"></a>CTabView::IsScrollBar
 
-Lo llama el marco de trabajo al crear una vista de ficha para determinar si la vista tiene una barra de desplazamiento horizontal compartida.
+Llamado por el marco de trabajo al crear una vista de ficha para determinar si la vista de ficha tiene una barra de desplazamiento horizontal compartida.
 
 ```
 virtual BOOL IsScrollBar() const;
@@ -168,17 +168,17 @@ virtual BOOL IsScrollBar() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la vista debe crearse junto con una barra de desplazamiento compartido. En caso contrario, FALSE.
+TRUESi la vista de pestaña debe crearse junto con una barra de desplazamiento compartida. De lo contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El marco llama a este método cuando un *CTabView* se está creando el objeto.
+El marco de trabajo llama a este método cuando se crea un *CTabView* objeto.
 
-Invalidar el *IsScrollBar* método en un *CTabView*-clase derivada y devuelve TRUE si desea crear una vista que tiene una barra de desplazamiento horizontal compartida.
+Invalidar el *IsScrollBar* método en un *CTabView*-clase derivada y devolver TRUE si desea crear una vista que tiene una barra de desplazamiento horizontal compartida.
 
-##  <a name="onactivateview"></a>  CTabView::OnActivateView
+## <a name="ctabviewonactivateview"></a><a name="onactivateview"></a>CTabView::OnActivateView
 
-Lo llama el marco de trabajo cuando se realiza la vista de ficha activo o inactivo.
+Llamado por el marco de trabajo cuando la vista de ficha se activa o inactiva.
 
 ```
 virtual void OnActivateView(CView* view);
@@ -186,14 +186,14 @@ virtual void OnActivateView(CView* view);
 
 ### <a name="parameters"></a>Parámetros
 
-*view*<br/>
-[in] Un puntero a la vista.
+*Vista*<br/>
+[en] Un puntero a la vista.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La implementación predeterminada no hace nada. Invalide este método en un `CTabView`-clase derivada para procesar esta notificación.
+La implementación predeterminada no hace nada. Invalide este `CTabView`método en una clase derivada para procesar esta notificación.
 
-##  <a name="removeview"></a>  CTabView::RemoveView
+## <a name="ctabviewremoveview"></a><a name="removeview"></a>CTabView::RemoveView
 
 Quita la vista del control de ficha.
 
@@ -204,17 +204,17 @@ BOOL RemoveView(int iTabNum);
 ### <a name="parameters"></a>Parámetros
 
 *iTabNum*<br/>
-[in] El índice de la vista para quitar.
+[en] El índice de la vista que se va a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El índice de la vista quitado si este método se realiza correctamente. En caso contrario,-1.
+El índice de la vista quitada si este método se realiza correctamente. De lo contrario -1.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="setactiveview"></a>  CTabView::SetActiveView
+## <a name="ctabviewsetactiveview"></a><a name="setactiveview"></a>CTabView::SetActiveView
 
-Una vista activa.
+Activa una vista.
 
 ```
 BOOL SetActiveView(int iTabNum);
@@ -223,17 +223,17 @@ BOOL SetActiveView(int iTabNum);
 ### <a name="parameters"></a>Parámetros
 
 *iTabNum*<br/>
-[in] Índice de base cero de la vista de ficha.
+[en] El índice de base cero de la vista de ficha.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la vista especificada se realizó activa, es FALSE si el índice de la vista no es válido.
+TRUESi la vista especificada se ha puesto activa, FALSE si el índice de la vista no es válido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, consulte [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).
+Para obtener más información, vea [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

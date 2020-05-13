@@ -1,9 +1,11 @@
 ---
 title: _splitpath_s, _wsplitpath_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wsplitpath_s
 - _splitpath_s
+- _o__splitpath_s
+- _o__wsplitpath_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 984b55737e575656670f561c45f528265800f214
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625838"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920299"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -94,13 +97,13 @@ errno_t _wsplitpath_s(
 Ruta de acceso completa.
 
 *dispositivo*<br/>
-Letra de unidad, seguida de dos puntos ( **:** ). Puede pasar **null** para este parámetro si no necesita la letra de la unidad.
+Letra de unidad, seguida de dos puntos (**:**). Puede pasar **null** para este parámetro si no necesita la letra de la unidad.
 
 *driveNumberOfElements*<br/>
 Tamaño del búfer de la *unidad* en caracteres anchos o de un solo byte. Si la *unidad* es **null**, este valor debe ser 0.
 
 *dir*<br/>
-Ruta de directorio, incluida la barra diagonal final. Se pueden usar barras diagonales ( **/** ), barras diagonales inversas ( **\\** ) o ambas. Puede pasar **null** para este parámetro si no necesita la ruta de acceso del directorio.
+Ruta de directorio, incluida la barra diagonal final. Se pueden usar barras **/** diagonales (), barras **\\** diagonales inversas () o ambas. Puede pasar **null** para este parámetro si no necesita la ruta de acceso del directorio.
 
 *dirNumberOfElements*<br/>
 Tamaño del búfer de *dir* en caracteres anchos o de un solo byte. Si *dir* es **null**, este valor debe ser 0.
@@ -112,7 +115,7 @@ Nombre de archivo base (sin extensión). Puede pasar **null** para este parámet
 Tamaño del búfer *fname* en caracteres anchos o de un solo byte. Si *fname* es **null**, este valor debe ser 0.
 
 *total*<br/>
-Extensión de nombre de archivo, incluido el punto inicial ( **.** ). Puede pasar **null** para este parámetro si no necesita la extensión de nombre de archivo.
+Extensión de nombre de archivo, incluido el punto inicial (**.**). Puede pasar **null** para este parámetro si no necesita la extensión de nombre de archivo.
 
 *extNumberOfElements*<br/>
 Tamaño del búfer de *ext* en caracteres anchos o de un solo byte. Si *ext* es **null**, este valor debe ser 0.
@@ -139,9 +142,11 @@ Si se da alguna de las condiciones anteriores, se invoca al controlador de pará
 
 Si alguno de los búferes es demasiado corto para contener el resultado, estas funciones borran todos los búferes de las cadenas vacías, establecen **errno** en **ERANGE**y devuelven **ERANGE**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_splitpath_s** divide una ruta de acceso en los cuatro componentes. **_splitpath_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath_s** es una versión con caracteres anchos de **_splitpath_s**; los argumentos de **_wsplitpath_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+La función **_splitpath_s** divide una ruta de acceso en los cuatro componentes. **_splitpath_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath_s** es una versión con caracteres anchos de **_splitpath_s**; los argumentos para **_wsplitpath_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -153,7 +158,7 @@ Cada componente de la ruta de acceso completa se almacena en un búfer independi
 
 En la tabla siguiente se enumeran los valores de las constantes de manifiesto.
 
-|Name|Valor|
+|Nombre|Value|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
@@ -179,7 +184,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 Vea el ejemplo de [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>

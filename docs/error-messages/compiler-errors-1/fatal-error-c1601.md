@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1601
 ms.assetid: 25797c39-f085-4d75-9eab-159ecd36ef49
-ms.openlocfilehash: cade1c216053e61b14bd9ccdd0b50e0325bb5cc7
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 22dfdd47fca596282762873ea86b9382c4d8f997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344776"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202922"
 ---
 # <a name="fatal-error-c1601"></a>Error irrecuperable C1601
 
 código de operación de ensamblado alineado no admitido
 
-Este error indica una incoherencia en los archivos .exe del compilador, que se haya producido debido a una instalación incompleta. Por ejemplo, es posible que ha instalado un service pack, pero no en el módulo de procesador. Instale todos los productos necesarios.
+Este error indica una falta de coincidencia en los archivos. exe del compilador, que pueden haberse producido debido a una instalación incompleta. Por ejemplo, es posible que haya instalado una Service Pack pero no el paquete de procesadores. Instale todos los productos necesarios.

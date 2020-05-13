@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4748eecdf67ae5a60ddf97783a934a05e80b406c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182995"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374661"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference (Clase)
 
@@ -26,43 +26,43 @@ Tipo de optimización que puedes usar para pasar datos de tipo String desde par�
 class StringReference
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ### <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[StringReference::StringReference](#ctor)|Dos constructores para crear instancias de `StringReference`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[StringReference::Data](#data)|Devuelve los datos de tipo String como una matriz de valores char16.|
-|[StringReference::Length](#length)|Devuelve el número de caracteres de la cadena.|
+|[StringReference::Longitud](#length)|Devuelve el número de caracteres de la cadena.|
 |[StringReference::GetHSTRING](#gethstring)|Devuelve los datos de tipo String como HSTRING.|
 |[StringReference::GetString](#getstring)|Devuelve los datos de tipo String como `Platform::String^`.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[StringReference::operator=](#operator-assign)|Asigna `StringReference` a una nueva instancia de `StringReference` .|
+|[StringReference::operator ?](#operator-assign)|Asigna `StringReference` a una nueva instancia de `StringReference` .|
 |[StringReference::operator()](#operator-call)|Convierte `StringReference` en `Platform::String^`.|
 
 ### <a name="requirements"></a>Requisitos
 
-**Cliente mínimo admitido:** Windows 8
+**Cliente mínimo soportado:** Windows 8
 
-**Servidor mínimo admitido:** Windows Server 2012
+**Servidor mínimo soportado:** Windows Server 2012
 
-**Espacio de nombres**: Plataforma
+**Espacio de nombres:** Platform
 
 **Encabezado:** vccorlib.h
 
-## <a name="data"></a>  Stringreference (método)
+## <a name="stringreferencedata-method"></a><a name="data"></a>StringReference::Data Método
 
 Devuelve el contenido de este `StringReference` como matriz de valores char16.
 
@@ -76,7 +76,7 @@ const ::default::char16 * Data() const;
 
 Matriz de caracteres de texto UNICODE char16.
 
-## <a name="gethstring"></a>  Gethstring (método)
+## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a>StringReference::GetHSTRING Método
 
 Devuelve el contenido de la cadena como `__abi_HSTRING`.
 
@@ -90,9 +90,9 @@ __abi_HSTRING GetHSTRING() const;
 
 `__abi_HSTRING` que contiene los datos de tipo String.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="getstring"></a>  Stringreference (método)
+## <a name="stringreferencegetstring-method"></a><a name="getstring"></a>StringReference::GetString Método
 
 Devuelve el contenido de la cadena como `Platform::String^`.
 
@@ -107,7 +107,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 `Platform::String^` que contiene los datos de tipo String.
 
-## <a name="length"></a>  Stringreference (método)
+## <a name="stringreferencelength-method"></a><a name="length"></a>StringReference::Método Length
 
 Devuelve el número de caracteres de la cadena.
 
@@ -121,9 +121,9 @@ unsigned int Length() const;
 
 Un entero sin signo que especifica la cantidad de caracteres de la cadena.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="operator-assign"></a>  StringReference::operator= Operator
+## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a>StringReference::operator- Operador
 
 Asigna el objeto especificado al objeto `StringReference` actual.
 
@@ -146,11 +146,11 @@ Puntero a una matriz de valores char16 que se usa para inicializar el objeto `St
 
 Referencia a un objeto de tipo `StringReference`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Dado que `StringReference` es una clase de C++ estándar y no una clase ref, no aparece en el **Examinador de objetos**.
+Dado `StringReference` que es una clase C++ estándar y no una clase ref, no aparece en el **Examinador de objetos**.
 
-## <a name="operator-call"></a>  StringReference::operator()  Operator
+## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a>StringReference::operator() Operador
 
 Convierte un objeto `StringReference` en un objeto `Platform::String^`.
 
@@ -165,7 +165,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 Identificador para un objeto de tipo `Platform::String`.
 
-## <a name="ctor"></a>  StringReference::StringReference (Constructor)
+## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a>StringReference::StringReference Constructor
 
 Inicializa una nueva instancia de la clase `StringReference`.
 
@@ -189,10 +189,10 @@ Puntero a una matriz de valores char16 que se emplea para inicializar la nueva i
 *__lenArg*<br/>
 Número de elementos de `__strArg`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La primera versión de este constructor es el constructor predeterminado. La segunda versión inicializa una nueva clase de instancia `StringReference` desde el objeto especificado por el parámetro `__fstrArg`. La tercera y la cuarta sobrecargas inicializan una nueva instancia de `StringReference` desde una matriz de valores char16. char16 representa un carácter de texto UNICODE de 16 bits.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Platform::StringReference (Clase)](../cppcx/platform-stringreference-class.md)

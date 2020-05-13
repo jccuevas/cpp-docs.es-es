@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: 11be0eba080085c507ed718ea23219ca1c93aeba
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 375b4227a25ae4c18cfd263eff4c3ec13f1304e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370009"
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException (clase)
 
@@ -29,15 +29,15 @@ class CMemoryException : public CSimpleException
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMemoryException::CMemoryException](#cmemoryexception)|Construye un objeto `CMemoryException`.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Calificación adicional no es necesaria ni posible. Se producen excepciones de memoria de forma automática **nuevo**. Si escribe sus propias funciones de memoria, uso `malloc`, por ejemplo, a continuación, que es responsables de producir excepciones de memoria.
+No es necesaria ni posible ninguna otra cualificación. Las excepciones de memoria se producen automáticamente mediante **new**. Si escribe sus propias `malloc`funciones de memoria, utilizando , por ejemplo, entonces usted es responsable de producir excepciones de memoria.
 
-Para obtener más información sobre `CMemoryException`, consulte el artículo [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).
+Para obtener `CMemoryException`más información sobre , vea el artículo Control de [excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -53,7 +53,7 @@ Para obtener más información sobre `CMemoryException`, consulte el artículo [
 
 **Encabezado:** afx.h
 
-##  <a name="cmemoryexception"></a>  CMemoryException::CMemoryException
+## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryException::CMemoryException
 
 Construye un objeto `CMemoryException`.
 
@@ -61,11 +61,11 @@ Construye un objeto `CMemoryException`.
 CMemoryException();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-No utilice este constructor directamente, pero en su lugar llame a la función global [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). Esta función global puede tener éxito en una situación de memoria insuficiente porque construye el objeto de excepción de memoria asignado previamente. Para obtener más información sobre el procesamiento de excepciones, vea el artículo [excepciones](../exception-handling-in-mfc.md).
+No utilice este constructor directamente, sino que llame a la función global [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). esta función global puede tener éxito en una situación de memoria insuficiente porque construye el objeto de excepción en la memoria asignada anteriormente. Para obtener más información sobre el procesamiento de excepciones, consulte las [excepciones](../exception-handling-in-mfc.md)de artículo .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CException (clase)](cexception-class.md)<br/>
+[Clase CException](cexception-class.md)<br/>
 [Gráfico de jerarquías](../hierarchy-chart.md)

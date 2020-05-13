@@ -1,8 +1,9 @@
 ---
 title: wcrtomb
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb
+- _o_wcrtomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: 8d2108b90f6884113f0bd974bf7aa634544adf5f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4107ae6cb6366fa8ad80251ce94ee35ca59501bd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945222"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910642"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -59,25 +61,27 @@ size_t wcrtomb(
 *mbchar*<br/>
 Carácter convertido multibyte resultante.
 
-*wchar*<br/>
+*WCHAR*<br/>
 Carácter ancho que se va a convertir.
 
 *mbstate*<br/>
-Un puntero a un objeto **mbstate_t** .
+Puntero a un objeto **mbstate_t** .
 
 ## <a name="return-value"></a>Valor devuelto
 
 Devuelve el número de bytes necesarios para representar el carácter multibyte convertido; si se produce un error, devuelve -1.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **wcrtomb** convierte un carácter ancho, comenzando en el estado de conversión especificado incluido en *mbstate*, del valor contenido en *WCHAR*, en la dirección representada por *mbchar*. El valor devuelto es el número de bytes necesarios para representar el carácter multibyte correspondiente, pero no devolverá más de **MB_CUR_MAX** bytes.
 
-Si *mbstate* es null, se usa el objeto **mbstate_t** interno que contiene el estado de conversión de *mbchar* . Si la secuencia de caracteres *WCHAR* no tiene una representación de caracteres multibyte correspondiente, se devuelve-1 y **errno** se establece en **EILSEQ**.
+Si *mbstate* es null, se utiliza el objeto de **mbstate_t** interno que contiene el estado de conversión de *mbchar* . Si la secuencia de caracteres *WCHAR* no tiene una representación de caracteres multibyte correspondiente, se devuelve-1 y **errno** se establece en **EILSEQ**.
 
 La función **wcrtomb** difiere de [wctomb, _wctomb_l](wctomb-wctomb-l.md) por su reinicio. El estado de la conversión se almacena en *mbstate* para las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** en lugar de **wcsnlen**, si se usara una llamada subsiguiente a **wcsrtombs** en lugar de **wcstombs**.
 
-En C++, esta función tiene una sobrecarga de plantilla que invoca a un homólogo más reciente y seguro de esta función. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, esta función tiene una sobrecarga de plantilla que invoca a un homólogo más reciente y seguro de esta función. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Excepciones
 
@@ -132,9 +136,9 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 |-------------|---------------------|
 |**wcrtomb**|\<wchar.h>|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

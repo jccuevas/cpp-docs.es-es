@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: b24d1e4d3e670a820c41735617b7db6780ff137c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fd19d941365c7772363417ce3e9225bd9b0300b2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491481"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748842"
 ---
 # <a name="cfiletime-class"></a>Clase CFileTime
 
@@ -41,65 +41,65 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CFileTime::CFileTime](#cfiletime)|El constructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CFileTime::GetCurrentTime](#getcurrenttime)|Llame a esta función estática para recuperar `CFileTime` un objeto que represente la fecha y hora actuales del sistema.|
-|[CFileTime::GetTime](#gettime)|Llame a este método para recuperar la hora del `CFileTime` objeto.|
-|[CFileTime::LocalToUTC](#localtoutc)|Llame a este método para convertir una hora de archivo local en una hora de archivo basándose en la hora universal coordinada (UTC).|
-|[CFileTime::SetTime](#settime)|Llame a este método para establecer la fecha y la hora almacenadas por el `CFileTime` objeto.|
-|[CFileTime::UTCToLocal](#utctolocal)|Llame a este método para convertir la hora basada en la hora universal coordinada (UTC) a la hora del archivo local.|
+|[CFileTime::GetCurrentTime](#getcurrenttime)|Llame a esta función estática para recuperar un `CFileTime` objeto que representa la fecha y hora actuales del sistema.|
+|[CFileTime::GetTime](#gettime)|Llame a este método para `CFileTime` recuperar la hora del objeto.|
+|[CFileTime::LocalToUTC](#localtoutc)|Llame a este método para convertir una hora de archivo local en una hora de archivo basada en la hora universal coordinada (UTC).|
+|[CFileTime::SetTime](#settime)|Llame a este método para establecer `CFileTime` la fecha y hora almacenadas por el objeto.|
+|[CFileTime::UTCToLocal](#utctolocal)|Llame a este método para convertir el tiempo en función de la hora universal coordinada (UTC) a la hora de archivo local.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CFileTime:: Operator-](#operator_-)|Este operador se usa para realizar la resta en un `CFileTime` objeto `CFileTimeSpan` o.|
-|[CFileTime:: Operator! =](#operator_neq)|Este operador compara dos `CFileTime` objetos para determinar si no son iguales.|
-|[CFileTime:: Operator +](#operator_add)|Este operador se usa para sumar en un objeto `CFileTimeSpan`.|
-|[CFileTime::operator +=](#operator_add_eq)|Este operador se usa para sumar en un objeto `CFileTimeSpan` y asignar el resultado al objeto actual.|
-|[CFileTime:: Operator&lt;](#operator_lt)|Este operador compara dos objetos `CFileTime` para determinar el menor.|
-|[CFileTime:: Operator&lt;=](#operator_lt_eq)|Este operador compara dos objetos `CFileTime` para determinar si son iguales o cuál es el menor.|
-|[CFileTime::operator =](#operator_eq)|Operador de asignación.|
-|[CFileTime:: Operator-=](#operator_-_eq)|Este operador se usa para realizar la resta en un `CFileTimeSpan` objeto y asignar el resultado al objeto actual.|
-|[CFileTime::operator ==](#operator_eq_eq)|Este operador compara dos objetos `CFileTime` para determinar si son iguales.|
-|[CFileTime:: Operator&gt;](#operator_gt)|Este operador compara dos objetos `CFileTime` para determinar el mayor.|
-|[CFileTime:: Operator&gt;=](#operator_gt_eq)|Este operador compara dos objetos `CFileTime` para determinar si son iguales o cuál es el mayor.|
+|[CFileTime::operador -](#operator_-)|Este operador se utiliza para `CFileTime` realizar `CFileTimeSpan` restas en un objeto u.|
+|[CFileTime::operator !o](#operator_neq)|Este operador compara `CFileTime` dos objetos para la desigualdad.|
+|[CFileTime::operador +](#operator_add)|Este operador se usa para sumar en un objeto `CFileTimeSpan`.|
+|[CFileTime::operador +o](#operator_add_eq)|Este operador se usa para sumar en un objeto `CFileTimeSpan` y asignar el resultado al objeto actual.|
+|[CFileTime::operator&lt;](#operator_lt)|Este operador compara dos objetos `CFileTime` para determinar el menor.|
+|[CFileTime::operator&lt;=](#operator_lt_eq)|Este operador compara dos objetos `CFileTime` para determinar si son iguales o cuál es el menor.|
+|[CFileTime::operator ?](#operator_eq)|El operador de asignación.|
+|[CFileTime::operador --](#operator_-_eq)|Este operador se utiliza para `CFileTimeSpan` realizar la resta en un objeto y asignar el resultado al objeto actual.|
+|[CFileTime::operador ?](#operator_eq_eq)|Este operador compara dos objetos `CFileTime` para determinar si son iguales.|
+|[CFileTime::operator&gt;](#operator_gt)|Este operador compara dos objetos `CFileTime` para determinar el mayor.|
+|[CFileTime::operator&gt;=](#operator_gt_eq)|Este operador compara dos objetos `CFileTime` para determinar si son iguales o cuál es el mayor.|
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CFileTime::Day](#day)|Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman un día.|
-|[CFileTime::Hour](#hour)|Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman una hora.|
-|[CFileTime::Millisecond](#millisecond)|Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman un milisegundo.|
-|[CFileTime::Minute](#minute)|Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman un minuto.|
-|[CFileTime::Second](#second)|Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman un segundo.|
-|[CFileTime::Week](#week)|Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman una semana.|
+|[CFileTime::Day](#day)|Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen un día.|
+|[CFileTime::Hora](#hour)|Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen una hora.|
+|[CFileTime::Millisecond](#millisecond)|Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen un milisegundo.|
+|[CFileTime::Minute](#minute)|Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen un minuto.|
+|[CFileTime::Segundo](#second)|Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen un segundo.|
+|[CFileTime::Semana](#week)|Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen una semana.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase proporciona métodos para administrar los valores de fecha y hora asociados a la creación, el acceso y la modificación de archivos. Los métodos y los datos de esta clase se utilizan con frecuencia junto `CFileTimeSpan` con los objetos, que se ocupan de los valores de hora relativos.
+Esta clase proporciona métodos para administrar los valores de fecha y hora asociados con la creación, el acceso y la modificación de archivos. Los métodos y datos de esta clase `CFileTimeSpan` se utilizan con frecuencia junto con los objetos, que tratan con valores de tiempo relativos.
 
-El valor de fecha y hora se almacena como un valor de 64 bits que representa el número de intervalos de 100-nanosegundos desde el 1 de enero de 1601. Este es el formato de hora universal coordinada (UTC).
+El valor de fecha y hora se almacena como un valor de 64 bits que representa el número de intervalos de 100 nanosegundos desde el 1 de enero de 1601. Este es el formato de hora universal coordinada (UTC).
 
-Las siguientes variables miembro const estáticas se proporcionan para simplificar los cálculos:
+Se proporcionan las siguientes variables miembro const estáticas para simplificar los cálculos:
 
-|Variable de miembro|Número de intervalos de 100 segundos|
+|Variable miembro|Número de intervalos de 100 nanosegundos|
 |---------------------|-----------------------------------------|
-|Millisecond|10,000|
-|Second|Milisegundo \* 1.000|
+|Millisecond|10 000|
+|Segundo|Milisegundo \* 1.000|
 |Minute|Segundo \* 60|
 |Hour|Minuto \* 60|
 |Día|Hora \* 24|
 |Semana|Día \* 7|
 
-**Nota:** No todos los sistemas de archivos pueden registrar la creación y la hora del último acceso, y no todos los sistemas de archivos los registran de la misma manera. Por ejemplo, en el sistema de archivos FAT de Windows NT, la hora de creación tiene una resolución de 10 milisegundos, el tiempo de escritura tiene una resolución de 2 segundos y el tiempo de acceso tiene una resolución de 1 día (la fecha de acceso). En NTFS, el tiempo de acceso tiene una resolución de 1 hora. Además, FAT registra las horas en el disco en la hora local, pero NTFS registra las horas en el disco en formato UTC. Para obtener más información, vea [tiempos de archivo](/windows/win32/SysInfo/file-times).
+**Nota** No todos los sistemas de archivos pueden registrar la creación y la última hora de acceso y no todos los sistemas de archivos los registran de la misma manera. Por ejemplo, en el sistema de archivos FAT de Windows NT, el tiempo de creación tiene una resolución de 10 milisegundos, el tiempo de escritura tiene una resolución de 2 segundos y el tiempo de acceso tiene una resolución de 1 día (la fecha de acceso). En NTFS, el tiempo de acceso tiene una resolución de 1 hora. Además, FAT registra las horas en el disco en la hora local, pero NTFS registra las horas en el disco en UTC. Para obtener más información, consulte [Tiempos de archivo](/windows/win32/SysInfo/file-times).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -109,9 +109,9 @@ Las siguientes variables miembro const estáticas se proporcionan para simplific
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atltime. h
+**Encabezado:** atltime.h
 
-##  <a name="cfiletime"></a>  CFileTime::CFileTime
+## <a name="cfiletimecfiletime"></a><a name="cfiletime"></a>CFileTime::CFileTime
 
 El constructor.
 
@@ -123,19 +123,19 @@ CFileTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ft*<br/>
-Una estructura [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) .
+*Pies*<br/>
+Una estructura [FILETIME.](/windows/win32/api/minwinbase/ns-minwinbase-filetime)
 
-*nTime*<br/>
-Fecha y hora expresadas como un valor de 64 bits.
+*Ntime*<br/>
+La fecha y la hora expresadas como un valor de 64 bits.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El `CFileTime` objeto se puede crear con una fecha y una hora existentes desde `FILETIME` una estructura, o expresarse como un valor de 64 bits (en formatos de hora local o de hora universal coordinada (UTC)). El constructor predeterminado establece la hora en 0.
+El `CFileTime` objeto se puede crear utilizando `FILETIME` una fecha y hora existentes a partir de una estructura, o expresarse como un valor de 64 bits (en formatos de hora local o de hora universal coordinada (UTC)). El constructor predeterminado establece la hora en 0.
 
-##  <a name="day"></a>  CFileTime::Day
+## <a name="cfiletimeday"></a><a name="day"></a>CFileTime::Day
 
-Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman un día.
+Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen un día.
 
 ```
 static const ULONGLONG Day = Hour* 24;
@@ -143,11 +143,11 @@ static const ULONGLONG Day = Hour* 24;
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CFileTime:: millisecond](#millisecond).
+Vea el ejemplo de [CFileTime::Millisecond](#millisecond).
 
-##  <a name="getcurrenttime"></a>  CFileTime::GetCurrentTime
+## <a name="cfiletimegetcurrenttime"></a><a name="getcurrenttime"></a>CFileTime::GetCurrentTime
 
-Llame a esta función estática para recuperar `CFileTime` un objeto que represente la fecha y hora actuales del sistema.
+Llame a esta función estática para recuperar un `CFileTime` objeto que representa la fecha y hora actuales del sistema.
 
 ```
 static CFileTime GetCurrentTime() throw();
@@ -155,15 +155,15 @@ static CFileTime GetCurrentTime() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la fecha y hora actuales del sistema en formato de hora universal coordinada (UTC).
+Devuelve la fecha y hora actual del sistema en formato de hora universal coordinada (UTC).
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCFiles#41](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_1.cpp)]
 
-##  <a name="gettime"></a>  CFileTime::GetTime
+## <a name="cfiletimegettime"></a><a name="gettime"></a>CFileTime::GetTime
 
-Llame a este método para recuperar la hora del `CFileTime` objeto.
+Llame a este método para `CFileTime` recuperar la hora del objeto.
 
 ```
 ULONGLONG GetTime() const throw();
@@ -171,11 +171,11 @@ ULONGLONG GetTime() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la fecha y la hora como un número de 64 bits, que puede estar en formato de hora universal coordinada (UTC) o local.
+Devuelve la fecha y la hora como un número de 64 bits, que puede estar en formato local o de hora universal coordinada (UTC).
 
-##  <a name="hour"></a>  CFileTime::Hour
+## <a name="cfiletimehour"></a><a name="hour"></a>CFileTime::Hora
 
-Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman una hora.
+Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen una hora.
 
 ```
 static const ULONGLONG Hour = Minute* 60;
@@ -183,11 +183,11 @@ static const ULONGLONG Hour = Minute* 60;
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CFileTime:: millisecond](#millisecond).
+Vea el ejemplo de [CFileTime::Millisecond](#millisecond).
 
-##  <a name="localtoutc"></a>  CFileTime::LocalToUTC
+## <a name="cfiletimelocaltoutc"></a><a name="localtoutc"></a>CFileTime::LocalToUTC
 
-Llame a este método para convertir una hora de archivo local en una hora de archivo basándose en la hora universal coordinada (UTC).
+Llame a este método para convertir una hora de archivo local en una hora de archivo basada en la hora universal coordinada (UTC).
 
 ```
 CFileTime LocalToUTC() const throw();
@@ -195,15 +195,15 @@ CFileTime LocalToUTC() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un `CFileTime` objeto que contiene la hora en formato UTC.
+Devuelve `CFileTime` un objeto que contiene la hora en formato UTC.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CFileTime:: UTCToLocal](#utctolocal).
+Vea el ejemplo de [CFileTime::UTCToLocal](#utctolocal).
 
-##  <a name="millisecond"></a>  CFileTime::Millisecond
+## <a name="cfiletimemillisecond"></a><a name="millisecond"></a>CFileTime::Millisecond
 
-Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman un milisegundo.
+Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen un milisegundo.
 
 ```
 static const ULONGLONG Millisecond = 10000;
@@ -213,9 +213,9 @@ static const ULONGLONG Millisecond = 10000;
 
 [!code-cpp[NVC_MFCFiles#44](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_2.cpp)]
 
-##  <a name="minute"></a>CFileTime:: minute
+## <a name="cfiletimeminute"></a><a name="minute"></a>CFileTime::Minute
 
-Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman un minuto.
+Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen un minuto.
 
 ```
 static const ULONGLONG Minute = Second* 60;
@@ -223,11 +223,11 @@ static const ULONGLONG Minute = Second* 60;
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CFileTime:: millisecond](#millisecond).
+Vea el ejemplo de [CFileTime::Millisecond](#millisecond).
 
-##  <a name="operator_-"></a>CFileTime:: Operator-
+## <a name="cfiletimeoperator--"></a><a name="operator_-"></a>CFileTime::operador -
 
-Este operador se usa para realizar la resta en un `CFileTime` objeto `CFileTimeSpan` o.
+Este operador se utiliza para `CFileTime` realizar `CFileTimeSpan` restas en un objeto u.
 
 ```
 CFileTime operator-(CFileTimeSpan span) const throw();
@@ -236,19 +236,19 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*extienda*<br/>
-Objeto `CFileTimeSpan`.
+*envergadura*<br/>
+Objeto `CFileTimeSpan` .
 
-*ft*<br/>
-Objeto `CFileTime`.
+*Pies*<br/>
+Objeto `CFileTime` .
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un `CFileTime` objeto o un `CFileTimeSpan` objeto que representa el resultado de la diferencia de tiempo entre los dos objetos.
+Devuelve `CFileTime` un objeto `CFileTimeSpan` o un objeto que representa el resultado de la diferencia de tiempo entre los dos objetos.
 
-##  <a name="operator_neq"></a>CFileTime:: Operator! =
+## <a name="cfiletimeoperator-"></a><a name="operator_neq"></a>CFileTime::operator !o
 
-Este operador compara dos `CFileTime` objetos para determinar si no son iguales.
+Este operador compara `CFileTime` dos objetos para la desigualdad.
 
 ```
 bool operator!=(CFileTime ft) const throw();
@@ -256,14 +256,14 @@ bool operator!=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ft*<br/>
+*Pies*<br/>
 Objeto `CFileTime` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve true si el elemento que se va a comparar no es `CFileTime` igual al objeto; de lo contrario, es false.
+Devuelve TRUE si el elemento que `CFileTime` se compara no es igual al objeto, de lo contrario FALSE.
 
-##  <a name="operator_add"></a>CFileTime:: Operator +
+## <a name="cfiletimeoperator-"></a><a name="operator_add"></a>CFileTime::operador +
 
 Este operador se usa para sumar en un objeto `CFileTimeSpan`.
 
@@ -273,14 +273,14 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*extienda*<br/>
-Objeto `CFileTimeSpan`.
+*envergadura*<br/>
+Objeto `CFileTimeSpan` .
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un `CFileTime` objeto que representa el resultado de la hora original más una hora relativa.
+Devuelve `CFileTime` un objeto que representa el resultado de la hora original más un tiempo relativo.
 
-##  <a name="operator_add_eq"></a>CFileTime:: Operator + =
+## <a name="cfiletimeoperator-"></a><a name="operator_add_eq"></a>CFileTime::operador +o
 
 Este operador se usa para sumar en un objeto `CFileTimeSpan` y asignar el resultado al objeto actual.
 
@@ -290,14 +290,14 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*extienda*<br/>
-Objeto `CFileTimeSpan`.
+*envergadura*<br/>
+Objeto `CFileTimeSpan` .
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el objeto `CFileTime` actualizado, que representa el resultado de la hora original más una hora relativa.
+Devuelve el `CFileTime` objeto actualizado, que representa el resultado de la hora original más un tiempo relativo.
 
-##  <a name="operator_lt"></a>CFileTime:: Operator&lt;
+## <a name="cfiletimeoperator-lt"></a><a name="operator_lt"></a>CFileTime::operator&lt;
 
 Este operador compara dos objetos `CFileTime` para determinar el menor.
 
@@ -307,18 +307,18 @@ bool operator<(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ft*<br/>
+*Pies*<br/>
 Objeto `CFileTime` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si el primer objeto es menor (antes en el tiempo) que el segundo; de lo contrario, devuelve FALSE.
+Devuelve TRUE si el primer objeto es menor (antes en el tiempo) que el segundo, FALSE en caso contrario.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCFiles#43](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_3.cpp)]
 
-##  <a name="operator_lt_eq"></a>CFileTime:: Operator&lt;=
+## <a name="cfiletimeoperator-lt"></a><a name="operator_lt_eq"></a>CFileTime::operator&lt;=
 
 Este operador compara dos objetos `CFileTime` para determinar si son iguales o cuál es el menor.
 
@@ -328,16 +328,16 @@ bool operator<=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ft*<br/>
+*Pies*<br/>
 Objeto `CFileTime` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si el primer objeto es menor que (antes en el tiempo) o igual que el segundo; de lo contrario, es FALSE.
+Devuelve TRUE si el primer objeto es menor que (antes en el tiempo) o igual que el segundo, de lo contrario FALSE.
 
-##  <a name="operator_eq"></a>CFileTime:: Operator =
+## <a name="cfiletimeoperator-"></a><a name="operator_eq"></a>CFileTime::operator ?
 
-Operador de asignación.
+El operador de asignación.
 
 ```
 CFileTime& operator=(const FILETIME& ft) throw();
@@ -345,16 +345,16 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ft*<br/>
-`CFileTime` Objeto que contiene la nueva fecha y hora.
+*Pies*<br/>
+Objeto `CFileTime` que contiene la nueva hora y fecha.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el objeto `CFileTime` actualizado.
+Devuelve el `CFileTime` objeto actualizado.
 
-##  <a name="operator_-_eq"></a>CFileTime:: Operator-=
+## <a name="cfiletimeoperator--"></a><a name="operator_-_eq"></a>CFileTime::operador --
 
-Este operador se usa para realizar la resta en un `CFileTimeSpan` objeto y asignar el resultado al objeto actual.
+Este operador se utiliza para `CFileTimeSpan` realizar la resta en un objeto y asignar el resultado al objeto actual.
 
 ```
 CFileTime& operator-=(CFileTimeSpan span) throw();
@@ -362,14 +362,14 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*extienda*<br/>
-`CFileTimeSpan` Objeto que contiene el tiempo relativo que se va a restar.
+*envergadura*<br/>
+Objeto `CFileTimeSpan` que contiene el tiempo relativo que se va a restar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el objeto `CFileTime` actualizado.
+Devuelve el `CFileTime` objeto actualizado.
 
-##  <a name="operator_eq_eq"></a>CFileTime:: Operator = =
+## <a name="cfiletimeoperator-"></a><a name="operator_eq_eq"></a>CFileTime::operador ?
 
 Este operador compara dos objetos `CFileTime` para determinar si son iguales.
 
@@ -379,14 +379,14 @@ bool operator==(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ft*<br/>
-`CFileTime` Objeto que se va a comparar.
+*Pies*<br/>
+El objeto `CFileTime` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si los objetos son iguales; de lo contrario, es FALSE.
+Devuelve TRUE si los objetos son iguales, de lo contrario FALSE.
 
-##  <a name="operator_gt"></a>CFileTime:: Operator&gt;
+## <a name="cfiletimeoperator-gt"></a><a name="operator_gt"></a>CFileTime::operator&gt;
 
 Este operador compara dos objetos `CFileTime` para determinar el mayor.
 
@@ -396,14 +396,14 @@ bool operator>(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ft*<br/>
+*Pies*<br/>
 Objeto `CFileTime` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si el primer objeto es mayor que (más adelante en el tiempo) que el segundo; de lo contrario, es FALSE.
+Devuelve TRUE si el primer objeto es mayor que (más adelante en el tiempo) que el segundo, en caso de no FALSE.
 
-##  <a name="operator_gt_eq"></a>CFileTime:: Operator&gt;=
+## <a name="cfiletimeoperator-gt"></a><a name="operator_gt_eq"></a>CFileTime::operator&gt;=
 
 Este operador compara dos objetos `CFileTime` para determinar si son iguales o cuál es el mayor.
 
@@ -413,16 +413,16 @@ bool operator>=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ft*<br/>
+*Pies*<br/>
 Objeto `CFileTime` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si el primer objeto es mayor que (más adelante en el tiempo) o igual que el segundo; de lo contrario, es FALSE.
+Devuelve TRUE si el primer objeto es mayor que (más adelante en el tiempo) o igual que el segundo, de lo contrario FALSE.
 
-##  <a name="second"></a>  CFileTime::Second
+## <a name="cfiletimesecond"></a><a name="second"></a>CFileTime::Segundo
 
-Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman un día.
+Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen un día.
 
 ```
 static const ULONGLONG Second = Millisecond* 1000;
@@ -430,24 +430,24 @@ static const ULONGLONG Second = Millisecond* 1000;
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CFileTime:: millisecond](#millisecond).
+Vea el ejemplo de [CFileTime::Millisecond](#millisecond).
 
-##  <a name="settime"></a>  CFileTime::SetTime
+## <a name="cfiletimesettime"></a><a name="settime"></a>CFileTime::SetTime
 
-Llame a este método para establecer la fecha y la hora almacenadas por el `CFileTime` objeto.
+Llame a este método para establecer `CFileTime` la fecha y hora almacenadas por el objeto.
 
-```
+```cpp
 void SetTime(ULONGLONG nTime) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nTime*<br/>
-Valor de 64 bits que representa la fecha y la hora, en formato de hora universal coordinada (UTC) o local.
+*Ntime*<br/>
+El valor de 64 bits que representa la fecha y la hora, en formato local o de hora universal coordinada (UTC).
 
-##  <a name="utctolocal"></a>  CFileTime::UTCToLocal
+## <a name="cfiletimeutctolocal"></a><a name="utctolocal"></a>CFileTime::UTCToLocal
 
-Llame a este método para convertir la hora basada en la hora universal coordinada (UTC) a la hora del archivo local.
+Llame a este método para convertir el tiempo en función de la hora universal coordinada (UTC) a la hora de archivo local.
 
 ```
 CFileTime UTCToLocal() const throw();
@@ -455,15 +455,15 @@ CFileTime UTCToLocal() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un `CFileTime` objeto que contiene la hora en formato de hora del archivo local.
+Devuelve `CFileTime` un objeto que contiene la hora en formato de hora de archivo local.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCFiles#42](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_4.cpp)]
 
-##  <a name="week"></a>  CFileTime::Week
+## <a name="cfiletimeweek"></a><a name="week"></a>CFileTime::Semana
 
-Un miembro de datos estático que almacena el número de intervalos de 100 nanosegundos que forman una semana.
+Un miembro de datos estáticos que almacena el número de intervalos de 100 nanosegundos que componen una semana.
 
 ```
 static const ULONGLONG Week = Day* 7;
@@ -471,11 +471,11 @@ static const ULONGLONG Week = Day* 7;
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CFileTime:: millisecond](#millisecond).
+Vea el ejemplo de [CFileTime::Millisecond](#millisecond).
 
 ## <a name="see-also"></a>Vea también
 
 [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)<br/>
-[CFileTimeSpan (clase)](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
+[Clase CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[Clases compartidas de ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Clases compartidas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

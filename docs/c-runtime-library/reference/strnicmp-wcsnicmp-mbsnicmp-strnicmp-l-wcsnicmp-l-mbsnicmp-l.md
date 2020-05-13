@@ -1,6 +1,6 @@
 ---
 title: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsnicmp
 - _strnicmp_l
@@ -8,6 +8,12 @@ api_name:
 - _strnicmp
 - _mbsnicmp
 - _mbsnicmp_l
+- _o__mbsnicmp
+- _o__mbsnicmp_l
+- _o__strnicmp
+- _o__strnicmp_l
+- _o__wcsnicmp
+- _o__wcsnicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -69,12 +76,12 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 6d1645c33684f5a0fbabc2119592c39a7df97ca3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947134"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920080"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -136,23 +143,25 @@ Configuración regional que se va a usar.
 
 Indica la relación entre las subcadenas, como se muestra a continuación.
 
-|Valor devuelto|DESCRIPCIÓN|
+|Valor devuelto|Descripción|
 |------------------|-----------------|
 |< 0|la subcadena *cadena1* es menor que *cadena2* subcadena.|
 |0|la subcadena *cadena1* es idéntica a la subcadena *cadena2* .|
 |> 0|la subcadena *cadena1* es mayor que *cadena2* subcadena.|
 
-En un error de validación de parámetros, estas funciones devuelven **_NLSCMPERROR**, \<que se define en String \<. h > y mbstring. h >.
+En un error de validación de parámetros, estas funciones devuelven **_NLSCMPERROR**, \<que se define en String \<. h> y mbstring. h>.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_strnicmp** compara ordinalmente, como máximo, los primeros caracteres de *recuento* de *cadena1* y *cadena2*. La comparación se realiza sin distinguir entre mayúsculas y minúsculas, ya que todos los caracteres se convierten a minúsculas. **_strnicmp** es una versión de **strncmp**que no distingue mayúsculas de minúsculas. La comparación finaliza si se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* . Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* , la cadena más corta es menor.
+La función **_strnicmp** compara ordinalmente, como máximo, los primeros caracteres de *recuento* de *cadena1* y *cadena2*. La comparación se realiza sin distinguir entre mayúsculas y minúsculas, ya que todos los caracteres se convierten a minúsculas. **_strnicmp** es una versión que no distingue entre mayúsculas y minúsculas de **strncmp**. La comparación finaliza si se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* . Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* , la cadena más corta es menor.
 
 Los caracteres 91 a 96 en la tabla ASCII ("[", "\\", "]", "^", "_" y "\`") se consideran menores que cualquier carácter alfabético. Esta ordenación es idéntica a la de **stricmp**.
 
 **_wcsnicmp** y **_mbsnicmp** son versiones de caracteres anchos y multibyte de **_strnicmp**. Los argumentos de **_wcsnicmp** son cadenas de caracteres anchos; los de **_mbsnicmp** son cadenas de caracteres multibyte. **_mbsnicmp** reconoce las secuencias de caracteres multibyte según la página de códigos multibyte actual y devuelve **_NLSCMPERROR** en un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Estas tres funciones se comportan exactamente igual. Estas funciones se ven afectadas por la configuración regional; las versiones que no tienen el sufijo **_L** usan la configuración regional actual para su comportamiento dependiente de la configuración regional; en su lugar, las versiones que tienen el sufijo **_L** usan la *configuración regional* que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Todas estas funciones validan sus parámetros. Si *string1* o *cadena2* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecen **errno** en **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -170,13 +179,13 @@ Todas estas funciones validan sus parámetros. Si *string1* o *cadena2* es un pu
 |**_wcsnicmp**, **_wcsnicmp_l**|\<string.h> o \<wchar.h>|
 |**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

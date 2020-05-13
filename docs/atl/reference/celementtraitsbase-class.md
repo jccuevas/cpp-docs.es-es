@@ -1,5 +1,5 @@
 ---
-title: CElementTraitsBase (clase)
+title: Clase CElementTraitsBase
 ms.date: 11/04/2016
 f1_keywords:
 - CElementTraitsBase
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-ms.openlocfilehash: 207207d26a2c43367a00b382f80761429159a7b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a29e8778cf2f3400df25b55574950a005bad995
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259123"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327002"
 ---
-# <a name="celementtraitsbase-class"></a>CElementTraitsBase (clase)
+# <a name="celementtraitsbase-class"></a>Clase CElementTraitsBase
 
-Esta clase proporciona copia de forma predeterminada y move los métodos para una clase de colección.
+Esta clase proporciona métodos de copia y movimiento predeterminados para una clase de colección.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,35 +32,35 @@ class CElementTraitsBase
 #### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-El tipo de datos que se almacenará en la colección.
+El tipo de datos que se almacenarán en la colección.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CElementTraitsBase::INARGTYPE](#inargtype)|El tipo de datos que se usará para agregar elementos al objeto de clase de colección.|
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.|
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|El tipo de datos que se va a utilizar para recuperar elementos del objeto de clase de colección.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CElementTraitsBase::CopyElements](#copyelements)|Llame a este método para copiar los elementos almacenados en un objeto de clase de colección.|
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Llame a este método para cambiar la posición de elementos almacenados en un objeto de clase de colección.|
+|[CElementTraitsBase::RelocateElements](#relocateelements)|Llame a este método para reubicar los elementos almacenados en un objeto de clase de colección.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase base define métodos para copiar y cambiar la ubicación de los elementos en una clase de colección. Lo utilizan las clases [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), y [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
+Esta clase base define métodos para copiar y reubicar elementos en una clase de colección. Es utilizado por las clases [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)y [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
 
-Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).
+Para obtener más información, vea Clases de [colección ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlcoll.h
 
-##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements
+## <a name="celementtraitsbasecopyelements"></a><a name="copyelements"></a>CElementTraitsBase::CopyElements
 
 Llame a este método para copiar los elementos almacenados en un objeto de clase de colección.
 
@@ -74,19 +74,19 @@ static void CopyElements(
 ### <a name="parameters"></a>Parámetros
 
 *pDest*<br/>
-Puntero al primer elemento que va a recibir los datos copiados.
+Puntero al primer elemento que recibirá los datos copiados.
 
 *pSrc*<br/>
-Puntero en el primer elemento que se va a copiar.
+Puntero al primer elemento que se va a copiar.
 
-*nElements*<br/>
+*nElementos*<br/>
 Número de elementos que se van a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-No deben superponerse a los elementos de origen y destino.
+Los elementos de origen y destino no deben superponerse.
 
-##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE
+## <a name="celementtraitsbaseinargtype"></a><a name="inargtype"></a>CElementTraitsBase::INARGTYPE
 
 El tipo de datos que se usará para agregar elementos a la colección.
 
@@ -94,17 +94,17 @@ El tipo de datos que se usará para agregar elementos a la colección.
 typedef const T& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE
+## <a name="celementtraitsbaseoutargtype"></a><a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE
 
-El tipo de datos que se usará para recuperar los elementos de la colección.
+El tipo de datos que se usará para recuperar elementos de la colección.
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements
+## <a name="celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>CElementTraitsBase::RelocateElements
 
-Llame a este método para cambiar la posición de elementos almacenados en un objeto de clase de colección.
+Llame a este método para reubicar los elementos almacenados en un objeto de clase de colección.
 
 ```
 static void RelocateElements(
@@ -116,18 +116,18 @@ static void RelocateElements(
 ### <a name="parameters"></a>Parámetros
 
 *pDest*<br/>
-Puntero al primer elemento que va a recibir los datos trasladados.
+Puntero al primer elemento que recibirá los datos reubicados.
 
 *pSrc*<br/>
-Puntero al primer elemento para cambiar la posición.
+Puntero al primer elemento que se va a reubicar.
 
-*nElements*<br/>
-El número de elementos que se va a cambiar la ubicación.
+*nElementos*<br/>
+El número de elementos que se van a reubicar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método llama a [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que es suficiente para la mayoría de los tipos de datos. Si los objetos que se está moviendo contienen punteros a sus propios miembros, este método debe invalidarse.
+Este método llama a [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que es suficiente para la mayoría de los tipos de datos. Si los objetos que se mueven contienen punteros a sus propios miembros, este método tendrá que reemplazarse.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general de clases](../../atl/atl-class-overview.md)

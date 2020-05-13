@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error method [C++]
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
-ms.openlocfilehash: 8856289605cce430fdab36d6e3e8b743190e02ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ac902f0fda90f77526ef53139ef0d523d8c22e7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180789"
 ---
-# <a name="comerrorcomerror"></a>_com_error::_com_error
+# <a name="_com_error_com_error"></a>_com_error::_com_error
 
 **Específicos de Microsoft**
 
-Construye un **_com_error** objeto.
+Construye un objeto de **_com_error** .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,34 +32,34 @@ _com_error( const _com_error& that ) throw( );
 
 #### <a name="parameters"></a>Parámetros
 
-*hr*<br/>
+*hora*<br/>
 Información de HRESULT.
 
 *perrinfo*<br/>
 Objeto `IErrorInfo`.
 
 *fAddRef*<br/>
-El valor predeterminado hace que el constructor llame a AddRef en un valor no null `IErrorInfo` interfaz. Esto proporciona para referencia correcta de recuento en el caso habitual donde la propiedad de la interfaz se pasa a la **_com_error** objetos, como:
+El valor predeterminado hace que el constructor llame a AddRef en una interfaz de `IErrorInfo` que no sea NULL. Esto proporciona un recuento de referencias correcto en el caso común en el que la propiedad de la interfaz se pasa al objeto **_com_error** , como:
 
 ```cpp
 throw _com_error(hr, perrinfo);
 ```
 
-Si no desea que su código para transferir la propiedad a la **_com_error** objeto y el `AddRef` es necesario para desplazar el `Release` en el **_com_error** destructor, construya el objeto como se indica a continuación:
+Si no desea que el código transfiera la propiedad al objeto **_com_error** , y el `AddRef` es necesario para desplazar el `Release` en el destructor **_com_error** , construya el objeto de la manera siguiente:
 
 ```cpp
 _com_error err(hr, perrinfo, true);
 ```
 
-*that*<br/>
-Existente **_com_error** objeto.
+*es*<br/>
+Objeto de **_com_error** existente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El primer constructor crea un nuevo objeto, dados un HRESULT y opcional `IErrorInfo` objeto. El segundo crea una copia de una existente **_com_error** objeto.
+El primer constructor crea un nuevo objeto a partir de un valor HRESULT y un objeto `IErrorInfo` opcional. La segunda crea una copia de un objeto de **_com_error** existente.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_com_error (Clase)](../cpp/com-error-class.md)

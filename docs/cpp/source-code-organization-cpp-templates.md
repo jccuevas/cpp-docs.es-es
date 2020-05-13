@@ -2,18 +2,18 @@
 title: Organización de código fuente (plantillas de C++)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 1933758e47f2fcc0b63f0d16809591b932501854
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
-ms.translationtype: HT
+ms.openlocfilehash: 76898d04e5f9f0576898eb40945b7718c650d71a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611397"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178735"
 ---
 # <a name="source-code-organization-c-templates"></a>Organización de código fuente (plantillas de C++)
 
 Al definir una plantilla de clase, debe organizar el código fuente de tal manera que las definiciones de miembro sean visibles para el compilador cuando las necesite.   Tiene la opción de utilizar el *modelo de inclusión* o de*creación de instancias explícita*. En el modelo de inclusión, se incluyen las definiciones de miembro en todos los archivos que usa una plantilla. Este enfoque es más sencillo y proporciona la máxima flexibilidad en cuanto a qué tipos concretos se pueden usar con la plantilla. La desventaja es que pueden aumentar los tiempos de compilación. El impacto puede ser significativo si un proyecto o los archivos incluidos tienen un gran tamaño. Con el enfoque de creación de instancias explícita, la propia plantilla crea instancias de clases concretas o miembros de clase para tipos específicos.  Este enfoque puede acelerar los tiempos de compilación, pero limita el uso a solo las clases que ha habilitado el implementador de plantilla antes de tiempo. En general, se recomienda usar el modelo de inclusión, a menos que los tiempos de compilación se conviertan en un problema.
 
-## <a name="background"></a>Fondo
+## <a name="background"></a>Información previa
 
 Las plantillas no son similares a las clases normales en el sentido de que el compilador no genera código de objeto para una plantilla o cualquiera de sus miembros. No se genera nada hasta que se crea una instancia de la plantilla con tipos concretos. Cuando el compilador encuentra una instancia de plantilla como `MyClass<int> mc;` y aún no existe ninguna clase con esa firma, genera una nueva clase. También intenta generar código para las funciones miembro que se usan. Si esas definiciones se encuentran en un archivo que no está incluido, directa o indirectamente, en el archivo .cpp que se está compilando, el compilador no puede verlas.  Desde el punto de vista del compilador, esto no es necesariamente un error porque las funciones pueden definirse en otra unidad de traducción, en cuyo caso el vinculador las encontrará.  Si el vinculador no encuentra ese código, genera un error **externo sin resolver**.
 

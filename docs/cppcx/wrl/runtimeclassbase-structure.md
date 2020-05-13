@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBase
 ms.assetid: 6ada4f81-a857-488a-ad56-8d0b11ccbfcc
-ms.openlocfilehash: 80762a7a2cfdc5c630a42627b8cfd8323f3567eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29bcf37ce9bd524dfe09823e00fda4d41eedaf52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403183"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213595"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase (Estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -22,11 +22,11 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 struct RuntimeClassBase;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Utilizado para detectar `RuntimeClass` en el [realizar](make-function.md) función.
+Se utiliza para detectar `RuntimeClass` en la función [Make](make-function.md) .
 
-**RuntimeClassBase** es una estructura vacía.
+**Runtimeclassbase (** es una estructura vacía.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -34,10 +34,10 @@ Utilizado para detectar `RuntimeClass` en el [realizar](make-function.md) funci�
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** implements.h
+**Encabezado:** implementa. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

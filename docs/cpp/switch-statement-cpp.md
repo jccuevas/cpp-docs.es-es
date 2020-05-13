@@ -1,6 +1,7 @@
 ---
-title: switch (Instrucción) (C++)
-ms.date: 05/06/2019
+title: switchStatement (C++)
+description: Referencia a la instrucción estándar switch de c++ en Microsoft Visual Studio c++.
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -9,76 +10,94 @@ helpviewer_keywords:
 - switch keyword [C++]
 - case keyword [C++], in switch statements
 - default keyword [C++]
+no-loc:
+- switch
+- case
+- default
+- break
+- while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 6b09c0eac939f7ca6a12b68ce5deb3fb83ad27c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160819"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83204161"
 ---
-# <a name="switch-statement-c"></a>switch (Instrucción) (C++)
+# <a name="switch-statement-c"></a>`switch`Statement (C++)
 
 Permite la selección entre varias secciones de código, dependiendo del valor de una expresión entera.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-   switch ( init; expression )
-   case constant-expression : statement
-   [default  : statement]
-```
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub> <sup>C++ 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
+
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
+
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
+
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Observaciones
 
-La *expresión* debe ser de un tipo entero o de un tipo de clase para el que haya una conversión no ambigua a un tipo entero. La promoción de entero se realiza como se describe en [conversiones estándar](standard-conversions.md).
+Una __`switch`__ instrucción hace que el control se transfiera a uno *`labeled-statement`* en su cuerpo de instrucción, dependiendo del valor de *`condition`* .
 
-El cuerpo de la instrucción **Switch** se compone de una serie de etiquetas **Case** y una etiqueta **default** opcional. Dos expresiones constantes en las instrucciones **Case** no pueden evaluarse en el mismo valor. La etiqueta **predeterminada** solo puede aparecer una vez. Las instrucciones etiquetadas no son requisitos sintácticos, pero la instrucción **Switch** no tiene sentido sin ellas.   La instrucción predeterminada no necesita estar al final; puede aparecer en cualquier parte del cuerpo de la instrucción switch. Una etiqueta case o default solo puede aparecer en una instrucción switch.
+*`condition`* Debe tener un tipo entero o ser un tipo de clase que tenga una conversión no ambigua a un tipo entero. La promoción de entero tiene lugar tal y como se describe en [conversiones estándar](standard-conversions.md).
 
-*Constant-Expression* en cada etiqueta **de caso** se convierte al tipo de *Expression* y se compara con la *expresión* para determinar si son iguales. El control pasa a la instrucción cuya *expresión constante* **Case** coincide con el valor de *Expression*. El comportamiento resultante se muestra en la siguiente tabla.
+El __`switch`__ cuerpo de la instrucción consta de una serie de __`case`__ etiquetas y una __`default`__ etiqueta opcional. Una *`labeled-statement`* es una de estas etiquetas y las instrucciones siguientes. Las instrucciones etiquetadas no son requisitos sintácticos, pero la __`switch`__ instrucción no tiene sentido sin ellas. Dos *`constant-expression`* valores de __`case`__ las instrucciones no pueden evaluarse como el mismo valor. La __`default`__ etiqueta solo puede aparecer una vez. __`default`__ A menudo, la instrucción se coloca al final, pero puede aparecer en cualquier parte del cuerpo de la __`switch`__ instrucción. Una __`case`__ __`default`__ etiqueta o solo puede aparecer dentro de una __`switch`__ instrucción.
 
-### <a name="switch-statement-behavior"></a>Comportamiento de la instrucción switch
+*`constant-expression`* En cada __`case`__ etiqueta se convierte en un valor constante que es del mismo tipo que *`condition`* . A continuación, se compara con *`condition`* para determinar si son iguales. El control pasa a la primera instrucción después del __`case`__ *`constant-expression`* valor que coincide con el valor de *`condition`* . El comportamiento resultante se muestra en la siguiente tabla.
 
-|Condición|Acción|
-|---------------|------------|
-|El valor convertido coincide con el de la expresión de control promovida.|El control se transfiere a la instrucción que sigue a esa etiqueta.|
-|Ninguna de las constantes coincide con las constantes en las etiquetas **Case** ; existe una etiqueta **predeterminada** .|El control se transfiere a la etiqueta **predeterminada** .|
-|Ninguna de las constantes coincide con las constantes en las etiquetas **Case** ; la etiqueta **predeterminada** no está presente.|El control se transfiere a la instrucción después de la instrucción **Switch** .|
+### <a name="switch-statement-behavior"></a>`switch`comportamiento de la instrucción
 
-Si se encuentra una expresión coincidente, el control no se obstaculiza en las siguientes etiquetas **Case** o **default** . La instrucción [break](../cpp/break-statement-cpp.md) se utiliza para detener la ejecución y transferir el control a la instrucción después de la instrucción **Switch** . Sin una instrucción **break** , se ejecuta cada instrucción de la etiqueta **Case** coincidente al final del **modificador**, incluido el **valor predeterminado**. Por ejemplo:
+| Condición | Acción |
+|--|--|
+| El valor convertido coincide con el de la expresión de control promovida. | El control se transfiere a la instrucción que sigue a esa etiqueta. |
+| Ninguna de las constantes coincide con las constantes en las __`case`__ etiquetas; existe una __`default`__ etiqueta. | El control se transfiere a la __`default`__ etiqueta. |
+| Ninguna de las constantes coincide con las constantes en las __`case`__ etiquetas; no __`default`__ existe ninguna etiqueta. | El control se transfiere a la instrucción después de la __`switch`__ instrucción. |
+
+Si se encuentra una expresión coincidente, la ejecución puede continuar a través __`case`__ de las etiquetas posteriores o __`default`__ . La [`break`](../cpp/break-statement-cpp.md) instrucción se utiliza para detener la ejecución y transferir el control a la instrucción después de la __`switch`__ instrucción. Sin una __`break`__ instrucción, se ejecuta cada instrucción de la __`case`__ etiqueta coincidente hasta el final de __`switch`__ , incluido __`default`__ . Por ejemplo:
 
 ```cpp
 // switch_statement1.cpp
 #include <stdio.h>
 
 int main() {
-   char *buffer = "Any character stream";
-   int capa, lettera, nota;
+   const char *buffer = "Any character stream";
+   int uppercase_A, lowercase_a, other;
    char c;
-   capa = lettera = nota = 0;
+   uppercase_A = lowercase_a = other = 0;
 
    while ( c = *buffer++ )   // Walks buffer until NULL
    {
       switch ( c )
       {
          case 'A':
-            capa++;
+            uppercase_A++;
             break;
          case 'a':
-            lettera++;
+            lowercase_a++;
             break;
          default:
-            nota++;
+            other++;
       }
    }
-   printf_s( "\nUppercase a: %d\nLowercase a: %d\nTotal: %d\n",
-      capa, lettera, (capa + lettera + nota) );
+   printf_s( "\nUppercase A: %d\nLowercase a: %d\nTotal: %d\n",
+      uppercase_A, lowercase_a, (uppercase_A + lowercase_a + other) );
 }
 ```
 
-En el ejemplo anterior, se incrementa `capa` si `c` es una `A` mayúscula. La instrucción **break** después de `capa++` finaliza la ejecución del cuerpo de la instrucción **Switch** y el control pasa al bucle **While** . Sin la instrucción **break** , la ejecución pasaría a la siguiente instrucción etiquetada, de modo que también se incrementaría `lettera` y `nota`. Una finalidad similar se sirve de la instrucción **break** para `case 'a'`. Si `c` es una `a`en minúsculas, se incrementa `lettera` y la instrucción **break** finaliza el cuerpo de la instrucción **Switch** . Si `c` no es un `a` o `A`, se ejecuta la instrucción **predeterminada** .
+En el ejemplo anterior, se incrementa `uppercase_A` si `c` es una `'A'` mayúscula. La __`break`__ instrucción después `uppercase_A++` de finaliza la ejecución del __`switch`__ cuerpo de la instrucción y el control pasa al __`while`__ bucle. Sin la __`break`__ instrucción, la ejecución pasaría a la siguiente instrucción etiquetada, por lo que `lowercase_a` `other` también se incrementaría. La instrucción de proporciona un propósito similar __`break`__ `case 'a'` . Si `c` es una minúscula `'a'` , `lowercase_a` se incrementa y la __`break`__ instrucción finaliza el cuerpo de la __`switch`__ instrucción. Si `c` no es `'a'` ni `'A'` , __`default`__ se ejecuta la instrucción.
 
-**Visual Studio 2017 y versiones posteriores:** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)) el atributo `[[fallthrough]]` se especifica en el estándar c++ 17. Se puede usar en una instrucción **Switch** como una sugerencia para el compilador (o para cualquier persona que lea el código) que está previsto el comportamiento de paso a través. Actualmente, C++ el compilador de Microsoft no advierte del comportamiento de fallthrough, por lo que este atributo no tiene ningún efecto en el comportamiento del compilador. Tenga en cuenta que el atributo se aplica a una instrucción vacía dentro de la instrucción etiquetada; en otras palabras, es necesario el punto y coma.
+**Visual Studio 2017 y versiones posteriores:** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)) el `[[fallthrough]]` atributo se especifica en el estándar c++ 17. Se puede utilizar en una __`switch`__ instrucción. Es una sugerencia para el compilador, o cualquier persona que lea el código, el comportamiento de paso a través es intencionado. El compilador de Microsoft C++ no advierte actualmente sobre el comportamiento de fallthrough, por lo que este atributo no tiene ningún efecto en el comportamiento del compilador. En el ejemplo, el atributo se aplica a una instrucción vacía dentro de la instrucción etiquetada sin terminar. Es decir, es necesario el punto y coma.
 
 ```cpp
 int main()
@@ -106,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 versión 15,3 y posterior** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): una instrucción switch puede introducir e inicializar una variable cuyo ámbito está limitado al bloque de la instrucción switch:
+**Visual Studio 2017 versión 15,3 y posterior** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)). Una __`switch`__ instrucción puede tener una *`init-statement`* cláusula, que finaliza con un punto y coma. Introduce e inicializa una variable cuyo ámbito se limita al bloque de la __`switch`__ instrucción:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +138,7 @@ int main()
     };
 ```
 
-Un bloque interno de una instrucción **Switch** puede contener definiciones con inicializaciones siempre y cuando se pueda tener acceso a ellas, es decir, no se omiten en todas las rutas de acceso de ejecución posibles. Los nombres proporcionados mediante estas declaraciones tienen ámbito local. Por ejemplo:
+Un bloque interno de una __`switch`__ instrucción puede contener definiciones con inicializadores siempre que sean *accesibles*, es decir, no omitir todas las rutas de acceso de ejecución posibles. Los nombres proporcionados mediante estas declaraciones tienen ámbito local. Por ejemplo:
 
 ```cpp
 // switch_statement2.cpp
@@ -154,17 +173,13 @@ int main(int argc, char *argv[])
 }
 ```
 
-Una instrucción **Switch** puede estar anidada. En tales casos, las etiquetas **Case** o **default** se asocian con la instrucción **Switch** más cercana que las incluye.
+Una __`switch`__ instrucción puede estar anidada. Cuando está anidada, __`case`__ las __`default`__ etiquetas o se asocian con la instrucción más cercana __`switch`__ que las incluye.
 
-**Específicos de Microsoft**
+### <a name="microsoft-specific-behavior"></a>Comportamiento específico de Microsoft
 
-Microsoft C no limita el número de valores Case en una instrucción **Switch** . El número solo está limitado por la memoria disponible. ANSI C requiere que se permitan, al menos, 257 etiquetas Case en una instrucción **Switch** .
+Microsoft C++ no limita el número de __`case`__ valores en una __`switch`__ instrucción. El número solo está limitado por la memoria disponible.
 
-El valor predeterminado para Microsoft C es que las extensiones de Microsoft estén habilitadas. Use la opción del compilador [/za](../build/reference/za-ze-disable-language-extensions.md) para deshabilitar estas extensiones.
-
-**FIN de Específicos de Microsoft**
-
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Instrucciones de selección](../cpp/selection-statements-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

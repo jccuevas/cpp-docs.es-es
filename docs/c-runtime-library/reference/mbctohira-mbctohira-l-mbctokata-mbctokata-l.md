@@ -1,11 +1,15 @@
 ---
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
+- _o__mbctohira
+- _o__mbctohira_l
+- _o__mbctokata
+- _o__mbctokata_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952557"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914378"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -76,7 +81,7 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter multibyte que se va a convertir.
 
 *locale*<br/>
@@ -86,7 +91,7 @@ Configuración regional que se va a usar.
 
 Cada una de estas funciones devuelve el carácter convertido *c*, si es posible. En caso contrario, devuelve el carácter *c* sin modificar.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las funciones **_mbctohira** y **_mbctokata** prueban un carácter *c* y, si es posible, aplican una de las conversiones siguientes.
 
@@ -99,6 +104,8 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 
 En versiones anteriores, **_mbctohira** se llamaba **jtohira** y **_mbctokata** se llamaba **jtokata**. Para código nuevo, use los nuevos nombres.
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
@@ -108,9 +115,9 @@ En versiones anteriores, **_mbctohira** se llamaba **jtohira** y **_mbctokata** 
 |**_mbctokata**|\<mbstring.h>|
 |**_mbctokata_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>

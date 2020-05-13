@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6264db037069f5fc6b858bdd466ce6c68b814a84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501601"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167049"
 ---
 # <a name="export"></a>exportar
 
@@ -23,13 +23,13 @@ Hace que una estructura de datos se coloque en el archivo. idl.
 [export]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **Export** C++ hace que se coloque una estructura de datos en el archivo. idl y que, a continuación, esté disponible en la biblioteca de tipos en un formato compatible con binario que permita su uso con cualquier lenguaje.
 
 No se puede aplicar el atributo **Export** a una clase aunque la clase solo tenga miembros públicos (el equivalente de un **struct**).
 
-Si exporta una enumeración o un **struct**sin nombre, se le asigna un nombre que comienza por **__unnamed**<em>x</em>, donde *x* es un número secuencial.
+Si exporta una **enumeración** o un **struct**sin nombre, se le asigna un nombre que comienza con **__unnamed**<em>x</em>, donde *x* es un número secuencial.
 
 Las definiciones de tipo válidas para la exportación son tipos base, Structs, uniones, enumeraciones o identificadores de tipo.  Vea [typedef](/windows/win32/Midl/typedef) para obtener más información.
 
@@ -55,13 +55,13 @@ struct MyStruct {
 |||
 |-|-|
 |**Se aplica a**|**Union**, **typedef**, **enum**, **struct**o **interface**|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)

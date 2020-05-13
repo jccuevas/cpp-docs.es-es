@@ -1,6 +1,6 @@
 ---
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsncat_s_l
 - wcsncat_s
@@ -8,6 +8,10 @@ api_name:
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
+- _o__mbsncat_s
+- _o__mbsncat_s_l
+- _o_strncat_s
+- _o_wcsncat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +56,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 4aba4a2bd843fe0946c2e444b305f776065a57be
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626180"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919355"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -173,15 +178,15 @@ Devuelve 0 si se ejecuta correctamente; devuelve un código de error si se produ
 
 |*strDestination*|*numberOfElements*|*strSource*|Valor devuelto|Contenido de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null** o sin terminar|any|any|**EINVAL**|no modificado|
-|any|any|**NULL**|**EINVAL**|no modificado|
-|any|0, o demasiado pequeño|any|**ERANGE**|no modificado|
+|**Null** o sin terminar|cualquiera|cualquiera|**EINVAL**|no modificado|
+|cualquiera|cualquiera|**ACEPTA**|**EINVAL**|no modificado|
+|cualquiera|0, o demasiado pequeño|cualquiera|**ERANGE**|no modificado|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estas funciones intentan anexar los primeros caracteres *D* de *strSource* al final de *strDest*, donde *D* es el menor de *Count* y la longitud de *strSource*. Si anexar esos caracteres *D* caben dentro de *strDest* (cuyo tamaño se proporciona como *numberOfElements*) y sigue dejando espacio para un terminador nulo, entonces se anexan esos caracteres, empezando por el valor nulo de terminación original de  *strDest*y se anexa un nuevo valor null de terminación; de lo contrario, *strDest*[0] se establece en el carácter nulo y se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Estas funciones intentan anexar los primeros caracteres *D* de *strSource* al final de *strDest*, donde *D* es el menor de *Count* y la longitud de *strSource*. Si anexar esos caracteres *D* caben dentro de *strDest* (cuyo tamaño se proporciona como *numberOfElements*) y todavía deja espacio para un terminador nulo, entonces se anexan esos caracteres, empezando por el valor nulo de terminación original de *strDest*, y se anexa un nuevo valor null de terminación; de lo contrario, *strDest*[0] se establece en el carácter nulo y se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
-Existe una excepción al comportamiento anterior. Si *Count* es [_TRUNCATE](../../c-runtime-library/truncate.md) , la cantidad de *strSource* que quepa se anexa a *strDest* mientras se mantiene espacio para anexar un carácter de terminación null.
+Existe una excepción al comportamiento anterior. Si el *recuento* es [_TRUNCATE](../../c-runtime-library/truncate.md) entonces, la cantidad de *strSource* que quepa se anexa a *strDest* mientras deja espacio para anexar un carácter de terminación null.
 
 Por ejemplo,
 
@@ -191,7 +196,7 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-significa que se pide a **strncat_s** que anexe tres caracteres a dos caracteres en un búfer de cinco caracteres de longitud. Esto no dejaría ningún espacio para el terminador null, por lo tanto **strncat_s** ceros en la cadena y llama al controlador de parámetros no válidos.
+significa que se solicita **strncat_s** para anexar tres caracteres a dos caracteres en un búfer de cinco caracteres. Esto no dejaría ningún espacio para el terminador null, por lo tanto **strncat_s** pone en cero la cadena y llama al controlador de parámetros no válidos.
 
 Si el comportamiento de truncamiento es necesario, use **_TRUNCATE** o ajuste el parámetro de *tamaño* según corresponda:
 
@@ -199,7 +204,7 @@ Si el comportamiento de truncamiento es necesario, use **_TRUNCATE** o ajuste el
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-o
+or
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -217,6 +222,8 @@ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
@@ -224,7 +231,7 @@ Las versiones de la biblioteca de depuración de estas funciones rellenan primer
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** y **_wcsncat_s_l** no dependen de la configuración regional; solo se proporcionan para **_tcsncat_s_l**.
+**_strncat_s_l** y **_wcsncat_s_l** no tienen ninguna dependencia de la configuración regional; solo se proporcionan para **_tcsncat_s_l**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -373,10 +380,10 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
