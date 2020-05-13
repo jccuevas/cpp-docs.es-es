@@ -1,0 +1,128 @@
+- name: C++ en Visual Studio
+  expanded: false
+  items:
+    - name: C++ en Visual Studio
+      href: ../overview/visual-cpp-in-visual-studio.md
+    - name: "Introducción al desarrollo de C++ en Visual\_Studio"
+      href: ../overview/overview-of-cpp-development.md
+    - name: Novedades de C++ en Visual Studio
+      href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: "Mejoras de conformidad de C++ en Visual\_Studio"
+      href: ../overview/cpp-conformance-improvements.md
+    - name: "Conformidad del lenguaje Microsoft\_C++"
+      href: ../overview/visual-cpp-language-conformance.md
+    - name: Plataformas de destino compatibles
+      href: ../overview/supported-platforms-visual-cpp.md
+    - name: Herramientas y características de C++ en las ediciones de Visual Studio
+      href: ../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md
+    - name: Muestras
+      href: ../overview/visual-cpp-samples.md
+    - name: Ayuda y comunidad
+      href: ../overview/visual-cpp-help-and-community.md
+    - name: Cómo notificar un problema con el conjunto de herramientas de Visual C++
+      href: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- name: Tutoriales de Visual Studio C++
+  expanded: false
+  items:
+    - name: "Instalación de compatibilidad con C++ en Visual\_Studio"
+      href: ../build/vscpp-step-0-installation.md
+    - name: Creación y edición de un proyecto de aplicación de consola de C++
+      href: ../build/vscpp-step-1-create.md
+    - name: Compilación y ejecución de un proyecto de aplicación de consola de C++
+      href: ../build/vscpp-step-2-build.md
+    - name: Creación de su segunda aplicación de C++
+      href: ../get-started/tutorial-console-cpp.md
+    - name: Creación de una aplicación UWP
+      href: /windows/uwp/cpp-and-winrt-apis/get-started
+    - name: Creación de una aplicación de escritorio de Windows
+      href: /windows/desktop/learnwin32/learn-to-program-for-windows
+    - name: Creación de un juego DirectX
+      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+- name: Proyectos y sistemas de compilación
+  href: ../build/projects-and-build-systems-cpp.md
+- name: Lectura y escritura del código de C++ en Visual Studio
+  href: ../ide/read-and-understand-code-cpp.md
+- name: Desarrollo de escritorio para Windows
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: Desarrollo de UWP
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: Desarrollo de juegos
+  href: ../overview/game-development-cpp.md
+- name: Desarrollo de Linux
+  href: ../linux/
+- name: Desarrollo móvil multiplataforma
+  href: ../cross-platform/
+- name: Desarrollo de .NET con C++/CLI
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: Programación web y para la nube
+  href: ../cloud/cloud-and-web-programming-in-visual-cpp.md
+- name: Puerto y actualización del código de C++
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: Procedimientos recomendados para la seguridad en C++
+  expanded: false
+  items:
+    - name: Procedimientos recomendados para la seguridad en C++
+      href: ../security/security-best-practices-for-cpp.md
+    - name: Ejecutar como miembro del grupo de usuarios
+      href: ../security/running-as-a-member-of-the-users-group.md
+    - name: Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación
+      href: ../security/how-user-account-control-uac-affects-your-application.md
+    - name: Guía para desarrolladores de C++ sobre los canales laterales de ejecución especulativa
+      href: ../security/developer-guidance-speculative-execution.md
+- name: Referencia
+  expanded: false
+  items:
+    - name: Lenguaje C/C++ y bibliotecas estándar
+      href: ../cpp/c-cpp-language-and-standard-libraries.md
+    - name: Referencia de lenguajes
+      expanded: false
+      items:
+        - name: Lenguajes
+          href: ../overview/languages-cpp.md
+        - name: Referencia del lenguaje C
+          href: ../c-language/c-language-reference.md
+        - name: Referencia del lenguaje C++
+          href: ../cpp/cpp-language-reference.md
+        - name: Referencia del preprocesador de C/C++
+          href: ../preprocessor/c-cpp-preprocessor-reference.md
+        - name: Intrínsecos del compilador y lenguaje ensamblador
+          href: ../intrinsics/compiler-intrinsics-and-assembly-language.md
+        - name: Intrínsecos del controlador
+          href: ../intrinsics/compiler-intrinsics.md
+        - name: Referencia del ensamblador de ARM
+          href: ../assembler/arm/arm-assembler-reference.md
+        - name: Código de ensamblado en línea en MSVC
+          href: ../assembler/inline/inline-assembler.md
+        - name: Referencia de Microsoft Macro Assembler (MASM)
+          href: ../assembler/masm/microsoft-macro-assembler-reference.md
+        - name: Extensiones de componentes de .NET y UWP
+          href: ../extensions/component-extensions-for-runtime-platforms.md
+        - name: Atributos de C++ para COM y .NET
+          href: ../windows/attributes/cpp-attributes-com-net.md
+    - name: Referencia de bibliotecas
+      expanded: false
+      items:
+        - name: Bibliotecas
+          href: ../overview/libraries-cpp.md
+        - name: Referencia de la biblioteca en tiempo de ejecución (CRT) de C
+          href: ../c-runtime-library/
+        - name: Referencia de biblioteca estándar de C++
+          href: ../standard-library/
+        - name: SafeInt (biblioteca)
+          expanded: false
+          items:
+            - name: SafeInt (biblioteca)
+              href: ../safeint/safeint-library.md
+            - name: SafeInt (Clase)
+              href: ../safeint/safeint-class.md
+            - name: SafeInt (Funciones)
+              href: ../safeint/safeint-functions.md
+            - name: SafeIntException (Clase)
+              href: ../safeint/safeintexception-class.md
+        - name: MFC/ATL
+          href: ../mfc/mfc-and-atl.md
+        - name: Bibliotecas paralelas
+          href: ../parallel/
+          items: null
+        - name: Bibliotecas de acceso a datos
+          href: ../data/

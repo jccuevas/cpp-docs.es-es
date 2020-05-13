@@ -1,0 +1,73 @@
+- name: Lectura y escritura del código de C++ en Visual Studio
+  expanded: true
+  items:
+    - name: Lectura y reconocimiento de código C++
+      href: ../ide/read-and-understand-code-cpp.md
+    - name: Edición y refactorización de código C++
+      href: ../ide/writing-and-refactoring-code-cpp.md
+    - name: Navegación en código C++
+      href: ../ide/navigate-code-cpp.md
+    - name: Establecer las preferencias de codificación de C++
+      href: ../ide/how-to-set-preferences.md
+    - name: Colaboración mediante Live Share para C++
+      href: ../ide/live-share-cpp.md
+    - name: Cambiar firma
+      href: ../ide/refactoring/change-signature.md
+    - name: Convertir en literal de cadena sin formato
+      href: ../ide/refactoring/convert-to-raw-string-literal.md
+    - name: Crear declaración o definición
+      href: ../ide/refactoring/create-declaration-definition.md
+    - name: Extraer función
+      href: ../ide/refactoring/extract-function.md
+    - name: Implementar virtuales puras
+      href: ../ide/refactoring/implement-pure-virtuals.md
+    - name: Mover definición de función
+      href: ../ide/refactoring/move-definition-location.md
+    - name: Cambiar nombre
+      href: ../ide/refactoring/rename.md
+- name: Utilizar el IDE de Visual Studio para desarrollo de escritorio de C++
+  expanded: true
+  items:
+    - name: Utilizar el IDE de Visual Studio para desarrollo de escritorio de C++
+      href: ../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
+    - name: 'Tutorial: Trabajar con proyectos y soluciones (C++)'
+      href: ../ide/walkthrough-working-with-projects-and-solutions-cpp.md
+    - name: 'Tutorial: Compilar un proyecto (C++)'
+      href: ../ide/walkthrough-building-a-project-cpp.md
+    - name: 'Tutorial: Probar un proyecto (C++)'
+      href: ../ide/walkthrough-testing-a-project-cpp.md
+    - name: 'Tutorial: Depurar un proyecto (C++)'
+      href: ../ide/walkthrough-debugging-a-project-cpp.md
+    - name: 'Tutorial: Implementar el programa (C++)'
+      href: ../ide/walkthrough-deploying-your-program-cpp.md
+- name: Agregar funcionalidad con los Asistentes para código
+  expanded: true
+  items:
+    - name: Agregar funcionalidad con los Asistentes para código
+      href: ../ide/adding-functionality-with-code-wizards-cpp.md
+    - name: Agregar una clase
+      href: ../ide/adding-a-class-visual-cpp.md
+    - name: Agregar una clase desde un control ActiveX
+      href: ../ide/adding-a-class-from-an-activex-control-visual-cpp.md
+    - name: Agregar una clase genérica de C++
+      href: ../ide/adding-a-generic-cpp-class.md
+    - name: Agregar una función miembro
+      href: ../ide/adding-a-member-function-visual-cpp.md
+    - name: Agregar una variable miembro
+      href: ../ide/adding-a-member-variable-visual-cpp.md
+    - name: Agregar un método
+      href: ../ide/adding-a-method-visual-cpp.md
+    - name: Agregar una propiedad
+      href: ../ide/adding-a-property-visual-cpp.md
+    - name: Agregar un evento
+      href: ../ide/adding-an-event-visual-cpp.md
+    - name: Agregar un controlador de eventos
+      href: ../ide/adding-an-event-handler-visual-cpp.md
+    - name: Crear una interfaz COM
+      href: ../ide/creating-a-com-interface-visual-cpp.md
+    - name: Implementar un punto de conexión
+      href: ../ide/implementing-a-connection-point-visual-cpp.md
+    - name: Implementar una interfaz
+      href: ../ide/implementing-an-interface-visual-cpp.md
+    - name: Reemplazar una función virtual
+      href: ../ide/overriding-a-virtual-function-visual-cpp.md
