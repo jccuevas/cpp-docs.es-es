@@ -1,4 +1,4 @@
----
+﻿---
 title: Aplicaciones de escritorio ( C++visual)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f

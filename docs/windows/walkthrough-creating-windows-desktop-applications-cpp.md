@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Tutorial: Crear una aplicación de escritorio de Windows tradicional (C++)'
 description: Cómo crear una aplicación de escritorio de Windows tradicional y mínima con Visual Studio, C++ y la API de Win32
 ms.custom: get-started-article
