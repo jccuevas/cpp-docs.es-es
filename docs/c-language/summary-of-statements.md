@@ -4,7 +4,7 @@ ms.date: 11/04/2016
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
 ms.openlocfilehash: 1a230ca7d998316d2ec96e76b54ac60575acd2ee
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857000"
@@ -18,8 +18,8 @@ ms.locfileid: "74857000"
 &nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción try-except-*  /\* \*específicas de Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* \*específicas de Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* Específico de Microsoft \*/
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**<br/>
@@ -56,10 +56,10 @@ ms.locfileid: "74857000"
 &nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
-*try-except-Statement*:/\* \*específicos de Microsoft /<br/>
+*try-except-statement*:   /\* Específico de Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
 
-*try-finally-Statement*:/\* \*específicos de Microsoft /<br/>
+*try-finally-statement*:   /\* Específico de Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__finally**  *compound-statement*
 
 ## <a name="see-also"></a>Vea también

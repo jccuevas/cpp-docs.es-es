@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
 ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857104"
@@ -23,7 +23,7 @@ Un *cuerpo de función* es una instrucción compuesta que contiene instrucciones
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *Attribute-SEQ* es un \*específico de Microsoft /
+/\* *attribute-seq* es específico de Microsoft \*/
 
 *compound-statement*: /\* cuerpo de la función \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**

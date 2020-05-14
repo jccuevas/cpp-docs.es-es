@@ -11,18 +11,18 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: db47362096506cf1c00f1ac566565b894253d798
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151369"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825696"
 ---
 # <a name="structure-and-union-members"></a>Miembros de estructura y de unión
 
 Una expresión de selección de miembro (“member-selection expression”) hace referencia a miembros de estructuras y uniones. Tal expresión tiene el valor y el tipo del miembro seleccionado.
 
-> *postfix-expression* **.** *identifier*
+> *postfix-expression* **.** *identifier*\
 > *postfix-expression* **->** *identifier*
 
 En esta lista se describen las dos formas de expresiones de selección de miembro:
@@ -33,7 +33,7 @@ En esta lista se describen las dos formas de expresiones de selección de miembr
 
 Las dos formas de expresiones de selección de miembros tienen efectos similares.
 
-De hecho, una expresión que contenga el operador de selección de miembro (**->**) es una versión abreviada de una expresión que usa el punto (**.**) si la expresión anterior al punto consta del operador de direccionamiento indirecto (<strong>\*</strong>) aplicado a un valor de puntero. Por lo tanto,
+De hecho, una expresión que contenga el operador de selección de miembro ( **->** ) es una versión abreviada de una expresión que usa el punto ( **.** ) si la expresión anterior al punto consta del operador de direccionamiento indirecto (<strong>\*</strong>) aplicado a un valor de puntero. Por lo tanto,
 
 ```cpp
 expression->identifier
@@ -72,7 +72,7 @@ En el ejemplo anterior, la dirección de la estructura `item` se asigna al miemb
 (item.sp)->a = 24;
 ```
 
-En este ejemplo, la expresión de puntero `item.sp` se usa con el operador de selección de miembro (**->**) para asignar un valor al miembro `a`.
+En este ejemplo, la expresión de puntero `item.sp` se usa con el operador de selección de miembro ( **->** ) para asignar un valor al miembro `a`.
 
 ```
 list[8].b = 12;

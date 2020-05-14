@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158241"
 ---
 # <a name="simple-variable-declarations"></a>Declaraciones de variables simples
 
@@ -33,7 +33,7 @@ En las declaraciones de variables se requieren clases o tipos de almacenamiento 
 
 Para los tipos aritméticos, de estructura, unión, enumeraciones y vacíos y para tipos representados por nombres de `typedef`, se puede usar declaradores simples en una declaración, puesto que el especificador de tipo proporciona toda la información de tipo. Los tipos de puntero, matriz y función requieren declaradores más complicados.
 
-Puede utilizar una lista de identificadores separados por comas (**,**) para especificar varias variables en la misma declaración. Todas las variables definidas en la declaración tienen el mismo tipo base. Por ejemplo:
+Puede utilizar una lista de identificadores separados por comas ( **,** ) para especificar varias variables en la misma declaración. Todas las variables definidas en la declaración tienen el mismo tipo base. Por ejemplo:
 
 ```C
 int x, y;        /* Declares two simple variables of type int */

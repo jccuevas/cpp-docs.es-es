@@ -1,5 +1,5 @@
 ---
-title: Consumir bibliotecas y componentes en C++ proyectos
+title: Consumo de bibliotecas y componentes en proyectos de C++
 ms.date: 12/10/2018
 f1_keywords:
 - VC.Project.References
@@ -9,48 +9,48 @@ helpviewer_keywords:
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80169960"
 ---
-# <a name="consuming-libraries-and-components"></a>Consumir bibliotecas y componentes
+# <a name="consuming-libraries-and-components"></a>Consumo de bibliotecas y componentes
 
-A menudo, C++ un proyecto necesita llamar a funciones o tener acceso a los datos de un archivo binario, como una biblioteca estática (archivos. lib), un archivo dll, un componente de Windows Runtime, un componente com o un ensamblado .net. En estos casos, tiene que configurar el proyecto para que pueda encontrar ese binario en tiempo de compilación. Los pasos específicos dependen del tipo de proyecto, el tipo del archivo binario y de si el binario se está compilando en la misma solución que el proyecto.
+A menudo, un proyecto de C++ necesita llamar a funciones o tener acceso a los datos de un archivo binario, como una biblioteca estática (archivos .lib), un archivo DLL, un componente de Windows Runtime, un componente COM o un ensamblado de .NET. En estos casos, tiene que configurar el proyecto para que pueda encontrar ese archivo binario en tiempo de compilación. Los pasos específicos dependen del tipo de proyecto, del tipo de archivo binario y de si el binario se va a compilar en la misma solución que el proyecto.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Consumo de bibliotecas descargadas a través de vcpkg
 
-Para consumir una biblioteca que ha descargado mediante el administrador de paquetes **vcpkg** , puede omitir las instrucciones siguientes. Consulte [vcpkg: un C++ administrador de paquetes para Windows, Linux y MacOS](vcpkg.md#integrate-with-visual-studio-windows) para más información.
+Para consumir una biblioteca que se ha descargado mediante el administrador de paquetes **vcpkg**, puede omitir las instrucciones siguientes. Consulte [vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS](vcpkg.md#integrate-with-visual-studio-windows) para obtener más información.
 
-## <a name="consuming-static-libraries"></a>Consumir bibliotecas estáticas
+## <a name="consuming-static-libraries"></a>Consumo de bibliotecas estáticas
 
 Si el proyecto de biblioteca estática se va a compilar en la misma solución:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>incluya los archivos de encabezado de la biblioteca estática mediante comillas. En una solución típica, la ruta de acceso se iniciará con `../<library project name>`. IntelliSense le ayudará a encontrarla.
-2. Agregue una referencia al proyecto de biblioteca estática. Haga clic con el botón derecho en **referencias** en el nodo del proyecto de aplicación en **Explorador de soluciones** y elija **Agregar referencia**.
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>Incluya los archivos de encabezado de la biblioteca estática entre comillas. En una solución típica, la ruta de acceso se iniciará con `../<library project name>`. IntelliSense le ayudará a encontrarla.
+2. Agregue una referencia al proyecto de biblioteca estática. Haga clic con el botón derecho en **Referencias** en el nodo del proyecto de prueba en el **Explorador de soluciones** y elija **Agregar referencia**.
 
 Si la biblioteca estática no forma parte de la solución:
 
-1. Haga clic con el botón secundario en el nodo del proyecto de aplicación en **Explorador de soluciones** y, a continuación, elija **propiedades**.
-2. En la página de propiedades **directorios de VC + +** , agregue la ruta de acceso al directorio donde se encuentra el archivo. lib en **rutas de biblioteca** y agregue la ruta de acceso a los archivos de encabezado de la biblioteca en directorios de **inclusión**.  
-3. En la página de propiedades **entrada del vinculador >** , agregue el nombre del archivo. lib a las **dependencias adicionales**.
+1. Haga clic con el botón derecho en el nodo del proyecto de aplicación en el **Explorador de soluciones** y elija **Propiedades**.
+2. En la página de propiedades **Directorios de VC++** , agregue la ruta de acceso al directorio donde se encuentra el archivo .lib en **Rutas de acceso de biblioteca** y agregue la ruta de acceso a los archivos de encabezado de la biblioteca en **Directorios de archivos de inclusión**.  
+3. En la página de propiedades **Enlazador > Entrada**, agregue el nombre del archivo .lib a **Dependencias adicionales**.
 
 ## <a name="dynamic-link-libraries"></a>Bibliotecas de vínculos dinámicos
 
 Si el archivo DLL se va a compilar como parte de la misma solución que la aplicación, siga los mismos pasos que para una biblioteca estática.
 
-Si el archivo DLL no forma parte de la solución de aplicación, necesita el archivo DLL, los encabezados con prototipos para las funciones y las clases exportadas, y un archivo. lib que proporciona la información de vinculación necesaria.
+Si el archivo DLL no forma parte de la solución de aplicación, necesita el archivo DLL, los encabezados con prototipos para las funciones y las clases exportadas, y un archivo .lib que proporciona la información de vinculación necesaria.
 
-1. Copie el archivo DLL en la carpeta de salida del proyecto o en otra carpeta de la ruta de acceso de búsqueda estándar de Windows para archivos dll. Consulte [orden de búsqueda de la biblioteca de vínculos dinámicos](/windows/win32/dlls/dynamic-link-library-search-order).
-2. Siga los pasos 1-3 para que las bibliotecas estáticas proporcionen las rutas de acceso a los encabezados y al archivo. lib.
+1. Copie el archivo DLL en la carpeta de salida del proyecto o en otra carpeta de la ruta de búsqueda estándar de Windows para archivos DLL. Consulte [Orden de búsqueda de la biblioteca de vínculos dinámicos](/windows/win32/dlls/dynamic-link-library-search-order).
+2. Siga los pasos 1-3 para que las bibliotecas estáticas proporcionen las rutas de acceso a los encabezados y al archivo .lib.
 
 ## <a name="com-objects"></a>objetos COM
 
-Si su aplicación C++ nativa necesita consumir un objeto com y dicho objeto está *registrado*, lo único que tiene que hacer es llamar a COCREATEINSTANCE y pasar el CLSID del objeto. El sistema lo encontrará en el registro de Windows y lo cargará. Un C++proyecto/CLI puede consumir un objeto com de la misma manera, o bien agregar una referencia a él desde la lista **Agregar referencias > com** y consumirlo a través del contenedor al que se [puede llamar en tiempo de ejecución](/dotnet/framework/interop/runtime-callable-wrapper).
+Si la aplicación nativa de C++ necesita consumir un objeto COM y ese objeto está *registrado*, lo único que debe hacer es llamar a CoCreateInstance y pasar el CLSID del objeto. El sistema lo encontrará en el Registro de Windows y lo cargará. Un proyecto de C++/CLI puede consumir un objeto COM de la misma manera, o bien puede agregar una referencia a él desde la lista **Agregar referencias > COM** y consumirlo a través de su [contenedor RCW](/dotnet/framework/interop/runtime-callable-wrapper).
 
-## <a name="net-assemblies-and-windows-runtime-components"></a>Ensamblados .NET y componentes de Windows Runtime
+## <a name="net-assemblies-and-windows-runtime-components"></a>Ensamblados de .NET y componentes de Windows Runtime
 
-En los proyectos C++de UWP o/CLI, se usan ensamblados .net o componentes de Windows Runtime agregando una *referencia* al ensamblado o componente. En el nodo **referencias** de un proyecto de C++UWP o/CLI, verá referencias a los componentes de uso frecuente. Haga clic con el botón secundario en el nodo **referencias** de **Explorador de soluciones** para que se muestre el **Administrador de referencias** y examine los componentes adicionales que conoce el sistema. Haga clic en el botón **examinar** para ir a cualquier carpeta en la que se encuentre un componente personalizado. Dado que los ensamblados .NET y los componentes de Windows Runtime contienen información de tipos integrados, puede ver sus métodos y clases haciendo clic con el botón secundario y eligiendo **ver en examinador de objetos**.
+En los proyectos de UWP o de C++/CLI, se consumen ensamblados de .NET o componentes de Windows Runtime agregando una *referencia* a ellos. En el nodo **Referencias** de un proyecto de UWP o de C++/CLI, verá referencias a los componentes más usados. Haga clic con el botón derecho en el nodo **Referencias** en el **Explorador de soluciones** para abrir el **Administrador de referencias** y examinar los componentes adicionales que el sistema conoce. Haga clic en el botón **Examinar** para ir a cualquier carpeta en la que se encuentre un componente personalizado. Dado que los ensamblados de .NET y los componentes de Windows Runtime contienen información de tipos integrados, puede ver sus métodos y clases haciendo clic con el botón derecho y eligiendo la opción **Ver en el Examinador de objetos**.
 
 ## <a name="reference-properties"></a>Propiedades de referencia
 
@@ -80,15 +80,15 @@ Las propiedades de referencias de ActiveX solo están disponibles para las refer
 
    Muestra la herramienta que se utiliza para compilar el ensamblado de interoperabilidad desde el control ActiveX o la biblioteca COM a los que se hace referencia.
 
-### <a name="assembly-reference-properties-ccli"></a>Propiedades de referencia deC++ensamblado (/CLI)
+### <a name="assembly-reference-properties-ccli"></a>Propiedades de referencias de ensamblados (C++/CLI)
 
-Las propiedades de referencia de ensamblado solo están disponibles para las C++referencias a ensamblados de .NET Framework en proyectos/CLI. Estas propiedades solo se muestran cuando se selecciona un ensamblado de .NET Framework en el panel **referencias** . No se pueden modificar las propiedades.
+Las propiedades de referencias de ensamblados solo están disponibles para referencias a ensamblados de .NET Framework en proyectos de C++/CLI. Estas propiedades solo se muestran cuando se selecciona un ensamblado de .NET Framework en el panel **Referencias**. No se pueden modificar las propiedades.
 
 - **Ruta relativa**
 
    Muestra la ruta de acceso relativa desde el directorio del proyecto hasta el ensamblado al que se hace referencia.
 
-### <a name="build-properties"></a>Propiedades de la compilación
+### <a name="build-properties"></a>Propiedades de compilación
 
 Las propiedades siguientes están disponibles en diversos tipos de referencia. Estas propiedades permiten especificar cómo compilar con referencias.
 
@@ -96,7 +96,7 @@ Las propiedades siguientes están disponibles en diversos tipos de referencia. E
 
    Especifica si se debe copiar automáticamente el ensamblado al que se hace referencia en la ubicación de destino durante una compilación.
 
-- **Copiar ensamblados satélite localesC++(/CLI)**
+- **Copia local de ensamblados satélite (C++/CLI)**
 
    Especifica si se deben copiar automáticamente los ensamblados satélite del ensamblado al que se hace referencia en la ubicación de destino durante una compilación. Solo se utiliza si el valor de **Copia local** es **true**.
 
@@ -106,7 +106,7 @@ Las propiedades siguientes están disponibles en diversos tipos de referencia. E
 
 ### <a name="project-to-project-reference-properties"></a>Propiedades de referencia de proyecto a proyecto
 
-Las siguientes propiedades definen una *referencia de proyecto a proyecto* del proyecto que está seleccionado en el panel **referencias** a otro proyecto de la misma solución. Para más información, vea [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project).
+Las siguientes propiedades definen una *referencia de proyecto a proyecto* del proyecto que está seleccionado en el panel **Referencias** a otro proyecto en la misma solución. Para más información, vea [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project).
 
 - **Dependencias de la biblioteca de vínculos**
 
@@ -120,7 +120,7 @@ Las siguientes propiedades definen una *referencia de proyecto a proyecto* del p
 
    Cuando esta propiedad es **False**, el sistema de proyectos no vincula dentro del proyecto dependiente los archivos .obj de la biblioteca generada por el proyecto independiente. Por lo tanto, este valor deshabilita la vinculación incremental. Normalmente especificará **False** , porque compilar la aplicación puede tardar mucho tiempo si hay muchos proyectos independientes.
 
-### <a name="read-only-reference-properties-com--net"></a>Propiedades de referencia de solo lectura (COM & .NET)
+### <a name="read-only-reference-properties-com--net"></a>Propiedades de referencias de solo lectura (COM y .NET)
 
 Las siguientes propiedades se encuentran en las referencias de ensamblado de .NET y COM y no se puede modificar.
 
@@ -140,7 +140,7 @@ Las siguientes propiedades se encuentran en las referencias de ensamblado de .NE
 
    Muestra la ruta de acceso del directorio del ensamblado al que se hace referencia.
 
-- **Identidad**
+- **Identity**
 
    Para los ensamblados de .NET Framework, muestra la ruta de acceso completa. Para los componentes COM, muestra el GUID.
 
@@ -164,7 +164,7 @@ Las siguientes propiedades se encuentran en las referencias de ensamblado de .NE
 
    Muestra la versión del ensamblado al que se hace referencia.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[C++referencia de la página de propiedades del proyecto](reference/property-pages-visual-cpp.md)<br>
+[Referencia de las páginas de propiedades de un proyecto de C++](reference/property-pages-visual-cpp.md)<br>
 [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](working-with-project-properties.md)

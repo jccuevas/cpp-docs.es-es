@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Organizar archivos de resultados de proyectos para la compilación'
+title: Procedimiento Organizar archivos de salida del proyecto para compilaciones
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
 ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328526"
 ---
-# <a name="how-to-organize-project-output-files-for-builds"></a>Cómo: Organizar archivos de resultados de proyectos para la compilación
+# <a name="how-to-organize-project-output-files-for-builds"></a>Procedimiento Organizar archivos de salida del proyecto para compilaciones
 
 En este tema se describen los procedimientos recomendados para organizar los archivos de salida del proyecto. Los errores de compilación se pueden producir al configurar los archivos de salida del proyecto de forma incorrecta. En este tema también se describen las ventajas y desventajas de cada alternativa para organizar los archivos de salida del proyecto.
 
@@ -46,9 +46,9 @@ En este tema se describen los procedimientos recomendados para organizar los arc
 
 1. Haga referencia al archivo de encabezado adecuado en el código mediante la directiva #include. El archivo de encabezado debe estar en la ruta de acceso de inclusión o formar parte del proyecto actual. Para obtener más información, vea [#include (directiva) (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. También puede establecer dependencias del proyecto. Al establecer las dependencias del proyecto se garantizan dos cosas. En primer lugar, se asegura de que los proyectos se compilen en el orden correcto para que un proyecto siempre pueda encontrar los archivos dependientes que necesita. En segundo lugar, agrega implícitamente el directorio de salida del proyecto dependiente a la ruta de acceso para que los archivos se puedan encontrar fácilmente en tiempo de vínculo.
+1. También puede establecer dependencias del proyecto. Al establecer las dependencias del proyecto se garantizan dos cosas. En primer lugar, se asegura de que los proyectos se compilen en el orden correcto para que un proyecto siempre pueda encontrar los archivos dependientes que necesita. En segundo lugar, se agrega implícitamente el directorio de salida del proyecto dependiente a la ruta de acceso para que los archivos se puedan encontrar fácilmente en tiempo de vinculación.
 
-1. Para implementar la aplicación, debe colocar el archivo DLL en un lugar adecuado. Puede ser uno de los siguientes:
+1. Para implementar la aplicación, debe colocar el archivo DLL en un lugar adecuado. Este puede ser uno de los siguientes:
 
    1. La misma ruta de acceso del archivo ejecutable.
 
@@ -68,6 +68,6 @@ La ubicación de los archivos de salida puede ser un problema importante cuando 
 
 1. La ubicación de la configuración de salida del proyecto se puede encontrar en las **Páginas de propiedades** del proyecto. Expanda el nodo situado junto a **Propiedades de configuración** y seleccione **General**. La ubicación de salida se especifica junto a **Directorio de salida**. Para obtener más información, vea [Página de propiedades General (Proyecto)](reference/general-property-page-project.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Tipos de proyectos de C++ en Visual Studio](reference/visual-cpp-project-types.md)

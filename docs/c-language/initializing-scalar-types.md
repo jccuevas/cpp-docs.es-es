@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
 ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232948"
 ---
 # <a name="initializing-scalar-types"></a>Inicializar tipos escalares
 
@@ -48,7 +48,7 @@ Puede inicializar variables de cualquier tipo, siempre que observe las reglas si
 
 - Las variables declaradas en el nivel de ámbito de archivo se pueden inicializar. Si no inicializa explícitamente una variable en el nivel externo, se inicializa en 0 de forma predeterminada.
 
-- Una expresión constante se puede utilizar para inicializar una variable global declarada con el especificador **storage-class-specifier** *static*. Las variables declaradas como **static** se inicializan cuando comienza la ejecución del programa. Si no inicializa explícitamente una variable global **static**, se inicializa en 0 de forma predeterminada y se asigna un puntero null a cada miembro que tenga el tipo de puntero.
+- Una expresión constante se puede usar para inicializar una variable global declarada con el *storage-class-specifier* **static**. Las variables declaradas como **static** se inicializan cuando comienza la ejecución del programa. Si no inicializa explícitamente una variable global **static**, se inicializa en 0 de forma predeterminada y se asigna un puntero null a cada miembro que tenga el tipo de puntero.
 
 - Las variables declaradas con el especificador de clase de almacenamiento **auto** o **register** se inicializan cada vez que el control en tiempo de ejecución pasa al bloque donde se declaran. Si omite un inicializador en la declaración de una variable **auto** o **register**, el valor inicial de la variable es indefinido. Para los valores auto y register, el inicializador no se limita a una constante; puede ser cualquier expresión que contenga valores definidos previamente, incluidas llamadas de función.
 
@@ -102,7 +102,7 @@ int function( void )
 }
 ```
 
-La variable global `GLOBAL` se declara en el nivel externo, por lo que tiene duración global. La variable local `LOCAL` tiene una clase de almacenamiento **auto** y solo tiene una dirección durante la ejecución de la función en la que se declara. Por consiguiente, el intento de inicializar la variable de puntero **static** `lp` con la dirección de `LOCAL` no se permite. La variable de puntero **static** `gp` se puede inicializar en la dirección de `GLOBAL` porque esa dirección siempre es la misma. De igual forma, `*rp` se puede inicializar porque `rp` es una variable local y no puede tener un inicializador que no sea constante. Cada vez que se entra en el bloque, `LOCAL` tiene una nueva dirección, que se asigna a `rp`.
+La variable global `GLOBAL` se declara en el nivel externo, por lo que tiene duración global. La variable local `LOCAL` tiene una clase de almacenamiento **auto** y solo tiene una dirección durante la ejecución de la función en la que se declara. Por consiguiente, el intento de inicializar la variable de puntero **static**`lp` con la dirección de `LOCAL` no se permite. La variable de puntero **static**`gp` se puede inicializar en la dirección de `GLOBAL` porque esa dirección siempre es la misma. De igual forma, `*rp` se puede inicializar porque `rp` es una variable local y no puede tener un inicializador que no sea constante. Cada vez que se entra en el bloque, `LOCAL` tiene una nueva dirección, que se asigna a `rp`.
 
 ## <a name="see-also"></a>Vea también
 

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
 ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857143"
@@ -36,7 +36,7 @@ Una definición de función especifica el nombre de la función, los tipos y el 
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *Attribute-SEQ* es un \*específico de Microsoft /
+/\* *attribute-seq* es específico de Microsoft \*/
 
 Los parámetros de prototipo son:
 

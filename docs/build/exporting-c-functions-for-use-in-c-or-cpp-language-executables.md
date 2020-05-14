@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
 ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273578"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Exportar funciones de C para utilizarlas en ejecutables creados en C o C++
 
-Si tiene funciones en un archivo DLL escrito en C que se desea tener acceso desde un lenguaje de C o C++ módulo de idioma, debe usar el **__cplusplus** macro de preprocesador para determinar qué idioma se está compilando y, a continuación, declarar estas las funciones con vinculación C si se usa desde un C++ módulo de idioma. Si usa esta técnica y proporcionar los archivos de encabezado para el archivo DLL, estas funciones se pueden usar los usuarios de C y C++ sin cambios.
+Si tiene funciones en un archivo DLL escrito en C a las que quiere acceder desde un módulo de lenguaje de C o C++, debe usar la macro de preprocesador **__cplusplus** para determinar qué lenguaje se está compilando y, luego, declarar estas funciones con vinculación de C si se usan desde un módulo de lenguaje de C++. Si usa esta técnica y proporciona archivos de encabezado para el archivo DLL, los usuarios de C y C++ podrán usar estas funciones sin cambios.
 
-El código siguiente muestra un archivo de encabezado que se puede usar las aplicaciones de cliente de C y C++:
+En el código siguiente se muestra un archivo de encabezado que pueden usar las aplicaciones cliente de C y C++:
 
 ```h
 // MyCFuncs.h
@@ -36,7 +36,7 @@ __declspec( dllimport ) void AnotherCFunc();
 #endif
 ```
 
-Si es preciso que vincule las funciones de C para el ejecutable de C++ y los archivos de encabezado de la declaración de función no han usado la técnica anterior, en el archivo de código fuente de C++, siga este procedimiento para evitar que el compilador de decoración de nombres de función de C:
+Si necesita vincular funciones de C al archivo ejecutable de C++ y los archivos de encabezado de declaración de función no han usado la técnica anterior, en el archivo de código fuente de C++, haga lo siguiente para evitar que el compilador decore los nombres de las funciones de C:
 
 ```cpp
 extern "C" {
@@ -48,11 +48,11 @@ extern "C" {
 
 - [Exportar desde un archivo DLL mediante archivos .def](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar desde un archivo DLL mediante__declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar desde un archivo DLL mediante __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar utilizando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Exportación e importación mediante AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
+- [Determinar el método de exportación que se usará](determining-which-exporting-method-to-use.md)
 
 - [Importación a una aplicación mediante __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 

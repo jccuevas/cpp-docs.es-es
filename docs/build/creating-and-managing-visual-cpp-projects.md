@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
 ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80078693"
 ---
 # <a name="visual-studio-projects---c"></a>Proyectos de Visual Studio: C++
 
-Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilación MSBuild. MSBuild es el sistema de compilación nativo para Visual Studio y, por lo general, es el mejor sistema de compilación que se usa para programas específicos de Windows. MSBuild está totalmente integrado con Visual Studio, pero también se puede usar desde la línea de comandos. En el caso de los proyectos multiplataforma, o los proyectos que usan bibliotecas de código abierto, se recomienda usar [proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md) en visual Studio 2017 y versiones posteriores. Para obtener información sobre cómo actualizar proyectos de MSBuild desde versiones anteriores de Visual Studio, vea la [Guía de migración y actualización de C++ Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md).
+Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilación MSBuild. MSBuild es el sistema de compilación nativo para Visual Studio y, generalmente, es el mejor para los programas específicos de Windows. MSBuild está totalmente integrado con Visual Studio, pero también se puede usar desde la línea de comandos. En el caso de los proyectos multiplataforma o los proyectos que usan bibliotecas de código abierto, se recomienda usar [proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md) en Visual Studio 2017 y versiones posteriores. Para obtener información sobre cómo actualizar proyectos de MSBuild desde versiones anteriores de Visual Studio, vea la [Guía de migración y actualización de Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Crear un proyecto
 
@@ -25,7 +25,7 @@ Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilaci�
 
 Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto** y, después, establece el **Lenguaje** en C++. En la lista de resultados, verá una lista de plantillas de proyecto que puede filtrar si establece **Plataforma** o **Tipo de proyecto**, y escribe palabras clave en el cuadro de búsqueda.
 
-   ![Plantillas de proyecto de Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2019")
+   ![Plantillas de proyecto de Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2019")
 
 ::: moniker-end
 
@@ -45,7 +45,7 @@ Después de crear un proyecto, aparece en la ventana [Explorador de soluciones](
 
 Cuando crea un proyecto, también se crea un archivo de solución (.sln). Puede agregar proyectos adicionales a la solución si hace clic con el botón derecho en ella en el **Explorador de soluciones**. El archivo de solución se usa para coordinar las dependencias de compilación cuando tiene varios proyectos relacionados, pero no hace mucho más. Todas las opciones del compilador se establecen en el nivel de proyecto.
 
-## <a name="add-items"></a>Agregar elementos
+## <a name="add-items"></a>Adición de elementos
 
 Para agregar archivos de código fuente, iconos o cualquier otro elemento al proyecto, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Agregar > Nuevo** o **Agregar > Elemento existente**.
 
@@ -84,7 +84,7 @@ Procedimientos para agregar un comando arbitrario al proceso de compilación en 
 [Creación de un proyecto a partir del código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Procedimientos para crear un proyecto de Visual Studio a partir de una colección flexible de archivos de código fuente.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)<br>
-[Guía C++ de migración y actualización de Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Guía de migración y actualización de Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

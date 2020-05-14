@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
 ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857156"
@@ -27,13 +27,13 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 ## <a name="syntax"></a>Sintaxis
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-Modifier-SEQ* **)**  /\* \*específico de Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Específico de Microsoft \*/
 
-*Extended-decl-Modifier-SEQ*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específico de Microsoft /<br/>
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Específico de Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Extended-decl-Modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específico de Microsoft /<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Específico de Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>

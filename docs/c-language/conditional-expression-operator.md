@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
 ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
 ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "81749198"
 ---
 # <a name="conditional-expression-operator"></a>Operador de expresión condicional
 
-C tiene un operador ternario: el operador de expresión condicional (**? :**).
+C tiene un operador ternario: el operador de expresión condicional ( **? :** ).
 
 ## <a name="syntax"></a>Sintaxis
 
-*condicional-expresión*:<br/>
+*conditional-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expresión*  **:**  *expresión condicional*
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*
 
 El elemento *logical-OR-expression* debe ser de tipo entero, flotante o puntero. Se evalúa en términos de su equivalencia a 0. Un punto de secuencia sigue a *logical-OR-expression*. La evaluación de los operandos se produce de la manera siguiente:
 

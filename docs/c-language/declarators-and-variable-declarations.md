@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
 ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234535"
 ---
 # <a name="declarators-and-variable-declarations"></a>Declaradores y declaraciones de variables
 
@@ -49,7 +49,7 @@ Utilice declaradores para declarar matrices de valores, punteros a valores y fun
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *declarator*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *declarator*  **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**
@@ -65,7 +65,7 @@ Utilice declaradores para declarar matrices de valores, punteros a valores y fun
 > [!NOTE]
 > Vea la sintaxis de *declaration* en [Información general de declaraciones](../c-language/overview-of-declarations.md) o [Resumen de la sintaxis del lenguaje C](../c-language/c-language-syntax-summary.md) para conocer la sintaxis que hace referencia a un *declarator*.
 
-Cuando un declarador consta de un identificador sin modificar, el elemento que se va a declarar tiene un tipo base. Si aparece un asterisco (<strong>\*</strong>) a la izquierda de un identificador, el tipo se modifica en un tipo de puntero. Si el identificador va seguido de corchetes (**[ ]**), el tipo se modifica en un tipo de matriz. Si el identificador va seguido de paréntesis, el tipo se modifica en un tipo de función. Para obtener más información sobre cómo interpretar la prioridad en declaraciones, vea [Interpretación de declaradores más complejos](../c-language/interpreting-more-complex-declarators.md).
+Cuando un declarador consta de un identificador sin modificar, el elemento que se va a declarar tiene un tipo base. Si aparece un asterisco (<strong>\*</strong>) a la izquierda de un identificador, el tipo se modifica en un tipo de puntero. Si el identificador va seguido de corchetes ( **[ ]** ), el tipo se modifica en un tipo de matriz. Si el identificador va seguido de paréntesis, el tipo se modifica en un tipo de función. Para obtener más información sobre cómo interpretar la prioridad en declaraciones, vea [Interpretación de declaradores más complejos](../c-language/interpreting-more-complex-declarators.md).
 
 Cada declarador declara al menos un identificador. Un declarador debe incluir un especificador de tipo para que sea una declaración completa. El especificador de tipo proporciona el tipo de los elementos de un tipo de matriz, el tipo de objeto al que apunta un tipo de puntero o el tipo de valor devuelto de una función.
 

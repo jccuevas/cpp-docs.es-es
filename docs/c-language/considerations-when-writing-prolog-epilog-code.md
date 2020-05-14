@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81334580"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Consideraciones para escribir código de prólogo y epílogo
 
-**Microsoft Specific**
+**Específicos de Microsoft**
 
-Antes de escribir sus propias secuencias de código de prólogo y epílogo, es importante comprender cómo se establece el marco de pila. También es útil saber cómo utilizar la constante predefinida **__LOCAL_SIZE.**
+Antes de escribir sus propias secuencias de código de prólogo y epílogo, es importante que comprenda cómo se diseña el marco de pila. También es útil saber utilizar la constante predefinida **__LOCAL_SIZE**.
 
-## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Diseño de marco CStack
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a> Diseño del marco de pila de C
 
 En este ejemplo se muestra el código de prólogo estándar que puede aparecer en una función de 32 bits:
 
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**END Microsoft Specific**
+**FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Funciones desnudas](../c-language/naked-functions.md)
+[Funciones naked](../c-language/naked-functions.md)

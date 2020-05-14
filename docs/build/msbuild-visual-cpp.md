@@ -1,5 +1,5 @@
 ---
-title: MSBuild en la línea de comandos - C++
+title: 'MSBuild en la línea de comandos: C++'
 ms.date: 12/12/2018
 helpviewer_keywords:
 - MSBuild
@@ -11,52 +11,52 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220565"
 ---
-# <a name="msbuild-on-the-command-line---c"></a>MSBuild en la línea de comandos - C++
+# <a name="msbuild-on-the-command-line---c"></a>MSBuild en la línea de comandos: C++
 
-En general, se recomienda que use Visual Studio para establecer las propiedades del proyecto e invocar el sistema MSBuild. Sin embargo, puede usar el **MSBuild** herramienta directamente desde el símbolo del sistema. El proceso de compilación se controla mediante la información en un archivo de proyecto (.vcxproj) que puede crear y editar. El archivo de proyecto especifica opciones de compilación basadas en fases, condiciones y eventos de compilación. Además, puede especificar cero o más de línea de comandos *opciones* argumentos.
+En general, se recomienda usar Visual Studio para establecer las propiedades del proyecto e invocar el sistema MSBuild. Pero se puede usar la herramienta **MSBuild** directamente desde el símbolo del sistema. El proceso de compilación se controla mediante la información de un archivo del proyecto (.vcxproj) que se puede crear y editar. En el archivo del proyecto se especifican las opciones de compilación en función de fases, condiciones y eventos de compilación. Además, puede especificar cero o más argumentos *opciones* de la línea de comandos.
 
-> **msbuild.exe** [ *project_file* ] [ *options* ]
+> **msbuild.exe** [ *archivo_del_proyecto* ] [ *opciones* ]
 
-Use la **/target** (o **/t**) y **/Property** (o **/p**) opciones de línea de comandos para invalidar los destinos y propiedades específicas Si se especifica en el archivo de proyecto.
+Use las opciones de línea de comandos **/target** (o **/t**) y **/property** (o **/p**) para invalidar propiedades y destinos concretos que se especifican en el archivo del proyecto.
 
-Es una función esencial del archivo del proyecto especificar un *destino*, que es una operación determinada aplicada a su proyecto y las entradas y salidas que son necesarios para realizar esa operación. Un archivo de proyecto puede especificar uno o varios destinos, que pueden incluir un destino predeterminado.
+Una función esencial del archivo del proyecto es especificar un *destino*, que es una operación determinada que se aplica al proyecto, y las entradas y salidas necesarias para realizar esa operación. Un archivo del proyecto puede especificar uno o varios destinos, que pueden incluir un destino predeterminado.
 
-Cada destino consta de una secuencia de uno o varios *tareas*. Cada tarea se representa mediante una clase de .NET Framework que contiene un comando ejecutable. Por ejemplo, el [CL (tarea)](/visualstudio/msbuild/cl-task) contiene el [cl.exe](reference/compiling-a-c-cpp-program.md) comando.
+Cada destino consta de una secuencia de una o varias *tareas*. Cada tarea se representa mediante una clase de .NET Framework que contiene un comando ejecutable. Por ejemplo, la tarea [CL](/visualstudio/msbuild/cl-task) contiene el comando [cl.exe](reference/compiling-a-c-cpp-program.md).
 
-Un *parámetro de tarea* es una propiedad de la tarea de la clase y que normalmente representa una opción de línea de comandos del comando ejecutable. Por ejemplo, el `FavorSizeOrSpeed` parámetro de la `CL` tarea corresponde a la **/Os** y **/Ot** opciones del compilador.
+Un *parámetro de tarea* es una propiedad de la tarea de clase y normalmente representa una opción de línea de comandos del comando ejecutable. Por ejemplo, el parámetro `FavorSizeOrSpeed` de la tarea `CL` se corresponde a las opciones del compilador **/Os** y **/Ot**.
 
-Parámetros de tarea adicionales admiten la infraestructura de MSBuild. Por ejemplo, el `Sources` parámetro de tarea Especifica un conjunto de tareas que pueden usarse en otras tareas. Para obtener más información acerca de las tareas de MSBuild, vea [referencia de tareas](/visualstudio/msbuild/msbuild-task-reference).
+Los parámetros de tarea adicionales admiten la infraestructura de MSBuild. Por ejemplo, el parámetro de tarea `Sources` especifica un conjunto de tareas que pueden consumir otras tareas. Para obtener más información sobre las tareas de MSBuild, vea [Referencia de tareas](/visualstudio/msbuild/msbuild-task-reference).
 
-Mayoría de las tareas requiere entradas y salidas, como cadena, numéricos o booleanos parámetros, las rutas de acceso y nombres de archivo. Por ejemplo, una entrada habitual es el nombre de un archivo de código fuente .cpp para compilar. Un parámetro de entrada importante es una cadena que especifica la configuración de compilación y plataforma, por ejemplo, "depurar\|Win32". Las entradas y salidas se especifican mediante uno o varios XML definido por el usuario `Item` elementos contenidos en un `ItemGroup` elemento.
+La mayoría de las tareas requieren entradas y salidas, como nombres de archivo, rutas de acceso y parámetros de cadena, numéricos o booleanos. Por ejemplo, una entrada común es el nombre de un archivo de código fuente .cpp que se va a compilar. Un parámetro de entrada importante es una cadena que especifica la configuración de compilación y la plataforma, por ejemplo, "Debug\|Win32". Las entradas y salidas se especifican mediante uno o varios elementos `Item` XML definidos por el usuario incluidos en un elemento `ItemGroup`.
 
-También puede especificar un archivo de proyecto definido por el usuario *propiedades* y `ItemDefinitionGroup` *elementos*. Las propiedades y los elementos forman pares de nombre/valor que se pueden usar como variables en la compilación. El componente de nombre de un par define una *macro*, y el componente de valor declara el *el valor de macro*. Se tiene acceso a una macro de propiedad mediante el uso de $(*nombre*) notación y una macro de elemento que se accede mediante %(*nombre*) notación.
+Un archivo del proyecto también puede especificar *propiedades* definidas por el usuario y *elementos* `ItemDefinitionGroup`. Las propiedades y los elementos forman pares de nombre/valor que se pueden usar como variables en la compilación. El componente de nombre de un par define una *macro* y el componente de valor declara el *valor de la macro*. Para acceder a una macro de propiedad se usa la notación $(*nombre*) y para acceder a una macro de elemento, la notación %(*nombre*).
 
-Otros elementos XML en un archivo de proyecto pueden probar las macros y, a continuación, condicionalmente establezca el valor de una macro o controlar la ejecución de la compilación. Los nombres de macro y cadenas literales se pueden concatenar para generar estructuras como un ruta de acceso y nombre de archivo. En la línea de comandos, el **/Property** opción establece o invalida una propiedad de proyecto. No se pueden hacer referencia a elementos en la línea de comandos.
+Otros elementos XML de un archivo del proyecto pueden probar macros y, después, establecer de forma condicional el valor de cualquier macro o controlar la ejecución de la compilación. Los nombres de macro y las cadenas literales se pueden concatenar para generar construcciones como una ruta de acceso y un nombre de archivo. En la línea de comandos, la opción **/property** establece o invalida una propiedad del proyecto. No se puede hacer referencia a los elementos en la línea de comandos.
 
-El sistema MSBuild puede ejecutar condicionalmente un destino antes o después de otro destino. Además, el sistema puede crear un destino en función de si los archivos que usa el destino son más recientes que los archivos que emite.
+El sistema MSBuild puede ejecutar condicionalmente un destino antes o después de otro destino. Además, el sistema puede compilar un destino en función de si los archivos que el destino consume son más recientes que los que emite.
 
-Para obtener más información acerca de MSBuild, vea:
+Para obtener más información sobre MSBuild, vea:
 
-- [MSBuild](/visualstudio/msbuild/msbuild) conceptos de información general de MSBuild.
+- [MSBuild](/visualstudio/msbuild/msbuild) Información general sobre los conceptos de MSBuild.
 
-- [Referencia de MSBuild](/visualstudio/msbuild/msbuild-reference) hacen referencia a información sobre el sistema MSBuild.
+- [Referencia de MSBuild](/visualstudio/msbuild/msbuild-reference) Información de referencia sobre el sistema MSBuild.
 
-- [Referencia de esquema de archivo de proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference) se enumeran los elementos de esquema XML de MSBuild, junto con sus atributos y elementos primarios y secundarios. Observe especialmente el [ItemGroup](/visualstudio/msbuild/itemgroup-element-msbuild), [PropertyGroup](/visualstudio/msbuild/propertygroup-element-msbuild), [destino](/visualstudio/msbuild/target-element-msbuild), y [tarea](/visualstudio/msbuild/task-element-msbuild) elementos.
+- [Referencia de esquema de archivo de proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference) Enumera los elementos de esquema XML de MSBuild, junto con sus atributos y elementos primarios y secundarios. En especial, tenga en cuenta los elementos [ItemGroup](/visualstudio/msbuild/itemgroup-element-msbuild), [PropertyGroup](/visualstudio/msbuild/propertygroup-element-msbuild), [Target](/visualstudio/msbuild/target-element-msbuild) y [Task](/visualstudio/msbuild/task-element-msbuild).
 
-- [Referencia de línea de comandos](/visualstudio/msbuild/msbuild-command-line-reference) se describen los argumentos de línea de comandos y opciones que puede utilizar con msbuild.exe.
+- [Referencia de la línea de comandos](/visualstudio/msbuild/msbuild-command-line-reference) Describe los argumentos y las opciones de la línea de comandos que puede usar con msbuild.exe.
 
-- [Referencia de tareas](/visualstudio/msbuild/msbuild-task-reference) las tareas de MSBuild describe. Tenga en cuenta especialmente estas tareas, que son específicas de Visual C++: [Tarea BscMake](/visualstudio/msbuild/bscmake-task), [CL (tarea)](/visualstudio/msbuild/cl-task), [CPPClean (tarea)](/visualstudio/msbuild/cppclean-task), [LIB (tarea)](/visualstudio/msbuild/lib-task), [Vincular tarea](/visualstudio/msbuild/link-task), [MIDL (tarea)](/visualstudio/msbuild/midl-task), [MT (tarea)](/visualstudio/msbuild/mt-task), [tarea RC](/visualstudio/msbuild/rc-task), [SetEnv (tarea)](/visualstudio/msbuild/setenv-task), [VCMessage (tarea)](/visualstudio/msbuild/vcmessage-task)
+- [Referencia de tareas](/visualstudio/msbuild/msbuild-task-reference) Describe las tareas de MSBuild. En especial, tenga en cuenta las tareas siguientes, que son específicas de Visual C++: [Tarea BscMake](/visualstudio/msbuild/bscmake-task), [Tarea CL](/visualstudio/msbuild/cl-task), [Tarea CPPClean](/visualstudio/msbuild/cppclean-task), [Tarea LIB](/visualstudio/msbuild/lib-task), [Tarea Link](/visualstudio/msbuild/link-task), [Tarea MIDL](/visualstudio/msbuild/midl-task), [Tarea MT](/visualstudio/msbuild/mt-task), [Tarea RC](/visualstudio/msbuild/rc-task), [Tarea SetEnv](/visualstudio/msbuild/setenv-task) y [Tarea VCMessage](/visualstudio/msbuild/vcmessage-task).
 
 ## <a name="in-this-section"></a>En esta sección
 
 |Término|Definición|
 |----------|----------------|
-|[Tutorial: Uso de MSBuild para crear un proyecto de C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Muestra cómo crear un Visual Studio C++ proyecto usando **MSBuild**.|
-|[Cómo: Usar de eventos de compilación en proyectos de MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Muestra cómo especificar una acción que se produce en una fase concreta de la compilación: antes de que empiece la compilación; antes de iniciar el paso de vínculo; o bien, una vez finalizada la compilación.|
-|[Cómo: Agregar un paso personalizado de compilación a proyectos de MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Muestra cómo agregar una fase definido por el usuario a la secuencia de compilación.|
-|[Cómo: Agregar herramientas personalizadas de compilación a proyectos de MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Muestra cómo asociar una herramienta de compilación con un archivo determinado.|
-|[Cómo: Integrar herramientas personalizadas en las propiedades del proyecto](how-to-integrate-custom-tools-into-the-project-properties.md)|Muestra cómo agregar las opciones para una herramienta personalizada para las propiedades del proyecto.|
-|[Cómo: Modificar la plataforma de destino y el conjunto de herramientas de la plataforma](how-to-modify-the-target-framework-and-platform-toolset.md)|Muestra cómo compilar un proyecto para varios marcos de trabajo o conjuntos de herramientas.|
+|[Tutorial: Uso de MSBuild para crear un proyecto de C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Se muestra cómo crear un proyecto de C++ en Visual Studio mediante **MSBuild**.|
+|[Cómo: Usar de eventos de compilación en proyectos de MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Se muestra cómo especificar una acción que se produce en una fase concreta de la compilación: antes de que se inicie la compilación, antes de que se inicie el paso de vínculo, o bien después de que finalice la compilación.|
+|[Cómo: Agregar un paso personalizado de compilación a proyectos de MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Se muestra cómo agregar una fase definida por el usuario a la secuencia de compilación.|
+|[Cómo: Agregar herramientas personalizadas de compilación a proyectos de MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Se muestra cómo asociar una herramienta de compilación a un archivo concreto.|
+|[Cómo: Integrar herramientas personalizadas en las propiedades del proyecto](how-to-integrate-custom-tools-into-the-project-properties.md)|Se muestra cómo agregar opciones para una herramienta personalizada a las propiedades del proyecto.|
+|[Cómo: Modificar la plataforma de destino y el conjunto de herramientas de la plataforma](how-to-modify-the-target-framework-and-platform-toolset.md)|Se muestra cómo compilar un proyecto para varios marcos de trabajo o conjuntos de herramientas.|
 
 ## <a name="see-also"></a>Vea también
 

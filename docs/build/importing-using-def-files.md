@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
 ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273422"
 ---
 # <a name="importing-using-def-files"></a>Importar mediante archivos DEF
 
-Si opta por usar **__declspec (dllimport)** junto con un archivo .def, debe cambiar el archivo .def para usar datos en lugar de constante para reducir la probabilidad de que la codificación incorrecta se producirá un problema:
+Si decide usar **__declspec(dllimport)** junto con un archivo .def, debe cambiar el archivo .def para usar DATA en lugar de CONSTANT, a fin de reducir la probabilidad de que la codificación incorrecta cause un problema:
 
 ```
 // project.def
@@ -26,16 +26,16 @@ EXPORTS
    ulDataInDll   DATA
 ```
 
-En la tabla siguiente se muestra por qué.
+En la siguiente tabla se muestra por qué.
 
-|Palabra clave|Se emite en la biblioteca de importación|Exportaciones|
+|Palabra clave|Emite en la biblioteca de importación|Exports|
 |-------------|---------------------------------|-------------|
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-Mediante **__declspec (dllimport)** y constante muestra tanto el `imp` versión y el nombre no representativo en la DLL .lib importación biblioteca que se crea para permitir la vinculación explícita. Uso de **__declspec (dllimport)** y listas de datos solamente el `imp` versión del nombre.
+Al usar **__declspec(dllimport)** y CONSTANT, se muestra la versión de `imp` y el nombre no representativo de la biblioteca de importación de DLL .lib que se crea para permitir la vinculación explícita. Al usar **__declspec(dllimport)** y DATA, solo muestra la versión `imp` del nombre.
 
-Si utiliza la constante, se puede usar cualquiera de las siguientes construcciones de código para tener acceso a `ulDataInDll`:
+Si usa CONSTANT, puede usar cualquiera de las siguientes construcciones de código para acceder a `ulDataInDll`:
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
@@ -49,7 +49,7 @@ ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-Sin embargo, si usa datos en el archivo .def, sólo el código compilado con la siguiente definición puede tener acceso a la variable `ulDataInDll`:
+En cambio, si usa DATA en el archivo .def, solo el código compilado con la definición siguiente puede acceder a la variable `ulDataInDll`:
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,9 +57,9 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-Uso de constante es más arriesgado porque si se olvida de utilizar el nivel de direccionamiento indirecto adicional, posiblemente puedan acceder a puntero de la tabla de direcciones de importación a la variable, no la propia variable. Este tipo de problema puede manifestarse como una infracción de acceso porque la tabla de direcciones de importación es actualmente de sólo lectura por el compilador y vinculador.
+El uso de CONSTANT es más arriesgado, dado que si se olvida de usar un nivel adicional de direccionamiento indirecto, podría acceder al puntero a la variable de la tabla de direcciones de importación, no a la variable en sí misma. Este tipo de problema a menudo se manifiesta como una infracción de acceso, puesto que el compilador y el enlazador hacen que la tabla de direcciones de importación sea de solo lectura.
 
-El vinculador MSVC actual emite una advertencia si ve CONSTANT en el archivo .def para tener en cuenta este caso. La única razón para utilizar CONSTANT es que si no se puede volver a compilar un archivo objeto donde el archivo de encabezado no indica **__declspec (dllimport)** en el prototipo.
+El enlazador MSVC actual emite una advertencia si detecta CONSTANT en el archivo .def para dar cuenta de esto. La única razón real para usar CONSTANT es que no se pueda volver a compilar un archivo objeto donde el archivo de encabezado no mostró **__declspec(dllimport)** en el prototipo.
 
 ## <a name="see-also"></a>Vea también
 

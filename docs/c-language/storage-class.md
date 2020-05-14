@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
 ms.openlocfilehash: aa6e977b3aa03b5f08901cfa8b0abe1b4046e72d
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857013"
@@ -26,7 +26,7 @@ El especificador de clase de almacenamiento en una definición de función propo
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *Attribute-SEQ* es un \*específico de Microsoft /
+/\* *attribute-seq* es específico de Microsoft \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>

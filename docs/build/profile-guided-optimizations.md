@@ -1,5 +1,5 @@
 ---
-title: Optimizaciones guiadas por perfil
+title: Optimizaciones guiadas por perfiles
 ms.date: 04/23/2019
 helpviewer_keywords:
 - profile-guided optimizations
@@ -12,85 +12,85 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64857327"
 ---
-# <a name="profile-guided-optimizations"></a>Optimizaciones guiadas por perfil
+# <a name="profile-guided-optimizations"></a>Optimizaciones guiadas por perfiles
 
-Optimización guiada por perfiles (PGO) le permite optimizar un archivo ejecutable completamente, donde el optimizador utiliza datos de series de pruebas del archivo .exe o .dll. Los datos representan el rendimiento probable del programa en un entorno de producción.
+La optimización guiada por perfiles (PGO) le permite optimizar un archivo ejecutable completo, donde el optimizador usa datos de las series de pruebas del archivo .exe o .dll. Los datos representan el rendimiento probable del programa en un entorno de producción.
 
-Las optimizaciones guiadas por perfiles solo están disponibles para destinos nativos x86 o x64. Las optimizaciones guiadas por perfiles no están disponibles para los archivos ejecutables que se ejecutan en common language runtime. Aunque genere un ensamblado con código nativo y administrado mixto (mediante el uso de la **/CLR** opción del compilador), no se puede usar la optimización guiada por perfiles en simplemente el código nativo. Si intenta compilar un proyecto con estas opciones establecidas en el IDE, se producirá un error de compilación.
+Las optimizaciones guiadas por perfiles solo están disponibles para destinos nativos x86 o x64. No están disponibles para archivos ejecutables que se ejecutan en Common Language Runtime. Aunque produzca un ensamblado con código nativo y administrado mixto (compilado la opción **/clr** del compilador), no puede usar la optimización guiada por perfiles solo en el código nativo. Si intenta compilar un proyecto con estas opciones establecidas en el IDE, se producirá un error de compilación.
 
 > [!NOTE]
-> Información recopilada de ejecuciones de pruebas de generación de perfiles reemplazará las optimizaciones que en caso contrario, estarían activas si se especifica **/Ob**, **/Os**, o **/Ot**. Para obtener más información, consulte [/Ob (expansión de funciones insertadas)](reference/ob-inline-function-expansion.md) y [/Os, /Ot (favorecer código pequeño, favorecer código rápido)](reference/os-ot-favor-small-code-favor-fast-code.md).
+> La información que se recopila a partir de series de pruebas de generación de perfiles reemplaza las optimizaciones que, en caso contrario, estarían activas si se especificara **/Ob**, **/Os** o **/Ot**. Para obtener más información, consulte [/Ob (Expansión de funciones insertadas)](reference/ob-inline-function-expansion.md) y [/Os, /Ot (Favorecer código pequeño, favorecer código rápido)](reference/os-ot-favor-small-code-favor-fast-code.md).
 
 ## <a name="steps-to-optimize-your-app"></a>Pasos para optimizar la aplicación
 
 Para usar la optimización guiada por perfiles, siga estos pasos para optimizar la aplicación:
 
-- Compilar uno o varios archivos de código fuente con [/GL](reference/gl-whole-program-optimization.md).
+- Compile uno o varios archivos de código fuente con [/GL](reference/gl-whole-program-optimization.md).
 
-   Cada módulo compilado con **/GL** se puede examinar durante las ejecuciones de pruebas de optimización guiada por perfiles para capturar el comportamiento de tiempo de ejecución. Cada módulo en una compilación de optimización guiada por perfiles no tiene que compilarse con **/GL**. Sin embargo, solo los módulos compilan con **/GL** están instrumentadas y posteriormente estarán disponibles para optimizaciones guiadas por perfil.
+   Cada módulo compilado con **/GL** se puede examinar durante las series de pruebas de optimización guiada por perfiles para capturar el comportamiento en tiempo de ejecución. No todos los módulos de la compilación de una optimización guiada por perfiles se tienen que compilar con **/GL**. Sin embargo, solo se instrumentarán los módulos compilados con **/GL**, que posteriormente estarán disponibles para optimizaciones guiadas por perfiles.
 
-- Vincúlelo con [/LTCG](reference/ltcg-link-time-code-generation.md) y [/GENPROFILE o/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
+- Vincule mediante [/LTCG](reference/ltcg-link-time-code-generation.md) y [/GENPROFILE o /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
 
-   Con ambos **/LTCG** y **/genprofile** o **/fastgenprofile** crea un `.pgd` archivo cuando se ejecuta la aplicación instrumentada. Después de agregar datos de ejecución de pruebas para el `.pgd` archivo, se puede usar como entrada para el siguiente paso del vínculo (creación de la imagen optimizada). Al especificar **/genprofile**, opcionalmente, puede agregar un **PGD =**_filename_ argumento para especificar un nombre no predeterminado o una ubicación para el `.pgd` archivo. La combinación de **/LTCG** y **/genprofile** o **/fastgenprofile** opciones del vinculador reemplaza al elemento desusado **/LTCG: PGINSTRUMENT** opción del vinculador.
+   El uso de **/LTCG** y **/GENPROFILE** o **/FASTGENPROFILE** crea un archivo `.pgd` cuando se ejecuta la aplicación instrumentada. Después de agregar los datos de la serie de pruebas al archivo `.pgd`, se pueden usar como entrada para el siguiente paso del vínculo (la creación de la imagen optimizada). Al especificar **/GENPROFILE**, opcionalmente puede agregar un argumento **PGD=** _filename_ para especificar un nombre o una ubicación no predeterminados para el archivo `.pgd`. La combinación de las opciones **/LTCG** y **/GENPROFILE** o **/FASTGENPROFILE** del enlazador reemplaza a la opción **/LTCG:PGINSTRUMENT** en desuso del enlazador.
 
 - Generar perfiles de la aplicación.
 
-   Finaliza una sesión EXE con perfiles de cada vez, o un archivo DLL de generación de perfiles se descarga, un `appname!N.pgc` se crea el archivo. Un `.pgc` archivo contiene información sobre una serie de pruebas de aplicación determinada. *appname* es el nombre de la aplicación, y *N* es un número que empieza con 1 que se incrementa en función del número de otros `appname!N.pgc` archivos en el directorio. Puede eliminar un `.pgc` archivo si la ejecución de pruebas no representan un escenario que desea optimizar.
+   Cada vez que finaliza una sesión EXE con perfiles generados o se descarga un archivo DLL con perfiles generados, se crea un archivo `appname!N.pgc`. Un archivo `.pgc` contiene información sobre una determinada serie de pruebas de la aplicación. *appname* es el nombre de la aplicación, y *N* es un número a partir de 1 que se incrementa en función del número de otros archivos `appname!N.pgc` que existan en el directorio. Puede eliminar un archivo `.pgc` si la serie de pruebas no representa un escenario que quiere optimizar.
 
-   Durante una ejecución de pruebas, puede forzar el cierre de abiertos actualmente `.pgc` archivo y la creación de un nuevo `.pgc` de archivos con la [pgosweep](pgosweep.md) utilidad (por ejemplo, al final de un escenario de prueba no coincide con la aplicación apagado).
+   Durante una serie de pruebas, puede forzar el cierre del archivo `.pgc` abierto en ese momento y la creación de un nuevo archivo `.pgc` con la utilidad [pgosweep](pgosweep.md) (por ejemplo, cuando el final de un escenario de pruebas no coincide con el cierre de la aplicación).
 
-   La aplicación directamente también puede invocar una función PGO, [PgoAutoSweep](pgoautosweep.md), para capturar los datos de perfil en el momento de la llamada como un `.pgc` archivo. Puede proporcionarle un mayor control sobre el código de los datos capturados en su `.pgc` archivos. Para obtener un ejemplo de cómo usar esta función, vea el [PgoAutoSweep](pgoautosweep.md) documentación.
+   La aplicación también puede invocar directamente una función PGO, [PgoAutoSweep](pgoautosweep.md), para capturar los datos de perfil en el momento de la llamada como un archivo `.pgc`. Puede proporcionar un control más preciso sobre el código incluido en los datos capturados en sus archivos `.pgc`. Para obtener un ejemplo de cómo usar esta función, consulte la documentación de [PgoAutoSweep](pgoautosweep.md).
 
-   Cuando se crea la compilación instrumentada, de forma predeterminada, la recopilación de datos se realiza en modo no seguro para subprocesos, que es más rápido, pero puede ser impreciso. Mediante el uso de la **EXACT** argumento **/genprofile** o **/fastgenprofile**, puede especificar la recopilación de datos en modo seguro para subprocesos, que es más preciso, pero más lento. Esta opción también está disponible si se establece en desuso [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode) variable de entorno o en desuso **/PogoSafeMode** opción del vinculador, cuando se crea la compilación instrumentada.
+   A la hora de crear la compilación instrumentada, la recopilación de datos se realiza en modo no seguro para subprocesos de forma predeterminada, que es el modo más rápido, pero puede ser impreciso. Al usar el argumento **EXACT** para **/GENPROFILE** o **/FASTGENPROFILE**, puede especificar la recopilación de datos en modo seguro para subprocesos, que es más preciso, pero más lento. Esta opción también está disponible si se establece la variable de entorno en desuso [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode), o la opción del enlazador en desuso **/POGOSAFEMODE**, al crear la compilación instrumentada.
 
-- Vincúlelo con **/LTCG** y **/useprofile**.
+- Vincule mediante **/LTCG** y **/USEPROFILE**.
 
-   Usar tanto el **/LTCG** y [/useprofile](reference/useprofile.md) opciones del enlazador para crear la imagen optimizada. Este paso toma como entrada el `.pgd` archivo. Al especificar **/useprofile**, opcionalmente, puede agregar un **PGD =**_filename_ argumento para especificar un nombre distinto del predeterminado o una ubicación para el `.pgd` archivo. También puede especificar este nombre mediante el uso del objeto desusado **/PGD** opción del vinculador. La combinación de **/LTCG** y **/useprofile** reemplaza al elemento desusado **/LTCG: PGOPTIMIZE** y **/LTCG: PGUPDATE** opciones del vinculador.
+   Use las opciones **/LTCG** y [/USEPROFILE](reference/useprofile.md) del enlazador para crear la imagen optimizada. Este paso toma como entrada el archivo `.pgd`. Al especificar **/USEPROFILE**, opcionalmente puede agregar un argumento **PGD=** _filename_ para especificar un nombre o una ubicación no predeterminados para el archivo `.pgd`. También puede especificar este nombre mediante la opción **/PGD** en desuso del enlazador. La combinación de **/LTCG** y **/USEPROFILE** reemplaza a las opciones **/LTCG:PGOPTIMIZE** y **/LTCG:PGUPDATE** en desuso del enlazador.
 
-Es posible incluso crear el archivo ejecutable optimizado y posteriormente, determinar que la generación de perfiles adicionales sería útil para crear una imagen más optimizada. Si la imagen instrumentada y su `.pgd` archivo están disponibles, puede realizar series de pruebas adicionales y volver a generar la imagen optimizada con las versiones más recientes `.pgd` archivo con el mismo **/LTCG** y   **/useprofile** opciones del vinculador.
+Incluso es posible crear el archivo ejecutable optimizado y, posteriormente, determinar que la generación de perfiles adicionales sería útil para crear una imagen más optimizada. Si la imagen instrumentada y el archivo `.pgd` correspondiente están disponibles, puede efectuar series de pruebas adicionales y recompilar la imagen optimizada con el archivo `.pgd` más reciente mediante el uso de las mismas opciones **/LTCG** y **/USEPROFILE** del enlazador.
 
-## <a name="optimizations-performed-by-pgo"></a>Optimizaciones realizadas por PGO
+## <a name="optimizations-performed-by-pgo"></a>Optimizaciones realizadas mediante PGO
 
 Las optimizaciones guiadas por perfiles incluyen estas comprobaciones y mejoras:
 
-- **Inserción** ; por ejemplo, si una función A frecuentemente llama a la función B y la función B es relativamente pequeño, a continuación, guiada por perfiles optimizaciones función insertada B en función de r.
+- **Inserción**: por ejemplo, si una función A llama frecuentemente a la función B y la función B es relativamente pequeña, las optimizaciones guiadas por perfiles insertan la función B en la función A.
 
-- **Especulación de llamada virtual** -si una llamada virtual, u otra llamada a través de un puntero a función, se destina frecuentemente a una función determinada, una optimización guiada por perfiles puede insertar una llamada directa ejecutada condicionalmente a la función de destino con frecuencia, y la llamada directa se puede alinear.
+- **Especulación de llamada virtual**: si una llamada virtual, u otra llamada a través de un puntero de función, se destina frecuentemente a una función determinada, una optimización guiada por perfiles puede insertar una llamada directa de ejecución condicional a la función de destino frecuente y la llamada directa se puede insertar.
 
-- **Asignación de registros** -optimización según los resultados de datos de perfil en la mejor asignación de registros.
+- **Asignación de registros**: la optimización basada en datos de perfil produce una mejor asignación de registros.
 
-- **Optimización básica de bloques** -optimización básica de bloques permite bloques básicos ejecutados habitualmente que se ejecutan dentro de un intervalo que se colocarán en el mismo conjunto de páginas (emplazamiento) temporalmente. Minimiza el número de páginas utilizadas, lo que minimiza la sobrecarga de memoria.
+- **Optimización básica de bloques**: permite colocar en el mismo conjunto de páginas (emplazamiento) los bloques básicos ejecutados habitualmente que se ejecutan a veces en un marco determinado. Esto minimiza el número de páginas usadas y, por tanto, la sobrecarga de memoria.
 
-- **Optimización de tamaño y velocidad** -funciones que el programa necesita más tiempo de ejecución pueden optimizarse para acelerar el proceso.
+- **Optimización del tamaño y la velocidad**: se puede optimizar la velocidad de las funciones en las que el programa invierte más tiempo de ejecución.
 
-- **Diseño de funciones** : basándose en el gráfico de llamadas y generando el perfil de comportamiento de llamador y destinatario, las funciones que tienden a ser a lo largo de la misma ruta de ejecución se colocan en la misma sección.
+- **Diseño de las funciones**: según el gráfico de llamadas y el comportamiento observado entre llamador y destinatario, las funciones que tienden a estar situadas a lo largo de la misma ruta de ejecución se colocan en la misma sección.
 
-- **Optimización de bifurcaciones condicionales** : con las comprobaciones de valores, guiada por perfiles pueden encontrar las optimizaciones si un valor determinado en una instrucción switch se utiliza con más frecuencia que otros valores.  En tal caso, el valor se puede extraer de la instrucción switch.  Lo mismo se puede hacer con `if`... `else` instrucciones donde el optimizador puede ordenar la `if`... `else` hasta que ya sea el `if` o `else` bloque se coloca en primer lugar, dependiendo de cuál es más frecuentemente es true.
+- **Optimización de ramas condicionales**: con los sondeos de valor, las optimizaciones guiadas por perfiles pueden averiguar si un valor determinado en una instrucción "switch" se usa con más frecuencia que otros valores.  En tal caso, el valor se puede extraer de la instrucción switch.  Lo mismo se puede hacer con las instrucciones `if`…`else` en las que el optimizador puede ordenar la instrucción `if`…`else` de modo que se coloque primero el bloque `if` o el `else`, en función de cuál sea "true" con más frecuencia.
 
-- **Separación de código muerto** -código que no se llama durante la generación de perfiles se mueve a una sección especial que se anexa al final del conjunto de secciones. Esta sección fuera de las páginas utilizadas con frecuencia mantiene eficazmente.
+- **Separación de código no alcanzado**: el código al que no se llama durante la generación de perfiles se mueve a una sección especial que se anexa al final del conjunto de secciones. Mantiene esta sección fuera de las páginas usadas con frecuencia de manera eficaz.
 
-- **Separación de código EH** -excepcionalmente solo se ejecuta código EH porque, a menudo se pueden mover a una sección independiente. Se mueve cuando las optimizaciones guiadas por perfiles pueden determinar que las excepciones se producen solo en condiciones excepcionales.
+- **Separación de código EH**: dado que el código EH solo se ejecuta de forma excepcional, a menudo se puede mover a una sección independiente. Se mueve cuando las optimizaciones guiadas por perfiles pueden determinar que las excepciones solo se producen en condiciones excepcionales.
 
-- **Funciones intrínsecas de memoria** : expandir el intrínseco o no depende de si se llama con frecuencia. Una función intrínseca también se puede optimizar basándose en el tamaño de bloque de los movimientos o copias.
+- **Funciones intrínsecas de memoria**: la expansión de una función intrínseca depende de si se llama a esta con frecuencia. Una función intrínseca también se puede optimizar basándose en el tamaño de bloque de los movimientos o copias.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Más información acerca de estas variables de entorno, funciones y herramientas que puede usar en las optimizaciones guiadas por perfiles:
+Obtenga más información sobre estas variables de entorno, funciones y herramientas que puede usar en las optimizaciones guiadas por perfiles:
 
-[Variables de entorno para las optimizaciones guiadas por perfil](environment-variables-for-profile-guided-optimizations.md)<br/>
-Estas variables se usan para especificar el comportamiento de tiempo de ejecución de escenarios de pruebas. Ahora que están en desuso y reemplazados por nuevas opciones del vinculador. Este documento muestra cómo pasar de las variables de entorno para las opciones del vinculador.
+[Variables de entrono para las optimizaciones guiadas por perfiles](environment-variables-for-profile-guided-optimizations.md)<br/>
+Estas variables se usaban para especificar el comportamiento en tiempo de ejecución de los escenarios de prueba. Ahora están en desuso y las han reemplazado las nuevas opciones del enlazador. En este documento se muestra cómo pasar de las variables de entorno a las opciones del enlazador.
 
 [PgoAutoSweep](pgoautosweep.md)<br/>
-Una función puede agregar a la aplicación para proporcionar personalización avanzada `.pgc` control de la captura de datos de archivo.
+Una función que se puede agregar a la aplicación para proporcionar un control detallado de captura de datos del archivo `.pgc`.
 
 [pgosweep](pgosweep.md)<br/>
-Una utilidad de línea de comandos que escribe todos los datos de perfil en el `.pgc` de archivos, se cierra el `.pgc` de archivos y abre una nueva `.pgc` archivo.
+Una utilidad de línea de comandos que escribe todos los datos de perfil en el archivo `.pgc`, cierra el archivo `.pgc` y abre un nuevo archivo `.pgc`.
 
 [pgomgr](pgomgr.md)<br/>
-Una utilidad de línea de comandos que agrega datos de perfil de uno o varios `.pgc` archivos a la `.pgd` archivo.
+Una utilidad de línea de comandos que agrega los datos de perfil de uno o más archivos `.pgc` al archivo `.pgd`.
 
 [Cómo: Combinar varios perfiles PGO en un solo perfil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-Ejemplos de **pgomgr** uso.
+Ejemplos de uso de **pgomgr**.
 
 ## <a name="see-also"></a>Vea también
 

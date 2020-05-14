@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
 ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
 ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/16/2020
 ms.locfileid: "76123947"
@@ -26,7 +26,7 @@ Cada programa de C tiene una función principal que se debe llamar **main**. Si 
 main( int argc, char *argv[ ], char *envp[ ] )
 ```
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Comentarios
 
 Las funciones incluidas en el programa de origen realizan una o más tareas concretas. La función **main** puede llamar a estas funciones para que realicen sus respectivas tareas. Cuando **main** llama a otra función, pasa el control de la ejecución a la función, de modo que la ejecución comienza en la primera instrucción de la función. Una función devuelve el control a **main** cuando se ejecuta una instrucción `return` o cuando se llega al final de la función.
 
@@ -38,5 +38,5 @@ Vea [Usar wmain](../c-language/using-wmain.md) para obtener una descripción de 
 
 ## <a name="see-also"></a>Vea también
 
-[función Main y argumentos de la línea deC++comandos ()](../cpp/main-function-command-line-args.md)\
+[Función main y argumentos de la línea de comandos (C++)](../cpp/main-function-command-line-args.md)\
 [Analizar los argumentos de la línea de comandos de C](../c-language/parsing-c-command-line-arguments.md)

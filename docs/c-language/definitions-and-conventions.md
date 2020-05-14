@@ -5,11 +5,11 @@ helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
 ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234442"
 ---
 # <a name="definitions-and-conventions"></a>Definiciones y convenciones
 
@@ -32,7 +32,7 @@ Las convenciones de sintaxis utilizan diferentes atributos de fuente para los di
 |<sub>opt</sub>|Los elementos no terminales seguidos de <sub>opt</sub> son siempre opcionales.|
 |tipo de letra predeterminado|Los caracteres del conjunto descrito o enumerado con este tipo de fuente se pueden usar como terminales en las instrucciones de C.|
 
-Un signo de dos puntos (**:**) a continuación de un no terminal presenta su definición. Las definiciones alternativas se enumeran en líneas independientes, excepto si van precedidas de las palabras "uno de".
+Un signo de dos puntos ( **:** ) a continuación de un no terminal presenta su definición. Las definiciones alternativas se enumeran en líneas independientes, excepto si van precedidas de las palabras "uno de".
 
 ## <a name="see-also"></a>Vea también
 

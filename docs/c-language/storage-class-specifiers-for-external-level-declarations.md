@@ -17,11 +17,11 @@ helpviewer_keywords:
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
 ms.openlocfilehash: 941994f668fa035b569f9ccae2c301ebf42bcda6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157960"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Especificadores de clase de almacenamiento para las declaraciones de nivel externo
 
@@ -40,7 +40,7 @@ Una declaración de variable externa que también inicializa la variable (implí
 
 - Una variable que se inicializa explícitamente en el nivel externo. Por ejemplo, `int j = 3;` es una definición de la variable `j`.
 
-En las declaraciones de variable de nivel externo (es decir, fuera de todas las funciones), puede utilizar el especificador de clase de almacenamiento **static** o `extern` u omitir el especificador de clase de almacenamiento completamente. No puede utilizar los terminales **auto** y **register** *storage-class-specifier* en el nivel externo.
+En las declaraciones de variable de nivel externo (es decir, fuera de todas las funciones), puede utilizar el especificador de clase de almacenamiento **static** o `extern` u omitir el especificador de clase de almacenamiento completamente. No puede usar los terminales *storage-class-specifier* **auto** y **register** en el nivel externo.
 
 Una vez que se define una variable en el nivel externo, es visible en el resto de la unidad de traducción. La variable no es visible antes de su declaración en el mismo archivo de código fuente. Además, no es visible en otros archivos de código fuente del programa, a menos que una declaración de referencia la haga visible, como se describe a continuación.
 
