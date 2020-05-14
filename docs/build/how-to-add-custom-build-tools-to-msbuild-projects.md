@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar herramientas de compilación personalizadas a proyectos de MSBuild
+title: Procedimiento para agregar herramientas personalizadas de compilación a proyectos de MSBuild
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
@@ -11,19 +11,19 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220717"
 ---
-# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Procedimiento Agregar herramientas de compilación personalizadas a proyectos de MSBuild
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Procedimiento para agregar herramientas personalizadas de compilación a proyectos de MSBuild
 
-Una herramienta de compilación personalizada es una herramienta de línea de comandos, definido por el usuario que está asociada a un archivo determinado.
+Una herramienta de compilación personalizada es una herramienta de línea de comandos definida por el usuario que está asociada a un archivo determinado.
 
-Para un archivo determinado, especifique en el archivo de proyecto (.vcxproj) en la línea de comandos para ejecutar, cualquier entrada adicional o los archivos de salida y un mensaje para mostrar. Si **MSBuild** determina que los archivos de salida están actualizados con respecto a los archivos de entrada, se muestra el mensaje y se ejecuta la herramienta de línea de comandos.
+Para un archivo en concreto, especifique en el archivo de proyecto (.vcxproj) la línea de comandos que se va a ejecutar, cualquier archivo de entrada o salida adicional, y un mensaje para mostrar. Si **MSBuild** determina que los archivos de salida no están actualizados con respecto a los archivos de entrada, muestra el mensaje y ejecuta la herramienta de línea de comandos.
 
-Para especificar cuándo se ejecuta la herramienta de compilación personalizada, use uno o ambos de los `CustomBuildBeforeTargets` y `CustomBuildAfterTargets` los elementos XML en el archivo de proyecto. Por ejemplo, podría especificar que la herramienta de compilación personalizada ejecutar después el compilador de MIDL y antes del compilador de C o C++. Especifique el `CustomBuildBeforeTargets` elemento que se va a ejecutar la herramienta antes de que se ejecuta un destino determinado; el `CustomBuildAfterTargets` elemento que se va a ejecutar la herramienta después de un destino determinado; o ambos elementos para ejecutar la herramienta entre la ejecución de los dos destinos. Si se especifica ninguno de los elementos, la herramienta de compilación personalizada se ejecuta en su ubicación predeterminada, que es antes de la **MIDL** destino.
+Para especificar el momento en el que se ejecuta la herramienta de compilación personalizada, use uno de los elementos XML `CustomBuildBeforeTargets` y `CustomBuildAfterTargets` (o ambos) en el archivo de proyecto. Por ejemplo, puede especificar que la herramienta de compilación personalizada se ejecute después del compilador de MIDL y antes del compilador de C/C++. Especifique el elemento `CustomBuildBeforeTargets` para ejecutar la herramienta antes de que se ejecute un destino determinado, el elemento `CustomBuildAfterTargets` para ejecutar la herramienta después de un destino determinado, o bien ambos elementos para ejecutar la herramienta entre la ejecución de dos destinos. Si no se especifica ningún elemento, la herramienta de compilación personalizada se ejecuta en su ubicación predeterminada, que es antes del destino **MIDL**.
 
-Pasos de compilación personalizada y herramientas de compilación personalizadas comparten la información especificada en el `CustomBuildBeforeTargets` y `CustomBuildAfterTargets` elementos XML. Especificar los destinos de una vez en el archivo de proyecto.
+Los pasos de compilación personalizados y las herramientas de compilación personalizadas comparten la información especificada en los elementos XML `CustomBuildBeforeTargets` y `CustomBuildAfterTargets`. Especifique esos destinos una vez en el archivo del proyecto.
 
 ### <a name="to-add-a-custom-build-tool"></a>Para agregar una herramienta de compilación personalizada
 
-1. Agregue un grupo de elementos al archivo de proyecto y agregue un elemento para cada archivo de entrada. Especifique el comando, las entradas adicionales, salidas y un mensaje como metadatos de elementos, como se muestra aquí. En este ejemplo se supone que existe un archivo de "faq.txt" en el mismo directorio que el proyecto.
+1. Agregue un grupo de elementos al archivo de proyecto y agregue un elemento para cada archivo de entrada. Especifique el comando, las entradas adicionales, las salidas y un mensaje como metadatos del elemento, como se muestra aquí. En este ejemplo se supone que existe un archivo "faq.txt" en el mismo directorio que el proyecto.
 
     ```
     <ItemGroup>
@@ -35,9 +35,9 @@ Pasos de compilación personalizada y herramientas de compilación personalizada
     </ItemGroup>
     ```
 
-### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>Para definir dónde se ejecutarán las herramientas de compilación personalizado en la compilación
+### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>Para definir dónde se ejecutarán las herramientas de compilación personalizadas en la compilación
 
-1. Agregue el siguiente grupo de propiedades al archivo de proyecto. Debe especificar al menos uno de los destinos, pero puede omitir el otro si solo está interesado en hacer que el paso de compilación se ejecute antes (o después de) un destino determinado. Este ejemplo realiza el paso personalizado después de compilar, pero antes de vincular.
+1. Agregue el grupo de propiedades siguiente al archivo del proyecto. Debe especificar al menos uno de los destinos, pero puede omitir el otro si solo le interesa que el paso de compilación se ejecute antes (o después) de un destino determinado. En este ejemplo se realiza el paso personalizado después de la compilación, pero antes de la vinculación.
 
     ```
     <PropertyGroup>

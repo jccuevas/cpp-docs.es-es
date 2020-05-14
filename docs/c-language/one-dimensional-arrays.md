@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
 ms.openlocfilehash: 7ac57a65d575ba6a9134f3c4474103735411847d
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299109"
@@ -38,7 +38,7 @@ int main() {
 
 Las expresiones suscritas se utilizan normalmente para hacer referencia a elementos de matriz, pero se puede aplicar un subíndice a cualquier puntero. Sea cual sea el orden de los valores, *expression* se debe incluir entre corchetes ( **[ ]** ).
 
-La expresión de subíndice se evalúa sumando el valor entero al valor del puntero y, después, aplicando el operador de direccionamiento indirecto (<strong>\*</strong>) al resultado. (Vea [direccionamiento indirecto y dirección de los operadores](../c-language/indirection-and-address-of-operators.md) para obtener una explicación del operador de direccionamiento indirecto). En efecto, en una matriz unidimensional, las cuatro expresiones siguientes son equivalentes, suponiendo que `a` sea un puntero y `b` sea un entero:
+La expresión de subíndice se evalúa sumando el valor entero al valor del puntero y, después, aplicando el operador de direccionamiento indirecto (<strong>\*</strong>) al resultado. (Vea [Direccionamiento indirecto y dirección de operadores](../c-language/indirection-and-address-of-operators.md) para ver una descripción del operador de direccionamiento indirecto). De hecho, en una matriz unidimensional, las cuatro expresiones siguientes son equivalentes, suponiendo que `a` es un puntero y `b` es un entero:
 
 ```
 a[b]
@@ -51,9 +51,9 @@ Según las reglas de conversión para el operador de suma (dadas en [Operadores 
 
 Por ejemplo, suponga que el identificador `line` hace referencia a una matriz de valores `int`. El procedimiento siguiente se utiliza para evaluar la expresión de subíndice `line[ i ]`:
 
-1. El valor entero `i` se multiplica por el número de bytes definido como la longitud de un elemento `int`. El valor convertido de `i` representa `i` posiciones de `int`.
+1. El valor entero `i` se multiplica por el número de bytes definido como la longitud de un elemento `int`. El valor convertido de `i` representa las posiciones `i` `int`.
 
-1. Este valor convertido se agrega al valor de puntero original (`line`) para producir una dirección que está desplazada `i` `int` posiciones de `line`.
+1. Este valor convertido se suma al valor del puntero original (`line`) para producir una dirección que está desplazada a las posiciones `i` `int` respecto a `line`.
 
 1. El operador de direccionamiento indirecto se aplica a la nueva dirección. El resultado es el valor del elemento de matriz en esa posición (de manera intuitiva, `line [ i ]`).
 

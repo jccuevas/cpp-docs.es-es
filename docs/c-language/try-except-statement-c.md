@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
 ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349737"
 ---
 # <a name="try-except-statement-c"></a>try-except (Instrucción) (C)
 
-**Microsoft Specific**
+**Específicos de Microsoft**
 
 La instrucción **try-except** es una extensión de Microsoft para el lenguaje C que permite a las aplicaciones obtener el control de un programa cuando se producen los eventos que normalmente finalizan la ejecución de un programa. Estos eventos se denominan excepciones y el mecanismo que se encarga de las excepciones se denomina control de excepciones estructurado.
 
@@ -29,7 +29,7 @@ Las excepciones pueden estar basadas en hardware o en software. Aunque las aplic
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (expresión***expression***)***declaración compuesta*      
+**__except (**  *expression*  **)**  *compound-statement*
 
 La instrucción compuesta detrás de la cláusula `__try` es la sección protegida. La instrucción compuesta detrás de la cláusula `__except` es el controlador de excepción. El controlador especifica un conjunto de acciones que se realizarán si se inicia una excepción durante la ejecución de la sección protegida. La ejecución continúa de la siguiente manera:
 
@@ -51,7 +51,7 @@ Dado que la expresión `__except` se evalúa como expresión de C, se limita a u
 > El control estructurado de excepciones funciona con archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el mecanismo de control de excepciones de C++ es mucho más flexible, ya que puede controlar excepciones de cualquier tipo.
 
 > [!NOTE]
-> Para los programas de C++, se debe usar el control de excepciones de C++ en lugar del control estructurado de excepciones. Para obtener más información, vea [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md) en la *Referencia del lenguaje C++*.
+> Para los programas de C++, se debe usar el control de excepciones de C++ en lugar del control estructurado de excepciones. Para obtener más información, vea [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md) en la *Referencia del lenguaje C++* .
 
 Cada rutina de una aplicación puede tener su propio controlador de excepciones. La expresión `__except` se ejecuta en el ámbito del cuerpo de `__try`. Esto significa que tiene acceso a cualquier variable local declarada allí.
 
@@ -94,8 +94,8 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**END Microsoft Specific**
+**FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [try-except (Instrucción)](../cpp/try-except-statement.md)

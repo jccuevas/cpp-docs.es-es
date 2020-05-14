@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
 ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80168778"
@@ -25,11 +25,11 @@ Los operadores bit a bit realizan operaciones AND bit a bit ( **&** ), OR exclus
 
 ## <a name="syntax"></a>Sintaxis
 
-*And-Expression*: &nbsp;&nbsp;*la expresión de igualdad* &nbsp;&nbsp;*y-* Expression **&** *igualdad-Expression*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*: &nbsp;&nbsp;*y-expression* &nbsp;&nbsp;expresión *and* - *OR-expression exclusiva-or-* **^** Expression
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*inclusivo-or-Expression*: &nbsp;&nbsp;*Exclusive-or-* Expression &nbsp;&nbsp;la *expresión or* inclusiva or- *or-Expression* &#124;
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 Los operandos de los operadores bit a bit deben tener tipos enteros, pero sus tipos pueden ser diferentes. Estos operadores realizan las conversiones aritméticas habituales; el tipo del resultado es el tipo de los operandos después de la conversión.
 

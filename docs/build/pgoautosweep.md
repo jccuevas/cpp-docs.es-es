@@ -7,14 +7,14 @@ f1_keywords:
 - PogoAutoSweepW
 ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
 ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/03/2019
 ms.locfileid: "67552243"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` guarda la información de contador actual de perfil en un archivo y, a continuación, restablece los contadores. Use la función durante la optimización guiada por perfiles se está preparando para escribir todos los datos de perfil desde el programa en ejecución a un `.pgc` archivo para su uso posterior en la compilación de optimización.
+`PgoAutoSweep` guarda la información del contador de perfiles actual en un archivo y, después, restablece los contadores. Use esta función durante el entrenamiento de la optimización guiada por perfiles para escribir todos los datos de perfil del programa en ejecución en un archivo `.pgc` que se usará posteriormente en la compilación de optimización.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,19 +26,19 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>Parámetros
 
 *name*<br/>
-Una cadena de identificación para el guardado `.pgc` archivo.
+Una cadena de identificación para el archivo `.pgc` guardado.
 
 ## <a name="remarks"></a>Comentarios
 
-Puede llamar a `PgoAutoSweep` desde su aplicación para guardar y restablecer los datos de perfil en cualquier momento durante la ejecución de la aplicación. En una generación instrumentada, `PgoAutoSweep` captura los datos de generación de perfiles actuales, lo guarda en un archivo y restablece los contadores de perfil. Es el equivalente de llamar a la [pgosweep](pgosweep.md) comando en un momento concreto en el archivo ejecutable. En una versión optimizada, `PgoAutoSweep` es una operación inefectiva.
+Puede llamar a `PgoAutoSweep` desde la aplicación para guardar y restablecer los datos de perfil en cualquier momento durante la ejecución de la aplicación. En una compilación instrumentada, `PgoAutoSweep` captura los datos de generación de perfiles actuales, los guarda en un archivo y restablece los contadores de perfil. Es el equivalente a llamar al comando [pgosweep](pgosweep.md) en un punto concreto del archivo ejecutable. En una compilación optimizada, `PgoAutoSweep` no es efectivo.
 
-Los datos del contador de perfil guardado se colocan en un archivo denominado *base_name*-*nombre*! *valor*.pgc, donde *base_name* es el nombre base del archivo ejecutable, *nombre* es el parámetro pasado a `PgoAutoSweep`, y *valor* es un valor único, normalmente un número de progresión, para evitar conflictos de nombres de archivo.
+Los datos del contador de perfiles guardados se colocan en un archivo denominado *base_name*-*name*!*value*.pgc, donde *base_name* es el nombre base del ejecutable, *name* es el parámetro que se pasa a `PgoAutoSweep`, y *value* es un valor único, normalmente un número que aumenta de forma continua para evitar colisiones de nombres de archivo.
 
-El `.pgc` archivos creados por `PgoAutoSweep` deben combinarse en un `.pgd` archivo que se usará para crear un archivo ejecutable optimizado. Puede usar el [pgomgr](pgomgr.md) comando para realizar la combinación.
+Los archivos `.pgc` creados por `PgoAutoSweep` deben combinarse en un archivo `.pgd` que se usará para crear un ejecutable optimizado. Puede usar el comando [pgomgr](pgomgr.md) para llevar a cabo la combinación.
 
-Puede pasar el nombre de la información combinada `.pgd` archivo al vinculador durante la compilación de optimización mediante el uso de la **PGD =** _filename_ argumento para el [/useprofile](reference/useprofile.md) vinculador opción o usando el desuso **/PGD** opción del vinculador. Si combina el `.pgc` archivos en un archivo denominado *base_name*.pgd, no deberá especificar el nombre de archivo en la línea de comandos, ya que el vinculador recoge este nombre de archivo de forma predeterminada.
+Puede pasar el nombre del archivo `.pgd` combinado al enlazador durante la compilación de optimización mediante el uso del argumento **PGD=** _filename_ para la opción [/USEPROFILE](reference/useprofile.md) del enlazador, o bien mediante la opción **/PGD** del enlazador. Si combina los archivos `.pgc` en un archivo denominado *base_name*.pgd, no es necesario que especifique el nombre de archivo en la línea de comandos, ya que el enlazador toma este nombre de archivo de forma predeterminada.
 
-El `PgoAutoSweep` función mantiene la configuración de seguridad para subprocesos especificado cuando se crea la compilación instrumentada. Si usa la configuración predeterminada o especifique el **NOEXACT** argumento para el [/GENPROFILE o/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) opción del vinculador, las llamadas a `PgoAutoSweep` no son seguros para subprocesos. El **EXACT** argumento crea un seguro para subprocesos y más preciso, pero más lento ejecutable instrumentado.
+La función `PgoAutoSweep` mantiene la configuración de seguridad para subprocesos especificada al crear la compilación instrumentada. Si usa la configuración predeterminada o especifica el argumento **NOEXACT** para las opciones [/GENPROFILE o /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) del enlazador, las llamadas a `PgoAutoSweep` no son seguras para subprocesos. El argumento **EXACT** crea un ejecutable instrumentado y seguro para subprocesos más preciso, pero más lento.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -46,11 +46,11 @@ El `PgoAutoSweep` función mantiene la configuración de seguridad para subproce
 |-------------|---------------------|
 |`PgoAutoSweep`|\<pgobootrun.h>|
 
-El archivo ejecutable debe incluir el archivo pgobootrun.lib en las bibliotecas vinculadas. Este archivo se incluye en la instalación de Visual Studio, en el directorio de bibliotecas de VC para cada arquitectura admitida.
+El ejecutable debe incluir el archivo pgobootrun.lib en las bibliotecas vinculadas. Este archivo se incluye en la instalación de Visual Studio, en el directorio de bibliotecas de VC para cada arquitectura admitida.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente usa `PgoAutoSweep` para crear dos `.pgc` archivos en diferentes momentos durante la ejecución. La primera contiene los datos que se describen el comportamiento en tiempo de ejecución hasta que `count` es igual a 3, y la segunda contiene los datos recopilados a partir de este punto hasta justo antes de finalización de la aplicación.
+En el ejemplo siguiente se usa `PgoAutoSweep` para crear dos archivos `.pgc` en distintos momentos durante la ejecución. El primero contiene datos que describen el comportamiento en tiempo de ejecución hasta que `count` es igual a 3, y el segundo contiene los datos recopilados después de este punto hasta justo antes de la finalización de la aplicación.
 
 ```cpp
 // pgoautosweep.cpp
@@ -97,15 +97,15 @@ int main()
 }
 ```
 
-En un símbolo del sistema para desarrolladores, compile el código en un archivo objeto con este comando:
+En un símbolo del sistema para desarrolladores, compile el código en un archivo objeto mediante el siguiente comando:
 
 `cl /c /GL /W4 /EHsc /O2 pgoautosweep.cpp`
 
-A continuación, generar una compilación instrumentada para el entrenamiento con este comando:
+A continuación, genere una compilación instrumentada para el entrenamiento mediante este comando:
 
 `link /LTCG /genprofile pgobootrun.lib pgoautosweep.obj`
 
-Ejecute el ejecutable instrumentado para capturar los datos de entrenamiento. La salida de datos por las llamadas a `PgoAutoSweep` se guarda en archivos denominados pgoautosweep func1! 1.pgc y pgoautosweep func2! 1.pgc. La salida del programa debe ser similar al siguiente mientras se ejecuta:
+Ejecute el ejecutable instrumentado para capturar los datos de entrenamiento. Los datos generados por las llamadas a `PgoAutoSweep` se guardan en archivos denominados pgoautosweep-func1!1.pgc y pgoautosweep-func2!1.pgc. La salida del comando anterior debería tener el siguiente aspecto:
 
 ```Output
 hello from func1 9
@@ -120,11 +120,11 @@ hello from func2 1
 hello from func2 0
 ```
 
-Combinar los datos guardados en una base de datos de entrenamiento de perfil mediante la ejecución de la **pgomgr** comando:
+Combine los datos guardados en una base de datos de entrenamiento de perfiles ejecutando el comando **pgomgr**:
 
 `pgoautosweep-func1!1.pgc pgoautosweep-func2!1.pgc`
 
-El resultado de este comando tiene un aspecto similar al siguiente:
+La salida de este comando tendrá un aspecto similar a:
 
 ```Output
 Microsoft (R) Profile Guided Optimization Manager 14.13.26128.0
@@ -136,7 +136,7 @@ Merging pgoautosweep-func2!1.pgc
 pgoautosweep-func2!1.pgc: Used  3.8% (22424 / 589824) of total space reserved.  0.0% of the counts were dropped due to overflow.
 ```
 
-Ahora puede usar estos datos de entrenamiento para generar una versión optimizada. Use este comando para crear el ejecutable optimizado:
+Ahora puede usar estos datos de entrenamiento para generar una compilación optimizada. Use el siguiente comando para compilar el archivo ejecutable optimizado:
 
 `link /LTCG /useprofile pgobootrun.lib pgoautosweep.obj`
 

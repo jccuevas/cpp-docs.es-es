@@ -14,17 +14,17 @@ ms.locfileid: "65220922"
 ---
 # <a name="automation-in-a-dll"></a>Automation en un archivo DLL
 
-Al elegir la opción de automatización en el Asistente para archivos DLL de MFC, el asistente le proporciona lo siguiente:
+Al elegir la opción de Automation en el Asistente para archivos DLL de MFC, el asistente le proporcionará lo siguiente:
 
-- Un lenguaje de descripción del objeto de inicio (. Archivos ODL)
+- Un archivo de inicio de Lenguaje de descripción de objetos (.ODL)
 
-- Una directiva de inclusión en el archivo STDAFX.h para Afxole.h
+- Una directiva include en el archivo STDAFX.h para Afxole.h
 
-- Una implementación de la `DllGetClassObject` función, que llama el **AfxDllGetClassObject** (función)
+- Una implementación de la función `DllGetClassObject`, que llama a la función **AfxDllGetClassObject**
 
-- Una implementación de la `DllCanUnloadNow` función, que llama el **AfxDllCanUnloadNow** (función)
+- Una implementación de la función `DllCanUnloadNow`, que llama a la función **AfxDllCanUnloadNow**
 
-- Una implementación de la `DllRegisterServer` función, que llama el [COleObjectFactory:: UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) (función)
+- Una implementación de la función `DllRegisterServer`, que llama a la función [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
@@ -32,4 +32,4 @@ Al elegir la opción de automatización en el Asistente para archivos DLL de MFC
 
 ## <a name="see-also"></a>Vea también
 
-[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)
+[Creación de archivos DLL de C/C++ en Visual Studio](dlls-in-visual-cpp.md)

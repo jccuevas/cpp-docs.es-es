@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
 ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299122"
@@ -26,10 +26,10 @@ La instrucción `goto` transfiere el control a una etiqueta. La etiqueta especif
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto***Identifier* **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;*identificador*de &nbsp; **:** *instrucción*
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
 
 Una etiqueta de instrucción solo tiene sentido en una instrucción `goto`; en cualquier otro contexto, una instrucción con etiqueta se ejecuta sin tener en cuenta la etiqueta.
 

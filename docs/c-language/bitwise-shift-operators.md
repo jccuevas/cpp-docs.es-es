@@ -8,15 +8,15 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
 ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326032"
 ---
 # <a name="bitwise-shift-operators"></a>Operadores de desplazamiento bit a bit
 
-Los operadores de desplazamiento mueven el primer operando a la izquierda (**&lt;&lt;**) o a la derecha (**>>**) según el número de posiciones que especifica el segundo operando.
+Los operadores de desplazamiento mueven el primer operando a la izquierda ( **&lt;&lt;** ) o a la derecha ( **>>** ) según el número de posiciones que especifica el segundo operando.
 
 ## <a name="syntax"></a>Sintaxis
 

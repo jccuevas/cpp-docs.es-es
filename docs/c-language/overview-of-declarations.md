@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
 ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857065"
@@ -19,9 +19,9 @@ Una "declaración" especifica la interpretación y los atributos de un conjunto 
 ## <a name="syntax"></a>Sintaxis
 
 *declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub>  *init-declarator-list*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *atributo-SEQ*<sub>OPT</sub> es específico de Microsoft */
+/\* *attribute-seq*<sub>opt</sub> es específico de Microsoft */
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>

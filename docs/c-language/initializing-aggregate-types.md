@@ -27,7 +27,7 @@ Un tipo *agregado* es una estructura, una unión o un tipo de matriz. Si un tipo
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*initializer-list* **,** *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;*initializer-list*  **,**  *initializer*
 
 El elemento *initializer-list* es una lista de inicializadores separados por comas. Cada inicializador de la lista es una expresión constante o una lista de inicializadores. Por consiguiente, las listas de inicializadores pueden anidarse. Este formulario es útil para inicializar miembros agregados de un tipo agregado, como se muestra en los ejemplos de esta sección. Sin embargo, si el inicializador de un identificador automático es una expresión única, no es necesario que sea una expresión constante; solo necesita tener el tipo apropiado para la asignación al identificador.
 

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
 ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62315240"
@@ -36,7 +36,7 @@ Para obtener información general sobre los eventos de compilación, vea [Descri
 
 1. En el **Explorador de soluciones**, seleccione el proyecto para el que quiere especificar el evento de compilación.
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](working-with-project-properties.md).
 
 1. En la carpeta **Eventos de compilación**, seleccione una página de propiedades de evento de compilación.
 
@@ -44,7 +44,7 @@ Para obtener información general sobre los eventos de compilación, vea [Descri
 
    - En **Línea de comandos**, especifique un comando como si estuviera especificándolo en el símbolo del sistema. Especifique un comando o archivo por lotes válido, y los archivos de entrada o salida necesarios. Especifique el comando por lotes **call** antes del nombre de un archivo por lotes para garantizar que se ejecuten todos los comandos siguientes.
 
-      Se pueden especificar varios archivos de entrada y salida simbólicamente mediante macros de MSBuild. Para obtener información sobre cómo especificar la ubicación de archivos o los nombres de conjuntos de archivos, consulte [macros comunes para propiedades y comandos de compilación](reference/common-macros-for-build-commands-and-properties.md).
+      Se pueden especificar varios archivos de entrada y salida simbólicamente mediante macros de MSBuild. Para obtener información sobre cómo especificar la ubicación de los archivos o los nombres de los conjuntos de archivos, vea [Macros comunes para propiedades y comandos de compilación](reference/common-macros-for-build-commands-and-properties.md).
 
       Como el carácter "%" está reservado por MSBuild, si se especifica una variable de entorno, reemplace todos los caracteres con escape **%** con la secuencia de escape hexadecimal **%25**. Por ejemplo, reemplace **%WINDIR%** con **%25WINDIR%25**. MSBuild reemplaza todas las secuencias **%25** con el carácter **%** antes de acceder a la variable de entorno.
 

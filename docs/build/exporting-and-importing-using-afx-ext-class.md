@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
 ms.openlocfilehash: 95c72f8251a8a59833483eb948709c80a69d03d7
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328608"
 ---
 # <a name="exporting-and-importing-using-afx_ext_class"></a>Exportar e importar mediante AFX_EXT_CLASS
 
-[Los archivos DLL de extensión MFC](extension-dlls-overview.md) usan la **AFX_EXT_CLASS** de macro para exportar clases; los ejecutables que se vinculan a la DLL de extensión MFC utilizan la macro para importar clases. Con la **macro AFX_EXT_CLASS,** los mismos archivos de encabezado que se usan para compilar el archivo DLL de extensión MFC se pueden usar con los ejecutables que se vinculan al archivo DLL.
+Los [archivos DLL de extensión de MFC](extension-dlls-overview.md) usan la macro **AFX_EXT_CLASS** para exportar clases; los ejecutables que se vinculan al archivo DLL de extensión de MFC usan la macro para importar clases. Con la macro **AFX_EXT_CLASS**, los mismos archivos de encabezado que se utilizan para compilar el archivo DLL de extensión de MFC se pueden usar con los ejecutables que se vinculan a la DLL.
 
-En el archivo de encabezado del archivo DLL, agregue la palabra clave **AFX_EXT_CLASS** a la declaración de la clase de la siguiente manera:
+En el archivo de encabezado de la DLL, agregue la palabra clave **AFX_EXT_CLASS** a la declaración de la clase de esta forma:
 
 ```cpp
 class AFX_EXT_CLASS CMyClass : public CDocument
@@ -31,11 +31,11 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 };
 ```
 
-MFC define esta macro `__declspec(dllexport)` como cuando `_AFXDLL` se `_AFXEXT` definen los símbolos de preprocesador y se definen. Pero la macro `__declspec(dllimport)` se `_AFXDLL` define `_AFXEXT` como cuándo se define y no se define. Cuando se define, `_AFXDLL` el símbolo de preprocesador indica que el ejecutable de destino (un archivo DLL o una aplicación) utiliza la versión compartida de MFC. Cuando `_AFXDLL` se `_AFXEXT` definen y se definen, esto indica que el ejecutable de destino es un archivo DLL de extensión MFC.
+MFC define esta macro como `__declspec(dllexport)` cuando se definen los símbolos de preprocesador `_AFXDLL` y `_AFXEXT`. Pero la macro se define como `__declspec(dllimport)` cuando se define `_AFXDLL` y no se define `_AFXEXT`. Cuando se define, el símbolo de preprocesador `_AFXDLL` indica que el ejecutable de destino (un archivo DLL o una aplicación) usa la versión compartida de MFC. Cuando se definen tanto `_AFXDLL` como `_AFXEXT`, esto indica que el archivo ejecutable de destino es un archivo DLL de extensión de MFC.
 
-Dado `AFX_EXT_CLASS` que `__declspec(dllexport)` se define como al exportar desde un archivo DLL de extensión MFC, puede exportar clases completas sin colocar los nombres representativos para todos los símbolos de esa clase en el archivo .def.
+Dado que `AFX_EXT_CLASS` se define como `__declspec(dllexport)` al exportar desde un archivo DLL de extensión de MFC, puede exportar clases completas sin colocar los nombres representativos de todos los símbolos de la clase en el archivo .def.
 
-Aunque puede evitar crear un archivo .def y todos los nombres decorados para la clase con este método, crear un archivo .def es más eficaz porque los nombres se pueden exportar por ordinal. Para utilizar el método de exportación del archivo .def, coloque el siguiente código al principio y al final del archivo de encabezado:
+Aunque con este método puede evitar la creación de un archivo .def y todos los nombres representativos para la clase, la creación de un archivo .def es más eficaz porque los nombres se pueden exportar por ordinal. Para usar el método de exportación mediante un archivo .def, coloque el código siguiente al principio y al final del archivo de encabezado:
 
 ```cpp
 #undef AFX_DATA
@@ -46,11 +46,11 @@ Aunque puede evitar crear un archivo .def y todos los nombres decorados para la 
 ```
 
 > [!CAUTION]
-> Tenga cuidado al exportar funciones en línea, ya que pueden crear la posibilidad de conflictos de versiones. Una función en línea se expande en el código de la aplicación; por lo tanto, si más adelante vuelve a escribir la función, no se actualiza a menos que se vuelva a compilar la propia aplicación. Normalmente, las funciones DLL se pueden actualizar sin volver a generar las aplicaciones que las utilizan.
+> Tenga cuidado al exportar funciones insertadas importadas, ya que pueden crear conflictos de versiones. Una función insertada se expande en el código de la aplicación; por tanto, si después vuelve a escribir la función, no se actualiza a menos que se vuelva a compilar la propia aplicación. Normalmente, las funciones de DLL se pueden actualizar sin volver a generar las aplicaciones que las usan.
 
 ## <a name="exporting-individual-members-in-a-class"></a>Exportación de miembros individuales en una clase
 
-A veces es posible que desee exportar miembros individuales de su clase. Por ejemplo, si va `CDialog`a exportar una clase derivada, es posible `DoModal` que solo necesite exportar el constructor y la llamada. Puede utilizar `AFX_EXT_CLASS` en los miembros individuales que necesita exportar.
+En ocasiones, es posible que quiera exportar miembros individuales de una clase. Por ejemplo, si va a exportar una clase derivada de `CDialog`, es posible que solo necesite exportar el constructor y la llamada a `DoModal`. Puede usar `AFX_EXT_CLASS` en los miembros individuales que necesite exportar.
 
 Por ejemplo:
 
@@ -66,9 +66,9 @@ public:
 };
 ```
 
-Dado que ya no está exportando todos los miembros de la clase, puede encontrarse con un problema adicional debido a la forma en que funcionan las macros MFC. Varias de las macros auxiliares de MFC realmente declaran o definen miembros de datos. Por lo tanto, estos miembros de datos también se deben exportar desde el archivo DLL.
+Como ya no se exportan todos los miembros de la clase, es posible que se encuentre con un problema adicional debido al funcionamiento de las macros de MFC. Algunas de las macros de asistente de MFC declaran o definen miembros de datos. Por tanto, estos miembros de datos también se deben exportar desde el archivo DLL.
 
-Por ejemplo, `DECLARE_DYNAMIC` la macro se define de la siguiente manera al compilar un archivo DLL de extensión MFC:
+Por ejemplo, la macro `DECLARE_DYNAMIC` se define como sigue al compilar un archivo DLL de extensión de MFC:
 
 ```cpp
 #define DECLARE_DYNAMIC(class_name) \
@@ -79,7 +79,7 @@ public: \
    virtual CRuntimeClass* GetRuntimeClass() const; \
 ```
 
-La línea que comienza `AFX_DATA` con static es declarar un objeto estático dentro de la clase. Para exportar esta clase correctamente y tener acceso a la información en tiempo de ejecución desde un ejecutable de cliente, debe exportar este objeto estático. Dado que el objeto estático `AFX_DATA`se declara con `AFX_DATA` el `__declspec(dllexport)` modificador , solo debe `__declspec(dllimport)` definir que sea al compilar el archivo DLL y definirlo como al compilar el ejecutable de cliente. Dado `AFX_EXT_CLASS` que ya está definido de esta `AFX_DATA` manera, solo `AFX_EXT_CLASS` necesita redefinir para que sea el mismo que en torno a la definición de clase.
+La línea que comienza con `AFX_DATA` estático declara un objeto estático dentro de la clase. Para exportar esta clase correctamente y acceder a la información en tiempo de ejecución desde un archivo ejecutable de cliente, debe exportar este objeto estático. Como el objeto estático se declara con el modificador `AFX_DATA`, solo es necesario definir `AFX_DATA` para que sea `__declspec(dllexport)` al compilar el archivo DLL y definirlo como `__declspec(dllimport)` al compilar el ejecutable del cliente. Como `AFX_EXT_CLASS` ya se define de esta manera, solo tiene que volver a definir `AFX_DATA` para que sea igual que `AFX_EXT_CLASS` en la definición de la clase.
 
 Por ejemplo:
 
@@ -97,35 +97,35 @@ class CExampleView : public CView
 #define AFX_DATA
 ```
 
-Dado que MFC `AFX_DATA` siempre usa el símbolo en los elementos de datos que define dentro de sus macros, esta técnica funciona para todos estos escenarios. Por ejemplo, funciona `DECLARE_MESSAGE_MAP`para .
+Como MFC siempre usa el símbolo `AFX_DATA` en los elementos de datos que define dentro de sus macros, esta técnica funciona en todos estos escenarios. Por ejemplo, funciona para `DECLARE_MESSAGE_MAP`.
 
 > [!NOTE]
-> Si exporta toda la clase en lugar de los miembros seleccionados de la clase, los miembros de datos estáticos se exportan automáticamente.
+> Si va a exportar toda la clase en lugar de miembros concretos de ella, los miembros de datos estáticos se exportan de forma automática.
 
 ### <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
-- [Exportar desde un archivo DLL mediante archivos .def](exporting-from-a-dll-using-def-files.md)
+- [Exportación desde un archivo DLL mediante archivos .def](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar desde un archivo DLL mediante__declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportación desde un archivo DLL mediante __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportación de funciones de C++ para usarlas en ejecutables del lenguaje C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exportar funciones de C para utilizarlas en ejecutables en lenguaje C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportación de funciones de C para usarlas en ejecutables del lenguaje C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinar qué método de exportación utilizar](determining-which-exporting-method-to-use.md)
+- [Determinación del método de exportación que se va a usar](determining-which-exporting-method-to-use.md)
 
 - [Importación a una aplicación mediante __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicializar un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicialización de un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Nombres decorados](reference/decorated-names.md)
+- [Nombres representativos](reference/decorated-names.md)
 
-- [Importar y exportar funciones inline](importing-and-exporting-inline-functions.md)
+- [Importación y exportación de funciones insertadas](importing-and-exporting-inline-functions.md)
 
 - [Importaciones mutuas](mutual-imports.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Exportar desde un archivo DLL](exporting-from-a-dll.md)
+[Exportación desde un archivo DLL](exporting-from-a-dll.md)

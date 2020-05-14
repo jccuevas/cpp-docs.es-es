@@ -12,15 +12,15 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326591"
 ---
 # <a name="c-logical-operators"></a>Operadores lógicos de C
 
-Los operadores lógicos realizan operaciones AND lógicas (**&&**) y OR lógicas (**||**).
+Los operadores lógicos realizan operaciones AND lógicas ( **&&** ) y OR lógicas ( **||** ).
 
 ## <a name="syntax"></a>Sintaxis
 

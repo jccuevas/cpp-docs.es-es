@@ -6,7 +6,7 @@ helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81323004"
@@ -15,7 +15,7 @@ ms.locfileid: "81323004"
 
 ::: moniker range="vs-2015"
 
-Los proyectos de CMake se admiten en Visual Studio 2017 y versiones posteriores.
+Los proyectos de CMake son compatibles con Visual Studio 2017 y versiones posteriores.
 
 ::: moniker-end
 
@@ -34,7 +34,7 @@ En un proyecto de CMake, las configuraciones de compilación se almacenan en un 
 - Depuración MinGW
 - Versión MinGW
 
-Al elegir una configuración, se agrega al archivo *CMakeSettings.json* en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto. Para obtener información sobre las propiedades de configuración, vea [CMakeSettings reference](cmakesettings-reference.md).
+Al elegir una configuración, se agrega al archivo *CMakeSettings.json* en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto. Para obtener información sobre las propiedades de configuración, vea el artículo [Referencia de CMakeSettings](cmakesettings-reference.md).
 
 ## <a name="linux-predefined-build-configurations"></a>Configuraciones de compilación predefinidas de Linux
 
@@ -359,25 +359,25 @@ Estas opciones permiten ejecutar comandos en el sistema remoto antes y después 
 En un proyecto de CMake, las configuraciones de compilación se almacenan en un archivo CMakeSettings.json. Cuando se selecciona **Administrar configuraciones** en la lista desplegable de configuración de compilación en la barra de herramientas principal, aparece un cuadro de diálogo que muestra las configuraciones predeterminadas de CMake disponibles en Visual Studio:
 
 - Depuración x86
-- x86 Clang Debug
+- x86 Clang Debug (Depuración de Clang x86)
 - Versión x86
-- x86 Clang Release
+- x86 Clang Release (Versión de Clang x86)
 - Depuración x64
-- x64 Clang Debug
+- x64 Clang Debug (Depuración de Clang x64)
 - Versión x64
-- x64 Clang Release
+- x64 Clang Release (Versión de Clang x64)
 - Depuración Linux
 - Versión Linux
-- Linux-Clang-Debug
-- Linux-Clang-Release
-- Caché existente (remoto)
-- Caché existente
+- Linux-Clang-Debug (Depuración de Clang de Linux)
+- Linux-Clang-Release (Versión de Clang de Linux)
+- Existing Cache (remote) (Caché existente [remota])
+- Existing Cache (Caché existente)
 - Depuración MinGW
 - Versión MinGW
-- WSL Debug
-- Versión WSL
-- WSL Clang Debug
-- WSL Clang Release
+- WSL Debug (Depuración de WSL)
+- WSL Release (Versión de WSL)
+- WSL Clang Debug (Depuración de Clang de WSL)
+- WSL Clang Release (Versión de Clang de WSL)
 - Clang
 
 Al elegir una configuración, se agrega al archivo CMakeSettings.json en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto.
@@ -696,11 +696,11 @@ Al elegir una configuración, se agrega al archivo CMakeSettings.json en la carp
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configuración de un proyecto de CMake en Linux](../linux/cmake-linux-project.md)<br/>
-[Conexión al equipo remoto Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Conexión al equipo remoto de Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Configuración de sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>
 [Implementación, ejecución y depuración del proyecto de Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referencia de configuración predefinida de CMake](cmake-predefined-configuration-reference.md)<br/>

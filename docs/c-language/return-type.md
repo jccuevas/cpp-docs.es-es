@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857039"
@@ -26,7 +26,7 @@ El tipo de valor devuelto de una función establece el tamaño y el tipo de valo
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *Attribute-SEQ* es un \*específico de Microsoft /
+/\* *attribute-seq* es específico de Microsoft \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -38,10 +38,10 @@ El tipo de valor devuelto de una función establece el tamaño y el tipo de valo
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*específico de Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*específico de Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*específico de Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*específico de Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Específico de Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>

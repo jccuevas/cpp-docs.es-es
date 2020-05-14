@@ -9,11 +9,11 @@ helpviewer_keywords:
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157812"
 ---
 # <a name="structure-declarations"></a>Declaraciones de estructura
 
@@ -149,7 +149,7 @@ struct somestruct
 
 El compilador permite una matriz sin tamaño o de tamaño cero como el último miembro de una estructura. Esto puede ser útil si el tamaño de una matriz constante es diferente según en la situación en la que se use. La declaración de este tipo de estructura tiene el siguiente aspecto:
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
 
 Las matrices sin tamaño solo pueden aparecer como el último miembro de una estructura. Las estructuras que contienen declaraciones de matriz sin tamaño se pueden anidar dentro de otras estructuras siempre y cuando no se declaren como miembros en ninguna de las estructuras contenedoras. Las matrices de estas estructuras no se permiten. El operador `sizeof`, cuando se aplica a una variable de este tipo o al propio tipo, asume que el tamaño de la matriz es 0.
 

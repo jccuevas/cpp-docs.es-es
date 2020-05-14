@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
 ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857091"
@@ -24,7 +24,7 @@ Una declaración de función precede a la definición de función y especifica e
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/*atributo \*-SEQ*<sub>opt</sub> es un \*específico de Microsoft /
+/\* *attribute-seq*<sub>opt</sub> es específico de Microsoft \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -50,7 +50,7 @@ El prototipo tiene la misma forma que la definición de función, excepto en que
 
 Los prototipos de función tienen los siguientes usos importantes:
 
-- Establecen el tipo de valor devuelto para las funciones que devuelven tipos distintos de **int**. Aunque las funciones que devuelven valores **int** no requieren prototipos, se recomiendan prototipos.
+- Establecen el tipo de valor devuelto para funciones que devuelven tipos diferentes de **int**. Aunque las funciones que devuelven valores **int** no requieren prototipos, estos son recomendables.
 
 - Sin prototipos completos se realizan conversiones estándar, pero no se hace ningún intento de comprobar el tipo o el número de argumentos con el número de parámetros.
 

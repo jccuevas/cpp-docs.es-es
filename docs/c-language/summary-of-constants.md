@@ -5,11 +5,11 @@ helpviewer_keywords:
 - constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
 ms.openlocfilehash: f927d977d818bed28c5fd7392f7933cd1a63ced3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157752"
 ---
 # <a name="summary-of-constants"></a>Resumen de constantes
 
@@ -32,7 +32,7 @@ ms.locfileid: "56150030"
 &nbsp;&nbsp;&nbsp;&nbsp;**E** *sign*<sub>opt</sub> *digit-sequence*
 
 *sign*: uno de<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**+ -**
+&nbsp;&nbsp;&nbsp;&nbsp; **+ -**
 
 *digit-sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
@@ -82,7 +82,7 @@ ms.locfileid: "56150030"
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**
 
 *character-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**'** *c-char-sequence* **'**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **'** *c-char-sequence* **'**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**L'** *c-char-sequence* **'**
 
 *integer-suffix*:<br/>
@@ -94,7 +94,7 @@ ms.locfileid: "56150030"
 &nbsp;&nbsp;&nbsp;&nbsp;*c-char-sequence* *c-char*
 
 *c-char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Cualquier miembro del juego de caracteres de origen excepto la comilla simple (**'**), la barra diagonal inversa (**\\**) o el carácter de nueva línea escape-sequence
+&nbsp;&nbsp;&nbsp;&nbsp;Cualquier miembro del juego de caracteres de origen excepto la comilla simple ( **'** ), la barra diagonal inversa ( **\\** ) o el carácter de nueva línea escape-sequence
 
 *escape-sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*simple-escape-sequence*<br/>
@@ -102,16 +102,16 @@ ms.locfileid: "56150030"
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence*
 
 *simple-escape-sequence*: uno de<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\a \b \f \n \r \t \v**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\' \\" \\\ \\?**
+&nbsp;&nbsp;&nbsp;&nbsp; **\a \b \f \n \r \t \v**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\\' \\" \\\ \\?**
 
 *octal-escape-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit* *octal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit* *octal-digit* *octal-digit*
+&nbsp;&nbsp;&nbsp;&nbsp; **\\** *octal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\\** *octal-digit* *octal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\\** *octal-digit* *octal-digit* *octal-digit*
 
 *hexadecimal-escape-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\x** *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\x** *hexadecimal-digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence* *hexadecimal-digit*
 
 ## <a name="see-also"></a>Vea también

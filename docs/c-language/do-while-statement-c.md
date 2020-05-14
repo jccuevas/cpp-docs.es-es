@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
 ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
 ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/17/2020
 ms.locfileid: "79438586"
@@ -19,7 +19,7 @@ La instrucción *do-while* permite repetir una instrucción o una instrucción c
 
 ## <a name="syntax"></a>Sintaxis
 
-*Iteration-Statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do***instrucción***While (** *expresión* **);**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
 
 El elemento *expression* en una instrucción *do-while* se evalúa después de que se ejecute el cuerpo del bucle. Por consiguiente, el cuerpo del bucle se ejecuta siempre al menos una vez.
 
@@ -43,6 +43,6 @@ do
 
 En esta instrucción *do-while*, se ejecutan las dos instrucciones `y = f( x );` y `x--;` independientemente del valor inicial de `x`. A continuación `x > 0` se evalúa. Si `x` es mayor que 0, el cuerpo de instrucción se ejecuta de nuevo y `x > 0` se evalúa de nuevo. El cuerpo de instrucción se ejecuta repetidamente mientras `x` siga siendo mayor que 0. La ejecución de la instrucción *do-while* finaliza cuando `x` se convierte en 0 o negativo. El cuerpo del bucle se ejecuta al menos una vez.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [do-while (Instrucción) (C++)](../cpp/do-while-statement-cpp.md)

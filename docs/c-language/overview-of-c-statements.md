@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
 ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857078"
@@ -33,9 +33,9 @@ Las instrucciones de C se componen de tokens, expresiones y otras instrucciones.
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-Statement](../c-language/try-except-statement-c.md) /* \*específicas de Microsoft /
+[try-except-statement](../c-language/try-except-statement-c.md) /* Específico de Microsoft \*/
 
-[try-finally-statement](../c-language/try-finally-statement-c.md) /\* \*específico de Microsoft /
+[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Específico de Microsoft \*/
 
 Con frecuencia, el cuerpo de la instrucción es una "instrucción compuesta". Una instrucción compuesta consta de otras instrucciones que pueden incluir palabras clave. La instrucción compuesta está delimitada por llaves ( **{ }** ). El resto de las instrucciones de C finalizan con un punto y coma ( **;** ). El punto y coma es un terminador de instrucciones.
 

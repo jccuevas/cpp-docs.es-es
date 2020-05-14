@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
 ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349611"
 ---
 # <a name="try-finally-statement-c"></a>try-finally (Instrucción) (C)
 
-**Microsoft Specific**
+**Específicos de Microsoft**
 
 La instrucción `try-finally` es una extensión de Microsoft al lenguaje C que permite que las aplicaciones garanticen la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. La instrucción `try-finally` es especialmente útil para las rutinas que tienen varios lugares donde comprobar un error, lo que puede causar que la rutina termine antes de tiempo.
 
@@ -44,12 +44,12 @@ No se llama al controlador de terminación si un proceso se elimina mientras se 
 > El control estructurado de excepciones funciona con archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el mecanismo de control de excepciones de C++ es mucho más flexible, ya que puede controlar excepciones de cualquier tipo.
 
 > [!NOTE]
-> Para los programas de C++, se debe usar el control de excepciones de C++ en lugar del control estructurado de excepciones. Para obtener más información, vea [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md) en la *Referencia del lenguaje C++*.
+> Para los programas de C++, se debe usar el control de excepciones de C++ en lugar del control estructurado de excepciones. Para obtener más información, vea [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md) en la *Referencia del lenguaje C++* .
 
 Consulte el ejemplo de la [instrucción try-except](../c-language/try-except-statement-c.md) para ver cómo funciona la instrucción `try-finally`.
 
-**END Microsoft Specific**
+**FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [try-finally (Instrucción)](../cpp/try-finally-statement.md)

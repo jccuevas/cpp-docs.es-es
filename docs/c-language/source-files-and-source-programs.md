@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
 ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349887"
@@ -21,12 +21,12 @@ Un programa de origen se puede dividir en uno o más "archivos de código fuente
 ## <a name="syntax"></a>Sintaxis
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaración externa* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*función-definición*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declaración*
+&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
 
 En [Información general de declaraciones](../c-language/overview-of-declarations.md) se proporciona la sintaxis para `declaration` no terminal, y en la *Referencia del preprocesador* se explica cómo se procesa la [unidad de traducción](../preprocessor/phases-of-translation.md).
 
@@ -39,6 +39,6 @@ Un "programa de origen" de C es una colección de directivas, pragmas, declaraci
 
 Los archivos de código fuente no tienen que contener instrucciones ejecutables. Por ejemplo, puede resultarle útil colocar las definiciones de variables en un archivo de código fuente y, a continuación, declarar las referencias a estas variables en otros archivos de código fuente que las usen. Esta técnica facilita la búsqueda y actualización de las definiciones cuando es necesario. Por la misma razón, las constantes y macros se organizan en archivos independientes, denominados "archivos de inclusión" o "archivos de encabezado", a los que se puede hacer referencia en archivos de código fuente según sea necesario. Vea la *Referencia del preprocesador* para obtener información sobre [macros](../preprocessor/macros-c-cpp.md) y [archivos de inclusión](../preprocessor/hash-include-directive-c-cpp.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Estructura del programa](../c-language/program-structure.md)
