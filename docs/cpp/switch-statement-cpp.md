@@ -20,10 +20,10 @@ no-loc:
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
 ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204161"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389706"
 ---
 # <a name="switch-statement-c"></a>`switch`Statement (C++)
 
@@ -46,13 +46,13 @@ Permite la selección entre varias secciones de código, dependiendo del valor d
 > &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
 > &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Una __`switch`__ instrucción hace que el control se transfiera a uno *`labeled-statement`* en su cuerpo de instrucción, dependiendo del valor de *`condition`* .
+Una instrucción __`switch`__ hace que el control se transfiera a una instrucción *`labeled-statement`* en el cuerpo de la instrucción, en función del valor de *`condition`* .
 
 *`condition`* Debe tener un tipo entero o ser un tipo de clase que tenga una conversión no ambigua a un tipo entero. La promoción de entero tiene lugar tal y como se describe en [conversiones estándar](standard-conversions.md).
 
-El __`switch`__ cuerpo de la instrucción consta de una serie de __`case`__ etiquetas y una __`default`__ etiqueta opcional. Una *`labeled-statement`* es una de estas etiquetas y las instrucciones siguientes. Las instrucciones etiquetadas no son requisitos sintácticos, pero la __`switch`__ instrucción no tiene sentido sin ellas. Dos *`constant-expression`* valores de __`case`__ las instrucciones no pueden evaluarse como el mismo valor. La __`default`__ etiqueta solo puede aparecer una vez. __`default`__ A menudo, la instrucción se coloca al final, pero puede aparecer en cualquier parte del cuerpo de la __`switch`__ instrucción. Una __`case`__ __`default`__ etiqueta o solo puede aparecer dentro de una __`switch`__ instrucción.
+El __`switch`__ cuerpo de la instrucción consta de una serie de __`case`__ etiquetas y una __`default`__ etiqueta opcional. Una *`labeled-statement`* es una de estas etiquetas y las instrucciones siguientes. Las instrucciones etiquetadas no son requisitos sintácticos, pero la __`switch`__ instrucción no tiene sentido sin ellas. Dos *`constant-expression`* valores de __`case`__ las instrucciones no pueden evaluarse como el mismo valor. La __`default`__ etiqueta solo puede aparecer una vez. __`default`__ A menudo, la instrucción se coloca al final, pero puede aparecer en cualquier parte del cuerpo de la __`switch`__ instrucción. Una etiqueta __`case`__ o __`default`__ solo puede aparecer en una instrucción __`switch`__ .
 
 *`constant-expression`* En cada __`case`__ etiqueta se convierte en un valor constante que es del mismo tipo que *`condition`* . A continuación, se compara con *`condition`* para determinar si son iguales. El control pasa a la primera instrucción después del __`case`__ *`constant-expression`* valor que coincide con el valor de *`condition`* . El comportamiento resultante se muestra en la siguiente tabla.
 
