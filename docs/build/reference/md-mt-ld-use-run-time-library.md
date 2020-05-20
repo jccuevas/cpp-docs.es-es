@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 4e734233d94bf57d6838bd4d37c023d55f1d5f6b
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: a66677ebbef984e9a4c8190f184ca3a9126a7b83
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299757"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550763"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (utilizar la biblioteca en tiempo de ejecución)
 
@@ -54,9 +54,9 @@ Indica si un módulo multiproceso es un archivo DLL y especifica versiones comer
 /LD[d]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-|Opción|DESCRIPCIÓN|
+|Opción|Descripción|
 |------------|-----------------|
 |**/MD**|Hace que la aplicación use la versión específica para multiproceso y la versión específica para DLL de la biblioteca en tiempo de ejecución. Define `_MT` y `_DLL` y hace que el compilador sitúe el nombre de la biblioteca MSVCRT.lib en el archivo .obj.<br /><br /> Las aplicaciones compiladas con esta opción se vinculan estáticamente con MSVCRT.lib. Esta biblioteca proporciona un nivel de código que permite al vinculador resolver referencias externas. El código de trabajo real se encuentra en MSVCR*versionNumber*. DLL, que debe estar disponible en tiempo de ejecución para las aplicaciones vinculadas con MSVCRT. lib.|
 |**/MDd**|Define `_DEBUG`, `_MT` y `_DLL` y hace que la aplicación use la versión de depuración multiproceso y la versión específica para DLL de la biblioteca en tiempo de ejecución. También hace que el compilador coloque el nombre de la biblioteca MSVCRTD.lib en el archivo .obj.|
@@ -67,19 +67,17 @@ Indica si un módulo multiproceso es un archivo DLL y especifica versiones comer
 
 Para obtener más información sobre las bibliotecas en tiempo de ejecución de C y las bibliotecas que se utilizan al compilar con [/CLR (compilación de Common Language Runtime)](clr-common-language-runtime-compilation.md), vea características de la [biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
-Todos los módulos pasados a una invocación determinada del enlazador deben haberse compilado con la misma opción del compilador de la biblioteca en tiempo de ejecución ( **/MD**, **/MT**, **/LD**).
+Todos los módulos pasados a una invocación determinada del enlazador deben haberse compilado con la misma opción del compilador de la biblioteca en tiempo de ejecución (**/MD**, **/MT**, **/LD**).
 
 Para obtener más información sobre cómo usar las versiones de depuración de las bibliotecas en tiempo de ejecución, vea [referencia de la biblioteca en tiempo de ejecución de C](../../c-runtime-library/c-run-time-library-reference.md).
 
-Para obtener más información sobre los archivos dll, vea [crear C/C++ dll en Visual Studio](../dlls-in-visual-cpp.md).
+Para obtener más información sobre los archivos dll, vea [crear archivos dll de C/C++ en Visual Studio](../dlls-in-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione la página de propiedades **Propiedades de configuración** > **C/C++**  > **Línea de comandos**.
-
-1. Seleccione la página de propiedades **generación de código** .
+1. Seleccione la **Configuration Properties**página de propiedades de generación de código de  >  **C/C++ y**propiedades de configuración  >  **Code Generation** .
 
 1. Modifique la propiedad **biblioteca en tiempo de ejecución** .
 
@@ -87,7 +85,7 @@ Para obtener más información sobre los archivos dll, vea [crear C/C++ dll en V
 
 - Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones del compilador de MSVC](compiler-options.md)<br/>
-[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
