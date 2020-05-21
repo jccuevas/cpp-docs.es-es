@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950204"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759243"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -90,7 +90,7 @@ Configuración regional que se va a usar.
 
 Devuelve el número de caracteres impreso o un valor negativo si se produce un error. Si *Format* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y establece **errno** en **EINVAL**. Si se encuentra **EOF** (0xFFFF) en el *argumento*, la función devuelve-1.
 
-Para obtener información sobre **errno** y códigos de error, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener información sobre **errno** y códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -119,7 +119,7 @@ Line one
         Line two
 ```
 
-Las [Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) siempre comienzan con un signo **%** de porcentaje () y se leen de izquierda a derecha. Cuando **printf** encuentra la primera especificación de formato (si existe), convierte el valor del primer argumento después del *formato* y lo envía en consecuencia. La segunda especificación de formato genera el segundo argumento que se convertirá y saldrá, y así sucesivamente. Si hay más argumentos que especificaciones de formato, se omiten los argumentos adicionales. Los resultados son indefinidos si no hay suficientes argumentos para todas las especificaciones de formato.
+Las [Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) siempre comienzan con un signo de porcentaje ( **%** ) y se leen de izquierda a derecha. Cuando **printf** encuentra la primera especificación de formato (si existe), convierte el valor del primer argumento después del *formato* y lo envía en consecuencia. La segunda especificación de formato genera el segundo argumento que se convertirá y saldrá, y así sucesivamente. Si hay más argumentos que especificaciones de formato, se omiten los argumentos adicionales. Los resultados son indefinidos si no hay suficientes argumentos para todas las especificaciones de formato.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
@@ -138,7 +138,7 @@ Las [Especificaciones de formato](../../c-runtime-library/format-specification-s
 |**printf**, **_printf_l**|\<stdio.h>|
 |**wprintf**, **_wprintf_l**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -199,7 +199,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Integer formats:
@@ -226,14 +226,15 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[Sintaxis de especificación de formato: funciones printf y wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[Compatibilidad de punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[vprintf (funciones)](../../c-runtime-library/vprintf-functions.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[Funciones de vprintf (](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>
