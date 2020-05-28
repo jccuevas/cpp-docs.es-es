@@ -1,50 +1,50 @@
 - name: Documentación de Linux con Visual Studio C++
-  href: index.md
+  href: ../linux/index.yml
 - name: 'Descarga, instalación y configuración de la carga de trabajo de desarrollo de Linux'
-  href: download-install-and-setup-the-linux-development-workload.md
+  href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: Conexión al equipo remoto Linux
   expanded: true
   items:
     - name: Conexión al equipo remoto Linux
-      href: connect-to-your-remote-linux-computer.md
+      href: ../linux/connect-to-your-remote-linux-computer.md
     - name: Configuración del desarrollo de Linux remoto seguro compatible con FIPS
-      href: set-up-fips-compliant-secure-remote-linux-development.md
+      href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: Referencia de ConnectionManager
-      href: connectionmanager-reference.md
+      href: ../linux/connectionmanager-reference.md
 - name: Creación de un proyecto de Linux
-  href: create-a-new-linux-project.md
+  href: ../linux/create-a-new-linux-project.md
 - name: Configuración de un proyecto de Linux
-  href: configure-a-linux-project.md
+  href: ../linux/configure-a-linux-project.md
 - name: Creación y configuración de un proyecto de CMake en Linux
-  href: cmake-linux-project.md
+  href: ../linux/cmake-linux-project.md
 - name: Configuración de proyectos de Linux para usar AddressSanitizer
-  href: linux-asan-configuration.md
+  href: ../linux/linux-asan-configuration.md
 - name: 'Implementar, ejecutar y depurar el proyecto de Linux'
-  href: deploy-run-and-debug-your-linux-project.md
+  href: ../linux/deploy-run-and-debug-your-linux-project.md
 - name: 'Tutorial: Creación de proyectos multiplataforma de C++ en Visual Studio'
   href: ../build/get-started-linux-cmake.md
 - name: Referencia de las páginas de propiedades de un proyecto de Linux
   expanded: false
   items:
     - name: Referencia de las páginas de propiedades de un proyecto de Linux
-      href: prop-pages-linux.md
+      href: ../linux/prop-pages-linux.md
     - name: Propiedades generales (Linux)
-      href: prop-pages/general-linux.md
+      href: ../linux/prop-pages/general-linux.md
     - name: Propiedades de depuración (Linux)
-      href: prop-pages/debugging-linux.md
+      href: ../linux/prop-pages/debugging-linux.md
     - name: Propiedades de directorios de VC++ (Linux)
-      href: prop-pages/directories-linux.md
+      href: ../linux/prop-pages/directories-linux.md
     - name: Propiedades de Copiar orígenes (Linux)
-      href: prop-pages/copy-sources-project.md
+      href: ../linux/prop-pages/copy-sources-project.md
     - name: Propiedades de C/C++ (Linux)
-      href: prop-pages/c-cpp-linux.md
+      href: ../linux/prop-pages/c-cpp-linux.md
     - name: Propiedades del enlazador (Linux)
-      href: prop-pages/linker-linux.md
+      href: ../linux/prop-pages/linker-linux.md
     - name: Propiedades de evento de compilación (Linux)
-      href: prop-pages/build-events-linux.md
+      href: ../linux/prop-pages/build-events-linux.md
     - name: Propiedades de paso de compilación personalizada (Linux)
-      href: prop-pages/custom-build-step-linux.md
+      href: ../linux/prop-pages/custom-build-step-linux.md
     - name: Propiedades de proyecto de archivos Make (Linux)
-      href: prop-pages/makefile-linux.md
+      href: ../linux/prop-pages/makefile-linux.md
     - name: Propiedades de archivo remoto (Linux)
-      href: prop-pages/remote-ar-linux.md
+      href: ../linux/prop-pages/remote-ar-linux.md
