@@ -1,6 +1,6 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
-ms.date: 4/2/2020
+ms.date: 5/28/2020
 api_name:
 - wcscpy_s
 - _mbscpy_s
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
+ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911844"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206198"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -116,7 +116,7 @@ errno_t _mbscpy_s_l(
 Ubicación del búfer de cadena de destino.
 
 *dest_size*<br/>
-Tamaño del búfer de cadena de destino en unidades **Char** para funciones estrechas y de varios bytes, y unidades de **wchar_t** para funciones anchas. Este valor debe ser mayor que cero y no mayor que **RSIZE_MAX**.
+Tamaño del búfer de cadena de destino en unidades **Char** para funciones estrechas y de varios bytes, y unidades de **wchar_t** para funciones anchas. Este valor debe ser mayor que cero y no mayor que **RSIZE_MAX**. Asegúrese de que este tamaño tiene en cuenta el final de `NULL` la cadena.
 
 *src*<br/>
 Búfer de cadena de origen terminada en NULL.
@@ -132,11 +132,11 @@ Cero si es correcto; en caso contrario, error.
 
 |*dest*|*dest_size*|*src*|Valor devuelto|Contenido de *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**ACEPTA**|cualquiera|cualquiera|**EINVAL**|no modificado|
-|cualquiera|cualquiera|**ACEPTA**|**EINVAL**|*dest*[0] establecido en 0|
+|**NULL**|cualquiera|cualquiera|**EINVAL**|no modificado|
+|cualquiera|cualquiera|**NULL**|**EINVAL**|*dest*[0] establecido en 0|
 |cualquiera|0, o demasiado pequeño|cualquiera|**ERANGE**|*dest*[0] establecido en 0|
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 La función **strcpy_s** copia el contenido de la dirección de *src*, incluido el carácter nulo de terminación, en la ubicación especificada por *dest*. La cadena de destino debe ser lo suficientemente grande como para contener la cadena de origen y su carácter nulo de terminación. El comportamiento de **strcpy_s** es indefinido si las cadenas de origen y de destino se superponen.
 
@@ -231,7 +231,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
