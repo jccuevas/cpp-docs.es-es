@@ -5,21 +5,39 @@ metadata:
   title: Analizadores de código C/C++
   description: Obtenga más información sobre cómo Visual Studio puede ayudarle a analizar la calidad del código C y C++.
   ms.topic: landing-page
-  ms.date: 02/12/2020
-  ms.openlocfilehash: 62416d462cc6da3bf28da2a7a825b6702c512385
-  ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+  ms.date: 05/26/2020
+  ms.openlocfilehash: 95bba65d42138424efb8978a67666c8354384aea
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/14/2020
-  ms.locfileid: "77429490"
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108412"
 landingContent:
 - title: Análisis del código de C y C++
   linkLists:
   - linkListType: overview
     links:
-    - text: Análisis del código de C y C++
+    - text: Análisis de código para obtener información general de C/C++
       url: code-analysis-for-c-cpp-overview.md
+  - linkListType: quickstart
+    links:
+    - text: Inicio rápido de Análisis de código para C/C++
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: tutorial
+    links:
+    - text: Tutorial Analizar código de C/C++ en busca de defectos
+      url: walkthrough-analyzing-c-cpp-code-for-defects.md
+    - text: Utilizar anotaciones SAL para reducir defectos de código de C/C++
+      url: using-sal-annotations-to-reduce-c-cpp-code-defects.md
+- title: Referencia de análisis de código
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C++ Core Guidelines
+      url: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
   - linkListType: reference
     links:
+    - text: Advertencias de C++ Core Guidelines
+      url: code-analysis-for-cpp-corecheck.md
     - text: Advertencias de análisis de código de C++
       url: code-analysis-for-c-cpp-warnings.md
