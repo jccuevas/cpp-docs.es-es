@@ -3,7 +3,6 @@
 - name: 'Tutorial: Compilación de un programa de C++/CLI que tiene como destino CLR'
   href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
 - name: Tareas de C++/CLI
-  expanded: false
   items:
     - name: Tareas de C++/CLI
       href: ../dotnet/cpp-cli-tasks.md
@@ -50,14 +49,12 @@
     - name: Acceso a datos mediante ADO.NET
       href: ../dotnet/data-access-using-adonet-cpp-cli.md
 - name: Interoperabilidad nativa y de .NET
-  expanded: false
   items:
     - name: Interoperabilidad nativa y de .NET
       href: ../dotnet/native-and-dotnet-interoperability.md
     - name: Interoperabilidad con otros lenguajes de .NET
       href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
     - name: Ensamblados mixtos (nativos y administrados)
-      expanded: false
       items:
         - name: Ensamblados mixtos (nativos y administrados)
           href: ../dotnet/mixed-native-and-managed-assemblies.md
@@ -80,14 +77,12 @@
         - name: Procedimiento Crear una aplicación de confianza parcial quitando la dependencia de la DLL de la biblioteca CRT
           href: ../dotnet/create-a-partially-trusted-application.md
     - name: Utilizar un control de usuario de Windows Forms en MFC
-      expanded: false
       items:
         - name: Utilizar un control de usuario de Windows Forms en MFC
           href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
         - name: Diferencias de programación entre formularios Windows Forms y MFC
           href: ../dotnet/windows-forms-mfc-programming-differences.md
         - name: Hospedar un control de usuario de Windows Forms en un cuadro de diálogo MFC
-          expanded: false
           items:
             - name: Hospedar un control de usuario de Windows Forms en un cuadro de diálogo MFC
               href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
@@ -98,7 +93,6 @@
             - name: Procedimiento Recibir eventos de Windows Forms de clases nativas de C++
               href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
         - name: Hospedar un control de usuario de Windows Forms como vista de MFC
-          expanded: false
           items:
             - name: Hospedar un control de usuario de Windows Forms como vista de MFC
               href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
@@ -111,12 +105,10 @@
         - name: Hospedar un control de usuario de Windows Forms en un cuadro de diálogo MFC
           href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
     - name: Llamar a funciones nativas desde código administrado
-      expanded: false
       items:
         - name: Llamar a funciones nativas desde código administrado
           href: ../dotnet/calling-native-functions-from-managed-code.md
         - name: Utilizar un elemento PInvoke explícito en C++ (Atributo DllImport)
-          expanded: false
           items:
             - name: Utilizar un elemento PInvoke explícito en C++ (Atributo DllImport)
               href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
@@ -133,7 +125,6 @@
             - name: Procedimiento Serializar punteros insertados mediante PInvoke
               href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
         - name: Utilizar la interoperabilidad de C++ (PInvoke implícito)
-          expanded: false
           items:
             - name: Utilizar la interoperabilidad de C++ (PInvoke implícito)
               href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
@@ -190,7 +181,6 @@
             - name: 'Procedimiento Envolver una clase nativa para usarla en C#'
               href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
 - name: Código puro y comprobable
-  expanded: false
   items:
     - name: Código puro y comprobable
       href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
@@ -213,7 +203,6 @@
 - name: Debug (Clase)
   href: ../dotnet/debug-class-cpp-cli.md
 - name: Referencia de la biblioteca STL/CLR
-  expanded: false
   items:
     - name: Referencia de la biblioteca STL/CLR
       href: ../dotnet/stl-clr-library-reference.md
@@ -270,12 +259,10 @@
     - name: vector (STL/CLR)
       href: ../dotnet/vector-stl-clr.md
 - name: Biblioteca de compatibilidad de C++
-  expanded: false
   items:
     - name: Biblioteca de compatibilidad de C++
       href: ../dotnet/cpp-support-library.md
     - name: Información general de la serialización en C++
-      expanded: false
       items:
         - name: Información general de la serialización en C++
           href: ../dotnet/overview-of-marshaling-in-cpp.md
@@ -286,12 +273,10 @@
     - name: msclr (Espacio de nombres)
       href: ../dotnet/msclr-namespace.md
     - name: Clases para la administración de recursos
-      expanded: false
       items:
         - name: Clases para la administración de recursos
           href: ../dotnet/resource-management-classes.md
         - name: auto_gcroot
-          expanded: false
           items:
             - name: auto_gcroot
               href: ../dotnet/auto-gcroot.md
@@ -300,7 +285,6 @@
             - name: swap (Función) (auto_gcroot)
               href: ../dotnet/swap-function-auto-gcroot.md
         - name: auto_handle
-          href: ../dotnet/auto-handle.md
           items:
             - name: auto_handle
               href: ../dotnet/auto-handle.md
@@ -309,12 +293,10 @@
             - name: swap (Función) (auto_handle)
               href: ../dotnet/swap-function-auto-handle.md
     - name: Synchronization (Clase lock)
-      expanded: false
       items:
         - name: Synchronization (Clase lock)
           href: ../dotnet/synchronization-lock-class.md
         - name: bloquear
-          expanded: false
           items:
             - name: bloquear
               href: ../dotnet/lock.md
@@ -323,21 +305,18 @@
             - name: lock_when (Enumeración)
               href: ../dotnet/lock-when-enum.md
     - name: Llamar a funciones en un dominio de aplicación concreto
-      expanded: false
       items:
         - name: Llamar a funciones en un dominio de aplicación concreto
           href: ../dotnet/calling-functions-in-a-specific-application-domain.md
         - name: call_in_appdomain (Función)
           href: ../dotnet/call-in-appdomain-function.md
     - name: 'com::ptr'
-      expanded: false
       items:
         - name: 'com::ptr'
           href: ../dotnet/com-ptr.md
         - name: 'com::ptr (Clase)'
           href: ../dotnet/com-ptr-class.md
 - name: Excepciones en C++/CLI
-  expanded: false
   items:
     - name: Excepciones en C++/CLI
       href: ../dotnet/exceptions-in-cpp-cli.md
@@ -352,7 +331,6 @@
     - name: Procedimiento Definir e instalar un controlador de excepciones global
       href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
 - name: Boxing
-  expanded: false
   items:
     - name: Boxing
       href: ../dotnet/boxing-cpp-cli.md
