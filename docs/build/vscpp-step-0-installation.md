@@ -1,21 +1,21 @@
 ---
-title: Instalación de compatibilidad con C++ en Visual Studio
+title: Instalación de C y compatibilidad con C++ en Visual Studio
 description: Instalación de la compatibilidad de Visual Studio con Visual C++
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: d3018bef9254a8eab557057c035cde84310a2452
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335364"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550815"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Instalación de compatibilidad con C++ en Visual Studio
+# <a name="install-c-and-c-support-in-visual-studio"></a>Instalación de C y compatibilidad con C++ en Visual Studio
 
-Si aún no se ha descargado e instalado Visual Studio C++ y las herramientas de Visual C++, aquí se muestra cómo empezar a trabajar.
+Si aún no se ha descargado e instalado Visual Studio y las herramientas de Microsoft C/C++, aquí se muestra cómo empezar a trabajar.
 
 ::: moniker range="vs-2019"
 
@@ -73,9 +73,9 @@ Una vez instalado el Instalador, puede usarlo para personalizar la instalación 
 
    ![Visual Studio 2019: Instalación de una carga de trabajo](../get-started/media/vs-installer-workloads.png)
 
-   Para obtener compatibilidad principal con C++, elija la carga de trabajo "Desarrollo para el escritorio con C++". Incluye el editor principal predeterminado, que contiene compatibilidad de edición de código básica para más de 20 lenguajes, la capacidad de abrir y editar código desde cualquier carpeta sin necesitar un proyecto y control de código fuente integrado.
+   Para obtener compatibilidad principal con C y C++, elija la carga de trabajo "Desarrollo para el escritorio con C++". Incluye el editor principal predeterminado, que contiene compatibilidad de edición de código básica para más de 20 lenguajes, la capacidad de abrir y editar código desde cualquier carpeta sin necesitar un proyecto y control de código fuente integrado.
 
-   Las cargas de trabajo adicionales admiten otros tipos de desarrollo de C++. Por ejemplo, elija la carga de trabajo "Desarrollo de la Plataforma universal de Windows" para crear aplicaciones que usen Windows Runtime para Microsoft Store. Elija "Desarrollo de juegos con C++" para crear juegos que usen DirectX, Unreal y Cocos2d. Elija "Desarrollo para Linux con C++" para establecer como destino las plataformas Linux, incluido el desarrollo para IoT.
+   Las cargas de trabajo adicionales admiten otros tipos de desarrollo. Por ejemplo, elija la carga de trabajo "Desarrollo de la Plataforma universal de Windows" para crear aplicaciones que usen Windows Runtime para Microsoft Store. Elija "Desarrollo de juegos con C++" para crear juegos que usen DirectX, Unreal y Cocos2d. Elija "Desarrollo para Linux con C++" para establecer como destino las plataformas Linux, incluido el desarrollo para IoT.
 
    En el panel **Detalles de la instalación** se enumeran los componentes incluidos y opcionales que ha instalado cada carga de trabajo. Se pueden seleccionar o anular la selección de los componentes opcionales de esta lista. Por ejemplo, para admitir el desarrollo mediante los conjuntos de herramientas de compilador de Visual Studio 2017 o 2015, elija los componentes opcionales MSVC v141 o MSVC v140. Se puede agregar compatibilidad con MFC, la extensión de lenguaje de los módulos experimentales, IncrediBuild y mucho más.
 
@@ -125,7 +125,7 @@ Puede reducir la superficie de memoria de instalación de Visual Studio en la u
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="vs-2017"
 
 ## <a name="visual-studio-2017-installation"></a>Instalación de Visual Studio 2017
 
@@ -159,7 +159,7 @@ Para obtener información sobre los requisitos de espacio en disco y de sistema 
 
    ![Desarrollo para el escritorio con la carga de trabajo de C++](media/desktop-development-with-cpp.png "Desarrollo para el escritorio con C++")
 
-   En el caso de C++, seleccione la carga de trabajo **Desarrollo para el escritorio con C++** y luego elija **Instalar**.
+   En el caso de C y C++, seleccione la carga de trabajo **Desarrollo para el escritorio con C++** y luego elija **Instalar**.
 
    ![Instalación del desarrollo para el escritorio con la carga de trabajo de C++](media/vscpp-concierge-choose-workload.gif "Instalación del desarrollo para el escritorio con la carga de trabajo de C++")
 
@@ -185,9 +185,9 @@ Para obtener información sobre los requisitos de espacio en disco y de sistema 
 
 ## <a name="visual-studio-2015-installation"></a>Instalación de Visual Studio 2015
 
-Para instalar Visual Studio 2015, vaya a [Descargar versiones anteriores de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Ejecute el programa de instalación y elija **Instalación personalizada** y, a continuación, seleccione el componente de C++. Para agregar compatibilidad con C++ a una instalación existente de Visual Studio 2015, haga clic en el botón Inicio de Windows y escriba **Agregar o quitar programas**. Abra el programa desde la lista de resultados y, después, busque la instalación de Visual Studio 2015 en la lista de programas instalados. Haga doble clic, elija **Modificar** y seleccione los componentes de Visual C++ que se van a instalar.
+Para instalar Visual Studio 2015, vaya a [Descargar versiones anteriores de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Ejecute el programa de instalación y elija **Instalación personalizada** y, a continuación, seleccione el componente de C++. Para agregar compatibilidad con C y C++ a una instalación existente de Visual Studio 2015, haga clic en el botón Inicio de Windows y escriba **Agregar o quitar programas**. Abra el programa desde la lista de resultados y, después, busque la instalación de Visual Studio 2015 en la lista de programas instalados. Haga doble clic, elija **Modificar** y seleccione los componentes de Visual C++ que se van a instalar.
 
-En general, recomendamos encarecidamente que use Visual Studio 2017, incluso para compilar el código mediante el compilador de Visual Studio 2015. Para obtener más información, vea [Use native multi-targeting in Visual Studio to build old projects](../porting/use-native-multi-targeting.md) (Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos).
+En general, recomendamos encarecidamente que use la versión más reciente de Visual Studio, incluso para compilar el código mediante el compilador de Visual Studio 2015. Para obtener más información, vea [Use native multi-targeting in Visual Studio to build old projects](../porting/use-native-multi-targeting.md) (Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos).
 
 ::: moniker-end
 

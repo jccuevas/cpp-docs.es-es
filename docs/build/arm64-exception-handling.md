@@ -2,12 +2,12 @@
 title: Control de excepciones de ARM64
 description: Describe las convenciones y los datos de control de excepciones que usa Windows en ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
-ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
+ms.openlocfilehash: abc77aa683e73a2740c71ffbd7ddead07f91ff7d
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504480"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854832"
 ---
 # <a name="arm64-exception-handling"></a>Control de excepciones de ARM64
 
@@ -307,12 +307,7 @@ Los códigos de desenredado se codifican según la tabla siguiente. Todos los c�
 |`end`|            11100100: final del código de desenredado. Implica ret en el epílogo. |
 |`end_c`|        11100101: final del código de desenredado en el ámbito encadenado actual. |
 |`save_next`|        11100110: guardar el siguiente par de registros Int o FP no volátiles. |
-|`arithmetic(add)`|    11100111'000zxxxx: sumar cookie reg(z) a lr (0=x28, 1=sp); `add lr, lr, reg(z)` |
-|`arithmetic(sub)`|    11100111'001zxxxx: restar cookie reg(z) de lr (0=x28, 1=sp); `sub lr, lr, reg(z)` |
-|`arithmetic(eor)`|    11100111'010zxxxx: eor lr con cookie reg(z) (0=x28, 1=sp); `eor lr, lr, reg(z)` |
-|`arithmetic(rol)`|    11100111'0110xxxx: rol simulado de LR con el registro de cookies (x28); xip0 = neg x28; `ror lr, xip0` |
-|`arithmetic(ror)`|    11100111'100zxxxx: ror lr con cookie reg(z) (0=x28, 1=sp); `ror lr, lr, reg(z)` |
-| |            11100111: xxxz----: ---- reservado |
+| |            11100111: reservado. |
 | |              11101xxx: reservado para los casos de pila personalizados siguientes generados solo para las rutinas ASM |
 | |              11101000: pila personalizada para MSFT_OP_TRAP_FRAME |
 | |              11101001: pila personalizada para MSFT_OP_MACHINE_FRAME |

@@ -4,12 +4,12 @@ description: Describe cómo usar Visual Studio para configurar las opciones del
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 8364e5b3dd3316a4ed7e754a104a14373040aa6e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
+ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328857"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630525"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurar sesiones de depuración de CMake
 
@@ -75,7 +75,7 @@ Las **variables de entorno** definidas en *CMakeSettings.json* también se puede
 
 Hay muchas propiedades de *launch.vs.json* para admitir todos los escenarios de depuración. Las propiedades siguientes son comunes a todas las configuraciones de depuración, tanto remotas como locales:
 
-- `projectTarget`: especifica el destino de CMake que se va a invocar al compilar el proyecto. Visual Studio rellena automáticamente esta propiedad si escribe *launch.vs.json* desde el **Menú Depurar** o **Vista de destinos**. Este valor debe coincidir con el nombre de un destino de depuración existente que aparezca en la lista desplegable **Elemento de inicio**.
+- `projectTarget`: especifica el destino de CMake que se va a invocar al compilar el proyecto. Visual Studio rellena automáticamente esta propiedad si escribe *launch.vs.json* desde el **Menú Depurar** o la **Vista de destinos**. Este valor debe coincidir con el nombre de un destino de depuración existente que aparezca en la lista desplegable **Elemento de inicio**.
 
 - `env`: variables de entorno adicionales que se van a agregar con la sintaxis:
 
@@ -97,7 +97,7 @@ En la versión 16.6 de Visual Studio 2019 hemos agregado una nueva configuraci
 - `name`: nombre descriptivo para identificar la configuración en la lista desplegable **Elemento de inicio**.
 - `project`: especifica la ruta de acceso relativa al archivo del proyecto. Normalmente, no es necesario cambiar esta ruta de acceso al depurar un proyecto de CMake.
 - `projectTarget`: especifica el destino de CMake que se va a invocar al compilar el proyecto. Visual Studio rellena automáticamente esta propiedad si escribe *launch.vs.json* desde el **Menú Depurar** o **Vista de destinos**. Este valor de destino debe coincidir con el nombre de un destino de depuración existente que aparezca en la lista desplegable **Elemento de inicio**.
-- `debuggerConfiguration`: indica el conjunto de valores predeterminados de depuración que se va a usar. En la versión 16.6 de Visual Studio 2019, la única opción válida es `gdb`. Las versiones anteriores también admiten `gdbserver`.
+- `debuggerConfiguration`: indica el conjunto de valores predeterminados de depuración que se va a usar. En la versión 16.6 de Visual Studio 2019, la única opción válida es `gdb`. Visual Studio 2019 versión 16.7 o posterior también admite `gdbserver`.
 - `args`: argumentos de la línea de comandos que se pasan al programa que se va a depurar.
 - `env`: variables de entorno adicionales que se pasan al programa que se va a depurar. Por ejemplo: `{"DISPLAY": "0.0"}`.
 - `processID`: id. de proceso de Linux al que se va a adjuntar. Solo se usa cuando se adjunta a un proceso remoto. Para obtener más información, vea [Solución de problemas de asociación a procesos mediante GDB](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
@@ -109,6 +109,15 @@ En la versión 16.6 de Visual Studio 2019 hemos agregado una nueva configuraci
 - `cwd`: Tiene como valor predeterminado `"${debugInfo.defaultWorkingDirectory}"`. Ruta de acceso de Unix al directorio del sistema remoto donde se ejecuta `program`. El directorio debe existir.
 - `gdbpath`: Tiene como valor predeterminado `/usr/bin/gdb`. Ruta de acceso completa de Unix al elemento `gdb` que se usa para depurar. Solo es necesaria si se usa una versión personalizada de `gdb`.
 - `preDebugCommand`: comando de Linux para ejecutar inmediatamente antes de invocar `gdb`. `gdb` no se inicia hasta que se completa el comando. Se puede usar la opción para ejecutar un script antes de la ejecución de `gdb`.
+
+#### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>Opciones adicionales permitidas con la configuración del elemento `gdbserver` (16.7 o posterior)
+
+- `program`: Tiene como valor predeterminado `"${debugInfo.fullTargetPath}"`. Ruta de acceso de Unix a la aplicación que se va a depurar. Solo es necesaria si es diferente del ejecutable de destino en la ubicación de compilación o implementación.
+- `remoteMachineName`:  Tiene como valor predeterminado `"${debugInfo.remoteMachineName}"`. Nombre del sistema remoto que hospeda el programa que se va a depurar. Solo es necesaria si es diferente del sistema de compilación. Debe tener una entrada existente en el [Administrador de conexiones](../linux/connect-to-your-remote-linux-computer.md). Presione **Ctrl+Espacio** para ver una lista de todas las conexiones remotas existentes.
+- `cwd`: Tiene como valor predeterminado `"${debugInfo.defaultWorkingDirectory}"`. Ruta de acceso de Unix al directorio del sistema remoto donde se ejecuta `program`. El directorio debe existir.
+- `gdbPath`: Tiene como valor predeterminado `${debugInfo.vsInstalledGdb}`. Ruta de acceso completa de Windows al elemento `gdb` que se usa para depurar. El valor predeterminado es el elemento `gdb` instalado con la carga de trabajo de desarrollo de Linux con C/C++.
+- `gdbserverPath`: Tiene como valor predeterminado `usr/bin/gdbserver`. Ruta de acceso completa de Unix al elemento `gdbserver` que se usa para depurar.
+- `preDebugCommand`: comando de Linux para ejecutar inmediatamente antes de iniciar `gdbserver`. `gdbserver` no se inicia hasta que se completa el comando.
 
 #### <a name="deployment-options"></a>Opciones de implementación
 
