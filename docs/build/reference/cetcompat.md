@@ -1,51 +1,54 @@
 ---
-title: / CETCOMPAT (pila de sombra CET compatible)
+title: /CETCOMPAT (compatibilidad con la pila de sombra de CET)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c807d91d69b967fd62e01a077711dede5f55c44
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273253"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421307"
 ---
-# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (pila de sombra CET compatible)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (compatibilidad con la pila de sombra de CET)
 
-Especifica si se debe marcar una imagen ejecutable como compatible con la pila de sombra de la tecnología de cumplimiento (CET) de flujo de Control.
+Especifica si se debe marcar una imagen ejecutable como compatible con la pila de sombras de la tecnología de aplicación de flujo de control (CET).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/CETCOMPAT**\[**:NO**]
+> **/CETCOMPAT** \[ **: No**]
 
 ## <a name="arguments"></a>Argumentos
 
-**NO**<br/>
-Especifica que el archivo ejecutable no se debe marcar compatible con la pila de sombra CET.
+**No**<br/>
+Especifica que el ejecutable no debe marcarse como compatible con la pila de sombra de CET.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Pila de sombra de la tecnología de cumplimiento (CET) de flujo de control es una característica de procesador del equipo que proporciona funcionalidades para defenderse de programación orientada a devuelto (superior) en función de los ataques de malware. Para obtener más información, consulte [cumplimiento Technology Preview de flujo de Control de Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+La pila de instantáneas de la tecnología de aplicación de flujo de control (CET) es una característica de procesador del equipo que proporciona capacidades para defenderse frente a ataques de malware basados en la programación orientada a la devolución (ROP). Para obtener más información, consulte [versión preliminar de la tecnología de aplicación de flujo de control Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-El **/CETCOMPAT** opción del vinculador indica al vinculador para marcar el archivo binario como pila sombra CET compatible. **/CETCOMPAT:no** marca el archivo binario que no es compatible con la pila de sombra CET. Si ambas opciones se especifican en la línea de comandos, se usa la última de ellas especificada. Actualmente, este modificador solo es aplicable a las arquitecturas x86 y x64.
+La opción del vinculador **/CETCOMPAT** indica al enlazador que marque el binario como compatible con la pila de sombra de CET. **/CETCOMPAT: no** marca el binario como no compatible con la pila de sombra de CET. Si se especifican ambas opciones en la línea de comandos, se usa la última especificada. Este modificador solo se aplica actualmente a las arquitecturas x86 y x64.
 
-El **/CETCOMPAT** opción está disponible a partir el conjunto de herramientas de Visual Studio 2019 Preview 3.
+La opción **/CETCOMPAT** está disponible a partir del conjunto de herramientas de Visual Studio 2019 Preview 3.
 
-### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Para establecer la opción del vinculador /CETCOMPAT en Visual Studio
+### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Para establecer la opción del vinculador/CETCOMPAT en Visual Studio
 
-1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
+1. Seleccione la **Configuration Properties**página de propiedades avanzadas del  >  **enlazador**de propiedades de configuración  >  **Advanced** .
 
-1. En el **opciones adicionales** , agregue **/CETCOMPAT** o **/CETCOMPAT:NO** y, a continuación, elija **Aceptar** o **aplicar**para guardar los cambios.
+1. Seleccione la propiedad **compatible con la pila de sombra de CET** .
+
+1. En el control desplegable, elija **sí (/CETCOMPAT)** para habilitar los metadatos de continuación EH o **no (/CETCOMPAT: no)** para deshabilitarlo.
+
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
-Esta opción no tiene un equivalente mediante programación.
+Esta opción no tiene un equivalente de programación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones del vinculador](linker-options.md)
