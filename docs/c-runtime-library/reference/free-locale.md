@@ -1,9 +1,10 @@
 ---
 title: _free_locale
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _free_locale
-apilocation:
+- _o__free_locale
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __free_locale
 - free_locale
@@ -26,14 +31,14 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 92dc8cd711087e8e797b484d6c7e3c6c3b031b5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dbc424c00464966605cce5c44118b88eb5335d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537389"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920437"
 ---
-# <a name="freelocale"></a>_free_locale
+# <a name="_free_locale"></a>_free_locale
 
 Libera un objeto de configuración regional.
 
@@ -50,21 +55,23 @@ void _free_locale(
 *locale*<br/>
 Objeto de configuración regional que se va a liberar.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_free_locale** función se usa para liberar el objeto de configuración regional obtenido de una llamada a **_get_current_locale** o **_create_locale**.
+La función **_free_locale** se usa para liberar el objeto de configuración regional Obtenido de una llamada a **_get_current_locale** o **_create_locale**.
 
-El nombre anterior de esta función, **__free_locale** (con dos caracteres de subrayado iniciales) ha quedado en desuso.
+El nombre anterior de esta función, **__free_locale** (con dos subrayados iniciales) ha quedado en desuso.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
-|**Rutina**|Encabezado necesario|
+|**Habitualmente**|Encabezado necesario|
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [_get_current_locale](get-current-locale.md)<br/>
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>

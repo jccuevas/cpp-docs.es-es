@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153430"
 ---
 # <a name="containers-client-item-notifications"></a>Contenedores: Notificaciones de elementos de cliente
 
@@ -40,7 +40,7 @@ El segundo argumento a esta función especifica cómo ha cambiado el elemento o 
 |**OLE_CHANGED**|Especifica el aspecto del elemento OLE que ha cambiado.|
 |**OLE_CHANGED_STATE**|Describe el estado que se escribió (*emptyState*, *loadedState*, *openState*, *activeState*, o  *activeUIState*).|
 
-Para obtener más información acerca de los Estados que puede suponer un elemento de cliente, consulte [contenedores: estados de elementos de cliente](../mfc/containers-client-item-states.md).
+Para obtener más información acerca de los Estados que puede suponer un elemento de cliente, consulte [contenedores: Estados de elementos de cliente](../mfc/containers-client-item-states.md).
 
 Las llamadas de framework `COleClientItem::OnGetItemPosition` cuando se está activando un elemento para su edición en contexto. Implementación es necesaria para las aplicaciones que admiten la edición en contexto. El Asistente para aplicaciones MFC proporciona una implementación básica, que asigna las coordenadas del elemento en el `CRect` objeto que se pasa como argumento a `OnGetItemPosition`.
 
@@ -49,6 +49,5 @@ Si cambia el tamaño o posición de un elemento OLE durante la edición en conte
 ## <a name="see-also"></a>Vea también
 
 [Contenedores](../mfc/containers.md)<br/>
-[Contenedores: Estados de elementos de cliente](../mfc/containers-client-item-states.md)<br/>
-[COleClientItem:: OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-
+[Contenedores: estados de elementos de cliente](../mfc/containers-client-item-states.md)<br/>
+[COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)

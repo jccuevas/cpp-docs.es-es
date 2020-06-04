@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3996e8e8d40ca24bf54fdf5bbbfde90f3d609c9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428111"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751564"
 ---
 # <a name="compiler-error-c2978"></a>Error del compilador C2978
 
 error de sintaxis: se esperaba 'palabraClave1' o 'palabraClave2'; se encontró el tipo 'palabraClave3'; no se admiten parámetros sin tipo en genéricos
 
-Se declaró una clase genérica incorrectamente. Consulte [genéricos](../../windows/generics-cpp-component-extensions.md)para obtener más información.
+Se declaró una clase genérica incorrectamente. Para obtener más información, vea [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C2978.
 
-```
+```cpp
 // C2978.cpp
 // compile with: /clr /c
 generic <ref class T>   // C2978

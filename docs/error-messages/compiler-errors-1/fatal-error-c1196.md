@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1196
 ms.assetid: 10a79b3f-3423-4ee3-98fa-e9e59cddabb1
-ms.openlocfilehash: a7ae9b9f4bbe049db532d4d8e22b690d336b6a1d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49f94c59de89023c10ac42da05a0faebd2e8f354
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203538"
 ---
 # <a name="fatal-error-c1196"></a>Error irrecuperable C1196
 

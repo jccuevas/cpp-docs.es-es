@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2630
 ms.assetid: 7a655a9c-bab4-495b-97a3-a3f34cf5369a
-ms.openlocfilehash: db4108961c940afe3333dc726a97a8ce6ae639a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5636b17573cd89c5a32e328aa3800d71136b84fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657163"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754711"
 ---
 # <a name="compiler-error-c2630"></a>Error del compilador C2630
 
-'símbolo' encontrado en lo que debe ser una lista separada por comas
+se encontró ' Symbol ' en lo que debe ser una lista separada por comas
 
 El símbolo aparece en un contexto que requiere una coma.
 
-El ejemplo siguiente genera C2630:
+En el ejemplo siguiente se genera C2630:
 
-```
+```cpp
 // C2630.cpp
 // compile with: /c
 struct D {

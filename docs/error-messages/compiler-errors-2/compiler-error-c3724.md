@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3724
 ms.assetid: cab8aba7-14fc-406f-8cc6-32744c8f31c1
-ms.openlocfilehash: 126317d78785b14f5ef613ec0c83d3e50b825d60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b107137652c4efde43fdfe9c991240767eb5ced7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676127"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752982"
 ---
 # <a name="compiler-error-c3724"></a>Error del compilador C3724
 
-debe #include \<windows.h > para usar subprocesamiento múltiple con eventos
+debe #include \<Windows. h > para usar varios subprocesos con eventos
 
-El archivo de windows.h es necesario si utiliza subprocesamiento múltiple con eventos. Para corregir este error, agregue `#include <windows.h>` a la parte superior del archivo en el que los orígenes de eventos y eventos se definen los receptores.
+El archivo Windows. h es necesario si usa el subprocesamiento múltiple con eventos. Para corregir este error, agregue `#include <windows.h>` a la parte superior del archivo en el que se definen los orígenes de eventos y los receptores de eventos.
 
-```
+```cpp
 // C3724.cpp
 // uncomment the following line to resolve
 // #include <windows.h>

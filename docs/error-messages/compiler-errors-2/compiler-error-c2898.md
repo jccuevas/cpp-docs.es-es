@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2898
 ms.assetid: 68466e11-2541-4f6b-b772-13a642f30dfb
-ms.openlocfilehash: 14cef7e23e48f2b5caf4fae12cac511c58ba1f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d06741735f6358856b70c4264755fe559d4f88a9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657709"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735767"
 ---
 # <a name="compiler-error-c2898"></a>Error del compilador C2898
 
-'declaration': las plantillas de función miembro no pueden ser virtuales
+' DECLARATION ': las plantillas de función miembro no pueden ser virtuales
 
-El ejemplo siguiente genera C2898:
+En el ejemplo siguiente se genera C2898:
 
-```
+```cpp
 // C2898.cpp
 // compile with: /c
 class X {

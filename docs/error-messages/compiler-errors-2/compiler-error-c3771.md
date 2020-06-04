@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3771
 ms.assetid: 68c23b25-7f21-4eaa-8f7e-38fda1130a69
-ms.openlocfilehash: 8ff2993cbd5f289ca9208d8c532d7fa8329af086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c29ad6007d33c43ae1e4758ae05caa9109053e3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453395"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165735"
 ---
 # <a name="compiler-error-c3771"></a>Error del compilador C3771
 
@@ -47,6 +47,6 @@ namespace NB {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Templates](../../cpp/templates-cpp.md) (Plantillas [C++])

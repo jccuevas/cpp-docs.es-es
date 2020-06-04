@@ -1,5 +1,5 @@
 ---
-title: COleDispatchDriver (clase)
+title: Clase COleDispatchDriver
 ms.date: 11/04/2016
 f1_keywords:
 - COleDispatchDriver
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524942"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753883"
 ---
-# <a name="coledispatchdriver-class"></a>COleDispatchDriver (clase)
+# <a name="coledispatchdriver-class"></a>Clase COleDispatchDriver
 
 Implementa el cliente de automatización OLE.
 
@@ -47,45 +47,45 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|Construye un objeto `COleDispatchDriver`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[COleDispatchDriver::AttachDispatch](#attachdispatch)|Asocia un `IDispatch` conexión a la `COleDispatchDriver` objeto.|
-|[COleDispatchDriver:: CreateDispatch](#createdispatch)|Crea un `IDispatch` conexión y lo asocia a la `COleDispatchDriver` objeto.|
-|[COleDispatchDriver::DetachDispatch](#detachdispatch)|Desasocia un `IDispatch` conexión sin liberarlo.|
-|[COleDispatchDriver:: GetProperty](#getproperty)|Obtiene una propiedad de automatización.|
-|[COleDispatchDriver:: Invokehelper](#invokehelper)|Aplicación auxiliar para llamar a métodos de automatización.|
-|[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|Las versiones un `IDispatch` conexión.|
-|[COleDispatchDriver:: SetProperty](#setproperty)|Establece una propiedad de automatización.|
+|[COleDispatchDriver::AttachDispatch](#attachdispatch)|Asocia una `IDispatch` conexión `COleDispatchDriver` al objeto.|
+|[COleDispatchDriver::CreateDispatch](#createdispatch)|Crea `IDispatch` una conexión y la `COleDispatchDriver` adjunta al objeto.|
+|[COleDispatchDriver::DetachDispatch](#detachdispatch)|Separa una `IDispatch` conexión, sin soltarla.|
+|[COleDispatchDriver::GetProperty](#getproperty)|Obtiene una propiedad de automatización.|
+|[COleDispatchDriver::InvokeHelper](#invokehelper)|Ayudante para llamar a métodos de automatización.|
+|[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|Libera `IDispatch` una conexión.|
+|[COleDispatchDriver::SetProperty](#setproperty)|Establece una propiedad de automatización.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[COleDispatchDriver::operator =](#operator_eq)|Copia el valor de origen en el `COleDispatchDriver` objeto.|
-|[COleDispatchDriver::operator LPDISPATCH](#operator_lpdispatch)|Tiene acceso a subyacente `IDispatch` puntero.|
+|[COleDispatchDriver::operator ?](#operator_eq)|Copia el valor `COleDispatchDriver` de origen en el objeto.|
+|[COleDispatchDriver::operador LPDISPATCH](#operator_lpdispatch)|Tiene acceso al `IDispatch` puntero subyacente.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Especifica si se debe liberar el `IDispatch` durante `ReleaseDispatch` o destrucción de objetos.|
-|[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Indica el puntero a la `IDispatch` interfaz asociada a este `COleDispatchDriver`.|
+|[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Especifica si se `IDispatch` debe `ReleaseDispatch` liberar la destrucción durante o del objeto.|
+|[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Indica el puntero `IDispatch` a la `COleDispatchDriver`interfaz adjunta a esto .|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`COleDispatchDriver` no tiene una clase base.
+`COleDispatchDriver`no tiene una clase base.
 
-Interfaces de envío OLE proporcionan acceso a los métodos y propiedades de un objeto. Las funciones miembro de `COleDispatchDriver` adjuntar, separar, crear y liberar una conexión de envío de tipo `IDispatch`. Otras funciones miembro usan listas de argumentos variables para simplificar la llamada `IDispatch::Invoke`.
+Las interfaces de envío OLE proporcionan acceso a los métodos y propiedades de un objeto. Funciones `COleDispatchDriver` miembro de adjuntar, separar, crear y `IDispatch`liberar una conexión de envío de tipo . Otras funciones miembro utilizan listas `IDispatch::Invoke`de argumentos variables para simplificar la llamada.
 
-Esta clase puede utilizarse directamente, pero generalmente es utilizado únicamente por las clases creadas por el Asistente para agregar clases. Al crear nuevas clases de C++ mediante la importación de una biblioteca de tipos, las nuevas clases se derivan `COleDispatchDriver`.
+Esta clase se puede usar directamente, pero generalmente solo la usan las clases creadas por el Asistente para agregar clases. Al crear nuevas clases C++ importando una biblioteca de `COleDispatchDriver`tipos, las nuevas clases se derivan de .
 
-Para obtener más información sobre el uso de `COleDispatchDriver`, consulte los artículos siguientes:
+Para obtener más `COleDispatchDriver`información sobre el uso de , consulte los siguientes artículos:
 
 - [Clientes de automatización](../../mfc/automation-clients.md)
 
@@ -99,11 +99,11 @@ Para obtener más información sobre el uso de `COleDispatchDriver`, consulte lo
 
 **Encabezado:** afxdisp.h
 
-##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch
+## <a name="coledispatchdriverattachdispatch"></a><a name="attachdispatch"></a>COleDispatchDriver::AttachDispatch
 
 Llame a la función miembro `AttachDispatch` para adjuntar un puntero `IDispatch` al objeto `COleDispatchDriver` . Para obtener más información, consulta [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -117,7 +117,7 @@ Puntero a un objeto `IDispatch` OLE que se adjuntará al objeto `COleDispatchDri
 *bAutoRelease*<br/>
 Especifica si el envío se liberará cuando este objeto se salga del ámbito.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función libera cualquier puntero `IDispatch` que ya está conectado al objeto `COleDispatchDriver` .
 
@@ -125,7 +125,7 @@ Esta función libera cualquier puntero `IDispatch` que ya está conectado al obj
 
 [!code-cpp[NVC_MFCOleContainer#3](../../mfc/codesnippet/cpp/coledispatchdriver-class_1.cpp)]
 
-##  <a name="coledispatchdriver"></a>  COleDispatchDriver::COleDispatchDriver
+## <a name="coledispatchdrivercoledispatchdriver"></a><a name="coledispatchdriver"></a>COleDispatchDriver::COleDispatchDriver
 
 Construye un objeto `COleDispatchDriver`.
 
@@ -144,21 +144,21 @@ Puntero a un objeto `IDispatch` OLE que se adjuntará al objeto `COleDispatchDri
 Especifica si el envío se liberará cuando este objeto se salga del ámbito.
 
 *dispatchSrc*<br/>
-Hacer referencia a un `COleDispatchDriver` objeto.
+Referencia a `COleDispatchDriver` un objeto existente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El formulario `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) se conecta el [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) interfaz.
+El `COleDispatchDriver`formulario `LPDISPATCH lpDispatch`( , **BOOL**`bAutoRelease` = **TRUE**) conecta la interfaz [IDispatch.](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
-El formulario `COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) copia existente `COleDispatchDriver` objeto e incrementa el recuento de referencias.
+El `COleDispatchDriver`formulario ( **const**`COleDispatchDriver`& `dispatchSrc` `COleDispatchDriver` ) copia un objeto existente e incrementa el recuento de referencias.
 
-El formulario `COleDispatchDriver`() se crea un `COleDispatchDriver` objeto pero no se conecta el `IDispatch` interfaz. Antes de usar `COleDispatchDriver`() sin argumentos, debe conectar un `IDispatch` a él mediante [COleDispatchDriver:: CreateDispatch](#createdispatch) o [COleDispatchDriver::AttachDispatch](#attachdispatch). Para obtener más información, consulta [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+El `COleDispatchDriver`formulario ( `COleDispatchDriver` ) crea un `IDispatch` objeto pero no conecta la interfaz. Antes `COleDispatchDriver`de usar ( ) sin `IDispatch` argumentos, debe conectarse a él mediante [COleDispatchDriver::CreateDispatch](#createdispatch) o [COleDispatchDriver::AttachDispatch](#attachdispatch). Para obtener más información, consulta [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="example"></a>Ejemplo
 
   Vea el ejemplo de [COleDispatchDriver::CreateDispatch](#createdispatch).
 
-##  <a name="createdispatch"></a>  COleDispatchDriver:: CreateDispatch
+## <a name="coledispatchdrivercreatedispatch"></a><a name="createdispatch"></a>COleDispatchDriver::CreateDispatch
 
 Crea un objeto de interfaz [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) y lo vincula al objeto `COleDispatchDriver` .
 
@@ -174,7 +174,7 @@ BOOL CreateDispatch(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Id. de clase del objeto de conexión `IDispatch` que se va a crear.
 
 *pError*<br/>
@@ -191,9 +191,9 @@ Distinto de cero en caso de éxito; en caso contrario, es 0.
 
 [!code-cpp[NVC_MFCOleContainer#4](../../mfc/codesnippet/cpp/coledispatchdriver-class_2.cpp)]
 
-##  <a name="detachdispatch"></a>  COleDispatchDriver::DetachDispatch
+## <a name="coledispatchdriverdetachdispatch"></a><a name="detachdispatch"></a>COleDispatchDriver::DetachDispatch
 
-Desasocia actual `IDispatch` conexión de este objeto.
+Separa la `IDispatch` conexión actual de este objeto.
 
 ```
 LPDISPATCH DetachDispatch();
@@ -201,23 +201,23 @@ LPDISPATCH DetachDispatch();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la OLE adjunta anteriormente `IDispatch` objeto.
+Puntero al objeto OLE `IDispatch` previamente asociado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El `IDispatch` no se libera.
 
-Para obtener más información sobre el tipo LPDISPATCH, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) en el SDK de Windows.
+Para obtener más información acerca del tipo LPDISPATCH, vea [Implementar la interfaz IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]
 
-##  <a name="getproperty"></a>  COleDispatchDriver:: GetProperty
+## <a name="coledispatchdrivergetproperty"></a><a name="getproperty"></a>COleDispatchDriver::GetProperty
 
-Obtiene la propiedad del objeto especificada por *dwDispID*.
+Obtiene la propiedad de objeto especificada por *dwDispID*.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -239,11 +239,11 @@ Dirección de la variable que recibirá el valor de propiedad. Debe coincidir co
 
 [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]
 
-##  <a name="invokehelper"></a>  COleDispatchDriver:: Invokehelper
+## <a name="coledispatchdriverinvokehelper"></a><a name="invokehelper"></a>COleDispatchDriver::InvokeHelper
 
-Llama al método de objeto o la propiedad especificada por *dwDispID*, en el contexto especificado por *wFlags*.
+Llama al método o propiedad de objeto especificado por *dwDispID*, en el contexto especificado por *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 Identifica el método o la propiedad que se va a invocar.
 
 *wFlags*<br/>
-Marcas que describen el contexto de la llamada a `IDispatch::Invoke`. . Para obtener una lista de valores posibles, vea el *wFlags* parámetro [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) en el SDK de Windows.
+Indicadores que describen el `IDispatch::Invoke`contexto de la llamada a . . Para obtener una lista de valores posibles, vea el *wFlags* parámetro en [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) en el Windows SDK.
 
 *vtRet*<br/>
 Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios.
@@ -267,18 +267,18 @@ Especifica el tipo del valor devuelto. Para los valores posibles, vea la secció
 Dirección de la variable que recibirá el valor de la propiedad o el valor devuelto. Debe coincidir con el tipo especificado por *vtRet*.
 
 *pbParamInfo*<br/>
-Puntero a una cadena terminada en null de bytes que especifica los tipos de los parámetros que siguen *pbParamInfo*.
+Puntero a una cadena de bytes terminada en null que especifica los tipos de los parámetros siguientes *pbParamInfo*.
 
 *...*<br/>
-Lista de variables de parámetros de tipos especificados en *pbParamInfo*.
+Lista variable de parámetros, de tipos especificados en *pbParamInfo*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El *pbParamInfo* parámetro especifica los tipos de los parámetros pasados al método o propiedad. La lista variable de argumentos se representa mediante **...** en la declaración de sintaxis.
+El parámetro *pbParamInfo* especifica los tipos de los parámetros pasados al método o propiedad. La lista variable de argumentos se representa mediante **...** en la declaración de sintaxis.
 
-Los valores posibles para el *vtRet* argumento se toman de la enumeración VARENUM. Los valores posibles son los siguientes:
+Los valores posibles para el argumento *vtRet* se toman de la enumeración VARENUM. Los valores posibles son los siguientes:
 
-|Símbolo|Tipo devuelto|
+|Símbolo|Tipo de valor devuelto|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
@@ -286,63 +286,63 @@ Los valores posibles para el *vtRet* argumento se toman de la enumeración VAREN
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
-|VT_DATE|**DATE**|
+|VT_DATE|**Fecha**|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
 |VT_BOOL|**BOOL**|
-|VT_VARIANT|**VARIANT**|
+|VT_VARIANT|**Variante**|
 |VT_UNKNOWN|LPUNKNOWN|
 
-El *pbParamInfo* argumento es una lista separada por espacios de **VTS_** constantes. Uno o varios de estos valores, separados por espacios (no por comas), especifican la lista de parámetros de la función. Los valores posibles se muestran con la macro [EVENT_CUSTOM](event-maps.md#event_custom) .
+El argumento *pbParamInfo* es una lista separada por espacios de **VTS_** constantes. Uno o varios de estos valores, separados por espacios (no por comas), especifican la lista de parámetros de la función. Los valores posibles se muestran con la macro [EVENT_CUSTOM](event-maps.md#event_custom) .
 
-Esta función convierte los parámetros con valores VARIANTARG y luego invoca el [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) método. Si se produce un error en la llamada a `Invoke` , esta función generará una excepción. Si el SCODE (código de estado) devuelto por `IDispatch::Invoke` es DISP_E_EXCEPTION, esta función genera un [COleException](../../mfc/reference/coleexception-class.md) objeto; de lo contrario, genera un [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
+Esta función convierte los parámetros a valores VARIANTARG y luego invoca el método [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) . Si se produce un error en la llamada a `Invoke` , esta función generará una excepción. Si el SCODE (código `IDispatch::Invoke` de estado) devuelto por es DISP_E_EXCEPTION, esta función produce un [COleException](../../mfc/reference/coleexception-class.md) objeto; de lo contrario, lanza una [excepción COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
-Para obtener más información, consulte [VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), y [estructura de códigos de Error COM](/windows/desktop/com/structure-of-com-error-codes) en el SDK de Windows.
+Para obtener más información, vea [VARIANTARG](/windows/win32/api/oaidl/ns-oaidl-variant), Implementación de [la interfaz IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)y [Estructura de](/windows/win32/com/structure-of-com-error-codes) códigos de error COM en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
   Vea el ejemplo de [COleDispatchDriver::CreateDispatch](#createdispatch).
 
-##  <a name="m_bautorelease"></a>  COleDispatchDriver::m_bAutoRelease
+## <a name="coledispatchdriverm_bautorelease"></a><a name="m_bautorelease"></a>COleDispatchDriver::m_bAutoRelease
 
-Si es TRUE, obtiene acceso al objeto COM por [m_lpDispatch](#m_lpdispatch) se automáticamente publicará cuando [ReleaseDispatch](#releasedispatch) se denomina o cuando este `COleDispatchDriver` se destruye el objeto.
+Si es TRUE, el objeto COM al que tiene acceso `COleDispatchDriver` [m_lpDispatch](#m_lpdispatch) se liberará automáticamente cuando se llame a [ReleaseDispatch](#releasedispatch) o cuando se destruya este objeto.
 
 ```
 BOOL m_bAutoRelease;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, `m_bAutoRelease` está establecida en TRUE en el constructor.
+De forma `m_bAutoRelease` predeterminada, se establece en TRUE en el constructor.
 
-Para obtener más información sobre la liberación de objetos COM, vea [implementa el recuento de referencias](/windows/desktop/com/implementing-reference-counting) y [IUnknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) en el SDK de Windows.
+Para obtener más información sobre cómo liberar objetos COM, vea [Implementación](/windows/win32/com/implementing-reference-counting) de recuento de referencias e [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]
 
-##  <a name="m_lpdispatch"></a>  COleDispatchDriver::m_lpDispatch
+## <a name="coledispatchdriverm_lpdispatch"></a><a name="m_lpdispatch"></a>COleDispatchDriver::m_lpDispatch
 
-El puntero a la `IDispatch` interfaz asociada a este `COleDispatchDriver`.
+El puntero `IDispatch` a la `COleDispatchDriver`interfaz adjunta a esto .
 
 ```
 LPDISPATCH m_lpDispatch;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El `m_lpDispatch` miembro de datos es una variable pública de tipo LPDISPATCH.
 
-Para obtener más información, consulte [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) en el SDK de Windows.
+Para obtener más información, consulte [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
   Vea el ejemplo de [COleDispatchDriver::AttachDispatch](#attachdispatch).
 
-##  <a name="operator_eq"></a>  COleDispatchDriver::operator =
+## <a name="coledispatchdriveroperator-"></a><a name="operator_eq"></a>COleDispatchDriver::operator ?
 
-Copia el valor de origen en el `COleDispatchDriver` objeto.
+Copia el valor `COleDispatchDriver` de origen en el objeto.
 
 ```
 const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
@@ -351,11 +351,11 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ### <a name="parameters"></a>Parámetros
 
 *dispatchSrc*<br/>
-Un puntero a una existente `COleDispatchDriver` objeto.
+Puntero a un `COleDispatchDriver` objeto existente.
 
-##  <a name="operator_lpdispatch"></a>  COleDispatchDriver::operator LPDISPATCH
+## <a name="coledispatchdriveroperator-lpdispatch"></a><a name="operator_lpdispatch"></a>COleDispatchDriver::operador LPDISPATCH
 
-Tiene acceso a subyacente `IDispatch` puntero de la `COleDispatchDriver` objeto.
+Tiene acceso al `IDispatch` puntero `COleDispatchDriver` subyacente del objeto.
 
 ```
 operator LPDISPATCH();
@@ -365,27 +365,27 @@ operator LPDISPATCH();
 
 [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]
 
-##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch
+## <a name="coledispatchdriverreleasedispatch"></a><a name="releasedispatch"></a>COleDispatchDriver::ReleaseDispatch
 
-Las versiones del `IDispatch` conexión. Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
+Libera `IDispatch` la conexión. Para obtener más información, consulte [Implementación de la interfaz IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si se ha establecido la liberación automática para esta conexión, esta función llama a `IDispatch::Release` antes de liberar la interfaz.
+Si se ha establecido la versión `IDispatch::Release` automática para esta conexión, esta función llama antes de liberar la interfaz.
 
 ### <a name="example"></a>Ejemplo
 
   Vea el ejemplo de [COleDispatchDriver::AttachDispatch](#attachdispatch).
 
-##  <a name="setproperty"></a>  COleDispatchDriver:: SetProperty
+## <a name="coledispatchdriversetproperty"></a><a name="setproperty"></a>COleDispatchDriver::SetProperty
 
-Establece la propiedad del objeto OLE especificada por *dwDispID*.
+Establece la propiedad de objeto OLE especificada por *dwDispID*.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -406,9 +406,9 @@ Un único parámetro del tipo especificado por *vtProp*.
 
 [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Ejemplo de MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[Ejemplo ACDUAL de MFC](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)

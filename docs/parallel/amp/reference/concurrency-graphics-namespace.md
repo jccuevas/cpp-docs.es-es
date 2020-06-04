@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-ms.openlocfilehash: 5bff3bbba3c2ba9e6c51ee20c8701c80a557707f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7e3b245c8d9e6ba0c563a63910fadd678523087
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500495"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139452"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics (Espacio de nombres)
 
-El espacio de nombres de gráficos proporciona tipos y funciones que están diseñadas para la programación de gráficos.
+El espacio de nombres Graphics proporciona tipos y funciones que están diseñados para la programación de gráficos.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 namespace graphics;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="namespaces"></a>Espacios de nombres
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[Concurrency::graphics::direct3d (espacio de nombres)](concurrency-graphics-direct3d-namespace.md)|Proporciona funciones para la interoperabilidad de Direct3D.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|`uint`|El tipo de elemento para [uint_2 (clase)](uint-2-class.md), [uint_3 (clase)](uint-3-class.md), y [uint_4 (clase)](uint-4-class.md). Definido como `typedef unsigned int uint;`.|
+|`uint`|El tipo de elemento de [Uint_2 clase](uint-2-class.md), [uint_3 clase](uint-3-class.md)y [uint_4 clase](uint-4-class.md). Definido como `typedef unsigned int uint;`.|
 
 ### <a name="enumerations"></a>Enumeraciones
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[address_mode (enumeración)](concurrency-graphics-namespace-enums.md#address_mode).|Especifica los modos de dirección compatibles para el muestreo de textura.|
-|[filter_mode (enumeración)](concurrency-graphics-namespace-enums.md#filter_mode)|Especifica los modos de filtro compatibles para el muestreo de textura.|
+|[enumeración address_mode](concurrency-graphics-namespace-enums.md#address_mode).|Especifica modos de dirección compatibles para el muestreo de textura.|
+|[Enumeración filter_mode](concurrency-graphics-namespace-enums.md#filter_mode)|Especifica los modos de filtro admitidos para el muestreo de textura.|
 
 ### <a name="classes"></a>Clases
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[texture (clase)](texture-class.md)|Una textura es un agregado en un accelerator_view en el dominio de la extensión de datos. Es una colección de variables, uno para cada elemento en un dominio de la extensión. Cada variable contiene un valor que corresponde al tipo primitivo de C++ (unsigned int, int, float, double), o la norma de tipo escalar, o unorm (definido en Concurrency:: Graphics) o tipos elegible de vectores cortos definen en Concurrency:: Graphics.|
-|[writeonly_texture_view (clase)](writeonly-texture-view-class.md)|Un writeonly_texture_view proporciona acceso de solo escritura a una textura.|
+|[texture (clase)](texture-class.md)|Una textura es un agregado de datos en un accelerator_view en el dominio de extensión. Es una colección de variables, una para cada elemento de un dominio de extensión. Cada variable contiene un valor que corresponde C++ al tipo primitivo (int sin signo, int, Float, Double) o a un tipo escalar norma, o unorm (definido en Concurrency:: Graphics) o tipos de vectores cortos válidos definidos en Concurrency:: Graphics.|
+|[writeonly_texture_view (clase)](writeonly-texture-view-class.md)|Un writeonly_texture_view proporciona el acceso WriteOnly a una textura.|
 |[double_2 (clase)](double-2-class.md)|Representa un vector corto de 2 `double` valores.|
 |[double_3 (clase)](double-3-class.md)|Representa un vector corto de 3 `double` valores.|
 |[double_4 (clase)](double-4-class.md)|Representa un vector corto de 4 `double` valores.|
@@ -68,22 +68,22 @@ namespace graphics;
 |[unorm_4 (clase)](unorm-4-class.md)|Representa un vector corto de 4 `unorm` valores.|
 |[sampler (clase)](sampler-class.md)|Representa la configuración de muestra utilizada para el muestreo de textura.|
 |[short_vector (estructura)](short-vector-structure.md)|Proporciona una implementación básica de un vector corto de valores.|
-|[short_vector_traits (estructura)](short-vector-traits-structure.md)|Permite la recuperación de la longitud y el tipo de un vector corto.|
-|[texture_view (clase)](texture-view-class.md)|Proporciona acceso de lectura y escritura a una textura.|
+|[short_vector_traits (estructura)](short-vector-traits-structure.md)|Permite recuperar la longitud y el tipo de un vector corto.|
+|[texture_view (clase)](texture-view-class.md)|Proporciona acceso de lectura y acceso de escritura a una textura.|
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[copy](concurrency-graphics-namespace-functions.md#copy)|Sobrecargado. Copia el contenido de la textura de origen en el búfer de host de destino.|
-|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Sobrecargado. Copia el contenido de la textura de origen en el búfer de host de destino de forma asincrónica.|
+|[copy](concurrency-graphics-namespace-functions.md#copy)|Sobrecargado. Copia el contenido de la textura de origen en el búfer del host de destino.|
+|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Sobrecargado. Copia de forma asincrónica el contenido de la textura de origen en el búfer del host de destino.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_graphics.h
+**Encabezado:** amp_graphics. h
 
 **Espacio de nombres:** Concurrency
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-ms.openlocfilehash: ceaa5cd647dfb527713613b9ce3b5cd81a780fd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd53aeb7f767b06c017c64caa55c916aa1e2b9c9
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657735"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990582"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Advertencia del compilador (nivel 4) C4673
 
-produce los siguientes tipos de 'identifier' no se considerará en el bloque catch
+al iniciar ' Identifier ', los siguientes tipos no se tendrán en cuenta en el sitio Catch
 
-Un objeto throw no puede controlarse en el **catch** bloque. Cada tipo que no se puede controlar se muestra en la salida de error inmediatamente después de la línea que contiene esta advertencia. Cada tipo no controlado tiene su propia advertencia. Lea la advertencia para cada tipo específico para obtener más información.
+No se puede controlar un objeto Throw en el bloque **catch** . Cada tipo que no se puede controlar aparece en la salida de error inmediatamente después de la línea que contiene esta advertencia. Cada tipo no controlado tiene su propia ADVERTENCIA. Lea la advertencia de cada tipo específico para obtener más información.
 
-El ejemplo siguiente genera C4673:
+En el ejemplo siguiente se genera C4673:
 
-```
+```cpp
 // C4673.cpp
 // compile with: /EHsc /W4
 class Base {

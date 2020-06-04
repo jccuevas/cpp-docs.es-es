@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: a68596136e61aa33176365a4eff818124463b77e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2424d076be0914a68c3227566cb851b7ab64cc0f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601037"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175043"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>Advertencia del compilador (nivel 1) C4807
 
@@ -23,7 +23,7 @@ Esta advertencia se genera al comparar un campo de bits con signo de un bit con 
 
 El ejemplo siguiente genera la advertencia C4807:
 
-```
+```cpp
 // C4807.cpp
 // compile with: /W1
 typedef struct bitfield {

@@ -1,35 +1,36 @@
 ---
 title: ALIGN (MASM)
-ms.date: 01/02/2019
+ms.date: 12/17/2019
 f1_keywords:
 - align
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: eb42b1952b3fd59438f0dd4c29d48c91c4d8864d
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031231"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316595"
 ---
-# <a name="align-masm"></a>ALIGN (MASM)
+# <a name="align"></a>ALIGN
 
-El **alinear** directiva alinea el siguiente elemento de datos o la instrucción en una dirección que sea un múltiplo de su parámetro. El parámetro debe ser una potencia de 2 (por ejemplo, 1, 2, 4 etc.) que es menor o igual que la alineación de segmento.
+La directiva **align** alinea el siguiente elemento de datos o instrucción en una dirección que es un múltiplo de su parámetro. El parámetro debe ser una potencia de 2 (por ejemplo, 1, 2, 4, etc.) que sea menor o igual que la alineación del segmento.
 
 ## <a name="syntax"></a>Sintaxis
 
-> Alinear [[*número*]]
+> **Align** ⟦*constantExpression*⟧
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-El **alinear** directiva le permite especificar el desplazamiento inicial de un elemento de datos o una instrucción. Datos alineados pueden mejorar el rendimiento, a costa de un espacio desaprovechado entre elementos de datos. Grandes mejoras de rendimiento pueden verse cuando se encuentran los accesos a datos en los límites que se ajusta a las líneas de la memoria caché. En los límites naturales de acceso para tipos nativos significa menos tiempo invertido en hardware interno Realineación microcódigo.
+La directiva **align** permite especificar el desplazamiento inicial de un elemento de datos o una instrucción. Los datos alineados pueden mejorar el rendimiento, a costa del espacio desperdiciado entre los elementos de datos. Se pueden observar grandes mejoras de rendimiento cuando los accesos a datos se encuentran en límites que caben dentro de las líneas de caché. Los accesos a los límites naturales para tipos nativos significan menos tiempo invertido en microcódigo de realineación de hardware interno.
 
-La necesidad de instrucciones alineadas es poco frecuente en los procesadores modernos que utilizan un modelo de direccionamiento sin formato, pero pueden ser necesarios para objetivos de salto en código antiguo para otros modelos de direccionamiento.
+La necesidad de instrucciones alineadas es poco frecuente en los procesadores modernos que usan un modelo de direccionamiento plano, pero es posible que sea necesario para saltar destinos en código anterior para otros modelos de direccionamiento.
 
-Cuando los datos están alineados, el espacio se omitió se rellena con ceros. Cuando las instrucciones están alineadas, el espacio se omitió se rellena con las instrucciones NOP de tamaño adecuado.
+Cuando se alinean los datos, el espacio omitido se rellena con ceros. Cuando las instrucciones están alineadas, el espacio omitido se rellena con las instrucciones NOP de tamaño adecuado.
 
 ## <a name="see-also"></a>Vea también
 
-[EVEN](even.md)<br/>
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Incluso](even.md)\
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

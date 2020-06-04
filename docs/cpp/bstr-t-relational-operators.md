@@ -1,6 +1,6 @@
 ---
 title: _bstr_t (Operadores relacionales)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - _bstr_t::operator>
 - _bstr_t::operator==
@@ -10,33 +10,16 @@ f1_keywords:
 - _bstr_t::operator<=
 - _bstr_t::operator!
 helpviewer_keywords:
-- '>= operator [C++], comparing specific objects'
-- operator<= [C++], bstr
-- '!= operator'
-- operator == [C++], bstr
-- operator!= [C++], relational operators
-- < operator [C++], comparing specific objects
-- relational operators [C++], _bstr_t class
-- operator== [C++], bstr
-- <= operator [C++], with specific objects
-- operator <= [C++], bstr
-- operator >= [C++], bstr
-- operator != [C++], relational operators
-- '> operator [C++], comparing specific objects'
-- operator< [C++], bstr
-- == operator [C++], with specific Visual C++ objects
-- operator>= [C++], bstr
-- operator < [C++], bstr
-- operator > [C++], bstr
+- _bstr_t [C++]
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
-ms.openlocfilehash: f454c8bcfeb28ada8c07564e9bb562e18a537e45
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a4126eb7771e17db5fb813898d6fa4917f6983bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330961"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190318"
 ---
-# <a name="bstrt-relational-operators"></a>_bstr_t (Operadores relacionales)
+# <a name="_bstr_t-relational-operators"></a>_bstr_t (Operadores relacionales)
 
 **Específicos de Microsoft**
 
@@ -54,12 +37,12 @@ bool operator<=(const _bstr_t& str) const throw( );
 bool operator>=(const _bstr_t& str) const throw( );
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven TRUE si las comparaciones se sostienen en caso contrario, devuelve FALSE.
+Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven TRUE si las comparaciones contienen; de lo contrario, devuelven FALSE.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_bstr_t (Clase)](../cpp/bstr-t-class.md)

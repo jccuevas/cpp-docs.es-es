@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4629
 ms.assetid: 158cde12-bae5-4d43-b575-b52b35aaa0b9
-ms.openlocfilehash: db3f4201dbf5ff925449b0924d08a43ee4283b3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4aaaf3d592398981c1266a0ffbc1625da7d906af
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651794"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990618"
 ---
 # <a name="compiler-warning-level-4-c4629"></a>Advertencia del compilador (nivel 4) C4629
 
@@ -21,7 +21,7 @@ En [/Za](../../build/reference/za-ze-disable-language-extensions.md), el compila
 
 El ejemplo siguiente genera la advertencia C4629:
 
-```
+```cpp
 // C4629.cpp
 // compile with: /Za /W4
 int main()

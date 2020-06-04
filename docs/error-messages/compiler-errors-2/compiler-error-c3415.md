@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3415
 ms.assetid: fa2db8ab-2820-4ec3-a740-fb5e2adcfb29
-ms.openlocfilehash: 3d4163fac83e24d30f29aed92e7a1ec1fc9e362f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da7b49d30866b9fa5ab27a93357fd2812aaa2806
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482009"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742930"
 ---
 # <a name="compiler-error-c3415"></a>Error del compilador C3415
 
@@ -42,7 +42,7 @@ Se especificaron valores en conflicto en pragmas [section](../../preprocessor/se
 
 El ejemplo siguiente genera la advertencia C3415:
 
-```
+```cpp
 // C3415.cpp
 #pragma section("mysec1",write)
 #pragma section("mysec1",read)   // C3415

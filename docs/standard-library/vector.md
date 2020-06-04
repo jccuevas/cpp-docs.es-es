@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19068de41cfdcb17ae624858c137bf624851479f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498298"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684065"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
-Define el vector de clases de plantilla de contenedores y varias plantillas auxiliares.
+Define el vector de plantilla de la clase de contenedor y varias plantillas auxiliares.
 
 El `vector` es un contenedor que organiza los elementos de un tipo determinado en una secuencia lineal. Permite el acceso aleatorio rápido a cualquier elemento, así como agregar y eliminar elementos de la secuencia de forma dinámica. El `vector` es el contenedor más apropiado para una secuencia cuando el rendimiento de acceso aleatorio es importante.
+
+> [!NOTE]
+> La biblioteca de > de \<vector también utiliza la instrucción `#include <initializer_list>`.
 
 Para más información sobre la clase `vector`, vea [vector (Clase)](../standard-library/vector-class.md). Para más información sobre la especialización `vector<bool>`, vea [vector\<bool> (Clase)](../standard-library/vector-bool-class.md).
 
@@ -74,21 +77,23 @@ void swap (
 
 ### <a name="parameters"></a>Parámetros
 
-*Type*<br/>
+*Escribir* \
 Parámetro de plantilla para el tipo de datos almacenados en el vector.
 
-*Asignador*<br/>
+@No__t_1 de *asignador*
 Parámetro de plantilla para el objeto de asignador almacenado responsable de la asignación y desasignación de memoria.
 
-*left*<br/>
+\ *izquierda*
 Primer vector (izquierdo) en una operación de comparación
 
-*right*<br/>
+\ *derecha*
 Segundo vector (derecho) en una operación de comparación.
+
+## <a name="members"></a>Miembros
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator! =](../standard-library/vector-operators.md#op_neq)|Comprueba si el objeto de vector en el lado izquierdo del operador no es igual que el objeto de vector en el lado derecho.|
 |[operator<](../standard-library/vector-operators.md#op_lt)|Comprueba si el objeto de vector en el lado izquierdo del operador es menor que el objeto de vector en el lado derecho.|
@@ -99,15 +104,16 @@ Segundo vector (derecho) en una operación de comparación.
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
-|[vector (Clase)](../standard-library/vector-class.md)|Una clase de plantilla de contenedores de secuencias que organiza los elementos de un tipo determinado en una organización lineal y permite el acceso aleatorio rápido a cualquier elemento.|
+|[vector (Clase)](../standard-library/vector-class.md)|Una plantilla de clase de contenedores de secuencias que organiza los elementos de un tipo determinado en una organización lineal y permite el acceso aleatorio rápido a cualquier elemento.|
 
 ### <a name="specializations"></a>Especializaciones
 
 |||
 |-|-|
-|[vector\<bool> (Clase)](../standard-library/vector-bool-class.md)|Una especialización completa de la clase de plantilla vector para los elementos del tipo `bool` con un asignador para el tipo subyacente utilizado por la especialización.|
+|hash|Devuelve un hash del vector.|
+|[vector\<bool> (Clase)](../standard-library/vector-bool-class.md)|Una especialización completa del vector de la plantilla de clase para los elementos de tipo `bool` con un asignador para el tipo subyacente utilizado por la especialización.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -117,6 +123,6 @@ Segundo vector (derecho) en una operación de comparación.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

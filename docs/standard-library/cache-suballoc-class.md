@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55860a65fc77f834ed699f3a5114768b7efdde6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438875"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366732"
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc (Clase)
+# <a name="cache_suballoc-class"></a>cache_suballoc (Clase)
 
 Define un [asignador de bloques](../standard-library/allocators-header.md) que asigna y desasigna bloques de memoria de un tamaño único.
 
@@ -32,13 +32,13 @@ class cache_suballoc
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*sz*|El número de elementos de la matriz que se van a asignar.|
+|*Sz*|El número de elementos de la matriz que se van a asignar.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase de plantilla cache_suballoc almacena bloques de memoria desasignados en una lista libre con longitud ilimitada, mediante `freelist<sizeof(Type), max_unbounded>`y subasigna bloques de memoria de un fragmento mayor asignado con **operador new** cuando la lista libre está vacío.
+La plantilla de clase cache_suballoc almacena bloques de memoria desasignados en una lista libre con longitud sin enlazar, utilizando `freelist<sizeof(Type), max_unbounded>`y subasigna bloques de memoria de un fragmento más grande asignado con el operador **new** cuando la lista gratuita está vacía.
 
-Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que **new (operador)** y **operador delete** requieren. Nunca se liberarán los fragmentos asignados.
+Cada fragmento `Sz * Nelts` contiene bytes de memoria utilizable y los datos que requieren **el operador new** y el operador **delete.** Nunca se liberarán los fragmentos asignados.
 
 ### <a name="constructors"></a>Constructores
 
@@ -48,9 +48,9 @@ Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
-|[allocate](#allocate)|Asigna un bloque de memoria.|
+|[Asignar](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
 
 ## <a name="requirements"></a>Requisitos
@@ -59,7 +59,7 @@ Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que
 
 **Espacio de nombres:** stdext
 
-## <a name="allocate"></a>  cache_suballoc::allocate
+## <a name="cache_suballocallocate"></a><a name="allocate"></a>cache_suballoc::asignar
 
 Asigna un bloque de memoria.
 
@@ -77,9 +77,9 @@ void *allocate(std::size_t count);
 
 Un puntero al objeto asignado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
+## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a>cache_suballoc::cache_suballoc
 
 Construye un objeto de tipo `cache_suballoc`.
 
@@ -87,9 +87,9 @@ Construye un objeto de tipo `cache_suballoc`.
 cache_suballoc();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="deallocate"></a>  cache_suballoc::deallocate
+## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a>cache_suballoc::deallocate
 
 Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*Ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<asignadores>](../standard-library/allocators-header.md)

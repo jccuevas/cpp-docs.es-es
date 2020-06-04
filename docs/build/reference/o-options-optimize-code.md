@@ -9,36 +9,36 @@ helpviewer_keywords:
 - performance, cle.exe compiler
 - cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-ms.openlocfilehash: f4e2bf8b848654f7b87c59e7a54994448ee62d51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffd3023120f1d930a24ccef6fa297594062322df
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320427"
 ---
 # <a name="o-options-optimize-code"></a>/O (Opciones) (Optimizar código)
 
 El **/O** opciones controlan diversas optimizaciones que le ayudarán a creación código para máxima velocidad o el tamaño mínimo.
 
-- [/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) establece una combinación de optimizaciones que generan código de tamaño mínimo.
+- [/ O1](o1-o2-minimize-size-maximize-speed.md) establece una combinación de optimizaciones que generan código de tamaño mínimo.
 
-- [/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) establece una combinación de optimizaciones que optimiza el código para la máxima velocidad.
+- [/ O2](o1-o2-minimize-size-maximize-speed.md) establece una combinación de optimizaciones que optimiza el código para la máxima velocidad.
 
-- [/Ob](../../build/reference/ob-inline-function-expansion.md) controla la expansión de funciones insertadas.
+- [/Ob](ob-inline-function-expansion.md) controla la expansión de funciones insertadas.
 
-- [/Od](../../build/reference/od-disable-debug.md) deshabilita la optimización, para acelerar la compilación y simplificar la depuración.
+- [/Od](od-disable-debug.md) deshabilita la optimización, para acelerar la compilación y simplificar la depuración.
 
-- [/ Og](../../build/reference/og-global-optimizations.md) habilita las optimizaciones globales.
+- [/ Og](og-global-optimizations.md) habilita las optimizaciones globales.
 
-- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) genera funciones intrínsecas para llamadas de función apropiadas.
+- [/Oi](oi-generate-intrinsic-functions.md) genera funciones intrínsecas para llamadas de función apropiadas.
 
-- [/OS](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) indica al compilador que dé prioridad a las optimizaciones de tamaño a través de las optimizaciones de velocidad.
+- [/OS](os-ot-favor-small-code-favor-fast-code.md) indica al compilador que dé prioridad a las optimizaciones de tamaño a través de las optimizaciones de velocidad.
 
-- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (valor predeterminado) indica al compilador que dé prioridad a las optimizaciones de velocidad sobre las optimizaciones de tamaño.
+- [/Ot](os-ot-favor-small-code-favor-fast-code.md) (valor predeterminado) indica al compilador que dé prioridad a las optimizaciones de velocidad sobre las optimizaciones de tamaño.
 
-- [/Ox](../../build/reference/ox-full-optimization.md) es una opción de combinación que selecciona varias de las optimizaciones con énfasis en la velocidad. Es un subconjunto estricto de la **/O2** optimizaciones.
+- [/Ox](ox-full-optimization.md) es una opción de combinación que selecciona varias de las optimizaciones con énfasis en la velocidad. Es un subconjunto estricto de la **/O2** optimizaciones.
 
-- [/Oy](../../build/reference/oy-frame-pointer-omission.md) suprime la creación de punteros de marco en la pila de llamadas para acelerar las llamadas a función.
+- [/Oy](oy-frame-pointer-omission.md) suprime la creación de punteros de marco en la pila de llamadas para acelerar las llamadas a función.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -46,5 +46,5 @@ Puede combinar varios **/O** opciones en una instrucción única opción. Por ej
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

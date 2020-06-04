@@ -72,47 +72,47 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508919"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126700"
 ---
-# <a name="double3-class"></a>double_3 (Clase)
+# <a name="double_3-class"></a>double_3 (Clase)
 
 Representa un vector corto de tres valores double.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class double_3;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor double_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de double_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|double_3:: get_X||
+|double_3::get_x||
 |double_3::get_xy||
 |double_3::get_xyz||
 |double_3::get_xz||
 |double_3::get_xzy||
-|double_3:: get_Y||
+|double_3::get_y||
 |double_3::get_yx||
 |double_3::get_yxz||
 |double_3::get_yz||
@@ -122,18 +122,18 @@ class double_3;
 |double_3::get_zxy||
 |double_3::get_zy||
 |double_3::get_zyx||
-|double_3:: ref_b||
-|double_3:: ref_g||
-|double_3:: ref_r||
-|double_3:: ref_x||
-|double_3:: ref_y||
+|double_3::ref_b||
+|double_3::ref_g||
+|double_3::ref_r||
+|double_3::ref_x||
+|double_3::ref_y||
 |double_3::ref_z||
-|double_3:: set_X||
-|double_3:: set_xy||
+|double_3::set_x||
+|double_3::set_xy||
 |double_3::set_xyz||
 |double_3::set_xz||
 |double_3::set_xzy||
-|double_3:: set_y||
+|double_3::set_y||
 |double_3::set_yx||
 |double_3::set_yxz||
 |double_3::set_yz||
@@ -146,57 +146,57 @@ class double_3;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_3::operator-||
 |double_3::operator--||
 |double_3::operator*=||
-|operador double_3:: / =||
-|operador double_3:: ++||
-|operador double_3:: +=||
+|double_3::operator/=||
+|double_3:: Operator + +||
+|double_3:: Operator + =||
 |double_3::operator=||
 |double_3::operator-=||
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#double_3__size)||
+|[Size (constante)](#double_3__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|double_3:: b||
-|double_3:: BG||
-|double_3:: BGR||
-|double_3:: br||
-|double_3:: brg||
-|double_3:: g||
-|double_3:: GB||
-|double_3:: GBR||
-|double_3:: GR||
-|double_3:: GRB||
-|double_3:: r||
-|double_3:: RB||
-|double_3:: RBG||
-|double_3:: RG||
-|double_3:: RGB||
-|double_3:: x||
-|double_3:: XY||
-|double_3:: XYZ||
-|double_3:: XZ||
-|double_3:: xzy||
-|double_3:: y||
-|double_3:: YX||
-|double_3:: YXZ||
-|double_3:: YZ||
-|double_3:: yzx||
-|double_3:: z||
-|double_3:: ZX||
-|double_3:: zxy||
+|double_3::b||
+|double_3::bg||
+|double_3::bgr||
+|double_3::br||
+|double_3::brg||
+|double_3::g||
+|double_3::gb||
+|double_3::gbr||
+|double_3::gr||
+|double_3::grb||
+|double_3::r||
+|double_3::rb||
+|double_3::rbg||
+|double_3::rg||
+|double_3::rgb||
+|double_3::x||
+|double_3::xy||
+|double_3::xyz||
+|double_3::xz||
+|double_3::xzy||
+|double_3::y||
+|double_3::yx||
+|double_3::yxz||
+|double_3::yz||
+|double_3::yzx||
+|double_3::z||
+|double_3::zx||
+|double_3::zxy||
 |double_3:: ZY||
-|double_3:: ZYX||
+|double_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -204,15 +204,15 @@ class double_3;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -254,26 +254,26 @@ explicit inline double_3(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="double_3__size"></a> Tamaño
+## <a name="double_3__size"></a>ajusta
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

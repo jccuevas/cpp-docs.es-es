@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - C2778
 ms.assetid: b24cb732-2914-42cc-8928-e2d87b393428
-ms.openlocfilehash: 56c316ac971d0bdd1a0ca27ef8d4282acbe24779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 247aba1b4dfe6b6d6db1e2b8f46f2aa08abf1a79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490518"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739992"
 ---
 # <a name="compiler-error-c2778"></a>Error del compilador C2778
 
-GUID formado incorrectamente en __declspec(uuid())
+GUID con formato incorrecto en __declspec (UUID ())
 
-Se proporcionó un GUID incorrecto para el [uuid](../../cpp/uuid-cpp.md) atributo extendido.
+Se proporciona un GUID incorrecto al atributo extendido [UUID](../../cpp/uuid-cpp.md) .
 
-El GUID debe ser una cadena de números hexadecimales con el formato siguiente:
+El GUID debe ser una cadena de números hexadecimales con el siguiente formato:
 
-```
+```cpp
 // C2778a.cpp
 // compile with: /c
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
 ```
 
-El `uuid` atributo extendido acepta cadenas reconocidas por [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring), con o sin delimitadores de llaves.
+El atributo extendido `uuid` acepta cadenas reconocidas por [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring), con o sin delimitadores de llave.
 
-El ejemplo siguiente genera C2778:
+En el ejemplo siguiente se genera C2778:
 
-```
+```cpp
 // C2778b.cpp
 struct __declspec(uuid(" 00000000-0000-0000-0000-000000000000 ")) C { };   // C2778
 struct __declspec(uuid("00000000000000000000000000000000")) D { };   // C2778

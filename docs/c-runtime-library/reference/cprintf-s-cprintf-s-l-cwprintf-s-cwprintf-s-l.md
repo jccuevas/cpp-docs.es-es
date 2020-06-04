@@ -1,12 +1,12 @@
 ---
 title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_s_l
 - _cprintf_s_l
 - _cprintf_s
 - _cwprintf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf_s_l
 - _cprintf_s
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c14da7158a3e15a74a01630a8a1b475d3e496de9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606524"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938967"
 ---
-# <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
+# <a name="_cprintf_s-_cprintf_s_l-_cwprintf_s-_cwprintf_s_l"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 
 Da formato e imprime en la consola. Estas versiones de [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -85,7 +88,7 @@ int _cwprintf_s_l(
 *format*<br/>
 Cadena de control de formato.
 
-*argumento*<br/>
+*argument*<br/>
 Parámetros opcionales.
 
 *locale*<br/>
@@ -97,16 +100,16 @@ Número de caracteres que se van a imprimir.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones de formato e imprimir una serie de caracteres y valores directamente en la consola, utilizando el **_putch** función (**_putwch** para **_cwprintf_s**) a la salida caracteres. Cada *argumento* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El formato tiene las mismas forma y función que el *formato* parámetro para el [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) función. A diferencia de la **fprintf_s**, **printf_s**, y **sprintf_s** funciones, ni **_cprintf_s** ni **_cwprintf_s** traduce los caracteres de avance de línea al carro combinaciones de retorno y salto de línea (CR-LF) cuando la salida.
+Estas funciones dan formato e imprimen una serie de caracteres y valores directamente en la consola, usando la función **_putch** ( **_putwch** para **_cwprintf_s**) con caracteres de salida. Cada *argumento* (si existe) se convierte y se genera de acuerdo con la especificación de formato correspondiente en *Format*. El formato tiene la misma forma y función que el parámetro de *formato* para la función [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) . A diferencia de las funciones **fprintf_s**, **printf_s**y **sprintf_s** , ni **_cprintf_s** ni **_cwprintf_s** traducen los caracteres de salto de línea en combinaciones retorno de carro-avance de línea (CR-LF) cuando se genera la salida.
 
-Una diferencia importante es que **_cwprintf_s** muestra caracteres Unicode cuando se usa en Windows NT. A diferencia de **_cprintf_s**, **_cwprintf_s** usa la configuración regional de consola actual
+Una diferencia importante es que **_cwprintf_s** muestra caracteres Unicode cuando se usa en Windows NT. A diferencia de **_cprintf_s**, **_cwprintf_s** usa la configuración regional actual de la consola
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
 
-Como las versiones no seguras (vea [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), estas funciones validan sus parámetros e invocan el controlador de parámetros no válidos, tal y como se describe en [devalidacióndeparámetros](../../c-runtime-library/parameter-validation.md)si *formato* es un puntero nulo. Estas funciones se diferencian de las versiones no seguras en que también se valida la propia cadena de formato. Si hay algún especificador de formato desconocido o con formato incorrecto, estas funciones invocan el controlador de parámetros no válidos. En todos los casos, si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**.
+Al igual que las versiones no seguras (vea [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), estas funciones validan sus parámetros e invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), si el *formato* es un valor null. puntero. Estas funciones se diferencian de las versiones no seguras en que también se valida la propia cadena de formato. Si hay algún especificador de formato desconocido o con formato incorrecto, estas funciones invocan el controlador de parámetros no válidos. En todos los casos, si la ejecución puede continuar, las funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

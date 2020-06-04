@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba6d305a414e99bd22ca603aaac2615994780c7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487040"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185768"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Advertencia del compilador (nivel 1) C4730
 
-'main': mezcla de _m64 y expresiones pueden ocasionar código incorrecto de punto flotante
+' Main ': la combinación de expresiones de _m64 y de punto flotante puede dar lugar a código incorrecto
 
-Una función usa [__m64](../../cpp/m64.md) y **float**/**doble** tipos. Espacio de registro porque los registros MMX y punto flotante comparten el mismo físico (no se puede usar al mismo tiempo) mediante `__m64` y **float**/**doble** tipos en el mismo función puede producir daños en los datos, podría causar una excepción.
+Una función utiliza los tipos de [__m64](../../cpp/m64.md) y **float**/**Double** . Dado que los registros MMX y de punto flotante comparten el mismo espacio de registro físico (no se pueden usar simultáneamente), el uso de `__m64` y **float**/tipos **Double** en la misma función puede provocar daños en los datos, lo que podría producir una excepción.
 
-Para utilizar sin ningún riesgo `__m64` tipos y tipos de punto flotante en la misma función, cada instrucción que usa uno de los tipos debe estar separado por el **_m_empty** (para MMX) o **_m_femms** (para 3DNow!) intrínseco.
+Para usar de forma segura tipos de `__m64` y tipos de punto flotante en la misma función, cada instrucción que usa uno de los tipos debe estar separada por el **_m_empty ()** (para MMX) o **_M_femms (** para 3DNow!) intrínseco.
 
-El ejemplo siguiente genera C4730:
+En el ejemplo siguiente se genera C4730:
 
-```
+```cpp
 // C4730.cpp
 // compile with: /W1
 // processor: x86

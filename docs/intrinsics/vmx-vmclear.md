@@ -1,38 +1,37 @@
 ---
 title: __vmx_vmclear
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmclear
 helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-ms.openlocfilehash: 469621eb828691b5475b453e8be0b8473b3594a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b5807402cf0a9d8a9ef1ded1d112d22a801633e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586347"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219543"
 ---
-# <a name="vmxvmclear"></a>__vmx_vmclear
+# <a name="__vmx_vmclear"></a>__vmx_vmclear
 
 **Específicos de Microsoft**
 
-Inicializa la estructura de control de máquina virtual especificada (VMCS) y establece su estado de inicio en `Clear`.
+Inicializa la estructura de control de máquina virtual (VMCS) especificada y establece su estado de `Clear`Inicio en.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned char __vmx_vmclear(
    unsigned __int64 *VmcsPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*VmcsPhysicalAddress*|[in] Un puntero a una ubicación de memoria de 64 bits que contiene la dirección física de la VMCS para borrar.|
+*VmcsPhysicalAddress*\
+de Puntero a una ubicación de memoria de 64 bits que contiene la dirección física del VMCS que se va a borrar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -44,9 +43,9 @@ unsigned char __vmx_vmclear(
 
 ## <a name="remarks"></a>Comentarios
 
-Una aplicación puede realizar una operación de entrada en máquina virtual mediante el uso del [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) función. El [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) función puede utilizarse solo con una VMCS cuyo estado de inicio es `Clear`y el [__vmx_vmresume](../intrinsics/vmx-vmresume.md) función puede utilizarse solo con una VMCS cuyo estado de inicio es `Launched`. Por lo tanto, use el [__vmx_vmclear](../intrinsics/vmx-vmclear.md) función para establecer el estado de inicio de una VMCS en `Clear`. Use la [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) función para la primera operación escriba a la máquina virtual y el [__vmx_vmresume](../intrinsics/vmx-vmresume.md) función para operaciones posteriores.
+Una aplicación puede realizar una operación de entrada de máquina virtual mediante la función [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) . La función [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) solo se puede usar con una VMCS cuyo estado de inicio `Clear`es, y la función [__vmx_vmresume](../intrinsics/vmx-vmresume.md) solo se puede usar con una VMCS cuyo estado de `Launched`inicio es. Por lo tanto, use la función [__vmx_vmclear](../intrinsics/vmx-vmclear.md) para establecer el estado de inicio de un `Clear`VMCS en. Use la función [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) para su primera operación de entrada de máquina virtual y la función [__vmx_vmresume](../intrinsics/vmx-vmresume.md) para las operaciones posteriores de la máquina virtual.
 
-La función `__vmx_vmclear` equivale a la instrucción máquina `VMCLEAR` . Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization Technical especificación para la arquitectura IA-32 Intel," documento C97063-002, número en el [Intel Corporation](https://software.intel.com/articles/intel-sdm) sitio.
+La función `__vmx_vmclear` equivale a la instrucción máquina `VMCLEAR` . Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento "Especificación técnica de virtualización de Intel para la arquitectura IA-32 Intel", número de documento C97063-002, en el sitio de [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -54,12 +53,12 @@ La función `__vmx_vmclear` equivale a la instrucción máquina `VMCLEAR` . Esta
 |---------------|------------------|
 |`__vmx_vmclear`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
-[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
+[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)\
 [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

@@ -1,29 +1,29 @@
 ---
-title: Compilador advertencia (nivel 1) C4010
+title: ADVERTENCIA del compilador (nivel 1) C4010
 ms.date: 11/04/2016
 f1_keywords:
 - C4010
 helpviewer_keywords:
 - C4010
 ms.assetid: d607a9ff-8f8f-45c0-b07b-3b2f439e5485
-ms.openlocfilehash: 40c6724daf17c1c0b546bb7bc64bb704f732e8d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6045d49ee34f837ad9f22bac5b2b43b75a998f7c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164695"
 ---
-# <a name="compiler-warning-level-1-c4010"></a>Compilador advertencia (nivel 1) C4010
+# <a name="compiler-warning-level-1-c4010"></a>ADVERTENCIA del compilador (nivel 1) C4010
 
-comentario de una línea contiene el carácter de continuación de línea
+el comentario de una sola línea contiene un carácter de continuación de línea
 
-Un comentario de una línea, que se introdujo por / /, contiene una barra diagonal inversa (\\) que actúa como un carácter de continuación de línea. El compilador considera que la siguiente línea como continuación y lo trata como un comentario.
+Un Comentario de una sola línea, que se introduce mediante//, contiene una barra diagonal inversa (\\) que actúa como un carácter de continuación de línea. El compilador considera que la siguiente línea es una continuación y la trata como un comentario.
 
-Algunas sintaxis dirigido al editores no indican la línea que sigue al carácter de continuación como un comentario. Omitir los colores en las líneas que causan esta advertencia de sintaxis.
+Algunos editores orientados a la sintaxis no indican la línea que sigue al carácter de continuación como comentario. Omitir el color de la sintaxis en las líneas que causan esta advertencia.
 
-El ejemplo siguiente genera C4010:
+En el ejemplo siguiente se genera C4010:
 
-```
+```cpp
 // C4010.cpp
 // compile with: /WX
 int main() {

@@ -6,37 +6,36 @@ helpviewer_keywords:
 - month calendar controls [MFC], creating
 - month calendar controls [MFC]
 ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
-ms.openlocfilehash: f98ce6c0272b64442d42cb0ba78b10affe5ede8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e430a86c2ac08bde0f031a4c91b9ae5c6f570f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523792"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907503"
 ---
 # <a name="creating-the-month-calendar-control"></a>Crear el control de calendario mensual
 
-¿Cómo se crea el control de calendario mensual depende de si está utilizando el control en un cuadro de diálogo o crearla en una ventana nondialog.
+La forma en que se crea el control de calendario mensual depende de si se usa el control en un cuadro de diálogo o si se crea en una ventana sin cuadro de diálogo.
 
-### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>Usar CMonthCalCtrl directamente en un cuadro de diálogo
+### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>Para usar CMonthCalCtrl directamente en un cuadro de diálogo
 
-1. En el editor de cuadro de diálogo, agregue un Control de calendario mensual al recurso de plantilla de cuadro de diálogo. Especifique su identificador de control.
+1. En el editor de cuadros de diálogo, agregue un control de calendario mensual al recurso de plantilla de cuadro de diálogo. Especifique su identificador de control.
 
-1. Especifique cualquier estilo necesario, mediante el cuadro de diálogo Propiedades del control de calendario mensual.
+1. Especifique los estilos necesarios mediante el cuadro de diálogo Propiedades del control de calendario mensual.
 
-1. Use la [Asistente para agregar variables miembro](../ide/adding-a-member-variable-visual-cpp.md) para agregar una variable miembro de tipo [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) con la propiedad del Control. Este miembro puede utilizarse para llamar a `CMonthCalCtrl` funciones miembro.
+1. Use el [Asistente para agregar variables miembro](../ide/adding-a-member-variable-visual-cpp.md) para agregar una variable miembro de tipo [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) con la propiedad del control. Este miembro se puede usar para llamar `CMonthCalCtrl` a funciones miembro.
 
-1. Utilice la ventana Propiedades para asignar funciones de controlador en la clase de cuadro de diálogo para cualquier notificación de control de calendario de mes de los mensajes necesite controlar (consulte [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)).
+1. Use el [Asistente para clases](reference/mfc-class-wizard.md) para asignar funciones de controlador en la clase de cuadro de diálogo para cualquier mensaje de notificación del control de calendario mensual que deba controlar (vea [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)).
 
-1. En [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), establecer los estilos adicionales para el `CMonthCalCtrl` objeto.
+1. En [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), establezca cualquier otro estilo para el `CMonthCalCtrl` objeto.
 
-### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>Usar CMonthCalCtrl en una ventana nondialog
+### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>Para usar CMonthCalCtrl en una ventana sin cuadro de diálogo
 
-1. Defina el control en la clase de vista o la ventana.
+1. Defina el control en la vista o la clase de ventana.
 
-1. El control llama [crear](../mfc/reference/cmonthcalctrl-class.md#create) función miembro, posiblemente en [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), posiblemente tan pronto como la ventana primaria [OnCreate](../mfc/reference/cwnd-class.md#oncreate) función de controlador (si es creación de subclases del control). Establecer los estilos para el control.
+1. Llame a la función miembro [Create](../mfc/reference/cmonthcalctrl-class.md#create) del control, posiblemente en [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), posiblemente tan pronto como la función de controlador de creación de la ventana primaria (si va a [crear](../mfc/reference/cwnd-class.md#oncreate) una subclase del control). Establezca los estilos del control.
 
 ## <a name="see-also"></a>Vea también
 
 [Uso de CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

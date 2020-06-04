@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4402
 ms.assetid: 2aaecfae-1e79-4787-87e8-0973f7ec0efe
-ms.openlocfilehash: 8d76c108213776d8502ce9152433df22cf6925c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b55568c42f2389f880357ab1ba72b68e6b40ee6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518561"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162613"
 ---
 # <a name="compiler-warning-level-1-c4402"></a>Advertencia del compilador (nivel 1) C4402
 
-debe utilizar un operador PTR
+debe usar el Operador PTR
 
-Se utiliza un tipo en un operando sin un operador PTR al que hace referencia a o convertir un tipo en código ensamblador en línea.
+Un tipo se usa en un operando sin un operador PTR cuando se hace referencia a un tipo en el código de ensamblado alineado o se convierte en él.
 
-El compilador supone que el operador PTR.
+El compilador asume el Operador PTR.

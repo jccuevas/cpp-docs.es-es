@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4051
 ms.assetid: 8c964e70-df12-45ff-93b9-496ad4271191
-ms.openlocfilehash: 4644da0b58af2de4d3b8270f06d1e6ed4cf828f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5d5a87e395aa9f6cd6e610cda1f7c4660fa371b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562375"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174367"
 ---
 # <a name="compiler-warning-level-2-c4051"></a>Advertencia del compilador (nivel 2) C4051
 

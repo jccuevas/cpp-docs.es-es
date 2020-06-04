@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidCastException
 ms.assetid: 0215131d-1251-4913-9561-824410e045b6
-ms.openlocfilehash: 9ff48fc456f03adc0e516624a16118e3ddad8718
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e502346cb373d9dec5450987c4807b445234b28
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301466"
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException (Clase)
 
@@ -35,7 +35,7 @@ Para obtener más información, consulta la clase [COMException](../cppcx/platfo
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Metadatos:** platform.winmd
 

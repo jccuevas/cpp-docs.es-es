@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2914
 ms.assetid: fc6a0592-f53e-4f5a-88cb-780bbed4acf2
-ms.openlocfilehash: 2500736f799032aea71173931139404b4406a16a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bed9e31d7d1de069ee708f8f482d26b37bc16833
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659601"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761063"
 ---
 # <a name="compiler-error-c2914"></a>Error del compilador C2914
 
-'identifier': no se puede deducir el argumento de tipo como argumento de función es ambigua
+' Identifier ': no se puede deducir el argumento de tipo porque el argumento de la función es ambiguo
 
-El compilador no puede determinar que sobrecargar funciones que se usará para un argumento genérico o plantilla.
+El compilador no puede determinar qué funciones sobrecargadas se usarán para un argumento genérico o de plantilla.
 
-El ejemplo siguiente genera el error C2914:
+En el ejemplo siguiente se genera C2914:
 
-```
+```cpp
 // C2914.cpp
 // compile with: /c
 void f(int);
@@ -32,9 +32,9 @@ void h() { g(f); }   // C2914
 // void h() { g<int>(f); }
 ```
 
-C2914 también puede producirse al usar genéricos.  El ejemplo siguiente genera el error C2914:
+C2914 también se puede producir al utilizar genéricos.  En el ejemplo siguiente se genera C2914:
 
-```
+```cpp
 // C2914b.cpp
 // compile with: /clr /c
 void f(int);

@@ -1,21 +1,21 @@
 ---
 title: binder1st (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder1st
+- functional/std::binder1st
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: a8e962e118d162e46e2edfca3ce11e7cbf322e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439642"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688386"
 ---
 # <a name="binder1st-class"></a>binder1st (Clase)
 
-Clase de plantilla que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.
+Una plantilla de clase que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado. Quedó en desuso en C++ 11 en favor del [enlace](functional-functions.md#bind)y se quitó en c++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,7 +29,7 @@ public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder1st(
-        const Operation& Func,
+        const Operation& binary_fn,
         const typename Operation::first_argument_type& left);
 
     result_type operator()(const argument_type& right) const;
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*Func*<br/>
+\ *binary_fn*
 El objeto de función binaria que se va a convertir en un objeto de función unaria.
 
-*left*<br/>
+\ *izquierda*
 El valor al que se enlazará el primer argumento del objeto de función binaria.
 
-*right*<br/>
+\ *derecha*
 El valor del argumento que el objeto binario adaptado compara con el valor fijo del segundo argumento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El objeto de función unaria resultante de enlazar el primer argumento del objeto de función binaria con el valor *izquierdo*.
+El objeto de función unaria resultante de enlazar el primer argumento del objeto de función binaria al valor *izquierdo*.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función binaria *Func* en `op`y una copia de *izquierdo* en `value`. Define su función miembro `operator()` para que devuelva **op**( **value**, `right`).
+La plantilla de clase almacena una copia de un objeto de función binaria *binary_fn* en `op` y una copia de *izquierda* en `value`. Define su función miembro `operator()` como si devolviera `op(value, right)`.
 
-Si *Func* es un objeto de tipo `Operation` y `c` es una constante, a continuación, [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) es equivalente a la `binder1st` constructor de clase `binder1st` \< **Operación**> ( `Func`, `c` ) y más conveniente.
+Si *binary_fn* es un objeto de tipo `Operation` y `c` es una constante, `bind1st(binary_fn, c)` es un equivalente más cómodo de `binder1st<Operation>(binary_fn, c)`. Para obtener más información, vea [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Ejemplo
 
@@ -105,20 +105,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

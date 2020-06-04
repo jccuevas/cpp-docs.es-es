@@ -1,22 +1,20 @@
 ---
 title: Usar CToolBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 4a325f750b65b39670168df5a85687b53fcc5a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581433"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442243"
 ---
 # <a name="using-ctoolbarctrl"></a>Usar CToolBarCtrl
 
-Puede usar el control de barra de herramientas ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) para crear una ventana de control que contiene los botones y espacios opcionales. Cada botón en la ventana de control de barra de herramientas envía un mensaje de comando a la ventana primaria como el usuario lo selecciona. Normalmente, los botones de una barra de herramientas corresponden a elementos del menú de la aplicación, que proporciona una manera más directa y adicional para el usuario tener acceso a los comandos de la aplicación.
+Puede utilizar el control de barra de herramientas ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) para crear una ventana de control que contenga botones y espacios opcionales. Cada botón de la ventana de control de barra de herramientas envía un mensaje de comando a la ventana primaria a medida que el usuario la elige. Normalmente, los botones de una barra de herramientas corresponden a elementos del menú de la aplicación, lo que proporciona una forma adicional y más directa para que el usuario tenga acceso a los comandos de una aplicación.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -32,7 +30,6 @@ Puede usar el control de barra de herramientas ([CToolBarCtrl](../mfc/reference/
 
 - [Personalización de la apariencia de un control de barra de herramientas](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles](../mfc/controls-mfc.md)
-

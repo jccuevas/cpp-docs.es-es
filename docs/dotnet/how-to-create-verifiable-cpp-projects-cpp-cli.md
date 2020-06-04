@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Crear proyectos de C++ comprobables (C++/CLI)'
+title: Procedimiento Crear proyectos de C++ comprobables (C++ / c++ / CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630443"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448112"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Cómo: crear proyectos de C++ comprobables (C++ / c++ / CLI)
 
@@ -20,7 +20,7 @@ Asistentes para aplicaciones de visuales C++ no crean proyectos comprobables.
 > [!IMPORTANT]
 > En desuso de Visual Studio 2015 y Visual Studio 2017 no admite la **/CLR: pure** y **/CLR: safe** creación de proyectos que se pueda comprobar. Si necesita código comprobable, se recomienda que trasladar el código en C#.
 
-Sin embargo, si usa una versión anterior del conjunto de herramientas del compilador de Visual C++ que admite **/CLR: pure** y **/CLR: safe**, se pueden convertir los proyectos para que sea comprobable. Este tema describe cómo establecer las propiedades del proyecto y modificar archivos de código fuente del proyecto para transformar los proyectos de Visual C++ para generar aplicaciones comprobables.
+Sin embargo, si está utilizando una versión anterior de Microsoft C++ conjunto de herramientas del compilador que admita **/CLR: pure** y **/CLR: safe**, se pueden convertir los proyectos para que sea comprobable. Este tema describe cómo establecer las propiedades del proyecto y modificar archivos de código fuente del proyecto para transformar su Visual Studio C++ proyectos para producir aplicaciones comprobables.
 
 ## <a name="compiler-and-linker-settings"></a>Configuración de compilador y vinculador
 
@@ -28,7 +28,7 @@ De forma predeterminada, los proyectos de .NET use la marca de compilador/CLR y 
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>Para cambiar la configuración del compilador y vinculador
 
-1. Mostrar la página de propiedades del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
+1. Mostrar la página de propiedades del proyecto. Para obtener más información, consulte [establecer compilador y las propiedades de compilación](../build/working-with-project-properties.md).
 
 1. En el **General** página en el **propiedades de configuración** de conjunto de nodos, el **compatible con tiempo de ejecución de Common Language** propiedad **seguro MSIL Common Language Compatibilidad en tiempo de ejecución (/ CLR: safe)**.
 
@@ -56,7 +56,7 @@ Dado que las aplicaciones comprobables no pueden usar las bibliotecas de tiempo 
 
 1. Cambiar _tmain () por Main() en el archivo del proyecto .cpp principal.
 
-1. Mostrar la página de propiedades del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
+1. Mostrar la página de propiedades del proyecto. Para obtener más información, consulte [establecer compilador y las propiedades de compilación](../build/working-with-project-properties.md).
 
 1. En el **avanzadas** página bajo la **vinculador** nodo, escriba `Main` como el **punto de entrada** valor de propiedad.
 

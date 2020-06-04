@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3240
 ms.assetid: 1a8dc213-b80c-47ae-ada0-e9554b635d1e
-ms.openlocfilehash: a8334b4f95ccadcce73a79d787669cba9f911199
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e38ac53d0473c4fe5daace0f8c674c06b2ae0161
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504619"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756388"
 ---
 # <a name="compiler-error-c3240"></a>Error del compilador C3240
 
-'function': debe ser una función miembro abstracta no sobrecargada de 'type'
+' función ': debe ser una función miembro abstracta no sobrecargada de ' tipo '
 
-Un tipo base contiene una función que se definió. Función debe ser virtual.
+Un tipo base contiene una función que se definió. La función debe ser virtual.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3240.
+En el ejemplo siguiente se genera C3240.
 
-```
+```cpp
 // C3240.cpp
 // compile with: /c
 __interface I {

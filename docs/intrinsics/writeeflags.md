@@ -1,50 +1,51 @@
 ---
 title: __writeeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writeeflags
 helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-ms.openlocfilehash: 8509bf37019d1525cdaca33bf1819d85ace7d75a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b9b6976369ed810789e5749a2e30029cad4c2d7
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600049"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858053"
 ---
-# <a name="writeeflags"></a>__writeeflags
+# <a name="__writeeflags"></a>__writeeflags
 
-Escribe el valor especificado en el programa de estado y control (EFLAGS) se registran.
+**Específicos de Microsoft**
+
+Escribe el valor especificado en el registro de estado del programa y del control (EFLAGS).
 
 ## <a name="syntax"></a>Sintaxis
 
+```C
+void __writeeflags(unsigned Value); /* x86 */
+void __writeeflags(unsigned __int64 Value); /* x64 */
 ```
-void __writeeflags(unsigned Value);
-void __writeeflags(unsigned __int64 Value);
-```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Valor*|[in] El valor para escribir en el registro EFLAGS. El `Value` parámetro es de 32 bits para una plataforma de 32 bits y 64 bits para una plataforma de 64 bits.|
+*Value*\
+de Valor que se va a escribir en el registro EFLAGS. El parámetro `Value` tiene una longitud de 32 bits para una plataforma de 32 bits y una longitud de 64 bits para una plataforma de 64 bits.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Estas rutinas sólo están disponibles como intrínsecos.
+Estas rutinas solo están disponibles como intrínsecos.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
 |`__writeeflags`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del Compilador](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

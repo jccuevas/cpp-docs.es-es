@@ -72,47 +72,47 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: 5faf2789c89e492d74851cb94d270b6fac2972c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c8486b96ac4359e84d52697b8a34d3718e00e2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553379"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127730"
 ---
-# <a name="uint3-class"></a>uint_3 (Clase)
+# <a name="uint_3-class"></a>uint_3 (Clase)
 
 Representa un vector corto de tres enteros sin signo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class uint_3;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor uint_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de uint_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_3::get_x||
 |uint_3::get_xy||
 |uint_3::get_xyz||
 |uint_3::get_xz||
-|uint_3:: get_xzy||
-|uint_3:: get_Y||
+|uint_3::get_xzy||
+|uint_3::get_y||
 |uint_3::get_yx||
 |uint_3::get_yxz||
 |uint_3::get_yz||
@@ -129,11 +129,11 @@ class uint_3;
 |uint_t::ref_y||
 |uint_t::ref_z||
 |uint_3::set_x||
-|uint_3:: set_xy||
+|uint_3::set_xy||
 |uint_3::set_xyz||
 |uint_3::set_xz||
-|uint_3:: set_xzy||
-|uint_3:: set_y||
+|uint_3::set_xzy||
+|uint_3::set_y||
 |uint_3::set_yx||
 |uint_3::set_yxz||
 |uint_3::set_yz||
@@ -146,7 +146,7 @@ class uint_3;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_3::operator--||
 |uint_3::operator%=||
@@ -158,51 +158,51 @@ class uint_3;
 |uint_3::operator~||
 |uint_3::operator++||
 |uint_3::operator+=||
-|uint_3::operator<\<=||
+|uint_3:: Operator <\<=||
 |uint_3::operator=||
 |uint_3::operator-=||
 |uint_3::operator>>=||
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#uint_3__size)||
+|[Size (constante)](#uint_3__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|uint_3:: b||
-|uint_3:: BG||
-|uint_3:: BGR||
-|uint_3:: br||
+|uint_3::b||
+|uint_3::bg||
+|uint_3::bgr||
+|uint_3::br||
 |uint_3::brg||
-|uint_3:: g||
-|uint_3:: GB||
+|uint_3::g||
+|uint_3::gb||
 |uint_3::gbr||
-|uint_3:: GR||
-|uint_3:: GRB||
-|uint_3:: r||
-|uint_3:: RB||
+|uint_3::gr||
+|uint_3::grb||
+|uint_3::r||
+|uint_3::rb||
 |uint_3::rbg||
-|uint_3:: RG||
-|uint_3:: RGB||
-|uint_3:: x||
-|uint_3:: XY||
-|uint_3:: XYZ||
-|uint_3:: XZ||
-|uint_3:: xzy||
-|uint_3:: y||
-|uint_3:: YX||
-|uint_3:: YXZ||
-|uint_3:: YZ||
-|uint_3:: yzx||
-|uint_3:: z||
+|uint_3::rg||
+|uint_3::rgb||
+|uint_3::x||
+|uint_3::xy||
+|uint_3::xyz||
+|uint_3::xz||
+|uint_3::xzy||
+|uint_3::y||
+|uint_3::yx||
+|uint_3::yxz||
+|uint_3::yz||
+|uint_3::yzx||
+|uint_3::z||
 |uint_3::zx||
-|uint_3:: zxy||
-|uint_3:: ZY||
-|uint_3:: ZYX||
+|uint_3::zxy||
+|uint_3::zy||
+|uint_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -210,15 +210,15 @@ class uint_3;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> uint_3
+## <a name="ctor"></a>uint_3
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 uint_3() restrict(amp,
     cpu);
 
@@ -260,26 +260,26 @@ explicit inline uint_3(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="uint_3__size"></a> Tamaño
+## <a name="uint_3__size"></a>ajusta
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

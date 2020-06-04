@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4669
 ms.assetid: 97730679-e3dc-44d4-b2a8-aa65badc17f2
-ms.openlocfilehash: f4d0b87c91649c5f2f6b5823fea82d2ce355d11a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45490ec399249a721f2d2567ca0182d44667243
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518643"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175564"
 ---
 # <a name="compiler-warning-level-1-c4669"></a>Advertencia del compilador (nivel 1) C4669
 
 'cast': conversión no segura: 'class' es un objeto de tipo administrado o WinRT
 
-Una conversión contiene un tipo administrado o de Windows Runtime. El compilador completa la conversión con una copia bit a bit de un puntero a otro, pero no realiza ninguna otra comprobación. Para resolver esta advertencia, no convierta las clases que contienen miembros administrados o tipos de Windows en tiempo de ejecución.
+Una conversión contiene un tipo administrado o de Windows Runtime. El compilador completa la conversión con una copia bit a bit de un puntero a otro, pero no realiza ninguna otra comprobación. Para resolver esta advertencia, no convierta las clases que contienen miembros administrados o tipos de Windows Runtime.
 
 El ejemplo siguiente genera el error C4669 y muestra cómo corregirlo:
 
-```
+```cpp
 // C4669.cpp
 // compile with: /clr /W1
 ref struct A {

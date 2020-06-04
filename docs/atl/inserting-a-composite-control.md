@@ -6,12 +6,12 @@ helpviewer_keywords:
 - composite controls
 - ATL Control Wizard
 ms.assetid: f10b1927-9fc6-40a7-ac29-efdac70584fe
-ms.openlocfilehash: c9e4f348f03800051a2eab518e5642f00ba59bee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89cadf3c966eebb1b96cbd378bb422cbcff48727
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250326"
 ---
 # <a name="inserting-a-composite-control"></a>Insertar un Control compuesto
 
@@ -24,4 +24,3 @@ Se creará una página HTML predeterminada para el control de vista.
 ## <a name="see-also"></a>Vea también
 
 [Fundamentos de controles compuestos](../atl/atl-composite-control-fundamentals.md)
-

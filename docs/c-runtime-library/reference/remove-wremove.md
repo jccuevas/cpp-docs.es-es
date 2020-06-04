@@ -1,10 +1,12 @@
 ---
 title: remove, _wremove
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wremove
 - remove
-apilocation:
+- _o__wremove
+- _o_remove
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remove
 - _wremove
@@ -30,16 +36,16 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
-ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417608"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917835"
 ---
-# <a name="remove-wremove"></a>remove, _wremove
+# <a name="remove-_wremove"></a>remove, _wremove
 
-Elimina un archivo.
+Elimine un archivo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -59,13 +65,15 @@ Ruta de acceso del archivo que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si el archivo se elimina correctamente. En caso contrario, devuelve -1 y establece **errno** a **EACCES** indicar que la ruta de acceso especifica un archivo de solo lectura, especifica un directorio o el archivo está abierto, o a **ENOENT** para indicar que no se encontró el nombre de archivo o ruta de acceso.
+Cada una de estas funciones devuelve 0 si el archivo se elimina correctamente. De lo contrario, devuelve-1 y establece **errno** en **EACCES** para indicar que la ruta de acceso especifica un archivo de solo lectura, especifica un directorio o el archivo está abierto o en **ENOENT** para indicar que no se encontró el nombre de archivo o la ruta de acceso.
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **remove** elimina el archivo especificado por *path*. **_wremove** es una versión con caracteres anchos de **_quitar**; el *ruta* argumento **_wremove** es una cadena de caracteres anchos. **_wremove** y **_quitar** se comportan exactamente igual. Para poder eliminar un archivo, primero se deben cerrar todos los controladores correspondientes.
+La función **remove** elimina el archivo especificado por *path*. **_wremove** es una versión con caracteres anchos de **_remove**; el argumento de *ruta de acceso* para **_wremove** es una cadena de caracteres anchos. **_wremove** y **_remove** se comportan de manera idéntica. Para poder eliminar un archivo, primero se deben cerrar todos los controladores correspondientes.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -80,7 +88,7 @@ La función **remove** elimina el archivo especificado por *path*. **_wremove** 
 |**remove**|\<stdio.h> o \<io.h>|
 |**_wremove**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -103,19 +111,19 @@ int main( void )
 }
 ```
 
-### <a name="input-crtremovetxt"></a>Entrada: crt_remove.txt
+### <a name="input-crt_removetxt"></a>Entrada: crt_remove.txt
 
 ```Input
 This file will be deleted.
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Deleted 'CRT_REMOVE.TXT'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_unlink, _wunlink](unlink-wunlink.md)<br/>

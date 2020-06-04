@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar una herramienta de dibujo
+title: 'Cómo: Usar una herramienta de dibujo'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
@@ -16,133 +16,132 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: b0041124c35414a0c1c998642b5321319602c872
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336558"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359850"
 ---
-# <a name="how-to-use-a-drawing-tool"></a>Procedimiento Usar una herramienta de dibujo
+# <a name="how-to-use-a-drawing-tool"></a>Cómo: Usar una herramienta de dibujo
 
-El **imagen** editor a mano alzado del dibujo y el borrado de las herramientas de todo el trabajo de la misma manera: seleccione la herramienta y, si es necesario, [seleccionar los colores de primer plano y fondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) y opciones de tamaño y forma. A continuación, mueva el puntero a la imagen y haga clic o arrastre para dibujar y borrar.
+El **Editor de imágenes** tiene herramientas de dibujo y borrado a mano alzada que funcionan de la misma manera. Seleccione la herramienta y, si es necesario, [seleccione los colores](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) de primer plano y de fondo y las opciones de tamaño y forma. A continuación, mueva el puntero a la imagen y haga clic o arrastre para dibujar y borrar.
 
 ## <a name="drawing-tools"></a>Herramientas de dibujo
 
-Cuando se selecciona el **borrador** herramienta, **pincel** herramienta, o **aerógrafo** herramienta, el selector de opciones muestra las opciones de la herramienta.
+Puede seleccionar herramientas de dibujo en la barra de herramientas Editor de **imágenes** o en el menú **Imagen.** Al seleccionar la herramienta **Borrador,** la herramienta **Pincel** o la herramienta **Aerógrafo,** el selector de opciones muestra las opciones de esa herramienta.
 
 > [!TIP]
-> En lugar de usar el **borrador** herramienta, le resultará más cómodo dibujar en el color de fondo con una de las herramientas de dibujo.
+> Las sugerencias de herramientas aparecen al colocar el cursor sobre los botones de la barra de herramientas del [Editor](../windows/toolbar-image-editor-for-icons.md)de imágenes . Estos consejos le ayudarán a identificar los botones específicos mencionados aquí.
 
-Puede seleccionar las herramientas de dibujo desde el **Editor de imágenes** barra de herramientas o el **imagen** menú.
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Para seleccionar y utilizar una herramienta de dibujo en la barra de herramientas editor de imágenes
 
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Para seleccionar y usar una herramienta de dibujo de la barra de herramientas del Editor de imágenes
+1. Seleccione un botón en la barra de herramientas **Editor de imágenes.**
 
-1. Seleccione un botón en el **Editor de imágenes** barra de herramientas.
+   - La herramienta **Borrador** pinta sobre la imagen con el color de fondo actual al pulsar el botón izquierdo del ratón.
 
-   - El **borrador** herramienta pinta la imagen con el color de fondo actual cuando se presiona el botón primario del mouse.
+      > [!TIP]
+      > En lugar de utilizar la herramienta **Borrador,** puede resultar más conveniente dibujar en el color de fondo con una de las herramientas de dibujo.
 
-   - El **lápiz** herramienta dibuja a mano alzada con un ancho constante de un píxel.
+   - La herramienta **Lápiz** dibuja a mano alzada en un ancho constante de un píxel.
 
-   - El **selector de opciones determina la forma y el tamaño de la herramienta pincel**.
+   - La herramienta **Pincel** tiene varias formas y tamaños.
 
-   - El **aerógrafo** herramienta distribuye aleatoriamente los píxeles de color en torno al centro del pincel.
+   - La herramienta **Aerógrafo** distribuye aleatoriamente los píxeles de color alrededor del centro del pincel.
 
-        > [!TIP]
-        >  Información sobre herramientas aparece cuando desplace el cursor sobre los botones en la [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md). Estas sugerencias le ayudarán a identificar los botones que se mencionan aquí.
+1. Si es necesario, seleccione colores y un pincel:
 
-1. Si es necesario, seleccione los colores y un pincel:
+   - En la [paleta Colores](../windows/colors-window-image-editor-for-icons.md), seleccione el botón izquierdo del ratón para seleccionar un color de primer plano o el botón derecho del ratón para seleccionar un color de fondo.
 
-   - En el [paleta de colores](../windows/colors-window-image-editor-for-icons.md), seleccione el botón primario del mouse para seleccionar un color de primer plano o el botón secundario del mouse para seleccionar un color de fondo.
+   - En el [selector Opciones](../windows/toolbar-image-editor-for-icons.md), seleccione una forma que represente el pincel que desea utilizar.
 
-   - En el [Selector de opciones](../windows/toolbar-image-editor-for-icons.md), seleccione una forma que representa el pincel que desea usar.
+1. Señale el lugar de la imagen donde desea empezar a dibujar o pintar. El puntero cambia de forma según la herramienta seleccionada.
 
-1. Elija el lugar en la imagen donde desee empezar a dibujar o pintar. El puntero cambia de forma según la herramienta seleccionada.
+1. Pulse el botón izquierdo del ratón (para el color de primer plano) o el botón derecho del ratón (para el color de fondo) y mantenlo pulsado mientras dibuja.
 
-1. Presione el botón primario del mouse (para el color de primer plano) o el botón secundario del mouse (para el color de fondo) y manténgalo presionado mientras dibuja.
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Para seleccionar y utilizar una herramienta de dibujo en el menú Imagen
 
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Para seleccionar y usar una herramienta de dibujo en el menú imagen
+1. Vaya al menú**Herramientas** **de imagen** > .
 
-1. Seleccione el **imagen** menú y seleccione el **herramientas** comando.
+1. En el submenú en cascada, elija la herramienta que desea utilizar.
 
-1. En el submenú en cascada, elija la herramienta que desea usar.
+## <a name="lines-or-closed-figures"></a>Líneas o figuras cerradas
 
-## <a name="lines-or-closed-figures"></a>Las líneas o figuras cerradas
+Las herramientas del **Editor** de imágenes para dibujar líneas y figuras cerradas funcionan de la misma manera: se coloca el punto de inserción en un punto y se arrastra a otro. Para las líneas, estos puntos son los puntos finales. Para las figuras cerradas, estos puntos son esquinas opuestas de un rectángulo que delimita la figura.
 
-El editor de imágenes de las herramientas de dibujo de líneas y figuras cerradas todas funcionan de la misma manera: sitúe el cursor en un punto y arrastrar a otra. Para las líneas, estos puntos son los puntos de conexión. Figuras cerradas, estos puntos son las esquinas opuestas de un rectángulo delimitador en la ilustración.
-
-Las líneas se dibujan con un ancho determinado por la selección de pincel actual y las figuras enmarcadas se dibujan con un ancho determinado por la selección actual del ancho. Líneas y las figuras, enmarcado tanto rellenado, se dibujan en el color de primer plano actual si presiona el botón primario del mouse, o en el color de fondo actual, si presiona el botón secundario del mouse.
+Las líneas se dibujan en un ancho determinado por la selección actual del pincel y las figuras enmarcadas se dibujan en un ancho determinado por la selección de anchura actual. Las líneas y todas las figuras, tanto enmarcadas como rellenadas, se dibujan en el color de primer plano actual si pulsa el botón izquierdo del ratón o en el color de fondo actual si pulsa el botón derecho del ratón.
 
 ### <a name="to-draw-a-line"></a>Para dibujar una línea
 
-1. En el [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md) (o desde el **imagen** menú, **herramientas** comando), elija el **línea** herramienta.
+1. Utilice la barra de herramientas Editor de [imágenes](../windows/toolbar-image-editor-for-icons.md) o vaya al **menú**> **Herramientas** de imagen y elija la herramienta **Línea.**
 
-1. Si es necesario, seleccione los colores y un pincel:
+1. Si es necesario, seleccione colores y un pincel:
 
-   - En el [paleta de colores](../windows/colors-window-image-editor-for-icons.md), seleccione el botón primario del mouse para seleccionar un color de primer plano o el botón secundario del mouse para seleccionar un color de fondo.
+   - En la [paleta Colores](../windows/colors-window-image-editor-for-icons.md), seleccione el botón izquierdo del ratón para seleccionar un color de primer plano o el botón derecho del ratón para seleccionar un color de fondo.
 
-   - En el [selector de opciones](../windows/toolbar-image-editor-for-icons.md), seleccione una forma que representa el pincel que desea usar.
+   - En el [selector Opciones](../windows/toolbar-image-editor-for-icons.md), seleccione una forma que represente el pincel que desea utilizar.
 
-1. Coloque el puntero en el punto de partida de la línea.
+1. Coloque el puntero en el punto inicial de la línea.
 
-1. Arrastre al extremo de la línea.
+1. Arrastre hasta el punto final de la línea.
 
-### <a name="to-draw-a-closed-figure"></a>Para dibujar una figura cerrada.
+### <a name="to-draw-a-closed-figure"></a>Para dibujar una figura cerrada
 
-1. En el **Editor de imágenes** barra de herramientas (o desde el **imagen** menú, **herramientas** comando), seleccione un **dibujo de figuras cerradas** herramienta.
+1. Utilice la barra de herramientas Editor de **imágenes** o vaya al **menú** > **Herramientas** de imagen y seleccione una herramienta Dibujo de **figura cerrada.**
 
-   El **dibujo de figuras cerradas** herramientas crean figuras a como se indica en sus respectivos botones.
+   Las herramientas **Dibujo de figura cerrada** crean figuras como se indica en sus respectivos botones.
 
-1. Si es necesario, seleccione los colores y un ancho de línea.
+1. Si es necesario, seleccione colores y un ancho de línea.
 
-1. Mueva el puntero a una de las esquinas del área rectangular en la que va a dibujar en la ilustración.
+1. Mueva el puntero a una esquina del área rectangular en la que desea dibujar la figura.
 
 1. Arrastre el puntero a la esquina diagonalmente opuesta.
 
-## <a name="custom-brushes"></a>Pinceles predeterminados
+## <a name="custom-brushes"></a>Pinceles personalizados
 
-Un pincel personalizado es una parte rectangular de una imagen que recoger y usar como uno de los **imagen** pincel predefinido del editor. Todas las operaciones que puede realizar en una selección, puede realizar en un pincel personalizado también.
+Un pincel personalizado es una parte rectangular de una imagen que se recoge y se utiliza como uno de los pinceles ya hechos del **Editor**de imágenes. Todas las operaciones que puede realizar en una selección, también se puede realizar en un pincel personalizado.
 
-### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Para crear un pincel personalizado desde una parte de una imagen
+### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Para crear un pincel personalizado a partir de una parte de una imagen
 
-1. [Seleccione la parte de la imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) que desea usar para un pincel.
+1. Seleccione la parte de la imagen que desea utilizar para un pincel.
 
-1. Mantenga el **MAYÚS** clave hacia abajo, elija en la selección y arrastre el puntero sobre la imagen. O desde el **imagen** menú, elija **usar la selección como pincel**.
+1. Mantenga pulsada la tecla **Mayús,** elija en la selección y arrástrela a través de la imagen, o vaya al **menú** > **Selección de uso**de imagen como pincel .
 
-   La selección se convierte en un pincel personalizado que distribuye los colores de la selección en la imagen. Copias de la selección se dejan a lo largo de la trayectoria de arrastre. Cuanto más lentamente arrastre, se realizan las copias más.
+   La selección se convierte en un pincel personalizado que distribuye los colores de la selección a través de la imagen. Las copias de la selección se dejan a lo largo del trazado de arrastre. Cuanto más lentamente arrastres, más copias se hacen.
 
    > [!NOTE]
-   > Seleccionar el **utilizar una selección como pincel** sin seleccionar primero una parte de la imagen se utiliza toda la imagen como un pincel. El resultado de usar un pincel personalizado también depende de si ha seleccionado un [fondo transparente u opaco](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+   > Al seleccionar **Usar una selección como pincel** sin seleccionar primero una parte de la imagen, se utilizará toda la imagen como pincel. El resultado del uso de un pincel personalizado también dependerá de si ha seleccionado un [fondo opaco o transparente.](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)
 
-Píxeles de un pincel personalizado que coincida con el color de fondo actual normalmente son transparentes: no pinte de la imagen existente. Puede cambiar este comportamiento para que se pinte píxeles de color de fondo a través de la imagen existente.
+Los píxeles de un pincel personalizado que coinciden con el color de fondo actual son normalmente transparentes: no pintan sobre la imagen existente. Puede cambiar este comportamiento para que los píxeles de color de fondo pinten sobre la imagen existente.
 
-Puede usar el pincel personalizado como un sello o una galería de símbolos para crear distintos efectos especiales.
+Puede utilizar el pincel personalizado como un sello o una galería de símbolos para crear diferentes efectos especiales.
 
-### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Para dibujar formas de pincel personalizado en el color de fondo
+### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Para dibujar formas de pincel personalizadas en el color de fondo
 
-1. [Seleccionar un fondo opaco o transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+1. Seleccione un fondo opaco o transparente.
 
-1. [Establecer el color de fondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) al color en el que va a dibujar.
+1. Establezca el color de fondo en el color en el que desea dibujar.
 
-1. Coloque el pincel personalizado donde va a dibujar.
+1. Coloque el pincel personalizado donde desee dibujar.
 
-1. Seleccione el botón secundario del mouse. Las regiones opacas del pincel personalizado se dibujan en el color de fondo.
+1. Seleccione el botón derecho del ratón. Las regiones opacas del pincel personalizado se dibujan en el color de fondo.
 
-### <a name="to-double-or-halve-the-custom-brush-size"></a>Para duplicar o a la mitad del tamaño del pincel personalizado
+### <a name="to-double-or-halve-the-custom-brush-size"></a>Para duplicar o reducir a la mitad el tamaño del pincel personalizado
 
-Presione el **signo** (**+**) clave duplicar el tamaño del pincel, o el **signo** (**-**) para dividirlo .
+Presione la tecla**+** Signo **más** ( ) para duplicar**-** el tamaño del pincel, o la tecla Signo **menos** ( ) para reducirlo a la mitad.
 
 ### <a name="to-cancel-the-custom-brush"></a>Para cancelar el pincel personalizado
 
-Presione **Esc** o elija otra herramienta de dibujo.
+Pulse **Esc** o elija otra herramienta de dibujo.
 
 ## <a name="requirements"></a>Requisitos
 
-Ninguna
+None
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
-[Uso de colores](../windows/working-with-color-image-editor-for-icons.md)
+[Cómo: Crear un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Cómo: Editar una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Cómo: Trabajar con Color](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Teclas del acelerador](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-ms.openlocfilehash: 66e7b907e3ed50c97e5cc864d51c621713cbf992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f021f2023af839413306c1e3d56dc741749cf216
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152051"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Configuración de la aplicación, Asistente para archivos DLL de MFC
 
@@ -51,4 +51,3 @@ Seleccione si la DLL de MFC debe admitir la automatización y si deben admitir s
 
 [Asistente para archivos DLL de MFC](../../mfc/reference/mfc-dll-wizard.md)<br/>
 [Creación de un proyecto DLL de MFC](../../mfc/reference/creating-an-mfc-dll-project.md)
-

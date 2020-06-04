@@ -1,37 +1,40 @@
 ---
 title: .PUSHREG
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .PUSHREG
 helpviewer_keywords:
 - .PUSHREG directive
 ms.assetid: e0c83758-dfed-40ea-afe6-cb833c8d2d30
-ms.openlocfilehash: 19e36f1c0b073c5b174ea9acb0f1eaac7d771c46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6ffd3668f47732144e8c632410f6dfde6b2f31
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501769"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318298"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Genera un `UWOP_PUSH_NONVOL` entrada de código de desenredo para registra especificado mediante el desplazamiento actual en el prólogo de número.
+Genera una entrada de código de desenredado de `UWOP_PUSH_NONVOL` para el número de registro especificado utilizando el desplazamiento actual en el prólogo.
 
 ## <a name="syntax"></a>Sintaxis
 
-> . Register PUSHREG
+> . *Registro* de PUSHREG
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-. PUSHREG permite a los usuarios de ml64.exe especificar cómo se desenreda una función de marco y solo se permite en el prólogo, que se extiende desde el [PROC](../../assembler/masm/proc.md) declaración de marco para el [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva. Estas directivas no generan código; solo generan `.xdata` y `.pdata`. . PUSHREG debe ir precedido de instrucciones que implementan las acciones que no resulte dañada. Es una buena práctica para ajustar las directivas de desenredado y el código que están diseñadas para desenredo en una macro para asegurarse de acuerdo.
+**. PUSHREG** permite a los usuarios de ml64. exe especificar cómo se desenreda una función de marco y solo se permite dentro del prólogo, que se extiende desde la declaración de **fotogramas** de [proceso](proc.md) a [. Directiva ENDPROLOG](dot-endprolog.md) . Estas directivas no generan código; solo generan `.xdata` y `.pdata`. **. PUSHREG** debe ir precedida de instrucciones que implementen realmente las acciones que se van a desenredar. Es una buena práctica encapsular las directivas de desenredado y el código que están diseñadas para desenredar en una macro para garantizar el acuerdo.
 
-Para obtener más información, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+*el registro* puede ser uno de: \
+RAX | RCX | RDX | RBX | RDI | RSI | RBP | R8 | R9 | R10 | R11 | R12 | R13 | R14 | R15.
+
+Para obtener más información, consulte [MASM para x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Ejemplo
 
 ### <a name="description"></a>Descripción
 
-El ejemplo siguiente muestra cómo insertar tegisters no volátil.
+En el ejemplo siguiente se muestra cómo se envían registros no volátiles.
 
 ### <a name="code"></a>Código
 
@@ -57,4 +60,5 @@ END
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

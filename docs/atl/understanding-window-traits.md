@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - window traits
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
-ms.openlocfilehash: 0ab1a3c8f20a8e81304cdae68731bc70fbfc05c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29549e54051405fc3dd4d5d7ae70a382ad7a62ea
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196188"
 ---
 # <a name="understanding-window-traits"></a>Descripción de rasgos de las ventanas
 
@@ -39,4 +39,3 @@ Cada una de estas funciones se pasará algún valor de estilo en tiempo de ejecu
 ## <a name="see-also"></a>Vea también
 
 [Clases de ventana](../atl/atl-window-classes.md)
-

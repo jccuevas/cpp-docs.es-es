@@ -5,16 +5,16 @@ helpviewer_keywords:
 - connection points [C++], examples
 - examples [ATL]
 ms.assetid: a49721b7-f308-43de-8868-f662a94bc81a
-ms.openlocfilehash: 9312db740171672e6b0f231855408e0d0a9e060d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f33364cee65031c358fb546312f3fe2b7ae854d3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495997"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491797"
 ---
 # <a name="atl-connection-point-example"></a>Ejemplo de puntos de conexión ATL
 
-En este ejemplo se muestra un objeto que admite [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) como una interfaz de salida:
+En este ejemplo se muestra un objeto que admite [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) como una interfaz de salida:
 
 [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]
 
@@ -25,4 +25,3 @@ Al especificar `IPropertyNotifySink` como una interfaz de salida, puede usar la 
 ## <a name="see-also"></a>Vea también
 
 [Punto de conexión](../atl/atl-connection-points.md)
-

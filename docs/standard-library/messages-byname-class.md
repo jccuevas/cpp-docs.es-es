@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 7b341f3e1dbf76021911c70560b83932b5302191
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605346"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689329"
 ---
-# <a name="messagesbyname-class"></a>messages_byname (Clase)
+# <a name="messages_byname-class"></a>messages_byname (Clase)
 
-La clase de plantilla derivada describe un objeto que puede actuar como una faceta de mensajes de una configuración regional concreta, lo que permite la recuperación de mensajes localizados.
+La plantilla de clase derivada describe un objeto que puede actuar como una faceta de mensaje de una configuración regional determinada, lo que permite la recuperación de mensajes localizados.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname*<br/>
+@No__t_1 *_Locname*
 Una configuración regional con nombre.
 
-*_Refs*<br/>
+@No__t_1 *_Refs*
 Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 
-Su comportamiento viene determinado por la configuración regional con nombre *_Locname*. Cada constructor inicializa su objeto base con [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
+Su comportamiento viene determinado por el *_Locname*de configuración regional con nombre. Cada constructor inicializa su objeto base con [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -57,4 +57,4 @@ Su comportamiento viene determinado por la configuración regional con nombre *_
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

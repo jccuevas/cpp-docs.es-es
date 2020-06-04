@@ -1,26 +1,26 @@
 ---
 title: Error recuperable A2006 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 80283bde4dff36e32d276c998f6797b6eeed8160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 058100984acbd42ac2993732ab619c0a27c0edd2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490069"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317089"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Error recuperable A2006 de ML
 
-**símbolo no definido: identificador**
+**símbolo sin definir: identificador**
 
 Se intentó usar un símbolo que no se definió.
 
-Puede haberse producido uno de los siguientes:
+Se puede haber producido una de las siguientes acciones:
 
 - No se definió un símbolo.
 
@@ -28,12 +28,12 @@ Puede haberse producido uno de los siguientes:
 
 - Se definió un símbolo en un archivo de inclusión que no se incluyó.
 
-- Se usó un símbolo externo sin un [EXTERN](../../assembler/masm/extern-masm.md) o [EXTERNDEF](../../assembler/masm/externdef.md) directiva.
+- Se usó un símbolo externo sin una directiva [extern](extern-masm.md) o [EXTERNDEF](externdef.md) .
 
-- Un nombre de símbolo se escribió correctamente.
+- No se ha escrito correctamente un nombre de símbolo.
 
-- Se hace referencia a una etiqueta de código local fuera de su ámbito.
+- Se hizo referencia A una etiqueta de código local fuera de su ámbito.
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

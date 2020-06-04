@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3094
 ms.assetid: 10da9b7c-e72d-4013-9925-c83e1bb142db
-ms.openlocfilehash: 1b2cd29738763e5b31cc6727126114fca509a47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9d3aaf8911e74734bb6a8ac03dfd6ebe5bc7a8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512588"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751331"
 ---
 # <a name="compiler-error-c3094"></a>Error del compilador C3094
 
 'attribute': uso anónimo no permitido
 
-Un atributo no estaba dirigido correctamente.  Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Un atributo no estaba dirigido correctamente.  Para obtener más información, consulta [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C3094:
 
-```
+```cpp
 // C3094.cpp
 // compile with: /clr /c
 using namespace System;

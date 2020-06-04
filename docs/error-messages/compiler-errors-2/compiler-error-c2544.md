@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2544
 ms.assetid: 8e79b74a-4e92-4752-a5fe-c3143dfc5524
-ms.openlocfilehash: 85136a8d05b2a9f4bdc7a53571aba83cc8fca1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 569f092adfc49116337dc39cdf3c3f33d55ffcb9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639626"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202519"
 ---
 # <a name="compiler-error-c2544"></a>Error del compilador C2544
 
-se esperaba ')' para el operador '()'
+se esperaba ') ' para el operador ' () '
 
-Falta un paréntesis izquierdo del operador de llamada de función.
+Falta un paréntesis izquierdo en el operador de llamada de función.
 
-Este error puede deberse a la expansión de macro.
+Este error puede deberse a la expansión de macros.

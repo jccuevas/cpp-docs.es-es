@@ -1,26 +1,27 @@
 ---
 title: .CONTINUE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .CONTINUE
 helpviewer_keywords:
 - .CONTINUE directive
 ms.assetid: 60a6e46d-49e6-4d65-97d0-cbe8c47b3fab
-ms.openlocfilehash: ac6d76247499c715ede0be6f7e426435e72bdf3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c6af474e065a17c413700d4826f9a73dcaaade7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647439"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314099"
 ---
-# <a name="continue"></a>.CONTINUE
+# <a name="continue-32-bit-masm"></a>. CONTINUE (32 bits MASM)
 
-Genera código para saltar a la parte superior de un [. MIENTRAS](../../assembler/masm/dot-while.md) o [. Repita](../../assembler/masm/dot-repeat.md) bloquear si `condition` es true.
+Genera código para saltar a la parte superior de [. WHILE](dot-while.md) o [. REPETIR](dot-repeat.md) bloque si la *condición* es verdadera. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
-> . CONTINUAR [[. Condición IF]]
+> **. CONTINUAR** ⟦ **. IF** *condición*⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

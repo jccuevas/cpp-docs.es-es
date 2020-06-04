@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-ms.openlocfilehash: c48298cf802600995dbbf68885896b6feccb807d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46f0a23fcfd949843e3548354f52970b10b6d63b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554731"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169492"
 ---
-# <a name="defining-asm-blocks-as-c-macros"></a>Definición de bloques __asm como macros de C
+# <a name="defining-__asm-blocks-as-c-macros"></a>Definición de bloques __asm como macros de C
 
 **Específicos de Microsoft**
 
@@ -47,14 +47,14 @@ La tercera y la cuarta palabras clave `__asm` son necesarias como separadores de
 
 Las llaves también son esenciales. Si las omite, las instrucciones de C o C++ situadas en la misma línea a la derecha de la llamada a la macro pueden confundir al compilador. Sin la llave de cierre, el compilador no puede saber dónde se detiene el código de ensamblado, e interpretará las instrucciones de C o C++ detrás del bloque `__asm` como instrucciones de ensamblado.
 
-Comentarios de estilo de ensamblado que comienzan con un punto y coma (**;**) continúan hasta el final de la línea. Esto causa problemas en las macros porque el compilador omite todo lo que aparece detrás del comentario, hasta el final de la línea lógica. Lo mismo ocurre con los comentarios de C o C++ de una sola línea ( `// comment`). Para evitar errores, utilice comentarios de C de estilo antiguo ( `/* comment */`) en los bloques `__asm` definidos como macros.
+Los comentarios de estilo de ensamblado que comienzan con un punto y coma ( **;** ) continúan hasta el final de la línea. Esto causa problemas en las macros porque el compilador omite todo lo que aparece detrás del comentario, hasta el final de la línea lógica. Lo mismo ocurre con los comentarios de C o C++ de una sola línea ( `// comment`). Para evitar errores, utilice comentarios de C de estilo antiguo ( `/* comment */`) en los bloques `__asm` definidos como macros.
 
 Un bloque `__asm` escrito como una macro de C puede aceptar argumentos. A diferencia de las macros de C normales, una macro `__asm` no puede devolver un valor. Así que no puede utilizar estas macros en expresiones de C o C++.
 
-Procure no llamar a macros de este tipo de forma indiscriminada. Por ejemplo, la llamada a una macro del lenguaje de ensamblado en una función declarada con la convención `__fastcall` puede producir resultados inesperados. (Consulte [uso y conservación de registros en un ensamblado alineado](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)
+Procure no llamar a macros de este tipo de forma indiscriminada. Por ejemplo, la llamada a una macro del lenguaje de ensamblado en una función declarada con la convención `__fastcall` puede producir resultados inesperados. (Consulte [uso y conservación de registros en un ensamblado insertado](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)).
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

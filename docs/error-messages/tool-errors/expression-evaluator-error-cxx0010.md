@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0010
 - CXX0010
 ms.assetid: 8bd474b0-da12-4990-8569-6392f09f05f6
-ms.openlocfilehash: d7d8de32bd62e0c92ea293f151376d9faa6cb9b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: afcce2405d487a2d88399ea28a95e63fd47f7106
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196149"
 ---
 # <a name="expression-evaluator-error-cxx0010"></a>Error del evaluador de expresiones CXX0010
 
-Falta el corchete de apertura
+falta el corchete de apertura
 
-La expresión contiene corchetes no coincidentes. Vuelva a escribir la expresión entre corchetes equilibradas.
+La expresión contiene CORCHETES desequilibrados. Vuelva a escribir la expresión con corchetes equilibrados.
 
 Este error es idéntico a CAN0010.

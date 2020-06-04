@@ -1,21 +1,21 @@
 ---
-title: intervalo (atributo de COM de C++)
+title: Range (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214622"
 ---
 # <a name="range-c"></a>range (C++)
 
-Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.
+Especifica un intervalo de valores permitidos para los argumentos o campos cuyos valores se establecen en tiempo de ejecución.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,14 +26,14 @@ Especifica un intervalo de valores permitidos para los argumentos o los campos c
 ### <a name="parameters"></a>Parámetros
 
 *low*<br/>
-El valor bajo del intervalo.
+Valor de intervalo inferior.
 
 *high*<br/>
-El valor de rango alto.
+Valor de intervalo alto.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **intervalo** atributo de C++ tiene la misma funcionalidad que el [intervalo](/windows/desktop/Midl/range) atributo MIDL.
+El atributo de **intervalo** C++ tiene la misma funcionalidad que el atributo MIDL de [intervalo](/windows/win32/Midl/range) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -59,12 +59,12 @@ __interface ICustom {
 |-|-|
 |**Se aplica a**|Método de interfaz, parámetro de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

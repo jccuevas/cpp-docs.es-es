@@ -1,17 +1,17 @@
 ---
 title: SIZESTR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - SIZESTR
 helpviewer_keywords:
 - SIZESTR directive
 ms.assetid: 8fe88b2e-8a44-4787-9015-030dfb6ea70e
-ms.openlocfilehash: cfb0eb83e52e567c60f0bf600444efb2b73c69ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3664bb5d416d25d4804c4d956c446dec670103e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603702"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318454"
 ---
 # <a name="sizestr"></a>SIZESTR
 
@@ -19,8 +19,9 @@ Busca el tamaño de un elemento de texto.
 
 ## <a name="syntax"></a>Sintaxis
 
-> nombre SIZESTR textitem
+> *nombre* **sizestr (** *textitem*
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

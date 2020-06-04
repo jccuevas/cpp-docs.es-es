@@ -2,12 +2,12 @@
 title: Cambiar firma
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
-ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
-ms.translationtype: HT
+ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171910"
 ---
 # <a name="change-signature"></a>Cambiar firma
 
@@ -17,7 +17,7 @@ ms.locfileid: "52281953"
 
 **Por qué:** Podría cambiar el orden de estos parámetros manualmente y, después, buscar todas las llamadas a esa función y cambiarlas una por una, pero esto podría provocar errores.  Esta herramienta de refactorización realizará la tarea automáticamente.
 
-**Cómo**:
+**Cómo:**
 
 1. Coloque el cursor del ratón o texto en el nombre del método que se va a modificar, o bien uno de sus usos:
 
@@ -38,9 +38,9 @@ ms.locfileid: "52281953"
    | Botón | Descripción
    | ------ | ---
    | **Up/Down**    | Mueve el parámetro seleccionado hacia arriba y hacia abajo en la lista.
-   | **Add**        | Agrega un parámetro nuevo a la lista
+   | **Add (Agregar)**        | Agrega un parámetro nuevo a la lista
    | **Remove**     | Quita el parámetro seleccionado de la lista.
-   | **Modificar**     | Modifica el parámetro seleccionado, cambiando su tipo, nombre y si es opcional, y cuál debería ser su valor insertado.
+   | **Modify**     | Modifica el parámetro seleccionado, cambiando su tipo, nombre y si es opcional, y cuál debería ser su valor insertado.
    | **Revertir**     | Restaura el parámetro seleccionado a su estado original.
    | **Revertir todo** | Restaura todos los parámetros a su estado original.
 
@@ -55,8 +55,8 @@ ms.locfileid: "52281953"
 
    | Entrada | Descripción
    | ----- | ---
-   | **Type**               | El tipo del parámetro (int, double, float, etc.)
-   | **Name**               | El nombre del parámetro.
+   | **Tipo**               | El tipo del parámetro (int, double, float, etc.)
+   | **Nombre**               | Nombre del parámetro
    | **Parámetro opcional** | Hace que el parámetro se especifique de manera opcional.
    | **Valor insertado**     | El valor insertado en las llamadas a la función donde no se especifica el parámetro (solo es válido para **Agregar**).
    | **Valor predeterminado**      | El valor que usa la función si el autor de la llamada no especifica ninguno (solo es válido para **Parámetros opcionales**).

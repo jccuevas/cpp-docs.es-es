@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - U1001
 ms.assetid: 5d7da559-6cbd-44d6-848c-aaf54cae0d1a
-ms.openlocfilehash: bfe2edf9c57eda073826a8c161ae0c358f3a6232
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb39d9080fdceb1ab26c32e9aedc654323581eb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662246"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173457"
 ---
 # <a name="nmake-fatal-error-u1001"></a>Error grave de NMAKE U1001
 
-error de sintaxis: carácter no válido 'character' en macro
+error de sintaxis: carácter ' carácter ' no válido en la macro
 
-El carácter especificado aparece en una macro, pero no es una letra, número o carácter de subrayado.
+El carácter especificado aparece en una macro, pero no es una letra, un número o un carácter de subrayado.
 
 Este error puede deberse a que faltan dos puntos en una expansión de macro:
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, stripping private symbols
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-ms.openlocfilehash: d03ee9d4f2ad3626dc260d171ef349a3a392fd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ed36eca727a15a3c70bc51a07cd3c143d7f66da
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320141"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (Quitar símbolos privados)
 
@@ -31,7 +31,7 @@ Un nombre especificado por el usuario para la base de datos de programa (PDB) qu
 
 ## <a name="remarks"></a>Comentarios
 
-La opción /PDBSTRIPPED crea un segundo archivo de programa (PDB) de la base de datos cuando se compilación la imagen del programa con cualquiera del compilador o vinculador opciones que generan un archivo PDB ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd o /Zi). En este segundo archivo PDB se omiten los símbolos que no se desea suministrar a los clientes. El segundo archivo PDB solo contendrá:
+La opción /PDBSTRIPPED crea un segundo archivo de programa (PDB) de la base de datos cuando se compilación la imagen del programa con cualquiera del compilador o vinculador opciones que generan un archivo PDB ([/DEBUG](debug-generate-debug-info.md), [/Z7](z7-zi-zi-debug-information-format.md), /Zd o /Zi). En este segundo archivo PDB se omiten los símbolos que no se desea suministrar a los clientes. El segundo archivo PDB solo contendrá:
 
 - Símbolos públicos
 
@@ -53,7 +53,7 @@ Si no crea un archivo PDB, /PDBSTRIPPED se omite.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -67,5 +67,5 @@ Si no crea un archivo PDB, /PDBSTRIPPED se omite.
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

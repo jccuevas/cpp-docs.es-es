@@ -1,10 +1,12 @@
 ---
 title: _ismbbalnum, _ismbbalnum_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _ismbbalnum
 - _ismbbalnum_l
-apilocation:
+- _o__ismbbalnum
+- _o__ismbbalnum_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbalnum
 - ismbbalnum
@@ -28,14 +34,14 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: 5b5f54754907c09a34b0f4c3bae3e5c27336ca36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abbc664170c274929875ef2e4b7af70bc5812a94
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554848"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917554"
 ---
-# <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum, _ismbbalnum_l
+# <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum, _ismbbalnum_l
 
 Determina si un carácter multibyte especificado es alfa o numérico.
 
@@ -52,7 +58,7 @@ int _ismbbalnum_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 *locale*<br/>
@@ -64,9 +70,13 @@ Configuración regional que se va a usar.
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-es distinto de cero para *c*, o 0 si no lo está.
+es distinto de cero para *c*, o 0 si no lo es.
 
-La versión de esta función con el **_l** sufijo es idéntico, salvo que usa la configuración regional pasada en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional.
+La versión de esta función con el sufijo **_L** es idéntica, salvo que usa la configuración regional que se pasa en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional.
+
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,13 +85,13 @@ La versión de esta función con el **_l** sufijo es idéntico, salvo que usa la
 |**_ismbbalnum**|\<mbctype.h>|
 |**_ismbbalnum_l**|\<mbctype.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
 Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

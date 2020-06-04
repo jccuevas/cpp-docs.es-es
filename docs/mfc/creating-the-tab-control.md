@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], creating
 - TCS_EX_FLATSEPARATORS extended style
 ms.assetid: 3a9c2d64-f5f4-41ea-84ab-fceb73c3dbdc
-ms.openlocfilehash: c444c938c88c2e8bf079f0f3eba80776c54af5ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4627009e2e07d1c5692d83d8d6262a9fcd37977e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241967"
 ---
 # <a name="creating-the-tab-control"></a>Crear el control de pestaña
 
@@ -62,4 +62,3 @@ Esto quitará los separadores que aparecen entre los botones de su `CTabCtrl` ob
 
 [Uso de CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

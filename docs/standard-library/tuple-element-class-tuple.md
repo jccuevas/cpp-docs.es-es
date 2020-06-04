@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: b8b50e04e530e2d21b7a4e042d9feb2984e639db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596747"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684461"
 ---
-# <a name="tupleelement-class"></a>tuple_element (Clase)
+# <a name="tuple_element-class"></a>tuple_element (Clase)
 
 Contiene un elemento `tuple` . Las especializaciones contienen elementos `array` y elementos `pair`.
 
@@ -56,35 +56,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parámetros
 
-*Index*<br/>
+*Índice* \
 Índice del elemento designado.
 
-*Tuple*<br/>
+@No__t_1 de *tupla*
 El tipo de tupla.
 
-*Elem*<br/>
+@No__t_1 *Elem*
 El tipo de un elemento de matriz.
 
-*Size*<br/>
+*Tamaño* \
 Se refiere al tamaño de la matriz.
 
-*T1*<br/>
-El tipo del primer elemento en un par.
+@No__t_1 *T1*
+Tipo del primer elemento de un par.
 
-*T2*<br/>
+@No__t_1 *T2*
 El tipo del segundo elemento de un par.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla `tuple_element` tiene una definición de tipo anidado `type` que es un sinónimo para el tipo de índice *índice* del tipo de tupla *tupla*.
+La plantilla de clase `tuple_element` tiene una definición de tipos anidada `type` que es un sinónimo del tipo en el *Índice* de índice de la *tupla*de tipo de tupla.
 
 La definición de tipo `tuple_element_t` es un alias adecuado para `tuple_element<Index, Tuple>::type`.
 
-La especialización de la clase de plantilla para matrices proporciona una interfaz a un `array` como una tupla de elementos `Size`, cada uno con el mismo tipo. Cada especialización tiene una definición de tipo anidada `type` que es un sinónimo del tipo de la *índice* elemento de la `array`, con cualquier calificador const y volatile conservado.
+La especialización de plantilla de clase para matrices proporciona una interfaz a un `array` como una tupla de `Size` elementos, cada uno de los cuales tiene el mismo tipo. Cada especialización tiene una definición de tipo anidada `type` que es un sinónimo del tipo del elemento *index* del `array`, con cualquier calificación const-volatile conservada.
 
 Las especializaciones de plantilla para tipos `pair` tienen una definición de tipo de miembro único, `type`, que es un sinónimo del tipo del elemento en la posición especificada en el par, con cualquier calificador const o volatile conservado. La definición de tipo `tuple_element_t` es un alias adecuado para `tuple_element<N, pair<T1, T2>>::type`.
 
-Use la [get (función) &lt;utilidad&gt; ](../standard-library/utility-functions.md#get) para devolver el elemento en una posición especificada, o de un tipo especificado.
+Utilice la [función get &lt;utility &gt;](../standard-library/utility-functions.md#get) para devolver el elemento en una posición especificada o de un tipo especificado.
 
 ## <a name="example"></a>Ejemplo
 
@@ -178,10 +178,6 @@ int main() {
 
 **Encabezado:** \<array> (para la especialización de matrices)
 
-**Encabezado:** \<utilidad > (para especializaciones de pares)
+**Encabezado:** \<utility > (para especializaciones de pares)
 
 **Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[tuple ](../standard-library/tuple-class.md)<br/>

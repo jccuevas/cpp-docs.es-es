@@ -1,26 +1,27 @@
 ---
 title: .ERRE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRE
 helpviewer_keywords:
 - .ERRE directive
 ms.assetid: cfb5a4bb-4488-4101-bd06-63ba43b1473e
-ms.openlocfilehash: 6e031b64aff2421b8908ed537b9c37e42b8ebc4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab432c5d1dc0a87e5de71688196332a56367b3ec
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526499"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313488"
 ---
 # <a name="erre"></a>.ERRE
 
-Genera un error si *expresión* es false (0).
+Genera un error si la *expresión* es false (0).
 
 ## <a name="syntax"></a>Sintaxis
 
-> . Expresión ERRE [[, mensaje]]
+> **. Erre** *Expression* ⟦ __,__ *Message*⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1020
 ms.assetid: 3e073ebf-9136-4bf8-ac6a-3c642ed64594
-ms.openlocfilehash: ac4a9d521728b22966f6d8824479d13cc7394601
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff4cc5564f59d0adf74ae86149130dd5d017a9ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182687"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>Error irrecuperable del compilador de recursos RC1020
 
-'#endif' inesperado
+' #endif ' inesperado
 
-Un `#endif` directiva apareciese sin coincidencia `#if`, **#ifdef**, o **#ifndef** directiva.
+Una directiva de `#endif` apareció sin una directiva `#if`, **#ifdef**o **#ifndef** coincidente.
 
-Asegúrese de que hay una coincidencia `#endif` para cada `#if`, **#ifdef**, y **#ifndef** instrucción.
+Asegúrese de que haya una `#endif` coincidente para cada instrucción `#if`, **#ifdef**y **#ifndef** .

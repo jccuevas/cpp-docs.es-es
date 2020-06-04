@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-ms.openlocfilehash: c6ab66fc606b58e87ac65373bf9f6a0662a720ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88dffe2874d29918315af65c6ea093c24695f97
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640276"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503410"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Asistente para componentes de páginas Active Server ATL
 
@@ -23,7 +23,7 @@ Use esta página del Asistente para componentes de páginas Active Server ATL pa
 
 - **OnStartPage/OnEndPage**
 
-   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) se llama a la primera vez que el script intenta tener acceso al objeto. **OnEndPage** se llama cuando finaliza el objeto de la secuencia de comandos de procesamiento.
+   [OnStartPage](/previous-versions//ms691624\(v=vs.85\)) se llama a la primera vez que el script intenta tener acceso al objeto. **OnEndPage** se llama cuando finaliza el objeto de la secuencia de comandos de procesamiento.
 
 - **Objeto intrínseco**
 
@@ -41,4 +41,3 @@ Use esta página del Asistente para componentes de páginas Active Server ATL pa
 
 [Asistente para componentes de páginas Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [Componente de páginas Active Server ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

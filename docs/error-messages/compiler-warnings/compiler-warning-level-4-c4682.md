@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6566c27999f218b7a214e32dde96bd1cf96fbb12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653068"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990126"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>Advertencia del compilador (nivel 4) C4682
 
 'parameter': no se especificó ningún atributo de parámetro direccional y se establece en [in] de forma predeterminada
 
-Un método sobre un parámetro de una interfaz con atributos no posee uno de los atributos direccionales: [in](../../windows/in-cpp.md) o [out](../../windows/out-cpp.md). El parámetro de establece de forma predeterminada en in.
+Un método en un parámetro de una interfaz con atributos no tiene uno de los atributos direccionales: [in](../../windows/in-cpp.md) o [out](../../windows/out-cpp.md). El parámetro tiene como valor predeterminado en in.
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 
 El ejemplo siguiente genera la advertencia C4682:
 
-```
+```cpp
 // C4682.cpp
 // compile with: /W4
 #pragma warning(default : 4682)

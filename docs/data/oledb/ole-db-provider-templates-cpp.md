@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-ms.openlocfilehash: e4b0523234e5e62b76762b07bb74b21a97c6713b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 793aa08630ec92f99c33c2a4f3688e78630a6c58
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361261"
 ---
 # <a name="ole-db-provider-templates-c"></a>Plantillas de proveedores OLE DB (C++)
 
@@ -70,5 +70,5 @@ Para obtener más información, consulte:
 ## <a name="see-also"></a>Vea también
 
 [Acceso a datos](../data-access-in-cpp.md)<br/>
-[Documentación del SDK de OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Documentación del SDK de OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [Referencia del programador de OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>

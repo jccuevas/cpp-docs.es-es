@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4641
 ms.assetid: 28fe5c3e-6039-42da-9100-1312b5b15aea
-ms.openlocfilehash: eea1f28c55c8beef5fada10080ebaac9371c94e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e3eab6e96e829e3c3fd9304e757ba653e8f19b4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477485"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991822"
 ---
 # <a name="compiler-warning-level-3-c4641"></a>Advertencia del compilador (nivel 3) C4641
 
 el comentario del documento XML tiene una referencia cruzada ambigua
 
-El compilador no pudo resolver una referencia de forma inequívoca. Para resolver esta advertencia, especifique la información de parámetros necesaria para que la referencia no sean ambiguos.
+El compilador no pudo resolver de forma inequívoca una referencia. Para resolver esta advertencia, especifique la información de parámetros necesaria para que la referencia no sea ambigua.
 
-Para obtener más información, consulta [XML Documentation](../../ide/xml-documentation-visual-cpp.md).
+Para obtener más información, consulta [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4641.
+En el ejemplo siguiente se genera C4641.
 
-```
+```cpp
 // C4641.cpp
 // compile with: /W3 /doc /clr /c
 

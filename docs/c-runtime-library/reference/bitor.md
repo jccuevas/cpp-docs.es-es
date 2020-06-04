@@ -1,7 +1,7 @@
 ---
 title: bitor
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bitor
 - std.bitor
@@ -20,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - bitor function
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
-ms.openlocfilehash: e8bb78e73b8beca4cbffd975f41c3432cf9fdefe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: bcd7639fd4959c95b198e080ae3c7d4fbd3234b8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171234"
 ---
 # <a name="bitor"></a>bitor
 
@@ -38,7 +41,7 @@ Alternativa al operador &#124;.
 #define bitor |
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La macro produce el operador &#124;.
 
@@ -70,4 +73,4 @@ int main( )
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<iso646.h>
+**Encabezado:** \<iso646. h >

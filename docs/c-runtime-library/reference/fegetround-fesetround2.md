@@ -1,10 +1,10 @@
 ---
 title: fegetround, fesetround
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fegetround
 - fesetround
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetround
 - fesetround
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b210dbce3104820f667d4ad0b4421277567b279f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666809"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941206"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -62,7 +65,7 @@ Si se ejecuta correctamente, **fesetround** devuelve 0. De lo contrario, devuelv
 
 Las operaciones de punto flotante pueden usar uno de los distintos modos de redondeo. Estos controlan en qué dirección se redondean los resultados de las operaciones de punto flotante cuando se almacenan los resultados. Se trata de los nombres y comportamientos de las macros de redondeo de punto flotante que se definen en \<fenv.h>:
 
-|Macro|Descripción|
+|Macro|DESCRIPCIÓN|
 |-----------|-----------------|
 |FE_DOWNWARD|Redondeo a infinito negativo.|
 |FE_TONEAREST|Redondeo al más próximo.|
@@ -77,13 +80,13 @@ El modo de redondeo actual afecta a estas operaciones:
 
 - Los resultados de los operadores aritméticos de punto flotante fuera de las expresiones constantes.
 
-- La biblioteca de redondeo de las funciones, como **rint** y **nearbyint**.
+- Las funciones de redondeo de la biblioteca, como **rimir** y **nearbyint (** .
 
 - Los valores devueltos de las funciones matemáticas de la biblioteca estándar.
 
 El modo de redondeo actual no afecta a estas operaciones:
 
-- El **trunc**, **ceil**, **floor**, y **lround** funciones de la biblioteca.
+- Las funciones de la biblioteca **trunc**, **Ceil (** , **Floor**y **lround** .
 
 - Las conversiones implícitas de punto flotante a entero, que siempre se redondean a cero.
 

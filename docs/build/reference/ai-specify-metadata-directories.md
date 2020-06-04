@@ -11,12 +11,12 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-ms.openlocfilehash: a9e752f68ed53c7a94fec1914bc42c39a17648b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3633cfe34a4f9c627f84cf401cb559f02f8c8229
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273227"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Especificar directorios de metadatos)
 
@@ -24,11 +24,11 @@ Especifica un directorio en el que el compilador debe buscar para resolver las r
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/AI**_directorio_
+> **/AI**_directory_
 
 ## <a name="arguments"></a>Argumentos
 
-*Directorio*<br/>
+*directory*<br/>
 Directorio o ruta de acceso donde debe buscar el compilador.
 
 ## <a name="remarks"></a>Comentarios
@@ -37,7 +37,7 @@ Un único directorio puede pasarse a una **/AI** invocación. Especifique uno **
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **General** página de propiedades.
 
@@ -49,6 +49,6 @@ Un único directorio puede pasarse a una **/AI** invocación. Especifique uno **
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [#using (directiva)](../../preprocessor/hash-using-directive-cpp.md)

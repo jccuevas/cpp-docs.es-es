@@ -1,6 +1,7 @@
 ---
 title: '&lt;atomic&gt;'
-ms.date: 11/04/2016
+description: Describe los tipos y las funciones disponibles en el encabezado atómico de la C++ biblioteca estándar.
+ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -48,16 +49,16 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600491"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991170"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
-Define las clases y las clases de plantilla que se van a usar para crear tipos que admitan operaciones atómicas.
+Define las clases y plantillas de clase que se van a utilizar para crear tipos que admitan operaciones atómicas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -65,24 +66,24 @@ Define las clases y las clases de plantilla que se van a usar para crear tipos q
 #include <atomic>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 > [!NOTE]
-> En el código que se compila con **/CLR**, este encabezado está bloqueado.
+> En el código compilado mediante [/clr: Pure](../build/reference/clr-common-language-runtime-compilation.md), este encabezado está bloqueado. Tanto **/clr: Pure** como **/clr: Safe** están en desuso en Visual Studio 2017 y versiones posteriores.
 
 Una operación atómica tiene dos propiedades clave que ayudan a usar varios subprocesos para manipular correctamente un objeto sin emplear bloqueos de exclusión mutua.
 
-- Dado que una operación atómica es indivisible, una segunda operación atómica sobre el mismo objeto desde un subproceso diferente puede obtener el estado del objeto únicamente antes o después de la primera operación atómica.
+- Dado que una operación atómica es indivisible, una segunda operación atómica en el mismo objeto desde un subproceso diferente puede obtener el estado del objeto solo antes o después de la primera operación atómica.
 
 - Según su argumento [memory_order](../standard-library/atomic-enums.md#memory_order_enum), una operación atómica establece requisitos de ordenación para la visibilidad de los efectos de otras operaciones atómicas del mismo subproceso. Por consiguiente, impide las optimizaciones del compilador que infringen los requisitos de ordenación.
 
 En algunas plataformas no sería posible implementar realmente las operaciones atómicas para algunos tipos sin usar bloqueos `mutex`. Un tipo atómico *no tiene bloqueos* si ninguna operación atómica sobre ese tipo emplea bloqueos.
 
-**C++11**: en los controladores de señal puede realizar operaciones atómicas sobre un objeto `obj` si `obj.is_lock_free()` o `atomic_is_lock_free(x)` son True.
+**C++ 11**: en los controladores de señal, puede realizar operaciones atómicas en un objeto `obj` si `obj.is_lock_free()` o `atomic_is_lock_free(x)` son true.
 
-La clase [atomic_flag](../standard-library/atomic-flag-structure.md) proporciona un tipo atómico mínimo que contiene un **bool** marca. Sus operaciones nunca tienen bloqueos.
+La clase [atomic_flag](../standard-library/atomic-flag-structure.md) proporciona un tipo atómico mínimo que contiene una marca **bool** . Sus operaciones nunca tienen bloqueos.
 
-La clase de plantilla `atomic<T>` almacena un objeto de su tipo de argumento `T` y proporciona acceso atómico a ese valor almacenado. Puede crear instancias de ella mediante cualquier tipo que se pueda copiar mediante [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) y cuya igualdad se pueda probar mediante [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). En concreto, puede usarla con tipos definidos por el usuario que cumplan estos requisitos y, en muchos casos, con tipos de punto flotante.
+La plantilla de clase `atomic<T>` almacena un objeto de su tipo de argumento `T` y proporciona acceso atómico a ese valor almacenado. Puede crear instancias de ella mediante cualquier tipo que se pueda copiar mediante [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) y cuya igualdad se pueda probar mediante [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). En concreto, puede usarla con tipos definidos por el usuario que cumplan estos requisitos y, en muchos casos, con tipos de punto flotante.
 
 La plantilla también tiene un conjunto de especializaciones para tipos enteros y una especialización parcial para punteros. Estas especializaciones proporcionan operaciones adicionales que no están disponibles a través de la plantilla principal.
 
@@ -94,9 +95,9 @@ Las especializaciones parciales `atomic<T *>` se aplican a todos los tipos de pu
 
 Las especializaciones `atomic<integral>` se aplican a todos los tipos enteros. Proporcionan operaciones adicionales que no están disponibles a través de la plantilla principal.
 
-Cada tipo `atomic<integral>` tiene una macro correspondiente que se puede usar en `if directive` para determinar en tiempo de compilación si las operaciones de ese tipo tienen bloqueos o no. Si el valor de la macro es cero, las operaciones del tipo tienen bloqueos. Si el valor es 1, las operaciones pueden no tener bloqueos y se necesita una comprobación en tiempo de ejecución. Si el valor es 2, las operaciones no tienen bloqueos. Puede usar la función `atomic_is_lock_free` para determinar en tiempo de ejecución si las operaciones sobre el tipo tienen bloqueos o no.
+Cada tipo `atomic<integral>` tiene una macro correspondiente que se puede usar en `if directive` para determinar en tiempo de compilación si las operaciones de ese tipo tienen bloqueos o no. Si el valor de la macro es cero, las operaciones en el tipo no tienen bloqueos. Si el valor es 1, las operaciones pueden no tener bloqueos y se necesita una comprobación en tiempo de ejecución. Si el valor es 2, las operaciones no tienen bloqueos. Puede usar la función `atomic_is_lock_free` para determinar en tiempo de ejecución si las operaciones sobre el tipo tienen bloqueos o no.
 
-Hay un tipo atómico con nombre correspondiente para cada uno de los tipos enteros que administra un objeto de ese tipo entero. Cada tipo `atomic_integral` tiene el mismo conjunto de funciones miembro que la instancia correspondiente de `atomic<T>` y se puede pasar a cualquiera de las funciones atómicas no miembro.
+Para cada uno de los tipos enteros, hay un tipo atómico con nombre correspondiente que administra un objeto de ese tipo entero. Cada tipo `atomic_integral` tiene el mismo conjunto de funciones miembro que la instancia correspondiente de `atomic<T>` y se puede pasar a cualquiera de las funciones atómicas no miembro.
 
 |Tipo `atomic_integral`.|Tipo entero|Macro `atomic_is_lock_free`|
 |----------------------------|-------------------|---------------------------------|
@@ -113,7 +114,7 @@ Hay un tipo atómico con nombre correspondiente para cada uno de los tipos enter
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**long long sin signo**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**unsigned Long Long**|ATOMIC_LLONG_LOCK_FREE|
 
 Existen nombres de typedef para especializaciones de la plantilla atómica para algunos de los tipos definidos en el encabezado \<inttypes.h>.
 
@@ -150,24 +151,24 @@ Existen nombres de typedef para especializaciones de la plantilla atómica para 
 |`atomic_intmax_t`|`atomic<intmax_t>`|
 |`atomic_uintmax_t`|`atomic<uintmax_t>`|
 
-## <a name="structs"></a>Estructuras
+## <a name="structs"></a>Structs
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[atomic (Estructura)](../standard-library/atomic-structure.md)|Describe un objeto que realiza operaciones atómicas sobre un valor almacenado.|
-|[atomic_flag (Estructura)](../standard-library/atomic-flag-structure.md)|Describe un objeto que se establece de forma atómica y borra un **bool** marca.|
+|[atomic_flag (Estructura)](../standard-library/atomic-flag-structure.md)|Describe un objeto que establece y borra de forma atómica una marca de **bool** .|
 
 ## <a name="enums"></a>Enumeraciones
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[memory_order (Enumeración)](../standard-library/atomic-enums.md#memory_order_enum)|Proporciona nombres simbólicos para las operaciones de sincronización en ubicaciones de memoria. Estas operaciones afectan a cómo las asignaciones de un subproceso se hacen visibles en otro.|
 
 ## <a name="functions"></a>Funciones
 
-En la lista siguiente, las funciones que no terminan en `_explicit` tienen la semántica `_explicit` correspondiente, salvo que tienen los argumentos implícitos [memory_order](../standard-library/atomic-enums.md#memory_order_enum) de `memory_order_seq_cst`.
+En la lista siguiente, las funciones que no terminan en `_explicit` tienen la semántica de la `_explicit`correspondiente, salvo que tienen los argumentos [memory_order](../standard-library/atomic-enums.md#memory_order_enum) implícitos de `memory_order_seq_cst`.
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Realiza una operación *atómica de comparación e intercambio*.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Realiza una operación *atómica de comparación e intercambio*.|
@@ -185,10 +186,10 @@ En la lista siguiente, las funciones que no terminan en `_explicit` tienen la se
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Resta un valor especificado de un valor almacenado existente.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Realiza una operación `exclusive or` bit a bit sobre un valor especificado y un valor almacenado existente.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Realiza una operación `exclusive or` bit a bit sobre un valor especificado y un valor almacenado existente.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Establece la marca de un `atomic_flag` objeto **false**.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Establece la marca de un `atomic_flag` objeto **false**.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Establece la marca de un `atomic_flag` objeto **true**.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Establece la marca de un `atomic_flag` objeto **true**.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Establece la marca de un objeto `atomic_flag` en **false**.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Establece la marca de un objeto `atomic_flag` en **false**.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Establece la marca de un objeto `atomic_flag` en **true**.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Establece la marca de un objeto `atomic_flag` en **true**.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Establece el valor almacenado en un objeto `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Especifica si las operaciones atómicas sobre un objeto especificado no tienen bloqueos.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera de forma atómica un valor.|
@@ -201,5 +202,5 @@ En la lista siguiente, las funciones que no terminan en `_explicit` tienen la se
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

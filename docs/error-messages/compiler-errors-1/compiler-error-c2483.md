@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2483
 ms.assetid: 5762b325-914b-442d-a604-e4617ba04038
-ms.openlocfilehash: d1a5632328c00ca2dcd03519d03fbdb648776a51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20b08c0d2cd89224ed3d3b8b34915deb947b0b4b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637884"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205119"
 ---
 # <a name="compiler-error-c2483"></a>Error del compilador C2483
 
->'*identificador*': no se puede declarar el objeto con constructor o destructor 'thread'
+>'*Identifier*': el objeto con el constructor o destructor no se puede declarar como ' Thread '
 
-Este mensaje de error es obsoleta en Visual Studio 2015 y versiones posteriores. En versiones anteriores, las variables declaradas con el `thread` atributo no se puede inicializar con un constructor u otra expresión que requiere la evaluación del tiempo de ejecución. Se requiere una expresión estática para inicializar `thread` datos.
+Este mensaje de error está obsoleto en Visual Studio 2015 y versiones posteriores. En versiones anteriores, las variables declaradas con el atributo `thread` no se pueden inicializar con un constructor u otra expresión que requiera la evaluación en tiempo de ejecución. Se requiere una expresión estática para inicializar los datos de `thread`.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2483 en Visual Studio 2013 y versiones anteriores.
+En el ejemplo siguiente se genera C2483 en Visual Studio 2013 y versiones anteriores.
 
 ```cpp
 // C2483.cpp
@@ -34,6 +34,6 @@ __declspec(thread) struct A {
 __declspec(thread) struct B {} b;   // OK
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [thread](../../cpp/thread.md)

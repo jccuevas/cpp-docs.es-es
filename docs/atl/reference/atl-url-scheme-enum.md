@@ -1,23 +1,23 @@
 ---
-title: Enumeración ATL_URL_SCHEME
+title: ATL_URL_SCHEME (enumeración)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATLUTIL/ATL::ATL_URL_SCHEME
 ms.assetid: f4131046-8ba0-4ec1-8209-84203f05d20e
-ms.openlocfilehash: bcc503082aa3acfaeb627467903e20775c7554d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d8307d6ea51c5ec7e63735360b8628a4c1ed782
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435157"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168584"
 ---
-# <a name="atlurlscheme"></a>ATL_URL_SCHEME
+# <a name="atl_url_scheme"></a>ATL_URL_SCHEME
 
-Los miembros de esta enumeración proporcionan constantes para los esquemas entendidos [CUrl](curl-class.md).
+Los miembros de esta enumeración proporcionan constantes para los esquemas que comprende el [rizo](curl-class.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 enum ATL_URL_SCHEME{
    ATL_URL_SCHEME_UNKNOWN = -1,
    ATL_URL_SCHEME_FTP     = 0,
@@ -33,10 +33,10 @@ enum ATL_URL_SCHEME{
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlutil.h
+**Encabezado:** atlutil. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conceptos](../active-template-library-atl-concepts.md)<br/>
-[CUrl::SetScheme](curl-class.md#setscheme)<br/>
-[CUrl::GetScheme](curl-class.md#getscheme)
+[Rizo:: SetScheme](curl-class.md#setscheme)<br/>
+[Rizo:: GetScheme](curl-class.md#getscheme)

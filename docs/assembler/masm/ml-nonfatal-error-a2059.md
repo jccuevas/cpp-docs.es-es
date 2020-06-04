@@ -1,25 +1,25 @@
 ---
 title: Error recuperable A2059 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2059
 helpviewer_keywords:
 - A2059
 ms.assetid: fadabbce-3054-4758-aeae-34d8540ce410
-ms.openlocfilehash: 137196e24530a7d7c7987fab1917d72dcd16d706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029a6b6534b1597e048cfea47331e19ae8f9e8eb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650026"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317999"
 ---
 # <a name="ml-nonfatal-error-a2059"></a>Error recuperable A2059 de ML
 
-**forzar el error: igualdad de cadenas**
+**error forzado: cadenas iguales**
 
-La directiva condicional error [. ERRIDN](../../assembler/masm/dot-erridn.md) o **. ERRIDNI** se usó para generar este error.
+La Directiva de error condicional [. ERRIDN](dot-erridn.md) o **. ERRIDNI** se usó para generar este error.
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

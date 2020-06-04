@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-ms.openlocfilehash: f6c5fcbae52ed695f2d0c389607ac4231f069788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 210778adecd87ffdd5f2702c10106f12bd5a1b79
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291684"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t procesar atributos en MIDL)
 
@@ -28,7 +28,7 @@ La opción /IGNOREIDL especifica que cualquier [atributos IDL](../../windows/idl
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -42,9 +42,9 @@ La opción /IGNOREIDL especifica que cualquier [atributos IDL](../../windows/idl
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (Dar nombre a los archivos de resultados de MIDL)](../../build/reference/idlout-name-midl-output-files.md)<br/>
-[/TLBOUT (Dar nombre a un archivo .TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
-[/MIDL (Especificar las opciones de la línea de comandos de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)<br/>
+[/IDLOUT (Dar nombre a los archivos de resultados de MIDL)](idlout-name-midl-output-files.md)<br/>
+[/TLBOUT (Dar nombre a un archivo .TLB)](tlbout-name-dot-tlb-file.md)<br/>
+[/MIDL (Especificar las opciones de la línea de comandos de MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Compilación de programas con atributos](../../windows/building-an-attributed-program.md)

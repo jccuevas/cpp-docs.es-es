@@ -1,28 +1,29 @@
 ---
 title: .LALL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LALL
 helpviewer_keywords:
 - .LALL directive
 ms.assetid: 23d7baf0-6a68-44d9-a980-33100a977fc6
-ms.openlocfilehash: f7558e7a37b4b72fd9f2cb492302cd52414aa7e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ced381bda01230581b9d3933f2c861b60c77c40d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605470"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317687"
 ---
 # <a name="lall"></a>.LALL
 
 ## <a name="syntax"></a>Sintaxis
 
-> .LALL
+> **.LALL**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Consulte [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+Vea [. LISTMACROALL](dot-listmacroall.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

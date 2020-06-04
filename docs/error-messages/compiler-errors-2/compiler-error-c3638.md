@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
-ms.openlocfilehash: 8b1ef7f4cb38653f0ccdfae5684eb2907a735af7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8d67ac0ff6a1fa5d9efbb8d85747ff94d75c648
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486897"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742501"
 ---
 # <a name="compiler-error-c3638"></a>Error del compilador C3638
 
-'operador': no se puede redefinir la conversión boxing estándar y los operadores de conversión unboxing
+' Operator ': los operadores de conversión boxing y unboxing estándar no se pueden redefinir
 
-El compilador define un operador de conversión para cada clase administrada para admitir la conversión boxing implícita. Este operador no se puede redefinir.
+El compilador define un operador de conversión para que cada clase administrada admita la conversión boxing implícita. Este operador no se puede redefinir.
 
-Para obtener más información, consulte [conversión Boxing implícita](../../windows/boxing-cpp-component-extensions.md).
+Para obtener más información, vea [conversión boxing implícita](../../extensions/boxing-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3638:
+En el ejemplo siguiente se genera C3638:
 
-```
+```cpp
 // C3638.cpp
 // compile with: /clr
 value struct V {

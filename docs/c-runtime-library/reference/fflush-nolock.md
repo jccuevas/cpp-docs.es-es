@@ -1,9 +1,10 @@
 ---
 title: _fflush_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fflush_nolock
-apilocation:
+- _o__fflush_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fflush_nolock
 - _fflush_nolock
@@ -25,14 +30,14 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-ms.openlocfilehash: 721098899525df02dc3b3d121cf894f8056fcb98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63d456288e978c79b4e0f4e67f9a4b2318bf0417
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464108"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920122"
 ---
-# <a name="fflushnolock"></a>_fflush_nolock
+# <a name="_fflush_nolock"></a>_fflush_nolock
 
 Vacía una secuencia sin bloquear el subproceso.
 
@@ -46,16 +51,18 @@ int _fflush_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Consulte [fflush](fflush.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta función es una versión que no sea de bloqueo de **fflush**. Es idéntico a **fflush** , salvo que no está protegida contra interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Esta función es una versión que no es de bloqueo de **fflush**. Es idéntico a **fflush** , salvo que no está protegido frente a interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -63,9 +70,9 @@ Esta función es una versión que no sea de bloqueo de **fflush**. Es idéntico 
 |--------------|---------------------|
 |**_fflush_nolock**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

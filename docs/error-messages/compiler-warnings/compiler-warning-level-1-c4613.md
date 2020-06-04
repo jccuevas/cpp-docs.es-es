@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4613
 ms.assetid: 399f521b-651c-4997-bc91-f40198e9a4d4
-ms.openlocfilehash: 3eaea39f49b985334247da41fa8f3499d3697815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb3883d318ccd885d19469e7722362485f782144
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554463"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185950"
 ---
 # <a name="compiler-warning-level-1-c4613"></a>Advertencia del compilador (nivel 1) C4613
 

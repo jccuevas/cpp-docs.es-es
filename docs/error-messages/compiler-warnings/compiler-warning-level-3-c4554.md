@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4554
 ms.assetid: 55bb68f0-2e80-4330-8921-51083c4f8d53
-ms.openlocfilehash: 26251e4acac862e0505ea52e40a7aff2527fd472
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45f9d85f272bb5093fd418981ea3dbdc8cb7f1c0
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646619"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992005"
 ---
 # <a name="compiler-warning-level-3-c4554"></a>Advertencia del compilador (nivel 3) C4554
 
-'operador': Compruebe la prioridad de operador para posibles errores; Utilice paréntesis para indicar la prioridad
+' Operator ': Compruebe la prioridad del operador para ver el error posible; usar paréntesis para clarificar la prioridad
 
-El ejemplo siguiente genera C4554:
+En el ejemplo siguiente se genera C4554:
 
-```
+```cpp
 // C4554.cpp
 // compile with: /W3 /WX
 int main() {

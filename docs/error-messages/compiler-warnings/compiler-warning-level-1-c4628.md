@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4628
 ms.assetid: 20fdc6f8-5f6a-40cc-aff8-c7ccf3d8ec26
-ms.openlocfilehash: ebb71155774ce32d6b4fc2b9920fdd31dd466841
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: affb2b5231d3745d4826e92657e355ec99570e7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466032"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199672"
 ---
 # <a name="compiler-warning-level-1-c4628"></a>Advertencia del compilador (nivel 1) C4628
 
 los digramas no son compatibles con -Ze. La secuencia de caracteres 'digrama' no interpretado como token alternativo de 'char'
 
-Los digramas no son compatibles con [/Ze](../../build/reference/za-ze-disable-language-extensions.md). Esta advertencia se seguirá por un error.
+No se admiten los digramas en [/ze](../../build/reference/za-ze-disable-language-extensions.md). Esta advertencia va seguida de un error.
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 
-El ejemplo siguiente genera C4628:
+En el ejemplo siguiente se genera C4628:
 
-```
+```cpp
 // C4628.cpp
 // compile with: /WX
 #pragma warning(default : 4628)

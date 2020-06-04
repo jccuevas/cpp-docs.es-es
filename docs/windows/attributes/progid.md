@@ -1,21 +1,21 @@
 ---
-title: ProgID (atributo de COM de C++)
+title: ProgID (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.progid
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: cb4802fbf4d647f11298848e3dac1b1d92300ce8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d529d7362dc62207cfd72576159f560a3e04c221
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654745"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514249"
 ---
 # <a name="progid"></a>progid
 
-Especifica el ProgID de un objeto COM.
+Especifica el ProgID para un objeto COM.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,25 +26,25 @@ Especifica el ProgID de un objeto COM.
 ### <a name="parameters"></a>Parámetros
 
 *name*<br/>
-El ProgID que representa el objeto.
+Identificador de programa (ProgID) que representa el objeto.
 
-ProgID presentan una versión legible del identificador de clase (CLSID) usado para identificar los objetos COM y ActiveX.
+Los ProgID presentan una versión legible del identificador de clase (CLSID) que se usa para identificar objetos COM/ActiveX.
 
 ## <a name="remarks"></a>Comentarios
 
-El **progid** atributo de C++ le permite especificar el ProgID de un objeto COM. Un ProgID tiene la forma *name1.name2.version*. Si no especifica un *versión* para un ProgID, la versión predeterminada es 1. Si no especifica *name1.name2*, el nombre predeterminado es *classname.classname*. Si no especifica **progid** y especificar `vi_progid`, *name1.name2* se toman de `vi_progid` y el (siguiente número secuencial) se anexa la versión.
+El atributo **ProgID** C++ permite especificar el identificador de programa (ProgID) de un objeto com. Un ProgID tiene el formato *nombre1. nombre2. version*. Si no especifica una *versión* para un ProgID, la versión predeterminada es 1. Si no especifica *nombre1. nombre2*, el nombre predeterminado es *className. ClassName*. Si no especifica **ProgID** y especifica `vi_progid`, *nombre1. nombre2* se toma de `vi_progid` y se anexa la versión (siguiente número secuencial).
 
-Si un bloque de atributos que usa **progid** no usa también **uuid**, el compilador comprobará si el registro para ver si un **uuid** existe para el elemento especificado **progid** . Si **progid** no se especifica, se usará la versión (y el nombre de coclase, si la creación de una coclase) para generar un **progid**.
+Si un bloque de atributos que utiliza **ProgID** no usa también el **UUID**, el compilador comprobará el registro para ver si existe un **UUID** para el **ProgID**especificado. Si no se especifica **ProgID** , la versión (y el nombre de coclase, si se crea una coclase) se usarán para generar un **ProgID**.
 
-**ProgID** implica la `coclass` atributo, es decir, si especifica **progid**, es lo mismo que si se especifica la `coclass` y **progid** atributos.
+**ProgID** implica el `coclass` atributo, es decir, si especifica **ProgID**, es lo mismo que especificar los `coclass` atributos y **ProgID** .
 
-El **progid** atributo hace que una clase que se registren automáticamente con el nombre especificado. El archivo .idl generado no se mostrará el **progid** valor.
+El atributo **ProgID** hace que una clase se registre automáticamente en el nombre especificado. El archivo. idl generado no mostrará el valor de **ProgID** .
 
-Cuando este atributo se utiliza dentro de un proyecto que usa ATL, cambia el comportamiento del atributo. Además del comportamiento anterior, la información especificada con este atributo se usa en el `GetProgID` función, insertado por el `coclass` atributo. Para obtener más información, consulte el [coclase](coclass.md) atributo.
+Cuando este atributo se usa en un proyecto que usa ATL, el comportamiento del atributo cambia. Además del comportamiento anterior, la información especificada con este atributo se usa en la `GetProgID` función, insertada por el `coclass` atributo. Para obtener más información, vea el atributo [CoClass](coclass.md) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [coclase](coclass.md) para un ejemplo de uso de **progid**.
+Vea el ejemplo de [coclase](coclass.md) para obtener un ejemplo del uso de **ProgID**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -53,9 +53,9 @@ Vea el ejemplo de [coclase](coclass.md) para un ejemplo de uso de **progid**.
 |||
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin |
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
@@ -64,4 +64,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
-[Clave de Id. de programa](/windows/desktop/com/-progid--key)
+[Clave ProgID](/windows/win32/com/-progid--key)

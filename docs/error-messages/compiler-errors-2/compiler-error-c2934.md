@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2934
 ms.assetid: b7f7e7aa-2d4c-4e17-8564-2c005ab81fd5
-ms.openlocfilehash: cd1eaad4023b1ce01f854afb4ad775b8fc2a4fd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9aef737b9ac7a88e569a6ed7924d05834fb50b22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176929"
 ---
 # <a name="compiler-error-c2934"></a>Error del compilador C2934
 

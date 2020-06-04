@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4065
 ms.assetid: aa5c9e2c-9ad3-4460-8605-4c12bbc6d423
-ms.openlocfilehash: 458685482e7cd5c61710c0080e99763c65e852e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed45eba3964533f6764cc775507a5054a21b700e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194062"
 ---
 # <a name="linker-tools-warning-lnk4065"></a>Advertencia de las herramientas del vinculador LNK4065
 
-'function' no se puede ordenar; pasa por alto
+' function ' no se puede ordenar; tendrán
 
-No se compiló la función especificada como una función empaquetada. Vuelva a compilar usando [/Gy](../../build/reference/gy-enable-function-level-linking.md).
+La función especificada no se compiló como una función empaquetada. Vuelva a compilar con [/GY](../../build/reference/gy-enable-function-level-linking.md).

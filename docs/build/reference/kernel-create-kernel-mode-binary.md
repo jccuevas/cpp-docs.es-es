@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291345"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Crear binario en modo kernel)
 
@@ -46,7 +46,7 @@ En la tabla siguiente se enumera los cambios de comportamiento del compilador cu
 |RTTI|Deshabilitado. Todas las instancias de la `dynamic_cast` y `typeid` palabras clave de emisión de un error del compilador, a menos que `dynamic_cast` se usa de forma estática.|
 |`new` y `delete`|Debe definir explícitamente el `new()` o `delete()` operador; el compilador ni el tiempo de ejecución que proporcionará una definición default.|
 
-Custom convenciones de llamada, el [/GS](../../build/reference/gs-buffer-security-check.md) opción de compilación y todas las optimizaciones se permiten cuando se usa el **/kernel** opción. La inserción en gran medida no se ve afectada por **/kernel**, con la misma semántica que cumple con el compilador. Si desea asegurarse de que el `__forceinline` se respeta el calificador de inserción, debe asegurarse de que aparezca esa advertencia [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) está habilitada para que se sabe cuándo un determinado `__forceinline` función no está entre línea.
+Custom convenciones de llamada, el [/GS](gs-buffer-security-check.md) opción de compilación y todas las optimizaciones se permiten cuando se usa el **/kernel** opción. La inserción en gran medida no se ve afectada por **/kernel**, con la misma semántica que cumple con el compilador. Si desea asegurarse de que el `__forceinline` se respeta el calificador de inserción, debe asegurarse de que aparezca esa advertencia [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) está habilitada para que se sabe cuándo un determinado `__forceinline` función no está entre línea.
 
 Cuando se pasa al compilador la **/kernel** switch, predefine una macro de preprocesador que se denomina `_KERNEL_MODE` y tiene el valor **1**. Puede utilizarlo para compilar condicionalmente en función de si el entorno de ejecución está en modo de usuario o modo núcleo de código. Por ejemplo, el código siguiente especifica que la clase debe estar en un segmento de memoria no paginable cuando se compila para la ejecución en modo kernel.
 
@@ -79,8 +79,8 @@ Compilar con **/kernel** también pasa **/kernel** al vinculador. Ella es cómo 
 
    ||**/kernel** obj|**/kernel-** obj, obj MASM, o cvtresed|Combinación de **/kernel** y **/kernel-** obj|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**vínculo /kernel**|Sí|Sí|Sí con advertencia LNK4257|
-   |**vínculo**|Sí|Sí|Sí|
+   |**link /kernel**|Sí|Sí|Sí con advertencia LNK4257|
+   |**link**|Sí|Sí|Sí|
 
    **LNK4257 vinculará el objeto que no se compila con/kernel; imagen no se puede ejecutar**
 
@@ -88,7 +88,7 @@ El **/kernel** opción y la **/driver** opción funcionan de forma independiente
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Para establecer la opción del compilador/kernel en Visual Studio
 
-1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **C o C++** carpeta.
 
@@ -98,5 +98,5 @@ El **/kernel** opción y la **/driver** opción funcionan de forma independiente
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

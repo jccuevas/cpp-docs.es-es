@@ -1,21 +1,21 @@
 ---
-title: Public (atributos de C++) (atributo de COM de C++)
+title: Public (C++ Attributes)C++ (atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: d89df014beae5a62a035c3156b92d3337ecd2c14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6912117ad05d6b608c45425ebec27cd49c0e5dc4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579340"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214726"
 ---
 # <a name="public-c-attributes"></a>public (Atributos de C++)
 
-Garantiza que una definición de tipo pasará a la biblioteca de tipos aunque no se hace referencia desde dentro del archivo. idl.
+Garantiza que una definición de tipo se incluirá en la biblioteca de tipos aunque no se haga referencia a ella desde el archivo. idl.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,13 +23,13 @@ Garantiza que una definición de tipo pasará a la biblioteca de tipos aunque no
 [public]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **pública** atributo de C++ tiene la misma funcionalidad que el [pública](/windows/desktop/Midl/public) atributo MIDL.
+El atributo **público** C++ tiene la misma funcionalidad que el atributo MIDL [público](/windows/win32/Midl/public) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo usar el **pública** atributo:
+En el código siguiente se muestra cómo usar el atributo **Public** :
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -53,12 +53,12 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**Se aplica a**|**typedef**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)

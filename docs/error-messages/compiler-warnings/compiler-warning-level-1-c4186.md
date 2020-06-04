@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4186
 ms.assetid: caf3f7d8-f305-426b-8d4e-2b96f5c269ea
-ms.openlocfilehash: fa5f0c3d3d409384b7cdc3c8a9cbe884732cbf8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6772e384b5908cbe81f85758f86eabe4c8240e6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646581"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163328"
 ---
 # <a name="compiler-warning-level-1-c4186"></a>Advertencia del compilador (nivel 1) C4186
 
-\#importación de atributo 'attribute' requiere argumentos count; pasa por alto
+\#atributo import ' Attribute ' requiere argumentos Count; tendrán
 
 Un atributo `#import` tiene un número incorrecto de argumentos.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4186.cpp
 // compile with: /W1 /c
 #import "stdole2.tlb" no_namespace("abc") rename("a","b","c")  // C4186

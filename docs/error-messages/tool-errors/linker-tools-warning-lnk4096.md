@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4096
 ms.assetid: ef6fba38-59a1-4d86-bcac-cadf44d87a36
-ms.openlocfilehash: 5b561d5e9c48d806be566aec104f63743d4409e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28d7bd2918c90716ab9d7eba67b59ca345fc5a17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437249"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183350"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Advertencia de las herramientas del vinculador LNK4096
 
-/ Valor BASE de 'número' no es válido para Windows 95 y Windows 98; imagen no se puede ejecutar
+El valor/BASE "número" no es válido para Windows 95 y Windows 98; es posible que la imagen no se ejecute
 
-La dirección base especificada no es válida. Archivos ejecutables de Windows 95 y Windows 98 deben tener una dirección base mayor que 0 x 400000. Para obtener más información sobre las direcciones base, vea la [/base](../../build/reference/base-base-address.md) opción del vinculador.
+La dirección base especificada no es válida. Los archivos ejecutables de Windows 95 y Windows 98 deben tener una dirección base mayor que 0x400000. Para obtener más información sobre las direcciones base, vea la opción del vinculador [/base](../../build/reference/base-base-address.md) .

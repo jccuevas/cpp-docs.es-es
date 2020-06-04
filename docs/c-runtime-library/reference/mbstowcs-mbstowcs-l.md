@@ -1,10 +1,12 @@
 ---
 title: mbstowcs, _mbstowcs_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - mbstowcs
 - _mbstowcs_l
-apilocation:
+- _o__mbstowcs_l
+- _o_mbstowcs
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,12 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbstowcs
 helpviewer_keywords:
@@ -25,14 +32,14 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 18e86ce359ff3b384ff8ef7dd5977d3be8d4785f
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702770"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915468"
 ---
-# <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
+# <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
 Convertir una secuencia de caracteres multibyte en una secuencia correspondiente de caracteres anchos. Hay disponibles versiones más seguras de estas funciones; vea [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md).
 
@@ -81,22 +88,24 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **mbstowcs** convierte correctamente la cadena de origen, devuelve el número de caracteres multibyte convertidos. Si el *wcstr* argumento es **NULL**, la función devuelve el tamaño necesario (en caracteres anchos) de la cadena de destino. Si **mbstowcs** encuentra un carácter multibyte no válido, devuelve -1. Si el valor devuelto es *recuento*, la cadena de caracteres anchos no está terminada en null.
+Si **mbstowcs** convierte correctamente la cadena de origen, devuelve el número de caracteres multibyte convertidos. Si el argumento *wcstr* es **null**, la función devuelve el tamaño necesario (en caracteres anchos) de la cadena de destino. Si **mbstowcs** encuentra un carácter multibyte no válido, devuelve-1. Si el valor devuelto es *Count*, la cadena de caracteres anchos no termina en NULL.
 
 > [!IMPORTANT]
-> Asegúrese de que *wcstr* y *mbstr* no se superponen y que *recuento* refleja correctamente el número de caracteres multibyte a convertir.
+> Asegúrese de que *wcstr* y *mbstr* no se superponen y que el *recuento* refleja correctamente el número de caracteres multibyte que se van a convertir.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **mbstowcs** función convierte hasta un número máximo de *recuento* caracteres multibyte señalados por *mbstr* en una cadena de caracteres anchos correspondientes que están determinado por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por *wcstr*. El resultado es similar a una serie de llamadas a [mbtowc](mbtowc-mbtowc-l.md). Si **mbstowcs** encuentra el carácter nulo de un byte ('\0') antes o al *recuento* se produce, convierten el carácter nulo en un carácter nulo de caracteres anchos (L '\0') y se detiene. Por tanto, la cadena de caracteres anchos en *wcstr* está terminada en null solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento es indefinido.
+La función **mbstowcs** convierte hasta un número máximo de caracteres multibyte de *recuento* a los que apunta *mbstr* a una cadena de caracteres anchos correspondientes que vienen determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por *wcstr*. El resultado es similar a una serie de llamadas a [mbtowc](mbtowc-mbtowc-l.md). Si **mbstowcs** detecta el carácter nulo de un solo byte (' \ 0 ') antes o cuando se produce el *recuento* , convierte el carácter nulo en un carácter nulo de caracteres anchos (L ' \ 0 ') y se detiene. Por lo tanto, la cadena de caracteres anchos en *wcstr* está terminada en NULL solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento es indefinido.
 
-Si el *wcstr* argumento es **NULL**, **mbstowcs** devuelve el número de caracteres anchos que daría como resultado de la conversión, sin incluir un terminador nulo. La cadena de origen debe terminar en nulo para que se devuelva el valor correcto. Si necesita que la cadena de caracteres anchos resultante termine en nulo, agregue uno al valor devuelto.
+Si el argumento *wcstr* es **null**, **mbstowcs** devuelve el número de caracteres anchos que resultarían de la conversión, sin incluir un terminador null. La cadena de origen debe terminar en nulo para que se devuelva el valor correcto. Si necesita que la cadena de caracteres anchos resultante termine en nulo, agregue uno al valor devuelto.
 
-Si el *mbstr* argumento es **NULL**, o si *recuento* es > **INT_MAX**, se invoca el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, errno se establece en **EINVAL** y la función devuelve -1.
+Si el argumento *mbstr* es **null**, o si *Count* es > **INT_MAX**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, errno se establece en **EINVAL** y la función devuelve-1.
 
-**mbstowcs** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_mbstowcs_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**mbstowcs** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_mbstowcs_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,7 +114,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -202,13 +211,13 @@ Convert back to wide-character string:
    Hex value of first 2 wide characters: 0x3042 0x3043
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

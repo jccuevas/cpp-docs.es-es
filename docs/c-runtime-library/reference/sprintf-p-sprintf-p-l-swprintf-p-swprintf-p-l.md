@@ -1,12 +1,12 @@
 ---
 title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sprintf_p
 - _swprintf_p_l
 - _swprintf_p
 - _sprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sprintf_p
 - _swprintf_p_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579609"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958025"
 ---
-# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
+# <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
 Escriba datos con formato en una cadena con la capacidad de especificar el orden en el que se usan los parámetros en la cadena de formato.
 
@@ -96,7 +99,7 @@ Número máximo de caracteres que se pueden almacenar.
 Cadena de control de formato.
 
 *argument_list*<br/>
-Argumentos opcionales de la cadena de formato.
+Argumentos opcionales para la cadena de formato.
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -105,15 +108,15 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-El número de caracteres escritos, o -1 si se produjo un error.
+Número de caracteres escritos, o-1 si se ha producido un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_sprintf_p** función da formato y almacena una serie de caracteres y valores en *búfer*. Cada argumento de la *argument_list* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El *formato* argumento usa el [dar formato a la sintaxis de especificación de funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carácter null se anexa después del último carácter escrito. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido. La diferencia entre **_sprintf_p** y **sprintf_s** es que **_sprintf_p** admite parámetros posicionales, lo que permite especificar el orden en que los argumentos son se utiliza en la cadena de formato. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
+La función **_sprintf_p** da formato y almacena una serie de caracteres y valores en el *búfer*. Cada argumento de *argument_list* (si existe) se convierte y se genera de acuerdo con la especificación de formato correspondiente en *Format*. El argumento *Format* usa la [Sintaxis de especificación de formato para las funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carácter null se anexa después del último carácter escrito. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido. La diferencia entre **_sprintf_p** y **sprintf_s** es que **_sprintf_p** admite parámetros posicionales, lo que permite especificar el orden en el que se usan los argumentos en la cadena de formato. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p** es una versión con caracteres anchos de **_sprintf_p**; los argumentos de puntero **_swprintf_p** son cadenas de caracteres anchos. Detección de errores de codificación **_swprintf_p** podría diferir en **_sprintf_p**. **_swprintf_p** y **fwprintf_p** se comportan exactamente igual, salvo que **_swprintf_p** escribe la salida en una cadena en lugar de a un destino de tipo **archivo**, y **_swprintf_p** requiere la *recuento* parámetro para especificar el número máximo de caracteres que se escribirá. Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+**_swprintf_p** es una versión con caracteres anchos de **_sprintf_p**; los argumentos de puntero a **_swprintf_p** son cadenas de caracteres anchos. La detección de errores de codificación en **_swprintf_p** puede diferir de la de **_sprintf_p**. **_swprintf_p** y **fwprintf_p** se comportan exactamente igual, salvo que **_swprintf_p** escribe la salida en una cadena en lugar de en un destino de tipo **File**, y **_swprintf_p** requiere el parámetro *Count* para especificar el valor de número máximo de caracteres que se van a escribir. Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
-**_sprintf_p** devuelve el número de bytes almacenados en *búfer*, sin contar el carácter nulo de terminación. **_swprintf_p** devuelve el número de caracteres anchos almacenados en *búfer*, sin contar el carácter ancho final null. Si *búfer* o *formato* es un puntero nulo, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros ](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
+**_sprintf_p** devuelve el número de bytes almacenados en el *búfer*, sin contar el carácter null de terminación. **_swprintf_p** devuelve el número de caracteres anchos almacenados en el *búfer*, sin contar el carácter ancho final null. Si *buffer* o *Format* es un puntero nulo, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

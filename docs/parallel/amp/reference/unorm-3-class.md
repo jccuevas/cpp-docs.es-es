@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: 2ea10af6ffa1c3e4731b889ddec2d6f0c86ec981
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458037"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126193"
 ---
-# <a name="unorm3-class"></a>unorm_3 (Clase)
+# <a name="unorm_3-class"></a>unorm_3 (Clase)
 
 Representa un vector corto de tres números normales sin signo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class unorm_3;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor unorm_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de unorm_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |unorm_3::get_x||
 |unorm_3::get_xy||
@@ -122,11 +122,11 @@ class unorm_3;
 |unorm_3::get_zxy||
 |unorm_3::get_zy||
 |unorm_3::get_zyx||
-|Unorm_3:: ref_b||
-|Unorm_3:: ref_g||
-|Unorm_3:: ref_r||
-|Unorm_3:: ref_x||
-|Unorm_3:: ref_y||
+|Unorm_3::ref_b||
+|Unorm_3::ref_g||
+|Unorm_3::ref_r||
+|Unorm_3::ref_x||
+|Unorm_3::ref_y||
 |Unorm_3::ref_z||
 |unorm_3::set_x||
 |unorm_3::set_xy||
@@ -146,7 +146,7 @@ class unorm_3;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |unorm_3::operator--||
 |unorm_3::operator*=||
@@ -158,44 +158,44 @@ class unorm_3;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#unorm_3__size)||
+|[Size (constante)](#unorm_3__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|unorm_3:: b||
-|unorm_3:: BG||
-|unorm_3:: BGR||
-|unorm_3:: br||
-|unorm_3:: brg||
-|unorm_3:: g||
-|unorm_3:: GB||
-|unorm_3:: GBR||
-|unorm_3:: GR||
-|unorm_3:: GRB||
-|unorm_3:: r||
-|unorm_3:: RB||
-|unorm_3:: RBG||
-|unorm_3:: RG||
-|unorm_3:: RGB||
-|unorm_3:: x||
-|unorm_3:: XY||
-|unorm_3:: XYZ||
-|unorm_3:: XZ||
-|unorm_3:: xzy||
+|unorm_3::b||
+|unorm_3::bg||
+|unorm_3::bgr||
+|unorm_3::br||
+|unorm_3::brg||
+|unorm_3::g||
+|unorm_3::gb||
+|unorm_3::gbr||
+|unorm_3::gr||
+|unorm_3::grb||
+|unorm_3::r||
+|unorm_3::rb||
+|unorm_3::rbg||
+|unorm_3::rg||
+|unorm_3::rgb||
+|unorm_3::x||
+|unorm_3::xy||
+|unorm_3::xyz||
+|unorm_3::xz||
+|unorm_3::xzy||
 |unorm_3:: y||
-|unorm_3:: YX||
-|unorm_3:: YXZ||
-|unorm_3:: YZ||
-|unorm_3:: yzx||
-|unorm_3:: z||
-|unorm_3:: ZX||
-|unorm_3:: zxy||
-|unorm_3:: ZY||
-|unorm_3:: ZYX||
+|unorm_3::yx||
+|unorm_3::yxz||
+|unorm_3::yz||
+|unorm_3::yzx||
+|unorm_3::z||
+|unorm_3::zx||
+|unorm_3::zxy||
+|unorm_3::zy||
+|unorm_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -203,15 +203,15 @@ class unorm_3;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm_3
+## <a name="ctor"></a>unorm_3
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 unorm_3() restrict(amp,
     cpu);
 
@@ -263,26 +263,26 @@ explicit inline unorm_3(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="unorm_3__size"></a> Tamaño
+## <a name="unorm_3__size"></a>ajusta
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - character arrays, converting to System::Byte arrays
 - examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-ms.openlocfilehash: 26ef83533e7da1d272c31a54165626f513a5508a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b53fc329dad1421c7c30f673d0360703773ea65
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594732"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545358"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>Cómo: convertir char \* String en una matriz System:: Byte
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Cómo: convertir char \* String en una matriz System:: byte
 
 La manera más eficaz de convertir una cadena `char *` en una matriz <xref:System.Byte> es utilizando la clase <xref:System.Runtime.InteropServices.Marshal>.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // convert_native_string_to_Byte_array.cpp
 // compile with: /clr
 #include <string.h>
@@ -51,6 +51,6 @@ int main() {
 Native String
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

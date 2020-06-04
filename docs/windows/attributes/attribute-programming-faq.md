@@ -7,56 +7,56 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c1762994d2cb109e86397bb0a5db1258cf33be2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434988"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376062"
 ---
 # <a name="attribute-programming-faq"></a>Preguntas más frecuentes de programación con atributos
 
-En este tema responde a las siguientes preguntas más frecuentes:
+Este tema responde a las siguientes preguntas frecuentes:
 
-- [¿Qué es un valor HRESULT?](#vcconattributeprogrammmingfaqanchor1)
+- [¿Qué es un HRESULT?](#vcconattributeprogrammmingfaqanchor1)
 
-- [Si es necesario especificar el nombre del parámetro para un atributo](#vcconattributeprogrammmingfaqanchor2)
+- [¿Cuándo tengo que especificar el nombre del parámetro para un atributo?](#vcconattributeprogrammmingfaqanchor2)
 
 - [¿Puedo usar comentarios en un bloque de atributos?](#vcconattributeprogrammmingfaqanchor3)
 
 - [¿Cómo interactúan los atributos con la herencia?](#vcconattributeprogrammmingfaqanchor4)
 
-- [¿Cómo se puede usar los atributos en un proyecto ATL sin atributos?](#vcconattributeprogrammmingfaqanchor5)
+- [¿Cómo puedo usar atributos en un proyecto ATL no atribuido?](#vcconattributeprogrammmingfaqanchor5)
 
-- [¿Cómo se puede usar un archivo .idl en un proyecto con atributos?](#vcconattributeprogrammmingfaqanchor6)
+- [¿Cómo puedo usar un archivo .idl en un proyecto con atributos?](#vcconattributeprogrammmingfaqanchor6)
 
-- [¿Modificar código insertado por un atributo?](#vcconattributeprogrammmingfaqanchor7)
+- [¿Puedo modificar el código que inserta un atributo?](#vcconattributeprogrammmingfaqanchor7)
 
-- [¿Cómo declarar hacia delante una interfaz con atributos?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
+- [¿Cómo puedo reenviar la declaración de una interfaz con atributos?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
 
-- [¿Puedo usar los atributos en una clase derivada de una clase que también usa los atributos?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
+- [¿Puedo usar atributos en una clase derivada de una clase que también usa atributos?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
 
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> ¿Qué es un valor HRESULT?
+## <a name="what-is-an-hresult"></a><a name="vcconattributeprogrammmingfaqanchor1"></a>¿Qué es un HRESULT?
 
-Un HRESULT es un tipo de datos simple que suele utilizarse como un valor devuelto por los atributos y ATL en general. En la tabla siguiente se describe los distintos valores. En el archivo winerror.h, encabezado contiene más valores.
+Un HRESULT es un tipo de datos simple que a menudo se utiliza como un valor devuelto por atributos y ATL en general. En la tabla siguiente se describen los distintos valores. Más valores están contenidos en el archivo de encabezado winerror.h.
 
-|nombre|Descripción|Valor|
+|Nombre|Descripción|Value|
 |----------|-----------------|-----------|
-|S_OK|Operación realizada correctamente|0x00000000|
-|E_UNEXPECTED|Error inesperado|0x8000FFFF|
-|E_NOTIMPL|No implementado|0 x 80004001|
+|S_OK|Operación correcta|0x00000000|
+|E_UNEXPECTED|Fallo inesperado|0x8000FFFF|
+|E_NOTIMPL|No implementado|0x80004001|
 |E_OUTOFMEMORY|No se pudo asignar la memoria necesaria|0x8007000E|
-|E_INVALIDARG|Uno o más argumentos no son válidos|0 x 80070057|
-|E_NOINTERFACE|No se admite dicha interfaz|0 x 80004002|
-|E_POINTER|Puntero no válido|0 x 80004003|
-|E_HANDLE|Identificador no válido|0x80070006|
-|E_ABORT|Operación anulada|0 x 80004004|
-|E_FAIL|Error no especificado|0 x 80004005|
-|E_ACCESSDENIED|General de acceso denegado|0 x 80070005|
+|E_INVALIDARG|Uno o más argumentos no son válidos|0x80070057|
+|E_NOINTERFACE|No se admite ninguna interfaz de este tipo|0x80004002|
+|E_POINTER|Puntero no válido|0x80004003|
+|E_HANDLE|Mango no válido|0x80070006|
+|E_ABORT|Operación abortada|0x80004004|
+|E_FAIL|Fallo no especificado|0x80004005|
+|E_ACCESSDENIED|Error de acceso general denegado|0x80070005|
 
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Si es necesario especificar el nombre del parámetro para un atributo
+## <a name="when-do-i-have-to-specify-the-parameter-name-for-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor2"></a>¿Cuándo tengo que especificar el nombre del parámetro para un atributo?
 
-En la mayoría de los casos, si el atributo tiene un único parámetro, ese parámetro se denomina. Este nombre no es necesario cuando se inserta el atributo en el código. Por ejemplo, el siguiente uso de la [agregables](aggregatable.md) atributo:
+En la mayoría de los casos, si el atributo tiene un único parámetro, se denomina ese parámetro. Este nombre no es necesario al insertar el atributo en el código. Por ejemplo, el siguiente uso del atributo [agregable:](aggregatable.md)
 
 ```cpp
 [coclass, aggregatable(value=allowed)]
@@ -66,7 +66,7 @@ class CMyClass
 };
 ```
 
-es exactamente igual que:
+es exactamente lo mismo que:
 
 ```cpp
 [coclass, aggregatable(allowed)]
@@ -80,21 +80,21 @@ Sin embargo, los siguientes atributos tienen parámetros únicos sin nombre:
 
 ||||
 |-|-|-|
-|[call_as](call-as.md)|[case](case-cpp.md)|[cpp_quote](cpp-quote.md)|
-|[default](default-cpp.md)|[defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
-|[emitidl](emitidl.md)|[entry](entry.md)|[first_is](first-is.md)|
-|[helpcontext](helpcontext.md)|[helpfile](helpfile.md)|[helpstring](helpstring.md)|
-|[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[identificador](id.md)|
-|[iid_is](iid-is.md)|[import](import.md)|[importlib](importlib.md)|
-|[include](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
+|[call_as](call-as.md)|[Caso](case-cpp.md)|[cpp_quote](cpp-quote.md)|
+|[default](default-cpp.md)|[Defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
+|[emitidl](emitidl.md)|[Entrada](entry.md)|[first_is](first-is.md)|
+|[helpcontext](helpcontext.md)|[Helpfile](helpfile.md)|[helpstring](helpstring.md)|
+|[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[id](id.md)|
+|[iid_is](iid-is.md)|[Importación](import.md)|[importlib](importlib.md)|
+|[incluír](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
 |[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
-|[pointer_default](pointer-default.md)|[pragma](pragma.md)|[restricted](restricted.md)|
-|[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
+|[pointer_default](pointer-default.md)|[pragma](pragma.md)|[Restringido](restricted.md)|
+|[size_is](size-is.md)|[de origen](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a> ¿Puedo usar comentarios en un bloque de atributos?
+## <a name="can-i-use-comments-in-an-attribute-block"></a><a name="vcconattributeprogrammmingfaqanchor3"></a>¿Puedo usar comentarios en un bloque de atributos?
 
-Puede usar una línea y varias líneas de comentarios dentro de un bloque de atributos. Sin embargo, no puede usar cualquier estilo de comentarios dentro de los paréntesis que contiene los parámetros de un atributo.
+Puede utilizar comentarios de una y varias líneas dentro de un bloque de atributos. Sin embargo, no puede utilizar ningún estilo de comentario entre paréntesis que contiene los parámetros en un atributo.
 
 Se permite lo siguiente:
 
@@ -105,30 +105,30 @@ Se permite lo siguiente:
 ]
 ```
 
-Se permite lo siguiente:
+No se permite lo siguiente:
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> ¿Cómo interactúan los atributos con la herencia?
+## <a name="how-do-attributes-interact-with-inheritance"></a><a name="vcconattributeprogrammmingfaqanchor4"></a>¿Cómo interactúan los atributos con la herencia?
 
-Clases con atributos y definirán puede heredar de otras clases, que es posible que ellos mismos tener atributos o no. El resultado de derivar de una clase con atributos es igual que derivarla de esa clase después de que el proveedor de atributos ha transformado su código. Los atributos no se transmiten a la herencia de C++ las clases derivadas. Un proveedor de atributos sólo transforma el código en la proximidad de sus atributos.
+Puede heredar clases con atributos y no atribuidos de otras clases, que pueden atribuirse o no. El resultado de derivar de una clase con atributos es el mismo que derivar de esa clase después de que el proveedor de atributos haya transformado su código. Los atributos no se transmiten a clases derivadas a través de la herencia C++. Un proveedor de atributos solo transforma el código en las proximidades de sus atributos.
 
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> ¿Cómo se puede usar los atributos en un proyecto ATL sin atributos?
+## <a name="how-can-i-use-attributes-in-a-nonattributed-atl-project"></a><a name="vcconattributeprogrammmingfaqanchor5"></a>¿Cómo puedo usar atributos en un proyecto ATL no atribuido?
 
-Puede tener un proyecto ATL sin atributos, que tiene un archivo .idl, y desea empezar a agregar objetos con atributos. En este caso, utilice el **Asistente para agregar clases** para proporcionar el código.
+Es posible que tenga un proyecto ATL no atribuido, que tiene un archivo .idl, y es posible que desee empezar a agregar objetos con atributos. En este caso, use el **Asistente para agregar clases** para proporcionar el código.
 
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a> ¿Cómo se puede usar un archivo .idl en un proyecto con atributos?
+## <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a>¿Cómo puedo usar un archivo .idl en un proyecto con atributos?
 
-Puede tener un archivo .idl que desea usar en un proyecto ATL con atributos. En este caso, utilizaría el [importidl](importidl.md) , compilar el archivo .idl en un archivo .h (consulte la [páginas de propiedades MIDL](../../ide/midl-property-pages.md) en el proyecto **páginas de propiedades** cuadro de diálogo), y a continuación, incluir el archivo .h en el proyecto.
+Es posible que tenga un archivo .idl que desea usar en el proyecto con atributos ATL. En este caso, usaría el atributo [importidl,](importidl.md) compilaría el archivo .idl en un archivo .h (consulte las páginas de propiedades [MIDL](../../build/reference/midl-property-pages.md) en el cuadro de diálogo **Páginas** de propiedades del proyecto) y, a continuación, incluiría el archivo .h en el proyecto.
 
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> ¿Modificar código insertado por un atributo?
+## <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a>¿Puedo modificar el código que inserta un atributo?
 
-Algunos atributos insertan código en el proyecto. Puede ver el código insertado mediante el [/Fx](../../build/reference/fx-merge-injected-code.md) opción del compilador. También es posible copiar el código del archivo insertado y péguelo en el código fuente. Esto le permite modificar el comportamiento del atributo. Sin embargo, es posible que deba modificar otras partes del código también.
+Algunos atributos insertan código en el proyecto. Puede ver el código insertado mediante la opción del compilador [/Fx.](../../build/reference/fx-merge-injected-code.md) También es posible copiar código del archivo inyectado y pegarlo en el código fuente. Esto le permite modificar el comportamiento del atributo. Sin embargo, es posible que también tenga que modificar otras partes del código.
 
-El ejemplo siguiente es el resultado de copiar código insertado en un archivo de código fuente:
+El ejemplo siguiente es el resultado de copiar el código inyectado en un archivo de código fuente:
 
 ```cpp
 // attr_injected.cpp
@@ -234,14 +234,14 @@ public:
 int main() {}
 ```
 
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> ¿Cómo declarar hacia delante una interfaz con atributos?
+## <a name="how-can-i-forward-declare-an-attributed-interface"></a><a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>¿Cómo puedo reenviar la declaración de una interfaz con atributos?
 
-Si va a realizar una declaración adelantada de una interfaz con atributos, debe aplicar los mismos atributos a la declaración adelantada a los que se aplica a la declaración de interfaz real. También debe aplicar la [exportar](export.md) atributo a la declaración adelantada.
+Si va a realizar una declaración de reenvío de una interfaz con atributos, debe aplicar los mismos atributos a la declaración de reenvío que se aplica a la declaración de interfaz real. También debe aplicar el atributo [export](export.md) a la declaración de reenvío.
 
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> ¿Puedo usar los atributos en una clase derivada de una clase que también usa los atributos?
+## <a name="can-i-use-attributes-on-a-class-derived-from-a-class-that-also-uses-attributes"></a><a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>¿Puedo usar atributos en una clase derivada de una clase que también usa atributos?
 
-No, no se admite el uso de atributos en una clase derivada de una clase que también usa los atributos.
+No, no se admite el uso de atributos en una clase derivada de una clase que también utiliza atributos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de C++ para COM y .NET](cpp-attributes-com-net.md)

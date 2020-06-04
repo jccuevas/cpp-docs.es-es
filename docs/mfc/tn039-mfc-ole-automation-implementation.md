@@ -1,8 +1,6 @@
 ---
 title: 'TN039: Implementación de MFC / OLE Automation'
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.ole
 helpviewer_keywords:
 - MFC, COM support
 - IDispatch interface
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e71b3795396aa73135e8dac022182d4371bb19ac
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658996"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611242"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: Implementación de Automation MFC/OLE
 
@@ -120,7 +118,7 @@ Nombre de la clase.
 *pszName*<br/>
 Nombre externo de la propiedad.
 
-*MemberName*<br/>
+*memberName*<br/>
 Nombre de la variable de miembro en el que se almacena la propiedad.
 
 *pfnAfterSet*<br/>
@@ -156,7 +154,7 @@ Nombre externo de la propiedad.
 *memberGet*<br/>
 Nombre de la función miembro que se usa para obtener la propiedad.
 
-*conjunto de miembros*<br/>
+*memberSet*<br/>
 Nombre de la función miembro que se usa para establecer la propiedad.
 
 *vtPropType*<br/>
@@ -228,7 +226,7 @@ Nombre de la clase.
 *pszName*<br/>
 Nombre externo de la propiedad.
 
-*DISPID*<br/>
+*dispid*<br/>
 El DISPID fijo para la propiedad o método.
 
 *pfnGet*<br/>
@@ -237,7 +235,7 @@ Nombre de la función miembro que se usa para obtener la propiedad.
 *pfnSet*<br/>
 Nombre de la función miembro que se usa para establecer la propiedad.
 
-*MemberName*<br/>
+*memberName*<br/>
 El nombre de la variable miembro para asignar a la propiedad
 
 *vtPropType*<br/>

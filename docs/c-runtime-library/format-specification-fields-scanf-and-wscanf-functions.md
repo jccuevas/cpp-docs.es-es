@@ -1,17 +1,6 @@
 ---
 title: 'Campos de especificación de formato: funciones scanf y wscanf'
 ms.date: 11/04/2016
-apilocation:
-- msvcr80.dll
-- msvcr110.dll
-- msvcr90.dll
-- msvcr100.dll
-- msvcr110_clr0400.dll
-- msvcr120.dll
-apitype: DLLExport
-f1_keywords:
-- wscanf
-- scanf
 helpviewer_keywords:
 - width, specifications in scanf function
 - scanf format specifications
@@ -21,12 +10,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 83c380adc1a8985bb232d70c6d7c4cb4a885e789
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 025d4c164d3afe1ca6b05c1c8e76441109cbc4ae
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625945"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438364"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Campos de especificación de formato: funciones scanf y wscanf
 
@@ -58,9 +47,9 @@ Un asterisco (`*`) después del signo de porcentaje suprime la asignación del c
 
 Las versiones seguras (las que tienen el sufijo `_s`) de la familia de funciones `scanf` requieren que se pase un parámetro de tamaño de búfer inmediatamente después de cada parámetro de tipo `c`, `C`, `s`, `S` o `[`. Para obtener más información sobre las versiones seguras de la familia de funciones `scanf`, consulte [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[scanf (especificación de ancho)](../c-runtime-library/scanf-width-specification.md)<br/>
+[scanf (Especificación de ancho)](../c-runtime-library/scanf-width-specification.md)<br/>
 [scanf (caracteres de campo de tipo)](../c-runtime-library/scanf-type-field-characters.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)

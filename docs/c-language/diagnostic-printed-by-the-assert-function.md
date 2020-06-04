@@ -3,11 +3,11 @@ title: Diagnóstico impreso por la función assert
 ms.date: 11/04/2016
 ms.assetid: 78b64200-520d-40da-9a61-71553f411d4f
 ms.openlocfilehash: 666ba22d642b772fe8ad336f57ab1bdd82bd2e18
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234229"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnóstico impreso por la función assert
 
@@ -15,7 +15,7 @@ ms.locfileid: "56151005"
 
 La función **assert** imprime un mensaje de diagnóstico y llama a la rutina **abort** si la expresión es false (0). El mensaje de diagnóstico tiene la forma
 
-> **Error de aserción**: <em>expression</em>**, archivo** <em>filename</em>**, línea** *linenumber*
+> **Error de aserción**: <em>expression</em> **, archivo** <em>filename</em> **, línea** *linenumber*
 
 donde *filename* es el nombre del archivo de código fuente y *linenumber* es el número de línea de la aserción que produjo un error en el archivo de código fuente. No se realiza ninguna acción si la *expresión* es true (distinto de cero).
 

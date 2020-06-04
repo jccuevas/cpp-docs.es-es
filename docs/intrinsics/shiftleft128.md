@@ -1,19 +1,19 @@
 ---
 title: __shiftleft128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftleft128
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 4fb1f9e65210ca9f9e38afd6fc13e01c7eb8f045
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325577"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218007"
 ---
-# <a name="shiftleft128"></a>__shiftleft128
+# <a name="__shiftleft128"></a>__shiftleft128
 
 **Específicos de Microsoft**
 
@@ -21,7 +21,7 @@ Desplaza una cantidad de 128 bits, representada como dos cantidades de 64 bits
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned __int64 __shiftleft128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Parte inferior*<br/>
-[in] Los 64 bits inferiores de la cantidad de 128 bits para desplazar.
+*LowPart*\
+de Los bits 64 bajos de la cantidad de 128 bits que se va a desplazar.
 
-*HighPart*<br/>
-[in] Los 64 bits superiores de la cantidad de 128 bits para desplazar.
+*HighPart*\
+de Los bits 64 altos de la cantidad de 128 bits que se va a desplazar.
 
-*Mayús*<br/>
-[in] El número de bits del desplazamiento.
+*Mover*\
+de Número de bits que se va a desplazar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -50,15 +50,15 @@ Los 64 bits superiores del resultado.
 |---------------|------------------|
 |`__shiftleft128`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El valor `Shift` es siempre módulo 64 para que, por ejemplo, si se llama a `__shiftleft128(1, 0, 64)`, la función desplace los bits `0` de la parte baja a la izquierda y devuelva una parte alta de `0` en vez de `1`, como cabría esperar.
+El valor de *desplazamiento* es siempre módulo 64, de modo que, por ejemplo, `__shiftleft128(1, 0, 64)`si llama a, la función desplazará los bits de la parte `0` baja a `0` la izquierda y devolverá una parte alta de y no `1` como cabría esperar.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```C
 // shiftleft128.c
 // processor: IPF, x64
 #include <stdio.h>
@@ -98,5 +98,5 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[__shiftright128](../intrinsics/shiftright128.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[__shiftright128](../intrinsics/shiftright128.md)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

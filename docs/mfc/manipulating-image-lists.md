@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-ms.openlocfilehash: 7ec641f1e7090e27edd367203b430b932ede52a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e86961980c91ade47a3d6510dec5c04ac36cffb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262793"
 ---
 # <a name="manipulating-image-lists"></a>Manipular listas de imágenes
 
@@ -31,4 +31,3 @@ El [funciones miembro GetSafeHandle](../mfc/reference/cimagelist-class.md#getsaf
 
 [Uso de CImageList](../mfc/using-cimagelist.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

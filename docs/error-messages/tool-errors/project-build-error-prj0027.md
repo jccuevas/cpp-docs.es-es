@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0027
 ms.assetid: 85d73a78-4b9e-4553-9f5d-2d76c48a790a
-ms.openlocfilehash: bc87ec33e78b9d45625432bd379b4ec7aeeecb52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc69f34dd291f2af241edae51bda9f09aeb9916d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555904"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192255"
 ---
 # <a name="project-build-error-prj0027"></a>Error PRJ0027 al compilar el proyecto
 
-Mensaje de registro de Unicode 'contenido' incluye contenido que no se puede traducir a la página de códigos ANSI del usuario.
+El mensaje de registro Unicode "contenido" contiene contenido que no se puede traducir a la página de códigos ANSI del usuario.
 
-Normalmente, solo verá esta advertencia junto con errores en la creación de archivos por lotes o la respuesta.
+Normalmente, solo verá esta advertencia junto con errores al crear archivos de lote o de respuesta.
 
-La resolución de este error consiste en actualizar el contenido del registro de compilación para que utilice ANSI o para instalar la página de códigos en el equipo y establecerla como la predeterminada del sistema.
+La solución para este error es actualizar el contenido del registro de compilación para usar ANSI o instalar la página de códigos en el equipo y establecerlo como el valor predeterminado del sistema.

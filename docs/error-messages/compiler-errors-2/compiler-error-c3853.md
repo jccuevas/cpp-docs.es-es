@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-ms.openlocfilehash: c2282196d045ffd88696149f7d22d4ed7f9603ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef6a57b7528a07756a5a9034482bf99ed3f8cc87
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535179"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754867"
 ---
 # <a name="compiler-error-c3853"></a>Error del compilador C3853
 
-'=': volver a inicializar una referencia o asignación a través de una referencia a la función no es válido
+' = ': la reinicialización de una referencia o asignación a través de una referencia a una función no es válida
 
-No se puede asignar a una referencia a través de una función porque las funciones no son valores l.
+No se puede asignar a una referencia a través de una función porque las funciones no son lvalues.
 
 Los ejemplos siguientes generan C3853:
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

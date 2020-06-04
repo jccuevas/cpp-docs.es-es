@@ -7,22 +7,22 @@ helpviewer_keywords:
 - limits.h header file
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
-ms.openlocfilehash: 0d14f6246dd2ec71c4e0b2286bb1f2b3325085b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75cd05e73aba2d2e82e8077e0a289d8b0fae7ec4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178229"
 ---
 # <a name="integer-limits"></a>Límites de enteros
 
 **Específicos de Microsoft**
 
-Los límites de los tipos enteros se muestran en la tabla siguiente. Estos límites también se definen en el archivo de encabezado estándar \<limits.h >.
+Los límites de los tipos enteros se muestran en la tabla siguiente. Estos límites también se definen en el archivo de encabezado estándar \<limits. h >.
 
 ## <a name="limits-on-integer-constants"></a>Límites en constantes de enteros
 
-|Constante|Significado|Valor|
+|Constante|Significado|Value|
 |--------------|-------------|-----------|
 |CHAR_BIT|Número de bits de la variable menor que no es un campo de bits.|8|
 |SCHAR_MIN|Valor mínimo de una variable de tipo **signed char**.|-128|
@@ -40,14 +40,14 @@ Los límites de los tipos enteros se muestran en la tabla siguiente. Estos lími
 |LONG_MIN|Valor mínimo de una variable de tipo **long**.|-2147483648|
 |LONG_MAX|Valor máximo de una variable de tipo **long**.|2147483647|
 |ULONG_MAX|Valor máximo de una variable de tipo **unsigned long**.|4294967295 (0xffffffff)|
-|LLONG_MIN|Valor mínimo de una variable de tipo **long long**|-9223372036854775808|
-|LLONG_MAX|Valor máximo de una variable de tipo **long long**|9223372036854775807|
-|ULLONG_MAX|Valor máximo de una variable de tipo **long long sin signo**|18446744073709551615 (0xffffffffffffffff)|
+|LLONG_MIN|Valor mínimo de una variable de tipo Long **Long**|-9223372036854775808|
+|LLONG_MAX|Valor máximo de una variable de tipo **Long Long**|9223372036854775807|
+|ULLONG_MAX|Valor máximo de una variable de tipo **unsigned Long Long**|18446744073709551615 (0xffffffffffffffff)|
 
 Si un valor supera la representación de entero mayor, el compilador de Microsoft genera un error.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Límites flotantes](../cpp/floating-limits.md)

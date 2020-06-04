@@ -1,12 +1,12 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _rotr64
 - _rotl
 - _rotr
 - _rotl64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _rotr64
 - rotl64
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567419"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949147"
 ---
-# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
+# <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Gira los bits a la izquierda (**_rotl**) o a la derecha (**_rotr**).
+Gira los bits a la izquierda ( **_rotl**) o a la derecha ( **_rotr**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -75,7 +78,7 @@ unsigned __int64 _rotr64(
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Valor que se va a girar.
 
 *shift*<br/>
@@ -87,7 +90,7 @@ El valor girado. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_rotl** y **_rotr** funciones girar el sin signo *valor* por *MAYÚS* bits. **_rotl** gira el valor a la izquierda. **_rotr** gira el valor a la derecha. Ambas funciones ajustan los bits girados de un extremo de *value* al otro extremo.
+Las funciones **_rotl** y **_rotr** giran el *valor* sin signo mediante el *desplazamiento* de bits. **_rotl** gira el valor a la izquierda. **_rotr** gira el valor a la derecha. Ambas funciones ajustan los bits girados de un extremo de *value* al otro extremo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -129,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 0xfd93 rotated left three times is 0x7ec98

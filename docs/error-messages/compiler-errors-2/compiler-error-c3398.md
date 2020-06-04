@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3398
 ms.assetid: 26f8c8a4-526f-415b-8047-155c5cd4f180
-ms.openlocfilehash: 3b688012009a87c1e3d0db05e47133893daeaf34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f76515d58f020b414e6b79a7737463af80bd2d07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451069"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200827"
 ---
 # <a name="compiler-error-c3398"></a>Error del compilador C3398
 

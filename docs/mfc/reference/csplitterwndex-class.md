@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7952e3082bf68cff7ad9ba218073081ee522320
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539001"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363920"
 ---
 # <a name="csplitterwndex-class"></a>Clase CSplitterWndEx
 
@@ -29,22 +29,22 @@ class CSplitterWndEx : public CSplitterWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`CSplitterWndEx::CSplitterWndEx`|Constructor predeterminado.|
 |`CSplitterWndEx::~CSplitterWndEx`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Lo llama el marco de trabajo para dibujar una ventana divisora. (Invalida [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Llamado por el marco de trabajo para dibujar una ventana divisora. (Reemplaza [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Invalidar el `OnDrawSplitter` método para personalizar la apariencia de los componentes gráficos de una ventana divisora.
+Invalide `OnDrawSplitter` el método para personalizar la apariencia de los componentes gráficos de una ventana divisora.
 
-El `CSplitterWndEx` clase se utiliza junto con el [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), y [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) métodos, que son implementado por un administrador visual. Para hacer que un administrador visual dibujar una ventana divisora en la aplicación, sustituir las declaraciones de la `CSplitterWnd` clase con la `CSplitterWndEx` clase. Para las aplicaciones de la ventana de marco, se declara la clase de ventana divisora en la clase CMainFrame que se encuentra en mainfrm.h. Para obtener un ejemplo, vea el `OutlookDemo` ejemplo en el directorio Samples.
+La `CSplitterWndEx` clase se utiliza junto con los métodos [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)y [OnFillSplitterBackground,](cmfcvisualmanager-class.md#onfillsplitterbackground) que implementa un administrador visual. Para hacer que un administrador visual dibuje una ventana `CSplitterWnd` divisora `CSplitterWndEx` en la aplicación, reemplace las declaraciones de la clase por la clase. Para las aplicaciones de ventana de marco, la clase de ventana divisora se declara en la clase CMainFrame que se encuentra en mainfrm.h. Para obtener un `OutlookDemo` ejemplo, vea el ejemplo en el directorio Samples.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -60,9 +60,9 @@ El `CSplitterWndEx` clase se utiliza junto con el [OnDrawSplitterBorder](cmfcvis
 
 **Encabezado:** afxsplitterwndex.h
 
-##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter
+## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter
 
-Lo llama el marco de trabajo para dibujar una ventana divisora.
+Llamado por el marco de trabajo para dibujar una ventana divisora.
 
 ```
 virtual void OnDrawSplitter(
@@ -75,19 +75,19 @@ virtual void OnDrawSplitter(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Puntero al contexto de dispositivo. Si este parámetro es NULL, el marco de trabajo se vuelve a dibujar la ventana activa.
+[en] Puntero al contexto del dispositivo. Si este parámetro es NULL, el marco de trabajo vuelve a dibujar la ventana activa.
 
-*nLas*<br/>
-[in] Uno de los `CSplitterWnd::ESplitType` valores de enumeración que especifica el elemento de la ventana de separador se va a dibujar. Los valores válidos son `splitBox`, `splitBar`, `splitIntersection` y `splitBorder`.
+*nType*<br/>
+[en] Uno de `CSplitterWnd::ESplitType` los valores de enumeración que especifica el elemento de ventana divisora que se va a dibujar. Los valores válidos son `splitBox`, `splitBar`, `splitIntersection` y `splitBorder`.
 
 *Rect*<br/>
-[in] Un rectángulo delimitador que especifica las dimensiones y la ubicación para dibujar el elemento de la ventana divisora especificado.
+[en] Un rectángulo delimitador que especifica las dimensiones y la ubicación para dibujar el elemento de ventana divisora especificado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../hierarchy-chart.md)<br/>
 [Clases](mfc-classes.md)<br/>
-[CSplitterWnd (clase)](csplitterwnd-class.md)<br/>
-[CMFCVisualManager (clase)](cmfcvisualmanager-class.md)
+[Clase CSplitterWnd](csplitterwnd-class.md)<br/>
+[CMFCVisualManager (Clase)](cmfcvisualmanager-class.md)

@@ -2,12 +2,12 @@
 title: Plantillas y resolución de nombres
 ms.date: 11/04/2016
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
-ms.openlocfilehash: e4a53df0a192c1d7b7f376e4401eb99fcbf7d481
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 693a2e69446410531d6a02047e8f230542362033
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160806"
 ---
 # <a name="templates-and-name-resolution"></a>Plantillas y resolución de nombres
 
@@ -73,6 +73,6 @@ Los nombres y las expresiones dependientes de un parámetro de plantilla se clas
 
 Las expresiones dependientes del tipo y dependientes del valor son expresiones que implican variables dependientes del tipo o dependientes del valor. Estas expresiones pueden tener una semántica diferente en función de los parámetros utilizados para la plantilla.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Templates](../cpp/templates-cpp.md) (Plantillas [C++])

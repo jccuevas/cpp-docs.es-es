@@ -6,18 +6,18 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: 0b43c7c148076e96dd0d3f444ffa8b6bad7c8b29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e67290d8de0b8251191c4a93b66b7e19a293ed61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566161"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371941"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; (Enumeraciones)
 
-## <a name="codecvt_mode"></a>  codecvt_mode (Enumeración)
+## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a>codecvt_mode (enumeración)
 
-Especifica la información de configuración de las facetas de [configuración regional](../standard-library/locale-class.md).
+Especifica la información de configuración de las facetas [de configuración](../standard-library/locale-class.md) regional.
 
 ```cpp
 enum codecvt_mode {
@@ -27,9 +27,9 @@ enum codecvt_mode {
 };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La enumeración define tres constantes que proporcionan información de configuración a las facetas de configuración regional declaradas en [\<codecvt>](../standard-library/codecvt.md). Los diferentes valores son:
+La enumeración define tres constantes que proporcionan información de configuración a las facetas de configuración regional declaradas en [ \<codecvt>](../standard-library/codecvt.md). Los diferentes valores son:
 
 - `consume_header`, para consumir una secuencia de encabezados iniciales al leer una secuencia multibyte y determinar los modos endian de la secuencia multibyte que se va a leer
 
@@ -39,6 +39,6 @@ La enumeración define tres constantes que proporcionan información de configur
 
 Estas constantes pueden usar OR en combinaciones arbitrarias.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<codecvt>](../standard-library/codecvt.md)<br/>
+[\<>codecvt](../standard-library/codecvt.md)

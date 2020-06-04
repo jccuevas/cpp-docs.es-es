@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3820
 ms.assetid: 98638838-068f-4a62-b8d5-1068368a0ff1
-ms.openlocfilehash: e969a20238366ee169256f2893b537ef9418bce7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6af6b665f3b9bc7d5aa12e7aa2096e17a158be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464494"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165605"
 ---
 # <a name="compiler-error-c3820"></a>Error del compilador C3820
 
@@ -23,7 +23,7 @@ El inicializador *nombre* para un tipo administrado también debe administrarse.
 
 1. Especifique un método de inicializador administrado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Inicializadores](../../cpp/initializers.md)<br/>
 [Consideraciones de inicio adicionales](../../cpp/additional-startup-considerations.md)

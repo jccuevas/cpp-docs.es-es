@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -LIBPATH linker option
 - library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
-ms.openlocfilehash: 40662e77faf03de8e5ef0abf334f4ec7be69c3ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab586c788825a854e7d3cb3760da6e4e5558de3a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269220"
 ---
 # <a name="libpath-additional-libpath"></a>/LIBPATH (Directorios de bibliotecas adicionales)
 
@@ -36,7 +36,7 @@ Utilice la opción/libpath para invalidar la ruta de acceso de la biblioteca de 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -50,5 +50,5 @@ Utilice la opción/libpath para invalidar la ruta de acceso de la biblioteca de 
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

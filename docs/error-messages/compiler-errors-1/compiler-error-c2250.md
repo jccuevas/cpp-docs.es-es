@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2250
 ms.assetid: f990986f-5c7d-4af4-a25c-b35540f1e217
-ms.openlocfilehash: ea426e071eecb09359c3a99a6f569f628595784a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 472aabf00fecd000f274d97b5753ed8460ff867f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438056"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758871"
 ---
 # <a name="compiler-error-c2250"></a>Error del compilador C2250
 
-'identificador': herencia ambigua de 'clase:: miembro'
+' Identifier ': herencia ambigua de ' Class:: Member '
 
-La clase derivada hereda más de un reemplazo de una función virtual de una clase base virtual. Estas invalidaciones son ambiguas en la clase derivada.
+La clase derivada hereda más de una invalidación de una función virtual de una clase base virtual. Estas invalidaciones son ambiguas en la clase derivada.
 
 El ejemplo siguiente genera la advertencia C2286:
 
-```
+```cpp
 // C2250.cpp
 // compile with: /c
 // C2250 expected

@@ -1,28 +1,26 @@
 ---
 title: Otros resultados de LIB
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-ms.openlocfilehash: 877450eac85044e187e27ce4acacff33ff9dba32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4152795c2f1cc2acbeb7a55d0d5ee3419fe6f789
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642396"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439178"
 ---
 # <a name="other-lib-output"></a>Otros resultados de LIB
 
-En el modo predeterminado, puede usar la opción/List para mostrar información acerca de la biblioteca resultante. Puede redirigir esta salida a un archivo.
+En el modo predeterminado, puede usar la opción/LIST para mostrar información sobre la biblioteca resultante. Esta salida se puede redirigir a un archivo.
 
-LIB muestra un mensaje de copyright y la versión y devuelve los archivos de comandos, a menos que se usa la opción /NOLOGO.
+LIB muestra un mensaje de copyright y de versión y repite los archivos de comandos a menos que se use la opción/NOLOGO.
 
-Cuando escriba `lib` con ninguna otra entrada, LIB muestra un extracto de uso que resume sus opciones.
+Cuando escribe `lib` sin ninguna otra entrada, LIB muestra una instrucción de uso que resume sus opciones.
 
-Error y advertencia mensajes emitidos por LIB tienen el formato LNK*nnnn*. Las herramientas de vínculo, DUMPBIN y EDITBIN también usan este intervalo de errores. Hay disponible Ayuda, seleccione el error en la ventana de salida y presione F1.
+Los mensajes de error y de advertencia emitidos por LIB tienen el formato LNK*nnnn*. Las herramientas LINK, DUMPBIN y EDITBIN también usan este intervalo de errores. Para obtener ayuda, seleccione el error en la ventana de salida y presione F1.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general sobre LIB](../../build/reference/overview-of-lib.md)
+[Información general sobre LIB](overview-of-lib.md)

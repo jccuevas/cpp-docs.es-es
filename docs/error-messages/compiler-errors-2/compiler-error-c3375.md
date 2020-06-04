@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3375
 ms.assetid: f1df78c6-e6ca-48f3-8b29-4e1710002bf3
-ms.openlocfilehash: b3dfc17f9df495fe6907b816bace0dac1eff08cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf92f0fabecfa7292a4d6a8644746c489cbf139f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545280"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759755"
 ---
 # <a name="compiler-error-c3375"></a>Error del compilador C3375
 
@@ -19,13 +19,13 @@ ms.locfileid: "50545280"
 
 Una creación de instancias de delegado podría haber tenido lugar en una función miembro estática o, como un delegado sin enlazar, en una función de instancia, por lo que el compilador emitió este error.
 
-Para obtener más información, consulte [delegate (extensiones de componentes de C++)](../../windows/delegate-cpp-component-extensions.md).
+Para obtener más información, vea [Delegate (C++ extensiones de componentes)](../../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C3375.
 
-```
+```cpp
 // C3375.cpp
 // compile with: /clr
 ref struct R {

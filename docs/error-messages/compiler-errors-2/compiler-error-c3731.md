@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
-ms.openlocfilehash: 5acc33869648f83cd44bc557128c685f521ddf88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9acf80eec0d36db64fa070d691533e7085754ac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496062"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752956"
 ---
 # <a name="compiler-error-c3731"></a>Error del compilador C3731
 
-evento incompatible 'función1' y el controlador 'function2'; origen del evento y controlador de eventos deben ser del mismo tipo
+evento no compatible ' función1 ' y controlador ' función2 '; el origen del evento y el controlador de eventos deben ser del mismo tipo
 
-El origen del evento y el receptor de eventos deben tener el mismo tipo (por ejemplo `native` frente a `com` tipos). Para corregir este error, asegúrese de los tipos de origen del evento y la coincidencia de controlador de eventos.
+El origen y el receptor de eventos deben tener el mismo tipo (por ejemplo `native` `com` tipos). Para corregir este error, haga que los tipos del origen de eventos y del controlador de eventos coincidan.
 
-El ejemplo siguiente genera C3731:
+En el ejemplo siguiente se genera C3731:
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>

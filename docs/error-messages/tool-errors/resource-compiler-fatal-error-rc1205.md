@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1205
 ms.assetid: 6cfbe019-ad8a-4267-b4b9-0d675bb3819a
-ms.openlocfilehash: 7593c6ca0ab12ef21297a592b866eb6a87cef8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a35b01ebd0b058a101bc41d7224ae79963ba3fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649051"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172872"
 ---
 # <a name="resource-compiler-fatal-error-rc1205"></a>Error irrecuperable del compilador de recursos RC1205
 
-página de códigos no válido
+Página de códigos no válida
 
-Especificar la página de código (/ c) opción iba seguida de una página de códigos no válido. Para más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md) en la *Referencia de la biblioteca en tiempo de ejecución* .
+La opción de especificar la página de códigos (/c) iba seguida de una página de códigos no válida. Para más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md) en la *Referencia de la biblioteca en tiempo de ejecución* .

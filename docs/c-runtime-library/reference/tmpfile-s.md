@@ -1,9 +1,10 @@
 ---
 title: tmpfile_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - tmpfile_s
-apilocation:
+- _o_tmpfile_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile_s
 helpviewer_keywords:
@@ -23,14 +28,14 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488119"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919927"
 ---
-# <a name="tmpfiles"></a>tmpfile_s
+# <a name="tmpfile_s"></a>tmpfile_s
 
 Crea un archivo temporal. Es una versión de [tmpfile](tmpfile.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -53,19 +58,21 @@ Devuelve 0 si se ejecuta correctamente; devuelve un código de error si se produ
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*pFilePtr*|**Valor devuelto**|**Contenido de***pFilePtr* |
+|*pFilePtr*|**Valor devuelto**|**Contenido de**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
-|**NULL**|**EINVAL**|no cambia|
+|**ACEPTA**|**EINVAL**|no cambia|
 
-Si se produce el error de validación de parámetros anterior, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y el valor devuelto es **EINVAL**.
+Si se produce el error de validación de parámetros anterior, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y el valor devuelto es **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **tmpfile_s** función crea un archivo temporal y coloca un puntero a ese flujo en el *pFilePtr* argumento. El archivo temporal se crea en el directorio raíz. Para crear un archivo temporal en un directorio que no sea el raíz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) junto con [fopen](fopen-wfopen.md).
+La función **tmpfile_s** crea un archivo temporal y coloca un puntero a ese flujo en el argumento *pFilePtr* . El archivo temporal se crea en el directorio raíz. Para crear un archivo temporal en un directorio que no sea el raíz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) junto con [fopen](fopen-wfopen.md).
 
-Si no se puede abrir el archivo, **tmpfile_s** escribe **NULL** a la *pFilePtr* parámetro. Este archivo temporal se elimina automáticamente cuando se cierra el archivo, cuando el programa finaliza normalmente o cuando **_rmtmp** se llama, suponiendo que no cambie el directorio de trabajo actual. Se abre el archivo temporal en **w + b** modo (lectura/escritura binario).
+Si no se puede abrir el archivo, **tmpfile_s** escribe **null** en el parámetro *pFilePtr* . Este archivo temporal se elimina automáticamente cuando se cierra el archivo, cuando el programa finaliza con normalidad o cuando se llama a **_rmtmp** , suponiendo que el directorio de trabajo actual no cambia. El archivo temporal se abre en modo **w + b** (lectura y escritura binaria).
 
-Error puede producirse si intenta más de **TMP_MAX_S** (consulte STDIO. H) llamadas con **tmpfile_s**.
+Se puede producir un error si se intentan más de **TMP_MAX_S** (consulte stdio. H) llama a con **tmpfile_s**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,7 +85,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 ## <a name="example"></a>Ejemplo
 
 > [!NOTE]
-> En este ejemplo puede requerir privilegios administrativos para ejecutarse en Windows.
+> Este ejemplo puede requerir privilegios administrativos para ejecutarse en Windows.
 
 ```C
 // crt_tmpfile_s.c
@@ -117,7 +124,7 @@ Temporary file 3 was created
 3 temporary files deleted
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>

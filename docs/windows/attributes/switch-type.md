@@ -1,21 +1,21 @@
 ---
-title: switch_type (atributo de COM de C++)
+title: switch_type (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: e8827fe576282b86f1d3bc633ec7f9f954c015b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448794"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214531"
 ---
-# <a name="switchtype"></a>switch_type
+# <a name="switch_type"></a>switch_type
 
-Identifica el tipo de la variable utilizada como la unión discriminante.
+Identifica el tipo de la variable utilizada como discriminante de Unión.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,13 +28,13 @@ type
 ### <a name="parameters"></a>Parámetros
 
 *type*<br/>
-El tipo de conmutador, puede ser un tipo entero, carácter, un valor booleano o enumeración.
+El tipo de modificador puede ser un entero, un carácter, un valor booleano o un tipo de enumeración.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **switch_type** atributo de C++ tiene la misma funcionalidad que el [switch_type](/windows/desktop/Midl/switch-type) atributo MIDL.
+El atributo **switch_type** C++ tiene la misma funcionalidad que el atributo MIDL [switch_type](/windows/win32/Midl/switch-type) .
 
-Atributos de C++ no admiten [encapsulado uniones](/windows/desktop/Midl/encapsulated-unions). [Uniones nonencapsulated](/windows/desktop/Midl/nonencapsulated-unions) solo se admiten en el formato siguiente:
+C++los atributos no admiten [uniones encapsuladas](/windows/win32/Midl/encapsulated-unions). Las [uniones no encapsuladas](/windows/win32/Midl/nonencapsulated-unions) solo se admiten en el formato siguiente:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -55,7 +55,7 @@ struct SizedValue2 {
 
 ## <a name="example"></a>Ejemplo
 
-Consulte la [caso](case-cpp.md) ejemplo para un ejemplo de uso de **switch_type**.
+Vea el ejemplo de [caso](case-cpp.md) para ver un ejemplo de uso de **switch_type**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -65,12 +65,12 @@ Consulte la [caso](case-cpp.md) ejemplo para un ejemplo de uso de **switch_type*
 |-|-|
 |**Se aplica a**|**typedef**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

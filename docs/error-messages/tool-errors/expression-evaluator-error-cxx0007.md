@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0007
 - CAN0007
 ms.assetid: 270a6d2d-ea6b-4a94-9871-841a6a133292
-ms.openlocfilehash: 5aba07517e924f0ae0b044466b43a4a8d7364578
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4c2ce8812c7eb8be1b4eb9fd47267db5e6f20f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612815"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196292"
 ---
 # <a name="expression-evaluator-error-cxx0007"></a>Error del evaluador de expresiones CXX0007
 
-Falta un paréntesis derecho
+faltan paréntesis a la derecha
 
-Se encontraron paréntesis sin correspondencia en la expresión. Vuelva a escribir la expresión con paréntesis equilibrados.
+Se encontraron paréntesis desequilibrados en la expresión. Vuelva a escribir la expresión con paréntesis equilibrados.
 
 Este error es idéntico a CAN0007.

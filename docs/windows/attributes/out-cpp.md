@@ -1,17 +1,17 @@
 ---
-title: out (atributo de COM de C++)
+title: out (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 15b82ddca42f9b70ac16538cea19f8aedd799c05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214707"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -23,9 +23,9 @@ Identifica los parámetros de puntero devueltos desde el procedimiento llamado a
 [out]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El atributo de C++ **out** tiene la misma funcionalidad que el atributo MIDL [out](/windows/desktop/Midl/out-idl) .
+El atributo de C++ **out** tiene la misma funcionalidad que el atributo MIDL [out](/windows/win32/Midl/out-idl) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -39,14 +39,14 @@ Consulte el ejemplo de [bindable](bindable.md) para ver un ejemplo de uso de **o
 |-|-|
 |**Se aplica a**|Parámetro de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[identificador](id.md)
+[id](id.md)

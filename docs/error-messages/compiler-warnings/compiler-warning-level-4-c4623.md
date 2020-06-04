@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4623
 ms.assetid: e630d8d0-f6ea-469c-a74f-07b027587225
-ms.openlocfilehash: d1b659a6aed593a2e3f01ac1b82e60878cb09c80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0dd9aec19fb21870a1233cd3b713337fa15aaa
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585437"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990631"
 ---
 # <a name="compiler-warning-level-4-c4623"></a>Advertencia del compilador (nivel 4) C4623
 
@@ -25,7 +25,7 @@ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias d
 
 El ejemplo siguiente genera C4623:
 
-```
+```cpp
 // C4623.cpp
 // compile with: /W4
 #pragma warning(default : 4623)

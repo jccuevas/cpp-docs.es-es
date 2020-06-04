@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4282
 ms.assetid: 155bef24-7bd1-497b-a24b-4a0d784b44cd
-ms.openlocfilehash: 649d8f5031b571811885cac0df7042284351f474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81b9757f604f517c6c91bf16d80d5f29d6a46249
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593078"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198957"
 ---
 # <a name="compiler-warning-level-3-c4282"></a>Advertencia del compilador (nivel 3) C4282
 
-a continuación, mediante el tipo 'type'
+a continuación, a través del tipo ' tipo '
 
-Esta continuación de la advertencia C4281shows que **operador ->** llama a sí mismo a través de `type`.
+Esta continuación de la advertencia C4281shows que **Operator->** llama a sí mismo a través de `type`.

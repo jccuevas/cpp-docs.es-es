@@ -1,27 +1,27 @@
 ---
 title: Error recuperable A2119 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2119
 helpviewer_keywords:
 - A2119
 ms.assetid: 4d4ee6da-3a58-495c-a1da-c3a405c4c18d
-ms.openlocfilehash: 6905f02369c9063d35c93ba9a30ffc2f394d23ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee23053a064c5dc08915eb2317fbb58b2391ed78
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633069"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316816"
 ---
 # <a name="ml-nonfatal-error-a2119"></a>Error recuperable A2119 de ML
 
-**se debe especificar el tipo de lenguaje**
+**se debe especificar el tipo de idioma**
 
-Una definición de procedimiento o prototipo no se proporcionó un tipo de lenguaje.
+No se proporcionó un tipo de lenguaje a una definición de procedimiento o prototipo.
 
-Si no se especifica un tipo de lenguaje predeterminado, un tipo de lenguaje debe declararse en cada definición de procedimiento o un prototipo. Un tipo de lenguaje predeterminado se establece mediante el [. MODELO](../../assembler/masm/dot-model.md) directiva, **opción LANG**, o las opciones de línea de comandos de ML **/Gc** o **/Gd**.
+Se debe declarar un tipo de lenguaje en cada definición de procedimiento o prototipo si no se especifica un tipo de idioma predeterminado. Un tipo de idioma predeterminado se establece mediante [. ](dot-model.md)Directive de modelo, **Option lang**o las opciones de línea de comandos de ml **/GC** o **/GD**.
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

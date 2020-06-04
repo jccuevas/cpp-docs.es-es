@@ -2,18 +2,16 @@
 title: Tipos de datos de las clases (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.datatypes
 helpviewer_keywords:
 - data types classes [C++]
 - data types [C++], classes
 ms.assetid: 29882bab-9174-4dfa-8227-ccfeba80b865
-ms.openlocfilehash: bc5754412b38f29bcec4184ab69694c1c69a2f9e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2cc3949e019532a35674b67446a831944ac668e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235043"
 ---
 # <a name="data-types-classes"></a>Clases de tipos de datos
 
@@ -28,4 +26,3 @@ Las siguientes clases de ajustan los tipos de datos de C++:
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../atl/atl-class-overview.md)
-

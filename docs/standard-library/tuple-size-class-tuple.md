@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1a069bcf5385a014438e36983e455ec3761ce727
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535712"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688857"
 ---
-# <a name="tuplesize-class"></a>tuple_size (Clase);
+# <a name="tuple_size-class"></a>tuple_size (Clase);
 
 Informa el número de elementos que contiene una `tuple` .
 
@@ -54,31 +54,35 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;
 ```
 
+```cpp
+template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
+```
+
 ### <a name="parameters"></a>Parámetros
 
-*Tuple*<br/>
+@No__t_1 de *tupla*
 El tipo de tupla.
 
-*Elem*<br/>
+@No__t_1 *Elem*
 El tipo de los elementos de la matriz.
 
-*Size*<br/>
+*Tamaño* \
 Se refiere al tamaño de la matriz.
 
-*T1*<br/>
+@No__t_1 *T1*
 El tipo del primer miembro del par.
 
-*T2*<br/>
+@No__t_1 *T2*
 El tipo del segundo miembro del par.
 
-*Tipos*<br/>
+*Types*\ (Tipos [Referencia de C#])
 Los tipos de los elementos de tupla.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla tiene un miembro `value` que es una expresión constante entera cuyo valor es la extensión del tipo de tupla *tupla*.
+La plantilla de clase tiene un miembro `value` que es una expresión constante entera cuyo valor es la extensión de la *tupla*de tipo de tupla.
 
-La especialización de plantilla para matrices tiene un miembro `value` que es una expresión constante entera cuyo valor es *tamaño*, que es el tamaño de la matriz.
+La especialización de plantilla para matrices tiene un miembro `value` que es una expresión constante entera cuyo valor es *size*, que es el tamaño de la matriz.
 
 La especialización de plantilla para pares tiene un miembro `value` que es una expresión constante entera cuyo valor es 2.
 
@@ -120,9 +124,3 @@ int main()
 **Encabezado:** \<utility> (para la especialización de pares)
 
 **Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[tuple](../standard-library/tuple-class.md)<br/>
-[tuple_element (Clase)](../standard-library/tuple-element-class-tuple.md)<br/>

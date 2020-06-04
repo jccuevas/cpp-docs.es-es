@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-ms.openlocfilehash: cf36514c6ce2cd25a49901165fcf919cffd5da7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 977ef29095e652ab40028a2e8ba7feffabf56418
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306455"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Probar propiedades y eventos con un contenedor de prueba
 
@@ -23,7 +23,7 @@ La aplicación de contenedor de prueba, que se incluye en Visual C++, es un cont
 
 ### <a name="to-access-the-activex-control-test-container"></a>Para obtener acceso a ActiveX Control Test Container
 
-1. Compilar el [ejemplo TSTCON: ActiveX Control Test Container](../visual-cpp-samples.md).
+1. Compilar el [ejemplo TSTCON: Control ActiveX Test Container](../overview/visual-cpp-samples.md).
 
 ### <a name="to-test-your-activex-control"></a>Para probar el control ActiveX
 
@@ -57,5 +57,4 @@ En este momento puede probar el control propiedades o eventos.
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Cómo: Depurar un control ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
-
+[Cómo: Depuración de un control ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)

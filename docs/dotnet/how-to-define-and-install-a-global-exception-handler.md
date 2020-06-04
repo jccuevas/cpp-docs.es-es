@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 9c6f355bc43fc53d2b8d27a1ee69c059d0f50692
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534542"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544980"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Cómo: Definir e instalar un controlador de excepciones global
 
-El ejemplo de código siguiente muestra las excepciones no controladas de cómo se pueden capturar. El formulario de ejemplo contiene un botón que, cuando se presionan, realiza una referencia nula, provocando que se produzca una excepción. Esta funcionalidad representa un error de código típico. El controlador de excepciones en toda la aplicación instalado por la función principal detecta la excepción resultante.
+En el ejemplo de código siguiente se muestra cómo se pueden capturar las excepciones no controladas. El formulario de ejemplo contiene un botón que, cuando se presiona, realiza una referencia nula, lo que provoca que se produzca una excepción. Esta funcionalidad representa un error de código típico. La excepción resultante es detectada por el controlador de excepciones de toda la aplicación instalado por la función main.
 
-Esto se logra enlazando un delegado para el <xref:System.Windows.Forms.Application.ThreadException> eventos. En este caso, excepciones posteriores se envían a la `App::OnUnhandled` método.
+Esto se logra enlazando un delegado al evento <xref:System.Windows.Forms.Application.ThreadException>. En este caso, las excepciones subsiguientes se envían al método `App::OnUnhandled`.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // global_exception_handler.cpp
 // compile with: /clr
 #using <system.dll>
@@ -71,6 +71,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de excepciones](../windows/exception-handling-cpp-component-extensions.md)
+[Control de excepciones](../extensions/exception-handling-cpp-component-extensions.md)

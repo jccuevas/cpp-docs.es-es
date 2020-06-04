@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4516
 ms.assetid: 6677bb1f-d26e-4ab9-8644-6b5a2a8f4ff8
-ms.openlocfilehash: 8020103e8e20bf1a5e955cbfdfafc6a328b439e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47e278bbc69b972f6acc391d6b3278ab8d159c08
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564052"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990704"
 ---
 # <a name="compiler-warning-level-4-c4516"></a>Advertencia del compilador (nivel 4) C4516
 
-'clase:: símbolo': las declaraciones de acceso están desusadas; declaraciones using de miembros son una alternativa mejor
+' Class:: Symbol ': las declaraciones de acceso están desusadas; las declaraciones Using de miembro proporcionan una mejor alternativa
 
-El Comité de ANSI C++ ha declarado las declaraciones de acceso (cambiar el acceso de un miembro en una clase derivada sin la [mediante](../../cpp/using-declaration.md) palabra clave) a estar obsoletas. Las declaraciones de acceso no pueden admitir futuras versiones de C++.
+El Comité C++ ANSI ha declarado declaraciones de acceso (cambiando el acceso de un miembro en una clase derivada sin la palabra clave [using](../../cpp/using-declaration.md) ) para que estén obsoletas. Es posible que las declaraciones de acceso no se admitan C++en versiones futuras de.
 
-El ejemplo siguiente genera C4516:
+En el ejemplo siguiente se genera C4516:
 
-```
+```cpp
 // C4516.cpp
 // compile with: /W4
 class A

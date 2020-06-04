@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2768
 ms.assetid: a7f6047a-6a80-4737-ad5c-c12868639fb5
-ms.openlocfilehash: 9c0fb8fb0a98830aaf061ba980e7bdd7903f25e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc801bb5802598e936d577f08729214bb7e13a1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626179"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759794"
 ---
 # <a name="compiler-error-c2768"></a>Error del compilador C2768
 
-'function': uso no válido de argumentos de plantilla explícitos
+' función ': uso no válido de argumentos de plantilla explícitos
 
-El compilador no pudo determinar si una definición de función se suponía que debía para ser una especialización explícita de una plantilla de función o si la definición de función se suponía que debía para ser para una nueva función.
+El compilador no pudo determinar si una definición de función debía ser una especialización explícita de una plantilla de función o si se supone que la definición de función era para una nueva función.
 
-Este error se introdujo en Visual Studio .NET 2003 como parte de las mejoras de conformidad del compilador.
+Este error se presentó en Visual Studio .NET 2003, como parte de las mejoras de conformidad del compilador.
 
-El ejemplo siguiente genera C2768:
+En el ejemplo siguiente se genera C2768:
 
-```
+```cpp
 // C2768.cpp
 template<typename T>
 void f(T) {}

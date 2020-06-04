@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /SWAPRUN linker option
 - SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-ms.openlocfilehash: a21b58cf997c64f099ce3b54f915415243fa9124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd0b3a46f52ec9b5a292e2f45671523d8c5cdf5e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317554"
 ---
 # <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (Cargar resultados del vinculador en el archivo de intercambio)
 
@@ -36,7 +36,7 @@ Si se especifica NET, el sistema operativo primero copiará la imagen binaria de
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -54,5 +54,5 @@ Si se especifica NET, el sistema operativo primero copiará la imagen binaria de
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

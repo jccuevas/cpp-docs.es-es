@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2002
 ms.assetid: 91982314-203a-4de1-b884-94e39a623f61
-ms.openlocfilehash: 30f472aa7a9475a19eea0e92fe5c2ea0d54e382b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c37a9b94be837248c8025a4fc069d8a242128542
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208252"
 ---
 # <a name="compiler-error-c2002"></a>Error del compilador C2002
 
@@ -23,14 +23,14 @@ La constante de caracteres multibyte no es válida.
 
 1. La constante de caracteres anchos contiene más bytes de lo esperado.
 
-1. No se incluye el encabezado estándar STDDEF.h.
+1. No se incluye el encabezado estándar STDDEF. h.
 
-1. Caracteres anchos no se pueden concatenar con literales de cadena normal.
+1. Los caracteres anchos no se pueden concatenar con literales de cadena normales.
 
-1. Una constante de caracteres anchos debe ir precedida por el carácter 'L':
+1. Una constante de caracteres anchos debe ir precedida del carácter ' L ':
 
     ```
     L'mbconst'
     ```
 
-1. En Microsoft C++, los argumentos de texto de una directiva de preprocesador deben ser ASCII. Por ejemplo, la directiva, `#pragma message(L"string")`, no es válido.
+1. En el C++caso de Microsoft, los argumentos de texto de una directiva de preprocesador deben ser ASCII. Por ejemplo, la Directiva, `#pragma message(L"string")`, no es válida.

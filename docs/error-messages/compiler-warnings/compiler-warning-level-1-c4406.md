@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4406
 ms.assetid: a3204731-2285-401c-b73b-af98586a86fa
-ms.openlocfilehash: 572d46f660d9df2f60df9f2238fe84da9db46ecc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86efe81d666a014e9fd7b9809b2ea55b2250ec3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162561"
 ---
 # <a name="compiler-warning-level-1-c4406"></a>Advertencia del compilador (nivel 1) C4406
 
-operando de la directiva pasa por alto
+operando de la Directiva omitido
 
-La directiva no toma ningún operandos, pero se especificó un operando.
+La Directiva no toma ningún operando, pero se ha especificado un operando.
 
-El compilador omitió el operando u operandos especificados.
+El compilador omitió el operando o los operandos especificados.

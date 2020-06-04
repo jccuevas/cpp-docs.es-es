@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4928
 ms.assetid: 77235d7f-9360-45cb-8348-d148c605c4a3
-ms.openlocfilehash: 9357e5775e6cfc9a44c43104c4ffd3fd34084e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54abb1072d8911fb7287b786f5a4254a710af815
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526485"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199334"
 ---
 # <a name="compiler-warning-level-1-c4928"></a>Advertencia del compilador (nivel 1) C4928
 
 inicialización de copia no válida; se aplicó implícitamente más de una conversión definida por el usuario
 
-Se encontró más de una rutina de conversión definido por el usuario. El compilador el código que ejecuta en todas las rutinas de ese tipo.
+Se encontró más de una rutina de conversión definida por el usuario. El compilador ejecutó el código en todas esas rutinas.
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 
-El ejemplo siguiente genera C4928:
+En el ejemplo siguiente se genera C4928:
 
-```
+```cpp
 // C4928.cpp
 // compile with: /W1
 #pragma warning(default: 4928)

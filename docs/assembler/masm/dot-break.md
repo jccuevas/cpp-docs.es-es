@@ -1,26 +1,27 @@
 ---
 title: .BREAK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .BREAK
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: ebf5bc74eb8e639d97762b64a15d3049b898160b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3096aaf827eecb4e297e5a1d04f5e982294053de
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610683"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314138"
 ---
-# <a name="break"></a>.BREAK
+# <a name="break-32-bit-masm"></a>. BREAK (MASM de 32 bits)
 
-Genera código para finalizar un [. MIENTRAS](../../assembler/masm/dot-while.md) o [. Repita](../../assembler/masm/dot-repeat.md) bloquear si *condición* es true.
+Genera código para finalizar un [. WHILE](dot-while.md) o [. REPETIR](dot-repeat.md) bloque si la *condición* es verdadera. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
-> . INTERRUMPIR [[. Condición IF]]
+> **. INTERRUMPA** ⟦ **. IF** *condición*⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

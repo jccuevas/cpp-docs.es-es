@@ -1,17 +1,17 @@
 ---
-title: Bindable (atributo de COM de C++)
+title: enlazable (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 08ecd3e242d1e3601f7a5a3ea54c51a679dca97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664157"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167360"
 ---
 # <a name="bindable"></a>bindable
 
@@ -23,21 +23,21 @@ Indica que la propiedad admite enlace de datos.
 [bindable]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **enlazable** atributo de C++ tiene la misma funcionalidad que el [enlazable](/windows/desktop/Midl/bindable) atributo MIDL. Se puede usar en las propiedades definidas con el [propget](propget.md), [propput](propput.md), o [propputref](propputref.md) atributos, o bien puede definir un método se puede enlazar manualmente.
+El **bindable** C++ atributo enlazable tiene la misma funcionalidad que el atributo MIDL [enlazable](/windows/win32/Midl/bindable) . Puede utilizarlo en las propiedades definidas con los atributos [propget](propget.md), [PROPPUT](propput.md)o [PROPPUTREF](propputref.md) , o puede definir manualmente un método enlazable.
 
-Los siguientes ejemplos MFC muestran el uso de **enlazable**:
+Los siguientes ejemplos de MFC muestran el uso de **Bindable**:
 
-- [Ejemplos de controles: Controles de ActiveX basados en MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Ejemplos de controles: controles ActiveX basados en MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Ejemplo CIRC: Control ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Ejemplo CIRC: control ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Ejemplo TESTHELP: Control de ActiveX con información sobre herramientas y ayuda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Ejemplo TESTHELP: control ActiveX con información sobre herramientas y ayuda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo puede usar **enlazable** en una propiedad:
+En el código siguiente se muestra cómo puede usar **Bindable** en una propiedad:
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -66,12 +66,12 @@ __interface IPropDemo : IDispatch {
 |-|-|
 |**Se aplica a**|Método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

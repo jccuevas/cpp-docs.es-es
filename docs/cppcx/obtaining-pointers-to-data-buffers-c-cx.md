@@ -2,24 +2,24 @@
 title: Obtener punteros a búfers de datos (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 2cd99019d75272f4362518de78b729cd7a2549f3
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9e60adc4163e96349f6f4bafa919944e5d8d5b51
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175111"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032374"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtener punteros a búfers de datos (C++/CX)
 
-En Windows en tiempo de ejecución, la interfaz [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) ofrece un medio basado en streaming e independiente del lenguaje para tener acceso a los búferes de datos. En C++ puedes obtener un puntero sin formato a la matriz de bytes subyacente mediante la interfaz IBufferByteAccess de la biblioteca de Windows en tiempo de ejecución definida en robuffer.h. Con este método, puedes modificar la matriz de bytes en contexto sin necesidad de crear ninguna copia innecesaria de los datos.
+En Windows en tiempo de ejecución, la interfaz [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) ofrece un medio basado en streaming e independiente del lenguaje para tener acceso a los búferes de datos. En C++ puedes obtener un puntero sin formato a la matriz de bytes subyacente mediante la interfaz IBufferByteAccess de la biblioteca de Windows en tiempo de ejecución definida en robuffer.h. Con este método, puedes modificar la matriz de bytes en contexto sin necesidad de crear ninguna copia innecesaria de los datos.
 
-En el diagrama siguiente se muestra un elemento de imagen XAML, cuyo origen es una interfaz [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Una aplicación cliente escrita en cualquier lenguaje puede pasar una referencia a la clase `WriteableBitmap` al código de C++, y este puede usar dicha referencia para tener acceso al búfer subyacente. En una aplicación de plataforma Universal de Windows que está escrita en C++, puede usar la función en el ejemplo siguiente directamente en el código fuente sin empaquetarla en un componente de Windows en tiempo de ejecución.
+En el diagrama siguiente se muestra un elemento de imagen XAML, cuyo origen es una interfaz [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap). Una aplicación cliente escrita en cualquier lenguaje puede pasar una referencia a la clase `WriteableBitmap` al código de C++, y este puede usar dicha referencia para tener acceso al búfer subyacente. En una aplicación de la Plataforma universal de Windows escrita en C++, puede usar la función en el ejemplo siguiente directamente en el código fuente sin empaquetarla en un componente de Windows Runtime.
 
-![C&#43; &#43; código que tiene acceso a datos de píxeles directamente](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; código que tiene acceso a datos de píxeles directamente")
+![C&#43;&#43; código que accede a los datos de píxeles directamente](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43;&#43; código que accede a los datos de píxeles directamente")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
-El método siguiente acepta una interfaz [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) y devuelve un puntero sin formato a la matriz de bytes subyacente. Para llamar a la función, pasa una propiedad [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) .
+El método siguiente acepta una interfaz [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) y devuelve un puntero sin formato a la matriz de bytes subyacente. Para llamar a la función, pasa una propiedad [WriteableBitmap::PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) .
 
 ```cpp
 #include <wrl.h>
@@ -51,11 +51,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 
 ## <a name="complete-example"></a>Ejemplo completo
 
-Los pasos siguientes muestran cómo crear una aplicación de C# Universal Windows Platform que pasa un `WriteableBitmap` un archivo DLL del componente en tiempo de ejecución de Windows de C++. El código de C++ obtiene un puntero al búfer de píxeles y realiza una modificación en contexto sencilla en la imagen. Como alternativa, puedes crear la aplicación cliente en Visual Basic, JavaScript o C++ en lugar de en C#. Si usas C++, no necesitas el archivo DLL de componente; puedes agregar estos métodos directamente a la clase MainPage o a alguna otra clase que definas.
+En los pasos siguientes se muestra cómo crear una `WriteableBitmap` aplicación de la Plataforma universal de Windows de C- que pasa a un archivo DLL de componente de Windows Runtime de C++. El código de C++ obtiene un puntero al búfer de píxeles y realiza una modificación en contexto sencilla en la imagen. Como alternativa, puedes crear la aplicación cliente en Visual Basic, JavaScript o C++ en lugar de en C#. Si usas C++, no necesitas el archivo DLL de componente; puedes agregar estos métodos directamente a la clase MainPage o a alguna otra clase que definas.
 
-#### <a name="create-the-client"></a>Crear el cliente
+#### <a name="create-the-client"></a>Creación del cliente
 
-1. Use la plantilla de proyecto aplicación vacía para crear una aplicación de C# Universal Windows Platform.
+1. Use la plantilla de proyecto de aplicación en blanco para crear una aplicación de la Plataforma universal de Windows de C.
 
 1. En MainPage.xaml
 
@@ -129,7 +129,7 @@ Los pasos siguientes muestran cómo crear una aplicación de C# Universal Window
 
 #### <a name="create-the-c-component"></a>Crear el componente C++
 
-1. Agregue un nuevo componente de tiempo de ejecución de Windows de C++ a la solución existente y asígnele el nombre `ImageManipCPP`. Agrega una referencia a este en el proyecto de C#. Para ello, haz clic con el botón secundario en ese proyecto en el **Explorador de soluciones** y elige **Agregar** **referencia**.
+1. Agregue un nuevo componente de Windows Runtime de C++ a la solución existente y asíse `ImageManipCPP`. Agrega una referencia a este en el proyecto de C#. Para ello, haz clic con el botón secundario en ese proyecto en el **Explorador de soluciones** y elige **Agregar****referencia**.
 
 1. En Class1.h
 

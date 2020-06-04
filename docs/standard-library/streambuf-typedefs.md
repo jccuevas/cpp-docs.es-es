@@ -5,12 +5,12 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 505739861771a05dd39741f432579a6e9b2d0c26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8eb058f161a9f30ccf5e9d49307b50c215f79c22
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664066"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376689"
 ---
 # <a name="ltstreambufgt-typedefs"></a>Definiciones de tipo de &lt;streambuf&gt;
 
@@ -18,30 +18,30 @@ ms.locfileid: "50664066"
 |-|-|
 |[streambuf](#streambuf)|[wstreambuf](#wstreambuf)|
 
-## <a name="streambuf"></a>  streambuf
+## <a name="streambuf"></a><a name="streambuf"></a>streambuf
 
-Una especialización de `basic_streambuf` que usa **char** como los parámetros de plantilla.
+Una especialización de `basic_streambuf` que utiliza **char** como los parámetros de plantilla.
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_streambuf](../standard-library/basic-streambuf-class.md), especializada en elementos del tipo **char** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de la plantilla de clase [basic_streambuf](../standard-library/basic-streambuf-class.md), especializada para elementos de tipo **char** con rasgos de carácter predeterminados.
 
-## <a name="wstreambuf"></a>  wstreambuf
+## <a name="wstreambuf"></a><a name="wstreambuf"></a>wstreambuf
 
-Una especialización de `basic_streambuf` que usa **wchar_t** como los parámetros de plantilla.
+Una especialización que utiliza `basic_streambuf` **wchar_t** como parámetros de plantilla.
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_streambuf](../standard-library/basic-streambuf-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de la plantilla de clase [basic_streambuf](../standard-library/basic-streambuf-class.md), especializada para elementos de tipo **wchar_t** con rasgos de carácter predeterminados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<streambuf>](../standard-library/streambuf.md)<br/>
+[\<>streambuf](../standard-library/streambuf.md)

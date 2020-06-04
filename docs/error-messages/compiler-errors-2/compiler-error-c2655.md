@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2655
 ms.assetid: beaefa6e-51b3-4df9-9150-960f3fbf40e0
-ms.openlocfilehash: 094dabb5ad07796194ae391000ca1e9025602d93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbef9f00145c84a5c562915da966f2a49995c3ba
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506774"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756115"
 ---
 # <a name="compiler-error-c2655"></a>Error del compilador C2655
 
-'identifier': definición o nueva declaración no válida en el ámbito actual
+' Identifier ': definición o nueva declaración no válida en el ámbito actual
 
-Un identificador se puede volver a declarar en el ámbito global.
+Un identificador solo se puede volver a declarar en el ámbito global.
 
-El ejemplo siguiente genera C2655:
+En el ejemplo siguiente se genera C2655:
 
-```
+```cpp
 // C2655.cpp
 class A {};
 class B {

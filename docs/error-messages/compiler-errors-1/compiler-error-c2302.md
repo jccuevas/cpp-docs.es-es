@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2302
 ms.assetid: 74a54bab-9d5c-446e-9b1f-c92fb57090a8
-ms.openlocfilehash: 284a5e641d7145c7ec3c2220448daa3a7b11b997
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7af55597229add40c120d1b6e6f94e5cc1256237
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206302"
 ---
 # <a name="compiler-error-c2302"></a>Error del compilador C2302
 
 a la izquierda de '.identifier' debe haber class/struct/union type
 
-La expresión a la izquierda del operador punto (.) no es una clase, estructura o unión.
+La expresión a la izquierda del operador punto (.) no es una clase, estructura o Unión.

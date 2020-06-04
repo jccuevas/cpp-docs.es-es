@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Agregar controles de cinta y controladores de eventos'
+title: Procedimiento Agregar controles de cinta y controladores de eventos
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c21e8b86962ebf37ca1a06bae056d09b9a9dbb2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389520"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Cómo: Agregar controles de cinta y controladores de eventos
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procedimiento Agregar controles de cinta y controladores de eventos
 
 Los controles de cinta de opciones son elementos, como botones y cuadros combinados, que se agregan a los paneles. Los paneles son áreas de la barra de cinta de opciones que muestran un grupo de controles relacionados.
 
@@ -40,6 +40,5 @@ En este tema, abra el Diseñador de cinta, agregará un botón y, a continuació
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo RibbonGadgets: Aplicación de Gadgets de cinta de opciones](../visual-cpp-samples.md)<br/>
+[Ejemplo RibbonGadgets: Aplicación de Gadgets de cinta](../overview/visual-cpp-samples.md)<br/>
 [Diseñador de la cinta de opciones (MFC)](../mfc/ribbon-designer-mfc.md)
-

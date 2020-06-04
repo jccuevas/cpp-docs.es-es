@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-ms.openlocfilehash: 62ce0a0edc7f15bc5a19e4630133976f413da35a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa26393f1ce76d3e1bc40e5ba4978d1bcdb4fc9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588622"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193763"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Advertencia de las herramientas del vinculador LNK4237
 
-/ SUBSYSTEM: Native especificada al importar desde 'dll'; Utilice/SUBSYSTEM: Console o/SUBSYSTEM: Windows.
+/SUBSYSTEM: NATIVE especificado al importar desde ' dll '; Use/SUBSYSTEM: CONSOLE o/SUBSYSTEM: WINDOWS.
 
-[/ SUBSYSTEM: Native](../../build/reference/subsystem-specify-subsystem.md) se especificó al generar una aplicación de windows (Win32) que utiliza directamente uno o varios de los siguientes:
+Se especificó [/Subsystem: Native](../../build/reference/subsystem-specify-subsystem.md) al compilar una aplicación de Windows (Win32) que usa directamente uno o varios de los siguientes elementos:
 
 - kernel32.dll
 
-- Gdi32.dll
+- gdi32.dll
 
 - user32.dll
 
-- uno de lo msvcrt\* archivos DLL.
+- uno de los archivos dll msvcrt\*.
 
-Resolver esta advertencia mediante la especificación no **/SUBSYSTEM: Native**.
+Para resolver esta advertencia, no especifique **/Subsystem: Native**.

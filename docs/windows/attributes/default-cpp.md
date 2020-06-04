@@ -1,5 +1,5 @@
 ---
-title: predeterminado (atributo de COM de C++)
+title: default (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 1c9c8cd9a6bf0d6ea34db5d62d7767874b4dd4b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560620"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167191"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -32,18 +32,18 @@ Interfaz predeterminada que estará disponible para los entornos de scripting qu
 
 Si no se especifica ninguna interfaz predeterminada, se usa la primera aparición de una interfaz sin origen como valor predeterminado.
 
-*Interfaz2*<br/>
-(Opcional) La interfaz de origen predeterminada. También debe especificar esta interfaz con el atributo [source](source-cpp.md) .
+*interfaz2*<br/>
+Opta La interfaz de origen predeterminada. También debe especificar esta interfaz con el atributo [source](source-cpp.md) .
 
 Si no se especifica ninguna interfaz de origen predeterminada, se usa la primera interfaz de origen como valor predeterminado.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El atributo C++ **default** tiene la misma funcionalidad que el atributo MIDL [default](/windows/desktop/Midl/default) . El atributo **default** también se usa con el atributo [case](case-cpp.md) .
+El atributo C++ **default** tiene la misma funcionalidad que el atributo MIDL [default](/windows/win32/Midl/default) . El atributo **default** también se usa con el atributo [case](case-cpp.md) .
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente código muestra cómo **predeterminada** se utiliza en la definición de una coclase especificar `ICustomDispatch` como la interfaz de programación predeterminada:
+En el código siguiente se muestra cómo se usa **default** en la definición de una coclase para especificar `ICustomDispatch` como la interfaz de programación predeterminada:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -99,15 +99,15 @@ El atributo [source](source-cpp.md) también tiene un ejemplo de cómo usar **de
 
 |||
 |-|-|
-|**Se aplica a**|**clase**, **struct**, miembro de datos|
+|**Se aplica a**|**clase**, **estructura**, miembro de datos|
 |**Reiterativo**|No|
-|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o **struct**)|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|**coclase** (cuando se aplica a una **clase** o **struct**)|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[coclase](coclass.md)
+[coclass](coclass.md)

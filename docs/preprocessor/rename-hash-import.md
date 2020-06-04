@@ -1,64 +1,60 @@
 ---
-title: rename (#import)
-ms.date: 10/18/2018
-f1_keywords:
-- Rename
+title: cambiar nombre de atributo de importación
+ms.date: 08/29/2019
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: 15673a8b9ebaf298ae1b2b45c9a76a1691e681b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 520369f0308078fead2947e27a512f25a3ad3fab
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514197"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447487"
 ---
-# <a name="rename-import"></a>cambiar el nombre (\#importar)
+# <a name="rename-import-attribute"></a>cambiar nombre de atributo de importación
 
-**Específicos de C++**
+**C++Cuestión**
 
 Resuelve problemas del conflicto de nombres.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-rename("OldName","NewName")
-```
+> **#import** **cambiar el nombre** *de la biblioteca de tipos* ("*OldName*" **,** "*NewName*" **)**
 
 ### <a name="parameters"></a>Parámetros
 
-*OldName*<br/>
+\ *OldName*
 Nombre anterior en la biblioteca de tipos.
 
-*NewName*<br/>
+*NewName*\
 Nombre usado en lugar del nombre anterior.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si se especifica este atributo, el compilador reemplaza todas las apariciones de *OldName* en una biblioteca de tipos con el proporcionado por el usuario *NewName* en los archivos de encabezado resultante.
+Cuando se especifica el atributo **Rename** , el compilador reemplaza todas las apariciones de *OldName* en la *biblioteca de tipos* con el *NewName* proporcionado por el usuario en los archivos de encabezado resultantes.
 
-Este atributo se puede utilizar cuando un nombre en la biblioteca de tipos coincide con una definición de macro en los archivos de encabezado del sistema. Si no se puede resolver esta situación, se generarán distintos errores de sintaxis, como [Error del compilador C2059](../error-messages/compiler-errors-1/compiler-error-c2059.md) y [Error del compilador C2061](../error-messages/compiler-errors-1/compiler-error-c2061.md).
+Se puede usar el atributo **Rename** cuando un nombre de la biblioteca de tipos coincide con una definición de macro en los archivos de encabezado del sistema. Si no se resuelve esta situación, el compilador puede emitir varios errores de sintaxis, como el [error del compilador C2059](../error-messages/compiler-errors-1/compiler-error-c2059.md) y el [error del compilador C2061](../error-messages/compiler-errors-1/compiler-error-c2061.md).
 
 > [!NOTE]
 > La sustitución se aplica a un nombre usado en la biblioteca de tipos, no a un nombre usado en el archivo de encabezado resultante.
 
-Suponga, por ejemplo, que hay una propiedad denominada `MyParent` en una biblioteca de tipos y que se define una macro `GetMyParent` en un archivo de encabezado y se utiliza antes de `#import`. Puesto que `GetMyParent` es el nombre predeterminado de una función de contenedor para el control de errores `get` propiedad, se producirá un conflicto de nombres. Para solucionar el problema, utilice el siguiente atributo en la instrucción `#import`:
+Suponga, por ejemplo, que hay una propiedad denominada `MyParent` en una biblioteca de tipos y que se define una macro `GetMyParent` en un archivo de encabezado y se utiliza antes de `#import`. Puesto que `GetMyParent` es el nombre predeterminado de una función contenedora para la propiedad `get` de control de errores, se producirá un conflicto de nombres. Para solucionar el problema, utilice el siguiente atributo en la instrucción `#import`:
 
 ```cpp
-rename("MyParent","MyParentX")
+#import MyTypeLib.tlb rename("MyParent","MyParentX")
 ```
 
 que cambia el nombre `MyParent` en la biblioteca de tipos. Un intento de cambiar el nombre del contenedor `GetMyParent` producirá un error:
 
 ```cpp
-rename("GetMyParent","GetMyParentX")
+#import MyTypeLib.tlb rename("GetMyParent","GetMyParentX")
 ```
 
-Esto se debe a que el nombre `GetMyParent` solo aparece en el archivo de encabezado resultante de la biblioteca de tipos.
+Se debe a que el nombre `GetMyParent` solo se produce en el archivo de encabezado de la biblioteca de tipos resultante.
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[#import atributos](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

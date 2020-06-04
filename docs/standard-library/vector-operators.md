@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f659f1291c4111d83cc8715fd0deb104a9685f4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474456"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427576"
 ---
 # <a name="ltvectorgt-operators"></a>Operadores de &lt;vector&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto en el lado izquierdo del operador no es igual al objeto del lado derecho.
 
@@ -40,17 +35,17 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los vectores no son iguales, **false** si los vectores son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Dos vectores son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -91,10 +86,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -132,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto en el lado izquierdo del operador es menor o igual que el objeto del lado derecho.
 
@@ -142,10 +137,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -183,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto en el lado izquierdo del operador es igual al objeto del lado derecho.
 
@@ -193,17 +188,17 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Es **true** si el vector del lado izquierdo del operador es igual que el vector del lado derecho del operador. De lo contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Dos vectores son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -244,10 +239,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -286,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto en el lado izquierdo del operador es mayor o igual que el objeto del lado derecho.
 
@@ -296,10 +291,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -337,7 +332,3 @@ int main( )
 ```Output
 Vector v1 is greater than or equal to vector v2.
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<vector>](../standard-library/vector.md)<br/>

@@ -1,53 +1,53 @@
 ---
 title: Mensajes de error de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - vc.errors.ml
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-ms.openlocfilehash: aa0440afae980e218c32ab3296bd7c6fb2b444d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b065433a1a6baf9bf2631aeb2f53421f8efb83b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677804"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312630"
 ---
 # <a name="ml-error-messages"></a>Mensajes de error de ML
 
-Los mensajes de error generados por componentes MASM se dividen en tres categorías:
+Los mensajes de error generados por los componentes de MASM se dividen en tres categorías:
 
-- **Errores irrecuperables.** Estos errores indican un problema grave que impide que la utilidad de completar el proceso normal.
+- **Errores irrecuperables.** Esto indica un problema grave que impide que la utilidad complete su proceso normal.
 
-- **Errores recuperables.** La utilidad puede completar su proceso. Si es así, su resultado no es probable que sea lo que desee.
+- **Errores no graves.** La utilidad puede completar su proceso. Si es así, no es probable que su resultado sea el que desee.
 
-- **Advertencias.** Estos mensajes indican las condiciones que pueden impedir la obtención de los resultados que desee.
+- **ADVERTENCIAS.** Estos mensajes indican condiciones que pueden impedir que se obtengan los resultados deseados.
 
-Todos los mensajes de error adoptan la forma siguiente:
+Todos los mensajes de error tienen el siguiente formato:
 
-> *Utilidad*: *Filename* (*línea*): {*Error_type*} (*código*): *Message_text*
+> *Utilidad*: *filename* (*línea*): {*Error_type*} (*código*): *Message_text*
 
 donde:
 
-*Utilidad*<br/>
-El programa que envió el mensaje de error.
+\ de la *utilidad*
+Programa que envió el mensaje de error.
 
-*Nombre de archivo*<br/>
+*Nombre de archivo*\
 El archivo que contiene la condición de generación de errores.
 
-*Line*<br/>
-La línea aproximada donde existe la condición de error.
+\ de *línea*
+La línea aproximada en la que existe la condición de error.
 
-*Error_type*<br/>
-Grave Error, Error o advertencia.
+*Error_type*\
+Error irrecuperable, error o advertencia.
 
-*Código*<br/>
-El código de error 5 o 6 dígitos únicos.
+*Código*\
+Código de error único de 5 o 6 dígitos.
 
-*Message_text*<br/>
-Una descripción breve y general de la condición de error.
+*Message_text*\
+Descripción breve y general de la condición de error.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Referencia de Microsoft macro Assembler](microsoft-macro-assembler-reference.md)

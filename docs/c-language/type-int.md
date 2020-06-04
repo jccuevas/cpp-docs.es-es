@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: ebce276c8c4efa822601fe36652057b37e922570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150017"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334446"
 ---
 # <a name="type-int"></a>Tipo int
 
@@ -22,12 +22,12 @@ Los especificadores de tipo `int` y `unsigned int` (o simplemente `unsigned`) de
 
 **Específicos de Microsoft**
 
-Los enteros con signo se representan en forma de complemento de dos. El bit más significativo contiene el signo: 1 si es negativo, 0 si es positivo y cero. El intervalo de valores se proporciona en [Límites de enteros de C++](../c-language/cpp-integer-limits.md), que se toma del archivo de encabezado LIMITS.H.
+Los enteros con signo se representan en forma de complemento de dos. El bit más significativo contiene el signo: 1 si es negativo, 0 si es positivo y cero. El intervalo de valores se proporciona en [Límites de enteros de C y C++](../c-language/cpp-integer-limits.md), que se toma del archivo de encabezado LIMITS.H.
 
 **FIN de Específicos de Microsoft**
 
 > [!NOTE]
->  Los especificadores de tipo int y unsigned int se usan con bastante frecuencia en los programas de C, porque permiten que un equipo determinado administre los valores enteros del modo más eficaz para ese equipo. Sin embargo, puesto que los tamaños de los tipos int y unsigned int varían, es posible que los programas que dependan de un tamaño de int concreto no sean portables a otros equipos. Para que los programas sean más portables, puede usar expresiones con el operador sizeof (como se describe en [El operador sizeof](../c-language/sizeof-operator-c.md)), en lugar de tamaños de datos codificados de forma rígida.
+> Los especificadores de tipo int y unsigned int se usan con bastante frecuencia en los programas de C, porque permiten que un equipo determinado administre los valores enteros del modo más eficaz para ese equipo. Sin embargo, puesto que los tamaños de los tipos int y unsigned int varían, es posible que los programas que dependan de un tamaño de int concreto no sean portables a otros equipos. Para que los programas sean más portables, puede usar expresiones con el operador sizeof (como se describe en [El operador sizeof](../c-language/sizeof-operator-c.md)), en lugar de tamaños de datos codificados de forma rígida.
 
 ## <a name="see-also"></a>Vea también
 

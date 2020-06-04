@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2673
 ms.assetid: 780230c0-619b-4a78-b01d-ff5886306741
-ms.openlocfilehash: 8a544b6d96089195d7d28f9a62b091b4f1cfc537
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ade00d0b912a44c0916e5ce5aa7f23b2cc91cf8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587647"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757168"
 ---
 # <a name="compiler-error-c2673"></a>Error del compilador C2673
 
-'function': las funciones globales no tienen punteros 'this'
+' función ': las funciones globales no tienen punteros ' this '
 
-Una función global intentó obtener acceso a `this`.
+Una función global intentó tener acceso a `this`.
 
-El ejemplo siguiente genera C2673:
+En el ejemplo siguiente se genera C2673:
 
-```
+```cpp
 // C2673.cpp
 int main() {
    this = 0;   // C2673

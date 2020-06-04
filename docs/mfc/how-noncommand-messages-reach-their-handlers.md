@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 - message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
-ms.openlocfilehash: f64eb97315b41a314c791e1a4c5bc7721b329fca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b9fb0a72b330380f0207db9968199a7e4c3d9b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407944"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Cómo llegan a los controladores los mensajes que no son de comandos
 
@@ -23,4 +23,3 @@ En tiempo de ejecución, cada ventana de Windows está asociada a un objeto de v
 ## <a name="see-also"></a>Vea también
 
 [Cómo el marco llama a un controlador](../mfc/how-the-framework-calls-a-handler.md)
-

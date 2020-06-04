@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1073
 ms.assetid: a946fcf1-674e-4a7a-a28c-b1effacbabe1
-ms.openlocfilehash: 61cc076ff88b04facd730792fe404bdecd0503ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d33cf5fefc4aea5b284d2e67c02a9cb310cd5433
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614791"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204326"
 ---
 # <a name="fatal-error-c1073"></a>Error irrecuperable C1073
 
-Error interno que requiere compilación incremental (archivo del compilador 'filename', número de línea)
+Error interno que requiere compilación incremental (archivo del compilador ' nombredearchivo ', número de línea)
 
 Vuelva a compilar el archivo sin usar la compilación incremental.

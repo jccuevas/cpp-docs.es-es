@@ -1,33 +1,33 @@
 ---
-title: 'Cómo: realizar enlaces de datos de DDX y DDV con formularios de Windows'
+title: 'Cómo: Hacer enlace de datos DDX-DDV con formularios Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31629a4db2559112ba49f5c069b08de7abdfc2db
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754350"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Cómo: Enlazar datos DDX/DDV con formularios Windows Forms
 
-[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) llamadas [CWinFormsControl:: CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) para crear un control que coincida con el identificador de control de recursos. Si usas `DDX_ManagedControl` para un `CWinFormsControl` control (en el asistente generó código), no debería llamar `CreateManagedControl` explícitamente para el mismo control.
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) llama a [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) para crear un control que coincida con el identificador de control de recursos. Si usa `DDX_ManagedControl` un `CWinFormsControl` control (en código generado por el `CreateManagedControl` asistente), no debe llamar explícitamente para el mismo control.
 
-Llame a `DDX_ManagedControl` en [CWnd:: DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) para crear controles de identificadores de recursos. Intercambio de datos, no es necesario utilizar las funciones DDX/DDV con controles de formularios Windows Forms. En su lugar, puede colocar código para tener acceso a las propiedades del control administrado en el `DoDataExchange` método de la clase de cuadro de diálogo (o vista), como en el ejemplo siguiente.
+Llame `DDX_ManagedControl` a [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) para crear controles a partir de identificadores de recursos. Para el intercambio de datos, no es necesario utilizar las funciones DDX/DDV con controles de formularios Windows Forms. En su lugar, puede colocar código para tener `DoDataExchange` acceso a las propiedades del control administrado en el método de la clase de cuadro de diálogo (o vista), como en el ejemplo siguiente.
 
-El ejemplo siguiente muestra cómo enlazar una cadena de C++ nativa a un control de usuario. NET.
+En el ejemplo siguiente se muestra cómo enlazar una cadena C++ nativa a un control de usuario de .NET.
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente es un ejemplo de enlace de datos DDX/DDV de una cadena MFC `m_str` con el definido por el usuario `NameText` propiedad de un control de usuario. NET.
+A continuación se muestra un ejemplo de enlace de `m_str` datos DDX/DDV de una cadena MFC con la propiedad definida por `NameText` el usuario de un control de usuario .NET.
 
-Cuando se crea el control [CDialog:: OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) llamadas `CMyDlg::DoDataExchange` por primera vez, por lo que cualquier código que hace referencia a `m_UserControl` debe ir después de la `DDX_ManagedControl` llamar.
+El control se crea cuando [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) llama `CMyDlg::DoDataExchange` por primera `m_UserControl` vez, `DDX_ManagedControl` por lo que cualquier código que hace referencia debe venir después de la llamada.
 
-Puede implementar este código en la aplicación de MFC01 creada en [Cómo: crear el Control de usuario y el Host en un cuadro de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Puede implementar este código en la aplicación MFC01 que creó en [Cómo: crear el control](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)de usuario y host en un cuadro de diálogo .
 
 Coloque el código siguiente en la declaración de CMFC01Dlg:
 
@@ -41,9 +41,9 @@ class CMFC01Dlg : public CDialog
 
 ## <a name="example"></a>Ejemplo
 
-Coloque el siguiente código en la implementación de CMFC01Dlg:
+Coloque el código siguiente en la implementación de CMFC01Dlg:
 
-```
+```cpp
 void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 {
    CDialog::DoDataExchange(pDX);
@@ -60,11 +60,11 @@ void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 
 ## <a name="example"></a>Ejemplo
 
-Ahora agregaremos el método de controlador para un clic en el botón Aceptar. Haga clic en el **vista de recursos** ficha. En la vista de recursos, haga doble clic en `IDD_MFC01_DIALOG`. El recurso de cuadro de diálogo aparece en el Editor de recursos. A continuación, haga doble clic en el botón Aceptar...
+Ahora agregaremos el método de controlador para hacer clic en el botón Aceptar. Haga clic en la pestaña **Vista** de recursos. En la vista de `IDD_MFC01_DIALOG`recursos, haga doble clic en . El recurso de cuadro de diálogo aparece en el Editor de recursos. A continuación, haga doble clic en OK botón..
 
-Definir el controlador como se indica a continuación.
+Defina el controlador de la siguiente manera.
 
-```
+```cpp
 void CMFC01Dlg::OnBnClickedOk()
 {
    AfxMessageBox(CString(m_MyControl.GetControl()->textBox1->Text));
@@ -74,16 +74,16 @@ void CMFC01Dlg::OnBnClickedOk()
 
 ## <a name="example"></a>Ejemplo
 
-Y agregue la siguiente línea a la implementación de CMFC01Dlg::OnInitDialog() BOOL.
+Y agregue la siguiente línea a la implementación de BOOL CMFC01Dlg::OnInitDialog().
 
 ```
 m_MyControl.GetControl()->textBox1->Text = "hello";
 ```
 
-Ahora puede compilar y ejecutar la aplicación. Tenga en cuenta que cualquier texto en el cuadro de texto se mostrará en un cuadro de mensaje emergente cuando se cierra la aplicación.
+Ya puede compilar y ejecutar la aplicación. Observe que cualquier texto del cuadro de texto se mostrará en un cuadro de mensaje emergente cuando se cierre la aplicación.
 
 ## <a name="see-also"></a>Vea también
 
 [CWinFormsControl (clase)](../mfc/reference/cwinformscontrol-class.md)<br/>
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>
-[CWnd:: DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)
+[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

@@ -2,18 +2,18 @@
 title: /LARGEADDRESSAWARE
 ms.date: 11/04/2016
 f1_keywords:
-- /largeaddressaware
+- /largeaddressaware_editbin
 helpviewer_keywords:
 - -LARGEADDRESSAWARE editbin option
 - /LARGEADDRESSAWARE editbin option
 - LARGEADDRESSAWARE editbin option
 ms.assetid: 5db58df3-4457-4808-adf7-2bee6ea97486
-ms.openlocfilehash: c30e7b9340fd45f31dc2a6508a0bcc04ffe8c910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1a4c27830850cb74f705bfb9663303f465632bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605002"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439456"
 ---
 # <a name="largeaddressaware"></a>/LARGEADDRESSAWARE
 
@@ -21,10 +21,10 @@ ms.locfileid: "50605002"
 /LARGEADDRESSAWARE
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta opción edita la imagen para indicar que la aplicación puede controlar direcciones superiores a 2 gigabytes.
+Esta opción edita la imagen para indicar que la aplicación puede controlar direcciones de más de 2 gigabytes.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Opciones de EDITBIN](../../build/reference/editbin-options.md)
+[Opciones de EDITBIN](editbin-options.md)

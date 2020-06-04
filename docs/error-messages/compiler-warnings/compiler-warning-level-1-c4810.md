@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4810
 ms.assetid: 39e2cae0-9c1c-4ac1-aaa0-5f661d06085b
-ms.openlocfilehash: 4701ac40d436a9f5511f2c7cec86e8183ec2f837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdeb4dd28587635a391e7b776ccd88b637a7769f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508161"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174939"
 ---
 # <a name="compiler-warning-level-1-c4810"></a>Advertencia del compilador (nivel 1) C4810
 
@@ -21,7 +21,7 @@ Esta advertencia se emite cuando se usa la opción **show** de pragma [pack](../
 
 Por ejemplo, el código siguiente muestra cómo funciona la advertencia C4810 con pragma pack:
 
-```
+```cpp
 // C4810.cpp
 // compile with: /W1 /LD
 // C4810 expected

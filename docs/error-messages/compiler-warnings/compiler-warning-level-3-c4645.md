@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4645
 ms.assetid: fd7c1ddf-f0d0-4e10-bab9-ccb4c3476298
-ms.openlocfilehash: a3e5c834a3f14b9a125176dcddd5bcc355cf1faa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9aff4b554f4b162f87de9e1d373d59dea019637
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536778"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991733"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>Advertencia del compilador (nivel 3) C4645
 
@@ -21,7 +21,7 @@ A [return](../../cpp/return-statement-in-program-termination-cpp.md) en una func
 
 El ejemplo siguiente genera la advertencia C4645:
 
-```
+```cpp
 // C4645.cpp
 // compile with:  /W3
 void __declspec(noreturn) func() {

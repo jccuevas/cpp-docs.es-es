@@ -217,7 +217,6 @@ f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_Segment_t
 - concrt/Concurrency::details::_ReentrantPPLLock::_Scoped_lock
 - ppl/Concurrency::_Task_handle_base_with_dtor::_Task_handle_base
-- DWORD
 - concurrent_queue/Concurrency::details::_Concurrent_queue_base_v4::_Internal_empty
 - concrt/Concurrency::details::_TaskCollection::_Wait
 - agents/Concurrency::_Order_node_base::consume_message
@@ -453,25 +452,25 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663338"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446280"
 ---
 # <a name="reference-concurrency-runtime"></a>Referencia (Runtime de simultaneidad)
 
 Esta sección contiene información de referencia para el Runtime de simultaneidad.
 
 > [!Note]
-> El estándar del lenguaje C++ reserva el uso de los identificadores que comienzan con un carácter de subrayado (_) para implementaciones como bibliotecas. No utilice estos nombres en el código. El comportamiento de los elementos de código cuyos nombres siguen esta convención no está garantizado y está sujeto a cambios en el futuro. Por estos motivos, dichos elementos de código se omiten en la documentación del Runtime de simultaneidad.
+> El C++ estándar del lenguaje reserva el uso de identificadores que comienzan con un carácter de subrayado (_) para implementaciones como bibliotecas. No utilice estos nombres en el código. El comportamiento de los elementos de código cuyos nombres siguen esta convención no está garantizado y está sujeto a cambios en el futuro. Por estos motivos, estos elementos de código se omiten en la documentación Runtime de simultaneidad.
 
 ## <a name="in-this-section"></a>En esta sección
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
-El espacio de nombres de simultaneidad proporciona clases y funciones que le proporcionan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulta [Concurrency Runtime](../concurrency-runtime.md).
+El espacio de nombres de simultaneidad proporciona clases y funciones que proporcionan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../concurrency-runtime.md).
 
-[espacio de nombres std](std-namespace.md)
+[espacio de nombres STD](std-namespace.md)
 
-[espacio de nombres stdx)](stdx-namespace.md)
+[espacio de nombres stdx (](stdx-namespace.md)

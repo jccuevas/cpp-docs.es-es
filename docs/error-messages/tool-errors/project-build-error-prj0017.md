@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0017
 ms.assetid: a192729f-bb10-486a-bfda-a7843fa259b2
-ms.openlocfilehash: dc96e24237cf29321bfa5987737baba6f6801541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8fbc0636d62b7162cf79bea033d7e0b4fa01a9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475437"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192593"
 ---
 # <a name="project-build-error-prj0017"></a>Error PRJ0017 al compilar el proyecto
 
 El directorio de trabajo actual no es válido.
 
-La ruta de acceso al directorio de trabajo actual es mayor que _MAXPATH. Para resolver este error, no cree el proyecto en un nivel profundo de este tipo.
+La ruta de acceso al directorio de trabajo actual es mayor que _MAXPATH. Para resolver este error, no cree el proyecto en un nivel de profundidad.

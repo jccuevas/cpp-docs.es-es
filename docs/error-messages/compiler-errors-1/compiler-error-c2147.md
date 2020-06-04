@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2147
 ms.assetid: d1adb3bf-7ece-4815-922c-ad7492fb6670
-ms.openlocfilehash: 0a093bbbaf9cf9f72625226f949a27b681005c35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0af88d89ff264ca9efd02477a62e5bd7532271bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614492"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756492"
 ---
 # <a name="compiler-error-c2147"></a>Error del compilador C2147
 
-error de sintaxis: 'identifier' es una nueva palabra clave
+error de sintaxis: ' Identifier ' es una palabra clave nueva
 
-Se usó un identificador que es ahora una palabra reservada en el lenguaje.
+Se usó un identificador que ahora es una palabra clave reservada en el lenguaje.
 
-El ejemplo siguiente genera C2147:
+En el ejemplo siguiente se genera C2147:
 
-```
+```cpp
 // C2147.cpp
 // compile with: /clr
 int main() {

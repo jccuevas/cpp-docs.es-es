@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: eda3dd38449f89d9b8d767b460970d659f6c9dc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316176"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Incluir información de depuración en un archivo objeto)
 
-Ritmo de completa información de depuración en todos los archivos objeto creado a partir de un archivo de encabezado precompilado (.pch) cuando se usa con el [/Yc](../../build/reference/yc-create-precompiled-header-file.md) y [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opciones. Desusado.
+Ritmo de completa información de depuración en todos los archivos objeto creado a partir de un archivo de encabezado precompilado (.pch) cuando se usa con el [/Yc](yc-create-precompiled-header-file.md) y [/Z7](z7-zi-zi-debug-information-format.md) opciones. Desusado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,9 +28,9 @@ Ritmo de completa información de depuración en todos los archivos objeto cread
 
 ## <a name="remarks"></a>Comentarios
 
-**/Yd** está en desuso; Visual C++ ahora admite varios objetos de escritura en un archivo .pdb único, use **/Zi** en su lugar. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](../../build/reference/compiler-options-listed-by-category.md).
+**/Yd** está en desuso; Visual C++ ahora admite varios objetos de escritura en un archivo .pdb único, use **/Zi** en su lugar. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](compiler-options-listed-by-category.md).
 
-A menos que necesite distribuir una información de depuración que contiene la biblioteca, utilice la [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción lugar **/Z7** y **/Yd**.
+A menos que necesite distribuir una información de depuración que contiene la biblioteca, utilice la [/Zi](z7-zi-zi-debug-information-format.md) opción lugar **/Z7** y **/Yd**.
 
 Almacenar información de depuración completa en todos los archivos .obj sólo es necesario para distribuir las bibliotecas que contienen información de depuración. Compilación de la que se ralentiza y requiere espacio en disco considerable. Cuando **/Yc** y **/Z7** se usan sin **/Yd**, el compilador almacena la información de depuración comunes en el primer archivo .obj creado a partir del archivo .pch. El compilador no inserta esta información en los archivos .obj creados posteriormente desde el archivo .pch; Inserta las referencias cruzadas a la información. Independientemente de cuántos archivos .obj que use el archivo .pch, solo un archivo .obj contiene la información de depuración comunes.
 
@@ -38,13 +38,13 @@ Aunque este comportamiento predeterminado logra más rápido el tiempo de compil
 
 Para obtener más información sobre los encabezados precompilados, vea:
 
-- [/Y (Encabezados precompilados)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Encabezados precompilados)](y-precompiled-headers.md)
 
-- [Crear archivos de encabezado precompilados](../../build/reference/creating-precompiled-header-files.md)
+- [Archivos de encabezado precompilados](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -83,5 +83,5 @@ Si el encabezado precompilado no se compiló con **/Z7**, puede usarlo en poster
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

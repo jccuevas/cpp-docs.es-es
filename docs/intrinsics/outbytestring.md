@@ -1,6 +1,6 @@
 ---
 title: __outbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbytestring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: c5d99ee230780d1bfdcd104c1fcf3b3bd099fd6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326931"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217175"
 ---
-# <a name="outbytestring"></a>__outbytestring
+# <a name="__outbytestring"></a>__outbytestring
 
 **Específicos de Microsoft**
 
-Genera el `rep outsb` instrucción, que envía el primer `Count` bytes de datos apunta a `Buffer` al puerto especificado por `Port`.
+Genera la `rep outsb` instrucción, que envía los primeros `Count` bytes `Buffer` de datos a los que señala el puerto especificado por `Port`.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __outbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,16 +31,16 @@ void __outbytestring(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Puerto*<br/>
-[in] El puerto para enviar los datos.
+*Casilla*\
+de Puerto al que se van a enviar los datos.
 
-*búfer*<br/>
-[in] Los datos se envíen el puerto especificado.
+*Búfer*\
+de Los datos que se van a enviar al puerto especificado.
 
-*Recuento*<br/>
-[in] El número de bytes de datos que se envían.
+*Contabiliza*\
+de El número de bytes de datos que se van a enviar.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,7 +48,7 @@ void __outbytestring(
 |---------------|------------------|
 |`__outbytestring`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -58,4 +58,4 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

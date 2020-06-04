@@ -1,21 +1,21 @@
 ---
-title: call_as (atributo de COM de C++)
+title: call_as (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 16839f5a5040e6b0019005912782ba359178cc47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579908"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167344"
 ---
-# <a name="callas"></a>call_as
+# <a name="call_as"></a>call_as
 
-Permite un [local](local-cpp.md) función a la que se asignan a una función remota para que cuando se llama a la función remota, se invoca la función local.
+Habilita una función [local](local-cpp.md) que se va a asignar a una función remota para que cuando se llame a la función remota, se invoque la función local.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,15 +26,15 @@ Permite un [local](local-cpp.md) función a la que se asignan a una función rem
 ### <a name="parameters"></a>Parámetros
 
 *function*<br/>
-La función local que desea que se llama cuando se invoca una función remota.
+Función local a la que se va a llamar cuando se invoque una función remota.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **call_as** atributo de C++ tiene la misma funcionalidad que el [call_as](/windows/desktop/Midl/call-as) atributo MIDL.
+El atributo **call_as** C++ tiene la misma funcionalidad que el atributo MIDL [call_as](/windows/win32/Midl/call-as) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo puede usar **call_as** para asignar una función utilizables (`f1`) a una función remota (`Remf1`):
+En el código siguiente se muestra cómo puede usar **call_as** para asignar una función no utilizables (`f1`) a una función de uso remoto (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -56,12 +56,12 @@ __interface IMInterface {
 |-|-|
 |**Se aplica a**|Método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

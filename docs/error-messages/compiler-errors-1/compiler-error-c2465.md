@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2465
 ms.assetid: 65ba2a9f-d95e-4af3-b60b-1ac59a1e307c
-ms.openlocfilehash: 82492f3397be46a195f31345e086ee592f1a0f65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a10e79eb3fee35d8e7ee1dadb6d7227749c1ad6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593562"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205171"
 ---
 # <a name="compiler-error-c2465"></a>Error del compilador C2465
 

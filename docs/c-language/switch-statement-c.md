@@ -1,34 +1,45 @@
 ---
-title: switch (Instrucción) (C)
-ms.date: 11/04/2016
+title: Instrucción switch (C)
+ms.date: 04/25/2020
 f1_keywords:
 - switch
 helpviewer_keywords:
 - switch keyword [C]
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
-ms.openlocfilehash: 0f781147bf4ed020cf925ca29c2ba1b0f601cde1
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+no-loc:
+- switch
+- case
+- default
+- break
+ms.openlocfilehash: eb18b6244318b595e67cc45f99dfcde314866f55
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148197"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825683"
 ---
-# <a name="switch-statement-c"></a>switch (Instrucción) (C)
+# <a name="switch-statement-c"></a>Instrucción `switch` (C)
 
-Las instrucciones `switch` y **case** ayudan a controlar las operaciones condicionales y de bifurcación complejas. La instrucción `switch` transfiere el control a una instrucción dentro del cuerpo.
+Las instrucciones __`switch`__ y __`case`__ ayudan a controlar las operaciones condicionales y de bifurcación complejas. La instrucción __`switch`__ transfiere el control a una instrucción dentro del cuerpo.
 
 ## <a name="syntax"></a>Sintaxis
 
-*selection-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (** *expression* **)** *statement*
+> *`selection-statement`* :\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__ &nbsp; *`expression`* &nbsp; __`)`__ &nbsp; *`statement`*
 
-*labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
+> *`labeled-statement`* :\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__ &nbsp; *`constant-expression`* &nbsp; __`:`__ &nbsp; *`statement`* \
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__ &nbsp; __`:`__ &nbsp; *`statement`*
 
-El control pasa a la instrucción cuya *constant-expression* **case** coincida con el valor de **switch (** *expression* **)**. La instrucción `switch` puede incluir cualquier número de instancias de **case**, pero dos constantes case no pueden tener el mismo valor dentro de la misma instrucción `switch`. La ejecución del cuerpo de instrucción comienza en la instrucción seleccionada y continúa hasta el final del cuerpo o hasta que una instrucción **break** transfiere el control fuera del cuerpo.
+## <a name="remarks"></a>Comentarios
 
-El uso de la instrucción `switch` suele tener una apariencia similar a lo siguiente:
+Una instrucción __`switch`__ hace que el control se transfiera a una instrucción *`labeled-statement`* en el cuerpo de la instrucción, en función del valor de *`expression`* .
+
+Los valores de *`expression`* y cada *`constant-expression`* deben tener un tipo entero. Una *`constant-expression`* debe tener un valor entero constante no ambiguo en tiempo de compilación.
+
+El control pasa a la instrucción **`case`** cuyo valor *`constant-expression`* coincide con el valor de *`expression`* . La instrucción __`switch`__ puede incluir cualquier número de instancias de __`case`__ . Aun así, dos valores *`constant-expression`* dentro de la misma instrucción __`switch`__ no pueden tener el mismo valor. La ejecución del cuerpo de la instrucción __`switch`__ comienza en la primera instrucción dentro o después de la instrucción *`labeled-statement`* correspondiente. La ejecución continúa hasta el final del cuerpo o hasta que una instrucción __`break`__ transfiere el control fuera del cuerpo.
+
+El uso de la instrucción __`switch`__ suele tener una apariencia similar a lo siguiente:
 
 ```C
 switch ( expression )
@@ -45,32 +56,32 @@ switch ( expression )
 }
 ```
 
-Puede usar la instrucción **break** para finalizar el procesamiento de una expresión case concreta dentro de la instrucción `switch` y para bifurcar al final de la instrucción `switch`. Sin **break**, el programa continúa a la siguiente expresión case y ejecuta las instrucciones hasta un **break** o hasta que se alcance el final de la instrucción. En algunas situaciones, esta continuación puede ser deseable.
+Puede usar la instrucción __`break`__ para finalizar el procesamiento de una instrucción con etiqueta concreta dentro de la instrucción __`switch`__ . Se bifurca al final de la instrucción __`switch`__ . Sin __`break`__ , el programa continúa a la siguiente expresión con etiqueta y ejecuta las instrucciones hasta una instrucción __`break`__ o hasta que se alcance el final de la instrucción. Esta continuación puede ser deseable en algunas situaciones.
 
-Se ejecuta la instrucción **default** si ninguna *constant-expression* **case** es igual al valor de **switch (** *expression* **)**. Si se omite la instrucción **default** y no se encuentra ninguna coincidencia de **case**, no se ejecuta ninguna de las instrucciones del cuerpo de `switch`. Puede haber a lo sumo una instrucción **default**. No es necesario que la instrucción **default** esté al final; puede aparecer en cualquier parte del cuerpo de la instrucción `switch`. Una etiqueta **case** o **default** solo puede aparecer en una instrucción `switch`.
+La instrucción __`default`__ se ejecuta si ningún valor *`constant-expression`* __`case`__ es igual al valor de *`expression`* . Si no hay ninguna instrucción __`default`__ y no se encuentra ninguna instrucción __`case`__ coincidente, no se ejecuta ninguna de las instrucciones del cuerpo __`switch`__ . Puede haber a lo sumo una instrucción __`default`__ . No es necesario que la instrucción __`default`__ aparezca al final. Puede aparecer en cualquier parte del cuerpo de la instrucción __`switch`__ . Una etiqueta __`case`__ o __`default`__ solo puede aparecer en una instrucción __`switch`__ .
 
-El tipo de `switch` *expression* y de *constant-expression* **case** debe ser entero. El valor de cada *constant-expression* **case** debe ser único dentro del cuerpo de instrucción.
+El tipo de *`expression`* __`switch`__ y *`constant-expression`* __`case`__ debe ser entero. El valor de cada *`constant-expression`* __`case`__ debe ser único dentro del cuerpo de instrucción.
 
-Las etiquetas **case** y **default** del cuerpo de instrucción de `switch` solo tienen sentido en la prueba inicial que determina dónde se inicia la ejecución en el cuerpo de instrucción. Las instrucciones switch pueden anidarse. Cualquier variable estática se inicializa antes de ejecutar cualquier instrucción `switch`.
+Las etiquetas __`case`__ y __`default`__ del cuerpo de instrucción __`switch`__ solo tienen sentido en la prueba inicial que determina dónde se inicia la ejecución en el cuerpo de instrucción. Las instrucciones __`switch`__ se pueden anidar. Cualquier variable estática se inicializa antes de ejecutar cualquier instrucción __`switch`__ .
 
 > [!NOTE]
-> Las declaraciones pueden aparecer en el encabezado de la instrucción compuesta que constituye el cuerpo de `switch`, pero las inicializaciones incluidas en las declaraciones no se realizan. La instrucción `switch` transfiere el control directamente a una instrucción ejecutable dentro del cuerpo y omite las líneas que contienen inicializaciones.
+> Las declaraciones pueden aparecer en el encabezado de la instrucción compuesta que constituye el cuerpo de __`switch`__ , pero las inicializaciones incluidas en las declaraciones no se realizan. La instrucción __`switch`__ transfiere el control directamente a una instrucción ejecutable dentro del cuerpo y omite las líneas que contienen inicializaciones.
 
-En los siguientes ejemplos de código se muestran instrucciones `switch`:
+En los siguientes ejemplos se muestran instrucciones __`switch`__ :
 
 ```C
 switch( c )
 {
     case 'A':
-        capa++;
+        capital_a++;
     case 'a':
-        lettera++;
+        letter_a++;
     default :
         total++;
 }
 ```
 
-En este ejemplo, las tres instrucciones del cuerpo de `switch` se ejecutan si `c` es igual a `'A'`, ya que no aparece una instrucción **break** antes de la siguiente expresión case. El control de la ejecución se transfiere a la primera instrucción (`capa++;`) y continúa en orden con el resto del cuerpo. Si `c` es igual a `'a'`, se incrementan `lettera` y `total`. Solo se incrementa `total` si `c` no es igual a `'A'` o `'a'`.
+En este ejemplo, las tres instrucciones del cuerpo de __`switch`__ se ejecutan si `c` es igual a `'A'`, ya que no aparece una instrucción __`break`__ antes de la siguiente instrucción __`case`__ . El control de la ejecución se transfiere a la primera instrucción (`capital_a++;`) y continúa en orden con el resto del cuerpo. Si `c` es igual a `'a'`, se incrementan `letter_a` y `total`. Solo se incrementa `total` cuando `c` no es igual a `'A'` o `'a'`.
 
 ```C
 switch( i )
@@ -87,29 +98,30 @@ switch( i )
 }
 ```
 
-En este ejemplo, una instrucción **break** sigue a cada instrucción del cuerpo de `switch`. La instrucción **break** fuerza una salida del cuerpo de instrucción tras ejecutar una instrucción. Si `i` es igual a -1, solo se incrementa `n`. La instrucción **break** que sigue a la instrucción `n++;` hace que el control de la ejecución salga del cuerpo de instrucción y omita las instrucciones restantes. De igual forma, si `i` es igual a 0, solo se incrementa `z`; si `i` es igual a 1, solo se incrementa `p`. La instrucción **break** final no es estrictamente necesaria, puesto que el control sale del cuerpo al final de la instrucción compuesta, pero se incluye por coherencia.
+En este ejemplo, una instrucción __`break`__ sigue a cada instrucción del cuerpo de __`switch`__ . La instrucción __`break`__ fuerza una salida del cuerpo de instrucción tras ejecutar una instrucción. Si `i` es igual a -1, solo se incrementa `n`. La instrucción __`break`__ que sigue a la instrucción `n++;` hace que el control de la ejecución salga del cuerpo de instrucción y omita las instrucciones restantes. De igual forma, si `i` es igual a 0, solo se incrementa `z`; si `i` es igual a 1, solo se incrementa `p`. La instrucción __`break`__ final no es estrictamente necesaria, puesto que el control sale del cuerpo al final de la instrucción compuesta. Se incluye por coherencia.
 
-Una sola instrucción puede contener varias etiquetas **case**, como se muestra en el ejemplo siguiente:
+Una sola instrucción puede contener varias etiquetas __`case`__ , como se muestra en el ejemplo siguiente:
 
 ```C
-case 'a' :
-case 'b' :
-case 'c' :
-case 'd' :
-case 'e' :
-case 'f' :  hexcvt(c);
+switch( c )
+{
+    case 'a' :
+    case 'b' :
+    case 'c' :
+    case 'd' :
+    case 'e' :
+    case 'f' :  convert_hex(c);
+}
 ```
 
-En este ejemplo, si *constant-expression* es cualquier letra entre `'a'` y `'f'`, se llama a la función `hexcvt`.
+En este ejemplo, si *constant-expression* es cualquier letra entre `'a'` y `'f'`, se llama a la función `convert_hex`.
 
-**Específicos de Microsoft**
+### <a name="microsoft-specific"></a>Específico de Microsoft
 
-Microsoft C no limita el número de valores case en una instrucción `switch`. El número solo está limitado por la memoria disponible. ANSI C requiere que al menos 257 etiquetas case se permitan en una instrucción `switch`.
+Microsoft C no limita el número de valores __`case`__ en una instrucción __`switch`__ . El número solo está limitado por la memoria disponible. ANSI C requiere que se permitan al menos 257 etiquetas __`case`__ en una instrucción __`switch`__ .
 
-El valor predeterminado para Microsoft C es que las extensiones de Microsoft estén habilitadas. Utilice la opción de compilador /Za para deshabilitar estas extensiones.
-
-**FIN de Específicos de Microsoft**
+El valor predeterminado default para Microsoft C es que las extensiones de Microsoft estén habilitadas. Use la opción de compilador [/Za](../build/reference/za-ze-disable-language-extensions.md) para deshabilitar estas extensiones.
 
 ## <a name="see-also"></a>Vea también
 
-[switch (Instrucción) (C++)](../cpp/switch-statement-cpp.md)
+[Instrucción switch (C++)](../cpp/switch-statement-cpp.md)

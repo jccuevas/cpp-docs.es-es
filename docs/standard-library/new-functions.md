@@ -2,31 +2,72 @@
 title: Funciones &lt;new&gt;
 ms.date: 11/04/2016
 f1_keywords:
+- new/std::get_new_handler
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: b5803b5fdf44392b6096f9c9a5ebdde7f94eae59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604027"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425416"
 ---
 # <a name="ltnewgt-functions"></a>Funciones &lt;new&gt;
 
-|||
-|-|-|
-|[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|
+## <a name="get_new_handler"></a>get_new_handler
 
-## <a name="nothrow"></a> nothrow
+```cpp
+new_handler get_new_handler() noexcept;
+```
 
-Proporciona un objeto que se usará como un argumento para el **nothrow** versiones de **nueva** y **eliminar**.
+### <a name="remarks"></a>Observaciones
+
+Devuelve el objeto `new_handler` actual.
+
+## <a name="launder"></a>blanqueo
+
+```cpp
+template <class T>
+    constexpr T* launder(T* ptr) noexcept;
+```
+
+### <a name="parameters"></a>Parámetros
+
+\ *ptr*
+Dirección de un byte en memoria que contiene un objeto cuyo tipo es similar a *T*.
+
+### <a name="return-value"></a>Valor devuelto
+
+Valor de tipo *T\** que apunta a X.
+
+### <a name="remarks"></a>Observaciones
+
+También se conoce como barrera de optimización de puntero.
+
+Se utiliza como una expresión constante cuando el valor de su argumento se puede usar en una expresión constante. Se puede obtener acceso a un byte de almacenamiento a través de un valor de puntero que apunta a un objeto si se encuentra dentro del almacenamiento ocupado por otro objeto, un objeto con un puntero similar.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+struct X { const int n; };
+
+X *p = new X{3};
+const int a = p->n;
+new (p) X{5}; // p does not point to new object because X::n is const
+const int b = p->n; // undefined behavior
+const int c = std::launder(p)->n; // OK
+```
+
+## <a name="nothrow"></a>nothrow
+
+Proporciona un objeto que se va a usar como argumento para las versiones **nothrow** de **New** y **Delete**.
 
 ```cpp
 extern const std::nothrow_t nothrow;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El objeto se usa como un argumento de función para que coincida con el tipo de parámetro [std::nothrow_t](../standard-library/nothrow-t-structure.md).
 
@@ -34,9 +75,9 @@ El objeto se usa como un argumento de función para que coincida con el tipo de 
 
 Vea [operator new](../standard-library/new-operators.md#op_new) y [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obtener ejemplos de cómo se usa `std::nothrow_t` como un parámetro de función.
 
-## <a name="set_new_handler"></a> set_new_handler
+## <a name="set_new_handler"></a>set_new_handler
 
-Una función de usuario que se va a llamar cuando se instala **operador new** se produce un error en su intento de asignar memoria.
+Instala una función de usuario a la que se llamará cuando se produzca un error en el **operador New** en su intento de asignar memoria.
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -44,16 +85,16 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Pnew*<br/>
-El `new_handler` para instalarse.
+\ *Pnew*
+`new_handler` que se va a instalar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 0 en la primera llamada y el valor `new_handler` anterior en las llamadas posteriores.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función almacena *Pnew* en estático [nuevo controlador](../standard-library/new-typedefs.md#new_handler) puntero que mantiene y, a continuación, devuelve el valor almacenado previamente en el puntero. Está usando el nuevo controlador [new (operador)](../standard-library/new-operators.md#op_new)(**size_t**).
+La función almacena *Pnew* en un nuevo puntero de [controlador](../standard-library/new-typedefs.md#new_handler) estático que mantiene y, a continuación, devuelve el valor almacenado previamente en el puntero. El [operador New](../standard-library/new-operators.md#op_new)(**size_t**) utiliza el nuevo controlador.
 
 ### <a name="example"></a>Ejemplo
 
@@ -117,7 +158,3 @@ Allocating 5000000 ints.
 The new_handler is called:
 bad allocation
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<new>](../standard-library/new.md)<br/>

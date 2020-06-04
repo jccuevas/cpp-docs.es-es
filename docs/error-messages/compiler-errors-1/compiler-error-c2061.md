@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: 0bd1e770e38fcb85164bfa205470ac55a12e1c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc64852523b6b56bc506260576e3c79164628340
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466201"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735936"
 ---
 # <a name="compiler-error-c2061"></a>Error del compilador C2061
 
-error de sintaxis: identificador 'identificador'
+error de sintaxis: identificador ' Identifier '
 
-El compilador encontró un identificador que no se esperaba. Asegúrese de que `identifier` se declara antes de usarlo.
+El compilador encontró un identificador en el que no se esperaba. Asegúrese de que `identifier` se declara antes de usarlo.
 
-Un inicializador puede aparecer entre paréntesis. Para evitar este problema, escriba el declarador entre paréntesis o conviértalo en un `typedef`.
+Un inicializador puede estar entre paréntesis. Para evitar este problema, incluya el declarador entre paréntesis o conviértalo en `typedef`.
 
-Este error también podría producirse cuando el compilador detecta una expresión como un argumento de plantilla de clase; usar [typename](../../cpp/typename.md) para indicar al compilador es un tipo.
+Este error también puede producirse cuando el compilador detecta una expresión como un argumento de plantilla de clase; Use [TypeName](../../cpp/typename.md) para indicar al compilador que es un tipo.
 
-El ejemplo siguiente genera C2061:
+En el ejemplo siguiente se genera C2061:
 
-```
+```cpp
 // C2061.cpp
 // compile with: /c
 template < A a >   // C2061
@@ -34,9 +34,9 @@ template < A a >   // C2061
 class c{};
 ```
 
-C2061 puede producirse si se pasa un nombre de instancia a [typeid](../../windows/typeid-cpp-component-extensions.md):
+C2061 puede producirse si se pasa un nombre de instancia a [typeid](../../extensions/typeid-cpp-component-extensions.md):
 
-```
+```cpp
 // C2061b.cpp
 // compile with: /clr
 ref struct G {

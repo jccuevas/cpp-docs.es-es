@@ -17,22 +17,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 311710d5614bbc7c24d6b32e89285715476f94da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510804"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425644"
 ---
 # <a name="ltiteratorgt-operators"></a>Operadores de &lt;iterator&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|
-|[operator-](#operator-)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto iterador del lado izquierdo del operador no es igual que el objeto iterador del lado derecho.
 
@@ -49,17 +43,17 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `iterator`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si los objetos iteradores no son iguales; **False** si son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un objeto iterador es igual a otro si direccionan los mismos elementos de un contenedor. Si dos iteradores apuntan a elementos distintos de un contenedor, no son iguales.
 
@@ -125,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto iterador del lado izquierdo del operador es igual que el objeto iterador del lado derecho.
 
@@ -153,21 +147,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo iterador.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo iterador.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los objetos iteradores son iguales; **false** si los objetos iteradores no son iguales.
+**true** si los objetos de iterador son iguales; **false** si los objetos de iterador no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un objeto iterador es igual a otro si direccionan los mismos elementos de un contenedor. Si dos iteradores apuntan a elementos distintos de un contenedor, no son iguales.
 
-Los primeros operadores de dos plantilla devuelven true solo si ambos *izquierdo* y *derecho* almacenan el mismo iterador. El tercer operador de plantilla devuelve true solo si ambos *izquierdo* y *derecho* almacenar el mismo puntero de secuencia. El cuarto operador de la plantilla devuelve ` left.equal ( right)`.
+Los dos primeros operadores de plantilla devuelven TRUE solo si tanto el *izquierdo* como el *derecho* almacenan el mismo iterador. El tercer operador de plantilla devuelve true solo si tanto la *izquierda* como la *derecha* almacenan el mismo puntero de secuencia. El cuarto operador de la plantilla devuelve `left.equal (right)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -242,17 +236,17 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `iterator`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el iterador del lado izquierdo de la expresión es menor que el iterador del lado derecho de la expresión; **False** si es mayor o igual que el iterador de la derecha.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un objeto iterador es menor que otro si direcciona un elemento que aparece en el contenedor antes que el elemento direccionado por el otro objeto iterador. Un objeto iterador no es menor que otro si direcciona el mismo elemento que el otro objeto iterador o bien un elemento que aparece en el contenedor después que el elemento direccionado por el otro objeto iterador.
 
@@ -322,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto iterador del lado izquierdo del operador es menor o igual que el objeto iterador del lado derecho.
 
@@ -333,17 +327,17 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo iterador.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo iterador.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el iterador del lado izquierdo de la expresión es menor o igual que el iterador del lado derecho de la expresión; **False** si es mayor que el iterador de la derecha.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un objeto iterador es menor o igual que otro si direcciona el mismo elemento o un elemento que aparece en el contenedor antes que el elemento direccionado por el otro objeto iterador. Un objeto iterador es mayor que otro si direcciona un elemento que aparece en el contenedor después que el elemento direccionado por el otro objeto iterador.
 
@@ -428,17 +422,17 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo iterador.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo iterador.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el iterador del lado izquierdo de la expresión es mayor que el iterador del lado derecho de la expresión; **False** si es menor o igual que el iterador de la derecha.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un objeto iterador es mayor que otro si direcciona un elemento que aparece en el contenedor después que el elemento direccionado por el otro objeto iterador. Un objeto iterador no es mayor que otro si direcciona el mismo elemento que el otro objeto iterador o bien un elemento que aparece en el contenedor antes que el elemento direccionado por el otro objeto iterador.
 
@@ -506,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto iterador del lado izquierdo del operador es mayor o igual que el objeto iterador del lado derecho.
 
@@ -517,17 +511,17 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo iterador.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo iterador.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el iterador del lado izquierdo de la expresión es mayor o igual que el iterador del lado derecho de la expresión; **False** si es menor que el iterador de la derecha.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un objeto iterador es mayor o igual que otro si direcciona el mismo elemento o un elemento que aparece en el contenedor después que el elemento direccionado por el otro objeto iterador. Un objeto iterador es menor que otro si direcciona un elemento que aparece en el contenedor antes que el elemento direccionado por el otro objeto iterador.
 
@@ -601,7 +595,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a>  operator+
+## <a name="op_add"></a>operador +
 
 Agrega un desplazamiento a un iterador y devuelve `move_iterator` o `reverse_iterator` que direcciona el elemento insertado en la nueva posición de desplazamiento.
 
@@ -621,15 +615,15 @@ operator+(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
+*_Off*\
 Número de posiciones que se va a desplazar move_iterator const o reverse_iterator const.
 
-*right*<br/>
+\ *derecha*
 Iterador que se va a desplazar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la suma *derecho* + *_Off*.
+Devuelve la suma *derecha* +  *_Off*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -680,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a>Operator
 
 Resta un iterador de otro y devuelve la diferencia.
 
@@ -698,17 +692,17 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Iterador.
 
-*right*<br/>
+\ *derecha*
 Iterador.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Diferencia existente entre dos iteradores `.`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer operador de la plantilla devuelve `left.base() - right.base()`.
 
@@ -772,7 +766,3 @@ The iterator rVPOS2 now points to the fifth element
 in the reversed sequence: 2.
 The difference: rVPOS2 - rVPOS1= 4.
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<iterator>](../standard-library/iterator.md)<br/>

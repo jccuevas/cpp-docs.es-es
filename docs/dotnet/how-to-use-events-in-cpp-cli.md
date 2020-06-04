@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: eb18922b998db6b959921c8d786e0d558a9c5ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513911"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545178"
 ---
 # <a name="how-to-use-events-in-ccli"></a>Cómo: Usar eventos en C++/CLI
 
-En este artículo se muestra cómo usar una interfaz que declara un evento y una función para invocar ese evento y el controlador de eventos y clases que implementan la interfaz.
+En este artículo se muestra cómo usar una interfaz que declara un evento y una función para invocar ese evento, y la clase y el controlador de eventos que implementan la interfaz.
 
 ## <a name="interface-events"></a>Eventos de interfaz
 
-El siguiente ejemplo de código agrega un controlador de eventos, se invoca el evento, lo que hace que el controlador de eventos escribir su nombre en la consola y, a continuación, quita el controlador de eventos.
+En el ejemplo de código siguiente se agrega un controlador de eventos, se invoca el evento (que hace que el controlador de eventos escriba su nombre en la consola) y, a continuación, se quita el controlador de eventos.
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,11 +71,11 @@ int main () {
 EventReceiver::Handler
 ```
 
-## <a name="custom-accessor-methods"></a>Métodos de descriptor de acceso personalizado
+## <a name="custom-accessor-methods"></a>Métodos de descriptor de acceso personalizados
 
-El ejemplo siguiente muestra cómo definir el comportamiento de un evento cuando se agregan o quitan controladores, y cuando se genera un evento.
+En el ejemplo siguiente se muestra cómo definir el comportamiento de un evento cuando se agregan o quitan controladores y cuando se genera un evento.
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -163,11 +163,11 @@ In event handler H1
 In event handler H2 with args 1 and 2.2
 ```
 
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Invalidar el acceso predeterminado en Agregar, quitar y generar los descriptores de acceso
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Invalidar el acceso predeterminado en los descriptores de acceso Add, Remove y raise
 
-En este ejemplo se muestra cómo invalidar el acceso predeterminado en el add, remove y raise eventos métodos:
+En este ejemplo se muestra cómo invalidar el acceso predeterminado en los métodos de eventos Add, Remove y raise:
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -223,9 +223,9 @@ int main() {
 
 ## <a name="multiple-event-handlers"></a>Varios controladores de eventos
 
-Un receptor de eventos, o cualquier otro código de cliente, puede agregar uno o varios controladores a un evento.
+Un receptor de eventos o cualquier otro código de cliente puede agregar uno o más controladores a un evento.
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -302,9 +302,9 @@ DblClickAgain(s=System.Char[])
 
 ## <a name="static-events"></a>Eventos estáticos
 
-El ejemplo siguiente muestra cómo definir y usar eventos estáticos.
+En el ejemplo siguiente se muestra cómo definir y usar eventos estáticos.
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -392,9 +392,9 @@ In event handler H2 with args 22 and 22.22
 
 ## <a name="virtual-events"></a>Eventos virtuales
 
-Este ejemplo implementa en una interfaz y la clase de eventos virtuales administrados:
+Este ejemplo implementa eventos administrados virtuales en una interfaz y una clase:
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -476,9 +476,9 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-No se puede especificar un evento simple para invalidar u ocultar un evento de clase base.  Debe definir todas las funciones de descriptor de acceso del evento y, a continuación, especifique el `new` o `override` palabra clave en cada función de descriptor de acceso.
+No se puede especificar un evento simple para invalidar u ocultar un evento de clase base.  Debe definir todas las funciones de descriptor de acceso del evento y, a continuación, especificar la palabra clave `new` o `override` en cada función de descriptor de acceso.
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -510,9 +510,9 @@ ref struct C : B {
 
 ## <a name="abstract-events"></a>Eventos abstractos
 
-El ejemplo siguiente muestra cómo implementar un evento abstracto.
+En el ejemplo siguiente se muestra cómo implementar un evento abstracto.
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -593,11 +593,11 @@ hi
 hello from Event2
 ```
 
-## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>Generar eventos que se definen en un ensamblado diferente
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>Generar eventos definidos en un ensamblado diferente
 
-Un evento y el controlador de eventos pueden definidos en un ensamblado y consumidos por otro ensamblado.
+Un evento y un controlador de eventos pueden definirse en un ensamblado y usarse en otro ensamblado.
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -615,7 +615,7 @@ public:
 
 Este código de cliente consume el evento:
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"
@@ -647,6 +647,6 @@ hello
 hello
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[event](../windows/event-cpp-component-extensions.md)
+[event](../extensions/event-cpp-component-extensions.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: 4b99578ed40b4ff70f3606840198b7062083ca83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030a6acb19c0907956d2a5b833b683821591e5c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667054"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758117"
 ---
 # <a name="compiler-error-c3671"></a>Error del compilador C3671
 
-'function_1': función no invalida 'function_2'
+' function_1 ': la función no invalida ' function_2 '
 
-Cuando se usa la sintaxis de invalidación explícita, el compilador genera un error si no se reemplaza una función.  Consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md) para obtener más información.
+Cuando se usa la sintaxis de invalidación explícita, el compilador genera un error si no se invalida una función.  Vea [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3671.
+En el ejemplo siguiente se genera C3671.
 
-```
+```cpp
 // C3671.cpp
 // compile with: /clr /c
 ref struct S {

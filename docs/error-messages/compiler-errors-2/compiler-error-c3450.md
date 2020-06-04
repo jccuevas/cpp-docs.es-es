@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3450
 ms.assetid: 78892cf7-0b82-4589-90d0-e06666247003
-ms.openlocfilehash: bedf78ef1cea9f17903fd05f9440c6baa69f7333
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b57b67e8f4542266818ad5b3d90d78a1a943d55
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481242"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756232"
 ---
 # <a name="compiler-error-c3450"></a>Error del compilador C3450
 
 'type': no es un atributo; no puede especificar [System::AttributeUsageAttribute] ni [Windows::Foundation::Metadata::AttributeUsageAttribute]
 
-Un atributo administrado definido por el usuario debe heredar de <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>. Se debe definir un atributo de Windows Runtime en el espacio de nombres `Windows::Foundation::Metadata`.
+Un atributo administrado definido por el usuario debe heredar de <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>. Se debe definir un atributo de tiempo de ejecución de Windows en el espacio de nombres `Windows::Foundation::Metadata`.
 
-Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Para obtener más información, consulta [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera el error C3450 y muestra cómo corregirlo.
 
-```
+```cpp
 // C3450.cpp
 // compile with: /clr
 // C3450 expected

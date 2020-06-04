@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Crear y usar instancias de CComPtr y CComQIPtr
+title: 'Cómo: crear y usar instancias de CComPtr y CComQIPtr'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: e376eab75b9b1fb4a7a271d05fe037142f22e139
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220559"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246542"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procedimiento Crear y usar instancias de CComPtr y CComQIPtr
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Cómo: crear y usar instancias de CComPtr y CComQIPtr
 
-En la programación clásica de Windows, a menudo las bibliotecas se implementan como objetos COM (o más concretamente, como servidores COM). Muchos componentes del sistema operativo Windows se implementan como servidores COM y muchos colaboradores proporcionan bibliotecas en este formato. Para obtener información sobre los conceptos básicos de COM, vea [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
+En la programación clásica de Windows, a menudo las bibliotecas se implementan como objetos COM (o más concretamente, como servidores COM). Muchos componentes del sistema operativo Windows se implementan como servidores COM y muchos colaboradores proporcionan bibliotecas en este formato. Para obtener información sobre los conceptos básicos de COM, vea [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
 Cuando cree instancias de un objeto del Modelo de objetos componentes (COM), almacena el puntero de interfaz en un puntero inteligente COM, que realiza el recuento de referencias mediante llamadas a `AddRef` y `Release` en el destructor. Si usa Active Template Library (ATL) o la biblioteca MFC (Microsoft Foundation Class), use el puntero inteligente de `CComPtr` . Si no usa ATL o MFC, use `_com_ptr_t`. Como no existe un equivalente COM para `std::unique_ptr`, use estos punteros inteligentes para los escenarios de un solo propietario y de varios propietarios. `CComPtr` y `ComQIPtr` admiten las operaciones de movimiento que tienen referencias rvalue.
 
@@ -23,7 +23,7 @@ En el ejemplo siguiente se muestra cómo usar `CComPtr` para crear una instancia
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` y sus relativos forman parte de la biblioteca ATL y se definen en \<atlcomcli.h >. `_com_ptr_t` se declara en \<comip.h >. El compilador crea especializaciones de `_com_ptr_t` cuando genera clases contenedoras para bibliotecas de tipos.
+`CComPtr` y sus familiares forman parte de la ATL y se definen en \<atlcomcli. h >. `_com_ptr_t` se declara en \<comip. h >. El compilador crea especializaciones de `_com_ptr_t` cuando genera clases contenedoras para bibliotecas de tipos.
 
 ## <a name="example"></a>Ejemplo
 

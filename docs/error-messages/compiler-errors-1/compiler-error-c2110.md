@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2110
 ms.assetid: 48fd76ed-90d6-4a60-9c7b-f6ce9355b4ca
-ms.openlocfilehash: b20e68ec032abdfae9afb1c94fed064010275149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91c674623624f4c156376faffd6aeae804a9308d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646971"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741201"
 ---
 # <a name="compiler-error-c2110"></a>Error del compilador C2110
 
@@ -21,7 +21,7 @@ Se intentaron agregar dos valores de puntero con el operador más ( `+` ).
 
 El ejemplo siguiente genera la advertencia C2110:
 
-```
+```cpp
 // C2110.cpp
 int main() {
    int a = 0;

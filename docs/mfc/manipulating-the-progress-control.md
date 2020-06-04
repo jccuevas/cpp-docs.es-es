@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-ms.openlocfilehash: c7c602dcdd70a3539f9137589d31820ee5470e49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9da6f8048adf1c7da184570ff7f94deee7441e5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279195"
 ---
 # <a name="manipulating-the-progress-control"></a>Manipular el control de progreso
 
@@ -51,4 +51,3 @@ Normalmente, el control de progreso se utiliza únicamente para la salida. Para 
 
 [Uso de CProgressCtrl](../mfc/using-cprogressctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

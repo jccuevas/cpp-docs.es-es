@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4961
 ms.assetid: fe22d99f-5a12-45d3-a7cf-867773a71e16
-ms.openlocfilehash: 04ce7853ec0699427f0091293045bb98c3ebfcdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b41874fdab6502a5afa73710b0da45247cd2fd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610501"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164864"
 ---
 # <a name="compiler-warning-c4961"></a>Advertencia del compilador C4961
 

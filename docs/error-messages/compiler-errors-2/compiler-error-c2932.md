@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2932
 ms.assetid: c28e88d9-e654-4367-bfb4-13c780bca9bd
-ms.openlocfilehash: 004767d4adbd87a2a21ec73fa720d6992eb31044
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1afe47e27cb38b2a3886854ce6efe34273c9132
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564464"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750109"
 ---
 # <a name="compiler-error-c2932"></a>Error del compilador C2932
 
@@ -21,7 +21,7 @@ No puede usar una clase genérica o de plantilla como un miembro de datos.
 
 El ejemplo siguiente genera la advertencia C2932:
 
-```
+```cpp
 // C2932.cpp
 // compile with: /c
 template<class T>
@@ -35,7 +35,7 @@ struct MyStruct {
 
 También se puede producir el error C2932 al usar genéricos:
 
-```
+```cpp
 // C2932b.cpp
 // compile with: /clr /c
 generic<class T>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53a4eb3e30048d9dc82722d912a026d63a87586d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446740"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371744"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Recommendations for Choosing a Collection (Clase)
 
@@ -47,19 +47,19 @@ En la siguiente tabla, [Características de la forma de colección](#_core_colle
 
 - En la columna 6 se describe si cada forma permite elementos duplicados.
 
-### <a name="_core_collection_shape_features"></a>  Características de la forma de colección
+### <a name="collection-shape-features"></a><a name="_core_collection_shape_features"></a>Características de la forma de la colección
 
-|Forma|Por orden |Indizar|Insertar un elemento|Buscar un elemento especificado|Elementos duplicados|
+|Forma|Ordered (Realizado)|Indexadas|Insertar un elemento|Buscar un elemento especificado|Elementos duplicados|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
-|Lista|Sí|No|Rápido|Lento|Sí|
-|Matriz|Sí|Por entero|Lento|Lento|Sí|
-|Asignación|No|Por clave|Rápido|Rápido|No (claves) Sí (valores)|
+|List|Sí|No|Rápido|Lenta|Sí|
+|Array|Sí|Por entero|Lenta|Lenta|Sí|
+|Map|No|Por clave|Rápido|Rápido|No (claves) Sí (valores)|
 
 En la siguiente tabla, [Características de clases de colección de MFC](#_core_characteristics_of_mfc_collection_classes), se resumen otras características importantes de las clases de colección específicas de MFC como guía para su selección. Su elección puede depender de si la clase se basa en plantillas de C++, de si sus elementos se pueden serializar a través del mecanismo de [serialización](../mfc/serialization-in-mfc.md) de documentos de MFC, de si sus elementos se pueden volcar mediante el mecanismo de volcado para diagnóstico de MFC o de si la clase tiene seguridad de tipos, es decir, si puede garantizar el tipo de elementos almacenados y recuperados de una colección basada en la clase.
 
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Características de clases de colección de MFC
+### <a name="characteristics-of-mfc-collection-classes"></a><a name="_core_characteristics_of_mfc_collection_classes"></a>Características de las clases de colección MFC
 
-|Clase|Usa C++<br /><br /> Python|Puede ser<br /><br /> serialized|Puede ser<br /><br /> volcado|Es<br /><br /> con seguridad de tipos|
+|Clase|Usa C++<br /><br /> plantillas|Puede ser<br /><br /> serialized|Puede ser<br /><br /> volcado|Is<br /><br /> con seguridad de tipos|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
 |`CArray`|Sí|Sí 1|Sí 1|No|
 |`CByteArray`|No|Sí|Sí|Sí 3|
@@ -85,16 +85,15 @@ En la siguiente tabla, [Características de clases de colección de MFC](#_core_
 |`CUIntArray`|No|No|Sí|Sí 3|
 |`CWordArray`|No|Sí|Sí|Sí 3|
 
-1. Para serializar, debe llamar explícitamente a la función `Serialize` del objeto de colección; para volcar, debe llamar explícitamente a la función `Dump`. No puede usar el formato `ar << collObj` para serializar ni el formato `dmp` `<< collObj` para volcar.
+1. Para serializar, debe llamar explícitamente a la función `Serialize` del objeto de colección; para volcar, debe llamar explícitamente a la función `Dump`. No puede usar `ar << collObj` el formulario `dmp` `<< collObj` para serializar o el formulario para volcar.
 
 2. La posibilidad de serializar depende del tipo de colección subyacente. Por ejemplo, si una matriz de puntero con tipo se basa en `CObArray`, es serializable; si se basa en `CPtrArray`, no es serializable. En general, las clases "Ptr" no se pueden serializar.
 
 3. Si marca Sí en esta columna, una clase de colección no basada en plantillas tiene seguridad de tipos, siempre que la use según lo previsto. Por ejemplo, si almacena bytes en una `CByteArray`, la matriz tiene seguridad de tipos. Pero si la usa para almacenar caracteres, su seguridad de tipos es más incierta.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Colecciones](../mfc/collections.md)<br/>
 [Clases basadas en plantillas](../mfc/template-based-classes.md)<br/>
 [Procedimiento para crear una colección con seguridad de tipos](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Acceso a todos los miembros de una colección](../mfc/accessing-all-members-of-a-collection.md)
-

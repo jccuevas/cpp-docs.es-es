@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 56be735aa99cfebe4ec64ff76f53d28cc9b9779e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443607"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753263"
 ---
 # <a name="cdockstate-class"></a>CDockState (clase)
 
@@ -37,28 +37,28 @@ class CDockState : public CObject
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CDockState::Clear](#clear)|Borra la información de estado de acoplamiento.|
-|[CDockState::GetVersion](#getversion)|Recupera el número de versión de almacenado en la barra de estado.|
-|[CDockState::LoadState](#loadstate)|Recupera información de estado desde el registro o. Archivo INI.|
-|[CDockState::SaveState](#savestate)|Guarda información de estado en el registro o el archivo INI.|
+|[CDockState::Clear](#clear)|Borra la información de estado del dock.|
+|[CDockState::GetVersion](#getversion)|Recupera el número de versión del estado de la barra almacenada.|
+|[CDockState::LoadState](#loadstate)|Recupera información de estado del registro o . Archivo INI.|
+|[CDockState::SaveState](#savestate)|Guarda la información de estado en el registro o en el archivo INI.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Matriz de punteros a almacenado información de estado con una entrada para cada barra de control de acoplamiento.|
+|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Matriz de punteros a la información de estado de acoplamiento almacenada con una entrada para cada barra de control.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El estado de acoplamiento incluye el tamaño y posición de la barra y si se acopla. Al recuperar almacenado acoplar el estado, `CDockState` comprueba la barra de la posición y, si no está visible con la configuración de pantalla actual, la barra de `CDockState` escala de la barra de posición para que sea visible. El propósito principal de `CDockState` es para contener todo el estado de un número de barras de control y para permitir que se puede guardar el estado y cargarse en del registro, la aplicación. Archivo INI, o en formato binario como parte de un `CArchive` contenido del objeto.
+El estado del muelle incluye el tamaño y la posición de la barra y si está o no acoplada. Al recuperar el estado `CDockState` de acoplamiento almacenado, comprueba la posición de la barra y, `CDockState` si la barra no está visible con la configuración de pantalla actual, escala la posición de la barra para que sea visible. El propósito `CDockState` principal de es mantener todo el estado de un número de barras de control y permitir que ese estado se guarde y cargue ya sea en el registro, el de la aplicación. INI, o en forma binaria `CArchive` como parte del contenido de un objeto.
 
-La barra de puede ser cualquier control acoplable barras, incluida una barra de herramientas, la barra de estado o la barra de cuadro de diálogo. `CDockState` objetos se escriben y leen a o desde un archivo a través de un `CArchive` objeto.
+La barra puede ser cualquier barra de control acoplable, incluida una barra de herramientas, una barra de estado o una barra de diálogo. `CDockState`objetos se escriben y se `CArchive` leen a o desde un archivo a través de un objeto.
 
-[CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) recupera la información de estado de toda la ventana de marco `CControlBar` objetos y los coloca en el `CDockState` objeto. A continuación, puede escribir el contenido de la `CDockState` objeto de almacenamiento con [Serialize](../../mfc/reference/cobject-class.md#serialize) o [CDockState::SaveState](#savestate). Si posteriormente desea restaurar el estado de las barras de control en la ventana de marco, puede cargar el estado con `Serialize` o [CDockState::LoadState](#loadstate), a continuación, usar [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) para aplicar el guardado estado de las barras de control de la ventana de marco.
+[CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) recupera la información de estado de `CControlBar` todos los objetos `CDockState` de la ventana de marco y la coloca en el objeto. A continuación, puede escribir `CDockState` el contenido del objeto en el almacenamiento con [Serialize](../../mfc/reference/cobject-class.md#serialize) o [CDockState::SaveState](#savestate). Si más adelante desea restaurar el estado de las barras de control `Serialize` en la ventana de marco, puede cargar el estado con o [CDockState::LoadState](#loadstate), a continuación, utilice [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) para aplicar el estado guardado a las barras de control de la ventana de marco.
 
-Para obtener más información sobre las barras de control de acoplamiento, consulte los artículos [barras de Control](../../mfc/control-bars.md), [las barras de herramientas: acoplamiento y flotantes](../../mfc/docking-and-floating-toolbars.md), y [marco Windows](../../mfc/frame-windows.md).
+Para obtener más información sobre las barras de control de acoplamiento, consulte los artículos [Barras](../../mfc/control-bars.md)de control , [Barras de herramientas: Acoplamiento y flotante](../../mfc/docking-and-floating-toolbars.md)y [Ventanas](../../mfc/frame-windows.md)de marco .
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -70,21 +70,21 @@ Para obtener más información sobre las barras de control de acoplamiento, cons
 
 **Encabezado:** afxadv.h
 
-##  <a name="clear"></a>  CDockState::Clear
+## <a name="cdockstateclear"></a><a name="clear"></a>CDockState::Clear
 
-Llame a esta función para borrar toda la información de acoplamiento almacenada en el `CDockState` objeto.
+Llame a esta función para borrar `CDockState` toda la información de acoplamiento almacenada en el objeto.
 
-```
+```cpp
 void Clear();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esto incluye no solo si se acopla la barra o no, pero el tamaño y la posición de la barra y si es visible o no.
+Esto incluye no sólo si la barra está acoplada o no, sino el tamaño y la posición de la barra y si es visible o no.
 
-##  <a name="getversion"></a>  CDockState::GetVersion
+## <a name="cdockstategetversion"></a><a name="getversion"></a>CDockState::GetVersion
 
-Llame a esta función para recuperar el número de versión de almacenado en la barra de estado.
+Llame a esta función para recuperar el número de versión del estado de la barra almacenada.
 
 ```
 DWORD GetVersion();
@@ -92,56 +92,55 @@ DWORD GetVersion();
 
 ### <a name="return-value"></a>Valor devuelto
 
-1 si la barra almacenada información es anterior a la actual de la barra de estado; 2 si la barra almacenada información es el mismo que el actual estado de la barra.
+1 si la información de la barra almacenada es anterior al estado actual de la barra; 2 si la información de la barra almacenada es la misma que el estado actual de la barra.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Compatibilidad de versiones permite que una barra revisada agregar nuevas propiedades persistentes y seguir siendo capaces de detectar y cargar el estado persistente creado por una versión anterior de la barra.
+La compatibilidad con versiones permite que una barra revisada agregue nuevas propiedades persistentes y aún pueda detectar y cargar el estado persistente creado por una versión anterior de la barra.
 
-##  <a name="loadstate"></a>  CDockState::LoadState
+## <a name="cdockstateloadstate"></a><a name="loadstate"></a>CDockState::LoadState
 
-Llame a esta función para recuperar información de estado del registro o. Archivo INI.
+Llame a esta función para recuperar información de estado del registro o . Archivo INI.
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-Apunta a una cadena null teminated que especifica el nombre de una sección en el archivo de inicialización o una clave del registro de Windows donde se almacena la información de estado.
+Apunta a una cadena de valores NULL que especifica el nombre de una sección en el archivo de inicialización o una clave en el registro de Windows donde se almacena la información de estado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El nombre del perfil es la sección de la aplicación. Archivo INI o el registro que contiene información de estado de las barras. Puede guardar el control de barra de información de estado en el registro o. El archivo INI con `SaveState`.
+El nombre del perfil es la sección de la aplicación. INI o el registro que contiene la información de estado de las barras. Puede guardar la información de estado de la barra de control en el registro o . INI con `SaveState`.
 
-##  <a name="m_arrbarinfo"></a>  CDockState::m_arrBarInfo
+## <a name="cdockstatem_arrbarinfo"></a><a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo
 
-Un `CPtrArray` objeto que es una matriz de punteros a la información de la barra de control almacenado para cada barra de control que ha guardado la información de estado en el `CDockState` objeto.
+Objeto `CPtrArray` que es una matriz de punteros a la información de la barra `CDockState` de control almacenada para cada barra de control que ha guardado información de estado en el objeto.
 
 ```
 CPtrArray m_arrBarInfo;
 ```
 
-##  <a name="savestate"></a>  CDockState::SaveState
+## <a name="cdockstatesavestate"></a><a name="savestate"></a>CDockState::SaveState
 
-Llame a esta función para guardar la información de estado en el registro o. Archivo INI.
+Llame a esta función para guardar la información de estado en el registro o . Archivo INI.
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-Apunta a una cadena null teminated que especifica el nombre de una sección en el archivo de inicialización o una clave del registro de Windows donde se almacena la información de estado.
+Apunta a una cadena de valores NULL que especifica el nombre de una sección en el archivo de inicialización o una clave en el registro de Windows donde se almacena la información de estado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El nombre del perfil es la sección de la aplicación. Archivo INI o del registro que contiene información de estado de la barra de control. `SaveState` También guarda el tamaño de pantalla actual. Puede recuperar información de la barra de control del registro o. El archivo INI con `LoadState`.
+El nombre del perfil es la sección de la aplicación. INI o el registro que contiene la información de estado de la barra de control. `SaveState`también guarda el tamaño de pantalla actual. Puede recuperar información de la barra de control del registro o . INI con `LoadState`.
 
 ## <a name="see-also"></a>Vea también
 
-[CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
+[Clase CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

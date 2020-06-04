@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, frame windows
 - styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
-ms.openlocfilehash: 01eb593e6a7c896b3c6e4acf9f753b73a346e3e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cade8e7e50779437feb73a94058dc62118c03c10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219748"
 ---
 # <a name="frame-window-styles-c"></a>Estilos de ventana de marco (C++)
 
@@ -35,4 +35,3 @@ Si la ventana **FWS_ADDTOTITLE** bit de estilo se establece (que es de forma pre
 ## <a name="see-also"></a>Vea también
 
 [Ventanas de marco](../mfc/frame-windows.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message handlers [MFC]
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
-ms.openlocfilehash: c316b4cf138c21b697181bcf132fa3766128a7ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6679ed97af77775e431cf77c3b7bc659b6eb445
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632718"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741659"
 ---
 # <a name="editing-a-message-handler"></a>Editar un controlador de mensajes
 
@@ -31,4 +31,4 @@ Para saltar a una definición de función miembro de [vista de clases](/visualst
 [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Controlador de mensajes de MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navegar por la estructura de clases](../../ide/navigate-code-cpp.md)

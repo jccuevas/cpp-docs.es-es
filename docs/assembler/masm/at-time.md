@@ -1,26 +1,27 @@
 ---
 title: '@Time'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@Time'
 helpviewer_keywords:
 - '@Time symbol'
 ms.assetid: a9712e51-be60-4ac4-a497-54a1aa0a1acd
-ms.openlocfilehash: 36de4c0ee131231372bd004d8aec5691b6620adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cb78714771e869c93fa1c5e54234240f0afb3a2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577923"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315295"
 ---
-# <a name="time"></a>@Time
+# <a name="time"></a>\@tiempo
 
-La hora del sistema en formato hh: mm: de 24 horas (macro de texto).
+La hora del sistema en formato HH: mm: SS (macro de texto) de 24 horas.
 
 ## <a name="syntax"></a>Sintaxis
 
-> @Time
+> **\@tiempo**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referencia de símbolos](symbols-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

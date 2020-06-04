@@ -1,6 +1,6 @@
 ---
 title: Operador ;
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator %3B
 - '%3B'
@@ -9,21 +9,22 @@ helpviewer_keywords:
 - semicolon operator
 - ; operator
 ms.assetid: 8369b28c-1fee-4e9a-a4a6-7db627e21075
-ms.openlocfilehash: e7ab11485e772431b684f22aa5ec0278e4bde7af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed1ed9b6995d9688bc13b14a154bad936ff59afd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489365"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318974"
 ---
 # <a name="operator-"></a>Operador ;
 
-Trata *texto* como un comentario.
+Trata el *texto* como comentario.
 
 ## <a name="syntax"></a>Sintaxis
 
-> ; *texto*
+> __;__ *texto* de
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

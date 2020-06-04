@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 21e17d9ec9c4b145af8909730e5f799de9b72ce2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293217"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Símbolo de punto de entrada)
 
@@ -42,17 +42,17 @@ De forma predeterminada, la dirección de inicio es un nombre de función de la 
 |**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Una aplicación que utilice/SUBSYSTEM:**WINDOWS**; llamadas `WinMain` (o `wWinMain`), que debe definirse para usar `__stdcall`|
 |**_DllMainCRTStartup**|UN ARCHIVO DLL; las llamadas `DllMain` si existe, que debe definirse para usar `__stdcall`|
 
-Si el [/DLL](../../build/reference/dll-build-a-dll.md) o [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opción no se especifica, el vinculador selecciona un punto de entrada y el subsistema dependiendo de si `main` o `WinMain` está definido.
+Si el [/DLL](dll-build-a-dll.md) o [/Subsystem](subsystem-specify-subsystem.md) opción no se especifica, el vinculador selecciona un punto de entrada y el subsistema dependiendo de si `main` o `WinMain` está definido.
 
 Las funciones `main`, `WinMain`, y `DllMain` son las tres formas de punto de entrada definido por el usuario.
 
 Al crear una imagen administrada, la función especificada a/Entry debe tener una firma de (LPVOID *var1*, DWORD *var2*, LPVOID *var3*).
 
-Para obtener información sobre cómo definir las suyas propias `DllMain` punto de entrada, consulte [archivos DLL y Visual C++ comportamiento de la biblioteca de tiempo de ejecución](../../build/run-time-library-behavior.md) .
+Para obtener información sobre cómo definir las suyas propias `DllMain` punto de entrada, consulte [archivos DLL y Visual C++ comportamiento de la biblioteca de tiempo de ejecución](../run-time-library-behavior.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -66,5 +66,5 @@ Para obtener información sobre cómo definir las suyas propias `DllMain` punto 
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

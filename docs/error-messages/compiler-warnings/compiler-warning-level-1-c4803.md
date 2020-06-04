@@ -1,33 +1,33 @@
 ---
-title: Advertencia del compilador (nivel 1) C4803
+title: ADVERTENCIA del compilador (nivel 1) C4803
 ms.date: 11/04/2016
 f1_keywords:
 - C4803
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: 3915307ac2bcc6a923c93382cfefa618ce01fe52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebf7b3baec3519a142c7a1835aa15a980974bb48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563220"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052348"
 ---
-# <a name="compiler-warning-level-1-c4803"></a>Advertencia del compilador (nivel 1) C4803
+# <a name="compiler-warning-level-1-c4803"></a>ADVERTENCIA del compilador (nivel 1) C4803
 
-'method': el método raise tiene una clase de almacenamiento distinta de la del evento, 'event'
+' Method ': el método raise tiene una clase de almacenamiento diferente de la del evento, ' Event '
 
-Métodos de evento deben tener la misma clase de almacenamiento que la declaración del evento. El compilador ajusta los métodos del evento para que las clases de almacenamiento son los mismos.
+Los métodos de evento deben tener la misma clase de almacenamiento que la declaración de evento. El compilador ajusta los métodos del evento para que las clases de almacenamiento sean las mismas.
 
-Esta advertencia puede producirse si tiene una clase que implementa un evento de una interfaz. El compilador no genera implícitamente un método raise para un evento en una interfaz. Al implementar esa interfaz en una clase, el compilador genera implícitamente un método raise y ese método no será virtual, por lo tanto, la advertencia. Para obtener más información sobre eventos, vea [eventos](../../windows/event-cpp-component-extensions.md).
+Esta advertencia puede producirse si tiene una clase que implementa un evento de una interfaz. El compilador no genera implícitamente un método raise para un evento en una interfaz. Cuando se implementa esa interfaz en una clase, el compilador genera implícitamente un método raise y ese método no será virtual, por lo tanto, la advertencia. Para obtener más información sobre eventos, vea [Event](../../extensions/event-cpp-component-extensions.md).
 
-Consulte [advertencia](../../preprocessor/warning.md) pragma para obtener información sobre cómo desactivar una advertencia.
+Consulte pragma [Warning](../../preprocessor/warning.md) para obtener información sobre cómo desactivar una advertencia.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera la advertencia C4803.
+En el ejemplo siguiente se genera C4803.
 
-```
+```cpp
 // C4803.cpp
 // compile with: /clr /W1
 using namespace System;

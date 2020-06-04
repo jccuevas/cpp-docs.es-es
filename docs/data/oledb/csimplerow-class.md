@@ -12,7 +12,6 @@ f1_keywords:
 - CSimpleRow.AddRefRow
 - CSimpleRow.Compare
 - CSimpleRow::Compare
-- CSimpleRow
 - ATL::CSimpleRow::CSimpleRow
 - CSimpleRow.CSimpleRow
 - ATL.CSimpleRow.CSimpleRow
@@ -35,16 +34,16 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556639"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211125"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow (Clase)
 
-Proporciona una implementación predeterminada para el identificador de fila, que se utiliza en el [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) clase.
+Proporciona una implementación predeterminada para el identificador de fila, que se usa en la clase [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -56,14 +55,14 @@ class CSimpleRow
 
 **Encabezado:** atldb.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[AddRefRow](#addrefrow)|Agrega un contador de referencia a un identificador de fila existente.|
-|[Compare](#compare)|Compara dos filas para ver si hacen referencia a la misma instancia de fila.|
+|[AddRefRow](#addrefrow)|Agrega un contador de referencias a un identificador de fila existente.|
+|[Comparar](#compare)|Compara dos filas para ver si hacen referencia a la misma instancia de fila.|
 |[CSimpleRow](#csimplerow)|El constructor.|
 |[ReleaseRow](#releaserow)|Libera filas.|
 
@@ -72,15 +71,15 @@ class CSimpleRow
 |||
 |-|-|
 |[m_dwRef](#dwref)|Recuento de referencias a un identificador de fila existente.|
-|[m_iRowset](#irowset)|Un índice al conjunto de filas que representa el cursor.|
+|[m_iRowset](#irowset)|Índice del conjunto de filas que representa el cursor.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Identificador de fila es, lógicamente, una etiqueta única para una fila de resultados. `IRowsetImpl` crea un nuevo `CSimpleRow` para todas las filas solicitaron en [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` También se puede reemplazar por su propia implementación del identificador de fila, ya que es un argumento de plantilla predeterminado a `IRowsetImpl`. El único requisito para reemplazar esta clase es que la clase de reemplazo proporciona un constructor que acepta un único parámetro de tipo **largo**.
+Un identificador de fila es lógicamente una etiqueta única para una fila de resultados. `IRowsetImpl` crea un `CSimpleRow` nuevo para cada fila solicitada en [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` también se pueden reemplazar por su propia implementación del identificador de fila, ya que se trata de un argumento de plantilla predeterminado que se va a `IRowsetImpl`. El único requisito para reemplazar esta clase es hacer que la clase de reemplazo proporcione un constructor que acepte un parámetro único de tipo **Long**.
 
-## <a name="addrefrow"></a> Csimplerow:: Addrefrow
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow:: AddRefRow
 
-Agrega un contador de referencia a un identificador de fila existente de una manera segura para subprocesos.
+Agrega un recuento de referencias a un identificador de fila existente de una manera segura para subprocesos.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -88,7 +87,7 @@ Agrega un contador de referencia a un identificador de fila existente de una man
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> Csimplerow:: Compare
+## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow:: Compare
 
 Compara dos filas para ver si hacen referencia a la misma instancia de fila.
 
@@ -105,9 +104,9 @@ Puntero a un objeto `CSimpleRow` .
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor HRESULT, normalmente S_OK, que indica las dos filas son la misma instancia de fila o S_FALSE, que indica las dos filas son diferentes. Consulte [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) en el *referencia del programador de OLE DB* para otros posibles valores devueltos.
+Un valor HRESULT, normalmente S_OK, que indica que las dos filas son la misma instancia de fila, o S_FALSE, que indica que las dos filas son diferentes. Vea [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) en la *Referencia del programador de OLE DB* para ver otros posibles valores devueltos.
 
-## <a name="csimplerow"></a> Csimplerow:: Csimplerow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow:: CSimpleRow
 
 El constructor.
 
@@ -120,15 +119,15 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 #### <a name="parameters"></a>Parámetros
 
 *iRowsetCur*<br/>
-[in] Índice de filas actual.
+de Índice del conjunto de filas actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Conjuntos de [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) a *iRowsetCur*.
+Establece [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) en *iRowsetCur*.
 
-## <a name="releaserow"></a> Csimplerow:: Releaserow
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow:: ReleaseRow
 
-Libera las filas de una manera segura para subprocesos.
+Libera filas de una manera segura para subprocesos.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -136,7 +135,7 @@ Libera las filas de una manera segura para subprocesos.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> Csimplerow:: M_dwref
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow:: m_dwRef
 
 Recuento de referencias a un identificador de fila existente.
 
@@ -146,9 +145,9 @@ Recuento de referencias a un identificador de fila existente.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> Csimplerow:: M_irowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow:: m_iRowset
 
-Índice al conjunto de filas que representa el cursor.
+Índice del conjunto de filas que representa el cursor.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -156,7 +155,7 @@ DWORD m_dwRef;
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

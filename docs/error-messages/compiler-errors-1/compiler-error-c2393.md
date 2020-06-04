@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-ms.openlocfilehash: 39ca693aed3f08e7b2df3d687f94d93384393f23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc3c124f1a4daea0f2517a93c6b354b8233aa5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566860"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205990"
 ---
 # <a name="compiler-error-c2393"></a>Error del compilador C2393
 
-> '*símbolo*': símbolo por appdomain no se puede asignar en el segmento '*segmento*'
+> '*Symbol*': el símbolo por AppDomain no se puede asignar en el segmento '*Segment*'
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+Las opciones del compilador **/clr: Pure** y **/clr: Safe** están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017.
 
-El uso de [appdomain](../../cpp/appdomain.md) variables implica que está compilando con **/CLR: pure** o **/CLR: safe**, y una imagen pura o segura no puede contener segmentos de datos.
+El uso de variables de [AppDomain](../../cpp/appdomain.md) implica que se compila con **/clr: Pure** o **/clr: Safe**, y una imagen segura o pura no puede contener segmentos de datos.
 
-Consulte [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) para obtener más información.
+Consulte [/CLR (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2393. Para corregir este problema, no cree un segmento de datos.
+En el ejemplo siguiente se genera C2393. Para corregir este problema, no cree un segmento de datos.
 
 ```cpp
 // C2393.cpp

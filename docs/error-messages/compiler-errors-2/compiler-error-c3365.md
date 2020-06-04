@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3365
 ms.assetid: 875ec3a4-522c-4e3d-9b67-48808b857f6d
-ms.openlocfilehash: fa11ac57205574da29c55344fedb0e996ab30557
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 355c4530fffa89470ac495aff8bc2822278e2da3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449821"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201200"
 ---
 # <a name="compiler-error-c3365"></a>Error del compilador C3365
 
 El operador 'operator': diferencia de operandos de tipo 'type1' y 'type2'
 
-Se intentaron componer delegados con tipos diferentes.  Consulte [Cómo: definir y usar delegados (C++ / c++ / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) para obtener más información sobre los delegados.
+Se intentaron componer delegados con tipos diferentes.  Vea [Cómo: definir y usar delegadosC++(/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) para obtener más información sobre los delegados.
 
 ## <a name="example"></a>Ejemplo
 

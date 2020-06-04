@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178387"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754546"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (clase)
 
@@ -55,65 +55,65 @@ class CMDIFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Construye un objeto `CMDIFrameWnd`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CMDIFrameWnd::CreateClient](#createclient)|Crea una ventana MDICLIENT de Windows para este `CMDIFrameWnd`. Lo llama el `OnCreate` función miembro de `CWnd`.|
+|[CMDIFrameWnd::CreateClient](#createclient)|Crea una ventana MDICLIENT `CMDIFrameWnd`de Windows para esto . Llamado por `OnCreate` la `CWnd`función miembro de .|
 |[CMDIFrameWnd::CreateNewChild](#createnewchild)|Crea una nueva ventana secundaria.|
-|[CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup)|Devuelve el menú emergente de la ventana.|
-|[CMDIFrameWnd::MDIActivate](#mdiactivate)|Activa una ventana secundaria MDI diferentes.|
+|[CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup)|Devuelve el menú emergente Ventana.|
+|[CMDIFrameWnd::MDIActivate](#mdiactivate)|Activa una ventana secundaria MDI diferente.|
 |[CMDIFrameWnd::MDICascade](#mdicascade)|Organiza todas las ventanas secundarias en un formato en cascada.|
-|[CMDIFrameWnd::MDIGetActive](#mdigetactive)|Recupera la ventana de secundario MDI activa actualmente, junto con una marca que indica si el elemento secundario está maximizado.|
-|[CMDIFrameWnd::MDIIconArrange](#mdiiconarrange)|Organiza todas las ventanas secundarias de documento minimizada.|
+|[CMDIFrameWnd::MDIGetActive](#mdigetactive)|Recupera la ventana secundaria MDI activa actualmente, junto con una marca que indica si el elemento secundario está maximizado o no.|
+|[CMDIFrameWnd::MDIIconArrange](#mdiiconarrange)|Organiza todas las ventanas secundarias de documentos minimizadas.|
 |[CMDIFrameWnd::MDIMaximize](#mdimaximize)|Maximiza una ventana secundaria MDI.|
-|[CMDIFrameWnd::MDINext](#mdinext)|Activa la ventana secundaria inmediatamente detrás de la ventana secundaria actualmente activa y coloca la ventana secundaria activa actualmente detrás de todas las demás ventanas secundarias.|
-|[CMDIFrameWnd::MDIPrev](#mdiprev)|Activa la ventana secundaria anterior y coloca la ventana secundaria actualmente activa inmediatamente detrás de él.|
+|[CMDIFrameWnd::MDINext](#mdinext)|Activa la ventana secundaria inmediatamente detrás de la ventana secundaria activa actualmente y coloca la ventana secundaria activa actualmente detrás de todas las demás ventanas secundarias.|
+|[CMDIFrameWnd::MDIPrev](#mdiprev)|Activa la ventana secundaria anterior y coloca la ventana secundaria activa inmediatamente detrás de ella.|
 |[CMDIFrameWnd::MDIRestore](#mdirestore)|Restaura una ventana secundaria MDI de tamaño maximizado o minimizado.|
-|[CMDIFrameWnd::MDISetMenu](#mdisetmenu)|Reemplaza el menú de una ventana de marco MDI, el menú emergente de la ventana o ambos.|
+|[CMDIFrameWnd::MDISetMenu](#mdisetmenu)|Reemplaza el menú de una ventana de marco MDI, el menú emergente Ventana o ambos.|
 |[CMDIFrameWnd::MDITile](#mditile)|Organiza todas las ventanas secundarias en un formato de mosaico.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Para crear una ventana de marco MDI útil para su aplicación, derive una clase de `CMDIFrameWnd`. Agregar variables miembro a la clase derivada para almacenar datos específicos de la aplicación. Implemente funciones miembro de controlador de mensajes y un mapa de mensajes en la clase derivada para especificar qué ocurre cuando los mensajes se dirigen a la ventana.
+Para crear una ventana de marco MDI útil `CMDIFrameWnd`para la aplicación, derive una clase de . Agregue variables miembro a la clase derivada para almacenar datos específicos de la aplicación. Implemente funciones miembro de controlador de mensajes y un mapa de mensajes en la clase derivada para especificar qué ocurre cuando los mensajes se dirigen a la ventana.
 
-Puede construir una ventana marco MDI mediante una llamada a la [crear](../../mfc/reference/cframewnd-class.md#create) o [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) función miembro de `CFrameWnd`.
+Puede construir una ventana de marco MDI llamando a `CFrameWnd`la [create](../../mfc/reference/cframewnd-class.md#create) o [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) función miembro de .
 
-Antes de llamar a `Create` o `LoadFrame`, debe construir el objeto de ventana de marco en el montón mediante C++ **nuevo** operador. Antes de llamar a `Create` también se puede registrar una clase de ventana con el [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global para establecer los estilos de icono y de clase para el marco.
+Antes de `Create` `LoadFrame`llamar o , debe construir el objeto de ventana de marco en el montón mediante el **operador new** C++. Antes `Create` de llamar también puede registrar una clase de ventana con la función global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) para establecer el icono y los estilos de clase para el marco.
 
-Use el `Create` función miembro para pasar parámetros de creación del marco de inmediatos como argumentos.
+Utilice `Create` la función miembro para pasar los parámetros de creación del marco como argumentos inmediatos.
 
-`LoadFrame` requiere menos argumentos que `Create`y recupera en su lugar, la mayoría de sus valores predeterminados de recursos, incluidos el título del marco, icono, tabla de aceleradores y menús. Para tener acceso a `LoadFrame`, todos estos recursos deben tener el mismo identificador de recurso (por ejemplo, IDR_MAINFRAME).
+`LoadFrame`requiere menos argumentos `Create`que , y en su lugar recupera la mayoría de sus valores predeterminados de los recursos, incluidos el título, el icono, la tabla de aceleradores y el menú del marco. Para que `LoadFrame`se pueda tener acceso a ellos , todos estos recursos deben tener el mismo identificador de recurso (por ejemplo, IDR_MAINFRAME).
 
-Aunque `MDIFrameWnd` se deriva de `CFrameWnd`, deriva una clase de ventana de marco `CMDIFrameWnd` no debe declararse con `DECLARE_DYNCREATE`.
+Aunque `MDIFrameWnd` se deriva `CFrameWnd`de , no `CMDIFrameWnd` es necesario declarar `DECLARE_DYNCREATE`con .
 
-El `CMDIFrameWnd` clase hereda gran parte de su implementación predeterminada de `CFrameWnd`. Para obtener una lista detallada de estas características, consulte el [CFrameWnd](../../mfc/reference/cframewnd-class.md) descripción de clase. La `CMDIFrameWnd` clase tiene las siguientes características adicionales:
+La `CMDIFrameWnd` clase hereda gran parte `CFrameWnd`de su implementación predeterminada de . Para obtener una lista detallada de estas características, consulte la descripción de la clase [CFrameWnd.](../../mfc/reference/cframewnd-class.md) La `CMDIFrameWnd` clase tiene las siguientes características adicionales:
 
-- Una ventana marco MDI administra la ventana MDICLIENT, cambiar la posición junto con las barras de control. La ventana de cliente MDI es el elemento primario directo de ventanas de marco secundario MDI. Los estilos de ventana WS_HSCROLL y WS_VSCROLL especificados en un `CMDIFrameWnd` se aplican a la ventana de cliente MDI en lugar de la ventana de marco principal, por lo que el usuario puede desplazar el área de cliente MDI (como se muestra en el Windows Administrador de programas, por ejemplo).
+- Una ventana de marco MDI administra la ventana MDICLIENT, reposicionándola junto con las barras de control. La ventana de cliente MDI es el elemento primario directo de las ventanas de marco secundario MDI. Los estilos de ventana WS_HSCROLL `CMDIFrameWnd` y WS_VSCROLL especificados en una aplicación a la ventana de cliente MDI en lugar de la ventana de marco principal para que el usuario pueda desplazarse por el área de cliente MDI (como en el Administrador de programas de Windows, por ejemplo).
 
-- Una ventana marco MDI posee un menú predeterminado que se usa como la barra de menús cuando no hay ninguna ventana secundaria MDI activa. Cuando hay un formulario secundario MDI activo, la barra de menús de la ventana de marco MDI se reemplaza automáticamente por el menú de ventana secundaria MDI.
+- Una ventana de marco MDI posee un menú predeterminado que se utiliza como la barra de menús cuando no hay ninguna ventana secundaria MDI activa. Cuando hay un elemento secundario MDI activo, la barra de menús de la ventana de marco MDI se reemplaza automáticamente por el menú de la ventana secundaria MDI.
 
-- Una ventana marco MDI funciona junto con la ventana secundaria MDI actual, si hay alguno. Por ejemplo, los mensajes de comandos se delegan al formulario secundario MDI activo antes de la ventana de marco MDI.
+- Una ventana de marco MDI funciona junto con la ventana secundaria MDI actual, si la hay. Por ejemplo, los mensajes de comando se delegan en el elemento secundario MDI activo actualmente antes de la ventana de marco MDI.
 
-- Una ventana marco MDI tiene controladores predeterminados para los siguientes comandos de menú de ventana estándares:
+- Una ventana de marco MDI tiene controladores predeterminados para los siguientes comandos de menú de ventana estándar:
 
-    - ID_WINDOW_TILE_VERT
+  - ID_WINDOW_TILE_VERT
 
-    - ID_WINDOW_TILE_HORZ
+  - ID_WINDOW_TILE_HORZ
 
-    - ID_WINDOW_CASCADE
+  - ID_WINDOW_CASCADE
 
-    - ID_WINDOW_ARRANGE
+  - ID_WINDOW_ARRANGE
 
-- Una ventana marco MDI también tiene una implementación de ID_WINDOW_NEW, que crea un nuevo marco y la vista del documento actual. Una aplicación puede invalidar estas implementaciones de comando predeterminado para personalizar el control de ventana MDI.
+- Una ventana de marco MDI también tiene una implementación de ID_WINDOW_NEW, que crea un nuevo marco y vista en el documento actual. Una aplicación puede invalidar estas implementaciones de comandos predeterminadas para personalizar el control de ventanas MDI.
 
-No use C++ **eliminar** operador para destruir una ventana de marco. Utilice `CWnd::DestroyWindow` en su lugar. El `CFrameWnd` implementací `PostNcDestroy` eliminará el objeto de C++ cuando se destruye la ventana. Cuando el usuario cierra la ventana de marco, el valor predeterminado `OnClose` controlador llamará `DestroyWindow`.
+No utilice el operador **de eliminación** C++ para destruir una ventana de marco. En su lugar, use `CWnd::DestroyWindow`. La `CFrameWnd` implementación de `PostNcDestroy` eliminará el objeto C++ cuando se destruya la ventana. Cuando el usuario cierra la ventana `OnClose` de `DestroyWindow`marco, el controlador predeterminado llamará a .
 
-Para obtener más información sobre `CMDIFrameWnd`, consulte [marco Windows](../../mfc/frame-windows.md).
+Para obtener `CMDIFrameWnd`más información sobre , consulte [Ventanas](../../mfc/frame-windows.md)de marco .
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -131,7 +131,7 @@ Para obtener más información sobre `CMDIFrameWnd`, consulte [marco Windows](..
 
 **Encabezado:** afxwin.h
 
-##  <a name="cmdiframewnd"></a>  CMDIFrameWnd::CMDIFrameWnd
+## <a name="cmdiframewndcmdiframewnd"></a><a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd
 
 Construye un objeto `CMDIFrameWnd`.
 
@@ -139,17 +139,17 @@ Construye un objeto `CMDIFrameWnd`.
 CMDIFrameWnd();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a la `Create` o `LoadFrame` función miembro para crear la ventana de marco MDI visible.
+Llame `Create` a `LoadFrame` la función o miembro para crear la ventana de marco MDI visible.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]
 
-##  <a name="createclient"></a>  CMDIFrameWnd::CreateClient
+## <a name="cmdiframewndcreateclient"></a><a name="createclient"></a>CMDIFrameWnd::CreateClient
 
-Crea la ventana de cliente MDI que administra el `CMDIChildWnd` objetos.
+Crea la ventana de cliente `CMDIChildWnd` MDI que administra los objetos.
 
 ```
 virtual BOOL CreateClient(
@@ -160,24 +160,24 @@ virtual BOOL CreateClient(
 ### <a name="parameters"></a>Parámetros
 
 *lpCreateStruct*<br/>
-Un puntero largo a un [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estructura.
+Un puntero largo a una estructura [CREATESTRUCT.](/windows/win32/api/winuser/ns-winuser-createstructw)
 
 *pWindowMenu*<br/>
-Un puntero en el menú emergente de la ventana.
+Un puntero al menú emergente Ventana.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta función miembro debe llamarse si invalida el `OnCreate` directamente la función miembro.
+Esta función miembro debe llamarse si invalida la `OnCreate` función miembro directamente.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCWindowing#14](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]
 
-##  <a name="createnewchild"></a>  CMDIFrameWnd::CreateNewChild
+## <a name="cmdiframewndcreatenewchild"></a><a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild
 
 Crea una nueva ventana secundaria.
 
@@ -192,28 +192,28 @@ CMDIChildWnd* CreateNewChild(
 ### <a name="parameters"></a>Parámetros
 
 *pClass*<br/>
-La clase de tiempo de ejecución de la ventana secundaria que se va a crear.
+La clase en tiempo de ejecución de la ventana secundaria que se va a crear.
 
-*Nrecurso*<br/>
-El identificador de recursos compartidos asociados con la ventana secundaria.
+*nResource*<br/>
+El identificador de los recursos compartidos asociados a la ventana secundaria.
 
-*hMenu*<br/>
+*hMenú*<br/>
 Menú de la ventana secundaria.
 
 *hAccel*<br/>
-Acelerador de la ventana secundaria.
+El acelerador de la ventana del niño.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice esta función para crear ventanas de una ventana de marco MDI secundarias.
+Utilice esta función para crear ventanas secundarias de una ventana de marco MDI.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]
 
-##  <a name="getwindowmenupopup"></a>  CMDIFrameWnd::GetWindowMenuPopup
+## <a name="cmdiframewndgetwindowmenupopup"></a><a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup
 
-Llame a esta función miembro para obtener un identificador para el menú emergente actual denominado "Window" (el menú emergente con los elementos de menú para la administración de ventanas MDI).
+Llame a esta función miembro para obtener un identificador del menú emergente actual denominado "Ventana" (el menú emergente con elementos de menú para la administración de ventanas MDI).
 
 ```
 virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
@@ -222,73 +222,73 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ### <a name="parameters"></a>Parámetros
 
 *hMenuBar*<br/>
-La barra de menú actual.
+La barra de menús actual.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El menú emergente de ventana si existe; en caso contrario, es NULL.
+El menú emergente Ventana si existe; NULL.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La implementación predeterminada busca un menú emergente que contiene comandos estándares del menú Ventana como ID_WINDOW_NEW y ID_WINDOW_TILE_HORZ.
+La implementación predeterminada busca un menú emergente que contenga comandos de menú ventana estándar, como ID_WINDOW_NEW y ID_WINDOW_TILE_HORZ.
 
-Reemplace esta función miembro si tiene un menú de ventana que no utiliza los identificadores de comando de menú estándar.
+Invalide esta función miembro si tiene un menú Ventana que no utiliza los identificadores de comando de menú estándar.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCWindowing#16](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]
 
-##  <a name="mdiactivate"></a>  CMDIFrameWnd::MDIActivate
+## <a name="cmdiframewndmdiactivate"></a><a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate
 
-Activa una ventana secundaria MDI diferentes.
+Activa una ventana secundaria MDI diferente.
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pWndActivate*<br/>
-Apunta a la ventana secundaria MDI en activarse.
+Señala a la ventana secundaria MDI que se va a activar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta función miembro envía el [WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate) mensaje tanto a la ventana secundaria que se va a activar la ventana secundaria que se está desactivando.
+Esta función miembro envía el [mensaje de WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate) a la ventana secundaria que se está activando y a la ventana secundaria que se está desactivando.
 
-Este es el mismo mensaje que se envía si el usuario cambia el foco a una ventana secundaria MDI utilizando el mouse o teclado.
+Este es el mismo mensaje que se envía si el usuario cambia el foco a una ventana secundaria MDI mediante el mouse o el teclado.
 
 > [!NOTE]
->  Una ventana secundaria MDI se activa independientemente de la ventana de marco MDI. Cuando el marco se activa, se envía la ventana secundaria que se activó por última vez una [WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) mensaje para dibujar un marco de ventana activa y barra de título, pero no recibe otro mensaje WM_MDIACTIVATE.
+> Una ventana secundaria MDI se activa independientemente de la ventana de marco MDI. Cuando el marco se activa, la ventana secundaria que se activó por última vez se envía un [mensaje de WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) para dibujar un marco de ventana activo y la barra de título, pero no recibe otro mensaje WM_MDIACTIVATE.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).
 
-##  <a name="mdicascade"></a>  CMDIFrameWnd::MDICascade
+## <a name="cmdiframewndmdicascade"></a><a name="mdicascade"></a>CMDIFrameWnd::MDICascade
 
 Organiza todas las ventanas secundarias MDI en un formato en cascada.
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nLas*<br/>
-Especifica una marca en cascada. Se puede especificar sólo el siguiente indicador: MDITILE_SKIPDISABLED, lo que impide deshabilitados ventanas secundarias MDI se organizan en cascada.
+*nType*<br/>
+Especifica una marca en cascada. Solo se puede especificar la siguiente marca: MDITILE_SKIPDISABLED, lo que impide que las ventanas secundarias MDI deshabilitadas se conecten en cascada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera versión de `MDICascade`, sin parámetros, todas las ventanas secundarias MDI, incluidos deshabilitado las en cascada. La segunda versión de ellas, opcionalmente, ventanas en cascada deshabilitado MDI secundarias no si especificar MDITILE_SKIPDISABLED para el *nLas* parámetro.
+La primera `MDICascade`versión de , sin parámetros, conecta en cascada todas las ventanas secundarias MDI, incluidas las deshabilitadas. Opcionalmente, la segunda versión no deshabilita en cascada las ventanas secundarias MDI si especifica MDITILE_SKIPDISABLED para el *nType* parámetro.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCWindowing#17](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]
 
-##  <a name="mdigetactive"></a>  CMDIFrameWnd::MDIGetActive
+## <a name="cmdiframewndmdigetactive"></a><a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive
 
-Recupera la actual ventana secundaria MDI activa, junto con una marca que indica si se maximiza la ventana secundaria.
+Recupera la ventana secundaria MDI activa actual, junto con una marca que indica si se maximiza la ventana secundaria.
 
 ```
 CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
@@ -297,7 +297,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ### <a name="parameters"></a>Parámetros
 
 *pbMaximized*<br/>
-Un puntero a un valor devuelto BOOL. Establece en TRUE si la devolución, si la ventana está maximizada; en caso contrario, FALSE.
+Un puntero a un valor devuelto BOOL. Establezca en TRUE al devolver si la ventana está maximizada; de lo contrario FALSO.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -307,15 +307,15 @@ Un puntero a la ventana secundaria MDI activa.
 
 Vea el ejemplo de [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).
 
-##  <a name="mdiiconarrange"></a>  CMDIFrameWnd::MDIIconArrange
+## <a name="cmdiframewndmdiiconarrange"></a><a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange
 
-Organiza todas las ventanas secundarias de documento minimizada.
+Organiza todas las ventanas secundarias de documentos minimizadas.
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 No afecta a las ventanas secundarias que no se minimizan.
 
@@ -323,77 +323,77 @@ No afecta a las ventanas secundarias que no se minimizan.
 
 Vea el ejemplo de [CMDIFrameWnd::MDICascade](#mdicascade).
 
-##  <a name="mdimaximize"></a>  CMDIFrameWnd::MDIMaximize
+## <a name="cmdiframewndmdimaximize"></a><a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize
 
-Maximiza la ventana MDI secundaria especificada.
+Maximiza la ventana secundaria MDI especificada.
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
-Puntos a maximizar la ventana.
+*pWnd*<br/>
+Apunta a la ventana para maximizar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando se maximiza una ventana secundaria, Windows cambia el tamaño a fin de hacer su área de cliente de rellenar la ventana del cliente. Windows coloca el menú ventana secundaria del Control en la barra de menús del marco para que el usuario pueda restaurar o cerrar la ventana secundaria. También se agrega el título de la ventana secundaria en el título de ventana de marco.
+Cuando se maximiza una ventana secundaria, Windows la cambia de tamaño para que su área de cliente llene la ventana de cliente. Windows coloca el menú Control de la ventana secundaria en la barra de menús del marco para que el usuario pueda restaurar o cerrar la ventana secundaria. También agrega el título de la ventana secundaria al título de la ventana de marco.
 
-Si otra ventana secundaria MDI se activa cuando se maximiza la ventana secundaria MDI activa actualmente, Windows restaura a los secundarios activos actualmente y maximiza la ventana secundaria recientemente activados.
+Si se activa otra ventana secundaria MDI cuando se maximiza la ventana secundaria MDI activa actualmente, Windows restaura el elemento secundario activo actualmente y maximiza la ventana secundaria recién activada.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).
 
-##  <a name="mdinext"></a>  CMDIFrameWnd::MDINext
+## <a name="cmdiframewndmdinext"></a><a name="mdinext"></a>CMDIFrameWnd::MDINext
 
-Activa la ventana secundaria inmediatamente detrás de la ventana secundaria actualmente activa y coloca la ventana secundaria activa actualmente detrás de todas las demás ventanas secundarias.
+Activa la ventana secundaria inmediatamente detrás de la ventana secundaria activa actualmente y coloca la ventana secundaria activa actualmente detrás de todas las demás ventanas secundarias.
 
-```
+```cpp
 void MDINext();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si se maximiza la ventana secundaria MDI activa actualmente, la función miembro restaura a los secundarios activos actualmente y maximiza al elemento secundario recién creado.
+Si se maximiza la ventana secundaria MDI actualmente activa, la función miembro restaura el elemento secundario activo actualmente y maximiza el elemento secundario recién activado.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCWindowing#18](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]
 
-##  <a name="mdiprev"></a>  CMDIFrameWnd::MDIPrev
+## <a name="cmdiframewndmdiprev"></a><a name="mdiprev"></a>CMDIFrameWnd::MDIPrev
 
-Activa la ventana secundaria anterior y coloca la ventana secundaria actualmente activa inmediatamente detrás de él.
+Activa la ventana secundaria anterior y coloca la ventana secundaria activa inmediatamente detrás de ella.
 
-```
+```cpp
 void MDIPrev();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si se maximiza la ventana secundaria MDI activa actualmente, la función miembro restaura a los secundarios activos actualmente y maximiza al elemento secundario recién creado.
+Si se maximiza la ventana secundaria MDI actualmente activa, la función miembro restaura el elemento secundario activo actualmente y maximiza el elemento secundario recién activado.
 
-##  <a name="mdirestore"></a>  CMDIFrameWnd::MDIRestore
+## <a name="cmdiframewndmdirestore"></a><a name="mdirestore"></a>CMDIFrameWnd::MDIRestore
 
 Restaura una ventana secundaria MDI de tamaño maximizado o minimizado.
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
-Apunta a la ventana para restaurar.
+*pWnd*<br/>
+Apunta a la ventana que se va a restaurar.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore).
 
-##  <a name="mdisetmenu"></a>  CMDIFrameWnd::MDISetMenu
+## <a name="cmdiframewndmdisetmenu"></a><a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu
 
-Reemplaza el menú de una ventana de marco MDI, el menú emergente de la ventana o ambos.
+Reemplaza el menú de una ventana de marco MDI, el menú emergente Ventana o ambos.
 
 ```
 CMenu* MDISetMenu(
@@ -404,22 +404,22 @@ CMenu* MDISetMenu(
 ### <a name="parameters"></a>Parámetros
 
 *pFrameMenu*<br/>
-Especifica el menú del nuevo menú de la ventana de marco. Si es NULL, no se cambia el menú.
+Especifica el menú del nuevo menú de ventana de marco. Si NULL, el menú no se cambia.
 
 *pWindowMenu*<br/>
-Especifica el menú del menú emergente de ventana nueva. Si es NULL, no se cambia el menú.
+Especifica el menú del nuevo menú emergente Ventana. Si NULL, el menú no se cambia.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un puntero al menú de ventana de marco reemplazado por este mensaje. El puntero puede ser temporal y no se debe almacenar para su uso posterior.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Después de llamar a `MDISetMenu`, una aplicación debe llamar a la [DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar) función miembro de `CWnd` para actualizar la barra de menús.
+Después `MDISetMenu`de llamar a , una aplicación `CWnd` debe llamar a la [DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar) función miembro de para actualizar la barra de menús.
 
-Si esta llamada reemplaza el menú emergente de la ventana, elementos de menú de ventana secundaria MDI se quitan desde el menú Ventana anterior y se agrega al menú emergente de ventana nueva.
+Si esta llamada reemplaza el menú emergente Ventana, los elementos de menú de la ventana secundaria MDI se eliminan del menú Ventana anterior y se agregan al nuevo menú emergente Ventana.
 
-Si se maximiza una ventana secundaria MDI y esta llamada reemplaza al menú de ventana de marco MDI, los controles de menú y la restauración de Control se quitan en el menú de la ventana de marco anterior y se agregan al menú nuevo.
+Si se maximiza una ventana secundaria MDI y esta llamada reemplaza el menú de ventana de marco MDI, el menú Control y los controles de restauración se quitan del menú de ventana de marco anterior y se agregan al nuevo menú.
 
 No llame a esta función miembro si usa el marco de trabajo para administrar las ventanas secundarias MDI.
 
@@ -429,29 +429,29 @@ No llame a esta función miembro si usa el marco de trabajo para administrar las
 
 [!code-cpp[NVC_MFCWindowing#20](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]
 
-##  <a name="mditile"></a>  CMDIFrameWnd::MDITile
+## <a name="cmdiframewndmditile"></a><a name="mditile"></a>CMDIFrameWnd::MDITile
 
 Organiza todas las ventanas secundarias en un formato de mosaico.
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nLas*<br/>
-Especifica una marca de disposición en mosaico. Este parámetro puede ser cualquiera de las marcas siguientes:
+*nType*<br/>
+Especifica un indicador de ordenamiento en teselas. Este parámetro puede ser cualquiera de los siguientes indicadores:
 
-- Ventanas secundarias de MDI de MDITILE_HORIZONTAL iconos para que una ventana aparezca por encima de otro.
+- MDITILE_HORIZONTAL ventanas secundarias de Tiles MDI para que aparezca una ventana encima de otra.
 
-- Evita que MDITILE_SKIPDISABLED había deshabilitado ventanas secundarias MDI desde que se coloca en mosaico.
+- MDITILE_SKIPDISABLED Impide que se alicen ventanas secundarias MDI deshabilitadas.
 
-- Ventanas secundarias de MDI de MDITILE_VERTICAL iconos para que una ventana aparezca junto a otro.
+- MDITILE_VERTICAL ventanas secundarias de Tiles MDI para que aparezca una ventana al lado de otra.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera versión de `MDITile`, sin parámetros, los iconos de las ventanas verticalmente en las versiones 3.1 y posteriores de Windows. La segunda versión muestra ventanas en mosaico vertical u horizontalmente, dependiendo del valor de la *nLas* parámetro.
+La primera `MDITile`versión de , sin parámetros, teselas las ventanas verticalmente en las versiones 3.1 y posteriores de Windows. La segunda versión teselas ventanas vertical u horizontalmente, dependiendo del valor de la *nType* parámetro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -459,9 +459,9 @@ Vea el ejemplo de [CMDIFrameWnd::MDICascade](#mdicascade).
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo MDI de MFC](../../visual-cpp-samples.md)<br/>
-[Ejemplo de MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Ejemplo SNAPVW de MFC](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[EJEMPLO de MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd (clase)](../../mfc/reference/cframewnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

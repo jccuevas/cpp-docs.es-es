@@ -1,5 +1,5 @@
 ---
-title: Depurador de
+title: Instantánea
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC cursor library [ODBC], snapshots
@@ -11,39 +11,39 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e487b5abcc5eee4e3f4b1941100980eac4a040c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366904"
 ---
-# <a name="snapshot"></a>Depurador de
+# <a name="snapshot"></a>Instantánea
 
-Una instantánea es un conjunto de registros que refleja una vista estática de los datos tal como se encontraban en el momento en que se creó la instantánea. Al abrir la instantánea y mover a todos los registros, el conjunto de registros contiene y sus valores no cambian hasta que se vuelve a generar la instantánea mediante una llamada a `Requery`.
+Una instantánea es un conjunto de registros que refleja una vista estática de los datos tal como existían en el momento en que se creó la instantánea. Al abrir la instantánea y mover la instantánea a todos los registros, el conjunto de `Requery`registros que contiene y sus valores no cambian hasta que se vuelve a generar la instantánea llamando a .
 
 > [!NOTE]
->  Este tema es aplicable a las clases ODBC de MFC. Si utiliza las clases DAO de MFC en lugar de las clases ODBC de MFC, vea [CDaoRecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open) para obtener una descripción de los conjuntos de registros de tipo de instantánea.
+> Este tema es aplicable a las clases ODBC de MFC. Si utiliza las clases DAO de MFC en lugar de las clases ODBC de MFC, vea [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open) para obtener una descripción de conjuntos de registros de tipo instantánea.
 
-Puede crear instantáneas actualizables o de solo lectura con las clases de base de datos. A diferencia de un conjunto de registros dinámicos, instantáneas actualizables no reflejan los cambios realizados por otros usuarios de valores de registro, sino reflejan las actualizaciones y eliminaciones realizados por el programa. Los registros agregados a una instantánea no son visibles para la instantánea hasta que llame a `Requery`.
+Puede crear instantáneas actualizables o de solo lectura con las clases de base de datos. A diferencia de un conjunto de registros dinámicos, una instantánea actualizable no refleja los cambios en los valores de registro realizados por otros usuarios, pero sí refleja las actualizaciones y eliminaciones realizadas por el programa. Los registros agregados a una instantánea no `Requery`se vuelven visibles para la instantánea hasta que se llama a .
 
 > [!TIP]
->  Una instantánea es un cursor estático de ODBC. Los cursores estáticos no obtienen realmente una fila de datos hasta que se desplace a ese registro. Para asegurarse de que todos los registros se recuperan inmediatamente, puede desplazarse hasta el final del conjunto de registros y, a continuación, desplácese hasta el primer registro que desea ver. Sin embargo, tenga en cuenta que el desplazamiento hasta el final implica una sobrecarga adicional y puede reducir el rendimiento.
+> Una instantánea es un cursor estático ODBC. Los cursores estáticos no obtienen realmente una fila de datos hasta que se desplaza a ese registro. Para asegurarse de que todos los registros se recuperan inmediatamente, puede desplazarse hasta el final del conjunto de registros y, a continuación, desplazarse hasta el primer registro que desea ver. Tenga en cuenta, sin embargo, que el desplazamiento hasta el final implica una sobrecarga adicional y puede reducir el rendimiento.
 
-Las instantáneas son más útiles cuando necesite que los datos permanezcan fijos durante las operaciones, así como cuando se genera un informe o realizar cálculos. Aun así, el origen de datos puede divergir considerablemente de la instantánea, por lo que es posible que desee volver a generarlo de vez en cuando.
+Las instantáneas son más valiosas cuando necesita que los datos permanezcan fijos durante las operaciones, como cuando se genera un informe o se realizan cálculos. Aún así, el origen de datos puede diferir considerablemente de la instantánea, por lo que es posible que desee volver a generarla de vez en cuando.
 
-Compatibilidad con las instantáneas se basa en la biblioteca de cursores ODBC, que proporciona los cursores estáticos y actualizaciones con ubicación (necesarios para la actualización) para cualquier controlador de nivel 1. La biblioteca de cursores DLL debe cargarse en memoria para esta compatibilidad. Cuando se construye un `CDatabase` objeto y llamar a su `OpenEx` función miembro, debe especificar el `CDatabase::useCursorLib` opción de la *dwOptions* parámetro. Si se llama a la `Open` función miembro, la biblioteca de cursores se carga de forma predeterminada. Si usa conjuntos de registros dinámicos en lugar de instantáneas, no desea hacer que la biblioteca de cursores que se cargue.
+La compatibilidad con instantáneas se basa en la biblioteca de cursores ODBC, que proporciona cursores estáticos y actualizaciones posicionadas (necesarias para la capacidad de actualización) para cualquier controlador de nivel 1. El archivo DLL de la biblioteca de cursores debe cargarse en memoria para esta compatibilidad. Al construir `CDatabase` un objeto `OpenEx` y llamar a su `CDatabase::useCursorLib` función miembro, debe especificar la opción de la *dwOptions* parámetro. Si se `Open` llama a la función miembro, la biblioteca de cursores se carga de forma predeterminada. Si utiliza conjuntos de registros dinámicos en lugar de instantáneas, no desea que se cargue la biblioteca de cursores.
 
-Las instantáneas están disponibles sólo si la biblioteca de cursores ODBC se cargó cuando el `CDatabase` se construye el objeto o el controlador ODBC que usa es compatible con los cursores estáticos.
-
-> [!NOTE]
->  Algunos controladores ODBC, las instantáneas (cursores estáticos) podrían no ser actualizables. Compruebe la documentación del controlador para los tipos de cursor admitidos y los tipos de simultaneidad que admiten. Para garantizar que las instantáneas actualizables, asegúrese de cargar la biblioteca de cursores en la memoria cuando se crea un `CDatabase` objeto. Para obtener más información, consulte [ODBC: biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Las instantáneas solo están disponibles si `CDatabase` la biblioteca de cursores ODBC se cargó cuando se construyó el objeto o el controlador ODBC que está utilizando admite cursores estáticos.
 
 > [!NOTE]
->  Si desea utilizar instantáneas y conjuntos de registros dinámicos, se debe basar en dos diferentes `CDatabase` objetos (dos conexiones distintas).
+> Para algunos controladores ODBC, es posible que las instantáneas (cursores estáticos) no se puedan actualizar. Compruebe la documentación del controlador para los tipos de cursor admitidos y los tipos de simultaneidad que admiten. Para garantizar instantáneas actualizables, asegúrese de cargar la `CDatabase` biblioteca de cursores en la memoria al crear un objeto. Para obtener más información, vea [ODBC: la biblioteca](../../data/odbc/odbc-the-odbc-cursor-library.md)de cursores ODBC .
 
-Para obtener más información sobre el recurso compartido de instantáneas de las propiedades con todos los conjuntos de registros, vea [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obtener más información sobre ODBC y las instantáneas, incluida la biblioteca de cursores ODBC, vea [ODBC](../../data/odbc/odbc-basics.md).
+> [!NOTE]
+> Si desea utilizar instantáneas y conjuntos de registros `CDatabase` dinámicos, debe basarlos en dos objetos diferentes (dos conexiones diferentes).
 
-## <a name="see-also"></a>Vea también
+Para obtener más información acerca de las propiedades que las instantáneas comparten con todos los conjuntos de registros, vea [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obtener más información acerca de ODBC y las instantáneas, incluida la biblioteca de cursores ODBC, vea [ODBC](../../data/odbc/odbc-basics.md).
 
-[Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>Consulte también
+
+[Conectividad de base de datos abierta (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

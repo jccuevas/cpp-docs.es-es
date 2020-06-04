@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-ms.openlocfilehash: 084749bc92491593995904b6707ca94f6545981f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 271ecd26136671737a47b7adbaee273a0997102d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484284"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545142"
 ---
-# <a name="swap-function-autogcroot"></a>swap (Función) (auto_gcroot)
+# <a name="swap-function-auto_gcroot"></a>swap (Función) (auto_gcroot)
 
-Intercambia los objetos entre una `auto_gcroot` y otro.
+Intercambia objetos entre una `auto_gcroot` y otra.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,15 +31,15 @@ void swap(
 
 #### <a name="parameters"></a>Parámetros
 
-*a la _izquierda*<br/>
-Una clase `auto_gcroot`.
+*_left*<br/>
+Un valor de tipo `auto_gcroot`.
 
-*a la _derecha*<br/>
-Otro `auto_gcroot`.
+*_right*<br/>
+Otro objeto `auto_gcroot`.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // msl_swap_auto_gcroot.cpp
 // compile with: /clr
 #include <msclr\auto_gcroot.h>
@@ -66,11 +66,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>Requisitos
 
-**Archivo de encabezado** \<msclr\auto_gcroot.h >
+**Archivo de encabezado** \<msclr \ auto_gcroot. h >
 
-**Namespace** msclr
+**Espacio de nombres** msclr
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [auto_gcroot](../dotnet/auto-gcroot.md)<br/>
 [auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)

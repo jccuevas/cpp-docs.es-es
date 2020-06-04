@@ -7,12 +7,12 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181699"
 ---
 # <a name="abstract-classes-c"></a>Clases abstractas (C++)
 
@@ -20,7 +20,7 @@ Las clases abstractas actúan como expresiones de conceptos generales de los que
 
 Una clase que contiene al menos una función pura virtual se considera una clase abstracta. Las clases derivadas de la clase abstracta deben implementar la función virtual pura o deben ser también clases abstractas.
 
-Considere el ejemplo presentado en [funciones virtuales](../cpp/virtual-functions.md). El propósito de la clase `Account` es proporcionar funcionalidad general, pero los objetos de tipo `Account` son demasiado generales para resultar útiles. Por consiguiente, `Account` es un buen candidato para una clase abstracta:
+Considere el ejemplo que se presenta en [funciones virtuales](../cpp/virtual-functions.md). El propósito de la clase `Account` es proporcionar funcionalidad general, pero los objetos de tipo `Account` son demasiado generales para resultar útiles. Por consiguiente, `Account` es un buen candidato para una clase abstracta:
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -53,7 +53,7 @@ Otra restricción es que, si el constructor para una clase abstracta llama a una
 
 Se pueden definir funciones virtuales puras para clases abstractas, pero solo se pueden llamar directamente mediante la sintaxis:
 
-*nombre de clase abstracta*::*nombre de la función*)
+*abstract-Class-Name*::*function-Name*()
 
 Esto ayuda en el diseño de las jerarquías de clase cuyas clases base incluyen destructores virtuales puros, porque los destructores de clase base siempre se llaman en el proceso de destrucción de un objeto. Considere el ejemplo siguiente:
 
@@ -86,6 +86,6 @@ Cuando el objeto al que señala `pDerived` se elimina, se llama al destructor de
 > [!NOTE]
 > En el ejemplo anterior, la función virtual pura `base::~base` se llama implícitamente desde `derived::~derived`. También es posible llamar a funciones virtuales puras explícitamente mediante el nombre completo de la función miembro.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Herencia](../cpp/inheritance-cpp.md)

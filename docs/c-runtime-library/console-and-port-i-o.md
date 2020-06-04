@@ -1,8 +1,6 @@
 ---
 title: E/S de consola y de puerto
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - routines, console and port I/O
 - routines
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 728ff6fa36d21e869c65db705b25bbe7c9d711ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 5b4dc2a081ea11bd84d932f55b5b247de81f296a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446766"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443449"
 ---
 # <a name="console-and-port-io"></a>E/S de consola y de puerto
 
@@ -24,7 +22,7 @@ Estas rutinas leen y escriben en la consola o en el puerto especificado. Las rut
 
 ## <a name="console-and-port-io-routines"></a>Rutinas de E/S de consola y de puerto
 
-|Rutina|Usar|
+|Rutina|Uso|
 |-------------|---------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|Leer cadena de la consola|
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|Escribir datos con formato en la consola|
@@ -42,7 +40,7 @@ Estas rutinas leen y escriben en la consola o en el puerto especificado. Las rut
 |[_putch, _putwch](../c-runtime-library/reference/putch-putwch.md)|Escribir carácter en la consola|
 |[_ungetch, _ungetwch](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)|Aplicar el método "unget" al último carácter leído de la consola, para que sea la siguiente lectura de caracteres|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Entrada y salida](../c-runtime-library/input-and-output.md)<br/>
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

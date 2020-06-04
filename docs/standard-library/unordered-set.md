@@ -6,33 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: 8e79d05512a53b8fc2d4cb305cecf8d9095a9728
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71acab214d891c6139f21685e9368399b99e1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602896"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688788"
 ---
-# <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
+# <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
-Define las clases de plantilla de contenedor [unordered_multiset](../standard-library/unordered-multiset-class.md) y [unordered_set](../standard-library/unordered-set-class.md), así como sus plantillas auxiliares.
+Define las plantillas de clase de contenedor [unordered_multiset](../standard-library/unordered-multiset-class.md) y [unordered_set](../standard-library/unordered-set-class.md) y sus plantillas auxiliares.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <unordered_set>
-```
+**Encabezado:** \<unordered_set>
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> La biblioteca de > de \<unordered_set también utiliza la instrucción `#include <initializer_list>`.
+
+## <a name="members"></a>Miembros
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[unordered_multiset (Clase)](../standard-library/unordered-multiset-class.md)|Almacena la tabla de hash de claves.|
 |[unordered_set (Clase)](../standard-library/unordered-set-class.md)|Almacena la tabla de hash de claves.|
 
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|||
 |-|-|
 |[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Comprueba si el objeto unordered_multiset del lado izquierdo del operador no es igual que el objeto unordered_multiset del lado derecho.|
 |[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Comprueba si el objeto unordered_multiset del lado izquierdo del operador es igual que el objeto unordered_multiset del lado derecho.|
@@ -43,5 +48,5 @@ Define las clases de plantilla de contenedor [unordered_multiset](../standard-li
 
 ## <a name="see-also"></a>Vea también
 
-[unordered_map (Clase)](../standard-library/unordered-map-class.md)<br/>
-[unordered_multimap (Clase)](../standard-library/unordered-multimap-class.md)<br/>
+[unordered_map (Clase)](../standard-library/unordered-map-class.md)\
+[unordered_multimap (Clase)](../standard-library/unordered-multimap-class.md)

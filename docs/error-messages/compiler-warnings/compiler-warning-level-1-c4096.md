@@ -1,29 +1,29 @@
 ---
-title: Compilador advertencia (nivel 1) C4096
+title: ADVERTENCIA del compilador (nivel 1) C4096
 ms.date: 11/04/2016
 f1_keywords:
 - C4096
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f5a45339673b57f946f206e1eaff0d23ec6fee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436555"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163941"
 ---
-# <a name="compiler-warning-level-1-c4096"></a>Compilador advertencia (nivel 1) C4096
+# <a name="compiler-warning-level-1-c4096"></a>ADVERTENCIA del compilador (nivel 1) C4096
 
-'a': interfaz no es una interfaz COM; no se emitirá para IDL
+' a ': la interfaz no es una interfaz COM; no se emitirá para IDL
 
-Una definición de interfaz que desea como una interfaz COM no se definió como una interfaz COM y, por tanto, no se emitirá para el archivo IDL.
+Una definición de interfaz que puede haber diseñado como una interfaz COM no se ha definido como una interfaz COM y, por tanto, no se emitirá en el archivo IDL.
 
-Consulte [atributos de la interfaz](../../windows/attributes/interface-attributes.md) para una lista de atributos que indican una interfaz es una interfaz COM.
+Vea [atributos de interfaz](../../windows/attributes/interface-attributes.md) para obtener una lista de atributos que indican que una interfaz es una interfaz com.
 
-El ejemplo siguiente genera C4096:
+En el ejemplo siguiente se genera C4096:
 
-```
+```cpp
 // C4096.cpp
 // compile with: /W1 /LD
 #include "windows.h"

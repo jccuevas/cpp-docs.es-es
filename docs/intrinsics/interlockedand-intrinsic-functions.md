@@ -1,6 +1,6 @@
 ---
 title: Funciones intrínsecas _InterlockedAnd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAnd_rel
 - _InterlockedAnd_cpp
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: 70e618944ddac3468c0e49443cde116c8496df7c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: e22b463a5229de4745f71aaa0240374a5c057508
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626773"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217773"
 ---
-# <a name="interlockedand-intrinsic-functions"></a>Funciones intrínsecas _InterlockedAnd
+# <a name="_interlockedand-intrinsic-functions"></a>Funciones intrínsecas _InterlockedAnd
 
 **Específicos de Microsoft**
 
@@ -71,7 +71,7 @@ Se utiliza para realizar una operación AND bit a bit atómica en una variable c
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 long _InterlockedAnd(
    long volatile * value,
    long mask
@@ -170,13 +170,13 @@ __int64 _InterlockedAnd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*value*<br/>
-[in, out] Un puntero al primer operando, sean reemplazadas por el resultado.
+*value*\
+[in, out] Puntero al primer operando, que se va a reemplazar por el resultado.
 
-*Máscara*<br/>
-[in] El segundo operando.
+*máscara*\
+de Segundo operando.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -186,16 +186,17 @@ El valor original del primer operando.
 
 |Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<INTRIN.h >|
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<INTRIN.h >|
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<INTRIN.h >|
-|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h >|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedAnd64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM, ARM64|\<intrin.h>|
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h>|
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Comentarios
 
 El número en el nombre de cada función especifica el tamaño en bits de los argumentos.
 
-En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` para adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.
+En las plataformas ARM y ARM64, utilice los intrínsecos `_acq` con `_rel` los sufijos y para adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.
 
 Los intrínsecos con un sufijo `_np` ("sin captura previa") impiden que el compilador inserte una posible operación de captura previa.
 
@@ -203,7 +204,7 @@ En las plataformas de Intel que admiten instrucciones de Elisión de bloqueo de 
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // InterlockedAnd.cpp
 // Compile with: /Oi
 #include <stdio.h>
@@ -229,5 +230,5 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Conflictos con el compilador de x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

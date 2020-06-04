@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4515
 ms.assetid: 167b5177-3f89-418b-b6c8-7de634f6b28f
-ms.openlocfilehash: 147855f607d8ca72aa32548bf817484b6c0c3cfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 442852ba971fb1b9a687d5ccf2b2857aa9deab50
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459662"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990723"
 ---
 # <a name="compiler-warning-level-4-c4515"></a>Advertencia del compilador (nivel 4) C4515
 
-'namespace': espacio de nombres se utiliza a sí mismo
+' espacio de nombres ': el espacio de nombres se usa a sí mismo
 
-Un espacio de nombres es utilizar de forma recursiva.
+Se utiliza un espacio de nombres de forma recursiva.
 
-El ejemplo siguiente genera C4515:
+En el ejemplo siguiente se genera C4515:
 
-```
+```cpp
 // C4515.cpp
 // compile with: /W4
 namespace A

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2097
 ms.assetid: 7e5b2fd4-f61c-4b8a-b265-93e987a04bd3
-ms.openlocfilehash: 8b50221997dcf2fb60ee2b82ed630dd325a38145
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb14aeef61d136a6992a05a72f382e589e88770
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676595"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207506"
 ---
 # <a name="compiler-error-c2097"></a>Error del compilador C2097
 
@@ -23,8 +23,8 @@ inicialización no válida
 
 1. Inicialización de una dirección corta con una dirección larga.
 
-1. Inicialización de un local estructura, unión o matriz con una expresión no constante cuando se compila con **/Za**.
+1. Inicialización de una estructura, Unión o matriz local con una expresión no constante al compilar con **/za**.
 
-1. Inicialización con una expresión que contenga un operador de comas.
+1. Inicialización con una expresión que contiene un operador de coma.
 
 1. Inicialización con una expresión que no es constante ni simbólica.

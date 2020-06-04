@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (ejecutar PGO en modo de seguro para subprocesos)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319725"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (ejecutar PGO en modo de seguro para subprocesos)
 
@@ -26,11 +26,11 @@ El **/PogoSafeMode** opción establece la compilación instrumentada para usar e
 
 De forma predeterminada, la generación de perfiles PGO funciona en modo rápido. **/ POGOSAFEMODE** es necesario sólo si desea usar el modo seguro.
 
-Para ejecutar la generación de perfiles PGO en modo seguro, debe usar **/genprofile: exacta** (opción preferida), o bien usar la variable de entorno [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) o el modificador del vinculador   **/PogoSafeMode**, según el sistema. Si va a realizar la generación de perfiles en un x64 equipo, debe usar el modificador del vinculador. Si va a realizar la generación de perfiles en un x86 equipo, puede usar el modificador del vinculador o defina la variable de entorno en cualquier valor antes de iniciar el proceso de instrumentación de PGO.
+Para ejecutar la generación de perfiles PGO en modo seguro, debe usar **/genprofile: exacta** (opción preferida), o bien usar la variable de entorno [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) o el modificador del vinculador   **/PogoSafeMode**, según el sistema. Si va a realizar la generación de perfiles en un x64 equipo, debe usar el modificador del vinculador. Si va a realizar la generación de perfiles en un x86 equipo, puede usar el modificador del vinculador o defina la variable de entorno en cualquier valor antes de iniciar el proceso de instrumentación de PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **vinculador** > **optimización** página de propiedades.
 
@@ -48,5 +48,5 @@ Para ejecutar la generación de perfiles PGO en modo seguro, debe usar **/genpro
 
 [/GENPROFILE y /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md)<br/>
-[Variables de entorno para las optimizaciones guiadas por perfiles](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optimizaciones guiadas por perfiles](../profile-guided-optimizations.md)<br/>
+[Variables de entorno para las optimizaciones guiadas por perfiles](../environment-variables-for-profile-guided-optimizations.md)<br/>

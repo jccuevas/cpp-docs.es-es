@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4161
 ms.assetid: 03d3be61-83f1-4009-8310-8758ab67055f
-ms.openlocfilehash: e1bbc949c298a7cfb6c3a3a061616db3dc4730f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94ff4b645ec704c1b17d3c74aba434cf3ac7f05e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555845"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199009"
 ---
 # <a name="compiler-warning-level-3-c4161"></a>Advertencia del compilador (nivel 3) C4161
 
-> #<a name="pragma-pragmapop--more-pops-than-pushes"></a>pragma *pragma*(POP...): más elementos POP que Push
+> #<a name="pragma-pragmapop--more-pops-than-pushes"></a>pragma *pragma*(pop...): más elementos pop que inserciones
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Como el código fuente contiene una extracción más que inserciones hay para la pragma *pragma*, es posible que la pila no tenga el comportamiento esperado. Para evitar la advertencia, asegúrese de que el número de extracciones no supera el número de inserciones.
 

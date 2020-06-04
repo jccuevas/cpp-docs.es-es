@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2992
 ms.assetid: 01b16447-43fe-4e91-9a5a-af884a166a31
-ms.openlocfilehash: c30a1d2e1c2bae92b426fdd8fa4be628c009fa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d4902d34a806eeb26ef376e3b7a7b6ce843dbc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581927"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751500"
 ---
 # <a name="compiler-error-c2992"></a>Error del compilador C2992
 
@@ -23,7 +23,7 @@ La clase está precedida por la palabra clave `template` o **generic** sin pará
 
 El ejemplo siguiente genera la advertencia C2992:
 
-```
+```cpp
 // C2992.cpp
 // compile with: /c
 template <class T>

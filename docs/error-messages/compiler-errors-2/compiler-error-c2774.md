@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2774
 ms.assetid: 10f428c6-7f49-489a-92ba-6ef978b7caaf
-ms.openlocfilehash: 6197e3da81a9f059c90d15608a939ad4887e526d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2630dba6a74bf6b31a5df7af57e42fd7c8fd4e09
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586893"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740109"
 ---
 # <a name="compiler-error-c2774"></a>Error del compilador C2774
 
-'identifier': no hay ningún método 'put' está asociado con esta propiedad
+' Identifier ': no hay ningún método ' Put ' asociado a esta propiedad
 
-Un miembro de datos declarado con [propiedad](../../cpp/property-cpp.md) no tiene ningún `put` función, pero una expresión intenta establecer su valor.
+Un miembro de datos declarado con la [propiedad](../../cpp/property-cpp.md) no tiene `put` función, pero una expresión intenta establecer su valor.
 
-El ejemplo siguiente genera C2774:
+En el ejemplo siguiente se genera C2774:
 
-```
+```cpp
 // C2774.cpp
 struct A {
    __declspec(property(get=GetProp)) int prop;

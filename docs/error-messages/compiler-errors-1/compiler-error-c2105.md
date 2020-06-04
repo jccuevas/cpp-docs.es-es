@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2105
 ms.assetid: 19b7f7bc-a9da-4d23-8193-005b6d09274f
-ms.openlocfilehash: d47ee2815a3ba5609fcdc6b7312ac8c6187ec861
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd09dda2b81bb34d395df6d8cdccb48b28c3025
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631769"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752215"
 ---
 # <a name="compiler-error-c2105"></a>Error del compilador C2105
 
-'operador' necesita valor l
+' Operator ' necesita valor l
 
 El operador debe tener un valor l como operando.
 
-El ejemplo siguiente genera C2105:
+En el ejemplo siguiente se genera C2105:
 
-```
+```cpp
 // C2105.cpp
 int main() {
    unsigned char * p1 = 0;
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-El ejemplo siguiente genera C2105:
+En el ejemplo siguiente se genera C2105:
 
-```
+```cpp
 // C2105b.cpp
 int main() {
    int a[10] = {0};

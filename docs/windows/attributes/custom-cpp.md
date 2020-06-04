@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 7aca125879591f71fe2ba60f34b712918350940f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f51b0210fff4db5be359fa94237f4d7c77b4fef2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565703"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214895"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -31,14 +31,14 @@ Define los metadatos de un objeto en la biblioteca de tipos.
 *uuid*<br/>
 Identificador único.
 
-*valor*<br/>
-Un valor que se puede colocar en una variante.
+*value*<br/>
+Valor que se puede colocar en una variante.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **personalizado** atributo de C++ hará que la información para colocarse en la biblioteca de tipos. Necesitará una herramienta que lee el valor personalizado de la biblioteca de tipos.
+El atributo **personalizado** C++ hará que la información se coloque en la biblioteca de tipos. Necesitará una herramienta que lea el valor personalizado de la biblioteca de tipos.
 
-El **personalizado** atributo tiene la misma funcionalidad que el [personalizado](/windows/desktop/Midl/custom) atributo MIDL.
+El atributo **personalizado** tiene la misma funcionalidad que el atributo MIDL [personalizado](/windows/win32/Midl/custom) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -46,14 +46,14 @@ El **personalizado** atributo tiene la misma funcionalidad que el [personalizado
 
 |||
 |-|-|
-|**Se aplica a**|No COM **interfaz**, **clase**, **enum**s, `idl_module` métodos, los miembros de interfaz, los parámetros de la interfaz, **typedef**s, **unión**s, **struct**s|
+|**Se aplica a**|**Interfaz**no com, **clase**, **enumeración**, métodos de `idl_module`, miembros de interfaz, parámetros de interfaz, **typedef**s, **Union**s, **struct**s|
 |**Reiterativo**|Sí|
 |**Atributos requeridos**|**coclase** (cuando se usa en la clase)|
-|**Atributos no válidos**|Ninguna|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>

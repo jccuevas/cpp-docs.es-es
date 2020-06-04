@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2838
 ms.assetid: 176b2ad6-7a84-4019-b97e-328866054457
-ms.openlocfilehash: 1482efa8b018914a4ebc509464622726ae9ebb20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 168f45a8cca8591d4780d056403de70440d25bec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560396"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757844"
 ---
 # <a name="compiler-error-c2838"></a>Error del compilador C2838
 
-'member': nombre completo no válido en la declaración de miembro
+' Member ': nombre completo no válido en la declaración de miembro
 
-Una clase, estructura o unión utiliza un nombre totalmente calificado para volver a declarar a un miembro de otra clase, estructura o unión.
+Una clase, estructura o unión usa un nombre completo para volver a declarar un miembro de otra clase, estructura o Unión.
 
-El ejemplo siguiente genera C2838:
+En el ejemplo siguiente se genera C2838:
 
-```
+```cpp
 // C2838.cpp
 // compile with: /c
 class Bellini {

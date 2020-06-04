@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1192
 ms.assetid: 54cff717-a3eb-471d-9bd4-1c2e673dbbef
-ms.openlocfilehash: 5fc5e0a17fb3fedca5719065ae426ac8c05db61f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a15a808c1aff46ba6e63b3e86c0745c8ed7711a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436446"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203676"
 ---
 # <a name="fatal-error-c1192"></a>Error irrecuperable C1192
 
-\#Error de #using en 'archivo'
+\#con failed en ' file '
 
-Solo un archivo con el formato de lenguaje intermedio de Microsoft (MSIL) se puede pasar a un [#using](../../preprocessor/hash-using-directive-cpp.md) directiva. El [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opción del compilador le permite crear un archivo de salida MSIL. Otros lenguajes de Visual Studio también generan archivos MSIL.
+Solo se puede pasar un archivo en el formato del lenguaje intermedio de Microsoft (MSIL) a una directiva de [#using](../../preprocessor/hash-using-directive-cpp.md) . La opción del compilador [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) permite crear un archivo de salida de MSIL. Otros lenguajes de Visual Studio también generan archivos MSIL.

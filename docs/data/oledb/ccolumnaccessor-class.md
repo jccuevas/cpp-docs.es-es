@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 85d3d9d4339634ea7948d7d5e9e09725b7fd8758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a3b1dac51a8300a915a7177c36f15512b583fa0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611373"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212115"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor (Clase)
 
-Genera código insertado de consumidor.
+Genera código de consumidor insertado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,33 +25,33 @@ Genera código insertado de consumidor.
 class CColumnAccessor : public CAccessorBase
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-En el código insertado, cada columna se enlaza como un descriptor de acceso independiente. Debe tener en cuenta que esta clase se usa en el código insertado (por ejemplo, es posible que aparece al depurar), pero normalmente nunca tendrá que utilizarla o sus métodos directamente.
+En el código insertado, cada columna se enlaza como un descriptor de acceso independiente. Debe tener en cuenta que esta clase se usa en el código insertado (por ejemplo, podría encontrarla durante la depuración), pero normalmente nunca tendrá que utilizarla o sus métodos directamente.
 
-`CColumnAccessor` implementa los siguientes métodos de código auxiliar, cada uno de los cuales corresponden de funcionalidad a otros métodos de clase de descriptor de acceso:
+`CColumnAccessor` implementa los siguientes métodos de código auxiliar, cada uno de los cuales se corresponde en la funcionalidad de otros métodos de clase de descriptor de acceso:
 
-- `CColumnAccessor` El constructor; crea una instancia e inicializa el `CColumnAccessor` objeto.
+- `CColumnAccessor` el constructor; crea una instancia e inicializa el objeto `CColumnAccessor`.
 
-- `CreateAccessor` Asigna memoria para la columna de las estructuras de enlace e inicializa a los miembros de datos de columna.
+- `CreateAccessor` asigna memoria a las estructuras de enlace de columna e inicializa los miembros de datos de columna.
 
-- `BindColumns` Enlaza las columnas a los descriptores de acceso.
+- `BindColumns` enlaza columnas a los descriptores de acceso.
 
-- `SetParameterBuffer` Asigna los búferes de parámetros.
+- `SetParameterBuffer` asigna búferes para los parámetros.
 
-- `AddParameter` Agrega una entrada de parámetro a las estructuras de entrada de parámetro.
+- `AddParameter` agrega una entrada de parámetro a las estructuras de entrada de parámetros.
 
-- `HasOutputColumns` Determina si el descriptor de acceso tiene columnas de salida
+- `HasOutputColumns` determina si el descriptor de acceso tiene columnas de salida
 
-- `HasParameters` Determina si el descriptor de acceso tiene parámetros.
+- `HasParameters` determina si el descriptor de acceso tiene parámetros.
 
-- `BindParameters` Enlaza los parámetros creados para las columnas.
+- `BindParameters` enlaza los parámetros creados a las columnas.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldbcli.h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

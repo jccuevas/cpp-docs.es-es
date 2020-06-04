@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: e5e658f16657c0021b78175e87d122a3accd11eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443671"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456536"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference (clase)
 
@@ -29,14 +29,14 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-El `add_rvalue_reference` clase tiene un miembro denominado `type`, que es un alias para el tipo de referencia rvalue para el parámetro de plantilla *T*. La semántica de contracción de referencias implica que, para los tipos que no sean de objeto y que no son de función *T*, `T&&` es un *T*. Por ejemplo, cuando *T* es un tipo de referencia lvalue, `add_rvalue_reference<T>::type` es el tipo de referencia de valor l, no una referencia rvalue.
+La `add_rvalue_reference` clase tiene un miembro denominado `type`, que es un alias para el tipo de una referencia rvalue al parámetro de plantilla *T*. La semántica de la contracción de referencia implica que, para los tipos de no objeto y que no son `T&&` de función *t*, es una *t*. Por ejemplo, cuando *T* es un tipo de referencia de `add_rvalue_reference<T>::type` valor l, es el tipo de referencia de valor l, no una referencia rvalue.
 
-Para mayor comodidad, \<type_traits > define una plantilla de aplicación auxiliar, `add_rvalue_reference_t`, ese alias el `type` miembro de `add_rvalue_reference`.
+Por comodidad, \<type_traits > define una plantilla de aplicación auxiliar `add_rvalue_reference_t`,, que tiene un `type` alias para `add_rvalue_reference`el miembro de.
 
 ## <a name="example"></a>Ejemplo
 
@@ -73,10 +73,10 @@ All static_assert tests of add_rvalue_reference passed.
 
 Encabezado: \<type_traits >
 
-Namespace: std
+Espacio de nombres: STD
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference (Clase)](../standard-library/add-lvalue-reference-class.md)<br/>
-[is_rvalue_reference (Clase)](../standard-library/is-rvalue-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Clase add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)\
+[is_rvalue_reference (Clase)](../standard-library/is-rvalue-reference-class.md)

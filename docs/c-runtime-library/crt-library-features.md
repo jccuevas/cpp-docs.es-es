@@ -1,8 +1,6 @@
 ---
 title: Características de la biblioteca CRT
 ms.date: 08/20/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -18,12 +16,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: a350e2c45d9ccf83fb09a76f43b63a6b17273cff
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540275"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438539"
 ---
 # <a name="crt-library-features"></a>Características de la biblioteca CRT
 
@@ -33,14 +31,14 @@ En este tema se describen los distintos archivos .lib que forman las bibliotecas
 
 La biblioteca de tiempo de ejecución de C (CRT) es la parte de la biblioteca estándar de C++ que incorpora la biblioteca del estándar ISO C99. Las bibliotecas de Visual C++ que implementan CRT admiten el desarrollo de código nativo, así como código mixto (nativo y administrado) y código administrado. Todas las versiones de CRT admiten el desarrollo multiproceso. La mayoría de las bibliotecas admite la vinculación estática, para vincular la biblioteca directamente en el código, o la vinculación dinámica para permitir que el código use archivos DLL comunes.
 
-A partir de Visual Studio 2015, el CRT se ha refactorizado en nuevos binarios. CRT Universal (UCRT) contiene las funciones y variables globales exportadas por la biblioteca CRT del estándar C99. El UCRT ahora es un componente de Windows y se incluye en Windows 10. La biblioteca estática, la biblioteca de importación de DLL y los archivos de encabezado para el UCRT ahora se encuentran en el SDK de Windows 10. Cuando se instala Visual C++, el programa de instalación de Visual Studio instala el subconjunto del SDK de Windows 10 necesario para usar el UCRT. Se puede usar el UCRT en cualquier versión de Windows compatible con Visual Studio 2015 y versiones posteriores. También se puede redistribuir mediante vcredist para las versiones compatibles de Windows que no sean Windows 10. Para obtener más información, vea [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).
+A partir de Visual Studio 2015, el CRT se ha refactorizado en nuevos binarios. CRT Universal (UCRT) contiene las funciones y variables globales exportadas por la biblioteca CRT del estándar C99. El UCRT ahora es un componente de Windows y se incluye en Windows 10. La biblioteca estática, la biblioteca de importación de DLL y los archivos de encabezado para el UCRT ahora se encuentran en el SDK de Windows 10. Cuando se instala Visual C++, el programa de instalación de Visual Studio instala el subconjunto del SDK de Windows 10 necesario para usar el UCRT. Se puede usar el UCRT en cualquier versión de Windows compatible con Visual Studio 2015 y versiones posteriores. También se puede redistribuir mediante vcredist para las versiones compatibles de Windows que no sean Windows 10. Para obtener más información, vea [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
 En la tabla siguiente se muestran las bibliotecas que implementan el UCRT.
 
 |Biblioteca|DLL asociado|Características|Opción|Directivas de preprocesador|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libucrt.lib|Ninguna|Vincula estáticamente el UCRT en el código.|**/MT**|_MT|
-|libucrtd.lib|Ninguna|Versión de depuración del UCRT para la vinculación estática. No redistribuible.|**/MTd**|_DEBUG, _MT|
+|libucrt.lib|None|Vincula estáticamente el UCRT en el código.|**/MT**|_MT|
+|libucrtd.lib|None|Versión de depuración del UCRT para la vinculación estática. No redistribuible.|**/MTd**|_DEBUG, _MT|
 |ucrt.lib|ucrtbase.dll|Biblioteca de importación de DLL para el UCRT.|**/MD**|_MT, _DLL|
 |ucrtd.lib|ucrtbased.dll|Biblioteca de importación de DLL para la versión de depuración del UCRT. No redistribuible.|**/MDd**|_DEBUG, _MT, _DLL|
 
@@ -50,8 +48,8 @@ En la siguiente tabla se muestran las bibliotecas que implementan la biblioteca 
 
 |Biblioteca|DLL asociado|Características|Opción|Directivas de preprocesador|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libvcruntime.lib|Ninguna|Se vincula estáticamente en el código.|**/MT**|_MT|
-|libvcruntimed.lib|Ninguna|Versión de depuración para la vinculación estática. No redistribuible.|**/MTd**|_MT, _DEBUG|
+|libvcruntime.lib|None|Se vincula estáticamente en el código.|**/MT**|_MT|
+|libvcruntimed.lib|None|Versión de depuración para la vinculación estática. No redistribuible.|**/MTd**|_MT, _DEBUG|
 |vcruntime.lib|vcruntime\<versión>.dll|Biblioteca de importación de DLL para vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<versión>d.dll|Biblioteca de importación de DLL para vcruntime de depuración. No redistribuible.|**/MDd**|_DEBUG, _MT, _DLL|
 
@@ -64,7 +62,7 @@ En la siguiente tabla se muestran las bibliotecas que implementan la inicializac
 
 |Biblioteca|Características|Opción|Directivas de preprocesador|
 |-------------|---------------------|------------|-----------------------------|
-|LIBCMT.lib|Vincula estáticamente el inicio de CRT nativo en el código.|**/MT**|_MT|
+|libcmt.lib|Vincula estáticamente el inicio de CRT nativo en el código.|**/MT**|_MT|
 |libcmtd.lib|Vincula estáticamente la versión de depuración del inicio de CRT nativo. No redistribuible.|**/MTd**|_DEBUG, _MT|
 |msvcrt.lib|Biblioteca estática para el inicio de CRT nativo para su uso con UCRT y vcruntime de DLL.|**/MD**|_MT, _DLL|
 |msvcrtd.lib|Biblioteca estática para la versión de depuración de inicio de CRT nativo para su uso con UCRT y vcruntime de DLL. No redistribuible.|**/MDd**|_DEBUG, _MT, _DLL|
@@ -79,7 +77,7 @@ El uso de CRT vinculado estáticamente implica que toda información de estado q
 
 Dado que un archivo DLL compilado mediante la vinculación a CRT estático tendrá su propio estado de CRT, no se recomienda para vincular estáticamente a CRT en un archivo DLL, a menos que las consecuencias de hacerlo se entiendan y se deseen obtener. Por ejemplo, si llama a [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) en un archivo ejecutable que cargue el DLL vinculado a su propio CRT estático, el traductor no detectará ninguna excepción de hardware que genere el código del archivo DLL, pero se detectarán las excepciones de hardware que genere el código del archivo ejecutable principal.
 
-Si usa el modificador de compilador **/clr** , el código se vinculará a una biblioteca estática, msvcmrt.lib. La biblioteca estática proporciona un proxy entre el código administrado y CRT nativo. CRT vinculado estáticamente (opciones **/MT** o **/MTd** ) no se puede usar con **/clr**. En su lugar, use las bibliotecas vinculadas dinámicamente (**/MD** o **/MDd**). Las bibliotecas de CRT administradas puras están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017.
+Si usa el modificador de compilador **/clr** , el código se vinculará a una biblioteca estática, msvcmrt.lib. La biblioteca estática proporciona un proxy entre el código administrado y CRT nativo. CRT vinculado estáticamente (opciones **/MT** o **/MTd** ) no se puede usar con **/clr**. En su lugar, use las bibliotecas vinculadas dinámicamente ( **/MD** o **/MDd**). Las bibliotecas de CRT administradas puras están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017.
 
 Para obtener más información sobre cómo usar CRT con **/clr**, vea [Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md).
 
@@ -112,8 +110,8 @@ Puede evitar muchos de estos problemas empleando las tecnologías de la interfaz
 
 También es posible evitar algunos de estos problemas si todas las imágenes del proceso usan la misma versión cargada dinámicamente de CRT. Para asegurarse de que todos los componentes utilizan la misma versión DLL de CRT, compílelos mediante la opción **/MD** y use el mismo conjunto de herramientas y configuración de propiedades del compilador.
 
-Es necesario prestar atención si el programa pasa ciertos recursos de CRT (por ejemplo, identificadores de archivo, configuraciones regionales y variables de entorno) a través de los límites de los archivos DLL, incluso si se utiliza la misma versión de CRT. Para obtener más información sobre los posibles problemas y cómo resolverlos, consulte [Errores potenciales que pasan los objetos de CRT entre los límites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Es necesario prestar atención si el programa pasa ciertos recursos de CRT (por ejemplo, identificadores de archivo, configuraciones regionales y variables de entorno) a través de los límites de los archivos DLL, incluso si se utiliza la misma versión de CRT. Para obtener más información sobre los posibles problemas y cómo resolverlos, consulte [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de la biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md)

@@ -5,40 +5,40 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-ms.openlocfilehash: 61e152534dbea09fbca0af819b0847e82a1c4146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177c06acfe665a43921b19407d9d357d4545e748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512078"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511274"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Configurar las imágenes para un elemento individual
 
-Los diferentes tipos de imágenes utilizados por el elemento de cuadro combinado extendido se determinan por los valores de la *iImage*, *iSelectedImage*, y *iOverlay* los miembros de la [ COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) estructura. Cada valor es el índice de una imagen en la lista de imágenes asociada del control. De forma predeterminada, estos miembros se establecen en 0, haciendo que el control no mostrar para el elemento no aparece ninguna imagen. Si desea utilizar imágenes para un elemento específico, puede modificar la estructura en consecuencia, cuando se inserta el elemento de cuadro combinado o modificando un elemento de cuadro combinado existente.
+Los distintos tipos de imágenes utilizados por el elemento del cuadro combinado extendido vienen determinados por los valores de los miembros *iImage*, *iSelectedImage*y *IOverlay* de la estructura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) . Cada valor es el índice de una imagen en la lista de imágenes asociada del control. De forma predeterminada, estos miembros se establecen en 0, lo que hace que el control no muestre ninguna imagen para el elemento. Si desea usar imágenes para un elemento específico, puede modificar la estructura en consecuencia, bien al insertar el elemento de cuadro combinado o al modificar un elemento de cuadro combinado existente.
 
-## <a name="setting-the-image-for-a-new-item"></a>Establecer la imagen de un nuevo elemento
+## <a name="setting-the-image-for-a-new-item"></a>Establecimiento de la imagen de un nuevo elemento
 
-Si va a insertar un nuevo elemento, inicialice la *iImage*, *iSelectedImage*, y *iOverlay* miembros con los valores adecuados de estructura y, a continuación, inserte el elemento con una llamada a [CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).
+Si va a insertar un nuevo elemento, inicialice los miembros de la estructura *iImage*, *iSelectedImage*y *IOverlay* con los valores adecuados y, a continuación, inserte el elemento con una llamada a [CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).
 
-El ejemplo siguiente inserta un nuevo elemento de cuadro combinado extendido (`cbi`) en el control de cuadro combinado extendido (`m_comboEx`), proporcionando índices para los tres estados de la imagen:
+En el ejemplo siguiente se inserta un nuevo elemento de cuadro combinado`cbi`extendido () en el control de cuadro`m_comboEx`combinado extendido (), proporcionando índices para los tres Estados de imagen:
 
 [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]
 
-## <a name="setting-the-image-for-an-existing-item"></a>Establecer la imagen de un elemento existente
+## <a name="setting-the-image-for-an-existing-item"></a>Establecimiento de la imagen de un elemento existente
 
-Si va a modificar un elemento existente, deberá trabajar con el *máscara* miembro de un **COMBOBOXEXITEM** estructura.
+Si va a modificar un elemento existente, debe trabajar con el miembro de *máscara* de una estructura **COMBOBOXEXITEM** .
 
-#### <a name="to-modify-an-existing-item-to-use-images"></a>Para modificar un elemento existente para usar imágenes
+#### <a name="to-modify-an-existing-item-to-use-images"></a>Para modificar un elemento existente para utilizar imágenes
 
-1. Declarar un **COMBOBOXEXITEM** estructurar y establecer el *máscara* miembro de datos a los valores está interesado en modificar.
+1. Declare una estructura **COMBOBOXEXITEM** y establezca el miembro de datos *Mask* en los valores que le interesa modificar.
 
 1. Con esta estructura, realice una llamada a [CComboBoxEx:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem).
 
-1. Modificar el *máscara*, *iImage*, y *iSelectedImage* miembros de la estructura recién devuelta, usando los valores adecuados.
+1. Modifique los miembros *Mask*, *iImage*y *iSelectedImage* de la estructura que se acaba de devolver, con los valores adecuados.
 
-1. Realizar una llamada a [CComboBoxEx:: SetItem](../mfc/reference/ccomboboxex-class.md#setitem), pasando la estructura modificada.
+1. Realice una llamada a [CComboBoxEx:: SetItem](../mfc/reference/ccomboboxex-class.md#setitem)y pase la estructura modificada.
 
-El ejemplo siguiente muestra este procedimiento intercambiando las imágenes seleccionadas y del tercer elemento de cuadro combinado extendido:
+En el ejemplo siguiente se muestra este procedimiento mediante el intercambio de las imágenes seleccionadas y no seleccionadas del tercer elemento del cuadro combinado extendido:
 
 [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]
 
@@ -46,4 +46,3 @@ El ejemplo siguiente muestra este procedimiento intercambiando las imágenes sel
 
 [Uso de CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2bda1d34c85b1e88c7d278816e30e76537a7523b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292853"
 ---
 # <a name="failure-hooks"></a>Enlaces de error
 
-El enlace de error está habilitado en la misma manera que el [enlace de notificación](../../build/reference/notification-hooks.md). Puede seguir la rutina de enlace tiene que devolver un valor adecuado para que el procesamiento (HINSTANCE o FARPROC) o 0 para indicar que debe producirse una excepción.
+El enlace de error está habilitado en la misma manera que el [enlace de notificación](notification-hooks.md). Puede seguir la rutina de enlace tiene que devolver un valor adecuado para que el procesamiento (HINSTANCE o FARPROC) o 0 para indicar que debe producirse una excepción.
 
 La variable de puntero que hace referencia a la función definida por el usuario es:
 
@@ -39,4 +39,4 @@ Si la notificación es **dliFailGetProc**, la función de enlace puede devolver:
 
 ## <a name="see-also"></a>Vea también
 
-[Notificación y control de errores](../../build/reference/error-handling-and-notification.md)
+[Notificación y control de errores](error-handling-and-notification.md)

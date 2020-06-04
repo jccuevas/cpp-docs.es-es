@@ -9,20 +9,20 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: f08ea9d6eb879aa3b07ac0ff983637236368a11a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507788"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544890"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Cómo: serializar cadenas Unicode mediante la interoperabilidad de C++
 
-En este tema se muestra un aspecto de la interoperabilidad de Visual C++. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+En este tema se muestra una faceta C++ de interoperabilidad visual. Para obtener más información, [vea C++ usar Interop (implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma para implementar administrados y las funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si se definen en archivos independientes. No es necesario que los archivos que contienen solo las funciones no administradas se compilan con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
+En los siguientes ejemplos de código se usan las directivas de #pragma [administradas y no administradas](../preprocessor/managed-unmanaged.md) para implementar funciones administradas y no administradas en el mismo archivo, pero estas funciones interoperan de la misma manera si se definen en archivos independientes. No es necesario compilar los archivos que contienen solo funciones no administradas con [/CLR (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-Este tema muestra cómo las cadenas de Unicode pueden ser pase de una a una función no administrada y viceversa. Para interoperar con otros tipos de cadenas, vea los temas siguientes:
+En este tema se muestra cómo se pueden pasar cadenas Unicode de una función administrada a una función no administrada y viceversa. Para interoperar con otros tipos de cadenas, vea los temas siguientes:
 
 - [Cómo: Serializar cadenas ANSI mediante la interoperabilidad de C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
@@ -30,9 +30,9 @@ Este tema muestra cómo las cadenas de Unicode pueden ser pase de una a una func
 
 ## <a name="example"></a>Ejemplo
 
-Para pasar una cadena Unicode de administrado a una función no administrada, se puede usar la función PtrToStringChars (declarada en Vcclr.h) para el acceso en la memoria donde se almacena la cadena administrada. Dado que esta dirección se pasará a una función nativa, es importante que se ha anclado la memoria con [pin_ptr (C++ / c++ / CLI)](../windows/pin-ptr-cpp-cli.md) para evitar que los datos de cadena que se ha reubicado, un ciclo de recopilación de elementos no utilizados tendrá lugar mientras el ejecuta la función no administrada.
+Para pasar una cadena Unicode de una función administrada a una función no administrada, se puede usar la función PtrToStringChars (declarada en vcclr. h) para tener acceso a en la memoria donde se almacena la cadena administrada. Dado que esta dirección se pasará a una función nativa, es importante anclar la memoria con [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para evitar que los datos de la cadena se reubiquen, en caso de que se produzca un ciclo de recolección de elementos no utilizados mientras se ejecuta la función no administrada.
 
-```
+```cpp
 // MarshalUnicode1.cpp
 // compile with: /clr
 #include <iostream>
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra el cálculo de referencias de datos necesarios para tener acceso a una cadena Unicode en una función administrada llamada a una función no administrada. La función administrada, al recibir la cadena Unicode nativa, lo convierte en una cadena administrada mediante el <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> método.
+En el ejemplo siguiente se muestra el cálculo de referencias de datos necesario para tener acceso a una cadena Unicode en una función administrada a la que llama una función no administrada. La función administrada, al recibir la cadena Unicode nativa, la convierte en una cadena administrada mediante el método <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>.
 
-```
+```cpp
 // MarshalUnicode2.cpp
 // compile with: /clr
 #include <iostream>
@@ -95,6 +95,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

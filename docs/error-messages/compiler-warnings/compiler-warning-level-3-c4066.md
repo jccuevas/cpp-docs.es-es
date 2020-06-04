@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4066
 ms.assetid: f2ae6465-a140-459a-87fd-c8f25fafedd4
-ms.openlocfilehash: 1d810f9b950e66228f731119f07a4830483d6169
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1304239705d2cbd14c06596c43b416c6d02ff85
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199063"
 ---
 # <a name="compiler-warning-level-3-c4066"></a>Advertencia del compilador (nivel 3) C4066
 

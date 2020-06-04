@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: serializar punteros incrustados mediante PInvoke'
+title: Procedimiento Serializar punteros incrustados mediante PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-ms.openlocfilehash: 4f2d37ceb18035747773d307885c8af17d696adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 943a1a2784a37353157cd38da7ebdc9827006fe5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325213"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Cómo: serializar punteros incrustados mediante PInvoke
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Procedimiento Serializar punteros incrustados mediante PInvoke
 
-Funciones que se implementan en archivos DLL no administrado se pueden llamar desde código administrado mediante la funcionalidad de invocación de plataforma (P/Invoke). Si el código fuente para el archivo DLL no está disponible, P/Invoke es la única opción para interoperar. Sin embargo, a diferencia de otros lenguajes. NET, Visual C++ proporciona una alternativa a P/Invoke. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) y [Cómo: serializar incrustado punteros Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Funciones que se implementan en archivos DLL no administrado se pueden llamar desde código administrado mediante la funcionalidad de invocación de plataforma (P/Invoke). Si el código fuente para el archivo DLL no está disponible, P/Invoke es la única opción para interoperar. Sin embargo, a diferencia de otros lenguajes. NET, Visual C++ proporciona una alternativa a P/Invoke. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) y [Cómo: Serializar punteros incrustados mediante la interoperabilidad de C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ## <a name="example"></a>Ejemplo
 

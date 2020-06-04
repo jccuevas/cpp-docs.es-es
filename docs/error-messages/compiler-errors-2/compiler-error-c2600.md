@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2600
 ms.assetid: cce11943-ea01-4bee-a7b0-b67d24ec6493
-ms.openlocfilehash: 4d9e94790c3f4b2fa0aaf36894f0b12c7134a9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2d95460cadf03f9152599ef47ae703030326dd1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500404"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740746"
 ---
 # <a name="compiler-error-c2600"></a>Error del compilador C2600
 
@@ -23,7 +23,7 @@ Para corregir este error, en la declaración de clase, declare cada función mie
 
 El código siguiente genera el error C2600:
 
-```
+```cpp
 // C2600.cpp
 // compile with: /c
 class C {};

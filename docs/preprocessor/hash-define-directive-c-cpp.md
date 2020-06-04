@@ -1,6 +1,6 @@
 ---
-title: '##define (directiva) (C/C ++)'
-ms.date: 11/04/2016
+title: '#define (Directiva) (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#define'
 helpviewer_keywords:
@@ -10,40 +10,39 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b72e2468b9e9984237c81f5cdb3c5691fe95cbd0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653757"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216279"
 ---
-# <a name="define-directive-cc"></a>#define (Directiva) (C/C++)
+# <a name="define-directive-cc"></a>#define (Directiva) (C++C/)
 
-El **#define** crea un *macro*, que es la asociación de un identificador o identificador parametrizado con una cadena de token. Una vez definida la macro, el compilador puede sustituir la cadena de token para cada aparición del identificador del archivo de código fuente.
+El **#define** crea una *macro*, que es la Asociación de un identificador o un identificador parametrizado con una cadena de token. Una vez definida la macro, el compilador puede sustituir la cadena de token para cada aparición del identificador del archivo de código fuente.
 
 ## <a name="syntax"></a>Sintaxis
 
-`#define` *identificador* *token-string*<sub>participar</sub>
-
-`#define` *identificador* `(` *identificador*<sub>opt</sub> `,` *...*  `,` *identificador*<sub>opt</sub> `)` *token-string*<sub>participar</sub>
+> **#define** *identificador* de *token-cadena* <sub>OPT</sub>\
+> **#define** *identificador* de **(** *identificador*<sub>OPT</sub> **,** ... **,** *identificador* de <sub>OPT</sub> **)** *token: cadena*<sub>opcional</sub>
 
 ## <a name="remarks"></a>Comentarios
 
-El **#define** directiva hace que el compilador sustituya *token-string* cada aparición de *identificador* en el archivo de origen. El *identificador* se sustituye solo cuando forma un token. Es decir, *identificador* no se reemplaza si aparece en un comentario, en una cadena o como parte de un identificador más largo. Para obtener más información, consulte [Tokens](../cpp/tokens-cpp.md).
+La directiva **#define** hace que el compilador sustituya por la *cadena de token* para cada aparición del *identificador* en el archivo de código fuente. El *identificador* solo se reemplaza cuando forma un token. Es decir, el *identificador* no se reemplaza si aparece en un comentario, en una cadena o como parte de un identificador más largo. Para obtener más información, consulte [tokens](../cpp/tokens-cpp.md).
 
-El *token-string* argumento consta de una serie de tokens, como palabras clave, constantes o instrucciones completas. Uno o más caracteres de espacio en blanco deben separar *token-string* desde *identificador*. Este espacio en blanco no se considera parte de texto sustituido, ni tampoco cualquier espacio en blanco que vaya después del último token del texto.
+El argumento *token-String* se compone de una serie de tokens, como palabras clave, constantes o instrucciones completas. Uno o más caracteres de espacio en blanco deben separar *la cadena de token* del *identificador*. Este espacio en blanco no se considera parte de texto sustituido, ni tampoco cualquier espacio en blanco que vaya después del último token del texto.
 
-Un `#define` sin un *token-string* quita las apariciones de *identificador* desde el archivo de origen. El *identificador* permanece definido y se pueden probar mediante el uso de la `#if defined` y `#ifdef` directivas.
+Un `#define` sin una *cadena de token* quita las apariciones del *identificador* del archivo de código fuente. El *identificador* permanece definido y se puede probar mediante las `#if defined` directivas y. `#ifdef`
 
-El segundo formato de sintaxis define una macro de tipo función con parámetros. Este formato acepta una lista opcional de parámetros que deben aparecer entre paréntesis. Una vez definido, cada repetición posterior de la macro *identificador*( *identificador*<sub>opt</sub>,..., *identificador* <sub>opt</sub> ) se reemplaza con una versión de la *token-string* argumento que tiene argumentos reales reemplazados por parámetros formales.
+El segundo formato de sintaxis define una macro de tipo función con parámetros. Este formato acepta una lista opcional de parámetros que deben aparecer entre paréntesis. Una vez definida la macro, cada repetición subsiguiente del *identificador*( *Identifier*<sub>OPT</sub>,..., *Identifier*<sub>OPT</sub> ) se reemplaza con una versión del argumento de cadena de *token* que tiene argumentos reales. se sustituye por los parámetros formales.
 
-Nombres de parámetros formales aparecen en *token-string* para marcar las ubicaciones donde se sustituyen los valores reales. Cada nombre de parámetro puede aparecer varias veces en *token-string*, y los nombres pueden aparecer en cualquier orden. El número de argumentos de la llamada debe coincidir con el número de parámetros en la definición de macro. El uso racional de paréntesis garantiza que los argumentos complejos se interpreten correctamente.
+Los nombres de parámetros formales aparecen en *cadena de token* para marcar las ubicaciones donde se sustituyen los valores reales. Cada nombre de parámetro puede aparecer varias veces en la *cadena de token*y los nombres pueden aparecer en cualquier orden. El número de argumentos de la llamada debe coincidir con el número de parámetros en la definición de macro. El uso racional de paréntesis garantiza que los argumentos complejos se interpreten correctamente.
 
-Los parámetros formales de la lista están separados por comas. Cada nombre de la lista debe ser único, y la lista se debe incluir entre paréntesis. No pueden separar espacios en blanco *identificador* y el paréntesis de apertura. Utilice la concatenación de línea, coloque una barra diagonal inversa (`\`) inmediatamente antes del carácter de nueva línea, para las directivas largas en líneas de código fuente. El ámbito de un nombre de parámetro formal se extiende a la nueva línea que finaliza *token-string*.
+Los parámetros formales de la lista están separados por comas. Cada nombre de la lista debe ser único, y la lista se debe incluir entre paréntesis. Ningún espacio puede separar el *identificador* y el paréntesis de apertura. Usar la concatenación de línea: coloca una barra`\`diagonal inversa () inmediatamente antes del carácter de nueva línea, para las directivas largas en varias líneas de código fuente. El ámbito de un nombre de parámetro formal se extiende a la nueva línea que finaliza la *cadena de token*.
 
-Cuando una macro se ha definido con el segundo formato de sintaxis, las instancias textuales subsiguientes seguidas de una lista de argumentos indican una llamada a macro. Los argumentos reales que siguen a una instancia de *identificador* en el archivo de código fuente coincidan con los parámetros formales correspondientes en la definición de macro. Cada parámetro formal en *token-string* que no esté precedido por una conversión a cadenas (`#`), charizing (`#@`), o pegado de token (`##`) (operador), o no seguido de un `##` operador, es Reemplazar por el argumento real correspondiente. Cualquier macro en el argumento real se expande antes de que la directiva reemplace el parámetro formal. (Se describen los operadores en [operadores de preprocesador](../preprocessor/preprocessor-operators.md).)
+Cuando una macro se ha definido con el segundo formato de sintaxis, las instancias textuales subsiguientes seguidas de una lista de argumentos indican una llamada a macro. Los argumentos reales que siguen a una instancia de *Identifier* en el archivo de código fuente coinciden con los parámetros formales correspondientes en la definición de macro. Cada parámetro formal de *la cadena de token* que no va precedido de un operador de`#`generación de cadenas ()`#@`, carácter () o de pegado`##`de token (), o no seguido `##` de un operador, se reemplaza por el correspondiente argumento real. Cualquier macro en el argumento real se expande antes de que la directiva reemplace el parámetro formal. (Los operadores se describen en [operadores de preprocesador](../preprocessor/preprocessor-operators.md)).
 
-Los siguientes ejemplos de macros con argumentos muestran el segundo formato de la **#define** sintaxis:
+Los siguientes ejemplos de macros con argumentos muestran el segundo formato de la sintaxis de **#define** :
 
 ```C
 // Macro to define cursor lines
@@ -54,19 +53,19 @@ Los siguientes ejemplos de macros con argumentos muestran el segundo formato de 
     ((rand()%(int)(((max) + 1)-(min)))+ (min))
 ```
 
-Los argumentos con efectos secundarios a veces hacen que las macros den resultados inesperados. Un parámetro formal determinado puede aparecer más de una vez en *token-string*. Si ese parámetro formal se sustituye por una expresión con efectos secundarios, la expresión, con sus efectos secundarios, se puede evaluar más de una vez. (Vea los ejemplos en [operador de pegado de Token (##)](../preprocessor/token-pasting-operator-hash-hash.md).)
+Los argumentos con efectos secundarios a veces hacen que las macros den resultados inesperados. Un parámetro formal determinado puede aparecer más de una vez en *la cadena de token*. Si ese parámetro formal se sustituye por una expresión con efectos secundarios, la expresión, con sus efectos secundarios, se puede evaluar más de una vez. (Vea los ejemplos en [operador de pegado de tokens (# #)](../preprocessor/token-pasting-operator-hash-hash.md)).
 
-La directiva `#undef` hace que se olvide la definición de preprocesador de un identificador. Consulte [la directiva #undef](../preprocessor/hash-undef-directive-c-cpp.md) para obtener más información.
+La directiva `#undef` hace que se olvide la definición de preprocesador de un identificador. Vea [la directiva #undef](../preprocessor/hash-undef-directive-c-cpp.md) para obtener más información.
 
-Si se produce el nombre de la macro que se define en *token-string* (incluso como resultado de otra expansión de macro), no se expande.
+Si el nombre de la macro que se está definiendo se produce en la *cadena de token* (incluso como resultado de otra expansión de macro), no se expande.
 
-Un segundo **#define** para una macro con el mismo nombre genera una advertencia a menos que la segunda secuencia de token es idéntica al primero.
+Un segundo **#define** para una macro con el mismo nombre genera una advertencia a menos que la segunda secuencia del token sea idéntica a la primera.
 
 **Específicos de Microsoft**
 
 Microsoft C/C++ permite volver a definir una macro si la nueva definición es sintácticamente idéntica a la definición original. Es decir, las dos definiciones pueden tener distintos nombres de parámetro. Este comportamiento difiere de ANSI C, que requiere que las dos definiciones sean léxicamente idénticas.
 
-Por ejemplo, las dos macros siguientes son idénticas salvo en los nombres de parámetro. ANSI C no permite esa nueva definición, pero Microsoft C o C++ lo compila sin errores.
+Por ejemplo, las dos macros siguientes son idénticas salvo en los nombres de parámetro. ANSI C no permite esa nueva definición, pero Microsoft C/C++ lo compila sin errores.
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )
@@ -82,7 +81,7 @@ Por otra parte, las dos macros siguientes no son idénticas y se generará una a
 
 **FIN de Específicos de Microsoft**
 
-En este ejemplo se ilustra la **#define** directiva:
+En este ejemplo se muestra la Directiva de **#define** :
 
 ```C
 #define WIDTH       80
@@ -111,7 +110,7 @@ que se evalúa como 280.
 
 **Específicos de Microsoft**
 
-Definición de macros y constantes con el [/D](../build/reference/d-preprocessor-definitions.md) opción del compilador tiene el mismo efecto que usar un **#define** preprocesamiento de directiva al principio del archivo. Se pueden definir hasta 30 macros mediante la opción /D.
+La definición de macros y constantes con la opción del compilador [/d](../build/reference/d-preprocessor-definitions.md) tiene el mismo efecto que el uso de una directiva de preprocesamiento **#define** al principio del archivo. Se pueden definir hasta 30 macros mediante la opción /D.
 
 **FIN de Específicos de Microsoft**
 

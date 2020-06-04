@@ -28,44 +28,44 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: dc7b00d70a4f816845f5741bf605f1c1bb631ee2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f01e4d50dc3fab8d7cb909d1ea2f3d1801f0db0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589363"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126215"
 ---
-# <a name="uint2-class"></a>uint_2 (Clase)
+# <a name="uint_2-class"></a>uint_2 (Clase)
 
 Representa un vector corto de dos enteros sin signo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class uint_2;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor uint_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de uint_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_2::get_x||
 |uint_2::get_xy||
-|uint_2:: get_Y||
+|uint_2::get_y||
 |uint_2::get_yx||
 |Método uint_2::ref_g||
 |Método uint_2::ref_r||
@@ -73,12 +73,12 @@ class uint_2;
 |Método uint_2::ref_y||
 |uint_2::set_x||
 |uint_2::set_xy||
-|uint_2:: set_y||
+|uint_2::set_y||
 |uint_2::set_yx||
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_2::operator--||
 |uint_2::operator%=||
@@ -90,29 +90,29 @@ class uint_2;
 |uint_2::operator~||
 |uint_2::operator++||
 |uint_2::operator+=||
-|uint_2::operator<\<=||
+|uint_2:: Operator <\<=||
 |uint_2::operator=||
 |uint_2::operator-=||
 |uint_2::operator>>=||
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#uint_2__size)||
+|[Size (constante)](#uint_2__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|uint_2:: g||
-|uint_2:: GR||
-|uint_2:: r||
+|uint_2::g||
+|uint_2::gr||
+|uint_2::r||
 |uint_2::rg||
-|uint_2:: x||
-|uint_2:: XY||
-|uint_2:: y||
-|uint_2:: YX||
+|uint_2::x||
+|uint_2::xy||
+|uint_2::y||
+|uint_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -120,15 +120,15 @@ class uint_2;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> uint_2
+## <a name="ctor"></a>uint_2
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 uint_2() restrict(amp,
     cpu);
 
@@ -169,23 +169,23 @@ explicit inline uint_2(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="uint_2__size"></a> Tamaño
+## <a name="uint_2__size"></a>ajusta
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

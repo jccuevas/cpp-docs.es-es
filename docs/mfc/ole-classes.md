@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: ff7ae74472c7857ce89ecf839c15cfa2ec4128f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69eb604b3a343fd135c76a4bb3c17245ece62092
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186409"
 ---
 # <a name="ole-classes"></a>Clases de OLE
 
@@ -53,4 +53,3 @@ Para ver la herencia de una clase, use la [gráfico de jerarquías de clase](../
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../mfc/class-library-overview.md)
-

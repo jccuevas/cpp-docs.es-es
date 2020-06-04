@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: ea09dd3d4a2eaf4cf7708d09509cfecfa4a6c6d5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805960"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373078"
 ---
 # <a name="lock-class"></a>lock (Clase)
 
-Esta clase automatiza tomar un bloqueo para sincronizar el acceso a un objeto desde varios subprocesos.  Cuando se construye adquiere el bloqueo y cuando se destruye versiones el bloqueo.
+Esta clase automatiza la toma de un bloqueo para sincronizar el acceso a un objeto desde varios subprocesos.  Cuando se construye adquiere el bloqueo y cuando se destruye libera el bloqueo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,49 +31,47 @@ Esta clase automatiza tomar un bloqueo para sincronizar el acceso a un objeto de
 ref class lock;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`lock` solo está disponible para los objetos de CLR y sólo puede utilizarse en el código CLR.
+`lock`solo está disponible para objetos CLR y solo se puede usar en código CLR.
 
-Internamente, los usos de la clase de bloqueo <xref:System.Threading.Monitor> para sincronizar el acceso. Para obtener más información, vea el artículo que se hace referencia.
+Internamente, la <xref:System.Threading.Monitor> clase de bloqueo utiliza para sincronizar el acceso. Para obtener más información, consulte el artículo al que se hace referencia.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |---------|-----------|
-|[lock::lock](#lock)|Construye un `lock` objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período determinado de tiempo o no en absoluto.|
-|[lock::~lock](#tilde-lock)|Destructs un `lock` objeto.|
+|[bloqueo::bloqueo](#lock)|Construye un `lock` objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período de tiempo especificado, o no en absoluto.|
+|[lock::~lock](#tilde-lock)|Destruye un `lock` objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |---------|-----------|
-|[lock::acquire](#acquire)|Adquiere un bloqueo en un objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período determinado de tiempo o no en absoluto.|
-|[lock::is_locked](#is-locked)|Indica si se encuentra un bloqueo.|
+|[lock::acquire](#acquire)|Adquiere un bloqueo en un objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período de tiempo especificado, o no en absoluto.|
+|[lock::is_locked](#is-locked)|Indica si se mantiene un bloqueo.|
 |[lock::release](#release)|Libera un bloqueo.|
-|[lock::try_acquire](#try-acquire)|Adquiere un bloqueo en un objeto, esperando un período de tiempo especificado y devuelve un `bool` para informar del éxito de adquisición en lugar de producir una excepción.|
+|[lock::try_acquire](#try-acquire)|Adquiere un bloqueo en un objeto, esperando una cantidad `bool` de tiempo especificada y devolviendo un para informar del éxito de la adquisición en lugar de producir una excepción.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |---------|-----------|
-|[lock::operator&nbsp;bool](#operator-bool)|Operador para el uso de `lock` en una expresión condicional.|
+|[bloqueo::operador&nbsp;bool](#operator-bool)|Operador para `lock` usar en una expresión condicional.|
 |[lock::operator==](#operator-equality)|Operador de igualdad.|
-|[lock::operator!=](#operator-inequality)|Operador de desigualdad.|
+|[bloqueo::operador!](#operator-inequality)|Operador de desigualdad.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Archivo de encabezado** \<msclr\lock.h >
+**Archivo** \<de encabezado msclr-lock.h>
 
-**Namespace** msclr
+**Espacio de nombres** msclr
 
+## <a name="locklock"></a><a name="lock"></a>bloqueo::bloqueo
 
-
-## <a name="lock"></a>lock::lock
-
-Construye un `lock` objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período determinado de tiempo o no en absoluto.
+Construye un `lock` objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período de tiempo especificado, o no en absoluto.
 
 ```cpp
 template<class T> lock(
@@ -96,28 +94,28 @@ template<class T> lock(
 ### <a name="parameters"></a>Parámetros
 
 *_object*<br/>
-El objeto se bloquee.
+El objeto que se va a bloquear.
 
 *_timeout*<br/>
-Valor de tiempo de espera en milisegundos, o como un <xref:System.TimeSpan>.
+Valor de tiempo de espera <xref:System.TimeSpan>en milisegundos o como archivo .
 
 ### <a name="exceptions"></a>Excepciones
 
-Produce <xref:System.ApplicationException> si la adquisición de bloqueo no se produce antes de tiempo de espera.
+Se <xref:System.ApplicationException> produce si la adquisición de bloqueo no se produce antes del tiempo de espera.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Los tres primeros formularios del constructor intentan adquirir un bloqueo en `_object` dentro del período de tiempo de espera especificado (o <xref:System.Threading.Timeout.Infinite> si se especifica ninguno).
+Las tres primeras formas del constructor `_object` intentan adquirir un bloqueo <xref:System.Threading.Timeout.Infinite> dentro del período de tiempo de espera especificado (o si no se especifica ninguna).
 
-La cuarta forma del constructor no adquirir un bloqueo en `_object`. `lock_later` es un miembro de la [lock_when (enumeración)](../dotnet/lock-when-enum.md). Use [lock::acquire](../dotnet/lock-acquire.md) o [lock::try_acquire](../dotnet/lock-try-acquire.md) para adquirir el bloqueo en este caso.
+La cuarta forma del constructor no adquiere `_object`un bloqueo en . `lock_later`es miembro del [lock_when enum](../dotnet/lock-when-enum.md). Utilice [lock::acquire](../dotnet/lock-acquire.md) o [lock::try_acquire](../dotnet/lock-try-acquire.md) para adquirir el bloqueo en este caso.
 
-El bloqueo se libera automáticamente cuando se llama al destructor.
+El bloqueo se liberará automáticamente cuando se llame al destructor.
 
-`_object` no puede ser <xref:System.Threading.ReaderWriterLock>.  Si es así, se producirá un error del compilador.
+`_object`no puede <xref:System.Threading.ReaderWriterLock>ser .  Si es así, se producirá un error del compilador.
 
 ### <a name="example"></a>Ejemplo
 
-En este ejemplo se usa una sola instancia de una clase entre varios subprocesos. La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso. El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen los subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
+En este ejemplo se utiliza una única instancia de una clase en varios subprocesos. La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos son coherentes para cada subproceso. El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
 
 ```cpp
 // msl_lock_lock.cpp
@@ -205,21 +203,21 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="tilde-lock"></a>lock::~lock
+## <a name="locklock"></a><a name="tilde-lock"></a>bloqueo::-bloqueo
 
-Destructs un `lock` objeto.
+Destruye un `lock` objeto.
 
 ```cpp
 ~lock();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El destructor llama a [lock::release](../dotnet/lock-release.md).
 
 ### <a name="example"></a>Ejemplo
 
-En este ejemplo se usa una sola instancia de una clase entre varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen los subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
+En este ejemplo se utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos son coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -307,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="acquire"></a>lock::acquire
+## <a name="lockacquire"></a><a name="acquire"></a>bloqueo::adquirir
 
-Adquiere un bloqueo en un objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período determinado de tiempo o no en absoluto.
+Adquiere un bloqueo en un objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período de tiempo especificado, o no en absoluto.
 
 ```cpp
 void acquire();
@@ -324,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>Parámetros
 
 *_timeout*<br/>
-Valor de tiempo de espera en milisegundos, o como un <xref:System.TimeSpan>.
+Valor de tiempo de <xref:System.TimeSpan>espera en milisegundos o como archivo .
 
 ### <a name="exceptions"></a>Excepciones
 
-Produce <xref:System.ApplicationException> si la adquisición de bloqueo no se produce antes de tiempo de espera.
+Se <xref:System.ApplicationException> produce si la adquisición de bloqueo no se produce antes del tiempo de espera.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si no se proporciona un valor de tiempo de espera, el tiempo de espera predeterminado es <xref:System.Threading.Timeout.Infinite>.
+Si no se proporciona un valor de <xref:System.Threading.Timeout.Infinite>tiempo de espera, el tiempo de espera predeterminado es .
 
-Si ya ha adquirido un bloqueo, esta función no hace nada.
+Si ya se ha adquirido un bloqueo, esta función no hace nada.
 
 ### <a name="example"></a>Ejemplo
 
-En este ejemplo se usa una sola instancia de una clase entre varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso. El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen los subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
+En este ejemplo se utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos son coherentes para cada subproceso. El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -426,9 +424,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="is-locked"></a>lock::is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>cerradura::is_locked
 
-Indica si se encuentra un bloqueo.
+Indica si se mantiene un bloqueo.
 
 ```cpp
 bool is_locked();
@@ -436,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se mantiene un bloqueo, `false` en caso contrario.
+`true`si se mantiene `false` un bloqueo, de lo contrario.
 
 ### <a name="example"></a>Ejemplo
 
-En este ejemplo se usa una sola instancia de una clase entre varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente para ver si los subprocesos de trabajo siguen existan, y espera hasta salir hasta que todos los subprocesos de trabajo haya completado sus tareas.
+En este ejemplo se utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos son coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si aún existen subprocesos de trabajo y espera a salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -529,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="operator-bool"></a>lock::operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>bloqueo::operador bool
 
-Operador para el uso de `lock` en una expresión condicional.
+Operador para `lock` usar en una expresión condicional.
 
 ```cpp
 operator bool();
@@ -539,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se mantiene un bloqueo, `false` en caso contrario.
+`true`si se mantiene `false` un bloqueo, de lo contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este operador convierte realmente en `_detail_class::_safe_bool` que es más seguro que `bool` porque no se puede convertir a un tipo entero.
+Este operador realmente `_detail_class::_safe_bool` convierte a `bool` que es más seguro que porque no se puede convertir a un tipo entero.
 
 ### <a name="example"></a>Ejemplo
 
-En este ejemplo se usa una sola instancia de una clase entre varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso. El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen los subprocesos de trabajo. Espera a que la aplicación principal para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
+En este ejemplo se utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos son coherentes para cada subproceso. El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen subprocesos de trabajo. La aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -636,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="release"></a>lock::release
+## <a name="lockrelease"></a><a name="release"></a>lock::release
 
 Libera un bloqueo.
 
@@ -644,15 +642,15 @@ Libera un bloqueo.
 void release();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si no se encuentra ningún bloqueo, `release` no hace nada.
+Si no se mantiene `release` ningún bloqueo, no hace nada.
 
-No debe llamar explícitamente a esta función. Cuando un `lock` objeto queda fuera del ámbito, sus llamadas de destructor `release`.
+No es posible llamar a esta función explícitamente. Cuando `lock` un objeto sale del ámbito, su destructor llama `release`.
 
 ### <a name="example"></a>Ejemplo
 
-En este ejemplo se usa una sola instancia de una clase entre varios subprocesos. La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso. El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen los subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
+En este ejemplo se utiliza una única instancia de una clase en varios subprocesos. La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos son coherentes para cada subproceso. El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
 
 ```cpp
 // msl_lock_release.cpp
@@ -740,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="try-acquire"></a>lock::try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>cerradura::try_acquire
 
-Adquiere un bloqueo en un objeto, esperando un período de tiempo especificado y devuelve un `bool` para informar del éxito de adquisición en lugar de producir una excepción.
+Adquiere un bloqueo en un objeto, esperando una cantidad `bool` de tiempo especificada y devolviendo un para informar del éxito de la adquisición en lugar de producir una excepción.
 
 ```cpp
 bool try_acquire(
@@ -756,19 +754,19 @@ bool try_acquire(
 ### <a name="parameters"></a>Parámetros
 
 *_timeout*<br/>
-Valor de tiempo de espera en milisegundos, o como un <xref:System.TimeSpan>.
+Valor de tiempo de <xref:System.TimeSpan>espera en milisegundos o como archivo .
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si se adquirió el bloqueo, `false` en caso contrario.
+`true`si se adquirió la cerradura, `false` de lo contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si ya ha adquirido un bloqueo, esta función no hace nada.
+Si ya se ha adquirido un bloqueo, esta función no hace nada.
 
 ### <a name="example"></a>Ejemplo
 
-En este ejemplo se usa una sola instancia de una clase entre varios subprocesos. La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso. El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen los subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
+En este ejemplo se utiliza una única instancia de una clase en varios subprocesos. La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos son coherentes para cada subproceso. El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si todavía existen subprocesos de trabajo. A continuación, la aplicación principal espera para salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -856,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="operator-equality"></a>lock::operator==
+## <a name="lockoperator"></a><a name="operator-equality"></a>Bloqueo::operador
 
 Operador de igualdad.
 
@@ -868,12 +866,12 @@ template<class T> bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*t*<br/>
-El objeto para comparar la igualdad.
+*T*<br/>
+El objeto cuya igualdad se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve `true` si `t` es el mismo que el objeto de bloqueo, `false` en caso contrario.
+Devuelve `true` `t` si es el mismo que `false` el objeto del bloqueo, en caso contrario.
 
 ### <a name="example"></a>Ejemplo
 
@@ -899,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="operator-inequality"></a>lock::operator!=
+## <a name="lockoperator"></a><a name="operator-inequality"></a>bloqueo::operador!
 
 Operador de desigualdad.
 
@@ -911,12 +909,12 @@ template<class T> bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*t*<br/>
-El objeto para comparar la desigualdad.
+*T*<br/>
+Objeto que se va a comparar para la desigualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve `true` si `t` difiere de objeto del bloqueo, `false` en caso contrario.
+Devuelve `true` `t` si difiere del objeto del `false` bloqueo, en caso contrario.
 
 ### <a name="example"></a>Ejemplo
 

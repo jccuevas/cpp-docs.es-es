@@ -1,12 +1,14 @@
 ---
 title: isblank, iswblank, _isblank_l, _iswblank_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - isblank
 - _isblank_l
 - iswblank
 - _iswblank_l
-apilocation:
+- _o_isblank
+- _o_iswblank
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +20,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswblank_l
 - isblank
@@ -27,14 +33,14 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c45319d7da48fad21af5375b0c310330d0f575a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497323"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918467"
 ---
-# <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
+# <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
 Determina si un entero representa un carácter en blanco.
 
@@ -59,7 +65,7 @@ int _iswblank_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 *locale*<br/>
@@ -67,11 +73,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de un espacio o un carácter de tabulación horizontal o forma parte de un conjunto específico de configuración regional de caracteres que se usan para separar las palabras dentro de una línea de texto. **ISBLANK** devuelve un valor distinto de cero si *c* es un carácter de espacio (0 x 20) o el carácter de tabulación horizontal (0 x 09). El resultado de la condición de prueba para el **isblank** depende de las funciones de la **LC_CTYPE** categoría de configuración de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las versiones de estas funciones que no tienen la **_l** sufijo usan la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; las versiones que tienen el **_l** sufijo son idénticas salvo que usan el configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un carácter de espacio o de tabulación horizontal, o es uno de los conjuntos de caracteres específicos de la configuración regional que se usan para separar las palabras dentro de una línea de texto. **esblanco** devuelve un valor distinto de cero si *c* es un carácter de espacio (0x20) o un carácter de tabulación horizontal (0x09). El resultado de la condición de prueba para las funciones **esblancos** depende de la configuración de la categoría **LC_CTYPE** de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las versiones de estas funciones que no tienen el sufijo **_L** usan la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo **_L** son idénticas, salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-**iswblank** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a un espacio estándar o carácter de tabulación horizontal.
+**iswblank** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a un carácter de espacio estándar o de tabulación horizontal.
 
-El comportamiento de **isblank** y **_isblank_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
+El comportamiento de **esblanco** y **_isblank_l** es indefinido si *c* no es EOF o en el intervalo comprendido entre 0 y 0xFF, ambos incluidos. Cuando se usa una biblioteca CRT de depuración y *c* no es uno de estos valores, las funciones generan una aserción.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -79,6 +85,10 @@ El comportamiento de **isblank** y **_isblank_l** es indefinido si *c* no es EOF
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
+
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -89,10 +99,10 @@ El comportamiento de **isblank** y **_isblank_l** es indefinido si *c* no es EOF
 |**_isblank_l**|\<ctype.h>|
 |**_iswblank_l**|\<ctype.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
-[is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>

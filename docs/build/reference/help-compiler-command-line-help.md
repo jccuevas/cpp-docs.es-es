@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -? compiler option [C++]
 - cl.exe compiler, command-line syntax
 ms.assetid: 192533e7-86f2-48e0-a08f-b5e4e3a4e784
-ms.openlocfilehash: f12b7d35bb5621837c6eda3857f4e51eb2685ba3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6cd015211a7a8039c5a1a2db696bf2160e282cd1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270437"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (Ayuda de la línea de comandos del compilador)
 
@@ -43,5 +43,5 @@ Muestra una lista de opciones del compilador en la salida estándar.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

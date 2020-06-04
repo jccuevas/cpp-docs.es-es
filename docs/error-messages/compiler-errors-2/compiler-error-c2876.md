@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2876
 ms.assetid: 8b674bf1-f9f4-4a8e-8127-e884c1d1708f
-ms.openlocfilehash: e7fcdeaf79728ee99498c69de0205619d16612d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb242c889d924612b5349ea06c19db954261b245
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664729"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736352"
 ---
 # <a name="compiler-error-c2876"></a>Error del compilador C2876
 
-'clase:: símbolo': no todas las sobrecargas son accesibles
+' Class:: Symbol ': no se puede tener acceso a todas las sobrecargas
 
-Todas las formas sobrecargadas de una función en una clase base deben ser accesibles para la clase derivada.
+Todas las formas sobrecargadas de una función de una clase base deben ser accesibles para la clase derivada.
 
-El ejemplo siguiente genera C2876:
+En el ejemplo siguiente se genera C2876:
 
-```
+```cpp
 // C2876.cpp
 // compile with: /c
 class A {

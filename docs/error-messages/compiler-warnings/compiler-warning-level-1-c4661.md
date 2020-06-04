@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4661
 ms.assetid: 603bb8b7-356d-4eef-924b-64d769bac5bd
-ms.openlocfilehash: 7566ba3d1db8e15d2919904d3dc2316e10a7ff59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43a3287787f831db23423412a9baf959929adfae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637429"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199466"
 ---
 # <a name="compiler-warning-level-1-c4661"></a>Advertencia del compilador (nivel 1) C4661
 
-'identifier': ninguna definición adecuada proporcionada para la solicitud de creación de instancias de plantillas explícitas
+' Identifier ': no se proporcionó una definición adecuada para la solicitud de creación de instancias de plantilla explícita
 
-No se define un miembro de la clase de plantilla.
+No se ha definido un miembro de la clase de plantilla.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4661.cpp
 // compile with: /W1 /LD
 template<class T> class MyClass {

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 7710b6f1efc2de770b26ad50923bde2ee5200f61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568175"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178072"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Declarador de referencia lvalue: &amp;
 
@@ -24,13 +24,13 @@ Contiene la dirección de un objeto, pero se comporta sintácticamente como un o
 type-id & cast-expression
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Una referencia de valor L se puede considerar otro nombre para un objeto. Una declaración de referencia de valor L está formada por una lista opcional de especificadores seguida de un declarador de referencia. Una referencia debe inicializarse y no se puede cambiar.
 
 Cualquier objeto cuya dirección se pueda convertir a un tipo de puntero especificado también se puede convertir a un tipo de referencia similar. Por ejemplo, cualquier objeto cuya dirección se pueda convertir al tipo `char *` también se puede convertir al tipo `char &`.
 
-No confunda las declaraciones de referencia con el uso de la [operador address-of](../cpp/address-of-operator-amp.md). Cuando el `&` *identificador* está precedido por un tipo, como **int** o **char**, *identificador* se declara como una referencia a el tipo. Cuando `&` *identificador* no va precedido por un tipo, el uso es que el operador address-of.
+No confunda las declaraciones de referencia con el uso del [operador Address-of](../cpp/address-of-operator-amp.md). Cuando el *identificador* de `&`está precedido por un tipo, como **int** o **Char**, el *identificador* se declara como una referencia al tipo. Cuando `&`*identificador* no va precedido de un tipo, el uso es el del operador Address-of.
 
 ## <a name="example"></a>Ejemplo
 
@@ -71,7 +71,7 @@ int main()
 Bill is 40
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencias](../cpp/references-cpp.md)<br/>
 [Argumentos de función de tipo de referencia](../cpp/reference-type-function-arguments.md)<br/>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2384
 ms.assetid: 8145f7ad-31b1-406d-ac43-0d557feab635
-ms.openlocfilehash: 1909fb999dd0f60224029b726f773c11fa69ee40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ce5c2f2540fbd2aca3509fa1dac55073a002abb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460325"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745270"
 ---
 # <a name="compiler-error-c2384"></a>Error del compilador C2384
 
 'member': no se puede aplicar __declspec(thread) a un miembro de una clase WinRT o administrada
 
-El [subproceso](../../cpp/thread.md) `__declspec` modificador no se puede usar en un miembro de una clase administrada o una clase en tiempo de ejecución de Windows.
+No se puede usar el modificador `__declspec` del [subproceso](../../cpp/thread.md) en un miembro de una clase administrada o Windows Runtime.
 
-El almacenamiento local para el subproceso estático solo puede usarse con DLL cargadas estáticamente; la DLL debe cargarse de manera estática al iniciarse el proceso. El tiempo de ejecución de Windows no admite el almacenamiento local para el subproceso.
+El almacenamiento local para el subproceso estático solo puede usarse con DLL cargadas estáticamente; la DLL debe cargarse de manera estática al iniciarse el proceso. Windows Runtime no admite el almacenamiento local para el subproceso.
 
 La siguiente línea genera C2384 y muestra cómo corregirlo en código C++/CLI:
 
-```
+```cpp
 // C2384.cpp
 // compile with: /clr /c
 public ref class B {

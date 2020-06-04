@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2805
 ms.assetid: c997dc56-e199-442f-b94e-ac551ec9b015
-ms.openlocfilehash: b0b3c0d4291787fb0b5664baa9159c84c8549dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 500660d70616a530fce3d8674f0f116ce219d1d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471739"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760639"
 ---
 # <a name="compiler-error-c2805"></a>Error del compilador C2805
 
-'operator operator' binario tiene demasiado pocos parámetros
+' operator Operator ' binario tiene demasiados parámetros
 
 El operador binario no tiene parámetros.
 
-El ejemplo siguiente genera C2805:
+En el ejemplo siguiente se genera C2805:
 
-```
+```cpp
 // C2805.cpp
 // compile with: /c
 class X {

@@ -1,10 +1,10 @@
 ---
 title: _clear87, _clearfp
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _clearfp
 - _clear87
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearfp
 - _clearfp
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ca49895b881d9e307c1116681bc36f86b167c25
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477264"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942958"
 ---
-# <a name="clear87-clearfp"></a>_clear87, _clearfp
+# <a name="_clear87-_clearfp"></a>_clear87, _clearfp
 
 Obtiene y borra la palabra de estado de punto flotante.
 
@@ -49,15 +52,15 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los bits en el valor devuelto indican el estado de punto flotante antes de llamar a **_clear87** o **_clearfp**. Para ver una definición completa de los bits devueltos por **_clear87**, vea Float.h. Muchas de las funciones de la biblioteca matemática modifican la palabra de estado 8087/80287 con resultados imprevisibles. Los valores devueltos de **_clear87** y **_status87** son más confiables si se realizan menos operaciones de punto flotante entre Estados conocidos de la palabra de estado de punto flotante.
+Los bits del valor devuelto indican el estado de punto flotante antes de la llamada a **_clear87** o **_clearfp**. Para obtener una definición completa de los bits devueltos por **_clear87**, vea float. h. Muchas de las funciones de la biblioteca matemática modifican la palabra de estado 8087/80287 con resultados imprevisibles. Los valores devueltos de **_clear87** y **_status87** se vuelven más confiables, ya que se realizan menos operaciones de punto flotante entre Estados conocidos de la palabra de estado de punto flotante.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_clear87** función borra las marcas de excepción de la palabra de estado de punto flotante, Establece el bit ocupado en 0 y devuelve la palabra de estado. La palabra de estado de punto flotante es una combinación de la palabra de estado 8087/80287 y de otras condiciones detectadas por el controlador de excepciones 8087/80287 (por ejemplo, el desbordamiento y subdesbordamiento de la pila de punto flotante).
+La función **_clear87** borra las marcas de excepción de la palabra de estado de punto flotante, establece el bit ocupado en 0 y devuelve la palabra de estado. La palabra de estado de punto flotante es una combinación de la palabra de estado 8087/80287 y de otras condiciones detectadas por el controlador de excepciones 8087/80287 (por ejemplo, el desbordamiento y subdesbordamiento de la pila de punto flotante).
 
-**_clearfp** es una versión independiente de la plataforma y portable de la **_clear87** rutina. Es idéntico a **_clear87** en plataformas Intel (x86) y también es compatible con la x64 y las plataformas ARM. Para asegurarse de que el código de punto flotante es portable a x64 y ARM, use **_clearfp**. Si solo va a usar x86 plataformas, se puede usar **_clear87** o **_clearfp**.
+**_clearfp** es una versión portátil e independiente de la plataforma de la rutina **_clear87** . Es idéntico a **_clear87** en plataformas Intel (x86) y también es compatible con las plataformas x64 y ARM. Para asegurarse de que el código de punto flotante es portable a x64 y a ARM, use **_clearfp**. Si solo tiene como destino plataformas x86, puede usar **_clear87** o **_clearfp**.
 
-Estas funciones están en desuso cuando se compila con [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime solo admite la precisión de punto flotante predeterminada.
+Estas funciones están desusadas al compilar con [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque el Common Language Runtime solo admite la precisión de punto flotante predeterminada.
 
 ## <a name="requirements"></a>Requisitos
 

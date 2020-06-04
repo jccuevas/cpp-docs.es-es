@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4548
 ms.assetid: 2cee817e-e463-4d90-bbd2-de120d48c101
-ms.openlocfilehash: 02010107c90f52f0fd2df838d90b78809fb80b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3770810ae4b2e8550fa79db27b58c581414316b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438576"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186236"
 ---
 # <a name="compiler-warning-level-1-c4548"></a>Advertencia del compilador (nivel 1) C4548
 
 la expresión antes de la coma no tiene ningún efecto; se esperaba una expresión con efectos secundarios
 
-El compilador detectó una expresión de coma mal formada.
+El compilador detectó una expresión de coma con formato incorrecto.
 
 De forma predeterminada, esta advertencia está desactivada. Para obtener más información, consulte [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-El ejemplo siguiente genera C4548:
+En el ejemplo siguiente se genera C4548:
 
-```
+```cpp
 // C4548.cpp
 // compile with: /W1
 #pragma warning (default : 4548)

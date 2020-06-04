@@ -1,9 +1,9 @@
 ---
 title: _local_unwind2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _local_unwind2
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcrt.dll
 - msvcr100.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr80.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _local_unwind2
 - local_unwind2
@@ -19,20 +22,20 @@ helpviewer_keywords:
 - _local_unwind2 function
 - local_unwind2 function
 ms.assetid: 44f1fa82-e01e-490f-a6e6-18fc6811c28c
-ms.openlocfilehash: 8ae5c3937c9dedc54f0a936b91963419d59f79cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: cbcc0c6177ba4cc449daf6a385a7cce53b8c1230
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535413"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745331"
 ---
-# <a name="localunwind2"></a>_local_unwind2
+# <a name="_local_unwind2"></a>_local_unwind2
 
 Función de CRT interna. Ejecuta todos los controladores de finalización que figuran en la tabla de ámbito indicada.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void _local_unwind2(
    PEXCEPTION_REGISTRATION xr,
    int stop
@@ -47,7 +50,7 @@ void _local_unwind2(
 *stop*<br/>
 [in] Nivel léxico que señala dónde debe detenerse `_local_unwind2`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Este método solo se usa en el entorno en tiempo de ejecución. No llame a este método en su código.
 

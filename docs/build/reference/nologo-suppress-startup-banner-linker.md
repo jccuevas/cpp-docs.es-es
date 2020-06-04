@@ -13,12 +13,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: d246da2e10f7c16f7c194962841e2e44d1fd1758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320531"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Suprimir el titular de inicio) (Vinculador)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50515549"
 
 La opción /NOLOGO impide ver el número de versión y mensaje de copyright.
 
-Esta opción también suprime la repetición de archivos de comandos. Para obtener más información, consulte [archivos de comandos de vínculo](../../build/reference/link-command-files.md).
+Esta opción también suprime la repetición de archivos de comandos. Para obtener más información, consulte [archivos de comandos de vínculo](linking.md).
 
 De forma predeterminada, esta información se envía mediante el enlazador para la ventana de salida. En la línea de comandos se envía a la salida estándar y puede redirigirse a un archivo.
 
@@ -44,5 +44,5 @@ De forma predeterminada, esta información se envía mediante el enlazador para 
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

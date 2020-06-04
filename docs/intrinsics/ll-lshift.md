@@ -1,6 +1,6 @@
 ---
 title: __ll_lshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ll_lshift_cpp
 - __ll_lshift
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 2f0c8f257188dbd3b03ece4269b8c353c7fa26f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 158ecbf39320d70b51f1f498a0b689ba58fec363
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625984"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221813"
 ---
-# <a name="lllshift"></a>__ll_lshift
+# <a name="__ll_lshift"></a>__ll_lshift
 
 **Específicos de Microsoft**
 
-Desplaza el valor de 64 bits proporcionado a la izquierda el número especificado de bits.
+Desplaza el valor de 64 bits proporcionado a la izquierda el número de bits especificado.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned __int64 __ll_lshift(
    unsigned __int64 Mask,
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Máscara*<br/>
-[in] El valor del entero de 64 bits para desplazarse a la izquierda.
+*Máscara*\
+de Valor entero de 64 bits que se va a desplazar a la izquierda.
 
-*nBit*<br/>
-[in] El número de bits del desplazamiento.
+*nBit*\
+de Número de bits que se va a desplazar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La máscara desplazado a la izquierda `nBit` bits.
+Máscara desplazada a la `nBit` izquierda por bits.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ La máscara desplazado a la izquierda `nBit` bits.
 |---------------|------------------|
 |`__ll_lshift`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Si compila un programa con la arquitectura de 64 bits y `nBit` es superior a 63, es el número de bits del desplazamiento `nBit` módulo 64. Si compila un programa con la arquitectura de 32 bits y `nBit` es mayor que 31, el número de bits del desplazamiento es `nBit` módulo 32.
+Si compila el programa para la arquitectura de 64 bits y `nBit` es superior a 63, el número de bits que se va a desplazar es `nBit` módulo 64. Si compila el programa para la arquitectura de 32 bits y `nBit` es mayor que 31, el número de bits que se va a desplazar es `nBit` módulo 32.
 
-El `ll` en el nombre indica que esta es una operación en `long long` (`__int64`).
+En el nombre indica que se trata de una operación de `long long` (`__int64`). `ll`
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // ll_lshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -79,16 +79,17 @@ int main()
 
 ## <a name="output"></a>Salida
 
-```
+```Output
 10000
 ```
 
-**Tenga en cuenta** hay ninguna versión sin signo de la operación de desplazamiento a la izquierda. Esto es porque `__ll_lshift` ya usa un parámetro de entrada sin signo. A diferencia de desplazamiento a la derecha, no hay ninguna dependencia de inicio de sesión para el desplazamiento a la izquierda, porque el bit menos significativo en el resultado siempre se establece en cero, independientemente del signo del valor desplazado a la.
+> [!NOTE]
+> No hay ninguna versión sin firmar de la operación de desplazamiento a la izquierda. Esto se debe `__ll_lshift` a que ya usa un parámetro de entrada sin signo. A diferencia del desplazamiento a la derecha, no hay ninguna dependencia de signo para el desplazamiento a la izquierda, ya que el bit menos significativo en el resultado siempre se establece en cero, independientemente del signo del valor desplazado.
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
-[__ull_rshift](../intrinsics/ull-rshift.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[__ll_rshift](../intrinsics/ll-rshift.md)\
+[__ull_rshift](../intrinsics/ull-rshift.md)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

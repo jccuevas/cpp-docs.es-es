@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4718
 ms.assetid: 29507f8a-b024-42c1-a3b8-f35d1f2641f3
-ms.openlocfilehash: c313e26af5f5b17db9c7d001a705ff7211461c2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48452ed53b93d7cd89daadd3f7ab3a69b453e1a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573705"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198164"
 ---
 # <a name="compiler-warning-level-4-c4718"></a>Advertencia del compilador (nivel 4) C4718
 

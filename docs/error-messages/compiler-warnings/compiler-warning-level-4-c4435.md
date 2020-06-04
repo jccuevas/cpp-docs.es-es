@@ -1,13 +1,17 @@
 ---
 title: Advertencia del compilador (nivel 4) C4435
 ms.date: 11/04/2016
+f1_keywords:
+- C4435
+helpviewer_keywords:
+- C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 7db1d483f571289c5b890c223ba1e59ba3d1f41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8021b6e4650a03b16c96711b8afe4f5fa57d2f07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572333"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185352"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>Advertencia del compilador (nivel 4) C4435
 
@@ -15,11 +19,11 @@ ms.locfileid: "50572333"
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 
-En el valor predeterminado la opción de/vd1 de compilación, la clase derivada no tiene un `vtordisp` campo para la base virtual indicada.  Si/vd2 o `#pragma vtordisp(2)` está activada, un `vtordisp` campo estará presente, cambiar el diseño del objeto.  Esto puede provocar problemas de compatibilidad binaria si interactúan módulos se compilan con diferentes `vtordisp` configuración.
+En la opción de compilación predeterminada de/VD1, la clase derivada no tiene un campo de `vtordisp` para la base virtual indicada.  Si/VD2 o `#pragma vtordisp(2)` está en vigor, se mostrará un campo `vtordisp`, cambiando el diseño del objeto.  Esto puede provocar problemas de compatibilidad binaria si los módulos interactivos se compilan con distintos valores de `vtordisp`.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4435.
+En el ejemplo siguiente se genera C4435.
 
 ```cpp
 // C4435.cpp
@@ -35,7 +39,7 @@ class B : public virtual A  // C4435
 {};
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
 [/vd (Deshabilitar desplazamientos de constructores)](../../build/reference/vd-disable-construction-displacements.md)

@@ -1,9 +1,10 @@
 ---
 title: rewind
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - rewind
-apilocation:
+- _o_rewind
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466084"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917756"
 ---
 # <a name="rewind"></a>rewind
 
@@ -45,30 +50,32 @@ void rewind(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **rebobinar** función recoloca el puntero de archivo asociado con *secuencia* al principio del archivo. Una llamada a **rewind** es similar a
+La función **Rewind** cambia la posición del puntero de archivo asociado al *flujo* al principio del archivo. Una llamada a **rewind** es similar a
 
-**fseek (void) (** _secuencia_**, 0 L, SEEK_SET);**
+**(void) fseek (** _Stream_**, 0L, SEEK_SET);**
 
-Sin embargo, a diferencia de [fseek](fseek-fseeki64.md), **rebobinar** borra los indicadores de error de la secuencia, así como el indicador de fin de archivo. Además, a diferencia de [fseek](fseek-fseeki64.md), **rebobinar** no devuelve un valor que indica si el puntero se movió correctamente.
+Sin embargo, a diferencia de [fseek](fseek-fseeki64.md), el **rebobinado** borra los indicadores de error de la secuencia, así como el indicador de fin de archivo. Además, a diferencia de [fseek](fseek-fseeki64.md), el **rebobinado** no devuelve un valor para indicar si el puntero se ha colocado correctamente.
 
-Para borrar el búfer del teclado, use **rebobinar** con el flujo **stdin**, que está asociado con el teclado de manera predeterminada.
+Para borrar el búfer del teclado, use el **rebobinado** con la secuencia **stdin**, que está asociada con el teclado de forma predeterminada.
 
-Si la secuencia es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve y **errno** está establecido en **EINVAL**.
+Si Stream es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve y **errno** se establece en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**rewind**|\<stdio.h>|
+|**rebobinar**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2197
 ms.assetid: 6dd5a6ec-bc80-41b9-a4ac-46f80eaca42d
-ms.openlocfilehash: 8999edcf37277e2e05a92a6601d60d34a675719c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16bc1b17b13cb9c7507a769f644eb34faa4989de
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527405"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301852"
 ---
 # <a name="compiler-error-c2197"></a>Error del compilador C2197
 
@@ -21,7 +21,7 @@ El compilador detectó demasiados parámetros para realizar una llamada a la fun
 
 El ejemplo siguiente genera la advertencia C2197:
 
-```
+```c
 // C2197.c
 // compile with: /Za /c
 void func( int );

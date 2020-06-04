@@ -6,64 +6,64 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eeaab22ded537cbbb211a79596b8383251af3ab7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547126"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189914"
 ---
-# <a name="comptrt-class"></a>_com_ptr_t (Clase)
+# <a name="_com_ptr_t-class"></a>_com_ptr_t (Clase)
 
 **Específicos de Microsoft**
 
-Un **_com_ptr_t** objeto encapsula un puntero de interfaz COM y se llama a un puntero "inteligente". Esta clase de plantilla administra la asignación de recursos y la desasignación con llamadas de función para la `IUnknown` funciones miembro: `QueryInterface`, `AddRef`, y `Release`.
+Un objeto **_com_ptr_t** encapsula un puntero de interfaz com y se denomina puntero "inteligente". Esta clase de plantilla administra la asignación y desasignación de recursos a través de llamadas de función a las funciones miembro de `IUnknown`: `QueryInterface`, `AddRef`y `Release`.
 
-Normalmente, la definición typedef proporcionada por la macro _COM_SMARTPTR_TYPEDEF hace referencia a un puntero inteligente. Esta macro toma un nombre de interfaz y el IID y declara una especialización de **_com_ptr_t** con el nombre de la interfaz más un sufijo de `Ptr`. Por ejemplo:
+La definición typedef proporcionada por la macro _COM_SMARTPTR_TYPEDEF normalmente hace referencia a un puntero inteligente. Esta macro toma un nombre de interfaz y el IID y declara una especialización de **_com_ptr_t** con el nombre de la interfaz más un sufijo de `Ptr`. Por ejemplo:
 
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 ```
 
-declara el **_com_ptr_t** especialización `IMyInterfacePtr`.
+declara el `IMyInterfacePtr`de especialización **_com_ptr_t** .
 
-Un conjunto de [plantillas de función](../cpp/relational-function-templates.md), no los miembros de esta plantilla de clase, admite las comparaciones con un puntero inteligente en el lado derecho del operador de comparación.
+Un conjunto de [plantillas de función](../cpp/relational-function-templates.md), no miembros de esta clase de plantilla, admite comparaciones con un puntero inteligente en el lado derecho del operador de comparación.
 
 ### <a name="construction"></a>Construcción
 
 |||
 |-|-|
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Construye un **_com_ptr_t** objeto.|
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Construye un objeto de **_com_ptr_t** .|
 
 ### <a name="low-level-operations"></a>Operaciones de bajo nivel
 
 |||
 |-|-|
-|[AddRef](../cpp/com-ptr-t-addref.md)|Las llamadas del `AddRef` función miembro de `IUnknown` en el puntero de interfaz encapsulado.|
-|[Asociar](../cpp/com-ptr-t-attach.md)|Encapsula un puntero de interfaz sin formato del tipo de este puntero inteligente.|
-|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Crea una nueva instancia de un objeto, dado un `CLSID` o `ProgID`.|
-|[Desasociar](../cpp/com-ptr-t-detach.md)|Extrae y devuelve el puntero de interfaz encapsulado.|
-|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Se asocia a una instancia existente de un objeto dada una `CLSID` o `ProgID`.|
+|[AddRef](../cpp/com-ptr-t-addref.md)|Llama a la función miembro `AddRef` de `IUnknown` en el puntero de interfaz encapsulado.|
+|[Adjuntar](../cpp/com-ptr-t-attach.md)|Encapsula un puntero de interfaz sin formato del tipo de este puntero inteligente.|
+|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Crea una nueva instancia de un objeto a partir de un `CLSID` o `ProgID`.|
+|[Separar](../cpp/com-ptr-t-detach.md)|Extrae y devuelve el puntero de interfaz encapsulado.|
+|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Se adjunta a una instancia existente de un objeto, dado un `CLSID` o `ProgID`.|
 |[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Devuelve el puntero de interfaz encapsulado.|
-|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Las llamadas del `QueryInterface` función miembro de `IUnknown` en el puntero de interfaz encapsulado.|
-|[Release](../cpp/com-ptr-t-release.md)|Las llamadas del `Release` función miembro de `IUnknown` en el puntero de interfaz encapsulado.|
+|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Llama a la función miembro `QueryInterface` de `IUnknown` en el puntero de interfaz encapsulado.|
+|[Versión](../cpp/com-ptr-t-release.md)|Llama a la función miembro `Release` de `IUnknown` en el puntero de interfaz encapsulado.|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[operador =](../cpp/com-ptr-t-operator-equal.md)|Asigna un nuevo valor a una existente **_com_ptr_t** objeto.|
-|[los operadores ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Comparar el objeto de puntero inteligente a otro puntero inteligente, puntero de interfaz sin formato, o NULL.|
-|[Extractores de datos](../cpp/com-ptr-t-extractors.md)|Extrae el puntero de interfaz COM encapsulado.|
+|[operador =](../cpp/com-ptr-t-operator-equal.md)|Asigna un nuevo valor a un objeto de **_com_ptr_t** existente.|
+|[operadores = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Compara el objeto de puntero inteligente con otro puntero inteligente, puntero de interfaz sin formato o NULL.|
+|[Extractores](../cpp/com-ptr-t-extractors.md)|Extrae el puntero de interfaz COM encapsulado.|
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<comip.h >
+**Encabezado:** \<comip. h >
 
-**Lib:** omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)
+**Lib:** omsuppw. lib o comsuppwd. lib (vea [/Zc: Wchar_t (Wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases de compatibilidad con COM del compilador](../cpp/compiler-com-support-classes.md)

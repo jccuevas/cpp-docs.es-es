@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616475"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857338"
 ---
 # <a name="references-c"></a>Referencias (C++)
 
-Una referencia (por ejemplo, un puntero) almacena la dirección de un objeto que se encuentra en otra parte de la memoria. A diferencia de un puntero, una referencia inicializada no puede hacer referencia a otro objeto ni establecerse en null. Hay dos tipos de referencias: referencias lvalue, que hacen referencia a un nombre variable y referencias rvalue, que hacen referencia a un [objeto temporal](../cpp/temporary-objects.md). El operador & significa una referencia lvalue, mientras que el operador && significa una referencia rvalue o una referencia universal (lvalue o rvalue) según el contexto.
+Una referencia (por ejemplo, un puntero) almacena la dirección de un objeto que se encuentra en otra parte de la memoria. A diferencia de un puntero, una referencia inicializada no puede hacer referencia a otro objeto ni establecerse en null. Hay dos tipos de referencias: referencias de valor l que hacen referencia a una variable con nombre y referencias rvalue que hacen referencia a un [objeto temporal](../cpp/temporary-objects.md). El operador & denota una referencia lvalue y el operador & & indica una referencia rvalue o una referencia universal (rvalue o lvalue) dependiendo del contexto.
 
 Las referencias se pueden declarar con la sintaxis siguiente:
 
-> \[*especificadores de clase de almacenamiento*] \[ *calificadores cv*] *especificadores de tipo* \[ *ms-modifier*]  *declarador* \[ **=** *expresión*]**;**
+> \[Type- *Class-Specifier*] \[*CV-calificadores*] *tipo-especificadores* \[*MS-modifier*] *declarador* \[ **=** *expresión*] **;**
 
 Se puede usar cualquier declarador válido que especifique una referencia. A menos que la referencia sea una referencia a un tipo de función o matriz, se aplica la siguiente sintaxis simplificada:
 
-> \[*especificadores de clase de almacenamiento*] \[ *calificadores cv*] *especificadores de tipo* \[ **&** o **&&**] \[ *calificadores cv*] *identificador* \[ **=** *expresión*]**;**
+> \[s-especificadores de *clase de almacenamiento*] \[de los *calificadores CV*] *de tipo-especificadores* \[ **&** o **&&** ] \[*de los calificadores CV*] *identificador* \[ **=** *expresión*] **;**
 
 Las referencias se declaran mediante la siguiente secuencia:
 
@@ -34,23 +34,23 @@ Las referencias se declaran mediante la siguiente secuencia:
 
    - Un especificador de clase de almacenamiento opcional.
 
-   - Opcional **const** o **volátil** calificadores.
+   - Calificadores **const** y/o **volatile** opcionales.
 
    - El especificador de tipo: el nombre de un tipo.
 
 1. El declarador:
 
-   - Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificador opcional concreto de Microsoft. Para obtener más información, vea [Modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-   - El **&** operador o **&&** operador.
+   - Operador de **&** o operador de **&&** .
 
-   - Opcional **const** o **volátil** opcionales.
+   - Opcionales **const** y/o **volatile** opcional.
 
    - El identificador.
 
 1. Un inicializador opcional.
 
-Las formas de declarador más complejas para punteros a matrices y funciones también se aplican a las referencias a las matrices y funciones. Para obtener más información, consulte [punteros](../cpp/pointers-cpp.md).
+Las formas de declarador más complejas para punteros a matrices y funciones también se aplican a las referencias a las matrices y funciones. Para obtener más información, vea [punteros](../cpp/pointers-cpp.md).
 
 Varios declaradores e inicializadores pueden aparecer en una lista separada por comas detrás de un único especificador de declaración. Por ejemplo:
 

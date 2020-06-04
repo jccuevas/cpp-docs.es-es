@@ -1,7 +1,7 @@
 ---
 title: _RPT, _RPTF, _RPTW, _RPTFW (Macros)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RPT3
 - RPTF4
@@ -86,16 +89,16 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 567fe0a68f5adad6f5d90ef3da9d673a75bb83a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440099"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949082"
 ---
-# <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW (Macros)
+# <a name="_rpt-_rptf-_rptw-_rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW (Macros)
 
-Realiza el seguimiento del progreso de la aplicación generando un informe de depuración (únicamente una versión de depuración). Tenga en cuenta que *n* especifica el número de argumentos de *args* y puede ser 0, 1, 2, 3, 4 o 5.
+Realiza el seguimiento del progreso de la aplicación generando un informe de depuración (únicamente una versión de depuración). Tenga en cuenta que *n* especifica el número de argumentos en *args* y puede ser 0, 1, 2, 3, 4 o 5.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -127,27 +130,27 @@ _RPTFWn(
 ### <a name="parameters"></a>Parámetros
 
 *reportType*<br/>
-Tipo de informe: **_CRT_WARN**, **_CRT_ERROR**, o **_CRT_ASSERT**.
+Tipo de informe: **_CRT_WARN**, **_CRT_ERROR**o **_CRT_ASSERT**.
 
 *format*<br/>
 Cadena de control de formato usada para crear el mensaje de usuario.
 
 *args*<br/>
-Argumentos de sustitución usados por *formato*.
+Argumentos de sustitución utilizados por el *formato*.
 
 ## <a name="remarks"></a>Comentarios
 
-Todas estas macros toman el *reportType* y *formato* parámetros. Además, también pueden tomar hasta cuatro argumentos adicionales, indicados con el número anexado al nombre de la macro. Por ejemplo, **_RPT0** y **_RPTF0** no toman ningún argumento adicional, **_RPT1** y **_RPTF1** tomar *arg1*, **_RPT2** y **_RPTF2** tomar *arg1* y **arg2**, y así sucesivamente.
+Todas estas macros toman los parámetros *reportType* y *Format* . Además, también pueden tomar hasta cuatro argumentos adicionales, indicados con el número anexado al nombre de la macro. Por ejemplo, **_RPT0** y **_RPTF0** no toman argumentos adicionales, **_RPT1** y **_RPTF1** toman *arg1*, **_RPT2** y **_RPTF2** toman *arg1* y **arg2**, etc.
 
-El **_RPT** y **_RPTF** macros son similares a los [printf](printf-printf-l-wprintf-wprintf-l.md) funcione, ya que pueden usarse para realizar un seguimiento del progreso de la aplicación durante el proceso de depuración. Sin embargo, estas macros son más flexibles que **printf** porque no tienen que incluirse en **#ifdef** instrucciones para evitar que se llamen en una compilación comercial de una aplicación. Esta flexibilidad se logra mediante el uso de la [_DEBUG](../../c-runtime-library/debug.md) macro; el **_RPT** y **_RPTF** macros solo están disponibles cuando el **_DEBUG** marca es definido. Cuando **_DEBUG** no es definido, las llamadas a estas macros se quitan durante el preprocesamiento.
+Las macros **_RPT** y **_RPTF** son similares a la función [printf](printf-printf-l-wprintf-wprintf-l.md) , ya que se pueden usar para realizar un seguimiento del progreso de una aplicación durante el proceso de depuración. Sin embargo, estas macros son más flexibles que **printf** , ya que no es necesario incluirlas en **#ifdef** instrucciones para evitar que se llamen en una compilación comercial de una aplicación. Esta flexibilidad se logra mediante la macro [_ Debug](../../c-runtime-library/debug.md) ; las macros **_RPT** y **_RPTF** solo están disponibles cuando se define la marca **_ Debug** . Cuando no se define **_ Debug** , las llamadas a estas macros se quitan durante el preprocesamiento.
 
-El **_RPTW** y **_RPTFW** macros son versiones con caracteres anchos de estas macros. Son como **wprintf** y toman las cadenas de caracteres anchos como argumentos.
+Las macros **_RPTW** y **rptfw (** son versiones con caracteres anchos de estas macros. Son como **wprintf** y toman cadenas de caracteres anchos como argumentos.
 
-El **_RPT** macros llamada la [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) función para generar un informe de depuración con un mensaje de usuario. El **_RPTW** macros llamada la **_CrtDbgReportW** función para generar el mismo informe con caracteres anchos. El **_RPTF** y **_RPTFW** macros de crean un informe de depuración con el número de archivo y la línea de código fuente donde se llamó la macro de informe, además, para el mensaje de usuario. El mensaje de usuario se crea sustituyendo el **arg**[*n*] argumentos en el *formato* de cadena, utilizando las mismas reglas definidas por el [printf](printf-printf-l-wprintf-wprintf-l.md)función.
+Las macros **_RPT** llaman a la función _ [crtdbgreport](crtdbgreport-crtdbgreportw.md) para generar un informe de depuración con un mensaje de usuario. Las macros **_RPTW** llaman a la función **_CrtDbgReportW** para generar el mismo informe con caracteres anchos. Las macros **_RPTF** y **rptfw (** crean un informe de depuración con el archivo de código fuente y el número de línea donde se llamó a la macro de informe, además del mensaje de usuario. El mensaje de usuario se crea sustituyendo los argumentos de **arg**[*n*] por la cadena de *formato* , con las mismas reglas definidas por la función [printf](printf-printf-l-wprintf-wprintf-l.md) .
 
-**_CrtDbgReport** o **_CrtDbgReportW** genera el informe de depuración y determina sus destinos en función de los modos de informe actual y el archivo definidos para *reportType*. Las funciones [_CrtSetReportMode](crtsetreportmode.md) y [_CrtSetReportFile](crtsetreportfile.md) se usan para definir los destinos de cada tipo de informe.
+_ **Crtdbgreport** o **_CrtDbgReportW** genera el informe de depuración y determina sus destinos en función de los modos de informe actuales y del archivo definido para *reportType*. Las funciones [_CrtSetReportMode](crtsetreportmode.md) y [_CrtSetReportFile](crtsetreportfile.md) se usan para definir los destinos de cada tipo de informe.
 
-Si un **_RPT** se llama a la macro y ni **_CrtSetReportMode** ni **_CrtSetReportFile** ha sido llamado, los mensajes se muestran como sigue.
+Si se llama a una macro **_RPT** y no se ha llamado a _ **Crtsetreportmode** ni a **_CrtSetReportFile** , los mensajes se muestran como se indica a continuación.
 
 |Tipo de informe|Destino de salida|
 |-----------------|------------------------|
@@ -155,18 +158,18 @@ Si un **_RPT** se llama a la macro y ni **_CrtSetReportMode** ni **_CrtSetReport
 |**_CRT_ERROR**|Ventana emergente. Lo mismo que si se hubiera especificado `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);`.|
 |**_CRT_ASSERT**|Igual que **_CRT_ERROR**.|
 
-Cuando el destino es una ventana de mensaje de depuración y el usuario elige el **vuelva a intentar** botón, **_CrtDbgReport** o **_CrtDbgReportW** devuelve 1, causando estas macros iniciar el depurador, siempre que esté habilitada la depuración de just-in-time (JIT). Para obtener más información sobre cómo usar estas macros como mecanismo de control de errores de depuración, vea [Using Macros for Verification and Reporting](/visualstudio/debugger/macros-for-reporting) (Uso de macros para comprobación e informes).
+Cuando el destino es una ventana de mensaje de depuración y el usuario elige el botón **Reintentar** , _ **crtdbgreport** o **_CrtDbgReportW** devuelve 1, lo que hace que estas macros inicien el depurador, siempre que esté habilitada la depuración Just-in-Time (JIT). Para obtener más información sobre cómo usar estas macros como mecanismo de control de errores de depuración, vea [Using Macros for Verification and Reporting](/visualstudio/debugger/macros-for-reporting) (Uso de macros para comprobación e informes).
 
-Existen otras dos macros que generan un informe de depuración. La macro [_ASSERT](assert-asserte-assert-expr-macros.md) genera un informe, pero solo cuando su argumento de expresión se evalúa como FALSE. [_ASSERTE](assert-asserte-assert-expr-macros.md) es exactamente igual que **_ASSERT**, pero incluye la expresión del error en el informe generado.
+Existen otras dos macros que generan un informe de depuración. La macro [_ASSERT](assert-asserte-assert-expr-macros.md) genera un informe, pero solo cuando su argumento de expresión se evalúa como FALSE. _ [Asserte](assert-asserte-assert-expr-macros.md) es exactamente igual que _ **Assert**, pero incluye la expresión errónea en el informe generado.
 
 ## <a name="requirements"></a>Requisitos
 
 |Macro|Encabezado necesario|
 |-----------|---------------------|
-|**_RPT** macros|\<crtdbg.h>|
-|**_RPTF** macros|\<crtdbg.h>|
+|Macros **_RPT**|\<crtdbg.h>|
+|Macros **_RPTF**|\<crtdbg.h>|
 |**_RPTW** macros|\<crtdbg.h>|
-|**_RPTFW** macros|\<crtdbg.h>|
+|Macros **rptfw (**|\<crtdbg.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

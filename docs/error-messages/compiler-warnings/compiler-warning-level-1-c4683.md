@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-ms.openlocfilehash: 264753ece6cbabded21df8e6b9dbb463f811e8a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f86cf8f6d894d6efaa1b49977634956dc1979a98
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175434"
 ---
 # <a name="compiler-warning-level-1-c4683"></a>Advertencia del compilador (nivel 1) C4683
 
-> '*función*': origen de eventos tiene un 'out'-parámetro; tenga cuidado al enlazar varios controladores de eventos
+> '*función*': el origen del evento tiene un parámetro ' out' '; Tenga cuidado al enlazar varios controladores de eventos
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si más de un receptor de eventos está escuchando en un origen de eventos COM, se puede omitir el valor de un parámetro de salida.
+Si hay más de un receptor de eventos escuchando a un origen de eventos COM, el valor de un parámetro de salida se puede omitir.
 
-Tenga en cuenta que se producirá una pérdida de memoria en las situaciones siguientes:
+Tenga en cuenta que se producirá una fuga de memoria en las situaciones siguientes:
 
-1. Si un método tiene un parámetro de salida asignado internamente, por ejemplo un BSTR *.
+1. Si un método tiene un parámetro de salida que se asigna internamente, por ejemplo, un BSTR *.
 
 2. Si el evento tiene más de un controlador (es un evento de multidifusión).
 
-El motivo de la pérdida es que el parámetro de salida se establece más de un controlador, pero al sitio de llamada sólo devuelve el último controlador.
+La razón de la fuga es que el parámetro out se establecerá en más de un controlador, pero solo lo devolverá el último controlador al sitio de llamada.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4683 y muestra cómo corregirlo:
+En el ejemplo siguiente se genera C4683 y se muestra cómo corregirlo:
 
 ```cpp
 // C4683.cpp

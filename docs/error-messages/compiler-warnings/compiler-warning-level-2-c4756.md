@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4756
 ms.assetid: 5a16df83-6b82-4619-83bd-319af4ef1d1d
-ms.openlocfilehash: 0e4e0d5e227795a45eb22e3fcb17bdfa600d69e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a48620a2cbc80379ea7a6787783e98dac1ffa9b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622526"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161729"
 ---
 # <a name="compiler-warning-level-2-c4756"></a>Advertencia del compilador (nivel 2) C4756
 
-desbordamiento en la aritmética de constante
+desbordamiento en aritmética de constantes
 
-El compilador generó una excepción al realizar la aritmética de constante durante la compilación.
+El compilador generó una excepción al realizar operaciones aritméticas constantes durante la compilación.
 
-El ejemplo siguiente genera C4756:
+En el ejemplo siguiente se genera C4756:
 
-```
+```cpp
 // C4756.cpp
 // compile with: /W2 /Od
 int main()

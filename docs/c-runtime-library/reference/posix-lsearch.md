@@ -1,9 +1,9 @@
 ---
 title: lsearch
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - lsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,24 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lsearch
 helpviewer_keywords:
 - lsearch function
 ms.assetid: 130da3fc-904a-4375-b0ab-79bfea8a455f
-ms.openlocfilehash: 0c30a088eac1d8ff8b03ad54ed045e7dfa18eebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a068b6500de8a1a795f5494ac12afa0e5ca08544
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531854"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300890"
 ---
 # <a name="lsearch"></a>lsearch
 
-Esta función POSIX está en desuso. En su lugar, use la función [_lsearch](lsearch.md), compatible con ISO C++, o la función [_lsearch_s](lsearch-s.md) con mejoras de seguridad.
+El nombre de la función POSIX implementada por Microsoft `lsearch` es un alias en desuso para la función [_lsearch](lsearch.md) . De forma predeterminada, genera una [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). El nombre está en desuso porque no sigue las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, todavía se admite la función.
+
+En su lugar, se recomienda usar [_lsearch](lsearch.md) o la función de [_lsearch_s](lsearch-s.md) con seguridad mejorada. O bien, puede seguir usando el nombre de esta función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

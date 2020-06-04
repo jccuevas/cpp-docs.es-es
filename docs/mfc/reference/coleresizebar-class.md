@@ -1,5 +1,5 @@
 ---
-title: COleResizeBar (clase)
+title: Clase COleResizeBar
 ms.date: 11/04/2016
 f1_keywords:
 - COleResizeBar
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: c4b7ce80762cdb49b6007eac7f6b26019b108795
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beb0c37b6ac23310b7d5c8506fbdaf677dd74d8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445115"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376154"
 ---
-# <a name="coleresizebar-class"></a>COleResizeBar (clase)
+# <a name="coleresizebar-class"></a>Clase COleResizeBar
 
 Un tipo de barra de control que admite el cambio de tamaño de elementos de OLE en contexto.
 
@@ -31,23 +31,23 @@ class COleResizeBar : public CControlBar
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[COleResizeBar::COleResizeBar](#coleresizebar)|Construye un objeto `COleResizeBar`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[COleResizeBar::Create](#create)|Crea y la inicializa en una ventana secundaria de Windows y la asocia a la `COleResizeBar` objeto.|
+|[COleResizeBar::Crear](#create)|Crea e inicializa una ventana secundaria de `COleResizeBar` Windows y la asocia al objeto.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`COleResizeBar` los objetos aparecen como un [CRectTracker](../../mfc/reference/crecttracker-class.md) controladores de tamaño con un borde sombreado y externo.
+`COleResizeBar`los objetos aparecen como un [CRectTracker](../../mfc/reference/crecttracker-class.md) con un borde sombreado y controladores de cambio de tamaño externo.
 
-`COleResizeBar` los objetos son normalmente incrustados miembros de objetos de ventana de marco derivados de la [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) clase.
+`COleResizeBar`los objetos suelen ser miembros incrustados de objetos de ventana de marco derivados de la [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) clase.
 
-Para obtener más información, vea el artículo [activación](../../mfc/activation-cpp.md).
+Para obtener más información, consulte el artículo [Activación](../../mfc/activation-cpp.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -65,7 +65,7 @@ Para obtener más información, vea el artículo [activación](../../mfc/activat
 
 **Encabezado:** afxole.h
 
-##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar
+## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar
 
 Construye un objeto `COleResizeBar`.
 
@@ -73,13 +73,13 @@ Construye un objeto `COleResizeBar`.
 COleResizeBar();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a `Create` para crear el objeto de la barra de cambio de tamaño.
+Llame `Create` para crear el objeto de barra de cambio de tamaño.
 
-##  <a name="create"></a>  COleResizeBar::Create
+## <a name="coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Crear
 
-Crea una ventana secundaria y lo asocia a la `COleResizeBar` objeto.
+Crea una ventana secundaria y `COleResizeBar` la asocia con el objeto.
 
 ```
 virtual BOOL Create(
@@ -91,21 +91,21 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *pParentWnd*<br/>
-Puntero a la ventana primaria de la barra de cambio de tamaño.
+Puntero a la ventana principal de la barra de cambio de tamaño.
 
 *dwStyle*<br/>
-Especifica el [estilo de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos.
+Especifica los atributos de estilo de [ventana.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
 *nID*<br/>
-Identificador de ventana secundaria de la barra de cambio de tamaño.
+El ID de la ventana secundaria de la barra de cambio de tamaño.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si se ha creado la barra de cambio de tamaño; en caso contrario, es 0.
+Distinto de cero si se creó la barra de cambio de tamaño; de lo contrario 0.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Ejemplo de MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[COleServerDoc (clase)](../../mfc/reference/coleserverdoc-class.md)
+[Clase COleServerDoc](../../mfc/reference/coleserverdoc-class.md)

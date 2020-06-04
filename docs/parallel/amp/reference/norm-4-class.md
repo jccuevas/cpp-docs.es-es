@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: ec71019e64046d693aaf96adb81762bfd536ac2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08d19d25c3f9309553972e752daee75c9896a071
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677232"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126479"
 ---
-# <a name="norm4-class"></a>norm_4 (Clase)
+# <a name="norm_4-class"></a>norm_4 (Clase)
 
 Representa un vector corto de cuatro números normales.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class norm_4;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor norm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de norm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |norm_4::get_w||
 |norm_4::get_wx||
@@ -442,7 +442,7 @@ class norm_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |norm_4::operator-||
 |norm_4::operator--||
@@ -455,13 +455,13 @@ class norm_4;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#norm_4__size)||
+|[Size (constante)](#norm_4__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |norm_4::a||
 |norm_4::ab||
@@ -469,16 +469,16 @@ class norm_4;
 |norm_4::abgr||
 |norm_4::abr||
 |norm_4::abrg||
-|norm_4:: AG||
-|norm_4:: agb||
-|norm_4:: agbr||
-|norm_4:: Agr||
-|norm_4:: agrb||
-|norm_4:: ar||
+|norm_4::ag||
+|norm_4::agb||
+|norm_4::agbr||
+|norm_4::agr||
+|norm_4::agrb||
+|norm_4::ar||
 |norm_4::arb||
 |norm_4::arbg||
 |norm_4::arg||
-|norm_4:: ARGB||
+|norm_4::argb||
 |norm_4::b||
 |norm_4::ba||
 |norm_4::bag||
@@ -492,7 +492,7 @@ class norm_4;
 |norm_4::bgra||
 |norm_4::br||
 |norm_4::bra||
-|norm_4:: brag||
+|norm_4::brag||
 |norm_4::brg||
 |norm_4::brga||
 |norm_4::g||
@@ -506,7 +506,7 @@ class norm_4;
 |norm_4::gbar||
 |norm_4::gbr||
 |norm_4::gbra||
-|norm_4:: GR||
+|norm_4::gr||
 |norm_4::gra||
 |norm_4::grab||
 |norm_4::grb||
@@ -515,8 +515,8 @@ class norm_4;
 |norm_4::ra||
 |norm_4::rab||
 |norm_4::rabg||
-|norm_4:: rag||
-|norm_4:: ragb||
+|norm_4::rag||
+|norm_4::ragb||
 |norm_4::rb||
 |norm_4::rba||
 |norm_4::rbag||
@@ -527,59 +527,59 @@ class norm_4;
 |norm_4::rgab||
 |norm_4::rgb||
 |norm_4::rgba||
-|norm_4:: w||
-|norm_4:: WX||
-|norm_4:: WXY||
-|norm_4:: wxyz||
-|norm_4:: wxz||
-|norm_4:: wxzy||
+|norm_4::w||
+|norm_4::wx||
+|norm_4::wxy||
+|norm_4::wxyz||
+|norm_4::wxz||
+|norm_4::wxzy||
 |norm_4:: WY||
-|norm_4:: wyx||
+|norm_4::wyx||
 |norm_4::wyxz||
-|norm_4:: WYZ||
-|norm_4:: wyzx||
+|norm_4:: Wyz||
+|norm_4::wyzx||
 |norm_4::wz||
 |norm_4::wzx||
-|norm_4:: wzxy||
-|norm_4:: wzy||
-|norm_4:: wzyx||
-|norm_4:: x||
-|norm_4:: xw||
+|norm_4::wzxy||
+|norm_4::wzy||
+|norm_4::wzyx||
+|norm_4::x||
+|norm_4::xw||
 |norm_4:: xwy||
 |norm_4:: xwyz||
 |norm_4::xwz||
-|norm_4:: xwzy||
-|norm_4:: XY||
-|norm_4:: xyw||
+|norm_4::xwzy||
+|norm_4::xy||
+|norm_4::xyw||
 |norm_4::xywz||
 |norm_4::xyz||
-|norm_4:: xyzw||
+|norm_4::xyzw||
 |norm_4::xz||
 |norm_4::xzw||
 |norm_4:: xzwy||
-|norm_4:: xzy||
+|norm_4:: XZY||
 |norm_4::xzyw||
 |norm_4:: y||
-|norm_4:: yw||
-|norm_4:: ywx||
+|norm_4::yw||
+|norm_4::ywx||
 |norm_4::ywxz||
 |norm_4::ywz||
 |norm_4::ywzx||
-|norm_4:: YX||
-|norm_4:: yxw||
+|norm_4::yx||
+|norm_4::yxw||
 |norm_4::yxwz||
 |norm_4::yxz||
-|norm_4:: yxzw||
-|norm_4:: YZ||
-|norm_4:: yzw||
-|norm_4:: yzwx||
-|norm_4:: yzx||
+|norm_4::yxzw||
+|norm_4::yz||
+|norm_4::yzw||
+|norm_4::yzwx||
+|norm_4::yzx||
 |norm_4::yzxw||
 |norm_4::z||
 |norm_4::zw||
 |norm_4::zwx||
 |norm_4::zwxy||
-|norm_4:: zwy||
+|norm_4:: Zwy||
 |norm_4::zwyx||
 |norm_4::zx||
 |norm_4::zxw||
@@ -598,15 +598,15 @@ class norm_4;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> norm_4
+## <a name="ctor"></a>norm_4
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 norm_4() restrict(amp,
     cpu);
 
@@ -667,29 +667,29 @@ explicit inline norm_4(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V3*<br/>
-El valor para inicializar el elemento 3.
+Valor para inicializar el elemento 3.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="norm_4__size"></a> Tamaño
+## <a name="norm_4__size"></a>ajusta
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

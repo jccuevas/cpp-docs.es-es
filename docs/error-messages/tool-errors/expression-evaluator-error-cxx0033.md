@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CAN0033
 - CXX0033
 ms.assetid: 0bd62c5b-de89-481f-9b12-88fe84805afe
-ms.openlocfilehash: 8563eb2fbc24c6ad8db639d2e227802412a16090
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2916808d98f1fabc2157fbedc96d76e196661279
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642798"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195518"
 ---
 # <a name="expression-evaluator-error-cxx0033"></a>Error del evaluador de expresiones CXX0033
 
-Error en la información de tipo OMF
+error en la información de tipo OMF
 
 El archivo ejecutable no tenía un formato de módulo de objeto válido (OMF) para la depuración.
 
@@ -24,6 +24,6 @@ Este error es idéntico a CAN0033.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. El archivo ejecutable no se creó con el vinculador que se suministra con esta versión de Visual C++. Volver a vincular el código de objeto con la versión actual de LINK.exe.
+1. El archivo ejecutable no se creó con el vinculador lanzado con esta versión de Visual C++. Volver a vincular el código objeto mediante la versión actual de LINK. exe.
 
-1. El archivo .exe esté dañado. Vuelva a compilar y volver a vincular el programa.
+1. Es posible que el archivo. exe se haya dañado. Vuelva a compilar y vincular el programa.

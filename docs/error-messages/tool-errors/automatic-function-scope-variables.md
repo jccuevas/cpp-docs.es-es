@@ -1,24 +1,24 @@
 ---
 title: Variables automáticas (ámbito de función)
-ms.date: 11/04/2016
+ms.date: 04/22/2019
 helpviewer_keywords:
 - automatic variables
 - variables, automatic
 - functions [C++], scope
 - scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-ms.openlocfilehash: 8803a1367dca2faf2042e851449eeedb6978b9e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec01f280c9de314ce670cae590c9a6917e9c0f07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496101"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197884"
 ---
 # <a name="automatic-function-scope-variables"></a>Variables automáticas (ámbito de función)
 
-Una variable declarada dentro de una función solo puede usarse dentro del ámbito de esa función.
+Una variable declarada dentro de una función solo se puede usar dentro del ámbito de esa función.
 
-```
+```cpp
 // LNK2019_AV.cpp
 // compile with: /c
 void test(void);
@@ -33,9 +33,9 @@ int main() {
 }
 ```
 
-Y entonces
+y, a continuación,
 
-```
+```cpp
 // LNK2019_AV_2.cpp
 // compile with: LNK2019_AV.cpp
 // LNK2019 expected
@@ -53,6 +53,6 @@ void test(void) {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Error de las herramientas del vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

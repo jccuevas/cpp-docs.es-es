@@ -1,9 +1,9 @@
 ---
 title: putenv
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - putenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,22 +15,27 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putenv
 helpviewer_keywords:
 - putenv function
 ms.assetid: 1dc49ef3-6b12-484c-8e60-7048bcc999f1
-ms.openlocfilehash: 395875ef918fb5d3e9ab2ce4269f61d860b1ee96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2a86753f1d9780f1dd8e3baf60f50ff1e79ea2
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676868"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300773"
 ---
 # <a name="putenv"></a>putenv
 
-Esta función POSIX está en desuso. En su lugar, use la función [_putenv](putenv-wputenv.md), compatible con ISO C++, o la función [_putenv_s](putenv-s-wputenv-s.md) con mejoras de seguridad.
+El nombre de la función POSIX implementada por Microsoft `putenv` es un alias en desuso para la función [_putenv](putenv-wputenv.md) . De forma predeterminada, genera una [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). El nombre está en desuso porque no sigue las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, todavía se admite la función.
+
+En su lugar, se recomienda usar [_putenv](putenv-wputenv.md) o la función de [_putenv_s](putenv-s-wputenv-s.md) con seguridad mejorada. O bien, puede seguir usando el nombre de esta función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 > [!IMPORTANT]
 > Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Serializar devoluciones de llamadas y delegados mediante la interoperabilidad de C++'
+title: 'Cómo: Calcular las referencias de devoluciones de llamadas y delegados mediante la interoperabilidad de C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: b72b99798a2c719f1ba919478132c7133fd71ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 592eae0ff59baddb79b810d46669b78ecc801155
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615727"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544944"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Cómo: Serializar devoluciones de llamadas y delegados mediante la interoperabilidad de C++
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Cómo: Calcular las referencias de devoluciones de llamadas y delegados mediante la interoperabilidad de C++
 
-En este tema se muestra el cálculo de referencias de devoluciones de llamada y delegados (la versión administrada de una devolución de llamada) entre código administrado y el uso de Visual C++.
+En este tema se muestra la serialización de devoluciones de llamada y delegados (la versión administrada de una devolución de llamada C++) entre código administrado y no administrado mediante Visual.
 
-Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma para implementar administrados y las funciones en el mismo archivo, pero también se puede definir las funciones en archivos independientes. No es necesario que los archivos que contienen solo las funciones no administradas se compilan con la [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
+En los siguientes ejemplos de código se usan las directivas de #pragma [administradas y no administradas](../preprocessor/managed-unmanaged.md) para implementar funciones administradas y no administradas en el mismo archivo, pero también se pueden definir las funciones en archivos independientes. No es necesario compilar los archivos que contienen solo funciones no administradas con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo configurar una API no administrada para desencadenar a un delegado administrado. Se crea un delegado administrado y uno de los métodos de interoperabilidad, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, se usa para recuperar el punto de entrada subyacente para el delegado. Esta dirección, a continuación, se pasa a la función no administrada, que se llama sin el conocimiento del hecho de que se implementa como una función administrada.
+En el ejemplo siguiente se muestra cómo configurar una API no administrada para desencadenar un delegado administrado. Se crea un delegado administrado y uno de los métodos de interoperabilidad, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, se usa para recuperar el punto de entrada subyacente del delegado. A continuación, esta dirección se pasa a la función no administrada, que lo llama sin tener conocimiento del hecho de que se implementa como una función administrada.
 
-Tenga en cuenta que es posible, aunque no es necesario, para anclar el delegado mediante [pin_ptr (C++ / c++ / CLI)](../windows/pin-ptr-cpp-cli.md) para evitar que lo que se va a volver a encontrar o eliminado por el recolector de elementos no utilizados. Protección de la recolección prematura es necesario, pero anclar ofrece más protección de la necesaria, ya que evita la colección y también impide la reubicación.
+Tenga en cuenta que es posible, pero no es necesario, anclar el delegado mediante [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para evitar que el recolector de elementos no utilizados lo vuelva a ubicar o deseche. Se necesita protección contra la recolección de elementos no utilizados prematura, pero el anclaje proporciona más protección de lo necesario, ya que evita la recopilación, pero también evita la reubicación.
 
-Si un delegado se encuentra volver a una recolección, no afectará a la devolución de llamada administrada subyacente, por lo que <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> se usa para agregar una referencia al delegado, lo que permite la reubicación del delegado, pero impide su eliminación. El uso de GCHandle en lugar de pin_ptr reduce el potencial de la fragmentación del montón administrado.
+Si una recolección de elementos no utilizados reubica un delegado, no afectará a la devolución de llamada administrada subyacente, por lo que se usa <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> para agregar una referencia al delegado, lo que permite la reubicación del delegado, pero se impide la eliminación. El uso de GCHandle en lugar de pin_ptr reduce el potencial de fragmentación del montón administrado.
 
-```
+```cpp
 // MarshalDelegate1.cpp
 // compile with: /clr
 #include <iostream>
@@ -79,9 +79,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente es similar al ejemplo anterior, pero en este caso se almacena el puntero de función proporcionado por la API no administrada, por lo que se puede invocar en cualquier momento, que requieren que se puede suprimir la recolección de elementos durante un período de tiempo arbitrario. Como resultado, el ejemplo siguiente utiliza una instancia global de <xref:System.Runtime.InteropServices.GCHandle> para impedir que el delegado que se cambia la ubicación, independientemente del ámbito de función. Como se describe en el primer ejemplo, uso de pin_ptr no es necesario para estos ejemplos, pero en este caso no funcionaría de todos modos, el ámbito de pin_ptr se limita a una sola función.
+El ejemplo siguiente es similar al ejemplo anterior, pero en este caso el puntero de función proporcionado se almacena mediante la API no administrada, por lo que se puede invocar en cualquier momento, lo que requiere que la recolección de elementos no utilizados se suprima durante un período de tiempo arbitrario. Como resultado, en el ejemplo siguiente se usa una instancia global de <xref:System.Runtime.InteropServices.GCHandle> para evitar que el delegado se reubique, independientemente del ámbito de la función. Como se describe en el primer ejemplo, el uso de pin_ptr no es necesario para estos ejemplos, pero en este caso no funcionaría de todas formas, ya que el ámbito de un pin_ptr está limitado a una sola función.
 
-```
+```cpp
 // MarshalDelegate2.cpp
 // compile with: /clr
 #include <iostream>
@@ -139,6 +139,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [OLE], creating
 - applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
-ms.openlocfilehash: b281cbeb4670af0efd232152010fdc90795af103
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7fa989d1a3b799cf6b427e27142d4479be900bf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308191"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Secuencia de operaciones para crear aplicaciones OLE
 
@@ -32,4 +32,3 @@ En la tabla siguiente se muestra su rol y roles de .NET framework en la creació
 [Secuencia de operaciones para compilar aplicaciones MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [Secuencia de operaciones para crear controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
 [Secuencia de operaciones para crear aplicaciones de base de datos](../mfc/sequence-of-operations-for-creating-database-applications.md)
-

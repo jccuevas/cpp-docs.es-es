@@ -1,29 +1,29 @@
 ---
-title: Del compilador (nivel 1) de la advertencia C4172
+title: ADVERTENCIA del compilador (nivel 1) C4172
 ms.date: 11/04/2016
 f1_keywords:
 - C4172
 helpviewer_keywords:
 - C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-ms.openlocfilehash: caa71da9182c1da1d17d87d901084d0ee9badf73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7258172c00b1ff4aebb18fa2c715559fd82a2180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536629"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163551"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>Del compilador (nivel 1) de la advertencia C4172
+# <a name="compiler-warning-level-1-c4172"></a>ADVERTENCIA del compilador (nivel 1) C4172
 
-devolución de dirección de variable local o temporal
+devolver la dirección de la variable local o temporal
 
-Una función devuelve la dirección de un objeto temporal o variable local. Objetos temporales y variables locales se destruyen cuando se devuelve una función, por lo que la dirección devuelta no es válida.
+Una función devuelve la dirección de una variable local o un objeto temporal. Las variables locales y los objetos temporales se destruyen cuando se devuelve una función, por lo que la dirección devuelta no es válida.
 
-Vuelva a diseñar la función para que no devuelve la dirección de un objeto local.
+Rediseñe la función para que no devuelva la dirección de un objeto local.
 
-El ejemplo siguiente genera C4172:
+En el ejemplo siguiente se genera C4172:
 
-```
+```cpp
 // C4172.cpp
 // compile with: /W1 /LD
 float f = 10;

@@ -1,9 +1,10 @@
 ---
 title: _chdrive
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _chdrive
-apilocation:
+- _o__chdrive
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - chdrive
 - _chdrive
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a597a67c7d2083cf5860112f6ed55ff248053d17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602311"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917018"
 ---
-# <a name="chdrive"></a>_chdrive
+# <a name="_chdrive"></a>_chdrive
 
 Cambia la unidad de trabajo actual.
 
@@ -48,20 +53,22 @@ int _chdrive(
 
 ### <a name="parameters"></a>Parámetros
 
-*Unidad*<br/>
+*dispositivo*<br/>
 Entero de 1 a 26 que especifica la unidad de trabajo actual (1=A, 2=B, etc.).
 
 ## <a name="return-value"></a>Valor devuelto
 
 Cero (0) si la unidad de trabajo actual se ha cambiado correctamente; de lo contrario, -1.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si *unidad* está fuera del intervalo comprendido entre 1 y 26, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, el **_chdrive** función devuelve -1, **errno** está establecido en **EACCES**, y **_doserrno** está establecido en  **ERROR_INVALID_DRIVE**.
+Si la *unidad* no está en el intervalo comprendido entre 1 y 26, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función **_chdrive** devuelve-1, **errno** se establece en **EACCES**y **_doserrno** se establece en **ERROR_INVALID_DRIVE**.
 
-La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, consulte [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
+La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, vea [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
 La función **_chdrive** solo cambia la unidad de trabajo actual; **_chdir** cambia el directorio de trabajo actual.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +82,7 @@ Para obtener más información, vea [Compatibilidad](../../c-runtime-library/com
 
 Consulte el ejemplo de [_getdrive](getdrive.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

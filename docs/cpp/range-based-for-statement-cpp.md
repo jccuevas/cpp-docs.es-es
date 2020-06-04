@@ -2,12 +2,12 @@
 title: Instrucción for basada en intervalo (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330936"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188355"
 ---
 # <a name="range-based-for-statement-c"></a>Instrucción for basada en intervalo (C++)
 
@@ -20,13 +20,13 @@ for ( for-range-declaration : expression )
    statement
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Usar basado en intervalos **para** instrucción para construir bucles que deben ejecutarse a través de un "intervalo", que se define como cualquier cosa que puede iterar a través de, por ejemplo, `std::vector`, o cualquier otra biblioteca estándar de C++ cuyo intervalo de secuencia se define mediante un `begin()` y `end()`. El nombre que se declara en el `for-range-declaration` parte es local para el **para** instrucción y no se puede volver a declarar en `expression` o `statement`. Tenga en cuenta que el [automática](../cpp/auto-cpp.md) se prefiere la palabra clave en el `for-range-declaration` parte de la instrucción.
+Use la instrucción **for** basada en intervalo para construir bucles que se deben ejecutar a través de un "intervalo", que se define como todo lo que se puede recorrer en iteración; por ejemplo C++ , `std::vector`o cualquier otra secuencia de la biblioteca estándar cuyo intervalo esté definido por un `begin()` y `end()`. El nombre que se declara en la parte `for-range-declaration` es local para la instrucción **for** y no se puede volver a declarar en `expression` o `statement`. Tenga en cuenta que se prefiere la palabra clave [auto](../cpp/auto-cpp.md) en la parte `for-range-declaration` de la instrucción.
 
-**Novedades de Visual Studio 2017:** en función de rangos para bucles ya no necesitan que begin() y end() devuelvan objetos del mismo tipo. Esto permite que end() devuelva un objeto centinela como el usado por los intervalos tal como se define en la propuesta de intervalos V3. Para más información, vea [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (Generalización del bucle for basado en intervalos) y [range-v3 library](https://github.com/ericniebler/range-v3) (Biblioteca range-v3) en GitHub.
+**Novedades de Visual Studio 2017:**  Los bucles for basados en intervalos ya no requieren que Begin () y end () devuelvan objetos del mismo tipo. Esto permite que end() devuelva un objeto centinela como el usado por los intervalos tal como se define en la propuesta de intervalos V3. Para más información, vea [Generalizing the Range-Based For Loop](https://wg21.link/p0184r0) (Generalización del bucle for basado en intervalos) y [range-v3 library](https://github.com/ericniebler/range-v3) (Biblioteca range-v3) en GitHub.
 
-Este código muestra cómo usar basado en rango **para** bucles para recorrer en iteración una matriz y un vector:
+Este código muestra cómo usar bucles **for** basados en intervalos para recorrer en iteración una matriz y un vector:
 
 ```cpp
 // range-based-for.cpp
@@ -96,9 +96,9 @@ end of integer array test
 end of vector test
 ```
 
-Basado en rango **para** bucle finaliza cuando uno de estos en `statement` se ejecuta: un [salto](../cpp/break-statement-cpp.md), [devolver](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) a un etiquetado instrucción fuera basado en intervalos **para** bucle. Un [continuar](../cpp/continue-statement-cpp.md) instrucción basado en rango **para** bucle finaliza solo la iteración actual.
+Un bucle **for** basado en intervalo finaliza cuando se ejecuta uno de estos en `statement`: [break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md) a una instrucción con etiqueta fuera del bucle **for** basado en intervalo. Una instrucción [continue](../cpp/continue-statement-cpp.md) en un bucle **for** basado en intervalo finaliza solo la iteración actual.
 
-Tenga en cuenta estos hechos a sobre basado en rango **para**:
+Tenga en cuenta que estos datos están basados en intervalos **para**:
 
 - Reconoce automáticamente las matrices.
 
@@ -106,7 +106,7 @@ Tenga en cuenta estos hechos a sobre basado en rango **para**:
 
 - Utiliza la búsqueda dependiente de argumentos `begin()` y `end()` para todo lo demás.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [auto](../cpp/auto-cpp.md)<br/>
 [Instrucciones de iteración](../cpp/iteration-statements-cpp.md)<br/>

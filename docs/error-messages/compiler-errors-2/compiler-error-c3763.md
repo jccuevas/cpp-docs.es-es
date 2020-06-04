@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: e7dc73334cedda27b82f79b1d2b7a8fc38a8098d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581316"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757259"
 ---
 # <a name="compiler-error-c3763"></a>Error del compilador C3763
 
-'type': 'retval' y 'out' solo puede aparecer en un tipo de puntero de datos
+' type ': ' retval ' y ' out ' solo pueden aparecer en un tipo de puntero de datos
 
-El [out](../../windows/out-cpp.md) o [retval](../../windows/retval.md) atributos solo pueden aparecer en los parámetros de tipo puntero. Quite el atributo o haga que el parámetro de tipo puntero.
+Los atributos [out](../../windows/out-cpp.md) o [retval](../../windows/retval.md) solo pueden aparecer en parámetros de tipo puntero. Quite el atributo o haga el parámetro de tipo de puntero.
 
-El ejemplo siguiente genera C3763:
+En el ejemplo siguiente se genera C3763:
 
-```
+```cpp
 // C3763.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

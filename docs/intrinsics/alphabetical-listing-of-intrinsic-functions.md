@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac2f005554cb8548c24368c2a0b245906bd1ca45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654774"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171702"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Lista alfabética de funciones intrínsecas
 
-Las secciones siguientes describen las funciones intrínsecas específicas de Microsoft que están disponibles en algunas arquitecturas o en todas ellas. Los fabricantes de procesadores también documentan otros intrínsecos compatibles, ya sea en los archivos de encabezado o en sus sitios web. Consulte la [intrínsecos ARM](../intrinsics/arm-intrinsics.md), [x86 intrínsecos](../intrinsics/x86-intrinsics-list.md), y [x64 intrínsecos](../intrinsics/x64-amd64-intrinsics-list.md) secciones para obtener vínculos a documentación del fabricante. Funciones de biblioteca en tiempo de ejecución (CRT) de C que tienen intrínsecos implementados no se documentan aquí; Estas funciones están documentadas en el [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md).
+Las secciones siguientes describen las funciones intrínsecas específicas de Microsoft que están disponibles en algunas arquitecturas o en todas ellas. Los fabricantes de procesadores también documentan otros intrínsecos compatibles, ya sea en los archivos de encabezado o en sus sitios web. Vea las [secciones funciones](../intrinsics/arm-intrinsics.md)intrínsecas de ARM, [intrínsecos de ARM64](../intrinsics/arm64-intrinsics.md), intrínsecos de [x86](../intrinsics/x86-intrinsics-list.md)y [intrínsecos de x64](../intrinsics/x64-amd64-intrinsics-list.md) para obtener vínculos a la documentación del fabricante. Las funciones de la biblioteca en tiempo de ejecución (CRT) de C que tienen intrínsecos implementados no se documentan aquí. Estas funciones se documentan en la referencia de la [biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
@@ -69,35 +69,35 @@ Las secciones siguientes describen las funciones intrínsecas específicas de Mi
 
 [__int2c](../intrinsics/int2c.md)
 
-[Funciones intrínsecas _InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
-[Funciones intrínsecas _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Funciones intrínsecas _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[funciones intrínsecas de _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Funciones intrínsecas _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[funciones intrínsecas de _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
 [Funciones intrínsecas de _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
-[Funciones intrínsecas _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
 
-[Funciones intrínsecas _InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)
 
-[Funciones intrínsecas _InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)
 
-[Funciones intrínsecas _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
 
-[Funciones intrínsecas _InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
 
-[Funciones intrínsecas _InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)
 
-[Funciones intrínsecas _InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)
 
-[Funciones intrínsecas _InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)
+[Funciones intrínsecas de _InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)
 
 [__invlpg](../intrinsics/invlpg.md)
 
@@ -273,6 +273,6 @@ Las secciones siguientes describen las funciones intrínsecas específicas de Mi
 
 [__writemsr](../intrinsics/writemsr.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

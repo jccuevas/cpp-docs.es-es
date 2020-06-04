@@ -1,5 +1,5 @@
 ---
-title: CGlobalUtils (clase)
+title: Clase CGlobalUtils
 ms.date: 10/18/2018
 f1_keywords:
 - CGlobalUtils
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: bd382a7f0143d1dce75815430741ef58cee0f8c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbac56ea7efca98218133b23657f8508ea6bac28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643318"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752905"
 ---
-# <a name="cglobalutils-class"></a>CGlobalUtils (clase)
+# <a name="cglobalutils-class"></a>Clase CGlobalUtils
 
-Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
+Para obtener más información, vea el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\mfc** de la instalación de Visual Studio.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -59,7 +59,7 @@ class CGlobalUtils
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||
 |[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||
@@ -78,7 +78,7 @@ class CGlobalUtils
 |[CGlobalUtils::StringFromCy](#stringfromcy)||
 |[CGlobalUtils::StringFromDecimal](#stringfromdecimal)||
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -88,9 +88,9 @@ class CGlobalUtils
 
 **Encabezado:** afxglobalutils.h
 
-##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea
+## <a name="cglobalutilsadjustrecttoworkarea"></a><a name="adjustrecttoworkarea"></a>CGlobalUtils::AdjustRectToWorkArea
 
-```
+```cpp
 void AdjustRectToworkArea(
     CRect& rect,
     CRect* pRectDelta = NULL);
@@ -98,14 +98,14 @@ void AdjustRectToworkArea(
 
 ### <a name="parameters"></a>Parámetros
 
-[in, out] *rect*<br/>
-[in] *pRectDelta*<br/>
+[adentro, fuera] *rect*<br/>
+[en] *pRectDelta*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect
+## <a name="cglobalutilscalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CGlobalUtils::CalcExpectedDockedRect
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CPaneContainerManager& barContainerManager,
     CWnd* pWndTodock,
@@ -117,21 +117,21 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *barContainerManager*<br/>
+[en] *barContainerManager*<br/>
 
-[in] *pWndTodock*<br/>
+[en] *pWndTodock*<br/>
 
-[in] *ptMouse*<br/>
+[en] *ptMouse*<br/>
 
-[out] *rectResult*<br/>
+[fuera] *rectResult*<br/>
 
-[out] *bDrawTab*<br/>
+[fuera] *bDrawTab*<br/>
 
-[out] *ppTargetBar*<br/>
+[fuera] *ppTargetBar*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached
+## <a name="cglobalutilscanbeattached"></a><a name="canbeattached"></a>CGlobalUtils::CanBeAttached
 
 ```
 BOOL CanBeAttached(CWnd* pWnd) const;
@@ -139,13 +139,13 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[en] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
+## <a name="cglobalutilscanpanebeinfloatingmultipaneframewnd"></a><a name="canpanebeinfloatingmultipaneframewnd"></a>CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
 
 ```
 BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
@@ -153,13 +153,13 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[en] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment
+## <a name="cglobalutilscheckalignment"></a><a name="checkalignment"></a>CGlobalUtils::CheckAlignment
 
 ```
 BOOL CheckAlignment(
@@ -175,27 +175,27 @@ BOOL CheckAlignment(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *punto*<br/>
+[en] *punto*<br/>
 
-[in] *pBar*<br/>
+[en] *pBar*<br/>
 
-[in] *nSensitivity*<br/>
+[en] *nSensibilidad*<br/>
 
-[in] *pDockManager*<br/>
+[en] *pDockManager*<br/>
 
-[in] *bOuterEdge*<br/>
+[en] *bOuterEdge*<br/>
 
-[out] *dwAlignment*<br/>
+[fuera] *dwAlignment*<br/>
 
-[in] *dwEnabledDockBars*<br/>
+[en] *dwEnabledDockBars*<br/>
 
-[in] *lpRectBounds*<br/>
+[en] *lpRectBounds*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString
+## <a name="cglobalutilscyfromstring"></a><a name="cyfromstring"></a>CGlobalUtils::CyFromString
 
 ```
 BOOL CyFromString(
@@ -205,15 +205,15 @@ BOOL CyFromString(
 
 ### <a name="parameters"></a>Parámetros
 
-[out] *cy*<br/>
+[fuera] *cy*<br/>
 
-[in] *psz*<br/>
+[en] *psz*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString
+## <a name="cglobalutilsdecimalfromstring"></a><a name="decimalfromstring"></a>CGlobalUtils::DecimalFromString
 
 ```
 BOOL DecimalFromString(
@@ -223,17 +223,17 @@ BOOL DecimalFromString(
 
 ### <a name="parameters"></a>Parámetros
 
-[out] *decimal*<br/>
+[fuera] *decimal*<br/>
 
-[in] *psz*<br/>
+[en] *psz*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="fliprect"></a>  CGlobalUtils::FlipRect
+## <a name="cglobalutilsfliprect"></a><a name="fliprect"></a>CGlobalUtils::FlipRect
 
-```
+```cpp
 void FlipRect(
     CRect& rect,
     int nDegrees);
@@ -241,14 +241,14 @@ void FlipRect(
 
 ### <a name="parameters"></a>Parámetros
 
-[in, out] *rect*<br/>
-[in] *nDegrees*<br/>
+[adentro, fuera] *rect*<br/>
+[en] *nDegrees*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout
+## <a name="cglobalutilsforceadjustlayout"></a><a name="forceadjustlayout"></a>CGlobalUtils::ForceAdjustLayout
 
-```
+```cpp
 void ForceAdjustLayout(
     CDockingManager* pDockManager,
     BOOL bForce = FALSE,
@@ -257,15 +257,15 @@ void ForceAdjustLayout(
 
 ### <a name="parameters"></a>Parámetros
 
-[in, out] *pDockManager*<br/>
+[adentro, fuera] *pDockManager*<br/>
 
-[in] *bForce*<br/>
+[en] *bFuerza*<br/>
 
-[in] *bForceInvisible*<br/>
+[en] *bForceInvisible*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager
+## <a name="cglobalutilsgetdockingmanager"></a><a name="getdockingmanager"></a>CGlobalUtils::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager(CWnd* pWnd);
@@ -273,13 +273,13 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[en] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment
+## <a name="cglobalutilsgetoppositealignment"></a><a name="getoppositealignment"></a>CGlobalUtils::GetOppositeAlignment
 
 ```
 DWORD GetOppositeAlignment(DWORD dwAlign);
@@ -287,13 +287,13 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *dwAlign*<br/>
+[en] *dwAlign*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint
+## <a name="cglobalutilsgetpaneandalignfrompoint"></a><a name="getpaneandalignfrompoint"></a>CGlobalUtils::GetPaneAndAlignFromPoint
 
 ```
 BOOL GetPaneAndAlignFromPoint(
@@ -307,23 +307,23 @@ BOOL GetPaneAndAlignFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *barContainerManager*<br/>
+[en] *barContainerManager*<br/>
 
-[in] *pt*<br/>
+[en] *pt*<br/>
 
-[out] *ppTargetControlBar*<br/>
+[fuera] *ppTargetControlBar*<br/>
 
-[out] *dwAlignment*<br/>
+[fuera] *dwAlignment*<br/>
 
-[out] *bTabArea*<br/>
+[fuera] *bTabArea*<br/>
 
-[out] *bCaption*<br/>
+[fuera] *bCaption*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon
+## <a name="cglobalutilsgetwndicon"></a><a name="getwndicon"></a>CGlobalUtils::GetWndIcon
 
 ```
 HICON GetWndIcon(CWnd* pWnd);
@@ -331,15 +331,15 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[en] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent
+## <a name="cglobalutilssetnewparent"></a><a name="setnewparent"></a>CGlobalUtils::SetNewParent
 
-```
+```cpp
 void SetNewParent(
     CObList& lstControlBars,
     CWnd* pNewParent,
@@ -348,15 +348,15 @@ void SetNewParent(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *lstControlBars*<br/>
+[en] *lstControlBars*<br/>
 
-[in] *pNewParent*<br/>
+[en] *pNewParent*<br/>
 
-[in] *bCheckVisibility*<br/>
+[en] *bCheckVisibility*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy
+## <a name="cglobalutilsstringfromcy"></a><a name="stringfromcy"></a>CGlobalUtils::StringFromCy
 
 ```
 BOOL StringFromCy(
@@ -366,15 +366,15 @@ BOOL StringFromCy(
 
 ### <a name="parameters"></a>Parámetros
 
-[out] *str*<br/>
+[fuera] *str*<br/>
 
-[in] *cy*<br/>
+[en] *cy*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal
+## <a name="cglobalutilsstringfromdecimal"></a><a name="stringfromdecimal"></a>CGlobalUtils::StringFromDecimal
 
 ```
 BOOL StringFromDecimal(
@@ -384,13 +384,13 @@ BOOL StringFromDecimal(
 
 ### <a name="parameters"></a>Parámetros
 
-[out] *str*<br/>
+[fuera] *str*<br/>
 
-[in] *decimal*<br/>
+[en] *decimal*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="see-also"></a>Vea también
 

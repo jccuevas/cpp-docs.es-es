@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3012
 ms.assetid: cc7040b1-b3fb-4da6-a474-877914d30332
-ms.openlocfilehash: 9fe0ac7d3637cad3a5571c4631345dac1a0021bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69f0544815804e9827631be81bf9735a95bd1a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503104"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176707"
 ---
 # <a name="compiler-error-c3012"></a>Error del compilador C3012
 
-> '*intrínseco*': función intrínseca no permitida directamente dentro de una región paralela
+> '*Intrinsic*': función intrínseca no permitida directamente dentro de una región paralela
 
-Una función [intrínseca del compilador](../../intrinsics/compiler-intrinsics.md) no se permite en una región `omp parallel` . Para corregir este problema, mueva intrínsecos fuera de la región, o reemplazarlos por sus equivalentes no intrínsecos.
+Una función [intrínseca del compilador](../../intrinsics/compiler-intrinsics.md) no se permite en una región `omp parallel` . Para corregir este problema, mueva las funciones intrínsecas fuera de la región o reemplácelas con equivalentes no intrínsecos.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera la advertencia C3012 y muestra una forma de corregirlo:
+En el ejemplo siguiente se genera C3012 y se muestra una manera de corregirlo:
 
 ```cpp
 // C3012.cpp

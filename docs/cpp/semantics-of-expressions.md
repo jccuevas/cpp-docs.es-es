@@ -7,20 +7,20 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178854"
 ---
 # <a name="semantics-of-expressions"></a>Semántica de las expresiones
 
-Las expresiones se evalúan según la prioridad y agrupación de sus operadores. ([Prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md) en [convenciones léxicas](../cpp/lexical-conventions.md), muestra las relaciones de C++ imponen los operadores en expresiones.)
+Las expresiones se evalúan según la prioridad y agrupación de sus operadores. (La[prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md) de los operadores en las [convenciones léxicas](../cpp/lexical-conventions.md)muestra las relaciones que los operadores imponen en las C++ expresiones).
 
 ## <a name="order-of-evaluation"></a>Orden de evaluación
 
-Considere este ejemplo:
+En este ejemplo:
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -43,8 +43,8 @@ int main()
 54
 ```
 
-![Orden de evaluación en una expresión](../cpp/media/vc38zv1.gif "orden de evaluación en una expresión") <br/>
-Orden de evaluación de expresión
+![Orden de evaluación en una expresión](../cpp/media/vc38zv1.gif "Orden de evaluación en una expresión") <br/>
+Orden de evaluación de expresiones
 
 El orden en que se evalúa la expresión mostrada en la ilustración anterior viene determinado por la prioridad y la asociatividad de los operadores:
 
@@ -52,27 +52,27 @@ El orden en que se evalúa la expresión mostrada en la ilustración anterior vi
 
 1. La suma (+) es la siguiente operación con mayor prioridad, por lo que `a` se suma al producto de `b` y `c`.
 
-1. El desplazamiento a la izquierda (<<) tiene la prioridad más baja en la expresión, pero aparece dos veces. Como el operador de desplazamiento a la izquierda se agrupa de izquierda a derecha, la subexpresión de la izquierda se evalúa primero y después se evalúa la de la derecha.
+1. El desplazamiento a la izquierda (< <) tiene la prioridad más baja en la expresión, pero hay dos repeticiones. Como el operador de desplazamiento a la izquierda se agrupa de izquierda a derecha, la subexpresión de la izquierda se evalúa primero y después se evalúa la de la derecha.
 
 Cuando se utilizan paréntesis para agrupar subexpresiones, se modifica la prioridad, así como el orden en que se evalúa la expresión, como se muestra en la ilustración siguiente.
 
-![Orden de evaluación de expresión con paréntesis](../cpp/media/vc38zv2.gif "orden de evaluación de expresión con paréntesis") <br/>
-Orden de expresión-evaluación con paréntesis
+![Orden de evaluación de expresión con paréntesis](../cpp/media/vc38zv2.gif "Orden de evaluación de expresión con paréntesis") <br/>
+Orden de evaluación de expresiones con paréntesis
 
 Las expresiones como las de la ilustración anterior se evalúan simplemente para que se apliquen sus efectos secundarios (en este caso, para transferir información al dispositivo de salida estándar).
 
 ## <a name="notation-in-expressions"></a>Notación en expresiones
 
-El lenguaje C++ indica ciertas compatibilidades al especificar operandos. En la tabla siguiente se muestra los tipos de operandos aceptables para los operadores que requieren operandos de tipo *tipo*.
+El lenguaje C++ indica ciertas compatibilidades al especificar operandos. En la tabla siguiente se muestran los tipos de operandos aceptables para los operadores que requieren operandos de tipo *Type*.
 
 ### <a name="operand-types-acceptable-to-operators"></a>Tipos de operando aceptables para los operadores
 
 |Tipo esperado|Tipos permitidos|
 |-------------------|-------------------|
-|*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *Tipo*&<br /> `const` *Tipo*&<br /> `volatile` *Tipo*&<br /> `volatile const` *Tipo*<br /> `volatile const` *Tipo*&|
-|*Tipo* \*|*Tipo* \*<br /> `const` *Tipo* \*<br /> `volatile` *Tipo* \*<br /> `volatile const` *Tipo* \*|
-|`const` *Tipo*|*type*<br /> `const` *Tipo*<br />`const` *Tipo*&|
-|`volatile` *Tipo*|*type*<br /> `volatile` *Tipo*<br /> `volatile` *Tipo*&|
+|*type*|*tipo* de `const`<br /> *tipo* de `volatile`<br /> *type*&<br /> `const` *tipo*&<br /> `volatile` *tipo*&<br /> *tipo* de `volatile const`<br /> `volatile const` *tipo*&|
+|*escribir* \*|*escribir* \*<br /> `const` *tipo* \*<br /> `volatile` *tipo* \*<br /> `volatile const` *tipo* \*|
+|*tipo* de `const`|*type*<br /> *tipo* de `const`<br />`const` *tipo*&|
+|*tipo* de `volatile`|*type*<br /> *tipo* de `volatile`<br /> `volatile` *tipo*&|
 
 Dado que las reglas anteriores se pueden utilizar combinadas, se puede proporcionar un puntero const a un objeto volatile cuando se espera un puntero.
 
@@ -88,15 +88,15 @@ func( i, ++i );
 
 El lenguaje C++ no garantiza el orden en el que se evalúan los argumentos para una llamada de función. Por consiguiente, en el ejemplo anterior, `func` podría recibir los valores 7 y 8 u 8 y 8 para sus parámetros, dependiendo de si los parámetros se evaluaran de izquierda a derecha o de derecha a izquierda.
 
-## <a name="c-sequence-points-microsoft-specific"></a>Puntos de secuencia de C++ (específicos de Microsoft)
+## <a name="c-sequence-points-microsoft-specific"></a>C++puntos de secuencia (específicos de Microsoft)
 
 Una expresión puede modificar el valor de un objeto solo una vez entre "puntos de secuencia" consecutivos.
 
 La definición del lenguaje C++ no especifica actualmente puntos de secuencia. Microsoft C++ utiliza los mismos puntos de secuencia que ANSI C para cualquier expresión que contenga operadores de C y que no use operadores sobrecargados. Cuando los operadores están sobrecargados, la semántica cambia de la secuencia de operadores a la secuencia de llamadas de función. Microsoft C++ utiliza los puntos de secuencia siguientes:
 
-- Operando izquierdo del operador AND lógico (&&). El operando izquierdo del operador AND lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador AND lógico.
+- Operando izquierdo del operador AND lógico (& &). El operando izquierdo del operador AND lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador AND lógico.
 
-- Operando izquierdo del operador OR lógico (&#124;&#124;). El operando izquierdo del operador OR lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador OR lógico.
+- Operando izquierdo del operador lógico OR (&#124;&#124;). El operando izquierdo del operador OR lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador OR lógico.
 
 - Operando izquierdo del operador de coma. El operando izquierdo del operador de coma se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. Los dos operandos del operador de coma se evalúan siempre.
 
@@ -116,6 +116,6 @@ La definición del lenguaje C++ no especifica actualmente puntos de secuencia. M
 
 - La expresión de una instrucción return. La expresión se evalúa completamente y se aplican todos los efectos secundarios antes de devolver el control a la función de llamada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones](../cpp/expressions-cpp.md)

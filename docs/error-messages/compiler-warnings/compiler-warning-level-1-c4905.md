@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
-ms.openlocfilehash: c1d201eb7d3eee322a1aa1e598eeb24928e361a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76f4786f808618b02ad93054d31992bbe710613e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584540"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199347"
 ---
 # <a name="compiler-warning-level-1-c4905"></a>Advertencia del compilador (nivel 1) C4905
 
@@ -23,9 +23,9 @@ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias d
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4905.
+En el ejemplo siguiente se genera C4905.
 
-```
+```cpp
 // C4905.cpp
 // compile with: /W1
 #pragma warning(default : 4905)

@@ -3,11 +3,11 @@ title: Resumen de expresiones
 ms.date: 06/14/2018
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
 ms.openlocfilehash: 320baa51d54f00ac4fdb6633922a8bb36cf92a94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157823"
 ---
 # <a name="summary-of-expressions"></a>Resumen de expresiones
 
@@ -15,7 +15,7 @@ ms.locfileid: "50543499"
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *expression*  **)**
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *expression*  **)**
 
 *expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
@@ -47,19 +47,19 @@ ms.locfileid: "50543499"
 
 *unary-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**++**  *unary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**--**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **++**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **--**  *unary-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-operator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof**  *unary-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *type-name*  **)**
 
 *unary-operator*: uno de<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&** **&#42;** **+** **-** **~** **!**
+&nbsp;&nbsp;&nbsp;&nbsp; **&** **&#42;** **+** **-** **~** **!**
 
 *cast-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *type-name*  **)**  *cast-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *type-name*  **)**  *cast-expression*
 
 *multiplicative-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>

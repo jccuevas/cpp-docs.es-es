@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
-ms.openlocfilehash: 568128d6199d16380b6a540173eded25f5588d23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65612e4a7d19295a8fa49576fb1d72c852a76b82
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571852"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757441"
 ---
 # <a name="compiler-error-c2711"></a>Error del compilador C2711
 
-'function': esta función no se puede compilar como administrada, considere la posibilidad de usar #pragma no administrado
+' función ': esta función no se puede compilar como administrada. considere la posibilidad de usar #pragma no administradas.
 
-Algunas instrucciones impedirá que el compilador genera MSIL para la función envolvente.
+Algunas instrucciones impedirán que el compilador genere MSIL para la función de inclusión.
 
-El ejemplo siguiente genera C2711:
+En el ejemplo siguiente se genera C2711:
 
-```
+```cpp
 // C2711.cpp
 // compile with: /clr
 // processor: x86

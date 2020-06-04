@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151213"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299096"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizar los argumentos de la línea de comandos de C
 
@@ -23,15 +23,15 @@ El código de inicio de Microsoft C utiliza las reglas siguientes al interpretar
 
 - Los argumentos van delimitados por espacio en blanco, que puede ser un carácter de espacio o una tabulación.
 
-- Una cadena entre comillas dobles se interpreta como un solo argumento, sin importar el espacio en blanco que contenga. Se puede incrustar una cadena entre comillas dentro de un argumento. Observe que el carácter de intercalación (**^**) no se reconoce como carácter de escape ni como delimitador.
+- Una cadena entre comillas dobles se interpreta como un solo argumento, sin importar el espacio en blanco que contenga. Se puede incrustar una cadena entre comillas dentro de un argumento. Observe que el carácter de intercalación ( **^** ) no se reconoce como carácter de escape ni como delimitador.
 
-- Un signo de comillas dobles precedido por una barra diagonal inversa, **\\"**, se interpreta como signo de comillas dobles literal (**"**).
+- Un signo de comillas dobles precedido por una barra diagonal inversa, **\\"** , se interpreta como signo de comillas dobles literal ( **"** ).
 
 - Las barras diagonales inversas se interpretan literalmente, a menos que precedan inmediatamente a unas comillas.
 
-- Si un número par de barras diagonales inversas va seguido de un signo de comillas dobles, se coloca una barra diagonal inversa (**\\**) en la matriz `argv` por cada par de barras diagonales inversas (**\\\\**) y el signo de comillas dobles (**"**) se interpreta como delimitador de cadenas.
+- Si un número par de barras diagonales inversas va seguido de un signo de comillas dobles, se coloca una barra diagonal inversa ( **\\** ) en la matriz `argv` por cada par de barras diagonales inversas ( **\\\\** ) y el signo de comillas dobles ( **"** ) se interpreta como delimitador de cadenas.
 
-- Si un número impar de barras diagonales inversas va seguido de un signo de comillas dobles, se coloca una barra diagonal inversa (**\\**) en la matriz `argv` por cada par de barras diagonales inversas (**\\\\**) y el signo de comillas dobles se interpreta como carácter de escape debido a la barra diagonal inversa restante, lo que hace que se ponga un signo de comillas dobles literal (**"**) en `argv`.
+- Si un número impar de barras diagonales inversas va seguido de un signo de comillas dobles, se coloca una barra diagonal inversa ( **\\** ) en la matriz `argv` por cada par de barras diagonales inversas ( **\\\\** ) y el signo de comillas dobles se interpreta como carácter de escape debido a la barra diagonal inversa restante, lo que hace que se ponga un signo de comillas dobles literal ( **"** ) en `argv`.
 
 En esta lista se muestran las reglas anteriores y el resultado interpretado que se pasa a `argv` para varios ejemplos de argumentos de la línea de comandos. La salida que se muestra en las columnas segunda, tercera y cuarta proviene del programa ARGS.C que sigue a la lista.
 
@@ -47,7 +47,7 @@ En esta lista se muestran las reglas anteriores y el resultado interpretado que 
 
 ### <a name="code"></a>Código
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:

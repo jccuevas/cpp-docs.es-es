@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE containers [MFC], client items
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
-ms.openlocfilehash: e0d56d4a8f25828de954a78e9bafd8df150c7ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153364"
 ---
 # <a name="containers-client-items"></a>Contenedores: Elementos de cliente
 
@@ -27,8 +27,8 @@ Cada aplicación de contenedor debe derivar al menos una clase de `COleClientIte
 ## <a name="see-also"></a>Vea también
 
 [Contenedores](../mfc/containers.md)<br/>
-[Contenedores: Archivos compuestos](../mfc/containers-compound-files.md)<br/>
-[Contenedores: Problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md)<br/>
-[Contenedores: Características avanzadas](../mfc/containers-advanced-features.md)<br/>
+[Contenedores: archivos compuestos](../mfc/containers-compound-files.md)<br/>
+[Contenedores: problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md)<br/>
+[Contenedores: características avanzadas](../mfc/containers-advanced-features.md)<br/>
 [COleClientItem (clase)](../mfc/reference/coleclientitem-class.md)<br/>
 [COleServerItem (clase)](../mfc/reference/coleserveritem-class.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0031
 ms.assetid: b42435c6-e570-4f8e-9ad5-12a7ea69ccb2
-ms.openlocfilehash: e5edae0c1b7464e4a3a5e9523332ce956d0dcf92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e13236f65aaca778a297cdd2942c07b75dd701d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648596"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192502"
 ---
 # <a name="project-build-error-prj0031"></a>Error PRJ0031 al compilar el proyecto
 
-La propiedad 'Outputs' de la compilación personalizada del paso de archivo 'archivo' contenía 'macro' que se evalúa como 'expansión_de_macro'.
+La propiedad ' Outputs ' del paso de compilación personalizada para el archivo ' file ' contiene ' macro ' que se evalúa como ' macro_expansion '.
 
-Un paso de compilación personalizada en un archivo tenía un resultado erróneo debido probablemente a un problema de evaluación de macro. Este error también puede significar que la ruta de acceso es incorrecto, que contiene caracteres o combinaciones de caracteres que no son válidos en una ruta de acceso de archivo.
+Un paso de compilación personalizado en un archivo tenía una salida errónea probablemente debido a un problema de evaluación de macros. Este error también puede significar que la ruta de acceso tiene un formato incorrecto, que contiene caracteres o combinaciones de caracteres que no son válidos en una ruta de acceso de archivo.
 
-Para resolver este error, corrija la macro o corrija la especificación de ruta de acceso. La ruta de acceso evaluada es una ruta de acceso absoluta del directorio de proyecto.
+Para resolver este error, corrija la macro o corrija la especificación de la ruta de acceso. La ruta de acceso evaluada es una ruta de acceso absoluta del directorio del proyecto.

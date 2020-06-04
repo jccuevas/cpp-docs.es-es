@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4099
 ms.assetid: 358170a4-07cd-43fe-918f-82c32757ffc5
-ms.openlocfilehash: dcf4d44c3a0b5b10035af763040c2912afc8c6f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1f330924b8e47e0649268142106a050c83cb20a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442181"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183324"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Advertencia de las herramientas del vinculador LNK4099
 
-No se encontró PDB 'filename' con 'objeto/library' o 'path'; vinculación de objetos como si no hay información de depuración
+No se encontró el archivo PDB ' nombredearchivo ' con ' Object/Library ' o en ' path '; vincular objeto como si no hubiera información de depuración
 
-El vinculador no pudo encontrar el archivo PDB. Copiar en el directorio que contiene `object/library`.
+El enlazador no pudo encontrar el archivo. pdb. Cópielo en el directorio que contiene `object/library`.
 
-Para buscar el nombre del archivo .pdb asociado al archivo objeto:
+Para buscar el nombre del archivo. pdb asociado al archivo objeto:
 
-1. Extraer un archivo de objeto de la biblioteca con [lib](../../build/reference/lib-reference.md) **/extract:**`objectname`**.obj** `xyz` **.lib**.
+1. Extraiga un archivo objeto de la biblioteca con [lib](../../build/reference/lib-reference.md) **/Extract:** `objectname` **. obj** `xyz` **. lib**.
 
-1. Compruebe la ruta de acceso al archivo .pdb con **dumpbin /section:.debug$ T /rawdata** `objectname` **.obj**.
+1. Compruebe la ruta de acceso al archivo. pdb con **dumpbin/Section:. Debug $ T/rawdata** `objectname` **. obj**.
 
-También puede compilar con [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), por lo que no necesita el archivo pdb para utilizarse o quite el [/DEBUG](../../build/reference/debug-generate-debug-info.md) del vinculador si no tiene archivos .pdb para los objetos que se está vinculando.
+También puede compilar con [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), por lo que no es necesario usar el archivo PDB, o bien quitar la opción del vinculador [/Debug](../../build/reference/debug-generate-debug-info.md) si no tiene archivos. pdb para los objetos que está vinculando.

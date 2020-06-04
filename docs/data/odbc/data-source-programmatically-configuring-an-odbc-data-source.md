@@ -9,26 +9,26 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba0224d166795b34d636ace610265e115209e49c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677375"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358857"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origen de datos: Configurar un origen de datos ODBC mediante programación
 
-En este tema se explica cómo se pueden configurar mediante programación los nombres de origen de datos Open Database Connectivity (ODBC). Esto proporciona flexibilidad al acceder a los datos sin obligar al usuario utilizar explícitamente el Administrador de ODBC u otros programas para especificar los nombres de orígenes de datos.
+En este tema se explica cómo configurar los nombres de origen de datos de Open Database Connectivity (ODBC) mediante programación. Esto le da flexibilidad para tener acceso a los datos sin forzar al usuario a usar explícitamente el Administrador ODBC u otros programas para especificar los nombres de los orígenes de datos.
 
-Normalmente, un usuario ejecuta el Administrador de ODBC para crear un origen de datos si el sistema de administración de asociado de la base de datos (DBMS) es compatible con esta operación.
+Normalmente, un usuario ejecuta administrador ODBC para crear un origen de datos si el sistema de administración de bases de datos (DBMS) asociado admite esta operación.
 
-Al crear un origen de datos ODBC de Microsoft Access mediante el Administrador ODBC, tiene dos opciones: puede seleccionar un archivo .mdb existente o puede crear un nuevo archivo .mdb. No hay ninguna forma de crear el archivo .mdb desde la aplicación ODBC de MFC mediante programación. Por lo tanto, si la aplicación requiere que se coloquen datos en un origen de datos de Microsoft Access (archivo .mdb), lo más probable es que desee tener un archivo .mdb vacío que se puede utilizar o copiar siempre que la necesite.
+Al crear un origen de datos ODBC de Microsoft Access a través del Administrador ODBC, se le ofrecen dos opciones: puede seleccionar un archivo .mdb existente o puede crear un nuevo archivo .mdb. No hay ninguna forma mediante programación de crear el archivo .mdb desde la aplicación ODBC de MFC. Por lo tanto, si la aplicación requiere que coloque datos en un origen de datos de Microsoft Access (archivo .mdb), lo más probable es que desee tener un archivo .mdb vacío que puede usar o copiar siempre que lo necesite.
 
-Sin embargo, muchos DBMS permiten la creación de orígenes de datos mediante programación. Algunos orígenes de datos mantienen una especificación de directorio para las bases de datos. Es decir, un directorio es el origen de datos y cada tabla del origen de datos se almacena en un archivo independiente (en el caso de dBASE, cada tabla es un archivo .dbf). Los controladores para otras bases de datos ODBC, como Microsoft Access y SQL Server, requieren que se cumplan algunos criterios concretos antes de poder establecer un origen de datos. Por ejemplo, cuando se usa el controlador ODBC de SQL Server, debe haber instalado un equipo de SQL Server.
+Sin embargo, muchos DBMS permiten la creación de orígenes de datos mediante programación. Algunos orígenes de datos mantienen una especificación de directorio para las bases de datos. Es decir, un directorio es el origen de datos y cada tabla dentro del origen de datos se almacena en un archivo independiente (en el caso de dBASE, cada tabla es un archivo .dbf). Los controladores para otras bases de datos ODBC, como Microsoft Access y SQL Server, requieren que se cumplan algunos criterios específicos antes de que se pueda establecer un origen de datos. Por ejemplo, al usar el controlador ODBC de SQL ServerSQL Server , debe haber establecido un equipo de SQL ServerSQL Server .
 
-##  <a name="_core_sqlconfigdatasource_example"></a> Ejemplo de SQLConfigDataSource
+## <a name="sqlconfigdatasource-example"></a><a name="_core_sqlconfigdatasource_example"></a>Ejemplo de SQLConfigDataSource
 
-En el ejemplo siguiente se usa el `::SQLConfigDataSource` función de la API de ODBC para crear un nuevo origen de datos de Excel llamado nuevo origen de datos de Excel:
+En el ejemplo `::SQLConfigDataSource` siguiente se utiliza la función DE API ODBC para crear un nuevo origen de datos de Excel denominado Nuevo origen de datos de Excel:
 
 ```
 SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
@@ -39,81 +39,81 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
                    "MaxScanRows=20\0");
 ```
 
-Tenga en cuenta que el origen de datos es realmente un directorio (C:\EXCELDIR); Este directorio debe existir. El controlador Excel utiliza directorios como orígenes de datos y archivos como tablas individuales (una tabla por archivo .xls).
+Tenga en cuenta que el origen de datos es en realidad un directorio (C:-EXCELDIR); este directorio debe existir. El controlador de Excel utiliza directorios como sus orígenes de datos y archivos como tablas individuales (una tabla por archivo .xls).
 
-Para obtener más información sobre la creación de tablas, consulte [origen de datos: crear una tabla en un origen de datos ODBC mediante programación](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Para obtener más información acerca de la creación de tablas, vea Origen de [datos: creación de una tabla mediante programación en un origen](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)de datos ODBC .
 
-La siguiente información explica los parámetros que deben pasarse a la `::SQLConfigDataSource` función de la API de ODBC. Para usar `::SQLConfigDataSource`, debe incluir el archivo de encabezado Odbcinst.h y utilizar la biblioteca de importación Odbcinst.lib. Además, Odbccp32.dll debe estar en la ruta de acceso en tiempo de ejecución (u Odbcinst.dll para 16 bits).
+En la siguiente información se describen los `::SQLConfigDataSource` parámetros que deben pasarse a la función de API ODBC. Para `::SQLConfigDataSource`utilizar , debe incluir el archivo de encabezado Odbcinst.h y utilizar la biblioteca de importación Odbcinst.lib. Además, Odbccp32.dll debe estar en la ruta de acceso en tiempo de ejecución (o Odbcinst.dll para 16 bits).
 
-Puede crear un nombre de origen de datos ODBC mediante el Administrador de ODBC o una utilidad similar. Sin embargo, a veces es preferible crear un nombre de origen de datos directamente desde la aplicación para obtener acceso sin pedir al usuario que ejecute una utilidad independiente.
+Puede crear un nombre de origen de datos ODBC mediante el Administrador ODBC o una utilidad similar. Sin embargo, a veces es deseable crear un nombre de origen de datos directamente desde la aplicación para obtener acceso sin necesidad de que el usuario ejecute una utilidad independiente.
 
-El Administrador de ODBC (se suele instalar en el Panel de Control) crea un nuevo origen de datos insertando entradas en el registro de Windows (o, para 16 bits, en el archivo Odbc.ini). El Administrador de controladores ODBC consulta este archivo para obtener la información necesaria sobre el origen de datos. Es importante saber qué información debe colocarse en el registro porque deberá proporcionarla con la llamada a `::SQLConfigDataSource`.
+Administrador ODBC (normalmente instalado en el Panel de control) crea un nuevo origen de datos colocando entradas en el registro de Windows (o, para 16 bits, en el archivo Odbc.ini). El Administrador de controladores ODBC consulta este archivo para obtener la información necesaria sobre el origen de datos. Es importante saber qué información debe colocarse en el registro porque debe `::SQLConfigDataSource`proporcionarla con la llamada a .
 
-Aunque esta información se podría escribir directamente en el registro sin utilizar `::SQLConfigDataSource`, cualquier aplicación que lo depende de la técnica actual que el Administrador de controladores utiliza para mantener sus datos. Si una revisión posterior para el Administrador de controladores ODBC registrara sobre orígenes de datos de una manera diferente, se interrumpe cualquier aplicación que usa esta técnica. Es aconsejable utilizar una función de API cuando se proporciona uno. Por ejemplo, el código es portátil de 16 bits a 32 bits si usas el `::SQLConfigDataSource` funcione, ya que la función escribe correctamente en el archivo Odbc.ini o en el registro.
+Aunque esta información se puede escribir `::SQLConfigDataSource`directamente en el registro sin usar , cualquier aplicación que lo haga se basa en la técnica actual que el Administrador de controladores utiliza para mantener sus datos. Si una revisión posterior del Administrador de controladores ODBC implementa el mantenimiento de registros sobre orígenes de datos de una manera diferente, se interrumpe cualquier aplicación que use esta técnica. Por lo general, es recomendable utilizar una función de API cuando se proporciona una. Por ejemplo, el código es portátil de 16 bits `::SQLConfigDataSource` a 32 bits si utiliza la función, porque la función escribe correctamente en el archivo Odbc.ini o en el registro.
 
-##  <a name="_core_sqlconfigdatasource_parameters"></a> Parámetros de SQLConfigDataSource
+## <a name="sqlconfigdatasource-parameters"></a><a name="_core_sqlconfigdatasource_parameters"></a>Parámetros SQLConfigDataSource
 
-Los siguientes explican los parámetros de la `::SQLConfigDataSource` función. Gran parte de la información procede de la API de ODBC *referencia del programador* suministrados con Visual C++ versión 1.5 y versiones posterior.
+A continuación se explican `::SQLConfigDataSource` los parámetros de la función. Gran parte de la información se toma de la *referencia del programador* de la API ODBC proporcionada con Visual C++ versión 1.5 y versiones posteriores.
 
-###  <a name="_core_function_prototype"></a> Prototipo de función
+### <a name="function-prototype"></a><a name="_core_function_prototype"></a>Prototipo de función
 
 ```
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-####  <a name="_core_parameters_and_usage"></a> Parámetros y uso
+#### <a name="parameters-and-usage"></a><a name="_core_parameters_and_usage"></a>Parámetros y uso
 
 *hwndParent*<br/>
-La ventana especificada como propietario de los cuadros de diálogo Administrador de controladores ODBC o el controlador ODBC específico crea para obtener información adicional del usuario sobre el nuevo origen de datos. Si el *lpszAttributes* parámetro no proporciona suficiente información, aparece un cuadro de diálogo. El *hwndParent* parámetro puede ser NULL.
+La ventana especificada como propietario de los cuadros de diálogo que el Administrador de controladores ODBC o el controlador ODBC específico crea para obtener información adicional del usuario sobre el nuevo origen de datos. Si el parámetro *lpszAttributes* no proporciona suficiente información, aparece un cuadro de diálogo. El *hwndParent* parámetro podría ser NULL.
 
 *lpszDriver*<br/>
-Descripción del controlador. Este es el nombre presentado a los usuarios en lugar de con el nombre de controlador físico (la DLL).
+La descripción del controlador. Este es el nombre que se presenta a los usuarios en lugar del nombre del controlador físico (el archivo DLL).
 
 *lpszAttributes*<br/>
-Lista de atributos con el formato "nombre de clave = valor". Estas cadenas están separadas por terminadores nulos con dos terminadores nulos consecutivos al final de la lista. Estos atributos son principalmente entradas de específicas del controlador de predeterminado, que se incluyen en el registro para el nuevo origen de datos. Una clave importante que no se menciona en la referencia de API de ODBC para esta función es "DSN" ("nombre origen de datos"), que especifica el nombre del nuevo origen de datos. El resto de las entradas son específicas del controlador para el nuevo origen de datos. A menudo no es necesario proporcionar todas las entradas porque el controlador puede pedir al usuario cuadros de diálogo para los nuevos valores. (Establezca *hwndParent* en NULL para hacer esto.) Es posible que desee proporcionar explícitamente valores predeterminados para que no se solicita al usuario.
+Lista de atributos con el formato "nombreclave-valor". Estas cadenas están separadas por terminadores nulos con dos terminadores nulos consecutivos al final de la lista. Estos atributos son principalmente entradas específicas del controlador predeterminadas, que van al registro para el nuevo origen de datos. Una clave importante que no se menciona en la referencia de la API ODBC para esta función es "DSN" ("nombre del origen de datos"), que especifica el nombre del nuevo origen de datos. El resto de las entradas son específicas del controlador para el nuevo origen de datos. A menudo no es necesario proporcionar todas las entradas porque el controlador puede solicitar al usuario cuadros de diálogo para los nuevos valores. (Establecer *hwndParent* en NULL para hacer esto.) Es posible que desee proporcionar explícitamente los valores predeterminados para que no se solicite al usuario.
 
 #### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Para determinar la descripción de un controlador para el parámetro lpszDriver mediante el Administrador ODBC
 
-1. Ejecute el Administrador de ODBC.
+1. Ejecute Administrador ODBC.
 
 1. Haga clic en **Agregar**.
 
-Esto proporciona una lista de controladores instalados y sus descripciones. Utilice esta descripción como la *lpszDriver* parámetro. Tenga en cuenta que use la descripción completa, como "Archivos de Excel (*.xls)", que incluyen la extensión de nombre de archivo y los paréntesis si aparecen en la descripción.
+Esto le da una lista de los controladores instalados y sus descripciones. Utilice esta descripción como parámetro *lpszDriver.* Tenga en cuenta que utiliza toda la descripción, como "Archivos de Excel (*.xls)", incluida la extensión de nombre de archivo y los paréntesis si existen en la descripción.
 
-Como alternativa, puede examinar el registro (o, para 16 bits, el archivo Odbcinst.ini), que contiene una lista de todas las entradas de controlador y las descripciones en la clave del registro "ODBC Drivers" (o la sección [ODBC Drivers] en Odbcinst.ini).
+Como alternativa, puede examinar el registro (o, para 16 bits, el archivo Odbcinst.ini), que contiene una lista de todas las entradas y descripciones del controlador bajo la clave del Registro "Controladores ODBC" (o la sección [Controladores ODBC] en Odbcinst.ini).
 
-Una forma de encontrar los nombres de clave y valores para el *lpszAttributes* parámetro es examinar el archivo Odbc.ini para un origen de datos ya configurados (por ejemplo, uno que se ha configurado por el Administrador ODBC).
+Una forma de encontrar los nombres de clave y los valores para el parámetro *lpszAttributes* es examinar el archivo Odbc.ini para un origen de datos ya configurado (quizás uno que ha sido configurado por el Administrador ODBC).
 
-#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Para buscar nombres de clave y valores para el parámetro lpszAttributes
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Para buscar nombres y valores para el parámetro lpszAttributes
 
-1. Ejecute el editor del registro de Windows (o, para 16 bits, abra el archivo Odbc.ini).
+1. Ejecute el editor del registro de Windows (o, durante 16 bits, abra el archivo Odbc.ini).
 
-1. Encontrar la información de orígenes de datos ODBC mediante uno de los siguientes:
+1. Busque la información de orígenes de datos ODBC mediante una de las siguientes opciones:
 
-   - Para 32 bits, busque la clave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Los orígenes de datos INI\ODBC** en el panel izquierdo.
+   - Para 32 bits, busque la clave **HKEY_CURRENT_USER, Software, ODBC y ODBC. Orígenes de datos INI-ODBC** en el panel izquierdo.
 
-      El panel derecho muestra las entradas de la forma: "pub: REG_SZ:*<data source name>*", donde *<data source name>* es un origen de datos que ya se ha configurado con la configuración deseada para el controlador desea Para usar. Seleccione el origen de datos que desee, por ejemplo, SQL Server. Los elementos que siguen a la cadena "pub:" son, en orden, el keyname y el valor para usar en su *lpszAttributes* parámetro.
+      El panel derecho enumera las entradas del formulario: "pub: REG_SZ: * \<* *\<nombre *del origen de datos>", donde el nombre del origen de datos>es un origen de datos que ya se ha configurado con la configuración deseada para el controlador que va a utilizar. Seleccione el origen de datos que desee, por ejemplo, SQL Server. Los elementos que siguen a la cadena "pub:" son, en orden, el nombre de clave y el valor que se va a utilizar en el parámetro *lpszAttributes.*
 
-   - Para 16 bits, busque la sección en el archivo Odbc.ini marcado por [*\<el nombre del origen de datos >*].
+   - Para 16 bits, busque la sección en el*\< *archivo Odbc.ini marcada por [ nombre de origen de datos>].
 
-      Las líneas que siguen a esta línea tienen el formato "nombre de clave = valor". Estas son exactamente las entradas que se van a usar en su *lpszAttributes* parámetro.
+      Las líneas que siguen a esta línea tienen la forma "nombreclave-valor". Estas son exactamente las entradas que se van a utilizar en el parámetro *lpszAttributes.*
 
-También puede examinar la documentación para el controlador específico que se va a usar. Puede encontrar información útil en la Ayuda en línea para el controlador, que puede tener acceso mediante la ejecución de administrador de ODBC. Normalmente, estos archivos de ayuda se colocan en el directorio WINDOWS\SYSTEM de Windows NT, Windows 3.1 o Windows 95.
+También es posible que desee examinar la documentación para el controlador específico que va a utilizar. Puede encontrar información útil en la Ayuda en línea para el controlador, a la que puede acceder ejecutando el Administrador ODBC. Estos archivos de Ayuda se colocan normalmente en el directorio WINDOWS-SYSTEM para Windows NT, Windows 3.1 o Windows 95.
 
 #### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Para obtener ayuda en línea para el controlador ODBC
 
-1. Ejecute el Administrador de ODBC.
+1. Ejecute Administrador ODBC.
 
 1. Haga clic en **Agregar**.
 
 1. Seleccione el nombre del controlador.
 
-1. Haga clic en **Aceptar**.
+1. Haga clic en **OK**.
 
-Cuando el Administrador de ODBC muestre la información para crear un nuevo origen de datos para ese controlador concreto, haga clic en **ayuda**. Se abrirá el archivo de ayuda para ese controlador concreto, que generalmente contiene información importante sobre el uso del controlador.
+Cuando el Administrador ODBC muestre la información para crear un nuevo origen de datos para ese controlador en particular, haga clic en **Ayuda**. Esto abre el archivo de ayuda para ese controlador en particular, que generalmente contiene información importante sobre el uso del controlador.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Origen de datos (ODBC)](../../data/odbc/data-source-odbc.md)

@@ -2,12 +2,12 @@
 title: Problemas de migración de punto flotante
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: HT
+ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332353"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215025"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migración de punto flotante
 
@@ -29,8 +29,8 @@ Las mejoras en la corrección de la generación de código en diferentes modos d
 
 En la mayoría de los casos, los cambios de punto flotante en los compiladores y las bibliotecas más recientes producen un comportamiento más rápido o más correcto, o ambos. Incluso podría constatar un mejor rendimiento energético del procesador cuando las instrucciones SSE2 reemplazan a las instrucciones x87. A pesar de todo, si tiene código que debe replicar con precisión el comportamiento de punto flotante de un compilador antiguo, considere la posibilidad de usar funciones de compatibilidad nativa con múltiples versiones de Visual Studio y compile el proyecto afectado con el conjunto de herramientas antiguo. Para obtener más información, vea [Use native multi-targeting in Visual Studio to build old projects](use-native-multi-targeting.md) (Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Actualizar proyectos desde versiones anteriores de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Información general sobre posibles problemas de actualización (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md)

@@ -1,7 +1,7 @@
 ---
 title: bitand
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - std::bitand
 - std.bitand
@@ -20,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - bitand function
 ms.assetid: 279cf9b5-fac1-49de-b329-f1a31b3481fe
-ms.openlocfilehash: dabe6add3e0fd2711b9149d4fdad88a8dad4871a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 771631275ea03cc9d3a6105aa51cd428f1720763
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517766"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171260"
 ---
 # <a name="bitand"></a>bitand
 
@@ -38,7 +41,7 @@ Alternativa al operador &.
 #define bitand &
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La macro produce el operador
 
@@ -70,4 +73,4 @@ int main( )
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<iso646.h>
+**Encabezado:** \<iso646. h >

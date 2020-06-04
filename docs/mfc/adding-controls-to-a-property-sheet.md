@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [MFC], adding to property sheets
 - property sheets, adding controls
 ms.assetid: 24ad4c0b-c1db-4850-b9f0-34aae8d74571
-ms.openlocfilehash: 141339bd146fec20f02e73e24bb9dae387f4e3ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07b384b2db36ae59d4de8b99d9c07396ce793979
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394798"
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Agregar controles a una hoja de propiedades
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3766
 ms.assetid: b5af2089-2e1e-4e45-a41d-495b6c55656e
-ms.openlocfilehash: 2d871e331987cb2731aad8b4fbc6ec2f094bd218
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1cbd218b127bdf0d6784b7d35dac563d8ea198d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518331"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757220"
 ---
 # <a name="compiler-error-c3766"></a>Error del compilador C3766
 
-'type' debe proporcionar una implementación de la interfaz 'función' del método
+' type ' debe proporcionar una implementación para el método de interfaz ' function '
 
-Una clase que hereda de una interfaz debe implementar a los miembros de interfaz.
+Una clase que hereda de una interfaz debe implementar los miembros de la interfaz.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3766.
+En el ejemplo siguiente se genera C3766.
 
-```
+```cpp
 // C3766.cpp
 // compile with: /clr /c
 

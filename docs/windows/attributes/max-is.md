@@ -1,21 +1,21 @@
 ---
-title: max_is (atributo de COM de C++)
+title: max_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627479"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166762"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-Designa el valor máximo para un índice de matriz válida.
+Designa el valor máximo de un índice de matriz válido.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,12 +25,12 @@ Designa el valor máximo para un índice de matriz válida.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
-Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
+*expression*<br/>
+Una o más expresiones del lenguaje C. Se permiten ranuras de argumentos vacías.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **max_is** atributo de C++ tiene la misma funcionalidad que el [max_is](/windows/desktop/Midl/max-is) atributo MIDL.
+El atributo **max_is** C++ tiene la misma funcionalidad que el atributo MIDL [max_is](/windows/win32/Midl/max-is) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,9 +38,9 @@ El **max_is** atributo de C++ tiene la misma funcionalidad que el [max_is](/wind
 
 |||
 |-|-|
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
+|**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|**size_is**|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
@@ -49,7 +49,7 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 
 Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

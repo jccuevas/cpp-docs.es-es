@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: a2af04502082f7fb30d59af5e6434161227c6d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d8ff442e84aa7563b1787e5a030297c034e1871
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437281"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992062"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>Advertencia del compilador (nivel 3) C4534
 
-'constructor' no será un constructor predeterminado para la clase 'class' debido al argumento predeterminado
+' constructor ' no será un constructor predeterminado para la clase ' Class ' debido al argumento predeterminado
 
-Una clase no administrada puede tener un constructor con parámetros que tienen valores predeterminados y el compilador usará esto como el constructor predeterminado. Una clase marcada con el `value` palabra clave no usará un constructor con valores predeterminados para sus parámetros como un constructor predeterminado.
+Una clase no administrada puede tener un constructor con parámetros que tienen valores predeterminados y el compilador lo utilizará como el constructor predeterminado. Una clase marcada con la palabra clave `value` no usará un constructor con valores predeterminados para sus parámetros como constructor predeterminado.
 
-Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md).
+Para más información, vea [ref class and ref struct (C++/CLI and C++/CX)](../../extensions/classes-and-structs-cpp-component-extensions.md) [ref class y ref struct (C++/CLI y C++/CX)].
 
-El ejemplo siguiente genera C4534:
+En el ejemplo siguiente se genera C4534:
 
-```
+```cpp
 // C4534.cpp
 // compile with: /W3 /clr /WX
 value class MyClass {

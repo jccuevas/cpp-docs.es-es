@@ -1,5 +1,5 @@
 ---
-title: CListView (clase)
+title: Clase CListView
 ms.date: 11/04/2016
 f1_keywords:
 - CListView
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: e7d542d253d0d4aa8d661effb7dd7147ea3c121b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7f3b7c43d98c4f2c42d0c27c8e224f33e4b3301
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592652"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749127"
 ---
-# <a name="clistview-class"></a>CListView (clase)
+# <a name="clistview-class"></a>Clase CListView
 
-Simplifica el uso del control de lista y de [CListCtrl](../../mfc/reference/clistctrl-class.md), la clase que encapsula la funcionalidad de control de lista, con la arquitectura de vista-documento de MFC.
+Simplifica el uso del control de lista y de [CListCtrl](../../mfc/reference/clistctrl-class.md), la clase que encapsula la funcionalidad de control de lista, con la arquitectura de vista de documento de MFC.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,25 +33,25 @@ class CListView : public CCtrlView
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CListView::CListView](#clistview)|Construye un objeto `CListView`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CListView::GetListCtrl](#getlistctrl)|Devuelve el control de lista asociado a la vista.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CListView::RemoveImageList](#removeimagelist)|Quita la lista de imágenes especificado de la vista de lista.|
+|[CListView::RemoveImageList](#removeimagelist)|Elimina la lista de imágenes especificada de la vista de lista.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Para obtener más información acerca de esta arquitectura, consulte la información general de la [CView](../../mfc/reference/cview-class.md) clase y las referencias cruzadas citadas no existe.
+Para obtener más información sobre esta arquitectura, vea la información general de la clase [CView](../../mfc/reference/cview-class.md) y las referencias cruzadas citadas allí.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -71,7 +71,7 @@ Para obtener más información acerca de esta arquitectura, consulte la informac
 
 **Encabezado:** afxcview.h
 
-##  <a name="clistview"></a>  CListView::CListView
+## <a name="clistviewclistview"></a><a name="clistview"></a>CListView::CListView
 
 Construye un objeto `CListView`.
 
@@ -79,7 +79,7 @@ Construye un objeto `CListView`.
 CListView();
 ```
 
-##  <a name="getlistctrl"></a>  CListView::GetListCtrl
+## <a name="clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl
 
 Llame a esta función miembro para obtener una referencia al control de lista asociado a la vista.
 
@@ -95,22 +95,22 @@ Una referencia al control de lista asociado a la vista.
 
 [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]
 
-##  <a name="removeimagelist"></a>  CListView::RemoveImageList
+## <a name="clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList
 
-Quita la lista de imágenes especificado de la vista de lista.
+Elimina la lista de imágenes especificada de la vista de lista.
 
-```
+```cpp
 void RemoveImageList(int nImageList);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *nImageList*<br/>
-Índice de base cero de la imagen para quitar.
+El índice de base cero de la imagen que se va a quitar.
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC ROWLIST](../../visual-cpp-samples.md)<br/>
-[CCtrlView (clase)](../../mfc/reference/cctrlview-class.md)<br/>
+[EJEMPLO DE MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
+[Clase CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[CCtrlView (clase)](../../mfc/reference/cctrlview-class.md)
+[Clase CCtrlView](../../mfc/reference/cctrlview-class.md)

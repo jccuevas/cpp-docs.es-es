@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
-ms.openlocfilehash: 3268e5b124be40313bdc97b4c95d935ddd4f9160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af43ddb83e872762f720b156644e0d466957a8a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462743"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203884"
 ---
 # <a name="fatal-error-c1092"></a>Error irrecuperable C1092
 
@@ -21,9 +21,9 @@ Ha cambiado o agregado un tipo de datos desde la última compilación correcta.
 
 - Editar y continuar no admite cambios en los tipos de datos existentes, incluidas las definiciones de clase, estructura o enumeración. Debe detener la depuración y compilar la aplicación.
 
-- Editar y continuar no admite la adición de nuevos tipos de datos si un archivo de base de datos de programa, como vc*x*0.pdb (donde *x* es la versión principal de Visual C++ en uso) es de solo lectura. Para agregar tipos de datos, el compilador debe abrir el archivo .pdb en modo de escritura.
+- Editar y continuar no admite la adición de nuevos tipos de datos si un archivo de base de datos de programa, como VC*x*0. pdb (donde *x* es la versión C++ principal de visual en uso) es de solo lectura. Para agregar tipos de datos, el compilador debe abrir el archivo. pdb en modo de escritura.
 
-### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Para quitar este error sin terminar la sesión de depuración actual
+### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Para quitar este error sin finalizar la sesión de depuración actual
 
 1. Cambie el tipo de datos a su estado anterior al error.
 

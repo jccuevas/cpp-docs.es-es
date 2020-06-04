@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2224
 ms.assetid: 27b93bbf-4ce7-47a3-a9c4-f4fbed689bdf
-ms.openlocfilehash: 8660f45267a21eb0914cc54dd2c4137fd5a336e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 620d28bfed178f3bb38df268ae851412bf6b0815
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521094"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206577"
 ---
 # <a name="compiler-error-c2224"></a>Error del compilador C2224
 
-izquierda de '. identifier' debe tener el tipo struct/union
+la izquierda de '. Identifier ' debe tener un tipo struct/union
 
-El operando situado a la izquierda del punto (.) no es una clase, estructura o unión.
+El operando situado a la izquierda del punto (.) no es una clase, estructura o Unión.
 
 Este error puede deberse a un operando izquierdo que sea una variable no definida (por lo tanto, escriba `int`).

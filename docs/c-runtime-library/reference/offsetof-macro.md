@@ -1,7 +1,7 @@
 ---
 title: offsetof (Macro)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,19 +12,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - offsetof
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458328"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951255"
 ---
 # <a name="offsetof-macro"></a>offsetof (Macro)
 
@@ -44,19 +47,19 @@ size_t offsetof(
 *structName*<br/>
 Nombre de la estructura de datos primaria.
 
-*MemberName*<br/>
+*memberName*<br/>
 Nombre del miembro de la estructura de datos primaria cuyo desplazamiento se determina.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**offsetof** devuelve el desplazamiento en bytes del miembro especificado desde el principio de su estructura de datos principal. No se define para campos de bits.
+**PosiciónInicial** devuelve el desplazamiento en bytes del miembro especificado desde el principio de su estructura de datos primaria. No se define para campos de bits.
 
 ## <a name="remarks"></a>Comentarios
 
-El **offsetof** macro devuelve el desplazamiento en bytes de *memberName* desde el principio de la estructura especificada por *structName* como un valor de tipo **size_ t**. Puede especificar tipos con el **struct** palabra clave.
+La macro **offsete** devuelve el desplazamiento en bytes de *memberName* desde el principio de la estructura especificada por *structName* como un valor de tipo **size_t**. Puede especificar tipos con la palabra clave **struct** .
 
 > [!NOTE]
-> **offsetof** no es una función y no se puede describir mediante un prototipo de C.
+> **PosiciónInicial** no es una función y no se puede describir mediante un prototipo de C.
 
 ## <a name="requirements"></a>Requisitos
 

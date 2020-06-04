@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: 8db1ba622a0c83a7f2a6421d79ff5853cbc4d9a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca91b9359417b8c4cce9329e2aa25107016c086
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555565"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750005"
 ---
 # <a name="compiler-error-c3101"></a>Error del compilador C3101
 
-expresión no válida para el campo' argumento de atributo con nombre'
+expresión no válida para el argumento de atributo con nombre ' Field '
 
 Al inicializar un argumento de atributo con nombre, el valor debe ser una constante de tiempo de compilación.
 
-Para obtener más información sobre atributos, vea [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Para obtener más información sobre los atributos, vea [atributos definidos por el usuario](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3101.
+En el ejemplo siguiente se genera C3101.
 
-```
+```cpp
 // C3101.cpp
 // compile with: /clr /c
 ref class AAttribute : System::Attribute {

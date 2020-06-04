@@ -1,17 +1,17 @@
 ---
-title: retval (atributo de COM de C++)
+title: retval (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 4ac6b72095620a3e857f2877d776e91b273e8f33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aded4588614eb4171e31a588f125ea8aa8de7ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166346"
 ---
 # <a name="retval"></a>retval
 
@@ -23,15 +23,15 @@ Designa el parámetro que recibe el valor devuelto del miembro.
 [retval]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **retval** atributo de C++ tiene la misma funcionalidad que el [retval](/windows/desktop/Midl/retval) atributo MIDL.
+El atributo **retval** C++ tiene la misma funcionalidad que el atributo MIDL [retval](/windows/win32/Midl/retval) .
 
-**retval** debe aparecer en el último argumento en la declaración de una función.
+**retval** debe aparecer en el último argumento de una declaración de función.
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **retval**.
+Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de uso de **retval**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -39,14 +39,14 @@ Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **retval**.
 
 |||
 |-|-|
-|**Se aplica a**|Parámetro de interfaz, el método de interfaz|
+|**Se aplica a**|Parámetro de interfaz, método de interfaz|
 |**Reiterativo**|No|
 |**Atributos requeridos**|**out**|
 |**Atributos no válidos**|**in**|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>

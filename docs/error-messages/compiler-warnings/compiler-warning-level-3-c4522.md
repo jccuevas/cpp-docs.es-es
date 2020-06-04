@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-ms.openlocfilehash: de163f0a3925b711f2f3437b700f75bbe994b3e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e791e490929daa4742a4db985f5a4f99f4db9d37
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622968"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992043"
 ---
 # <a name="compiler-warning-level-3-c4522"></a>Advertencia del compilador (nivel 3) C4522
 
-'class': varios operadores de asignación especificados
+' Class ': se especificaron varios operadores de asignación
 
-La clase tiene múltiples operadores de asignación de un tipo único. Esta advertencia es informativa; los constructores son invocables en el programa.
+La clase tiene varios operadores de asignación de un único tipo. Esta advertencia es informativa; se puede llamar a los constructores en el programa.
 
-Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir esta advertencia.
+Use la pragma [Warning](../../preprocessor/warning.md) para suprimir esta advertencia.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4522.
+En el ejemplo siguiente se genera C4522.
 
-```
+```cpp
 // C4522.cpp
 // compile with: /EHsc /W3
 #include <iostream>

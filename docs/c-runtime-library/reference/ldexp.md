@@ -1,12 +1,13 @@
 ---
 title: ldexp, ldexpf, ldexpl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
-apilocation:
+- _o_ldexp
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ldexp
 - ldexpf
@@ -34,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502614"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916542"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -75,26 +80,28 @@ long double ldexpl(
 *x*<br/>
 Valor de punto flotante.
 
-*exp*<br/>
+*consumo*<br/>
 Exponente de entero.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **ldexp** funciones devuelven el valor de *x* \* 2<sup>*exp* </sup> si se realiza correctamente. En caso de desbordamiento y según cuál sea el signo de *x*, **ldexp** devuelve **HUGE_VAL**; el **errno** valor se establece en **ERANGE** .
+Las funciones **ldexp** devuelven el valor de *x* \* 2<sup>*exp*</sup> si se realiza correctamente. En el desbordamiento, y en función del signo de *x*, **ldexp** devuelve +/- **HUGE_VAL**; el valor **errno** se establece en **ERANGE**.
 
-Para obtener más información acerca de **errno** y los posibles valores devueltos erróneos, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información sobre **errno** y los posibles valores devueltos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ldexp** que toman **float** o **largo** **doble** tipos. En un programa C, **ldexp** siempre toma un **doble** y un **int** y devuelve un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **ldexp** que toman tipos **float** o **Long** **Double** . En un programa de C, **ldexp** siempre toma un **valor Double** y un **entero** y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**, **ldexpf (**, **ldexpl**|\<math.h>|\<cmath>|
 
-Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

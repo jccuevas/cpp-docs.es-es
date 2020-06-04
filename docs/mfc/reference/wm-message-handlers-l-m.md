@@ -1,5 +1,5 @@
 ---
-title: 'Controladores de mensajes WM_: L - M'
+title: 'Mensajes Wm_: L - M'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_MENUSELECT
@@ -33,14 +33,14 @@ helpviewer_keywords:
 - ON_WM_LBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
-ms.openlocfilehash: 395bd7f627fe85b8bb763bdb1e75ae36c91b3061
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ebf5ced1f8e36dc059922b67552b19ca4672443
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309166"
 ---
-# <a name="wm-message-handlers-l---m"></a>Controladores de mensajes WM_: L - M
+# <a name="wm-message-handlers-l---m"></a>Mensajes Wm_: L - M
 
 Las siguientes entradas de mapa de la izquierda se corresponden con los prototipos de función de la derecha:
 
@@ -72,4 +72,3 @@ Las siguientes entradas de mapa de la izquierda se corresponden con los prototip
 
 [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)<br/>
 [Controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

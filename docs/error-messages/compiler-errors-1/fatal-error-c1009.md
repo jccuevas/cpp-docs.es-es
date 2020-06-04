@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1009
 ms.assetid: dcc8383c-3362-4c47-9c26-25d2451ebd53
-ms.openlocfilehash: c4654d37f5ce184f6fa5b8888e6ca0184267be07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df298db97e81be0f1f7ab89c89855d9b0f5c569c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542667"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204833"
 ---
 # <a name="fatal-error-c1009"></a>Error irrecuperable C1009
 
 límite del compilador: las macros están demasiado anidadas
 
-El compilador ha intentado expandir demasiadas macros al mismo tiempo. El compilador tiene un límite de 256 niveles de macros anidadas. Divida las macros anidadas en macros más sencillas.
+El compilador intentó expandir demasiadas macros al mismo tiempo. El compilador tiene un límite de 256 niveles de macros anidadas. Divida las macros anidadas en macros más sencillas.

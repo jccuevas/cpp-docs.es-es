@@ -4,18 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - _com_error::operator=
 helpviewer_keywords:
-- operator= _com_error objects
-- = operator [C++], with specific Visual C++ objects
-- operator = _com_error objects
+- _com_error [C++]
 ms.assetid: b9cc4094-d055-450c-b45a-0a95317488f8
-ms.openlocfilehash: 68eb486ec109d98890ebf3adc0c086368380142b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f24076a0286da910378d6633f483e6f050858b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449600"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180555"
 ---
-# <a name="comerroroperator-"></a>_com_error::operator =
+# <a name="_com_erroroperator-"></a>_com_error::operator =
 
 **Específicos de Microsoft**
 
@@ -31,11 +29,11 @@ _com_error& operator = (
 
 #### <a name="parameters"></a>Parámetros
 
-*que*<br/>
-Un objeto `_com_error`.
+*es*<br/>
+Objeto `_com_error` .
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_com_error (Clase)](../cpp/com-error-class.md)

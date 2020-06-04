@@ -1,21 +1,21 @@
 ---
-title: helpstringcontext (atributo de COM de C++)
+title: helpstringcontext (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: d292dd53ff3009a571dd5b0a1ba102e75b648e4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533606"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168154"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
-Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.
+Especifica el identificador de un tema de ayuda en un archivo. hlp o. chm.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,11 +26,11 @@ Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.
 ### <a name="parameters"></a>Parámetros
 
 *contextID*<br/>
-Un identificador de contexto de Ayuda de 32 bits en el **ayuda** archivo.
+Un identificador de contexto de ayuda de 32 bits en el archivo de **ayuda** .
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **helpstringcontext** atributo de C++ tiene la misma funcionalidad que el [helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL (atributo).
+El atributo **helpstringcontext** C++ tiene la misma funcionalidad que el atributo ODL de [helpstringcontext](/windows/win32/Midl/helpstringcontext) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -56,12 +56,12 @@ __interface IMyI
 |-|-|
 |**Se aplica a**|**clase**, **interfaz**, método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)<br/>

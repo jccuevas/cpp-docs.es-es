@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4353
 ms.assetid: 6e79f186-ed82-4c95-9923-0ad5bb9c4db1
-ms.openlocfilehash: 305c1156ae8dc664edba17287786db50bfabbd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c91a3d21a16cc8891d6f04db49c3a0f0ec26e2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187198"
 ---
 # <a name="compiler-warning-level-1-c4353"></a>Advertencia del compilador (nivel 1) C4353
 
-ha utilizado una extensión no estándar: constante 0 como expresión de función. Utilice en su lugar '__noop' función intrínseca
+se ha utilizado una extensión no estándar: constante 0 como expresión de función. Use en su lugar la función intrínseca ' __noop '
 
-No se puede usar la constante cero (0) como una expresión de función. Para obtener más información, consulte [__noop](../../intrinsics/noop.md).
+No se puede usar la constante cero (0) como expresión de función. Para obtener más información, vea [__noop](../../intrinsics/noop.md).
 
-El ejemplo siguiente genera C4353:
+En el ejemplo siguiente se genera C4353:
 
-```
+```cpp
 // C4353.cpp
 // compile with: /W1
 void MyPrintf(void){};

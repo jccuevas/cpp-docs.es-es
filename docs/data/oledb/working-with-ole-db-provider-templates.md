@@ -7,16 +7,16 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 23a455eef5645aa027a9fdb97baaea948500cd6c
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209248"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Trabajar con plantillas de proveedores OLE DB
 
-Para obtener información sobre cómo trabajar con las plantillas de proveedor OLE DB, vea los temas siguientes:
+Para obtener información sobre cómo trabajar con las plantillas de proveedor de OLE DB, vea los temas siguientes:
 
 - [Agregar una interfaz a un proveedor](../../data/oledb/adding-an-interface-to-your-provider.md)
 
@@ -34,7 +34,7 @@ Para obtener información sobre cómo trabajar con las plantillas de proveedor O
 
 - [Convertir datos no compatibles con el proveedor](../../data/oledb/converting-data-not-supported-by-the-provider.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

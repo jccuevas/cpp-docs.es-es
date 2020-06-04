@@ -1,67 +1,48 @@
 ---
 title: /errorReport (Informar de los errores del compilador)
-ms.date: 11/04/2016
+description: Referencia de la opción de líneaC++ de comandos de Microsoft C/Compiler/errorreport.
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
-- /errorreport
 helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 8529e8c3cfc0914797c81207889a9505f1d57382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9efe96ed2611795e1fef408ad07b49d65261c3b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660166"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075081"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Informar de los errores del compilador)
 
-Permite proporcionar directamente a Microsoft información sobre los errores internos del compilador (ICE).
+> [!NOTE]
+> La opción **/errorreport** está en desuso. A partir de Windows Vista, los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-/errorReport:[ none | prompt | queue | send ]
-```
+> **/errorreport:** \[**none** \| **prompt** \| **Queue** \| **send** ]
 
-## <a name="arguments"></a>Argumentos
+## <a name="remarks"></a>Observaciones
 
-**none**<br/>
-No se recopilarán informes sobre errores internos del compilador ni se enviarán a Microsoft.
+Se produce un error interno del compilador (ICE) cuando el compilador no puede procesar un archivo de código fuente. Cuando se produce un ICE, el compilador no genera un archivo de salida ni ningún diagnóstico útil que pueda usar para corregir el código.
 
-**prompt**<br/>
-Pregunta si desea enviar un informe cuando recibe un error interno del compilador. **símbolo del sistema** es el valor predeterminado cuando se compila una aplicación en el entorno de desarrollo.
-
-**queue**<br/>
-Pone en cola el informe de error. Cuando inicie sesión con privilegios de administrador, se muestra una ventana para que se puede notificar los errores desde la última vez que se ha iniciado sesión (no se le indicará que envíe informes de errores más de una vez cada tres días). **cola** es el valor predeterminado cuando se compila una aplicación en un símbolo del sistema.
-
-**send**<br/>
-Envía automáticamente informes de errores internos del compilador a Microsoft si el informe está habilitado por la configuración del sistema de informes de errores de Windows.
-
-## <a name="remarks"></a>Comentarios
-
-Cuando el compilador no puede procesar un archivo de código fuente, se produce un error interno del compilador (ICE). Cuando se produce un ICE, el compilador no genera un archivo de salida ni otro tipo de diagnóstico útil que pueda usar para corregir el código.
-
-En versiones anteriores, al que obtuvo un ICE, se recomienda llamar a servicios de soporte técnico de Microsoft para informar del problema. Con **/errorreport**, puede proporcionar información de los ICE directamente a Microsoft. Sus informes de error pueden ayudar a mejorar las futuras versiones del compilador.
-
-La capacidad de un usuario de enviar informes depende de los permisos de directiva de equipo y de usuario.
+La configuración del servicio Informe de errores de Windows invalida los argumentos **/errorreport** . El compilador envía automáticamente informes de errores internos a Microsoft, si los informes se habilitan mediante Informe de errores de Windows. No se envía ningún informe si está deshabilitado por Informe de errores de Windows.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Haga clic en la carpeta **C/C++** .
+1. Abra las **propiedades de configuración** > página de propiedades **avanzadas** de **CC++ /**  > .
 
-1. Haga clic en el **avanzadas** página de propiedades.
-
-1. Modificar el **Error Reporting** propiedad.
+1. Modifique la propiedad **informes de errores** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
 - Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+\ [Opciones del compilador MSVC](compiler-options.md)
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

@@ -1,10 +1,10 @@
 ---
 title: __getmainargs, __wgetmainargs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wgetmainargs
 - __getmainargs
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcrt.dll
 - msvcr110_clr0400.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __wgetmainargs
 - __getmainargs
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: 6e2bf21f2ac50d3486af56f9581ff6c8d0e0c309
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
-ms.translationtype: HT
+ms.openlocfilehash: 01658c6146706d8ea7bfd70d002efcfff88031b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523343"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171598"
 ---
-# <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
+# <a name="__getmainargs-__wgetmainargs"></a>__getmainargs, __wgetmainargs
 
 Invoca al análisis de línea de comandos y vuelve a copiar los argumentos en `main()` mediante los punteros que se pasan.
 
@@ -70,7 +73,7 @@ Otra información que se pasa al archivo DLL de CRT.
 
 0 si es correcto; un valor negativo si no lo es.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Use `__getmainargs` en plataformas de caracteres no anchos y `__wgetmainargs` en plataformas de caracteres anchos (Unicode).
 

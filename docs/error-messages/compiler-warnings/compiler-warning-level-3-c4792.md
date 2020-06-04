@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4792
 ms.assetid: c047ce69-a622-44e1-9425-d41aa9261c61
-ms.openlocfilehash: adf233673c4b654927aa9488565adf6ceef5d3e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0efed41fad2648d7e681fa4e5575e7f36fb6aeb
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501197"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991676"
 ---
 # <a name="compiler-warning-level-3-c4792"></a>Advertencia del compilador (nivel 3) C4792
 
@@ -23,7 +23,7 @@ Esta advertencia no se puede resolver  en el código ni cambiando la forma de re
 
 El ejemplo siguiente genera la advertencia C4792:
 
-```
+```cpp
 // C4792.cpp
 // compile with: /clr /W3
 // C4792 expected

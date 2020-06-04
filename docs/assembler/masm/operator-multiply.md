@@ -1,6 +1,6 @@
 ---
-title: operador *
-ms.date: 08/30/2018
+title: '\* (Operador)'
+ms.date: 12/17/2019
 f1_keywords:
 - operator *
 helpviewer_keywords:
@@ -10,21 +10,22 @@ helpviewer_keywords:
 - arithmetic operators [C++], multiplication
 - operators [MASM], multiplication
 ms.assetid: 6a66521c-664f-41c3-8a77-5a948df1e9ad
-ms.openlocfilehash: 8d115d41e9d24cc036fd641669c0f11baa31b756
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82af3b7ddc4d632629efcfa2f11d83866c58622
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432349"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317830"
 ---
-# <a name="operator-"></a>operador *
+# <a name="operator-"></a>\* (Operador)
 
-Devuelve *expression1* veces *expression2*.
+Devuelve *expression1* Times *expression2*.
 
 ## <a name="syntax"></a>Sintaxis
 
-> expression1 * expression2
+> *expression1* __\*__ *expresión2*
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

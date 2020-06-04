@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 498aefae4dfe8fd13184b9da1685494d533575dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ede846c9068978ad5d283e97b1c96d3527bf67c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556434"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757244"
 ---
 # <a name="compiler-error-c3764"></a>Error del compilador C3764
 
-'función_de_reemplazo': no se puede invalidar el método de clase base 'función_de_clase_base'
+' override_function ': no se puede invalidar el método de clase base ' base_class_function '
 
-El compilador detectó una invalidación con formato incorrecto. Por ejemplo, la función de la clase base no era `virtual`. Para obtener más información, consulte [invalidar](../../windows/override-cpp-component-extensions.md).
+El compilador detectó una invalidación con un formato incorrecto. Por ejemplo, la función de clase base no se `virtual`. Para obtener más información, vea [override](../../extensions/override-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3764.
+En el ejemplo siguiente se genera C3764.
 
-```
+```cpp
 // C3764.cpp
 // compile with: /clr /c
 public ref struct A {
@@ -39,9 +39,9 @@ public ref struct B : A {
 
 ## <a name="example"></a>Ejemplo
 
-C3764 también puede producirse cuando un método de clase base es explícitamente y con nombre se reemplaza. El ejemplo siguiente genera C3764.
+C3764 también se puede producir cuando un método de clase base es explícitamente y tiene el nombre invalidado. En el ejemplo siguiente se genera C3764.
 
-```
+```cpp
 // C3764_b.cpp
 // compile with: /clr /c
 ref struct A {

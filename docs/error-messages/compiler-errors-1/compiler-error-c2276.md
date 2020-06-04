@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2276
 ms.assetid: 62005ad9-6cb9-4b1f-965d-b875adaf695e
-ms.openlocfilehash: 2128be2be4f0b5be37bbfc5098a35bb39afe5906
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69bbabbf38f7ee02d08f4b5e9dc4bed167919291
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633667"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760067"
 ---
 # <a name="compiler-error-c2276"></a>Error del compilador C2276
 
-'operador': operación no válida en la expresión de función miembro enlazada
+' Operator ': operación no válida en una expresión de función miembro enlazada
 
 El compilador encontró un problema con la sintaxis para crear un puntero a miembro.
 
-El ejemplo siguiente genera C2276:
+En el ejemplo siguiente se genera C2276:
 
-```
+```cpp
 // C2276.cpp
 class A {
 public:

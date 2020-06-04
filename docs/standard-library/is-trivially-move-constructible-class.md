@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-ms.openlocfilehash: a1aef356716fac903b4e44a358602c709572e8ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 279da956eaff21c39c6e5ca563f26989105f7e74
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544357"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448360"
 ---
 # <a name="istriviallymoveconstructible-class"></a>Clase is_trivially_move_constructible
 
@@ -26,12 +26,12 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor de movimiento trivial, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor de movimiento trivial; en caso contrario, contiene false.
 
 Un constructor de movimiento para una clase *Ty* es trivial si:
 
@@ -41,11 +41,11 @@ sus tipos de parámetro son equivalentes a los de una declaración implícita
 
 la clase *Ty* no tiene ninguna función virtual
 
-la clase *Ty* tiene ninguna base virtual
+la clase *Ty* no tiene ninguna base virtual
 
 la clase no tiene ningún miembro de datos no estáticos volátil
 
-todas las bases directas de la clase *Ty* tienen constructores de movimiento trivial
+todas las bases directas de la clase *Ty* tienen constructores de movimiento triviales
 
 las clases de todos los miembros de datos no estáticos del tipo de clase tienen constructores de movimiento triviales
 
@@ -59,4 +59,4 @@ las clases de todos los miembros de datos no estáticos de la matriz de tipo de 
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

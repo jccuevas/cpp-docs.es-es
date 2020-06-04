@@ -1,9 +1,10 @@
 ---
 title: set_terminate (CRT)
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - set_terminate
-apilocation:
+- _o_set_terminate
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_terminate
 helpviewer_keywords:
@@ -23,16 +28,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493917"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914516"
 ---
-# <a name="setterminate-crt"></a>set_terminate (CRT)
+# <a name="set_terminate-crt"></a>set_terminate (CRT)
 
-Instala su propia rutina de finalización para ser llamado por **finalizar**.
+Instala su propia rutina de finalización a la que debe llamar **Terminate**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,24 +52,26 @@ Puntero a una función de finalización que se escribe.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la función anterior registrada por **set_terminate** para que la función anterior se puede restaurar más adelante. Si no se ha establecido ninguna función anterior, el valor devuelto puede utilizarse para restaurar el comportamiento predeterminado; Este valor puede ser **NULL**.
+Devuelve un puntero a la función anterior registrada por **set_terminate** para que la función anterior se pueda restaurar más adelante. Si no se ha establecido ninguna función anterior, el valor devuelto se puede utilizar para restaurar el comportamiento predeterminado; Este valor puede ser **null**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **set_terminate** función instalaciones *termFunction* como la función llamada por **finalizar**. **set_terminate** se usa con el control de excepciones de C++ y se puede llamar en cualquier momento en el programa antes de que se produce la excepción. **Finalizar** llamadas [anular](abort.md) de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo su propia función de finalización y llamar a **set_terminate** con el nombre de la función como su argumento. **Finalizar** llama a la última función especificada como argumento a **set_terminate**. Después de llevar a cabo cualquier tarea de limpieza, de deseada *termFunction* debe salir del programa. Si no existe (si se devuelve a su llamador), [anular](abort.md) se llama.
+La función **set_terminate** instala *termFunction* como la función a la que llama **Terminate**. **set_terminate** se usa con el control de excepciones de C++ y se puede llamar en cualquier punto del programa antes de que se produzca la excepción. la instrucción **Terminate** llama a [Abort](abort.md) de forma predeterminada. Puede cambiar este valor predeterminado si escribe su propia función de finalización y llama a **set_terminate** con el nombre de la función como su argumento. **Terminate** llama a la última función especificada como argumento para **set_terminate**. Después de realizar las tareas de limpieza deseadas, *termFunction* debe salir del programa. Si no sale (si vuelve a su llamador), se llama a [Abort](abort.md) .
 
 En un entorno multiproceso, las funciones de finalización se mantienen por separado para cada subproceso. Cada subproceso nuevo debe instalar su propia función de finalización. Por lo tanto, cada subproceso se encarga de su propio control de finalización.
 
-El **terminate_function** tipo está definido en el controlador de eventos. H como un puntero a una función de finalización definida por el usuario, *termFunction* que devuelve **void**. La función personalizada *termFunction* puede tomar ningún argumento y no debe devolver al llamador. Si es así, [anular](abort.md) se llama. No se puede producir una excepción desde *termFunction*.
+El tipo de **terminate_function** se define en EH. H como puntero a una función de finalización definida por el usuario, *termFunction* que devuelve **void**. La función personalizada *termFunction* no puede tomar ningún argumento y no debe volver a su llamador. Si es así, se llama a [Abort](abort.md) . Una excepción no se puede iniciar desde dentro de *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> El **set_terminate** función solo funciona fuera del depurador.
+> La función **set_terminate** solo funciona fuera del depurador.
 
-Solo hay un **set_terminate** controlador para todos los dinámicamente exe y DLL vinculados; incluso si se llama a **set_terminate** el controlador puede reemplazarse por otro, o que puede sustituir un controlador establecido por otro Archivo DLL o EXE.
+Hay un único controlador de **set_terminate** para todos los archivos dll o exe vinculados dinámicamente. incluso si llama a **set_terminate** el controlador puede reemplazarse por otro, o puede que esté reemplazando un controlador establecido por otro archivo dll o exe.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -72,17 +79,17 @@ Solo hay un **set_terminate** controlador para todos los dinámicamente exe y DL
 |-------------|---------------------|
 |**set_terminate**|\<eh.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [terminate](terminate-crt.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Rutinas para el control de excepciones](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[aborta](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[terminate](terminate-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[cancela](terminate-crt.md)<br/>
+[esperado](unexpected-crt.md)<br/>

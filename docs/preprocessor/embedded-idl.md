@@ -1,38 +1,35 @@
 ---
-title: embedded_idl
-ms.date: 10/18/2018
+title: atributo de importación embedded_idl
+ms.date: 08/29/2019
 f1_keywords:
 - embedded_idl
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525611"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216327"
 ---
-# <a name="embeddedidl"></a>embedded_idl
+# <a name="embedded_idl-import-attribute"></a>atributo de importación embedded_idl
 
-**Específicos de C++**
+**C++Cuestión**
 
-Especifica que la biblioteca de tipos se escriba en el archivo .tlh, conservando el código generado por el atributo.
+Especifica si la biblioteca de tipos se escribe en `.tlh` el archivo con el código generado por el atributo conservado.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-embedded_idl[("param")]
-```
+> **#import** *biblioteca de tipos* **embedded_idl** [ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
 
 ### <a name="parameters"></a>Parámetros
 
-*param*<br/>
-Puede ser uno de dos valores:
+**emitidl**\
+La información de tipo importada de *Type-Library* está presente en el IDL generado para el proyecto con atributos. Este comportamiento es el predeterminado y está en vigor si no se especifica un parámetro en `embedded_idl`.
 
-- **emitidl**: información de tipo importada de typelib estará presente en el archivo IDL generado para el proyecto con atributos.  Este es el valor predeterminado y estará en vigor si no se especifica un parámetro para `embedded_idl`.
-
-- **no_emitidl**: información de tipo importada de typelib no estará presente en el archivo IDL generado para el proyecto con atributos.
+**"no_emitidl"** \
+La información de tipo importada de la *biblioteca de tipos* no está presente en el IDL generado para el proyecto con atributos.
 
 ## <a name="example"></a>Ejemplo
 
@@ -44,11 +41,9 @@ Puede ser uno de dos valores:
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-## <a name="remarks"></a>Comentarios
-
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

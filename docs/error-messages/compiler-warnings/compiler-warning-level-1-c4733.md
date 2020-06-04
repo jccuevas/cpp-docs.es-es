@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-ms.openlocfilehash: 0d0b0b912ef15294f9a4362a79dffd6d7eeabed8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39674c32deb506725aa5f7c1f5f875e771519938
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474925"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185677"
 ---
 # <a name="compiler-warning-level-1-c4733"></a>Advertencia del compilador (nivel 1) C4733
 
-Inline asm que asigna a 'FS: 0': controlador no está registrado como controlador seguro
+Asignación de ASM en línea a ' FS: 0 ': el controlador no está registrado como controlador seguro
 
-Una función que modifique el valor en FS: 0 para agregar un nuevo controlador de excepción puede no funcionar con las excepciones seguras, porque no se puede registrar el controlador como un controlador de excepciones válido (vea [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
+Función que modifica el valor en FS: 0 para agregar un nuevo controlador de excepciones, puede que no funcione con excepciones seguras, ya que el controlador no se puede registrar como un controlador de excepciones válido (vea [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
 
-Para resolver esta advertencia, quite la definición FS: 0 o desactivar esta advertencia y usar [. SAFESEH](../../assembler/masm/dot-safeseh.md) para especificar los controladores de excepciones seguros.
+Para resolver esta advertencia, quite el FS: 0 definición o desactive esta advertencia y use [. SAFESEH](../../assembler/masm/dot-safeseh.md) para especificar los controladores de excepciones seguros.
 
-El ejemplo siguiente genera C4733:
+En el ejemplo siguiente se genera C4733:
 
-```
+```cpp
 // C4733.cpp
 // compile with: /W1 /c
 // processor: x86

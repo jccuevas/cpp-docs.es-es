@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605158"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178956"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Reglas y limitaciones de las funciones naked
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
 Las reglas y las limitaciones siguientes se aplican a las funciones naked:
 
-- El **devolver** no permite la instrucción.
+- No se permite la instrucción **Return** .
 
 - Las construcciones de control estructurado de excepciones y control de excepciones de C++ no se permiten porque deben desenredarse a través del marco de la pila.
 
@@ -31,9 +31,9 @@ Las reglas y las limitaciones siguientes se aplican a las funciones naked:
 
 - No se pueden declarar objetos de clase de C++ en el ámbito léxico de la función. Sin embargo, se pueden declarar objetos en un bloque anidado.
 
-- El **naked** se omite la palabra clave cuando se compila con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+- La palabra clave **naked** se omite al compilar con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Para [__fastcall](../cpp/fastcall.md) funciones naked, siempre que haya una referencia en el código de C o C++ en uno de los argumentos del registro, el código de prólogo debe almacenar los valores de ese registro en la ubicación de la pila para esa variable. Por ejemplo:
+- En el caso de las funciones de [__fastcall](../cpp/fastcall.md) Naked, siempre que hayaC++ una referencia en C/Code a uno de los argumentos de registro, el código de prólogo debe almacenar los valores de que se registran en la ubicación de la pila para esa variable. Por ejemplo:
 
 ```cpp
 // nkdfastcl.cpp
@@ -72,6 +72,6 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Llamadas de función naked](../cpp/naked-function-calls.md)

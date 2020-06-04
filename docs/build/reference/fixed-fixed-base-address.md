@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -FIXED linker option
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-ms.openlocfilehash: 12ba2d977ecca4805aa01ade1a6ea8239e07716e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292489"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Dirección base fija)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50523037"
 
 ## <a name="remarks"></a>Comentarios
 
-Indica al sistema operativo que solo debe cargar el programa en su dirección base preferida. Si dicha dirección base no está disponible, el sistema operativo no cargará el archivo. Para obtener más información, consulte [/BASE (dirección base)](../../build/reference/base-base-address.md).
+Indica al sistema operativo que solo debe cargar el programa en su dirección base preferida. Si dicha dirección base no está disponible, el sistema operativo no cargará el archivo. Para obtener más información, consulte [/BASE (dirección base)](base-base-address.md).
 
 /FIXED:NO es el valor predeterminado para un archivo DLL, mientras que /FIXED se utiliza para proyectos de cualquier otro tipo.
 
@@ -35,7 +35,7 @@ Si se especifica /FIXED:NO, se generará una sección de cambio de ubicación en
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **vinculador** carpeta.
 
@@ -49,5 +49,5 @@ Si se especifica /FIXED:NO, se generará una sección de cambio de ubicación en
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

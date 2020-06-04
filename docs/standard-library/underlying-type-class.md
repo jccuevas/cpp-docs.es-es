@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-ms.openlocfilehash: 23e5e9bc5406265f49fca2ed220c597cb32e2a9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4768d78047112a7584ca49b0e4487fad55a970
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609708"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688839"
 ---
-# <a name="underlyingtype-class"></a>underlying_type (Clase)
+# <a name="underlying_type-class"></a>underlying_type (Clase)
 
 Genera el tipo entero subyacente para un tipo de enumeración.
 
@@ -26,12 +26,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*T* \
 Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-El `type` typedef de miembro de la clase de plantilla nombra el tipo entero subyacente de *T*, cuando *T* es un tipo de enumeración, en caso contrario, no hay ninguna definición de tipo de miembro `type`.
+La definición de tipo de miembro de `type` de la plantilla de clase nombra el tipo entero subyacente de *t*, cuando *t* es un tipo de enumeración; de lo contrario, no hay ningún miembro typedef `type`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ El `type` typedef de miembro de la clase de plantilla nombra el tipo entero suby
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2040
 ms.assetid: 74ca3592-1469-4965-ab34-a4815e2fbefe
-ms.openlocfilehash: b45ec25f1ed516ae73b242fdcc7c66f68c92f724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8002d7168354b1213d01ca390a03b1baa5e35c88
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624723"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740421"
 ---
 # <a name="compiler-error-c2040"></a>Error del compilador C2040
 
@@ -21,7 +21,7 @@ Una expresión que contenga los operandos especificados tiene tipos de operando 
 
 Este ejemplo genera el error C2040 y muestra cómo corregirlo.
 
-```
+```cpp
 // C2040.cpp
 // Compile by using: cl /c /W3 C2040.cpp
 bool test() {

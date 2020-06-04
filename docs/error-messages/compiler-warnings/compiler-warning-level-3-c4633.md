@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4633
 ms.assetid: 6d76f268-ba8c-448b-8e83-b903a18b583b
-ms.openlocfilehash: f1a4af399859c28f13432a344ae3dd921f9e1696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91a1f2a646adca7cf121528779bf0ded4d37024e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459821"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991904"
 ---
 # <a name="compiler-warning-level-3-c4633"></a>Advertencia del compilador (nivel 1) C4633
 
-Destino del comentario del documento XML: error: razón
+Destino del comentario del documento XML: error: motivo
 
-Pasa un nombre a la [ \<param >](../../ide/param-visual-cpp.md) no se encontró la etiqueta a la que el compilador.
+El compilador no encontró un nombre pasado a la etiqueta [\<param >](../../build/reference/param-visual-cpp.md) .
 
-El ejemplo siguiente genera C4633:
+En el ejemplo siguiente se genera C4633:
 
-```
+```cpp
 // C4633.cpp
 // compile with: /clr /doc /LD /W3
 

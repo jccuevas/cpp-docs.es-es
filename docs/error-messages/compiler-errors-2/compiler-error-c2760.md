@@ -6,22 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2760
 ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
-ms.openlocfilehash: 24c33d90c0f91aa3c4b01142902afc4333c1c732
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5680de2fe0364d7cdc5e7ef017bd298423ea4c21
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550571"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273668"
 ---
 # <a name="compiler-error-c2760"></a>Error del compilador C2760
 
-error de sintaxis: se esperaba 'nombre1' no 'nombre2'
+> error de sintaxis: se esperaba '*nombre1*' no '*nombre2*'
 
-Un operador de conversión se usa con un operador no válido.
+## <a name="remarks"></a>Comentarios
 
-El ejemplo siguiente genera C2760:
+Hay varias maneras de producir este error. Normalmente, se debe a una secuencia de tokens de la que el compilador no puede tener sentido.
 
-```
+## <a name="example"></a>Ejemplo
+
+En este ejemplo, se usa un operador de conversión con un operador no válido.
+
+```cpp
 // C2760.cpp
 class B {};
 class D : public B {};

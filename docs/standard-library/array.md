@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf9209b18328735f15393687528a40a94198730
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553301"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690037"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliares.
+Define la **matriz** de plantillas de clase de contenedor y varias plantillas auxiliares.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <array>
-```
+**Encabezado:** \<array>
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> La biblioteca de > de \<array también utiliza la instrucción `#include <initializer_list>`.
+
+## <a name="members"></a>Miembros
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|Almacena una secuencia de elementos de longitud fija.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Contiene el tipo de un elemento de matriz.|
@@ -33,7 +38,7 @@ Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliare
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|comparación de matriz, igual|
 |[operator!=](../standard-library/array-operators.md#op_neq)|comparación de matriz, no igual|
@@ -44,12 +49,12 @@ Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliare
 
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|Obtiene el elemento de matriz especificado.|
 |[swap](../standard-library/array-functions.md#swap)|Intercambia el contenido de una matriz con el contenido de otra.|
 
 ## <a name="see-also"></a>Vea también
 
-[\<tuple>](../standard-library/tuple.md)<br/>
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<tuple>](../standard-library/tuple.md)\
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

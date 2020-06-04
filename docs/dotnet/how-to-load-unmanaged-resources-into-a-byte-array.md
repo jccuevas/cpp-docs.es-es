@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: d7d35af462a2d598995f222221a4023d09c73ff3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579891"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544962"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Cómo: Cargar recursos no administrados en una matriz de bytes
 
-En este tema se describe varias formas de cargar recursos no administrados en un <xref:System.Byte> matriz.
+En este tema se describen varias maneras de cargar recursos no administrados en una matriz de <xref:System.Byte>.
 
 ## <a name="example"></a>Ejemplo
 
-Si conoce el tamaño de los recursos no administrados, puede asignar previamente una matriz de CLR y, a continuación, cargue el recurso en la matriz mediante un puntero al bloque de la matriz CLR.
+Si conoce el tamaño del recurso no administrado, puede preasignar una matriz de CLR y, a continuación, cargar el recurso en la matriz mediante un puntero al bloque de matriz de la matriz de CLR.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se muestra cómo copiar datos desde un bloque de memoria no administrada a una matriz administrada.
+En este ejemplo se muestra cómo copiar datos de un bloque de memoria no administrada a una matriz administrada.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;
@@ -75,6 +75,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

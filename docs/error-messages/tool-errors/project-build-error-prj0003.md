@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 9a116f41efc791ed90fbac8065bc339172c9ea9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59028c6d886630ef7db115a2ea93327669b2fcfd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572395"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192931"
 ---
 # <a name="project-build-error-prj0003"></a>Error PRJ0003 al compilar el proyecto
 
 > Error al generar '*línea de comandos*'.
 
-El *línea de comandos* comando tiene el formato de entrada en el **páginas de propiedades** cuadro de diálogo devolvió un código de error, pero se muestra ninguna información en el **salida** ventana.
+El comando de *línea de comandos* formado a partir de la entrada en el cuadro de diálogo **páginas de propiedades** devolvió un código de error, pero no aparece ninguna información en la ventana de **salida** .
 
-Las posibles razones para este error incluyen:
+Entre los posibles motivos de este error se incluyen:
 
-- El proyecto depende del servidor ATL. A partir de Visual Studio 2008, servidor ATL ya no se incluye como parte de Visual Studio, pero se ha publicado como un proyecto de código fuente compartido en CodePlex. Para descargar las herramientas y el código fuente del servidor ATL, vaya a [herramientas y la biblioteca de servidor ATL](http://go.microsoft.com/fwlink/p/?linkid=81979).
+- El proyecto depende del servidor ATL. A partir de Visual Studio 2008, el servidor ATL ya no se incluye como parte de Visual Studio, pero se ha publicado como un proyecto de código fuente compartido en CodePlex. Para descargar el código fuente y las herramientas de servidor ATL, vaya a la [biblioteca de servidor ATL y las](https://go.microsoft.com/fwlink/p/?linkid=81979)herramientas.
 
-- Recursos del sistema insuficientes. Cierre algunas aplicaciones para resolver este problema.
+- Pocos recursos del sistema. Cierre algunas aplicaciones para resolver este fin.
 
 - Privilegios de seguridad insuficientes. Compruebe que dispone de suficientes privilegios de seguridad.
 
-- Las rutas de acceso ejecutable especificados en **directorios de VC ++** no incluyen la ruta de acceso para la herramienta que está intentando ejecutar. Para obtener información, consulte [trabajar con las propiedades del proyecto](../../ide/working-with-project-properties.md)
+- Las rutas de acceso del archivo ejecutable especificadas en los **directorios de VC + +** no incluyen la ruta de acceso de la herramienta que está intentando ejecutar. Para obtener más información, vea [establecer las propiedades del compilador y compilación](../../build/working-with-project-properties.md)
 
-- Para proyectos de archivos MAKE, falta un comando para ejecutarse en cualquiera **crear línea de comandos** o **volver a generar la línea de comandos**.
+- En el caso de los proyectos de archivos make, falta un comando para ejecutarlo en la línea de comandos de compilación o en la **línea de comandos**de **recompilación** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Errores y advertencias de compilación del proyecto (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

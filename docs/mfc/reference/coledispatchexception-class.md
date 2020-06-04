@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: 06f8d8abd8ea337369ceed62a9944e867d355768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4572b639b757569d8e3cfa731f99c123762f3900
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456243"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375061"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException (clase)
 
@@ -37,21 +37,21 @@ class COleDispatchException : public CException
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Contexto de ayuda para el error.|
-|[COleDispatchException::m_strDescription](#m_strdescription)|Descripción del error.|
-|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|Archivo de ayuda para usar con `m_dwHelpContext`.|
+|[COleDispatchException::m_strDescription](#m_strdescription)|Descripción del error verbal.|
+|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|Archivo de ayuda `m_dwHelpContext`para usar con .|
 |[COleDispatchException::m_strSource](#m_strsource)|Aplicación que generó la excepción.|
 |[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-código de error específico.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Como las demás clases de excepción derivan de la `CException` de la clase base `COleDispatchException` puede utilizarse con las macros THROW, THROW_LAST, TRY, CATCH, AND_CATCH y END_CATCH.
+Al igual que las otras `CException` clases `COleDispatchException` de excepción derivadas de la clase base, se pueden utilizar con las macros THROW, THROW_LAST, TRY, CATCH, AND_CATCH y END_CATCH.
 
 En general, debe llamar a [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) para crear y producir un `COleDispatchException` objeto.
 
-Para obtener más información sobre las excepciones, consulte los artículos [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md) y [excepciones: excepciones OLE](../../mfc/exceptions-ole-exceptions.md).
+Para obtener más información sobre las excepciones, vea los artículos Control de excepciones [(MFC)](../../mfc/exception-handling-in-mfc.md) y [Excepciones: Excepciones OLE](../../mfc/exceptions-ole-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -65,15 +65,15 @@ Para obtener más información sobre las excepciones, consulte los artículos [d
 
 **Encabezado:** afxdisp.h
 
-##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext
+## <a name="coledispatchexceptionm_dwhelpcontext"></a><a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext
 
-Identifica un contexto de ayuda en la Ayuda de la aplicación (. Archivo HLP).
+Identifica un contexto de ayuda en la ayuda de la aplicación (. HLP).
 
 ```
 DWORD m_dwHelpContext;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este miembro se establece mediante la función [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) cuando se produce una excepción.
 
@@ -81,15 +81,15 @@ Este miembro se establece mediante la función [AfxThrowOleDispatchException](ex
 
   Vea el ejemplo de [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription
+## <a name="coledispatchexceptionm_strdescription"></a><a name="m_strdescription"></a>COleDispatchException::m_strDescription
 
-Contiene una descripción del error, como "Disco lleno".
+Contiene una descripción de error verbal, como "Disco lleno."
 
 ```
 CString m_strDescription;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este miembro se establece mediante la función [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) cuando se produce una excepción.
 
@@ -97,17 +97,17 @@ Este miembro se establece mediante la función [AfxThrowOleDispatchException](ex
 
   Vea el ejemplo de [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile
+## <a name="coledispatchexceptionm_strhelpfile"></a><a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile
 
-El marco de trabajo se rellena de esta cadena con el nombre del archivo de Ayuda de la aplicación.
+El marco de trabajo rellena esta cadena con el nombre del archivo de ayuda de la aplicación.
 
 ```
 CString m_strHelpFile;
 ```
 
-##  <a name="m_strsource"></a>  COleDispatchException::m_strSource
+## <a name="coledispatchexceptionm_strsource"></a><a name="m_strsource"></a>COleDispatchException::m_strSource
 
-El marco de trabajo se rellena de esta cadena con el nombre de la aplicación que generó la excepción.
+El marco de trabajo rellena esta cadena con el nombre de la aplicación que generó la excepción.
 
 ```
 CString m_strSource;
@@ -117,22 +117,22 @@ CString m_strSource;
 
   Vea el ejemplo de [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_wcode"></a>  COleDispatchException::m_wCode
+## <a name="coledispatchexceptionm_wcode"></a><a name="m_wcode"></a>COleDispatchException::m_wCode
 
-Contiene un código de error específico para su aplicación.
+Contiene un código de error específico de la aplicación.
 
 ```
 WORD m_wCode;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este miembro se establece mediante la función [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) cuando se produce una excepción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Ejemplo de MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[CException (clase)](../../mfc/reference/cexception-class.md)<br/>
+[Ejemplo de MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[Clase CException](../../mfc/reference/cexception-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[COleDispatchDriver (clase)](../../mfc/reference/coledispatchdriver-class.md)<br/>
-[COleException (clase)](../../mfc/reference/coleexception-class.md)
+[Clase COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)<br/>
+[Clase COleException](../../mfc/reference/coleexception-class.md)

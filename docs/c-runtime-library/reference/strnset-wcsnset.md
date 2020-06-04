@@ -1,10 +1,10 @@
 ---
 title: strnset, wcsnset
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - strnset
 - wcsnset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsnset
 - strnset
@@ -23,13 +26,15 @@ helpviewer_keywords:
 - strnset function
 - wcsnset function
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
-ms.openlocfilehash: 0e325237cdd8e1ff597bf0fbbe59be741bc9ef18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1f00410dc15a329d6381af893eab44bb938f248
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492321"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301098"
 ---
 # <a name="strnset-wcsnset"></a>strnset, wcsnset
 
-Estas funciones POSIX están obsoletas. En su lugar, use las funciones [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md), compatibles con ISO C++, o las funciones [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md), con mejoras de seguridad.
+Los nombres de función específicos de Microsoft `strnset` y `wcsnset` son alias desusados para las funciones [_strnset y _wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) . De forma predeterminada, generan la [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Los nombres están desusados porque no siguen las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, las funciones todavía se admiten.
+
+En su lugar, se recomienda usar [_strnset y _wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) o las funciones [_strnset_s y _wcsnset_s](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md) con seguridad mejorada. O bien, puede seguir usando estos nombres de función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

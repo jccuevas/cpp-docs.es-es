@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 7402f99148f20be4ce56c44b5ce7f66f0c24bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240592"
 ---
 # <a name="handling-the-apply-button"></a>Controlar el botón Aplicar
 
-Hojas de propiedades tienen una funcionalidad que no lo hacen los cuadros de diálogo estándar: permiten que el usuario aplicar los cambios que se hayan realizado antes de cerrar la hoja de propiedades. Esto se realiza mediante el botón Aplicar. En este artículo se describe los métodos que puede usar para implementar correctamente esta característica.
+Hojas de propiedades tienen una funcionalidad que no lo hacen los cuadros de diálogo estándar: Permiten que el usuario aplicar los cambios que se hayan realizado antes de cerrar la hoja de propiedades. Esto se realiza mediante el botón Aplicar. En este artículo se describe los métodos que puede usar para implementar correctamente esta característica.
 
-Cuadros de diálogo modales suelen aplican la configuración a un objeto externo cuando el usuario hace clic en Aceptar para cerrar el cuadro de diálogo. Lo mismo puede decirse de una hoja de propiedades: cuando el usuario hace clic en Aceptar, la nueva configuración en la hoja de propiedades surta efecto.
+Cuadros de diálogo modales suelen aplican la configuración a un objeto externo cuando el usuario hace clic en Aceptar para cerrar el cuadro de diálogo. Lo mismo puede decirse de una hoja de propiedades: Cuando el usuario hace clic en Aceptar, aplicará la nueva configuración en la hoja de propiedades.
 
 Sin embargo, desea permitir al usuario guardar la configuración sin tener que cerrar el cuadro de diálogo de la hoja de propiedades. Se trata de la función del botón Aplicar. El botón Aplicar aplica la configuración actual en todas las páginas de propiedades para el objeto externo, en lugar de aplicarse solo la configuración actual de la página activa actualmente.
 
@@ -30,9 +30,8 @@ Debe llamar a [CPropertyPage:: SetModified](../mfc/reference/cpropertypage-class
 
 Para implementar el efecto del botón Aplicar, la hoja de propiedades debe indicar su propietario, o algún otro objeto externo en la aplicación, para aplicar la configuración actual en las páginas de propiedades. Al mismo tiempo, debe deshabilitar el botón Aplicar a la hoja de propiedades mediante una llamada a `CPropertyPage::SetModified( FALSE )` para todas las páginas que aplica sus modificaciones en el objeto externo.
 
-Para obtener un ejemplo de este proceso, vea el ejemplo General de MFC [PROPDLG](../visual-cpp-samples.md).
+Para obtener un ejemplo de este proceso, vea el ejemplo General de MFC [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Hojas de propiedades](../mfc/property-sheets-mfc.md)
-

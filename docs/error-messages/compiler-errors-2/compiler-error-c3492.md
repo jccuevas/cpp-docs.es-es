@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: 53dd22368aee5e0de9eca1349eb4d7dd3ed1c570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485012"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738315"
 ---
 # <a name="compiler-error-c3492"></a>Error del compilador C3492
 
@@ -27,7 +27,7 @@ No se puede capturar un miembro de una unión sin nombre.
 
 El ejemplo siguiente genera el error C3492 porque se captura en un miembro de una unión anónima:
 
-```
+```cpp
 // C3492a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 En el ejemplo siguiente se resuelve C3492 dando un nombre a la unión y pasando la estructura de unión completa a la lista de captura de la expresión lambda:
 
-```
+```cpp
 // C3492b.cpp
 
 int main()

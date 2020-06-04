@@ -1,0 +1,49 @@
+### YamlMime:Landing
+title: Desarrollo móvil con C++ | Windows UWP, Android y iOS
+summary: Cree aplicaciones C++ nativas para dispositivos iOS, Android y Windows con Visual Studio.
+metadata:
+  title: Documentación de desarrollo móvil con C++
+  description: Cree aplicaciones C++ nativas para dispositivos iOS, Android y Windows con Visual Studio.
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 05/26/2020
+  ms.openlocfilehash: 7a858d9f26c106988156813b3f1f6bbe995e620a
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153533"
+landingContent:
+- title: Aprenda a compilar aplicaciones móviles multiplataforma
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Instalación del desarrollo móvil multiplataforma con C++
+      url: install-visual-cpp-for-cross-platform-mobile-development.md
+  - linkListType: overview
+    links:
+    - text: Información general del desarrollo móvil multiplataforma con C++
+      url: visual-cpp-for-cross-platform-mobile-development.md
+  - linkListType: tutorial
+    links:
+    - text: Crear una aplicación de OpenGL ES en Android e iOS
+      url: build-an-opengl-es-application-on-android-and-ios.md
+    - text: Crear una aplicación de Android Native Activity
+      url: create-an-android-native-activity-app.md
+  - linkListType: learn
+    links:
+    - text: Ejemplos de desarrollo móvil multiplataforma
+      url: cross-platform-mobile-development-examples.md
+- title: Referencia multiplataforma
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Referencia de página de propiedades multiplataforma de C++
+      url: cross-platform-prop-pages.md
+    - text: Documentación de la Plataforma universal de Windows (UWP)
+      url: /cpp/cppcx/universal-windows-apps-cpp
+    - text: Documentación de API de iOS
+      url: https://developer.apple.com/reference
+    - text: Documentación de API de Android
+      url: https://developer.android.com/guide/index.html

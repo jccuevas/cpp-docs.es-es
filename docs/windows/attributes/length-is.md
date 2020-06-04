@@ -1,21 +1,21 @@
 ---
-title: length_is (atributo de COM de C++)
+title: length_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489570"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214791"
 ---
-# <a name="lengthis"></a>length_is
+# <a name="length_is"></a>length_is
 
-Especifica el número de elementos de matriz que se transmitan.
+Especifica el número de elementos de matriz que se van a transmitir.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,12 +25,12 @@ Especifica el número de elementos de matriz que se transmitan.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
-Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
+*expression*<br/>
+Una o más expresiones del lenguaje C. Se permiten ranuras de argumentos vacías.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **length_is** atributo de C++ tiene la misma funcionalidad que el [length_is](/windows/desktop/Midl/length-is) atributo MIDL.
+El atributo **length_is** C++ tiene la misma funcionalidad que el atributo MIDL [length_is](/windows/win32/Midl/length-is) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -42,14 +42,14 @@ Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar un
 
 |||
 |-|-|
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
+|**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

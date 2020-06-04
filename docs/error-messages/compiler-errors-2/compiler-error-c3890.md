@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3890
 ms.assetid: 2f22c2fd-c14e-45e1-b936-b739ffc0b135
-ms.openlocfilehash: 2354be5ac7299fc0361e1b3ad50554e9949f8c1d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d93afa2ac8e365eff2f9256235b391f561cb977
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599489"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736547"
 ---
 # <a name="compiler-error-c3890"></a>Error del compilador C3890
 
-'var': no puede tomar la dirección de un miembro de datos literal
+' var ': no se puede adquirir la dirección de un miembro de datos literal
 
-Existe un miembro de datos literal en el montón de recolección.  Un objeto en el montón de recolección se puede mover, por lo que no es útil tomar la dirección.
+Existe un miembro de datos literal en el montón de recolección de elementos no utilizados.  Un objeto en el montón de recolección de elementos no utilizados puede moverse, por lo que no resulta útil tomar la dirección.
 
-El ejemplo siguiente genera C3890:
+En el ejemplo siguiente se genera C3890:
 
-```
+```cpp
 // C3890.cpp
 // compile with: /clr
 ref struct Y1 {

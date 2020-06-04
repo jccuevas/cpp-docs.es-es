@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-ms.openlocfilehash: 95344b5ef675f566f433dfeaed9dee5c38ef77d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dc9781bc0cf1bc6c7f879cc3971828983471c6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598281"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757753"
 ---
 # <a name="compiler-error-c2071"></a>Error del compilador C2071
 
 'identificador': clase de almacenamiento no válida
 
-`identifier` se ha declarado con un no válido [clase de almacenamiento](../../c-language/c-storage-classes.md). Este error puede producirse cuando se especifica más de una clase de almacenamiento para un identificador, o cuando la definición no es compatible con la declaración de clase de almacenamiento.
+`identifier` se declaró con una [clase de almacenamiento](../../c-language/c-storage-classes.md)no válida. Este error puede producirse cuando se especifica más de una clase de almacenamiento para un identificador, o cuando la definición no es compatible con la declaración de clase de almacenamiento.
 
-Para corregir este problema, averigüe la clase de almacenamiento previsto del identificador, por ejemplo, `static` o `extern`y corrija la declaración para hacer coincidir.
+Para corregir este problema, comprenda la clase de almacenamiento previsto del identificador (por ejemplo, `static` o `extern`) y corrija la declaración para que coincida.
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera el error C2071.
 
-```
+```cpp
 // C2071.cpp
 // compile with: /c
 struct C {
@@ -40,7 +40,7 @@ struct D {
 
 El ejemplo siguiente genera el error C2071.
 
-```
+```cpp
 // C2071_b.cpp
 // compile with: /c
 typedef int x(int i) { return i; }   // C2071

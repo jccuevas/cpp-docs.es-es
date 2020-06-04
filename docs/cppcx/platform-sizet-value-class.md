@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 02fe62165ce40d267f156eaeb3ad93f636c9ab73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322160"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT (Clase de valor)
 
@@ -26,21 +26,21 @@ public ref class SizeT sealed : ValueType
 
 ### <a name="members"></a>Miembros
 
-|Miembro|Descripción|
+|Member|Descripción|
 |------------|-----------------|
 |[SizeT::SizeT (Constructor)](#ctor)|Inicializa una nueva instancia de la clase con el valor especificado.|
 
 ### <a name="requirements"></a>Requisitos
 
-**Cliente mínimo admitido:** Windows 8
+**Cliente mínimo soportado:** Windows 8
 
-**Servidor mínimo admitido:** Windows Server 2012
+**Servidor mínimo soportado:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres:** Platform
 
 **Metadatos:** platform.winmd
 
-## <a name="ctor"></a>  Constructor de Sizet
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a>SizeT::SizeT constructor
 
 Inicializa una nueva instancia de SizeT con el valor especificado.
 
@@ -52,12 +52,12 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
 
 ### <a name="parameters"></a>Parámetros
 
-*Valor1*<br/>
+*value1*<br/>
 Un valor sin signo de 32 bits.
 
-*Value2*<br/>
+*value2*<br/>
 Puntero a un valor sin signo de 32 bits.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)

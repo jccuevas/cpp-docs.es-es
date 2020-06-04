@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2233
 ms.assetid: 236bdf0b-9607-4f26-a249-d8def0b1333c
-ms.openlocfilehash: 7d96230f189a8f9371473d2da4df4e7be295ab03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 066f28bfaacd1ad2e7645822aef082e43e863327
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499117"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759261"
 ---
 # <a name="compiler-error-c2233"></a>Error del compilador C2233
 
-'identifier': las matrices de objetos que contienen matrices de tamaño cero no son válidas
+' Identifier ': las matrices de objetos que contienen matrices de tamaño cero no son válidas
 
-Cada objeto de matriz debe contener al menos un elemento.
+Cada objeto de una matriz debe contener al menos un elemento.
 
-El ejemplo siguiente genera C2233:
+En el ejemplo siguiente se genera C2233:
 
-```
+```cpp
 // C2233.cpp
 // compile with: /c
 class A {

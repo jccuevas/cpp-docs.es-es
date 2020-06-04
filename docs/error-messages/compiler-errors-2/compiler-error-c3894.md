@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: 4d935e140d89cb5c3714450597677a7a02a245e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496049"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749443"
 ---
 # <a name="compiler-error-c3894"></a>Error del compilador C3894
 
-'var': uso de valor l del miembro de datos estático initonly solamente se permite en el constructor de clase 'class'
+' var ': el uso del valor l del miembro de datos estático InitOnly solo se permite en el constructor de clase de la clase ' Class '
 
-Estática [initonly](../../dotnet/initonly-cpp-cli.md) los miembros de datos solo pueden usarse como valores l en su punto de declaración o en un constructor estático.
+Los miembros de datos [InitOnly](../../dotnet/initonly-cpp-cli.md) estáticos solo se pueden usar como valores l en su punto de declaración o en un constructor estático.
 
-Los miembros de datos de instancia (no estáticos) initonly solo pueden usarse como valores l en su punto de declaración o en los constructores de instancia (no estáticos).
+Los miembros de datos initonly (no estáticos) de instancia solo se pueden usar como valores l en su punto de declaración o en constructores de instancia (no estáticos).
 
-El ejemplo siguiente genera C3894:
+En el ejemplo siguiente se genera C3894:
 
-```
+```cpp
 // C3894.cpp
 // compile with: /clr
 ref struct Y1 {

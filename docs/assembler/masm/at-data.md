@@ -1,26 +1,27 @@
 ---
 title: '@data'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@data'
 helpviewer_keywords:
 - '@data symbol'
 ms.assetid: d3e99fb0-4c9e-40a8-9e2d-15de3b01a2fe
-ms.openlocfilehash: 456a1f1e53fbcba47d1ef33a1fa89b0d4fdc6a37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74539105f85ba3080f42fc958ec7edd305748c23
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607420"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316257"
 ---
-# <a name="data"></a>@data
+# <a name="data"></a>\@de datos
 
-El nombre del grupo de datos de forma predeterminada. Se evalúa como DGROUP para todos los modelos excepto **planos**. Se evalúa como **planos** bajo el **planos** modelo de memoria (macro de texto).
+Nombre del grupo de datos predeterminado. Se evalúa como DGROUP para todos los modelos excepto **plano**. Se evalúa como **plano** bajo el modelo de memoria **plana** (macro de texto).
 
 ## <a name="syntax"></a>Sintaxis
 
-> @data
+> **\@data**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referencia de símbolos](symbols-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3880
 ms.assetid: b0e05d1e-32d0-4034-9246-f37d23573ea9
-ms.openlocfilehash: 60b96a9e704215ec1cbbab63eb77ca5d43ccb627
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54fd65fb4fe23a5c493a4e9ac83a5e44b0596362
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626947"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736677"
 ---
 # <a name="compiler-error-c3880"></a>Error del compilador C3880
 
-'var': no puede ser un miembro de datos literal
+' var ': no puede ser un miembro de datos literal
 
-El tipo de un [literal](../../windows/literal-cpp-component-extensions.md) atributo debe ser, o convertible de tiempo de compilación a uno de los tipos siguientes:
+El tipo de un atributo [literal](../../extensions/literal-cpp-component-extensions.md) debe ser, o bien se puede convertir en tiempo de compilación a, uno de los siguientes tipos:
 
 - tipo entero
 
@@ -25,9 +25,9 @@ El tipo de un [literal](../../windows/literal-cpp-component-extensions.md) atrib
 
 - enumeración con un tipo entero o subyacente
 
-El ejemplo siguiente genera C3880:
+En el ejemplo siguiente se genera C3880:
 
-```
+```cpp
 // C3880.cpp
 // compile with: /clr /c
 ref struct Y1 {

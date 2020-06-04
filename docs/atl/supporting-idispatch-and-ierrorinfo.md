@@ -1,21 +1,18 @@
 ---
 title: Admitir IDispatch e IErrorInfo
 ms.date: 11/04/2016
-f1_keywords:
-- IErrorInfo
-- IDispatch
 helpviewer_keywords:
 - ISupportErrorInfoImpl method
 - IErrorInfo class suppor in ATL
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 7db2220f-319d-4ce9-9382-d340019f14f7
-ms.openlocfilehash: ea45f0bdd2363f4392baee049629c55259e45af0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2dcebd215ff5e1bdf72323323dfbaebd16fa3403
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502441"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342022"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Admitir IDispatch e IErrorInfo
 
@@ -26,4 +23,3 @@ Si el objeto utiliza el `IErrorInfo` interfaz para notificar los errores que se 
 ## <a name="see-also"></a>Vea también
 
 [Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)
-

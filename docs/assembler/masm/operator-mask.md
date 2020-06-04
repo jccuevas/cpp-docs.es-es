@@ -1,6 +1,6 @@
 ---
 title: Operador MASK
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator MASK
 - MASK
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - MASK operator
 - operator MASK
 ms.assetid: bf997f99-17c8-4230-ab69-7a9774a75d93
-ms.openlocfilehash: 6acd6596613e32186385568cc68b3eb498176b6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 064022b3fb49a498a8ab7f8513b89d4c9964e346
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495126"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317856"
 ---
 # <a name="operator-mask"></a>Operador MASK
 
-Devuelve un poco de máscara en el que los bits de *recordfieldname* o *registro* se establecen y se borran todos los demás bits.
+Devuelve una máscara de bits en la que se establecen los bits de *recordfieldname* o *Record* y se borran todos los demás bits.
 
 ## <a name="syntax"></a>Sintaxis
 
-> MÁSCARA {recordfieldname | registro}
+> **Máscara** {*recordfieldname* | *registro*}
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2927
 ms.assetid: 3f75beec-ff5c-44e1-9085-990ecd55198d
-ms.openlocfilehash: acdb33c28021d007c3f1b25ae7b4419ffbbf6bef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f7c9ecdc178e98881d519c343372e99f7f03128
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637416"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176955"
 ---
 # <a name="compiler-error-c2927"></a>Error del compilador C2927
 

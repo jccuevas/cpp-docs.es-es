@@ -1,34 +1,35 @@
 ---
 title: ALIAS (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - Alias
 helpviewer_keywords:
 - ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-ms.openlocfilehash: ab00092f410d34119e876db4562e6d0709743d79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aef169c5632e74722438c63718ce5b783a8da09
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483504"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316608"
 ---
-# <a name="alias-masm"></a>ALIAS (MASM)
+# <a name="alias"></a>ALIAS
 
-El **ALIAS** directiva crea un nombre alternativo para una función.  Esto le permite crear varios nombres para una función o crear bibliotecas que permiten al vinculador (LINK.exe) para asignar una función antigua a una nueva función.
+La Directiva de **alias** crea un nombre alternativo para una función.  Esto le permite crear varios nombres para una función, o crear bibliotecas que permitan al vinculador (LINK. exe) asignar una función antigua a una nueva función.
 
 ## <a name="syntax"></a>Sintaxis
 
-> ALIAS \< *alias*> = \< *nombre real*>
+> Alias **\<** _alias_ **> = \<** _nombre real_ **>**
 
-#### <a name="parameters"></a>Parámetros
+#### <a name="parameters"></a>Parameters
 
-*nombre real*<br/>
-El nombre real de la función o procedimiento.  Son necesarios los corchetes angulares.
+\ *de nombre real*
+Nombre real de la función o el procedimiento.  Los corchetes angulares son obligatorios.
 
-*alias*<br/>
-El nombre alternativo o alias.  Son necesarios los corchetes angulares.
+*alias*\
+El nombre alternativo o de alias.  Los corchetes angulares son obligatorios.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

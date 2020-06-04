@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - SetString method [C++]
 ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
-ms.openlocfilehash: d07e995be0ecd99974356a7516e7c4deee677637
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60ad1c1bd95eb35f2a4f2800f79d0326c68a1176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628246"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745848"
 ---
-# <a name="varianttsetstring"></a>_variant_t::SetString
+# <a name="_variant_tsetstring"></a>_variant_t::SetString
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
 Asigna una cadena a este objeto `_variant_t`.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void SetString(const char* pSrc);
 ```
 
@@ -30,12 +30,12 @@ void SetString(const char* pSrc);
 *pSrc*<br/>
 Puntero a la cadena de caracteres.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Convierte una cadena de caracteres ANSI en una cadena `BSTR` Unicode y la asigna a este objeto `_variant_t`.
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
 ## <a name="see-also"></a>Vea también
 
-[_variant_t (Clase)](../cpp/variant-t-class.md)
+[Clase _variant_t](../cpp/variant-t-class.md)

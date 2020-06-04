@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 641595f663c382129a40ce503ebdb789f8042cf0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466825"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376562"
 ---
-# <a name="syncpercontainer-class"></a>sync_per_container (Clase)
+# <a name="sync_per_container-class"></a>sync_per_container (Clase)
 
-Describe un [filtro de sincronización](../standard-library/allocators-header.md) que proporciona un objeto de caché independiente para cada objeto de asignador.
+Describe un filtro de [sincronización](../standard-library/allocators-header.md) que proporciona un objeto de caché independiente para cada objeto de asignador.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,11 +30,11 @@ class sync_per_container
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Caché*|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Memoria caché*|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[equals](#equals)|Compara dos cachés para determinar si son iguales.|
 
@@ -44,7 +44,7 @@ class sync_per_container
 
 **Espacio de nombres:** stdext
 
-## <a name="equals"></a>  sync_per_container::equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::igual es
 
 Compara dos cachés para determinar si son iguales.
 
@@ -56,15 +56,15 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Caché*|El objeto de caché del filtro de sincronización.|
-|*Otros problemas*|El objeto de caché para comparar la igualdad.|
+|*Memoria caché*|El objeto de caché del filtro de sincronización.|
+|*Otros*|El objeto de caché para comparar la igualdad.|
 
 ### <a name="return-value"></a>Valor devuelto
 
 La función miembro siempre devuelve **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<asignadores>](../standard-library/allocators-header.md)

@@ -1,6 +1,6 @@
 ---
-title: Macros de registro
-ms.date: 11/04/2016
+title: Macros del Registro
+ms.date: 08/19/2019
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
 - atlcom/ATL::DECLARE_LIBID
@@ -12,48 +12,48 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd012b4300f4cd72cdc9ab363b770ac1dbefa06e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660387"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326039"
 ---
-# <a name="registry-macros"></a>Macros de registro
+# <a name="registry-macros"></a>Macros del Registro
 
-Estas macros definen las instalaciones de biblioteca y el registro de tipo útil.
+Estas macros definen instalaciones útiles de biblioteca de tipos y del registro.
 
 |||
 |-|-|
-|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Indica que desea que el código de registro para el objeto en el objeto para evitar una dependencia en ATL. ARCHIVO DLL.|
-|[DECLARE_LIBID](#declare_libid)|Proporciona una manera de ATL obtener el *libid* de la biblioteca de tipos.|
-|[DECLARE_NO_REGISTRY](#declare_no_registry)|Evita el registro de ATL de forma predeterminada.|
-|[DECLARE_REGISTRY](#declare_registry)|Escribe o quita la entrada del objeto principal en el registro del sistema.|
+|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Indica que desea que el código de registro del objeto esté en el objeto para evitar una dependencia de ATL. Dll.|
+|[DECLARE_LIBID](#declare_libid)|Proporciona una manera para que ATL obtenga el *libid* de la biblioteca de tipos.|
+|[DECLARE_NO_REGISTRY](#declare_no_registry)|Evita el registro ATL predeterminado.|
+|[DECLARE_REGISTRY](#declare_registry)|Introduce o quita la entrada del objeto principal en el registro del sistema.|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Especifica la información necesaria para registrar automáticamente el *appid*.|
-|[MACROS DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Busca el recurso con nombre y se ejecuta el script del registro dentro de él.|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Busca el recurso identificado por un número de identificación y se ejecuta el script del registro dentro de él.|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Busca el recurso con nombre y ejecuta el script del Registro dentro de él.|
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Busca el recurso identificado por un número de IDENTIFICADOR y ejecuta el script del Registro dentro de él.|
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlcom.h
 
-##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY
+## <a name="_atl_static_registry"></a><a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY
 
-Un símbolo que indica que desea que el código de registro para el objeto en el objeto para evitar una dependencia en ATL. ARCHIVO DLL.
+Símbolo que indica que desea que el código de registro del objeto esté en el objeto para evitar una dependencia de ATL. Dll.
 
 ```
 #define _ATL_STATIC_REGISTRY
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Al definir ATL_STATIC_REGISTRY, debe usar el código siguiente:
+Al definir ATL_STATIC_REGISTRY, debe utilizar el código siguiente:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]
 
-##  <a name="declare_libid"></a>  DECLARE_LIBID
+## <a name="declare_libid"></a><a name="declare_libid"></a>DECLARE_LIBID
 
-Proporciona una manera de ATL obtener el *libid* de la biblioteca de tipos.
+Proporciona una manera para que ATL obtenga el *libid* de la biblioteca de tipos.
 
 ```
 DECLARE_LIBID( libid )
@@ -61,28 +61,28 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parámetros
 
-*LIBID*<br/>
-El GUID de la biblioteca de tipos.
+*libid*<br/>
+GUID de la biblioteca de tipos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Usar DECLARE_LIBID en un `CAtlModuleT`-clase derivada.
+Utilice DECLARE_LIBID `CAtlModuleT`en una clase derivada.
 
 ### <a name="example"></a>Ejemplo
 
-Sin atributos generados por el Asistente para proyectos ATL tendrá un ejemplo del uso de esta macro.
+Los proyectos ATL generados por asistentes no atribuidos tendrán un ejemplo del uso de esta macro.
 
-##  <a name="declare_no_registry"></a>  DECLARE_NO_REGISTRY
+## <a name="declare_no_registry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY
 
-Si desea evitar cualquier registro ATL predeterminado para la clase en la que aparece esta macro, utilice DECLARE_NO_REGISTRY.
+Utilice DECLARE_NO_REGISTRY si desea evitar cualquier registro ATL predeterminado para la clase en la que aparece esta macro.
 
 ```
 DECLARE_NO_REGISTRY()
 ```
 
-##  <a name="declare_registry"></a>  DECLARE_REGISTRY
+## <a name="declare_registry"></a><a name="declare_registry"></a>DECLARE_REGISTRY
 
-Escribe el registro de clase estándar en el registro del sistema o lo quita del registro del sistema.
+Introduce el registro de clase estándar en el registro del sistema o lo elimina del registro del sistema.
 
 ```
 DECLARE_REGISTRY(
@@ -95,28 +95,28 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Parámetros
 
-*class*<br/>
-[in] Se incluye por compatibilidad con versiones anteriores.
+*clase*<br/>
+[en] Incluido para compatibilidad con versiones anteriores.
 
-*pid*<br/>
-[in] LPCTSTR que es un identificador de programa específico de la versión.
+*Pid*<br/>
+[en] Un LPCTSTR que es un identificador de programa específico de la versión.
 
 *vpid*<br/>
-[in] LPCTSTR que es un identificador de programa independiente de la versión.
+[en] Un LPCTSTR que es un identificador de programa independiente de la versión.
 
-*NID*<br/>
-[in] Un tipo UINT que es un índice de la cadena de recurso en el registro que se usará como la descripción del programa.
+*Nid*<br/>
+[en] UINT que es un índice de la cadena de recursos en el registro que se usará como descripción del programa.
 
-*flags*<br/>
-[in] DWORD que contiene el modelo de subprocesos del programa en el registro. Debe ser uno de los siguientes valores: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH o AUTPRXFLAG.
+*Banderas*<br/>
+[en] DWORD que contiene el modelo de subprocesos del programa en el registro. Debe ser uno de los siguientes valores: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH o AUTPRXFLAG.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El registro estándar consta de los CLSID, Id. de programa, Id. de programa independiente de la versión, cadena de descripción y el modelo de subprocesos.
+El registro estándar consta de CLSID, ID de programa, ID de programa independiente de la versión, cadena de descripción y modelo de subproceso.
 
-Cuando se crea un objeto o controlar mediante el Asistente para agregar clases de ATL, el asistente implementa la compatibilidad con secuencias de comandos del registro automáticamente y agrega el [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) macro a los archivos. Si no desea compatibilidad con el registro basado en script, deberá reemplazar esta macro con DECLARE_REGISTRY. DECLARE_REGISTRY sólo inserta las cinco claves básicas que se ha descrito anteriormente en el registro. Debe escribir código para insertar otras claves en el registro manualmente.
+Al crear un objeto o control mediante el Asistente para agregar clases ATL, el asistente implementa automáticamente la compatibilidad con el registro basada en scripts y agrega la macro [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) a los archivos. Si no desea compatibilidad con el registro basado en scripts, debe reemplazar esta macro con DECLARE_REGISTRY. DECLARE_REGISTRY solo inserta las cinco claves básicas descritas anteriormente en el registro. Debe escribir manualmente código para insertar otras claves en el registro.
 
-##  <a name="declare_registry_appid_resourceid"></a>  DECLARE_REGISTRY_APPID_RESOURCEID
+## <a name="declare_registry_appid_resourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID
 
 Especifica la información necesaria para registrar automáticamente el *appid*.
 
@@ -128,23 +128,23 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parámetros
 
-*RESID*<br/>
-El identificador de recurso del archivo .rgs que contiene información sobre la *appid*.
+*Resnum*<br/>
+El identificador de recurso del archivo .rgs que contiene información sobre el *appid*.
 
-*AppID*<br/>
+*Appid*<br/>
 Un GUID.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Usar DECLARE_REGISTRY_APPID_RESOURCEID en un `CAtlModuleT`-clase derivada.
+Utilice DECLARE_REGISTRY_APPID_RESOURCEID `CAtlModuleT`en una clase derivada.
 
 ### <a name="example"></a>Ejemplo
 
-Las clases agregadas a proyectos ATL con el Asistente de código Agregar clase tendrá un ejemplo del uso de esta macro.
+Las clases agregadas a proyectos ATL con el Asistente para agregar código de clase tendrán un ejemplo de uso de esta macro.
 
-##  <a name="declare_registry_resource"></a>  MACROS DECLARE_REGISTRY_RESOURCE
+## <a name="declare_registry_resource"></a><a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE
 
-Obtiene el recurso con nombre que contiene el archivo de registro y se ejecuta la secuencia de comandos para especificar los objetos en el registro del sistema o quitarlas del registro del sistema.
+Obtiene el recurso con nombre que contiene el archivo de registro y ejecuta el script para introducir objetos en el registro del sistema o quitarlos del registro del sistema.
 
 ```
 DECLARE_REGISTRY_RESOURCE( x )
@@ -152,24 +152,24 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
-[in] Identificador del recurso de cadena.
+*X*<br/>
+[en] Identificador de cadena del recurso.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando se crea un objeto o controlar mediante el Asistente para proyectos ATL, el asistente automáticamente implementar la compatibilidad con secuencias de comandos del registro y agregue el [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) macro, que es similar a DECLARE_REGISTRY_ RECURSOS a los archivos.
+Al crear un objeto o control mediante el Asistente para proyectos ATL, el asistente implementará automáticamente la compatibilidad del Registro basada en scripts y agregará la macro [DECLARE_REGISTRY_RESOURCEID,](#declare_registry_resourceid) que es similar a DECLARE_REGISTRY_RESOURCE, a los archivos.
 
-Puede vincular estáticamente con el componente de registro de ATL (registrador) para acceder al registro optimizado. Para vincular estáticamente al código del registrador, agregue la siguiente línea al archivo stdafx.h:
+Puede vincular estáticamente con el componente de registro ATL (Registrar) para optimizar el acceso al registro. Para vincular estáticamente al código del registrador, agregue la siguiente línea al archivo *pch.h* (*stdafx.h* en Visual Studio 2017 y versiones anteriores):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Si desea que ATL para sustituir los valores de reemplazo en tiempo de ejecución, no especifique la macro macros DECLARE_REGISTRY_RESOURCE o DECLARE_REGISTRY_RESOURCEID. En su lugar, cree una matriz de `_ATL_REGMAP_ENTRIES` estructuras, donde cada entrada contiene un marcador de posición variable emparejan con un valor para reemplazar el marcador de posición en tiempo de ejecución. A continuación, llame a [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) o [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), pasando la matriz. Esto agrega todos los valores de reemplazo en el `_ATL_REGMAP_ENTRIES` estructuras al mapa de reemplazo del registrador.
+Si desea que ATL sustituya los valores de sustitución en tiempo de ejecución, no especifique la macro DECLARE_REGISTRY_RESOURCE o DECLARE_REGISTRY_RESOURCEID. En su lugar, `_ATL_REGMAP_ENTRIES` cree una matriz de estructuras, donde cada entrada contiene un marcador de posición variable emparejado con un valor para reemplazar el marcador de posición en tiempo de ejecución. A continuación, llame a [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) o [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), pasando la matriz. Esto agrega todos los valores `_ATL_REGMAP_ENTRIES` de reemplazo en las estructuras al mapa de reemplazo del registrador.
 
-Para obtener más información acerca de los parámetros reemplazables y secuencias de comandos, vea el artículo [el componente de registro de ATL (registrador)](../../atl/atl-registry-component-registrar.md).
+Para obtener más información acerca de los parámetros reemplazables y el scripting, consulte el artículo [Componente del Registro ATL (Registrar).](../../atl/atl-registry-component-registrar.md)
 
-##  <a name="declare_registry_resourceid"></a>  DECLARE_REGISTRY_RESOURCEID
+## <a name="declare_registry_resourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
 
-Igual que [macros DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) salvo que usa un tipo UINT generados por el Asistente para identificar el recurso, en lugar de un nombre de cadena.
+Igual que [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) excepto que usa un UINT generado por el asistente para identificar el recurso, en lugar de un nombre de cadena.
 
 ```
 DECLARE_REGISTRY_RESOURCEID( x )
@@ -177,21 +177,21 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
-[in] Identificador generado por el Asistente del recurso.
+*X*<br/>
+[en] Identificador generado por el asistente del recurso.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando se crea un objeto o un control mediante el Asistente para proyectos ATL, el asistente automáticamente implementar la compatibilidad con secuencias de comandos del registro y agregar la macro DECLARE_REGISTRY_RESOURCEID a los archivos.
+Al crear un objeto o control mediante el Asistente para proyectos ATL, el asistente implementará automáticamente la compatibilidad del Registro basada en scripts y agregará la macro DECLARE_REGISTRY_RESOURCEID a los archivos.
 
-Puede vincular estáticamente con el componente de registro de ATL (registrador) para acceder al registro optimizado. Para vincular estáticamente al código del registrador, agregue la siguiente línea al archivo stdafx.h:
+Puede vincular estáticamente con el componente de registro ATL (Registrar) para optimizar el acceso al registro. Para vincular estáticamente al código del registrador, agregue la siguiente línea al archivo *stdafx.h* (*pch.h* en Visual Studio 2019 y versiones posteriores):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Si desea que ATL para sustituir los valores de reemplazo en tiempo de ejecución, no especifique la macro macros DECLARE_REGISTRY_RESOURCE o DECLARE_REGISTRY_RESOURCEID. En su lugar, cree una matriz de `_ATL_REGMAP_ENTRIES` estructuras, donde cada entrada contiene un marcador de posición variable emparejan con un valor para reemplazar el marcador de posición en tiempo de ejecución. A continuación, llame a [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) o [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), pasando la matriz. Esto agrega todos los valores de reemplazo en el `_ATL_REGMAP_ENTRIES` estructuras al mapa de reemplazo del registrador.
+Si desea que ATL sustituya los valores de sustitución en tiempo de ejecución, no especifique la macro DECLARE_REGISTRY_RESOURCE o DECLARE_REGISTRY_RESOURCEID. En su lugar, `_ATL_REGMAP_ENTRIES` cree una matriz de estructuras, donde cada entrada contiene un marcador de posición variable emparejado con un valor para reemplazar el marcador de posición en tiempo de ejecución. A continuación, llame a [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) o [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), pasando la matriz. Esto agrega todos los valores `_ATL_REGMAP_ENTRIES` de reemplazo en las estructuras al mapa de reemplazo del registrador.
 
-Para obtener más información acerca de los parámetros reemplazables y secuencias de comandos, vea el artículo [el componente de registro de ATL (registrador)](../../atl/atl-registry-component-registrar.md).
+Para obtener más información acerca de los parámetros reemplazables y el scripting, consulte el artículo [Componente del Registro ATL (Registrar).](../../atl/atl-registry-component-registrar.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Macros](../../atl/reference/atl-macros.md)

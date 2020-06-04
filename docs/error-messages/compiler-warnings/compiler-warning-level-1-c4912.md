@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4912
 ms.assetid: ba1f1a66-8c20-4792-9ac8-43e49f729ae2
-ms.openlocfilehash: 7a6f7df79a98685a7eec1582ae248ea3f620c5fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dacde50fe10151d42110a30a699e1e772c8d8b45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474309"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174692"
 ---
 # <a name="compiler-warning-level-1-c4912"></a>Advertencia del compilador (nivel 1) C4912
 
@@ -21,7 +21,7 @@ Los atributos que se aplican a los UDT (tipos definidos por el usuario, que pued
 
 El código siguiente muestra cómo se puede generar esta advertencia:
 
-```
+```cpp
 // C4912.cpp
 // compile with: /W1
 #include <windows.h>

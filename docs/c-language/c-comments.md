@@ -9,11 +9,11 @@ helpviewer_keywords:
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326292"
 ---
 # <a name="c-comments"></a>Comentarios en C
 
@@ -61,13 +61,13 @@ Aunque se pueden utilizar comentarios para inhabilitar algunas líneas de códig
 
 **Específicos de Microsoft**
 
-El compilador de Microsoft también admite los comentarios de una línea precedidos por dos barras diagonales (__//__). Si compila con /Za (estándar ANSI), estos comentarios generan errores. Estos comentarios no pueden extenderse a una segunda línea.
+El compilador de Microsoft también admite los comentarios de una línea precedidos por dos barras diagonales ( __//__ ). Si compila con /Za (estándar ANSI), estos comentarios generan errores. Estos comentarios no pueden extenderse a una segunda línea.
 
 ```C
 // This is a valid comment
 ```
 
-Los comentarios que comienzan con dos barras diagonales (__//__) se finalizan con el siguiente carácter de nueva línea que no vaya precedido por un carácter de escape. En el ejemplo siguiente, el carácter de nueva línea va precedido de una barra diagonal inversa (**\\**), por lo que crea una "secuencia de escape". Esta secuencia de escape hace que el compilador trate la línea siguiente como parte de la línea anterior. (Para obtener más información, vea [Secuencias de escape](../c-language/escape-sequences.md)).
+Los comentarios que comienzan con dos barras diagonales ( __//__ ) se finalizan con el siguiente carácter de nueva línea que no vaya precedido por un carácter de escape. En el ejemplo siguiente, el carácter de nueva línea va precedido de una barra diagonal inversa ( **\\** ), por lo que crea una "secuencia de escape". Esta secuencia de escape hace que el compilador trate la línea siguiente como parte de la línea anterior. (Para obtener más información, vea [Secuencias de escape](../c-language/escape-sequences.md)).
 
 ```C
 // my comment \

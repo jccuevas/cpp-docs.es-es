@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3087
 ms.assetid: 4f5bdd52-a853-4f02-b160-6868e9190b9d
-ms.openlocfilehash: 43044e0708ce9c30099c7d25935a8ff9605f45ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b9ae71ebfbcfcd5936a2fc3ca666aa51e59bfb5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489727"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751422"
 ---
 # <a name="compiler-error-c3087"></a>Error del compilador C3087
 
@@ -23,7 +23,7 @@ Se especificó un argumento con nombre en el mismo bloque de atributos que un ar
 
 El ejemplo siguiente genera la advertencia C3087.
 
-```
+```cpp
 // C3087.cpp
 // compile with: /c
 [idl_quote("quote1", text="quote2")];   // C3087

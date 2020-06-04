@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d4b4a4876f47452361b13837b0279f5bf98f8658
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279348"
 ---
 # <a name="managing-mdi-child-windows"></a>Administrar ventanas secundarias MDI
 
@@ -39,4 +39,3 @@ Una ventana marco MDI también funciona junto con la ventana secundaria MDI actu
 ## <a name="see-also"></a>Vea también
 
 [Uso de ventanas de marco](../mfc/using-frame-windows.md)
-

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4405
 ms.assetid: 155c64d6-58ae-4455-b61f-ccd711c5da96
-ms.openlocfilehash: e85bdc995fe16f91e2e9c734dacc65ca0b7b622d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ec06e80ac8f61802258a62594029b15a55ebe42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654923"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162574"
 ---
 # <a name="compiler-warning-level-1-c4405"></a>Advertencia del compilador (nivel 1) C4405
 
-'identifier': identificador es una palabra reservada
+' Identifier ': el identificador es una palabra reservada
 
-Una palabra reservada para el ensamblado insertado se utiliza como nombre de variable. Esto puede producir resultados imprevisibles. Para corregir esta advertencia, evite dar a las variables con palabras reservadas para el ensamblado alineado. El ejemplo siguiente genera C4405:
+Una palabra reservada para el ensamblado alineado se usa como un nombre de variable. Esto puede producir resultados imprevisibles. Para corregir esta advertencia, evite asignar nombres a las variables con palabras reservadas para el ensamblado alineado. En el ejemplo siguiente se genera C4405:
 
-```
+```cpp
 // C4405.cpp
 // compile with: /W1
 // processor: x86

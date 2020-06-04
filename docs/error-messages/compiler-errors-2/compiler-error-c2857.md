@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2857
 ms.assetid: b57302bd-58ec-45ae-992a-1e282d5eeccc
-ms.openlocfilehash: 10c0ea3b54ded29bf80f83713cea33428dca6ca0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11b620f9748ac85e731d79b0652c0392375b2ea4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432156"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201856"
 ---
 # <a name="compiler-error-c2857"></a>Error del compilador C2857
 
-> ' #include ' instrucción especificada con la/Yc*filename* no se encontró la opción de línea de comandos en el archivo de origen
+> no se encontró la instrucción ' #include ' especificada con la opción de línea de comandos/YC*filename* en el archivo de código fuente
 
-El [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opción especifica el nombre de un archivo de inclusión que no se incluye en el archivo de origen que se está compilando.
+La opción [/YC](../../build/reference/yc-create-precompiled-header-file.md) especifica el nombre de un archivo de inclusión que no está incluido en el archivo de código fuente que se está compilando.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cuando se usa el **/Yc**<em>filename</em> opción en un archivo de origen para crear un archivo de encabezado precompilado (PCH), que el archivo de origen debe incluir el *filename* archivo de encabezado. Cada archivo que incluya el archivo de código fuente, hasta e incluyendo especificado *filename*, se incluye en el archivo PCH. En otros archivos de código fuente compilados mediante la **/Yu**<em>filename</em> opción para usar el PCH de archivos, un archivo de inclusión de *filename* debe ser la primera línea de sin comentarios en el archivo. El compilador omite todo lo que antes de que se incluyen en el archivo de origen.
+Cuando se usa la opción **/YC**<em>filename</em> en un archivo de código fuente para crear un archivo de encabezado precompilado (PCH), ese archivo de origen debe incluir el archivo de encabezado del *nombre* de archivo. Todos los archivos incluidos en el archivo de código fuente, hasta el *nombre*de archivo especificado, inclusive, se incluyen en el archivo PCH. En otros archivos de código fuente compilados con la opción **/Yu**<em>filename</em> para usar el archivo PCH, una inclusión de *filename* debe ser la primera línea que no sea de comentario en el archivo. El compilador omite todo lo que haya en el archivo de código fuente antes de este include.
 
-Este error puede deberse a un `#include "filename"` instrucción en un bloque de compilación condicional que no se compila en el archivo de origen PCH.
+Este error puede deberse a una instrucción `#include "filename"` en un bloque de compilación condicional que no está compilado en el archivo de código fuente PCH.
 
 ## <a name="example"></a>Ejemplo
 
-En un uso típico, un archivo de código fuente en el proyecto se designa como el archivo de código fuente PCH y un archivo de encabezado se utiliza como el archivo de encabezado PCH. Un archivo de encabezado PCH típico tiene todos los encabezados de la biblioteca usados en el proyecto, pero los encabezados no locales que aún están en desarrollo. En este ejemplo, el archivo de encabezado PCH denominado *my_pch.h*.
+En el uso típico, un archivo de código fuente del proyecto se designa como el archivo de código fuente PCH y un archivo de encabezado se utiliza como archivo de encabezado PCH. Un archivo de encabezado PCH típico tiene todos los encabezados de biblioteca que se usan en el proyecto, pero no los encabezados locales que todavía están en desarrollo. En este ejemplo, el archivo de encabezado PCH se denomina *my_pch. h*.
 
 ```cpp
 // my_pch.h
@@ -35,7 +35,7 @@ En un uso típico, un archivo de código fuente en el proyecto se designa como e
 #include <stdio.h>
 ```
 
-El archivo de código fuente PCH compilado mediante la **/Yc**<em>my_pch.h</em> opción. Si el compilador no encuentra un archivo de inclusión de este archivo de encabezado PCH, genera C2857:
+El archivo de código fuente PCH se compila mediante la opción **/yc**<em>my_pch. h</em> . Si el compilador no encuentra una inclusión de este archivo de encabezado PCH, genera C2857:
 
 ```cpp
 // my_pch.cpp
@@ -46,7 +46,7 @@ El archivo de código fuente PCH compilado mediante la **/Yc**<em>my_pch.h</em> 
 #endif
 ```
 
-Para usar este archivo PCH, archivos de código fuente deben compilarse con la **/Yu**<em>my_pch.h</em> opción. El archivo de encabezado PCH debe incluirse en primer lugar en los archivos de origen que utilizan el PCH:
+Para usar este archivo PCH, los archivos de código fuente deben compilarse con la opción **/yu**<em>my_pch. h</em> . El archivo de encabezado PCH debe incluirse primero en los archivos de código fuente que usan el PCH:
 
 ```cpp
 // C2857.cpp

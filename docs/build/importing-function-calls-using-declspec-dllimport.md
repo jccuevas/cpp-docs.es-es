@@ -1,60 +1,62 @@
 ---
 title: Importar llamadas a funciones mediante __declspec(dllimport)
-ms.date: 11/04/2016
-f1_keywords:
-- __declspec
-- dllimport
+description: Cómo y por qué usar __declspec(dllimport) al llamar a datos y funciones de DLL.
+ms.date: 05/03/2020
 helpviewer_keywords:
 - importing function calls [C++]
 - dllimport attribute [C++], function call imports
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-ms.openlocfilehash: 513e6bd7b1120dd710852ab61aa7603bba74907e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 515fbdb2824c1eaf41e822adeae1a16d3072eec4
+ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498233"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765726"
 ---
-# <a name="importing-function-calls-using-declspecdllimport"></a>Importar llamadas a funciones mediante __declspec(dllimport)
+# <a name="importing-function-calls-using-__declspecdllimport"></a>Importación de llamadas a funciones mediante `__declspec(dllimport)`
 
-El ejemplo de código siguiente muestra cómo usar **_declspec (dllimport)** para importar las llamadas de función desde un archivo DLL en una aplicación. Supongamos que `func1` es una función que reside en un archivo DLL independiente desde el archivo .exe que contiene el **principal** función.
+La anotación de llamadas mediante **`__declspec(dllimport)`** puede agilizarlas. **`__declspec(dllimport)`** siempre es necesario para acceder a los datos de DLL exportados.
 
-Sin **__declspec (dllimport)**, dado el código:
+## <a name="import-a-function-from-a-dll"></a>Importación de una función desde un archivo DLL
 
-```
+En el ejemplo de código siguiente se muestra cómo usar **`__declspec(dllimport)`** para importar llamadas a funciones desde un archivo DLL en una aplicación. Imagine que `func1` es una función que se encuentra en un archivo DLL independiente del archivo ejecutable que contiene la función **main**.
+
+Sin **`__declspec(dllimport)`** , dado este código:
+
+```C
 int main(void)
 {
    func1();
 }
 ```
 
-el compilador genera código similar al siguiente:
+el compilador genera código como el siguiente:
 
-```
+```asm
 call func1
 ```
 
-y el vinculador traducirá la llamada en algo parecido a esto:
+y el enlazador traduce la llamada a algo parecido a lo siguiente:
 
-```
+```asm
 call 0x4000000         ; The address of 'func1'.
 ```
 
-Si `func1` existe en otro archivo DLL, el vinculador no puede resolver directamente porque no tiene ninguna manera de saber lo que la dirección de `func1` es. En entornos de 16 bits, el vinculador agrega esta dirección de código a una lista en el archivo .exe que el cargador revisaría en tiempo de ejecución con la dirección correcta. En entornos de 32 bits y 64 bits, el vinculador genera un código thunk de los cuales conoce la dirección. En un entorno de 32 bits del código thunk es similar:
+Si `func1` existe en otro archivo DLL, el enlazador no puede resolver esta dirección directamente porque no tiene ninguna manera de saber cuál es la dirección de `func1`. En entornos de 32 y 64 bits, el enlazador genera un código thunk en una dirección conocida. En un entorno de 32 bits, el código thunk tiene el siguiente aspecto:
 
-```
+```asm
 0x40000000:    jmp DWORD PTR __imp_func1
 ```
 
-Aquí `imp_func1` es la dirección para el `func1` ranura en la tabla de direcciones de importación del archivo .exe. Todas las direcciones, por tanto, se sabe que el vinculador. El cargador solo tiene que actualizar la tabla de direcciones de importación del archivo .exe en tiempo de carga para que todo funcione correctamente.
+Aquí, `__imp_func1` es la dirección de la ranura `func1` en la tabla de direcciones de importación del archivo ejecutable. El enlazador conoce todas estas direcciones. El cargador solo tiene que actualizar la tabla de direcciones de importación del archivo ejecutable en el momento de la carga para que todo funcione correctamente.
 
-Por lo tanto, uso **__declspec (dllimport)** es mejor porque el vinculador no genera un código thunk si no es necesario. Fragmentos de código thunk que el código de mayor tamaño (en sistemas RISC, pueden ser varias instrucciones) y puede degradar el rendimiento de la memoria caché. Si indica al compilador que la función está en un archivo DLL, puede generar una llamada indirecta.
+Por eso, el uso de **`__declspec(dllimport)`** es mejor, ya que el enlazador no genera un código thunk si no es necesario. Los códigos thunk aumentan el tamaño del código (en sistemas RISC, puede constar de varias instrucciones) y pueden degradar el rendimiento de la caché. Si indica al compilador que la función está en un archivo DLL, puede generar una llamada indirecta de forma automática.
 
-Así que ahora este código:
+Por tanto, ahora este código:
 
-```
+```C
 __declspec(dllimport) void func1(void);
 int main(void)
 {
@@ -62,16 +64,16 @@ int main(void)
 }
 ```
 
-genera la siguiente instrucción:
+genera esta instrucción:
 
-```
+```asm
 call DWORD PTR __imp_func1
 ```
 
-No hay ningún código thunk y ningún `jmp` instrucciones, por lo que el código es más pequeñas y rápidas.
+No hay código thunk ni ninguna instrucción `jmp`, por lo que el código es más pequeño y más rápido. También puede obtener el mismo efecto sin **`__declspec(dllimport)`** mediante la optimización de todo el programa. Para obtener más información, consulte [/GL (Optimización de todo el programa)](reference/gl-whole-program-optimization.md).
 
-Por otro lado, para las llamadas de función dentro de un archivo DLL, no desea tener que usar una llamada indirecta. Ya sabe de dirección de una función. Dado que se requiere tiempo y espacio para cargar y almacenar la dirección de la función antes de una llamada indirecta, una llamada directa es siempre más rápido y más pequeños. Solo desea usar **__declspec (dllimport)** al llamar a funciones DLL desde fuera el propio archivo DLL. No use **__declspec (dllimport)** en funciones dentro de un archivo DLL al compilar ese archivo DLL.
+En el caso de las llamadas de función dentro de un archivo DLL, no le interesa tener que usar una llamada indirecta. El enlazador ya conoce la dirección de la función. Se necesita tiempo y espacio adicional para cargar y almacenar la dirección de la función antes de una llamada indirecta. Una llamada directa siempre es más rápida y de menor tamaño. Solo le interesa usar **`__declspec(dllimport)`** al llamar a funciones DLL desde fuera del propio archivo DLL. No use **`__declspec(dllimport)`** en funciones dentro de un archivo DLL al compilarlo.
 
 ## <a name="see-also"></a>Vea también
 
-[Importación a una aplicación](../build/importing-into-an-application.md)
+[Importación a una aplicación](importing-into-an-application.md)

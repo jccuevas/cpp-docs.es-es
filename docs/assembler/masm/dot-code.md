@@ -1,33 +1,35 @@
 ---
 title: .CODE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .CODE
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 65d336d2829c97fdf21e6f4b0fcb3063cc7776ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e53befcc46319d0ecf2287ab96a19a73a0b0b85
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630816"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076276"
 ---
 # <a name="code"></a>.CODE
 
-Cuando se usa con [. MODELO](../../assembler/masm/dot-model.md), indica el inicio de un segmento de código.
+(solo para MASM de 32 bits). Cuando se utiliza con [. MODELO](dot-model.md), indica el inicio de un segmento de código.
 
 ## <a name="syntax"></a>Sintaxis
 
-> . CÓDIGO [[nombre]]
+> **. CÓDIGO** ⟦*nombre*⟧ \
+> ⟦ *segmentItem* ⟧... \
+> ⟦ *codesegmentnameId* **finaliza**;; ⟧\
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|`name`|Parámetro opcional que especifica el nombre del segmento de código. El nombre predeterminado es _TEXT pequeña, pequeña, compacto y plana [modelos](../../assembler/masm/dot-model.md). El nombre predeterminado es *modulename*_TEXT para otros modelos.|
+*nombre*\
+Parámetro opcional que especifica el nombre del segmento de código. El nombre predeterminado es **_TEXT** para los [modelos](dot-model.md)minúsculo, pequeño, compacto y plano. El nombre predeterminado es *modulename*_TEXT para otros modelos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
-[.DATA](../../assembler/masm/dot-data.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[. ](dot-data.md)\ de datos
+[Gramática BNF de MASM](masm-bnf-grammar.md)

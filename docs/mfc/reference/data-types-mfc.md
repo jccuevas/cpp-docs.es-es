@@ -24,26 +24,26 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-ms.openlocfilehash: 56da8a25261a54e952a529e93063fbe853cbf16d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37dd9b9d3f3905a923cd9c51856c1c39819cb162
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608096"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502129"
 ---
 # <a name="data-types-mfc"></a>Tipos de datos (MFC)
 
-En este tema se enumera los tipos de datos más usados en la biblioteca Microsoft Foundation Class. La mayoría de los tipos de datos es los mismos que en el Kit de desarrollo de plataforma de Software (SDK), mientras que otras son exclusivas de MFC.
+En este tema se enumeran los tipos de datos que se usan con más frecuencia en el biblioteca MFC. La mayoría de los tipos de datos son los mismos que en el kit de desarrollo de software (SDK) de la plataforma, mientras que otros son exclusivos de MFC.
 
-Para obtener información sobre los tipos de datos utilizados en el SDK de Windows y MFC, vea [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types).
+Para obtener información sobre los tipos de datos utilizados en el Windows SDK y en MFC, vea [tipos de datos de Windows](/windows/win32/WinProg/windows-data-types).
 
-Tipos de datos únicos para la biblioteca Microsoft Foundation Class incluyen lo siguiente:
+Entre los tipos de datos únicos del biblioteca MFC se incluyen los siguientes:
 
-- COLOCAR un valor que se usa para indicar la posición de un elemento en una colección: usa las clases de colección de MFC.
+- COLOCA un valor que se usa para indicar la posición de un elemento en una colección; lo utilizan las clases de colección de MFC.
 
-- Puntero de 32 bits LPCRECT una constante (no modificable) `RECT` estructura.
+- LPCRECT un puntero de 32 bits a una estructura constante (no modificable `RECT` ).
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../../mfc/class-library-overview.md)<br/>
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
+[Información general sobre clases](../../mfc/class-library-overview.md)<br/>
+[Macros y variables globales](../../mfc/reference/mfc-macros-and-globals.md)

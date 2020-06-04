@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3132
 ms.assetid: d54a3d12-336a-4ed0-ad4e-43cddac33b5e
-ms.openlocfilehash: a4c6ce8005aecd094c57b3dbda5c95565deecb95
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3ef68e693b77b72c1e4cc2590a404b09b38ab04
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760210"
 ---
 # <a name="compiler-error-c3132"></a>Error del compilador C3132
 
-'parámetro de función': las matrices de parámetros solo se pueden aplicar a un argumento formal de tipo 'matriz unidimensional administrada'
+' función-parámetro ': las matrices de parámetros solo se pueden aplicar a un argumento formal de tipo ' matriz administrada de una sola dimensión '
 
-El [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) se aplicó el atributo a un parámetro que no era una matriz unidimensional.
+El atributo <xref:System.ParamArrayAttribute> se aplicó a un parámetro que no era una matriz de una sola dimensión.
 
-El ejemplo siguiente genera C3132:
+En el ejemplo siguiente se genera C3132:
 
-```
+```cpp
 // C3132.cpp
 // compile with: /clr /c
 using namespace System;

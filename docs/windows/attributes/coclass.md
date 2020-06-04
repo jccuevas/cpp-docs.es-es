@@ -1,17 +1,17 @@
 ---
-title: coclass (atributo de COM de C++)
+title: coclass (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.coclass
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 69f749dd6f8b2a8c42b4c75dd3790b9f7fbcf291
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76540e90fef2e840b91bb07f570a7b8c0987eb10
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168336"
 ---
 # <a name="coclass"></a>coclase
 
@@ -23,57 +23,57 @@ Crea un objeto COM, que puede implementar una interfaz COM.
 [coclass]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **coclase** atributo de C++ coloca una construcción de coclase en el archivo .idl generado.
+El atributo **CoClass** C++ coloca una construcción de coclase en el archivo. idl generado.
 
-Al definir una coclase, también puede especificar el [uuid](uuid-cpp-attributes.md), [versión](version-cpp.md), [threading](threading-cpp.md), [vi_progid](vi-progid.md), y [progid ](progid.md) atributos. Si no se especifica uno de ellos, se generará.
+Al definir una coclase, también puede especificar los atributos [UUID](uuid-cpp-attributes.md), [version](version-cpp.md), [Threading](threading-cpp.md), [vi_progid](vi-progid.md)y [ProgID](progid.md) . Si no se especifica ninguno de ellos, se generará.
 
-Si los dos archivos de encabezado contienen clases con el **coclase** atributo y no se especifica un GUID, el compilador usará el mismo GUID para las dos clases, y que se producirá un error MIDL.  Por lo tanto, debe usar el `uuid` cuando se usa el atributo **coclase**.
+Si dos archivos de encabezado contienen clases con el atributo **CoClass** y no especifican un GUID, el compilador utilizará el mismo GUID para ambas clases y se producirá un error de MIDL.  Por lo tanto, debe usar el atributo `uuid` al usar **CoClass**.
 
 **Proyectos ATL**
 
-Cuando este atributo precede a una definición de clase o estructura en un proyecto ATL,:
+Cuando este atributo precede a una definición de clase o estructura en un proyecto ATL, se:
 
-- Inserta el código o datos para admitir el registro automático para el objeto.
+- Inserta código o datos para admitir el registro automático del objeto.
 
-- Inserta el código o datos para admitir un generador de clases COM para el objeto.
+- Inserta código o datos para admitir un generador de clases COM para el objeto.
 
-- Inserta el código o datos para implementar `IUnknown` y hacer que un objeto COM que se puede crear el objeto.
+- Inserta código o datos para implementar `IUnknown` y convertir el objeto en un objeto que se pueda crear COM.
 
-En concreto, las clases base siguientes se agregan al objeto de destino:
+En concreto, las siguientes clases base se agregan al objeto de destino:
 
-- [Clase de CComCoClass](../../atl/reference/ccomcoclass-class.md) proporciona el modelo de fábrica y agregación de clase predeterminado para el objeto.
+- [CComCoClass (clase](../../atl/reference/ccomcoclass-class.md) ) proporciona el generador de clases predeterminado y el modelo de agregación para el objeto.
 
-- [CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md) tiene una plantilla basada en la clase de modelo de subprocesos especificada por el [threading](threading-cpp.md) atributo. Si el `threading` atributo no se especifica, el modelo de subprocesos de predeterminada es un contenedor.
+- [CComObjectRootEx (clase](../../atl/reference/ccomobjectrootex-class.md) ) tiene una plantilla basada en la clase de modelo de subprocesos especificada por el atributo [Threading](threading-cpp.md) . Si no se especifica el atributo `threading`, el modelo de subprocesos predeterminado es Apartment.
 
-- [IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md) se agrega si el [noncreatable](noncreatable.md) no se especifica el atributo para el objeto de destino.
+- [IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md) se agrega si no se especifica el atributo [noncreatable](noncreatable.md) para el objeto de destino.
 
-Por último, se reemplaza cualquier interfaz dual que no se define mediante un IDL incrustado con el correspondiente [IDispatchImpl](../../atl/reference/idispatchimpl-class.md) clase. Si se define la interfaz dual en IDL incrustado, no se modifica la interfaz en la lista base concreta.
+Por último, cualquier interfaz dual que no se haya definido mediante IDL incrustado se reemplaza por la clase [IDispatchImpl](../../atl/reference/idispatchimpl-class.md) correspondiente. Si la interfaz dual se define en IDL incrustado, la interfaz concreta de la lista base no se modifica.
 
-El **coclase** atributo también hace que las siguientes funciones disponibles a través de código insertado, o en el caso de `GetObjectCLSID`, como un método estático en la clase base `CComCoClass`:
+El atributo **CoClass** también hace que las siguientes funciones estén disponibles a través del código insertado o, en el caso de `GetObjectCLSID`, como un método estático en la clase base `CComCoClass`:
 
-- `UpdateRegistry` registra los generadores de clases de la clase de destino.
+- `UpdateRegistry` registra los generadores de clase de la clase de destino.
 
-- `GetObjectCLSID`, que está relacionada con el registro, también puede utilizarse para obtener el CLSID de la clase de destino.
+- `GetObjectCLSID`, que está relacionado con el registro, también se puede usar para obtener el CLSID de la clase de destino.
 
-- `GetObjectFriendlyName` de forma predeterminada, devuelve una cadena de formato de la "\<*nombre de clase de destino*> `Object`". Si esta función ya está presente, no se agrega. Agregue esta función a la clase de destino para devolver un nombre más descriptivo a la que se genera automáticamente.
+- de forma predeterminada `GetObjectFriendlyName` devuelve una cadena con el formato "\<*nombre de clase de destino*> `Object`". Si esta función ya está presente, no se agrega. Agregue esta función a la clase de destino para devolver un nombre más descriptivo que el generado automáticamente.
 
-- `GetProgID`, que está relacionada con el registro, se devuelve la cadena especificada con el [progid](progid.md) atributo.
+- `GetProgID`, que está relacionado con el registro, devuelve la cadena especificada con el atributo [ProgID](progid.md) .
 
 - `GetVersionIndependentProgID` tiene la misma funcionalidad que `GetProgID`, pero devuelve la cadena especificada con [vi_progid](vi-progid.md).
 
-Los cambios siguientes, que están relacionados con la asignación COM, se realizan en la clase de destino:
+Los cambios siguientes, que están relacionados con el mapa COM, se realizan en la clase de destino:
 
-- Se agrega un mapa COM con entradas para todas las interfaces que se deriva de la clase de destino y todas las entradas especificadas por el [puntos de entrada de interfaz COM](../../mfc/com-interface-entry-points.md) atributo o las requeridas por el [agregados](aggregates.md) atributo.
+- Se agrega un mapa COM con entradas para todas las interfaces de las que se deriva la clase de destino y todas las entradas especificadas por el atributo de puntos de entrada de la [interfaz com](../../mfc/com-interface-entry-points.md) o las que requiere el atributo de [agregados](aggregates.md) .
 
-- Un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) macro se inserta en el mapa COM.
+- Se inserta una macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) en el mapa com.
 
-El nombre de la coclase generado en el archivo IDL para la clase tendrán el mismo nombre que la clase.  Por ejemplo, que hace referencia al siguiente ejemplo, para obtener acceso al identificador de clase para una coclase `CMyClass`, en un cliente a través del archivo de encabezado generados por MIDL, utilice `CLSID_CMyClass`.
+El nombre de la coclase generada en el archivo. idl para la clase tendrá el mismo nombre que la clase.  Por ejemplo, y al hacer referencia al ejemplo siguiente, para tener acceso al identificador de clase de una coclase `CMyClass`, en un cliente a través del archivo de encabezado generado por MIDL, utilice `CLSID_CMyClass`.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo usar el **coclase** atributo:
+En el código siguiente se muestra cómo usar el atributo **CoClass** :
 
 ```cpp
 // cpp_attr_ref_coclass1.cpp
@@ -91,7 +91,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};
 ```
 
-El ejemplo siguiente muestra cómo invalidar la implementación predeterminada de una función que aparece en el código insertado por el **coclase** atributo. Consulte [/Fx](../../build/reference/fx-merge-injected-code.md) para obtener más información sobre cómo ver código insertado. Las interfaces que usó para una clase o clases base se aparecerá en el código insertado. Además, si una clase se incluye de forma predeterminada en el código insertado y especificar explícitamente esa clase como base para la coclase, el proveedor de atributo usará el formulario especificado en el código.
+En el ejemplo siguiente se muestra cómo invalidar la implementación predeterminada de una función que aparece en el código inyectado por el atributo **CoClass** . Consulte [/Fx](../../build/reference/fx-merge-injected-code.md) para obtener más información sobre cómo ver código insertado. Las clases base o las interfaces que use para una clase aparecerán en el código insertado. Además, si una clase se incluye de forma predeterminada en el código insertado y se especifica explícitamente esa clase como base para su coclase, el proveedor de atributos usará el formulario especificado en el código.
 
 ```cpp
 // cpp_attr_ref_coclass2.cpp
@@ -133,12 +133,12 @@ public:
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos COM](com-attributes.md)<br/>

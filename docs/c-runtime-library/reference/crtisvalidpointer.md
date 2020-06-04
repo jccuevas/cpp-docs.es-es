@@ -1,9 +1,9 @@
 ---
 title: _CrtIsValidPointer
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsValidPointer
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-ms.openlocfilehash: 64197d460cdb7dd26d22196c08151be09df48573
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 490d2dea097935dee2cd2a003aa28e32f1ced69d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429262"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938769"
 ---
-# <a name="crtisvalidpointer"></a>_CrtIsValidPointer
+# <a name="_crtisvalidpointer"></a>_CrtIsValidPointer
 
 Comprueba que un puntero no es null. En las versiones de la biblioteca en tiempo de ejecución de C anteriores a Visual Studio 2010, comprueba que un intervalo de memoria especificado es válido para lectura y escritura (solo en la versión de depuración).
 
@@ -56,11 +59,11 @@ Accesibilidad de lectura y escritura que se va a determinar para el intervalo de
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_CrtIsValidPointer** devuelve TRUE si el puntero especificado no es null. En las versiones de la biblioteca de CRT anteriores a Visual Studio 2010, devuelve TRUE si el intervalo de memoria es válido para la o las operaciones especificadas. De lo contrario, la función devuelve el FALSE.
+**_CrtIsValidPointer** devuelve true si el puntero especificado no es NULL. En las versiones de la biblioteca de CRT anteriores a Visual Studio 2010, devuelve TRUE si el intervalo de memoria es válido para la o las operaciones especificadas. De lo contrario, la función devuelve el FALSE.
 
 ## <a name="remarks"></a>Comentarios
 
-A partir de la biblioteca de CRT en Visual Studio 2010, el *tamaño* y *acceso* se omiten los parámetros, y **_CrtIsValidPointer** solo comprueba que el especificado *dirección* no es null. No se recomienda usar esta función porque puede realizar la prueba sin ningún problema. En las versiones anteriores de Visual Studio 2010, la función simplemente comprueba que el intervalo de memoria que empieza en *dirección* y se extiende por *tamaño* bytes es válido para las operaciones de accesibilidad especificadas. Cuando *acceso* está establecida en TRUE, el intervalo de memoria se comprueba para operaciones de lectura y escritura. Cuando *acceso* es FALSE, el intervalo de memoria solo se comprueba para su lectura. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsValidPointer** se quitan durante el preprocesamiento.
+A partir de la biblioteca de CRT de Visual Studio 2010, se omiten los parámetros de *tamaño* y de *acceso* , y **_CrtIsValidPointer** solo comprueba si la *Dirección* especificada no es NULL. No se recomienda usar esta función porque puede realizar la prueba sin ningún problema. En las versiones anteriores a Visual Studio 2010, la función comprueba que el intervalo de memoria que empieza en la *Dirección* y que se extiende para el *tamaño* de bytes es válido para las operaciones de accesibilidad especificadas. Cuando el *acceso* se establece en true, el intervalo de memoria se comprueba para lectura y escritura. Cuando el *acceso* es false, el intervalo de memoria solo se valida para lectura. Cuando no se define [_ Debug](../../c-runtime-library/debug.md) , las llamadas a **_CrtIsValidPointer** se quitan durante el preprocesamiento.
 
 Dado que esta función devuelve TRUE o FALSE, se puede pasar a una de las macros [_ASSERT](assert-asserte-assert-expr-macros.md) para crear un mecanismo sencillo de control de errores de depuración. En el ejemplo siguiente se genera un error de aserción si el intervalo de memoria no es válido para operaciones de lectura y escritura:
 
@@ -68,7 +71,7 @@ Dado que esta función devuelve TRUE o FALSE, se puede pasar a una de las macros
 _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 ```
 
-Para obtener más información acerca de cómo **_CrtIsValidPointer** puede utilizarse con otras macros y funciones de depuración, vea [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información sobre cómo se puede usar **_CrtIsValidPointer** con otras funciones de depuración y macros, vea [macros para informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

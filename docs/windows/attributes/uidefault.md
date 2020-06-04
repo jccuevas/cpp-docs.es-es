@@ -1,21 +1,21 @@
 ---
-title: UIDefault (atributo de COM de C++)
+title: uidefault (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: 61297ecea1137c2247077e3d3ac2f3c4718b13a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55e88ab4dfaaa4157a99c4dc523f205370f78c46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608723"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214466"
 ---
 # <a name="uidefault"></a>uidefault
 
-Indica que el miembro de la información de tipo es el miembro predeterminado para su presentación en la interfaz de usuario.
+Indica que el miembro de información de tipo es el miembro predeterminado que se va a mostrar en la interfaz de usuario.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,13 +23,13 @@ Indica que el miembro de la información de tipo es el miembro predeterminado pa
 [uidefault]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **uidefault** atributo de C++ tiene la misma funcionalidad que el [uidefault](/windows/desktop/Midl/uidefault) atributo MIDL.
+El atributo **uidefault** C++ tiene la misma funcionalidad que el atributo MIDL [uidefault](/windows/win32/Midl/uidefault) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra un ejemplo de **uidefault**:
+En el código siguiente se muestra un ejemplo de **uidefault**:
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp
@@ -56,12 +56,12 @@ __interface ICustom{
 |-|-|
 |**Se aplica a**|Método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4638
 ms.assetid: 2c07923a-e103-4e40-bd11-fdfed428a5ec
-ms.openlocfilehash: 1bdd7541e16f5c02756678ae78a777094b5fe588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3662116359f906ef6f0a004fada8efd6771d0a0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651534"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174133"
 ---
 # <a name="compiler-warning-level-3-c4638"></a>Advertencia del compilador (nivel 3) C4638
 
 > Destino del comentario del documento XML: referencia a símbolo desconocido '*símbolo*'
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El compilador no pudo resolver un símbolo (*símbolo*). El símbolo debe ser válido en la compilación.
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: dd508095508cf9d0d04778b06d6296296649f710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565326"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367935"
 ---
 # <a name="standard-types"></a>Tipos estándar
 
@@ -173,7 +173,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 
 ### <a name="fixed-width-integral-types-stdinth"></a>Tipos enteros de ancho fijo (stdint.h)
 
-|nombre|Tipo integrado equivalente|
+|Nombre|Tipo integrado equivalente|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|signed char, unsigned char|
 |int16\_t, uint16\_t|short, unsigned short|
@@ -202,7 +202,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |Estructuras de `div_t`, `ldiv_t` y `lldiv_t`|Almacena los valores devueltos por [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) y [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivamente.|STDLIB.H|
 |Entero de `errno_t`|Se usa para un tipo de valor devuelto o un parámetro de la función que se ocupa de los códigos de error de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception` (estructura)|Almacena información de error para [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
-|`_EXCEPTION_POINTERS`|Contiene un registro de excepciones. Para más información, vea [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers).|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|Contiene un registro de excepciones. Para más información, vea [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
 |`FILE` (estructura)|Almacena información sobre el estado actual del flujo; se usa en todas las operaciones de E/S de flujo.|STDIO.H|
 |Estructuras de `_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t` y `__wfinddata64i32_t`|Almacena información de atributos de archivo devuelta por [_findfirst, _wfindfirst y por funciones relacionadas](../c-runtime-library/reference/findfirst-functions.md) y [_findnext, _wfindnext y por funciones relacionadas](../c-runtime-library/reference/findnext-functions.md). Vea [Funciones de búsqueda de nombre de archivo](../c-runtime-library/filename-search-functions.md) para obtener información sobre los miembros de la estructura.|IO.H, WCHAR.H|
 |`_FPIEEE_RECORD` (estructura)|Contiene información sobre la excepción de punto flotante del IEEE; [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) la pasa al controlador de interceptaciones definido por el usuario.|FPIEEE.H|
@@ -217,7 +217,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |Matriz `jmp_buf`|Usado por [setjmp](../c-runtime-library/reference/setjmp.md) y [longjmp](../c-runtime-library/reference/longjmp.md) para guardar y restaurar el entorno del programa.|SETJMP.H|
 |`lconv` (estructura)|Contiene reglas de formato para valores numéricos en distintos países o regiones. Usado por [localeconv](../c-runtime-library/reference/localeconv.md).|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (doble largo o matriz de caracteres sin signo)|Se usa para representar un valor doble largo.|STDLIB.H|
-|`_locale_t` (estructura)|Almacena valores de la configuración regional actual. Se usa en todas las bibliotecas en tiempo de ejecución de C específicas de la configuración regional.|CRTDEF.H|
+|`_locale_t` (estructura)|Almacena valores de la configuración regional actual. Se usa en todas las bibliotecas en tiempo de ejecución de C específicas de la configuración regional.|CRTDEFS.H|
 |`mbstate_t`|Realiza el seguimiento del estado de una conversión de caracteres multibyte.|WCHAR.H|
 |Entero largo de `off_t`, `_off_t`|Representa el valor de desplazamiento de archivo.|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> Puntero `_onexit_m_t`|Devuelto por [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md).|STDLIB.H|
@@ -253,6 +253,6 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |Entero de `wctype_t`|Puede representar todos los caracteres del juego de caracteres de cualquier idioma.|WCHAR.H,<br /><br /> CRTDEFS.H|
 |Entero de `wint_t`|Tipo de objeto de datos que puede contener cualquier carácter ancho o valor final de archivo ancho.|WCHAR.H,<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de la biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md)

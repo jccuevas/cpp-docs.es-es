@@ -1,22 +1,20 @@
 ---
 title: Usar CRichEditCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CRichEditCtrl
 helpviewer_keywords:
 - rich edit controls [MFC], using
 - CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
-ms.openlocfilehash: 22255cc0072e6d25bc3ec70086be6ec99a59808a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53f718d58840eba5f7c1e41c1c337e6c779b51e3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498168"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441798"
 ---
 # <a name="using-cricheditctrl"></a>Usar CRichEditCtrl
 
-Un control rich edit es una ventana en la que el usuario puede escribir y editar texto. El texto se puede asignar caracteres y el formato de párrafo y puede incluir objetos OLE incrustados. El control rich edit se representa en MFC mediante el [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) clase.
+Un control Rich Edit es una ventana en la que el usuario puede escribir y editar texto. El texto puede tener asignado un formato de carácter y de párrafo, y puede incluir objetos OLE incrustados. La clase [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) representa el control Rich Edit en MFC.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -32,7 +30,7 @@ Un control rich edit es una ventana en la que el usuario puede escribir y editar
 
 - [Selección actual en un control Rich Edit](../mfc/current-selection-in-a-rich-edit-control.md)
 
-- [Separaciones de palabras en un Control Rich Edit](../mfc/word-breaks-in-rich-edit-controls.md)
+- [Saltos de palabra en un control Rich Edit](../mfc/word-breaks-in-rich-edit-controls.md)
 
 - [Operaciones del Portapapeles en los controles Rich Edit](../mfc/clipboard-operations-in-rich-edit-controls.md)
 
@@ -44,7 +42,6 @@ Un control rich edit es una ventana en la que el usuario puede escribir y editar
 
 - [Notificaciones de un control Rich Edit](../mfc/notifications-from-a-rich-edit-control.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles](../mfc/controls-mfc.md)
-

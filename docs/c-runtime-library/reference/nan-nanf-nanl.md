@@ -1,11 +1,14 @@
 ---
 title: nan, nanf, nanl
-ms.date: 01/31/2019
-apiname:
+ms.date: 4/2/2020
+api_name:
 - nanf
 - nan
 - nanl
-apilocation:
+- _o_nan
+- _o_nanf
+- _o_nanl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +20,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nan
 - nanl
@@ -27,12 +34,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: df3985a28bc351bdf196c0a1561bd3e25b661c87
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703001"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914584"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -53,24 +60,26 @@ Valor de cadena.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **nan** funciones devuelven un valor NaN reservado.
+Las funciones **Nan** devuelven un valor Nan inquiet.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **nan** las funciones devuelven un valor de punto flotante que corresponde a un NaN silencioso (que no sea de señalización). El *entrada* valor se omite. Para obtener información sobre cómo se representa un NaN en la salida, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Las funciones **Nan** devuelven un valor de punto flotante que corresponde a un Nan (sin señalización) silencioso. Se omite el valor de *entrada* . Para obtener información sobre cómo se representa un NaN en la salida, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**nan**, **nanf**, **nanl**|\<math.h>|\<cmath> o \<math.h>|
+|**Nan**, **nanf (**, **nanl**|\<math.h>|\<cmath> o \<math.h>|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf (](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

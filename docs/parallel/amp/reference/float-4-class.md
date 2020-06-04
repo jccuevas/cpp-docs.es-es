@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 97302504303a540eb691f7af15f7d346d0d50ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459779"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142181"
 ---
-# <a name="float4-class"></a>float_4 (Clase)
+# <a name="float_4-class"></a>float_4 (Clase)
 
 Representa un vector corto de cuatro valores de coma flotante.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class float_4;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor float_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de float_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -321,10 +321,10 @@ class float_4;
 |float_4::get_wzyx||
 |float_4::get_x||
 |float_4::get_xw||
-|float_4:: get_xwy||
+|float_4::get_xwy||
 |float_4::get_xwyz||
 |float_4::get_xwz||
-|float_4:: get_xwzy||
+|float_4::get_xwzy||
 |float_4::get_xy||
 |float_4::get_xyw||
 |float_4::get_xywz||
@@ -332,11 +332,11 @@ class float_4;
 |float_4::get_xyzw||
 |float_4::get_xz||
 |float_4::get_xzw||
-|float_4:: get_xzwy||
-|float_4:: get_xzy||
+|float_4::get_xzwy||
+|float_4::get_xzy||
 |float_4::get_xzyw||
-|float_4:: get_Y||
-|float_4:: get_yw||
+|float_4::get_y||
+|float_4::get_yw||
 |float_4::get_ywx||
 |float_4::get_ywxz||
 |float_4::get_ywz||
@@ -347,7 +347,7 @@ class float_4;
 |float_4::get_yxz||
 |float_4::get_yxzw||
 |float_4::get_yz||
-|float_4:: get_yzw||
+|float_4::get_yzw||
 |float_4::get_yzwx||
 |float_4::get_yzx||
 |float_4::get_yzxw||
@@ -373,7 +373,7 @@ class float_4;
 |float_4::ref_r||
 |float_4::ref_w||
 |float_4::ref_x||
-|float_4:: ref_y||
+|float_4::ref_y||
 |float_4::ref_z||
 |float_4::set_w||
 |float_4::set_wx||
@@ -393,22 +393,22 @@ class float_4;
 |float_4::set_wzyx||
 |float_4::set_x||
 |float_4::set_xw||
-|float_4:: set_xwy||
-|float_4:: set_xwyz||
+|float_4::set_xwy||
+|float_4::set_xwyz||
 |float_4::set_xwz||
-|float_4:: set_xwzy||
-|float_4:: set_xy||
-|float_4:: set_xyw||
+|float_4::set_xwzy||
+|float_4::set_xy||
+|float_4::set_xyw||
 |float_4::set_xywz||
 |float_4::set_xyz||
-|float_4:: set_xyzw||
+|float_4::set_xyzw||
 |float_4::set_xz||
 |float_4::set_xzw||
-|float_4:: set_xzwy||
-|float_4:: set_xzy||
+|float_4::set_xzwy||
+|float_4::set_xzy||
 |float_4::set_xzyw||
-|float_4:: set_y||
-|float_4:: set_yw||
+|float_4::set_y||
+|float_4::set_yw||
 |float_4::set_ywx||
 |float_4::set_ywxz||
 |float_4::set_ywz||
@@ -419,7 +419,7 @@ class float_4;
 |float_4::set_yxz||
 |float_4::set_yxzw||
 |float_4::set_yz||
-|float_4:: set_yzw||
+|float_4::set_yzw||
 |float_4::set_yzwx||
 |float_4::set_yzx||
 |float_4::set_yzxw||
@@ -442,7 +442,7 @@ class float_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_4::operator-||
 |float_4::operator--||
@@ -455,13 +455,13 @@ class float_4;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#float_4__size)||
+|[Size (constante)](#float_4__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_4::a||
 |float_4::ab||
@@ -469,20 +469,20 @@ class float_4;
 |float_4::abgr||
 |float_4::abr||
 |float_4::abrg||
-|float_4:: AG||
-|float_4:: agb||
+|float_4::ag||
+|float_4::agb||
 |float_4::agbr||
-|float_4:: Agr||
-|float_4:: agrb||
+|float_4::agr||
+|float_4::agrb||
 |float_4::ar||
 |float_4::arb||
 |float_4::arbg||
 |float_4::arg||
-|float_4:: ARGB||
-|float_4:: b||
+|float_4::argb||
+|float_4::b||
 |float_4::ba||
-|float_4:: bag||
-|float_4:: bagr||
+|float_4::bag||
+|float_4::bagr||
 |float_4::bar||
 |float_4::barg||
 |float_4::bg||
@@ -516,10 +516,10 @@ class float_4;
 |float_4::rab||
 |float_4::rabg||
 |float_4::rag||
-|float_4:: ragb||
+|float_4::ragb||
 |float_4::rb||
 |float_4::rba||
-|float_4:: rbag||
+|float_4::rbag||
 |float_4::rbg||
 |float_4::rbga||
 |float_4::rg||
@@ -527,70 +527,70 @@ class float_4;
 |float_4::rgab||
 |float_4::rgb||
 |float_4::rgba||
-|float_4:: w||
-|float_4:: WX||
-|float_4:: WXY||
-|float_4:: wxyz||
-|float_4:: wxz||
-|float_4:: wxzy||
-|float_4:: WY||
-|float_4:: wyx||
-|float_4:: wyxz||
-|float_4:: WYZ||
-|float_4:: wyzx||
-|float_4:: wZ||
+|float_4::w||
+|float_4::wx||
+|float_4::wxy||
+|float_4::wxyz||
+|float_4::wxz||
+|float_4::wxzy||
+|float_4::wy||
+|float_4::wyx||
+|float_4::wyxz||
+|float_4::wyz||
+|float_4::wyzx||
+|float_4::wz||
 |float_4::wzx||
-|float_4:: wzxy||
-|float_4:: wzy||
-|float_4:: wzyx||
-|float_4:: x||
-|float_4:: xw||
-|float_4:: xwy||
-|float_4:: xwyz||
+|float_4::wzxy||
+|float_4::wzy||
+|float_4::wzyx||
+|float_4::x||
+|float_4::xw||
+|float_4::xwy||
+|float_4::xwyz||
 |float_4::xwz||
-|float_4:: xwzy||
-|float_4:: XY||
-|float_4:: xyw||
-|float_4:: xywz||
-|float_4:: XYZ||
-|float_4:: xyzw||
+|float_4::xwzy||
+|float_4::xy||
+|float_4::xyw||
+|float_4::xywz||
+|float_4::xyz||
+|float_4::xyzw||
 |float_4::xz||
-|float_4:: xzw||
-|float_4:: xzwy||
-|float_4:: xzy||
-|float_4:: xzyw||
-|float_4:: y||
-|float_4:: yw||
-|float_4:: ywx||
+|float_4::xzw||
+|float_4::xzwy||
+|float_4::xzy||
+|float_4::xzyw||
+|float_4::y||
+|float_4::yw||
+|float_4::ywx||
 |float_4::ywxz||
-|float_4:: ywz||
+|float_4::ywz||
 |float_4::ywzx||
-|float_4:: YX||
-|float_4:: yxw||
+|float_4::yx||
+|float_4::yxw||
 |float_4::yxwz||
-|float_4:: YXZ||
-|float_4:: yxzw||
-|float_4:: YZ||
-|float_4:: yzw||
-|float_4:: yzwx||
-|float_4:: yzx||
-|float_4:: yzxw||
+|float_4::yxz||
+|float_4::yxzw||
+|float_4::yz||
+|float_4::yzw||
+|float_4::yzwx||
+|float_4::yzx||
+|float_4::yzxw||
 |float_4::z||
-|float_4:: ZW||
-|float_4:: zwx||
-|float_4:: zwxy||
-|float_4:: zwy||
-|float_4:: zwyx||
+|float_4::zw||
+|float_4::zwx||
+|float_4::zwxy||
+|float_4::zwy||
+|float_4::zwyx||
 |float_4::zx||
 |float_4::zxw||
-|float_4:: zxwy||
-|float_4:: zxy||
-|float_4:: zxyw||
-|float_4:: ZY||
-|float_4:: zyw||
-|float_4:: zywx||
-|float_4:: ZYX||
-|float_4:: zyxw||
+|float_4::zxwy||
+|float_4::zxy||
+|float_4::zxyw||
+|float_4::zy||
+|float_4::zyw||
+|float_4::zywx||
+|float_4::zyx||
+|float_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -598,15 +598,15 @@ class float_4;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline float_4(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V3*<br/>
-El valor para inicializar el elemento 3.
+Valor para inicializar el elemento 3.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="float_4__size"></a> Tamaño
+## <a name="float_4__size"></a>ajusta
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

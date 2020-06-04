@@ -1,11 +1,11 @@
 ---
 title: clog, clogf, clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636558"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942925"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -68,7 +71,7 @@ Base del logaritmo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El logaritmo natural de *z*. El resultado es ilimitado en el eje real y en el intervalo [-iπ, + iπ] en el eje imaginario.
+Logaritmo natural de *z*. El resultado es ilimitado a lo largo del eje real y en el intervalo [-iπ, + iπ] a lo largo del eje imaginario.
 
 Los valores de devolución posibles son:
 
@@ -82,13 +85,13 @@ Los valores de devolución posibles son:
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **clog** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **clog** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas del **obstruya** que toman y devuelven los valores de **_Fcomplex** y **_Lcomplex** . En un programa de C, el **obstruya** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**CLOG**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+|**clog**,               **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

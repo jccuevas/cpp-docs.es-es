@@ -1,39 +1,39 @@
 ---
 title: Error del compilador C2065
-ms.date: 09/01/2017
+ms.date: 08/19/2019
 f1_keywords:
 - C2065
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40d1d0744588c4b7911e84f5e57a6b40372b48cf
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482527"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630132"
 ---
 # <a name="compiler-error-c2065"></a>Error del compilador C2065
 
-> '*identificador*': identificador no declarado
+> '*Identifier*': identificador no declarado
 
-El compilador no encuentra la declaración de un identificador. Hay varias causas posibles para este error. Las causas más comunes de C2065 son que aún no se ha declarado el identificador, el identificador está mal escrito, el encabezado donde se declara el identificador no se incluye en el archivo o el identificador no tiene un calificador de ámbito, por ejemplo, `cout` en lugar de `std::cout`. Para obtener más información sobre las declaraciones de C++, vea [declaraciones y definiciones (C++)](../../cpp/declarations-and-definitions-cpp.md).
+El compilador no puede encontrar la declaración de un identificador. Hay muchas causas posibles de este error. Las causas más comunes de C2065 son que el identificador no se ha declarado, el identificador está mal escrito, el encabezado en el que se declara el identificador no está incluido en el archivo o el identificador no tiene un calificador de ámbito, por ejemplo, `cout` en lugar de `std::cout`. Para obtener más información sobre las declaraciones C++en, vea [declaraciones y definiciones (C++)](../../cpp/declarations-and-definitions-cpp.md).
 
-Estos son algunos problemas comunes y soluciones con mayor detalle.
+Estos son algunos problemas y soluciones comunes con mayor detalle.
 
-## <a name="the-identifier-is-undeclared"></a>El identificador se ha declarado
+## <a name="the-identifier-is-undeclared"></a>El identificador no está declarado
 
-Si el identificador es una variable o un nombre de función, debe declarar antes de poder usarlo. Una declaración de función también debe incluir los tipos de sus parámetros antes de que se puede usar la función. Si la variable se declara mediante `auto`, el compilador debe ser capaz de deducir el tipo de su inicializador.
+Si el identificador es una variable o un nombre de función, debe declararlo para poder utilizarlo. Una declaración de función también debe incluir los tipos de sus parámetros antes de que se pueda usar la función. Si la variable se declara mediante `auto`, el compilador debe ser capaz de deducir el tipo de su inicializador.
 
-Si el identificador es un miembro de una clase o struct o declarados en un espacio de nombres, debe calificarse por el nombre de clase o struct, o el nombre del espacio de nombres, cuando se utiliza fuera del ámbito de espacio de nombres, clase o struct. Como alternativa, se debe poner el espacio de nombres en el ámbito una `using` la directiva como `using namespace std;`, o se debe poner el nombre de miembro en el ámbito una `using` declaración, como `using std::string;`. En caso contrario, el nombre no completo se considera un identificador no declarado en el ámbito actual.
+Si el identificador es un miembro de una clase o struct, o se declara en un espacio de nombres, se debe calificar con el nombre de clase o struct, o el nombre de espacio de nombres, cuando se usa fuera del ámbito de estructura, clase o espacio de nombres. Como alternativa, el espacio de nombres debe incluirse en el `using` ámbito mediante una `using namespace std;`Directiva como, o bien el nombre del miembro debe incluirse `using` en el ámbito mediante `using std::string;`una declaración, como. De lo contrario, el nombre no completo se considera un identificador no declarado en el ámbito actual.
 
-Si el identificador es la etiqueta para un tipo definido por el usuario, por ejemplo, un `class` o `struct`, el tipo de la etiqueta se debe declarar antes de poder usarlo. Por ejemplo, la declaración `struct SomeStruct { /*...*/ };` debe existir antes de que se puede declarar una variable `SomeStruct myStruct;` en el código.
+Si el identificador es la etiqueta de un tipo definido por el usuario, por ejemplo, `class` o `struct`, se debe declarar el tipo de la etiqueta antes de que se pueda usar. Por ejemplo, la declaración `struct SomeStruct { /*...*/ };` debe existir antes de poder declarar una variable `SomeStruct myStruct;` en el código.
 
-Si el identificador es un alias de tipo, el tipo debe declararse mediante un `using` declaración o `typedef` antes de poder usarlo. Por ejemplo, se debe declarar `using my_flags = std::ios_base::fmtflags;` antes de poder usar `my_flags` como un alias de tipo para `std::ios_base::fmtflags`.
+Si el identificador es un alias de tipo, el tipo se debe declarar mediante una `using` declaración o `typedef` antes de que se pueda usar. Por ejemplo, debe declarar `using my_flags = std::ios_base::fmtflags;` antes de que pueda usar `my_flags` como un alias de tipo para. `std::ios_base::fmtflags`
 
-## <a name="example-misspelled-identifier"></a>Ejemplo: identificador de mal escrita
+## <a name="example-misspelled-identifier"></a>Ejemplo: identificador mal escrito
 
-Este error suele ocurre cuando el nombre del identificador está mal escrito o el identificador usa las letras mayúsculas y minúsculas incorrectas. El nombre de la declaración debe coincidir exactamente con el nombre que use.
+Este error suele producirse cuando el nombre del identificador está mal escrito o el identificador usa letras mayúsculas y minúsculas equivocadas. El nombre de la declaración debe coincidir exactamente con el nombre que use.
 
 ```cpp
 // C2065_spell.cpp
@@ -51,9 +51,9 @@ int main() {
 
 ## <a name="example-use-an-unscoped-identifier"></a>Ejemplo: usar un identificador sin ámbito
 
-Este error puede producirse si el identificador no es el ámbito adecuado. Si ve C2065 cuando usas `cout`, esta es la causa. Cuando los operadores y funciones de la biblioteca estándar de C++ no están completamente calificados por espacio de nombres o que no haya llevado la `std` espacio de nombres en el ámbito actual mediante el uso de un `using` la directiva, el compilador no los encuentra. Para corregir este problema, debe totalmente calificar los nombres de identificador, o especifique el espacio de nombres con el `using` directiva.
+Este error puede producirse si el identificador no tiene el ámbito adecuado. Si ve C2065 cuando usa `cout`, esta es la causa. Cuando C++ las funciones y los operadores de la biblioteca estándar no están totalmente calificados por el espacio de `std` nombres o no se ha puesto el espacio `using` de nombres en el ámbito actual mediante una directiva, el compilador no puede encontrarlos. Para corregir este problema, debe calificar totalmente los nombres de los identificadores o especificar el espacio de nombres `using` con la Directiva.
 
-En este ejemplo se produce un error al compilarse porque `cout` y `endl` se definen en el `std` espacio de nombres:
+No se puede compilar `cout` este `endl` ejemplo porque y se `std` definen en el espacio de nombres:
 
 ```cpp
 // C2065_scope.cpp
@@ -69,23 +69,23 @@ int main() {
 }
 ```
 
-Los identificadores que se declaran dentro de `class`, `struct`, o `enum class` tipos también deben calificarse con el nombre de su ámbito de inclusión al usarlos fuera de ese ámbito.
+Los identificadores que se declaran `struct`dentro de `enum class` `class`los tipos, o también se deben calificar con el nombre de su ámbito de inclusión cuando se usan fuera de ese ámbito.
 
-## <a name="example-precompiled-header-isnt-first"></a>Ejemplo: encabezado precompilado no está primero
+## <a name="example-precompiled-header-isnt-first"></a>Ejemplo: el encabezado precompilado no es primero
 
-Este error puede producirse si coloca las directivas de preprocesador, como #include, #define, o #pragma, antes de la #include de un archivo de encabezado precompilado. Si el archivo de origen usa un archivo de encabezado precompilado (es decir, si se ha compilado mediante el uso de la **/Yu** opción del compilador), a continuación, se omiten todas las directivas de preprocesador antes del archivo de encabezado precompilado.
+Este error puede producirse si se colocan directivas de preprocesador, como #include, #define o #pragma, antes del #include de un archivo de encabezado precompilado. Si el archivo de código fuente utiliza un archivo de encabezado precompilado (es decir, si se compila con la opción del compilador **/Yu** ), se omiten todas las directivas de preprocesador antes del archivo de encabezado precompilado.
 
-En este ejemplo se produce un error al compilarse porque `cout` y `endl` se definen en el \<iostream > encabezado, que se pasa por alto porque está incluido antes de que el archivo de encabezado precompilado. Para compilar este ejemplo, crear los tres archivos, compilar stdafx.cpp y, luego, compilar C2065_pch.cpp.
+No se puede compilar `cout` este `endl` ejemplo porque y se \<definen en el encabezado de > de iostream, que se omite porque se incluye antes del archivo de encabezado precompilado. Para compilar este ejemplo, cree los tres archivos, compile stdafx. cpp y, a continuación, compile C2065_pch. cpp.
 
 ```cpp
-// stdafx.h
+// pch.h (stdafx.h in Visual Studio 2017 and earlier)
 #include <stdio.h>
 ```
 
 ```cpp
-// stdafx.cpp
+// pch.cpp (stdafx.cpp in Visual Studio 2017 and earlier)
 // Compile by using: cl /EHsc /W4 /c /Ycstdafx.h stdafx.cpp
-#include <stdafx.h>
+#include "pch.h"
 ```
 
 ```cpp
@@ -101,11 +101,11 @@ int main() {
 }
 ```
 
-Para corregir este problema, agregue el #include de \<iostream > en el archivo de encabezado precompilado o mueva después del archivo de encabezado precompilado se incluye en el archivo de origen.
+Para corregir este problema, agregue el #include de \<iostream > al archivo de encabezado precompilado o muévalo después de incluir el archivo de encabezado precompilado en el archivo de código fuente.
 
 ## <a name="example-missing-header-file"></a>Ejemplo: falta el archivo de encabezado
 
-No se ha incluido el archivo de encabezado que declara el identificador. Asegúrese de que el archivo que contiene la declaración del identificador se incluye en cada archivo de origen que lo utiliza.
+No incluyó el archivo de encabezado que declara el identificador. Asegúrese de que el archivo que contiene la declaración para el identificador está incluido en cada archivo de código fuente que lo usa.
 
 ```cpp
 // C2065_header.cpp
@@ -119,7 +119,7 @@ int main() {
 }
 ```
 
-Otra posible causa es que si utiliza una lista de inicializadores sin incluir el \<initializer_list > encabezado.
+Otra posible causa es el uso de una lista de inicializadores sin incluir \<el encabezado > initializer_list.
 
 ```cpp
 // C2065_initializer.cpp
@@ -134,11 +134,11 @@ int main() {
 }
 ```
 
-Es posible que vea este error en los archivos de código fuente de aplicación de escritorio de Windows si define `VC_EXTRALEAN`, `WIN32_LEAN_AND_MEAN`, o `WIN32_EXTRA_LEAN`. Estas macros de preprocesador excluirán algunos archivos de encabezado de windows.h y afxv\_w32.h para acelerar la compila. Busque en windows.h y afxv_w32.h una descripción actualizada de lo que se excluye.
+Puede ver este error en los archivos de origen de la aplicación de escritorio `VC_EXTRALEAN`de `WIN32_LEAN_AND_MEAN`Windows si `WIN32_EXTRA_LEAN`define, o. Estas macros de preprocesador excluyen algunos archivos de encabezado de Windows. h\_y afxv W32. h para acelerar las compilaciones. Busque en Windows. h y afxv_w32. h una descripción actualizada de lo que se excluye.
 
 ## <a name="example-missing-closing-quote"></a>Ejemplo: falta la comilla de cierre
 
-Este error puede producirse si faltan comillas de cierre después de una constante de cadena. Se trata de una manera fácil confundir el compilador. Tenga en cuenta que la comilla de cierre que falta puede estar varias líneas antes de la ubicación del error notificado.
+Este error puede producirse si falta una comilla de cierre después de una constante de cadena. Se trata de una manera sencilla de confundir el compilador. Tenga en cuenta que las comillas de cierre que faltan pueden tener varias líneas antes de la ubicación del error.
 
 ```cpp
 // C2065_quote.cpp
@@ -153,9 +153,9 @@ int main() {
 }
 ```
 
-## <a name="example-use-iterator-outside-for-loop-scope"></a>Ejemplo: usar iterador fuera de ámbito del bucle for
+## <a name="example-use-iterator-outside-for-loop-scope"></a>Ejemplo: usar un iterador fuera del ámbito del bucle
 
-Este error puede producirse si declara una variable de iterador en un `for` bucle y, a continuación, intente usar esa variable fuera del ámbito de la `for` bucle. El compilador permite la [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opción del compilador de forma predeterminada. Consulte [Debug Iterator Support](../../standard-library/debug-iterator-support.md) para obtener más información.
+Este error puede producirse si se declara una variable de iterador en un `for` bucle e intenta usar esa variable `for` de iterador fuera del ámbito del bucle. El compilador habilita de forma predeterminada la opción del compilador [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) . Para obtener más información, consulte [compatibilidad con iteradores](../../standard-library/debug-iterator-support.md) de depuración.
 
 ```cpp
 // C2065_iter.cpp
@@ -179,11 +179,11 @@ int main() {
 }
 ```
 
-## <a name="example-preprocessor-removed-declaration"></a>Ejemplo: declaración preprocesador quitado
+## <a name="example-preprocessor-removed-declaration"></a>Ejemplo: la declaración del preprocesador quitado
 
-Este error puede producirse si se hace referencia a una función o variable que está en código compilado condicionalmente que no se compila para la configuración actual. Esto también puede ocurrir si se llama a una función en un archivo de encabezado que no se admite actualmente en el entorno de compilación. Si ciertas variables o funciones solo están disponibles cuando se define una macro de preprocesador concreta, asegúrese de que solo se puede compilar el código que llama a estas funciones cuando se define la misma macro de preprocesador. Este problema es fácil de detectar en el IDE, ya que la declaración de la función está atenuada si las macros de preprocesador necesarias no están definidas para la configuración de compilación actual.
+Este error puede producirse si se hace referencia a una función o variable que está en código compilado condicionalmente que no se compila para la configuración actual. Esto también puede ocurrir si se llama a una función en un archivo de encabezado que no se admite actualmente en el entorno de compilación. Si algunas variables o funciones solo están disponibles cuando se define una macro de preprocesador determinada, asegúrese de que el código que llama a esas funciones solo se puede compilar cuando se define la misma macro de preprocesador. Este problema es fácil de detectar en el IDE, ya que la declaración de la función está atenuada si no se han definido las macros de preprocesador necesarias para la configuración de compilación actual.
 
-Este es un ejemplo de código que funciona cuando se compila en modo de depuración, pero no de venta directa:
+Este es un ejemplo de código que funciona al compilar en depurar, pero no a minorista:
 
 ```cpp
 // C2065_defined.cpp
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Ejemplo: C + + / error de deducción de tipo CLI
+## <a name="example-ccli-type-deduction-failure"></a>Ejemplo: C++/CLI error de deducción de tipo
 
-Este error puede producirse cuando se llama a una función genérica, si no se puede deducir el argumento de tipo previsto desde los parámetros utilizados. Para obtener más información, consulte [funciones genéricas (C++ / c++ / CLI)](../../windows/generic-functions-cpp-cli.md).
+Este error puede producirse cuando se llama a una función genérica, si el argumento de tipo previsto no se puede deducir a partir de los parámetros utilizados. Para obtener más información, consulte [funciones genéricasC++(/CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,9 +220,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Ejemplo: C + + / parámetros de atributo de la CLI
+## <a name="example-ccli-attribute-parameters"></a>Ejemplo: C++/CLI parámetros de atributo
 
-Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: comprobación de parámetros de atributos de Visual C++.
+Este error también se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio 2005: comprobación de parámetros para los C++ atributos visuales.
 
 ```cpp
 // C2065_attributes.cpp

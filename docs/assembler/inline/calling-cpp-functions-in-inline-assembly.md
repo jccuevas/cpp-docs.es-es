@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: 1f0d1eb3-54cf-45d5-838d-958188616b38
-ms.openlocfilehash: 666f7b2a59f0d48a14be54a439b6402f2a4d3128
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f16e466ebb5f31231411eaaf9a1a85bfcc46a34d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458233"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169583"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Llamada a funciones C++ en el ensamblado alineado
 
@@ -22,10 +22,10 @@ ms.locfileid: "50458233"
 
 Un bloque `__asm` solo puede llamar a funciones globales de C++ que no estén sobrecargadas. Si llama a una función global sobrecargada de C++ o a una función miembro de C++, el compilador genera un error.
 
-También puede llamar a cualquier función declarada con **extern "C"** vinculación. Esto permite un `__asm` bloque dentro de un programa de C++ para llamar a las funciones de biblioteca de C, porque todos los archivos de encabezado estándar declaran las funciones de biblioteca para tener **extern "C"** vinculación.
+También puede llamar a cualquier función declarada con la vinculación **extern "C"** . Esto permite que un bloque `__asm` dentro C++ de un programa llame a las funciones de la biblioteca de C, ya que todos los archivos de encabezado estándar declaran las funciones de la biblioteca para que tengan vinculación **extern "C"** .
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

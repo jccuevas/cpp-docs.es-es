@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2171
 ms.assetid: a80343b5-ab3f-4413-b6f1-3ce9d7e519e5
-ms.openlocfilehash: 9b51a3793f7ada131ef409ece05b866eb635b9b3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 7d74cec63c0fb74ed8d6589a43c3b82c94633002
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325775"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758403"
 ---
 # <a name="compiler-error-c2171"></a>Error del compilador C2171
 
@@ -23,7 +23,7 @@ Se usa un operador unario con un tipo de operando no válido.
 
 El ejemplo siguiente genera la advertencia C2171.
 
-```
+```cpp
 // C2171.cpp
 int main() {
    double d, d1;
@@ -39,7 +39,7 @@ int main() {
 
 El ejemplo siguiente genera la advertencia C2171.
 
-```
+```cpp
 // C2171_b.cpp
 // compile with: /c
 class A {

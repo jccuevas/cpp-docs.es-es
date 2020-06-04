@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: ac3e0fda473cf50c8adc10e603d9b6c3beee05be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546697"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214293"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode (Enumeración)
 
@@ -24,16 +24,16 @@ Especifica una categoría numérica que representa un tipo integrado.
 enum class TypeCode {};
 ```
 
-### <a name="members"></a>Miembros
+### <a name="members"></a>Members
 
 |Código de tipo|Descripción|
 |---------------|-----------------|
-|Booleano|Tipo de Platform::Boolean|
+|Boolean|Tipo de Platform::Boolean|
 |Char16|Tipo de default::char16.|
 |DateTime|Tipo DateTime.|
 |Decimal|Tipo numérico.|
-|Doble|Tipo de default::float64.|
-|Empty|Void|
+|Double|Tipo de default::float64.|
+|Vacío|Void|
 |Int16|Tipo de default::int16.|
 |Int32|Tipo de default::int32.|
 |Int64|Tipo de default::int64.|

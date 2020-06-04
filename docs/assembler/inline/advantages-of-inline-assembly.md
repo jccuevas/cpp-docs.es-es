@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inline assembly [C++], about inline assembly
 - inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
-ms.openlocfilehash: ecf1598ec90a8600e1fa9aae565724c254dc11e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e634f78eca753487cf122ac95df55828bb64625
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556746"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169661"
 ---
 # <a name="advantages-of-inline-assembly"></a>Ventajas de ensamblado alineado
 
@@ -33,6 +33,6 @@ El ensamblado alineado es una herramienta para fines especiales. Si piensa migra
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

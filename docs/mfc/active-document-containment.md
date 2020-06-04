@@ -8,12 +8,12 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-ms.openlocfilehash: 22111a8b2f7048d9f62d9e3e2f6c270fdc9bace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc13384454c4732d3efbf99def5d05dd4f2d44aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394973"
 ---
 # <a name="active-document-containment"></a>Contención de documentos activos
 
@@ -35,9 +35,8 @@ Los usuarios de una aplicación de contenedor de documentos activos pueden crear
 
 ## <a name="sample-programs"></a>Programas de ejemplo
 
-- El [MFCBIND](../visual-cpp-samples.md) ejemplo ilustra la implementación de una aplicación de contenedor de documentos activos.
+- El [MFCBIND](../overview/visual-cpp-samples.md) ejemplo ilustra la implementación de una aplicación de contenedor de documentos activos.
 
 ## <a name="see-also"></a>Vea también
 
 [MFC COM](../mfc/mfc-com.md)
-

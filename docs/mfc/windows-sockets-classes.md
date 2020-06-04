@@ -1,33 +1,30 @@
 ---
 title: Clases de Windows Sockets
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.net
 helpviewer_keywords:
 - sockets classes [MFC]
 - Windows Sockets [MFC], classes
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
-ms.openlocfilehash: 18537c0de09185c8cd219e3d17ef8bb297e1d711
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f1b7b2b6674b4a5f8c8f7bff6c5fa239715f459
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433610"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445985"
 ---
 # <a name="windows-sockets-classes"></a>Clases de Windows Sockets
 
-Windows Sockets proporciona una manera independiente del protocolo de red para la comunicación entre dos equipos. Estos sockets pueden ser sincrónicos (el programa espera hasta que la comunicación se realiza) o asincrónica (el programa continúa ejecutándose mientras la comunicación está ocurriendo).
+Windows Sockets proporciona una manera independiente del Protocolo de red de comunicarse entre dos equipos. Estos Sockets pueden ser sincrónicos (el programa espera hasta que se realiza la comunicación) o asincrónicos (el programa continúa ejecutándose mientras la comunicación está en curso).
 
 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
 Encapsula la API de Windows Sockets en un contenedor fino.
 
 [CSocket](../mfc/reference/csocket-class.md)<br/>
-Deriva de mayor nivel de abstracción `CAsyncSocket`. Opera de forma sincrónica.
+Abstracción de nivel superior derivada de `CAsyncSocket`. Funciona de forma sincrónica.
 
 [CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
-Proporciona un `CFile` interfaz a un Socket de Windows.
+Proporciona una interfaz de `CFile` a un socket de Windows.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general de clases](../mfc/class-library-overview.md)
-
+[Información general sobre clases](../mfc/class-library-overview.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW4003
 ms.assetid: e9c289f2-c065-4f26-bc24-991953742abc
-ms.openlocfilehash: 7e030f8e13c5682b3c303f5bdfc336b1335cf39c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20a59b2c79688567df8d84bb7933c1cc69043928
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559645"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182219"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>Advertencia del compilador de recursos RW4003
 

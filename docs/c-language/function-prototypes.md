@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148809"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857091"
 ---
 # <a name="function-prototypes"></a>Prototipos de función
 
@@ -43,8 +43,8 @@ Una declaración de función precede a la definición de función y especifica e
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* Un declarador de función \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Declarador de nuevo estilo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Declarador de estilo obsoleto \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Declarador de nuevo estilo \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Declarador de estilo obsoleto \*/
 
 El prototipo tiene la misma forma que la definición de función, excepto en que termina con un punto y coma inmediatamente después del paréntesis de cierre y, por consiguiente, no tiene ningún cuerpo. En cualquier caso, el tipo de valor devuelto debe coincidir con el tipo de valor devuelto especificado en la definición de función.
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: d930c1884975288ff11f4d4e5cf2728e717e17d5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326672"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189278"
 ---
 # <a name="do-while-statement-c"></a>do-while (instrucción de C++)
 
-Ejecuta un *instrucción* repetidamente hasta que la condición de finalización (el *expresión*) se evalúa como cero.
+Ejecuta una *instrucción* varias veces hasta que la condición de finalización especificada (la *expresión*) se evalúa como cero.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,9 +28,9 @@ do
 while ( expression ) ;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La prueba de la condición de finalización se realiza después de cada ejecución del bucle; por lo tanto, un **hacer-mientras** bucle ejecuta una o varias veces, dependiendo del valor de la expresión de finalización. La instrucción **do-while** también puede finalizar cuando se ejecuta una instrucción [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) o [return](../cpp/return-statement-cpp.md) dentro del cuerpo de la instrucción.
+La prueba de la condición de finalización se realiza después de cada ejecución del bucle. por lo tanto, un bucle **do-while** se ejecuta una o más veces, dependiendo del valor de la expresión de finalización. La instrucción **do-while** también puede finalizar cuando se ejecuta una instrucción [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) o [return](../cpp/return-statement-cpp.md) dentro del cuerpo de la instrucción.
 
 *expression* debe tener un tipo aritmético o de puntero. La ejecución continúa de la siguiente manera:
 
@@ -40,7 +40,7 @@ La prueba de la condición de finalización se realiza después de cada ejecuci�
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra el **hacer-mientras** instrucción:
+En el ejemplo siguiente se muestra la instrucción **do-while** :
 
 ```cpp
 // do_while_statement.cpp
@@ -55,7 +55,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Instrucciones de iteración](../cpp/iteration-statements-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>

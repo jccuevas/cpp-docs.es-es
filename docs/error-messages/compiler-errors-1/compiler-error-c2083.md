@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2083
 ms.assetid: 5fc4f931-eab6-4d8d-a3ee-3b8e11e64b18
-ms.openlocfilehash: 5a09d4c1ca294ca082ed9a2fb00b015b2519ef5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf3fbde1ce1a79528a11fe6564ccf1604645f718
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207730"
 ---
 # <a name="compiler-error-c2083"></a>Error del compilador C2083
 

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 71a5943f65f4bd490ecb02824fef7a96741709f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540328"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755879"
 ---
 # <a name="compiler-error-c3104"></a>Error del compilador C3104
 
 argumento de atributo no válido
 
-Ha especificado un argumento no válido a un atributo.
+Especificó un argumento no válido para un atributo.
 
-Consulte [tipos de parámetro de atributo](../../windows/attribute-parameter-types-cpp-component-extensions.md) para obtener más información.
+Para obtener más información, vea [tipos de parámetro de atributo](../../extensions/attribute-parameter-types-cpp-component-extensions.md) .
 
-Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: cuando se pasan las matrices administradas a los atributos personalizados, el tipo de la matriz ya no se deduce de la lista de inicialización de agregado. Ahora, el compilador requiere que especifique el tipo de la matriz, así como la lista de inicializadores.
+Este error se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio 2005: al pasar matrices administradas a atributos personalizados, el tipo de la matriz ya no se deduce de la lista de inicialización agregada. Ahora, el compilador requiere que se especifique el tipo de la matriz, así como la lista de inicializadores.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3104.
+En el ejemplo siguiente se genera C3104.
 
-```
+```cpp
 // C3104a.cpp
 // compile with: /clr /c
 using namespace System;
@@ -46,9 +46,9 @@ ref struct AStruct{};
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3104.
+En el ejemplo siguiente se genera C3104.
 
-```
+```cpp
 // C3104b.cpp
 // compile with: /clr /c
 // C3104 expected

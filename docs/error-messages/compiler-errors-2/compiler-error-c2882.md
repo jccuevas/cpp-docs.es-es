@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2882
 ms.assetid: 617018ee-5a0d-4b8d-9612-77e8ae52679b
-ms.openlocfilehash: e5fd20695f6922ba5832abb1042cce63b7c4f5a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1c6f20ae33a545ae2e6bd7b373ecf2444e0d1d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598503"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736170"
 ---
 # <a name="compiler-error-c2882"></a>Error del compilador C2882
 
-'name': uso no válido de identificador de espacio de nombres en la expresión
+' name ': uso no válido del identificador de espacio de nombres en la expresión
 
-Se intentó usar el nombre de un espacio de nombres en una expresión.
+Ha intentado usar el nombre de un espacio de nombres en una expresión.
 
-El ejemplo siguiente genera C2882:
+En el ejemplo siguiente se genera C2882:
 
-```
+```cpp
 // C2882.cpp
 // compile with: /c
 namespace A {

@@ -1,5 +1,5 @@
 ---
-title: missing_wait (Clase)
+title: missing_wait (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - missing_wait
@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: 7e515a33bfa827bba5329182cd3b79764495d728
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531123"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142387"
 ---
-# <a name="missingwait-class"></a>missing_wait (Clase)
+# <a name="missing_wait-class"></a>missing_wait (clase)
 
 Esta clase describe una excepción que se produce cuando todavía existen tareas programadas para un objeto `task_group` o `structured_task_group` en el momento que el destructor de objeto se ejecuta. Nunca se producirá esta excepción si el destructor se alcanza debido al desenredo de pila como el resultado de una excepción.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class missing_wait : public std::exception;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[missing_wait)](#ctor)|Sobrecargado. Construye un objeto `missing_wait`.|
+|[missing_wait](#ctor)|Sobrecargado. Construye un objeto `missing_wait`.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Ausencia de flujo de excepciones, usted es responsable de una llamada a la `wait` o `run_and_wait` método de un `task_group` o `structured_task_group` objeto antes de permitir que ese objeto se destruya. El runtime produce esta excepción como una indicación de que se olvidó de llamar el `wait` o `run_and_wait` método.
+Flujo de excepciones ausente, es responsable de llamar al método `wait` o `run_and_wait` de un objeto `task_group` o `structured_task_group` antes de permitir que ese objeto se destruya. El tiempo de ejecución produce esta excepción como una indicación de que olvidó llamar al método `wait` o `run_and_wait`.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -45,15 +45,15 @@ Ausencia de flujo de excepciones, usted es responsable de una llamada a la `wait
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrt.h
+**Encabezado:** concrt. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> missing_wait)
+## <a name="ctor"></a>missing_wait
 
 Construye un objeto `missing_wait`.
 
-```
+```cpp
 explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
 
 missing_wait() throw();
@@ -61,13 +61,13 @@ missing_wait() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Mensaje descriptivo del error.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [task_group (clase)](task-group-class.md)<br/>
-[Espere](task-group-class.md)<br/>
+[currir](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group (clase)](structured-task-group-class.md)

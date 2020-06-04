@@ -7,12 +7,12 @@ helpviewer_keywords:
 - breaking words in CRichEditCtrl
 - rich edit controls [MFC], word breaks in
 ms.assetid: 641dcf9e-7b40-4dc0-85f7-575a8c142f73
-ms.openlocfilehash: efe4a0a2c06c14d913d43c51d1f0100f27c6a537
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e71643350ced5b8ecff7c8ac7829741cc3e8493b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399543"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Separaciones de palabras en los controles Rich Edit
 
@@ -22,4 +22,3 @@ Un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 
 
 [Uso de CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

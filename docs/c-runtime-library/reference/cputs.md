@@ -1,9 +1,9 @@
 ---
 title: cputs
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,27 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputs
 helpviewer_keywords:
 - cputs function
 ms.assetid: 0c2a7d4e-623a-4cb2-a0f9-1900c05bac08
-ms.openlocfilehash: 39a65feb50e896fe324ab3cdf64963393649aa22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31f7de886f1bf947fdcfb61e33894d52fd00c3bf
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429892"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299889"
 ---
 # <a name="cputs"></a>cputs
 
-Esta función POSIX está en desuso. En su lugar, use la función [_cputs](cputs-cputws.md), compatible con ISO C++.
+El nombre de la función específica de Microsoft `cputs` es un alias en desuso para la función [_cputs](cputs-cputws.md) . De forma predeterminada, genera una [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). El nombre está en desuso porque no sigue las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, todavía se admite la función.
+
+En su lugar, se recomienda usar [_cputs](cputs-cputws.md) . O bien, puede seguir usando el nombre de esta función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 > [!IMPORTANT]
 > Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

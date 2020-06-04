@@ -1,21 +1,21 @@
 ---
-title: DefaultValue (atributo de COM de C++)
+title: DefaultValue (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: 22aa969185afbac5ab395d0ac7dde23e715b8e58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537675"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214854"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-Permite especificar un valor predeterminado para un parámetro opcional con tipo.
+Permite la especificación de un valor predeterminado para un parámetro opcional con tipo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,16 +25,16 @@ Permite especificar un valor predeterminado para un parámetro opcional con tipo
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
-El valor predeterminado para el parámetro.
+*value*<br/>
+Valor predeterminado del parámetro.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **defaultvalue** atributo de C++ tiene la misma funcionalidad que el [defaultvalue](/windows/desktop/Midl/defaultvalue) atributo MIDL.
+El atributo **DefaultValue** C++ tiene la misma funcionalidad que el atributo MIDL [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra un método de interfaz mediante el **defaultvalue** atributo:
+En el código siguiente se muestra un método de interfaz mediante el atributo **DefaultValue** :
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -62,12 +62,12 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**Se aplica a**|Parámetro de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>

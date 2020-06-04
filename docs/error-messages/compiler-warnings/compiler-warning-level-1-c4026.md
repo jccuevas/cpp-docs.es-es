@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4026
 ms.assetid: 2c8ff616-8d7f-4784-8037-77f8b6a67698
-ms.openlocfilehash: a81aec1e65322acdbdbf7279c2da89a63ac44eca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 728f68a62b83a5a5da7c031208f007ee364e41da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538104"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164500"
 ---
 # <a name="compiler-warning-level-1-c4026"></a>Advertencia del compilador (nivel 1) C4026
 

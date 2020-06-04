@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3654
 ms.assetid: 57d96e3f-6bbb-4eaa-934b-26c23b4ceb2e
-ms.openlocfilehash: eca5081daaaf92a7b95a076a1e93bc06799bd9f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 960dbe9f18403c12919db713cc41451dd7b93aac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649025"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756297"
 ---
 # <a name="compiler-error-c3654"></a>Error del compilador C3654
 
-'texto': error de sintaxis en la invalidación explícita
+' text ': error de sintaxis en la invalidación explícita
 
-Era una cadena inesperada en un reemplazo explícito. Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Una cadena inesperada se encontraba en una invalidación explícita. Para obtener más información, vea [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3654:
+En el ejemplo siguiente se genera C3654:
 
-```
+```cpp
 // C3654.cpp
 // compile with: /clr /c
 public ref struct B {

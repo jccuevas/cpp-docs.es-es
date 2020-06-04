@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2050
 ms.assetid: 66aaed7d-00db-4ce1-a9d6-4447c1cf07ce
-ms.openlocfilehash: 99091452c2fc845ba396d7a8b290c2c857146257
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3d100387264af4a3f9bba8b9934fc6ca1d0d5a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739186"
 ---
 # <a name="compiler-error-c2050"></a>Error del compilador C2050
 
-expresión switch no integral
+cambiar expresión no integral
 
-El `switch` expresión se evalúa como un valor no entero. Para resolver el error, use los valores enteros solo en las instrucciones switch.
+La expresión `switch` se evalúa como un valor no entero. Para resolver el error, use solo valores enteros en instrucciones switch.
 
-El ejemplo siguiente genera C2050:
+En el ejemplo siguiente se genera C2050:
 
-```
+```cpp
 // C2050.cpp
 int main() {
    int a = 1;
@@ -34,9 +34,9 @@ int main() {
 }
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C2050b.cpp
 int main() {
    int a = 1;

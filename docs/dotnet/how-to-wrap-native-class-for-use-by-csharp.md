@@ -6,20 +6,20 @@ helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: dc61c9749492f2f0dbe0c6b60abc2a9030cab4d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588102"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545892"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Cómo: Envolver una clase nativa para utilizarla en C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Cómo: ajustar una clase nativa para su uso en C\#
 
-En este ejemplo se muestra cómo ajustar una clase de C++ nativa, por lo que puede utilizarse en el código creado en C# u otro lenguaje. NET.
+En este ejemplo se muestra cómo ajustar una C++ clase nativa para que se pueda utilizar en el código creado C#en u otro lenguaje .net.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>
@@ -67,6 +67,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

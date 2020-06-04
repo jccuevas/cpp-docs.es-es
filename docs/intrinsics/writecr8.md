@@ -1,36 +1,36 @@
 ---
 title: __writecr8
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr8
 helpviewer_keywords:
 - _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
-ms.openlocfilehash: 1a7b31ed7e370c4dd3fee9e5a205be6e34ba560b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c8df13c15b5cd8a51b77d65ad930a1852809ee30
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325789"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219243"
 ---
-# <a name="writecr8"></a>__writecr8
+# <a name="__writecr8"></a>__writecr8
 
 **Específicos de Microsoft**
 
-Escribe el valor `Data` al registro CR8.
+Escribe el valor `Data` en el registro CR8.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void writecr8(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Data*<br/>
-[in] El valor para escribir en el registro CR8.
+*Data*\
+de Valor que se va a escribir en el registro CR8.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,14 +38,14 @@ void writecr8(
 |---------------|------------------|
 |`__writecr8`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Este intrínseco solo está disponible en modo kernel, y la rutina solo está disponible como intrínseco.
+El `__writecr8` intrínseco solo está disponible en modo kernel y la rutina solo está disponible como intrínseco.
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

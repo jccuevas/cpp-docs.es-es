@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2217b865109cc48151e4e96b2d38b88764c0c64f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565534"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203659"
 ---
 # <a name="fatal-error-c1189"></a>Error irrecuperable C1189
 
-> **\#Error:** *mensaje de error proporcionado por el usuario*
+> **error de\#:** *mensaje de error proporcionado* por el usuario
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Genera el error C1189 el `#error` directiva. El desarrollador que codifica la directiva especifica el texto del mensaje de error. Para obtener más información, consulte [#error (directiva) (C/C ++)](../../preprocessor/hash-error-directive-c-cpp.md).
+C1189 se genera mediante la Directiva `#error`. El desarrollador que codifica la Directiva especifica el texto del mensaje de error. Para obtener más información, vea [#error (Directiva)C++(C/)](../../preprocessor/hash-error-directive-c-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C1189. En el ejemplo, el desarrollador emite un mensaje de error personalizado porque el `_WIN32` no está definido el identificador:
+En el ejemplo siguiente se genera C1189. En el ejemplo, el desarrollador emite un mensaje de error personalizado porque no se ha definido el identificador de `_WIN32`:
 
 ```cpp
 // C1189.cpp
@@ -33,6 +33,6 @@ El ejemplo siguiente genera el error C1189. En el ejemplo, el desarrollador emit
 #endif
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [#define (directiva) (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

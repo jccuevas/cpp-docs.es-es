@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
 ms.openlocfilehash: bd4d5c1fd7dd8d7419fc901149ceab7e769e7076
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404057"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>Advertencia del compilador (nivel 1) C4462
 
 > no puede determinar el GUID del tipo. El programa puede dar un error en tiempo de ejecución.
 
-La advertencia C4462 se produce en una aplicación o componente de Windows Runtime cuando uno de los parámetros de tipos de un controlador `TypedEventHandler` público es una referencia a la clase envolvente.
+La advertencia C4462 se produce en una aplicación o componente de Windows en tiempo de ejecución cuando uno de los parámetros de tipos de un controlador `TypedEventHandler` público es una referencia a la clase envolvente.
 
 Esta advertencia suele convertirse automáticamente en un error. Si desea modificar este comportamiento, use [advertencia #pragma](../../preprocessor/warning.md). Por ejemplo, para C4462 en una advertencia de nivel 4, agregue esta línea al archivo de código fuente:
 

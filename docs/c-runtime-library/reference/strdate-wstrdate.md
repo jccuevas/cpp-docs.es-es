@@ -1,10 +1,12 @@
 ---
 title: _strdate, _wstrdate
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _strdate
 - _wstrdate
-apilocation:
+- _o__strdate
+- _o__wstrdate
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstrdate
 - wstrdate
@@ -33,14 +39,14 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639616"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911855"
 ---
-# <a name="strdate-wstrdate"></a>_strdate, _wstrdate
+# <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
 Copia la fecha actual del sistema en un búfer. Hay disponibles versiones más seguras de estas funciones; vea [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md).
 
@@ -72,17 +78,19 @@ Puntero a un búfer que contiene la cadena de fecha con formato.
 
 Cada una de estas funciones devuelve un puntero a la cadena de caracteres resultante *datestr*.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Hay disponibles versiones más seguras de estas funciones; vea [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Se recomienda usar siempre que sea posible las funciones más seguras.
 
-El **_strdate** función copia la fecha actual del sistema en el búfer señalado por *datestr*, con el formato **mm**/**dd** / **yy**, donde **mm** son dos dígitos que representa el mes, **dd** son dos dígitos que representa el día, y **AA**  es los dos últimos dígitos del año. Por ejemplo, la cadena **05/12/99** representa 5 de diciembre de 1999. La longitud del búfer debe ser de 9 bytes como mínimo.
+La **función _strdate** copia la fecha actual del sistema en el búfer señalado por *datestr*, con formato **mm**/**DD**/**AA**, donde **mm** es dos dígitos que representan el mes, **DD** son dos dígitos que representan el día y **YY** son los dos últimos dígitos del año. Por ejemplo, la cadena **12/05/99** representa el 5 de diciembre de 1999. La longitud del búfer debe ser de 9 bytes como mínimo.
 
-Si *datestr* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
+Si *datestr* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 **_wstrdate** es una versión con caracteres anchos de **_strdate**; el argumento y el valor devuelto de **_wstrdate** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -97,7 +105,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**_strdate**|\<time.h>|
 |**_wstrdate**|\<time.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -125,9 +133,9 @@ int main()
 OS date: 04/25/03
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

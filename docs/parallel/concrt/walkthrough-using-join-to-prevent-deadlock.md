@@ -1,26 +1,26 @@
 ---
 title: 'Tutorial: Usar la clase join para evitar un interbloqueo'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4df83e944552fd6c0d2482efa72883d87cd45f8c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175926"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140657"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Tutorial: Usar la clase join para evitar un interbloqueo
 
-En este tema usa el problema cena de los filósofos para ilustrar cómo se usa el [Concurrency:: join](../../parallel/concrt/reference/join-class.md) clase para evitar el interbloqueo en la aplicación. En una aplicación de software, el *interbloqueo* se produce cuando dos o más procesos mantienen un recurso y esperan mutuamente a que el otro proceso libere algún otro recurso.
+En este tema se usa el problema de la cena de los filósofos para ilustrar cómo se usa la clase [Concurrency:: join](../../parallel/concrt/reference/join-class.md) para evitar el interbloqueo en la aplicación. En una aplicación de software, el *interbloqueo* se produce cuando dos o más procesos mantienen un recurso y esperan mutuamente a que el otro proceso libere algún otro recurso.
 
 El problema de la cena de los filósofos es un ejemplo concreto del conjunto general de problemas que se pueden producir cuando se comparte un conjunto de recursos entre varios procesos simultáneos.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Lea los siguientes temas antes de iniciar este tutorial:
 
@@ -34,29 +34,29 @@ Lea los siguientes temas antes de iniciar este tutorial:
 
 - [Estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md)
 
-##  <a name="top"></a> Secciones
+## <a name="top"></a> Secciones
 
 Este tutorial contiene las siguientes secciones:
 
-- [El problema cena de los filósofos](#problem)
+- [El problema de la cena de los filósofos](#problem)
 
-- [Una implementación sencilla](#deadlock)
+- [Una implementación de Naive](#deadlock)
 
-- [Usar la clase join para evitar un interbloqueo](#solution)
+- [Usar join para evitar el interbloqueo](#solution)
 
-##  <a name="problem"></a> El problema cena de los filósofos
+## <a name="problem"></a>El problema de la cena de los filósofos
 
 El problema de la cena de los filósofos ilustra cómo se produce el interbloqueo en una aplicación. En este problema, cinco filósofos están sentados a una mesa redonda. Cada filósofo alterna entre pensar y comer. Cada filósofo debe compartir un palillo con el vecino sentado a la izquierda y otro palillo con el vecino sentado a la derecha. En la siguiente ilustración se muestra este diseño.
 
-![El problema de los filósofos cena](../../parallel/concrt/media/dining_philosophersproblem.png "el problema cena de los filósofos")
+![El problema de la cena de los filósofos](../../parallel/concrt/media/dining_philosophersproblem.png "El problema de la cena de los filósofos")
 
 Para comer, un filósofo debe tener en la mano dos palillos. Si cada filósofo tiene un solo palillo y está esperando a que le den otro, ninguno puede comer y todos se quedan sin comer.
 
 [[Arriba](#top)]
 
-##  <a name="deadlock"></a> Una implementación sencilla
+## <a name="deadlock"></a>Una implementación de Naive
 
-En el siguiente ejemplo se muestra una implementación sencilla del problema de la cena de los filósofos. El `philosopher` (clase), que se deriva de [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), permite que cada filósofo actúe de forma independiente. El ejemplo usa una matriz compartida de [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) objetos que se va a asignar a cada `philosopher` objeto acceso exclusivo a un par de palillos.
+En el siguiente ejemplo se muestra una implementación sencilla del problema de la cena de los filósofos. La clase `philosopher`, que se deriva de [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), permite que cada filósofo actúe de forma independiente. En el ejemplo se usa una matriz compartida de objetos [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) para proporcionar a cada objeto `philosopher` acceso exclusivo a un par de palillos.
 
 Para relacionar la implementación con la ilustración, la clase `philosopher` representa a un filósofo. Una variable `int` representa cada palillo. Los objetos `critical_section` sirven como contenedores en los que se encuentran los palillos. El método `run` simula la vida del filósofo. El método `think` simula el acto de pensar y el método `eat` simula el acto de comer.
 
@@ -64,35 +64,31 @@ Un objeto `philosopher` bloquea ambos objetos `critical_section` para simular la
 
 El método `pickup_chopsticks` ilustra dónde se puede producir el interbloqueo. Si cada objeto `philosopher` obtiene acceso a uno de los bloqueos, ningún objeto `philosopher` puede continuar porque otro objeto `philosopher` controla el otro bloqueo.
 
-## <a name="example"></a>Ejemplo
-
-### <a name="description"></a>Descripción
-
-### <a name="code"></a>Código
+### <a name="example"></a>Ejemplo
 
 [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]
 
-## <a name="compiling-the-code"></a>Compilar el código
+### <a name="compiling-the-code"></a>Compilar el código
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `philosophers-deadlock.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc philosophers-deadlock.cpp**
+> **cl. exe/EHsc Philosophers-deadlock. cpp**
 
 [[Arriba](#top)]
 
-##  <a name="solution"></a> Usar la clase join para evitar un interbloqueo
+## <a name="solution"></a>Usar join para evitar el interbloqueo
 
 En esta sección se muestra cómo usar los búferes de mensajes y las funciones de paso de mensajes para eliminar la oportunidad de que se produzcan interbloqueos.
 
-Para relacionar este ejemplo con el anterior, el `philosopher` clase reemplaza cada `critical_section` objeto utilizando un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto y un `join` objeto. El objeto `join` sirve como un árbitro que proporciona los palillos al filósofo.
+Para relacionar este ejemplo con el anterior, la clase `philosopher` reemplaza cada objeto `critical_section` mediante un objeto [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) y un objeto `join`. El objeto `join` sirve como un árbitro que proporciona los palillos al filósofo.
 
 En este ejemplo se usa la clase `unbounded_buffer` porque cuando un destino recibe un mensaje de un objeto `unbounded_buffer`, el mensaje se quita de la cola de mensajes. Esto permite que un objeto `unbounded_buffer` contenga un mensaje para indicar que el palillo está disponible. Un objeto `unbounded_buffer` que no contiene ningún mensaje indica que el palillo se está usando.
 
 Este ejemplo usa un objeto `join` no expansivo porque una combinación no expansiva solo da cada acceso a ambos palillos al objeto `philosopher` cuando ambos objetos `unbounded_buffer` contienen un mensaje. Una combinación expansiva no evitaría el interbloqueo porque aceptaría los mensajes en cuanto estuvieran disponibles. Se puede producir el interbloqueo si todos los objetos `join` expansivos reciben uno de los mensajes pero esperan para siempre a que el otro esté disponible.
 
-Para obtener más información sobre las combinaciones expansivas y no expansivas y las diferencias entre los diversos tipos de búfer de mensajes, vea [bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md).
+Para obtener más información sobre las uniones expansivas y no expansivas, y las diferencias entre los distintos tipos de búfer de mensajes, consulte [bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md).
 
-#### <a name="to-prevent-deadlock-in-this-example"></a>Para evitar el interbloqueo en este ejemplo
+### <a name="to-prevent-deadlock-in-this-example"></a>Para evitar el interbloqueo en este ejemplo
 
 1. Quite el siguiente código del ejemplo.
 
@@ -122,17 +118,13 @@ Para obtener más información sobre las combinaciones expansivas y no expansiva
 
 [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]
 
-## <a name="example"></a>Ejemplo
-
 ### <a name="description"></a>Descripción
 
 A continuación se muestra el ejemplo completo que usa los objetos `join` no expansivos para eliminar el riesgo de interbloqueo.
 
-### <a name="code"></a>Código
+### <a name="example"></a>Ejemplo
 
 [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]
-
-### <a name="comments"></a>Comentarios
 
 Este ejemplo produce el siguiente resultado:
 
@@ -144,15 +136,15 @@ socrates ate 50 times.
 plato ate 50 times.
 ```
 
-## <a name="compiling-the-code"></a>Compilar el código
+### <a name="compiling-the-code"></a>Compilar el código
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `philosophers-join.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc philosophers-join.cpp**
+> **cl. exe/EHsc Philosophers-join. cpp**
 
 [[Arriba](#top)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tutoriales del Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)<br/>

@@ -1,52 +1,52 @@
 ---
 title: PROTO
-ms.date: 10/22/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROTO
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3963fa29050653d1706222d33734c4b5f2a17919
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536742"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318649"
 ---
 # <a name="proto"></a>PROTO
 
-Prototipos de función o procedimiento. Puede llamar a la función prototipo lo PROTO (directiva) mediante el uso de la [INVOKE](invoke.md) directiva.
+Prototipos de una función o un procedimiento. Puede llamar a la función prototipo de la Directiva PROTO mediante la directiva [INVOKE](invoke.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
-> *etiqueta* **PROTO** \[ *distancia*] \[ *langtype*] \[ __,__ \[ *parámetro*]__:__*etiqueta*]...
+> *etiqueta* **proto** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ __,__ ⟦*parámetro*⟧ __:__ *Tag* ... ⟧
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
-*Etiqueta*<br/>
-El nombre de la función de prototipo.
+\ de *etiqueta*
+Nombre de la función prototipo.
 
-*distance*<br/>
-(Opcional) Utilizadas en modelos de memoria de 16 bits para invalidar el valor predeterminado e indique **NEAR** o **lejano** llamadas.
+*distancia* (solo para MASM de 32 bits). \
+Opta Se usa en los modelos de memoria de 16 bits para reemplazar el valor predeterminado e indicar llamadas **cercanas** o **lejanas** .
 
-*langtype*<br/>
-(Opcional) Establece la convención de llamada y nomenclatura para los procedimientos y los símbolos públicos. Convenciones admitidas son:
+*tipo de idioma* (solo MASM de 32 bits). \
+Opta Establece la llamada y la Convención de nomenclatura para los procedimientos y símbolos públicos. Las convenciones admitidas son:
 
-- 32 bits **planos** modelo: **C**, **STDCALL**
+- modelo **plano** de 32 bits: **C**, **Stdcall**
 
-- modelos de 16 bits: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- modelos de 16 bits: **C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **Stdcall**
 
-*Parámetro*<br/>
-El nombre opcional para un parámetro de función.
+\ de *parámetros*
+Nombre opcional de un parámetro de función.
 
-*Etiqueta*<br/>
+\ de *etiquetas*
 El tipo de un parámetro de función.
 
-El *parámetro* y *etiqueta* parámetros pueden aparecer varias veces, una vez para cada argumento pasado.
+Los parámetros de *parámetro* y *etiqueta* pueden aparecer varias veces, una vez para cada argumento pasado.
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo se muestra un **PROTO** declaración para una función denominada `addup3` que usa un **NEAR** llamada para invalidar el valor predeterminado de modelo de 16 bits para las llamadas a procedimientos y utiliza el **C**convención de llamada para apilar los parámetros y valores devueltos. Acepta dos argumentos: un **WORD** y un **VARARG**.
+En este ejemplo se muestra una declaración de **proto** para una función denominada `addup3` que usa una llamada **Near** para reemplazar el valor predeterminado del modelo de 16 bits para las llamadas a procedimientos y usa la Convención de llamada de **C** para los parámetros de pila y los valores devueltos. Toma dos argumentos, una **palabra** y un **vararg**.
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
@@ -54,5 +54,6 @@ addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)<br/>
-[. Referencia del modelo](dot-model.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[. ](dot-model.md)\ de referencia de modelo
+[Gramática BNF de MASM](masm-bnf-grammar.md)

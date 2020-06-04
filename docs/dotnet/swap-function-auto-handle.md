@@ -2,22 +2,19 @@
 title: swap (Función) (auto_handle)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- msclr::swap
-- msclr.swap
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: a4e15e2a0481f10b58517135c5dc283549f358af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638307"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545946"
 ---
-# <a name="swap-function-autohandle"></a>swap (Función) (auto_handle)
+# <a name="swap-function-auto_handle"></a>swap (Función) (auto_handle)
 
-Intercambia los objetos entre una `auto_handle` y otro.
+Intercambia objetos entre una `auto_handle` y otra.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,15 +28,15 @@ void swap(
 
 #### <a name="parameters"></a>Parámetros
 
-*a la _izquierda*<br/>
-Una clase `auto_handle`.
+*_left*<br/>
+Un valor de tipo `auto_handle`.
 
-*a la _derecha*<br/>
-Otro `auto_handle`.
+*_right*<br/>
+Otro objeto `auto_handle`.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // msl_swap_auto_handle.cpp
 // compile with: /clr
 #include <msclr\auto_handle.h>
@@ -66,11 +63,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>Requisitos
 
-**Archivo de encabezado** \<msclr\auto_handle.h >
+**Archivo de encabezado** \<msclr \ auto_handle. h >
 
-**Namespace** msclr
+**Espacio de nombres** msclr
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
 [auto_handle::swap](../dotnet/auto-handle-swap.md)

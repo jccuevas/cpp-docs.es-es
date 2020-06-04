@@ -6,12 +6,12 @@ helpviewer_keywords:
 - flicker, MFC ActiveX controls
 - activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
-ms.openlocfilehash: d979a6f633926bed1ad59de86829b9ac27b0d0cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fad24d6201260e87ff32436752a9fbf035e822ae
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297052"
 ---
 # <a name="providing-flicker-free-activation"></a>Proporcionar activación sin parpadeo
 
@@ -27,5 +27,4 @@ Si usas la activación sin ventana, esta optimización no tiene ningún efecto.
 
 ## <a name="see-also"></a>Vea también
 
-[Controles ActiveX MFC: Optimización](../mfc/mfc-activex-controls-optimization.md)
-
+[Controles ActiveX de MFC: optimización](../mfc/mfc-activex-controls-optimization.md)

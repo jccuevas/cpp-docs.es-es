@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4163
 ms.assetid: b08413fd-03fc-4f41-9167-a98976ac12f2
-ms.openlocfilehash: 737cf7ad00bfefd429792eed3f730844789e0c02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 492fe4a75b4ddf9b5f78810226f14aa84ab2b56a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597175"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176135"
 ---
 # <a name="compiler-warning-level-1-c4163"></a>Advertencia del compilador (nivel 1) C4163
 
@@ -21,7 +21,7 @@ No se puede usar la función especificada como una función [intrínseca](../../
 
 El ejemplo siguiente genera la advertencia C4163:
 
-```
+```cpp
 // C4163.cpp
 // compile with: /W1 /LD
 #include <math.h>

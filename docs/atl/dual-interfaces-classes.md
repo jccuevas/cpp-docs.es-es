@@ -2,18 +2,16 @@
 title: Clases (ATL) de Interfaces duales
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.interfaces.dual
 helpviewer_keywords:
 - dual interfaces, classes
 - dual interfaces
 ms.assetid: c2b1b165-ff39-4e4a-a683-91eca9158304
-ms.openlocfilehash: 494ce694a4b328b5fb161444457de2ef085c81a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1148b89251e88bd7a436ce9b7cd7797a32fba0c5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250613"
 ---
 # <a name="dual-interfaces-classes"></a>Clases de Interfaces duales
 
@@ -24,4 +22,3 @@ La clase siguiente proporciona compatibilidad para interfaces duales:
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../atl/atl-class-overview.md)
-

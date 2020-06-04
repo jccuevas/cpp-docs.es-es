@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3396
 ms.assetid: e3580e32-72ec-4c3e-8afa-755603ffd25c
-ms.openlocfilehash: 06a11e5304a3962675fac1b45c1d162042060688
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eaedff4ee9e9cc08b50f94f7beecd0d0542ef2fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201037"
 ---
 # <a name="compiler-error-c3396"></a>Error del compilador C3396
 

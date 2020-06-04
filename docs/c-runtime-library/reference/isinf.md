@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - isinf function
 ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331615"
 ---
 # <a name="isinf"></a>isinf
 
@@ -56,6 +56,6 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
-[isfinite, _finite, _finitef](finite-finitef.md)<br/>
+[isfinite, _finite y _finitef](finite-finitef.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

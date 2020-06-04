@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Cargar un recurso de cinta desde una aplicación MFC'
+title: Procedimiento Cargar un recurso de cinta desde una aplicación de MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
-ms.openlocfilehash: 14ba37952d6f8849c51b36901a6bc17404f938e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7691d4168101209b0e2d2500012a2b4a8e47788
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160333"
 ---
-# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Cómo: Cargar un recurso de cinta desde una aplicación MFC
+# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Procedimiento Cargar un recurso de cinta desde una aplicación de MFC
 
 Para usar el recurso de cinta en la aplicación, modifique la aplicación para cargar el recurso de cinta de opciones.
 
@@ -40,4 +40,3 @@ Para usar el recurso de cinta en la aplicación, modifique la aplicación para c
 ## <a name="see-also"></a>Vea también
 
 [Diseñador de la cinta de opciones (MFC)](../mfc/ribbon-designer-mfc.md)
-

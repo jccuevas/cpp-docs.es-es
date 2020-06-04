@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: deb9eaedba3c99bb2fcb8399ac412ccedb11545f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568537"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375922"
 ---
 # <a name="messages-class"></a>messages (Clase)
 
-La clase de plantilla describe un objeto que puede actuar como una faceta de configuración regional para recuperar mensajes traducidos y adaptados de un catálogo de mensajes internacionalizados para una configuración regional concreta.
+La plantilla de clase describe un objeto que puede servir como una faceta de configuración regional para recuperar mensajes localizados de un catálogo de mensajes internacionalizados para una configuración regional determinada.
 
 Actualmente, mientras se implementa la clase messages, no hay mensajes.
 
@@ -44,10 +44,10 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
+*CharType*\
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.**
 
@@ -57,20 +57,20 @@ Básicamente esta faceta abre un catálogo de mensajes definidos en la clase bas
 
 |Constructor|Descripción|
 |-|-|
-|[messages](#messages)|Función constructor de la faceta de mensajes.|
+|[Mensajes](#messages)|Función constructor de la faceta de mensajes.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo de carácter usado para mostrar mensajes.|
 |[string_type](#string_type)|Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
-|[close](#close)|Cierra el catálogo de mensajes.|
+|[Cerca](#close)|Cierra el catálogo de mensajes.|
 |[do_close](#do_close)|Una función virtual llamada para perder el catálogo de mensajes.|
 |[do_get](#do_get)|Una función virtual llamada para recuperar el catálogo de mensajes.|
 |[do_open](#do_open)|Una función virtual llamada para abrir el catálogo de mensajes.|
@@ -83,7 +83,7 @@ Básicamente esta faceta abre un catálogo de mensajes definidos en la clase bas
 
 **Espacio de nombres:** std
 
-## <a name="char_type"></a> messages::char_type
+## <a name="messageschar_type"></a><a name="char_type"></a>mensajes::char_type
 
 Tipo de carácter usado para mostrar mensajes.
 
@@ -91,11 +91,11 @@ Tipo de carácter usado para mostrar mensajes.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla **CharType**.
 
-## <a name="close"></a> messages::close
+## <a name="messagesclose"></a><a name="close"></a>mensajes::cerrar
 
 Cierra el catálogo de mensajes.
 
@@ -105,14 +105,14 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*<br/>
+*_Catval*\
 El catálogo que se va a cerrar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro llama a [do_close](#do_close)(_ *Catval*).
 
-## <a name="do_close"></a> messages::do_close
+## <a name="messagesdo_close"></a><a name="do_close"></a>messages::do_close
 
 Una función virtual llamada para perder el catálogo de mensajes.
 
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*<br/>
+*_Catval*\
 El catálogo que se va a cerrar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro protegida cierra el catálogo de mensajes *_Catval*, que debe haberse abierto mediante una llamada anterior a [do_open](#do_open).
+La función miembro protegida cierra el catálogo de *_Catval*, que debe haber sido abierto por una llamada anterior a [do_open](#do_open).
 
 *_Catval* debe obtenerse de un catálogo abierto anteriormente que no esté cerrado.
 
@@ -135,7 +135,7 @@ La función miembro protegida cierra el catálogo de mensajes *_Catval*, que deb
 
 Vea el ejemplo de [close](#close), que llama a `do_close`.
 
-## <a name="do_get"></a> messages::do_get
+## <a name="messagesdo_get"></a><a name="do_get"></a>mensajes::do_get
 
 Una función virtual llamada para recuperar el catálogo de mensajes.
 
@@ -149,31 +149,31 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*<br/>
+*_Catval*\
 El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_Establecer*<br/>
+*_Set*\
 El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Cuerpo*<br/>
+*_Message*\
 El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Dfault*<br/>
+*_Dfault*\
 La cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve una copia de *_Dfault* en caso de error. De otro modo, devuelve una copia de la secuencia de mensajes especificada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro protegida intenta obtener una secuencia de mensajes desde el catálogo de mensajes *_Catval*. Es posible que el uso de *_Establecer*, *_cuerpo*, y *_Dfault* de esta manera.
+La función miembro protegida intenta obtener una secuencia de mensajes del catálogo de *_Catval*. Puede hacer uso de *_Set,* *_Message,* y *_Dfault* al hacerlo.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [get](#get), que llama a `do_get`.
 
-## <a name="do_open"></a> messages::do_open
+## <a name="messagesdo_open"></a><a name="do_open"></a>mensajes::do_open
 
 Una función virtual llamada para abrir el catálogo de mensajes.
 
@@ -185,19 +185,19 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catname*<br/>
+*_Catname*\
 El nombre del catálogo que se va a buscar.
 
-*_Loc*<br/>
+*_Loc*\
 La configuración regional que se está buscando en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve un valor que se compara con menos de cero en caso de error. De otro modo, el valor devuelto puede usarse como el primer argumento en una llamada posterior a [get](#get).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro protegida intenta abrir un catálogo de mensajes cuyo nombre es *_Catname*. Es posible que el uso de la configuración regional *_Loc* hacerlo
+La función miembro protegida intenta abrir un catálogo de mensajes cuyo nombre es *_Catname*. Puede hacer uso de la *_Loc* de la configuración regional al hacerlo
 
 El valor devuelto debe usarse como el argumento en una llamada posterior a [close](#close).
 
@@ -205,7 +205,7 @@ El valor devuelto debe usarse como el argumento en una llamada posterior a [clos
 
 Vea el ejemplo de [open](#open), que llama a `do_open`.
 
-## <a name="get"></a> messages::get
+## <a name="messagesget"></a><a name="get"></a>mensajes::get
 
 Recupera el catálogo de mensajes.
 
@@ -219,27 +219,27 @@ string_type get(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*<br/>
+*_Catval*\
 El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_Establecer*<br/>
+*_Set*\
 El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Cuerpo*<br/>
+*_Message*\
 El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Dfault*<br/>
+*_Dfault*\
 La cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve una copia de *_Dfault* en caso de error. De otro modo, devuelve una copia de la secuencia de mensajes especificada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve [do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`).
+La función miembro `_Set`devuelve `_Message` `_Dfault` [do_get](#do_get)( `_Catval`, , , ).
 
-## <a name="messages"></a> messages::messages
+## <a name="messagesmessages"></a><a name="messages"></a>mensajes::mensajes
 
 Función constructor de la faceta de mensajes.
 
@@ -254,27 +254,27 @@ protected: messages(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-*_Locname*<br/>
+*_Locname*\
 El nombre de la configuración regional.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Los valores posibles de la *_Refs* parámetro y su importancia son:
+Los valores posibles para el parámetro *_Refs* y su importancia son:
 
 - 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
 - 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: no se definen estos valores.
+- \>1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
 El constructor inicializa su objeto base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
-## <a name="open"></a> messages::open
+## <a name="messagesopen"></a><a name="open"></a>mensajes::abrir
 
 Abre el catálogo de mensajes.
 
@@ -286,21 +286,21 @@ catalog open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catname*<br/>
+*_Catname*\
 El nombre del catálogo que se va a buscar.
 
-*_Loc*<br/>
+*_Loc*\
 La configuración regional que se está buscando en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve un valor que se compara con menos de cero en caso de error. De otro modo, el valor devuelto puede usarse como el primer argumento en una llamada posterior a [get](#get).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve [do_open](#do_open)( `_Catname`, `_Loc`).
+La función miembro `_Catname` `_Loc`devuelve [do_open](#do_open)( , ).
 
-## <a name="string_type"></a> messages::string_type
+## <a name="messagesstring_type"></a><a name="string_type"></a>mensajes::string_type
 
 Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo `CharType`.
 
@@ -308,12 +308,12 @@ Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres d
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe una especialización de clase de plantilla [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de mensajes.
+El tipo describe una especialización de plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de mensajes.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<locale>](../standard-library/locale.md)<br/>
-[messages_base (Clase)](../standard-library/messages-base-class.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<>de la localidad](../standard-library/locale.md)\
+[Clase messages_base](../standard-library/messages-base-class.md)\
+[Seguridad de roscas en la biblioteca estándar C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

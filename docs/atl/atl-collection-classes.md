@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223443"
 ---
 # <a name="atl-collection-classes"></a>Clases de colección de ATL
 
@@ -59,7 +59,7 @@ Estas clases le permite detectar muchos errores de programación cuando se usa e
 
 También se proporcionan clases de colecciones especializadas para administrar los punteros de memoria y los punteros de interfaz:
 
-|Clase|Propósito|
+|Clase|Finalidad|
 |-----------|-------------|
 |[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Proporciona métodos útiles al construir una matriz de punteros inteligentes.|
 |[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Proporciona métodos útiles al construir una lista de punteros inteligentes.|
@@ -116,13 +116,13 @@ El diagrama siguiente muestra la jerarquía de clases para las clases CTraits.
 
 Los ejemplos siguientes muestran las clases de colección:
 
-- [Ejemplo MMXSwarm](../visual-cpp-samples.md)
+- [Ejemplo MMXSwarm](../overview/visual-cpp-samples.md)
 
-- [Ejemplo DynamicConsumer](../visual-cpp-samples.md)
+- [DynamicConsumer Sample](../overview/visual-cpp-samples.md)
 
 - [Ejemplo UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [Ejemplo de marquesina](../visual-cpp-samples.md)
+- [Ejemplo de marquesina](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vea también
 

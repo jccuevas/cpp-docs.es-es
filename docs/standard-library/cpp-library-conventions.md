@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: f1790b75baea340d0b3ab1044290317055ac81d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524792"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755712"
 ---
 # <a name="c-library-conventions"></a>Convenciones de la biblioteca de C++
 
@@ -24,7 +24,7 @@ La biblioteca de C++ cumple prácticamente con las mismas convenciones que la bi
 
 Una implementación tiene cierta libertad en cómo declara los tipos y funciones de la biblioteca de C++:
 
-- Los nombres de funciones de la biblioteca estándar de C pueden tener la vinculación extern #"C++" o extern "C". Incluya el encabezado estándar de C adecuado, en lugar de declarar una entidad de biblioteca insertada.
+- Los nombres de las funciones de la biblioteca estándar de C pueden tenerC++una vinculación extern "" o extern "C". Incluya el encabezado estándar de C adecuado, en lugar de declarar una entidad de biblioteca insertada.
 
 - Un nombre de función miembro en una clase de biblioteca puede tener firmas de función adicionales además de las que aparecen en este documento. Puede asegurarse de que una llamada a función que se describe aquí se comporte según lo esperado, pero no puede tomar de forma fiable la dirección de una función miembro de biblioteca. (El tipo podría no ser el esperado).
 
@@ -50,5 +50,5 @@ Por otro lado, hay algunas restricciones:
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

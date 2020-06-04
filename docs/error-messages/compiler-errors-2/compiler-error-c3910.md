@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3910
 ms.assetid: cfcbe620-b463-463b-95ea-2d60ad33ebb5
-ms.openlocfilehash: b9194149c532044f6c8a1eab84729f7896f1352b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef63b8f5d1ee4b3f094bed3549eec8157a950e91
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568550"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748884"
 ---
 # <a name="compiler-error-c3910"></a>Error del compilador C3910
 
-'evento': debe definir el miembro 'método'
+' evento ': debe definir el miembro ' Method '
 
-Se definió un evento, pero no contiene el método de descriptor de acceso especificada, se requiere.
+Se definió un evento, pero no contenía el método de descriptor de acceso necesario especificado.
 
-Para obtener más información, consulte [eventos](../../windows/event-cpp-component-extensions.md).
+Para obtener más información, vea [Event](../../extensions/event-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3910:
+En el ejemplo siguiente se genera C3910:
 
-```
+```cpp
 // C3910.cpp
 // compile with: /clr /c
 delegate void H();

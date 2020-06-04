@@ -1,9 +1,9 @@
 ---
 title: _set_controlfp
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _set_controlfp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_controlfp
 - _set_controlfp
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d39406db0f4c9ba6374776da62aea2dbb61e23d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499056"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948682"
 ---
-# <a name="setcontrolfp"></a>_set_controlfp
+# <a name="_set_controlfp"></a>_set_controlfp
 
 Establece la palabra de control de punto flotante.
 
@@ -49,7 +52,7 @@ void __cdecl _set_controlfp(
 *newControl*<br/>
 Valores de bit de la nueva palabra de control.
 
-*Máscara*<br/>
+*mask*<br/>
 Máscara de los bits de la nueva palabra de control que se va a definir.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -58,9 +61,9 @@ Ninguno.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_set_controlfp** es similar a la función **_control87**, pero solo establece la palabra de control de punto flotante en *newControl*. Los bits de los valores indican el estado de control de punto flotante. El estado de control de punto flotante permite que el programa cambie los modos de precisión, redondeo e infinito en el paquete matemático de punto flotante. También puede aplicar o quitar la máscara de excepciones de punto flotante mediante **_set_controlfp**. Para obtener más información, vea [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+La función **_set_controlfp** es similar a **_control87**, pero solo establece la palabra de control de punto flotante en *newControl*. Los bits de los valores indican el estado de control de punto flotante. El estado de control de punto flotante permite que el programa cambie los modos de precisión, redondeo e infinito en el paquete matemático de punto flotante. También puede enmascarar o desenmascarar las excepciones de punto flotante mediante **_set_controlfp**. Para obtener más información, vea [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
-Esta función está en desuso cuando se compila con [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime solo admite la precisión de punto flotante predeterminada.
+Esta función está en desuso al compilar con [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque el Common Language Runtime solo admite la precisión de punto flotante predeterminada.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 3f781e59672764dc518f3c6fad61d4021720362a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148145"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857039"
 ---
 # <a name="return-type"></a>Tipo devuelto
 
@@ -38,10 +38,10 @@ El tipo de valor devuelto de una función establece el tamaño y el tipo de valo
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8** /\* Específico de Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16** /\* Específico de Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32** /\* Específico de Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64** /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Específico de Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>

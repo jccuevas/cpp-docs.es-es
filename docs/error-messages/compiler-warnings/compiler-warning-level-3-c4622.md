@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4622
 ms.assetid: d3c879f0-4492-4f4b-b26d-230993f3a933
-ms.openlocfilehash: 88a41c7f9edb1d2a9f6d4547336a77bd5e362882
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 295a183afb24121a2abefd336f6ea92110220155
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575336"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185509"
 ---
 # <a name="compiler-warning-level-3-c4622"></a>Advertencia del compilador (nivel 3) C4622
 

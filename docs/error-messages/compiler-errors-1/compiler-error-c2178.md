@@ -1,31 +1,31 @@
 ---
-title: Error de compilador C2178
+title: Error del compilador C2178
 ms.date: 05/08/2017
 f1_keywords:
 - C2178
 helpviewer_keywords:
 - C2178
 ms.assetid: 79a14158-17f3-4221-bd06-9d675c49cef4
-ms.openlocfilehash: cd153bb5b331872bfe35b046d41612998bd0eff7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85cac4919c048c30a3ed1ff5573a3c14b77da0bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622565"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737197"
 ---
-# <a name="compiler-error-c2178"></a>Error de compilador C2178
+# <a name="compiler-error-c2178"></a>Error del compilador C2178
 
-'*identificador*'no se pueden declarar con'*especificador*' especificador
+'*Identifier*' no se puede declarar con el especificador '*Specifier*'
 
-Un `mutable` especificador se usó en una declaración, pero el especificador no se permite en este contexto.
+Se usó un especificador de `mutable` en una declaración, pero el especificador no se permite en este contexto.
 
-El `mutable` especificador pueden aplicarse únicamente a los nombres de miembros de datos de clase y no se puede aplicar a los nombres declarados `const` o `static`y no se puede aplicar para hacer referencia a miembros.
+El especificador de `mutable` solo se puede aplicar a los nombres de los miembros de datos de clase y no se puede aplicar a los nombres declarados `const` o `static`, y no se pueden aplicar a los miembros de referencia.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo puede producirse C2178 y cómo corregirlo.
+En el ejemplo siguiente se muestra cómo puede producirse C2178 y cómo corregirlo.
 
-```
+```cpp
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 

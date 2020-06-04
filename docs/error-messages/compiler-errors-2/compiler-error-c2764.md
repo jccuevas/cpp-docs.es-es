@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
-ms.openlocfilehash: ba16431fc71a0e594b77dcc6dab62ed6c49c9137
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d318742a367487f3688717046a6a798c2add87a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587112"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759846"
 ---
 # <a name="compiler-error-c2764"></a>Error del compilador C2764
 
-'param': parámetro de plantilla no utilizado o deducible en la especialización parcial 'specialization'
+' param ': el parámetro de plantilla no se ha usado o no se ha deducido en la especialización parcial ' especialización '
 
-No se utiliza un parámetro de plantilla en una especialización parcial. Esto hace que la especialización parcial que quede inutilizable porque no se puede deducir el parámetro de plantilla.
+Un parámetro de plantilla no se utiliza en una especialización parcial. Esto hace que la especialización parcial quede inutilizable porque no se puede deducir el parámetro de plantilla.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2764:
+En el ejemplo siguiente se genera C2764:
 
-```
+```cpp
 // C2764.cpp
 #include <stdio.h>
 template <class T1, class T2>

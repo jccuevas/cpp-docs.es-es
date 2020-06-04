@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char> class
 ms.assetid: abd9373a-77db-4031-bf4b-f8ac15087581
-ms.openlocfilehash: 6793a039b94a1ddc2daa80c5eb4d47fbdf6d6222
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccb08f3e505122757080129b36558490456fc2c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509985"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688328"
 ---
-# <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; (Struct)
+# <a name="char_traitsltchargt-struct"></a>char_traits&lt;char&gt; (Struct)
 
-Un struct que es una especialización del struct de plantilla **char_traits\<CharType >** a un elemento de tipo **char**.
+Un struct que es una especialización del struct de plantilla **char_traits \<CharType >** a un elemento de tipo **Char**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,8 +27,8 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>Comentarios
 
-La especialización permite aprovechar las funciones de biblioteca que manipulan objetos de este tipo de struct **char**.
+La especialización permite que el struct aproveche las funciones de biblioteca que manipulan objetos de este tipo **Char**.
 
 ## <a name="example"></a>Ejemplo
 
-Consultar las funciones miembro y typedefs de la clase de plantilla [char_traits (clase)](../standard-library/char-traits-struct.md)
+Vea las definiciones de tipo y las funciones miembro de la clase [char_traits](../standard-library/char-traits-struct.md) de la plantilla de clase

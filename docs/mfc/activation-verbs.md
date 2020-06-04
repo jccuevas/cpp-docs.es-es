@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392913"
 ---
 # <a name="activation-verbs"></a>Activación: Verbos
 
@@ -29,7 +29,7 @@ Muchos tipos de elementos OLE admiten un solo verbo y edición es la más común
 
 Otro verbo que se usan con frecuencia es abierto. El verbo Open es idéntico al editar, salvo que se inicia la aplicación de servidor en una ventana independiente. Este verbo debe usarse cuando la aplicación de contenedor o la aplicación de servidor no admite la activación en contexto.
 
-Los verbos distintos del principal se deben invocar a través de un comando de submenú cuando se selecciona el elemento. Este menú contiene todos los verbos admitidos por el elemento y suele alcanzarse por la *typename* **objeto** comando el **editar** menú. Para obtener información sobre la *typename* **objeto** de comandos, consulte el artículo [menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).
+Los verbos distintos del principal se deben invocar a través de un comando de submenú cuando se selecciona el elemento. Este menú contiene todos los verbos admitidos por el elemento y suele alcanzarse por la *typename* **objeto** comando el **editar** menú. Para obtener información sobre la *typename* **objeto** de comandos, consulte el artículo [menús y recursos: Adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).
 
 Los verbos que admite una aplicación de servidor se muestran en la base de datos de registro de Windows. Si se escribe la aplicación de servidor con la biblioteca Microsoft Foundation Class, se registrarán automáticamente todos los verbos cuando se inicia el servidor. Si no es así, debe registrarlos durante la fase de inicialización de la aplicación de servidor. Para obtener más información, vea el artículo [registro](../mfc/registration.md).
 
@@ -38,4 +38,3 @@ Los verbos que admite una aplicación de servidor se muestran en la base de dato
 [Activación](../mfc/activation-cpp.md)<br/>
 [Contenedores](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)
-

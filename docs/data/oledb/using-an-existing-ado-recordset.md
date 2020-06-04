@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: 62e56b818a766bf3b7efddf9243ffd47ad2cb46f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610605"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209357"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilizar un conjunto de registros ADO existente
 
-Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), utilice ADO para abrir un conjunto de registros (correspondiente a un conjunto de filas en las plantillas de consumidor OLE DB). Cuando haya un conjunto de registros, haga lo siguiente para conectarse a un conjunto de filas de OLE DB:
+Para mezclar OLE DB plantillas de consumidor y objetos de datos activos (ADO), use ADO para abrir un conjunto de registros (correspondiente a un conjunto de filas en las plantillas de consumidor OLE DB). Cuando tenga un conjunto de registros, haga lo siguiente para conectarse a un conjunto de filas de OLE DB:
 
-1. Llame a `QueryInterface` para el `IRowset` y `IAccessor` punteros.
+1. Llame a `QueryInterface` para los punteros de `IRowset` y `IAccessor`.
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,9 +27,9 @@ Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), ut
     ```
 
     > [!NOTE]
-    > *lpUnk* apunta a la `IUnknown` objeto del conjunto de registros ADO.
+    > *lpUnk* apunta al objeto `IUnknown` del conjunto de registros ADO.
 
-1. Asociar el descriptor de acceso y el conjunto de filas a sus clases de plantillas de consumidor OLE DB apropiados.
+1. Adjunte el descriptor de acceso y el conjunto de filas a sus clases de plantilla de consumidor OLE DB apropiadas.
 
     ```cpp
     CRowset rs;
@@ -40,6 +40,6 @@ Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), ut
     rs.SetAccessor(accessor);
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

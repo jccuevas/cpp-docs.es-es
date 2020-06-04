@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3369
 ms.assetid: c6ceb9cb-3df9-4334-9a5c-d16db351d476
-ms.openlocfilehash: 0cd27da4b73732513afe0bd33a2d7312e6ddbe97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee936f4921369b1d59d81b51dcb3e81c69be083c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618964"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755608"
 ---
 # <a name="compiler-error-c3369"></a>Error del compilador C3369
 
@@ -21,7 +21,7 @@ El uso de [idl_module](../../windows/idl-module.md) donde se define la DLL solo 
 
 El ejemplo siguiente genera la advertencia C3369:
 
-```
+```cpp
 // C3369.cpp
 // compile with: /c
 [idl_module(name="name1", dllname="x.dll")]; // C3369

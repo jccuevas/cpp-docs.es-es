@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607871"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448072"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semántica de pila de C++ para los tipos de referencia
 
-Antes de Visual C++ 2005, una instancia de un tipo de referencia solo se creara con la `new` operador, que se creó el objeto en la basura recopilados de montón. Sin embargo, ahora puede crear una instancia de un tipo de referencia con la misma sintaxis que usaría para crear una instancia de un tipo nativo en la pila. Por lo tanto, no es necesario usar [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia. Y cuando el objeto queda fuera del ámbito, el compilador llama al destructor del objeto.
+Antes de Visual Studio 2005, una instancia de un tipo de referencia solo se creara con la `new` operador, que se creó el objeto en la basura recopilados de montón. Sin embargo, ahora puede crear una instancia de un tipo de referencia con la misma sintaxis que usaría para crear una instancia de un tipo nativo en la pila. Por lo tanto, no es necesario usar [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia. Y cuando el objeto queda fuera del ámbito, el compilador llama al destructor del objeto.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -27,7 +27,7 @@ El compilador no generará un constructor de copias para un tipo de referencia. 
 
 El compilador no generará un operador de asignación predeterminado para un tipo de referencia. Un operador de asignación permite crear un objeto mediante la semántica de pila y se inicializa con un objeto existente que se creó utilizando la semántica de pila. Un operador de asignación para un tipo de referencia tiene una firma de la forma siguiente: `void operator=( R% ){}`.
 
-Si el destructor de su tipo libera los recursos críticos y usa semántica de pila para tipos de referencia, no es necesario llamar explícitamente al destructor (o llamar a `delete`). Para obtener más información sobre los destructores en tipos de referencia, consulte [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Si el destructor de su tipo libera los recursos críticos y usa semántica de pila para tipos de referencia, no es necesario llamar explícitamente al destructor (o llamar a `delete`). Para obtener más información sobre los destructores en tipos de referencia, consulte [destructores y finalizadores en cómo: Definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Un operador de asignación generados por el compilador seguirá las reglas habituales de C++ estándares con las siguientes adiciones:
 
@@ -41,9 +41,9 @@ El compilador también proporciona un `%` operador unario para convertir una ins
 
 Los siguientes tipos de referencia no están disponibles para su uso con semántica de pila:
 
-- [delegate (Extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (Extensiones de componentes de C++)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Matrices](../windows/arrays-cpp-component-extensions.md)
+- [Matrices](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Clases y structs](../extensions/classes-and-structs-cpp-component-extensions.md)

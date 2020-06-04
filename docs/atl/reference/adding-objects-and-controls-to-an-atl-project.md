@@ -1,6 +1,6 @@
 ---
 title: Adición de objetos y controles a un proyecto ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.appwiz.ATL.controls
 helpviewer_keywords:
@@ -11,44 +11,46 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506137"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075311"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Adición de objetos y controles a un proyecto ATL
 
-Puede usar uno de los asistentes de código ATL para agregar un objeto o un control a los proyectos basados en MFC o ATL. Para cada objeto COM o un control Agregar, el asistente genera archivos .h y .cpp, así como un archivo .rgs para compatibilidad con el registro basado en script. Los asistentes de código ATL siguientes están disponibles en Visual Studio:
+> [!NOTE]
+> El Asistente para componentes COM+ 1.0 ATL, el Asistente para consumidores OLE DB ATL y el Asistente para componentes de páginas Active Server ATL no están disponibles en Visual Studio 2019 ni en versiones posteriores.
+
+Puede usar uno de los asistentes de código ATL para agregar un objeto o un control a los proyectos basados en MFC o ATL. Para cada objeto o control COM que se agregue, el asistente genera archivos .h y .cpp, así como un archivo .rgs para la compatibilidad con el registro basado en scripts. Los asistentes de código ATL siguientes están disponibles en Visual Studio:
 
 ||||
 |-|-|-|
 |[Objeto simple ATL](../../atl/reference/atl-simple-object-wizard.md)|[Cuadro de diálogo ATL](../../atl/reference/atl-dialog-wizard.md)|[Control ATL](../../atl/reference/atl-control-wizard.md)|
-|[Página de propiedades ATL](../../atl/reference/atl-property-page-wizard.md)|[Componente de páginas Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[Consumidor OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md)|
-|[Agregar compatibilidad con ATL a MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Asistente para componentes ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Proveedor OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|
+|[Página de propiedades ATL](../../atl/reference/atl-property-page-wizard.md)|[Componente de páginas Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[Asistente para consumidores OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md)|
+|[Agregar compatibilidad de ATL a MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Asistente para componentes ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Agregar un proveedor OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|
 
 > [!NOTE]
 > Antes de agregar un objeto ATL al proyecto, debe revisar los detalles y requisitos para el objeto en los temas de ayuda relacionados.
 
 ## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Para agregar un objeto o un control mediante el Asistente para controles ATL
 
-1. En **el Explorador de soluciones**, haga clic en el nodo del proyecto y haga clic en **agregar** en el menú contextual. Haga clic en **Agregar clase**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo del proyecto y haga clic en **Agregar** en el menú contextual. Haga clic en **Agregar clase**.
 
-   El [Agregar clase](../../ide/add-class-dialog-box.md) aparece el cuadro de diálogo.
+   Aparecerá el cuadro de diálogo [Agregar clase](../../ide/add-class-dialog-box.md).
 
-1. Con el **ATL** carpeta seleccionada en el **categorías** panel, seleccione un objeto que se va a insertar en el **plantillas** panel. Haga clic en **abierto**. Aparece el Asistente de código para el objeto seleccionado.
+1. Con la carpeta **ATL** seleccionada en el panel **Categorías**, seleccione un objeto para insertar en el panel **Plantillas**. Haga clic en **Abrir**. Aparecerá el asistente de código para el objeto seleccionado.
 
    > [!NOTE]
-   > Si desea agregar un objeto ATL a un proyecto MFC, debe agregar compatibilidad con ATL al proyecto existente. Puede hacerlo siguiendo las instrucciones de [agregar compatibilidad con ATL a un proyecto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Si quiere agregar un objeto ATL a un proyecto MFC, tendrá que agregar compatibilidad con ATL al proyecto existente. Para hacerlo, siga las instrucciones de [Adición de compatibilidad con ATL al proyecto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
-   Como alternativa, si se intenta agregar un objeto ATL a un proyecto MFC sin agregar previamente compatibilidad con ATL, Visual Studio le pedirá que especifique si desea que la compatibilidad agregada a su proyecto. Haga clic en **Sí** para agregar compatibilidad con ATL al proyecto y abrir el asistente ATL seleccionado.
+   Como alternativa, si intenta agregar un objeto ATL a un proyecto MFC sin agregar previamente compatibilidad con ATL, Visual Studio le pedirá que especifique si quiere que se agregue la compatibilidad al proyecto. Haga clic en **Sí** para agregar compatibilidad con ATL al proyecto y abrir el asistente ATL seleccionado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Tipos de proyecto de Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Crear proyectos de escritorio con asistentes para aplicaciones](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Tipos de proyectos de C++ en Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programar con ATL y código en tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md)

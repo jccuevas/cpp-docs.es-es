@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445323"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161820"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Advertencia del compilador (nivel 2) C4396
 
@@ -27,7 +27,7 @@ Una especialización de una plantilla de función no puede especificar ninguno d
 
 El ejemplo de código siguiente muestra una declaración de función friend no válida con un especificador `inline` .
 
-```
+```cpp
 // C4396.cpp
 // compile with: /W2 /c
 

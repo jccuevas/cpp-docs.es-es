@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4670
 ms.assetid: e172b134-b1fb-4dfe-8e9d-209ea08b73c7
-ms.openlocfilehash: 1ce32ef4d07ea5e2c6f328578837f805eed5c897
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ea32e8693fbe310b82eeeb87b1e97f2281ddf04
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633484"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990752"
 ---
 # <a name="compiler-warning-level-4-c4670"></a>Advertencia del compilador (nivel 4) C4670
 
@@ -21,7 +21,7 @@ La clase base especificada de un objeto para que se produzca en un bloque **try*
 
 El ejemplo siguiente genera la advertencia C4670:
 
-```
+```cpp
 // C4670.cpp
 // compile with: /EHsc /W4
 class A

@@ -1,41 +1,41 @@
 ---
 title: _mm_cvtss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtss_si64x
 helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: 7948348e0bbc0ea5c0eb1536d79d9eaad08b1087
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6079ed7846a35ff16355f0341d63430f9846057f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330702"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217438"
 ---
-# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+# <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
 **Específicos de Microsoft**
 
-Genera el x64 extendidos versión de la convertir valor escalar único precisión número de punto flotante a entero de 64 bits (`cvtss2si`) instrucción.
+Genera la versión extendida de x64 del número de punto flotante de precisión sencilla escalar a la instrucción entera`cvtss2si`de 64 bits ().
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 __int64 _mm_cvtss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
-[in] Un `__m128` estructura que contiene los valores de punto flotante.
+*value*\
+de `__m128` Estructura que contiene los valores de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un entero de 64 bits, el resultado de la conversión del primer valor de punto flotante a entero.
+Entero de 64 bits, el resultado de la conversión del primer valor de punto flotante en un entero.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,17 +43,17 @@ Un entero de 64 bits, el resultado de la conversión del primer valor de punto f
 |---------------|------------------|
 |`_mm_cvtss_si64x`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El primer elemento del valor de la estructura se convierte en un entero y devuelve. Los bits de control de redondeo de MXCSR se usan para determinar el comportamiento de redondeo. El valor predeterminado el modo de redondeo es redondear al más cercano, redondear al número par si la parte decimal es 0,5. Dado que el `__m128` estructura representa un registro XMM, esta función intrínseca toma un valor desde el registro XMM y lo escribe en la memoria del sistema.
+El primer elemento del valor de la estructura se convierte en un entero y se devuelve. Los bits de control de redondeo de MXCSR se usan para determinar el comportamiento de redondeo. El modo de redondeo predeterminado es redondear a la más cercana, redondeando al número par si la parte decimal es 0,5. Dado que `__m128` la estructura representa un registro XMM, el intrínseco toma un valor del registro XMM y lo escribe en la memoria del sistema.
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // _mm_cvtss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[__m128d](../cpp/m128d.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[__m128d](../cpp/m128d.md)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

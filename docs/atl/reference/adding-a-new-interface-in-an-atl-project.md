@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 1724dd3eb73b82e34c5cc2b0c1965d73e099a708
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 15283439bdcf76fea64d677ad84bee333833dc71
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440058"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221223"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Agregar una nueva interfaz en un proyecto ATL
 
@@ -43,8 +43,7 @@ Puede agregar una nueva interfaz al control de dos maneras: manualmente o median
 ## <a name="see-also"></a>Vea también
 
 [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Tipos de proyecto de Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Crear proyectos de escritorio con asistentes para aplicaciones](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[C++tipos de proyecto en Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programar con ATL y código en tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md)

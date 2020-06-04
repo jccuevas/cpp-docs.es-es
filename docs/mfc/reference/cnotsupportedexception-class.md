@@ -1,5 +1,5 @@
 ---
-title: CNotSupportedException (clase)
+title: Clase CNotSupportedException
 ms.date: 11/04/2016
 f1_keywords:
 - CNotSupportedException
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: 0eb3bf0de51345ed4316d2a1c5c29b8ecb3e8bba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b859b939baef018e69b245e597eea90e608253ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363193"
 ---
-# <a name="cnotsupportedexception-class"></a>CNotSupportedException (clase)
+# <a name="cnotsupportedexception-class"></a>Clase CNotSupportedException
 
 Representa una excepción que es el resultado de una solicitud de una característica no compatible.
 
@@ -29,15 +29,15 @@ class CNotSupportedException : public CSimpleException
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Construye un objeto `CNotSupportedException`.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Calificación adicional no es necesaria ni posible.
+No es necesaria ni posible ninguna otra cualificación.
 
-Para obtener más información sobre el uso de `CNotSupportedException`, consulte el artículo [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).
+Para obtener más `CNotSupportedException`información sobre el uso , vea el artículo Control de [excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -53,7 +53,7 @@ Para obtener más información sobre el uso de `CNotSupportedException`, consult
 
 **Encabezado:** afx.h
 
-##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException
+## <a name="cnotsupportedexceptioncnotsupportedexception"></a><a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException
 
 Construye un objeto `CNotSupportedException`.
 
@@ -61,12 +61,11 @@ Construye un objeto `CNotSupportedException`.
 CNotSupportedException();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-No utilice este constructor directamente, pero en su lugar llame a la función global [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). Para obtener más información sobre el procesamiento de excepciones, vea el artículo [control de excepciones en MFC](../exception-handling-in-mfc.md).
+No utilice este constructor directamente, sino que llame a la función global [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). Para obtener más información sobre el procesamiento de excepciones, vea el artículo Control de [excepciones en MFC](../exception-handling-in-mfc.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CException (clase)](cexception-class.md)<br/>
+[Clase CException](cexception-class.md)<br/>
 [Gráfico de jerarquías](../hierarchy-chart.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DateTimePicker control [MFC], display styles
 - DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
-ms.openlocfilehash: 2e3e980649264a6842abcc9491171e5105dbab17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8da5ecaf473d6d3c35ddc1b95ac856ce8c12f163
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411635"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Usar cadenas de formato personalizado en un control de selector de fecha y hora
 
@@ -35,4 +35,3 @@ Además de las cadenas de formato personalizado de selector de fecha y hora tamb
 
 [Uso de CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

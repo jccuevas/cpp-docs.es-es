@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2598
 ms.assetid: 40777c62-39ba-441e-b081-f49f94b43547
-ms.openlocfilehash: 521a67bdf1e1f64853a3f87933b3fa714c8e33f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1ad34d454c5dc80feaac1df1383854391100ab0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578235"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759326"
 ---
 # <a name="compiler-error-c2598"></a>Error del compilador C2598
 
-especificación de vinculación debe estar en el ámbito global
+la especificación de vinculación debe estar en el ámbito global
 
 El especificador de vinculación se declara en el ámbito local.
 
-El ejemplo siguiente genera C2598:
+En el ejemplo siguiente se genera C2598:
 
-```
+```cpp
 // C2598.cpp
 // compile with: /c
 void func() {

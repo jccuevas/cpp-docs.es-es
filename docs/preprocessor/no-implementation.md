@@ -1,38 +1,37 @@
 ---
-title: no_implementation
-ms.date: 11/04/2016
+title: atributo de importación no_implementation
+ms.date: 08/29/2019
 f1_keywords:
 - no_implementation
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: d4e55d06bef823d28c5deb3467654bc530a3853e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f0a7454fdbedc1959b665ccb2a23748d21c342d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456789"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220776"
 ---
-# <a name="noimplementation"></a>no_implementation
-**Específicos de C++**
+# <a name="no_implementation-import-attribute"></a>atributo de importación no_implementation
 
-Suprime la generación del encabezado .tli, que contiene las implementaciones de las funciones miembro de contenedor.
+**C++Cuestión**
+
+Suprime la generación del `.tli` encabezado, que contiene las implementaciones de las funciones miembro del contenedor.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-no_implementation
-```
+> **#import** *biblioteca de tipos* **no_implementation**
 
 ## <a name="remarks"></a>Comentarios
 
-Si se especifica este atributo, el encabezado.tlh, con las declaraciones para exponer elementos de la biblioteca de tipos, se generará sin una instrucción `#include` para incluir el archivo de encabezado .tli.
+Si se especifica este atributo, el `.tlh` encabezado, con las declaraciones para exponer elementos de la biblioteca de tipos, se generará sin `#include` una instrucción para incluir `.tli` el archivo de encabezado.
 
-Este atributo se utiliza junto con [implementation_only](../preprocessor/implementation-only.md).
+Este atributo se usa junto con [implementation_only](../preprocessor/implementation-only.md).
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Probar un proyecto (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0422b4f862b5438a313e25dac421d591bbbb9a5
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437315"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273696"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Tutorial: Probar un proyecto (C++)
 
@@ -31,7 +31,7 @@ En este tutorial, verá el valor de una variable mientras el programa se ejecuta
 
 1. Seleccione esta línea de código:
 
-   `Cardgame.solitaire(1);`
+   `Cardgame solitaire(1);`
 
 1. Para establecer un punto de interrupción en esa línea, en la barra de menús, seleccione **Depurar** > **Alternar puntos de interrupción**, o bien presione la tecla **F9**. Aparece un círculo de color rojo a la izquierda de la línea; indica que se ha establecido un punto de interrupción. Para quitar un punto de interrupción, puede volver elegir el comando de menú o la tecla **F9**.
 
@@ -58,9 +58,9 @@ En este tutorial, verá el valor de una variable mientras el programa se ejecuta
 ## <a name="next-steps"></a>Pasos siguientes
 
 **Anterior:** [Tutorial: Compilar un proyecto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**Siguiente:** [Tutorial: Depurar un proyecto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Siguiente:** [Tutorial: Depuración de un proyecto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>
+[Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>

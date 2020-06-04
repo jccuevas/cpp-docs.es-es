@@ -1,10 +1,10 @@
 ---
 title: vscanf_s, vwscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf_s
 - vwscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 90100a5fbc03371a11f437acc12562d9ccf957f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d08679d08fb5b212306cbaeec200d16803a85ef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519475"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945408"
 ---
-# <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
+# <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
 Lee datos con formato del flujo de entrada estándar. Estas versiones de [vscanf, vwscanf](vscanf-vwscanf.md) tienen mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -55,22 +58,22 @@ Lista de argumentos de variable.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el número de campos que se han convertido y asignado correctamente; el valor devuelto no incluye los campos que se leyeron pero no se asignaron. Un valor devuelto de 0 indica que no se ha asignado ningún campo. El valor devuelto es **EOF** para un error, o si se encuentra el carácter de final de archivo o el carácter de final de cadena en el primer intento de leer un carácter. Si *formato* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **vscanf_s** y **vwscanf_s** devolver **EOF** y establecer **errno** a **EINVAL**.
+Devuelve el número de campos que se han convertido y asignado correctamente; el valor devuelto no incluye los campos que se leyeron pero no se asignaron. Un valor devuelto de 0 indica que no se ha asignado ningún campo. El valor devuelto es **EOF** para un error, o si se encuentra el carácter de final de archivo o el carácter de final de cadena en el primer intento de leer un carácter. Si *Format* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **vscanf_s** y **vwscanf_s** devuelven **EOF** y establecen **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **vscanf_s** función lee los datos de flujo de entrada estándar **stdin** y escribe los datos en las ubicaciones que proporcionan el *arglist* lista de argumentos. Cada argumento de la lista debe ser un puntero a una variable de un tipo que se corresponde con un especificador de tipo en *formato*. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **vscanf_s** Lee los datos del flujo de entrada estándar **stdin** y escribe los datos en las ubicaciones que proporciona la lista de argumentos *arglist* . Cada argumento de la lista debe ser un puntero a una variable de un tipo que se corresponda con un especificador de tipo en *formato*. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-**vwscanf_s** es una versión con caracteres anchos de **vscanf_s**; el *formato* argumento **vwscanf_s** es una cadena de caracteres anchos. **vwscanf_s** y **vscanf_s** se comportan exactamente igual si el flujo se abre en modo ANSI. **vscanf_s** no admite la entrada desde un flujo UNICODE.
+**vwscanf_s** es una versión con caracteres anchos de **vscanf_s**; el argumento de *formato* para **vwscanf_s** es una cadena de caracteres anchos. **vwscanf_s** y **vscanf_s** se comportan exactamente igual si la secuencia se abre en modo ANSI. **vscanf_s** no admite la entrada de una secuencia Unicode.
 
-A diferencia de **vscanf** y **vwscanf**, **vscanf_s** y **vwscanf_s** requieren el tamaño del búfer debe especificarse para todos los parámetros de tipo de entrada **c**, **C**, **s**, **S**, o de cadena que se incluyen en los conjuntos de controles **[]**. El tamaño de búfer en caracteres se pasa como parámetro adicional inmediatamente después del puntero en el búfer o la variable. El tamaño del búfer en caracteres para un **wchar_t** cadena no es igual que el tamaño en bytes.
+A diferencia de **vscanf** y **vwscanf**, **vscanf_s** y **vwscanf_s** requieren que se especifique el tamaño de búfer para todos los parámetros de entrada de tipo **c**, **c**, **s**, **s**o conjuntos de control de cadenas que se incluyen en **[]** . El tamaño de búfer en caracteres se pasa como parámetro adicional inmediatamente después del puntero en el búfer o la variable. El tamaño del búfer en caracteres de una cadena **wchar_t** no es el mismo que el tamaño en bytes.
 
 El tamaño de búfer incluye el valor nulo final. Puede usar un campo de especificación de ancho para garantizar que el token que se lee se ajuste al búfer. Si no se usa ningún campo de especificación de ancho y la lectura de token es demasiado grande como para ajustarse al búfer, no se escribirá ningún valor en dicho búfer.
 
 > [!NOTE]
-> El *tamaño* parámetro es de tipo **sin signo**, no **size_t**.
+> El parámetro de *tamaño* es de tipo sin **signo**, no **size_t**.
 
 Para obtener más información, consulte [scanf (Especificación de ancho)](../../c-runtime-library/scanf-width-specification.md).
 
@@ -89,7 +92,7 @@ Para obtener más información, vea [Campos de especificación de formato: funci
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

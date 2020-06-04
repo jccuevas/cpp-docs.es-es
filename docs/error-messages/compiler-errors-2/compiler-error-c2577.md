@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2577
 ms.assetid: fc79ef83-8362-40a2-9257-8037c3195ce4
-ms.openlocfilehash: 4406aa90b26bc517308132ae9cccd003d44a9aad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb42f9b792b3908a153737bcec93a449b656147
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530551"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755452"
 ---
 # <a name="compiler-error-c2577"></a>Error del compilador C2577
 
-'member': un destructor/finalizador no puede tener un tipo de valor devuelto
+' Member ': el destructor/finalizador no puede tener un tipo de valor devuelto
 
-Un destructor o finalizador no puede devolver un valor de `void` o cualquier otro tipo. Quitar el `return` instrucción de la definición del destructor.
+Un destructor o finalizador no puede devolver un valor de `void` o de cualquier otro tipo. Quite la instrucción `return` de la definición del destructor.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2577.
+En el ejemplo siguiente se genera C2577.
 
-```
+```cpp
 // C2577.cpp
 // compile with: /c
 class A {

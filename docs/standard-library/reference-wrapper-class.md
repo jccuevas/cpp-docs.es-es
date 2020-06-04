@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525241"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240275"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper (Clase)
 
@@ -35,7 +35,6 @@ Contiene una referencia.
 template <class Ty>
 class reference_wrapper
 {
-public:
     typedef Ty type;
 
     reference_wrapper(Ty&) noexcept;
@@ -45,9 +44,6 @@ public:
     template <class... Types>
     auto operator()(Types&&... args) const ->
         decltype(std::invoke(get(), std::forward<Types>(args)...));
-
-private:
-    Ty *ptr; // exposition only
 };
 ```
 
@@ -59,39 +55,35 @@ El tipo `Ty` debe ser un tipo de objeto o un tipo de función, o una aserción e
 
 Las funciones del asistente [std::ref](functional-functions.md#ref) y [std::cref](functional-functions.md#cref) pueden usarse para crear objetos `reference_wrapper`.
 
+## <a name="members"></a>Miembros
+
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|||
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Construye un objeto `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|||
 |-|-|
 |[result_type](#result_type)|Tipo de resultado débil de la referencia ajustada.|
 |[type](#type)|Tipo de la referencia ajustada.|
 
-### <a name="member-functions"></a>Funciones miembro
+### <a name="functions"></a>Funciones
 
-|Función miembro|Descripción|
+|||
 |-|-|
 |[get](#get)|Obtiene la referencia ajustada.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Obtiene un puntero a la referencia ajustada.|
-|[reference_wrapper::operator()](#op_call)|Llama a la referencia ajustada.|
+|[operator Ty&amp;](#op_ty_amp)|Obtiene un puntero a la referencia ajustada.|
+|[operator()](#op_call)|Llama a la referencia ajustada.|
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="get"></a> reference_wrapper::get
+## <a name="get"></a> Obtener
 
 Obtiene la referencia ajustada.
 
@@ -130,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> reference_wrapper::operator Ty&amp;
+## <a name="op_ty_amp"></a> operator Ty&amp;
 
 Obtiene la referencia ajustada.
 
@@ -166,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> reference_wrapper::operator()
+## <a name="op_call"></a> operator()
 
 Llama a la referencia ajustada.
 
@@ -177,10 +169,10 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipos*<br/>
+*Types*\ (Tipos [Referencia de C#])
 Los tipos de la lista de argumentos.
 
-*args*<br/>
+*args*\
 La lista de argumentos.
 
 ### <a name="remarks"></a>Comentarios
@@ -212,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper::reference_wrapper
+## <a name="reference_wrapper"></a> reference_wrapper)
 
 Construye un objeto `reference_wrapper`.
 
@@ -222,10 +214,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo que se va a ajustar.
 
-*Val*<br/>
+*Val*\
 El valor que se va a ajustar.
 
 ### <a name="remarks"></a>Comentarios
@@ -263,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> reference_wrapper::result_type
+## <a name="result_type"></a> result_type
 
 Tipo de resultado débil de la referencia ajustada.
 
@@ -302,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> reference_wrapper::type
+## <a name="type"></a> Tipo
 
 Tipo de la referencia ajustada.
 
@@ -343,8 +335,3 @@ int main() {
 i = 1
 rwi = 1
 ```
-
-## <a name="see-also"></a>Vea también
-
-[cref](../standard-library/functional-functions.md#cref)<br/>
-[ref](../standard-library/functional-functions.md#ref)<br/>

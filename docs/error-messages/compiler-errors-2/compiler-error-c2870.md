@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2870
 ms.assetid: 80523ee9-1fd3-4dc4-8a77-5083deb99066
-ms.openlocfilehash: f61281da23e46236e7fce496a4d89086e5d6c0ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b006592723df1222d05e39b3bc9e5729efc8aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546384"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755036"
 ---
 # <a name="compiler-error-c2870"></a>Error del compilador C2870
 
-'name': una definición de espacio de nombres debe aparecer en el ámbito de archivo o directamente dentro de otra definición de espacio de nombres
+' name ': una definición de espacio de nombres debe aparecer en el ámbito de archivo o inmediatamente dentro de otra definición de espacio de nombres
 
-Define el espacio de nombres `name` incorrectamente. Los espacios de nombres deben definirse en el ámbito de archivo (fuera de todos los bloques y clases) o inmediatamente dentro de otro espacio de nombres.
+Ha definido el espacio de nombres `name` de forma incorrecta. Los espacios de nombres se deben definir en el ámbito de archivo (fuera de todos los bloques y clases) o inmediatamente dentro de otro espacio de nombres.
 
-El ejemplo siguiente genera C2870:
+En el ejemplo siguiente se genera C2870:
 
-```
+```cpp
 // C2870.cpp
 // compile with: /c
 int main() {

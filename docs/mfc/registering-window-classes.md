@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WinMain method [MFC]
 - registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
-ms.openlocfilehash: c1fc6628b2b5e8e6fa657f4cf99be2256377a5b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c459b909a60fff2b7aeded9ea8d79a39ced24e4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309088"
 ---
 # <a name="registering-window-classes"></a>Registrar clases de ventana
 
@@ -38,4 +38,3 @@ Para obtener más información, consulte [Nota técnica 1](../mfc/tn001-window-c
 ## <a name="see-also"></a>Vea también
 
 [Creación de ventanas](../mfc/creating-windows.md)
-

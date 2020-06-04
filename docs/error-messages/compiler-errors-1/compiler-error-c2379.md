@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2379
 ms.assetid: 37dc3015-a4af-4341-bbf3-da6150df7e51
-ms.openlocfilehash: 1b3256efb6c0ff8236ba80a9ac681780f34fa8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f096791a6120023e079b93452a4b35c669db2139
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643851"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302112"
 ---
 # <a name="compiler-error-c2379"></a>Error del compilador C2379
 
-número de parámetros formales tiene tipo diferente tras promoverlo
+el número de parámetro formal tiene un tipo diferente cuando se promueve
 
-El tipo del parámetro especificado no es compatible mediante promociones predeterminadas con el tipo de una declaración anterior. Se trata de un error en ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) y una advertencia con las extensiones de Microsoft (**/Ze**).
+El tipo del parámetro especificado no es compatible, a través de promociones predeterminadas, con el tipo en una declaración anterior. Se trata de un error en ANSI C ([/za](../../build/reference/za-ze-disable-language-extensions.md)) y una advertencia con las extensiones de Microsoft ( **/ze**).
 
-El ejemplo siguiente genera C2379:
+En el ejemplo siguiente se genera C2379:
 
-```
+```c
 // C2379.c
 // compile with: /Za
 void func();

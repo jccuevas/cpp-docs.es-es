@@ -1,25 +1,25 @@
 ---
 title: Error recuperable A2044 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2044
 helpviewer_keywords:
 - A2044
 ms.assetid: 7cf144ac-408c-4e35-9a15-38656a4e87cd
-ms.openlocfilehash: 2c0d3f0f145acc80079f2263723ad42da89105eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4635520916a8bc6d18d7cb44735b6ececbd8d437
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542576"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317011"
 ---
 # <a name="ml-nonfatal-error-a2044"></a>Error recuperable A2044 de ML
 
-**carácter no válido en archivo**
+**carácter no válido en el archivo**
 
-El archivo de origen contenía un carácter fuera de un comentario, cadena o literal no se reconoció como un operador u otro carácter legal.
+El archivo de código fuente contenía un carácter fuera de un comentario, una cadena o un literal que no se reconoció como operador u otro carácter legal.
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

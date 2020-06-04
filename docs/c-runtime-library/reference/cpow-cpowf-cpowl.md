@@ -1,11 +1,11 @@
 ---
 title: cpow, cpowf, cpowl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cpow
 - cpowf
 - cpowl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cpow
 - cpowf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 005bafd4b19164f5c85be839a90fc7d5259d61bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562492"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942704"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
@@ -71,17 +74,17 @@ El exponente.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor de *x* elevado a la potencia de *y* con un corte de bifurcación *x* en el eje real negativo.
+Valor de *x* elevado a la potencia de *y* con un corte de bifurcación para *x* en el eje real negativo.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cpow** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cpow** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **cpow** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **cpow** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**cpow**, **cpowf**, **cpowl**|\<complex.h>|\<ccomplex>|
+|**cpow**,               **cpowf**, **cpowl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

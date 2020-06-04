@@ -1,28 +1,29 @@
 ---
 title: SBYTE (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - sbyte
 helpviewer_keywords:
 - SBYTE directive
 ms.assetid: ae9323cc-4ed5-45fa-9cd6-c241868e4cfd
-ms.openlocfilehash: e95da5c9567483597112bfde686fcfe451b67eb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e80a695364ccbaa6d0bea99a3a219b7a97067ae7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531910"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318493"
 ---
-# <a name="sbyte-masm"></a>SBYTE (MASM)
+# <a name="sbyte"></a>SBYTE
 
-Asigna e inicializa opcionalmente un byte con signo de almacenamiento para cada `initializer`. También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.
+Asigna y, opcionalmente, Inicializa un byte de almacenamiento con signo para cada *inicializador*. También se puede usar como especificador de tipo en cualquier lugar en el que un tipo sea válido.
 
 ## <a name="syntax"></a>Sintaxis
 
-> nombre SBYTEinitializer [[, inicializador]]...
+> *Name*  **SBYTE** *initializer* ⟦ __,__ *initializer* ... ⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
-[BYTE](../../assembler/masm/byte-masm.md)<br/>
-[DB](../../assembler/masm/db.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[BYTE](byte-masm.md)\
+\ [dB](db.md)
+[Gramática BNF de MASM](masm-bnf-grammar.md)

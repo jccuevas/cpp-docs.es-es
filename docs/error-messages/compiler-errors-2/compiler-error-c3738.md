@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
-ms.openlocfilehash: e313c7d66bc030183e330dd961fad2fb35f02ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffefa0eff23e11412573b8062fa15bb5679923e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539329"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752774"
 ---
 # <a name="compiler-error-c3738"></a>Error del compilador C3738
 
-'convención de llamada': debe coincidir con la convención de llamada de la creación de instancias explícita de la plantilla que se va a crear una instancia
+' calling_convention ': la Convención de llamada de la creación de instancias explícita debe coincidir con la de la plantilla de la que se crean instancias
 
-Se recomienda que no especifican una convención de llamada en una instancia explícita. Si es necesario, sin embargo, deben coincidir con las convenciones de llamada.
+Se recomienda no especificar una Convención de llamada en una creación de instancias explícita. Sin embargo, si es necesario, las convenciones de llamada deben coincidir.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3738.
+En el ejemplo siguiente se genera C3738.
 
-```
+```cpp
 // C3738.cpp
 // compile with: /clr
 // processor: x86

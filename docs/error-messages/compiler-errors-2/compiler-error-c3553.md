@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3553
 ms.assetid: 7f84bf37-6419-4ad3-ab30-64266100b930
-ms.openlocfilehash: 219592f2403904f9923e84bfd4539a22cddd02de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82540e0f6c4b60aea2e708dcf00796490cd7d3cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543434"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200660"
 ---
 # <a name="compiler-error-c3553"></a>Error del compilador C3553
 

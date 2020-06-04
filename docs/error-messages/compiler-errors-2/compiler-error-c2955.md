@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520002"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742878"
 ---
 # <a name="compiler-error-c2955"></a>Error del compilador C2955
 
@@ -19,11 +19,11 @@ ms.locfileid: "51520002"
 
 No puede usar una plantilla de clase o de clase genérica como identificador sin una lista de plantillas o de argumentos genéricos.
 
-Para obtener más información, consulte [plantillas de clase](../../cpp/class-templates.md).
+Para obtener más información, vea [plantillas de clase](../../cpp/class-templates.md).
 
 El ejemplo siguiente genera el error C2955 y muestra cómo corregirlo.
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -35,7 +35,7 @@ X<int> x2;   // OK - this is how to fix it.
 
 El error C2955 también se puede producir al intentar efectuar una definición fuera de línea para una función declarada en una plantilla de clase:
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void CT<T>::CTFunc2() {}
 
 También se puede producir el error C2955 al usar genéricos:
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-**Visual Studio 2017 y versiones posterior:** el compilador diagnostica correctamente las listas de argumentos de plantilla que faltan cuando la plantilla aparece en una lista de parámetros de plantilla (por ejemplo, como parte de un argumento de plantilla predeterminado o un parámetro de plantilla sin tipo). El siguiente código se compila en Visual Studio 2015, pero genera un error en Visual Studio 2017.
+**Visual Studio 2017 y versiones posteriores:** El compilador diagnostica correctamente las listas de argumentos de plantilla que faltan cuando la plantilla aparece en una lista de parámetros de plantilla (por ejemplo, como parte de un argumento de plantilla predeterminado o un parámetro de plantilla sin tipo). El siguiente código se compila en Visual Studio 2015, pero genera un error en Visual Studio 2017.
 
 ```
 template <class T> class ListNode;

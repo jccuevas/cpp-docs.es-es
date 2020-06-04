@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6ecd3ed09e31e99898143e30ffe70c1c14aea9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667055"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545346"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Cómo: Tener acceso a caracteres en un objeto System::String
 
-Puede tener acceso a caracteres de un <xref:System.String> objeto para las llamadas de alto rendimiento a no administrado, las funciones que utilizan `wchar_t*` cadenas. El método produce un puntero interior al primer carácter de la <xref:System.String> objeto. Este puntero se puede manipular directamente o anclado y pasar a una función que espera una normal `wchar_t` cadena.
+Puede tener acceso a los caracteres de un objeto <xref:System.String> para las llamadas de alto rendimiento a funciones no administradas que toman cadenas de `wchar_t*`. El método produce un puntero interior al primer carácter del objeto <xref:System.String>. Este puntero se puede manipular directamente o anclar y pasar a una función que espera una cadena de `wchar_t` normal.
 
 ## <a name="example"></a>Ejemplo
 
-`PtrToStringChars` Devuelve un <xref:System.Char>, que es un puntero interior (también conocido como un `byref`). Por lo tanto, está sujeto a la recolección de elementos. No debe anclar este puntero, a menos que se va a pasarlo a una función nativa.
+`PtrToStringChars` devuelve un <xref:System.Char>, que es un puntero interior (también conocido como `byref`). Como tal, está sujeta a la recolección de elementos no utilizados. No tiene que anclar este puntero a menos que vaya a pasarlo a una función nativa.
 
-Observe el código siguiente.  Anclar no es necesaria porque `ppchar` es un puntero interior y, si el recolector de elementos no utilizados mueve la cadena señala, también se actualizará `ppchar`. Sin un [pin_ptr (C++ / c++ / CLI)](../windows/pin-ptr-cpp-cli.md), el código funcionará y no ha causado la disminución del rendimiento potencial Anclando.
+Observe el código siguiente.  El anclaje no es necesario porque `ppchar` es un puntero interior y, si el recolector de elementos no utilizados mueve la cadena a la que apunta, también actualizará `ppchar`. Sin un [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), el código funcionará y no se producirá la posible disminución del rendimiento causada por el anclaje.
 
-Si se pasa `ppchar` a una función nativa, a continuación, debe ser un puntero anclado; el recolector de elementos no utilizados no podrá actualizar punteros en el marco de pila no administrado.
+Si pasa `ppchar` a una función nativa, debe ser un puntero anclado; el recolector de elementos no utilizados no podrá actualizar ningún puntero en el marco de pila no administrado.
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -48,9 +48,9 @@ abcdefg
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo muestra dónde es preciso anclar.
+Este ejemplo muestra dónde se necesita el anclaje.
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Un puntero interior tiene todas las propiedades de un puntero de C++ nativo. Por ejemplo, puede usar para recorrer una estructura de datos vinculado y hacer inserciones y eliminaciones sólo mediante un puntero:
+Un puntero interior tiene todas las propiedades de un puntero C++ nativo. Por ejemplo, puede utilizarlo para recorrer una estructura de datos vinculada y realizar inserciones y eliminaciones mediante un solo puntero:
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;
@@ -99,6 +99,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

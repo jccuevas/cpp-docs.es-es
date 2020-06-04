@@ -7,12 +7,12 @@ helpviewer_keywords:
 - make_signed class
 - make_signed
 ms.assetid: 686247c0-247c-496b-9b1b-ba9dcd633621
-ms.openlocfilehash: c9fe9d54d503f1aa1dfb3debfaeb7649f2e5c18d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3c35e28dec3270299329c0186273e324effc2bb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631652"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453680"
 ---
 # <a name="makesigned-class"></a>make_signed (Clase)
 
@@ -30,12 +30,12 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del modificador de tipo contiene un tipo modificado que es *T* si `is_signed<T>` es verdadero. En caso contrario, es el tipo sin signo menor `UT` para el que `sizeof (T) <= sizeof (UT)`.
+Una instancia del modificador de tipo contiene un tipo modificado que es *T* si `is_signed<T>` es true. En caso contrario, es el tipo sin signo menor `UT` para el que `sizeof (T) <= sizeof (UT)`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -45,4 +45,4 @@ Una instancia del modificador de tipo contiene un tipo modificado que es *T* si 
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

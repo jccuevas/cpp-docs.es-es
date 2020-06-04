@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4010
 ms.assetid: 2824cf99-4174-4b60-a6e2-c01e9f1ee52d
-ms.openlocfilehash: 3f25c9194f48df4064282fb8601928b3ff00f40e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b2d5bd9b9d2fe0af488dad000638e7ae4f7624d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558800"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194309"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Advertencia de las herramientas del vinculador LNK4010
 
-número de números de versión de subsistema no válido; versión predeterminada del subsistema supone
+número de versión del subsistema no válido; se presupone la versión predeterminada del subsistema
 
-Puede especificar una versión para el subsistema de la imagen ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Cada subsistema tiene un requisito de versión mínima. Si la versión especificada es inferior al mínimo, se producirá esta advertencia y el vinculador usará sólo el subsistema de forma predeterminada.
+Puede especificar una versión para el subsistema de la imagen ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Cada subsistema tiene un requisito de versión mínima. Si la versión especificada es inferior al mínimo, esta advertencia se producirá y el vinculador simplemente usará el subsistema predeterminado.

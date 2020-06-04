@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 17d8ad581640611a5b517edd15609aa8052ecae4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f202ffabe945e55589ab1fc771a1757e23ca2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677141"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372476"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Configuración de la aplicación, Asistente para controles ActiveX MFC
 
@@ -30,17 +30,16 @@ Use esta página del Asistente para controles ActiveX MFC para diseñar y agrega
 
    Al generar archivos de ayuda a través del asistente, el proyecto incluye lo siguiente:
 
-   - El archivo .vcxproj contiene código para compilar y configurar el archivo de ayuda cuando se compile el proyecto.
+  - El archivo .vcxproj contiene código para compilar y configurar el archivo de ayuda cuando se compile el proyecto.
 
-   - El archivo *nombre_proyecto_pág_prop*.cpp incluye una función [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) en el constructor.
+  - El archivo *nombre_proyecto_pág_prop*.cpp incluye una función [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) en el constructor.
 
-   - El archivo nombre_proyecto.hpj, es el archivo de proyecto de ayuda que el compilador de ayuda usa para crear el archivo de ayuda del control ActiveX. El archivo .hpj es un archivo de texto que contiene la información sobre cómo compilar el archivo de ayuda y las rutas de acceso a los archivos adicionales (por ejemplo, mapas de bits) que incluye el archivo de ayuda.
+  - El archivo nombre_proyecto.hpj, es el archivo de proyecto de ayuda que el compilador de ayuda usa para crear el archivo de ayuda del control ActiveX. El archivo .hpj es un archivo de texto que contiene la información sobre cómo compilar el archivo de ayuda y las rutas de acceso a los archivos adicionales (por ejemplo, mapas de bits) que incluye el archivo de ayuda.
 
-   - El proyecto incluye el directorio HLP, que contendrá los archivos de mapa de bits de ayuda del proyecto y el archivo de temas de ayuda (*nombre_proyecto*.rtf). Este archivo de temas de ayuda contiene los temas de ayuda estándar para las propiedades, los eventos y los métodos admitidos por muchos controles ActiveX comunes. Puede editar el archivo .rtf para agregar o quitar temas de ayuda específicos.
+  - El proyecto incluye el directorio HLP, que contendrá los archivos de mapa de bits de ayuda del proyecto y el archivo de temas de ayuda (*nombre_proyecto*.rtf). Este archivo de temas de ayuda contiene los temas de ayuda estándar para las propiedades, los eventos y los métodos admitidos por muchos controles ActiveX comunes. Puede editar el archivo .rtf para agregar o quitar temas de ayuda específicos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asistente para controles ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Nombres del control, Asistente para controles ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
+[Nombres de control, Asistente para controles ActiveX de MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
 [Configuración del control, Asistente para controles ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
-

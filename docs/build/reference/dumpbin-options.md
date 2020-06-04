@@ -1,73 +1,79 @@
 ---
 title: Opciones de DUMPBIN
-ms.date: 11/04/2016
-f1_keywords:
-- dumpbin
+description: Guía de referencia de las opciones de la línea de comandos de la utilidad Microsoft DUMPBIN.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 5c57c49a39ae135f88f1f1eca25e59a68c7ad1aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54f5a22808026f4442f85d5e53a0805702e05868
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434312"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440041"
 ---
 # <a name="dumpbin-options"></a>Opciones de DUMPBIN
 
-Una opción consta de un especificador de opción, que es un guión (-) o una barra diagonal (/), seguido del nombre de la opción. Los nombres de opción no pueden abreviarse. Algunas opciones toman argumentos, y éstos se especifican precedidos de dos puntos (:). No se permiten espacios ni tabulaciones dentro de una especificación de opción. Use uno o más espacios o tabulaciones para separar especificaciones de opción en la línea de comandos. En los nombres de opción y sus palabras clave, y en los argumentos de nombre de archivo, no se distingue mayúsculas de minúsculas. La mayoría de las opciones se aplican a todos los archivos binarios; algunas sólo se aplican a determinados tipos de archivos. De forma predeterminada, DUMPBIN envía la información a la salida estándar. Use la [/OUT](../../build/reference/out-dumpbin.md) opción para enviar la salida a un archivo.
+Una opción consta de un *especificador de opción*, que puede ser un guión (`-`) o una barra diagonal (`/`), seguido del nombre de la opción. Los nombres de opciones no se pueden abreviar. Algunas opciones toman argumentos, especificados después de dos puntos (`:`). No se permiten espacios ni tabulaciones dentro de una especificación de opción. Use uno o más espacios o tabulaciones para separar especificaciones de opción en la línea de comandos. Los nombres de opciones y sus argumentos de nombre de archivo o palabra clave no distinguen mayúsculas de minúsculas. La mayoría de las opciones se aplican a todos los archivos binarios, pero algunos solo se aplican a determinados tipos de archivos. De forma predeterminada, DUMPBIN envía la información a la salida estándar. Use la opción [/out](out-dumpbin.md) para enviar la salida a un archivo.
+
+## <a name="options-list"></a>Lista de opciones
 
 DUMPBIN tiene las siguientes opciones:
 
-- [/ALL](../../build/reference/all.md)
+- [/ALL](all.md)
 
-- [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)
+- [/ARCHIVEMEMBERS](archivemembers.md)
 
-- [/CLRHEADER](../../build/reference/clrheader.md)
+- [/CLRHEADER](clrheader.md)
 
-- [/DEPENDENTS](../../build/reference/dependents.md)
+- [/DEPENDENTS](dependents.md)
 
-- [/DIRECTIVES](../../build/reference/directives.md)
+- [/DIRECTIVES](directives.md)
 
-- [/DISASM](../../build/reference/disasm.md)
+- [/DISASM\[: {BYTEs\|nobytes}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)
+- [/errorreport: {None | PREGUNTAR | COLA | SEND}](errorreport-dumpbin-exe.md) (desusado)
 
-- [/EXPORTS](../../build/reference/dash-exports.md)
+- [/EXPORTS](dash-exports.md)
 
-- [/FPO](../../build/reference/fpo.md)
+- [/FPO](fpo.md)
 
-- [/HEADERS](../../build/reference/headers.md)
+- [/HEADERS](headers.md)
 
-- [/ IMPORTACIONES](../../build/reference/imports-dumpbin.md)
+- [/IMPORTS\[: nombre de archivo\]](imports-dumpbin.md)
 
-- [/LINENUMBERS](../../build/reference/linenumbers.md)
+- [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](../../build/reference/linkermember.md)
+- [\[/LINKERMEMBER: {1 | 2}\]](linkermember.md)
 
-- [/LOADCONFIG](../../build/reference/loadconfig.md)
+- [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](../../build/reference/out-dumpbin.md)
+- [/NOPDB](nopdb.md)
 
-- [/PDATA](../../build/reference/pdata.md)
+- [/OUT: nombrearchivo](out-dumpbin.md)
 
-- [/PDBPATH](../../build/reference/pdbpath.md)
+- [/PDATA](pdata.md)
 
-- [/RANGE](../../build/reference/range.md)
+- [\[/PDBPATH:\] detallado](pdbpath.md)
 
-- [/RAWDATA](../../build/reference/rawdata.md)
+- [/RANGEE: vaMin\[, vaMax\]](range.md)
 
-- [/RELOCATIONS](../../build/reference/relocations.md)
+- [\[/RAWDATA: {NONE\|1\|2\|4\|8}\[, #\]\]](rawdata.md)
 
-- [/SECTION](../../build/reference/section-dumpbin.md)
+- [/RELOCATIONS](relocations.md)
 
-- [/SUMMARY](../../build/reference/summary.md)
+- [/SECTION: nombre](section-dumpbin.md)
 
-- [/SYMBOLS](../../build/reference/symbols.md)
+- [/SUMMARY](summary.md)
 
-- [/TLS](../../build/reference/tls.md)
+- [/SYMBOLS](symbols.md)
 
-## <a name="see-also"></a>Vea también
+- [/TLS](tls.md)
 
-[Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[Referencia de DUMPBIN](../../build/reference/dumpbin-reference.md)
+Para enumerar las opciones admitidas por DUMPBIN en la línea de comandos, use el comando **/?** de la oferta.
+
+## <a name="see-also"></a>Consulte también
+
+\ [adicionales de herramientas de compilación de MSVC](c-cpp-build-tools.md)
+\ de [línea de comandos de DUMPBIN](dumpbin-command-line.md)
+[Referencia de DUMPBIN](dumpbin-reference.md)

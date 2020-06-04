@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3117
 ms.assetid: dceee392-d4c7-4599-b75e-7aaac7c36fdd
-ms.openlocfilehash: 66efcf95599a18e0d93ff36f0e684ad350941977
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ef04eca5c059ce1544b62addcaeb0510697d658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486130"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741175"
 ---
 # <a name="compiler-error-c3117"></a>Error del compilador C3117
 
-'%$S': una interfaz solo puede tener una clase base
+'% $S ': una interfaz solo puede tener una clase base
 
-Declara una interfaz que hereda de varias clases base.
+Ha declarado una interfaz que hereda de varias clases base.
 
-El ejemplo siguiente genera C3117:
+En el ejemplo siguiente se genera C3117:
 
-```
+```cpp
 // C3117.cpp
 #include <windows.h>
 

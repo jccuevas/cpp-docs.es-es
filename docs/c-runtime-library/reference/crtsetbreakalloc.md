@@ -1,9 +1,9 @@
 ---
 title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetBreakAlloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e13c908c1efd1af9196885dee6e3b0f45845946b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487833"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942312"
 ---
-# <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
+# <a name="_crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
 Establece un punto de interrupción en un número de orden de asignación de objetos especificado (solo versión de depuración).
 
@@ -52,11 +55,11 @@ Devuelve el número de orden de asignación de objetos anterior que tenía estab
 
 ## <a name="remarks"></a>Comentarios
 
-**_CrtSetBreakAlloc** permite que una aplicación realizar la detección de pérdidas de memoria mediante la separación en un momento concreto de asignación de memoria y la trazabilidad del origen de la solicitud. La función usa el número de orden de la asignación de objetos secuencial asignado al bloque de memoria cuando se asignó en el montón. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtSetBreakAlloc** se quitan durante el preprocesamiento.
+**_CrtSetBreakAlloc** permite que una aplicación realice la detección de pérdidas de memoria al interrumpir en un punto específico de asignación de memoria y volver a realizar el seguimiento en el origen de la solicitud. La función usa el número de orden de la asignación de objetos secuencial asignado al bloque de memoria cuando se asignó en el montón. Cuando no se define [_ Debug](../../c-runtime-library/debug.md) , las llamadas a **_CrtSetBreakAlloc** se quitan durante el preprocesamiento.
 
-El número de orden de la asignación de objetos se almacena en el campo *lRequest* de la estructura **_CrtMemBlockHeader**, que se define en Crtdbg.h. Cuando se proporciona información sobre un bloque de memoria por una de las funciones de volcado de depuración, este número aparece encerrado entre llaves, como {36}.
+El número de orden de la asignación de objetos se almacena en el campo *lRequest* de la estructura **_CrtMemBlockHeader**, que se define en Crtdbg.h. Cuando una de las funciones de volcado de depuración detecta información sobre un bloque de memoria, este número se incluye entre llaves, {36}como.
 
-Para obtener más información acerca de cómo **_CrtSetBreakAlloc** puede utilizarse con otras funciones de administración de memoria, vea [seguimiento de solicitudes de asignación del montón](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información sobre cómo se puede usar **_CrtSetBreakAlloc** con otras funciones de administración de memoria, vea [seguimiento de las solicitudes de asignación del montón](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

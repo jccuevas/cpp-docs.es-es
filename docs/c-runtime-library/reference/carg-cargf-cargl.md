@@ -1,11 +1,11 @@
 ---
 title: carg, cargf, cargl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - carg
 - cargf
 - cargl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - carg
 - cargf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e66b0b3545b3f28a8f7b4ca14c29ffe1e0fc260c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665600"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939311"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -68,17 +71,17 @@ Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El argumento (también conocida como fase) de *z*. El resultado se encuentra en el intervalo [-π, + π].
+El argumento (también conocido como fase) de *z*. El resultado se encuentra en el intervalo [-π, + π].
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **carg** que toman **_Fcomplex** o **_Lcomplex** valores y devuelven **float** o **largo** **doble** valores. En un programa C, **carg** siempre toma un **_Dcomplex** valor y devuelve un **doble** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **carg** que toman los valores **_Fcomplex** o **_Lcomplex** y devolver valores de tipo **float** o **Long** **Double** . En un programa de C, **carg** siempre toma un valor **_Dcomplex** y devuelve un valor **Double** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+|**carg**,               **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

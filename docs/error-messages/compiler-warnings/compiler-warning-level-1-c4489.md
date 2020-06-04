@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
-ms.openlocfilehash: 4da96fd13fe9ba03c19808d32d3cdd9c73ec2b18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9811e9f9c17463fdcd550ffd82af4f81a40bb34
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584735"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186613"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>Advertencia del compilador (nivel 1) C4489
 
-'especificador': no se permite en el método de interfaz 'method'; invalidar especificadores solo se permiten en métodos de clase de valor y de clase ref
+' Specifier ': no se permite en el método de interfaz ' Method '; los especificadores de invalidación solo se permiten en métodos de clase Ref y de clase de valor
 
-Se usó incorrectamente una palabra clave de especificador en un método de interfaz.
+Una palabra clave de especificador se usó incorrectamente en un método de interfaz.
 
-Para obtener más información, consulte [especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md).
+Para obtener más información, vea [especificadores de invalidación](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4489.
+En el ejemplo siguiente se genera C4489.
 
-```
+```cpp
 // C4489.cpp
 // compile with: /clr /c /W1
 public interface class I {

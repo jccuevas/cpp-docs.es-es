@@ -29,12 +29,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: b4025413fcf6389249fc011da020c0cd7c6f4519
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321194"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Extensiones de Microsoft para C y C++
 
@@ -262,9 +262,9 @@ void func ()
 
 En **/Ze**, debe incluir iso646.h si desea usar formas de texto de los operadores siguientes:
 
-- && (and)
+- & & (y)
 
-- &= (and_eq)
+- & = (and_eq)
 
 - & (bitand)
 
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-- [/Za, /Ze (Deshabilitar extensiones de lenguaje)](../../build/reference/za-ze-disable-language-extensions.md)
-- [Opciones del compilador](../../build/reference/compiler-options.md)
-- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+- [/Za, /Ze (Deshabilitar extensiones de lenguaje)](za-ze-disable-language-extensions.md)
+- [Opciones del compilador de MSVC](compiler-options.md)
+- [Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

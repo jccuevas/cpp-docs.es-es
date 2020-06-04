@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441359"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214294"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext (Enumeración)
 
@@ -24,12 +24,12 @@ Especifica el contexto del subproceso en el que se ejecuta una función de devol
 enum class CallbackContext {};
 ```
 
-### <a name="members"></a>Miembros
+### <a name="members"></a>Members
 
 |Código de tipo|Descripción|
 |---------------|-----------------|
-|Cualquiera|La función de devolución de llamada se puede ejecutar en cualquier contexto de subproceso.|
-|Igual|La función de devolución de llamada solo se puede ejecutar en el contexto de subproceso que inició la operación asincrónica.|
+|Any|La función de devolución de llamada se puede ejecutar en cualquier contexto de subproceso.|
+|Iguales|La función de devolución de llamada solo se puede ejecutar en el contexto de subproceso que inició la operación asincrónica.|
 
 ### <a name="requirements"></a>Requisitos
 

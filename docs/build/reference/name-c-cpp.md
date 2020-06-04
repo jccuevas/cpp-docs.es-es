@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-ms.openlocfilehash: c05e82409d6b6e48390d54160e8ff23ada788d41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0813befc622db72e095c449794405fc5d58465b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320583"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
 
@@ -23,10 +23,10 @@ NAME [application][BASE=address]
 
 ## <a name="remarks"></a>Comentarios
 
-Es una manera equivalente para especificar un nombre de archivo de salida con el [/OUT](../../build/reference/out-output-file-name.md) opción del vinculador y una manera equivalente a establecer la dirección base es con la [/base](../../build/reference/base-base-address.md) opción del vinculador. Si se especifican ambos, / OUT invalida **nombre**.
+Es una manera equivalente para especificar un nombre de archivo de salida con el [/OUT](out-output-file-name.md) opción del vinculador y una manera equivalente a establecer la dirección base es con la [/base](base-base-address.md) opción del vinculador. Si se especifican ambos, / OUT invalida **nombre**.
 
 Si compila un archivo DLL, nombre sólo afectará el nombre del archivo DLL.
 
 ## <a name="see-also"></a>Vea también
 
-[Reglas para instrucciones de definición de módulos](../../build/reference/rules-for-module-definition-statements.md)
+[Reglas para instrucciones de definición de módulos](rules-for-module-definition-statements.md)

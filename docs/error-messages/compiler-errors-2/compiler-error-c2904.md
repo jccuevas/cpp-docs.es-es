@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2904
 ms.assetid: d5802f2e-d3fc-473d-aa04-36957b4eaca5
-ms.openlocfilehash: 90e0ae54e9d3c218040cfa8665f742be92ad7487
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 506618da12af7d78db948f1a4197bf93367b7f7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641527"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750604"
 ---
 # <a name="compiler-error-c2904"></a>Error del compilador C2904
 
@@ -21,7 +21,7 @@ Compruebe el código en busca de nombres duplicados.
 
 El ejemplo siguiente genera la advertencia C2904:
 
-```
+```cpp
 // C2904.cpp
 // compile with: /c
 void X();  // X is declared as a function

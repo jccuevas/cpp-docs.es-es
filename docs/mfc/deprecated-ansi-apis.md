@@ -1,17 +1,17 @@
 ---
-title: API ANSI en desuso
+title: API ANSI desusadas
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: 51d14f4cae530fe6723b04268865af1f5fac84a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153559"
 ---
-# <a name="deprecated-ansi-apis"></a>API ANSI en desuso
+# <a name="deprecated-ansi-apis"></a>API ANSI desusadas
 
 La biblioteca Microsoft Foundation Class (MFC) es la migración hacia las clases y métodos que se basan en el juego de caracteres Unicode. Por lo tanto, las versiones ANSI de varios métodos MFC están en desuso. Use las versiones Unicode de estos métodos en sus aplicaciones futuras.
 
@@ -153,4 +153,3 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ## <a name="see-also"></a>Vea también
 
 [Requisitos de compilación para los controles comunes de Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
-

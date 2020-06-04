@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
-ms.openlocfilehash: 4ad48ea0bc09e098a41cb9aa969a08e9ead48f73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 148433f0d959985eb5a874f588f8cbf9d377e8b7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484847"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735962"
 ---
 # <a name="compiler-error-c3299"></a>Error del compilador C3299
 
@@ -21,13 +21,13 @@ Al reemplazar una función miembro genérica, no puede especificar cláusulas de
 
 Se heredarán las cláusulas de restricción en la función genérica que está reemplazando.
 
-Para obtener más información, consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Para más información, consulte [Restricciones de parámetros de tipo genérico](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C3299.
 
-```
+```cpp
 // C3299.cpp
 // compile with: /clr /c
 public ref struct R {

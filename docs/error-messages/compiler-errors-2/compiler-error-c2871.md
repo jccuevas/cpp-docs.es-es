@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2871
 ms.assetid: 44aeb84d-61f0-45e0-8dad-22a3cd46b7f8
-ms.openlocfilehash: 355a485de46916977be6f7b801794806a9c9e0ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc24e5fefe9ffd67dc6b01520ea32805a22f70c3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201687"
 ---
 # <a name="compiler-error-c2871"></a>Error del compilador C2871
 
-'name': no existe un espacio de nombres con este nombre
+' name ': no existe un espacio de nombres con este nombre
 
-Este error se producirá cuando se pasa un identificador que no sea un espacio de nombres para un [mediante](../../cpp/namespaces-cpp.md#using_directives) directiva.
+Este error se produce cuando se pasa un identificador que no es un espacio de nombres a una directiva [using](../../cpp/namespaces-cpp.md#using_directives) .
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2871:
+En el ejemplo siguiente se genera C2871:
 
 ```cpp
 // C2871.cpp

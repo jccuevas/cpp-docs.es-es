@@ -1,20 +1,20 @@
 ---
 title: __vmx_vmresume
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmresume
 helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-ms.openlocfilehash: 4be197566f32c5edf49a9036b1ac641416d28fc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34d0e6814dd00da07076e644513400bd5be36bd3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616858"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219442"
 ---
-# <a name="vmxvmresume"></a>__vmx_vmresume
+# <a name="__vmx_vmresume"></a>__vmx_vmresume
 
 **Específicos de Microsoft**
 
@@ -22,14 +22,14 @@ Reanuda la operación que no es de raíz VMX mediante la estructura de control d
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned char __vmx_vmresume(
    void);
 ```
 
 ## <a name="return-value"></a>Valor devuelto
 
-|Valor|Significado|
+|Value|Significado|
 |-----------|-------------|
 |0|La operación se realizó correctamente.|
 |1|Error en la operación con el estado extendido disponible en el `VM-instruction error field` de la VMCS actual.|
@@ -47,12 +47,12 @@ La función `__vmx_vmresume` equivale a la instrucción máquina `VMRESUME` . Es
 |---------------|------------------|
 |`__vmx_vmresume`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
-[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
+[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)\
 [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

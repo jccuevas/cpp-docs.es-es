@@ -1,9 +1,10 @@
 ---
 title: rand_s
-ms.date: 1/02/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - rand_s
-apilocation:
+- _o_rand_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rand_s
 helpviewer_keywords:
@@ -27,16 +32,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: d196a6f5d7483deb9a7e1b8d7fa929532b6197db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572723"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919536"
 ---
-# <a name="rands"></a>rand_s
+# <a name="rand_s"></a>rand_s
 
-Genera un número pseudoaleatorio. Se trata de una versión más segura de la función [rand](rand.md), con mejoras de seguridad, como se describe en [características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Genera un número pseudoaleatorio. Esta es una versión más segura de la función [Rand](rand.md), con mejoras de seguridad, como se describe en [características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,24 +52,26 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Parámetros
 
 *randomValue*<br/>
-Un puntero a un entero que contenga el valor generado.
+Un puntero a un entero que contiene el valor generado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto, código de error en caso contrario. Si el puntero de entrada _randomValue_ es un puntero nulo, la función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** a **EINVAL**. Si se produce un error en la función por cualquier otra razón, *_randomValue_ se establece en 0.
+Cero si es correcto, código de error en caso contrario. Si el puntero de entrada _randomValue_ es un puntero nulo, la función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** en **EINVAL**. Si se produce un error en la función por cualquier otro motivo, *_randomValue_ se establece en 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **rand_s** función escribe un entero pseudoaleatorio entre 0 y **UINT_MAX** al puntero de entrada. El **rand_s** función usa el sistema operativo para generar números aleatorios criptográficamente seguros. No utiliza el valor de inicialización generado por el [srand](srand.md) función, tampoco afecta a la secuencia de números aleatorios utilizada por [rand](rand.md).
+La función **rand_s** escribe un entero pseudoaleatorio en el intervalo de 0 para **UINT_MAX** al puntero de entrada. La función **rand_s** utiliza el sistema operativo para generar números aleatorios criptográficamente seguros. No utiliza la inicialización generada por la función [srand](srand.md) , ni afecta a la secuencia de números aleatorios que usa [Rand](rand.md).
 
-El **rand_s** función requiere que la constante **_CRT_RAND_S** definirse antes de la declaración de inclusión de la función se declaren, como en el ejemplo siguiente:
+La función **rand_s** requiere que la constante **_CRT_RAND_S** definirse antes que la instrucción de inclusión de la función que se va a declarar, como en el ejemplo siguiente:
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s** depende de la [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API, que solo está disponible en Windows XP y versiones posteriores.
+**rand_s** depende de la API de [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , que solo está disponible en Windows XP y versiones posteriores.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -124,7 +131,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 10
@@ -150,7 +157,7 @@ int main( void )
 65.0712
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>

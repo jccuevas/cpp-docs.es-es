@@ -1,30 +1,31 @@
 ---
 title: .LISTMACROALL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTMACROALL
 helpviewer_keywords:
 - .LISTMACROALL directive
 ms.assetid: 36f329fd-eff0-4414-8b4a-6223113f9fda
-ms.openlocfilehash: 6b9e5a028d607ea1d3d3dfdb497bf0b8f61ade12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50787e952921c759a91c09ff3ae6b7a654a4625a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639236"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317661"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 
-Se inicia el listado de todas las instrucciones de macros.
+Inicia la lista de todas las instrucciones de las macros.
 
 ## <a name="syntax"></a>Sintaxis
 
-> .LISTMACROALL
+> **.LISTMACROALL**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Igual que [. LALL](../../assembler/masm/dot-lall.md).
+Igual que [. LALL](dot-lall.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

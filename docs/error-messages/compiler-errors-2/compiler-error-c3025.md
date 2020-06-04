@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3025
 ms.assetid: 4442f5a3-d9ea-4873-b1fb-e7e5bd3cbe5e
-ms.openlocfilehash: bb3337cb563125ce0329146f64c4da3f33e28ce7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0aac601285d4f345809f805fcccd62b7de7bab1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490732"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741981"
 ---
 # <a name="compiler-error-c3025"></a>Error del compilador C3025
 
@@ -23,7 +23,7 @@ Una cláusula necesita una expresión de entero pero se proporcionó una expresi
 
 El ejemplo siguiente genera la advertencia C3025.
 
-```
+```cpp
 // C3025.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

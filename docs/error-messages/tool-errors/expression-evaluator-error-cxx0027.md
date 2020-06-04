@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CAN0027
 - CXX0027
 ms.assetid: 0127cfc0-c292-4923-a58b-25542343cdad
-ms.openlocfilehash: 3d67ba9acaea62573c7ec8583116c922ca3b1b9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e68a0236145203bd37906e7f4645b1828d803779
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589736"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195739"
 ---
 # <a name="expression-evaluator-error-cxx0027"></a>Error del evaluador de expresiones CXX0027
 
-tp addr no valor l
+TP addr not l-value
 
 Cambie la sintaxis de la expresión.
 

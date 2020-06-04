@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2749
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
-ms.openlocfilehash: 80ac01eaba8e5291ee5558d226ebea2c3d8ff47e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c2f3d3a297d70501c675ac6a9f750cbdf0d421
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601076"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759625"
 ---
 # <a name="compiler-error-c2749"></a>Error del compilador C2749
 
-'type': solamente puede producir o detectar el identificador a una clase administrada con/CLR: safe
+' type ': solo puede producir o detectar el identificador de una clase administrada con/CLR: Safe
 
-Cuando se usa **/CLR: safe**, solo se puede producir o detectar un tipo de referencia.
+Al usar **/clr: Safe**, solo puede producir o detectar un tipo de referencia.
 
 Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2749:
+En el ejemplo siguiente se genera C2749:
 
-```
+```cpp
 // C2749.cpp
 // compile with: /clr:safe
 ref struct MyStruct {

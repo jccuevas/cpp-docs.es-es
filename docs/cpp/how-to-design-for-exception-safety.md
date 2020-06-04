@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Diseño de seguridad de las excepciones
+title: 'Cómo: diseñar para la seguridad de excepciones'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220561"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246515"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Procedimiento Diseño de seguridad de las excepciones
+# <a name="how-to-design-for-exception-safety"></a>Cómo: diseñar para la seguridad de excepciones
 
 Una de las ventajas del mecanismo de excepciones es que la ejecución, así como los datos sobre la excepción, saltan directamente de la instrucción que produce la excepción a la primera instrucción catch que la controla. El controlador puede ser cualquier número de niveles en la pila de llamadas. Las funciones a las que se llama entre la instrucción try y la instrucción throw no se requieren para saber nada sobre la excepción que se produce.  Sin embargo, tienen que diseñarse de forma que puedan quedar fuera de ámbito “inesperadamente” en cualquier punto donde una excepción pudiera propagarse de arriba a abajo, y lo hagan sin dejar detrás objetos parcialmente creados, memoria perdida o estructuras de datos que están en estado inutilizable.
 
@@ -21,9 +21,9 @@ Una directiva sólida de control de excepciones requiere una reflexión cuidados
 
 Independientemente de cómo una función controla una excepción, para ayudar a garantizar que es “segura para excepciones”, debe diseñarse según las reglas básicas siguientes.
 
-### <a name="keep-resource-classes-simple"></a>Mantener clases de recursos simples
+### <a name="keep-resource-classes-simple"></a>Mantener simples las clases de recursos
 
-Cuando se encapsula la administración de recursos manual en las clases, use una clase que no haga nada más que administrar cada recurso; de lo contrario, podrían producirse pérdidas. Use [inteligente punteros](../cpp/smart-pointers-modern-cpp.md) cuando sea posible, como se muestra en el ejemplo siguiente. Este ejemplo es deliberadamente artificial y simplista para resaltar las diferencias cuando se utiliza `shared_ptr`.
+Al encapsular la administración manual de recursos en las clases, use una clase que no hace nada excepto administrar un único recurso. Al mantener la clase simple, se reduce el riesgo de introducir pérdidas de recursos. Utilice [punteros inteligentes](smart-pointers-modern-cpp.md) cuando sea posible, como se muestra en el ejemplo siguiente. Este ejemplo es deliberadamente artificial y simplista para resaltar las diferencias cuando se utiliza `shared_ptr`.
 
 ```cpp
 // old-style new/delete version
@@ -83,19 +83,19 @@ public:
 };
 ```
 
-### <a name="use-the-raii-idiom-to-manage-resources"></a>Utilizar la expresión RAII para administrar recursos
+### <a name="use-the-raii-idiom-to-manage-resources"></a>Usar la expresión RAII para administrar recursos
 
-Para que sea seguro ante excepciones, una función debe asegurarse de que los objetos que ha asignado mediante `malloc` o **nuevo** se destruyen, y todos los recursos como identificadores de archivo están cerrados o liberados incluso si se produce una excepción. El *Resource Acquisition Is Initialization* expresión (RAII) enlaza la administración de estos recursos para la duración de las variables automáticas. Cuando una función sale del ámbito, ya sea porque vuelve normalmente o debido a una excepción, se invocan los destructores para todas las variables automáticas totalmente implementadas. Un objeto contenedor RAII, por ejemplo, un puntero inteligente, llama a la función de eliminación o cierre adecuada en el destructor. En el código seguro para excepciones, pasar la propiedad de cada recurso inmediatamente a algún tipo de objeto RAII tiene una importancia crítica. Tenga en cuenta que el `vector`, `string`, `make_shared`, `fstream`, y las clases similares controlan la adquisición del recurso para usted.  Sin embargo, `unique_ptr` tradicional y `shared_ptr` construcciones son especiales porque la adquisición de recursos se realiza por el usuario en lugar del objeto; por lo tanto, se consideran *Resource Release Is Destruction* pero son cuestionables como RAII.
+Para que sea segura para excepciones, una función debe asegurarse de que los objetos que ha asignado mediante `malloc` o **nuevo** se destruyen, y que todos los recursos como los identificadores de archivo se cierran o se liberan incluso si se produce una excepción. La expresión de *adquisición de recursos es* el modo de inicialización (RAII) vincula la administración de dichos recursos a la duración de las variables automáticas. Cuando una función sale del ámbito, ya sea porque vuelve normalmente o debido a una excepción, se invocan los destructores para todas las variables automáticas totalmente implementadas. Un objeto contenedor RAII, por ejemplo, un puntero inteligente, llama a la función de eliminación o cierre adecuada en el destructor. En el código seguro para excepciones, pasar la propiedad de cada recurso inmediatamente a algún tipo de objeto RAII tiene una importancia crítica. Tenga en cuenta que las clases `vector`, `string`, `make_shared`, `fstream`y similares controlan la adquisición del recurso.  Sin embargo, `unique_ptr` y las construcciones de `shared_ptr` tradicionales son especiales porque la adquisición de recursos la realiza el usuario en lugar del objeto; por lo tanto, se cuentan como la *liberación de recursos* , pero son cuestionables como RAII.
 
 ## <a name="the-three-exception-guarantees"></a>Las tres garantías de excepción
 
-Normalmente, se explica la seguridad de las excepciones en cuanto a las tres garantías de excepción que se puede proporcionar una función: la *garantía de ningún error*, *garantía segura*y el *garantía básica* .
+Normalmente, la seguridad de las excepciones se describe en términos de las tres garantías de excepción que una función puede proporcionar: la *garantía sin errores*, la *garantía segura*y la *garantía básica*.
 
-### <a name="no-fail-guarantee"></a>Garantía de que no haya error
+### <a name="no-fail-guarantee"></a>Garantía sin errores
 
 La garantía de que no haya error (o “ningún throw”) es la mayor garantía que una función puede proporcionar. Indica que la función no producirá una excepción ni permitirá que se propague. Sin embargo, esta garantía no se puede proporcionar confiablemente a menos que (a) se sepa que todas las funciones a las que llama la función tampoco producen ningún error, (b) se sepa que cualquier excepción que se produzca se detectará antes de que llegue a esta función o (c) se sepa cómo detectar y controlar correctamente todas las excepciones que puedan tener acceso a esta función.
 
-La garantía segura y la seguridad básica se basan en la hipótesis de que los destructores no producen ningún error. Todos los contenedores y tipos de la garantía de la biblioteca estándar que los destructores no producen. También es un requisito inverso: La biblioteca estándar requiere que los definidos por el usuario tipos que se les proporciona, por ejemplo, como argumentos de plantilla, debe tener destructores no producen excepciones.
+La garantía segura y la seguridad básica se basan en la hipótesis de que los destructores no producen ningún error. Todos los contenedores y tipos de la garantía de la biblioteca estándar que los destructores no producen. También hay un requisito inverso: la biblioteca estándar requiere que los tipos definidos por el usuario que se le proporcionan (por ejemplo, como argumentos de plantilla) deben tener destructores no que produzcan excepciones.
 
 ### <a name="strong-guarantee"></a>Garantía segura
 
@@ -121,5 +121,5 @@ Los tipos integrados garantizan todos que no se produzca ningún error y los tip
 
 ## <a name="see-also"></a>Vea también
 
-[Controlar errores y excepciones (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Cómo: La interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Prácticas C++ recomendadas modernas para excepciones y control de errores](errors-and-exception-handling-modern-cpp.md)<br/>
+[Cómo: Interfaz entre código excepcional y no excepcional](how-to-interface-between-exceptional-and-non-exceptional-code.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0016
 - CXX0016
 ms.assetid: af94a2ae-e835-4da6-8d2f-5c879f72eda2
-ms.openlocfilehash: 8e8e8ed3e8b374786414a59bb65e22701b816f65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f280eeb6d59eb2f81d6d27225441f807664ce27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493774"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196032"
 ---
 # <a name="expression-evaluator-error-cxx0016"></a>Error del evaluador de expresiones CXX0016
 
 constante demasiado grande
 
-El evaluador de expresiones de C no puede aceptar una constante de entero sin signo mayor que 4.294.967.295 (0FFFFFFFF hexadecimal) o una constante de punto flotante cuya magnitud sea mayor que aproximadamente 1.8E + 308.
+El evaluador de expresiones de C no puede aceptar una constante de entero sin signo mayor que 4.294.967.295 (0FFFFFFFF hexadecimal) o una constante de punto flotante cuya magnitud sea mayor que aproximadamente 1,8 E + 308.
 
 Este error es idéntico a CAN0016.

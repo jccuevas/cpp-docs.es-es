@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Yl compiler option [C++]
 - /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
-ms.openlocfilehash: c6828fb602c7c1c0aaa7732292604706ffd45230
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 816ba66c94e616407a8891cd149a41e44e29358d
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587045"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825722"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Insertar referencia PCH para biblioteca de depuración)
 
-El **/Yl** opción genera un único símbolo en un archivo de encabezado precompilado y se inserta una referencia a este símbolo en todos los archivos de objeto que usa el encabezado precompilado.
+La opción **/YL** genera un símbolo único en un archivo de encabezado precompilado y se inserta una referencia a este símbolo en todos los archivos objeto que usan el encabezado precompilado.
 
 ## <a name="syntax"></a>Sintaxis
 
->**/Yl**
-> **/Yl**_nombre_
-> **/Yl-**
+>**/YL**\
+>**/YL**_Name_\
+>**YL**
 
 ### <a name="arguments"></a>Argumentos
 
@@ -31,39 +31,39 @@ El **/Yl** opción genera un único símbolo en un archivo de encabezado precomp
 Nombre opcional que se usa como parte del símbolo único.
 
 *\-*<br/>
-Deshabilita un guión (-) de forma explícita el **/Yl** opción del compilador.
+Un guión (-) deshabilita explícitamente la opción del compilador **/YL** .
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **/Yl** opción del compilador crea una definición de símbolo único en un archivo de encabezado precompilado creado mediante el uso de la [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opción. Las referencias a este símbolo se insertan automáticamente en todos los archivos que incluyan el encabezado precompilado utilizando la [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opción del compilador. El **/Yl** está habilitada de forma predeterminada cuando **/Yc** se usa para crear un archivo de encabezado precompilado.
+La opción del compilador **/YL** crea una definición de símbolo único en un archivo de encabezado precompilado creado con la opción [/YC](yc-create-precompiled-header-file.md) . Las referencias a este símbolo se insertan automáticamente en todos los archivos que incluyen el encabezado precompilado mediante la opción del compilador [/Yu](yu-use-precompiled-header-file.md) . La opción **/YL** está habilitada de forma predeterminada cuando se usa **/YC** para crear un archivo de encabezado precompilado.
 
-El **/Yl**_nombre_ opción se utiliza para crear un símbolo de identificación en el archivo de encabezado precompilado. El compilador usa el *nombre* argumento como parte del nombre representativo del símbolo que crea, similar a `__@@_PchSym_@00@...@name`, donde la cadena de caracteres de un único generado por el compilador la representa de puntos suspensivos (...). Si el *nombre* argumento se omite, el compilador genera un nombre de símbolo automáticamente. Normalmente, no es necesario conocer el nombre del símbolo. Sin embargo, cuando el proyecto usa más de un archivo de encabezado precompilado, el **/Yl**_nombre_ opción puede resultar útil para determinar qué objeto de archivos de uso que el encabezado precompilado. Puede usar *nombre* como una cadena de búsqueda para buscar la referencia de símbolos en un archivo de volcado.
+La opción **/YL**_Name_ se usa para crear un símbolo identificable en el archivo de encabezado precompilado. El compilador usa el argumento *Name* como parte del nombre de símbolo representativo que `__@@_PchSym_@00@...@name`crea, similar a, donde los puntos suspensivos (...) representan una cadena de caracteres única generada por el compilador. Si se omite el argumento de *nombre* , el compilador genera automáticamente un nombre de símbolo. Normalmente, no es necesario conocer el nombre del símbolo. Sin embargo, cuando el proyecto usa más de un archivo de encabezado precompilado, la opción **/YL**_Name_ puede ser útil para determinar qué archivos de objeto usan el encabezado precompilado. Puede usar *Name* como una cadena de búsqueda para buscar la referencia de símbolos en un archivo de volcado de memoria.
 
-**/Yl-** deshabilita el comportamiento predeterminado y no se pone un símbolo de identificación en el archivo de encabezado precompilado. Archivos compilados que incluyen este encabezado precompilado no podrá obtener una referencia de símbolos comunes.
+**/YL-** deshabilita el comportamiento predeterminado y no coloca un símbolo de identificación en el archivo de encabezado precompilado. Los archivos compilados que incluyen este encabezado precompilado no obtienen una referencia de símbolo común.
 
-Cuando **/Yc** no se especifica, cualquier **/Yl** opción no tiene ningún efecto, pero si especificado debe coincidir con cualquier **/Yl** pasó cuando la opción **/Yc** es especificado.
+Cuando no se especifica **/YC** , cualquier opción **/YL** no tiene ningún efecto, pero si se especifica, debe coincidir con cualquier opción **/YL** pasada cuando se especifica **/YC** .
 
-Si usas **/Yl-**, **/Yc** y [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opciones para generar un archivo de encabezado precompilado, la información de depuración se almacena en el archivo de objeto para el archivo de origen utilizado para crear el encabezado precompilado, en lugar de un archivo .pdb independiente. Si este archivo de objeto, a continuación, se realiza alguna parte de una biblioteca, [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) errores o [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) las advertencias pueden ocurrir en las compilaciones que usan esta biblioteca y el archivo de encabezado precompilado, si el archivo de origen utilizado para crear el archivo de encabezado precompilado no define ningún símbolo propio. El vinculador puede excluir el archivo objeto desde el vínculo, junto con la información de depuración asociada, cuando se hace referencia a nada en el archivo objeto en el cliente de la biblioteca. Para solucionar este problema, especifique **/Yl** (o quitar el **/Yl-** opción) cuando se usa **/Yc** para crear el archivo de encabezado precompilado. Esto garantiza que se vincula el archivo de objeto de la biblioteca que contiene la información de depuración en la compilación.
+Si usa las opciones **/YL-**, **/YC** y [/Z7](z7-zi-zi-debug-information-format.md) para compilar un archivo de encabezado precompilado, la información de depuración se almacena en el archivo objeto del archivo de código fuente utilizado para crear el encabezado precompilado, en lugar de un archivo. pdb independiente. Si este archivo objeto se convierte en parte de una biblioteca, pueden producirse errores [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) o advertencias de [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) en las compilaciones que usan esta biblioteca y el archivo de encabezado precompilado, si el archivo de código fuente utilizado para crear el archivo de encabezado precompilado no define ningún símbolo. El enlazador puede excluir el archivo objeto del vínculo, junto con la información de depuración asociada, cuando no se hace referencia a nada en el archivo objeto en el cliente de biblioteca. Para solucionar este problema, especifique **/YL** (o quite la opción **/YL-** ) cuando use **/YC** para crear el archivo de encabezado precompilado. Esto garantiza que el archivo objeto de la biblioteca que contiene la información de depuración se vincula en la compilación.
 
 Para obtener más información sobre los encabezados precompilados, vea:
 
-- [/Y (Encabezados precompilados)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Encabezados precompilados)](y-precompiled-headers.md)
 
-- [Crear archivos de encabezado precompilados](../../build/reference/creating-precompiled-header-files.md)
+- [Archivos de encabezado precompilados](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
+1. Seleccione la página de propiedades**línea de comandos** de**C/C++** > de **propiedades** > de configuración.
 
-1. Agregar el **/Yl**_nombre_ opción del compilador en el **opciones adicionales** cuadro. Elija **Aceptar** para guardar los cambios.
+1. Agregue la opción del compilador **/YL**_Name_ en el cuadro **opciones adicionales** . Elija **Aceptar** para guardar los cambios.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
 - Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

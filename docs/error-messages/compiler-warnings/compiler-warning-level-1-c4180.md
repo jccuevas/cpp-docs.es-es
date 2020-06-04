@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4180
 ms.assetid: 40c91bd4-37f1-4d59-a4f3-d5ddab68239b
-ms.openlocfilehash: 8ed09edae5a9577773c573337b6e646a49599862
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f542951424325db727fc6d4ba7ac449095bdac83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508876"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175966"
 ---
 # <a name="compiler-warning-level-1-c4180"></a>Advertencia del compilador (nivel 1) C4180
 
@@ -21,7 +21,7 @@ Un calificador, como **const**, se aplica a un tipo de función definido por `ty
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4180.cpp
 // compile with: /W1 /c
 typedef int FuncType(void);

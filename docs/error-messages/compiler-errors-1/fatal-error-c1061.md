@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1061
 ms.assetid: 9366c0bc-96e0-4967-aa7d-4ebf098de806
-ms.openlocfilehash: 1733a13e697af775653609ddfcc22f7297dad240
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 049adb38dd8f33de7dbdd02d8420eba284ca2ca1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661180"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204417"
 ---
 # <a name="fatal-error-c1061"></a>Error irrecuperable C1061
 

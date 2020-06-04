@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cfloat header
 ms.assetid: 25ec4ab9-3c1d-46e3-9e68-ad9a8762cadb
-ms.openlocfilehash: c11ac6095145f619346b4ec1388ea980fa2455c0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0ce5a4612363dde1daa991d4f84eb8a77aebaaa5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518221"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449001"
 ---
 # <a name="ltcfloatgt"></a>&lt;cfloat&gt;
 
@@ -23,8 +23,53 @@ Incluye el encabezado \<float.h> de la biblioteca estándar de C.
 #include <cfloat>
 ```
 
+## <a name="definitions"></a>Definiciones
+
+```cpp
+#define FLT_ROUNDS
+#define FLT_EVAL_METHOD
+#define FLT_HAS_SUBNORM
+#define DBL_HAS_SUBNORM
+#define LDBL_HAS_SUBNORM
+#define FLT_RADIX
+#define FLT_MANT_DIG
+#define DBL_MANT_DIG
+#define LDBL_MANT_DIG
+#define FLT_DECIMAL_DIG
+#define DBL_DECIMAL_DIG
+#define LDBL_DECIMAL_DIG
+#define DECIMAL_DIG
+#define FLT_DIG
+#define DBL_DIG
+#define LDBL_DIG
+#define FLT_MIN_EXP
+#define DBL_MIN_EXP
+#define LDBL_MIN_EXP
+#define FLT_MIN_10_EXP
+#define DBL_MIN_10_EXP
+#define LDBL_MIN_10_EXP
+#define FLT_MAX_EXP
+#define DBL_MAX_EXP
+#define LDBL_MAX_EXP
+#define FLT_MAX_10_EXP
+#define DBL_MAX_10_EXP
+#define LDBL_MAX_10_EXP
+#define FLT_MAX
+#define DBL_MAX
+#define LDBL_MAX
+#define FLT_EPSILON
+#define DBL_EPSILON
+#define LDBL_EPSILON
+#define FLT_MIN
+#define DBL_MIN
+#define LDBL_MIN
+#define FLT_TRUE_MIN
+#define DBL_TRUE_MIN
+#define LDBL_TRUE_MIN
+```
+
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

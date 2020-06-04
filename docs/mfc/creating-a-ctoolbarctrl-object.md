@@ -1,39 +1,36 @@
 ---
 title: Crear un objeto CToolBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-ms.openlocfilehash: ad75f346e21262b894d01efd351e6bb0a3ede3a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf1d2eeb9efd2f8a1e7b433c0e18dd868a8b9aca
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564676"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445895"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Crear un objeto CToolBarCtrl
 
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objetos contienen varias estructuras de datos interno: una lista de mapas de bits de imagen de botón, una lista de cadenas de la etiqueta de botón y una lista de `TBBUTTON` estructuras, que asocia una imagen o de cadena con la posición, el estilo, el estado, y Identificador de comando del botón. Cada uno de los elementos de estas estructuras de datos se denomina mediante un índice de base cero. Para poder usar un `CToolBarCtrl` de objeto, debe configurar estas estructuras de datos. Para obtener una lista de las estructuras de datos, vea [controles de barra de herramientas](controls-mfc.md) en el SDK de Windows. La lista de cadenas puede usarse solo para las etiquetas de botón; no se puede recuperar las cadenas de la barra de herramientas.
+Los objetos [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) contienen varias estructuras de datos internas (una lista de mapas de bits de imagen de botón, una lista de cadenas de etiqueta de botón y una lista de estructuras `TBBUTTON`) que asocian una imagen o cadena con la posición, el estilo, el estado y el identificador de comando del botón. Un índice basado en cero hace referencia a cada uno de los elementos de estas estructuras de datos. Antes de poder usar un objeto de `CToolBarCtrl`, debe configurar estas estructuras de datos. Para obtener una lista de las estructuras de datos, vea [controles de barra de herramientas](controls-mfc.md) en el Windows SDK. La lista de cadenas solo se puede usar para las etiquetas de botón; no se pueden recuperar cadenas de la barra de herramientas.
 
-Para usar un `CToolBarCtrl` de objeto, normalmente se siguen estos pasos:
+Para usar un objeto de `CToolBarCtrl`, normalmente se siguen estos pasos:
 
 ### <a name="to-use-a-ctoolbarctrl-object"></a>Para utilizar un objeto CToolBarCtrl
 
-1. Construir la [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto.
+1. Construya el objeto [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) .
 
-1. Llame a [crear](../mfc/reference/ctoolbarctrl-class.md#create) para crear el control común de barra de herramientas de Windows y adjuntarlo a la `CToolBarCtrl` objeto. Si desea que las imágenes de mapa de bits para los botones, agregar los mapas de bits de botón a la barra de herramientas mediante una llamada a [AddBitmap](../mfc/reference/ctoolbarctrl-class.md#addbitmap). Si desea que las etiquetas de cadena para los botones, agregue las cadenas a la barra de herramientas mediante una llamada a [AddString](../mfc/reference/ctoolbarctrl-class.md#addstring) o [a AddStrings](../mfc/reference/ctoolbarctrl-class.md#addstrings). Después de llamar a `AddString` o `AddStrings`, debe llamar a [AutoSize](../mfc/reference/ctoolbarctrl-class.md#autosize) con el fin de obtener la cadena o cadenas que aparezcan.
+1. Llame a [Create](../mfc/reference/ctoolbarctrl-class.md#create) para crear el control común de barra de herramientas de Windows y adjuntarlo al objeto `CToolBarCtrl`. Si desea imágenes de mapa de bits para botones, agregue los mapas de bits de botón a la barra de herramientas llamando a [AddBitmap](../mfc/reference/ctoolbarctrl-class.md#addbitmap). Si desea etiquetas de cadena para botones, agregue las cadenas a la barra de herramientas llamando a [addString](../mfc/reference/ctoolbarctrl-class.md#addstring) y/o [AddStrings](../mfc/reference/ctoolbarctrl-class.md#addstrings). Después de llamar a `AddString` y/o `AddStrings`, debe llamar a [AutoSize](../mfc/reference/ctoolbarctrl-class.md#autosize) para que aparezcan la cadena o las cadenas.
 
-1. Agregar estructuras de botón a la barra de herramientas mediante una llamada a [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons).
+1. Agregue estructuras de botón a la barra de herramientas llamando a [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons).
 
-1. Si desea información sobre herramientas, controle **TTN_NEEDTEXT** mensajes en la ventana propietaria de la barra de herramientas, como se describe en [controlar herramienta notificaciones](../mfc/handling-tool-tip-notifications.md).
+1. Si desea información sobre herramientas, controle **TTN_NEEDTEXT** mensajes en la ventana propietaria de la barra de herramientas, como se describe en control de las [notificaciones de la información sobre herramientas](../mfc/handling-tool-tip-notifications.md).
 
-1. Si desea que el usuario pueda personalizar la barra de herramientas, controlar los mensajes de notificación de personalización en la ventana propietaria, como se describe en [controlar notificaciones de personalización](../mfc/handling-customization-notifications.md).
+1. Si desea que el usuario pueda personalizar la barra de herramientas, controle los mensajes de notificación de personalización en la ventana propietaria tal y como se describe en [control de notificaciones de personalización](../mfc/handling-customization-notifications.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

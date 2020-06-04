@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
-ms.openlocfilehash: f83adcb87994d13edd1c1579183377a365e2051e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcff3610255c40f4e06201e52a53eb5dd965a4be
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317944"
 ---
 # <a name="specifying-the-pathname"></a>Especificar la ruta de acceso
 
@@ -38,6 +38,6 @@ CL /FmPRN HELLO.CPP
 
 ## <a name="see-also"></a>Vea también
 
-[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[/F (Opciones del archivo de resultados)](output-file-f-options.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

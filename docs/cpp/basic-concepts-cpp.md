@@ -1,39 +1,31 @@
 ---
 title: Conceptos básicos (C++)
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 12/11/2019
 helpviewer_keywords:
 - C++, basic language concepts
 ms.assetid: 961801e6-2ffd-4bf1-bb71-7f55e48d9c79
-ms.openlocfilehash: cd868a2b534c8367e4633d81a521dc1bf1de91dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e83fd8624461cb2016f621effc64f056d0c15702
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468710"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181322"
 ---
 # <a name="basic-concepts--c"></a>Conceptos básicos (C++)
 
-En esta sección se explican conceptos necesarios para entender C++. Los programadores de C estarán familiarizados con muchos de estos conceptos, pero hay algunas diferencias sutiles que pueden producir resultados inesperados del programa. Se incluyen los temas siguientes:
+En esta sección se explican conceptos necesarios para entender C++. Los programadores de C estarán familiarizados con muchos de estos conceptos, pero hay algunas diferencias sutiles que pueden producir resultados inesperados del programa. Se tratan los siguientes temas:
 
-- [Declaraciones y definiciones](../cpp/declarations-and-definitions-cpp.md)
+- [C++sistema de tipos](cpp-type-system-modern-cpp.md)
+- [Ámbito](scope-visual-cpp.md)
+- [Unidades de traducción y vinculación](program-and-linkage-cpp.md)
+- [función Main y argumentos de la línea de comandos](main-function-command-line-args.md)
+- [Finalización del programa](program-termination.md)
+- [Lvalues y rvalues](lvalues-and-rvalues-visual-cpp.md)
+- [Objetos temporales](temporary-objects.md)
+- [Alignment](alignment-cpp-declarations.md)
+- [Tipos estándar y de diseño estándar](trivial-standard-layout-and-pod-types.md)
 
-- [Ámbito de un objeto de C++ o la función](../cpp/scope-visual-cpp.md)
+## <a name="see-also"></a>Consulte también
 
-- [Reglas de definición y vinculación de programa](../cpp/program-and-linkage-cpp.md)
-
-- [Inicio y finalización](../cpp/startup-and-termination-cpp.md)
-
-- [Valores L y valores r](../cpp/lvalues-and-rvalues-visual-cpp.md)
-
-- [Objetos temporales](../cpp/temporary-objects.md)
-
-- [Alineación](../cpp/alignment-cpp-declarations.md)
-
-- [alignof y alignas](../cpp/alignof-and-alignas-cpp.md)
-
-- [Trivial, diseño estándar y tipos POD](../cpp/trivial-standard-layout-and-pod-types.md)
-
-## <a name="see-also"></a>Vea también
-
-[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)
+[Referencia del lenguaje C++](cpp-language-reference.md)

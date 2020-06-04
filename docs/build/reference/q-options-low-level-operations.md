@@ -1,40 +1,46 @@
 ---
 title: /Q (Opciones) (Operaciones de bajo nivel)
-ms.date: 1/23/2018
+ms.date: 01/08/2020
 f1_keywords:
 - /q
 helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: a6dcbd256fa3510955884d3adba4855b23cdbfab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514262"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034524"
 ---
 # <a name="q-options-low-level-operations"></a>/Q (Opciones) (Operaciones de bajo nivel)
 
-Puede usar el **/Q** opciones del compilador para realizar las siguientes operaciones de compilador de bajo nivel:
+Puede usar las opciones del compilador **/q** para realizar las siguientes operaciones de compilador de bajo nivel:
 
-- [/ Qfast_transcendentals (Force funciones transcendentales rápidas)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): genera funciones transcendentales rápidas.
+- [/Qfast_transcendentals (Force Fast funciones transcendentales)](qfast-transcendentals-force-fast-transcendentals.md): genera funciones transcendentales rápido.
 
-- [/QIfist (suprimir _ftol)](../../build/reference/qifist-suppress-ftol.md): suprime `_ftol` cuando una conversión de un tipo de punto flotante a un tipo entero es necesario (solo x86).
+- [/QIfist (suprimir _ftol)](qifist-suppress-ftol.md): suprime `_ftol` cuando se requiere una conversión de un tipo de punto flotante a un tipo entero (solo x86).
 
-- [/ Qimprecise_fwaits (quitar comandos fwait en los bloques Try)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): quita `fwait` comandos dentro de `try` bloques.
+- [/Qimprecise_fwaits (quitar comandos fwait dentro de los bloques try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): quita `fwait` comandos dentro de `try` bloques.
 
-- [/Qpar (Paralelizador)](../../build/reference/qpar-auto-parallelizer.md): habilita la paralelización automática de bucles marcados con el [#pragma loop()](../../preprocessor/loop.md) directiva.
+- [/QIntel-JCC-Erratum](qintel-jcc-erratum.md): reduce el impacto en el rendimiento causado por la actualización de microcódigo de errata de código condicional de Intel (JCC).
 
-- [/ Qpar-report (nivel de información de Paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): habilita los niveles de ejecución en paralelo automática de informe.
+- [/QPAR (auto-paralelizador automático)](qpar-auto-parallelizer.md): habilita la paralelización automática de bucles marcados con la Directiva de [bucle #pragma ()](../../preprocessor/loop.md) .
 
-- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): suprime las optimizaciones de carga de registro de punto flotante y para los movimientos entre memoria y MMX registra.
+- [/QPAR-Report (nivel de informe de paralelizador automático automática)](qpar-report-auto-parallelizer-reporting-level.md): habilita los niveles de informes para la paralelización automática.
 
-- [/Qspectre](../../build/reference/qspectre.md): genera instrucciones para mitigar determinadas vulnerabilidades de seguridad de Spectre.
+- [/Qsafe_fp_loads](qsafe-fp-loads.md): suprime las optimizaciones para las cargas de registro de punto flotante y para los movimientos entre la memoria y los registros MMX.
 
-- [/ Qvec-report (nivel de información de Vectorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): habilita los niveles para la vectorización automática de informe.
+- [/Qspectre](qspectre.md): genera instrucciones para mitigar ciertas vulnerabilidades de seguridad de Spectre.
 
-## <a name="see-also"></a>Vea también
+- [/Qspectre-Load](qspectre-load.md): genera instrucciones para mitigar las vulnerabilidades de seguridad de Spectre basadas en cargas.
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+- [/Qspectre-Load-CF](qspectre-load-cf.md): genera instrucciones para mitigar las vulnerabilidades de seguridad de Spectre en función de las instrucciones de flujo de control que se cargan.
+
+- [/Qvec-Report (vectorizador automático)](qvec-report-auto-vectorizer-reporting-level.md): habilita los niveles de informe para la vectorización automática.
+
+## <a name="see-also"></a>Consulte también
+
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

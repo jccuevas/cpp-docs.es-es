@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: cac397e4588c493fb8c47932feb97a5f12cf2583
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98c4bf43883d15cd17877d7146edf16a73c7ce46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578222"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201109"
 ---
 # <a name="compiler-error-c3391"></a>Error del compilador C3391
 
-'type_arg': argumento de tipo no válido para el parámetro genérico 'param' de 'generic_type' genérico debe ser un tipo de valor distinto de null
+' type_arg ': argumento de tipo no válido para el parámetro genérico ' param ' de ' generic_type ' genérico; debe ser un tipo de valor que no acepte valores NULL
 
-Se crearon instancias de un tipo genérico incorrectamente. Compruebe la definición de tipo. Para obtener más información, consulte <xref:System.Nullable> y [genéricos](../../windows/generics-cpp-component-extensions.md).
+Se crearon incorrectamente instancias de un tipo genérico. Compruebe la definición de tipo. Para obtener más información, vea <xref:System.Nullable> y [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente ejemplo usa C# para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos en C / c++ / CLI. Para obtener más información, vea [Restricciones de tipos de parámetros](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+En el ejemplo siguiente C# se usa para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos C++en/CLI. Para obtener más información, vea [Restricciones de tipos de parámetros](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3391.cs
 // Compile by using: csc /target:library C3391.cs
 // a C# program
@@ -31,7 +31,7 @@ public class GR<N>
 where N : struct {}
 ```
 
-Cuando el componente C3391.dll está disponible, el ejemplo siguiente genera la advertencia C3391.
+Cuando el componente C3391. dll está disponible, el ejemplo siguiente genera C3391.
 
 ```cpp
 // C3391_b.cpp

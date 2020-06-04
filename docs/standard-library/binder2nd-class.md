@@ -1,21 +1,21 @@
 ---
 title: binder2nd (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder2nd
+- functional/std::binder2nd
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: bb7b867be4ef7ff0f5bcd9ad54538bf449ccd071
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464667"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890095"
 ---
 # <a name="binder2nd-class"></a>binder2nd (Clase)
 
-Clase de plantilla que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.
+Una plantilla de clase que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado. En desuso en C++ 11, se ha quitado en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,42 +25,37 @@ class binder2nd
     : public unaryFunction <typename Operation::first_argument_type,
     typename Operation::result_type>
 {
-public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
     result_type operator()(argument_type& left) const;
-
-protected:
-    Operation op;
-    typename Operation::second_argument_type value;
 };
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Func*<br/>
+\ *FUNC*
 El objeto de función binaria que se va a convertir en un objeto de función unaria.
 
-*right*<br/>
+\ *derecha*
 El valor al que se enlazará el segundo argumento del objeto de función binaria.
 
-*left*<br/>
+\ *izquierda*
 El valor del argumento que el objeto binario adaptado compara con el valor fijo del segundo argumento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El objeto de función unaria resultante de enlazar el segundo argumento del objeto de función binaria con el valor *derecho*.
+El objeto de función unaria resultante de enlazar el segundo argumento del objeto de función binaria al valor *derecho*.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función binaria _ *Func* en `op`y una copia de *derecho* en `value`. Define su función miembro `operator()` para que devuelva **op**( `left`, **value**).
+La plantilla de clase almacena una copia de un objeto de función binario *FUNC* en `op`y una copia de *derecha* en `value`. Define su función miembro `operator()` como si devolviera `op(left, value)`.
 
-Si `Func` es un objeto de tipo `Operation` y c es una constante, a continuación, [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) es equivalente a la `binder2nd` constructor de clase `binder2nd` \<  **Operación**> ( `Func`, `c` ) y más conveniente.
+Si *FUNC* es un objeto de tipo `Operation` y c es una constante, [bind2nd (](../standard-library/functional-functions.md#bind2nd)`(func, c)` es equivalente al constructor de clase `binder2nd` `binder2nd<Operation>(func, c)`y más conveniente.
 
 ## <a name="example"></a>Ejemplo
 
@@ -105,20 +100,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

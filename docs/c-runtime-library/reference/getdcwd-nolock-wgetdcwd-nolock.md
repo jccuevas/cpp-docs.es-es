@@ -1,10 +1,10 @@
 ---
 title: _getdcwd_nolock, _wgetdcwd_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wgetdcwd_nolock
 - tgetdcwd_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563698"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955186"
 ---
-# <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
+# <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
 Obtiene la ruta de acceso completa del directorio de trabajo actual en la unidad especificada.
 
@@ -65,14 +68,14 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*Unidad*<br/>
+*drive*<br/>
 Unidad de disco.
 
 *buffer*<br/>
 Ubicación de almacenamiento de la ruta de acceso.
 
-*MAXLEN*<br/>
-Longitud máxima de ruta de acceso en caracteres: **char** para **_getdcwd** y **wchar_t** para **_wgetdcwd**.
+*maxlen*<br/>
+Longitud máxima de la ruta de acceso en caracteres: **Char** para **_getdcwd** y **wchar_t** para **_wgetdcwd**.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -80,7 +83,7 @@ Consulte [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Comentarios
 
-**_getdcwd_nolock** y **_wgetdcwd_nolock** son idénticas a **_getdcwd** y **_wgetdcwd**, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_getdcwd_nolock** y **_wgetdcwd_nolock** son idénticos a **_getdcwd** y **_wgetdcwd**, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

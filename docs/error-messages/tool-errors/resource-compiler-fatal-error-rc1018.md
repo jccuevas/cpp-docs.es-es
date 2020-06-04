@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1018
 ms.assetid: bb1d2efd-6898-412f-bb03-9ff94c54e4dc
-ms.openlocfilehash: 02e37ae2f48a6d87da128078d0e18a76f400817f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50fcd8130d1737180e5c1b7972b78e1298084618
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666588"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173080"
 ---
 # <a name="resource-compiler-fatal-error-rc1018"></a>Error irrecuperable del compilador de recursos RC1018
 
-'#elif' inesperado
+' #elif ' inesperado
 
-El `#elif` directiva no estaba dentro de un `#if`, **#ifdef**, o **#ifndef** construir.
+La Directiva `#elif` no aparecía dentro de una construcción `#if`, **#ifdef**o **#ifndef** .
 
-Asegúrese de que hay un `#if`, **#ifdef**, o **#ifndef** en vigor antes de esta instrucción.
+Asegúrese de que hay una instrucción `#if`, **#ifdef**o **#ifndef** en vigor antes de esta instrucción.

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - controls [ATL], adding to projects
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
-ms.openlocfilehash: a7fd85263531968aeb4dd86534b4e67ddc553629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a10c5c358901122dda37b395c1f0fa5cdc30ce30
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598830"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321696"
 ---
 # <a name="atl-control-wizard"></a>Asistente para controles ATL
 
-Inserciones en un proyecto ATL (o un proyecto MFC con compatibilidad con ATL) un control ATL. Puede usar a este asistente para insertar uno de los tres tipos de controles:
+Inserta en un proyecto ATL (o un proyecto MFC con compatibilidad con ATL) un control ATL. Puede utilizar este asistente para insertar uno de los tres tipos de controles:
 
 - Control estándar
 
@@ -25,18 +25,18 @@ Inserciones en un proyecto ATL (o un proyecto MFC con compatibilidad con ATL) un
 
 - Control DHTML
 
-Además, puede especificar un control mínimo, quitando las interfaces de la [Interfaces](../../atl/reference/interfaces-atl-control-wizard.md) lista, que se proporcionan como valores predeterminados para los controles en la mayoría de los contenedores. Puede establecer las interfaces que van a admitir para el control en el **Interfaces** página del asistente.
+Además, puede especificar un control mínimo, quitando las interfaces de la lista [Interfaces,](../../atl/reference/interfaces-atl-control-wizard.md) que se proporcionan como valores predeterminados para que los controles se abran en la mayoría de los contenedores. Puede establecer las interfaces que desea que se admitan para el control en la página **Interfaces** del asistente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El script de registro generado por este asistente registrará sus componentes COM en HKEY_CURRENT_USER en lugar de HKEY_LOCAL_MACHINE. Para modificar este comportamiento, establezca el **registrar componentes para todos los usuarios** opción del Asistente para ATL.
+El script de registro generado por este asistente registrará sus componentes COM en HKEY_CURRENT_USER en lugar de HKEY_LOCAL_MACHINE. Para modificar este comportamiento, establezca la opción para **registrar componentes para todos los usuarios** del Asistente para ATL.
 
-## <a name="names"></a>Nombres
+## <a name="names"></a>nombres
 
-Especifique los nombres para el objeto, interfaz y clases que se agregarán al proyecto. Excepto para **nombre corto**, todos los demás cuadros pueden cambiarse de forma independiente. Si cambia el texto para **nombre corto**, el cambio se refleja en los nombres de todos los demás cuadros de esta página. Si cambia el **coclase** nombre en la sección de COM, el cambio se refleja en el **tipo** cuadro, pero la **interfaz** nombre y **ProgID** hacer No cambie. Este comportamiento de nomenclatura está diseñado para que todos los nombres fácilmente identificables por usted a medida que desarrolla el control.
+Especifique los nombres para el objeto, la interfaz y las clases que se van a agregar al proyecto. A excepción de **Nombre corto**, todas las demás cajas se pueden cambiar de forma independiente. Si cambia el texto para **Nombre corto**, el cambio se refleja en los nombres del resto de los cuadros de esta página. Si cambia el nombre de **coclase** en la sección COM, el cambio se refleja en el cuadro **Tipo,** pero el nombre de la **interfaz** y **ProgID** no cambian. Este comportamiento de nomenclatura se ha diseñado para facilitarle la identificación de todos los nombres a medida que desarrolla su control.
 
 > [!NOTE]
->  **Coclase** es editable en sólo los controles sin atributos. Si su proyecto tiene atributos, no puede editar **coclase**.
+> **La coclase** solo se puede editar en controles no atribuidos. Si su proyecto tiene atributos, no podrá editar **Coclase**.
 
 ### <a name="c"></a>C++
 
@@ -44,60 +44,59 @@ Proporciona información para la clase de C++ creada para implementar el objeto.
 
 - **Nombre corto**
 
-   Establece el nombre abreviado para el objeto. El nombre que proporcione determina la clase y **coclase** nombres, el archivo (. CPP y. H) nombres de, el nombre de la interfaz y el **tipo** nombres, a menos que cambie esos campos individualmente.
+   Especifica un nombre abreviado para el objeto. El nombre que proporcione determina los nombres de clase y **Coclase,** el archivo (. CPP y . H), el nombre de la interfaz y los nombres **de tipo,** a menos que cambie esos campos individualmente.
 
 - **Clase**
 
-   Establece el nombre de la clase que implementa el objeto. Este nombre se basa en el nombre que se proporciona en **nombre corto**, precedidos por 'C', el prefijo habitual para un nombre de clase.
+   Establece el nombre de la clase que implementa el objeto. Este nombre se basa en el que se proporcione en **Nombre corto**, precedido de "C", el prefijo típico para un nombre de clase.
 
 - **Archivo .h**
 
-   Establece el nombre del archivo de encabezado para la clase nueva del objeto. De forma predeterminada, este nombre se basa en el nombre que se proporciona en **nombre corto**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación que elija, o bien para anexar la declaración de clase a un archivo existente. Si selecciona un archivo existente, el asistente no lo guardará en la ubicación seleccionada hasta que haga clic en **finalizar**.
+   Establece el nombre del archivo de encabezado para la clase nueva del objeto. De forma predeterminada, este nombre se basa en el que se proporcione en **Nombre corto**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación que elija, o bien para anexar la declaración de clase a un archivo existente. Si selecciona un archivo existente, el asistente no lo guardará en la ubicación seleccionada hasta que haga clic en **Finalizar**.
 
    El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **Finalizar**, el asistente le pedirá que indique si se debe anexar la declaración de clase al contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **No** para volver al asistente y especificar otro nombre de archivo.
 
 - **Archivo .cpp**
 
-   Establece el nombre del archivo de implementación para la clase nueva del objeto. De forma predeterminada, este nombre se basa en el nombre que se proporciona en **nombre corto**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación que elija. El archivo no se guarda en la ubicación seleccionada hasta que haga clic en **Finalizar** en el asistente.
+   Establece el nombre del archivo de implementación para la clase nueva del objeto. De forma predeterminada, este nombre se basa en el que se proporcione en **Nombre corto**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación que elija. El archivo no se guarda en la ubicación seleccionada hasta que haga clic en **Finalizar** en el asistente.
 
    El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **Finalizar**, el asistente le pedirá que indique si se debe anexar la implementación de clase al contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **No** para volver al asistente y especificar otro nombre de archivo.
 
 - **Con atributos**
 
-   Indica si el objeto utiliza atributos. Si va a agregar un objeto a un proyecto ATL con atributos, esta opción está activada y no está disponible para cambiar. Es decir, puede agregar solo los objetos con atributos a un proyecto creado con el soporte técnico de atributo.
+   Indica si el objeto usa atributos. Si agrega un objeto a un proyecto ATL con atributos, esta opción estará activada y no se podrá cambiar. Es decir, solo puede agregar objetos con atributos a un proyecto creado con compatibilidad con atributos.
 
-   Puede agregar un objeto con atributos sólo a un proyecto ATL que utiliza atributos. Si selecciona esta opción para un proyecto ATL que no es compatible con atributos, el asistente le pedirá que especifique si desea agregar compatibilidad para el proyecto.
+   Solo puede agregar un objeto con atributos a un proyecto ATL que usa atributos. Si selecciona esta opción para un proyecto ATL sin compatibilidad con atributos, el asistente le pide que especifique si desea agregar dicha compatibilidad al proyecto.
 
-   De forma predeterminada, cualquier objeto que agregue después de establecer esta opción se designará como con atributos (la casilla de verificación está seleccionada). Puede desactivar esta casilla para agregar un objeto que no utiliza atributos.
+   De forma predeterminada, cualquier objeto que agregue una vez que establezca esta opción se designará como con atributos (la casilla estará activada). Puede borrar esta casilla para agregar un objeto que no usa atributos.
 
-   Consulte [configuración de la aplicación, Asistente para proyectos ATL](../../atl/reference/application-settings-atl-project-wizard.md) y [mecanismos básicos de los atributos](../../windows/basic-mechanics-of-attributes.md) para obtener más información.
+   Consulte [Configuración de la aplicación, Asistente para proyectos ATL](../../atl/reference/application-settings-atl-project-wizard.md) y [Mecanismos básicos de los atributos](../../windows/basic-mechanics-of-attributes.md) para obtener más información.
 
 ### <a name="com"></a>COM
 
-Proporciona información sobre la funcionalidad de COM para el objeto.
+Proporciona información sobre la funcionalidad COM del objeto.
 
 - **Coclase**
 
    Establece el nombre de la clase de componente que contiene una lista de interfaces que admite el objeto.
 
    > [!NOTE]
-   > Si crea el proyecto mediante atributos, o si se indican en esta página del asistente que utiliza atributos en el control, no se puede cambiar esta opción ya que ATL no incluye el **coclase** atributo.
+   > Si crea el proyecto mediante atributos, o si indica en esta página del asistente que el control utiliza atributos, no puede cambiar esta opción porque ATL no incluye el atributo **de coclase.**
 
-- **Interface**
+- **Interfaz**
 
-   Establece el nombre de la interfaz para el objeto. De forma predeterminada un nombre de interfaz llevan el prefijo "I".
+   Establece el nombre de la interfaz para el objeto. De forma predeterminada, un nombre de interfaz se antepone a "I".
 
-- **Type**
+- **Tipo**
 
-   Establece la descripción del objeto que va a aparecer en el registro
+   Establece la descripción del objeto que aparecerá en el Registro.
 
-- **Id. de programa**
+- **Progid**
 
-   Establece el nombre que se pueden usar los contenedores en lugar del CLSID del objeto. Este campo no se rellena automáticamente. Si no rellena este campo manualmente, el control no esté disponible para otras herramientas. Por ejemplo, los controles ActiveX que se generan sin un `ProgID` no están disponibles en el **insertar ActiveX Control** cuadro de diálogo. Para más información sobre el cuadro de diálogo, vea [Insertar control ActiveX (cuadro de diálogo)](../../windows/insert-activex-control-dialog-box.md).
+   Establece el nombre que pueden usar los contenedores en lugar del CLSID del objeto. Este campo no se rellena automáticamente. Si no rellena manualmente este campo, es posible que el control no esté disponible para otras herramientas. Por ejemplo, los controles ActiveX `ProgID` que se generan sin a no están disponibles en el cuadro de diálogo **Insertar control ActiveX.** Para más información sobre el cuadro de diálogo, vea [Insertar control ActiveX (cuadro de diálogo)](../../windows/insert-activex-control-dialog-box.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control ATL](../../atl/reference/adding-an-atl-control.md)<br/>
-[Agregar funciones al control compuesto](../../atl/adding-functionality-to-the-composite-control.md)<br/>
-[Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)
-
+[Adición de funcionalidad al control compuesto](../../atl/adding-functionality-to-the-composite-control.md)<br/>
+[Fundamentos de los objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
 ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344946"
 ---
 # <a name="type-cast-conversions"></a>Conversiones de tipos
 
@@ -24,7 +24,7 @@ Puede utilizar conversiones de tipo para convertir tipos explícitamente.
 
 *cast-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *type-name*  **)**  *cast-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *type-name*  **)**  *cast-expression*
 
 *type-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>
@@ -39,7 +39,7 @@ El elemento *type-name* es un tipo y el elemento *cast-expression* es un valor q
 |Punto flotante|Cualquier tipo aritmético|
 |Un puntero a un objeto o (**void** <strong>\*</strong>)|Cualquier tipo entero, (**void** <strong>\*</strong>), un puntero a un objeto o un puntero de función|
 |Puntero de función|Cualquier tipo entero, un puntero a un objeto o un puntero de función|
-|Una estructura, unión o matriz|Ninguna|
+|Una estructura, unión o matriz|None|
 |Un tipo void|Cualquier tipo|
 
 Cualquier identificador se puede convertir al tipo `void`. Sin embargo, si el tipo especificado en una expresión de conversión de tipos no es `void`, el identificador que se va a convertir a ese tipo no puede ser una expresión `void`. Cualquier expresión se puede convertir a `void`, pero una expresión de tipo `void` no se puede convertir a ningún otro tipo. Por ejemplo, una función con el tipo de valor devuelto `void` no puede devolver un valor convertido a otro tipo.

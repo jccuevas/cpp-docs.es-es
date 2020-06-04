@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3732
 ms.assetid: 2d55a7e1-9c39-4379-a093-2f7beb27e2ca
-ms.openlocfilehash: c71cca3643f6337060de6e4bb56ac64d8f0d6e4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30ade41ae463923cc5cc9911469e587decacbc64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611360"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752930"
 ---
 # <a name="compiler-error-c3732"></a>Error del compilador C3732
 
-'interface': una interfaz personalizada que desencadena eventos COM no puede heredar de IDispatch
+' interfaz ': una interfaz personalizada que activa eventos COM no puede heredar de IDispatch
 
-No se puede heredar una interfaz que admite eventos COM `IDispatch`. Para obtener más información, consulte [control de eventos en COM](../../cpp/event-handling-in-com.md).
+Una interfaz que admite eventos COM no puede heredar de `IDispatch`. Para obtener más información, vea [control de eventos en com](../../cpp/event-handling-in-com.md).
 
 El siguiente error genera C3732:
 
-```
+```cpp
 // C3732.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

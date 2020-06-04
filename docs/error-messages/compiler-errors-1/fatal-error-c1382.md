@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1382
 ms.assetid: 7a100f8c-3179-4927-a2f1-98de4c753850
-ms.openlocfilehash: 2b7f6fd878f0d0ba6cde19a3a316a01c390e954a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ed70a81c4ae2028d09b694f325f83454e99a587
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600608"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203104"
 ---
 # <a name="fatal-error-c1382"></a>Error irrecuperable C1382
 
-el archivo PCH 'archivo' se ha recompilado desde que se generó 'obj'. Recompile este objeto
+el archivo PCH ' file ' se ha recompilado desde que se generó ' obj '. Recompile este objeto
 
-Cuando se usa [/LTCG](../../build/reference/ltcg-link-time-code-generation.md), el compilador detectó un archivo .pch más reciente que un archivo .obj CIL que hace referencia a ella. La información en el archivo obj CIL es obsoleta. Vuelva a generar el objeto.
+Al usar [/LTCG](../../build/reference/ltcg-link-time-code-generation.md), el compilador detectó un archivo. pch que es más reciente que un cil. obj que apunta a él. La información del archivo CIL. obj no está actualizada. Vuelva a generar el objeto.
 
-C1382 también puede producirse si se compila con **/Yc**, pero también pasar varios orígenes de archivos de código para el compilador.  Para resolver, no use **/Yc** al pasar varios orígenes de archivos de código para el compilador.  Para obtener más información, consulte [/Yc (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md).
+C1382 también se puede producir si se compila con **/YC**, pero también se pasan varios archivos de código fuente al compilador.  Para resolverlo, no use **/YC** al pasar varios archivos de código fuente al compilador.  Para obtener más información, vea [/YC (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md).

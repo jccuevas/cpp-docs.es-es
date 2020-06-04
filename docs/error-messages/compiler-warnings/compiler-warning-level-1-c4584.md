@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
-ms.openlocfilehash: 3c60575e766ea3490a40711fe26c3e402c41fbdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa736e8dbab775fcd6cdffc467aee1312004fa60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162158"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>Advertencia del compilador (nivel 1) C4584
 
-'class1': clase base 'clase2' ya es una clase base de 'Clase3'
+' Class1 ': la clase base ' clase2 ' ya es una clase base de ' class3 '
 
-La clase definida se hereda de dos clases, uno de los cuales hereda de la otra. Por ejemplo:
+La clase que ha definido hereda de dos clases, una de las cuales hereda de la otra. Por ejemplo:
 
-```
+```cpp
 // C4584.cpp
 // compile with: /W1 /LD
 class A {
@@ -32,4 +32,4 @@ class C : public A, public B { // C4584
 };
 ```
 
-En este caso, podría generarse una advertencia en la clase C, ya que hereda de una clase y clase B, que también se hereda de la clase A. Esta advertencia sirve como recordatorio de que debe calificar totalmente el uso de los miembros de estas clases base o se generará un error del compilador debido a la ambigüedad en cuanto a qué miembro de clase se hace referencia.
+En este caso, se emitirá una advertencia en la clase C porque hereda tanto de la clase A como de la clase B, que también hereda de la clase A. Esta advertencia sirve como recordatorio de que debe calificar totalmente el uso de los miembros de estas clases base, o bien se generará un error del compilador debido a la ambigüedad en cuanto al miembro de clase al que se hace referencia.

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 0f7ed1fcf0c4e3290d110d9aa12b66289cb331f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08c73602d87cbfc31364148d9565071da7b732c4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459038"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687363"
 ---
 # <a name="operatorgt"></a>operator&gt;=
 
 > [!NOTE]
-> Este tema se incluye en la documentación de Visual C++ como un ejemplo no funcional de los contenedores usados en la biblioteca estándar de C++. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
+> Este tema se encuentra en la C++ documentación de Microsoft como un ejemplo no funcional de contenedores usados en C++ la biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
 
-Sobrecarga **operator>=** para comparar dos objetos de la clase de plantilla [Container](../standard-library/sample-container-class.md).
+Sobrecarga **operator > =** para comparar dos objetos de [contenedor](../standard-library/sample-container-class.md)de plantilla de clase.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,4 +42,4 @@ Devuelve `!(left < right)`.
 
 ## <a name="see-also"></a>Vea también
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-ms.openlocfilehash: 824e9b1b71615bd3fc488052d5e713dee2e0d015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3854ffe205aa8e6cb9cfb800b9aa1473094fffaf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235504"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementación de un administrador de cadenas personalizado (método avanzado)
 
@@ -32,4 +32,3 @@ El `CStringData` estructura consta de cuatro campos:
 ## <a name="see-also"></a>Vea también
 
 [Administración de memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

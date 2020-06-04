@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-ms.openlocfilehash: 30511ec6c9f0e00f4cec51e00f85ea5e32453327
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62254367"
 ---
 # <a name="automation-clients"></a>clientes de automatización
 
@@ -43,4 +43,3 @@ Si desea controlar los eventos en el cliente de automatización, deberá agregar
 [Clientes de automatización: Usar bibliotecas de tipos](../mfc/automation-clients-using-type-libraries.md)<br/>
 [Automatización](../mfc/automation.md)<br/>
 [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md)
-

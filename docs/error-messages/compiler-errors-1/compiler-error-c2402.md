@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2402
 ms.assetid: 23fa63e1-ea9e-482f-be2e-a205c548ba69
-ms.openlocfilehash: 2927c13fe7acffb535e97c4d56fdbf4f366e8ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 221094eff6c2d7b2d821ac545daf01d1ac3732a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470010"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205977"
 ---
 # <a name="compiler-error-c2402"></a>Error del compilador C2402
 

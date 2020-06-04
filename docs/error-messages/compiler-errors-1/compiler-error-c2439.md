@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2439
 ms.assetid: 3c5dbe5c-b7d3-4bb0-8619-92f6e280461e
-ms.openlocfilehash: f71112d3f37f3e4d1a4f41bade95726d7aa0a0bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99f3644869f6c5395684643f0e7802f3a01baa62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644371"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205366"
 ---
 # <a name="compiler-error-c2439"></a>Error del compilador C2439
 
-'identifier': no se pudo inicializar el miembro
+' Identifier ': no se pudo inicializar el miembro
 
-No se puede inicializar una clase, estructura o miembro de unión.
+No se puede inicializar un miembro de clase, estructura o Unión.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. Intentando inicializar una estructura o clase base indirecta.
+1. Intentando inicializar una clase o estructura base indirecta.
 
-1. Intentando inicializar a un miembro heredado de una clase o estructura. El constructor de la clase o estructura se debe inicializar un miembro heredado.
+1. Intento de inicializar un miembro heredado de una clase o estructura. El constructor de la clase o estructura debe inicializar un miembro heredado.

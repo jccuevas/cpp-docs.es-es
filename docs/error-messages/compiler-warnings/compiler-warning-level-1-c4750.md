@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: e82640b26df5ceab030d0c3f0e716e0ed72102ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ba0a37d2c213c35002b8e09d4377869a868d401
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595753"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175173"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Advertencia del compilador (nivel 1) C4750
 
@@ -33,7 +33,7 @@ La función 'identificador' fuerza la expansión inline de la función [_alloca]
 
 El siguiente ejemplo de código llama a `MyFunction` en un bucle y `MyFunction` llama a la función `_alloca` . El modificador `__forceinline` hace que la expansión inline de la función `_alloca` .
 
-```
+```cpp
 // c4750.cpp
 // compile with: /O2 /W1 /c
 #include <intrin.h>
@@ -55,6 +55,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_alloca](../../c-runtime-library/reference/alloca.md)

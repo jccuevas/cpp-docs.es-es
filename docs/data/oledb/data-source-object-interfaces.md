@@ -9,31 +9,31 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], object interfaces
 - OLE DB [C++], interfaces
 ms.assetid: 929e100c-c08c-4b64-8437-d8d1357226f6
-ms.openlocfilehash: aaa9e90996750b0518999803487fcb39729c76f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a615694a9db75cdaf3b187cf6d29248bd26ef978
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519657"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544607"
 ---
 # <a name="data-source-object-interfaces"></a>Interfaces del objeto de origen de datos
 
-En la tabla siguiente se muestra las interfaces obligatorias y opcionales definidas por OLE DB para un objeto de origen de datos.
+En la tabla siguiente se muestran las interfaces obligatorias y opcionales definidas por OLE DB para un objeto de origen de datos.
 
-|Interfaz|¿Obligatorio?|¿Implementado por plantillas OLE DB?|
+|Interfaz|¿Necesario?|¿Se implementa mediante plantillas OLE DB?|
 |---------------|---------------|--------------------------------------|
-|`IDBCreateSession`|Obligatorio|Sí|
-|`IDBInitialize`|Obligatorio|Sí|
-|`IDBProperties`|Obligatorio|Sí|
-|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|Obligatorio|Sí|
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|No|
-|`IDBDataSourceAdmin`|Optional|No|
-|`IDBInfo`|Optional|No|
-|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Optional|No|
-|`ISupportErrorInfo`|Optional|No|
+|`IDBCreateSession`|Mandatory|Sí|
+|`IDBInitialize`|Mandatory|Sí|
+|`IDBProperties`|Mandatory|Sí|
+|[IPersist](/windows/win32/api/objidl/nn-objidl-ipersist)|Mandatory|Sí|
+|[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Opcional|No|
+|`IDBDataSourceAdmin`|Opcional|No|
+|`IDBInfo`|Opcional|No|
+|[IPersistFile](/windows/win32/api/objidl/nn-objidl-ipersistfile)|Opcional|No|
+|`ISupportErrorInfo`|Opcional|No|
 
-Los datos del origen de objeto implementa la `IDBProperties`, `IDBInitialize`, y `IDBCreateSession` interfaces mediante herencia. Puede ofrecer funcionalidad adicional heredando o no de una de estas clases de implementación. Si desea admitir la `IDBDataSourceAdmin` interfaz, debe heredar de la `IDBDataSourceAdminImpl` clase.
+El objeto de origen de datos implementa las interfaces `IDBProperties`, `IDBInitialize`y `IDBCreateSession` a través de la herencia. Puede optar por admitir funcionalidad adicional heredando o no heredando de una de estas clases de implementación. Si desea admitir la interfaz `IDBDataSourceAdmin`, debe heredar de la clase `IDBDataSourceAdminImpl`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

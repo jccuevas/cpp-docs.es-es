@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: aa1874dee72f7734c690ce9e86998a5120b2974b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643708"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126674"
 ---
-# <a name="int4-class"></a>int_4 (Clase)
+# <a name="int_4-class"></a>int_4 (Clase)
 
 Representa un vector corto de cuatro enteros.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class int_4;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor int_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de int_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -321,10 +321,10 @@ class int_4;
 |int_4::get_wzyx||
 |int_4::get_x||
 |int_4::get_xw||
-|int_4:: get_xwy||
+|int_4::get_xwy||
 |int_4::get_xwyz||
 |int_4::get_xwz||
-|int_4:: get_xwzy||
+|int_4::get_xwzy||
 |int_4::get_xy||
 |int_4::get_xyw||
 |int_4::get_xywz||
@@ -373,7 +373,7 @@ class int_4;
 |int_4::ref_r||
 |int_4::ref_w||
 |int_4::ref_x||
-|int_4:: ref_y||
+|int_4::ref_y||
 |int_4::ref_z||
 |int_4::set_w||
 |int_4::set_wx||
@@ -393,10 +393,10 @@ class int_4;
 |int_4::set_wzyx||
 |int_4::set_x||
 |int_4::set_xw||
-|int_4:: set_xwy||
+|int_4::set_xwy||
 |int_4::set_xwyz||
 |int_4::set_xwz||
-|int_4:: set_xwzy||
+|int_4::set_xwzy||
 |int_4::set_xy||
 |int_4::set_xyw||
 |int_4::set_xywz||
@@ -442,7 +442,7 @@ class int_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_4::operator-||
 |int_4::operator--||
@@ -455,20 +455,20 @@ class int_4;
 |int_4::operator~||
 |int_4::operator++||
 |int_4::operator+=||
-|int_4::operator<\<=||
+|int_4:: Operator <\<=||
 |int_4::operator=||
 |int_4::operator-=||
 |int_4::operator>>=||
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#int_4__size)||
+|[Size (constante)](#int_4__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||
@@ -477,10 +477,10 @@ class int_4;
 |int_4::abr||
 |int_4::abrg||
 |int_4::ag||
-|int_4:: agb||
+|int_4::agb||
 |int_4::agbr||
 |int_4::agr||
-|int_4:: agrb||
+|int_4::agrb||
 |int_4::ar||
 |int_4::arb||
 |int_4::arbg||
@@ -534,66 +534,66 @@ class int_4;
 |int_4::rgab||
 |int_4::rgb||
 |int_4::rgba||
-|int_4:: w||
-|int_4:: WX||
-|int_4:: WXY||
-|int_4:: wxyz||
-|int_4:: wxz||
-|int_4:: wxzy||
-|int_4:: WY||
-|int_4:: wyx||
+|int_4::w||
+|int_4::wx||
+|int_4::wxy||
+|int_4::wxyz||
+|int_4::wxz||
+|int_4::wxzy||
+|int_4::wy||
+|int_4::wyx||
 |int_4::wyxz||
-|int_4:: WYZ||
-|int_4:: wyzx||
+|int_4::wyz||
+|int_4::wyzx||
 |int_4::wz||
 |int_4::wzx||
-|int_4:: wzxy||
-|int_4:: wzy||
-|int_4:: wzyx||
+|int_4::wzxy||
+|int_4::wzy||
+|int_4::wzyx||
 |int_4::x||
 |int_4::xw||
-|int_4:: xwy||
-|int_4:: xwyz||
+|int_4::xwy||
+|int_4::xwyz||
 |int_4::xwz||
-|int_4:: xwzy||
-|int_4:: XY||
-|int_4:: xyw||
+|int_4::xwzy||
+|int_4::xy||
+|int_4::xyw||
 |int_4::xywz||
 |int_4::xyz||
-|int_4:: xyzw||
+|int_4::xyzw||
 |int_4::xz||
-|int_4:: xzw||
-|int_4:: xzwy||
-|int_4:: xzy||
-|int_4:: xzyw||
-|int_4:: y||
-|int_4:: yw||
-|int_4:: ywx||
+|int_4::xzw||
+|int_4::xzwy||
+|int_4::xzy||
+|int_4::xzyw||
+|int_4::y||
+|int_4::yw||
+|int_4::ywx||
 |int_4::ywxz||
 |int_4::ywz||
 |int_4::ywzx||
-|int_4:: YX||
-|int_4:: yxw||
+|int_4::yx||
+|int_4::yxw||
 |int_4::yxwz||
 |int_4::yxz||
-|int_4:: yxzw||
-|int_4:: YZ||
-|int_4:: yzw||
-|int_4:: yzwx||
+|int_4::yxzw||
+|int_4::yz||
+|int_4::yzw||
+|int_4::yzwx||
 |int_4::yzx||
-|int_4:: yzxw||
+|int_4::yzxw||
 |int_4::z||
 |int_4::zw||
 |int_4::zwx||
-|int_4:: zwxy||
-|int_4:: zwy||
+|int_4::zwxy||
+|int_4::zwy||
 |int_4::zwyx||
 |int_4::zx||
 |int_4::zxw||
 |int_4::zxwy||
 |int_4::zxy||
 |int_4::zxyw||
-|int_4:: ZY||
+|int_4::zy||
 |int_4::zyw||
 |int_4::zywx||
 |int_4::zyx||
@@ -605,15 +605,15 @@ class int_4;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> int_4
+## <a name="ctor"></a>int_4
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -656,29 +656,29 @@ explicit inline int_4(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V3*<br/>
-El valor para inicializar el elemento 3.
+Valor para inicializar el elemento 3.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="int_4__size"></a> Tamaño
+## <a name="int_4__size"></a>ajusta
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

@@ -1,21 +1,21 @@
 ---
-title: doble (atributo de COM de C++)
+title: dual (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 30d334f58f0eb91c9ca44ba5a5b6b8edf3970510
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509959"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168218"
 ---
 # <a name="dual"></a>dual
 
-Coloca una interfaz en el archivo .idl como una interfaz dual.
+Coloca una interfaz en el archivo. idl como una interfaz dual.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,9 +23,9 @@ Coloca una interfaz en el archivo .idl como una interfaz dual.
 [dual]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cuando el **dual** atributo de C++ precede a una interfaz, hace que la interfaz colocarse dentro del bloque de biblioteca en el archivo .idl generado.
+Cuando el atributo **dual** C++ precede a una interfaz, hace que la interfaz se coloque dentro del bloque de biblioteca en el archivo. idl generado.
 
 ## <a name="example"></a>Ejemplo
 
@@ -61,12 +61,12 @@ __interface IStatic : IDispatch
 |-|-|
 |**Se aplica a**|**interface**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|`dispinterface`|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos por uso](attributes-by-usage.md)<br/>

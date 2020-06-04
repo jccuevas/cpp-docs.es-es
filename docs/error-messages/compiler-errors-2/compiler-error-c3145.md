@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3145
 ms.assetid: f165c874-0f51-45c7-85e8-ebe321cbc168
-ms.openlocfilehash: e425402bcea3e08764a9a89abfbd9316ca254a83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10ce7f9e6fac09401892304f2803ea76c226fab5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598541"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746011"
 ---
 # <a name="compiler-error-c3145"></a>Error del compilador C3145
 
@@ -21,7 +21,7 @@ Solo se pueden definir objetos CLR o WinRT en el ámbito de función.
 
 En el ejemplo siguiente se genera el error C3145 y se muestra cómo corregirlo:
 
-```
+```cpp
 // C3145.cpp
 // compile with: /clr
 using namespace System;
@@ -44,7 +44,7 @@ int main() {
 
 El ejemplo siguiente genera el error C3145:
 
-```
+```cpp
 // C3145b.cpp
 // compile with: /clr
 ref class MyClass {

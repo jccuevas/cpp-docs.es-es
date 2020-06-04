@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4716
 ms.assetid: d95ecfe5-870f-461f-a746-7913af98414b
-ms.openlocfilehash: 5ec0aea543053d699db7483df7dd7ea91b3af715
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91e836c9bb606d7759206788d1e3abd63b293fa8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594550"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175316"
 ---
 # <a name="compiler-warning-level-1-c4716"></a>Advertencia del compilador (nivel 1) C4716
 
@@ -19,15 +19,15 @@ ms.locfileid: "50594550"
 
 La función especificada no devolvió un valor.
 
-Solo funciona con un tipo de valor devuelto void pueden usa el comando devuelto sin un valor devuelto correspondiente.
+Solo las funciones con un tipo de valor devuelto de void pueden utilizar el comando Return sin un valor devuelto que lo acompañe.
 
-Cuando se llama a esta función, se devolverá un valor indefinido.
+Se devolverá un valor no definido cuando se llame a esta función.
 
-Esta advertencia suele convertirse automáticamente en un error. Si desea modificar este comportamiento, use [advertencia #pragma](../../preprocessor/warning.md).
+Esta advertencia suele convertirse automáticamente en un error. Si desea modificar este comportamiento, use [#pragma ADVERTENCIA](../../preprocessor/warning.md).
 
-El ejemplo siguiente genera C4716:
+En el ejemplo siguiente se genera C4716:
 
-```
+```cpp
 // C4716.cpp
 // compile with: /c /W1
 // C4716 expected

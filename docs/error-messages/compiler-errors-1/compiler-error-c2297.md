@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
-ms.openlocfilehash: f2b1fb0590b8fd72b0365185b245d7b16566d11d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f07d522f7594d78df566b6a4be47ad0dadd4b3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601362"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759092"
 ---
 # <a name="compiler-error-c2297"></a>Error del compilador C2297
 
-'operator': operando derecho incorrecto
+' operador ': operando derecho incorrecto
 
 El operando derecho utilizado con `operator` no es válido.
 
-Por ejemplo, el compilador puede ver una declaración donde se pretendía realizar una llamada de función.
+Por ejemplo, el compilador puede ver una declaración en la que se pretendía una llamada de función.
 
-El ejemplo siguiente genera C2297:
+En el ejemplo siguiente se genera C2297:
 
-```
+```cpp
 // C2297.cpp
 struct MyStruct {
    struct Help {

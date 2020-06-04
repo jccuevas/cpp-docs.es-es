@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3139
 ms.assetid: 95c92263-10ac-4ff3-b385-6312dd92adbc
-ms.openlocfilehash: f224be74a94e0e769e7c26bc99b4790d69f6b65b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 274f3cdb3425a8a0e1e282ca6e9ca79f70077233
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521208"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761265"
 ---
 # <a name="compiler-error-c3139"></a>Error del compilador C3139
 
-'struct': no se puede exportar un tipo definido por el usuario sin miembros
+' struct ': no se puede exportar un UDT sin miembros
 
-Se intentó aplicar el [exportar](../../windows/export.md) atributo a un UDT vacío (tipo definido por el usuario). Por ejemplo:
+Ha intentado aplicar el atributo de [exportación](../../windows/export.md) a un UDT vacío (tipo definido por el usuario). Por ejemplo:
 
-```
+```cpp
 // C3139.cpp
 #include "unknwn.h"
 [emitidl];

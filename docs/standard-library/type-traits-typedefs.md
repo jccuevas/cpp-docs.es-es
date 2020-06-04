@@ -7,20 +7,20 @@ f1_keywords:
 - type_traits/std::true_type
 - xtr1common/std::true_type
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
-ms.openlocfilehash: 579d276b7e9f2a7b44b41681b85fffd318ecddbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 784bcfa5325e74180d3981a98cda530d839ab9f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367974"
 ---
-# <a name="lttypetraitsgt-typedefs"></a>Definiciones de tipo de &lt;type_traits&gt;
+# <a name="lttype_traitsgt-typedefs"></a>Definiciones de tipo de &lt;type_traits&gt;
 
 |||
 |-|-|
 |[false_type](#false_type)|[true_type](#true_type)|
 
-## <a name="false_type"></a>  false_type (Definición de tipo)
+## <a name="false_type-typedef"></a><a name="false_type"></a>false_type Typedef
 
 Contiene la constante integral con valor false.
 
@@ -28,7 +28,7 @@ Contiene la constante integral con valor false.
 typedef integral_constant<bool, false> false_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de una especialización de la plantilla `integral_constant`.
 
@@ -53,7 +53,7 @@ false_type == false
 true_type == true
 ```
 
-## <a name="true_type"></a>  true_type (Definición de tipo)
+## <a name="true_type-typedef"></a><a name="true_type"></a>true_type Typedef
 
 Contiene la constante integral con valor true.
 
@@ -61,7 +61,7 @@ Contiene la constante integral con valor true.
 typedef integral_constant<bool, true> true_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de una especialización de la plantilla `integral_constant`.
 
@@ -88,6 +88,6 @@ false_type == false
 true_type == true
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

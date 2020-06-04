@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4216
 ms.assetid: 211079dc-59d0-42a7-801c-2ddab21d7232
-ms.openlocfilehash: 43c72855dbb40e93cb219e4461dbbf81d086ea79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2521366a9f33e8c5b1b7d41951a7cb08adfc2561
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650923"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199828"
 ---
 # <a name="compiler-warning-level-1-c4216"></a>Advertencia del compilador (nivel 1) C4216
 
-ha utilizado una extensión no estándar: float long
+se ha utilizado una extensión no estándar: Float Long
 
-Tratan las extensiones de Microsoft (/Ze) **long float** como **doble**. Compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) no lo hace. Use **doble** para mantener la compatibilidad. El ejemplo siguiente genera C4216:
+Las extensiones predeterminadas de Microsoft (/ZE) tratan **float Long** como **Double**. La compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) no. Utilice **Double** para mantener la compatibilidad. En el ejemplo siguiente se genera C4216:
 
-```
+```cpp
 // C4216.cpp
 // compile with: /W1
 float long a;   // C4216

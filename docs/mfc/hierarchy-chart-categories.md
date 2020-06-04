@@ -1,17 +1,15 @@
 ---
 title: Categorías de gráfico de jerarquías
 ms.date: 11/19/2018
-f1_keywords:
-- vc.mfc
 helpviewer_keywords:
 - MFC, hierarchy
 ms.assetid: 1f109428-4b84-4f7c-90a9-e71fe071311e
-ms.openlocfilehash: 94b7804c295ef7b5e32ddcf991e1ee437c8bc8b0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5413cf08a4a5b7e70a650c5b7b9000a72b32c0c5
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175124"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611957"
 ---
 # <a name="hierarchy-chart-categories"></a>Categorías de gráfico de jerarquías
 
@@ -21,4 +19,3 @@ ms.locfileid: "52175124"
 
 [Gráfico de jerarquías](../mfc/hierarchy-chart.md)<br/>
 [Aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 09a509f650dee76ea1cb10fea8e4019f6d7f5e2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428424"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416207"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Uso de _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>Usar _ITERATOR_DEBUG_LEVEL
 
 Puede usar la macro de preprocesador [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) para desactivar la característica de depuración de iteradores en una compilación de depuración. Este programa no valida, pero aún desencadena un comportamiento indefinido.
 
@@ -87,7 +87,7 @@ int main() {
 -572662307
 ```
 
-## <a name="unitialized-iterators"></a>Iteradores no inicializados
+## <a name="unitialized-iterators"></a>Iteradores no inicializadas
 
 También se produce una aserción si intenta usar un iterador antes de que se inicialice, como se muestra aquí:
 
@@ -128,9 +128,9 @@ int main()
 
 Tenga en cuenta que este ejemplo usa la expresión lambda `[] (int& elem) { elem *= 2; }` en lugar de un functor. Aunque esta opción no influye en el error de aserción (un functor similar provocaría el mismo error), las expresiones lambda son una forma muy útil de realizar tareas de objeto de función compacta. Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="iterators-going-out-of-scope"></a>Iteradores va fuera del ámbito
+## <a name="iterators-going-out-of-scope"></a>Los iteradores salen del ámbito
 
-Comprobaciones de iteradores de depuración también provocar una variable de iterador que se declara en un **para** bucle esté fuera de ámbito cuando el **para** finaliza el ámbito de bucle.
+Las comprobaciones de depuración del iterador también hacen que una variable de iterador declarada en un bucle **for** esté fuera del ámbito cuando finalice el ámbito del bucle **for** .
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -146,9 +146,9 @@ int main() {
 }
 ```
 
-## <a name="destructors-for-debug-iterators"></a>Destructores para los iteradores de depuración
+## <a name="destructors-for-debug-iterators"></a>Destructores para iteradores de depuración
 
-Los iteradores de depuración tienen destructores no triviales. Si no se ejecuta un destructor, pero se libera la memoria del objeto, pueden producirse daños en datos y las infracciones de acceso. Considere este ejemplo:
+Los iteradores de depuración tienen destructores no triviales. Si un destructor no se ejecuta pero se libera la memoria del objeto, pueden producirse infracciones de acceso y datos dañados. En este ejemplo:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -166,12 +166,13 @@ struct derived : base {
 };
 
 int main() {
-  auto vect = std::vector<int>(10);
-  auto sink = new auto(std::begin(vect));
-  ::operator delete(sink); // frees the memory without calling ~iterator()
-} // access violation
+   std::vector<int> vect( 10 );
+   base * pb = new derived( vect.begin() );
+   delete pb;  // doesn't call ~derived()
+   // access violation
+}
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)

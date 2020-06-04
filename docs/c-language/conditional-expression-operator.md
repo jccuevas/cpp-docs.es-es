@@ -6,16 +6,16 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150628"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749198"
 ---
 # <a name="conditional-expression-operator"></a>Operador de expresión condicional
 
-C tiene un operador ternario: el operador de expresión condicional (**? :**).
+C tiene un operador ternario: el operador de expresión condicional ( **? :** ).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -55,7 +55,7 @@ j = ( i < 0 ) ? ( -i ) : ( i );
 
 En este ejemplo se asigna el valor absoluto de `i` a `j`. Si `i` es menor que 0, `-i` se asigna a `j`. Si `i` es mayor o igual que 0, `i` se asigna a `j`.
 
-```
+```cpp
 void f1( void );
 void f2( void );
 int x;

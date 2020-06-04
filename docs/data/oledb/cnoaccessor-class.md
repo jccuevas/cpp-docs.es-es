@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-ms.openlocfilehash: d6eb5aaa9a66f46335b0a364e6c6e79abc297d64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82d756690c6c2a719cb03f458c471aa44e3d5b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211736"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor (Clase)
 
-Se puede usar como un argumento de plantilla (`TAccessor`) para las clases de plantilla, como `CCommand` y `CTable`, que requieren un argumento de la clase de descriptor de acceso.
+Se puede usar como un argumento de plantilla (`TAccessor`) para las clases de plantilla, como `CCommand` y `CTable`, que requieren un argumento de clase de descriptor de acceso.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,41 +25,41 @@ Se puede usar como un argumento de plantilla (`TAccessor`) para las clases de pl
 class CNoAccessor
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Use `CNoAccessor` como argumento de plantilla cuando no desea que la clase para admitir parámetros o columnas de salida.
+Use `CNoAccessor` como argumento de plantilla cuando no desee que la clase admita parámetros o columnas de salida.
 
 `CNoAccessor` implementa los siguientes métodos de código auxiliar, cada uno de los cuales corresponde a otros métodos de clase de descriptor de acceso:
 
-- `BindColumns` -Enlaza las columnas a los descriptores de acceso.
+- `BindColumns`: enlaza columnas a los descriptores de acceso.
 
-- `BindParameters` -Enlaza los parámetros creados para las columnas.
+- `BindParameters`: enlaza los parámetros creados a las columnas.
 
-- `Bind` : Crea los enlaces.
+- `Bind`: crea enlaces.
 
-- `Close` -Cierra el descriptor de acceso.
+- `Close`: cierra el descriptor de acceso.
 
-- `ReleaseAccessors` -Libera los descriptores de acceso creados por la clase.
+- `ReleaseAccessors`: libera los descriptores de acceso creados por la clase.
 
-- `FreeRecordMemory` -Libera las columnas en el registro actual que necesitan ser liberados.
+- `FreeRecordMemory`: libera cualquier columna del registro actual que se debe liberar.
 
-- `GetColumnInfo` -Obtiene información de columna del conjunto de filas abierto.
+- `GetColumnInfo`: obtiene información de columna del conjunto de filas abierto.
 
-- `GetNumAccessors` -Recupera el número de descriptores de acceso creado por la clase.
+- `GetNumAccessors`: recupera el número de descriptores de acceso creados por la clase.
 
-- `IsAutoAccessor` -Devuelve true si se recuperan automáticamente los datos para el descriptor de acceso durante una operación de movimiento.
+- `IsAutoAccessor`: devuelve true si los datos se recuperan automáticamente para el descriptor de acceso durante una operación de movimiento.
 
-- `GetHAccessor` -Recupera el identificador de descriptor de acceso de un descriptor de acceso especificada.
+- `GetHAccessor`: recupera el identificador de descriptor de acceso de un descriptor de acceso especificado.
 
-- `GetBuffer` -Recupera el puntero al búfer del marcador.
+- `GetBuffer`: recupera el puntero al búfer del marcador.
 
-- `NoBindOnNullRowset` -Impide que el enlace de datos en conjuntos de filas vacío.
+- `NoBindOnNullRowset`: impide el enlace de datos en conjuntos de filas vacíos.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldbcli.h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

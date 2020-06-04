@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4920
 ms.assetid: 1e501f2e-93c1-4d27-a4fa-54fc86271ae7
-ms.openlocfilehash: cd501cf0e3b434523623276027056c93c77fc278
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b587a4ca2a78bc2ac54640adb2b149d97bef4def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580699"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174666"
 ---
 # <a name="compiler-warning-level-1-c4920"></a>Advertencia del compilador (nivel 1) C4920
 
@@ -36,7 +36,7 @@ library MyLib
 
 los siguientes ejemplos generan el error C4920,
 
-```
+```cpp
 // C4920.cpp
 // compile with: /W1
 #import "t4920.tlb"   // C4920

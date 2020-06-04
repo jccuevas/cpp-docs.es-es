@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - D8036
 ms.assetid: 420a8daf-1873-49cd-95ea-a603d77b9410
-ms.openlocfilehash: b5c8fce07b9149189ee875e2b0bcfed42ab3d1a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 209d0ea3f9fa3fd2e311506d3e03162c639f4a6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588583"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196877"
 ---
 # <a name="command-line-error-d8036"></a>Error de la línea de comandos D8036
 
-'/ option' no se permite con varios archivos de origen
+'/option ' no se permite con varios archivos de código fuente
 
-Estas opciones del compilador no pueden utilizarse con varios archivos de origen:
+Estas opciones del compilador no se pueden usar con varios archivos de código fuente:
 
-- Lista de archivos de ensamblado de nombre (/ Fa)
+- Nombre de la lista de archivos de ensamblado (/FA)
 
-- Cambiar el nombre de archivo objeto (/ Fo)
+- Cambiar el nombre del archivo objeto (/FO)
 
-- Crear información de explorador de código fuente sin variables locales (/ Fr)
+- Crear información del explorador de código fuente sin variables locales (/fr)
 
-- Crear información de explorador de código fuente que incluye las variables locales (/ FR)
+- Crear información del explorador de código fuente que incluya variables locales (/FR)

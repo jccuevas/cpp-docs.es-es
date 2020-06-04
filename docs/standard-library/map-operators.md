@@ -1,6 +1,6 @@
 ---
 title: Operadores de &lt;map&gt;
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - map/std::operator!=
 - map/std::operator&gt;
@@ -16,23 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 28acb02932ac2a6064ad49853adcb40dfb781520
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b16028ea4be5303df5c6337260de5098e9c6ed6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504317"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371037"
 ---
 # <a name="ltmapgt-operators"></a>Operadores de &lt;map&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-|[operator!= (multimap)](#op_neq_multimap)|[operator&gt;](#op_gt_multimap)|[operator&gt;=](#op_gt_eq_multimap)|
-|[operator&lt;](#op_lt_multimap)|[operator&lt;=](#op_lt_eq_multimap)|[operator==](#op_eq_eq_multimap)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>¡Operador!
 
 Comprueba si el objeto de mapa del lado izquierdo del operador no es igual que el objeto de mapa del lado derecho.
 
@@ -44,17 +37,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si los mapas no son iguales; **False** si los mapas son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. Dos mapas listas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -90,13 +83,14 @@ int main( )
    else
       cout << "The maps m1 and m3 are equal." << endl;
 }
-/* Output:
-The maps m1 and m2 are not equal.
-The maps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_lt"></a> operator&lt;
+```Output
+The maps m1 and m2 are not equal.
+The maps m1 and m3 are equal.
+```
+
+## <a name="operatorlt"></a><a name="op_lt"></a>Operador&lt;
 
 Comprueba si el objeto de mapa del lado izquierdo del operador es menor que el objeto de mapa del lado derecho.
 
@@ -108,17 +102,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa del lado izquierdo del operador es estrictamente menor que el mapa del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -154,13 +148,14 @@ int main( )
    else
       cout << "The map m1 is not less than the map m3." << endl;
 }
-/* Output:
-The map m1 is less than the map m2.
-The map m1 is not less than the map m3.
-*/
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+```Output
+The map m1 is less than the map m2.
+The map m1 is not less than the map m3.
+```
+
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operador&lt;=
 
 Comprueba si el objeto de mapa del lado izquierdo del operador es menor o igual que el objeto de mapa del lado derecho.
 
@@ -172,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -220,14 +215,15 @@ int main( )
    else
       cout << "The map m1 is greater than the map m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The map m1 is less than or equal to the map m2.
 The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
-*/
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operadora
 
 Comprueba si el objeto de mapa del lado izquierdo del operador es igual que el objeto de mapa del lado derecho.
 
@@ -239,17 +235,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa del lado izquierdo del operador es igual que el mapa del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. Dos mapas listas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -285,13 +281,14 @@ int main( )
    else
       cout << "The maps m1 and m3 are not equal." << endl;
 }
-/* Output:
-The maps m1 and m2 are not equal.
-The maps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_gt"></a> operator&gt;
+```Output
+The maps m1 and m2 are not equal.
+The maps m1 and m3 are equal.
+```
+
+## <a name="operatorgt"></a><a name="op_gt"></a>Operador&gt;
 
 Comprueba si el objeto de mapa del lado izquierdo del operador es mayor que el objeto de mapa del lado derecho.
 
@@ -303,17 +300,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa del lado izquierdo del operador es mayor que el mapa del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -355,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operador&gt;=
 
 Comprueba si el objeto de mapa del lado izquierdo del operador es mayor o igual que el objeto de mapa del lado derecho.
 
@@ -367,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -415,14 +412,15 @@ int main( )
    else
       cout << "The map m1 is less than the map m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The map m1 is less than the map m2.
 Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
-*/
 ```
 
-## <a name="op_neq_multimap"></a>  operator!= (multimap)
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>operador! (multimapa)
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador no es igual que el objeto de mapa múltiple del lado derecho.
 
@@ -434,17 +432,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si los mapas múltiples no son iguales; **False** si los mapas múltiples son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. Dos mapas múltiples son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -480,13 +478,14 @@ int main( )
    else
       cout << "The multimaps m1 and m3 are equal." << endl;
 }
-/* Output:
-The multimaps m1 and m2 are not equal.
-The multimaps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_lt_multimap"></a> operator&lt;
+```Output
+The multimaps m1 and m2 are not equal.
+The multimaps m1 and m3 are equal.
+```
+
+## <a name="operatorlt"></a><a name="op_lt_multimap"></a>Operador&lt;
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es menor que el objeto de mapa múltiple del lado derecho.
 
@@ -498,17 +497,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa múltiple del lado izquierdo del operador es estrictamente menor que el mapa múltiple del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -544,13 +543,14 @@ int main( )
    else
       cout << "The multimap m1 is not less than the multimap m3." << endl;
 }
-/* Output:
-The multimap m1 is less than the multimap m2.
-The multimap m1 is not less than the multimap m3.
-*/
 ```
 
-## <a name="eq_multimap"></a> operator&lt;=
+```Output
+The multimap m1 is less than the multimap m2.
+The multimap m1 is not less than the multimap m3.
+```
+
+## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>Operador&lt;=
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es menor o igual que el objeto de mapa múltiple del lado derecho.
 
@@ -562,10 +562,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -610,14 +610,15 @@ int main( )
    else
       cout << "m1 is greater than m4" << endl;
 }
-/* Output:
+```
+
+```Output
 m1 is less than or equal to m2
 m1 is greater than m3
 m1 is less than or equal to m4
-*/
 ```
 
-## <a name="op_eq_eq_multimap"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operadora
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es igual que el objeto de mapa múltiple del lado derecho.
 
@@ -629,17 +630,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **rue** si el mapa múltiple del lado izquierdo del operador es igual que el mapa múltiple del lado derecho del operador. En caso contrario, **alse**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. Dos mapas múltiples son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -675,13 +676,14 @@ int main( )
    else
       cout << "m1 and m3 are not equal" << endl;
 }
-/* Output:
-m1 and m2 are not equal
-m1 and m3 are equal
-*/
 ```
 
-## <a name="op_gt_multimap"></a> operator&gt;
+```Output
+m1 and m2 are not equal
+m1 and m3 are equal
+```
+
+## <a name="operatorgt"></a><a name="op_gt_multimap"></a>Operador&gt;
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es mayor que el objeto de mapa múltiple del lado derecho.
 
@@ -693,17 +695,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa múltiple del lado izquierdo del operador es mayor que el mapa múltiple del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -739,13 +741,14 @@ int main( )
    else
       cout << "The multimap m1 is not greater than the multimap m3." << endl;
 }
-/* Output:
-Multimap m1 is not greater than multimap m2.
-The multimap m1 is greater than the multimap m3.
-*/
 ```
 
-## <a name="op_gt_eq_multimap"></a> operator&gt;=
+```Output
+Multimap m1 is not greater than multimap m2.
+The multimap m1 is greater than the multimap m3.
+```
+
+## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>Operador&gt;=
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es mayor o igual que el objeto de mapa múltiple del lado derecho.
 
@@ -757,10 +760,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -805,13 +808,10 @@ int main( )
    else
       cout << "The multimap m1 is less than the multimap m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The multimap m1 is less than the multimap m2.
 The multimap m1 is greater than or equal to the multimap m3.
 The multimap m1 is greater than or equal to the multimap m4.
-*/
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<map>](../standard-library/map.md)<br/>

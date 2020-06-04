@@ -1,10 +1,10 @@
 ---
 title: _strdup_dbg, _wcsdup_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdup_dbg
 - _wcsdup_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcsdup_dbg
 - strdup_dbg
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f7d4fd8781269ee37f7515fdcab72e5195fdf00
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531164"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958201"
 ---
-# <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
+# <a name="_strdup_dbg-_wcsdup_dbg"></a>_strdup_dbg, _wcsdup_dbg
 
-Las versiones de [_strdup y _wcsdup](strdup-wcsdup-mbsdup.md) que usan la versión de depuración **malloc**.
+Versiones de [_strdup y _wcsdup](strdup-wcsdup-mbsdup.md) que usan la versión de depuración de **malloc**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -65,23 +68,23 @@ wchar_t *_wcsdup_dbg(
 Cadena de origen terminada en NULL.
 
 *blockType*<br/>
-Tipo de bloque de memoria solicitado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
+Tipo de bloque de memoria solicitado: _ **client_block** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o **null**.
 
 *linenumber*<br/>
-Número de línea en el archivo de código fuente que se solicitó la operación de asignación o **NULL**.
+Número de línea del archivo de código fuente donde se solicitó la operación de asignación o **null**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un puntero a la ubicación de almacenamiento para la cadena copiada o **NULL** si no se puede asignar almacenamiento.
+Cada una de estas funciones devuelve un puntero a la ubicación de almacenamiento para la cadena copiada o **null** si no se puede asignar el almacenamiento.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strdup_dbg** y **_wcsdup_dbg** funciones son idénticas a **_strdup** y **_wcsdup** , salvo que, cuando **_ DEPURAR** está definido, estas funciones usan la versión de depuración **malloc**, **_malloc_dbg**para asignar memoria para la cadena duplicada. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
+Las funciones **_strdup_dbg** y **_wcsdup_dbg** son idénticas **a _strdup** y **_wcsdup** , salvo que, cuando se define **_ Debug** , estas funciones usan la versión de depuración de **malloc**, **_ malloc_dbg**, para asignar memoria para la cadena duplicada. Para obtener información sobre las características de depuración de **_ malloc_dbg**, consulte [_ malloc_dbg](malloc-dbg.md).
 
-En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En su lugar, puede definir la marca **_CRTDBG_MAP_ALLOC**. Cuando **_CRTDBG_MAP_ALLOC** está definido, las llamadas a **_strdup** y **_wcsdup** se reasignan a **_strdup_dbg** y **_ wcsdup_dbg**, respectivamente, con el *existen* establecido en **_NORMAL_BLOCK**. Por lo tanto, no es necesario llamar a estas funciones explícitamente a menos que desee marcar los bloques del montón como **_CLIENT_BLOCK**. Para obtener más información sobre los tipos de bloques, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
+En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En su lugar, puede definir la marca _ **crtdbg_map_alloc**. Cuando se define _ **crtdbg_map_alloc** , las llamadas a **_strdup** y **_wcsdup** se reasignan a **_strdup_dbg** y **_Wcsdup_dbg**, respectivamente, con el *blockType* establecido en **_NORMAL_BLOCK**. Por lo tanto, no es necesario llamar a estas funciones explícitamente a menos que desee marcar los bloques del montón como _ **client_block**. Para obtener más información sobre los tipos de bloques, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

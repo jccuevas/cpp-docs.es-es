@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2808
 ms.assetid: 3d745102-d3b3-4735-a7d2-ad42d5bf3cfa
-ms.openlocfilehash: 84135288255c806e644e153a4d8f678fc13d2787
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c5be25e8606329589e1ac3a215f30fe6ce74c594
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522147"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760600"
 ---
 # <a name="compiler-error-c2808"></a>Error del compilador C2808
 
-'operator operator' unario tiene demasiados parámetros formales
+' operator Operator ' unario tiene demasiados parámetros formales
 
-El operador unario tiene una lista de parámetros no nulo.
+El operador unario tiene una lista de parámetros no void.
 
-El ejemplo siguiente genera C2808:
+En el ejemplo siguiente se genera C2808:
 
-```
+```cpp
 // C2808.cpp
 // compile with: /c
 class X {

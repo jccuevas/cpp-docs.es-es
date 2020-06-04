@@ -1,14 +1,20 @@
 ---
 title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _strlwr_l
 - _strlwr
 - _wcslwr_l
 - _mbslwr_l
 - _wcslwr
 - _mbslwr
-apilocation:
+- _o__mbslwr
+- _o__mbslwr_l
+- _o__strlwr
+- _o__strlwr_l
+- _o__wcslwr
+- _o__wcslwr_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +27,12 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strlwr
 - wcslwr_l
@@ -56,19 +67,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 4b4d02c7176c779703e2025cd2ab5f6fa9c3b1db
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 9ba2570ff02cf11cb5822666b5569fa88caf76b9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703030"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919942"
 ---
-# <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
+# <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
-Cambia la cadena a minúsculas. Hay disponibles versiones más seguras de estas funciones; vea [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
+Convierte una cadena a minúsculas. Hay disponibles versiones más seguras de estas funciones; vea [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbslwr** y **_mbslwr_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr** y **_mbslwr_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -125,7 +136,7 @@ unsigned char *_mbslwr_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena terminada en NULL que se va a cambiar a minúsculas.
 
 *locale*<br/>
@@ -135,15 +146,17 @@ Configuración regional que se va a usar.
 
 Cada una de estas funciones devuelve un puntero a la cadena convertida. Dado que la modificación se hace en contexto, el puntero devuelto es el mismo que el puntero que se pasa como argumento de entrada. No se reserva ningún valor devuelto para indicar un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_strlwr** función convierte las letras mayúsculas en *str* en minúsculas según lo determinado por la **LC_CTYPE** valor de la categoría de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el **_l** sufijo usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional pasada en en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La función **_strlwr** convierte las letras mayúsculas de *Str* a minúsculas, según lo determinado por el valor de la categoría **LC_CTYPE** de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, vea [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo **_L** usan la configuración regional actual para su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_L** son idénticas, salvo que usan en su lugar la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-El **_wcslwr** y **_mbslwr** funciones son versiones de caracteres anchos y caracteres multibyte de **_strlwr**. El valor de argumentos y valores devueltos de **_wcslwr** son caracteres anchos cadenas; los de **_mbslwr** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+Las funciones **_wcslwr** y **_mbslwr** son versiones de caracteres anchos y multibyte de **_strlwr**. El argumento y el valor devuelto de **_wcslwr** son cadenas de caracteres anchos; los de **_mbslwr** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-Si *str* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven la cadena original y establecen **errno** a **EINVAL**.
+Si *Str* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven la cadena original y establecen **errno** en **EINVAL**.
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -160,7 +173,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**_wcslwr**, **_wcslwr_l**|\<string.h> o \<wchar.h>|
 |**_mbslwr**, **_mbslwr_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -198,8 +211,8 @@ Lower: the string to end all strings!
 Upper: THE STRING TO END ALL STRINGS!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)<br/>

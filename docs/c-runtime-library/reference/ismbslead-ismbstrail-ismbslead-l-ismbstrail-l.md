@@ -1,12 +1,16 @@
 ---
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
-apilocation:
+- _o__ismbslead
+- _o__ismbslead_l
+- _o__ismbstrail
+- _o__ismbstrail_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +22,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbslead
 - ismbs
@@ -40,14 +48,14 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468918"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919157"
 ---
-# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
+# <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
 Realiza pruebas contextuales para los bytes iniciales y finales de cadenas de caracteres multibyte y determina si un determinado puntero de la subcadena apunta a un byte inicial o un byte final.
 
@@ -79,10 +87,10 @@ int _ismbstrail_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Puntero al principio de la cadena o el byte inicial conocido anterior.
 
-*Actual*<br/>
+*corrientes*<br/>
 Puntero a la posición en la cadena que se va a probar.
 
 *locale*<br/>
@@ -90,13 +98,15 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbslead** devuelve -1 si el carácter es un byte inicial y **_ismbstrail** devuelve -1 si el carácter es un byte final. Si las cadenas de entrada son válidas pero no son un byte inicial o byte final, estas funciones devuelven cero. Si algún argumento es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **NULL** y establecer **errno** a **EINVAL**.
+**_ismbslead** devuelve-1 si el carácter es un byte inicial y **_ismbstrail** devuelve-1 si el carácter es un byte final. Si las cadenas de entrada son válidas pero no son un byte inicial o byte final, estas funciones devuelven cero. Si alguno de los argumentos es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **null** y establecen **errno** en **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**_ismbslead** y **_ismbstrail** son más lentos que el **_ismbblead** y **_ismbbtrail** versiones porque toman en cuenta el contexto de cadena.
+**_ismbslead** y **_ismbstrail** son más lentos que las versiones **_ismbblead** y **_ismbbtrail** porque tienen en cuenta el contexto de cadena.
 
-Las versiones de estas funciones que tienen el **_l** sufijo son idénticas salvo que su comportamiento dependiente de configuración regional usan la configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el sufijo **_L** son idénticas, salvo que para su comportamiento dependiente de la configuración regional usan la configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -109,11 +119,11 @@ Las versiones de estas funciones que tienen el **_l** sufijo son idénticas salv
 
 \* Para las constantes de manifiesto de las condiciones de prueba.
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc (rutinas)](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbc (Rutinas)](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

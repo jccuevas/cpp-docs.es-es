@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
-ms.openlocfilehash: 04b79b3c924892eb2a970f880d3f2048f4cb2b10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c060d5b01c0d918071681996e76258eba0ce943
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607680"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753424"
 ---
 # <a name="compiler-error-c3710"></a>Error del compilador C3710
 
-'function': sintaxis incorrecta para especificar el controlador de eventos en __hook /\__unhook
+' función ': Sintaxis incorrecta para especificar el controlador de eventos en __hook/\__unhook
 
-Al especificar un controlador de eventos con [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md), el controlador debe ser un método válido.
+Cuando se especifica un controlador de eventos con [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md), el controlador debe ser un método válido.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3710
+En el ejemplo siguiente se genera C3710
 
-```
+```cpp
 // C3710.cpp
 // compile with: /link /opt:noref
 #include <atlbase.h>

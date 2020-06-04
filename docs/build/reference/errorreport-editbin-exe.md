@@ -1,32 +1,34 @@
 ---
 title: /ERRORREPORT (editbin.exe)
-ms.date: 11/04/2016
+description: Referencia de la opción de línea de comandos/ERRORREPORT de la utilidad Microsoft EDITBIN.
+ms.date: 02/09/2020
 f1_keywords:
-- /ERRORREPORT
+- /ERRORREPORT_editbin
 helpviewer_keywords:
 - -ERRORREPORT editbin option
 - ERRORREPORT editbin option
 - /ERRORREPORT editbin option
 ms.assetid: eca66ac3-b754-4bd7-9dd4-e04fc79a71b6
-ms.openlocfilehash: 046b446ae8065bc8da16ae97005df5d2ff3a1155
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4456a49cc53b21bd24c616852159ca299181071b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605015"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439904"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
 
-```
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
-```
+> [!NOTE]
+> La opción/ERRORREPORT está en desuso. A partir de Windows Vista, los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-## <a name="remarks"></a>Comentarios
+## <a name="syntax"></a>Sintaxis
 
-Si editbin.exe produce un error en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft sobre estos errores internos.
+> **/Errorreport** \[ **NONE** \| **prompt** \| **Queue** \| **send** ]
 
-Para obtener más información acerca de **/errorreport**, consulte [/errorReport (informar de errores de compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+## <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+La configuración del servicio Informe de errores de Windows invalida los argumentos **/errorreport** . EDITBIN envía automáticamente informes de errores internos a Microsoft, si los informes se habilitan mediante Informe de errores de Windows. No se envía ningún informe si está deshabilitado por Informe de errores de Windows.
 
-[Opciones de EDITBIN](../../build/reference/editbin-options.md)
+## <a name="see-also"></a>Consulte también
+
+[Opciones de EDITBIN](editbin-options.md)

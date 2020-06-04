@@ -19,16 +19,16 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8e3d5b3ff01dd37eec9f00dac2f2ce28013fc258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a53cd653258980d21e9dd297ae61c458732b7250
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210553"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl (Clase)
 
-Realiza las mismas funciones que `IObjectWithSite` , pero también permite que las propiedades de OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.
+Realiza las mismas funciones que `IObjectWithSite` pero también habilita las propiedades OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,7 +47,7 @@ Una clase derivada de `IRowsetCreator`.
 
 **Encabezado:** atldb.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
@@ -55,13 +55,13 @@ Una clase derivada de `IRowsetCreator`.
 |-|-|
 |[SetSite](#setsite)|Establece el sitio que contiene el objeto de conjunto de filas.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase hereda de [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) e invalida [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Cuando un objeto de comando o sesión de proveedor crea un conjunto de filas, llama a `QueryInterface` en el objeto de conjunto de filas buscando `IObjectWithSite` y llama a `SetSite` pasando el objeto de conjunto de filas `IUnkown` interfaz como la interfaz de sitio.
+Esta clase hereda de [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) e invalida [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Cuando un comando de proveedor o un objeto de sesión crea un conjunto de filas, llama a `QueryInterface` en el objeto de conjunto de filas que busca `IObjectWithSite` y llama a `SetSite` pasar la interfaz de `IUnkown` del objeto de conjunto de filas como la interfaz de sitio.
 
-## <a name="setsite"></a> IRowsetCreatorImpl:: SetSite
+## <a name="irowsetcreatorimplsetsite"></a><a name="setsite"></a>Irowsetcreatorimpl (:: SetSite
 
-Establece el sitio que contiene el objeto de conjunto de filas. Para obtener más información, consulte [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
+Establece el sitio que contiene el objeto de conjunto de filas. Para obtener más información, vea [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -72,17 +72,17 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 #### <a name="parameters"></a>Parámetros
 
 *pCreator*<br/>
-[in] Puntero a la `IUnknown` puntero de interfaz del sitio de administración en el objeto de conjunto de filas.
+de Puntero al puntero de interfaz de `IUnknown` del sitio que administra el objeto de conjunto de filas.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Además, `IRowsetCreatorImpl::SetSite` permite OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` propiedades.
+Además, `IRowsetCreatorImpl::SetSite` habilita las propiedades de `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` de OLE DB.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

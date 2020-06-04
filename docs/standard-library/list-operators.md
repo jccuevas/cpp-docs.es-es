@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 919c24217866a57d0401c8cd6fea8f5cef02906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537550"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425590"
 ---
 # <a name="ltlistgt-operators"></a>Operadores de &lt;list&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto de lista del lado izquierdo del operador no es igual que el objeto de lista del lado derecho.
 
@@ -42,17 +37,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `list`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `list`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si las listas no son iguales; **False** si son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de lista se basa en una comparación en pares de sus elementos. Dos listas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -93,17 +88,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `list`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `list`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la lista del lado izquierdo del operador es menor pero no igual que la lista del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de lista se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -136,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto de lista del lado izquierdo del operador es menor o igual que el objeto de lista del lado derecho.
 
@@ -148,17 +143,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `list`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `list`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la lista del lado izquierdo del operador es menor o igual que la lista del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de lista se basa en una comparación en pares de sus elementos. La relación de menor o igual entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -191,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto de lista del lado izquierdo del operador es igual que el objeto de lista del lado derecho.
 
@@ -203,17 +198,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `list`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `list`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la lista del lado izquierdo del operador es igual que la lista del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de lista se basa en una comparación en pares de sus elementos. Dos listas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -254,17 +249,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `list`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `list`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la lista del lado izquierdo del operador es mayor que la lista del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de lista se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -297,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto de lista del lado izquierdo del operador es mayor o igual que el objeto de lista del lado derecho.
 
@@ -309,17 +304,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `list`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `list`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la lista del lado izquierdo del operador es mayor o igual que la lista del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de lista se basa en una comparación en pares de sus elementos. La relación de mayor o igual entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -352,7 +347,3 @@ int main( )
 List c1 is greater than or equal to list c2.
 */
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<list>](../standard-library/list.md)<br/>

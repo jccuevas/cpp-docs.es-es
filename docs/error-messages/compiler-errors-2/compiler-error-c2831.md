@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2831
 ms.assetid: c8c04288-0889-4265-a077-17f94cbcdcc9
-ms.openlocfilehash: b0708a7c45f33e30280666cf9bc903723d6a9c26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2fa97e4b293d306a7d6ceecd08256c8212f8cb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628338"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736898"
 ---
 # <a name="compiler-error-c2831"></a>Error del compilador C2831
 
-'operator operator' no puede tener parámetros predeterminados
+' operator Operator ' no puede tener parámetros predeterminados
 
 Solo tres operadores pueden tener parámetros predeterminados:
 
@@ -23,11 +23,11 @@ Solo tres operadores pueden tener parámetros predeterminados:
 
 - Asignación =
 
-- Paréntesis de apertura ()
+- Paréntesis izquierdo (
 
-El ejemplo siguiente genera C2831:
+En el ejemplo siguiente se genera C2831:
 
-```
+```cpp
 // C2831.cpp
 // compile with: /c
 #define BINOP <=

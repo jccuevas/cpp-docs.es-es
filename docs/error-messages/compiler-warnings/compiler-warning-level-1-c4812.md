@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4812
 ms.assetid: a7f5721f-2019-44de-ad62-ed30bac8b1f3
-ms.openlocfilehash: 6ba32bf3cad905d686eae78fbfbc198e911e91c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9355886c3ec19e75cc1aa62f8cc41bba9f951d7c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676777"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174913"
 ---
 # <a name="compiler-warning-level-1-c4812"></a>Advertencia del compilador (nivel 1) C4812
 
@@ -21,7 +21,7 @@ En la versión actual de Visual C++, todavía se admite la especialización expl
 
 El ejemplo siguiente genera la advertencia C4812:
 
-```
+```cpp
 // C4812.cpp
 // compile with: /W1 /c
 template <class T>

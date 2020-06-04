@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0011
 - CXX0011
 ms.assetid: c2252e89-ad66-43fc-93e4-b886dcbd3f19
-ms.openlocfilehash: b22b7e39fc2d7436d83bc4fa7cfec49a42ddf06a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68b6087d28b9b3ac5dbaf833cbd544ca4ea22132
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523802"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196162"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>Error del evaluador de expresiones CXX0011
 
-Falta el corchete de cierre
+falta el corchete de cierre
 
-La expresión contiene corchetes no coincidentes. Vuelva a escribir la expresión entre corchetes equilibradas.
+La expresión contiene CORCHETES desequilibrados. Vuelva a escribir la expresión con corchetes equilibrados.
 
 Este error es idéntico a CAN0011.

@@ -1,26 +1,29 @@
 ---
 title: operador new(CRT)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - msvcr120.dll
 - msvcr110.dll
 - msvcr80.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - new[]
 helpviewer_keywords:
 - operator new[]
 - vector new
 ms.assetid: 79682f85-6889-40f6-b8f7-9eed5176ea35
-ms.openlocfilehash: afbec5397ab0c9e488a2d624404b3fc9092556ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d5a339ad842c46ce4f0ee708464adf8300bb6c59
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441098"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171507"
 ---
 # <a name="operator-newcrt"></a>operador new(CRT)
 

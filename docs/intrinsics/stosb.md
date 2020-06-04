@@ -1,6 +1,6 @@
 ---
 title: __stosb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosb
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 25b037d17c1648816fe97fc5140aa0bfa7284f05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edf74da4c8b5aa97e542d89f55b3ed8411db9bac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465213"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221213"
 ---
-# <a name="stosb"></a>__stosb
+# <a name="__stosb"></a>__stosb
 
 **Específicos de Microsoft**
 
-Genera una instrucción de cadena de la tienda (`rep stosb`).
+Genera una instrucción de cadena de`rep stosb`almacén ().
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __stosb(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*dest*<br/>
-[out] El destino de la operación.
+*Destino*\
+enuncia Destino de la operación.
 
-*Data*<br/>
-[in] Para almacenar los datos.
+*Data*\
+de Datos que se van a almacenar.
 
-*Recuento*<br/>
-[in] La longitud del bloque de bytes que se escriben.
+*Contabiliza*\
+de Longitud del bloque de bytes que se va a escribir.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,11 +48,11 @@ void __stosb(
 |---------------|------------------|
 |`__stosb`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El resultado es que el carácter `Data` se escribe en un bloque de `Count` bytes en el `Dest` cadena.
+El resultado es que los *datos* de caracteres se escriben en un bloque de bytes de recuento en la cadena de *destino* .
 
 Esta rutina solo está disponible como función intrínseca.
 
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

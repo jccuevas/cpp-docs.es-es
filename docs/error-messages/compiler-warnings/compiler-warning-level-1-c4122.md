@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4122
 ms.assetid: 9a83eb0d-8708-42f7-988a-b0b6f2f646a0
-ms.openlocfilehash: bb5016bbf323057822c89a74001c75ab1855542c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a01899de643a1f10f2211a67025fd3f46c546b8a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490343"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176330"
 ---
 # <a name="compiler-warning-level-1-c4122"></a>Advertencia del compilador (nivel 1) C4122
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: a26df26849302ae1cce449f92cdeb5ee6dfd9baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271364"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Exporta una función)
 
@@ -36,7 +36,7 @@ Hay cuatro métodos para exportar una definición, aparece en el orden recomenda
 
 1. [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) en el código fuente
 
-1. Un [exportaciones](../../build/reference/exports.md) instrucción en un archivo .def
+1. Un [exportaciones](exports.md) instrucción en un archivo .def
 
 1. Una especificación /EXPORT en un comando de LINK
 
@@ -44,7 +44,7 @@ Hay cuatro métodos para exportar una definición, aparece en el orden recomenda
 
 Todos estos métodos pueden usarse en el mismo programa. Cuando LINK compila un programa que contiene exportaciones, también crea una biblioteca de importación, a menos que se usa un archivo .exp en la compilación.
 
-LINK usa formatos de identificadores representativos. El compilador decora un identificador cuando crea el archivo .obj. Si *entrada* se especifica al vinculador en su no representativo de formulario (tal como aparece en el código fuente), vínculo intenta hacer coincidir el nombre. Si no encuentra a una coincidencia única, vínculo emite un mensaje de error. Use la [DUMPBIN](../../build/reference/dumpbin-reference.md) herramienta para obtener el [nombre representativo](../../build/reference/decorated-names.md) formulario de un identificador al que deberá especificarlo al vinculador.
+LINK usa formatos de identificadores representativos. El compilador decora un identificador cuando crea el archivo .obj. Si *entrada* se especifica al vinculador en su no representativo de formulario (tal como aparece en el código fuente), vínculo intenta hacer coincidir el nombre. Si no encuentra a una coincidencia única, vínculo emite un mensaje de error. Use la [DUMPBIN](dumpbin-reference.md) herramienta para obtener el [nombre representativo](decorated-names.md) formulario de un identificador al que deberá especificarlo al vinculador.
 
 > [!NOTE]
 > No se especifica el formato representativo de los identificadores de C que se declaran `__cdecl` o `__stdcall`.
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
 
@@ -70,5 +70,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

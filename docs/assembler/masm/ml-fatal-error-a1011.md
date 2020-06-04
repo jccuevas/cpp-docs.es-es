@@ -1,39 +1,39 @@
 ---
 title: Error irrecuperable A1011 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A1011
 helpviewer_keywords:
 - A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-ms.openlocfilehash: 591755a1d7066d8251f61d2a22b9601a9ccb9dcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5607d6d56e0b3889332dcf2624d519529819b1c9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520203"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318088"
 ---
 # <a name="ml-fatal-error-a1011"></a>Error irrecuperable A1011 de ML
 
-**Directiva debe estar en el bloque de control**
+**la Directiva debe estar en el bloque de control**
 
-El ensamblador encontró una directiva de alto nivel donde no se esperaba. Se encontró una de las siguientes directivas:
+El ensamblador encontró una directiva de alto nivel en la que no se esperaba una. Se encontró una de las siguientes directivas:
 
-- [. ELSE](../../assembler/masm/dot-else.md) sin [. IF](../../assembler/masm/dot-if.md)
+- [. ELSE](dot-else.md) sin [. Si](dot-if.md) es
 
-- [. ENDIF](../../assembler/masm/dot-endif.md) sin [. IF](../../assembler/masm/dot-if.md)
+- [. ENDIF](dot-endif.md) sin [. Si](dot-if.md) es
 
-- [. ENDW](../../assembler/masm/dot-endw.md) sin [. WHILE](../../assembler/masm/dot-while.md)
+- [. ENDW](dot-endw.md) sin [. WHILE](dot-while.md)
 
-- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) sin [. REPITA](../../assembler/masm/dot-repeat.md)
+- [. UNTILCXZ](dot-untilcxz.md) sin [. REPETIR](dot-repeat.md)
 
-- [. CONTINUAR](../../assembler/masm/dot-continue.md) sin [. MIENTRAS](../../assembler/masm/dot-while.md) o [. REPITA](../../assembler/masm/dot-repeat.md)
+- [. Continúe](dot-continue.md) sin [. WHILE](dot-while.md) o [. REPETIR](dot-repeat.md)
 
-- [. INTERRUMPIR](../../assembler/masm/dot-break.md) sin [. MIENTRAS](../../assembler/masm/dot-while.md) o [. REPITA](../../assembler/masm/dot-repeat.md)
+- [. INTERRUMPIr](dot-break.md) sin [. WHILE](dot-while.md) o [. REPETIR](dot-repeat.md)
 
-- [. ELSE](../../assembler/masm/dot-else.md) siguiente `.ELSE`
+- [. ](dot-else.md)De lo contrario `.ELSE`
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

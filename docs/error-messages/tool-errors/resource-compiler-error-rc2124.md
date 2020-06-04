@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2124
 ms.assetid: 4eb5c4ec-ca9b-46a0-805b-35e040e9ed41
-ms.openlocfilehash: b61c76c96430ab39a6225ab16b4851b20303f5a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da83601c8a4e99118bb7301da39c5bf9957e10eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637559"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191358"
 ---
 # <a name="resource-compiler-error-rc2124"></a>Error del compilador de recursos RC2124
 
-No se permiten de menús vacíos
+no se permiten menús vacíos
 
-Un **final** palabra clave aparece antes de cualquier elemento de menú se define en el **menú** instrucción. El compilador de recursos no permite menús vacíos. Asegúrese de que no tiene ningún signo de comillas abierto dentro de la **menú** instrucción.
+Aparece una palabra clave **End** antes de que se defina algún elemento de menú en la instrucción de **menú** . El compilador de recursos no permite menús vacíos. Asegúrese de que no tiene Comillas abiertas en la instrucción de **menú** .

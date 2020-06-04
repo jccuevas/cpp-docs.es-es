@@ -1,9 +1,9 @@
 ---
-title: div, ldiv, lldiv
+title: div, LDIV, lldiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - div
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - div
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653432"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937698"
 ---
-# <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
+# <a name="div-ldiv-lldiv"></a>div, LDIV, lldiv
 
 Calcula el cociente y el resto de dos valores enteros.
 
@@ -66,7 +69,7 @@ lldiv_t div(
 
 ### <a name="parameters"></a>Parámetros
 
-*número*<br/>
+*numer*<br/>
 Numerador.
 
 *denom*<br/>
@@ -74,13 +77,13 @@ Denominador.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**div** llamado con argumentos de tipo **int** devuelve una estructura de tipo **div_t**, que compone el cociente y el resto. El valor devuelto con argumentos de tipo **largo** es **ldiv_t**y el valor devuelto con argumentos de tipo **largo** **largo** es **lldiv_t**. **div_t**, **ldiv_t**, y **lldiv_t** se definen en \<stdlib.h >.
+el **div** al que se llama mediante argumentos de tipo **int** devuelve una estructura de tipo **div_t**, que comprende el cociente y el resto. El valor devuelto con argumentos de tipo **Long** es **ldiv_t**y el valor devuelto con argumentos de **tipo Long** **Long** es **lldiv_t**. **div_t**, **ldiv_t**y **lldiv_t** se definen en \<stdlib. h >.
 
 ## <a name="remarks"></a>Comentarios
 
-El **div** función divide *número* por *denom* y, por tanto, se calcula el cociente y el resto. El [div_t](../../c-runtime-library/standard-types.md) estructura contiene el cociente, **quot**y el resto, **rem**. El signo del cociente es el mismo que el del cociente matemático. Su valor absoluto es el entero más grande que es menor que el valor absoluto del cociente matemático. Si el denominador es 0, el programa se cierra con un mensaje de error.
+La función **div** divide el *número* por *denom* y, por tanto, calcula el cociente y el resto. La estructura [div_t](../../c-runtime-library/standard-types.md) contiene el cociente, **quot**y el resto, **REM**. El signo del cociente es el mismo que el del cociente matemático. Su valor absoluto es el entero más grande que es menor que el valor absoluto del cociente matemático. Si el denominador es 0, el programa se cierra con un mensaje de error.
 
-Las sobrecargas de **div** que aceptan argumentos de tipo **largo** o **largo** **largo** solo están disponibles para el código de C++. Los tipos devueltos [ldiv_t](../../c-runtime-library/standard-types.md) y [lldiv_t](../../c-runtime-library/standard-types.md) contiene miembros **quot** y **rem**, que tienen los mismos significados que los miembros de **div_t**.
+Las sobrecargas de **div** que toman argumentos de tipo **Long** o **Long** **Long** solo están disponibles para C++ el código. Los tipos de valor devuelto [ldiv_t](../../c-runtime-library/standard-types.md) y [lldiv_t](../../c-runtime-library/standard-types.md) contienen los miembros **quot** y **REM**, que tienen los mismos significados que los miembros de **div_t**.
 
 ## <a name="requirements"></a>Requisitos
 

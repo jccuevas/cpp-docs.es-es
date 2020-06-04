@@ -7,12 +7,12 @@ helpviewer_keywords:
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-ms.openlocfilehash: 7b143d0d27bcb8ee975d4056cf0a307db7b330c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6765445552826b71cca278c1fbbc66e500cb75a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307406"
 ---
 # <a name="slider-control-styles"></a>Estilos de control deslizante
 
@@ -32,4 +32,3 @@ De forma predeterminada, la duración de deslizante un control deslizante del co
 
 [Uso de CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

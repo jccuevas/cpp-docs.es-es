@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3053
 ms.assetid: ab9a25f3-e341-4f6e-8e69-069b4a963a64
-ms.openlocfilehash: cb01207be15a628fb0c6206df3e6a673067f568a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07514dfb931dcb5bf45bb8526cd19cf19103a56f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441374"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761209"
 ---
 # <a name="compiler-error-c3053"></a>Error del compilador C3053
 
@@ -21,7 +21,7 @@ Símbolos pasan a [threadprivate](../../parallel/openmp/reference/threadprivate.
 
 El ejemplo siguiente genera la advertencia C3053:
 
-```
+```cpp
 // C3053.cpp
 // compile with: /openmp
 void Test() {
@@ -34,9 +34,9 @@ void Test() {
 }
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C3053b.cpp
 // compile with: /openmp /LD
 int x, y;

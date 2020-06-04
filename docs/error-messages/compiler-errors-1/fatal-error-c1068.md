@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1068
 ms.assetid: 3b4abd16-4552-4900-84be-54f6ebb6c785
-ms.openlocfilehash: bbf001472c81da4b52deda620eab2b59ef600090
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2cea6e059737d245a216c33418e60e9040e4f9c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204339"
 ---
 # <a name="fatal-error-c1068"></a>Error irrecuperable C1068
 

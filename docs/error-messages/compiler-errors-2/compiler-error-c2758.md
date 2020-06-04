@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2758
 ms.assetid: 1d273034-194c-4926-9869-142d1b219cbe
-ms.openlocfilehash: c3a86b8b8c7f122929a52221d4f01a17c50395be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c854aeff1c57b8be6b445bc3615008519ca00af7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618041"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759521"
 ---
 # <a name="compiler-error-c2758"></a>Error del compilador C2758
 
@@ -21,7 +21,7 @@ El error del compilador C2758 se produce cuando el constructor no inicializa un 
 
 El siguiente ejemplo genera el error C2758:
 
-```
+```cpp
 // C2758.cpp
 // Compile by using: cl /W3 /c C2758.cpp
 struct A {

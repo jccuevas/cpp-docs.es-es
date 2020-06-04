@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4389
 ms.assetid: fc0e3a8e-f766-437c-b7f1-e61abb2a8765
-ms.openlocfilehash: 7490218c0af61ef3b2346fc1bee9806d87d02294
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94c9e6a49296ac048437501b1e61ddbd3e0ccbad
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533398"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990860"
 ---
 # <a name="compiler-warning-level-4-c4389"></a>Advertencia del compilador (nivel 4) C4389
 
-'operador': no coinciden signed/unsigned
+' operador ': no coinciden signed/unsigned
 
-Una operación implicaba variables con y sin signo. Esto podría provocar una pérdida de datos.
+Operación implicada de variables con signo y sin signo. Esto podría provocar una pérdida de datos.
 
-El ejemplo siguiente genera C4389:
+En el ejemplo siguiente se genera C4389:
 
-```
+```cpp
 // C4389.cpp
 // compile with: /W4
 #pragma warning(default: 4389)

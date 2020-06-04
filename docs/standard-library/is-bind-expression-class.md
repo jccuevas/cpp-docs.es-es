@@ -6,22 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-ms.openlocfilehash: f547b6f74a86612174cb0f510870171158678f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d83ff978ccbaec5e66509ac94f22cf29bc20866
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519423"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258087"
 ---
-# <a name="isbindexpression-class"></a>is_bind_expression (Clase)
+# <a name="is_bind_expression-class"></a>is_bind_expression (Clase)
 
 Comprueba si el tipo se genera mediante una llamada a `bind`.
 
 ## <a name="syntax"></a>Sintaxis
 
-plantilla<class Ty> struct is_bind_expression {static const valor bool;};
+```cpp
+template<class Ty>
+struct is_bind_expression {
+   static const bool value;
+};
+```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El miembro constante `value` es true si el tipo `Ty` es un tipo devuelto mediante una llamada a `bind`. En caso contrario, es false.
 
@@ -57,13 +62,3 @@ int main()
 0
 1
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[bind](../standard-library/functional-functions.md#bind)<br/>

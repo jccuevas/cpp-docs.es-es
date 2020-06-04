@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2420
 ms.assetid: cc11faab-a022-4702-ac8b-9864b916cfa2
-ms.openlocfilehash: ec04feba2ba200e01387eb704160d84886084373
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c6e4661012938d080d58bee2cf8f1f63da4eee2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535803"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205483"
 ---
 # <a name="compiler-error-c2420"></a>Error del compilador C2420
 

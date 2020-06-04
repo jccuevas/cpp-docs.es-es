@@ -1,38 +1,38 @@
 ---
 title: Error irrecuperable A1007 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 98933c3a24da22f447174a3b51c4855690aba83e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9527769e0d9397de90f49cbce98b2cca42bed50
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603403"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317128"
 ---
 # <a name="ml-fatal-error-a1007"></a>Error irrecuperable A1007 de ML
 
 **nivel de anidamiento demasiado profundo**
 
-El ensamblador alcanzó su límite de anidamiento. El límite es de 20 niveles excepto donde se indique lo contrario.
+El ensamblador ha alcanzado su límite de anidamiento. El límite es de 20 niveles excepto cuando se indica lo contrario.
 
-Uno de estos procedimientos se están demasiado anidado:
+Uno de los siguientes elementos estaba anidado demasiado profundamente:
 
-- Una directiva de alto nivel como [. IF](../../assembler/masm/dot-if.md), [. Repita](../../assembler/masm/dot-repeat.md), o [. MIENTRAS](../../assembler/masm/dot-while.md).
+- Una directiva de alto nivel como [. Si](dot-if.md)es, [. Repita el procedimiento](dot-repeat.md)o [. WHILE](dot-while.md).
 
-- Una definición de estructura.
+- Definición de estructura.
 
-- Una directiva condicional de ensamblado.
+- Una directiva de ensamblado condicional.
 
-- Una definición de procedimiento.
+- Definición de procedimiento.
 
-- Un [PUSHCONTEXT](../../assembler/masm/pushcontext.md) directiva (el límite son 10).
+- Una directiva [PUSHCONTEXT](pushcontext.md) (el límite es 10).
 
-- Una definición de segmento.
+- Definición de segmento.
 
 - Un archivo de inclusión.
 
@@ -40,4 +40,4 @@ Uno de estos procedimientos se están demasiado anidado:
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4518
 ms.assetid: 4ad21004-f076-43fd-99f4-4bf1f9be4c0b
-ms.openlocfilehash: 85e0d87094fc355bf63d79bf2eb5b1d06f233542
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76761d9e0a260a05acef01bc451ad411aac517c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466812"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186522"
 ---
 # <a name="compiler-warning-level-1-c4518"></a>Advertencia del compilador (nivel 1) C4518
 
-'especificador': clase de almacenamiento o tipo esperaban aquí; pasa por alto
+' Specifier ': aquí no se esperaban los especificadores de clase o tipo de almacenamiento; tendrán
 
-El ejemplo siguiente genera C4518:
+En el ejemplo siguiente se genera C4518:
 
-```
+```cpp
 // C4518.cpp
 // compile with: /c /W1
 _declspec(dllexport) extern "C" void MyFunction();   // C4518

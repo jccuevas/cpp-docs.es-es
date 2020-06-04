@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 7e01cf8ba027fc2062d01173aca544fae4b937e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293113"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Controlador de modo kernel de Windows NT)
 
@@ -33,13 +33,13 @@ Si **/DRIVER** no se especifica, el vinculador no establece estos bits.
 
 Si **/DRIVER** se especifica:
 
-- **/ Fixed: no** está en vigor. Para obtener más información, consulte [/FIXED (Dirección base fija)](../../build/reference/fixed-fixed-base-address.md).
+- **/ Fixed: no** está en vigor. Para obtener más información, consulte [/FIXED (Dirección base fija)](fixed-fixed-base-address.md).
 
-- La extensión del archivo de salida se establece en .sys. Use **/OUT** para cambiar el nombre de archivo predeterminado y la extensión. Para obtener más información, consulte [/OUT (Nombre del archivo de salida)](../../build/reference/out-output-file-name.md).
+- La extensión del archivo de salida se establece en .sys. Use **/OUT** para cambiar el nombre de archivo predeterminado y la extensión. Para obtener más información, consulte [/OUT (Nombre del archivo de salida)](out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -53,5 +53,5 @@ Si **/DRIVER** se especifica:
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

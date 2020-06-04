@@ -1,11 +1,11 @@
 ---
 title: catan, catanf, catanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catan
 - catanf
 - catanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catan
 - catanf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 204a05b4293fefa4378e54ce93a625bf890cf4d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455229"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943362"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Recupera el arco tangente de un número complejo, con cortes de bifurcación fuera del intervalo [-1; + 1] en el eje imaginario.
+Recupera el arco tangente de un número complejo con cortes de bifurcación fuera del intervalo [-1; + 1] a lo largo del eje imaginario.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,17 +64,17 @@ Número complejo que representa un ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El arco tangente de *z*, en radianes. El resultado es ilimitado en el eje imaginario y, en el intervalo [-π/2; + π/2] en el eje real.
+Arco tangente de *z*, en radianes. El resultado es ilimitado a lo largo del eje imaginario y en el intervalo [-π/2; + π/2] a lo largo del eje real.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **catan** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **catan** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Catan** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **Catan** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
+|**catan**,               **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

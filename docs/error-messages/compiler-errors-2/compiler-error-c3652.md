@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3652
 ms.assetid: 15d68737-177e-41f1-80e0-7c3e2afdf0fc
-ms.openlocfilehash: acdb8f7687639e2b35e36ea9ebf514292f4631fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3290b1e4b40a63a69911452b845bf1ea0ddf3223
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470335"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756349"
 ---
 # <a name="compiler-error-c3652"></a>Error del compilador C3652
 
-'override': una función que realiza invalidaciones explícitamente debe ser virtual
+' override ': una función que invalida explícitamente debe ser virtual
 
-Una función que realiza un reemplazo explícito debe ser virtual. Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Una función que realiza una invalidación explícita debe ser virtual. Para obtener más información, vea [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3652:
+En el ejemplo siguiente se genera C3652:
 
-```
+```cpp
 // C3652.cpp
 // compile with: /clr /c
 public interface class I {

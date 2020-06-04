@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0020
 ms.assetid: 54bb8cd4-af7c-4d62-8125-3ab5ff5f2cc4
-ms.openlocfilehash: a4529507ea25e2ea988929e421a43471668e3851
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e33ca7ead85744ab1ef1f1ecb4dd2775c7b0c603
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192671"
 ---
 # <a name="project-build-error-prj0020"></a>Error PRJ0020 al compilar el proyecto
 
-> Herramienta '*herramienta*', propiedad '*propiedad*'contiene el nombre de archivo no válido'*archivo*'.
+> La herramienta '*Tool*', la propiedad '*Property*' contiene un nombre de archivo no válido '*File*'.
 
-El nombre de archivo *archivo*, especificado en la propiedad *propiedad* para la herramienta *herramienta*, no era válido.
+El *archivo*de nombre de archivo, especificado en la *propiedad* Property de la *herramienta*de herramienta, no era válido.
 
-Ha usado una macro desconocida o no es válida.
+Es posible que haya usado una macro desconocida o no válida.
 
-Consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md) para obtener información sobre cómo obtener acceso a las propiedades del proyecto.
+Vea [establecer las C++ propiedades de un proyecto visual](../../build/working-with-project-properties.md) para obtener información sobre cómo obtener acceso a las propiedades del proyecto.

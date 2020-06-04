@@ -1,9 +1,10 @@
 ---
 title: wctob
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - wctob
-apilocation:
+- _o_wctob
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctob
 helpviewer_keywords:
@@ -23,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522524"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910473"
 ---
 # <a name="wctob"></a>wctob
 
@@ -44,18 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>Parámetros
 
-*wchar*<br/>
+*WCHAR*<br/>
 Valor que se va a traducir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **wctob** convierte correctamente un carácter ancho, devuelve su representación de carácter multibyte únicamente si el carácter multibyte es la longitud de exactamente un byte. Si **wctob** encuentra un carácter ancho que no se puede convertir en un carácter multibyte o carácter multibyte no es exactamente un byte de largo, devuelve -1.
+Si **wctob** convierte correctamente un carácter ancho, devuelve su representación de caracteres multibyte, solo si el carácter multibyte tiene una longitud exacta de un byte. Si **wctob** encuentra un carácter ancho que no se puede convertir en un carácter multibyte o el carácter multibyte no tiene exactamente un byte de longitud, devuelve-1.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **wctob** función convierte un carácter ancho incluido en *wchar* en el carácter multibyte correspondiente pasado por la devolución **int** valor, si el multibyte carácter es la longitud de exactamente un byte.
+La función **wctob** convierte un carácter ancho incluido en *WCHAR* en el carácter multibyte correspondiente pasado por el valor devuelto **int** , si el carácter multibyte tiene una longitud exacta de un byte.
 
-Si **wctob** se realizó correctamente y no se encontró ningún carácter multibyte correspondiente, la función establece **errno** a **EILSEQ** y devuelve -1.
+Si **wctob** no tuvo éxito y no se encontró ningún carácter multibyte correspondiente, la función establece **errno** en **EILSEQ** y devuelve-1.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -63,11 +70,11 @@ Si **wctob** se realizó correctamente y no se encontró ningún carácter multi
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra el comportamiento de la **wcstombs** función.
+Este programa muestra el comportamiento de la función **wcstombs** .
 
 ```C
 // crt_wctob.c
@@ -99,12 +106,12 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Depurar un proyecto (C++)'
-ms.date: 09/14/2018
+title: 'Tutorial: Depuración de un proyecto (C++)'
+ms.date: 04/25/2019
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581953"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400974"
 ---
-# <a name="walkthrough-debugging-a-project-c"></a>Tutorial: Depurar un proyecto (C++)
+# <a name="walkthrough-debugging-a-project-c"></a>Tutorial: Depuración de un proyecto (C++)
 
 En este tutorial, modificará el programa para corregir el problema que detectó al probar el proyecto.
 
@@ -54,9 +54,9 @@ En este tutorial, modificará el programa para corregir el problema que detectó
 ## <a name="next-steps"></a>Pasos siguientes
 
 **Anterior:** [Tutorial: Probar un proyecto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Siguiente:** [Tutorial: Implementar el programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**Siguiente:** [Tutorial: Implementar el programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>
+[Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>

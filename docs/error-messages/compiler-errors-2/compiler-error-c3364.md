@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-ms.openlocfilehash: e99ab3919edcfb883701c08c52cd7aad60cd4591
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eae1e7ddbc34d36b55d7afa424c137db00ef047d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498792"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757350"
 ---
 # <a name="compiler-error-c3364"></a>Error del compilador C3364
 
-'delegado': constructor delegado: el argumento debe ser el puntero a función miembro de clase administrada o una función global
+' Delegate ': constructor delegado: el argumento debe ser un puntero a una función miembro de una clase administrada o de una función global
 
 El segundo parámetro del constructor del delegado toma la dirección de una función miembro o la dirección de una función miembro estática de cualquier clase. Ambos se tratan como direcciones simples.
 
-El ejemplo siguiente genera C3364:
+En el ejemplo siguiente se genera C3364:
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

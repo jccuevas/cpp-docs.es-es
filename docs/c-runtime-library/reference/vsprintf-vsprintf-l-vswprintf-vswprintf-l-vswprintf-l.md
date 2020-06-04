@@ -1,13 +1,13 @@
 ---
 title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 09/03/2019
+api_name:
 - _vswprintf_l
 - _vsprintf_l
 - vsprintf
 - vswprintf
 - __vswprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,11 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vstprintf
 - vswprintf
@@ -45,14 +49,14 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 84f5aeb79dd6145175cfc5d6c5c2dc02aaa338bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9efb30428a146ec72c48d68ec411b21ca5bfef79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445752"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945337"
 ---
-# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+# <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
 Escribe un resultado con formato mediante un puntero a una lista de argumentos. Hay disponibles versiones más seguras de estas funciones; vea [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
@@ -119,37 +123,37 @@ int _vswprintf_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*buffer*<br/>
+*búfer*\
 Ubicación de almacenamiento del resultado.
 
-*count*<br/>
-Número máximo de caracteres que se va a almacenar en las versiones de cadena de caracteres anchos de esta función.
+*contabiliza*\
+Número máximo de caracteres que se van a almacenar, en las versiones de cadena ancha de esta función.
 
-*format*<br/>
+*Aplique*\
 Especificación de formato.
 
-*argptr*<br/>
+*argptr*\
 Puntero a la lista de argumentos.
 
-*locale*<br/>
+*configuración regional*\
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**vsprintf** y **vswprintf** devuelve el número de caracteres escritos, sin incluir el carácter nulo final o un valor negativo si se produce un error de salida. Si *búfer* o *formato* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
+**vsprintf** y **vswprintf** devuelven el número de caracteres escritos, sin incluir el carácter nulo de terminación, o un valor negativo si se produce un error de salida. Si *buffer* o *Format* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, se da formato y escribe los datos especificados en la memoria que apunta *búfer*.
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato y escribe los datos especificados en la memoria a la que apunta el *búfer*.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 > [!IMPORTANT]
-> Uso de **vsprintf**, no existe ninguna forma de limitar el número de caracteres escrito, lo que significa que el código mediante esta función es susceptible de saturaciones del búfer. En su lugar, use [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) o llame a [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar el tamaño de búfer necesario. Además, asegúrese de que *formato* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> Mediante **vsprintf**, no hay forma de limitar el número de caracteres escritos, lo que significa que el código que usa esta función es susceptible a las saturaciones del búfer. En su lugar, use [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) o llame a [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar el tamaño de búfer necesario. Además, asegúrese de que el *formato* no sea una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-**vswprintf** se ajusta a la Standard ISO C, que requiere que el segundo parámetro, *recuento*, del tipo **size_t**. Para imponer el anterior comportamiento no estándar, defina **_CRT_NON_CONFORMING_SWPRINTFS**. El comportamiento anterior no puede ser en una versión futura, por lo que debería modificarse el código para usar el nuevo comportamiento estándar.
+**vswprintf** se ajusta al estándar ISO C, que requiere el segundo parámetro, *Count*, de tipo **size_t**. Para forzar el comportamiento no estándar anterior, defina **_CRT_NON_CONFORMING_SWPRINTFS**. Es posible que el comportamiento anterior no esté en una versión futura, por lo que se debe cambiar el código para que use el nuevo comportamiento compatible.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -175,15 +179,16 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ```C
 // crt_vsprintf.c
-// compile with: /W3
+// compile with: cl /W4 crt_vsprintf.c
 // This program uses vsprintf to write to a buffer.
 // The size of the buffer is determined by _vscprintf.
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
 
-void test( char * format, ... )
+void test( char const * const format, ... )
 {
     va_list args;
     int     len;
@@ -196,12 +201,14 @@ void test( char * format, ... )
                                 + 1; // terminating '\0'
 
     buffer = (char*)malloc( len * sizeof(char) );
+    if ( 0 != buffer )
+    {
+        vsprintf( buffer, format, args ); // C4996
+        // Note: vsprintf is deprecated; consider using vsprintf_s instead
+        puts( buffer );
 
-    vsprintf( buffer, format, args ); // C4996
-    // Note: vsprintf is deprecated; consider using vsprintf_s instead
-    puts( buffer );
-
-    free( buffer );
+        free( buffer );
+    }
     va_end( args );
 }
 
@@ -219,10 +226,10 @@ This is a string
 
 ## <a name="see-also"></a>Vea también
 
-[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
-[vprintf (funciones)](../../c-runtime-library/vprintf-functions.md)<br/>
-[Sintaxis de especificación de formato: printf y wprintf (funciones)](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
-[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
-[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)\
+[vprintf (Funciones)](../../c-runtime-library/vprintf-functions.md)\
+[Sintaxis de especificación de formato: Funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
+[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
+[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)\
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
+[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)

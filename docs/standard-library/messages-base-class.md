@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_base class
 ms.assetid: 9aad38c6-4c13-445d-b096-364bd0836efb
-ms.openlocfilehash: 750c9f36ce7f96a065e0e29111ea379a48595328
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79b6cb5f0b0c219e959f53fdc667f4c8af273cef
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611619"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451849"
 ---
 # <a name="messagesbase-class"></a>messages_base (Clase)
 
-La clase base describe un **int** tipo para el catálogo de mensajes.
+La clase base describe un tipo **int** para el catálogo de mensajes.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,7 +28,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>Comentarios
 
-El catálogo de tipos es un sinónimo de tipo **int** que describe los posibles valores devueltos de messages:: [do_open](../standard-library/messages-class.md#do_open).
+El catálogo de tipos es un sinónimo del tipo **int** que describe los posibles valores devueltos de Messages:: [do_open](../standard-library/messages-class.md#do_open).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,4 +38,4 @@ El catálogo de tipos es un sinónimo de tipo **int** que describe los posibles 
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

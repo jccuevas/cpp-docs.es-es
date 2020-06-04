@@ -1,6 +1,6 @@
 ---
 title: _bittest, _bittest64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittest64
 - _bittest_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 170979b5cf463d72f645599e146d1e8e2a10154d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645407"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216905"
 ---
-# <a name="bittest-bittest64"></a>_bittest, _bittest64
+# <a name="_bittest-_bittest64"></a>_bittest, _bittest64
 
 **Específicos de Microsoft**
 
@@ -26,7 +26,7 @@ Genera la instrucción`bt`, que examina el bit en la posición `b` de la direcci
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned char _bittest(
    long const *a,
    long b
@@ -39,11 +39,11 @@ unsigned char _bittest64(
 
 ### <a name="parameters"></a>Parámetros
 
-*a*<br/>
-[in] Un puntero a la memoria que se va a examinar.
+*un*\
+de Puntero a la memoria que se va a examinar.
 
-*b*<br/>
-[in] La posición de bit para probar.
+*b*\
+de Posición de bit que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -51,10 +51,10 @@ El bit en la posición especificada.
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|Header|
+|Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
-|`_bittest`|x86, ARM, x64|\<INTRIN.h >|
-|`_bittest64`|ARM, x64|\<INTRIN.h >|
+|`_bittest`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_bittest64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -104,4 +104,4 @@ Binary representation:
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

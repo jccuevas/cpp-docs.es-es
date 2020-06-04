@@ -1,6 +1,6 @@
 ---
-title: CFixedStringT (clase)
-ms.date: 11/04/2016
+title: CFixedStringT (Clase)
+ms.date: 03/27/2019
 f1_keywords:
 - CFixedStringT
 - CSTRINGT/ATL::CFixedStringT
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-ms.openlocfilehash: 25556b45f93898acbb8b8b4f9263231b5b3ce2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe096185f6f0b71ad45757cd0b75ab13c41e5f5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317827"
 ---
-# <a name="cfixedstringt-class"></a>CFixedStringT (clase)
+# <a name="cfixedstringt-class"></a>CFixedStringT (Clase)
 
-Esta clase representa un objeto de cadena con un búfer de caracteres fijos.
+Esta clase representa un objeto de cadena con un búfer de caracteres fijo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,7 +30,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 #### <a name="parameters"></a>Parámetros
 
 *StringType*<br/>
-Usa como clase base para el objeto de cadena fija y puede ser cualquier `CStringT`-tipo basado en. Algunos ejemplos incluyen `CString`, `CStringA`, y `CStringW`.
+Se utiliza como la clase base para `CStringT`el objeto de cadena fija y puede ser cualquier tipo basado en . Algunos ejemplos `CString` `CStringA`incluyen `CStringW`, , y .
 
 *t_nChars*<br/>
 El número de caracteres almacenados en el búfer.
@@ -39,27 +39,27 @@ El número de caracteres almacenados en el búfer.
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CFixedStringT::CFixedStringT](#cfixedstringt)|El constructor para el objeto de cadena.|
+|[CFixedStringT::CFixedStringT](#cfixedstringt)|El constructor del objeto de cadena.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CFixedStringT::operator =](#eq)|Asigna un nuevo valor a un `CFixedStringT` objeto.|
+|[CFixedStringT::operator ?](#operator_eq)|Asigna un nuevo valor `CFixedStringT` a un objeto.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase es un ejemplo de una clase de cadena personalizada basada en `CStringT`. Aunque es bastante similar, las dos clases se diferencian en la implementación. Las principales diferencias entre `CFixedStringT` y `CStringT` son:
+Esta clase es un ejemplo de `CStringT`una clase de cadena personalizada basada en . Aunque similar, las dos clases difieren en la implementación. Las principales diferencias entre `CFixedStringT` y `CStringT` son:
 
-- El búfer del carácter inicial se asigna como parte del objeto y tiene un tamaño *t_nChars*. Esto permite la `CFixedString` objeto ocupando un fragmento de memoria contigua para mejorar el rendimiento. Sin embargo, si el contenido de un `CFixedStringT` supere el objeto *t_nChars*, el búfer se asigna dinámicamente.
+- El búfer de caracteres inicial se asigna como parte del objeto y tiene el tamaño *t_nChars*. Esto permite `CFixedString` que el objeto ocupe un fragmento de memoria contiguo para fines de rendimiento. Sin embargo, si `CFixedStringT` el contenido de un objeto crece más allá *de t_nChars*, el búfer se asigna dinámicamente.
 
-- El búfer de caracteres para un `CFixedStringT` objeto siempre es la misma longitud ( *t_nChars*). No hay ninguna limitación de tamaño de búfer para `CStringT` objetos.
+- El búfer de `CFixedStringT` caracteres de un objeto siempre tiene la misma longitud ( *t_nChars*). No hay ninguna limitación `CStringT` en el tamaño del búfer para los objetos.
 
-- El Administrador de memoria para `CFixedStringT` se personaliza de forma que el uso compartido de un [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objeto entre dos o más `CFixedStringT` objectsis no permitido. `CStringT` objetos no tienen esta limitación.
+- El administrador `CFixedStringT` de memoria para se personaliza de modo que `CFixedStringT` no se permite el uso compartido de un [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objeto entre dos o más objetos. `CStringT`objetos no tienen esta limitación.
 
-Para obtener más información sobre la personalización de `CFixedStringT` y administración de memoria para objetos de cadena en general, vea [administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Para obtener más información `CFixedStringT` sobre la personalización y la administración de memoria para objetos de cadena en general, vea Administración de [memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -75,63 +75,62 @@ Para obtener más información sobre la personalización de `CFixedStringT` y ad
 
 **Encabezado:** cstringt.h
 
-##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT
+## <a name="cfixedstringtcfixedstringt"></a><a name="cfixedstringt"></a>CFixedStringT::CFixedStringT
 
 Construye un objeto `CFixedStringT`.
 
 ```
 CFixedStringT() throw();
 explicit CFixedStringT(IAtlStringMgr* pStringMgr) throw();
-CFixedStringT(const CFixedStringT<StringType, t_nChars>& str);
-CFixedStringT(const StringType& str);
-CFixedStringT(const StringType::XCHAR* psz);
-explicit CFixedStringT(const StringType::YCHAR* psz);
-explicit CFixedStringT(const unsigned char* psz);
+CFixedStringT(const CFixedStringT<StringType, t_nChars>& strSrc);
+CFixedStringT(const StringType& strSrc);
+CFixedStringT(const StringType::XCHAR* pszSrc);
+explicit CFixedStringT(const StringType::YCHAR* pszSrc);
+explicit CFixedStringT(const unsigned char* pszSrc);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*psz*<br/>
-Una cadena terminada en null que se copiará en esto `CFixedStringT` objeto.
+*pszSrc*<br/>
+Cadena terminada en null que se `CFixedStringT` va a copiar en este objeto.
 
-*str*<br/>
-Existente `CFixedStringT` objeto que se copiará en esto `CFixedStringT` objeto.
+*strSrc*<br/>
+Objeto `CFixedStringT` existente que se va `CFixedStringT` a copiar en este objeto.
 
 *pStringMgr*<br/>
-Un puntero para el Administrador de memoria de la `CFixedStringT` objeto. Para obtener más información sobre `IAtlStringMgr` y administración de memoria para `CFixedStringT`, consulte [administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Un puntero al administrador `CFixedStringT` de memoria del objeto. Para obtener `IAtlStringMgr` más información `CFixedStringT`sobre la administración de memoria y la administración de memoria para , vea Administración de [memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Dado que los constructores copian los datos de entrada en el nuevo almacenamiento asignado, debe tener en cuenta que pueden dar lugar a excepciones de memoria. Tenga en cuenta que algunos de estos constructores actúan como funciones de conversión.
+Dado que los constructores copian los datos de entrada en el nuevo almacenamiento asignado, debe tener en cuenta que pueden producirse excepciones de memoria. Algunos de estos constructores actúan como funciones de conversión.
 
-##  <a name="operator__eq"></a>  CFixedStringT::operator =
+## <a name="cfixedstringtoperator-"></a><a name="operator_eq"></a>CFixedStringT::operator ?
 
-Reinicializa un existente `CFixedStringT` objeto con datos nuevos.
+Reinicializa un `CFixedStringT` objeto existente con nuevos datos.
 
 ```
 CFixedStringT<StringType, t_nChars>& operator=(
-    const CFixedStringT<StringType, t_nChars>& str);
-CFixedStringT<StringType, t_nChars>& operator=(const char* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const wchar_t* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const unsigned char* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
+    const CFixedStringT<StringType, t_nChars>& strSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const char* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const wchar_t* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const unsigned char* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const StringType& strSrc);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
-Una cadena terminada en null que se copiará en esto `CFixedStringT` objeto.
+*pszSrc*<br/>
+Cadena terminada en null que se `CFixedStringT` va a copiar en este objeto.
 
-*psz*<br/>
-Existente `CFixedStringT` que se copiará en esto `CFixedStringT` objeto.
+*strSrc*<br/>
+Una `CFixedStringT` existente que se `CFixedStringT` va a copiar en este objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Debe tener en cuenta que pueden producirse excepciones siempre que use el operador de asignación, porque a menudo se asigna nuevo almacenamiento para almacenar el resultado de la memoria `CFixedStringT` objeto.
+Debe tener en cuenta que pueden producirse excepciones de memoria siempre que `CFixedStringT` utilice el operador de asignación porque a menudo se asigna nuevo almacenamiento para contener el objeto resultante.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CStringT (clase)](../../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Clase CStringT](../../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
+[Clases compartidas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

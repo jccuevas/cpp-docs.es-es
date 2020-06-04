@@ -7,16 +7,16 @@ helpviewer_keywords:
 - comments, C++ code
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
-ms.openlocfilehash: a90d9d37e69cb2e8be4ab18f77026fdce1221307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3326ad7d0b5118182a5d582061fd0c103986f232
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506111"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189759"
 ---
 # <a name="comments-c"></a>Comentarios (C++)
 
-Un comentario es texto que el compilador omite pero que es útil para los programadores. Los comentarios se usan normalmente para anotar código para su referencia futura. El compilador los trata como si fueran espacios en blanco. Puede utilizar comentarios en las pruebas para desactivar algunas líneas de código inactivos; Sin embargo, `#if` / `#endif` las directivas de preprocesador funcionan mejor para esto porque se puede encerrar el código que contiene los comentarios, pero no se pueden anidar comentarios.
+Un comentario es texto que el compilador omite pero que es útil para los programadores. Los comentarios se usan normalmente para anotar código para su referencia futura. El compilador los trata como si fueran espacios en blanco. Puede usar los comentarios en las pruebas para que algunas líneas de código queden inactivas. sin embargo, `#if`/`#endif` directivas de preprocesador funcionan mejor para esto, ya que puede rodear el código que contiene comentarios, pero no puede anidar Comentarios.
 
 Los comentarios de C++ se escriben de una de las maneras siguientes:
 
@@ -26,6 +26,6 @@ Los comentarios de C++ se escriben de una de las maneras siguientes:
 
 Los caracteres de comentario (`/*`, `*/` y `//`) no tienen ningún significado especial dentro de una constante de caracteres, un literal de cadena o un comentario. Por tanto, los comentarios que usan la primera sintaxis no se pueden anidar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Convenciones léxicas](../cpp/lexical-conventions.md)

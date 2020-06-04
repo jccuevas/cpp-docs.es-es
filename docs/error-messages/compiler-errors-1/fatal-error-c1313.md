@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1313
 ms.assetid: 6c7631c8-6fd7-476a-9303-564717fda0f9
-ms.openlocfilehash: 825edb8487b045e39335e4eaea5cc9c725e70896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64921221a146221319ec80202353f95d950b15b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451472"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203195"
 ---
 # <a name="fatal-error-c1313"></a>Error irrecuperable C1313
 
-límite del compilador: no se pueden anidar más de número de niveles bloques de tipo
+límite del compilador: los bloques de tipo no se pueden anidar más de un número.
 
-Excepción control (o control de excepciones estructurado) bloques se anidaron demasiado profundo.  Simplifique el código.
+Los bloques de control de excepciones (o control de excepciones estructurado) se han anidado demasiado profundamente.  Simplifique el código.

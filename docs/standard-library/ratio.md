@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609009"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687062"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -48,7 +48,7 @@ Incluye el encabezado estándar \<ratio> para definir constantes y plantillas qu
 #include <ratio>
 ```
 
-### <a name="ratio-template"></a>proporción de plantilla
+### <a name="ratio-template"></a>Plantilla de proporción
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-La plantilla `ratio` define las constantes estáticas `num` y `den` que `num`  /  `den` == numerador y denominador y `num` y `den` no tienen factores comunes. `num` / `den` es el valor representado por la clase de plantilla. Por lo tanto, `type` designa la creación de instancias `ratio<num, den>`.
+La plantilla `ratio` define las constantes estáticas `num` y `den` de modo que `num`  /  `den` = = numerador/denominador y `num` y `den` no tienen ningún factor común. `num`  /  `den` es el valor representado por la plantilla de clase. Por lo tanto, `type` designa el `ratio<num, den>` de creación de instancias.
 
 ### <a name="specializations"></a>Especializaciones
 
@@ -70,7 +70,7 @@ La plantilla `ratio` define las constantes estáticas `num` y `den` que `num`  /
 
 Cada especialización toma dos parámetros de plantilla que también deben ser especializaciones de `ratio`. El valor de `type` se determina mediante una operación lógica asociada.
 
-|nombre|Valor de `type`|
+|Name|Valor de `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
@@ -85,7 +85,7 @@ Cada especialización toma dos parámetros de plantilla que también deben ser e
 
 ### <a name="typedefs"></a>typedefs
 
-Para mayor comodidad, el encabezado define relaciones para los prefijos SI estándares:
+Para mayor comodidad, el encabezado define las proporciones de los prefijos SI:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: c7d0d8b8572c26bfa75b9fab81900c0ae21fb932
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520704"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456240"
 ---
 # <a name="isintegral-class"></a>is_integral (Clase)
 
@@ -27,14 +27,14 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es uno de los tipos enteros, o un `cv-qualified` formulario de uno de los tipos enteros, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es uno de los tipos enteros o un `cv-qualified` formulario de uno de los tipos enteros; de lo contrario, contiene false.
 
-Un tipo entero es uno de **bool**, **char**, **unsigned char**, **firmado char**, **wchar_t**, **corto**, **entero corto sin signo**, **int**, **int sin signo**, **largo**y **unsigned long**. Además, los compiladores que proporcionarlas, un tipo entero puede ser uno de **long long**, **long long sin signo**, **__int64**, y **__int64 sin signo**.
+Un tipo entero es uno de **bool**, **Char**, **unsigned char**, **signed char**, **wchar_t**, **Short**, unsigned **Short**, **int**, unsigned **int**, **Long**y Unsigned **Long**. Además, con los compiladores que los proporcionan, un tipo entero puede ser uno de Long **Long**, **unsigned Long Long**, **_** _ Int64 y Unsigned _ _ Int64.
 
 ## <a name="example"></a>Ejemplo
 
@@ -76,6 +76,6 @@ is_integral<float> == false
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_enum (Clase)](../standard-library/is-enum-class.md)<br/>
-[is_floating_point (Clase)](../standard-library/is-floating-point-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Clase is_enum](../standard-library/is-enum-class.md)\
+[Clase is_floating_point](../standard-library/is-floating-point-class.md)

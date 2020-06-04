@@ -12,14 +12,14 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: c59134afc3b4d0f6360984c67dede28c27010bae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597540"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300162"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr, _wpgmptr
 
 Ruta de acceso al archivo ejecutable. En desuso; use [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) y [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).
 
@@ -30,7 +30,7 @@ extern char *_pgmptr;
 extern wchar_t *_wpgmptr;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Cuando se ejecuta un programa desde el intérprete de comandos (Cmd.exe), `_pgmptr` se inicializa automáticamente en la ruta de acceso completa al archivo ejecutable. Por ejemplo, si se encuentra Hello.exe en C:\BIN, y C:\BIN está en la ruta de acceso, `_pgmptr` se establece en C:\BIN\Hello.exe cuando se ejecuta:
 
@@ -48,7 +48,7 @@ Cuando un programa no se ejecuta desde la línea de comandos, `_pgmptr` podría 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Variable|Encabezado necesario|
 |--------------|---------------------|
@@ -58,7 +58,7 @@ Cuando un programa no se ejecuta desde la línea de comandos, `_pgmptr` podría 
 
 El siguiente programa muestra el uso de `_pgmptr`.
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.

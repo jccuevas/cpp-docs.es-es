@@ -1,33 +1,40 @@
 ---
 title: '&lt;ccomplex&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - <ccomplex>
+- ccomplex
+helpviewer_keywords:
+- ccomplex header
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-ms.openlocfilehash: ab9e95eb7b432a85a75d73d388ec069b0d04ac62
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5b5383b1eca4fda72f5f9e3a78637373acbcf7ab
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517207"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341141"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
-Incluye el encabezado [\<complex>](../standard-library/complex.md) de la biblioteca estándar de C++ que, de forma efectiva, incluye el encabezado \<complex.h> de la biblioteca estándar de C y agrega los nombres asociados al espacio de nombres `std`.
+Incluye el C++ encabezado [ \<](complex.md)de la biblioteca estándar > complejo.
 
-## <a name="syntax"></a>Sintaxis
+> [!NOTE]
+> El encabezado > Complex \<. h de la biblioteca estándar de C \<no está incluido en el > de ccomplex, porque C++ se ha reemplazado \<con las sobrecargas de los > complejos > y \<cmath. Esto hace que \<el encabezado ccomplex > sea redundante. El \<encabezado de > Complex. h está en desuso C++en. El \<encabezado ccomplex > está en desuso en c++ 17 y se ha quitado en el borrador c++ 20 standard.
 
-```cpp
-#include <ccomplex>
-```
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** \<> ccomplex
+
+**Espacio de nombres:** std
 
 ## <a name="remarks"></a>Comentarios
 
-Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.
-
-El nombre `clog`, que está declarado en \<complex.h>, no está definido en el espacio de nombres `std` por los conflictos potenciales con el `clog` que está declarado en [\<iostream>](../standard-library/iostream.md).
+El nombre `clog`, que se declara en \<el > complejo. h, no se define `std` en el espacio de nombres debido a `clog` conflictos potenciales con el que se declara en [ \<iostream >](iostream.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[\<> complejos](complex.md)\
+[\<cmath>](cmath.md)\
+[Referencia de archivos de encabezado](cpp-standard-library-header-files.md)\
+[C++Información general de la biblioteca estándar](cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la C++ biblioteca estándar](thread-safety-in-the-cpp-standard-library.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
-ms.openlocfilehash: 47bf9c50a2da039b0ffa074796a768290b732bb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ea796ab40a2090ed9853377f7c9415914bc0e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178987"
 ---
 # <a name="return-statement-c"></a>return (Instrucción) (C++)
 
@@ -24,17 +24,17 @@ Finaliza la ejecución de una función y devuelve el control a la función de ll
 return [expression];
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La cláusula `expression`, si está presente, se convierte al tipo especificado en la declaración de función, como si se realizara una inicialización. Conversión del tipo de la expresión a la **devolver** tipo de la función puede crear objetos temporales. Para obtener más información acerca de cómo y cuándo se crean objetos temporales, vea [objetos temporales](../cpp/temporary-objects.md).
+La cláusula `expression`, si está presente, se convierte al tipo especificado en la declaración de función, como si se realizara una inicialización. La conversión del tipo de la expresión al tipo de **valor devuelto** de la función puede crear objetos temporales. Para obtener más información sobre cómo y cuándo se crean objetos temporales, vea [objetos temporales](../cpp/temporary-objects.md).
 
-El valor de la cláusula `expression` se devuelve a la función de llamada. Si se omite la expresión, el valor devuelto de la función es indefinido. Los constructores y destructores y funciones de tipo **void**, no se puede especificar una expresión en el **devolver** instrucción. Las funciones de todos los demás tipos deben especificar una expresión en el **devolver** instrucción.
+El valor de la cláusula `expression` se devuelve a la función de llamada. Si se omite la expresión, el valor devuelto de la función es indefinido. Los constructores y destructores, y las funciones de tipo **void**, no pueden especificar una expresión en la instrucción **Return** . Las funciones de todos los demás tipos deben especificar una expresión en la instrucción **Return** .
 
-Cuando el flujo de control sale del bloque que incluye la definición de función, el resultado es el mismo, como sería si un **devolver** hubiera ejecutado la instrucción sin una expresión. Esto no es válido para las funciones que se declaran como si devolvieran un valor.
+Cuando el flujo de control sale del bloque que contiene la definición de función, el resultado es el mismo que si se hubiera ejecutado una instrucción **Return** sin una expresión. Esto no es válido para las funciones que se declaran como si devolvieran un valor.
 
-Una función puede tener cualquier número de **devolver** instrucciones.
+Una función puede tener cualquier número de instrucciones **Return** .
 
-En el ejemplo siguiente se usa una expresión con un **devolver** instrucción para obtener el mayor de dos enteros.
+En el ejemplo siguiente se usa una expresión con una instrucción **Return** para obtener el mayor de dos enteros.
 
 ## <a name="example"></a>Ejemplo
 
@@ -56,7 +56,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Instrucciones de salto](../cpp/jump-statements-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

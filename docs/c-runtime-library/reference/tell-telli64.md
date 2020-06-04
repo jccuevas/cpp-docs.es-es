@@ -1,10 +1,12 @@
 ---
 title: _tell, _telli64
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _telli64
 - _tell
-apilocation:
+- _o__tell
+- _o__telli64
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,9 +18,12 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -30,14 +35,14 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660153"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912242"
 ---
-# <a name="tell-telli64"></a>_tell, _telli64
+# <a name="_tell-_telli64"></a>_tell, _telli64
 
 Obtiene la posición del puntero de archivo.
 
@@ -54,20 +59,22 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*<br/>
+*asa*<br/>
 Descriptor de archivo que hace referencia a un archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Posición actual del puntero de archivo. En los dispositivos incapaces de efectuar búsquedas, el valor devuelto es indefinido.
 
-Un valor devuelto de-1 L indica un error. Si *controlar* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EBADF** y devuelven-1 L.
+Un valor devuelto de-1L indica un error. Si el *identificador* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EBADF** y devuelven-1L.
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre este y otros códigos de retorno.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_tell** función obtiene la posición actual del puntero de archivo (si existe) asociada con el *controlar* argumento. La posición se expresa como el número de bytes desde el principio del archivo. Para el **_telli64** función, este valor se expresa como un entero de 64 bits.
+La función **_tell** obtiene la posición actual del puntero de archivo (si existe) asociado al argumento de *identificador* . La posición se expresa como el número de bytes desde el principio del archivo. En el caso de la función **_telli64** , este valor se expresa como un entero de 64 bits.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +82,7 @@ El **_tell** función obtiene la posición actual del puntero de archivo (si exi
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -110,7 +117,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crttelltxt"></a>Entrada: crt_tell.txt
+### <a name="input-crt_telltxt"></a>Entrada: crt_tell.txt
 
 ```Input
 Line one.

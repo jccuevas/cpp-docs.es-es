@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 491121bc236c54ce5b74c76abfa6a650ff7a99ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625126"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162171"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Advertencia del compilador (nivel 1) C4581
 
-comportamiento desusado: "string1" reemplazado por 'cadena2' para procesar el atributo
+comportamiento en desuso: ' "string1" ' se ha reemplazado por ' cadena2 ' para procesar el atributo
 
-Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: comprobación de parámetros de atributos de Visual C++.
+Este error se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio 2005: comprobación de parámetros para los C++ atributos visuales.
 
-En versiones anteriores, se han aceptado los valores de atributo se incluyen entre comillas o no. Si el valor es una enumeración, no debe incluirse entre comillas.
+En versiones anteriores, se aceptaban valores de atributo tanto si se encontraban entre comillas. Si el valor es una enumeración, no debe ir entre comillas.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4581.
+En el ejemplo siguiente se genera C4581.
 
-```
+```cpp
 // C4581.cpp
 // compile with: /c /W1
 #include "unknwn.h"

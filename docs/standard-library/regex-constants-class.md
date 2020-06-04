@@ -82,14 +82,14 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: f3e733bced407f96414783612165984c71b63775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331961"
 ---
-# <a name="regexconstants-namespace"></a>espacio de nombres regex_constants)
+# <a name="regex_constants-namespace"></a>regex_constants (Espacio de nombres)
 
 Espacio de nombres para las marcas de expresiones regulares.
 
@@ -103,7 +103,7 @@ namespace regex_constants {
 }
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El espacio de nombres `regex_constants` encapsula varios tipos de marca y sus valores de marca asociados.
 
@@ -119,7 +119,7 @@ El espacio de nombres `regex_constants` encapsula varios tipos de marca y sus va
 
 **Espacio de nombres:** std
 
-## <a name="error_type"></a> regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
 
 Marcas para notificar errores de sintaxis de expresión regular.
 
@@ -144,7 +144,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo enumerado que describe un objeto que puede contener marcadores de error. Los diferentes valores de marca son:
 
@@ -180,7 +180,7 @@ El tipo es un tipo enumerado que describe un objeto que puede contener marcadore
 
 `error_backref`: la expresión contenía una referencia inversa no válida
 
-## <a name="match_flag_type"></a> regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
 
 Marcadores para las opciones de coincidencia de expresión regular.
 
@@ -204,13 +204,13 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo de máscara de bits que describe las opciones que se van a usar al buscar coincidencias entre una secuencia de texto y una expresión regular, así como las marcas de formato que se usarán al reemplazar texto. Las opciones pueden combinarse con `|`.
 
 Las opciones de coincidencia son las siguientes:
 
-*match_default*<br/>
+`match_default`
 
 `match_not_bol`: no tratar la primera posición de la secuencia de destino como el principio de una línea
 
@@ -238,7 +238,7 @@ Las marcas de formato son las siguientes:
 
 `format_first_only`: no buscar coincidencias después de la primera
 
-## <a name="syntax_option_type"></a> regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
 
 Marcas para seleccionar las opciones de sintaxis.
 
@@ -260,7 +260,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo de máscara de bits que describe los especificadores de idioma y los modificadores de sintaxis que se usarán al compilar una expresión regular. Las opciones pueden combinarse con `|`. Debe usarse un especificador de idioma a la vez.
 
@@ -288,13 +288,13 @@ Los modificadores de sintaxis son los siguientes:
 
 `collate`: genera coincidencias dependientes de la configuración regional
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_error (Clase)](../standard-library/regex-error-class.md)<br/>
-[Funciones de \<regex>](../standard-library/regex-functions.md)<br/>
-[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)<br/>
-[Operadores de \<regex>](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits (Clase)](../standard-library/regex-traits-class.md)<br/>
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Clase regex_error](../standard-library/regex-error-class.md)\
+[\<funciones de> regex](../standard-library/regex-functions.md)\
+[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores de> regex](../standard-library/regex-operators.md)\
+[Clase regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Clase regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

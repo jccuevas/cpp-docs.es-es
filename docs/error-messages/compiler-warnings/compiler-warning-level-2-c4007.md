@@ -1,20 +1,20 @@
 ---
-title: Compilador advertencia (nivel 2) C4007
+title: ADVERTENCIA del compilador (nivel 2) C4007
 ms.date: 11/04/2016
 f1_keywords:
 - C4007
 helpviewer_keywords:
 - C4007
 ms.assetid: 56a70c07-59a5-4fd7-80ed-63592c65cbb7
-ms.openlocfilehash: 07cbea639918de8dfa7381880c34ef3bc5656288
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33ef3abfa0b24babf1288f8df4156659c83001dd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624229"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174380"
 ---
-# <a name="compiler-warning-level-2-c4007"></a>Compilador advertencia (nivel 2) C4007
+# <a name="compiler-warning-level-2-c4007"></a>ADVERTENCIA del compilador (nivel 2) C4007
 
-'function': debe ser 'atributo'
+' función ': debe ser ' atributo '
 
-Un atributo necesario para una función no se ha indicado explícitamente. Por ejemplo, la función **principal** debe tener el `__cdecl` atributo. El compilador fuerza el atributo.
+No se ha indicado explícitamente un atributo necesario para una función. Por ejemplo, la función **Main** debe tener el atributo `__cdecl`. El compilador fuerza el atributo.

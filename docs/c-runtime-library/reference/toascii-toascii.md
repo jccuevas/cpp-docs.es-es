@@ -1,9 +1,9 @@
 ---
 title: toascii, __toascii
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __toascii
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __toascii
 - toascii
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09df829511b38b87cb41e32a59bee9f38a9b8f32
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578976"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957472"
 ---
-# <a name="toascii-toascii"></a>toascii, __toascii
+# <a name="toascii-__toascii"></a>toascii, __toascii
 
 Convierte caracteres en ASCII de 7 bits por truncamiento.
 
@@ -54,21 +57,21 @@ Carácter que se va a convertir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**__toascii** convierte el valor de *c* a la ASCII de 7 bits de intervalo y devuelve el resultado. No se reserva ningún valor devuelto para indicar un error.
+**__toascii** convierte el valor de *c* en el intervalo ASCII de 7 bits y devuelve el resultado. No se reserva ningún valor devuelto para indicar un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **__toascii** rutina convierte el carácter especificado en un carácter ASCII al truncarlo a los 7 bits de orden inferior. No se aplica ninguna otra transformación.
+La rutina **__toascii** convierte el carácter especificado en un carácter ASCII al truncarlo en los 7 bits de orden inferior. No se aplica ninguna otra transformación.
 
-El **__toascii** rutina se define como una macro, a menos que la macro de preprocesador _ctype_disable_macros. Por compatibilidad con versiones anteriores, **toascii** se define como una macro solo cuando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) no está definido o se define como 0; en caso contrario, está sin definir.
+La rutina **__toascii** se define como una macro a menos que se defina la macro de preprocesador _CTYPE_DISABLE_MACROS. Por compatibilidad con versiones anteriores, **toascii** se define como una macro solo cuando [ &#95; &#95;stdc&#95; ](../../preprocessor/predefined-macros.md) no está definido o se define como 0; en caso contrario, no está definido.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**ToAscii**, **__toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
+|**toascii**, **__toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
 
-El **toascii** macro es una extensión POSIX y **__toascii** es una implementación específica de Microsoft de la extensión POSIX. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La macro **toascii** es una extensión POSIX y **__toascii** es una implementación específica de Microsoft de la extensión POSIX. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 

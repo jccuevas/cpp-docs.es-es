@@ -10,22 +10,22 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366419"
 ---
 # <a name="ltregexgt-operators"></a>Operadores de &lt;regex&gt;
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+|[¡Operador!](#op_neq)|[Operador&gt;](#op_gt)|[Operador&gt;=](#op_gt_eq)|
+|[Operador&lt;](#op_lt)|[Operador&lt;&lt;](#op_lt_lt)|[Operador&lt;=](#op_lt_eq)|
+|[operadora](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>¡Operador!
 
 Comparación de desigualdad para varios objetos.
 
@@ -66,22 +66,22 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*Izquierda*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*Correcto*\
 El objeto derecho que se compara.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada operador de la plantilla devuelve `!(left == right)`.
 
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Operador&lt;
 
 Comparación menor que para varios objetos.
 
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*Izquierda*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*Correcto*\
 El objeto derecho que se compara.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cada operador de plantilla convierte sus argumentos a un tipo de cadena y devuelve true solo si el valor convertido de *izquierdo* compara menos que el valor convertido de *derecho*.
+Cada operador de plantilla convierte sus argumentos en un tipo de cadena y devuelve true solo si el valor convertido de *left* se compara menos que el valor convertido de *right*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operador&lt;&lt;
 
 Inserta un sub_match en una secuencia.
 
@@ -266,25 +266,25 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+*Elem*\
 El tipo de elemento.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*sistema operativo*<br/>
+*os*\
 Secuencia de salida.
 
-*right*<br/>
+*Correcto*\
 Objeto que se va a insertar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El operador de la plantilla devuelve `os << right.str()`.
 
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operador&lt;=
 
 Comparación menor o igual que para varios objetos.
 
@@ -351,22 +351,22 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*Izquierda*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*Correcto*\
 El objeto derecho que se compara.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada operador de la plantilla devuelve `!(right < left)`.
 
@@ -424,7 +424,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operadora
 
 Comparación de igualdad para varios objetos.
 
@@ -465,32 +465,32 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*Izquierda*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*Correcto*\
 El objeto derecho que se compara.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada operador de la plantilla convierte cada uno de sus argumentos a un tipo de cadena y devuelve el resultado de realizar una comparación de igualdad de los objetos convertidos.
 
 Cuando un operador de plantilla convierte sus argumentos a un tipo de cadena, usa la primera de las siguientes transformaciones que se aplica:
 
-los argumentos cuyos tipos sean una especialización de clase de plantilla `match_results` o `sub_match` se convierten mediante una llamada a la función miembro `str`;
+argumentos cuyos tipos son `match_results` una `sub_match` especialización de `str` plantilla de clase o se convierten mediante una llamada a la función miembro;
 
-los argumentos cuyos tipos sean una especialización de la clase de plantilla `basic_string` no se cambian;
+argumentos cuyos tipos son una `basic_string` especialización de la plantilla de clase no se modifican;
 
-todos los demás tipos de argumento se convierten pasando el valor del argumento al constructor para una especialización adecuada de la clase de plantilla `basic_string`.
+todos los demás tipos de argumento se convierten pasando el `basic_string`valor de argumento al constructor para una especialización adecuada de la plantilla de clase.
 
 ### <a name="example"></a>Ejemplo
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Operador&gt;
 
 Comparación mayor que para varios objetos.
 
@@ -588,22 +588,22 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*Izquierda*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*Correcto*\
 El objeto derecho que se compara.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada operador de la plantilla devuelve `right < left`.
 
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operador&gt;=
 
 Comparación mayor o igual que para varios objetos.
 
@@ -698,22 +698,22 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*Izquierda*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*Correcto*\
 El objeto derecho que se compara.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada operador de la plantilla devuelve `!(left < right)`.
 
@@ -771,13 +771,13 @@ sub >= "aab" == false
 sub >= 'a' == true
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants (Clase)](../standard-library/regex-constants-class.md)<br/>
-[regex_error (Clase)](../standard-library/regex-error-class.md)<br/>
-[Funciones de \<regex>](../standard-library/regex-functions.md)<br/>
-[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)<br/>
-[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits (Clase)](../standard-library/regex-traits-class.md)<br/>
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Clase regex_constants](../standard-library/regex-constants-class.md)\
+[Clase regex_error](../standard-library/regex-error-class.md)\
+[\<funciones de> regex](../standard-library/regex-functions.md)\
+[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
+[Clase regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Clase regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

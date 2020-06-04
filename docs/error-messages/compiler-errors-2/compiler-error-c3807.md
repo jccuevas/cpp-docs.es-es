@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
-ms.openlocfilehash: b5599914666af95a29667acc1ad4ad35eef7608f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4b33782c0a1e5abb811210c9e7a28da7040c805
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591131"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755270"
 ---
 # <a name="compiler-error-c3807"></a>Error del compilador C3807
 
-'type': una clase con el atributo ComImport no puede derivar de 'tipo2', se permite solo la implementación de interfaz
+' type ': una clase con el atributo ComImport no puede derivar de ' tipo2 ', solo se permite la implementación de la interfaz
 
-Un tipo que derive de <xref:System.Runtime.InteropServices.ComImportAttribute> sólo se puede implementar una interfaz.
+Un tipo que se deriva de <xref:System.Runtime.InteropServices.ComImportAttribute> solo puede implementar una interfaz.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3807.
+En el ejemplo siguiente se genera C3807.
 
-```
+```cpp
 // C3807.cpp
 // compile with: /clr /c
 ref struct S {};

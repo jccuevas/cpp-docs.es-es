@@ -1,10 +1,10 @@
 ---
 title: _lrotl, _lrotr
 ms.date: 04/04/2018
-apiname:
+api_name:
 - _lrotl
 - _lrotr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrotr
 - lrotl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518422"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953032"
 ---
-# <a name="lrotl-lrotr"></a>_lrotl, _lrotr
+# <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Gira los bits a la izquierda (**_lrotl**) o a la derecha (**_lrotr**).
+Gira los bits a la izquierda ( **_lrotl**) o a la derecha ( **_lrotr**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,7 +54,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Valor que se va a girar.
 
 *shift*<br/>
@@ -63,7 +66,7 @@ Ambas funciones devuelven el valor girado. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_lrotl** y **_lrotr** funciones girar *valor* por *MAYÚS* bits. **_lrotl** gira el valor a la izquierda, hacia los bits más significativos. **_lrotr** gira el valor a la derecha, hacia los bits menos significativos. Ambas funciones ajustan los bits girados de un extremo de *value* al otro extremo.
+Las funciones **_lrotl** y **_lrotr** giran el *valor* por los bits de *desplazamiento* . **_lrotl** gira el valor a la izquierda, hacia los bits más significativos. **_lrotr** gira el valor a la derecha, hacia los bits menos significativos. Ambas funciones ajustan los bits girados de un extremo de *value* al otro extremo.
 
 ## <a name="requirements"></a>Requisitos
 

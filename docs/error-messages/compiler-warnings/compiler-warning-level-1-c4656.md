@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4656
 ms.assetid: b5aaef74-2320-4345-a6ae-b813881a491c
-ms.openlocfilehash: 4285ce20f6131c2503304ed1bdb1bde02b2efcec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a78da51a99aa924eadbf5c9f458ceb0a75889141
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175654"
 ---
 # <a name="compiler-warning-level-1-c4656"></a>Advertencia del compilador (nivel 1) C4656
 
-'símbolo': tipo de datos es nuevo o ha cambiado desde la última compilación o se define de forma distinta en otro lugar
+' Symbol ': el tipo de datos es nuevo o ha cambiado desde la última compilación o bien se ha definido de forma distinta en otro lugar
 
 El usuario agrega o cambia un tipo de datos, que se convierte en nuevo para el código fuente desde la última compilación correcta. La función Editar y continuar no admite cambios en los tipos de datos existentes.
 

@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 8ab2e0d152e4c123fa23512bc0111cebd070b3ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200869"
 ---
 # <a name="compiler-error-c3409"></a>Error del compilador C3409
 
-> no se permite el bloque de atributos vacío
+> no se permite un bloque de atributos vacío
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Los corchetes se interpretaron en el compilador como un [atributo](../../windows/cpp-attributes-reference.md) bloque, pero no hay atributos que se han encontrado.
+El compilador interpreta los corchetes como un bloque de [atributos](../../windows/attributes-alphabetical-reference.md) , pero no se encontró ningún atributo.
 
-El compilador puede generar este error cuando utilice corchetes como parte de la definición de una expresión lambda. Este error se produce cuando el compilador no puede determinar si los corchetes son parte de la definición de una expresión lambda o de un bloque de atributos. Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../../cpp/lambda-expressions-in-cpp.md).
+El compilador puede generar este error cuando se usan corchetes como parte de la definición de una expresión lambda. Este error se produce cuando el compilador no puede determinar si los corchetes forman parte de la definición de una expresión lambda o de un bloque de atributos. Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../../cpp/lambda-expressions-in-cpp.md).
 
 ### <a name="to-correct-this-error"></a>Para corregir este error
 
 1. Si los corchetes forman parte de un bloque de atributos:
 
-   1. Proporcionar uno o varios atributos en el bloque de atributos.
+   1. Proporcione uno o más atributos en el bloque de atributos.
 
    1. Quite el bloque de atributos.
 
-1. Si los corchetes forman parte de una expresión lambda, asegúrese de que la expresión lambda sigue las reglas de sintaxis válida.
+1. Si los corchetes forman parte de una expresión lambda, asegúrese de que la expresión lambda sigue las reglas de sintaxis válidas.
 
-   Para obtener más información sobre la sintaxis de expresiones lambda, vea [sintaxis de expresión Lambda](../../cpp/lambda-expression-syntax.md).
+   Para obtener más información sobre la sintaxis de expresiones lambda, vea [Sintaxis de expresiones lambda](../../cpp/lambda-expression-syntax.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C3409.
+En el ejemplo siguiente se genera C3409.
 
 ```cpp
 // C3409.cpp
@@ -56,7 +56,7 @@ class b : public x {};
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente genera el error C3409 porque una expresión lambda usa la `mutable` especificación, pero no proporciona una lista de parámetros. El compilador no puede determinar si los corchetes son parte de la definición de una expresión lambda o de un bloque de atributos.
+En el ejemplo siguiente se genera C3409 porque una expresión lambda usa la especificación `mutable`, pero no proporciona una lista de parámetros. El compilador no puede determinar si los corchetes forman parte de la definición de una expresión lambda o de un bloque de atributos.
 
 ```cpp
 // C3409b.cpp
@@ -67,8 +67,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
+[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
 [Expresiones lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Sintaxis de la expresión lambda](../../cpp/lambda-expression-syntax.md)

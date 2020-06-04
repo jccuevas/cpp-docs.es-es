@@ -1,9 +1,9 @@
 ---
 title: _abnormal_termination
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _abnormal_termination
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _abnormal_termination
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: 231a5a521d9e234d3e31e6ccdbe98b207a89b3eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433548"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944711"
 ---
-# <a name="abnormaltermination"></a>_abnormal_termination
+# <a name="_abnormal_termination"></a>_abnormal_termination
 
 Indica si el bloque `__finally` de una [instrucción try-finally](../cpp/try-finally-statement.md) se especifica mientras el sistema ejecuta una lista interna de controladores de terminación.
 

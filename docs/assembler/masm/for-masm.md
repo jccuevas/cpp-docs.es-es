@@ -1,32 +1,31 @@
 ---
 title: FOR (MASM)
-ms.date: 08/30/2018
-f1_keywords:
-- for
+ms.date: 12/17/2019
 helpviewer_keywords:
 - FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-ms.openlocfilehash: 5e365ee45396d581f0580e078496aeb2ecab165a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3572abbf35024ce56435b66640886c03093bfc14
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554926"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440852"
 ---
-# <a name="for-masm"></a>FOR (MASM)
+# <a name="for"></a>FOR
 
-Marca un bloque que se repetirá una vez para cada *argumento*, con el actual *argumento* reemplazando *parámetro* en cada repetición.
+Marca un bloque que se repetirá una vez para cada *argumento*, con el *argumento* actual reemplazando el *parámetro* en cada repetición.
 
 ## <a name="syntax"></a>Sintaxis
 
-> PARA *parámetro* [[: REQ |: =*predeterminada*]], \< *argumento* [[, *argumento*]]... ><br/>
-> *Instrucciones*<br/>
-> ENDM
+> **Para** *el parámetro* ⟦ **: REQ** |  __: =__ *default*⟧ **, \<** _argumento_ ⟦ __,__ *argument* ... **>** ⟧\
+> *instrucciones*\
+> **ENDM**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Igual que [IRP](../../assembler/masm/irp.md).
+Igual que [IRP](irp.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

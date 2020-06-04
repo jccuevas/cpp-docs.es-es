@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 511d66821bf23c149fafb0bfd397929077f020ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989aecdfafc0d57bfb28874ee84dbf40f8fefc30
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385341"
 ---
 # <a name="building-on-the-framework"></a>Compilar en el marco
 
@@ -33,4 +33,3 @@ En su mayor parte, puede seguir estas tablas como una secuencia de pasos para cr
 ## <a name="see-also"></a>Vea también
 
 [Temas generales de MFC](../mfc/general-mfc-topics.md)
-

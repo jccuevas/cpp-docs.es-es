@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2929
 ms.assetid: 11134027-6adc-4733-b6bd-b94486bd1933
-ms.openlocfilehash: fe2a56f7722c70c11e980fb6ee59230ffd056c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d420e3f6470a94874549fadc8cd90e4dac20fe6e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658814"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760998"
 ---
 # <a name="compiler-error-c2929"></a>Error del compilador C2929
 
@@ -21,7 +21,7 @@ No se puede usar con instancias explícitamente un identificador mientras se evi
 
 El ejemplo siguiente genera la advertencia C2929:
 
-```
+```cpp
 // C2929.cpp
 // compile with: /c
 template<typename T>

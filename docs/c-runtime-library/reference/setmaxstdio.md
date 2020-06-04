@@ -1,9 +1,9 @@
 ---
 title: _setmaxstdio
-ms.date: 11/04/2016
-apiname:
+ms.date: 05/21/2019
+api_name:
 - _setmaxstdio
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
@@ -25,48 +28,48 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 58cffedf673e23a69c2d8040071b2e3353ff4502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 620213b4df9ea555189a1403b3c9e83b55cad6c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445089"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948219"
 ---
-# <a name="setmaxstdio"></a>_setmaxstdio
+# <a name="_setmaxstdio"></a>_setmaxstdio
 
-Establece un valor máximo para el número de archivos abiertos simultáneamente en el **stdio** nivel.
+Establece el número de archivos que se permite abrir simultáneamente en el nivel de flujo de E/S.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```C
 int _setmaxstdio(
-   int newmax
+   int new_max
 );
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*newmax*<br/>
-Nuevo máximo para el número de archivos abiertos simultáneamente en el **stdio** nivel.
+*new_max*<br/>
+Nuevo número de archivos que se permite abrir simultáneamente en el nivel de flujo de E/S.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve *newmax* si se realiza correctamente; en caso contrario, de -1.
+Devuelve *new_max* si se realiza correctamente; en caso contrario, devuelve -1.
 
-Si *newmax* es menor que **_IOB_ENTRIES** o mayor, a continuación, se invoca el número máximo de controladores disponibles en el sistema operativo, el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** a **EINVAL**.
+Si *new_max* es menor que **_IOB_ENTRIES** o mayor que el número máximo de controladores disponibles en el sistema operativo, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_setmaxstdio** función cambia el valor máximo para el número de archivos que se pueden abrir simultáneamente en el **stdio** nivel.
+La función **_setmaxstdio** cambia el valor máximo del número de archivos que pueden estar abiertos simultáneamente en el nivel de flujo de E/S.
 
-La E/S en tiempo de ejecución de C ahora admite muchos más archivos abiertos en las plataformas de Win32 que en las versiones anteriores. Hasta 2048 archivos puede estar abierto simultáneamente en el [nivel de lowio](../../c-runtime-library/low-level-i-o.md) (es decir, puede abrir y acceso por medio de la **_open**, **_read**, **_write**, y así sucesivamente familia de funciones de E/S). Hasta 512 archivos puede estar abierto simultáneamente en el [nivel de stdio](../../c-runtime-library/stream-i-o.md) (es decir, puede abrir y acceso por medio de la **fopen**, **fgetc**, **fputc** y así sucesivamente familia de funciones). El límite de 512 archivos abiertos en el **stdio** nivel se puede aumentar hasta un máximo de 2048 mediante la **_setmaxstdio** función.
+La E/S de tiempo de ejecución de C ahora admite hasta 8192 archivos abiertos simultáneamente en el nivel de [flujo de E/S inferior](../../c-runtime-library/low-level-i-o.md). Este nivel incluye los archivos abiertos y aquellos a los que se ha accedido mediante la familia de funciones de E/S **_open**, **_read** y **_write**. De forma predeterminada, se pueden abrir hasta 512 archivos al mismo tiempo en el nivel de [flujo de E/S](../../c-runtime-library/stream-i-o.md). Este nivel incluye los archivos abiertos y aquellos a los que se ha accedido mediante la familia de funciones **fopen**, **fgetc** y **fputc**. El límite de 512 archivos abiertos en el nivel de flujo de E/S se puede aumentar hasta un máximo de 8192 mediante la función **_setmaxstdio**.
 
-Dado que **stdio**-las funciones de nivel, como **fopen**, se crean en la parte superior de la **lowio** functions, el máximo de 2048 es un límite superior para el número de forma simultánea Abra los archivos que se tiene acceso a través de la biblioteca de tiempo de ejecución de C.
+Dado que las funciones de nivel de flujo de E/S (como **fopen**) se crean a partir de las funciones de nivel de flujo de E/S, el máximo de 8192 archivos es un límite superior para el número de archivos abiertos simultáneamente a los que se obtiene acceso a través de la biblioteca de tiempo de ejecución de C.
 
 > [!NOTE]
-> Este límite superior puede exceder la compatibilidad de ciertas plataformas y configuraciones de Win32.
+> Este límite superior puede exceder los valores que admiten ciertas plataformas y configuraciones de Win32.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,7 +81,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [_getmaxstdio](getmaxstdio.md) para obtener un ejemplo del uso de **_setmaxstdio**.
+Vea [_getmaxstdio](getmaxstdio.md) para obtener un ejemplo del uso de **_setmaxstdio**.
 
 ## <a name="see-also"></a>Vea también
 

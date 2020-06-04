@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2162
 ms.assetid: 34923628-d35e-48ab-9072-b95e3b5f6b45
-ms.openlocfilehash: 02c0101324b28ebe548c38c6dc617faaa62315b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b4efd609aaa1f1c5bc50460ff653b36b12061e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602411"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755699"
 ---
 # <a name="compiler-error-c2162"></a>Error del compilador C2162
 
-parámetro formal de macro esperado
+se esperaba un parámetro formal de macro
 
-El token que sigue a un operador de generación de cadenas (#) no es un nombre de parámetro formal.
+El token que sigue a un operador de cadena (#) no es un nombre de parámetro formal.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2162:
+En el ejemplo siguiente se genera C2162:
 
-```
+```cpp
 // C2162.cpp
 // compile with: /c
 #include <stdio.h>

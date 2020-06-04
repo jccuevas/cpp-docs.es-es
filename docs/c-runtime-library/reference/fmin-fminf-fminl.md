@@ -1,11 +1,11 @@
 ---
 title: fmin, fminf, fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464368"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957088"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -84,21 +87,21 @@ Si es correcto, devuelve el menor de *x* o *y*.
 
 |Entrada|Resultado|
 |-----------|------------|
-|*x* es NaN|*y*|
-|*y* es NaN|*x*|
-|*x* y *y* son NaN|NaN|
+|*x* es Nan|*y*|
+|*y* es Nan|*x*|
+|*x* e *y* son Nan|NaN|
 
-No hace que la función [_matherr](matherr.md) que se invoque, producir las excepciones de punto flotante o cambie el valor de **errno**.
+La función no provoca la invocación de [_matherr](matherr.md) , produce excepciones de punto flotante o cambia el valor de **errno**.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **fmin** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **fmin** siempre toma y devuelve un **doble**.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **fMin (** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **fMin (** siempre toma y devuelve un **valor Double**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**Fmin**, **fminf**, **fminl**|C: \<math.h><br />C++: \<math.h> o \<cmath>|
+|**fmin**, **fminf**, **fminl**|C: \<math.h><br />C++: \<math.h> o \<cmath>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

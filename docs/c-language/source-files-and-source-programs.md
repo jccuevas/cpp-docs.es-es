@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349887"
 ---
 # <a name="source-files-and-source-programs"></a>Archivos de código fuente y programas de origen
 
@@ -31,7 +31,7 @@ Un programa de origen se puede dividir en uno o más "archivos de código fuente
 En [Información general de declaraciones](../c-language/overview-of-declarations.md) se proporciona la sintaxis para `declaration` no terminal, y en la *Referencia del preprocesador* se explica cómo se procesa la [unidad de traducción](../preprocessor/phases-of-translation.md).
 
 > [!NOTE]
->  Vea la introducción a [Resumen de la sintaxis de lenguaje C](../c-language/c-language-syntax-summary.md) para obtener una explicación de las convenciones de sintaxis de ANSI.
+> Vea la introducción a [Resumen de la sintaxis de lenguaje C](../c-language/c-language-syntax-summary.md) para obtener una explicación de las convenciones de sintaxis de ANSI.
 
 Los componentes de una unidad de traducción son las declaraciones externas que incluyen definiciones de función y declaraciones de identificador. Estas declaraciones y definiciones pueden estar en los archivos de código fuente, archivos de encabezado, bibliotecas y otros archivos que el programa necesita. Debe compilar cada unidad de traducción y vincular los archivos objeto resultantes para crear un programa.
 

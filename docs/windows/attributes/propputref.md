@@ -1,21 +1,21 @@
 ---
-title: propputref (atributo de COM de C++)
+title: PROPPUTREF (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propputref
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: 0ebf39be6d83e7c5a64ad29f34f9accf0743dbf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9c4413e9bb8c7faa332bb842700dfcf84d6666a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551286"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166437"
 ---
 # <a name="propputref"></a>propputref
 
-Especifica una función de la configuración de propiedad que utiliza una referencia en lugar de un valor.
+Especifica una función de configuración de propiedades que usa una referencia en lugar de un valor.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,13 +23,13 @@ Especifica una función de la configuración de propiedad que utiliza una refere
 [propputref]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **propputref** atributo de C++ tiene la misma funcionalidad que el [propputref](/windows/desktop/Midl/propputref) atributo MIDL.
+El atributo **PROPPUTREF** C++ tiene la misma funcionalidad que el atributo MIDL de la [PROPPUTREF](/windows/win32/Midl/propputref) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **propputref**.
+Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de uso de **PROPPUTREF**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -39,12 +39,12 @@ Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **propputre
 |-|-|
 |**Se aplica a**|Método|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|`propget`, `propput`|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

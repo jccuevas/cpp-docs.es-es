@@ -1,18 +1,18 @@
 ---
 title: is_function (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- type_traits/std::is
+- type_traits/std::is_function
 helpviewer_keywords:
 - is_function class
-- is
+- is_function
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
-ms.openlocfilehash: 0d2559ca6d864a23c5949bcddee8790df4b2bb65
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6e436d205c7569aeac7b9dc65b122f3fe289f334
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523050"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456272"
 ---
 # <a name="isfunction-class"></a>is_function (Clase)
 
@@ -27,12 +27,12 @@ struct is_function;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo de función, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo de función; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 
@@ -79,5 +79,5 @@ is_function<float()> == true
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_object (Clase)](../standard-library/is-object-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Clase is_object](../standard-library/is-object-class.md)

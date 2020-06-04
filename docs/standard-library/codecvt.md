@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978249"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688286"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Define varias clases de plantilla que describen objetos en función de la clase de plantilla [codecvt](../standard-library/codecvt-class.md). Estos objetos pueden actuar como [facetas de configuración regional](../standard-library/locale-class.md#facet_class) que controlan las conversiones entre una secuencia de valores de tipo `Elem` y una secuencia de valores de tipo **char**.
+Define varias plantillas de clase que describen objetos basados en la plantilla de clase [codecvt](../standard-library/codecvt-class.md). Estos objetos pueden servir como [aspectos de la configuración regional](../standard-library/locale-class.md#facet_class) que controlan las conversiones entre una secuencia de valores de tipo `Elem` y una secuencia de valores de tipo **Char**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,7 +34,7 @@ Las facetas de configuración regional declaradas en este encabezado convierten 
 
 - UCS-16 es la codificación Unicode dentro del programa como uno o dos enteros de 16 bits. (Tenga en cuenta que esto no cumple todos los requisitos de una codificación de caracteres anchos válida para el estándar de C o C++; no obstante, se usa ampliamente como tal).
 
-Para las secuencias de bytes (almacenados en un archivo, transmitidos como una secuencia de bytes o almacenados en el programa en una matriz de **char**):
+En el caso de secuencias de bytes (almacenadas en un archivo, se transmiten como una secuencia de bytes o se almacenan en el programa en una matriz de **caracteres**):
 
 - UTF-8 es la codificación Unicode en un flujo de bytes como uno o varios bytes de ocho bits con un orden de bytes deterministas.
 
@@ -64,4 +64,4 @@ Para las secuencias de bytes (almacenados en un archivo, transmitidos como una s
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

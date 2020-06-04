@@ -1,30 +1,31 @@
 ---
 title: DD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - dd
 helpviewer_keywords:
 - DD directive
 ms.assetid: 0c238628-2fe2-437e-979d-a90bdae7b478
-ms.openlocfilehash: 6022da53ad8cde2b90431bfaf5b1ea2ddc0cac34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea3c052ba2c98b7dabe9649884391689209d202
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626112"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314983"
 ---
 # <a name="dd"></a>DD
 
-Asigna e inicializa, opcionalmente, una palabra doble (4 bytes) de almacenamiento para cada `initializer`. `DD` es un sinónimo de [DWORD](../../assembler/masm/dword.md).
+Asigna y, opcionalmente, Inicializa una palabra doble (4 bytes) de almacenamiento para cada *inicializador*. **DD** es un sinónimo de [DWORD](dword.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-> [[nombre]] Inicializador DD [[, inicializador]]...
+> ⟦*nombre*⟧ **DD** *inicializador* ⟦ __,__ *inicializador* ... ⟧
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.
+También se puede usar como especificador de tipo en cualquier lugar en el que un tipo sea válido.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

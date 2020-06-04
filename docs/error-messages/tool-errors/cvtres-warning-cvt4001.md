@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - CVT4001
 ms.assetid: 39c13bc2-92fa-4d79-8171-039b27329dcc
-ms.openlocfilehash: 7faf2fa7762e04aa9dc94574c82b514a5ba9bdf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9c6f46cfb874b8f3613879c89b3e3bbca23b1ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196435"
 ---
 # <a name="cvtres-warning-cvt4001"></a>Advertencia de CVTRES CVT4001
 
-> tipo de equipo no especificado; supone *tipo*
+> tipo de equipo no especificado; *tipo* asumido
 
-CVTRES no encontró una especificación de equipo. Supone que el tipo de equipo determinado. Si el valor predeterminado es incorrecta, vuelva a ejecutar CVTRES con la opción/Machine.
+CVTRES no encontró una especificación de equipo. Asumió el tipo de equipo dado. Si el valor predeterminado es incorrecto, vuelva a ejecutar CVTRES con la opción/MACHINE.

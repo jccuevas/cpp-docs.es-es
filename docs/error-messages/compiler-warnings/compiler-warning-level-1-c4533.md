@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4533
 ms.assetid: 359fecda-d540-46e5-b214-dbabe9ef50d2
-ms.openlocfilehash: 8ac7f00ad3401e88224c0150324822ce71e95018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20637dc23e13031b4199298a3374825062ce40da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652171"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186431"
 ---
 # <a name="compiler-warning-level-1-c4533"></a>Advertencia del compilador (nivel 1) C4533
 
-la inicialización de 'variable' se omite en 'instrucción'
+' instruction ' omite la inicialización de ' variable '
 
-Una instrucción en el programa puede cambiar el flujo de control, que no se ha ejecutado una instrucción que inicializa una variable. El ejemplo siguiente genera C4533:
+Una instrucción del programa cambió el flujo de control, de modo que no se ejecutó una instrucción que inicializó una variable. En el ejemplo siguiente se genera C4533:
 
-```
+```cpp
 // C4533.cpp
 // compile with: /W1
 #include <stdio.h>

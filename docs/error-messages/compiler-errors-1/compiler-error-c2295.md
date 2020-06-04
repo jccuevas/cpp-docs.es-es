@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2295
 ms.assetid: faddf446-5924-401e-b719-93390d5cd084
-ms.openlocfilehash: a08b9b95974b0e715397abd1c76ee082697e640d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3474b280198f7f0defbf62d4720473a6e3e077e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617802"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206354"
 ---
 # <a name="compiler-error-c2295"></a>Error del compilador C2295
 

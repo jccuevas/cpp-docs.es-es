@@ -6,23 +6,23 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: 9bb42af69a204c88e6068444642275b59ea5bf5c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b1f068c928abd0a6656bed0702422d9bda843208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518299"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209512"
 ---
 # <a name="testing-your-provider"></a>Probar un proveedor
 
-Antes de liberar un proveedor, debe hacer las pruebas siguientes, en el orden indicado. Estas pruebas muestran que el proveedor funciona correctamente para la mayoría de los usuarios potencial.
+Antes de liberar un proveedor, debe realizar las siguientes pruebas, en el orden indicado. Estas pruebas muestran que el proveedor funciona correctamente para la mayoría de los usuarios potenciales.
 
-1. Pruebe el proveedor mediante un [consumidor](../../data/oledb/creating-an-ole-db-consumer.md) aplicación escrita con las plantillas de consumidor OLE DB. El consumidor de prueba debe cubrir todas las áreas funcionales del proveedor (todo el código que ha agregado o modificado).
+1. Pruebe el proveedor con una aplicación de [consumidor](../../data/oledb/creating-an-ole-db-consumer.md) escrita con las plantillas de consumidor OLE DB. El consumidor de pruebas debe cubrir todas las áreas funcionales de su proveedor (todo el código que ha agregado o modificado).
 
-1. Probar el proveedor mediante una aplicación de consumidor escrita con ADO. La mayoría de los desarrolladores (especialmente los desarrolladores de Microsoft Visual Basic y C# de Microsoft) utilizan ADO o ADO.NET para aplicaciones de consumidor. El consumidor de prueba debe cubrir todas las áreas funcionales del proveedor. Para obtener un ejemplo de una aplicación de consumidor ADO, vea [ejemplos de código ADO en Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).
+1. Pruebe el proveedor con una aplicación de consumidor escrita con ADO. La mayoría de los desarrolladores (especialmente Microsoft C# Visual Basic y los desarrolladores de Microsoft) usan ADO o ADO.net para aplicaciones de consumidor. El consumidor de pruebas debe cubrir todas las áreas funcionales de su proveedor. Para obtener un ejemplo de una aplicación de consumidor de ADO, vea [ejemplos de código ADO en Microsoft Visual Basic](/previous-versions/ms807514(v=msdn.10)).
 
-1. Ejecute las pruebas de conformidad de OLE DB (incluidas las pruebas de conformidad de ADO) para mostrar que el proveedor cumple el estándar de nivel 0 para proveedores OLE DB. (Para obtener una explicación del nivel 0, busque **las pruebas de conformidad de nivel 0 OLE DB** en [Guía del programador de OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Estas pruebas y la documentación asociada se incluyen con Visual C++ en el SDK de Data Access. Estas pruebas también ayudan para mostrar que el proveedor se ejecuta correctamente cuando se agrega otro [los proveedores de servicios](../../data/oledb/ole-db-resource-pooling-and-services.md) y son especialmente útiles si modifica o agregar propiedades. Para obtener más información acerca de las pruebas de conformidad, vea el archivo Léame para el SDK de Data Access, que se encuentra en uno de los CDs de Visual Studio.
+1. Ejecute las pruebas de conformidad OLE DB (incluidas las pruebas de conformidad de ADO) para mostrar que el proveedor cumple el estándar de nivel 0 para los proveedores de OLE DB. (Para obtener una explicación del nivel 0, busque **pruebas de conformidad de nivel 0 de OLE DB** en [OLE DB guía del programador](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Estas pruebas y la documentación asociada se incluyen con C++ visual en el SDK de acceso a datos. Estas pruebas también ayudan a mostrar que el proveedor se ejecuta correctamente cuando se agregan por otros [proveedores de servicios](../../data/oledb/ole-db-resource-pooling-and-services.md) y son especialmente útiles si se modifican o agregan propiedades. Para obtener más información sobre las pruebas de conformidad, vea el archivo Léame del SDK de acceso a datos, que se encuentra en uno de los CD de Visual Studio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

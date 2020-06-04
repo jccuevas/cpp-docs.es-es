@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2155
 ms.assetid: 54d408af-fc48-4121-9011-5e75c7072e01
-ms.openlocfilehash: bee0b6707df6f559412917eb32d9471c9c7842dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da7a2041c5b65973eaa398f05010cfe4f0a76ff2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451591"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207173"
 ---
 # <a name="compiler-error-c2155"></a>Error del compilador C2155
 
-'?': operando, se esperaba izquierdo aritmética no válido o tipo de puntero
+'? ': operando izquierdo no válido, se esperaba un tipo aritmético o de puntero
 
-Una expresión en el lado izquierdo de `?` no se pueden comparar en cero. Debe usar una expresión aritmética o de puntero que se puede comparar en cero.
+Una expresión en el lado izquierdo de `?` no se puede comparar con cero. Debe utilizar una expresión aritmética o de puntero que se pueda comparar con cero.

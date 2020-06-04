@@ -1,12 +1,12 @@
 ---
 title: printf, _printf_l, wprintf, _wprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_l
 - wprintf
 - _wprintf_l
 - printf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - printf
 - _tprintf
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666900"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759243"
 ---
-# <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
+# <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
 Imprime el resultado con formato en la cadena de salida estándar. Hay versiones más seguras de estas funciones disponibles; vea [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).
 
@@ -77,7 +80,7 @@ int _wprintf_l(
 *format*<br/>
 Control de formato.
 
-*argumento*<br/>
+*argument*<br/>
 Argumentos opcionales.
 
 *locale*<br/>
@@ -85,17 +88,17 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el número de caracteres impreso o un valor negativo si se produce un error. Si *formato* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**. Si **EOF** (0xFFFF) se encuentra en *argumento*, la función devuelve -1.
+Devuelve el número de caracteres impreso o un valor negativo si se produce un error. Si *Format* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y establece **errno** en **EINVAL**. Si se encuentra **EOF** (0xFFFF) en el *argumento*, la función devuelve-1.
 
 Para obtener información sobre **errno** y códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **printf** función da formato e imprime una serie de caracteres y valores en el flujo de salida estándar, **stdout**. Si los argumentos siguen la *formato* cadena, la *formato* cadena debe contener especificaciones que determinen el formato de salida para los argumentos. **printf** y [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) se comportan exactamente igual, salvo que **printf** escribe la salida en **stdout** en lugar de a un destino de tipo **archivo** .
+La función **printf** da formato e imprime una serie de caracteres y valores en el flujo de salida estándar, **stdout**. Si los argumentos siguen a la cadena de *formato* , la cadena de *formato* debe contener especificaciones que determinen el formato de salida de los argumentos. **printf** y [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) se comportan exactamente igual, salvo que **printf** escribe la salida en **stdout** en lugar de en un destino de tipo **File**.
 
-**wprintf** es una versión con caracteres anchos de **printf**; *formato* es una cadena de caracteres anchos. **wprintf** y **printf** se comportan exactamente igual si el flujo se abre en modo ANSI. **printf** no admite actualmente la salida en un flujo UNICODE.
+**wprintf** es una versión con caracteres anchos de **printf**; *Format* es una cadena de caracteres anchos. **wprintf** y **printf** se comportan exactamente igual si la secuencia se abre en modo ANSI. **printf** no admite actualmente la salida en un flujo Unicode.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -103,7 +106,7 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-El *formato* argumento consta de caracteres ordinarios, secuencias de escape, y (si los argumentos siguen *formato*) especificaciones de formato. Las secuencias de escape y caracteres ordinarios se copian en **stdout** en orden de aparición. Por ejemplo, la línea:
+El argumento de *formato* consta de caracteres ordinarios, secuencias de escape y (si los argumentos siguen *formato*) Especificaciones de formato. Los caracteres ordinarios y las secuencias de escape se copian en **stdout** en orden de aparición. Por ejemplo, la línea:
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -116,7 +119,7 @@ Line one
         Line two
 ```
 
-[Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) siempre comienzan con un signo de porcentaje (**%**) y se leen de izquierda a derecha. Cuando **printf** encuentra la primera especificación de formato (si existe), convierte el valor del primer argumento después *formato* y lo envía en consecuencia. La segunda especificación de formato genera el segundo argumento que se convertirá y saldrá, y así sucesivamente. Si hay más argumentos que especificaciones de formato, se omiten los argumentos adicionales. Los resultados son indefinidos si no hay suficientes argumentos para todas las especificaciones de formato.
+Las [Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) siempre comienzan con un signo de porcentaje ( **%** ) y se leen de izquierda a derecha. Cuando **printf** encuentra la primera especificación de formato (si existe), convierte el valor del primer argumento después del *formato* y lo envía en consecuencia. La segunda especificación de formato genera el segundo argumento que se convertirá y saldrá, y así sucesivamente. Si hay más argumentos que especificaciones de formato, se omiten los argumentos adicionales. Los resultados son indefinidos si no hay suficientes argumentos para todas las especificaciones de formato.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
@@ -135,7 +138,7 @@ Line one
 |**printf**, **_printf_l**|\<stdio.h>|
 |**wprintf**, **_wprintf_l**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -196,7 +199,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Integer formats:
@@ -223,14 +226,15 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también:
 
-[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[Sintaxis de especificación de formato: funciones printf y wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[Compatibilidad de punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[vprintf (funciones)](../../c-runtime-library/vprintf-functions.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[Funciones de vprintf (](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>

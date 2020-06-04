@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4227
 ms.assetid: 78f98374-c00b-4000-aefa-1b1c67b4666b
-ms.openlocfilehash: a93b7f225149f9b557ad6238376ffd1bafec82d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d63d6b4997e7a7e8baf4c80841ffb4c7e59d03c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175914"
 ---
 # <a name="compiler-warning-level-1-c4227"></a>Advertencia del compilador (nivel 1) C4227
 
-ha utilizado un anacronismo: se omiten los calificadores de referencia
+anachronizmus usado: se omiten los calificadores de la referencia
 
-Utilizar calificadores como `const` o `volatile` con referencias de C++ es una práctica obsoleta.
+El uso de calificadores como `const` o C++ `volatile` con referencias es una práctica no actualizada.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4227.cpp
 // compile with: /W1 /c
 int j = 0;

@@ -1,9 +1,9 @@
 ---
 title: mktemp
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - mktemp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,24 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mktemp
 helpviewer_keywords:
 - mktemp function
 ms.assetid: b58cba60-034f-4e63-b312-ccbcd489d0a7
-ms.openlocfilehash: 1d3d74f5c505281ca76b4d711624be6b7e11d65b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9efd79111c000764561ba415db79a13a34c46fe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593601"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301020"
 ---
 # <a name="mktemp"></a>mktemp
 
-Esta función POSIX está en desuso. En su lugar, use la función [_mktemp](mktemp-wmktemp.md), compatible con ISO C++, o la función [_mktemp_s](mktemp-s-wmktemp-s.md) con mejoras de seguridad.
+El nombre de la función específica de Microsoft `mktemp` es un alias en desuso para la función [_mktemp](mktemp-wmktemp.md) . De forma predeterminada, genera una [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). El nombre está en desuso porque no sigue las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, todavía se admite la función.
+
+En su lugar, se recomienda usar [_mktemp](mktemp-wmktemp.md) o la función de [_mktemp_s](mktemp-s-wmktemp-s.md) con seguridad mejorada. O bien, puede seguir usando el nombre de esta función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

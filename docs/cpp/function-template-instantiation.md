@@ -6,12 +6,12 @@ helpviewer_keywords:
 - function templates, instantiation
 - instantiation, function templates
 ms.assetid: f22a07c7-3ad1-465a-84f5-8737e274bd47
-ms.openlocfilehash: c4667f5ae625468cdab428706ddaff92a1c1af33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6917448af067542fffb13aa043720bf8a26f7ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620940"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179762"
 ---
 # <a name="function-template-instantiation"></a>Crear instancias de plantillas de función
 
@@ -37,6 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de función](../cpp/function-templates.md)

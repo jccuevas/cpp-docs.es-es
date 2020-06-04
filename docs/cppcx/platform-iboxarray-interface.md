@@ -3,17 +3,17 @@ title: Platform::IBoxArray (Interfaz)
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Value
+- VCCORLIB/Platform::IBoxArray
+- VCCORLIB/Platform::IBoxArray::Value
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: a35a8b7d9f23bcb624755353e27e52de4b873c5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497048"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444160"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray (Interfaz)
 
@@ -31,11 +31,11 @@ interface class IBoxArray
 *T*<br/>
 Tipo del valor al que se ha aplicado la conversión boxing en cada elemento de la matriz.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`IBoxArray` es C++ / c++ / nombre CX para `Windows::Foundation::IReferenceArray`.
+`IBoxArray` es el C++nombre de/cx para `Windows::Foundation::IReferenceArray`.
 
-### <a name="members"></a>Miembros
+### <a name="members"></a>Members
 
 La interfaz `IBoxArray` hereda de la interfaz `IValueType` . `IBoxArray` también tiene estos miembros:
 
@@ -43,7 +43,7 @@ La interfaz `IBoxArray` hereda de la interfaz `IValueType` . `IBoxArray` tambié
 |------------|-----------------|
 |[Valor](#value)|Devuelve la matriz a la que se le ha aplicado la conversión unboxing y que se almacenó previamente en esta instancia de `IBoxArray` .|
 
-## <a name="value"></a> Propiedad Iboxarray
+## <a name="value"></a>IBoxArray:: Value (propiedad)
 
 Devuelve el valor que se almacenó originalmente en este objeto.
 
@@ -62,10 +62,10 @@ Tipo del valor al que se le ha aplicado la conversión boxing.
 
 Devuelve el valor que se almacenó originalmente en este objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener un ejemplo, vea [Boxing](../cppcx/boxing-c-cx.md).
+Para obtener un ejemplo, vea [conversión boxing](../cppcx/boxing-c-cx.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Array y WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

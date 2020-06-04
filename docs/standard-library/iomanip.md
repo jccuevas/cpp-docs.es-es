@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: 983fbc190fb83b81534e3888c748c0bf9c235638
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b9da0de64bbb0ef48a6a9741ff941e6abda0e705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524669"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449204"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Incluir el `iostreams` encabezado estándar \<iomanip > para definir varios manipuladores que toman un solo argumento.
+Incluya el `iostreams` encabezado \<estándar iomanip > para definir varios manipuladores que toman cada uno de ellos un solo argumento.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,7 +26,7 @@ Incluir el `iostreams` encabezado estándar \<iomanip > para definir varios mani
 
 ## <a name="remarks"></a>Comentarios
 
-Cada uno de estos manipuladores devuelve un tipo sin especificar, denominado `T1` a través de `T10`, que ambas sobrecargas `basic_istream` \< **Elem**, **Tr** > `::` [operador >>](../standard-library/istream-operators.md#op_gt_gt) y `basic_ostream` \< **Elem**, **Tr** > `::` [operador <<](../standard-library/ostream-operators.md#op_lt_lt).
+Cada uno de estos manipuladores devuelve un tipo sin especificar, llamado `T1` a través de `T10`, que sobrecarga los operadores `basic_istream`\<**Elem**, **Tr**>`::`[>>](../standard-library/istream-operators.md#op_gt_gt) y `basic_ostream`\<**Elem**, **Tr**>`::`[<<](../standard-library/ostream-operators.md#op_lt_lt).
 
 ### <a name="manipulators"></a>Manipuladores
 
@@ -46,7 +46,7 @@ Cada uno de estos manipuladores devuelve un tipo sin especificar, denominado `T1
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programación con iostream](../standard-library/iostream-programming.md)<br/>
-[Convenciones de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programación con iostream](../standard-library/iostream-programming.md)\
+[Convenciones de iostreams](../standard-library/iostreams-conventions.md)

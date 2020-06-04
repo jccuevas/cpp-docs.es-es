@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2103
 ms.assetid: dfe95972-35e9-469a-b8a8-52c849d4e4e4
-ms.openlocfilehash: ec95eee2b909658b006172bc68f9373cd70be1d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6bbdf582b589b3cd372408ea855a531f6eb2258f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207485"
 ---
 # <a name="compiler-error-c2103"></a>Error del compilador C2103
 

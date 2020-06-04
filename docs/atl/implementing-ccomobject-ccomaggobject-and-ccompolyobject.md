@@ -1,22 +1,18 @@
 ---
 title: Implementar CComObject, CComAggObject y CComPolyObject
 ms.date: 11/04/2016
-f1_keywords:
-- CComPolyObject
-- CComAggObject
-- CComObject
 helpviewer_keywords:
 - CComPolyObject class, implementing
 - CreateInstance method
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-ms.openlocfilehash: 6e9e1a22ebe23f9fec6e553713a5701315cdac96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2413c8fb9f5722f0245883c947067387838e57f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261792"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementar CComObject, CComAggObject y CComPolyObject
 
@@ -39,4 +35,3 @@ La ventaja de usar `CComPolyObject` es que no tenga ambos `CComAggObject` y `CCo
 
 [Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Macros de agregación y generador de clases](../atl/reference/aggregation-and-class-factory-macros.md)
-

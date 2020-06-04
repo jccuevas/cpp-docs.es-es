@@ -1,26 +1,27 @@
 ---
 title: '@CurSeg'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@CurSeg'
 helpviewer_keywords:
 - '@CurSeg symbol'
 ms.assetid: 8fbf90c1-7734-4113-9ba2-6ec664b3b59f
-ms.openlocfilehash: c575c1c5f25e72f34525c0802483fdb61844293c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 400b34e2fa6b01860003567ccb949cf414a6e8e8
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579196"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316387"
 ---
-# <a name="curseg"></a>@CurSeg
+# <a name="curseg"></a>\@CurSeg
 
-El nombre del segmento actual (macro de texto).
+Nombre del segmento actual (macro de texto).
 
 ## <a name="syntax"></a>Sintaxis
 
-> @CurSeg
+> **\@CurSeg**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referencia de símbolos](symbols-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

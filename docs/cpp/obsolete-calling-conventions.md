@@ -12,23 +12,23 @@ helpviewer_keywords:
 - __fortran keyword [C++]
 - calling conventions, obsolete
 ms.assetid: a91fc665-034a-48ce-b6bd-d27125f308a7
-ms.openlocfilehash: 86c75c779158d9f191dd015410cf16c9ce25690d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 156482a395c7dfc8711e273141a09a37ea3e135d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587998"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188563"
 ---
 # <a name="obsolete-calling-conventions"></a>Convenciones de llamada obsoletas
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
-El **__pascal**, **__fortran**, y **__syscall** ya no se admiten las convenciones de llamada. Puede emular su funcionalidad mediante una de las convenciones de llamada admitidas y las opciones del vinculador adecuadas.
+Ya no se admiten las convenciones de llamada de **__pascal**, **__fortran**y **__syscall** . Puede emular su funcionalidad mediante una de las convenciones de llamada admitidas y las opciones del vinculador adecuadas.
 
-\<Windows.h > ahora es compatible con la macro WINAPI, que se traduce en la convención de llamada adecuada para el destino. Usar WINAPI donde antes utilizaba PASCAL o **__far \__pascal**.
+\<Windows. h > admite ahora la macro WINAPI, que se traduce en la Convención de llamada adecuada para el destino. Use WINAPI donde anteriormente usó PASCAL o **__far \__pascal**.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Paso de argumentos y convenciones de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)

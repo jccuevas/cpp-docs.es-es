@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4962
 ms.assetid: 62b156fe-04e5-4a6e-9339-6ab148185f87
-ms.openlocfilehash: e3f7b715da3774d8289fdd526cf1fa0b5bdddba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a600c1875040e1076978bb80c467e6232303cd82
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585321"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164851"
 ---
 # <a name="compiler-warning-c4962"></a>Advertencia del compilador C4962
 

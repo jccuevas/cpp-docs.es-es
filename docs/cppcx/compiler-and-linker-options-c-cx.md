@@ -2,12 +2,12 @@
 title: Opciones del compilador y del vinculador (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-ms.openlocfilehash: 2165d802e6ff4bd530acac7c1ba6185c732a6499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383365"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opciones del compilador y del vinculador (C++/CX)
 
@@ -31,7 +31,7 @@ La variable de entorno %LIBPATH% especifica la ruta de acceso predeterminada par
 |Opción|Descripción|
 |------------|-----------------|
 |/APPCONTAINER[:NO]|Marca el archivo ejecutable como que se puede ejecutar en appcontainer (solo).|
-|/ WINMD [: {N&AMP;#124;SOLO}]|Emite un archivo .winmd y un archivo binario asociado. Esta opción se debe pasar al enlazador para que se emita un .winmd.<br /><br /> **NO:** no genera un archivo .winmd, pero sí un archivo binario.<br /><br /> **ONLY:** genera un archivo .winmd, pero no un archivo binario.|
+|/WINMD[:{NO&#124;ONLY}]|Emite un archivo .winmd y un archivo binario asociado. Esta opción se debe pasar al enlazador para que se emita un .winmd.<br /><br /> **NO:** no genera un archivo .winmd, pero sí un archivo binario.<br /><br /> **ONLY:** genera un archivo .winmd, pero no un archivo binario.|
 |/WINMDFILE:*nombre_de_archivo*|El nombre del archivo .winmd que se va a generar, en lugar del nombre de archivo .winmd predeterminado. Si se especifican varios nombres de archivo en la línea de comandos, se usará el último nombre.|
 |/WINMDDELAYSIGN[:NO]|Firma parcialmente el archivo .winmd y coloca la clave pública en el archivo binario.<br /><br /> **NO:**(predeterminado) no firma el archivo .winmd.<br /><br /> /WINMDDELAYSIGN no tiene ningún efecto a menos que también se especifiquen /WINMDKEYFILE o /WINMDKEYCONTAINER.|
 |/WINMDKEYCONTAINER:*nombre*|Especifica un contenedor de claves para firmar un ensamblado. El parámetro *nombre* corresponde al contenedor de claves que se usa para firmar el archivo de metadatos.|
@@ -43,4 +43,4 @@ Al usar **/ZW**, el compilador se vincula automáticamente a la versión de DLL 
 
 ## <a name="see-also"></a>Vea también
 
-[Compilar aplicaciones y bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)
+[Compilación de aplicaciones y bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)

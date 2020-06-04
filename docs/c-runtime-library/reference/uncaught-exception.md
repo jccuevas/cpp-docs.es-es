@@ -1,9 +1,9 @@
 ---
 title: __uncaught_exception
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __uncaught_exception
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __uncaught_exception
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-ms.openlocfilehash: 19d1e18af27722d6f9da39ebaaf6c9415c281849
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0130776ec2511aefd42d1700f950d97738e9fb14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579639"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945949"
 ---
-# <a name="uncaughtexception"></a>__uncaught_exception
+# <a name="__uncaught_exception"></a>__uncaught_exception
 
-Indica si se ha producido una o más excepciones, pero aún no se han manipulado por el correspondiente **catch** block de un [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) instrucción.
+Indica si se han producido una o más excepciones, pero que aún no se han controlado por el bloque **catch** correspondiente de una instrucción [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,7 +43,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>Valor devuelto
 
-**True** desde el momento en que se produce una excepción un **intente** se bloquean hasta que la coincidencia de **catch** bloque está inicializado; de lo contrario, **false**.
+**true** desde el momento en que se produce una excepción en un bloque **try** hasta que se inicializa el bloque **catch** correspondiente; en caso contrario, **false**.
 
 ## <a name="remarks"></a>Comentarios
 

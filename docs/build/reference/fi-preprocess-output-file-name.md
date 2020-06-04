@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: d4de722ad33a9c9e5e7c37176bbe5d7031b68a39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990c48a72c3f6017d893ddf9b46bcbb737bfb634
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271260"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (Preprocesar el nombre del archivo de salida)
 
-Especifica el nombre del archivo de salida a la que el [/P (Preprocesar para un archivo)](../../build/reference/p-preprocess-to-a-file.md) opción del compilador escribe la salida preprocesada.
+Especifica el nombre del archivo de salida a la que el [/P (Preprocesar para un archivo)](p-preprocess-to-a-file.md) opción del compilador escribe la salida preprocesada.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -48,6 +48,6 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[/P (Preprocesar para archivo)](../../build/reference/p-preprocess-to-a-file.md)<br/>
-[Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[/P (Preprocesar para archivo)](p-preprocess-to-a-file.md)<br/>
+[Especificar la ruta de acceso](specifying-the-pathname.md)

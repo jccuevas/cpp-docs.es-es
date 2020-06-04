@@ -16,15 +16,15 @@ helpviewer_keywords:
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
 ms.openlocfilehash: 146f84c90aa56b5abf6ae5212c1729022cb7e4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534373"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343896"
 ---
 # <a name="indirection-and-address-of-operators"></a>Operadores de direccionamiento indirecto y address-of
 
-El operador unario de direccionamiento indirecto (__&#42;__) accede a un valor indirectamente, mediante un puntero. El operando debe ser un tipo de puntero. El resultado de la operación es el valor al que hace referencia el operando; es decir, el valor de la dirección a la que señala el operando. El tipo del resultado es el tipo al que apunta el operando.
+El operador unario de direccionamiento indirecto ( __&#42;__ ) accede a un valor indirectamente, mediante un puntero. El operando debe ser un tipo de puntero. El resultado de la operación es el valor al que hace referencia el operando; es decir, el valor de la dirección a la que señala el operando. El tipo del resultado es el tipo al que apunta el operando.
 
 El resultado del operador de direccionamiento indirecto es *type* si el operando es del tipo *pointer to type*. Si el operando señala a una función, el resultado es un designador de función. Si señala a un objeto, el resultado es un valor L que designa el objeto.
 
@@ -38,9 +38,9 @@ Si el valor del puntero no es válido, el resultado del operador de direccionami
 
 - El puntero especifica una dirección no utilizada por el programa que se ejecuta.
 
-El operador unario address-of (**&**) proporciona la dirección de su operando. El operando debe ser un valor L que designe un objeto que no esté declarado como __registro__ y no sea un campo de bits, o bien el resultado de un operador unario __&#42;__ de un operador de desreferencia de matriz (__&#91;&#93;__) o, por último, un designador de función. El resultado es del tipo *pointer to type* para un operando de tipo *type*.
+El operador unario address-of ( **&** ) proporciona la dirección de su operando. El operando debe ser un valor L que designe un objeto que no esté declarado como __registro__ y no sea un campo de bits, o bien el resultado de un operador unario __&#42;__ de un operador de desreferencia de matriz ( __&#91;&#93;__ ) o, por último, un designador de función. El resultado es del tipo *pointer to type* para un operando de tipo *type*.
 
-Si el operando es el resultado de un operador unario __&#42;__, no se evaluará ningún operador y el resultado será el mismo que si se hubiesen omitido ambos. El resultado no es un valor L, y se siguen aplicando las restricciones de los operadores. Si el operando es el resultado de un operador __&#91;&#93;__, no se evaluarán ni el operador __&__ ni el unario __&#42;__ implicados por el operador __&#91;&#93;__. El resultado tiene el mismo efecto que si se eliminase el operador __&__ y se cambiase el operador __&#91;&#93;__ por un operador __+__. De lo contrario, el resultado es un puntero que señala al objeto o a la función designados por el operando.
+Si el operando es el resultado de un operador unario __&#42;__ , no se evaluará ningún operador y el resultado será el mismo que si se hubiesen omitido ambos. El resultado no es un valor L, y se siguen aplicando las restricciones de los operadores. Si el operando es el resultado de un operador __&#91;&#93;__ , no se evaluarán ni el operador __&__ ni el unario __&#42;__ implicados por el operador __&#91;&#93;__ . El resultado tiene el mismo efecto que si se eliminase el operador __&__ y se cambiase el operador __&#91;&#93;__ por un operador __+__ . De lo contrario, el resultado es un puntero que señala al objeto o a la función designados por el operando.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -52,13 +52,13 @@ int a[20];
 double d;
 ```
 
-Esta instrucción utiliza el operador address-of (**&**) para tomar la dirección del sexto elemento de la matriz `a`. El resultado se almacena en la variable de puntero `pa`:
+Esta instrucción utiliza el operador address-of ( **&** ) para tomar la dirección del sexto elemento de la matriz `a`. El resultado se almacena en la variable de puntero `pa`:
 
 ```C
 pa = &a[5];
 ```
 
-En este ejemplo se utiliza el operador de direccionamiento indirecto (__&#42;__) para acceder al valor `int` de la dirección almacenada en `pa`. El valor se asigna a la variable de entero `x`:
+En este ejemplo se utiliza el operador de direccionamiento indirecto ( __&#42;__ ) para acceder al valor `int` de la dirección almacenada en `pa`. El valor se asigna a la variable de entero `x`:
 
 ```C
 x = *pa;

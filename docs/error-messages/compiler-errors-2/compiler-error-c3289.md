@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3289
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
-ms.openlocfilehash: 0ebb56023694b1713bfe88379d07fc621da4d43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee80fb2c917281163156ef148403088cef8e8545
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622656"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760171"
 ---
 # <a name="compiler-error-c3289"></a>Error del compilador C3289
 
 'property': no se puede indexar una propiedad trivial
 
-Se ha declarado incorrectamente una propiedad. Deben definirse descriptores de acceso para una propiedad indexada. Vea [property](../../windows/property-cpp-component-extensions.md) para obtener más información.
+Se ha declarado incorrectamente una propiedad. Deben definirse descriptores de acceso para una propiedad indexada. Vea [property](../../extensions/property-cpp-component-extensions.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C3289.
 
-```
+```cpp
 // C3289.cpp
 // compile with: /clr
 public ref struct C {

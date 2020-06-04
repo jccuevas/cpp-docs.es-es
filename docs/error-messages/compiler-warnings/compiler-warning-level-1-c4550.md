@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4550
 ms.assetid: f902b4ed-5f17-48ea-b693-92f4fb8c8054
-ms.openlocfilehash: eff3548ef43075a86f52086caf9b79158ad70cb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 454b0154f555ef1ba1ac13ea7a87d454d59c6f05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640770"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186171"
 ---
 # <a name="compiler-warning-level-1-c4550"></a>Advertencia del compilador (nivel 1) C4550
 
-expresión se evalúa como una función que le falta una lista de argumentos
+la expresión se evalúa como una función a la que le falta una lista de argumentos
 
-Un puntero a una función sin referencia falta una lista de argumentos.
+Falta una lista de argumentos en un puntero desreferenciado a una función.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4550.cpp
 // compile with: /W1
 bool f()

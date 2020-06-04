@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 9130fa2665452b85c5ec83eef0b3d1d618c995a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466714"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990459"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>Advertencia del compilador (nivel 4) C4680
 
-'class': coclase no especifica una interfaz predeterminada
+' Class ': la coclase no especifica una interfaz predeterminada
 
-Un [predeterminada](../../windows/default-cpp.md) interfaz no se especificó para una clase marcada con el [coclase](../../windows/coclass.md) atributo. Para un objeto sea útil, debe implementar una interfaz.
+No se especificó una interfaz [predeterminada](../../windows/default-cpp.md) para una clase marcada con el atributo [CoClass](../../windows/coclass.md) . Para que un objeto sea útil, debe implementar una interfaz.
 
-El ejemplo siguiente genera la advertencia C4680:
+En el ejemplo siguiente se genera C4680:
 
-```
+```cpp
 // C4680.cpp
 // compile with: /W4
 #include <windows.h>

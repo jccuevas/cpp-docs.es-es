@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecc30baabdcb60a030418e9643e2fcffe5ba8281
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321376"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Incrustar información de UAC en el manifiesto)
 
@@ -33,7 +33,7 @@ Especifica si la información de Control de cuentas de usuario (UAC) debe incrus
 
 ### <a name="parameters"></a>Parámetros
 
-*Fragmento*<br/>
+*fragment*<br/>
 Una cadena que contiene los valores de `level` y `uiAccess`. Para obtener más información, vea la sección Comentarios más adelante en este tema.
 
 *_level*<br/>
@@ -48,11 +48,11 @@ Si especifica varias opciones /MANIFESTUAC en la línea de comandos, tendrá pri
 
 Las opciones de /MANIFESTUAC:level son las siguientes:
 
-- `asInvoker`: la aplicación se ejecutará con los mismos permisos que el proceso que la inició. La aplicación se puede elevar a un nivel de permisos superior seleccionando **ejecutar como administrador**.
+- `asInvoker`: La aplicación se ejecutará con los mismos permisos que el proceso que fue iniciado. La aplicación se puede elevar a un nivel de permisos superior seleccionando **ejecutar como administrador**.
 
-- highestAvailable: la aplicación se ejecutará con el máximo nivel de permisos posible. Si el usuario que inicia la aplicación es miembro del grupo Administradores, esta opción es igual que requireAdministrator. Si el máximo nivel de permisos disponible es superior al nivel del proceso de apertura, el sistema solicitará las credenciales.
+- highestAvailable: La aplicación se ejecutará con el mayor nivel de permiso que lo hace. Si el usuario que inicia la aplicación es miembro del grupo Administradores, esta opción es igual que requireAdministrator. Si el máximo nivel de permisos disponible es superior al nivel del proceso de apertura, el sistema solicitará las credenciales.
 
-- requireAdministrator: la aplicación se ejecutará con permisos de administrador. El usuario que inicia la aplicación debe ser miembro del grupo Administradores. Si el proceso de apertura no se está ejecutando con permisos administrativos, el sistema solicitará las credenciales.
+- requireAdministrator: La aplicación se ejecutará con permisos de administrador. El usuario que inicia la aplicación debe ser miembro del grupo Administradores. Si el proceso de apertura no se está ejecutando con permisos administrativos, el sistema solicitará las credenciales.
 
 El nivel y los valores de uiAccess se pueden especificar en un solo paso mediante la opción /MANIFESTUAC:fragmento. El fragmento deben tener el formato siguiente:
 
@@ -62,7 +62,7 @@ El nivel y los valores de uiAccess se pueden especificar en un solo paso mediant
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el nodo **Propiedades de configuración**.
 
@@ -78,5 +78,5 @@ El nivel y los valores de uiAccess se pueden especificar en un solo paso mediant
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

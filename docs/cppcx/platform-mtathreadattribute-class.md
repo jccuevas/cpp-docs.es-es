@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 07a20457df1bb9124b965cfae27d30e9f31d7531
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152675"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (Clase)
 
@@ -38,7 +38,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 El atributo MTAThreadAttribute hereda de [Platform:: Object Class](../cppcx/platform-object-class.md). MTAThreadAttribute también sobrecarga o tiene los siguientes miembros:
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[MTAThreadAttribute::Equals](#equals)|Determina si el objeto especificado es igual al objeto actual.|
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|
@@ -52,7 +52,7 @@ El atributo MTAThreadAttribute hereda de [Platform:: Object Class](../cppcx/plat
 
 **Metadatos:** platform.winmd
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 ## <a name="ctor"></a> MTAThreadAttribute (Constructor)
 

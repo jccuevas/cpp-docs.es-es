@@ -1,9 +1,9 @@
 ---
 title: compl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - compl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - std::compl
 - std.compl
@@ -22,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - compl function
 ms.assetid: e03f6fb5-cb8b-4afa-99c0-905f4105fb34
-ms.openlocfilehash: 24db46eb0d9b0793e01bdf72a5531fba60de4987
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ae1924ba8cdbcdeb9a06c241bc1fadfc66efd613
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170312"
 ---
 # <a name="compl"></a>compl
 
@@ -39,7 +42,7 @@ Alternativa al operador ~.
 #define compl ~
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La macro produce el operador ~.
 
@@ -71,4 +74,4 @@ int main( )
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<iso646.h>
+**Encabezado:** \<iso646. h >

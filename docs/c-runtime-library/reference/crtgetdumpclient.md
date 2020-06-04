@@ -1,9 +1,9 @@
 ---
 title: _CrtGetDumpClient
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetDumpClient
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b5c6c7d4d123d2d419f104ddaabd57c10ad320e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550740"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938747"
 ---
-# <a name="crtgetdumpclient"></a>_CrtGetDumpClient
+# <a name="_crtgetdumpclient"></a>_CrtGetDumpClient
 
-Recupera la función actual definida por la aplicación para volcar la **_CLIENT_BLOCK** escriba bloques de memoria (solo versión de depuración).
+Recupera la función actual definida por la aplicación para volcar los bloques de memoria de tipo _ **client_block** (solo versión de depuración).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,7 +48,7 @@ Devuelve la rutina de volcado actual.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtGetDumpClient** función recupera la función actual de enlace para volcar objetos almacenados en el **_CLIENT_BLOCK** bloques de memoria para el tiempo de ejecución de C depuración el proceso de volcado de memoria.
+La función **_CrtGetDumpClient** recupera la función de enlace actual para los objetos de volcado almacenados en los bloques de memoria _ **client_block** para el proceso de volcado de memoria de depuración en tiempo de ejecución de C.
 
 Para obtener más información sobre cómo usar otras funciones con capacidad de enlace en tiempo de ejecución y cómo escribir funciones de enlace definidas por el cliente, consulte [Creación de funciones de enlace de depuración](/visualstudio/debugger/debug-hook-function-writing).
 

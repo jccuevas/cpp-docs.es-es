@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4238
 ms.assetid: 5d4051d3-7b0f-43ea-8c8d-d194bfdceb71
-ms.openlocfilehash: c5ffa07b06f010d10edc14aa7576bb614aa9dd04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc913a4f92963437347fbc708eca03c25ab9d403
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471908"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991471"
 ---
 # <a name="compiler-warning-level-4-c4238"></a>Advertencia del compilador (nivel 4) C4238
 
-ha utilizado una extensión no estándar: valor-r de clase utilizado como valor l
+se ha utilizado una extensión no estándar: rvalue de clase usado como lvalue
 
-Para ofrecer compatibilidad con versiones anteriores de Visual C++, las extensiones de Microsoft (**/Ze**) le permiten usar un tipo de clase como un valor r en un contexto que implícita o explícitamente tome su dirección. En algunos casos, como en el ejemplo siguiente, esto puede ser peligroso.
+Por compatibilidad con versiones anteriores de Visual C++, las extensiones de Microsoft ( **/ze**) le permiten usar un tipo de clase como un valor r en un contexto que toma implícita o explícitamente su dirección. En algunos casos, como en el ejemplo siguiente, esto puede ser peligroso.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4238.cpp
 // compile with: /W4 /c
 struct C {
@@ -31,4 +31,4 @@ struct C {
 C * pC = &C();   // C4238
 ```
 
-Este uso produce un error en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Este uso provoca un error en la compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

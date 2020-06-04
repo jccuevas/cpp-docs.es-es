@@ -1,18 +1,16 @@
 ---
 title: Información general de clases ATL
 ms.date: 11/04/2016
-f1_keywords:
-- vc.atl.classes
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbb9e2454aadd33db61c722704e17ce95f3df4c4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223383"
 ---
 # <a name="atl-class-overview"></a>Información general de clases ATL
 
@@ -27,7 +25,7 @@ Las clases de Active Template Library (ATL) se pueden clasificar como sigue:
 |[Controles compuestos](../atl/composite-controls-classes.md)|[Las propiedades y páginas de propiedades](../atl/properties-and-property-pages-classes.md)|
 |[Puntos de conexión](../atl/connection-points-classes.md)|[Compatibilidad del registro](../atl/registry-support-classes.md)|
 |[Contención de controles](../atl/control-containment-classes.md)|[Objetos de ejecución](../atl/running-objects-classes.md)|
-|[De los controles: Soporte técnico en General](../atl/controls-general-support-classes.md)|[Seguridad](../atl/security-classes.md)|
+|[Controles: Soporte técnico general](../atl/controls-general-support-classes.md)|[Seguridad](../atl/security-classes.md)|
 |[Transferencia de datos](../atl/data-transfer-classes.md)|[Compatibilidad con proveedores de servicio](../atl/service-provider-support-classes.md)|
 |[Tipos de datos](../atl/data-types-classes.md)|[Información del sitio](../atl/site-information-classes.md)|
 |[Depuración y la excepción](../atl/debugging-and-exceptions-classes.md)|[Cadena y texto](../atl/string-and-text-classes.md)|
@@ -48,4 +46,3 @@ Para obtener información sobre las clases adicionales que se puede usar en proy
 [Variables globales](../atl/reference/atl-global-variables.md)<br/>
 [Macros](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
-

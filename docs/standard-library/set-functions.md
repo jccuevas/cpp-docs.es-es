@@ -5,20 +5,16 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: 3873a85218c738b3a9693926e064a10b82a553c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3a63fb86caa3485b1ee14538c3eb1f1ff72923e
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467345"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425170"
 ---
 # <a name="ltsetgt-functions"></a>Funciones &lt;set&gt;
 
-|||
-|-|-|
-|[swap (mapa)](#swap)|[swap (conjunto mútiple)](#swap_multiset)|
-
-## <a name="swap"></a>  swap  (mapa)
+## <a name="swap"></a>intercambiar (asignar)
 
 Intercambia los elementos de dos conjuntos.
 
@@ -29,25 +25,25 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
-El conjunto que proporciona los elementos que se van a intercambiar o el conjunto cuyos elementos se van a intercambiar con los del conjunto *izquierdo*.
+\ *derecha*
+Conjunto que proporciona los elementos que se van a intercambiar o el conjunto cuyos elementos se van a intercambiar con los del conjunto *izquierdo*.
 
-*left*<br/>
-El conjunto cuyos elementos se van a intercambiar con los del conjunto *derecho*.
+\ *izquierda*
+Conjunto cuyos elementos se van a intercambiar con los del conjunto *derecho*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función de plantilla es un algoritmo especializado en la clase contenedora establecida para ejecutar la función miembro `left.` [intercambio](../standard-library/set-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
+La función de plantilla es un algoritmo especializado en la clase de contenedor establecida para ejecutar la función miembro `left.`[swap](../standard-library/set-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, entonces el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
 
-`template` \< **classT**> **void swap**( **T&**, **T&**)
+`template` \< **classt**> **void swap**( **t &** , **t &** )
 
-en la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada en cada contenedor es mucho más rápida dado que puede funcionar con la representación interna de la clase contenedora.
+de la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de código para la clase miembro [set::swap](../standard-library/set-class.md#swap) para obtener un ejemplo del uso de la versión de plantilla de `swap`.
 
-## <a name="swap_multiset"></a>  swap  (conjunto mútiple)
+## <a name="swap_multiset"></a>swap (MultiSet)
 
 Intercambia los elementos de dos conjuntos mútiples.
 
@@ -58,24 +54,20 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
-El conjunto múltiple que proporciona los elementos deben intercambiar o el conjunto mútiple cuyos elementos se van a intercambiar con los de la clase multiset *izquierdo*.
+\ *derecha*
+Conjunto múltiple que proporciona los elementos que se van a intercambiar o el conjunto múltiple cuyos elementos se van a intercambiar con los del conjunto múltiple *izquierdo*.
 
-*left*<br/>
-El conjunto mútiple cuyos elementos se van a intercambiar con los de la clase multiset *derecho*.
+\ *izquierda*
+Conjunto múltiple cuyos elementos se van a intercambiar con los del *derecho*de conjunto múltiple.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función de plantilla es un algoritmo especializado en el conjunto múltiple de clase de contenedor para ejecutar la función miembro `left.` [intercambio](../standard-library/multiset-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
+La función de plantilla es un algoritmo especializado en la clase contenedor MultiSet para ejecutar la función miembro `left.`[swap](../standard-library/multiset-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, entonces el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
 
-`template` \< **classT**> **void swap**( **T&**, **T&**)
+`template` \< **classt**> **void swap**( **t &** , **t &** )
 
-en la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada en cada contenedor es mucho más rápida dado que puede funcionar con la representación interna de la clase contenedora.
+de la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de código para la clase miembro [multiset::swap](../standard-library/multiset-class.md#swap) para obtener un ejemplo del uso de la versión de plantilla de `swap`.
-
-## <a name="see-also"></a>Vea también
-
-[\<set>](../standard-library/set.md)<br/>

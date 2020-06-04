@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2003
 ms.assetid: 3161bc08-593d-4448-9fd3-4e3810be9e82
-ms.openlocfilehash: 5bc1250ce5c98e89be768141e3d71c16c5e6b356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a0dac2f6886ffbef20d9303b2637bfebc240fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528874"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208239"
 ---
 # <a name="compiler-error-c2003"></a>Error del compilador C2003
 
-se esperaba 'defined id'
+se esperaba ' ID. definido '
 
 Un identificador debe seguir la palabra clave del preprocesador.

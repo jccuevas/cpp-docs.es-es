@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbar controls [MFC], about toolbar controls
 - CToolBarCtrl class [MFC], settings
 ms.assetid: 025ba920-b3ee-4d82-9367-e652cd7875b9
-ms.openlocfilehash: 5b5a91b4b78737866a0718865ae45fc62d1ca71a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baccc2f486bb49a52f1297c01941a90e9ee01b7a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307606"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Configuración del control Toolbar
 
@@ -22,4 +22,3 @@ Una barra de herramientas puede tener características de personalización integ
 
 [Uso de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

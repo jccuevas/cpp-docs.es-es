@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2648
 ms.assetid: ce338337-9154-4f85-bb61-b05fdbfad75d
-ms.openlocfilehash: fc563c6e85555b113734ec93fc545bb505bd3f38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74e1aa18d49e8a705a95f17c83bb201e9022d8c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610192"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755725"
 ---
 # <a name="compiler-error-c2648"></a>Error del compilador C2648
 
-'identifier': uso de miembro como parámetro predeterminado requiere un miembro static
+' Identifier ': el uso del miembro como parámetro predeterminado requiere un miembro estático
 
-Un miembro no estático se usa como parámetro predeterminado.
+Un miembro no estático se utiliza como parámetro predeterminado.
 
-El ejemplo siguiente genera C2648:
+En el ejemplo siguiente se genera C2648:
 
-```
+```cpp
 // C2648.cpp
 // compile with: /c
 class C {

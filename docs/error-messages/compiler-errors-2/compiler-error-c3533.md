@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: 59ceea942d9165f6f7c6161032e96404bc0dcba7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce95bba417e9be3603f15376a0fd65a48f951a2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547256"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755647"
 ---
 # <a name="compiler-error-c3533"></a>Error del compilador C3533
 
-'type': un parámetro no puede tener un tipo que contiene 'auto'
+' type ': un parámetro no puede tener un tipo que contiene ' auto '
 
-No se puede declarar un parámetro de método o una plantilla con el `auto` palabra clave si el valor predeterminado [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) opción del compilador está en vigor.
+Un parámetro de método o plantilla no se puede declarar con la palabra clave `auto` si la opción del compilador [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) predeterminada está en vigor.
 
 ### <a name="to-correct-this-error"></a>Para corregir este error
 
-1. Quitar el `auto` palabra clave de la declaración de parámetro.
+1. Quite la palabra clave `auto` de la declaración del parámetro.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se genera C3533 porque declara un parámetro de función con el `auto` palabra clave y se compila con **/Zc: Auto**.
+En el ejemplo siguiente se produce C3533 porque declara un parámetro de función con la palabra clave `auto` y se compila con **/Zc: auto**.
 
-```
+```cpp
 // C3533a.cpp
 // Compile with /Zc:auto
 void f(auto j) {} // C3533
@@ -35,9 +35,9 @@ void f(auto j) {} // C3533
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3533 en modo C ++ 14 porque declara un parámetro de plantilla con el `auto` palabra clave y se compila con **/Zc: Auto**. (En C ++ 17, esto es una definición de una plantilla de clase con un parámetro de plantilla sin tipo único cuyo tipo se deduce válida).
+En el ejemplo siguiente se produce C3533 en modo C++ 14 porque declara un parámetro de plantilla con la palabra clave `auto` y se compila con **/Zc: auto**. (En C++ 17, se trata de una definición válida de una plantilla de clase con un solo parámetro de plantilla sin tipo cuyo tipo se deduce).
 
-```
+```cpp
 // C3533b.cpp
 // Compile with /Zc:auto
 template<auto T> class C {}; // C3533

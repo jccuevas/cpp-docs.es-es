@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::common_type
 ms.assetid: 2b42722c-c3dc-4d62-8613-0271e52b6f00
-ms.openlocfilehash: 4d2f1fe6ebf5b8f35f65fb9b551e6e7d473615a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cef9b1fb6bc2723de1202b63ddc711ddd39f0d97
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435339"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689800"
 ---
-# <a name="commontype-structure"></a>common_type (Estructura)
+# <a name="common_type-structure"></a>common_type (Estructura)
 
-Describe especializaciones de la clase de plantilla [common_type](../standard-library/common-type-class.md) para las creaciones de instancias de [duration](../standard-library/duration-class.md) y [time_point](../standard-library/time-point-class.md).
+Describe las especializaciones de la plantilla de clase [common_type](../standard-library/common-type-class.md) para las creaciones de instancias de [Duration](../standard-library/duration-class.md) y [time_point](../standard-library/time-point-class.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,5 +39,5 @@ chrono::time_point<Clock, Duration2>>;
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

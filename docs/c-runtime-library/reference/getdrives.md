@@ -1,9 +1,10 @@
 ---
 title: _getdrives
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getdrives
-apilocation:
+- _o__getdrives
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdrives
 - _getdrives
@@ -24,14 +29,14 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 444a54a316b1b1e4cfd26df95d172c7e9748fb88
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 66940abc3f171b07f0816441709b1f4f9db88614
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678319"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913753"
 ---
-# <a name="getdrives"></a>_getdrives
+# <a name="_getdrives"></a>_getdrives
 
 Devuelve una máscara de bits que representa las unidades de disco disponibles actualmente.
 
@@ -48,13 +53,17 @@ unsigned long _getdrives( void );
 
 Si la función se realiza correctamente, el valor devuelto es una máscara de bits que representa las unidades de disco disponibles actualmente. La posición de bit 0 (el bit menos significativo) es la unidad A, la posición de bit 1 es la unidad B, la posición de bit 2 es la unidad C y así sucesivamente. Si la función no se realiza correctamente, el valor devuelto es cero. Para obtener información de error extendida, llame a **GetLastError**.
 
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**_getdrives**|\<direct.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -102,6 +111,6 @@ D:
 E:
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>

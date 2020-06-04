@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146962"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857156"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Atributos extendidos de clase de almacenamiento de C
 
@@ -27,7 +27,7 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 ## <a name="syntax"></a>Sintaxis
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Específico de Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Específico de Microsoft \*/
 
 *extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Específico de Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>

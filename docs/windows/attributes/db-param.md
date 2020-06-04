@@ -1,17 +1,17 @@
 ---
-title: db_param (atributo de COM de C++)
+title: db_param (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 58d6fa5026395b4be6663ab253cf9ffdfea01788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148099"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -25,10 +25,10 @@ La variable de miembro especificado se asocia con un parámetro de entrada o sal
 
 ### <a name="parameters"></a>Parámetros
 
-*Ordinal*<br/>
+*ordinal*<br/>
 El número de columna (ordinal DBCOLUMNINFO) correspondiente a un campo del conjunto de filas que se va a enlazar datos.
 
-*ParamType*<br/>
+*paramtype*<br/>
 (Opcional) El tipo de conjunto para el parámetro. Los proveedores admiten solo tipos de E/S de parámetros que son compatibles con el origen de datos subyacente. El tipo es una combinación de uno o más valores DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT un parámetro de entrada.
@@ -37,17 +37,17 @@ El número de columna (ordinal DBCOLUMNINFO) correspondiente a un campo del conj
 
 - DBPARAMIO_NOTPARAM el descriptor de acceso no tiene parámetros. Establecer `eParamIO` en este valor en la fila de los descriptores de acceso recuerda al usuario que se omiten los parámetros.
 
-*DbType*<br/>
-(Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251) para la entrada de columna.
+*dbtype*<br/>
+(Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) para la entrada de columna.
 
 *precision*<br/>
-(Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845)
+(Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*Escala*<br/>
-(Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845)
+*scale*<br/>
+(Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-(Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617) en el *referencia del programador de OLE DB*.
+(Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617(v=vs.85)) en el *referencia del programador de OLE DB*.
 
 *length*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1351
 ms.assetid: 1f8502e4-1049-49c7-bbe3-fa101c79021e
-ms.openlocfilehash: 5ba34d07141ddef301f95de23bead654a14b677e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079f17106f3515b332352c2370371e175e72d7a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431803"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203143"
 ---
 # <a name="fatal-error-c1351"></a>Error irrecuperable C1351
 

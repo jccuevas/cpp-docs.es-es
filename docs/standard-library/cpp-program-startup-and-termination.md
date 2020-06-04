@@ -9,12 +9,12 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-ms.openlocfilehash: 2246e50c81da9eb505fd30cfa31f9f24e3fe4703
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8852172a998e4bf4f42f9f919dc29c2ded85
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459194"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450653"
 ---
 # <a name="c-program-startup-and-termination"></a>Inicio y terminación de un programa de C++
 
@@ -36,5 +36,5 @@ Al igual que con C, al volver de `main` o llamar a `exit`, se llama a todas las 
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

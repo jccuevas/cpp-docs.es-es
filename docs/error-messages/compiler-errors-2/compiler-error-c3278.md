@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-ms.openlocfilehash: 7618336c08dd111e495d7e4102b8e61c6e927c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec51064853afa37f75022042c8c6121b6c5248a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579756"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201440"
 ---
 # <a name="compiler-error-c3278"></a>Error del compilador C3278
 
-> llamada de interfaz o método puro directa '*método*' se producirá un error en tiempo de ejecución
+> la llamada directa de la interfaz o el método puro '*método*' producirá un error en tiempo de ejecución
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Se realizó una llamada a un método de interfaz o a un método puro, y esto no está permitido.
 

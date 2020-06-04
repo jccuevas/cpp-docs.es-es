@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: fd86228417234f705d3f765624cd942c982df875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456191"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374731"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits (Estructura)
+# <a name="short_vector_traits-structure"></a>short_vector_traits (Estructura)
 
-short_vector_traits () permite la recuperación de la longitud del vector subyacente y el tipo escalar de un tipo de vector corto o un tipo escalar
+short_vector_traits permite la recuperación de la longitud del vector subyacente y el tipo escalar de un tipo vectorial corto o un tipo escalar
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,7 +75,7 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 `T`
 
@@ -83,21 +83,21 @@ struct short_vector_traits<double_4>;
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor short_vector_traits::short_vector_traits](#ctor)||
+|[short_vector_traits::short_vector_traits (Constructor)](#ctor)||
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[short_vector_traits::Size (constante)](#size)||
+|[short_vector_traits::size (Constante)](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -107,20 +107,20 @@ struct short_vector_traits<double_4>;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Simultaneidad::gráficos
 
-##  <a name="ctor"></a>  Constructor short_vector_traits::short_vector_traits
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>Constructor short_vector_traits::short_vector_traits
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits::Size (constante)
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits::tamaño Constante
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
+[Concurrency::graphics (Espacio de nombres)](concurrency-graphics-namespace.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4549
 ms.assetid: 81a07676-625b-4f58-9b0c-3ee22830b04a
-ms.openlocfilehash: 5732b2f963be52512d5d80f2552af4a80acb3372
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da252efa624b65ca87dd60fe1cdb9b0c5e33ccbb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657241"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186210"
 ---
 # <a name="compiler-warning-level-1-c4549"></a>Advertencia del compilador (nivel 1) C4549
 
-'operador': operador antes de una coma no tiene ningún efecto; ¿ha pensado en 'operador'?
+' Operator ': el operador antes de la coma no tiene ningún efecto; ¿deseaba ' operador '?
 
-El compilador detectó una expresión de coma mal formada.
+El compilador detectó una expresión de coma con formato incorrecto.
 
 De forma predeterminada, esta advertencia está desactivada. Para obtener más información, consulte [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-El ejemplo siguiente genera C4549:
+En el ejemplo siguiente se genera C4549:
 
-```
+```cpp
 // C4549.cpp
 // compile with: /W1
 #pragma warning (default : 4549)

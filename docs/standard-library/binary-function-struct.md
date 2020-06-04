@@ -1,21 +1,21 @@
 ---
 title: binary_function (Struct)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- functional/std::binary
+- functional/std::binary_function
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 5a153d85f9f6dcb93a074725ee9582ccfc1a66ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acbcb7496b7e6b37af61c5eb7a113c77855e6928
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466773"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243399"
 ---
 # <a name="binaryfunction-struct"></a>binary_function (Struct)
 
-Un struct base vacío que define los tipos que pueden heredar las clases derivadas que proporciona un objeto de función binario.
+Un struct base vacío que define los tipos que pueden heredar las clases derivadas que proporciona un objeto de función binario. En desuso en C ++ 11, se ha quitado en C ++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,14 +24,14 @@ struct binary_function {
    typedef Arg1 first_argument_type;
    typedef Arg2 second_argument_type;
    typedef Result result_type;
-   };
+};
 ```
 
 ## <a name="remarks"></a>Comentarios
 
 El struct de plantilla sirve como base para las clases que definen una función miembro con el formato:
 
-> *result_type* ** operator() (const ** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**&) const**
+> *result_type* ** operator() (const ** <em>first_argument_type</em> **&, const** <em>second_argument_type</em> **&) const**
 
 Todas estas funciones binarias pueden hacer referencia a su primer tipo de argumento como *first_argument_type*, a su segundo tipo de argumento como *second_argument_type* y a su tipo de valor devuelto como *result_type*.
 
@@ -88,20 +88,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 11 5.5 3.66667 2.75 2.2 1.83333 )
 The vector v2 = ( -0 -2 -4 -6 -8 -10 )
 The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

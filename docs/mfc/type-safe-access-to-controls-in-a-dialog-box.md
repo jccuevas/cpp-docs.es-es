@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type-safe access to dialog box controls
 - MFC dialog boxes [MFC], type-safe access to controls
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
-ms.openlocfilehash: 61a4df25ccc310ff65e1789b5405fcf395213a3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b8e5aef61d1a7c7277f2a6bd37b81bd156bb837
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181623"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>Acceso con seguridad de tipos a los controles en un cuadro de diálogo
 
@@ -30,4 +30,3 @@ Existen dos enfoques para llevar a cabo una asociación entre un control de un c
 ## <a name="see-also"></a>Vea también
 
 [Cuadros de diálogo](../mfc/dialog-boxes.md)
-

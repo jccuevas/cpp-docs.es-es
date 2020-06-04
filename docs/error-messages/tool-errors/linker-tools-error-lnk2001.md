@@ -1,105 +1,112 @@
 ---
-title: Error de las herramientas del vinculador LNK2001
-ms.date: 05/17/2017
+title: Error de las herramientas del enlazador LNK2001
+ms.date: 12/19/2019
 f1_keywords:
 - LNK2001
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: dba197be71fc77af6d95c2ec62053928ac1627cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6d1e53d8f057ddc93e2dfde65cb951d247dfcc0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631665"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302138"
 ---
-# <a name="linker-tools-error-lnk2001"></a>Error de las herramientas del vinculador LNK2001
+# <a name="linker-tools-error-lnk2001"></a>Error de las herramientas del enlazador LNK2001
 
-símbolo externo sin resolver "*símbolo*"
+> símbolo externo sin resolver "*Symbol*"
 
-El código compilado que hace una referencia o una llamada a *símbolos*, pero este símbolo no está definido en cualquiera de las bibliotecas o archivos de objeto especificados al vinculador.
+El código compilado realiza una referencia o una llamada a *Symbol*. El símbolo no está definido en ninguna biblioteca o archivo objeto buscado por el enlazador.
 
-Este mensaje de error va seguido de un error irrecuperable [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Debe corregir todos los LNK2001 y LNK2019 errores para corregir el error LNK1120.
+Este mensaje de error va seguido de un error irrecuperable [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Para corregir el error LNK1120, primero Corrija todos los errores LNK2001 y LNK2019.
 
-## <a name="possible-causes"></a>Causas posibles
-
-Hay muchas maneras de obtener este error, pero todas ellas implican una referencia a una función o variable que el vinculador no *resolver*, o busque una definición. El compilador puede identificar cuándo un símbolo no es *declarado*, pero no cuando no es *definido*, porque la definición puede estar en un archivo de origen diferente o biblioteca. Si se hace referencia a un símbolo, pero nunca se ha definido, el vinculador genera un error.
-
-### <a name="coding-issues"></a>Problemas de codificación
-
-Este error puede deberse a un caso que no coinciden en su código fuente o una definición de módulo (.def) archivo. Por ejemplo, si el nombre de una variable `var1` en un C++ archivo de origen e intente obtener acceso a él como `VAR1` en otra, se genera este error. Para corregir este problema, use sistemáticamente la ortografía y mayúsculas y minúsculas de los nombres de.
-
-Este error puede producirse en un proyecto que usa [inserción de funciones](../../error-messages/tool-errors/function-inlining-problems.md) si define las funciones en un archivo de código fuente en lugar de un archivo de encabezado. Las funciones insertadas no se ve fuera del archivo de origen que los define. Para corregir este problema, defina las funciones insertadas en los encabezados de donde se declaran.
-
-Este error puede producirse si se llama a una función de C desde un programa de C++ sin usar un `extern "C"` declaración para la función. El compilador usa las convenciones de nomenclatura de símbolo interno diferente para el código de C y C++, y es el nombre del símbolo interno que el vinculador busca al resolver los símbolos. Para corregir este problema, use un `extern "C"` contenedor alrededor de todas las declaraciones de funciones de C que se usan en el código de C++, que hace que el compilador use la convención de nomenclatura de C interna para esos símbolos. Opciones del compilador [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) y [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) hará que el compilador compilar archivos como C++ o C, respectivamente, independientemente de la extensión de nombre de archivo. Estas opciones pueden dar lugar a nombres de función interna diferentes de lo esperado.
-
-Este error puede deberse a un intento de hacer referencia a funciones o datos que no tienen vinculación externa. En C++, las funciones insertadas y `const` datos tienen vinculación interna a menos que especifique explícitamente como `extern`. Para corregir este problema, utilice explicit `extern` declaraciones en símbolos contempladas fuera del archivo de origen de definición.
-
-Este error puede deberse a un [falta el cuerpo de función o variable](../../error-messages/tool-errors/missing-function-body-or-variable.md) definición. Este error es habitual cuando se declara, pero no definen, variables, funciones o clases en el código. El compilador sólo necesita un prototipo de función o `extern` declaración de variable para generar un archivo de objeto sin errores, pero el vinculador no puede resolver una llamada a la función o una referencia a la variable porque no hay ningún espacio de variable o el código de función reservado. Para corregir este problema, asegúrese de que cada función que se hace referencia y la variable está totalmente definida en un archivo de origen o la biblioteca que se incluye en el vínculo.
-
-Este error puede deberse a una llamada de función que usa tipos devueltos y parámetros o las convenciones de llamada que no coinciden con los de la definición de función. En los archivos de objeto de C++, [nombre decoración](../../error-messages/tool-errors/name-decoration.md) incorpora la convención de llamada, el ámbito de clase o espacio de nombres y tipos devueltos y parámetros de una función en el nombre de función representativo final, que se usa como el símbolo de coincidirán cuando las llamadas a la función desde otros archivos de objeto se resuelven. Para corregir este problema, asegúrese de que la declaración, definición y llamadas a la función de todos los usan los mismos ámbitos, tipos y las convenciones de llamada.
-
-Este error puede deberse en código de C++ al incluir un prototipo de función en una definición de clase, pero no se pudo [incluyen la implementación](../../error-messages/tool-errors/missing-function-body-or-variable.md) de la función y, a continuación, llamarlo. Para corregir este problema, asegúrese de proporcionar una definición para todos los llama declarado los miembros de una clase.
-
-Este error puede deberse a un intento de llamar a una función virtual pura de una clase base abstracta. Una función virtual pura no tiene ninguna implementación de la clase base. Para corregir este problema, asegúrese de que todos se llama a funciones virtuales se implementan.
-
-Este error puede deberse a que se intenta utilizar una variable declarada dentro de una función ([una variable local](../../error-messages/tool-errors/automatic-function-scope-variables.md)) fuera del ámbito de esa función. Para corregir este problema, quite la referencia a la variable que no está en el ámbito o mover la variable a un ámbito superior.
-
-Este error puede producirse cuando se compila una versión de lanzamiento de un proyecto ATL, generar un mensaje que se requiere código de inicio de CRT. Para solucionar este problema, realice una de las acciones siguientes,
-
-- Quitar `_ATL_MIN_CRT` en la lista del preprocesador define para permitir que el código de inicio de CRT se incluirán. Consulte [página de propiedades General (proyecto)](../../ide/general-property-page-project.md) para obtener más información.
-
-- Si es posible, quite las llamadas a funciones de CRT que requieren código de inicio de CRT. En su lugar, use sus equivalentes de Win32. Por ejemplo, usar `lstrcmp` en lugar de `strcmp`. Las funciones conocidas que requieren código de inicio de CRT son algunas de las cadenas y las funciones de punto flotante.
-
-### <a name="compilation-and-link-issues"></a>Problemas de compilación y vínculo
-
-Este error puede producirse cuando el proyecto no tiene una referencia a una biblioteca (. LIB) o un objeto (. Archivo OBJ). Para corregir este problema, agregue una referencia al archivo de objeto o biblioteca requerida para el proyecto. Para obtener más información, consulte [archivos .lib como entrada del vinculador](../../build/reference/dot-lib-files-as-linker-input.md).
-
-Este error puede producirse si usa el [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) o [/Zl](../../build/reference/zl-omit-default-library-name.md) opciones. Al especificar estas opciones, no se vinculan bibliotecas que contienen el código necesario en el proyecto, a menos que se hayan incluido explícitamente. Para corregir este problema, debe incluir explícitamente todas las bibliotecas que se usa en la línea de comandos. Si ve muchos falta CRT o la biblioteca estándar de los nombres de función al usar estas opciones, incluir explícitamente los archivos CRT y archivos DLL de biblioteca estándar o biblioteca en el vínculo.
-
-Si compila con la **/CLR** opción, puede haber una referencia a .cctor que falta. Para corregir este problema, consulte [inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md) para obtener más información.
-
-Este error puede producirse si crea un vínculo a las bibliotecas de modo de versión al compilar una versión de depuración de una aplicación. De forma similar, si utiliza opciones **/MTd** o **/MDd** o definir `_DEBUG` y, a continuación, vincular a las bibliotecas de lanzamiento, debe esperar muchos externos sin resolver posibles, entre otros problemas. Vinculación de un modo de lanzamiento con las bibliotecas de depuración también hace que los problemas similares. Para corregir este problema, asegúrese de que usa las bibliotecas de depuración en las compilaciones de depuración y compila bibliotecas comerciales en su distribuidor.
-
-Este error puede producirse si el código hace referencia a un símbolo de una versión de una biblioteca, pero proporcionar una versión diferente de la biblioteca del vinculador. Por lo general, no se pueden mezclar archivos objeto o bibliotecas que se generan para las diferentes versiones del compilador. Las bibliotecas que se incluyen en una nueva versión pueden contener símbolos que no se encuentra en las bibliotecas incluidas con las versiones anteriores y viceversa. Para corregir este problema, cree todos los archivos objeto y bibliotecas con la misma versión del compilador antes de vincularlas.
-
-- Las herramientas de &#124; opciones &#124; proyectos &#124; cuadro de diálogo de directorios de VC ++, en la selección de archivos de biblioteca, le permite cambiar el orden de búsqueda de biblioteca. La carpeta vinculador del cuadro de diálogo páginas de propiedades del proyecto también puede contener rutas de acceso que podrían estar obsoletas.
-
-- Este problema puede aparecer cuando se instala un nuevo SDK (quizás en una ubicación diferente), y el orden de búsqueda no se actualiza para señalar a la nueva ubicación. Normalmente, se debe colocar la ruta de acceso al nuevo SDK include y lib directorios delante de la ubicación predeterminada Visual C++. Además, un proyecto que contiene las rutas de acceso incrustados todavía puede apuntar a rutas de acceso anteriores que sean válidos, pero obsoleto en la nueva funcionalidad agregada por la nueva versión que se instala en una ubicación diferente.
-
-- Si compila en la línea de comandos y ha creado sus propias variables de entorno, compruebe que las rutas de acceso a archivos de encabezado, bibliotecas y herramientas se dirijan a una versión coherente. Para obtener más información, consulte [establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
-
-Actualmente no hay ningún estándar para [C++ nomenclatura](../../error-messages/tool-errors/name-decoration.md) entre los proveedores de compiladores, ni entre versiones diferentes de un compilador. Por lo tanto, vincular archivos objeto compilados con otros compiladores puede no producir el mismo esquema de nomenclatura y esto provocará el error LNK2001.
-
-[Opciones de compilación de combinación en línea y no en línea](../../error-messages/tool-errors/function-inlining-problems.md) en módulos diferentes puede causar el error LNK2001. Si se crea una biblioteca de C++ con la inclusión de funciones activado (**/Ob1** o **/Ob2**), pero el archivo de encabezado correspondiente que describe las funciones tiene desactivada (no hay `inline` palabra clave), este error se produce. Para corregir este problema, defina las funciones `inline` en el archivo de encabezado incluido en otros archivos de origen.
-
-Si usas el `#pragma inline_depth` compilador la directiva, asegúrese de tener un [establecer valor de 2 o mayor](../../error-messages/tool-errors/function-inlining-problems.md)y asegúrese también de usar el [/Ob1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md) opción del compilador.
-
-Este error puede producirse si se omite el vínculo de la opción/NOENTRY cuando se crea un archivo DLL de recursos. Para corregir este problema, agregue la opción /NOENTRY al comando de vínculo.
-
-Este error puede producirse si usa /SUBSYSTEM incorrecto o configuración/Entry en el proyecto. Por ejemplo, si escribe una aplicación de consola y especifique/SUBSYSTEM: Windows, se genera un error externo sin resolver para `WinMain`. Para corregir este problema, asegúrese de que coinciden con las opciones para el tipo de proyecto. Para obtener más información sobre estas opciones y puntos de entrada, consulte el [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) y [/Entry](../../build/reference/entry-entry-point-symbol.md) opciones del vinculador.
-
-### <a name="exported-symbol-issues"></a>Problemas de los símbolos exportados
-
-Este error se produce cuando no se encuentra una exportación aparece en un archivo. def. Esto podría deberse a que no existe, está mal escrito o utiliza nombres representativos de C++. Un archivo .def no toman nombres representativos. Para corregir este problema, quite exportaciones innecesarias y usar `extern "C"` declaraciones de los símbolos exportados.
+Hay muchas maneras de obtener errores LNK2001. Todos ellos incluyen una *referencia* a una función o variable que el vinculador no puede *resolver*o buscar una definición para. El compilador puede identificar si el código no *declara* un símbolo, pero no cuando no se *define* uno. Esto se debe a que la definición puede estar en un archivo o biblioteca de origen diferente. Si el código hace referencia a un símbolo, pero nunca se define, el vinculador genera un error.
 
 ## <a name="what-is-an-unresolved-external-symbol"></a>¿Qué es un símbolo externo sin resolver?
 
-Un *símbolo* es el nombre de una función o variable global que se usa internamente mediante un archivo objeto compilado o biblioteca. Es un símbolo *definido* en el archivo objeto donde se asigna almacenamiento para una variable global o en una función, donde se coloca el código compilado para el cuerpo de función. Un *símbolo externo* es un símbolo que *que se hace referencia*, es decir, usar o llamado en el archivo de un objeto, pero definido en un archivo de biblioteca u objeto diferente. Un *exportar símbolos* es aquella que está disponible públicamente con el archivo objeto o biblioteca que lo define. El vinculador debe *resolver*, o busque la definición coincidente para cada símbolo externo al que hace referencia un archivo objeto cuando se vincula a una aplicación o DLL. El vinculador genera un error cuando no puede resolver un símbolo externo mediante la búsqueda de un símbolo exportado coincidente en cualquiera de los archivos vinculados.
+Un *símbolo* es el nombre interno de una función o una variable global. Es el formato del nombre usado o definido en un archivo o biblioteca de objetos compilados. Se define una variable global en el archivo objeto en el que se asigna el almacenamiento. Una función se define en el archivo objeto donde se coloca el código compilado para el cuerpo de la función. Se hace referencia a un *símbolo externo* en un archivo objeto, pero se define en otro archivo de biblioteca u objeto. Un *símbolo exportado* es aquél que está disponible públicamente por el archivo objeto o la biblioteca que lo define.
 
-## <a name="use-the-decorated-name-to-find-the-error"></a>Use el nombre representativo para encontrar el error
+Para crear una aplicación o un archivo DLL, cada símbolo usado debe tener una definición. El enlazador debe *resolver*o encontrar la definición coincidente para, cada uno de los símbolos externos a los que hace referencia cada archivo objeto. El vinculador genera un error cuando no puede resolver un símbolo externo. Significa que el enlazador no pudo encontrar una definición de símbolo exportado coincidente en ninguno de los archivos vinculados.
 
-El uso del compilador y vinculador de C++ [decoración](../../error-messages/tool-errors/name-decoration.md), también conocida como *alteración de nombres*, para codificar información adicional sobre el tipo de una variable o el tipo de valor devuelto, los tipos de parámetro, ámbito y que realiza la llamada convención de una función en el nombre del símbolo. Este nombre representativo es el nombre del símbolo el enlazador busca para resolver los símbolos externos.
+## <a name="compilation-and-link-issues"></a>Problemas de compilación y vinculación
 
-Dado que la información adicional se convierte en parte del nombre del símbolo, puede producirse un error de vínculo si la declaración de una función o variable no coinciden exactamente con la definición de la función o variable. Esto puede ocurrir incluso si se utiliza el mismo archivo de encabezado en el código de llamada y el código de definición, si se usan los distintos indicadores de compilador al compilar los archivos de origen. Por ejemplo, puede obtener este error si se compila el código para usar el `__vectorcall` convención de llamada, pero puede vincula a una biblioteca que se espera que los clientes a llamar mediante el valor predeterminado `__cdecl` o `__fastcall` convención de llamada. En este caso, los símbolos no coinciden porque las convenciones de llamada son diferentes
+Este error puede producirse:
 
-Para ayudarle a encontrar la causa de este tipo de error, el mensaje de error del vinculador muestra tanto el "nombre descriptivo," el nombre usado en el código fuente y el nombre representativo (entre paréntesis) para el símbolo externo sin resolver. No es necesario saber cómo traducir el nombre representativo para poder usarlo compararlo con otros nombres representativos. Puede usar las herramientas de línea de comandos que se incluyen con el compilador para comparar el nombre del símbolo esperado y el nombre del símbolo real:
+- Cuando el proyecto no tiene una referencia a una biblioteca (. LIB) u Object (. OBJ). Para corregir este problema, agregue al proyecto una referencia a la biblioteca o archivo de objeto requerido. Para obtener más información, vea [archivos lib como entrada del vinculador](../../build/reference/dot-lib-files-as-linker-input.md).
 
-- El [/EXPORTA](../../build/reference/dash-exports.md) y [/símbolos](../../build/reference/symbols.md) las opciones de la herramienta de línea de comandos DUMPBIN pueden ayudarle a descubrir qué símbolos están definidos en los archivos .dll y biblioteca u objeto. Puede usar esto para comprobar que el representativos exportados nombres coinciden con que los nombres representativos el vinculador busca.
+- Cuando el proyecto tiene una referencia a una biblioteca (. LIB) u Object (. OBJ) que a su vez requiere símbolos de otra biblioteca. Puede ocurrir incluso si no llama a funciones que causan la dependencia. Para corregir este problema, agregue una referencia a la otra biblioteca a su proyecto. Para obtener más información, consulte [Descripción del modelo clásico para la vinculación: toma de símbolos para la conducción](https://devblogs.microsoft.com/oldnewthing/20130108-00/?p=5623).
 
-En algunos casos, el vinculador solo puede notificar el nombre representativo para un símbolo. Puede usar la herramienta de línea de comandos UNDNAME para obtener el formato no representativo de un nombre representativo.
+- Si usa las opciones [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) o [/ZL](../../build/reference/zl-omit-default-library-name.md) . Cuando se especifican estas opciones, las bibliotecas que contienen código necesario no se vinculan al proyecto a menos que se hayan incluido explícitamente. Para corregir este problema, incluya explícitamente todas las bibliotecas que use en la línea de comandos de vínculo. Si ve muchos nombres de funciones de biblioteca estándar o CRT que faltan al usar estas opciones, incluya explícitamente los archivos dll de la biblioteca CRT y estándar o los archivos de biblioteca en el vínculo.
+
+- Si se compila con la opción **/CLR** . Puede que falte una referencia a `.cctor`. Para obtener más información sobre cómo corregir este problema, vea [inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md).
+
+- Si se vincula a las bibliotecas de modo de versión al compilar una versión de depuración de una aplicación. Del mismo modo, si usa las opciones **/MTD** o **/mdd** o define `_DEBUG` y, a continuación, vincula a las bibliotecas de versión, debe esperar muchos externos potenciales sin resolver, entre otros problemas. La vinculación de una compilación de modo de versión con las bibliotecas de depuración también causa problemas similares. Para corregir este problema, asegúrese de que usa las bibliotecas de depuración en las compilaciones de depuración y las bibliotecas comerciales en las compilaciones comerciales.
+
+- Si el código hace referencia a un símbolo de una versión de la biblioteca, pero vincula una versión diferente de la biblioteca. Por lo general, no se pueden combinar archivos objeto o bibliotecas que se compilan para versiones diferentes del compilador. Las bibliotecas que se incluyen en una versión pueden contener símbolos que no se encuentran en las bibliotecas incluidas en otras versiones. Para solucionar este problema, compile todos los archivos de objeto y bibliotecas con la misma versión del compilador antes de vincularlos. Para obtener más información, consulte [ C++ compatibilidad binaria 2015-2019](../../porting/binary-compat-2015-2017.md).
+
+- Si las rutas de acceso de la biblioteca no están actualizadas. Las **herramientas > opciones > proyectos > cuadro de diálogo directorios de VC + +** , en la selección **archivos de biblioteca** , permite cambiar el orden de búsqueda de la biblioteca. La carpeta del vinculador en el cuadro de diálogo páginas de propiedades del proyecto también puede contener rutas de acceso que no estén actualizadas.
+
+- Cuando se instala un nuevo Windows SDK (quizás en una ubicación diferente). El orden de búsqueda de la biblioteca debe actualizarse para que apunte a la nueva ubicación. Normalmente, debe colocar la ruta de acceso en los directorios de inclusión y de biblioteca de SDK nuevos delante C++ de la ubicación visual predeterminada. Además, un proyecto que contenga rutas de acceso incrustadas puede seguir señalando a rutas de acceso anteriores que sean válidas pero no estén actualizadas. Actualice las rutas de acceso para la nueva funcionalidad agregada por la nueva versión que se instala en una ubicación diferente.
+
+- Si compila en la línea de comandos y ha creado sus propias variables de entorno. Compruebe que las rutas de acceso a las herramientas, bibliotecas y archivos de encabezado van a una versión coherente. Para obtener más información, vea [establecer la ruta de acceso y las variables de entorno para las compilaciones de línea de comandos](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
+
+## <a name="coding-issues"></a>Problemas de codificación
+
+Este error puede deberse a:
+
+- No coinciden las mayúsculas y minúsculas en el código fuente o el archivo de definición de módulo (. def). Por ejemplo, si se denomina una variable `var1` en un C++ archivo de código fuente e intenta tener acceso a ella como `VAR1` en otro, se genera este error. Para corregir este problema, use nombres escritos con mayúsculas y minúsculas de forma coherente.
+
+- Proyecto que usa la [inclusión de funciones](../../error-messages/tool-errors/function-inlining-problems.md). Puede producirse al definir las funciones como `inline` en un archivo de código fuente, en lugar de en un archivo de encabezado. Las funciones insertadas no se pueden observar fuera del archivo de código fuente que las define. Para corregir este problema, defina las funciones insertadas en los encabezados en los que se declaran.
+
+- Llamar a una función de C C++ desde un programa sin usar una declaración de `extern "C"` para la función de c. El compilador usa convenciones de nomenclatura de símbolos internas C++ diferentes para C y el código. El nombre de símbolo interno es lo que el enlazador busca al resolver símbolos. Para corregir este problema, utilice un contenedor de `extern "C"` en torno a todas las declaraciones de las funciones C++ de c usadas en el código, lo que hace que el compilador use la Convención de nomenclatura interna de c para esos símbolos. Las opciones del compilador [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) y [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) hacen que el C++ compilador compile archivos como o C, respectivamente, independientemente de cuál sea la extensión del nombre de archivo. Estas opciones pueden hacer que los nombres de función internos sean distintos de los esperados.
+
+- Intento de hacer referencia a funciones o datos que no tienen vinculación externa. En C++, las funciones insertadas y los datos de `const` tienen vinculación interna, a menos que se especifique explícitamente como `extern`. Para corregir este problema, use declaraciones de `extern` explícitas en símbolos a los que se hace referencia fuera del archivo de código fuente de definición.
+
+- Una definición de [variable o cuerpo de función que falta](../../error-messages/tool-errors/missing-function-body-or-variable.md) . Este error es habitual cuando se declaran, pero no se definen, variables, funciones o clases en el código. El compilador solo necesita un prototipo de función o `extern` declaración de variable para generar un archivo objeto sin errores, pero el enlazador no puede resolver una llamada a la función o una referencia a la variable porque no hay código de función o espacio de variables reservado. Para corregir este problema, asegúrese de definir todas las funciones y variables a las que se hace referencia en un archivo o biblioteca de origen que vincule.
+
+- Una llamada de función que usa tipos de valor devuelto y parámetro, o convenciones de llamada que no coinciden con las de la definición de función. En C++ los archivos objeto, la [decoración de nombres](../../error-messages/tool-errors/name-decoration.md) codifica la Convención de llamada, el ámbito de clase o espacio de nombres y los tipos de valor devuelto y parámetro de una función. La cadena codificada pasa a formar parte del nombre de función representativo final. El enlazador usa este nombre para resolver o hacer coincidir llamadas a la función desde otros archivos objeto. Para corregir este problema, asegúrese de que la declaración de la función, la definición y las llamadas utilizan los mismos ámbitos, tipos y convenciones de llamada.
+
+- C++código al que se llama cuando se incluye un prototipo de función en una definición de clase, pero no se [incluye la implementación](../../error-messages/tool-errors/missing-function-body-or-variable.md) de la función. Para corregir este problema, asegúrese de proporcionar una definición para todos los miembros de clase a los que llame.
+
+- Intento de llamar a una función virtual pura desde una clase base abstracta. Una función virtual pura no tiene ninguna implementación de clase base. Para corregir este problema, asegúrese de que se han implementado todas las funciones virtuales llamadas.
+
+- Se está intentando usar una variable declarada dentro de una función ([una variable local](../../error-messages/tool-errors/automatic-function-scope-variables.md)) fuera del ámbito de esa función. Para corregir este problema, quite la referencia a la variable que no está en el ámbito o mueva la variable a un ámbito superior.
+
+- Al compilar una versión de lanzamiento de un proyecto ATL, que genera un mensaje que indica que se requiere código de inicio de CRT. Para corregir este problema, realice una de las siguientes acciones:
+
+  - Quite `_ATL_MIN_CRT` de la lista de definiciones del preprocesador para permitir que se incluya código de inicio de CRT. Para obtener más información, vea [Página de propiedades general (proyecto)](../../build/reference/general-property-page-project.md).
+
+  - Si es posible, quite las llamadas a funciones de CRT que requieran código de inicio de CRT. En su lugar, use sus equivalentes de Win32. Por ejemplo, use `lstrcmp` en lugar de `strcmp`. Las funciones conocidas que requieren código de inicio de CRT son algunas de las funciones de cadena y de punto flotante.
+
+## <a name="consistency-issues"></a>Problemas de coherencia
+
+Actualmente no hay ningún estándar para la [ C++ decoración de nombres](../../error-messages/tool-errors/name-decoration.md) entre los proveedores de compiladores, ni siquiera entre las distintas versiones del mismo compilador. Los archivos objeto compilados con distintos compiladores no pueden usar el mismo esquema de nomenclatura. La vinculación puede producir el error LNK2001.
+
+La [combinación de opciones de compilación alineadas y no alineadas](../../error-messages/tool-errors/function-inlining-problems.md) en módulos diferentes puede producir el error LNK2001. Si una C++ biblioteca se crea con la inserción de funciones activada ( **/ob1** o **/OB2**), pero el archivo de encabezado correspondiente que describe las funciones tiene la inserción desactivada (no `inline` palabra clave), se produce este error. Para corregir este problema, defina las funciones `inline` en el archivo de encabezado que se incluye en otros archivos de código fuente.
+
+Si usa la Directiva de compilador de `#pragma inline_depth`, asegúrese de que ha establecido un [valor de 2 o superior](../../error-messages/tool-errors/function-inlining-problems.md)y asegúrese de usar también la opción del compilador [/ob1](../../build/reference/ob-inline-function-expansion.md) o [/OB2](../../build/reference/ob-inline-function-expansion.md) .
+
+Este error puede producirse si se omite la opción de vínculo/NOENTRY al crear un archivo DLL de solo recursos. Para corregir este problema, agregue la opción/NOENTRY al comando Link.
+
+Este error puede producirse si se usa una configuración/SUBSYSTEM o/ENTRY incorrecta en el proyecto. Por ejemplo, si escribe una aplicación de consola y especifica/SUBSYSTEM: WINDOWS, se genera un error externo sin resolver para `WinMain`. Para corregir este problema, asegúrese de que coincide con las opciones del tipo de proyecto. Para obtener más información sobre estas opciones y los puntos de entrada, vea las opciones del vinculador [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) y [/entry](../../build/reference/entry-entry-point-symbol.md) .
+
+## <a name="exported-def-file-symbol-issues"></a>Problemas de símbolos de archivos. def exportados
+
+Este error se produce cuando no se encuentra una exportación enumerada en un archivo. def. Podría deberse a que la exportación no existe, está escrita incorrectamente o usa C++ nombres representativos. Un archivo. def no toma nombres representativos. Para corregir este problema, quite las exportaciones innecesarias y use declaraciones de `extern "C"` para los símbolos exportados.
+
+## <a name="use-the-decorated-name-to-find-the-error"></a>Usar el nombre representativo para encontrar el error
+
+El C++ compilador y el vinculador usan la [decoración de nombres](../../error-messages/tool-errors/name-decoration.md), también conocida como *"cambio de nombre"* . La decoración de nombres codifica información adicional sobre el tipo de una variable en su nombre de símbolo. El nombre de símbolo de una función codifica su tipo de valor devuelto, los tipos de parámetro, el ámbito y la Convención de llamada. Este nombre representativo es el nombre del símbolo que el enlazador busca para resolver los símbolos externos.
+
+Se puede producir un error de vínculo si la declaración de una función o variable no coincide *exactamente* con la definición de la función o variable. Esto se debe a que cualquier diferencia pasa a formar parte del nombre del símbolo para que coincida. El error puede producirse incluso si se usa el mismo archivo de encabezado tanto en el código de llamada como en el código de definición. Una forma de hacerlo es si se compilan los archivos de código fuente con diferentes marcadores de compilador. Por ejemplo, si el código se compila para usar la Convención de llamada `__vectorcall`, pero se vincula a una biblioteca que espera que los clientes la llamen mediante la `__cdecl` predeterminada o `__fastcall` Convención de llamada. En este caso, los símbolos no coinciden porque las convenciones de llamada son diferentes.
+
+Para que le resulte más fácil encontrar la causa, el mensaje de error muestra dos versiones del nombre. Muestra el "nombre descriptivo", el nombre usado en el código fuente y el nombre representativo (entre paréntesis). No es necesario saber cómo interpretar el nombre representativo. Todavía puede buscar y compararlo con otros nombres representativos. Las herramientas de línea de comandos pueden ayudarle a buscar y comparar el nombre de símbolo esperado y el nombre de símbolo real:
+
+- Las opciones [/Exports](../../build/reference/dash-exports.md) y [/Symbols](../../build/reference/symbols.md) de la herramienta de línea de comandos DUMPBIN son útiles aquí. Pueden ayudarle a detectar qué símbolos se definen en los archivos. dll y de objeto o biblioteca. Puede usar la lista de símbolos para comprobar que los nombres representativos exportados coinciden con los nombres representativos que busca el enlazador.
+
+- En algunos casos, el vinculador solo puede informar del nombre representativo de un símbolo. Puede usar la herramienta de línea de comandos UNDNAME para obtener la forma no representativa de un nombre representativo.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Para obtener más información sobre las posibles causas y soluciones para el error LNK2001, consulte la pregunta desbordamiento de pila [¿qué es un error de símbolo externo sin definir referencia/unresolved y cómo lo corrijo?](http://stackoverflow.com/q/12573816/2002113).
-
+Para obtener más información, vea la pregunta Stack Overflow ["¿Qué es un error de referencia sin definir o de símbolo externo sin resolver?"](https://stackoverflow.com/q/12573816/2002113).

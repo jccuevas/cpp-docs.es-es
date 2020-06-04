@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648180"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760444"
 ---
 # <a name="compiler-error-c2707"></a>Error del compilador C2707
 
-'identifier': contexto incorrecto para la función intrínseca
+' Identifier ': contexto incorrecto para la función intrínseca
 
-Funciones intrínsecas de control de excepciones estructuradas no son válidas en ciertos contextos:
+Los intrínsecos de control de excepciones estructuradas no son válidos en determinados contextos:
 
-- `_exception_code()` fuera de un filtro de excepción o `__except` bloque
+- `_exception_code()` fuera de un filtro de excepción o un bloque de `__except`
 
-- `_exception_info()` fuera de un filtro de excepción
+- `_exception_info()` fuera de un filtro de excepciones
 
-- `_abnormal_termination()` fuera de un `__finally` bloque
+- `_abnormal_termination()` fuera de un bloque de `__finally`
 
-Para resolver el error, asegúrese de que las funciones intrínsecas de control de excepciones se colocan en el contexto adecuado.
+Para resolver el error, asegúrese de que los intrínsecos de control de excepciones se colocan en el contexto adecuado.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2707.
+En el ejemplo siguiente se genera C2707.
 
-```
+```cpp
 // C2707.cpp
 #include <windows.h>
 #include <stdio.h>

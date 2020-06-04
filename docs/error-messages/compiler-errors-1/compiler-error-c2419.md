@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2419
 ms.assetid: 51fe3195-34b6-445e-9f01-1e93e8714295
-ms.openlocfilehash: 9689077dd77e9a8d0623c636e9cd344a4460c1ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad212479b8e270148143c08eea8f3c3137662771
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527304"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205522"
 ---
 # <a name="compiler-error-c2419"></a>Error del compilador C2419
 

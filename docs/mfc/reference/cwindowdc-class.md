@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-ms.openlocfilehash: eccea1893979c4491f7080d0d3dc980adaf19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89a822280ddebca942016f9a3a334a7128d8456a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553054"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371979"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC (clase)
 
@@ -31,21 +31,21 @@ class CWindowDC : public CDC
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CWindowDC::CWindowDC](#cwindowdc)|Construye un objeto `CWindowDC`.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CWindowDC::m_hWnd](#m_hwnd)|El HWND para que este `CWindowDC` se adjunta.|
+|[CWindowDC::m_hWnd](#m_hwnd)|El HWND al `CWindowDC` que está conectado.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Llama a la función Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)en tiempo de construcción y [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) en tiempo de destrucción. Esto significa que un `CWindowDC` objeto obtiene acceso a un área de pantalla completa de un [CWnd](../../mfc/reference/cwnd-class.md) (áreas cliente y no cliente).
+Llama a la función de Windows [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc)en tiempo de construcción y [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) en tiempo de destrucción. Esto significa `CWindowDC` que un objeto tiene acceso a toda el área de pantalla de un [CWnd](../../mfc/reference/cwnd-class.md) (áreas cliente y no cliente).
 
-Para obtener más información sobre el uso de `CWindowDC`, consulte [contextos de dispositivo](../../mfc/device-contexts.md).
+Para obtener más `CWindowDC`información sobre el uso de , consulte [Contextos](../../mfc/device-contexts.md)de dispositivo .
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -59,9 +59,9 @@ Para obtener más información sobre el uso de `CWindowDC`, consulte [contextos 
 
 Encabezado: afxwin.h
 
-##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC
+## <a name="cwindowdccwindowdc"></a><a name="cwindowdc"></a>CWindowDC::CWindowDC
 
-Construye un `CWindowDC` objeto que tiene acceso al área de pantalla completa (cliente y no cliente) de la `CWnd` objeto señalado por *conquistado*.
+Construye un `CWindowDC` objeto que tiene acceso a todo el área `CWnd` de pantalla (cliente y no cliente) del objeto al que apunta *pWnd*.
 
 ```
 explicit CWindowDC(CWnd* pWnd);
@@ -69,37 +69,37 @@ explicit CWindowDC(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
-La ventana cuyo área de cliente que tendrá acceso el objeto de contexto de dispositivo.
+*pWnd*<br/>
+La ventana a la que accederá el objeto de contexto de dispositivo al área de cliente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El constructor llama a la función Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc).
+El constructor llama a la función de Windows [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc).
 
-Una excepción (de tipo `CResourceException`) se produce si el Windows `GetWindowDC` llamar se produce un error. Un contexto de dispositivo no puede estar disponible si Windows ya asignado todos sus contextos de dispositivo disponible. La aplicación compite por los cinco contextos mostrar comunes disponibles en un momento dado en Windows.
+Se produce una `CResourceException`excepción (de `GetWindowDC` tipo ) si se produce un error en la llamada de Windows. Es posible que un contexto de dispositivo no esté disponible si Windows ya ha asignado todos sus contextos de dispositivo disponibles. La aplicación compite por los cinco contextos de visualización comunes disponibles en un momento dado en Windows.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]
 
-##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd
+## <a name="cwindowdcm_hwnd"></a><a name="m_hwnd"></a>CWindowDC::m_hWnd
 
-El HWND de la `CWnd` puntero se utiliza para construir el `CWindowDC` objeto.
+El HWND `CWnd` del puntero se `CWindowDC` utiliza para construir el objeto.
 
 ```
 HWND m_hWnd;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`m_hWnd` es una variable de tipo HWND protegida.
+`m_hWnd`es una variable protegida de tipo HWND.
 
 ### <a name="example"></a>Ejemplo
 
   Vea el ejemplo de [CWindowDC::CWindowDC](#cwindowdc).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CDC (clase)](../../mfc/reference/cdc-class.md)<br/>
+[Clase CDC](../../mfc/reference/cdc-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[CDC (clase)](../../mfc/reference/cdc-class.md)
+[Clase CDC](../../mfc/reference/cdc-class.md)

@@ -9,21 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 1f0ff93c22263ca4b35377b5d9af089816e8895a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f63f65fb4c10fbe2ad538852222e6468b9061d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537116"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375401"
 ---
 # <a name="ltiosgt-typedefs"></a>Definiciones de tipo &lt;ios&gt;
 
-||||
-|-|-|-|
-|[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|
-|[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|
-
-## <a name="ios"></a>  ios
+## <a name="ios"></a><a name="ios"></a>Ios
 
 Es compatible con la clase ios de la antigua biblioteca iostream.
 
@@ -31,11 +26,11 @@ Es compatible con la clase ios de la antigua biblioteca iostream.
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos del tipo **char** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_ios](../standard-library/basic-ios-class.md), especializada para elementos de tipo **char** con rasgos de carácter predeterminados.
 
-## <a name="streamoff"></a>  streamoff
+## <a name="streamoff"></a><a name="streamoff"></a>streamoff
 
 Admite operaciones internas.
 
@@ -47,11 +42,11 @@ Admite operaciones internas.
 #endif
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un entero con signo que describe un objeto que puede almacenar un desplazamiento de bytes implicado en varias operaciones de posicionamiento de flujo. La representación tiene al menos 32 bits de valor. No es necesariamente lo bastante grande como para representar una posición de byte arbitraria en un flujo. El valor `streamoff(-1)` suele indicar un desplazamiento erróneo.
+El tipo es un entero con signo que describe un objeto que puede almacenar un desplazamiento de bytes implicado en varias operaciones de posicionamiento de flujo. La representación tiene al menos 32 bits de valor. No es necesariamente lo bastante grande como para representar una posición de byte arbitraria en un flujo. El `streamoff(-1)` valor generalmente indica un desplazamiento erróneo.
 
-## <a name="streampos"></a>  streampos
+## <a name="streampos"></a><a name="streampos"></a>streampos
 
 Contiene la posición actual del puntero de búfer o el puntero de archivo.
 
@@ -59,9 +54,9 @@ Contiene la posición actual del puntero de búfer o el puntero de archivo.
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Tipo sinónimo de [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
+El tipo es un sinónimo de [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Ejemplo
 
@@ -86,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a>  streamsize
+## <a name="streamsize"></a><a name="streamsize"></a>streamsize
 
 Denota el tamaño del flujo.
 
@@ -98,7 +93,7 @@ Denota el tamaño del flujo.
 #endif
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un entero con signo que describe un objeto que puede almacenar un recuento del número de elementos implicados en varias operaciones de flujo. La representación tiene al menos 16 bits. No es necesariamente lo bastante grande como para representar una posición de byte arbitraria en un flujo.
 
@@ -122,7 +117,7 @@ int main( )
 }
 ```
 
-## <a name="wios"></a>  wios
+## <a name="wios"></a><a name="wios"></a>wios
 
 Es compatible con la clase wios de la antigua biblioteca iostream.
 
@@ -130,11 +125,11 @@ Es compatible con la clase wios de la antigua biblioteca iostream.
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_ios](../standard-library/basic-ios-class.md), especializada para elementos de tipo **wchar_t** con rasgos de carácter predeterminados.
 
-## <a name="wstreampos"></a>  wstreampos
+## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
 
 Contiene la posición actual del puntero de búfer o el puntero de archivo.
 
@@ -142,9 +137,9 @@ Contiene la posición actual del puntero de búfer o el puntero de archivo.
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Tipo sinónimo de [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
+El tipo es un sinónimo de [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Ejemplo
 
@@ -167,7 +162,3 @@ int main( )
 ```Output
 7
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<ios>](../standard-library/ios.md)<br/>

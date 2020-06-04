@@ -1,21 +1,21 @@
 ---
-title: implements_category (atributo de COM de C++)
+title: implements_category (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements_category
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: a63504ce327bc2f1996c74dba9c51dc345e15abd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd55c7474a0a8a273ddfab212b3ebcaa6e3b4a65
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647166"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166867"
 ---
-# <a name="implementscategory"></a>implements_category
+# <a name="implements_category"></a>implements_category
 
-Especifica las categorías de componente que implementa la clase de destino.
+Especifica las categorías de componentes implementadas por la clase de destino.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,17 +26,17 @@ Especifica las categorías de componente que implementa la clase de destino.
 ### <a name="parameters"></a>Parámetros
 
 *implements_category*<br/>
-El identificador de la categoría implementada.
+IDENTIFICADOR de la categoría implementada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **implements_category** atributo de C++ especifica las categorías de componente que implementa la clase de destino. Esto se hace creando una asignación de categoría y agregando entradas independientes especificadas por el **implements_category** atributo. Para obtener más información, consulte [¿cuáles son las categorías del componente y cómo hacer They Work?](https://msdn.microsoft.com/library/windows/desktop/ms694322).
+El atributo **implements_category** C++ especifica las categorías de componentes implementadas por la clase de destino. Esto se hace creando un mapa de categorías y agregando entradas independientes especificadas por el atributo **implements_category** . Para obtener más información, vea [categorías de componentes y cómo funcionan](/windows/win32/com/component-categories-and-how-they-work).
 
-Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
+Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si se aplica `progid`, también se aplican `vi_progid` y `coclass`.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente especifica que el siguiente objeto implementa la `Control` categoría.
+El código siguiente especifica que el siguiente objeto implementa la categoría `Control`.
 
 ```cpp
 // cpp_attr_ref_implements_category.cpp
@@ -59,12 +59,12 @@ class CMyClass {};
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|Sí|
-|**Atributos requeridos**|Uno de los siguientes: `coclass`, `progid`, o `vi_progid`|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|Uno de los siguientes: `coclass`, `progid`o `vi_progid`|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos COM](com-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>

@@ -17,57 +17,57 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 45180b3ac2647c9f4f5d25a1322794552bd79004
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175724"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212386"
 ---
 # <a name="accessors-and-rowsets"></a>Descriptores de acceso y conjuntos de filas
 
-Para establecer y recuperar datos, plantillas OLE DB usan un descriptor de acceso y un conjunto de filas a través de la [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) clase. Esta clase puede controlar varios descriptores de acceso de diferentes tipos.
+Para establecer y recuperar datos, las plantillas de OLE DB usan un descriptor de acceso y un conjunto de filas a través de la clase [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) . Esta clase puede controlar varios descriptores de acceso de tipos diferentes.
 
-## <a name="accessor-types"></a>Tipos de descriptor de acceso
+## <a name="accessor-types"></a>Tipos descriptores de acceso
 
-Todos los descriptores de acceso que se derivan de [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` Proporciona los parámetros y enlace de columna.
+Todos los descriptores de acceso derivan de [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` proporciona enlaces de parámetros y columnas.
 
-En la siguiente ilustración se muestra los tipos de descriptor de acceso.
+En la ilustración siguiente se muestran los tipos de descriptor de acceso.
 
-![Tipos de descriptor de acceso](../../data/oledb/media/vcaccessortypes.gif "tipos de descriptor de acceso")<br/>
-Clases de descriptor de acceso
+![Tipos descriptores de acceso](../../data/oledb/media/vcaccessortypes.gif "Tipos de descriptores de acceso")<br/>
+Clases accessor
 
-- [CAccessor](../../data/oledb/caccessor-class.md) Utilice este descriptor de acceso cuando conozca la estructura del origen de base de datos en tiempo de diseño. `CAccessor` enlaza estáticamente un registro de base de datos, que contiene el búfer, al origen de datos.
+- [CAccessor](../../data/oledb/caccessor-class.md) Use este descriptor de acceso cuando Conozca la estructura del origen de base de datos en tiempo de diseño. `CAccessor` enlaza estáticamente un registro de base de datos, que contiene el búfer, al origen de datos.
 
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) utilizar este descriptor de acceso cuando no conoce la estructura de la base de datos en tiempo de diseño. `CDynamicAccessor` las llamadas `IColumnsInfo::GetColumnInfo` para obtener la información de columna de base de datos. Crea y administra un descriptor de acceso y el búfer.
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Use este descriptor de acceso si no conoce la estructura de la base de datos en tiempo de diseño. `CDynamicAccessor` llama `IColumnsInfo::GetColumnInfo` para obtener la información de la columna de base de datos. Crea y administra un descriptor de acceso y el búfer.
 
-- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) utilizar este descriptor de acceso para controlar los tipos de comando desconocido. Al preparar los comandos, `CDynamicParameterAccessor` puede obtener información de parámetros de la `ICommandWithParameters` interfaz, si el proveedor admite `ICommandWithParameters`.
+- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) Use este descriptor de acceso para controlar tipos de comando desconocidos. Cuando se preparan los comandos, `CDynamicParameterAccessor` puede obtener información de parámetros de la interfaz `ICommandWithParameters`, si el proveedor admite `ICommandWithParameters`.
 
-- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), y [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) Use estas clases cuando no tiene conocimiento del esquema de base de datos. `CDynamicStringAccessorA` Recupera los datos como cadenas ANSI; `CDynamicStringAccessorW` recupera los datos como cadenas Unicode.
+- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [cdynamicstringaccessora (](../../data/oledb/cdynamicstringaccessora-class.md)y [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) usan estas clases cuando no se conoce el esquema de la base de datos. `CDynamicStringAccessorA` recupera datos como cadenas ANSI; `CDynamicStringAccessorW` recupera datos como cadenas Unicode.
 
-- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) con esta clase, puede usar cualquier deseado si el proveedor puede convertir el tipo de los tipos de datos. Controla las columnas de resultados y parámetros del comando.
+- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) Con esta clase, puede usar cualquier tipo de datos que desee si el proveedor puede convertir el tipo. Controla las columnas de resultados y los parámetros de comando.
 
-En la tabla siguiente se resume la compatibilidad de los tipos de descriptor de acceso de plantilla OLE DB.
+En la tabla siguiente se resume la compatibilidad de con los tipos de descriptor de acceso de la plantilla OLE DB.
 
-|Tipo de descriptor de acceso|Dinámico|Identificadores de parámetros|Búfer|Varios descriptores de acceso|
+|Tipo descriptor de acceso|Dinámica|Controla los parámetros|Buffer|Varios descriptores de acceso|
 |-------------------|-------------|--------------------|------------|------------------------|
 |`CAccessor`|No|Sí|Usuario|Sí|
-|`CDynamicAccessor`|Sí|No|plantillas OLE DB|No|
-|`CDynamicParameterAccessor`|Sí|Sí|plantillas OLE DB|No|
-|`CDynamicStringAccessor[A,W]`|Sí|No|plantillas OLE DB|No|
+|`CDynamicAccessor`|Sí|No|Plantillas OLE DB|No|
+|`CDynamicParameterAccessor`|Sí|Sí|Plantillas OLE DB|No|
+|`CDynamicStringAccessor[A,W]`|Sí|No|Plantillas OLE DB|No|
 |`CManualAccessor`|Sí|Sí|Usuario|Sí|
 
 ## <a name="rowset-types"></a>Tipos de conjuntos de filas
 
-Las plantillas OLE DB admiten tres tipos de conjuntos de filas (consulte la ilustración anterior): conjuntos de filas simples (implementado por [CRowset](../../data/oledb/crowset-class.md)), conjuntos de filas masivos (implementado por [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) y los conjuntos de filas (se implementa de matriz por [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Captura de los conjuntos de filas único controlar una sola fila cuando `MoveNext` se llama. Conjuntos de filas masiva pueden obtener varios identificadores de fila. Conjuntos de filas de matriz son conjuntos de filas que se pueden acceder mediante la sintaxis de la matriz.
+Las plantillas de OLE DB admiten tres tipos de conjuntos de filas (vea la ilustración anterior): conjuntos de filas individuales (implementados por [CRowset](../../data/oledb/crowset-class.md)), conjuntos de filas masivos (implementados por [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) y conjuntos de filas de matriz (implementados por [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Los conjuntos de filas individuales capturan un identificador de fila único cuando se llama a `MoveNext`. Los conjuntos de filas masivos pueden capturar varios identificadores de fila. Los conjuntos de filas de matriz son conjuntos de filas a los que se puede tener acceso mediante la sintaxis de la matriz.
 
-En la siguiente ilustración se muestra los tipos de conjunto de filas.
+En la ilustración siguiente se muestran los tipos de conjunto de filas.
 
-![Gráfico de RowsetType](../../data/oledb/media/vcrowsettypes.gif "gráfico de RowsetType")<br/>
+![Gráfico RowsetType](../../data/oledb/media/vcrowsettypes.gif "Gráfico de RowsetType")<br/>
 Clases de conjunto de filas
 
-[Conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) no acceder a los datos en los datos almacenar pero en su lugar, tener acceso a información sobre el almacén de datos, denominada metadatos. Conjuntos de filas de esquema se usan normalmente en situaciones en las que la estructura de base de datos no se conoce en tiempo de compilación y debe obtenerse en tiempo de ejecución.
+Los [conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) no tienen acceso a los datos del almacén de datos, sino que obtienen acceso a información sobre el almacén de datos, denominados metadatos. Los conjuntos de filas de esquema se utilizan normalmente en situaciones en las que no se conoce la estructura de la base de datos en tiempo de compilación y se deben obtener en tiempo de ejecución.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

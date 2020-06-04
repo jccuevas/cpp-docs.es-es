@@ -3,38 +3,38 @@ title: 2. Directivas
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
 ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087345"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424198"
 ---
 # <a name="2-directives"></a>2. Directivas
 
-Las directivas se basan en `#pragma` directivas definidas en los estándares de C y C++.  Los compiladores que admiten la de OpenMP C y C++ API incluirá una opción de línea de comandos que se activa y permite la interpretación de todas las directivas de compilador de OpenMP.
+Las directivas se basan en las directivas de `#pragma` definidas en C++ los estándares C y.  Los compiladores que admiten la API C++ y C de OpenMP incluirán una opción de línea de comandos que active y permita la interpretación de todas las directivas de compilador de OpenMP.
 
-## <a name="21-directive-format"></a>2.1 formato de directivas
+## <a name="21-directive-format"></a>formato de directiva 2,1
 
-La sintaxis de una directiva de OpenMP se especifican formalmente la gramática en [Apéndice C](c-openmp-c-and-cpp-grammar.md)e informalmente como sigue:
+La sintaxis de una directiva de OpenMP se especifica formalmente con la gramática en el [Apéndice C](c-openmp-c-and-cpp-grammar.md)y, de manera informativa, de la manera siguiente:
 
 ```cpp
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-Cada directiva comienza con `#pragma omp`para reducir la posibilidad de conflicto con otras directivas pragma de (que no sean de OpenMP o proveedor extensiones OpenMP) con los mismos nombres. El resto de la directiva sigue las convenciones de los estándares de C y C++ para las directivas de compilador. En concreto, se puede usar espacios en blanco antes y después el `#`, y a veces se debe usar un espacio en blanco para separar las palabras en una directiva. Después de los tokens de preprocesamiento el `#pragma omp` están sujetos a reemplazo de macros.
+Cada directiva comienza con `#pragma omp`, para reducir la posibilidad de que se produzca un conflicto con otras directivas pragma (no de OpenMP o extensiones de proveedor a OpenMP) con los mismos nombres. El resto de la Directiva sigue las convenciones de los estándares C C++ y para las directivas de compilador. En concreto, se puede usar el espacio en blanco antes y después del `#`y, en ocasiones, se debe usar el espacio en blanco para separar las palabras de una directiva. Los tokens de preprocesamiento que siguen a los `#pragma omp` están sujetos a sustitución de macros.
 
-Directivas distinguen mayúsculas de minúsculas. El orden en que aparecen en las directivas no es significativo. Las cláusulas en las directivas se pueden repetir según sea necesario, sujeto a las restricciones que aparecen en la descripción de cada cláusula. Si *variable lista* aparece en una cláusula, deben especificar solo las variables. Solo un *nombre de directiva* se puede especificar por directiva.  Por ejemplo, no se permite la directiva siguiente:
+Las directivas distinguen mayúsculas de minúsculas. El orden en que aparecen las cláusulas en las directivas no es significativo. Las cláusulas de las directivas se pueden repetir según sea necesario, en función de las restricciones que se indican en la descripción de cada cláusula. Si *variable-List* aparece en una cláusula, debe especificar solo variables. Solo se puede especificar un *nombre de directiva* por directiva.  Por ejemplo, no se permite la siguiente directiva:
 
 ```cpp
 /* ERROR - multiple directive names not allowed */
 #pragma omp parallel barrier
 ```
 
-Se aplica una directiva de OpenMP a lo sumo una subsiguiente instrucción, que debe ser un bloque estructurado.
+Una directiva de OpenMP se aplica a como máximo una instrucción correcta, que debe ser un bloque estructurado.
 
-## <a name="22-conditional-compilation"></a>2.2 compilación condicional
+## <a name="22-conditional-compilation"></a>2,2 compilación condicional
 
-El `_OPENMP` nombre de macro se define mediante implementaciones compatibles con OpenMP como la constante decimal *AAAAMM*, que será el año y mes de la especificación aprobada. Esta macro no debe ser el sujeto de un `#define` o un `#undef` preprocesamiento de directiva.
+El nombre de la macro `_OPENMP` se define mediante implementaciones compatibles con OpenMP como la constante decimal *YYYYMM*, que será el año y el mes de la especificación aprobada. Esta macro no debe ser el asunto de una `#define` o de una directiva de preprocesamiento `#undef`.
 
 ```cpp
 #ifdef _OPENMP
@@ -42,129 +42,129 @@ iam = omp_get_thread_num() + index;
 #endif
 ```
 
-Si los proveedores de definan extensiones para OpenMP, pueden especificar adicionales macros predefinidas.
+Si los proveedores definen las extensiones de OpenMP, pueden especificar macros predefinidas adicionales.
 
-## <a name="23-parallel-construct"></a>2.3 parallel (construcción)
+## <a name="23-parallel-construct"></a>2,3 construcción paralela
 
-La directiva siguiente define una región paralela, que es una región del programa que va a ser ejecutado por muchos subprocesos en paralelo. Esta directiva es la construcción fundamental que se inicia la ejecución en paralelo.
+La siguiente Directiva define una región paralela, que es una región del programa que va a ser ejecutada por muchos subprocesos en paralelo. Esta directiva es la construcción fundamental que comienza la ejecución en paralelo.
 
 ```cpp
 #pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block
 ```
 
-El *cláusula* es uno de los siguientes:
+La *cláusula* es una de las siguientes:
 
-- `if(` *scalar-expression* `)`
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
+- `if(` `)` *de expresión escalar*
+- `private(` `)` *de lista variable*
+- `firstprivate(` `)` *de lista variable*
 - `default(shared | none)`
-- `shared(` *variable-list* `)`
-- `copyin(` *variable-list* `)`
-- `reduction(` *operator* `:`  *variable-list* `)`
-- `num_threads(` *integer-expression* `)`
+- `shared(` `)` *de lista variable*
+- `copyin(` `)` *de lista variable*
+- `reduction(` *operador* `:`*lista de variables* `)`
+- `num_threads(` *Integer-expression* `)`
 
-Cuando un subproceso llega a una construcción paralela, se crea un grupo de subprocesos si se cumple una de los casos siguientes:
+Cuando un subproceso llega a una construcción paralela, se crea un equipo de subprocesos si se cumple uno de los siguientes casos:
 
-- No `if` cláusula está presente.
-- El `if` expresión se evalúa como un valor distinto de cero.
+- No existe ninguna cláusula de `if`.
+- La expresión `if` se evalúa como un valor distinto de cero.
 
-Este subproceso se convierte en el subproceso principal del equipo, con un número de subprocesos de 0, y todos los subprocesos en el equipo, incluido el subproceso principal, la región se ejecutan en paralelo. Si el valor de la `if` expresión es cero, se serializa la región.
+Este subproceso se convierte en el subproceso principal del equipo, con un número de subprocesos de 0, y todos los subprocesos del equipo, incluido el subproceso principal, ejecutan la región en paralelo. Si el valor de la expresión `if` es cero, la región se serializa.
 
-Para determinar el número de subprocesos que se solicitan, se considerarán las reglas siguientes en orden. Se aplicará la primera regla cuya condición se cumple:
+Para determinar el número de subprocesos solicitados, se tendrán en cuenta las siguientes reglas en orden. Se aplicará la primera regla cuya condición se cumpla:
 
-1. Si el `num_threads` cláusula está presente, el valor de la expresión de entero es el número de subprocesos que se solicita.
+1. Si la cláusula `num_threads` está presente, el valor de la expresión de tipo entero es el número de subprocesos solicitados.
 
-1. Si el `omp_set_num_threads` se ha llamado la función de biblioteca y, después, el valor del argumento en la llamada ha ejecutado más recientemente es el número de subprocesos que se solicita.
+1. Si se ha llamado a la función de biblioteca `omp_set_num_threads`, el valor del argumento en la llamada ejecutada más recientemente es el número de subprocesos solicitados.
 
-1. Si la variable de entorno `OMP_NUM_THREADS` está definido, el valor de esta variable de entorno es el número de subprocesos que se solicita.
+1. Si se define la variable de entorno `OMP_NUM_THREADS`, el valor de esta variable de entorno es el número de subprocesos solicitados.
 
-1. Si se usa ninguno de los métodos anteriores, el número de subprocesos es definido por la implementación.
+1. Si no se usa ninguno de los métodos anteriores, el número de subprocesos solicitados está definido por la implementación.
 
-Si el `num_threads` cláusula está presente, a continuación, reemplaza el número de subprocesos solicitado por el `omp_set_num_threads` función de biblioteca o el `OMP_NUM_THREADS` variable de entorno solo para la región paralela que se aplica. Más adelante regiones en paralelo no se ven afectadas por ella.
+Si la cláusula `num_threads` está presente, reemplaza el número de subprocesos solicitados por la función de biblioteca de `omp_set_num_threads` o la variable de entorno `OMP_NUM_THREADS` solo para la región paralela a la que se aplica. Las regiones paralelas posteriores no se ven afectadas por esta.
 
-El número de subprocesos que se ejecutan en la región paralela también depende de si está habilitado el ajuste dinámico del número de subprocesos. Si se deshabilita el ajuste dinámico, el número solicitado de subprocesos ejecutará la región paralela. Si está habilitado el ajuste dinámico, a continuación, el número solicitado de subprocesos es el número máximo de subprocesos que se pueden ejecutar a la región paralela.
+El número de subprocesos que ejecutan la región paralela depende también de si está habilitado el ajuste dinámico del número de subprocesos. Si el ajuste dinámico está deshabilitado, el número solicitado de subprocesos ejecutará la región paralela. Si el ajuste dinámico está habilitado, el número de subprocesos solicitados es el número máximo de subprocesos que pueden ejecutar la región paralela.
 
-Si se encuentra una región paralela mientras está deshabilitado el ajuste dinámico del número de subprocesos, y el número de subprocesos solicitado para la región paralela es mayor que el número que puede proporcionar el sistema de tiempo de ejecución, el comportamiento del programa es definido por la implementación. Una implementación, por ejemplo, puede interrumpir la ejecución del programa, o puede serializar la región paralela.
+Si se encuentra una región paralela mientras se deshabilita el ajuste dinámico del número de subprocesos y el número de subprocesos solicitados para la región paralela es mayor que el número que el sistema en tiempo de ejecución puede proporcionar, el comportamiento del programa es definido por la implementación. Una implementación puede, por ejemplo, interrumpir la ejecución del programa o puede serializar la región paralela.
 
-El `omp_set_dynamic` función de biblioteca y el `OMP_DYNAMIC` variable de entorno puede utilizarse para habilitar y deshabilitar el ajuste dinámico del número de subprocesos.
+La función de biblioteca `omp_set_dynamic` y la variable de entorno `OMP_DYNAMIC` se pueden usar para habilitar y deshabilitar el ajuste dinámico del número de subprocesos.
 
-El número de procesadores físicos hospedando en realidad los subprocesos en un momento dado es definido por la implementación. Una vez creado, el número de subprocesos en el equipo permanece constante para la duración de esa región paralela. Puede cambiarse explícitamente por el usuario o automáticamente por el sistema de tiempo de ejecución de una región paralela a otra.
+El número de procesadores físicos que hospedan realmente los subprocesos en un momento dado está definido por la implementación. Una vez creado, el número de subprocesos del equipo permanece constante mientras dure la región paralela. Puede cambiarse explícitamente por el usuario o automáticamente por el sistema en tiempo de ejecución desde una región paralela a otra.
 
-Se ejecutan las instrucciones incluidas en la extensión de la región paralela dinámica por cada subproceso, y cada subproceso puede ejecutar una ruta de acceso de las instrucciones que es diferente de los demás subprocesos. Las directivas que se encuentra fuera de la extensión léxica de una región paralela se conocen como directivas huérfanas.
+Cada subproceso ejecuta las instrucciones contenidas en la extensión dinámica de la región paralela, y cada subproceso puede ejecutar una ruta de instrucciones que es diferente de los demás subprocesos. Las directivas que se encuentran fuera de la extensión léxica de una región paralela se conocen como directivas huérfanas.
 
-Hay una barrera implícita al final de una región paralela. Solo el subproceso principal del equipo continúa la ejecución al final de una región paralela.
+Existe una barrera implícita al final de una región paralela. Solo el subproceso maestro del equipo continúa la ejecución al final de una región paralela.
 
-Si un subproceso en un equipo que ejecuta una región paralela encuentra otra construcción paralela, crea un nuevo equipo y se convierte en el maestro de ese nuevo equipo. Las regiones paralelas anidadas se serializan de forma predeterminada. Como resultado, de forma predeterminada, una región paralela anidada se ejecuta por un equipo que se compone de un subproceso. Se puede cambiar el comportamiento predeterminado mediante el uso de la función de biblioteca de tiempo de ejecución `omp_set_nested` o la variable de entorno `OMP_NESTED`. Sin embargo, el número de subprocesos en un equipo que ejecute una región paralela anidada es definido por la implementación.
+Si un subproceso de un equipo que ejecuta una región paralela encuentra otra construcción paralela, crea un nuevo equipo y se convierte en el maestro del nuevo equipo. Las regiones paralelas anidadas se serializan de forma predeterminada. Como resultado, de forma predeterminada, una región paralela anidada se ejecuta en un equipo compuesto por un subproceso. El comportamiento predeterminado se puede cambiar mediante la función de biblioteca en tiempo de ejecución `omp_set_nested` o la variable de entorno `OMP_NESTED`. Sin embargo, el número de subprocesos de un equipo que ejecutan una región paralela anidada está definido por la implementación.
 
-Restricciones para el `parallel` directiva son los siguientes:
+Las restricciones de la Directiva de `parallel` son las siguientes:
 
-- A lo sumo, una `if` cláusula puede aparecer en la directiva.
+- Como máximo, puede aparecer una cláusula `if` en la Directiva.
 
-- No se especifica si cualquiera de efectos dentro expresión o `num_threads` expresión se producen.
+- No se especifica si se producen efectos secundarios dentro de las expresiones if o `num_threads`.
 
-- Un `throw` ejecuta dentro de una región paralela debe provocar que la ejecución reanudar dentro de la extensión dinámica del mismo bloque estructurado y se debe detectar mediante el mismo subproceso que produjo la excepción.
+- Una `throw` ejecuta dentro de una región paralela debe hacer que la ejecución se reanude dentro de la extensión dinámica del mismo bloque estructurado y debe ser detectada por el mismo subproceso que produjo la excepción.
 
-- Una sola `num_threads` cláusula puede aparecer en la directiva. El `num_threads` expresión se evalúa fuera del contexto de la región paralela y se debe evaluar como un valor entero positivo.
+- Solo puede aparecer una sola cláusula `num_threads` en la Directiva. La expresión `num_threads` se evalúa fuera del contexto de la región paralela y debe evaluarse como un valor entero positivo.
 
-- El orden de evaluación de la `if` y `num_threads` cláusulas no se ha especificado.
+- El orden de evaluación de las cláusulas `if` y `num_threads` no está especificado.
 
 ### <a name="cross-references"></a>Referencias cruzadas
 
-- `private`, `firstprivate`, `default`, `shared`, `copyin`, y `reduction` cláusulas ([sección 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variable de entorno
-- [omp_set_dynamic ()](3-run-time-library-functions.md#317-omp_set_dynamic-function) función de biblioteca
-- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) variable de entorno
-- [omp_set_nested ()](3-run-time-library-functions.md#319-omp_set_nested-function) (función)
-- [OMP_NESTED](4-environment-variables.md#44-omp_nested) variable de entorno
-- [omp_set_num_threads ()](3-run-time-library-functions.md#311-omp_set_num_threads-function) función de biblioteca
+- cláusulas `private`, `firstprivate`, `default`, `shared`, `copyin`y `reduction` ([sección 2.7.2](#272-data-sharing-attribute-clauses))
+- Variable de entorno [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) función de biblioteca
+- Variable de entorno [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) función)
+- Variable de entorno [OMP_NESTED](4-environment-variables.md#44-omp_nested)
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) función de biblioteca
 
-## <a name="24-work-sharing-constructs"></a>2.4 construcciones de uso compartido
+## <a name="24-work-sharing-constructs"></a>2,4 construcciones de uso compartido de trabajo
 
-Una construcción de uso compartido distribuye la ejecución de la instrucción asociada entre los miembros del equipo que alcanzarlo. Las directivas de uso compartido no iniciar nuevos subprocesos, y no hay ninguna barrera implícita en la entrada a una construcción de uso compartido.
+Una construcción de uso compartido de trabajo distribuye la ejecución de la instrucción asociada entre los miembros del equipo que la encuentran. Las directivas de uso compartido de trabajo no inician nuevos subprocesos y no hay ninguna barrera implícita en la entrada a una construcción de uso compartido de trabajo.
 
-Construye la secuencia de uso compartido y `barrier` directivas encontradas deben ser el mismo para todos los subprocesos en un equipo.
+La secuencia de construcciones de uso compartido de trabajo y las directivas de `barrier` encontradas deben ser las mismas para todos los subprocesos de un equipo.
 
-OpenMP define las siguientes construcciones de uso compartido, y estas construcciones se describen en las secciones siguientes:
+OpenMP define las siguientes construcciones de uso compartido de trabajo y estas construcciones se describen en las secciones siguientes:
 
-- [para](#241-for-construct) directiva
-- [las secciones](#242-sections-construct) directiva
-- [solo](#243-single-construct) directiva
+- [for](#241-for-construct) (Directiva)
+- [Sections](#242-sections-construct) (Directiva)
+- directiva [única](#243-single-construct)
 
 ### <a name="241-for-construct"></a>2.4.1 for (construcción)
 
-El `for` directiva identifica una construcción de uso compartido de trabajo iterativa que especifica que las iteraciones del bucle asociada se ejecutarán en paralelo. Las iteraciones de la `for` bucle se distribuyen entre los subprocesos que ya existen en el equipo que ejecuta la construcción paralela a la que se enlaza. La sintaxis de la `for` construcción es como sigue:
+La Directiva `for` identifica una construcción iterativa de uso compartido de trabajo que especifica que las iteraciones del bucle asociado se ejecutarán en paralelo. Las iteraciones del bucle `for` se distribuyen entre los subprocesos que ya existen en el equipo que ejecuta la construcción paralela a la que se enlaza. La sintaxis de la construcción `for` es la siguiente:
 
 ```cpp
 #pragma omp for [clause[[,] clause] ... ] new-line for-loop
 ```
 
-La cláusula es uno de los siguientes:
+La cláusula es una de las siguientes:
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `lastprivate(` *variable-list* `)`
-- `reduction(` *operator* `:` *variable-list* `)`
+- `private(` `)` *de lista variable*
+- `firstprivate(` `)` *de lista variable*
+- `lastprivate(` `)` *de lista variable*
+- `reduction(` *operador* `:` *lista de variables* `)`
 - `ordered`
-- `schedule(` *kind* [`,` *chunk_size*] `)`
+- `schedule(` *clase* [`,` *chunk_size*] `)`
 - `nowait`
 
-El `for` directiva impone restricciones en la estructura de los correspondientes `for` bucle. En concreto, la correspondiente `for` bucle debe tener la forma canónica:
+La Directiva `for` coloca restricciones en la estructura del bucle de `for` correspondiente. En concreto, el bucle de `for` correspondiente debe tener una forma canónica:
 
-`for (` *init-expr* `;` *var  logical-op  b* `;` *incr-expr* `)`
+`for (` *init-expr* `;` *var Logical-OP b* `;` *incr-expr* `)`
 
 *init-expr*<br/>
 Uno de los siguientes:
 
 - *var* = *lb*
-- *integer-type var* = *lb*
+- *variable de tipo entero:*  = *lb*
 
 *incr-expr*<br/>
 Uno de los siguientes:
 
 - `++` *var*
-- *var* `++`
+- `++` *var*
 - `--` *var*
-- *var* `--`
+- `--` *var*
 - *var* `+=` *incr*
 - *var* `-=` *incr*
 - *var* `=` *var* `+` *incr*
@@ -172,9 +172,9 @@ Uno de los siguientes:
 - *var* `=` *var* `-` *incr*
 
 *var*<br/>
-Una variable de entero con signo. Si esta variable se pueden compartir en caso contrario, se implícitamente hace privada para el tiempo que dure la `for`. No modifique esta variable dentro del cuerpo de la `for` instrucción. A menos que se especifica la variable `lastprivate`, su valor después de que el bucle es indeterminado.
+Variable de entero con signo. Si, de lo contrario, esta variable sería compartida, es privada implícitamente mientras dure el `for`. No modifique esta variable en el cuerpo de la instrucción `for`. A menos que se especifique la variable `lastprivate`, su valor después del bucle es indeterminado.
 
-*logical-op*<br/>
+*operación lógica*<br/>
 Uno de los siguientes:
 
 - `<`
@@ -182,58 +182,58 @@ Uno de los siguientes:
 - `>`
 - `>=`
 
-*lb*, *b*, y *incr*<br>
-Las expresiones de enteros invariable de bucle. No hay ninguna sincronización durante la evaluación de estas expresiones, por lo que los efectos secundarios evaluados producir resultados indeterminados.
+*lb*, *b*y *incr*<br>
+Expresiones de entero invariable de bucle. No hay ninguna sincronización durante la evaluación de estas expresiones, por lo que los efectos secundarios evaluados producen resultados indeterminados.
 
-La forma canónica permite que el número de iteraciones del bucle debe calcularse en la entrada para el bucle. Este cálculo se realiza con los valores en el tipo de *var*, después de promociones de enteros. En particular, si el valor de *b* `-` *lb* `+` *incr* no se puede representar en que el tipo, el resultado es indeterminado. Además, si *lógico op* es `<` o `<=`, a continuación, *incr expr* debe provocar *var* para aumentar en cada iteración del bucle.   Si *lógico op* es `>` o `>=`, a continuación, *incr expr* debe provocar *var* mantendría en cada iteración del bucle.
+La forma canónica permite calcular el número de iteraciones de bucle en la entrada al bucle. Este cálculo se realiza con valores en el tipo de *var*, después de promociones enteras. En concreto, si el valor de *b* `-` *lb* `+` *incr* no se puede representar en ese tipo, el resultado es indeterminado. Además, si *la operación lógica* está `<` o `<=`, *incr-expr* debe hacer que *var* aumente en cada iteración del bucle.   Si *Logical-OP* es `>` o `>=`, *incr-expr* debe hacer que *var* se reduzca en cada iteración del bucle.
 
-El `schedule` cláusula especifica cómo las iteraciones de la `for` bucle se dividen entre los subprocesos del equipo. La corrección de un programa no debe depender de qué subproceso ejecuta una iteración determinada. El valor de *chunk_size*, si se especifica, debe ser una expresión de entero invariable de bucle con un valor positivo. No hay ninguna sincronización durante la evaluación de esta expresión, por lo que los efectos secundarios evaluados producir resultados indeterminados. La programación *tipo* puede ser uno de los siguientes valores:
+La cláusula `schedule` especifica cómo se dividen las iteraciones del bucle de `for` entre los subprocesos del equipo. La corrección de un programa no debe depender del subproceso que ejecuta una iteración concreta. El valor de *chunk_size*, si se especifica, debe ser una expresión de tipo entero invariable de bucle con un valor positivo. No hay ninguna sincronización durante la evaluación de esta expresión, por lo que los efectos secundarios evaluados producen resultados indeterminados. El *tipo* de programación puede ser uno de los siguientes valores:
 
-Tabla 2-1: `schedule` cláusula *tipo* valores
+Tabla 2-1: valores de *tipo* de cláusula `schedule`
 
 |||
 |-|-|
-|estático|Cuando `schedule(static,` *chunk_size* `)` se especifica, las iteraciones se dividen en fragmentos de un tamaño especificado por *chunk_size*. Los fragmentos se asignan estáticamente a subprocesos en el equipo en un modo round-robin en el orden el número de subprocesos. Cuando no hay ninguna *chunk_size* se especifica, el espacio de la iteración se divide en fragmentos que son aproximadamente iguales en tamaño, con un solo fragmento asignado a cada subproceso.|
-|dynamic|Cuando `schedule(dynamic,` *chunk_size* `)` se especifica, las iteraciones se dividen en una serie de fragmentos, cada uno con *chunk_size* iteraciones. Cada fragmento se asigna a un subproceso que está esperando una asignación. El subproceso ejecuta el fragmento de iteraciones y, a continuación, espera para su asignación siguiente, hasta que ningún fragmento permanecen para asignarse. El último fragmento que se asignará puede tener un menor número de iteraciones. Cuando no hay ninguna *chunk_size* se especifica, el valor predeterminado es 1.|
-|guiada por perfiles|Cuando `schedule(guided,` *chunk_size* `)` se especifica, las iteraciones se asignan a subprocesos en fragmentos con disminuir el tamaño. Cuando un subproceso finaliza su fragmento asignado de iteraciones, se asigna dinámicamente otro fragmento, hasta que se deja a ninguno. Para un *chunk_size* de 1, el tamaño de cada fragmento es aproximadamente el número de iteraciones sin asignar dividido por el número de subprocesos. Estos tamaños casi exponencialmente disminuyen en 1. Para un *chunk_size* con valor *k* mayor que 1, los tamaños de disminuir exponencialmente casi a *k*, salvo que el último fragmento puede tener menos de *k* iteraciones. Cuando no hay ninguna *chunk_size* se especifica, el valor predeterminado es 1.|
-|motor en tiempo de ejecución|Cuando `schedule(runtime)` se especifica, la decisión sobre la programación se retrasa hasta el tiempo de ejecución. La programación *tipo* y tamaño de los fragmentos se puede elegir en tiempo de ejecución estableciendo la variable de entorno `OMP_SCHEDULE`. Si no se establece esta variable de entorno, la programación resultante es definido por la implementación. Cuando `schedule(runtime)` se especifica, *chunk_size* no debe especificarse.|
+|estática|Cuando se especifica `schedule(static,` *chunk_size* `)`, las iteraciones se dividen en fragmentos de un tamaño especificado por *chunk_size*. Los fragmentos se asignan estáticamente a los subprocesos del equipo en un modo Round Robin en el orden del número de subprocesos. Cuando no se especifica ningún *chunk_size* , el espacio de iteración se divide en fragmentos que tienen aproximadamente el mismo tamaño, con un fragmento asignado a cada subproceso.|
+|dinámico|Cuando se especifica `schedule(dynamic,` *chunk_size* `)`, las iteraciones se dividen en una serie de fragmentos, cada uno de los cuales contiene *chunk_size* iteraciones. Cada fragmento se asigna a un subproceso que está esperando una asignación. El subproceso ejecuta el fragmento de iteraciones y, a continuación, espera a su siguiente asignación, hasta que no se conservan los fragmentos. El último fragmento que se va a asignar puede tener un número menor de iteraciones. Cuando no se especifica ningún *chunk_size* , el valor predeterminado es 1.|
+|varia|Cuando se especifica `schedule(guided,` *chunk_size* `)`, las iteraciones se asignan a los subprocesos en fragmentos con tamaños decrecientes. Cuando un subproceso finaliza su fragmento de iteraciones asignado, se asigna dinámicamente a otro fragmento, hasta que no quede ninguno. En el caso de una *chunk_size* de 1, el tamaño de cada fragmento es aproximadamente el número de iteraciones sin asignar dividido por el número de subprocesos. Estos tamaños disminuyen de forma exponencial en 1. En el caso de una *chunk_size* con el valor *k* mayor que 1, los tamaños disminuyen de forma exponencial a *k*, salvo que el último fragmento puede tener menos de *k* iteraciones. Cuando no se especifica ningún *chunk_size* , el valor predeterminado es 1.|
+|en tiempo de ejecución|Cuando se especifica `schedule(runtime)`, la decisión relativa a la programación se aplaza hasta el tiempo de ejecución. El *tipo* de programación y el tamaño de los fragmentos se pueden elegir en tiempo de ejecución si se establece la variable de entorno `OMP_SCHEDULE`. Si no se establece esta variable de entorno, la programación resultante está definida por la implementación. Cuando se especifica `schedule(runtime)`, no se debe especificar *chunk_size* .|
 
-En ausencia de definido explícitamente `schedule` cláusula, el valor predeterminado `schedule` define la implementación.
+En ausencia de una cláusula `schedule` definida explícitamente, el `schedule` predeterminado está definido por la implementación.
 
-Un programa compatible con OpenMP no debe confiar en un programa en particular para su ejecución correcta. Un programa no debe confiar en una programación *tipo* que se ajuste exactamente a la descripción proporcionada más arriba, porque es posible que las variaciones en las implementaciones de la misma programación *tipo* a través de diferentes compiladores. Las descripciones se pueden usar para seleccionar la programación que es adecuada para una situación en particular.
+Un programa compatible con OpenMP no debe depender de una programación determinada para la ejecución correcta. Un programa no debe basarse en un *tipo* de programación que se ajuste exactamente a la descripción indicada anteriormente, ya que es posible tener variaciones en las implementaciones de la misma *clase* de programación en diferentes compiladores. Las descripciones se pueden usar para seleccionar la programación adecuada para una situación determinada.
 
-El `ordered` cláusula debe estar presente cuando `ordered` directivas enlazar a la `for` construir.
+La cláusula `ordered` debe estar presente cuando `ordered` directivas se enlazan a la construcción `for`.
 
-Hay una barrera implícita al final de un `for` construir a menos que un `nowait` se especifica la cláusula.
+Hay una barrera implícita al final de una construcción `for` a menos que se especifique una cláusula `nowait`.
 
-Restricciones para el `for` directiva son los siguientes:
+Las restricciones de la Directiva de `for` son las siguientes:
 
-- El `for` bucle debe ser un bloque estructurado y, además, su ejecución no debe terminar con un `break` instrucción.
+- El bucle `for` debe ser un bloque estructurado y, además, su ejecución no debe terminar con una instrucción `break`.
 
-- Los valores del bucle controlan las expresiones de la `for` bucle asociado con un `for` directiva debe ser el mismo para todos los subprocesos en el equipo.
+- Los valores de las expresiones de control de bucle del bucle `for` asociado a una directiva `for` deben ser los mismos para todos los subprocesos del equipo.
 
-- El `for` variable de iteración del bucle debe tener un tipo entero con signo.
+- La variable de iteración del bucle `for` debe tener un tipo entero con signo.
 
-- Una sola `schedule` cláusula puede aparecer en un `for` directiva.
+- En una directiva de `for` solo puede aparecer una cláusula de `schedule` única.
 
-- Una sola `ordered` cláusula puede aparecer en un `for` directiva.
+- En una directiva de `for` solo puede aparecer una cláusula de `ordered` única.
 
-- Una sola `nowait` cláusula puede aparecer en un `for` directiva.
+- En una directiva de `for` solo puede aparecer una cláusula de `nowait` única.
 
-- Es si no especificado o con qué frecuencia los efectos secundarios dentro de la *chunk_size*, *lb*, *b*, o *incr* las expresiones se encuentran.
+- No se especifica si o con qué frecuencia se producen efectos secundarios dentro de las expresiones *chunk_size*, *lb*, *b*o *incr* .
 
-- El valor de la *chunk_size* expresión debe ser el mismo para todos los subprocesos en el equipo.
+- El valor de la expresión *chunk_size* debe ser el mismo para todos los subprocesos del equipo.
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
-- `private`, `firstprivate`, `lastprivate`, y `reduction` cláusulas ([sección 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) variable de entorno
-- [ordenar](#266-ordered-construct) construir
-- [programación](d-using-the-schedule-clause.md) cláusula
+- cláusulas `private`, `firstprivate`, `lastprivate`y `reduction` ([sección 2.7.2](#272-data-sharing-attribute-clauses))
+- Variable de entorno [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule)
+- construcción [ordenada](#266-ordered-construct)
+- cláusula [Schedule](d-using-the-schedule-clause.md)
 
-### <a name="242-sections-construct"></a>2.4.2 secciones construcción
+### <a name="242-sections-construct"></a>2.4.2 Sections (construcción)
 
-El `sections` directiva identifica una construcción noniterative uso compartido que especifica un conjunto de construcciones que se va a dividir entre los subprocesos en un equipo. Cada sección se ejecuta una vez por un subproceso en el equipo. La sintaxis de la `sections` directiva es como sigue:
+La Directiva `sections` identifica una construcción de uso compartido de trabajo no iterativo que especifica un conjunto de construcciones que se van a dividir entre los subprocesos de un equipo. Cada sección se ejecuta una vez por un subproceso del equipo. La sintaxis de la Directiva `sections` es la siguiente:
 
 ```cpp
 #pragma omp sections [clause[[,] clause] ...] new-line
@@ -245,80 +245,80 @@ El `sections` directiva identifica una construcción noniterative uso compartido
 }
 ```
 
-La cláusula es uno de los siguientes:
+La cláusula es una de las siguientes:
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `lastprivate(` *variable-list* `)`
-- `reduction(` *operator* `:`  *variable-list* `)`
+- `private(` `)` *de lista variable*
+- `firstprivate(` `)` *de lista variable*
+- `lastprivate(` `)` *de lista variable*
+- `reduction(` *operador* `:`*lista de variables* `)`
 - `nowait`
 
-Cada sección está precedido por un `section` directiva, aunque el `section` directiva es opcional para la primera sección. El `section` las directivas deben aparecer dentro de la extensión de léxico el `sections` directiva. Hay una barrera implícita al final de un `sections` construir, a menos que un `nowait` se especifica.
+Cada sección está precedida por una directiva `section`, aunque la Directiva `section` es opcional para la primera sección. Las directivas de `section` deben aparecer dentro de la extensión léxica de la Directiva `sections`. Hay una barrera implícita al final de una construcción `sections`, a menos que se especifique un `nowait`.
 
-Restricciones para el `sections` directiva son los siguientes:
+Las restricciones de la Directiva de `sections` son las siguientes:
 
-- Un `section` directiva no debe aparecer fuera de la extensión de léxico el `sections` directiva.
+- Una directiva `section` no debe aparecer fuera de la extensión léxica de la Directiva `sections`.
 
-- Una sola `nowait` cláusula puede aparecer en un `sections` directiva.
+- En una directiva de `sections` solo puede aparecer una cláusula de `nowait` única.
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
-- `private`, `firstprivate`, `lastprivate`, y `reduction` cláusulas ([sección 2.7.2](#272-data-sharing-attribute-clauses))
+- cláusulas `private`, `firstprivate`, `lastprivate`y `reduction` ([sección 2.7.2](#272-data-sharing-attribute-clauses))
 
-### <a name="243-single-construct"></a>2.4.3 single (construcción)
+### <a name="243-single-construct"></a>2.4.3 Single (construcción)
 
-El `single` directiva identifica una construcción que especifica que se ejecuta el bloque estructurado asociado sólo un subproceso en el equipo (no necesariamente el subproceso principal). La sintaxis de la `single` directiva es como sigue:
+La Directiva `single` identifica una construcción que especifica que solo un subproceso del equipo ejecuta el bloque estructurado asociado (no necesariamente el subproceso principal). La sintaxis de la Directiva `single` es la siguiente:
 
 ```cpp
 #pragma omp single [clause[[,] clause] ...] new-linestructured-block
 ```
 
-La cláusula es uno de los siguientes:
+La cláusula es una de las siguientes:
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `copyprivate(` *variable-list* `)`
+- `private(` `)` *de lista variable*
+- `firstprivate(` `)` *de lista variable*
+- `copyprivate(` `)` *de lista variable*
 - `nowait`
 
-Hay una barrera implícita después de la `single` construir a menos que un `nowait` se especifica la cláusula.
+Hay una barrera implícita después de la construcción `single` a menos que se especifique una cláusula `nowait`.
 
-Restricciones para el `single` directiva son los siguientes:
+Las restricciones de la Directiva de `single` son las siguientes:
 
-- Una sola `nowait` cláusula puede aparecer en un `single` directiva.
-- El `copyprivate` cláusula no debe usarse con el `nowait` cláusula.
+- En una directiva de `single` solo puede aparecer una cláusula de `nowait` única.
+- La cláusula `copyprivate` no debe usarse con la cláusula `nowait`.
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
-- `private`, `firstprivate`, y `copyprivate` cláusulas ([sección 2.7.2](#272-data-sharing-attribute-clauses))
+- cláusulas `private`, `firstprivate`y `copyprivate` ([sección 2.7.2](#272-data-sharing-attribute-clauses))
 
-## <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 combinado construcciones de uso compartido paralelas
+## <a name="25-combined-parallel-work-sharing-constructs"></a>2,5 construcciones de uso compartido paralelas combinadas
 
-Construcciones de uso compartido paralelas combinadas son accesos directos para especificar una región paralela que tiene solo una construcción de uso compartido. La semántica de estas directivas es lo mismo que especificar explícitamente un `parallel` directiva seguida por una única construcción de uso compartido.
+Las construcciones de uso compartido paralelas combinadas son métodos abreviados para especificar una región paralela que solo tiene una construcción de uso compartido de trabajo. La semántica de estas directivas es la misma que la especificación explícita de una directiva de `parallel` seguida de una única construcción de uso compartido de trabajo.
 
-Las secciones siguientes describen las construcciones de uso compartido paralelas combinadas:
+En las secciones siguientes se describen las construcciones de uso compartido paralelas combinadas:
 
-- [paralelo para](#251-parallel-for-construct) directiva
-- [las secciones en paralelo](#252-parallel-sections-construct) directiva
+- [Parallel for](#251-parallel-for-construct) (Directiva)
+- Directiva de [secciones paralelas](#252-parallel-sections-construct)
 
-### <a name="251-parallel-for-construct"></a>2.5.1 parallel for (construcción)
+### <a name="251-parallel-for-construct"></a>2.5.1 Parallel for (construcción)
 
-El `parallel for` directiva es un acceso directo para un `parallel` región que contiene una sola `for` directiva. La sintaxis de la `parallel for` directiva es como sigue:
+La Directiva `parallel for` es un método abreviado para una región `parallel` que contiene solo una única directiva `for`. La sintaxis de la Directiva `parallel for` es la siguiente:
 
 ```cpp
 #pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop
 ```
 
-Esta directiva permite que todas las cláusulas de la `parallel` directiva y la `for` la directiva, excepto el `nowait` cláusula con significados idénticos y restricciones. La semántica es lo mismo que especificar explícitamente un `parallel` directiva seguido inmediatamente por un `for` directiva.
+Esta directiva permite todas las cláusulas de la Directiva de `parallel` y la Directiva `for`, excepto la cláusula `nowait`, con significados y límites idénticos. La semántica es la misma que si se especifica explícitamente una directiva de `parallel` seguido inmediatamente de una directiva `for`.
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
-- [paralelo](#23-parallel-construct) directiva
-- [para](#241-for-construct) directiva
+- [Parallel](#23-parallel-construct) (Directiva)
+- [for](#241-for-construct) (Directiva)
 - [Cláusulas de atributos de datos](#272-data-sharing-attribute-clauses)
 
-### <a name="252-parallel-sections-construct"></a>2.5.2 parallel secciones construcción
+### <a name="252-parallel-sections-construct"></a>construcción de secciones paralelas de 2.5.2
 
-El `parallel sections` directiva proporciona un formulario de método abreviado para especificar un `parallel` región que tiene una sola `sections` directiva. La semántica es lo mismo que especificar explícitamente un `parallel` directiva seguido inmediatamente por un `sections` directiva. La sintaxis de la `parallel sections` directiva es como sigue:
+La Directiva `parallel sections` proporciona un formulario de acceso directo para especificar una región de `parallel` que solo tiene una única directiva de `sections`. La semántica es la misma que si se especifica explícitamente una directiva de `parallel` seguido inmediatamente de una directiva `sections`. La sintaxis de la Directiva `parallel sections` es la siguiente:
 
 ```cpp
 #pragma omp parallel sections  [clause[[,] clause] ...] new-line
@@ -330,55 +330,55 @@ El `parallel sections` directiva proporciona un formulario de método abreviado 
 }
 ```
 
-El *cláusula* puede ser una de las cláusulas aceptadas por el `parallel` y `sections` directivas, excepto el `nowait` cláusula.
+La *cláusula* puede ser una de las cláusulas aceptadas por las directivas `parallel` y `sections`, excepto la cláusula `nowait`.
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
-- [paralelo](#23-parallel-construct) directiva
-- [las secciones](#242-sections-construct) directiva
+- [Parallel](#23-parallel-construct) (Directiva)
+- [Sections](#242-sections-construct) (Directiva)
 
-## <a name="26-master-and-synchronization-directives"></a>2.6 directivas Master y sincronización
+## <a name="26-master-and-synchronization-directives"></a>2,6 directivas maestras y de sincronización
 
-Las secciones siguientes describen:
+En las secciones siguientes se describe:
 
-- [maestro](#261-master-construct) construir
-- [crítica](#262-critical-construct) construir
-- [barrera](#263-barrier-directive) directiva
-- [atomic](#264-atomic-construct) construir
-- [Vaciar](#265-flush-directive) directiva
-- [ordenar](#266-ordered-construct) construir
+- construcción [maestra](#261-master-construct)
+- construcción [crítica](#262-critical-construct)
+- [barrera](#263-barrier-directive) (Directiva)
+- [Atomic](#264-atomic-construct) (construcción)
+- [Flush](#265-flush-directive) (Directiva)
+- construcción [ordenada](#266-ordered-construct)
 
-### <a name="261-master-construct"></a>2.6.1 master (construcción)
+### <a name="261-master-construct"></a>2.6.1 (construcción maestra)
 
-El `master` directiva identifica una construcción que especifica un bloque estructurado que se ejecuta el subproceso principal del equipo. La sintaxis de la `master` directiva es como sigue:
+La Directiva `master` identifica una construcción que especifica un bloque estructurado ejecutado por el subproceso principal del equipo. La sintaxis de la Directiva `master` es la siguiente:
 
 ```cpp
 #pragma omp master new-linestructured-block
 ```
 
-Otros subprocesos en el equipo no ejecutan el bloque estructurado asociado. No hay ninguna barrera implícita ya sea en la entrada o salida de la construcción principal.
+Otros subprocesos del equipo no ejecutan el bloque estructurado asociado. No hay ninguna barrera implícita en la entrada o salida de la construcción maestra.
 
-### <a name="262-critical-construct"></a>2.6.2 critical (construcción)
+### <a name="262-critical-construct"></a>construcción crítica de 2.6.2 Critical (
 
-El `critical` directiva identifica una construcción que limita la ejecución del bloque estructurado asociado a un único subproceso cada vez. La sintaxis de la `critical` directiva es como sigue:
+La Directiva `critical` identifica una construcción que restringe la ejecución del bloque estructurado asociado a un único subproceso cada vez. La sintaxis de la Directiva `critical` es la siguiente:
 
 ```cpp
 #pragma omp critical [(name)]  new-linestructured-block
 ```
 
-Opcional *nombre* puede utilizarse para identificar la región crítica. Los identificadores utilizados para identificar una región crítica tienen vinculación externa y se encuentran en un espacio de nombres es independiente de los espacios de nombres utilizados por etiquetas, etiquetas, miembros y los identificadores normales.
+Se puede usar un *nombre* opcional para identificar la región crítica. Los identificadores que se usan para identificar una región crítica tienen vinculación externa y se encuentran en un espacio de nombres que es independiente de los espacios de nombres usados por etiquetas, etiquetas, miembros e identificadores normales.
 
-Un subproceso espera al principio de una región crítica hasta que ningún otro subproceso está ejecutando en una región crítica (en cualquier lugar en el programa) con el mismo nombre. Todo sin nombre `critical` asignan directivas en el mismo nombre no especificado.
+Un subproceso espera al principio de una región crítica hasta que ningún otro subproceso está ejecutando una región crítica (en cualquier parte del programa) con el mismo nombre. Todas las directivas de `critical` sin nombre se asignan al mismo nombre sin especificar.
 
-### <a name="263-barrier-directive"></a>2.6.3 directiva barrier
+### <a name="263-barrier-directive"></a>2.6.3 barrera (Directiva)
 
-El `barrier` directiva sincroniza todos los subprocesos en un equipo. Cuando encuentra, cada subproceso en el equipo espera hasta que todos los demás han alcanzado este punto. La sintaxis de la `barrier` directiva es como sigue:
+La Directiva `barrier` sincroniza todos los subprocesos de un equipo. Cuando se encuentran, cada subproceso del equipo espera hasta que todos los demás hayan llegado a este punto. La sintaxis de la Directiva `barrier` es la siguiente:
 
 ```cpp
 #pragma omp barrier new-line
 ```
 
-Después de que todos los subprocesos en el equipo han detectado la barrera, cada subproceso en el equipo comienza a ejecutar las instrucciones después de la directiva de barrera en paralelo. Dado que el `barrier` directiva no tiene una instrucción del lenguaje C como parte de su sintaxis, hay algunas restricciones en su posición dentro de un programa. Para obtener más información sobre la gramática formal, consulte [Apéndice C](c-openmp-c-and-cpp-grammar.md). El ejemplo siguiente muestra estas restricciones.
+Una vez que todos los subprocesos del equipo han encontrado la barrera, cada subproceso del equipo empieza a ejecutar las instrucciones después de la Directiva de barrera en paralelo. Dado que la Directiva de `barrier` no tiene una instrucción de lenguaje C como parte de su sintaxis, existen algunas restricciones en su ubicación dentro de un programa. Para obtener más información sobre la gramática formal, vea el [Apéndice C](c-openmp-c-and-cpp-grammar.md). En el ejemplo siguiente se muestran estas restricciones.
 
 ```cpp
 /* ERROR - The barrier directive cannot be the immediate
@@ -396,9 +396,9 @@ if (x!=0) {
 }
 ```
 
-### <a name="264-atomic-construct"></a>2.6.4 atomic (construcción)
+### <a name="264-atomic-construct"></a>2.6.4 Atomic (construcción)
 
-El `atomic` Directiva garantiza que una ubicación de memoria específica se actualiza de forma atómica, en lugar de exponerlos a la posibilidad de múltiples simultáneas de escritura de subprocesos. La sintaxis de la `atomic` directiva es como sigue:
+La Directiva de `atomic` garantiza que una ubicación de memoria específica se actualice de forma atómica, en lugar de exponerla a la posibilidad de varios subprocesos de escritura simultánea. La sintaxis de la Directiva `atomic` es la siguiente:
 
 ```cpp
 #pragma omp atomic new-lineexpression-stmt
@@ -407,24 +407,24 @@ El `atomic` Directiva garantiza que una ubicación de memoria específica se act
 La instrucción de expresión debe tener una de las siguientes formas:
 
 - *x binop* `=` *expr*
-- *x* `++`
 - `++` *x*
-- *x* `--`
+- `++` *x*
+- `--` *x*
 - `--` *x*
 
 En las expresiones anteriores:
 
-- *x* es una expresión de valor l con el tipo escalar.
+- *x* es una expresión lvalue con un tipo escalar.
 
-- *Expr* es una expresión con tipo escalar, y no hace referencia el objeto designado por *x*.
+- *expr* es una expresión con tipo escalar y no hace referencia al objeto designado por *x*.
 
-- *binop* no es un operador sobrecargado y es uno de `+`, `*`, `-`, `/`, `&`, `^`, `|`, `<<`, o `>>`.
+- *binop* no es un operador sobrecargado y es uno de `+`, `*`, `-`, `/`, `&`, `^`, `|`, `<<`o `>>`.
 
-Aunque es definido por la implementación si una implementación reemplaza toda `atomic` directivas con `critical` directivas que tienen el mismo único *nombre*, el `atomic` directiva permite una mejor optimización . A menudo las instrucciones de hardware están disponibles que puede realizar la actualización atómica con la menor carga.
+Aunque se define en la implementación si una implementación reemplaza todas las directivas de `atomic` con directivas de `critical` que tienen el mismo *nombre*único, la directiva de `atomic` permite una mejor optimización. A menudo hay disponibles instrucciones de hardware que pueden realizar la actualización atómica con la mínima sobrecarga.
 
-Solo la carga y el almacén del objeto designado por *x* son atómica; la evaluación de *expr* no es atómica. Para evitar condiciones de carrera, todas las actualizaciones de la ubicación en paralelo deben protegerse con el `atomic` la directiva, excepto los que se sabe que están libres de las condiciones de carrera.
+Solo la carga y el almacenamiento del objeto designado por *x* son atómicos. la evaluación de *expr* no es atómica. Para evitar las condiciones de carrera, todas las actualizaciones de la ubicación en paralelo deben protegerse con la Directiva de `atomic`, excepto aquellas que se sabe que están libres de condiciones de carrera.
 
-Restricciones para el `atomic` directiva son los siguientes:
+Las restricciones de la Directiva de `atomic` son las siguientes:
 
 - Todas las referencias atómicas a la ubicación de almacenamiento x en todo el programa deben tener un tipo compatible.
 
@@ -447,40 +447,40 @@ u.n++;
 u.x -= 1.0f;
 ```
 
-### <a name="265-flush-directive"></a>2.6.5 flush (directiva)
+### <a name="265-flush-directive"></a>2.6.5 Flush (Directiva)
 
-El `flush` directiva, ya sea explícita o implícita, especifica un punto de secuencia "entre subprocesos" en el que se requiere la implementación para asegurarse de que todos los subprocesos en un equipo tienen una vista coherente de ciertos objetos (especificadas a continuación) en la memoria. Esto significa que finalizan las evaluaciones anteriores de las expresiones que hacen referencia a esos objetos y las evaluaciones posteriores todavía no han comenzado. Por ejemplo, los compiladores deben restaurar los valores de los objetos de los registros a la memoria y hardware que deba vaciar los búferes de escritura a la memoria y volver a los valores de los objetos de la memoria.
+La Directiva `flush`, ya sea explícita o implícita, especifica un punto de secuencia "entre subprocesos" en el que la implementación es necesaria para garantizar que todos los subprocesos de un equipo tienen una vista coherente de ciertos objetos (especificados a continuación) en la memoria. Esto significa que las evaluaciones anteriores de las expresiones que hacen referencia a esos objetos están completas y las evaluaciones posteriores aún no han empezado. Por ejemplo, los compiladores deben restaurar los valores de los objetos de los registros en la memoria, y es posible que el hardware necesite vaciar los búferes de escritura en la memoria y volver a cargar los valores de los objetos de la memoria.
 
-La sintaxis de la `flush` directiva es como sigue:
+La sintaxis de la Directiva `flush` es la siguiente:
 
 ```cpp
 #pragma omp flush [(variable-list)]  new-line
 ```
 
-Si los objetos que requieren sincronización pueden designarse por variables y, después, esas variables se pueden especificar en el elemento opcional *variable lista*. Si un puntero se encuentra en la *lista de variables*, el propio puntero se vacía, no el objeto hace referencia el puntero.
+Si los objetos que requieren sincronización se pueden designar todos mediante variables, esas variables se pueden especificar en la *lista de variables*opcionales. Si un puntero está presente en la *lista de variables*, se vacía el propio puntero, no el objeto al que hace referencia el puntero.
 
-Un `flush` la directiva sin un *variable lista* sincroniza los objetos compartidos todo excepto los objetos inaccesibles con una duración de almacenamiento automático. (Esto es probable que tenga más sobrecarga que una `flush` con un *lista de variables*.) Un `flush` la directiva sin un *variable lista* está implícito en las siguientes directivas:
+Una directiva de `flush` sin una *lista de variables* sincroniza todos los objetos compartidos excepto los objetos inaccesibles con duración de almacenamiento automática. (Es probable que se produzca más sobrecarga que una `flush` con una *lista de variables*). Una directiva de `flush` sin una *lista de variables* está implícita para las siguientes directivas:
 
 - `barrier`
-- En la entrada y la salida de `critical`
-- En la entrada y la salida de `ordered`
-- En la entrada y la salida de `parallel`
-- Al salir desde `for`
-- Al salir desde `sections`
-- Al salir desde `single`
-- En la entrada y la salida de `parallel for`
-- En la entrada y la salida de `parallel sections`
+- Al entrar y salir de `critical`
+- Al entrar y salir de `ordered`
+- Al entrar y salir de `parallel`
+- Al salir de `for`
+- Al salir de `sections`
+- Al salir de `single`
+- Al entrar y salir de `parallel for`
+- Al entrar y salir de `parallel sections`
 
-La directiva no afecta a si un `nowait` cláusula está presente. Se debe tener en cuenta que el `flush` directiva no es implícito para cualquiera de las siguientes acciones:
+La Directiva no está implícita si hay una cláusula `nowait`. Se debe observar que la Directiva de `flush` no está implícita para ninguno de los siguientes elementos:
 
-- En la entrada a `for`
-- En la entrada o salida de `master`
-- En la entrada a `sections`
-- En la entrada a `single`
+- Entrada en `for`
+- Al entrar o salir de `master`
+- Entrada en `sections`
+- Entrada en `single`
 
-Una referencia que tiene acceso al valor de un objeto con un tipo calificado como volátil se comporta como si hubiera un `flush` Directiva especifique ese objeto en el momento de la secuencia anterior. Una referencia que modifica el valor de un objeto con un tipo calificado como volátil se comporta como si hubiera un `flush` Directiva especifique ese objeto en el momento de la secuencia.
+Una referencia que tiene acceso al valor de un objeto con un tipo calificado por volatile se comporta como si hubiese una directiva `flush` que especifica ese objeto en el punto de secuencia anterior. Una referencia que modifica el valor de un objeto con un tipo calificado como volátil se comporta como si hubiera una directiva de `flush` que especifica ese objeto en el punto de secuencia posterior.
 
-Dado que el `flush` directiva no tiene una instrucción del lenguaje C como parte de su sintaxis, hay algunas restricciones en su posición dentro de un programa. Para obtener más información sobre la gramática formal, consulte [Apéndice C](c-openmp-c-and-cpp-grammar.md). El ejemplo siguiente muestra estas restricciones.
+Dado que la Directiva de `flush` no tiene una instrucción de lenguaje C como parte de su sintaxis, existen algunas restricciones en su ubicación dentro de un programa. Para obtener más información sobre la gramática formal, vea el [Apéndice C](c-openmp-c-and-cpp-grammar.md). En el ejemplo siguiente se muestran estas restricciones.
 
 ```cpp
 /* ERROR - The flush directive cannot be the immediate
@@ -498,67 +498,67 @@ if (x!=0) {
 }
 ```
 
-Restricciones para el `flush` directiva son los siguientes:
+Las restricciones de la Directiva de `flush` son las siguientes:
 
-- Una variable especificada en un `flush` directiva no debe tener un tipo de referencia.
+- Una variable especificada en una directiva de `flush` no debe tener un tipo de referencia.
 
-### <a name="266-ordered-construct"></a>2.6.6 construcción ordenada
+### <a name="266-ordered-construct"></a>construcción ordenada 2.6.6
 
-El bloque estructurado que sigue un `ordered` directiva se ejecuta en el orden en el que se ejecutan en un bucle secuencial iteraciones. La sintaxis de la `ordered` directiva es como sigue:
+El bloque estructurado que sigue a una directiva de `ordered` se ejecuta en el orden en el que se ejecutarán las iteraciones en un bucle secuencial. La sintaxis de la Directiva `ordered` es la siguiente:
 
 ```cpp
 #pragma omp ordered new-linestructured-block
 ```
 
-Un `ordered` directiva debe estar dentro de la extensión dinámica de un `for` o `parallel for` construir. El `for` o `parallel for` la directiva a la que el `ordered` construcción enlaza debe tener un `ordered` cláusula especificada como se describe en [sección 2.4.1](#241-for-construct). En la ejecución de un `for` o `parallel for` construir con un `ordered` cláusula, `ordered` construcciones se ejecutan de forma estricta en el orden en el que se ejecutaría en una ejecución secuencial del bucle.
+Una directiva de `ordered` debe estar dentro de la extensión dinámica de una construcción de `for` o `parallel for`. La Directiva `for` o `parallel for` a la que se enlaza la construcción de `ordered` debe tener una cláusula `ordered` especificada como se describe en la [sección 2.4.1](#241-for-construct). En la ejecución de una construcción `for` o `parallel for` con una cláusula `ordered`, las construcciones `ordered` se ejecutan estrictamente en el orden en que se ejecutarían en una ejecución secuencial del bucle.
 
-Restricciones para el `ordered` directiva son los siguientes:
+Las restricciones de la Directiva de `ordered` son las siguientes:
 
-- Una iteración de un bucle con un `for` construcción no debe ejecutar la misma directiva ordered más de una vez y no debe ejecutar más de un `ordered` directiva.
+- Una iteración de un bucle con una construcción `for` no debe ejecutar la misma directiva ordenada más de una vez y no debe ejecutar más de una directiva `ordered`.
 
-## <a name="27-data-environment"></a>2.7 entorno de datos
+## <a name="27-data-environment"></a>2,7 entorno de datos
 
-En esta sección se presenta una directiva y varias cláusulas para controlar el entorno de datos durante la ejecución de las regiones en paralelo, como sigue:
+En esta sección se presenta una directiva y varias cláusulas para controlar el entorno de datos durante la ejecución de regiones paralelas, como se indica a continuación:
 
-- Un [threadprivate](#271-threadprivate-directive) directiva se proporciona para hacer que variables estáticas del ámbito de bloque, ámbito de espacio de nombres o ámbito de archivo local a un subproceso.
+- Se proporciona una directiva [threadprivate](#271-threadprivate-directive) para convertir en un subproceso el ámbito de archivo, el ámbito del espacio de nombres o las variables estáticas de ámbito de bloque.
 
-- Las cláusulas que se pueden especificar en las directivas para controlar los atributos de uso compartido de las variables de la duración de las construcciones paralelas o uso compartido se describen en [sección 2.7.2](#272-data-sharing-attribute-clauses).
+- Las cláusulas que se pueden especificar en las directivas para controlar los atributos de uso compartido de variables para la duración de las construcciones paralelas o de uso compartido de trabajo se describen en la [sección 2.7.2](#272-data-sharing-attribute-clauses).
 
-### <a name="271-threadprivate-directive"></a>2.7.1 threadprivate (directiva)
+### <a name="271-threadprivate-directive"></a>2.7.1 threadprivate (Directiva)
 
-El `threadprivate` directiva hace que el ámbito de archivo con nombre, ámbito de espacio de nombres o variables estáticas del ámbito de bloque especificadas en el *variable lista* privados de un subproceso. *lista de variables* es una lista separada por comas de variables que no tienen un tipo incompleto. La sintaxis de la `threadprivate` directiva es como sigue:
+La Directiva `threadprivate` hace que las variables con nombre de ámbito de archivo, ámbito de espacio de nombres o ámbito de bloque estático especificadas en la *lista de variables* esté privada en un subproceso. *variable-List* es una lista separada por comas de variables que no tienen un tipo incompleto. La sintaxis de la Directiva `threadprivate` es la siguiente:
 
 ```cpp
 #pragma omp threadprivate(variable-list) new-line
 ```
 
-Cada copia de un `threadprivate` variable se inicializa una vez, en un punto especificado en el programa antes de la primera referencia a esa copia y de la forma habitual (es decir, como la copia maestra se inicializaría en una ejecución en serie del programa). Tenga en cuenta que si se hace referencia a un objeto en un inicializador explícito de un `threadprivate` variable y el valor del objeto se modifica antes de la primera referencia a una copia de la variable y, después, el comportamiento no está especificado.
+Cada copia de una variable de `threadprivate` se inicializa una vez, en un punto no especificado del programa antes de la primera referencia a esa copia y de la manera habitual (es decir, como la copia maestra se inicializaría en una ejecución en serie del programa). Tenga en cuenta que si se hace referencia a un objeto en un inicializador explícito de una variable `threadprivate`, y el valor del objeto se modifica antes de la primera referencia a una copia de la variable, no se especifica el comportamiento.
 
-Como con cualquier variable privada, un subproceso no debe hacer referencia a copia de otro subproceso de un `threadprivate` objeto. Durante la serie y regiones principales del programa, las referencias será copia del subproceso principal del objeto.
+Como con cualquier variable privada, un subproceso no debe hacer referencia a la copia de otro subproceso de un objeto `threadprivate`. Durante las regiones en serie y las regiones maestras del programa, las referencias se realizarán a la copia del objeto del subproceso maestro.
 
-Una vez que se ejecuta la primera región paralela, los datos en el `threadprivate` se garantiza que los objetos para conservar solo si los subprocesos del mecanismo dinámico se ha deshabilitado, y si el número de subprocesos permanece sin cambios para todas las regiones en paralelo.
+Una vez que se ejecuta la primera región paralela, se garantiza que los datos de los objetos `threadprivate` se conservan solo si se ha deshabilitado el mecanismo de subprocesos dinámicos y si el número de subprocesos permanece inalterado en todas las regiones paralelas.
 
-Las restricciones para el `threadprivate` directiva son los siguientes:
+Las restricciones de la Directiva de `threadprivate` son las siguientes:
 
-- Un `threadprivate` debe aparecer fuera de cualquier definición o declaración de directiva para las variables de ámbito de archivo o el ámbito de espacio de nombres y debe preceder léxicamente a todas las referencias a cualquiera de las variables en su lista.
+- Una directiva de `threadprivate` para las variables de ámbito de archivo o de espacio de nombres debe aparecer fuera de cualquier definición o declaración y debe preceder léxicamente a todas las referencias a cualquiera de las variables de su lista.
 
-- Cada variable en el *lista de variables* de un `threadprivate` directiva en el ámbito de archivo o espacio de nombres debe hacer referencia a una declaración de variable en el ámbito de archivo o espacio de nombres que precede léxicamente a la directiva.
+- Cada variable de la *lista de variables* de una directiva de `threadprivate` en el ámbito de archivo o espacio de nombres debe hacer referencia a una declaración de variable en el ámbito de archivo o espacio de nombres que precede léxicamente a la Directiva.
 
-- Un `threadprivate` directiva para las variables de ámbito de bloque estática debe aparecer en el ámbito de la variable y no en un ámbito anidado. La directiva debe preceder léxicamente a todas las referencias a cualquiera de las variables en su lista.
+- Una directiva de `threadprivate` para las variables estáticas de ámbito de bloque debe aparecer en el ámbito de la variable y no en un ámbito anidado. La Directiva debe preceder léxicamente a todas las referencias a cualquiera de las variables de su lista.
 
-- Cada variable en el *lista de variables* de un `threadprivate` directiva en el ámbito de bloque debe hacer referencia a una declaración de variable en el mismo ámbito que precede léxicamente a la directiva. La declaración de variable debe usar el especificador de clase de almacenamiento estática.
+- Cada variable de la *lista de variables* de una directiva de `threadprivate` en el ámbito de bloque debe hacer referencia a una declaración de variable en el mismo ámbito que precede léxicamente a la Directiva. La declaración de variable debe usar el especificador de clase de almacenamiento static.
 
-- Si se especifica una variable en un `threadprivate` la directiva en una unidad de traducción, se debe especificar en una `threadprivate` la directiva en cada unidad de traducción en el que se declara.
+- Si se especifica una variable en una directiva de `threadprivate` en una unidad de traducción, debe especificarse en una directiva de `threadprivate` en cada unidad de traducción en la que se declara.
 
-- Un `threadprivate` variable no debe aparecer en cualquier cláusula excepto el `copyin`, `copyprivate`, `schedule`, `num_threads`, o el `if` cláusula.
+- Una variable `threadprivate` no debe aparecer en ninguna cláusula excepto en la cláusula `copyin`, `copyprivate`, `schedule`, `num_threads`o `if`.
 
-- La dirección de un `threadprivate` variable no es una constante de dirección.
+- La dirección de una variable `threadprivate` no es una constante de dirección.
 
-- Un `threadprivate` variable no debe tener un tipo incompleto ni un tipo de referencia.
+- Una variable `threadprivate` no debe tener un tipo incompleto o un tipo de referencia.
 
-- Un `threadprivate` variable con tipo de clase POD no debe tener un constructor de copias sea accesible y no ambigua, si se declara con un inicializador explícito.
+- Una variable `threadprivate` con un tipo de clase que no sea POD debe tener un constructor de copias accesible y no ambiguo si se ha declarado con un inicializador explícito.
 
-El ejemplo siguiente muestra cómo modificar una variable que aparece en un inicializador puede provocar un comportamiento no especificado y cómo evitar este problema mediante el uso de un objeto auxiliar y un constructor de copias.
+En el ejemplo siguiente se muestra cómo la modificación de una variable que aparece en un inicializador puede provocar un comportamiento no especificado y cómo evitar este problema mediante el uso de un objeto auxiliar y un constructor de copia.
 
 ```cpp
 int x = 1;
@@ -583,92 +583,92 @@ void f(int n) {
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - [subprocesos dinámicos](3-run-time-library-functions.md#317-omp_set_dynamic-function)
-- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) variable de entorno
+- Variable de entorno [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 
-### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 cláusulas de atributos uso compartido de datos
+### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 cláusulas de atributo de uso compartido de datos
 
-Varias directivas aceptan las cláusulas que permitir que un usuario controlar los atributos de uso compartido de las variables de la duración de la región. Cláusulas de atributos de uso compartido sólo se aplican a las variables de la extensión léxica de la directiva en el que aparece la cláusula. Todas las cláusulas siguientes no se permiten en todas las directivas. La lista de cláusulas que son válidos en una directiva determinada se describen con la directiva.
+Varias directivas aceptan cláusulas que permiten a un usuario controlar los atributos de uso compartido de variables para la duración de la región. Las cláusulas de atributo de uso compartido solo se aplican a las variables de la extensión léxica de la Directiva en la que aparece la cláusula. No todas las cláusulas siguientes se permiten en todas las directivas. La lista de cláusulas válidas en una directiva determinada se describe con la Directiva.
 
-Si una variable es visible cuando un paralelo o se encuentra la construcción de uso compartido y la variable no se especifica en una cláusula de atributos de uso compartido o `threadprivate` la directiva, a continuación, la variable se comparte. Las variables estáticas declaradas dentro de la extensión dinámica de una región paralela se comparten. Montón de memoria asignada (por ejemplo, mediante `malloc()` en C o C++ o la `new` operador de C++) se comparte. (El puntero a esta memoria, sin embargo, puede ser privados o compartidos.) Las variables con una duración de almacenamiento automática declarados dentro de la extensión de una región paralela dinámica son privadas.
+Si una variable es visible cuando se encuentra una construcción paralela o de uso compartido de trabajo, y la variable no se especifica en una cláusula de atributo de uso compartido o en una directiva de `threadprivate`, la variable se comparte. Las variables estáticas declaradas dentro de la extensión dinámica de una región paralela están compartidas. Memoria asignada en el montón (por ejemplo, el uso C++ de `malloc()` en C o C++o el operador de `new` en) se comparte. (Sin embargo, el puntero a esta memoria puede ser privado o compartido). Las variables con la duración de almacenamiento automática declarada dentro de la extensión dinámica de una región paralela son privadas.
 
-La mayoría de las cláusulas de acepta un *lista de variables* argumento, que es una lista separada por comas de variables que están visibles. Si hace referencia una variable en una cláusula de atributos de uso compartido de datos tiene un tipo derivado de una plantilla y no hay ninguna otra referencia a esa variable en el programa, el comportamiento es indefinido.
+La mayoría de las cláusulas aceptan un argumento *de lista de variables* , que es una lista separada por comas de variables que están visibles. Si una variable a la que se hace referencia en una cláusula de atributo de uso compartido de datos tiene un tipo derivado de una plantilla y no hay ninguna otra referencia a esa variable en el programa, el comportamiento es indefinido.
 
-Todas las variables que aparecen en las cláusulas de la Directiva deben estar visibles. Se pueden repetir las cláusulas según sea necesario, pero no hay ninguna variable puede especificarse en más de una cláusula, salvo que se puede especificar una variable en ambos un `firstprivate` y un `lastprivate` cláusula.
+Todas las variables que aparecen dentro de las cláusulas de Directiva deben ser visibles. Las cláusulas se pueden repetir según sea necesario, pero no se puede especificar ninguna variable en más de una cláusula, salvo que se puede especificar una variable en una cláusula `firstprivate` y una `lastprivate`.
 
-Las secciones siguientes describen las cláusulas de atributos de uso compartido de datos:
+En las secciones siguientes se describen las cláusulas de atributo de uso compartido de datos:
 
 - [private](#2721-private)
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
-- [shared](#2724-shared)
-- [default](#2725-default)
+- [recurso](#2724-shared)
+- [valor predeterminado](#2725-default)
 - [reduction](#2726-reduction)
 - [copyin](#2727-copyin)
 - [copyprivate](#2728-copyprivate)
 
 #### <a name="2721-private"></a>2.7.2.1 private
 
-El `private` cláusula declara las variables en la lista de variables a ser privada para cada subproceso en un equipo. La sintaxis de la `private` cláusula es como sigue:
+La cláusula `private` declara las variables de la lista de variables para ser privadas para cada subproceso de un equipo. La sintaxis de la cláusula `private` es la siguiente:
 
 ```cpp
 private(variable-list)
 ```
 
-El comportamiento de una variable especificada en un `private` es la siguiente cláusula. Se asigna un nuevo objeto con una duración de almacenamiento automática para la construcción. El tamaño y la alineación del nuevo objeto se determinan por el tipo de la variable. Esta asignación se produce una vez para cada subproceso en el equipo y se invoca un constructor predeterminado para un objeto de clase si es necesario; en caso contrario, el valor inicial es indeterminado.  El objeto original al que hace referencia la variable tiene un valor indeterminado al entrar en la construcción, no se debe modificar dentro de la extensión de la construcción dinámica y tiene un valor indeterminado al salir de la construcción.
+El comportamiento de una variable especificada en una cláusula `private` es el siguiente. Se asigna un nuevo objeto con la duración de almacenamiento automática para la construcción. El tamaño y la alineación del nuevo objeto vienen determinados por el tipo de la variable. Esta asignación se produce una vez para cada subproceso del equipo y se invoca un constructor predeterminado para un objeto de clase, si es necesario. de lo contrario, el valor inicial es indeterminado.  El objeto original al que hace referencia la variable tiene un valor indeterminado en el momento de la entrada a la construcción, no debe modificarse dentro de la extensión dinámica de la construcción y tiene un valor indeterminado al salir de la construcción.
 
-En la medida léxica de la construcción de la directiva, el nuevo objeto privado asignado por el subproceso hace referencia a la variable.
+En la extensión léxica de la construcción de la Directiva, la variable hace referencia al nuevo objeto privado asignado por el subproceso.
 
-Las restricciones para el `private` cláusula son los siguientes:
+Las restricciones de la cláusula `private` son las siguientes:
 
-- Una variable con un tipo de clase que se especifica en un `private` cláusula debe tener un constructor predeterminado accesible y no ambigua.
+- Una variable con un tipo de clase que se especifica en una cláusula `private` debe tener un constructor predeterminado accesible y no ambiguo.
 
-- Una variable especificada en un `private` cláusula no debe tener un `const`-calificado tipo a menos que tenga una clase de tipo con un `mutable` miembro.
+- Una variable especificada en una cláusula `private` no debe tener un tipo calificado `const`a menos que tenga un tipo de clase con un miembro `mutable`.
 
-- Una variable especificada en un `private` cláusula no debe tener un tipo incompleto ni un tipo de referencia.
+- Una variable especificada en una cláusula `private` no debe tener un tipo incompleto o un tipo de referencia.
 
-- Las variables que aparecen en la `reduction` cláusula de una `parallel` directiva no se puede especificar en un `private` cláusula en una directiva de uso compartido que se enlaza a la construcción paralela.
+- Las variables que aparecen en la cláusula `reduction` de una directiva `parallel` no se pueden especificar en una cláusula `private` en una directiva de uso compartido de trabajo que se enlaza a la construcción Parallel.
 
 #### <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
 
-El `firstprivate` cláusula ofrece un superconjunto de la funcionalidad proporcionada por el `private` cláusula. La sintaxis de la `firstprivate` cláusula es como sigue:
+La cláusula `firstprivate` proporciona un superconjunto de la funcionalidad proporcionada por la cláusula `private`. La sintaxis de la cláusula `firstprivate` es la siguiente:
 
 ```cpp
 firstprivate(variable-list)
 ```
 
-Las variables especificadas en *lista de variables* tiene `private` semántica de cláusula, como se describe en [sección 2.7.2.1](#2721-private). Se produce la inicialización o la construcción como si se lleva a cabo una vez por subproceso, antes de la ejecución del subproceso de la construcción. Para un `firstprivate` cláusula en una construcción paralela, el valor inicial del nuevo objeto privado es el valor del objeto original que existe inmediatamente antes de la construcción paralela para el subproceso que se encuentra. Para un `firstprivate` cláusula en una construcción de uso compartido, el valor inicial del nuevo objeto para cada subproceso que ejecuta la construcción de uso compartido privado es el valor del objeto original que existe antes del momento dado en el mismo subproceso encuentra el construcción de uso compartido. Además, para los objetos de C++, el nuevo objeto privado para cada subproceso está copiado a partir del objeto original.
+Las variables especificadas en *la lista de variables* tienen `private` semántica de la cláusula, como se describe en la [sección 2.7.2.1](#2721-private). La inicialización o la construcción tienen lugar como si se realizara una vez por subproceso, antes de la ejecución del subproceso de la construcción. Para una cláusula `firstprivate` en una construcción paralela, el valor inicial del nuevo objeto privado es el valor del objeto original que existe inmediatamente antes de la construcción Parallel para el subproceso que lo encuentra. Para una cláusula `firstprivate` en una construcción de uso compartido de trabajo, el valor inicial del nuevo objeto privado para cada subproceso que ejecuta la construcción de uso compartido de trabajo es el valor del objeto original que existe antes del momento en que el mismo subproceso encuentra la construcción de uso compartido de trabajo. Además, en el C++ caso de los objetos, el nuevo objeto privado para cada subproceso se construye a partir del objeto original.
 
-Las restricciones para el `firstprivate` cláusula son los siguientes:
+Las restricciones de la cláusula `firstprivate` son las siguientes:
 
-- Una variable especificada en un `firstprivate` cláusula no debe tener un tipo incompleto ni un tipo de referencia.
+- Una variable especificada en una cláusula `firstprivate` no debe tener un tipo incompleto o un tipo de referencia.
 
-- Una variable con un tipo de clase que se especifica como `firstprivate` debe tener un constructor de copias sea accesible y no ambigua.
+- Una variable con un tipo de clase que se especifica como `firstprivate` debe tener un constructor de copias accesible y no ambiguo.
 
-- Las variables que son privadas dentro de una región paralela o que aparecen en la `reduction` cláusula de una `parallel` directiva no se puede especificar en un `firstprivate` cláusula en una directiva de uso compartido que se enlaza a la construcción paralela.
+- Las variables que son privadas dentro de una región paralela o que aparecen en la cláusula `reduction` de una directiva `parallel` no se pueden especificar en una cláusula `firstprivate` en una directiva de uso compartido que se enlaza a la construcción Parallel.
 
 #### <a name="2723-lastprivate"></a>2.7.2.3 lastprivate
 
-El `lastprivate` cláusula ofrece un superconjunto de la funcionalidad proporcionada por el `private` cláusula. La sintaxis de la `lastprivate` cláusula es como sigue:
+La cláusula `lastprivate` proporciona un superconjunto de la funcionalidad proporcionada por la cláusula `private`. La sintaxis de la cláusula `lastprivate` es la siguiente:
 
 ```cpp
 lastprivate(variable-list)
 ```
 
-Las variables especificadas en el *lista de variables* tiene `private` semántica de la cláusula. Cuando un `lastprivate` cláusula aparece en la directiva que identifica una construcción de uso compartido, el valor de cada `lastprivate` variable desde la última secuencialmente iteración de bucle asociado o la directiva de léxicamente última sección, se asigna a la objeto original de la variable. Las variables que no se le asigna un valor por la última iteración de la `for` o `parallel for`, o en la sección del última léxicamente el `sections` o `parallel sections` directiva, tienen valores indeterminados después de la construcción. Sin asignar subobjetos también tienen un valor indeterminado después de la construcción.
+Las variables especificadas en la *lista de variables* tienen `private` semántica de la cláusula. Cuando aparece una cláusula `lastprivate` en la Directiva que identifica una construcción de uso compartido de trabajo, el valor de cada variable `lastprivate` de la última iteración secuencial del bucle asociado, o de la Directiva de la última sección léxica, se asigna al objeto original de la variable. Las variables a las que no se asigna un valor por la última iteración de la `for` o `parallel for`, o por la última sección léxica de la Directiva `sections` o `parallel sections`, tienen valores indeterminados después de la construcción. Los subobjetos sin asignar también tienen un valor indeterminado después de la construcción.
 
-Las restricciones para el `lastprivate` cláusula son los siguientes:
+Las restricciones de la cláusula `lastprivate` son las siguientes:
 
-- Todas las restricciones para `private` aplicar.
+- Se aplican todas las restricciones de `private`.
 
-- Una variable con un tipo de clase que se especifica como `lastprivate` debe tener un operador de asignación de copia accesible y no ambigua.
+- Una variable con un tipo de clase que se especifica como `lastprivate` debe tener un operador de asignación de copia accesible y no ambiguo.
 
-- Las variables que son privadas dentro de una región paralela o que aparecen en la `reduction` cláusula de una `parallel` directiva no se puede especificar en un `lastprivate` cláusula en una directiva de uso compartido que se enlaza a la construcción paralela.
+- Las variables que son privadas dentro de una región paralela o que aparecen en la cláusula `reduction` de una directiva `parallel` no se pueden especificar en una cláusula `lastprivate` en una directiva de uso compartido que se enlaza a la construcción Parallel.
 
 #### <a name="2724-shared"></a>2.7.2.4 shared
 
-Esta cláusula comparte las variables que aparecen en la *variable lista* entre todos los subprocesos en un equipo. Todos los subprocesos dentro de un equipo obtener acceso a la misma área de almacenamiento para `shared` variables.
+Esta cláusula comparte las variables que aparecen en la *lista variable* entre todos los subprocesos de un equipo. Todos los subprocesos de un equipo acceden al mismo área de almacenamiento para las variables de `shared`.
 
-La sintaxis de la `shared` cláusula es como sigue:
+La sintaxis de la cláusula `shared` es la siguiente:
 
 ```cpp
 shared(variable-list)
@@ -676,31 +676,31 @@ shared(variable-list)
 
 #### <a name="2725-default"></a>2.7.2.5 default
 
-El `default` cláusula permite al usuario que afectan a los atributos de uso compartido de datos de variables. La sintaxis de la `default` cláusula es como sigue:
+La cláusula `default` permite al usuario afectar a los atributos de uso compartido de datos de las variables. La sintaxis de la cláusula `default` es la siguiente:
 
 ```cpp
 default(shared | none)
 ```
 
-Especificar `default(shared)` es equivalente a enumerar explícitamente cada variable visible actualmente en un `shared` cláusula, a menos que sea `threadprivate` o `const`-completo. En ausencia de explícita `default` cláusula, el comportamiento predeterminado es el mismo que if `default(shared)` se han especificado.
+Especificar `default(shared)` es equivalente a enumerar explícitamente cada variable visible actualmente en una cláusula `shared`, a menos que sea `threadprivate` o se califique `const`. En ausencia de una cláusula `default` explícita, el comportamiento predeterminado es el mismo que si se especificara `default(shared)`.
 
-Especificar `default(none)` requiere al menos uno de los siguientes debe ser true para todas las referencias a una variable de la extensión léxica de la construcción paralela:
+La especificación de `default(none)` requiere que se cumpla al menos uno de los siguientes elementos para cada referencia a una variable en la extensión léxica de la construcción Parallel:
 
-- La variable se muestra explícitamente en una cláusula de atributos de uso compartido de datos de una construcción que contiene la referencia.
+- La variable se muestra explícitamente en una cláusula de atributo de uso compartido de datos de una construcción que contiene la referencia.
 
-- La variable se declara dentro de la construcción paralela.
+- La variable se declara dentro de la construcción Parallel.
 
 - La variable es `threadprivate`.
 
-- La variable tiene un `const`-calificado de tipo.
+- La variable tiene un tipo `const`calificado.
 
-- La variable es la variable de control de bucle para un `for` bucle que sigue inmediatamente a un `for` o `parallel for` directiva y la referencia de variable aparece dentro del bucle.
+- La variable es la variable de control de bucle para un bucle `for` que sigue inmediatamente a una directiva `for` o `parallel for`, y la referencia a la variable aparece dentro del bucle.
 
-Especificar una variable en un `firstprivate`, `lastprivate`, o `reduction` cláusula de una directiva delimitada hace una referencia implícita a la variable en el contexto envolvente. Estas referencias implícitas también están sujetos a los requisitos mencionados anteriormente.
+Al especificar una variable en una cláusula `firstprivate`, `lastprivate`o `reduction` de una directiva delimitada, se produce una referencia implícita a la variable en el contexto envolvente. Dichas referencias implícitas también están sujetas a los requisitos mencionados anteriormente.
 
-Una sola `default` cláusula se puede especificar en un `parallel` directiva.
+Solo se puede especificar una sola cláusula `default` en una directiva `parallel`.
 
-Predeterminado de una variable se puede invalidar el atributo de uso compartido de datos mediante el uso de la `private`, `firstprivate`, `lastprivate`, `reduction`, y `shared` cláusulas, como se muestra en el ejemplo siguiente:
+El atributo de uso compartido de datos predeterminado de una variable se puede invalidar mediante las cláusulas `private`, `firstprivate`, `lastprivate`, `reduction`y `shared`, tal como se muestra en el ejemplo siguiente:
 
 ```cpp
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\
@@ -709,18 +709,18 @@ Predeterminado de una variable se puede invalidar el atributo de uso compartido 
 
 #### <a name="2726-reduction"></a>2.7.2.6 reduction
 
-Esta cláusula realiza una reducción en las variables escalares que aparecen en *lista de variables*, con el operador *op*. La sintaxis de la `reduction` cláusula es como sigue:
+Esta cláusula realiza una reducción en las variables escalares que aparecen en la *lista de variables*, con el operador *OP*. La sintaxis de la cláusula `reduction` es la siguiente:
 
-`reduction(` *OP* `:` *lista de variables* `)`
+`reduction(` *op* `:` *variable-List* `)`
 
-Una reducción se suele especificar para una instrucción con una de las formas siguientes:
+Normalmente se especifica una reducción para una instrucción con uno de los siguientes formatos:
 
-- *x* `=` *x* *op* *expr*
+- *expresión* *x* `=` *x* *OP*
 - *x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* (excepto para la resta)
-- *x* `++`
+- *x* `=` *expr* *OP* *x* (excepto para resta)
 - `++` *x*
-- *x* `--`
+- `++` *x*
+- `--` *x*
 - `--` *x*
 
 donde:
@@ -728,19 +728,19 @@ donde:
 *x*<br/>
 Una de las variables de reducción especificadas en la lista.
 
-*variable-list*<br/>
-Una lista separada por comas de variables de reducción escalar.
+*lista de variables*<br/>
+Lista separada por comas de variables de reducción escalar.
 
 *expr*<br/>
-Una expresión con tipo escalar que no hace referencia a *x*.
+Expresión con tipo escalar que no hace referencia a *x*.
 
-*op*<br/>
-No es un operador sobrecargado, pero uno de `+`, `*`, `-`, `&`, `^`, `|`, `&&`, o `||`.
+*operador*<br/>
+No es un operador sobrecargado pero uno de `+`, `*`, `-`, `&`, `^`, `|`, `&&`o `||`.
 
 *binop*<br/>
-No es un operador sobrecargado, pero uno de `+`, `*`, `-`, `&`, `^`, o `|`.
+No es un operador sobrecargado pero uno de `+`, `*`, `-`, `&`, `^`o `|`.
 
-El siguiente es un ejemplo de la `reduction` cláusula:
+El siguiente es un ejemplo de la cláusula `reduction`:
 
 ```cpp
 #pragma omp parallel for reduction(+: a, y) reduction(||: am)
@@ -751,21 +751,21 @@ for (i=0; i<n; i++) {
 }
 ```
 
-Como se muestra en el ejemplo, un operador puede estar oculto dentro de una llamada de función. El usuario debe tener cuidado de que el operador especificado en el `reduction` cláusula coincide con la operación de reducción.
+Como se muestra en el ejemplo, un operador puede ocultarse dentro de una llamada de función. El usuario debe tener cuidado de que el operador especificado en la cláusula `reduction` coincida con la operación de reducción.
 
-Aunque el operando derecho de la `||` operador tiene efectos secundarios en este ejemplo, están permitidos, pero deben usarse con cuidado. En este contexto, puede producirse un efecto secundario que garantiza que no se producen durante la ejecución secuencial del bucle durante la ejecución en paralelo. Esta diferencia puede producirse porque el orden de ejecución de las iteraciones es indeterminado.
+Aunque el operando derecho del operador `||` no tiene efectos secundarios en este ejemplo, están permitidos, pero deben usarse con cuidado. En este contexto, el efecto secundario que se garantiza que no se produzca durante la ejecución secuencial del bucle puede producirse durante la ejecución en paralelo. Esta diferencia puede producirse porque el orden de ejecución de las iteraciones es indeterminado.
 
-El operador se utiliza para determinar el valor inicial de las variables privadas utilizadas por el compilador para la reducción y determinar el operador de finalización. Especificar explícitamente el operador permite la instrucción de reducción que pueden estar fuera de la extensión de la construcción de léxica. Cualquier número de `reduction` cláusulas se pueden especificar en la directiva, pero puede aparecer una variable en a lo sumo uno `reduction` cláusula para dicha directiva.
+El operador se usa para determinar el valor inicial de todas las variables privadas utilizadas por el compilador para la reducción y para determinar el operador de finalización. Especificar explícitamente el operador permite que la instrucción de reducción esté fuera de la extensión léxica de la construcción. Se puede especificar cualquier número de cláusulas de `reduction` en la Directiva, pero puede aparecer una variable en como máximo una cláusula `reduction` para esa Directiva.
 
-Una copia privada de cada variable en *lista de variables* se crean, uno para cada subproceso, como si el `private` cláusula hubiese utilizada. La copia privada se inicializa según el operador (consulte la tabla siguiente).
+Se crea una copia privada de cada variable en la *lista de variables* , una para cada subproceso, como si se hubiera usado la cláusula `private`. La copia privada se inicializa según el operador (vea la tabla siguiente).
 
-Al final de la región para el que el `reduction` se especificó la cláusula, el objeto original se actualiza para reflejar el resultado de combinar su valor original con el valor final de cada una de las copias privadas mediante el operador especificado. Los operadores de reducción son todas asociativos (excepto para la resta), y el compilador puede reasociar libremente el cálculo del valor final. (Los resultados parciales de una reducción de la resta se suman para formar el valor final).
+Al final de la región para la que se especificó la cláusula `reduction`, el objeto original se actualiza para reflejar el resultado de la combinación de su valor original con el valor final de cada una de las copias privadas mediante el operador especificado. Los operadores de reducción son todos asociativos (excepto para la resta), y el compilador puede reasociar libremente el cálculo del valor final. (Los resultados parciales de una reducción de resta se agregan para formar el valor final).
 
-El valor del objeto original se convierte en indeterminado cuando el primer subproceso llega a la cláusula contenedora y permanece así hasta que finalice el cálculo de reducción.  Normalmente, el cálculo se completará al final de la construcción; Sin embargo, si la `reduction` cláusula se usa en una construcción que `nowait` es también se aplica el valor del objeto original permanece indeterminado hasta que se ha realizado una sincronización de barrera para asegurarse de que todos los subprocesos han completado la `reduction`cláusula.
+El valor del objeto original se convierte en indeterminados cuando el primer subproceso alcanza la cláusula contenedora y permanece así hasta que se completa el cálculo de reducción.  Normalmente, el cálculo se completará al final de la construcción; sin embargo, si se utiliza la cláusula `reduction` en una construcción a la que se aplica también `nowait`, el valor del objeto original permanece indeterminado hasta que se ha realizado una sincronización de barrera para asegurarse de que todos los subprocesos han completado la cláusula `reduction`.
 
-En la tabla siguiente se enumera los operadores que son válidos y sus valores de inicialización canónico. El valor de inicialización real será coherente con el tipo de datos de la variable de reducción.
+En la tabla siguiente se enumeran los operadores válidos y sus valores de inicialización canónicos. El valor de inicialización real será coherente con el tipo de datos de la variable de reducción.
 
-|Operador|Inicialización|
+|Operator|Inicialización|
 |--------------|--------------------|
 |`+`|0|
 |`*`|1|
@@ -776,13 +776,13 @@ En la tabla siguiente se enumera los operadores que son válidos y sus valores d
 |`&&`|1|
 |`||`|0|
 
-Las restricciones para el `reduction` cláusula son los siguientes:
+Las restricciones de la cláusula `reduction` son las siguientes:
 
-- El tipo de las variables en el `reduction` cláusula debe ser válida para el operador de reducción, salvo que nunca se permiten los tipos de puntero y tipos de referencia.
+- El tipo de las variables de la cláusula `reduction` debe ser válido para el operador de reducción, excepto en que nunca se permiten tipos de puntero y tipos de referencia.
 
-- Una variable que se especifica en el `reduction` cláusula no debe ser `const`-completo.
+- Una variable que se especifica en la cláusula `reduction` no debe estar calificada `const`.
 
-- Las variables que son privadas dentro de una región paralela o que aparecen en la `reduction` cláusula de una `parallel` directiva no se puede especificar en un `reduction` cláusula en una directiva de uso compartido que se enlaza a la construcción paralela.
+- Las variables que son privadas dentro de una región paralela o que aparecen en la cláusula `reduction` de una directiva `parallel` no se pueden especificar en una cláusula `reduction` en una directiva de uso compartido que se enlaza a la construcción Parallel.
 
    ```cpp
    #pragma omp parallel private(y)
@@ -800,7 +800,7 @@ Las restricciones para el `reduction` cláusula son los siguientes:
 
 #### <a name="2727-copyin"></a>2.7.2.7 copyin
 
-El `copyin` cláusula proporciona un mecanismo para asignar el mismo valor para `threadprivate` variables para cada subproceso en el equipo de ejecución de la región paralela. Para cada variable especificada en un `copyin` cláusula, el valor de la variable en el subproceso principal del equipo de copia, como si la asignación, en las copias de subprocesos privados al principio de la región paralela. La sintaxis de la `copyin` cláusula es como sigue:
+La cláusula `copyin` proporciona un mecanismo para asignar el mismo valor a `threadprivate` variables para cada subproceso del equipo que ejecuta la región paralela. Para cada variable especificada en una cláusula `copyin`, se copia el valor de la variable en el subproceso maestro del equipo, como si se hubiera asignado, a las copias de subproceso privado al principio de la región paralela. La sintaxis de la cláusula `copyin` es la siguiente:
 
 ```cpp
 
@@ -809,17 +809,17 @@ variable-list
 )
 ```
 
-Las restricciones para el `copyin` cláusula son los siguientes:
+Las restricciones de la cláusula `copyin` son las siguientes:
 
-- Una variable que se especifica en el `copyin` cláusula debe tener un operador de asignación de copia accesible y no ambigua.
+- Una variable que se especifica en la cláusula `copyin` debe tener un operador de asignación de copia accesible y no ambiguo.
 
-- Una variable que se especifica en el `copyin` cláusula debe ser un `threadprivate` variable.
+- Una variable que se especifica en la cláusula `copyin` debe ser una variable `threadprivate`.
 
 #### <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 
-El `copyprivate` cláusula proporciona un mecanismo para usar una variable privada para difundir un valor de un miembro de un equipo a los demás miembros. Es una alternativa al uso de una variable compartida para el valor al que proporciona este tipo de variable compartida puede ser difícil (por ejemplo, en una necesidad de una variable diferente en cada nivel de recursividad). El `copyprivate` cláusula solamente puede aparecer en el `single` directiva.
+La cláusula `copyprivate` proporciona un mecanismo para utilizar una variable privada con el fin de difundir un valor de un miembro de un equipo a los demás miembros. Es una alternativa al uso de una variable compartida para el valor cuando proporcionar este tipo de variable compartida sería difícil (por ejemplo, en una recursividad que requiera una variable diferente en cada nivel). La cláusula `copyprivate` solo puede aparecer en la Directiva `single`.
 
-La sintaxis de la `copyprivate` cláusula es como sigue:
+La sintaxis de la cláusula `copyprivate` es la siguiente:
 
 ```cpp
 
@@ -828,46 +828,46 @@ variable-list
 )
 ```
 
-El efecto de la `copyprivate` cláusula en una de las variables en su lista de variables que se produce después de la ejecución del bloque estructurado asociado con el `single` construir, y antes de que cualquiera de los subprocesos en el equipo ha dejado la barrera al final de la construcción. A continuación, en todos los demás subprocesos en el equipo de cada variable en el *lista de variables*, esa variable queda definida (como si de asignación) con el valor de la correspondiente estructurado de variable en el subproceso que ejecutó la construcción bloque.
+El efecto de la cláusula `copyprivate` en las variables de su lista de variables se produce después de la ejecución del bloque estructurado asociado a la construcción `single` y antes de que cualquiera de los subprocesos del equipo haya dejado la barrera al final de la construcción. Después, en todos los demás subprocesos del equipo, para cada variable de la *lista de variables*, esa variable se define (como si se hubiera asignado) con el valor de la variable correspondiente en el subproceso que ejecutó el bloque estructurado de la construcción.
 
-Restricciones para el `copyprivate` cláusula son los siguientes:
+Las restricciones de la cláusula `copyprivate` son las siguientes:
 
-- Una variable que se especifica en el `copyprivate` cláusula no debe aparecer en un `private` o `firstprivate` cláusula para el mismo `single` directiva.
+- Una variable que se especifica en la cláusula `copyprivate` no debe aparecer en una cláusula `private` o `firstprivate` para la misma directiva `single`.
 
-- Si un `single` la directiva con un `copyprivate` cláusula se encuentra en la extensión dinámica de una región paralela, todas las variables que se especifica en el `copyprivate` cláusula debe ser privada en el contexto envolvente.
+- Si se encuentra una directiva de `single` con una cláusula `copyprivate` en la extensión dinámica de una región paralela, todas las variables especificadas en la cláusula `copyprivate` deben ser privadas en el contexto envolvente.
 
-- Una variable que se especifica en el `copyprivate` cláusula debe tener un operador de asignación de copia no ambigua accesible.
+- Una variable que se especifica en la cláusula `copyprivate` debe tener un operador de asignación de copia no ambiguo accesible.
 
-## <a name="28-directive-binding"></a>2.8 enlace de directivas
+## <a name="28-directive-binding"></a>2,8 enlace de directivas
 
-Enlace dinámico de directivas debe cumplir las reglas siguientes:
+El enlace dinámico de directivas debe cumplir las siguientes reglas:
 
-- El `for`, `sections`, `single`, `master`, y `barrier` directivas enlazar a la inclusión dinámicamente `parallel`, si existe alguno, independientemente del valor de cualquier `if` cláusula que puede estar presente en el que Directiva. Si no hay ninguna región paralela se está ejecutando actualmente, las directivas se ejecutan por un equipo que se compone del subproceso principal.
+- Las directivas `for`, `sections`, `single`, `master`y `barrier` se enlazan al `parallel`de inclusión dinámica, si existe, independientemente del valor de cualquier cláusula `if` que pueda estar presente en esa Directiva. Si no se está ejecutando ninguna región paralela, las directivas las ejecuta un equipo compuesto solo por el subproceso maestro.
 
-- El `ordered` directiva se enlaza a la inclusión dinámicamente `for`.
+- La Directiva `ordered` se enlaza a la `for`de inclusión dinámica.
 
-- El `atomic` Directiva exige acceso exclusivo con respecto a `atomic` directivas en todos los subprocesos, no solo el equipo actual.
+- La Directiva `atomic` exige el acceso exclusivo con respecto a las directivas de `atomic` en todos los subprocesos, no solo al equipo actual.
 
-- El `critical` Directiva exige acceso exclusivo con respecto a `critical` directivas en todos los subprocesos, no solo el equipo actual.
+- La Directiva `critical` exige el acceso exclusivo con respecto a las directivas de `critical` en todos los subprocesos, no solo al equipo actual.
 
-- Una directiva nunca puede enlazar dinámicamente a cualquier directiva fuera lo más parecido posible inclusión `parallel`.
+- Una directiva nunca se puede enlazar a ninguna directiva fuera de la `parallel`de inclusión dinámica más cercana.
 
-## <a name="29-directive-nesting"></a>2.9 anidamiento de directivas
+## <a name="29-directive-nesting"></a>2,9 anidamiento de directivas
 
-Anidamiento dinámico de directivas debe cumplir las reglas siguientes:
+La anidación dinámica de directivas debe cumplir las siguientes reglas:
 
-- Un `parallel` directiva dinámicamente dentro de otra `parallel` lógicamente establece un nuevo equipo, que se compone del subproceso actual, a menos que anidada paralelismo está habilitado.
+- Una directiva de `parallel` dinámicamente dentro de otra `parallel` establece lógicamente un nuevo equipo, que se compone solo del subproceso actual, a menos que esté habilitado el paralelismo anidado.
 
-- `for`, `sections`, y `single` directivas que se enlazan a la misma `parallel` no pueden anidarse dentro de otros.
+- las directivas `for`, `sections`y `single` que se enlazan a la misma `parallel` no se pueden anidar dentro de otras.
 
-- `critical` no pueden anidarse dentro de otras directivas con el mismo nombre. Tenga en cuenta que esta restricción no es suficiente para evitar el interbloqueo.
+- las directivas de `critical` con el mismo nombre no se pueden anidar unas dentro de otras. Tenga en cuenta que esta restricción no es suficiente para evitar el interbloqueo.
 
-- `for`, `sections`, y `single` no se permiten las directivas de la extensión dinámica de `critical`, `ordered`, y `master` regiones si las directivas se enlazan a la misma `parallel` como las regiones.
+- las directivas `for`, `sections`y `single` no se permiten en la extensión dinámica de las regiones `critical`, `ordered`y `master` si las directivas se enlazan a la misma `parallel` que las regiones.
 
-- `barrier` no se permiten las directivas de la extensión dinámica de `for`, `ordered`, `sections`, `single`, `master`, y `critical` regiones si las directivas se enlazan a la misma `parallel` como las regiones.
+- las directivas de `barrier` no se permiten en la extensión dinámica de las regiones `for`, `ordered`, `sections`, `single`, `master`y `critical` si las directivas se enlazan a la misma `parallel` que las regiones.
 
-- `master` no se permiten las directivas de la extensión dinámica de `for`, `sections`, y `single` directivas si el `master` directivas enlazar al mismo `parallel` como las directivas de uso compartido.
+- las directivas de `master` no se permiten en la extensión dinámica de las directivas `for`, `sections`y `single` si las directivas de `master` se enlazan al mismo `parallel` que las directivas de uso compartido de trabajo.
 
-- `ordered` no se permiten las directivas de la extensión dinámica de `critical` regiones si las directivas se enlazan a la misma `parallel` como las regiones.
+- las directivas de `ordered` no se permiten en la extensión dinámica de las regiones `critical` si las directivas se enlazan a la misma `parallel` que las regiones.
 
-- También se permite cualquier directiva que se permite cuando se ejecuta de forma dinámica dentro de una región paralela cuando se ejecuta fuera de una región paralela. Cuando se ejecuta dinámicamente fuera de una región paralela especificada por el usuario, la directiva se ejecuta por un equipo que se compone del subproceso principal.
+- También se permite cualquier directiva que se permita cuando se ejecute dinámicamente dentro de una región paralela cuando se ejecute fuera de una región paralela. Cuando se ejecuta de forma dinámica fuera de una región paralela especificada por el usuario, la Directiva se ejecuta en un equipo compuesto solo por el subproceso maestro.

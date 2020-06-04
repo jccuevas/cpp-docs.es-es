@@ -1,27 +1,26 @@
 ---
-title: Eventos e Interfaces duales
+title: Interfaces y eventos duales
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], dual interfaces
 - dual interfaces, events
 ms.assetid: bb382f7c-e885-4274-bf07-83f3602615d2
-ms.openlocfilehash: f94e87f077846af8d61b06145f776f385051e79f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ce5048c25bd55feb0f1eb20fc04ec6bfeead746
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640601"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319605"
 ---
-# <a name="dual-interfaces-and-events"></a>Eventos e Interfaces duales
+# <a name="dual-interfaces-and-events"></a>Interfaces y eventos duales
 
-Aunque es posible diseñar una interfaz de eventos como dual, hay una serie de motivos de buen diseño para no hacerlo. La razón fundamental es que el origen del evento solo desencadenará el evento a través de la tabla vtable o `Invoke`, no ambos. Si el origen del evento desencadena el evento como una llamada al método de vtable directo, el `IDispatch` nunca se usarán los métodos y está claro que la interfaz debería haber sido una interfaz vtable pura. Si el origen del evento desencadena el evento como una llamada a `Invoke`, nunca se usará los métodos de vtable y resulta que debería haber sido la interfaz dispinterface. Si define las interfaces de eventos como duales, se necesitarán los clientes implementar parte de una interfaz que nunca se usará.
+Si bien es posible diseñar una interfaz de eventos como dual, hay una serie de buenas razones de diseño para no hacerlo. La razón fundamental es que la fuente del evento sólo activará `Invoke`el evento a través de la vtable o vía, no ambos. Si el origen del evento desencadena el evento como `IDispatch` una llamada directa al método vtable, los métodos nunca se utilizarán y está claro que la interfaz debería haber sido una interfaz vtable pura. Si el origen del evento desencadena `Invoke`el evento como una llamada a , los métodos vtable nunca se utilizarán y está claro que la interfaz debería haber sido una interfaz dispinterface. Si define las interfaces de eventos como duales, necesitará que los clientes implementen parte de una interfaz que nunca se usará.
 
 > [!NOTE]
->  Este argumento no es aplicable a las interfaces duales, en general. Desde una perspectiva de implementación, duales son una forma rápida, cómoda y con buen soporte de implementación de interfaces que se puede acceder a una amplia gama de clientes.
+> Este argumento no se aplica a las interfaces duales, en general. Desde una perspectiva de implementación, los duales son una forma rápida, cómoda y bien soportada de implementar interfaces que son accesibles para una amplia gama de clientes.
 
-Existen otros motivos para evitar interfaces duales de eventos; ni Visual Basic ni en Internet Explorer las admiten.
+Hay otras razones para evitar las interfaces de eventos duales; ni Visual Basic ni Internet Explorer los admiten.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Interfaces duales y ATL](../atl/dual-interfaces-and-atl.md)
-

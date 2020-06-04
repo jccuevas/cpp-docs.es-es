@@ -5,7 +5,6 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
-- IsSameRow
 - IRowsetIdentityImpl.IsSameRow
 - ATL.IRowsetIdentityImpl.IsSameRow
 - IRowsetIdentityImpl::IsSameRow
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: b70ebdaa44331d9fa545763f0dd19e6320dd652b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 20f558099c02d7de8a20b3cf631812b44a742a48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556223"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210412"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl (Clase)
 
-Implementa OLE DB [IRowsetIdentity](https://docs.microsoft.com/previous-versions/windows/desktop/ms715913(v=vs.85)) interfaz, que permite realizar pruebas para la identidad de fila.
+Implementa la interfaz OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85)) , que permite probar la identidad de fila.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,13 +38,13 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 Una clase derivada de `IRowsetIdentityImpl`.
 
 *RowClass*<br/>
-La unidad de almacenamiento para el `HROW`.
+Unidad de almacenamiento para el `HROW`.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldb.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
@@ -53,7 +52,7 @@ La unidad de almacenamiento para el `HROW`.
 |-|-|
 |[IsSameRow](#issamerow)|Compara dos identificadores de fila para ver si hacen referencia a la misma fila.|
 
-## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
+## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a>Irowsetidentityimpl (:: IsSameRow
 
 Compara dos identificadores de fila para ver si hacen referencia a la misma fila.
 
@@ -66,13 +65,13 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para comparar los identificadores de fila, este método convierte el `HROW` identificadores a `RowClass` miembros y las llamadas `memcmp` en los punteros.
+Para comparar los identificadores de fila, este método convierte los controladores de `HROW` en miembros de `RowClass` y llama a `memcmp` en los punteros.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

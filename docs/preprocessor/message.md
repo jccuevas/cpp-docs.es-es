@@ -1,6 +1,6 @@
 ---
-title: message
-ms.date: 11/04/2016
+title: message (Pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - message_CPP
 - vc-pragma.message
@@ -8,31 +8,30 @@ helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-ms.openlocfilehash: a55721fb954cf9383022b4fc8e84327ea4c772e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48605fbef3b6d81c140e663e950429cd3dcf9b19
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627388"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218798"
 ---
-# <a name="message"></a>message
+# <a name="message-pragma"></a>message (Pragma)
+
 Envía un literal de cadena al resultado estándar sin finalizar la compilación.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-#pragma message( messagestring )
-```
+> **mensaje de #pragma (** *cadena de mensaje* **)**
 
 ## <a name="remarks"></a>Comentarios
 
-Un uso típico de la **mensaje** pragma consiste en Mostrar mensajes informativos en tiempo de compilación.
+Un uso típico del pragma **Message** es mostrar mensajes informativos en tiempo de compilación.
 
-El *messagestring* parámetro puede ser una macro que se expande a un literal de cadena y puede concatenar estas macros con literales de cadena en cualquier combinación.
+El parámetro *de cadena de mensaje* puede ser una macro que se expande a un literal de cadena y puede concatenar estas macros con literales de cadena en cualquier combinación.
 
-Si utiliza una macro predefinida en el **mensaje** pragma, la macro debe devolver una cadena, de lo contrario, tendrá que convertir el resultado de la macro en una cadena.
+Si usa una macro predefinida en el pragma **Message** , la macro debe devolver una cadena. De lo contrario, tendrá que convertir el resultado de la macro en una cadena.
 
-El siguiente fragmento de código utiliza el **mensaje** pragma para mostrar mensajes durante la compilación:
+En el fragmento de código siguiente se usa el pragma **Message** para mostrar los mensajes durante la compilación:
 
 ```cpp
 // pragma_directives_message1.cpp
@@ -59,4 +58,4 @@ El siguiente fragmento de código utiliza el **mensaje** pragma para mostrar men
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

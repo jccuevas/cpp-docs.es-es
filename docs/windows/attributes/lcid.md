@@ -1,21 +1,21 @@
 ---
-title: LCID (atributo de COM de C++)
+title: LCID (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: e431736fcd38b3c08936e65ecf05594142ced4e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb9e44d34c675e4f5d955c5f422a6dd35259ec8d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655335"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214804"
 ---
 # <a name="lcid"></a>lcid
 
-Le permite pasar un identificador de configuración regional a una función.
+Permite pasar un identificador de configuración regional a una función.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,9 +23,9 @@ Le permite pasar un identificador de configuración regional a una función.
 [lcid]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **lcid** atributo de C++ implementa la funcionalidad de la [lcid](/windows/desktop/Midl/lcid) atributo MIDL. Si desea implementar la configuración regional para un bloque de biblioteca, use el **lcid =** `lcid` parámetro para el [módulo](module-cpp.md) atributo.
+El atributo **LCID** C++ implementa la funcionalidad del atributo MIDL de [LCID](/windows/win32/Midl/lcid) . Si desea implementar la configuración regional para un bloque de biblioteca, use el parámetro **LCID =** `lcid` para el atributo [Module](module-cpp.md) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -50,12 +50,12 @@ __interface IStatic {
 |-|-|
 |**Se aplica a**|Parámetro de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)

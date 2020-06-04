@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: 18b95884bb673305398739968ef2530e8c4778d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215285"
 ---
-# <a name="codecvtutf16"></a>codecvt_utf16
+# <a name="codecvt_utf16"></a>codecvt_utf16
 
 Representa una faceta [locale](../standard-library/locale-class.md) que convierte entre caracteres anchos codificados como UCS-2 o UCS-4 y un flujo de bytes codificados como UTF-16LE o UTF-16BE.
 
@@ -24,18 +24,18 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+\ *Elem*
 Tipo de elemento de carácter ancho.
 
-*Maxcode*<br/>
+\ de *maxcode*
 Número máximo de caracteres de la faceta de configuración regional.
 
-*Modo*<br/>
+\ *modo*
 Información de configuración de la faceta de configuración regional.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase de plantilla convierte entre caracteres anchos codificados como UCS-2 o UCS-4 y un flujo de bytes codificados como UTF-16LE, si Mode & little_endian, o UTF-16BE en caso contrario.
+Esta plantilla de clase convierte entre caracteres anchos codificados como UCS-2 o UCS-4 y una secuencia de bytes codificada como UTF-16LE, si el modo & little_endian o UTF-16BE en caso contrario.
 
 El flujo de bytes debe escribirse en un archivo binario; puede dañarse si se escribe en un archivo de texto.
 
@@ -43,4 +43,4 @@ El flujo de bytes debe escribirse en un archivo binario; puede dañarse si se es
 
 Encabezado: \<codecvt >
 
-Namespace: std
+Espacio de nombres: std

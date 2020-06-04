@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-ms.openlocfilehash: 52d30f3ddee8b25ea54e799cfcb984bdffa80726
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b1b769ed7e27e9c8c3edbe6b08452f3ec964727
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508880"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756362"
 ---
 # <a name="compiler-error-c3650"></a>Error del compilador C3650
 
-'método_de_interfaz': no se puede utilizar como invalidación explícita, debe ser una función miembro virtual de una clase base
+' interface_method ': no se puede usar como una invalidación explícita; debe ser una función miembro virtual de una clase base
 
-Se intentó realizar un reemplazo explícito en un miembro que no era virtual.
+Se intentó realizar una invalidación explícita en un miembro que no era virtual.
 
-Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Para obtener más información, vea [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3650:
+En el ejemplo siguiente se genera C3650:
 
-```
+```cpp
 // C3650.cpp
 // compile with: /clr
 public interface struct I {

@@ -1,21 +1,21 @@
 ---
-title: Aggregatable (atributo de COM de C++)
+title: agregable (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregatable
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 74a561b9b70c5aee36781d102835c73dec2c3ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d929543f699dcd20471ff9a9b45f54119f82a40a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582473"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168530"
 ---
 # <a name="aggregatable"></a>aggregatable
 
-Indica que la clase admite agregación.
+Indica que la clase admite la agregación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,26 +25,26 @@ Indica que la clase admite agregación.
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
-(Opcional) Un parámetro para indicar cuándo se puede agregar el objeto COM:
+*value*<br/>
+Opta Un parámetro para indicar cuándo se puede Agregar el objeto COM:
 
-- `never` No se puede agregar el objeto COM.
+- `never` el objeto COM no se puede Agregar.
 
-- `allowed` El objeto COM puede crearse directamente o puede agregarse. Este es el valor predeterminado.
+- `allowed` el objeto COM se puede crear directamente o se puede Agregar. Este es el valor predeterminado.
 
-- `always` El objeto COM no se puede crear directamente y solo se puede agregar. Cuando se llama a `CoCreateInstance` para este objeto, debe especificar el objeto de agregación `IUnknown` interfaz (el control `IUnknown`).
+- `always` el objeto COM no se puede crear directamente y solo se puede Agregar. Cuando llame a `CoCreateInstance` para este objeto, debe especificar la interfaz de `IUnknown` del objeto de agregado (control `IUnknown`).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **agregables** atributo de C++ tiene la misma funcionalidad que el [agregables](/windows/desktop/Midl/aggregatable) atributo MIDL. Esto significa que el compilador pasará el **agregables** a través del atributo en el archivo .idl generado.
+El **aggregatable** C++ atributo agregable tiene la misma funcionalidad que el atributo MIDL [agregable](/windows/win32/Midl/aggregatable) . Esto significa que el compilador pasará el atributo **agregable** a través del archivo. idl generado.
 
-Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
+Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si se aplica `progid`, también se aplican `vi_progid` y `coclass`.
 
 ### <a name="atl-projects"></a>Proyectos ATL
 
 Si este atributo se usa en un proyecto que usa ATL, el comportamiento del atributo cambiará. Además del comportamiento descrito anteriormente, el atributo también agrega una de las macros siguientes a la clase de destino:
 
-|Valor de parámetro|Macro insertado|
+|Valor del parámetro|Macro insertada|
 |---------------------|--------------------|
 |`Never`|[DECLARE_NOT_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|
 |`Allowed`|[DECLARE_POLY_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|
@@ -74,14 +74,14 @@ class CMyClass {};
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|Uno o varios de los siguientes: `coclass`, `progid`o `vi_progid`.|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregación](/windows/desktop/com/aggregation)
+[Agregación](/windows/win32/com/aggregation)

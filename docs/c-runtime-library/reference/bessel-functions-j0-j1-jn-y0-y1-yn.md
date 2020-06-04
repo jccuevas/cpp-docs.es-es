@@ -1,14 +1,20 @@
 ---
 title: 'Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+- _o__j0
+- _o__j1
+- _o__jn
+- _o__y0
+- _o__y1
+- _o__yn
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +26,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,14 +48,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531868"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913476"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
 Calcula la función Bessel de la clase del primer o segundo tipo, de órdenes 0, 1 o n. Las funciones Bessel suelen usarse en las matemáticas de la teoría de las ondas electromagnéticas.
 
@@ -84,23 +94,25 @@ Orden de enteros de la función Bessel.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve una función Bessel de *x*. Si *x* es negativo en el **_y0**, **_y1**, o **_yn** funciones, la rutina se establece **errno** a  **EDOM**, imprime un **_DOMAIN** mensaje de error que **stderr**y devuelve **_HUGE_VAL**. Puede modificar mediante el uso de control de errores **_matherr**.
+Cada una de estas rutinas devuelve una función Bessel de *x*. Si *x* es negativo en las **funciones _y0**, **_y1**o **_Yn** , la rutina establece **errno** en **EDOM**, imprime un mensaje de error de **_DOMAIN** en **stderr**y devuelve **_HUGE_VAL**. Puede modificar el control de errores mediante **_matherr**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_j0**, **_j1**, y **_jn** rutinas devuelven funciones Bessel del primer tipo: ordena 0, 1 y n, respectivamente.
-
-|Entrada|Excepción SEH|Excepción de Matherr|
-|-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|**NO VÁLIDO**|**_DOMINIO**|
-
-El **_y0**, **_y1**, y **_yn** rutinas devuelven funciones Bessel del segundo tipo: ordena 0, 1 y n, respectivamente.
+Las rutinas **_j0**, **_j1**y **_Jn** devuelven funciones Bessel del primer tipo: ordena 0, 1 y n, respectivamente.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|**NO VÁLIDO**|**_DOMINIO**|
+|± **QNAN**, **IND**|**No válido**|**_DOMAIN**|
+
+Las rutinas **_y0**, **_y1**y **_Yn** devuelven funciones Bessel del segundo tipo: orders 0, 1 y n, respectivamente.
+
+|Entrada|Excepción SEH|Excepción de Matherr|
+|-----------|-------------------|-----------------------|
+|± **QNAN**, **IND**|**No válido**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**NO VÁLIDO**|**_DOMINIO**|
+|&#124;x&#124; < 0,0|**No válido**|**_DOMAIN**|
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -108,7 +120,7 @@ El **_y0**, **_y1**, y **_yn** rutinas devuelven funciones Bessel del segundo ti
 |-------------|---------------------|
 |**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -151,7 +163,7 @@ Bessel functions for x = 2.387000:
    Second 4      _yn( 4, x )  -1.626833
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

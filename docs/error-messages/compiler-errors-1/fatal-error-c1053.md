@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C1053
 ms.assetid: f50c1c6a-d9cc-42fa-984e-4e2e6e9cd1b1
-ms.openlocfilehash: 944207702d2928d780c3af8973fb699f16d23b5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34d57e06f008652955ef6522055e124ef1b209e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204521"
 ---
 # <a name="fatal-error-c1053"></a>Error irrecuperable C1053
 
-'\<identificador >': función es demasiado larga
+'\<identificador > ': la función es demasiado grande
 
 La función es demasiado grande para compilarla.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones
 
 1. Intente compilarla sin optimizaciones.
 

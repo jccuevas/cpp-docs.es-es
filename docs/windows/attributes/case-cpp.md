@@ -1,21 +1,21 @@
 ---
-title: caso (atributo de COM de C++)
+title: Case (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: 1ed107b78ea5638d93a773e19de13b4c1fe1036c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648414"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167346"
 ---
 # <a name="case-c"></a>case (C++)
 
-Puede usar con el [switch_type](switch-type.md) atributo en un **union**.
+Se usa con el [switch_type](switch-type.md) atributo de una **Unión**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,8 +25,8 @@ Puede usar con el [switch_type](switch-type.md) atributo en un **union**.
 
 #### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
-Un valor de entrada posibles para el que desea proporcionar un procesamiento. El tipo de **valor** puede ser uno de los siguientes tipos:
+*value*<br/>
+Un valor de entrada posible para el que desea proporcionar el procesamiento. El tipo de **valor** puede ser uno de los siguientes tipos:
 
 - `int`
 
@@ -38,13 +38,13 @@ Un valor de entrada posibles para el que desea proporcionar un procesamiento. El
 
 o un identificador de este tipo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **caso** atributo de C++ tiene la misma funcionalidad que el **caso** atributo MIDL. Este atributo sólo se utiliza con el [switch_type](switch-type.md) atributo.
+El atributo **Case** C++ tiene la misma funcionalidad que el atributo MIDL de **Case** . Este atributo solo se utiliza con el atributo [switch_type](switch-type.md) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra un uso de la **caso** atributo:
+En el código siguiente se muestra el uso del atributo **Case** :
 
 ```cpp
 // cpp_attr_ref_case.cpp
@@ -69,14 +69,14 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Se aplica a**|Miembro de un **clase** o **struct**|
+|**Se aplica a**|Miembro de una **clase** o **struct**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

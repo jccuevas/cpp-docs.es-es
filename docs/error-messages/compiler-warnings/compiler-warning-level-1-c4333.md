@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4333
 ms.assetid: d3763c52-6110-4da0-84db-5264e3f3f166
-ms.openlocfilehash: b0f87b5d839dcfbb577af567a1a51a95daf716f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534491db2d612f251a6fd85c9239537569083874
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162938"
 ---
 # <a name="compiler-warning-level-1-c4333"></a>Advertencia del compilador (nivel 1) C4333
 
-'operador': desplazamiento a la derecha por cantidad demasiado grande, la pérdida de datos
+' operador ': desplazamiento a la derecha con una cantidad demasiado grande, pérdida de datos
 
-Una operación de desplazamiento a la derecha era demasiado grande.  Todos los bits significativos son desplazados y el resultado siempre será cero.
+Una operación de desplazamiento A la derecha era demasiado grande.  Todos los bits significativos se desplazan hacia afuera y el resultado siempre será cero.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4333.
+En el ejemplo siguiente se genera C4333.
 
-```
+```cpp
 // C4333.cpp
 // compile with: /c /W1
 unsigned shift8 (unsigned char c) {

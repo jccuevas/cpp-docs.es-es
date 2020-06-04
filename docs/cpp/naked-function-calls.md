@@ -11,18 +11,18 @@ helpviewer_keywords:
 - naked keyword [C++]
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
-ms.openlocfilehash: f9d8a8747d4a808d040b814005782ed8187bf274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14bc64314cf64e7d13c076c314419e3d636432d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177942"
 ---
 # <a name="naked-function-calls"></a>Llamadas de función naked
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
-Las funciones declaradas con el **naked** atributo se emiten sin código de prólogo o epílogo, lo que permite escribir sus propias secuencias de prólogo/epílogo personalizado mediante la [ensamblador alineado](../assembler/inline/inline-assembler.md). Las funciones naked se proporcionan como una característica avanzada. Permiten declarar una función que se está llamando desde un contexto que no es C/C++, y crear así diferentes suposiciones sobre dónde están los parámetros o qué registros se conservan. Entre los posibles ejemplos, se encuentran rutinas tales como los controladores de interrupción. Esta característica es especialmente útil para quienes escriben controladores de dispositivos virtuales (VxD).
+Las funciones declaradas con el atributo **naked** se emiten sin código de prólogo o epílogo, lo que le permite escribir sus propias secuencias de prólogo/epílogo personalizadas mediante el [ensamblador alineado](../assembler/inline/inline-assembler.md). Las funciones naked se proporcionan como una característica avanzada. Permiten declarar una función que se está llamando desde un contexto que no es C/C++, y crear así diferentes suposiciones sobre dónde están los parámetros o qué registros se conservan. Entre los posibles ejemplos, se encuentran rutinas tales como los controladores de interrupción. Esta característica es especialmente útil para quienes escriben controladores de dispositivos virtuales (VxD).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
@@ -34,6 +34,6 @@ Las funciones declaradas con el **naked** atributo se emiten sin código de pró
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Convenciones de llamada](../cpp/calling-conventions.md)

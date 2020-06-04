@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - future/std::future_error
 ms.assetid: 6071c545-ac2a-49ef-9967-07b0125da861
-ms.openlocfilehash: 2b3f754c0ceb7384d99c6a657de214d30aca24b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3f9d63c45d0e185e3e1476094736d132822173
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430478"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447349"
 ---
 # <a name="futureerror-class"></a>future_error (Clase)
 
@@ -31,12 +31,12 @@ const char *what() const throw();
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<futura >
+**Encabezado:** \<> futuro
 
 **Espacio de nombres:** std
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[logic_error (Clase)](../standard-library/logic-error-class.md)<br/>
-[error_code (Clase)](../standard-library/error-code-class.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[logic_error (Clase)](../standard-library/logic-error-class.md)\
+[error_code (Clase)](../standard-library/error-code-class.md)

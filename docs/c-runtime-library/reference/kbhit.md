@@ -1,9 +1,10 @@
 ---
 title: _kbhit
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _kbhit
-apilocation:
+- _o__kbhit
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,10 +16,13 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _kbhit
-- kbhit
 - conio/_kbhit
 helpviewer_keywords:
 - keyboard input
@@ -30,14 +34,14 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfe26a988c491c4d137bfc1badc093d56cde4010
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668005"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916548"
 ---
-# <a name="kbhit"></a>_kbhit
+# <a name="_kbhit"></a>_kbhit
 
 Comprueba si hay acciones del teclado en la consola.
 
@@ -55,9 +59,11 @@ int _kbhit( void );
 
 **_kbhit** devuelve un valor distinto de cero si se ha presionado una tecla. De lo contrario, devuelve 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_kbhit** función comprueba la consola para una pulsación de tecla recientes. Si la función devuelve un valor distinto de cero, hay una pulsación de tecla esperando en el búfer. El programa, a continuación, puede llamar a **_getch** o **_getche** para obtener la pulsación de tecla.
+La función **_kbhit** comprueba si la consola tiene una pulsación de tecla reciente. Si la función devuelve un valor distinto de cero, hay una pulsación de tecla esperando en el búfer. A continuación, el programa puede llamar a **_getch** o **_getche** para obtener la pulsación de tecla.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -65,7 +71,7 @@ El **_kbhit** función comprueba la consola para una pulsación de tecla recient
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -96,13 +102,13 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de consola y Puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>

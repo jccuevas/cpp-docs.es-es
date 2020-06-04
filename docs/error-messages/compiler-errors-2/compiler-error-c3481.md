@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3481
 ms.assetid: 5d09375a-5ed3-4b61-86ed-45e91fd734c7
-ms.openlocfilehash: 32a04c2c49f8d9d974c3423756c4c9fc59a46495
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1719e9f1d3328be083f745498e6f4ad772b0b52a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661986"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755244"
 ---
 # <a name="compiler-error-c3481"></a>Error del compilador C3481
 
@@ -27,7 +27,7 @@ El compilador no puede encontrar la definición de una variable que se pasó a l
 
 El ejemplo siguiente genera el error C3481 porque la variable `n` no está definida:
 
-```
+```cpp
 // C3481.cpp
 
 int main()

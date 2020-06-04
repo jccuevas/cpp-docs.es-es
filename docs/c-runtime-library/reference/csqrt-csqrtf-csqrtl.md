@@ -1,11 +1,11 @@
 ---
 title: csqrt, csqrtf, csqrtl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csqrt
 - csqrtf
 - csqrtl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csqrt
 - csqrtf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1afc79f0fba9663ec5fbb0a556da52c3a1c55ca6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449886"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941977"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 
@@ -68,22 +71,22 @@ Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La raíz cuadrada de *z*. El resultado se encuentra en el semiplano derecho.
+Raíz cuadrada de *z*. El resultado se encuentra en el semiplano derecho.
 
-|Entrada|Excepción SEH|**_matherr** excepción|
+|Entrada|Excepción SEH|**_matherr** Excepcional|
 |-----------|-------------------|--------------------------|
-|+ QNAN, IND|ninguna|_DOMAIN|
+|± QNAN, IND|ninguna|_DOMAIN|
 |- ∞|ninguna|_DOMAIN|
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **csqrt** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **csqrt** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **csqrt** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **csqrt** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**csqrt**, **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
+|**csqrt**,               **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

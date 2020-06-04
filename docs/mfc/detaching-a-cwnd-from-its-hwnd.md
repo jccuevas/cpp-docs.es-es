@@ -1,8 +1,6 @@
 ---
 title: Desasociar CWnd de su HWND
 ms.date: 11/04/2016
-f1_keywords:
-- CWnd
 helpviewer_keywords:
 - HWND, detaching CWnd from
 - removing HWNDs from CWnds
@@ -10,26 +8,25 @@ helpviewer_keywords:
 - detaching CWnds from HWNDs
 - Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
-ms.openlocfilehash: fe4d9efa6adcec51d5944755e4a8abb1cc0784e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a6f97ba9f1dd3a928a5450c1a899ce09a4ac5f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653978"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446961"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Desasociar CWnd de su HWND
 
-Si tiene que evitar el objeto -`HWND` relación, MFC proporciona otra `CWnd` función miembro, [Detach](../mfc/reference/cwnd-class.md#detach), que desconecta el objeto de ventana de C++ de la ventana de Windows. Esto impide que el destructor destruir la ventana de Windows cuando se destruye el objeto.
+Si necesita eludir la relación de`HWND` de objetos, MFC proporciona otra `CWnd` función miembro, [detach](../mfc/reference/cwnd-class.md#detach), que desconecta el C++ objeto de ventana de la ventana de Windows. Esto evita que el destructor destruya la ventana de Windows cuando se destruye el objeto.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Creación de ventanas](../mfc/creating-windows.md)
+- [Crear ventanas](../mfc/creating-windows.md)
 
 - [Secuencia de destrucción de ventanas](../mfc/window-destruction-sequence.md)
 
-- [Asignación y desasignación de memoria de ventana](../mfc/allocating-and-deallocating-window-memory.md)
+- [Asignar y desasignar memoria de ventana](../mfc/allocating-and-deallocating-window-memory.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Objetos de ventana](../mfc/window-objects.md)
-

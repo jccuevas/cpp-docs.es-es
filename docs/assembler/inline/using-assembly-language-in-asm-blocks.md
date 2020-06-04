@@ -6,14 +6,14 @@ helpviewer_keywords:
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5c7c9274ab5b75efa007fd96fc00d80bd53426e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631431"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169128"
 ---
-# <a name="using-assembly-language-in-asm-blocks"></a>Uso del lenguaje de ensamblado en bloques __asm
+# <a name="using-assembly-language-in-__asm-blocks"></a>Uso del lenguaje de ensamblado en bloques __asm
 
 **Específicos de Microsoft**
 
@@ -37,7 +37,7 @@ El ensamblador insertado tiene mucho en común con otros ensambladores. Por ejem
 
 - [Comentarios en lenguaje de ensamblado](../../assembler/inline/assembly-language-comments.md)
 
-- [La pseudoinstrucción _emit](../../assembler/inline/emit-pseudoinstruction.md)
+- [_Emit Emit (](../../assembler/inline/emit-pseudoinstruction.md)
 
 - [Depuración y listas para el ensamblado insertado](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)
 
@@ -45,6 +45,6 @@ El ensamblador insertado tiene mucho en común con otros ensambladores. Por ejem
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

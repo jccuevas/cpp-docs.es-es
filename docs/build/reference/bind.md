@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /BIND editbin option
 - import address table
 ms.assetid: 3772b330-1868-4c90-857d-c31faa867982
-ms.openlocfilehash: 671a26268ab07db4a38ae241ae1e0867dd0eb43c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ba0a5f0235c8771567e4e43172bdf8c81c99a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295037"
 ---
 # <a name="bind"></a>/BIND
 
@@ -34,4 +34,4 @@ De forma predeterminada, el cargador del programa establece las direcciones de p
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de EDITBIN](../../build/reference/editbin-options.md)
+[Opciones de EDITBIN](editbin-options.md)

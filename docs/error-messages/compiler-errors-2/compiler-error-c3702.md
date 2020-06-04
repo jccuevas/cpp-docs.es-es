@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3702
 ms.assetid: 14fcc20e-4404-45d7-be54-e4f09332fa5a
-ms.openlocfilehash: 3a440703b2b17979dda0c00fb2ff87f2b0eb0ff7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f9a3509dfe47f2d6d410a05409a28885983cd7a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676400"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758013"
 ---
 # <a name="compiler-error-c3702"></a>Error del compilador C3702
 
-'function': se requiere para los eventos COM ATL
+' función ': ATL es necesario para los eventos COM
 
-Se intentó utilizar eventos COM sin incluir los archivos de encabezado ATL necesarios.
+Ha intentado utilizar eventos COM sin incluir los archivos de encabezado ATL necesarios.
 
-El ejemplo siguiente genera C3702:
+En el ejemplo siguiente se genera C3702:
 
-```
+```cpp
 // C3702.cpp
 // uncomment the following line to resolve
 // #define _ATL_ATTRIBUTES 1

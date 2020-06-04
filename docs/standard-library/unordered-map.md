@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 6ccb2c0c54f8094110d37e6dfd2c504fa8173641
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e77fd79375fa7f636f551c1246be4f0d8f309ffd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627505"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688827"
 ---
-# <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
+# <a name="ltunordered_mapgt"></a>&lt;unordered_map&gt;
 
-Define las clases de plantilla de contenedor [unordered_map](../standard-library/unordered-map-class.md) y [unordered_multimap](../standard-library/unordered-multimap-class.md), así como sus plantillas auxiliares.
+Define las plantillas de clase de contenedor [unordered_map](../standard-library/unordered-map-class.md) y [unordered_multimap](../standard-library/unordered-multimap-class.md) y sus plantillas auxiliares.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
 #include <unordered_map>
 ```
+
+> [!NOTE]
+> La biblioteca de > de \<unordered_map también utiliza la instrucción `#include <initializer_list>`.
 
 ### <a name="classes"></a>Clases
 
@@ -43,5 +46,5 @@ Define las clases de plantilla de contenedor [unordered_map](../standard-library
 
 ## <a name="see-also"></a>Vea también
 
-[unordered_multiset (Clase)](../standard-library/unordered-multiset-class.md)<br/>
-[unordered_set (Clase)](../standard-library/unordered-set-class.md)<br/>
+[unordered_multiset (Clase)](../standard-library/unordered-multiset-class.md)\
+[unordered_set (Clase)](../standard-library/unordered-set-class.md)

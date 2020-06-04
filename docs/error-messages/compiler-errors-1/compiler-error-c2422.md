@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2422
 ms.assetid: ef0ec302-4028-4778-b134-0b8cea4bcad9
-ms.openlocfilehash: 524eeadb6cf066d3eba3a7e88c45a9e2b993c0ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39f779ee846cf4f328f9c7af59ae394d97d7a3ca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509140"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744737"
 ---
 # <a name="compiler-error-c2422"></a>Error del compilador C2422
 
-invalidación de segmento no válido en 'operando'
+invalidación de segmento no válida en ' operando '
 
-Código de ensamblado alineado utiliza incorrectamente un operador de invalidación de segmento (dos puntos) en un operando.  Entre las posibles causas se incluyen:
+El código de ensamblado alineado usa incorrectamente un operador de invalidación de segmento (dos puntos) en un operando.  Las posibles causas son:
 
-- El registro que precede al operador no es un registro de segmento.
+- El registro anterior al operador no es un registro de segmento.
 
-- El registro que precede al operador no es el registro de segmento solo en el operando.
+- El registro anterior al operador no es el único registro de segmento en el operando.
 
-- El operador de invalidación de segmento aparece dentro de un operador de direccionamiento indirecto (paréntesis).
+- El operador de invalidación de segmento aparece dentro de un operador de direccionamiento indirecto (corchetes).
 
-- La expresión que sigue al operador de invalidación de segmento no es un operando inmediato o un operando de memoria.
+- La expresión que sigue al operador de invalidación de segmento no es un operando inmediato ni un operando de memoria.
 
-El ejemplo siguiente genera C2422:
+En el ejemplo siguiente se genera C2422:
 
-```
+```cpp
 // C2422.cpp
 // processor: x86
 int main() {

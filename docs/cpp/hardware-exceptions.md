@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 17775f3b2ee6dfa235c93d0bf0e3335b464aaa69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8adfd59eab0960ab14b2becb8d9864c77196c909
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553535"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188681"
 ---
 # <a name="hardware-exceptions"></a>Excepciones de hardware
 
@@ -27,7 +27,7 @@ Las excepciones de hardware reconocidas por Windows se resumen en la tabla sigui
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Lectura o escritura en una ubicación de memoria inaccesible.|
 |STATUS_BREAKPOINT|Detección de un punto de interrupción definido por hardware; se usa solo en depuradores.|
-|STATUS_DATATYPE_MISALIGNMENT|Lectura o escritura de datos en una dirección que no está bien alineada; por ejemplo, las entidades de 16 bits se deben alinear en límites de 2 bytes. (No aplicable a Intel 80*x*86 procesadores.)|
+|STATUS_DATATYPE_MISALIGNMENT|Lectura o escritura de datos en una dirección que no está bien alineada; por ejemplo, las entidades de 16 bits se deben alinear en límites de 2 bytes. (No aplicable a los procesadores Intel 80*x*86).|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|División del tipo de punto flotante entre 0,0.|
 |STATUS_FLOAT_OVERFLOW|Superación del exponente positivo máximo del tipo de punto flotante.|
 |STATUS_FLOAT_UNDERFLOW|Superación de la magnitud del exponente negativo menor del tipo de punto flotante.|
@@ -38,9 +38,9 @@ Las excepciones de hardware reconocidas por Windows se resumen en la tabla sigui
 |STATUS_INTEGER_OVERFLOW|Intento de operación que supera el intervalo del entero.|
 |STATUS_SINGLE_STEP|Ejecución de una instrucción en modo paso a paso; solo se usa en depuradores.|
 
-Depuradores, el sistema operativo u otro código de bajo nivel se ocuparán de administrar muchas de las excepciones que se indican en la tabla anterior. El código no debería administrar errores que no sean de enteros y punto flotante. Por lo tanto, lo normal sería usar el filtro de control de excepciones para omitir las excepciones (que se evalúen como 0). En caso contrario, es posible que los mecanismos de nivel inferior no respondan correctamente. Sin embargo, puede tomar las debidas precauciones contra el posible efecto de estos errores de bajo nivel por [escribir controladores de terminación](../cpp/writing-a-termination-handler.md).
+Depuradores, el sistema operativo u otro código de bajo nivel se ocuparán de administrar muchas de las excepciones que se indican en la tabla anterior. El código no debería administrar errores que no sean de enteros y punto flotante. Por lo tanto, lo normal sería usar el filtro de control de excepciones para omitir las excepciones (que se evalúen como 0). En caso contrario, es posible que los mecanismos de nivel inferior no respondan correctamente. Sin embargo, puede tomar las precauciones adecuadas contra el posible efecto de estos errores de bajo nivel escribiendo [controladores de terminación](../cpp/writing-a-termination-handler.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)<br/>
-[Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

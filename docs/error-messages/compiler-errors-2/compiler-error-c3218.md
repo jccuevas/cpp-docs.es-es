@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3218
 ms.assetid: 0eea19e0-503e-4e07-ae8b-2cb2e95922cd
-ms.openlocfilehash: 87084f9751b1593ec93a3062f23714bba403da9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386a0c180dd01161ebccdd2b04e899e0cc999614
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578209"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737990"
 ---
 # <a name="compiler-error-c3218"></a>Error del compilador C3218
 
-'type': no se permite como restricción de tipo
+' type ': tipo no permitido como restricción
 
-Para que un tipo sea una restricción, debe ser un tipo de valor o una referencia a una interfaz o clase administrada.
+Para que un tipo sea una restricción, debe ser un tipo de valor o una referencia a una clase o interfaz administrada.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3218.
+En el ejemplo siguiente se genera C3218.
 
-```
+```cpp
 // C3218.cpp
 // compile with: /clr /c
 class A {};

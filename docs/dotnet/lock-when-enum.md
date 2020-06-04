@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: 0c6c1bc099f8ff5d597d803c3963785902f9acd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573361"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544836"
 ---
-# <a name="lockwhen-enum"></a>lock_when (Enumeración)
+# <a name="lock_when-enum"></a>lock_when (Enumeración)
 
-Especifica el bloqueo aplazada.
+Especifica el bloqueo diferido.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,15 +28,15 @@ enum lock_when {
 };
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cuando se pasan a [lock::lock](../dotnet/lock-lock.md), `lock_later` especifica que el bloqueo no se realizará ahora.
+Cuando se pasa a [Lock:: Lock](../dotnet/lock-lock.md), `lock_later` especifica que no se va a realizar el bloqueo ahora.
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se usa una sola instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso principal de la aplicación utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente para ver si los subprocesos de trabajo siguen existan, y espera hasta salir hasta que todos los subprocesos de trabajo haya completado sus tareas.
+En este ejemplo se usa una sola instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo para asegurarse de que los accesos a sus datos internos son coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente si hay algún subproceso de trabajo y espera a salir hasta que todos los subprocesos de trabajo hayan completado sus tareas.
 
-```
+```cpp
 // msl_lock_lock_when.cpp
 // compile with: /clr
 #include <msclr/lock.h>
@@ -126,8 +126,8 @@ All threads completed.
 
 **Archivo de encabezado** \<msclr\lock.h >
 
-**Namespace** msclr
+**Espacio de nombres** msclr
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [lock](../dotnet/lock.md)

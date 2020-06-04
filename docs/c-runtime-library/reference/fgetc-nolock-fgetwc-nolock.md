@@ -1,10 +1,12 @@
 ---
 title: _fgetc_nolock, _fgetwc_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fgetc_nolock
 - _fgetwc_nolock
-apilocation:
+- _o__fgetc_nolock
+- _o__fgetwc_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetwc_nolock
 - fgettc_nolock
@@ -35,14 +41,14 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2744dc17c79fc1e3e568dd3b7a62602b75603be0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601726"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912770"
 ---
-# <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
+# <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock, _fgetwc_nolock
 
 Lee un carácter de una secuencia sin bloquear el subproceso.
 
@@ -59,16 +65,18 @@ wint_t _fgetwc_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Consulte [fgetc, fgetwc](fgetc-fgetwc.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**_fgetc_nolock** y **_fgetwc_nolock** son idénticas a **fgetc** y **fgetwc**, respectivamente, salvo que no están protegidas contra las interferencias otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_fgetc_nolock** y **_fgetwc_nolock** son idénticos a **fgetc** y **fgetwc**, respectivamente, salvo que no están protegidos contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -83,7 +91,7 @@ Consulte [fgetc, fgetwc](fgetc-fgetwc.md).
 |**_fgetc_nolock**|\<stdio.h>|
 |**_fgetwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -121,7 +129,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetcnolocktxt"></a>Entrada: crt_fgetc_nolock.txt
+## <a name="input-crt_fgetc_nolocktxt"></a>Entrada: crt_fgetc_nolock.txt
 
 ```Input
 Line one.

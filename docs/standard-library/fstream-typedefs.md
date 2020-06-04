@@ -11,58 +11,58 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: d5a4b0e2d671bb787501767d4321bd3ed61deb88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e481c131a6e4a1111b1ed88217b891d6fc96a8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481944"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317192"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; (Typedefs)
 
 ||||
 |-|-|-|
-|[filebuf](#filebuf)|[fstream](#fstream)|[ifstream](#ifstream)|
+|[filebuf](#filebuf)|[Fstream](#fstream)|[ifstream](#ifstream)|
 |[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|
 |[wifstream](#wifstream)|[wofstream](#wofstream)|
 
-## <a name="filebuf"></a>  filebuf
+## <a name="filebuf"></a><a name="filebuf"></a>filebuf
 
-Un tipo `basic_filebuf` especializado en **char** parámetros de plantilla.
+Un `basic_filebuf` tipo especializado en parámetros de plantilla **char.**
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_filebuf](../standard-library/basic-filebuf-class.md), especializada en elementos del tipo **char** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_filebuf](../standard-library/basic-filebuf-class.md), especializada para elementos de tipo **char** con rasgos de carácter predeterminados.
 
-## <a name="fstream"></a>  fstream
+## <a name="fstream"></a><a name="fstream"></a>Fstream
 
-Un tipo `basic_fstream` especializado en **char** parámetros de plantilla.
+Un `basic_fstream` tipo especializado en parámetros de plantilla **char.**
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_fstream](../standard-library/basic-fstream-class.md), especializada en elementos del tipo **char** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_fstream](../standard-library/basic-fstream-class.md), especializada para elementos de tipo **char** con rasgos de carácter predeterminados.
 
-## <a name="ifstream"></a>  ifstream
+## <a name="ifstream"></a><a name="ifstream"></a>ifstream
 
-Define una secuencia que se utilizará para leer datos de caracteres de byte único en serie desde un archivo. `ifstream` es un typedef que especializa la clase de plantilla `basic_ifstream` para **char**.
+Define una secuencia que se utilizará para leer datos de caracteres de byte único en serie desde un archivo. `ifstream`es un typedef que especializa `basic_ifstream` la plantilla de clase para **char**.
 
-También hay `wifstream`, un typedef que especializa `basic_ifstream` leer **wchar_t** caracteres de doble ancho. Para obtener más información, vea [wifstream](../standard-library/fstream-typedefs.md#wifstream).
+También `wifstream`hay , una typedef `basic_ifstream` que se especializa para leer **wchar_t** caracteres de doble ancho. Para obtener más información, vea [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_ifstream](../standard-library/basic-ifstream-class.md), especializada en elementos de tipo char con rasgos de caracteres predeterminados. Un ejemplo es
+El tipo es un sinónimo de plantilla de clase [basic_ifstream](../standard-library/basic-ifstream-class.md), especializada para elementos de tipo char con rasgos de carácter predeterminados. Un ejemplo es
 
 ```cpp
 using namespace std;
@@ -76,66 +76,66 @@ if (!infile.bad())
 }
 ```
 
-## <a name="ofstream"></a>  ofstream
+## <a name="ofstream"></a><a name="ofstream"></a>ofstream
 
-Un tipo `basic_ofstream` especializado en **char** parámetros de plantilla.
+Un `basic_ofstream` tipo especializado en parámetros de plantilla **char.**
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_ofstream](../standard-library/basic-ofstream-class.md), especializada en elementos del tipo **char** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_ofstream](../standard-library/basic-ofstream-class.md), especializada para elementos de tipo **char** con rasgos de carácter predeterminados.
 
-## <a name="wfstream"></a>  wfstream
+## <a name="wfstream"></a><a name="wfstream"></a>wfstream
 
-Un tipo `basic_fstream` especializado en **wchar_t** parámetros de plantilla.
+Un `basic_fstream` tipo especializado en **wchar_t** parámetros de plantilla.
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_fstream](../standard-library/basic-fstream-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_fstream](../standard-library/basic-fstream-class.md), especializada para elementos de tipo **wchar_t** con rasgos de carácter predeterminados.
 
-## <a name="wifstream"></a>  wifstream
+## <a name="wifstream"></a><a name="wifstream"></a>wifstream
 
-Un tipo `basic_ifstream` especializado en **wchar_t** parámetros de plantilla.
+Un `basic_ifstream` tipo especializado en **wchar_t** parámetros de plantilla.
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_ifstream](../standard-library/basic-ifstream-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_ifstream](../standard-library/basic-ifstream-class.md), especializada para elementos de tipo **wchar_t** con rasgos de carácter predeterminados.
 
-## <a name="wofstream"></a>  wofstream
+## <a name="wofstream"></a><a name="wofstream"></a>wofstream
 
-Un tipo `basic_ofstream` especializado en **wchar_t** parámetros de plantilla.
+Un `basic_ofstream` tipo especializado en **wchar_t** parámetros de plantilla.
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_ofstream](../standard-library/basic-ofstream-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_ofstream](../standard-library/basic-ofstream-class.md), especializada para elementos de tipo **wchar_t** con rasgos de carácter predeterminados.
 
-## <a name="wfilebuf"></a>  wfilebuf
+## <a name="wfilebuf"></a><a name="wfilebuf"></a>wfilebuf
 
-Un tipo `basic_filebuf` especializado en **wchar_t** parámetros de plantilla.
+Un `basic_filebuf` tipo especializado en **wchar_t** parámetros de plantilla.
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_filebuf](../standard-library/basic-filebuf-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_filebuf](../standard-library/basic-filebuf-class.md), especializada para elementos de tipo **wchar_t** con rasgos de carácter predeterminados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<fstream>](../standard-library/fstream.md)<br/>
+[\<>fstream](../standard-library/fstream.md)

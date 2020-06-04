@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2941
 ms.assetid: 1bba94eb-5bf6-468d-8f84-96a6391a7048
-ms.openlocfilehash: 4679000840b2acd242a672457c645d916e6be7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d2e996079194219484dbeb25b66905363ca66df
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593359"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176902"
 ---
 # <a name="compiler-error-c2941"></a>Error del compilador C2941
 

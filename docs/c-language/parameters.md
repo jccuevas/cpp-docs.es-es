@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parameters [C++], function
 - functions [C], parameters
 - function parameters, syntax
-- ellipses (...), parameters
+- ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 0652fe6076899020050d94378649018721b4b188
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 78ad91ea86d81a3b6d888335ba7b78399a1d2aea
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147235"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032075"
 ---
 # <a name="parameters"></a>Parámetros
 
@@ -34,8 +34,8 @@ Los argumentos son los nombres de los valores pasados a una función por una lla
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* Un declarador de función \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* Declarador de nuevo estilo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Declarador de estilo obsoleto \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Declarador de nuevo estilo \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Declarador de estilo obsoleto \*/
 
 *parameter-type-list*: /\* La lista de parámetros \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
@@ -66,7 +66,7 @@ void new( double x, double y, double z )
 }
 ```
 
-Si aparece al menos un parámetro en la lista de parámetros, la lista puede finalizar con una coma seguida de tres puntos (**, ...**). Esta construcción, denominada "notación de puntos suspensivos", indica un número variable de argumentos a la función. (Vea [Llamadas con un número variable de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obtener más información). Sin embargo, una llamada a la función debe tener como mínimo tantos argumentos como parámetros haya antes de la última coma.
+Si aparece al menos un parámetro en la lista de parámetros, la lista puede finalizar con una coma seguida de tres puntos ( **, ...** ). Esta construcción, denominada "notación de puntos suspensivos", indica un número variable de argumentos a la función. (Vea [Llamadas con un número variable de argumentos](../c-language/calls-with-a-variable-number-of-arguments.md) para obtener más información). Sin embargo, una llamada a la función debe tener como mínimo tantos argumentos como parámetros haya antes de la última coma.
 
 Si no se van a pasar argumentos a la función, la lista de parámetros se sustituye por la palabra clave `void`. Este uso de `void` es distinto de su uso como especificador de tipo.
 

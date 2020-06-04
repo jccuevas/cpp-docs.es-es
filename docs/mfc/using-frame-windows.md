@@ -6,12 +6,12 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-ms.openlocfilehash: 1ce23633310482c52f60a591452e3d20ac10c706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba304bce5bd0d91f4db8372b087c42c98b9c103d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411583"
 ---
 # <a name="using-frame-windows"></a>Usar ventanas de marco
 
@@ -44,4 +44,3 @@ El marco de trabajo MFC crea documentos, ventanas de marco y sus documentos y vi
 ## <a name="see-also"></a>Vea también
 
 [Ventanas de marco](../mfc/frame-windows.md)
-

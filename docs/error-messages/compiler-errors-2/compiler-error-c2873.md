@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2873
 ms.assetid: 7a10036b-400e-4364-bd2f-dcd7370c5e28
-ms.openlocfilehash: 69be18e5f3e06392d4f2fa11c6343a07298b84bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a77c4294d697d915a77b5aa244579860f860cf21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455180"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201662"
 ---
 # <a name="compiler-error-c2873"></a>Error del compilador C2873
 
-'símbolo': símbolo no se puede usar en una declaración using
+' Symbol ': el símbolo no se puede usar en una declaración Using
 
-Un `using` directiva falta un [espacio de nombres](../../cpp/namespaces-cpp.md) palabra clave. Esto hace que el compilador interprete el código como incorrectamente un [mediante declaración](../../cpp/using-declaration.md) en lugar de un [#using](../../cpp/namespaces-cpp.md#using_directives).
+Falta una palabra clave de [espacio de nombres](../../cpp/namespaces-cpp.md) en una directiva de `using`. Esto hace que el compilador interprete de forma errónea el código como una [declaración Using](../../cpp/using-declaration.md) en lugar de una [directiva using](../../cpp/namespaces-cpp.md#using_directives).

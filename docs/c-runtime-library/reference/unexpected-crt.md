@@ -1,9 +1,9 @@
 ---
 title: unexpected (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - unexpected
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - unexpected
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 796f5ddbf8467656b5430de1d504f162d891864d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534031"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957817"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
-Las llamadas **finalizar** o función que se especifique mediante **set_unexpected**.
+Llama a **Terminate** o a la función que especifique mediante **set_unexpected**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,7 +42,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Comentarios
 
-El **inesperado** rutina no se utiliza con la implementación actual del control de excepciones de C++. **inesperado** llamadas **finalizar** de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo una función de finalización personalizada y llamando a **set_unexpected** con el nombre de la función como su argumento. **inesperado** llama a la última función especificada como argumento a **set_unexpected**.
+La rutina **inesperada** no se utiliza con la implementación C++ actual del control de excepciones. llamadas **inesperadas** **terminan** de forma predeterminada. Puede cambiar este comportamiento predeterminado si escribe una función de finalización personalizada y llama a **set_unexpected** con el nombre de la función como su argumento. **inesperadas** llama a la última función especificada como argumento para **set_unexpected**.
 
 ## <a name="requirements"></a>Requisitos
 

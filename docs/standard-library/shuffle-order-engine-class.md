@@ -15,14 +15,14 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d72cfaae2e7f6768a68439fbc30aa5ab0d38f270
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676660"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686428"
 ---
-# <a name="shuffleorderengine-class"></a>shuffle_order_engine (Clase)
+# <a name="shuffle_order_engine-class"></a>shuffle_order_engine (Clase)
 
 Genera una secuencia aleatoria reordenando los valores que devuelve su motor base.
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*Motor de*<br/>
+@No__t_1 del *motor*
 El tipo de motor base.
 
-*K*<br/>
+*K* \
 **Tamaño de la tabla**. Número de elementos en el búfer (tabla). **Condición previa:** `0 < K`
 
 ## <a name="members"></a>Miembros
@@ -52,7 +52,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla describe un *adaptador de motor* que genera valores reordenando los valores que su motor base devuelve. Cada constructor rellena la tabla interna con *K* valores devueltos por el motor de base y se selecciona un elemento aleatorio de la tabla cuando se solicita un valor.
+Esta plantilla de clase describe un *adaptador de motor* que genera valores reordenando los valores devueltos por su motor base. Cada constructor rellena la tabla interna con los valores *K* devueltos por el motor base, y se selecciona un elemento aleatorio de la tabla cuando se solicita un valor.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -62,4 +62,4 @@ Esta clase de plantilla describe un *adaptador de motor* que genera valores reor
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

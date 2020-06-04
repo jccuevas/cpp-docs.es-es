@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2757
 ms.assetid: 421f102f-8a32-4d47-a109-811ddf2c909d
-ms.openlocfilehash: 98b43a2f3c0888fc385226cd80889b9911c84690
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9f4661495e0fa5219a517b6f6ca410323a77269
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668525"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759534"
 ---
 # <a name="compiler-error-c2757"></a>Error del compilador C2757
 
-'símbolo': ya existe un símbolo con este nombre y, por tanto, no se puede usar este nombre como un espacio de nombres
+' Symbol ': ya existe un símbolo con este nombre y, por tanto, este nombre no se puede usar como nombre de espacio de nombres
 
-Ya se se usa un símbolo usado en la compilación actual como un identificador de espacio de nombres en un ensamblado de referencia.
+Un símbolo usado en la compilación actual como identificador de espacio de nombres ya se está usando en un ensamblado al que se hace referencia.
 
-El ejemplo siguiente genera C2757:
+En el ejemplo siguiente se genera C2757:
 
-```
+```cpp
 // C2757a.cpp
 // compile with: /clr /LD
 public ref class Nes {};
@@ -29,7 +29,7 @@ public ref class Nes {};
 
 Y luego,
 
-```
+```cpp
 // C2757b.cpp
 // compile with: /clr /c
 #using <C2757a.dll>

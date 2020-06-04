@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0072
 - CXX0072
 ms.assetid: fd04e197-cfa9-4097-a070-8fa2111e876d
-ms.openlocfilehash: b8896fa2ad9c3d7cae41c79f129c6b8b8aacf20c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdd4307c4af9696050d2dcfce4c307d39f46edd0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184260"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>Error del evaluador de expresiones CXX0072
 
-Error: falta la información de tipo o desconocido
+Error: falta la información de tipo o es desconocida
 
-El archivo .pch vinculan no en o el código tiene una referencia a un tipo que se encuentra en un módulo no compilado con/Zi.
+No se vinculó el archivo. pch o el código tiene una referencia a un tipo que se encuentra en un módulo no compilado con/Zi.
 
 Este error es idéntico a CAN0067.

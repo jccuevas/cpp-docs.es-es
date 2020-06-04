@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9476c0c446463c04084f46ed17a8ada7fb01fd7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588167"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188134"
 ---
-# <a name="tilestatic-keyword"></a>tile_static (Palabra clave)
+# <a name="tile_static-keyword"></a>tile_static (Palabra clave)
 
-El **tile_static** palabra clave se utiliza para declarar una variable que puede tener acceso a todos los subprocesos de un mosaico de subprocesos. La duración de la variable comienza cuando la ejecución llega al punto de declaración y termina cuando vuelve la función del kernel. Para obtener más información sobre el uso de mosaicos, vea [usando iconos](../parallel/amp/using-tiles.md).
+La palabra clave **tile_static** se usa para declarar una variable a la que pueden tener acceso todos los subprocesos de un mosaico de subprocesos. La duración de la variable comienza cuando la ejecución llega al punto de declaración y termina cuando vuelve la función del kernel. Para obtener más información sobre el uso de mosaicos, vea [uso de mosaicos](../parallel/amp/using-tiles.md).
 
-El **tile_static** palabra clave tiene las siguientes limitaciones:
+La palabra clave **tile_static** tiene las siguientes limitaciones:
 
 - Solo se puede utilizar en variables que estén en una función que tenga el modificador `restrict(amp)`.
 
 - No se puede usar en las variables que sean de tipo puntero o referencia.
 
-- Un **tile_static** variable no puede tener un inicializador. Los constructores y destructores predeterminados no se invocan automáticamente.
+- Una variable **tile_static** no puede tener un inicializador. Los constructores y destructores predeterminados no se invocan automáticamente.
 
-- El valor de una variable **tile_static** variable es indefinida.
+- El valor de una variable **tile_static** no inicializada es indefinido.
 
-- Si un **tile_static** variable se declara en un gráfico de llamadas que se ha modificado mediante una llamada sin mosaicos a `parallel_for_each`, se genera una advertencia y el comportamiento de la variable es indefinido.
+- Si se declara una variable de **tile_static** en un gráfico de llamadas cuya raíz es una llamada no en mosaico a `parallel_for_each`, se genera una advertencia y el comportamiento de la variable no está definido.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo un **tile_static** variable se puede usar para acumular datos entre varios subprocesos en un icono.
+En el ejemplo siguiente se muestra cómo se puede utilizar una variable de **tile_static** para acumular datos en varios subprocesos de un mosaico.
 
 ```cpp
 // Sample data:
@@ -144,9 +144,9 @@ for (int i = 0; i < 4; i++) {
 // 5 5 2 2 4 4
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
 [Información general sobre C++ AMP](../parallel/amp/cpp-amp-overview.md)<br/>
-[parallel_for_each (función) (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
+[Función parallel_for_each (C++ amp)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
 [Tutorial: Multiplicación de matrices](../parallel/amp/walkthrough-matrix-multiplication.md)

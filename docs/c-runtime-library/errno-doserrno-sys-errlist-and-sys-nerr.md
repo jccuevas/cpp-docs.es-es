@@ -1,11 +1,14 @@
 ---
 title: errno, _doserrno, _sys_errlist y _sys_nerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _errno
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sys_errlist
 - errno
@@ -21,14 +24,14 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487733"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944557"
 ---
-# <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist y _sys_nerr
+# <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno, _doserrno, _sys_errlist y _sys_nerr
 
 Macros globales que contienen códigos de error que se establecen durante la ejecución del programa, así como los equivalentes de cadena de esos códigos para mostrarlos.
 

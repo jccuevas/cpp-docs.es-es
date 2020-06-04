@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-ms.openlocfilehash: 7cfaa8db9cf550ae118e53a7c70d64261c48a43c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607a27cbb06efd86d3a50aae5e62edf5ba3d400
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455723"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217581"
 ---
 # <a name="mfc-dll-wizard"></a>Asistente para archivos DLL de MFC
 
@@ -40,10 +40,9 @@ Puede realizar las tareas y los tipos de mejoras para un proyecto de DLL de MFC 
 
 ## <a name="see-also"></a>Vea también
 
-[Creación y administración de proyectos de Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Páginas de propiedades](../../ide/property-pages-visual-cpp.md)<br/>
-[Trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md)<br/>
+[Proyectos de Visual Studio: C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Páginas de propiedades](../../build/reference/property-pages-visual-cpp.md)<br/>
+[Set compiler and build properties](../../build/working-with-project-properties.md) (Establecer las propiedades del compilador y la compilación)<br/>
 [Clase MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Agregar una función miembro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Implementar una interfaz](../../ide/implementing-an-interface-visual-cpp.md)<br/>
-

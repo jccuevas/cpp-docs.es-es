@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mapfiles, specifying file name
 - /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-ms.openlocfilehash: 8ff2a8f54caa54247050c607004ed328c0d1b11d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a45fd5ea44b8908e77f847275bde42b86385cdb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321610"
 ---
 # <a name="map-generate-mapfile"></a>/MAP (Generar archivo de asignaciones)
 
@@ -51,11 +51,11 @@ Un archivo de asignaciones es un archivo de texto que contiene la siguiente info
 
 - El punto de entrada (como *sección*:*desplazamiento*)
 
-El [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md) opción especifica información adicional que se incluirán en el archivo de asignaciones.
+El [/MAPINFO](mapinfo-include-information-in-mapfile.md) opción especifica información adicional que se incluirán en el archivo de asignaciones.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -69,5 +69,5 @@ El [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md) o
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

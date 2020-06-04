@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-ms.openlocfilehash: 850ce46f524d9069609c1e5809c091c18bd58ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcd55f6a157f4b837090a3608fb509b870aae5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618249"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352992"
 ---
 # <a name="cbasekeyframe-class"></a>Clase CBaseKeyFrame
 
@@ -43,30 +43,30 @@ class CBaseKeyFrame : public CObject;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Construye un objeto de fotograma clave.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Agrega un fotograma clave para crear un guion gráfico.|
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Devuelve el valor del fotograma clave subyacente.|
-|[CBaseKeyFrame::IsAdded](#isadded)|Indica si se ha agregado un fotograma clave en guiones gráficos.|
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Especifica si el fotograma clave se debe agregar a guión gráfico con desplazamiento o después de la transición.|
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Agrega un fotograma clave al guión gráfico.|
+|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Devuelve el valor de fotograma clave subyacente.|
+|[CBaseKeyFrame::IsAdded](#isadded)|Indica si se ha agregado un fotograma clave al guión gráfico.|
+|[CBaseKeyFrame::IskeyframeAtOffset](#iskeyframeatoffset)|Especifica si el fotograma clave se debe agregar al guión gráfico en el desplazamiento o después de la transición.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CBaseKeyFrame::m_bAdded](#m_badded)|Especifica si se ha agregado este fotograma clave a un guión gráfico.|
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Especifica si se debe agregar este fotograma clave en guiones gráficos en un desplazamiento desde otro fotograma clave existente, o al final de algunos transición.|
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Representa un fotograma clave de API de animación de Windows. Cuando no se ha inicializado un fotograma clave se establece al valor predefinido UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Especifica si este fotograma clave se ha agregado a un guión gráfico.|
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Especifica si este fotograma clave se debe agregar al guión gráfico en un desplazamiento de otro fotograma clave existente o al final de alguna transición.|
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Representa un fotograma clave de la API de animación de Windows. Cuando no se inicializa un fotograma clave, se establece en el valor predefinido UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Encapsula la variable UI_ANIMATION_KEYFRAME. Actúa como clase base para cualquier implementación de fotograma clave. Un fotograma clave representa un momento dado dentro de un guión gráfico y puede utilizarse para especificar los tiempos de inicio y finalización de las transiciones. Hay dos tipos de fotogramas clave - fotogramas clave que se agrega al guion gráfico en el desplazamiento especificado (en tiempo), o fotogramas clave que se agregaron después de transición especificado. Dado que no se puede conocer las duraciones de algunas transiciones antes del comienzo de la animación, los valores reales de algunos fotogramas clave se determinan en tiempo de ejecución solo. Dado que los fotogramas clave pueden depender de las transiciones, que a su vez, sus dependen de los fotogramas clave, es importante evitar la recursividad infinita al crear cadenas de fotograma clave.
+Encapsula UI_ANIMATION_KEYFRAME variable. Sirve como clase base para cualquier implementación de fotograma clave. Un fotograma clave representa un momento en el tiempo dentro de un guión gráfico y se puede utilizar para especificar las horas de inicio y finalización de las transiciones. Hay dos tipos de fotogramas clave: fotogramas clave agregados al guión gráfico en el desplazamiento especificado (en el tiempo) o fotogramas clave agregados después de la transición especificada. Dado que las duraciones de algunas transiciones no se pueden conocer antes de que se inicie la animación, los valores reales de algunos fotogramas clave se determinan solo en tiempo de ejecución. Dado que los fotogramas clave pueden depender de transiciones, que a su vez dependen de fotogramas clave, es importante evitar recursividads infinitas al crear cadenas de fotogramas clave.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -78,9 +78,9 @@ Encapsula la variable UI_ANIMATION_KEYFRAME. Actúa como clase base para cualqui
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard
+## <a name="cbasekeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard
 
-Agrega un fotograma clave para crear un guion gráfico.
+Agrega un fotograma clave al guión gráfico.
 
 ```
 virtual BOOL AddToStoryboard(
@@ -94,17 +94,17 @@ virtual BOOL AddToStoryboard(
 Un puntero a un guión gráfico.
 
 *bDeepAdd*<br/>
-Si este parámetro es TRUE y el fotograma clave que se va a agregar depende de algún otro fotograma clave o transición, este método intenta agregar este fotograma clave o una transición en guiones gráficos en primer lugar.
+Si este parámetro es TRUE y el fotograma clave que se agrega depende de algún otro fotograma clave o transición, este método intenta agregar primero este fotograma clave o la transición al guión gráfico.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el fotograma clave se agregó al guión gráfico correctamente; en caso contrario, FALSE.
+TRUESi el fotograma clave se ha agregado correctamente al guión gráfico; de lo contrario FALSO.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Se llama a este método para agregar un fotograma clave para crear un guion gráfico.
+Se llama a este método para agregar un fotograma clave al guión gráfico.
 
-##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame
+## <a name="cbasekeyframecbasekeyframe"></a><a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame
 
 Construye un objeto de fotograma clave.
 
@@ -112,9 +112,9 @@ Construye un objeto de fotograma clave.
 CBaseKeyFrame();
 ```
 
-##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe
+## <a name="cbasekeyframegetanimationkeyframe"></a><a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe
 
-Devuelve el valor del fotograma clave subyacente.
+Devuelve el valor de fotograma clave subyacente.
 
 ```
 UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
@@ -124,13 +124,13 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 
 Un fotograma clave actual. El valor predeterminado es UI_ANIMATION_KEYFRAME_STORYBOARD_START.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Se trata de un descriptor de acceso para el valor del fotograma clave subyacente.
+Se trata de un descriptor de acceso al valor de fotograma clave subyacente.
 
-##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded
+## <a name="cbasekeyframeisadded"></a><a name="isadded"></a>CBaseKeyFrame::IsAdded
 
-Indica si se ha agregado un fotograma clave en guiones gráficos.
+Indica si se ha agregado un fotograma clave al guión gráfico.
 
 ```
 BOOL IsAdded() const;
@@ -138,15 +138,15 @@ BOOL IsAdded() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se agrega un fotograma clave a un guión gráfico; otehrwise FALSE.
+TRUESi se agrega un fotograma clave a un guión gráfico; FALSO otehrwise.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-En la clase base IsAdded siempre devuelve TRUE, pero que se invalide en clases derivadas.
+En la clase base IsAdded siempre devuelve TRUE, pero se invalida en clases derivadas.
 
-##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset
+## <a name="cbasekeyframeiskeyframeatoffset"></a><a name="iskeyframeatoffset"></a>CBaseKeyFrame::IskeyframeAtOffset
 
-Especifica si el fotograma clave se debe agregar a guión gráfico con desplazamiento o después de la transición.
+Especifica si el fotograma clave se debe agregar al guión gráfico en el desplazamiento o después de la transición.
 
 ```
 BOOL IsKeyframeAtOffset() const;
@@ -154,36 +154,36 @@ BOOL IsKeyframeAtOffset() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el fotograma clave se debe agregar al guión gráfico en algún desplazamiento especificado. FALSE si el fotograma clave se debe agregar a guión gráfico después de algunos transición.
+TRUESi el fotograma clave se debe agregar al guión gráfico en algún desplazamiento especificado. FALSE si el fotograma clave se debe agregar al guión gráfico después de alguna transición.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Especifica si el fotograma clave se debe agregar a guión gráfico con desplazamiento. Debe especificarse el desplazamiento o la transición en una clase derivada.
+Especifica si el fotograma clave se debe agregar al guión gráfico en el desplazamiento. El desplazamiento o la transición deben especificarse en una clase derivada.
 
-##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded
+## <a name="cbasekeyframem_badded"></a><a name="m_badded"></a>CBaseKeyFrame::m_bAdded
 
-Especifica si se ha agregado este fotograma clave a un guión gráfico.
+Especifica si este fotograma clave se ha agregado a un guión gráfico.
 
 ```
 BOOL m_bAdded;
 ```
 
-##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset
+## <a name="cbasekeyframem_biskeyframeatoffset"></a><a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset
 
-Especifica si se debe agregar este fotograma clave en guiones gráficos en un desplazamiento desde otro fotograma clave existente, o al final de algunos transición.
+Especifica si este fotograma clave se debe agregar al guión gráfico en un desplazamiento de otro fotograma clave existente o al final de alguna transición.
 
 ```
 BOOL m_bIsKeyframeAtOffset;
 ```
 
-##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe
+## <a name="cbasekeyframem_keyframe"></a><a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe
 
-Representa un fotograma clave de API de animación de Windows. Cuando no se ha inicializado un fotograma clave se establece al valor predefinido UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+Representa un fotograma clave de la API de animación de Windows. Cuando no se inicializa un fotograma clave, se establece en el valor predefinido UI_ANIMATION_KEYFRAME_STORYBOARD_START.
 
 ```
 UI_ANIMATION_KEYFRAME m_keyframe;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

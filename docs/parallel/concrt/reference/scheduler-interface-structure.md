@@ -6,20 +6,20 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_interface
 - PPLINTERFACE/concurrency::scheduler_interface::scheduler_interface::schedule
 ms.assetid: 4de61c78-a2c6-4698-bd47-964baf7fa287
-ms.openlocfilehash: 9fa51aa5bd1fdea4eb1c35488654f0b5003e2efe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da2ebc2f9c2878baefcfa792bac08f420dbbb281
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358782"
 ---
-# <a name="schedulerinterface-structure"></a>scheduler_interface (Estructura)
+# <a name="scheduler_interface-structure"></a>scheduler_interface (Estructura)
 
 Interfaz de Scheduler
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 struct __declspec(novtable) scheduler_interface;
 ```
 
@@ -27,9 +27,9 @@ struct __declspec(novtable) scheduler_interface;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[scheduler_interface::Schedule](#schedule)||
+|[scheduler_interface::programa](#schedule)||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -41,14 +41,14 @@ struct __declspec(novtable) scheduler_interface;
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="schedule"></a>  scheduler_interface::Schedule (método)
+## <a name="scheduler_interfaceschedule-method"></a><a name="schedule"></a>scheduler_interface::método de programación Método
 
-```
+```cpp
 virtual void schedule(
     TaskProc_t,
 void*) = 0;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[concurrency (espacio de nombres)](concurrency-namespace.md)
+[espacio de nombres de simultaneidad](concurrency-namespace.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 633089115fe7edd0bdf06cdbcda6909ae7ac656e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552586"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754165"
 ---
 # <a name="compiler-error-c3265"></a>Error del compilador C3265
 
-no se puede declarar una construcción administrada en una no administrada 'construcción no administrada' que administrado
+no se puede declarar una ' construcción administrada ' administrada en una ' construcción no administrada ' no administrada
 
-No puede incluir un objeto administrado en un contexto no administrado.
+No se puede incluir un objeto administrado en un contexto no administrado.
 
-El ejemplo siguiente reproduce C3265:
+En el ejemplo siguiente se reproduce C3265:
 
-```
+```cpp
 // C3265_2.cpp
 // compile with: /clr /LD
 #include <vcclr.h>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3458
 ms.assetid: 940202fd-8dcc-4042-9c96-3f9e9127d2f1
-ms.openlocfilehash: 07749677dbaa84de205adf38aadee6867a553852
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98f3dc8ec880a2d134da4cc1438841744b8d9a94
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676816"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756661"
 ---
 # <a name="compiler-error-c3458"></a>Error del compilador C3458
 
@@ -23,7 +23,7 @@ Se especificaron dos atributos que son mutuamente excluyentes para la misma cons
 
 El ejemplo siguiente genera la advertencia C3458.
 
-```
+```cpp
 // C3458.cpp
 // compile with: /clr /c
 [System::Reflection::DefaultMember("Chars")]

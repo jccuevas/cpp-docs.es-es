@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-ms.openlocfilehash: 45a140d3fd5f510ee2434950ca3c4b47c0756d75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20c17eaa6555b5511ecbc930eacdb2ec92475b23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447242"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749508"
 ---
 # <a name="compiler-error-c3893"></a>Error del compilador C3893
 
-'var': uso del valor l del miembro de datos initonly solamente se permite en un constructor de instancia de clase 'type_name'
+' var ': el uso del valor l del miembro de datos initonly solo se permite en un constructor de instancia de la clase ' type_name '
 
-Estática [initonly](../../dotnet/initonly-cpp-cli.md) los miembros de datos solo pueden obtener la dirección en un constructor estático.
+Los miembros de datos [InitOnly](../../dotnet/initonly-cpp-cli.md) estáticos solo pueden tomar su dirección en un constructor estático.
 
-Los miembros de datos de instancia (no estáticos) initonly solo pueden obtener la dirección en constructores de instancia (no estáticos).
+Los miembros de datos initonly (no estáticos) de instancia solo pueden tomar su dirección en constructores de instancia (no estáticos).
 
-El ejemplo siguiente genera C3893:
+En el ejemplo siguiente se genera C3893:
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

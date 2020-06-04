@@ -1,5 +1,5 @@
 ---
-title: Principios (ATL) de control de eventos
+title: Principios de control de eventos (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
@@ -8,41 +8,40 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-ms.openlocfilehash: e460685d17a568d9e3b49af40dd1e3f1dbda7c28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e810853e7c81f279039e0b3dfda5199d38deee2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610995"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319565"
 ---
-# <a name="event-handling-principles"></a>Principios de control de eventos
+# <a name="event-handling-principles"></a>Principios de manejo de eventos
 
-Hay tres pasos comunes a todo el control de eventos. Necesitará:
+Hay tres pasos comunes a todo el control de eventos. Usted tendrá que:
 
 - Implemente la interfaz de eventos en el objeto.
 
-- Notificar al origen de eventos que su objeto quiere recibir eventos.
+- Aconseje al origen de eventos que el objeto desea recibir eventos.
 
-- No notificar el origen del evento cuando el objeto ya no necesita recibir eventos.
+- Desavisar el origen de eventos cuando el objeto ya no necesite recibir eventos.
 
-La forma en que se implementa la interfaz de eventos dependerá de su tipo. Una interfaz de eventos puede ser vtable, una interfaz dispinterface o doble. Resulta al diseñador del origen del evento para definir la interfaz; depende de cómo implementar esa interfaz.
+La forma en que implementará la interfaz de eventos dependerá de su tipo. Una interfaz de eventos puede ser vtable, dual o dispinterface. Depende del diseñador del origen de eventos definir la interfaz; depende de usted implementar esa interfaz.
 
 > [!NOTE]
->  Aunque no hay ninguna razón técnica que una interfaz de eventos no puede ser dual, hay una serie de motivos de buen diseño para evitar el uso de duales. Sin embargo, esto es una decisión realizada por el diseñador o implementador del evento *origen*. Puesto que trabaja desde la perspectiva del evento `sink`, necesario para permitir la posibilidad de que no puede tener cualquier elección, pero para implementar una interfaz de evento dual. Para obtener más información sobre interfaces duales, consulte [Interfaces duales y ATL](../atl/dual-interfaces-and-atl.md).
+> Aunque no hay razones técnicas por las que una interfaz de eventos no puede ser dual, hay una serie de buenas razones de diseño para evitar el uso de duales. Sin embargo, se trata de una decisión tomada por el diseñador/implementador del *origen*del evento. Puesto que está trabajando desde `sink`la perspectiva del evento, debe permitir la posibilidad de que no tenga otra opción que implementar una interfaz de eventos dual. Para obtener más información sobre las interfaces duales, consulte [Interfaces duales y ATL.](../atl/dual-interfaces-and-atl.md)
 
-El origen del evento que avisa de puede dividirse en tres pasos:
+El asesoramiento al origen del evento se puede dividir en tres pasos:
 
-- Consultar el objeto de origen para [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).
+- Consulte el objeto de origen para [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer).
 
-- Llame a [IConnectionPointContainer:: FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) pasando el IID de la interfaz de eventos que le interese. Si es correcto, se devolverá el [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interfaz en un objeto de punto de conexión.
+- Llame a [IConnectionPointContainer::FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) pasando el IID de la interfaz de eventos que le interesa. Si se realiza correctamente, se devolverá la interfaz [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) en un objeto de punto de conexión.
 
-- Llame a [IConnectionPoint:: Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) pasando el `IUnknown` del receptor de eventos. Si es correcto, esto devolverá un `DWORD` cookie que representa la conexión.
+- Llame a [IConnectionPoint::Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) pasando el `IUnknown` receptor de eventos. Si se realiza correctamente, se devolverá una `DWORD` cookie que representa la conexión.
 
-Una vez que se ha registrado correctamente su interés en recibir eventos, métodos de interfaz de eventos del objeto llamará según los eventos desencadenados por el objeto de origen. Cuando ya no necesite recibir eventos, puede pasar la cookie de vuelta al punto de conexión a través de [IConnectionPoint:: Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Esto interrumpirá la conexión entre el origen y receptor.
+Una vez que haya registrado correctamente su interés en recibir eventos, se llamará a los métodos de la interfaz de eventos del objeto según los eventos desencadenados por el objeto de origen. Cuando ya no necesite recibir eventos, puede devolver la cookie al punto de conexión a través de [IConnectionPoint::Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Esto interrumpirá la conexión entre el origen y el receptor.
 
-Tenga cuidado para evitar la referencia de los ciclos al control de eventos.
+Tenga cuidado de evitar ciclos de referencia al controlar eventos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de eventos](../atl/event-handling-and-atl.md)
-
+[Manejo de eventos](../atl/event-handling-and-atl.md)

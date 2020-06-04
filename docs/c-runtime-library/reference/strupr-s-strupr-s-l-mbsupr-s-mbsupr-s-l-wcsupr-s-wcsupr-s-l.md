@@ -1,14 +1,20 @@
 ---
 title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _strupr_s
 - _strupr_s_l
 - _mbsupr_s
 - _wcsupr_s_l
 - _mbsupr_s_l
 - _wcsupr_s
-apilocation:
+- _o__mbsupr_s
+- _o__mbsupr_s_l
+- _o__strupr_s
+- _o__strupr_s_l
+- _o__wcsupr_s
+- _o__wcsupr_s_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +27,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strupr_s
 - mbsupr_s
@@ -60,19 +70,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2e32a42e945b350a0a9b28ccd4ef9cb16668605
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569707"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912369"
 ---
-# <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
+# <a name="_strupr_s-_strupr_s_l-_mbsupr_s-_mbsupr_s_l-_wcsupr_s-_wcsupr_s_l"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
 Pone una cadena en mayúsculas usando la configuración regional actual o la configuración regional especificada que se pasa. Estas versiones de [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsupr_s** y **_mbsupr_s_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr_s** y **_mbsupr_s_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -135,7 +145,7 @@ errno_t _mbsupr_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena que se va a poner en mayúsculas.
 
 *numberOfElements*<br/>
@@ -148,17 +158,19 @@ Configuración regional que se va a usar.
 
 Devuelve cero si se ejecuta correctamente; devuelve un código de error de valor distinto de cero si se produce un error.
 
-Estas funciones validan sus parámetros. Si *str* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**. Si *numberOfElements* es menor que la longitud de la cadena, las funciones devuelven **ERANGE** y establecer **errno** a **ERANGE**.
+Estas funciones validan sus parámetros. Si *Str* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**. Si *numberOfElements* es menor que la longitud de la cadena, las funciones devuelven **ERANGE** y establecen **errno** en **ERANGE**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_strupr_s** función convierte, en su lugar, cada minúscula de *str* a mayúsculas. **_wcsupr_s** es la versión de caracteres anchos de **_strupr_s**. **_mbsupr_s** es la versión de caracteres multibyte de **_strupr_s**.
+La función **_strupr_s** convierte, en contexto, cada letra minúscula de *Str* a mayúsculas. **_wcsupr_s** es la versión con caracteres anchos de **_strupr_s**. **_mbsupr_s** es la versión de caracteres multibyte de **_strupr_s**.
 
-La conversión viene determinada por la **LC_CTYPE** valor de la categoría de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el **_l** sufijo use la configuración regional actual; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La conversión está determinada por el valor de la categoría **LC_CTYPE** de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, vea [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo **_L** usan la configuración regional actual; el uso del sufijo **_L** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -174,15 +186,15 @@ Las versiones de depuración de estas funciones rellenan primero el búfer con 0
 |**_strupr_s**, **_strupr_s_l**|\<string.h>|
 |**_wcsupr_s**, **_wcsupr_s_l**, **_mbsupr_s**, **_mbsupr_s_l**|\<string.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)<br/>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: f552a5d76d1a778cdf72cbe079138f609350ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa948865685af4cbd6a865cfbf1d8546b29ab280
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511246"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161144"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>Advertencia del compilador (nivel 4) C4221
 
-ha utilizado una extensión no estándar: 'identifier': no se puede inicializar utilizando la dirección de la variable automática
+se ha utilizado una extensión no estándar: ' Identifier ': no se puede inicializar con la dirección de la variable automática
 
-Con las extensiones de Microsoft (/Ze) de forma predeterminada, se puede inicializar un tipo agregado (**matriz**, `struct`, o **unión**) con la dirección de una variable local (automática).
+Con las extensiones predeterminadas de Microsoft (/ZE), puede inicializar un tipo de agregado (**matriz**, `struct`o **Unión**) con la dirección de una variable local (automática).
 
 ## <a name="example"></a>Ejemplo
 
-```
+```c
 // C4221.c
 // compile with: /W4
 struct S
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Inicializaciones no son válidas en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Tales inicializaciones no son válidas con compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

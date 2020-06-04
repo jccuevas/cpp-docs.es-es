@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41a958c78719f6aedf1cc02f8e3ff5a2dbbf0e1b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565937"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368848"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator (clase)
 
-Implementa el separador de la cinta de opciones.
+Implementa el separador de cinta de opciones.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,35 +45,35 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 |||
 |-|-|
-|Name|Descripción|
+|Nombre|Descripción|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Construye un objeto `CMFCRibbonSeparator`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |||
 |-|-|
-|Name|Descripción|
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Agrega un separador para el **comandos** lista en el **personalizar** cuadro de diálogo. (Invalida [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
-|`CMFCRibbonSeparator::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
-|`CMFCRibbonSeparator::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
+|Nombre|Descripción|
+|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Agrega un separador a la lista **Comandos** del cuadro de diálogo **Personalizar.** (Reemplaza [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
+|`CMFCRibbonSeparator::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
+|`CMFCRibbonSeparator::GetThisClass`|Utilizado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
 |||
 |-|-|
-|Name|Descripción|
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Un método de copia que establece las variables de miembro de un separador de otro objeto.|
+|Nombre|Descripción|
+|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Método copy que establece las variables miembro de un separador desde otro objeto.|
 |[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Devuelve el tamaño de un separador.|
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|Indica si se trata de un separador.|
-|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Indica si se trata de una posición de tabulación.|
+|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Indica si se trata de una tabulación.|
 |[CMFCRibbonSeparator::OnDraw](#ondraw)|Llamado por el sistema para dibujar el separador en la cinta de opciones o la barra de herramientas de acceso rápido.|
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Llamado por el sistema para dibujar el separador en la **comandos** lista.|
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Llamado por el sistema para dibujar el separador en la lista **Comandos.**|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Un separador de cinta es una línea vertical u horizontal que lógicamente separa la cinta de opciones elementos. En el control de la cinta de opciones, el menú principal de la aplicación, la barra de estado de la cinta de opciones y la barra de herramientas de acceso rápido, se puede dibujar un separador.
+Un separador de cinta de opciones es una línea vertical u horizontal que separa lógicamente los elementos de la cinta de opciones. Se puede dibujar un separador en el control de la cinta de opciones, el menú principal de la aplicación, la barra de estado de la cinta de opciones y la barra de herramientas de acceso rápido.
 
-Para utilizar un separador en la aplicación, construya el objeto nuevo y agregarlo al menú principal de la aplicación como se muestra aquí:
+Para utilizar un separador en la aplicación, construya el nuevo objeto y agréguelo al menú principal de la aplicación como se muestra aquí:
 
 ```
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -83,7 +83,8 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```
-Llame a [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) para agregar separadores a paneles de cinta. Los separadores se asignan y se agrega de forma interna el `AddSeparator` método.
+
+Llame a [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) para agregar separadores a los paneles de la cinta de opciones. Los separadores se asignan y `AddSeparator` se agregan internamente por el método.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -97,9 +98,9 @@ Llame a [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-clas
 
 **Encabezado:** afxbaseribbonelement.h
 
-##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox
+## <a name="cmfcribbonseparatoraddtolistbox"></a><a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox
 
-Agrega un separador para el **comandos** lista en el **personalizar** cuadro de diálogo.
+Agrega un separador a la lista **Comandos** del cuadro de diálogo **Personalizar.**
 
 ```
 virtual int AddToListBox(
@@ -110,16 +111,16 @@ virtual int AddToListBox(
 ### <a name="parameters"></a>Parámetros
 
 *pWndListBox*<br/>
-[in] Un puntero a la **comandos** donde se agrega el separador de lista.
+[en] Puntero a la lista **Comandos** donde se agrega el separador.
 
 *bDeep*<br/>
-[in] Pasa por alto.
+[en] Ignorado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero de la cadena en el cuadro de lista especificado por *pWndListBox*.
+Indice de base cero a la cadena en el cuadro de lista especificado por *pWndListBox*.
 
-##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator
+## <a name="cmfcribbonseparatorcmfcribbonseparator"></a><a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator
 
 Construye un objeto `CMFCRibbonSeparator`.
 
@@ -130,21 +131,21 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ### <a name="parameters"></a>Parámetros
 
 *bIsHoriz*<br/>
-[in] Si es TRUE, el separador es horizontal; Si es FALSE, el separador es vertical.
+[en] Si TRUE, el separador es horizontal; si FALSE, el separador es vertical.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Separadores horizontales se utilizan en los menús de la aplicación. Separadores verticales se utilizan en las barras de herramientas.
+Los separadores horizontales se utilizan en los menús de la aplicación. Los separadores verticales se utilizan en las barras de herramientas.
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCRibbonSeparator` clase.
+En el ejemplo siguiente se muestra `CMFCRibbonSeparator` cómo construir un objeto de la clase.
 
 [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]
 
-##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom
+## <a name="cmfcribbonseparatorcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom
 
-Un método de copia que establece las variables de miembro de un separador de otro objeto.
+Método copy que establece las variables miembro de un separador desde otro objeto.
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -152,10 +153,10 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>Parámetros
 
-*src*<br/>
-[in] El elemento de cinta de opciones de origen para copiarlos.
+*Fuente*<br/>
+[en] El elemento de la cinta de opciones de origen desde el que se va a copiar.
 
-##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize
+## <a name="cmfcribbonseparatorgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize
 
 Devuelve el tamaño de un separador.
 
@@ -166,13 +167,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Un puntero a un contenido del dispositivo.
+[en] Un puntero al contenido de un dispositivo.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El tamaño del separador en el contexto de dispositivo determinado.
+El tamaño del separador en el contexto del dispositivo dado.
 
-##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator
+## <a name="cmfcribbonseparatorisseparator"></a><a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator
 
 Indica si se trata de un separador.
 
@@ -184,9 +185,9 @@ virtual BOOL IsSeparator() const;
 
 Siempre TRUE para esta clase.
 
-##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop
+## <a name="cmfcribbonseparatoristabstop"></a><a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop
 
-Indica si se trata de una posición de tabulación.
+Indica si se trata de una tabulación.
 
 ```
 virtual BOOL IsTabStop() const;
@@ -196,11 +197,11 @@ virtual BOOL IsTabStop() const;
 
 Siempre FALSE para esta clase.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Un separador de la cinta de opciones no es una posición de tabulación.
+Un separador de cinta de opciones no es una tabulación.
 
-##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw
+## <a name="cmfcribbonseparatorondraw"></a><a name="ondraw"></a>CMFCRibbonSeparator::OnDraw
 
 Llamado por el sistema para dibujar el separador en la cinta de opciones o la barra de herramientas de acceso rápido.
 
@@ -211,11 +212,11 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Un puntero a un contexto de dispositivo.
+[en] Puntero a un contexto de dispositivo.
 
-##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList
+## <a name="cmfcribbonseparatorondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList
 
-Llamado por el sistema para dibujar el separador en la **comandos** lista.
+Llamado por el sistema para dibujar el separador en la lista **Comandos.**
 
 ```
 virtual void OnDrawOnList(
@@ -232,14 +233,14 @@ virtual void OnDrawOnList(
 |||
 |-|-|
 |Parámetro|Descripción|
-|*pDC*|[in] Un puntero a un contexto de dispositivo.|
-|*strText*|[in] Texto que se muestra en la lista.|
-|*nTextOffset*|[in] Espaciado entre el texto y el lado izquierdo del rectángulo delimitador.|
-|*Rect*|[in] Especifica el rectángulo delimitador.|
-|*bIsSelected*|[in] Pasa por alto.|
-|*bHighlighted*|[in] Pasa por alto.|
+|*pDC*|[en] Puntero a un contexto de dispositivo.|
+|*strText*|[en] Texto mostrado en la lista.|
+|*nTextOffset*|[en] Espaciado entre el texto y el lado izquierdo del rectángulo delimitador.|
+|*Rect*|[en] Especifica el rectángulo delimitador.|
+|*bIsSelected*|[en] Ignorado.|
+|*bResaltado*|[en] Ignorado.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

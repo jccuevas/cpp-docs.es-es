@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4724
 ms.assetid: 3be4305b-e8fe-49a9-abbf-b20dfbd71a19
-ms.openlocfilehash: 9b160cdb66fcbf74455d67187717ed76c5e0e0b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64425333fb8b89127b92e906c93d17c26fe25cdf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174081"
 ---
 # <a name="compiler-warning-level-3-c4724"></a>Advertencia del compilador (nivel 3) C4724
 

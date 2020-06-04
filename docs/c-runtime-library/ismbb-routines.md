@@ -1,7 +1,7 @@
 ---
 title: _ismbb (Rutinas)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbb
 - ismbb
@@ -17,14 +20,14 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 6e1dd62f45eed4ec1d8e89a746d01ca1984022ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481411"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944526"
 ---
-# <a name="ismbb-routines"></a>_ismbb (Rutinas)
+# <a name="_ismbb-routines"></a>_ismbb (Rutinas)
 
 Prueba si el valor entero `c` dado cumple una determinada condición, utilizando la configuración regional actual o una categoría de estado de conversión LC_CTYPE especificada.
 
@@ -53,7 +56,7 @@ Las rutinas de la familia de `_ismbb` prueban el entero `c` dado como se indica 
 |[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Igual que `_ismbbprint`, pero `_ismbbgraph` no incluye el carácter de espacio (0x20).|
 |[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Símbolo de texto no ASCII que no sea de puntuación. Por ejemplo, en la página de códigos 932 únicamente, `_ismbbkalnum` prueba si hay caracteres alfanuméricos katakana.|
 |[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1 - 0xDF). Específico de la página de códigos 932.|
-|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Texto no ASCII o signo de puntuación no ASCII. Por ejemplo, solo en la página de códigos 932, `_ismbbkprint` comprueba si hay caracteres o signos de puntuación katakana (intervalo: 0xA1 - 0xDF).|
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Texto no ASCII o signo de puntuación no ASCII. Por ejemplo, solo en la página de códigos 932, `_ismbbkprint` comprueba si hay caracteres alfanuméricos o signos de puntuación katakana (intervalo: 0xA1 - 0xDF).|
 |[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Puntuación no ASCII. Por ejemplo, en la página de códigos 932 únicamente, `_ismbbkpunct` prueba si hay signos de puntuación katakana.|
 |[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Primer byte de un carácter multibyte. Por ejemplo, en la página de códigos 932 únicamente, los intervalos válidos son 0x81 - 0x9F y 0xE0 - 0xFC.|
 |[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint** incluye el carácter de espacio (0x20).|

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: b785754a7970573c42fcc1d0736541416f522c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a507d1e69b3524074e50fde0e87fc5ebb6e5ca03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429181"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367342"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo (estructura)
 
-Esta estructura proporciona información acerca de la ficha MDI que se está desplazando sobre el usuario.
+Esta estructura proporciona información sobre la pestaña MDI sobre la que el usuario está pasando el cursor.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,19 +27,19 @@ struct CMFCTabToolTipInfo
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Especifica el índice del control de ficha.|
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Un puntero al control de ficha.|
-|[CMFCTabToolTipInfo::m_strText](#m_strtext)|El texto de información sobre herramientas.|
+|[CMFCTabToolTipInfo::m_strText](#m_strtext)|Texto de la información sobre herramientas.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Un puntero a un `CMFCTabToolTipInfo` estructura se pasa como un parámetro del mensaje AFX_WM_ON_GET_TAB_TOOLTIP. Este mensaje se genera cuando se habilitan las pestañas MDI y el usuario se desplaza sobre un control de ficha.
+Un puntero `CMFCTabToolTipInfo` a una estructura se pasa como un parámetro del mensaje de AFX_WM_ON_GET_TAB_TOOLTIP. Este mensaje se genera cuando las pestañas MDI están habilitadas y el usuario pasa el cursor sobre un control de ficha.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `CMFCTabToolTipInfo` se utiliza en el [ejemplo MDITabsDemo: aplicación de MFC con fichas MDI](../../visual-cpp-samples.md).
+En el ejemplo `CMFCTabToolTipInfo` siguiente se muestra cómo se utiliza en el [ejemplo MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -51,7 +51,7 @@ El ejemplo siguiente se muestra cómo `CMFCTabToolTipInfo` se utiliza en el [eje
 
 **Encabezado:** afxbasetabctrl.h
 
-##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex
+## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a>CMFCTabToolTipInfo::m_nTabIndex
 
 Especifica el índice del control de ficha.
 
@@ -59,17 +59,17 @@ Especifica el índice del control de ficha.
 int m_nTabIndex;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Índice de la pestaña en el que se está desplazando el usuario.
+Indice de la pestaña sobre la que el usuario está pasando el ratón.
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `m_nTabIndex` se utiliza en el [ejemplo MDITabsDemo: aplicación de MFC con fichas MDI](../../visual-cpp-samples.md).
+En el ejemplo `m_nTabIndex` siguiente se muestra cómo se utiliza en el [ejemplo MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_ptabwnd"></a>  CMFCTabToolTipInfo::m_pTabWnd
+## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a>CMFCTabToolTipInfo::m_pTabWnd
 
 Un puntero al control de ficha.
 
@@ -79,29 +79,29 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `m_pTabWnd` se utiliza en el [ejemplo MDITabsDemo: aplicación de MFC con fichas MDI](../../visual-cpp-samples.md).
+En el ejemplo `m_pTabWnd` siguiente se muestra cómo se utiliza en el [ejemplo MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_strtext"></a>  CMFCTabToolTipInfo::m_strText
+## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a>CMFCTabToolTipInfo::m_strText
 
-El texto de información sobre herramientas.
+Texto de la información sobre herramientas.
 
 ```
 CString m_strText;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si la cadena está vacía, no se muestra la información sobre herramientas.
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `m_strText` se utiliza en el [ejemplo MDITabsDemo: aplicación de MFC con fichas MDI](../../visual-cpp-samples.md).
+En el ejemplo `m_strText` siguiente se muestra cómo se utiliza en el [ejemplo MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)

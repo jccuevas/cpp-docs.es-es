@@ -1,12 +1,16 @@
 ---
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
-apilocation:
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +22,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbctoupper_l
 - mbctolower_l
@@ -42,14 +50,14 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539693"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914287"
 ---
-# <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
+# <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
 Comprueba y convierte las mayúsculas y minúsculas de un carácter multibyte.
 
@@ -77,7 +85,7 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter multibyte que se va a convertir.
 
 *locale*<br/>
@@ -85,9 +93,9 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el carácter convertido *c*, si es posible. En caso contrario, devuelve el carácter *c* sin cambios.
+Cada una de estas funciones devuelve el carácter convertido *c*, si es posible. En caso contrario, devuelve el carácter *c* sin modificar.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las funciones prueban un carácter *c* y, si es posible, aplican una de las conversiones siguientes.
 
@@ -96,17 +104,19 @@ Las funciones prueban un carácter *c* y, si es posible, aplican una de las conv
 |**_mbctolower**, **_mbctolower_l**|Carácter en mayúscula en carácter en minúscula.|
 |**_mbctoupper**, **_mbctoupper_l**|Carácter en minúscula en carácter en mayúscula.|
 
-El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el **_l** sufijo usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el **_l** sufijo es idéntico, salvo que usa el parámetro de configuración regional pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el sufijo **_L** usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el sufijo **_L** es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En versiones anteriores, **_mbctolower** se llamó a **jtolower**, y **_mbctoupper** se llamó a **jtoupper**. Para código nuevo, use los nombres nuevos.
+En versiones anteriores, **_mbctolower** se llamaba **jtolower**y **_mbctoupper** se llamaba **jtoupper**. Para código nuevo, use los nombres nuevos.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**ToLower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**ToUpper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>Requisitos
@@ -116,9 +126,9 @@ En versiones anteriores, **_mbctolower** se llamó a **jtolower**, y **_mbctoupp
 |**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
 |**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

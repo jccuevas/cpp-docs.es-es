@@ -1,6 +1,6 @@
 ---
 title: _bittestandreset, _bittestandreset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandreset64_cpp
 - _bittestandreset
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-ms.openlocfilehash: d8c4675e7efe9e1de8ce6f133d1c361481f1b544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e0c869b926b2f9f3c04fd648f84ef33b8d16fcd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557672"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216925"
 ---
-# <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
+# <a name="_bittestandreset-_bittestandreset64"></a>_bittestandreset, _bittestandreset64
 
 **Específicos de Microsoft**
 
-Generar la instrucción que examina el bit `b` de la dirección `a`, devuelve su valor actual y restablece el bit a 0.
+Genere la instrucción para examinar el `b` bit de la `a`dirección, devuelva su valor actual y restablezca el bit en 0.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned char _bittestandreset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandreset64(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*a*<br/>
-[in, out] Un puntero a la memoria que se va a examinar.
+*un*\
+[in, out] Puntero a la memoria que se va a examinar.
 
-*b*<br/>
-[in] La posición de bit para probar.
+*b*\
+de Posición de bit que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -53,10 +53,10 @@ El bit en la posición especificada.
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
-|`_bittestandreset`|x86, ARM, x64|
-|`_bittestandreset64`|x64|
+|`_bittestandreset`|x86, ARM, x64, ARM64|
+|`_bittestandreset64`|x64, ARM64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -64,7 +64,7 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // bittestandreset.cpp
 // processor: x86, IPF, x64
 #include <stdio.h>
@@ -103,4 +103,4 @@ The number was negative.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4470
 ms.assetid: f52a3eaa-a235-4747-a47d-9ec4ad4cb0ea
-ms.openlocfilehash: 7fd4644ab39e350c0c0badb527875b427a2c6987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 164bc1fa85466b80ee66a22a1a1679a40b89ce2e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531071"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186730"
 ---
 # <a name="compiler-warning-level-1-c4470"></a>Advertencia del compilador (nivel 1) C4470
 
-pragmas de control de punto flotante omitidas en /clr
+pragmas de control de punto flotante omitidas en/CLR
 
-Las pragmas de control de punto flotante:
+Pragmas de control float:
 
 - [fenv_access](../../preprocessor/fenv-access.md)
 
@@ -27,9 +27,9 @@ Las pragmas de control de punto flotante:
 
 no tienen ningún efecto en [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
 
-El ejemplo siguiente genera C4470:
+En el ejemplo siguiente se genera C4470:
 
-```
+```cpp
 // C4470.cpp
 // compile with: /clr /W1 /LD
 #pragma float_control(except, on)   // C4470

@@ -6,26 +6,25 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 52f375c98b5f73e0f5721c951c94e4b24f0bc224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 440ab6fdfe7663557f6c6a6607e617c793d26674
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608685"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371575"
 ---
 # <a name="creating-the-image-lists"></a>Crear las listas de imágenes
 
-Creación de listas de imágenes es el mismo independientemente de si usa [CListView](../mfc/reference/clistview-class.md) o [CListCtrl](../mfc/reference/clistctrl-class.md).
+Crear listas de imágenes es lo mismo tanto si se utiliza [CListView](../mfc/reference/clistview-class.md) o [CListCtrl](../mfc/reference/clistctrl-class.md).
 
 > [!NOTE]
->  Solo necesita listas de imágenes si el control de lista incluye el `LVS_ICON` estilo.
+> Solo necesita listas de imágenes `LVS_ICON` si el control de lista incluye el estilo.
 
-Utilice la clase `CImageList` para crear una o varias listas de imágenes (para iconos de tamaño normal, iconos pequeños y estados). Consulte [CImageList](../mfc/reference/cimagelist-class.md)y consulte [listas de imágenes de vista de lista](/windows/desktop/Controls/using-list-view-controls) en el SDK de Windows.
+Utilice `CImageList` la clase para crear una o más listas de imágenes (para iconos de tamaño completo, iconos pequeños y estados). Consulte [CImageList](../mfc/reference/cimagelist-class.md)y listar listas de [imágenes](/windows/win32/Controls/using-list-view-controls) en el Windows SDK.
 
-Llame a [CListCtrl:: SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) para cada lista de imágenes; pasar un puntero a la correspondiente `CImageList` objeto.
+Llame a [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) para cada lista de imágenes; pasar un puntero `CImageList` al objeto adecuado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

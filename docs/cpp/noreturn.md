@@ -7,27 +7,27 @@ helpviewer_keywords:
 - __declspec keyword [C++], noreturn
 - noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
-ms.openlocfilehash: 1d78e8f5116eabf9073205b938156197bf1001a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a30840aa0556a7324ba24c0f2aaec57dea88d082
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611866"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367864"
 ---
 # <a name="noreturn"></a>noreturn
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Microsoft Specific**
 
-Esto **__declspec** atributo indica al compilador que no devuelve una función. Como consecuencia, el compilador sabe que el código después de una llamada a un **__declspec (noreturn)** función es inaccesible.
+Este **atributo __declspec** indica al compilador que una función no devuelve. Como consecuencia, el compilador sabe que el código que sigue a una llamada a una función **__declspec(noreturn)** es inalcanzable.
 
-Si el compilador encuentra una función con una ruta de acceso de control que no devuelve un valor, genera una advertencia (C4715) o un mensaje de error (C2202). Si no se puede alcanzar la ruta de acceso de control debido a una función que nunca devuelve resultados, puede usar **__declspec (noreturn)** para evitar esta advertencia o error.
+Si el compilador encuentra una función con una ruta de acceso de control que no devuelve un valor, genera una advertencia (C4715) o un mensaje de error (C2202). Si no se puede alcanzar la ruta de acceso de control debido a una función que nunca devuelve, puede usar **__declspec(noreturn)** para evitar esta advertencia o error.
 
 > [!NOTE]
->  Agregar **__declspec (noreturn)** a una función que se espera que devuelva puede provocar un comportamiento indefinido.
+> Agregar **__declspec(noreturn)** a una función que se espera que se devuelva puede dar lugar a un comportamiento indefinido.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, la **else** cláusula no contiene una instrucción return.  Declarar `fatal` como **__declspec (noreturn)** evita un error o mensaje de advertencia.
+En el ejemplo siguiente, la cláusula **else** no contiene una instrucción return.  Declarar `fatal` como **__declspec(noreturn)** evita un error o mensaje de advertencia.
 
 ```cpp
 // noreturn2.cpp
@@ -43,7 +43,9 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+**END Microsoft Specific**
+
+## <a name="see-also"></a>Consulte también
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

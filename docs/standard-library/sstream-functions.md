@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
-ms.openlocfilehash: f22aec854b9a1d9b7b8360cacbb08760413fa22e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf7cd26b25680eb7e5270fdc8ae7dac0d10f70f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458310"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336650"
 ---
 # <a name="ltsstreamgt-functions"></a>Funciones de &lt;sstream&gt;
 
@@ -17,7 +17,7 @@ ms.locfileid: "50458310"
 |-|
 |[swap](#sstream_swap)|
 
-## <a name="sstream_swap"></a>  swap
+## <a name="swap"></a><a name="sstream_swap"></a>Intercambio
 
 Intercambia los valores entre dos objetos `sstream`.
 
@@ -47,13 +47,13 @@ void swap(
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*left*|Referencia a un objeto `sstream`.|
-|*right*|Referencia a un objeto `sstream`.|
+|*Izquierda*|Referencia a un objeto `sstream`.|
+|*Correcto*|Referencia a un objeto `sstream`.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla ejecuta `left.swap(right)`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<sstream>](../standard-library/sstream.md)<br/>
+[\<>sstream](../standard-library/sstream.md)

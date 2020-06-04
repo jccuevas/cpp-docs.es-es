@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4604769d9d1bc5fa848d15459327dc87d82f7016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464966"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363781"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (Clase)
 
-Representa los errores que se producen durante la ejecución de una aplicación. Las clases de excepción personalizadas no se pueden derivar de `Platform::Exception`. Si necesitas una excepción personalizada, puedes utilizar `Platform::COMException` y especificar un HRESULT específico de la aplicación.
+Representa los errores que se producen durante la ejecución de la aplicación. Las clases de excepción personalizadas no se pueden derivar de `Platform::Exception`. Si necesitas una excepción personalizada, puedes utilizar `Platform::COMException` y especificar un HRESULT específico de la aplicación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,38 +35,38 @@ La clase `Exception` también tiene las siguientes clases de miembros.
 
 ### <a name="constructors"></a>Constructores
 
-|Miembro|Descripción|
+|Member|Descripción|
 |------------|-----------------|
-|[Exception](#ctor)|Inicializa una nueva instancia de la clase `Exception`.|
+|[Excepción::Excepción](#ctor)|Inicializa una nueva instancia de la clase `Exception`.|
 
 ### <a name="methods"></a>Métodos
 
 La clase `Exception` hereda los métodos `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`y `ToString()` de [Platform::Object Class](../cppcx/platform-object-class.md). La clase `Exception` también tiene el método siguiente.
 
-|Miembro|Descripción|
+|Member|Descripción|
 |------------|-----------------|
-|[Exception:: CreateException](#createexception)|Crea una excepción que representa el valor HRESULT especificado.|
+|[Excepción::CreateException](#createexception)|Crea una excepción que representa el valor HRESULT especificado.|
 
 ### <a name="properties"></a>Propiedades
 
 La clase Exception también tiene las propiedades siguientes.
 
-|Miembro|Descripción|
+|Member|Descripción|
 |------------|-----------------|
-|[Exception:: HRESULT](#hresult)|HRESULT correspondiente a la excepción.|
-|[Exception:: Message](#message)|Un mensaje que describe la excepción. Este valor es de solo lectura y se no puede modificarse después de que se haya generado `Exception` .|
+|[Excepción::HResult](#hresult)|HRESULT correspondiente a la excepción.|
+|[Excepción::Mensaje](#message)|Mensaje que describe la excepción. Este valor es de solo lectura y se no puede modificarse después de que se haya generado `Exception` .|
 
 ### <a name="requirements"></a>Requisitos
 
-**Cliente mínimo admitido:** Windows 8
+**Cliente mínimo soportado:** Windows 8
 
-**Servidor mínimo admitido:** Windows Server 2012
+**Servidor mínimo soportado:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres:** Platform
 
 **Metadatos:** platform.winmd
 
-## <a name="createexception"></a> CreateException (método)
+## <a name="exceptioncreateexception-method"></a><a name="createexception"></a>Exception::CreateException Método
 
 Crea una excepción Platform::Exception^ a partir de un valor HRESULT especificado.
 
@@ -79,23 +79,23 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Parámetros
 
-*recursos humanos*<br/>
-Un valor HRESULT que se obtiene normalmente de una llamada a un método COM. Si el valor es 0, lo que es igual a S_OK, este método produce [Platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) porque los métodos COM que se realice correctamente no deberían producir excepciones.
+*Hr*<br/>
+Un valor HRESULT que se obtiene normalmente de una llamada a un método COM. Si el valor es 0, que es igual a S_OK, este método produce [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) porque los métodos COM que se realizan correctamente no deben producir excepciones.
 
-*message*<br/>
+*Mensaje*<br/>
 Cadena que describe el error.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Una excepción que representa el HRESULT de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Utiliza este método para crear una excepción a partir de un valor HRESULT devuelto, por ejemplo, desde una llamada a un método de interfaz COM. Puedes utilizar la sobrecarga que toma un parámetro String^ para proporcionar un mensaje personalizado.
 
-Es muy recomendable utilizar CreateException para crear una excepción fuertemente tipada en lugar de crear un [Platform:: COMException](../cppcx/platform-comexception-class.md) simplemente que contenga el valor HRESULT.
+Se recomienda encarecidamente usar CreateException para crear una excepción fuertemente tipada en lugar de crear una [excepción Platform::COMException](../cppcx/platform-comexception-class.md) que simplemente contenga el Valor HRESULT.
 
-## <a name="ctor"></a>  Constructor de Exception
+## <a name="exceptionexception-constructor"></a><a name="ctor"></a>Excepción::Exception Constructor
 
 Inicializa una nueva instancia de la clase Exception.
 
@@ -108,13 +108,13 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Parámetros
 
-*HRESULT*<br/>
+*Hresult*<br/>
 Valor HRESULT de error representado por la excepción.
 
-*message*<br/>
+*Mensaje*<br/>
 Mensaje especificado por el usuario, como texto preceptivo, asociado a la excepción. Normalmente, deberías optar por la segunda sobrecarga para proporcionar un mensaje descriptivo que sea lo más específico posible sobre cómo y por qué se ha producido el error.
 
-## <a name="hresult"></a>  Exception:: HRESULT Property
+## <a name="exceptionhresult-property"></a><a name="hresult"></a>Exception::HResult (Propiedad)
 
 HRESULT correspondiente a la excepción.
 
@@ -125,15 +125,15 @@ public:
     property int HResult { int get(); }
 ```
 
-## <a name="property-value"></a>Valor de propiedad
+## <a name="property-value"></a>Valor de la propiedad
 
 Valor HRESULT.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La mayoría de las excepciones comienzan como errores COM, que se devuelven como valores HRESULT. C++/CX convierte estos valores en objetos Platform::Exception^ y esta propiedad almacena el valor del código de error original.
 
-## <a name="message"></a> Propiedad Exception
+## <a name="exceptionmessage-property"></a><a name="message"></a>Excepción::Propiedad Message
 
 Mensaje que describe el error.
 
@@ -143,14 +143,14 @@ Mensaje que describe el error.
 public:property String^ Message;
 ```
 
-## <a name="property-value"></a>Valor de propiedad
+## <a name="property-value"></a>Valor de la propiedad
 
-En las excepciones que se originan en Windows Runtime, es una descripción del error proporcionada por el sistema.
+En las excepciones que se originan en Windows en tiempo de ejecución, es una descripción del error proporcionada por el sistema.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-En Windows 8, esta propiedad es de solo lectura porque las excepciones en esa versión de Windows Runtime se transportan a través de ABI solo como valores HRESULT. En Windows 8.1, se transmite información de excepción más completa a través de la ABI y puedes proporcionar un mensaje personalizado al que otros componentes podrán tener acceso mediante programación. Para obtener más información, consulte [excepciones (C++ / c++ / CX)](../cppcx/exceptions-c-cx.md).
+En Windows 8, esta propiedad es de solo lectura porque las excepciones de esa versión de Windows Runtime se transportan a través de la ABI solo como HRESULTS. En Windows 8.1, se transmite información de excepción más completa a través de la ABI y puedes proporcionar un mensaje personalizado al que otros componentes podrán tener acceso mediante programación. Para obtener más información, consulte [Excepciones (C++/CX)](../cppcx/exceptions-c-cx.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)

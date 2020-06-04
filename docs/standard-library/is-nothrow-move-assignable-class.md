@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
-ms.openlocfilehash: eb1ddcace7a68bf60154a15117a1c16a438d263d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8273be92a9c7e60e446b3c2b561a6020e70fb2f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535933"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455891"
 ---
 # <a name="isnothrowmoveassignable-class"></a>Clase is_nothrow_move_assignable
 
@@ -26,12 +26,12 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothrow mover operador de asignación, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un operador de asignación de movimiento nothrow; en caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothr
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

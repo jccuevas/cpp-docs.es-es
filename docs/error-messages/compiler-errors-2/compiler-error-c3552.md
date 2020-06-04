@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3552
 ms.assetid: 83401524-1bf1-44c0-8aca-a6eb35c4224c
-ms.openlocfilehash: 27c4707097f43266a3be57ad6dc9591ab6f34e97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 567c92ddabbe2517700e4c67ef2c1ba899baada8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441813"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200673"
 ---
 # <a name="compiler-error-c3552"></a>Error del compilador C3552
 

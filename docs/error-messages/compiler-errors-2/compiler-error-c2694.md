@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2694
 ms.assetid: 8dc2cec2-67ae-4e16-8c0c-374425aca8bc
-ms.openlocfilehash: 4897512f6bd27465b7281d7a27757918128202d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca378c3e0ce88b454cb89fc08470a277a7be6f47
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489939"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755231"
 ---
 # <a name="compiler-error-c2694"></a>Error del compilador C2694
 
-'override': función virtual de invalidación tiene especificación de excepción menos restrictiva que la clase base virtual miembro función 'base'
+' override ': la función virtual de invalidación tiene una especificación de excepción menos restrictiva que la función miembro virtual de clase base ' base '
 
-Se ha reemplazado una función virtual, pero en [/Za](../../build/reference/za-ze-disable-language-extensions.md), el reemplazo de la función tenía menos restrictivo [especificación de excepción](../../cpp/exception-specifications-throw-cpp.md).
+Se invalidó una función virtual, pero en [/za](../../build/reference/za-ze-disable-language-extensions.md), la función de reemplazo tenía una [especificación de excepción](../../cpp/exception-specifications-throw-cpp.md)menos restrictiva.
 
-El ejemplo siguiente genera C2694:
+En el ejemplo siguiente se genera C2694:
 
-```
+```cpp
 // C2694.cpp
 // compile with: /Za /c
 class MyBase {

@@ -1,9 +1,10 @@
 ---
 title: _gcvt_s
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _gcvt_s
-apilocation:
+- _o__gcvt_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt_s
 - gcvt_s
@@ -29,14 +34,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554972"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919424"
 ---
-# <a name="gcvts"></a>_gcvt_s
+# <a name="_gcvt_s"></a>_gcvt_s
 
 Convierte un valor de punto flotante en una cadena. Se trata de una versión de [_gcvt](gcvt.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -59,16 +64,16 @@ errno_t _gcvt_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*buffer*<br/>
+*búfer*<br/>
 Búfer en que se va a almacenar el resultado de la conversión.
 
 *sizeInBytes*<br/>
 Tamaño del búfer.
 
-*valor*<br/>
+*value*<br/>
 Valor que se va a convertir.
 
-*digits*<br/>
+*dígitos*<br/>
 Número de dígitos significativos almacenados.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -77,23 +82,25 @@ Cero si es correcto. Si se produce un error debido a un parámetro no válido (v
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*sizeInBytes*|*valor*|*digits*|Volver|Valor de *búfer*|
+|*búfer*|*sizeInBytes*|*value*|*dígitos*|Valor devuelto|Valor en *búfer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|any|any|any|**EINVAL**|No modificado.|
-|No **NULL** (apunta a la memoria válida)|cero|any|any|**EINVAL**|No modificado.|
-|No **NULL** (apunta a la memoria válida)|any|any|>= *sizeInBytes*|**EINVAL**|No modificado.|
+|**ACEPTA**|cualquiera|cualquiera|cualquiera|**EINVAL**|No se ha modificado.|
+|Not **null** (apunta a la memoria válida)|cero|cualquiera|cualquiera|**EINVAL**|No se ha modificado.|
+|Not **null** (apunta a la memoria válida)|cualquiera|cualquiera|>= *sizeInBytes*|**EINVAL**|No se ha modificado.|
 
 **Problemas de seguridad**
 
-**_gcvt_s** puede generar una infracción de acceso si *búfer* no apunta a la memoria válida y no es **NULL**.
+**_gcvt_s** puede generar una infracción de acceso si el *búfer* no apunta a una memoria válida y no es **null**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_gcvt_s** función convierte un punto flotante *valor* en una cadena de caracteres (que incluye un separador decimal y un posible byte con signo) y almacena la cadena en *búfer* . *búfer* debe ser lo suficientemente grande como para contener el valor convertido más un carácter nulo final, que se anexa automáticamente. Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier flotante como valor de punto. Si un tamaño de búfer *dígitos* + 1 se usa, la función no sobrescribirá el final del búfer, así que asegúrese de proporcionar un búfer suficiente para esta operación. **_gcvt_s** intenta generar *dígitos* dígitos en formato decimal. Si no es posible, genera *dígitos* dígitos en formato exponencial. Los ceros finales pueden suprimirse en la conversión.
+La función **_gcvt_s** convierte un *valor* de punto flotante en una cadena de caracteres (que incluye un separador decimal y un byte de signo posible) y almacena la cadena en el *búfer*. el *búfer* debe ser lo suficientemente grande como para alojar el valor convertido más un carácter nulo de terminación, que se anexa automáticamente. Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier valor de punto flotante. Si se usa un tamaño de búfer de *dígitos* + 1, la función no sobrescribirá el final del búfer, por lo que debe asegurarse de proporcionar un búfer suficiente para esta operación. **_gcvt_s** intenta producir dígitos de *dígitos* en formato decimal. Si no es posible, genera dígitos de *dígitos* en formato exponencial. Los ceros finales pueden suprimirse en la conversión.
 
-En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-La versión de depuración de esta función rellena primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La versión de depuración de esta función rellena primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -101,7 +108,7 @@ La versión de depuración de esta función rellena primero el búfer con 0xFD. 
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -134,7 +141,7 @@ int main()
 Converted value: 1.2
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>

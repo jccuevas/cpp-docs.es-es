@@ -2,12 +2,12 @@
 title: Funciones establecidas como valor predeterminado y eliminadas explícitamente
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bd13b5fef3a9dfc13d72f1ee34d7ced902735e15
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327023"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360903"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funciones establecidas como valor predeterminado y eliminadas explícitamente
 
@@ -15,7 +15,7 @@ En C++11, las funciones establecidas como valor predeterminado y eliminadas prop
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Ventajas de las funciones establecidas como valor predeterminado o eliminadas explícitamente
 
-En C++, el compilador genera automáticamente el constructor predeterminado, el constructor de copias, el operador de asignación de copia y el destructor de un tipo si este no declara los suyos propios. Estas funciones se conocen como el *funciones miembro especiales*, y son lo que permite que tipos simples definidos por el usuario en C++ se comportan como las estructuras en C. Es decir, puede crear, copiar y destruir sin ningún esfuerzo de codificación adicional. C++11 aporta semántica de movimiento al lenguaje y agrega el constructor de movimiento y el operador de asignación de movimiento a la lista de funciones miembro especiales que el compilador puede generar automáticamente.
+En C++, el compilador genera automáticamente el constructor predeterminado, el constructor de copias, el operador de asignación de copia y el destructor de un tipo si este no declara los suyos propios. Estas funciones se conocen como las *funciones miembro especiales*y son las que hacen que los tipos simples definidos por el usuario en C++ se comporten como lo hacen las estructuras en C. Es decir, puede crearlos, copiarlos y destruirlos sin ningún esfuerzo de codificación adicional. C++11 aporta semántica de movimiento al lenguaje y agrega el constructor de movimiento y el operador de asignación de movimiento a la lista de funciones miembro especiales que el compilador puede generar automáticamente.
 
 Esto es útil en el caso de tipos simples, pero los tipos complejos suelen definir una o varias funciones miembro especiales por sí mismos, lo que puede impedir la generación automática de otras funciones miembro especiales. En la práctica:
 
@@ -25,25 +25,25 @@ Esto es útil en el caso de tipos simples, pero los tipos complejos suelen defin
 
 - Si se declara explícitamente un constructor de movimiento o un operador de asignación de movimiento, entonces:
 
-   - No se genera automáticamente ningún constructor de copia.
+  - No se genera automáticamente ningún constructor de copia.
 
-   - No se genera automáticamente ningún operador de asignación de copia.
+  - No se genera automáticamente ningún operador de asignación de copia.
 
 - Si se declara explícitamente un constructor de copia, un operador de asignación de copia, un constructor de movimiento, un operador de asignación de movimiento o un destructor, entonces:
 
-   - No se genera automáticamente ningún constructor de movimiento.
+  - No se genera automáticamente ningún constructor de movimiento.
 
-   - No se genera automáticamente ningún operador de asignación de movimiento.
+  - No se genera automáticamente ningún operador de asignación de movimiento.
 
 > [!NOTE]
 > Además, el estándar C++11 especifica las reglas adicionales siguientes:
 >
-> - Si se declara explícitamente un constructor de copia o un destructor, la generación automática del operador de asignación de copia está en desuso.
-> - Si se declara explícitamente un operador de asignación de copia o un destructor, la generación automática del constructor de copia está desusada.
+> - Si se declara explícitamente un constructor de copia o un destructor, la generación automática del operador de asignación de copia está desusada.
+> - Si se declara explícitamente un operador de asignación de copia o un destructor, la generación automática del constructor de copia está en desuso.
 >
 > En ambos casos, Visual Studio sigue generando automáticamente las funciones necesarias de forma implícita y no emite ninguna advertencia.
 
-Las consecuencias de estas reglas también pueden propagarse a las jerarquías de objetos. Por ejemplo, si por cualquier motivo una clase base no puede tener un constructor predeterminado que se pueda llamar desde una clase derivada, es decir, un **pública** o **protegido** constructor que no toma ningún parámetro, a continuación, en una clase que se deriva de no puede generar automáticamente su propio constructor predeterminado.
+Las consecuencias de estas reglas también pueden propagarse a las jerarquías de objetos. Por ejemplo, si por alguna razón una clase base no puede tener un constructor predeterminado al que se puede llamar desde una clase derivada, es decir, un constructor **público** o **protegido** que no toma ningún parámetro, una clase que deriva de ella no puede generar automáticamente su propio constructor predeterminado.
 
 Estas reglas pueden complicar la implementación de lo que deberían ser tipos sencillos definidos por el usuario y expresiones comunes de C++, como la creación de un tipo definido por el usuario que no se puede copiar declarando de forma privada el constructor de copia y el operador de asignación de copia y no definiéndolos.
 
@@ -60,7 +60,7 @@ private:
 
 Antes de C++11, este fragmento de código era la forma idiomática de los tipos que no se pueden copiar. Sin embargo, plantea varios problemas:
 
-- El constructor de copia debe declararse de forma privada para ocultarlo, pero como se ha declarado plenamente, se impide la generación automática del constructor predeterminado. Tiene que definir explícitamente el constructor predeterminado si desea uno, aunque no haga nada.
+- El constructor de copias debe declararse de forma privada para ocultarlo, pero como se declara en absoluto, se impide la generación automática del constructor predeterminado. Tiene que definir explícitamente el constructor predeterminado si desea uno, aunque no haga nada.
 
 - Aunque el constructor predeterminado definido de forma explícita no realice ninguna acción, el compilador lo considera no trivial. Es menos eficaz que un constructor predeterminado generado automáticamente e impide que `noncopyable` sea un verdadero tipo POD.
 
@@ -108,13 +108,13 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;
 ```
 
-Tenga en cuenta que puede establecer como valor predeterminado una función miembro especial fuera del cuerpo de una clase siempre y cuando se pueda insertar.
+Tenga en cuenta que puede establecer una función miembro especial fuera del cuerpo de una clase siempre que sea inlinable.
 
 Debido a las ventajas de rendimiento que ofrecen las funciones miembro especiales triviales, se recomienda elegir funciones miembro especiales generadas automáticamente en lugar de cuerpos de función vacíos cuando se desee el comportamiento predeterminado. Se puede hacer si se establece explícitamente como valor predeterminado la función miembro especial o si no la declara (y tampoco declara otras funciones miembro especiales que impedirían que se generara automáticamente).
 
 ## <a name="deleted-functions"></a>Funciones eliminadas
 
-Es posible eliminar funciones miembro especiales, así como funciones miembro normales y funciones no miembro, para evitar que se definan o se llamen. La eliminación de funciones miembro especiales proporciona una forma más limpia de impedir que el compilador genere funciones miembro especiales que no se desean. La función se debe eliminar en cuanto se declara; no se puede eliminar después de la manera en que se puede declarar una función y establecerla como valor predeterminado más adelante.
+Es posible eliminar funciones miembro especiales, así como funciones miembro normales y funciones no miembro, para evitar que se definan o se llamen. La eliminación de funciones miembro especiales proporciona una forma más limpia de evitar que el compilador genere funciones miembro especiales que no desea. La función se debe eliminar en cuanto se declara; no se puede eliminar después de la manera en que se puede declarar una función y establecerla como valor predeterminado más adelante.
 
 ```cpp
 struct widget
@@ -132,7 +132,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }
 ```
 
-Tenga en cuenta en el ejemplo anterior que la llamada a `call_with_true_double_only` mediante el uso de un **float** argumento provocaría un error del compilador, pero la llamada a `call_with_true_double_only` mediante el uso de un **int** no lo haría el argumento; en el **int** caso, el argumento se promoverá de **int** a **doble** y llamar correctamente a la **doble** versión de la función, Aunque podría no ser lo que se pretende. Para asegurarse de que cualquier llamada a esta función mediante un argumento que no sea double produce un error del compilador, se puede declarar una versión de plantilla de la función que se elimina.
+Observe en el ejemplo `call_with_true_double_only` anterior que llamar mediante un argumento **float** provocaría un error del compilador, pero llamar `call_with_true_double_only` mediante un argumento **int** no lo haría; en el caso **int,** el argumento se promoverá de **int** a **double** y se llamará con éxito a la versión **doble** de la función, aunque eso podría no ser lo que se pretende. Para asegurarse de que cualquier llamada a esta función mediante un argumento no doble produce un error del compilador, puede declarar una versión de plantilla de la función que se elimina.
 
 ```cpp
 template < typename T >

@@ -1,6 +1,6 @@
 ---
 title: __popcnt16, __popcnt, __popcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __popcnt64
 - __popcnt
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146897"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221360"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+# <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Específicos de Microsoft**
 
-Cuenta el número de uno de los bits (recuento de llenado) en un 16, 32 o entero sin signo de 64 bits.
+Cuenta el número de `1` bits (número de rellenado) en un entero de 16, 32 o 64 bits sin signo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned short __popcnt16(
    unsigned short value
 );
@@ -38,14 +38,14 @@ unsigned __int64 __popcnt64(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*value*<br/>
-[in] El 16, 32 o entero sin signo de 64 bits para el que queremos que el recuento de llenado.
+*value*\
+de Entero de 16, 32 o 64 bits sin signo para el que se desea el recuento de población.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El número de bits de uno de los `value` parámetro.
+Número de `1` bits del parámetro de *valor* .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -55,17 +55,17 @@ El número de bits de uno de los `value` parámetro.
 |`__popcnt`|Manipulación de bits avanzada|
 |`__popcnt64`|Manipulación de bits avanzada en modo de 64 bits.|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones intrínsecas genera el `popcnt` instrucción. En el modo de 32 bits no hay ningún 64-bit registros de uso general, por lo tanto, no de 64 bits `popcnt`.
+Cada una de las funciones intrínsecas `popcnt` genera la instrucción. En el modo de 32 bits, no hay registros de uso general de 64 bits, por lo que no se `popcnt` admite 64 bits.
 
-Para determinar la compatibilidad de hardware para el `popcnt` instrucción, llamada la `__cpuid` intrínseca con `InfoType=0x00000001` y comprobar poco 23 de `CPUInfo[2] (ECX)`. Este bit es 1 si se admite la instrucción y 0 en caso contrario. Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `popcnt` instrucciones, los resultados son impredecibles.
+Para determinar la compatibilidad de hardware `popcnt` de la instrucción, `__cpuid` llame a `InfoType=0x00000001` la función intrínseca con y `CPUInfo[2] (ECX)`Compruebe el bit 23 de. Este bit es 1 si se admite la instrucción y 0 en caso contrario. Si ejecuta código que usa estos intrínsecos en hardware que no admite la `popcnt` instrucción, los resultados son imprevisibles.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 #include <iostream>
 #include <intrin.h>
 using namespace std;
@@ -101,8 +101,8 @@ __popcnt(0xffffffff) = 32
 
 **FIN de Específicos de Microsoft**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.
+Partes con Copyright 2007 de Advanced Micro Devices, Inc. Todos los derechos reservados. Se reproduce con el permiso de Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

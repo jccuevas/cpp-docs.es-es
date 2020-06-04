@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2651
 ms.assetid: c3524a89-47d1-43f6-9e20-2cda15f9ae8a
-ms.openlocfilehash: 5712595cf8e502df4d434478e8b44d852e60751b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9959c549c7f2d43f1f4f8aec3e73b8465c4c580c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482594"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177214"
 ---
 # <a name="compiler-error-c2651"></a>Error del compilador C2651
 
-tipo de datos: izquierda de 'operator' debe ser una clase, struct o union
+' Data Type ': la izquierda de ' Operator ' debe ser una clase, una estructura o una Unión
 
-Para usar un parámetro de plantilla como si fuera una clase, especializar la plantilla de clase con una clase en lugar de un tipo entero.
+Para utilizar un parámetro de plantilla como si es una clase, especializa la plantilla de clase con una clase en lugar de un tipo entero.

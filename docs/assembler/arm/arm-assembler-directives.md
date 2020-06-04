@@ -3,11 +3,11 @@ title: Directiva del ensamblador de ARM
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
 ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167678"
 ---
 # <a name="arm-assembler-directives"></a>Directiva del ensamblador de ARM
 
@@ -107,7 +107,7 @@ En su mayor parte, el ensamblador de ARM Microsoft utiliza el lenguaje ensamblad
 
    No se admite.
 
-- REUBIQUE
+- RELOC
 
    `RELOC n` solo se puede seguir una instrucción o una directiva de la definición de datos. No hay ningún "anónimo"symbol"que se puede reasignar.
 

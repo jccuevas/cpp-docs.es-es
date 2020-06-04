@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3417
 ms.assetid: 3e7869ea-8948-42fb-ba30-6ccafe499c35
-ms.openlocfilehash: 574af940f17c1a79472d6d20d63c9ff74d4c411e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93f287dd7173cc83a8c910d035f80a15c6a4f701
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615778"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756167"
 ---
 # <a name="compiler-error-c3417"></a>Error del compilador C3417
 
-'member': tipos de valor no pueden contener funciones miembro especiales definidas por el usuario
+' Member ': los tipos de valor no pueden contener funciones miembro especiales definidas por el usuario
 
-Tipos de valor no pueden contener funciones como un constructor de instancia predeterminado, un destructor o un constructor de copias.
+Los tipos de valor no pueden contener funciones como un constructor de instancia, un destructor o un constructor de copias predeterminados.
 
-El ejemplo siguiente genera C3517:
+En el ejemplo siguiente se genera C3517:
 
-```
+```cpp
 // C3417.cpp
 // compile with: /clr /c
 value class VC {

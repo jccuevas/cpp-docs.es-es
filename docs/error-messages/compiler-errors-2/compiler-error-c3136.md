@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3136
 ms.assetid: c77103cd-00f7-408e-b74b-4f8562039d31
-ms.openlocfilehash: e32ffca067c3b25120301527e7a708d53001d541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75862f3b80d617b607a7b3e735cb3e16e9a40bb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501100"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757389"
 ---
 # <a name="compiler-error-c3136"></a>Error del compilador C3136
 
-'interface': una interfaz COM solo puede heredar de otra interfaz COM; 'interface' no es una interfaz COM
+' interfaz ': una interfaz COM solo puede heredar de otra interfaz COM, ' interfaz ' no es una interfaz COM
 
-Una interfaz a la que se aplicó un [interface (atributo)](../../windows/attributes/interface-attributes.md) hereda de una interfaz que no es una interfaz COM. En última instancia hereda una interfaz COM de `IUnknown`. Cualquier interfaz precedida por un atributo de la interfaz es una interfaz COM.
+Una interfaz a la que se ha aplicado un [atributo de interfaz](../../windows/attributes/interface-attributes.md) hereda de una interfaz que no es una interfaz com. Una interfaz COM hereda en última instancia de `IUnknown`. Cualquier interfaz precedida por un atributo de interfaz es una interfaz COM.
 
-El ejemplo siguiente genera C3136:
+En el ejemplo siguiente se genera C3136:
 
-```
+```cpp
 // C3136.cpp
 #include "unknwn.h"
 

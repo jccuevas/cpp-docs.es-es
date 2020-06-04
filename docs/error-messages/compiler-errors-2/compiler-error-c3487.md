@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-ms.openlocfilehash: a1c4b667e23ff167b28b9f22f93b0930545c915c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b38755470e3746066711382b2ed471badc8e197
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492619"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738445"
 ---
 # <a name="compiler-error-c3487"></a>Error del compilador C3487
 
@@ -27,7 +27,7 @@ Una expresión lambda debe especificar su tipo de valor devuelto a menos que con
 
 En el ejemplo siguiente se genera el error C3487 porque los tipos de valor devueltos de la expresión lambda no coinciden:
 
-```
+```cpp
 // C3487.cpp
 // Compile by using: cl /c /W4 C3487.cpp
 

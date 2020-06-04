@@ -1,10 +1,12 @@
 ---
 title: _makepath_s, _wmakepath_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wmakepath_s
 - _makepath_s
-apilocation:
+- _o__makepath_s
+- _o__wmakepath_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,12 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wmakepath_s
 - makepath_s
@@ -29,14 +36,14 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8eb3cf338d7486d7e7893090a1390e5d2d16a438
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471921"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914480"
 ---
-# <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
+# <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
 Crea un nombre de ruta de acceso de los componentes. Estas son versiones de [_makepath, _wmakepath](makepath-wmakepath.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -88,17 +95,17 @@ Tamaño del búfer en palabras.
 *sizeInBytes*<br/>
 Tamaño del búfer en bytes.
 
-*Unidad*<br/>
-Contiene una letra (A, B, etc.) correspondiente a la unidad deseada y un signo de dos puntos final opcional. **_makepath_s** inserta los dos puntos automáticamente en la ruta de acceso compuesta si está presente. Si *unidad* es **NULL** o apunta a una cadena vacía, letra de unidad no aparece en la composición *ruta* cadena.
+*dispositivo*<br/>
+Contiene una letra (A, B, etc.) correspondiente a la unidad deseada y un signo de dos puntos final opcional. **_makepath_s** inserta los dos puntos automáticamente en la ruta de acceso compuesta si faltan. Si la *unidad* es **null** o apunta a una cadena vacía, no aparece ninguna letra de unidad en la cadena de *ruta de acceso* compuesta.
 
 *dir*<br/>
-Contiene la ruta de acceso de los directorios, sin incluir el designador de unidad ni el nombre de archivo real. La barra diagonal final es opcional y una barra diagonal (/) o una barra diagonal inversa (\\) o ambos se pueden utilizar en una sola *dir* argumento. Si no se especifica ninguna barra diagonal (/ o \\), se inserta automáticamente. Si *dir* es **NULL** o apunta a una cadena vacía, no hay ruta de acceso de directorio se insertará en la composición *ruta* cadena.
+Contiene la ruta de acceso de los directorios, sin incluir el designador de unidad ni el nombre de archivo real. La barra diagonal final es opcional y se puede usar una barra diagonal (/) o una barra diagonal\\inversa (), o ambas, en un solo argumento *dir* . Si no se especifica ninguna barra diagonal (/ o \\), se inserta automáticamente. Si *dir* es **null** o apunta a una cadena vacía, no se insertará ninguna ruta de acceso de directorio en la cadena de *ruta de acceso* compuesta.
 
 *fname*<br/>
-Contiene el nombre de archivo base sin ninguna extensión de nombre de archivo. Si *fname* es **NULL** o apunta a una cadena vacía, ningún nombre de archivo se insertará en la composición *ruta* cadena.
+Contiene el nombre de archivo base sin ninguna extensión de nombre de archivo. Si *fname* es **null** o apunta a una cadena vacía, no se inserta ningún nombre de archivo en la cadena de *ruta de acceso* compuesta.
 
-*ext*<br/>
-Contiene la extensión de nombre de archivo real, con o sin punto inicial (.). **_makepath_s** inserta el punto automáticamente si no aparece en *ext*. Si *ext* es **NULL** o apunta a una cadena vacía, sin extensión se insertará en la composición *ruta* cadena.
+*total*<br/>
+Contiene la extensión de nombre de archivo real, con o sin punto inicial (.). **_makepath_s** inserta el período automáticamente si no aparece en *ext*. Si *ext* es **null** o apunta a una cadena vacía, no se inserta ninguna extensión en la cadena de *ruta de acceso* compuesta.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -106,16 +113,18 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*path*|*sizeInWords* / *sizeInBytes*|Volver|Contenido de *ruta de acceso*|
+|*path*|*sizeInWords* / *sizeInBytes*|Valor devuelto|Contenido de la *ruta de acceso*|
 |------------|------------------------------------|------------|------------------------|
-|**NULL**|any|**EINVAL**|no modificado|
-|any|<= 0|**EINVAL**|no modificado|
+|**ACEPTA**|cualquiera|**EINVAL**|no modificado|
+|cualquiera|<= 0|**EINVAL**|no modificado|
 
-Si se produce alguna de las condiciones de error anteriores, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y las funciones devuelven **EINVAL**. **NULL** se permite para los parámetros *unidad*, *fname*, y *ext*. Para obtener información sobre el comportamiento que se produce cuando estos parámetros son punteros nulos o cadenas vacías, vea la sección Comentarios.
+Si se produce alguna de las condiciones de error anteriores, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y las funciones devuelven **EINVAL**. Se permite **null** para los parámetros *Drive*, *fname*y *ext*. Para obtener información sobre el comportamiento cuando estos parámetros son punteros nulos o cadenas vacías, vea la sección Comentarios.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_makepath_s** función crea una cadena de ruta de acceso compuesta de componentes determinados y almacena el resultado en *ruta de acceso*. El *ruta* podría incluir una letra de unidad, ruta de acceso de directorio, nombre de archivo y extensión de nombre de archivo. **_wmakepath_s** es una versión con caracteres anchos de **_makepath_s**; los argumentos de **_wmakepath_s** son cadenas de caracteres anchos. **_wmakepath_s** y **_makepath_s** se comportan exactamente igual.
+La función **_makepath_s** crea una cadena de ruta de acceso compuesta a partir de componentes individuales y almacena el resultado en la *ruta de acceso*. La *ruta de acceso* puede incluir una letra de unidad, una ruta de acceso de directorio, un nombre de archivo y una extensión de nombre de archivo. **_wmakepath_s** es una versión con caracteres anchos de **_makepath_s**; los argumentos para **_wmakepath_s** son cadenas de caracteres anchos. **_wmakepath_s** y **_makepath_s** se comportan de manera idéntica.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -123,13 +132,13 @@ El **_makepath_s** función crea una cadena de ruta de acceso compuesta de compo
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-El *ruta* argumento debe apuntar a un búfer vacío suficientemente grande para contener la ruta de acceso completa. El compuesto *ruta* debe ser no puede superar el **_MAX_PATH** constante, definida en Stdlib.h.
+El argumento *path* debe apuntar a un búfer vacío lo suficientemente grande como para contener la ruta de acceso completa. La *ruta de acceso* compuesta no debe ser mayor que la constante **_MAX_PATH** , definida en stdlib. h.
 
-Si la ruta de acceso es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, **errno** está establecido en **EINVAL**. **NULL** se permiten valores para todos los demás parámetros.
+Si path es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, **errno** se establece en **EINVAL**. Se permiten valores **null** para todos los demás parámetros.
 
-En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -138,7 +147,7 @@ Las versiones de depuración de estas funciones rellenan primero el búfer con 0
 |**_makepath_s**|\<stdlib.h>|
 |**_wmakepath_s**|\<stdlib.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -190,7 +199,7 @@ Path extracted with _splitpath_s:
    Ext: .c
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>

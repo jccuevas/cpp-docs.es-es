@@ -1,14 +1,18 @@
 ---
 title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _utime64
 - _utime
 - _wutime
 - _wutime64
 - _wutime32
 - _utime32
-apilocation:
+- _o__utime32
+- _o__utime64
+- _o__wutime32
+- _o__wutime64
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +24,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tutime
 - _utime64
@@ -58,14 +66,14 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dbff557cd116eb1df44f015b17716408c8dc54c2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524643"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912130"
 ---
-# <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
+# <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
 Establece la hora de modificación de un archivo.
 
@@ -100,43 +108,45 @@ int _wutime64(
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*<br/>
+*extensión*<br/>
 Puntero a una cadena que contiene la ruta de acceso o el nombre de archivo.
 
-*Veces*<br/>
+*Times*<br/>
 Puntero a los valores de hora almacenados.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se ha cambiado la hora de modificación de archivo, cada una de estas funciones devuelve 0. Un valor devuelto de -1 indica un error. Si se pasa un parámetro no válido, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y **errno** se establece en uno de los siguientes valores:
+Si se ha cambiado la hora de modificación de archivo, cada una de estas funciones devuelve 0. Un valor devuelto de-1 indica un error. Si se pasa un parámetro no válido, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y **errno** se establece en uno de los siguientes valores:
 
 |valor de errno|Condición|
 |-|-|
 | **EACCES** | La ruta de acceso especifica un directorio o un archivo de solo lectura |
-| **EINVAL** | No válido *veces* argumento |
+| **EINVAL** | Argumento de *horas* no válidas |
 | **EMFILE** | Demasiados archivos abiertos (se debe abrir el archivo para cambiar su hora de modificación) |
 | **ENOENT** | Ruta de acceso o nombre de archivo no encontrado |
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
-La fecha de un archivo se puede cambiar si la fecha de modificación es posterior a la medianoche del 1 de enero de 1970 y anterior a la fecha de finalización de la función empleada. **_utime** y **_wutime** usar un valor de tiempo de 64 bits, por lo que la fecha de finalización es 23:59:59 del 31 de diciembre de 3000, UTC. Si **_USE_32BIT_TIME_T** se define para forzar el comportamiento anterior, la fecha de finalización es 23:59:59 del 18 de enero de 2038, UTC. **_utime32** o **_wutime32** usar un tipo en tiempo de 32 bits independientemente de si **_USE_32BIT_TIME_T** está definido, y siempre tienen la fecha de finalización anterior. **_utime64** o **_wutime64** usar siempre el tipo en tiempo de 64 bits, por lo que siempre, estas funciones admiten la fecha de finalización posterior.
+La fecha de un archivo se puede cambiar si la fecha de modificación es posterior a la medianoche del 1 de enero de 1970 y anterior a la fecha de finalización de la función empleada. **_utime** y **_wutime** usan un valor de tiempo de 64 bits, por lo que la fecha de finalización es 23:59:59, 31 de diciembre de 3000, UTC. Si se define **_USE_32BIT_TIME_T** para forzar el comportamiento anterior, la fecha de finalización 23:59:59 es el 18 de enero de 2038, UTC. **_utime32** o **_wutime32** usar un tipo de tiempo de 32 con independencia de si se ha definido **_USE_32BIT_TIME_T** y siempre tienen la fecha de finalización anterior. **_utime64** o **_wutime64** usar siempre el tipo de tiempo de 64 bits, por lo que estas funciones siempre admiten la fecha de finalización posterior.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_utime** función establece la hora de modificación para el archivo especificado por *filename*. El proceso debe tener acceso de escritura al archivo para cambiar la hora. En el sistema operativo Windows, puede cambiar la hora de acceso y la hora de modificación en el **_utimbuf** estructura. Si *veces* es un **NULL** puntero, la hora de modificación se establece en la hora local actual. En caso contrario, *veces* debe apuntar a una estructura de tipo **_utimbuf**, definida en SYS\UTIME. H.
+La función **_utime** establece la hora de modificación del archivo especificado por *filename*. El proceso debe tener acceso de escritura al archivo para cambiar la hora. En el sistema operativo Windows, puede cambiar la hora de acceso y la hora de modificación en la estructura de **_utimbuf** . Si *Times* es un puntero **nulo** , la hora de modificación se establece en la hora local actual. De lo contrario, las *horas* deben apuntar a una estructura de tipo **_utimbuf**, definida en SYS\UTIME. C.
 
-El **_utimbuf** estructura almacena los tiempos de acceso y de modificación de archivos utilizados por **_utime** para cambiar las fechas de modificación del archivo. La estructura tiene los siguientes campos, que son de tipo **time_t**:
+La estructura **_utimbuf** almacena las horas de modificación y el acceso a los archivos que usa **_utime** para cambiar las fechas de modificación del archivo. La estructura tiene los siguientes campos, que son de tipo **time_t**:
 
 | Campo |   |
 |-------|---|
 | **actime** | Hora de acceso a archivos |
 | **modtime** | Hora de modificación de archivos |
 
-Las versiones específicas de la **_utimbuf** estructura (**_utimebuf32** y **__utimbuf64**) se definen mediante las versiones de 32 bits y 64 bits del tipo de hora. Se usan en las versiones específicas de 32 y 64 bits de esta función. **_utimbuf** forma predeterminada usa un tipo en tiempo de 64 bits, a menos que **_USE_32BIT_TIME_T** está definido.
+Las versiones específicas de la estructura **_utimbuf** (**_utimebuf32** y **__utimbuf64**) se definen mediante las versiones de 32 bits y 64 bits del tipo Time. Se usan en las versiones específicas de 32 y 64 bits de esta función. **_utimbuf** utiliza de forma predeterminada un tipo de tiempo de 64 bits a menos que se defina **_USE_32BIT_TIME_T** .
 
-**_utime** es idéntico al **_futime** , salvo que el *filename* argumento de **_utime** es un nombre de archivo o una ruta de acceso a un archivo, en lugar de un descriptor de archivo de un Abra el archivo.
+**_utime** es idéntica a **_futime** , salvo que el argumento *filename* de **_utime** es un nombre de archivo o una ruta de acceso a un archivo, en lugar de un descriptor de archivo de un archivo abierto.
 
-**_wutime** es una versión con caracteres anchos de **_utime**; el *filename* argumento **_wutime** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+**_wutime** es una versión con caracteres anchos de **_utime**; el argumento *filename* para **_wutime** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -154,11 +164,11 @@ Las versiones específicas de la **_utimbuf** estructura (**_utimebuf32** y **__
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_wutime**|\<utime.h> o \<wchar.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-Este programa usa **_utime** para establecer la hora de modificación del archivo a la hora actual.
+Este programa usa **_utime** para establecer la hora de modificación del archivo en la hora actual.
 
 ```C
 // crt_utime.c
@@ -205,7 +215,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Volume in drive C has no label.
@@ -227,9 +237,9 @@ Directory of C:\test
                0 Dir(s)  20,742,955,008 bytes free
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>

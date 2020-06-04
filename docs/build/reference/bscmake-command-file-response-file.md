@@ -9,14 +9,17 @@ helpviewer_keywords:
 - response files
 - command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-ms.openlocfilehash: 6be6dae2ef3dd729819a5eccba5e86df479ab5ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a55fd616a00aeb3ade229bf7cff8220f86085b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295050"
 ---
 # <a name="bscmake-command-file-response-file"></a>Archivo de comandos de BSCMAKE (Archivo de respuesta)
+
+> [!WARNING]
+> Aunque BSCMAKE todavía se instala con Visual Studio, el IDE ya no lo utiliza. Desde Visual Studio 2008, la información de examen y de símbolos se almacena automáticamente en un archivo .sdf de SQL Server en la carpeta de soluciones.
 
 Puede proporcionar la totalidad o parte de la entrada de línea de comandos en un archivo de comandos. Especifique el archivo de comandos utilizando la sintaxis siguiente:
 
@@ -45,4 +48,4 @@ file1.sbr file2.sbr file3.sbr file4.sbr
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de BSCMAKE](../../build/reference/bscmake-reference.md)
+[Referencia de BSCMAKE](bscmake-reference.md)

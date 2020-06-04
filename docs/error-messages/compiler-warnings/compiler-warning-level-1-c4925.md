@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4925
 ms.assetid: a4b206c0-016a-4f28-873a-bb8bb41bad50
-ms.openlocfilehash: cb7b416fe15380dc914bd57152e8a0ce3618ee85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: defd60d02a8725b114b3901f8d70af87e27445c4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614570"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174640"
 ---
 # <a name="compiler-warning-level-1-c4925"></a>Advertencia del compilador (nivel 1) C4925
 
@@ -23,7 +23,7 @@ Otra manera de resolver esta advertencia es no convertir el parámetro (en la de
 
 El ejemplo siguiente genera la advertencia C4925:
 
-```
+```cpp
 // C4925.cpp
 // compile with: /LD /W1
 #define _ATL_ATTRIBUTES 1

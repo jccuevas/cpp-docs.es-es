@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: 2c2d2f2598d06ca228a96f2786fcb02888e29a1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530903"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758494"
 ---
 # <a name="compiler-error-c3918"></a>Error del compilador C3918
 
-uso requiere que 'miembro' sea un miembro de datos
+el uso requiere que ' Member ' sea un miembro de datos
 
-C3918 puede producirse por varias razones relacionadas con eventos.
+C3918 puede producirse por varias razones relacionadas con los eventos.
 
 ## <a name="example"></a>Ejemplo
 
-C3918 puede producirse porque falta un miembro de clase en el contexto actual. El ejemplo siguiente genera C3918.
+C3918 puede producirse porque se requiere un miembro de clase en el contexto actual. En el ejemplo siguiente se genera C3918.
 
-```
+```cpp
 // C3918.cpp
 // compile with: /clr /c
 public ref class C {
@@ -43,11 +43,11 @@ public:
 
 ## <a name="example"></a>Ejemplo
 
-C3918 también se produce si intenta comprobar un evento trivial es null (el nombre del evento dejará de proporcionar acceso directo al delegado de almacén de respaldo para el evento).
+C3918 también se produce si se intenta comprobar si hay un evento trivial para null (el nombre del evento ya no proporcionará acceso directo al delegado de la memoria auxiliar para el evento).
 
-El ejemplo siguiente genera C3918.
+En el ejemplo siguiente se genera C3918.
 
-```
+```cpp
 // C3918_2.cpp
 // compile with: /clr /c
 using namespace System;
@@ -68,9 +68,9 @@ ref struct EventSource : public IEFace {
 
 ## <a name="example"></a>Ejemplo
 
-C3918 también puede producirse si se suscribe incorrectamente a un evento. El ejemplo siguiente genera C3918.
+C3918 también se puede producir si se suscribe incorrectamente a un evento. En el ejemplo siguiente se genera C3918.
 
-```
+```cpp
 // C3918_3.cpp
 // compile with: /clr /c
 using namespace System;

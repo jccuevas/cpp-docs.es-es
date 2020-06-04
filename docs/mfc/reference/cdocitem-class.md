@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-ms.openlocfilehash: cf854bbc99ebeee55ae130b747c77fd7fe52f8d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438bc2a03239946dbfca53d5f2989c731b682ab0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437108"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375618"
 ---
 # <a name="cdocitem-class"></a>CDocItem (clase)
 
@@ -31,16 +31,16 @@ class CDocItem : public CCmdTarget
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDocItem::GetDocument](#getdocument)|Devuelve el documento que contiene el elemento.|
-|[CDocItem::IsBlank](#isblank)|Determina si el elemento contiene toda la información.|
+|[CDocItem::IsBlank](#isblank)|Determina si el elemento contiene información.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CDocItem` los objetos se utilizan para representar los elementos OLE en documentos de cliente y servidor.
+`CDocItem`los objetos se utilizan para representar elementos OLE en documentos de cliente y servidor.
 
-Para obtener más información, vea el artículo [contenedores: implementar un contenedor](../../mfc/containers-implementing-a-container.md).
+Para obtener más información, vea el artículo [Contenedores: implementar un contenedor](../../mfc/containers-implementing-a-container.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -54,7 +54,7 @@ Para obtener más información, vea el artículo [contenedores: implementar un c
 
 **Encabezado:** afxole.h
 
-##  <a name="getdocument"></a>  CDocItem::GetDocument
+## <a name="cdocitemgetdocument"></a><a name="getdocument"></a>CDocItem::GetDocument
 
 Llame a esta función para obtener el documento que contiene el elemento.
 
@@ -64,15 +64,15 @@ CDocument* GetDocument() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al documento que contiene el elemento; Es NULL, si el elemento no forma parte de un documento.
+Un puntero al documento que contiene el elemento; NULL, si el elemento no forma parte de un documento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta función se reemplaza en las clases derivadas [COleClientItem](../../mfc/reference/coleclientitem-class.md) y [COleServerItem](../../mfc/reference/coleserveritem-class.md), devuelve un puntero a la ya sea un [COleDocument](../../mfc/reference/coledocument-class.md), un [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), o un [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) objeto.
+Esta función se reemplaza en las clases derivadas [COleClientItem](../../mfc/reference/coleclientitem-class.md) y [COleServerItem](../../mfc/reference/coleserveritem-class.md), devolviendo un puntero a un [COleDocument](../../mfc/reference/coledocument-class.md), un [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), o un [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) objeto.
 
-##  <a name="isblank"></a>  CDocItem::IsBlank
+## <a name="cdocitemisblank"></a><a name="isblank"></a>CDocItem::IsBlank
 
-Lo llama el marco de trabajo cuando se produce la serialización predeterminada.
+Llamado por el marco de trabajo cuando se produce la serialización predeterminada.
 
 ```
 virtual BOOL IsBlank() const;
@@ -80,18 +80,18 @@ virtual BOOL IsBlank() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el elemento no contiene ninguna información; en caso contrario, es 0.
+Distinto de cero si el elemento no contiene información; de lo contrario 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, `CDocItem` objetos no están en blanco. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objetos a veces están en blanco, dado que proceden directamente de `CDocItem`. Sin embargo, [COleServerItem](../../mfc/reference/coleserveritem-class.md) objetos siempre están en blanco. De forma predeterminada, que contiene las aplicaciones OLE `COleClientItem` objetos que no tienen ningún x o y extensión se serializan. Esto se hace devolviendo TRUE desde un reemplazo de `IsBlank` cuando el elemento no tiene ningún x o y extensión.
+De forma `CDocItem` predeterminada, los objetos no están en blanco. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objetos a veces `CDocItem`están en blanco porque derivan directamente de . Sin embargo, [COleServerItem](../../mfc/reference/coleserveritem-class.md) objetos siempre están en blanco. De forma predeterminada, `COleClientItem` se serializan las aplicaciones OLE que contienen objetos que no tienen ninguna extensión x o y. Esto se hace devolviendo TRUE `IsBlank` de una invalidación de cuando el elemento no tiene ninguna extensión x o y.
 
-Reemplace esta función si desea implementar otras acciones durante la serialización.
+Invalide esta función si desea implementar otras acciones durante la serialización.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[COleDocument (clase)](../../mfc/reference/coledocument-class.md)<br/>
+[COleDocument (Clase)](../../mfc/reference/coledocument-class.md)<br/>
 [COleServerItem (clase)](../../mfc/reference/coleserveritem-class.md)<br/>
-[COleClientItem (clase)](../../mfc/reference/coleclientitem-class.md)
+[Clase COleClientItem](../../mfc/reference/coleclientitem-class.md)

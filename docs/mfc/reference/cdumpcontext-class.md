@@ -1,5 +1,5 @@
 ---
-title: CDumpContext (clase)
+title: Clase CDumpContext
 ms.date: 11/04/2016
 f1_keywords:
 - CDumpContext
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: 391804d05800e3979add7bee6342308de4253602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668824"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753215"
 ---
-# <a name="cdumpcontext-class"></a>CDumpContext (clase)
+# <a name="cdumpcontext-class"></a>Clase CDumpContext
 
 Admite resultados de diagnóstico orientados a secuencia en forma de texto legible.
 
@@ -39,47 +39,47 @@ class CDumpContext
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDumpContext::CDumpContext](#cdumpcontext)|Construye un objeto `CDumpContext`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDumpContext::DumpAsHex](#dumpashex)|Vuelca el elemento indicado en formato hexadecimal.|
-|[CDumpContext::Flush](#flush)|Vacía los datos en el búfer de contexto de volcado de memoria.|
-|[CDumpContext::GetDepth](#getdepth)|Obtiene un entero que corresponde a la profundidad del volcado de memoria.|
-|[CDumpContext::HexDump](#hexdump)|Los volcados de bytes que contiene una matriz en formato hexadecimal.|
-|[CDumpContext::SetDepth](#setdepth)|Establece la profundidad del volcado de memoria.|
+|[CDumpContext::Flush](#flush)|Vacía los datos del búfer de contexto de volcado.|
+|[CDumpContext::GetDepth](#getdepth)|Obtiene un entero correspondiente a la profundidad del volcado.|
+|[CDumpContext::HexDump](#hexdump)|Vuelca bytes contenidos en una matriz en formato hexadecimal.|
+|[CDumpContext::SetDepth](#setdepth)|Establece la profundidad del volcado.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|Inserta las variables y objetos en el contexto de volcado de memoria.|
+|[CDumpContext::operator&lt;&lt;](#operator_lt_lt)|Inserta variables y objetos en el contexto de volcado.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CDumpContext` no tiene una clase base.
+`CDumpContext`no tiene una clase base.
 
-Puede usar [afxDump](diagnostic-services.md#afxdump), un predeclarados `CDumpContext` objeto para la mayor parte de su proceso de volcado. La `afxDump` objeto solo está disponible en la versión de depuración de la biblioteca Microsoft Foundation Class.
+Puede usar [afxDump](diagnostic-services.md#afxdump), `CDumpContext` un objeto declarado previamente, para la mayor parte del volcado. El `afxDump` objeto solo está disponible en la versión de depuración de la biblioteca Microsoft Foundation Class.
 
-Varios de la memoria [servicios de diagnóstico](../../mfc/reference/diagnostic-services.md) usar `afxDump` para su salida.
+Varios de los servicios `afxDump` de [diagnóstico](../../mfc/reference/diagnostic-services.md) de memoria utilizan para su salida.
 
-En el entorno de Windows, la salida de predefinido `afxDump` objeto, conceptualmente similar a la `cerr` de flujo, se enruta al depurador mediante la función de Windows `OutputDebugString`.
+En el entorno de Windows, `afxDump` la salida del objeto `cerr` predefinido, conceptualmente similar a `OutputDebugString`la secuencia, se enruta al depurador a través de la función Windows.
 
-El `CDumpContext` clase tiene una inserción sobrecargada ( **<<**) operador para `CObject` punteros que vuelque los datos del objeto. Si tiene un formato de volcado de memoria personalizado para un objeto derivado, invalidar [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Implementa un invalidado la mayoría de las clases de Microsoft Foundation `Dump` función miembro.
+La `CDumpContext` clase tiene un **<<** operador de `CObject` inserción sobrecargado ( ) para punteros que vuelcan los datos del objeto. Si necesita un formato de volcado personalizado para un objeto derivado, reemplace [CObject::Dump](../../mfc/reference/cobject-class.md#dump). La mayoría de las `Dump` clases de Microsoft Foundation implementan una función miembro invalidada.
 
-Las clases que no se derivan `CObject`, tales como `CString`, `CTime`, y `CTimeSpan`, tienen sus propios sobrecargado `CDumpContext` operadores de inserción, como estructuras utilizadas con frecuencia, como `CFileStatus`, `CPoint`, y `CRect`.
+Las clases que `CObject`no se `CString` `CTime`derivan `CTimeSpan`de , como `CDumpContext` , , y , tienen sus `CFileStatus`propios operadores de inserción sobrecargados, al igual que las estructuras de uso frecuente como , `CPoint`, y `CRect`.
 
-Si usas el [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) o [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro en la implementación de la clase, a continuación, `CObject::Dump` imprimirá el nombre de su `CObject`-clase derivada. En caso contrario, imprimirá `CObject`.
+Si utiliza la [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) o [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro en `CObject::Dump` la implementación de `CObject`la clase, imprimirá el nombre de la clase derivada. De lo contrario, se imprimirá `CObject`.
 
-El `CDumpContext` clase está disponible con las versiones de depuración y lanzamiento de la biblioteca, pero la `Dump` función miembro solo se define en la versión de depuración. Use **#ifdef _DEBUG**  /  `#endif` instrucciones para poner entre corchetes del código de diagnóstico, incluidas personalizado `Dump` funciones miembro.
+La `CDumpContext` clase está disponible con las versiones Debug `Dump` y Release de la biblioteca, pero la función miembro solo se define en la versión de depuración. Utilice **#ifdef _DEBUG**  /  `#endif` instrucciones para poner entre `Dump` corchetes el código de diagnóstico, incluidas las funciones miembro personalizadas.
 
-Antes de crear su propio `CDumpContext` objeto, debe crear un `CFile` objeto que actúa como el destino de volcado de memoria.
+Antes de crear `CDumpContext` su propio objeto, debe crear un `CFile` objeto que sirva como destino de volcado.
 
-Para obtener más información sobre `CDumpContext`, consulte [depurar aplicaciones de MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Para obtener `CDumpContext`más información sobre , vea [Depuración de aplicaciones MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 **#define _DEBUG**
 
@@ -91,9 +91,9 @@ Para obtener más información sobre `CDumpContext`, consulte [depurar aplicacio
 
 **Encabezado:** afx.h
 
-##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext
 
-Crea un objeto de clase `CDumpContext`.
+Construye un objeto `CDumpContext`de clase .
 
 ```
 CDumpContext(CFile* pFile = NULL);
@@ -102,19 +102,19 @@ CDumpContext(CFile* pFile = NULL);
 ### <a name="parameters"></a>Parámetros
 
 *pFile*<br/>
-Un puntero a la `CFile` objeto que constituye el destino de volcado de memoria.
+Puntero al `CFile` objeto que es el destino de volcado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La `afxDump` objeto se crea automáticamente.
+El `afxDump` objeto se construye automáticamente.
 
-No escriba subyacente `CFile` mientras el contexto de volcado de memoria está activo; en caso contrario, ya que interferiría con la información del volcado. En el entorno de Windows, se enruta la salida al depurador mediante la función de Windows `OutputDebugString`.
+No escriba en el `CFile` subyacente mientras el contexto de volcado está activo; de lo contrario, usted interferirá con el basurero. En el entorno de Windows, la salida se `OutputDebugString`enruta al depurador a través de la función de Windows.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex
 
 Vuelca el tipo especificado con formato de números hexadecimales.
 
@@ -133,19 +133,19 @@ CDumpContext& DumpAsHex(WORD w);
 
 Referencia a un objeto `CDumpContext`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a esta función miembro para el elemento del tipo especificado como un número hexadecimal de volcado de memoria. Para volcar una matriz, llame a [CDumpContext::HexDump](#hexdump).
+Llame a esta función miembro para volcar el elemento del tipo especificado como un número hexadecimal. Para volcar una matriz, llame a [CDumpContext::HexDump](#hexdump).
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-##  <a name="flush"></a>  CDumpContext::Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Flush
 
-Obliga a los datos que quedan en los búferes se escriban en el archivo adjunto en el contexto de volcado.
+Obliga a que los datos que queden en los búferes se escriban en el archivo adjunto al contexto de volcado.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -153,7 +153,7 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-##  <a name="getdepth"></a>  CDumpContext::GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth
 
 Determina si un volcado profundo o superficial está en proceso.
 
@@ -163,17 +163,17 @@ int GetDepth() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La profundidad del volcado de memoria según lo establecido por `SetDepth`.
+La profundidad del volcado `SetDepth`establecida por .
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [SetDepth](#setdepth).
+  Consulte el ejemplo [de SetDepth](#setdepth).
 
-##  <a name="hexdump"></a>  CDumpContext::HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump
 
-Volcados de memoria de una matriz de bytes con formato de números hexadecimales.
+Vuelca una matriz de bytes con formato de números hexadecimales.
 
-```
+```cpp
 void HexDump(
     LPCTSTR lpszLine,
     BYTE* pby,
@@ -184,28 +184,28 @@ void HexDump(
 ### <a name="parameters"></a>Parámetros
 
 *lpszLine*<br/>
-Una cadena en la salida del principio de una nueva línea.
+Una cadena para generar al principio de una nueva línea.
 
-*pby*<br/>
-Un puntero a un búfer que contiene los bytes que se va a volcar.
+*Pby*<br/>
+Puntero a un búfer que contiene los bytes que se van a volcar.
 
 *nBytes*<br/>
-El número de bytes para volcar.
+El número de bytes que se van a volcar.
 
-*nWidth*<br/>
-Vuelca el número máximo de bytes por línea (no el ancho de la línea de salida).
+*nAncho*<br/>
+Número máximo de bytes volcados por línea (no el ancho de la línea de salida).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para volcar un tipo de elemento único y específico como un número hexadecimal, llame a [CDumpContext::DumpAsHex](#dumpashex).
+Para volcar un único tipo de elemento específico como un número hexadecimal, llame a [CDumpContext::DumpAsHex](#dumpashex).
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;
 
-Genera los datos especificados en el contexto de volcado.
+Produce los datos especificados en el contexto de volcado.
 
 ```
 CDumpContext& operator<<(const CObject* pOb);
@@ -233,23 +233,23 @@ CDumpContext& operator<<(HFONT h);
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un `CDumpContext` referencia. El valor devuelto puede escribir varias inserciones en una sola línea de código fuente.
+Referencia `CDumpContext`. Con el valor devuelto, puede escribir varias inserciones en una sola línea de código fuente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Se sobrecarga el operador de inserción para `CObject` punteros, así como para los tipos más primitivos. Un puntero al carácter da como resultado un volcado del contenido de cadena; un puntero a **void** da como resultado un volcado hexadecimal de la dirección solo. Un LONGLONG da como resultado un volcado de memoria de un entero con signo de 64 bits; ULONGLONG da como resultado un volcado de memoria de un entero de 64 bits sin signo.
+El operador de inserción está sobrecargado para `CObject` punteros, así como para la mayoría de los tipos primitivos. Un puntero a carácter da como resultado un volcado de contenido de cadena; un puntero a **void** da como resultado un volcado hexadecimal de la dirección solamente. Un LONGLONG da como resultado un volcado de un entero de 64 bits con signo; Un ULONGLONG da como resultado un volcado de un entero sin signo de 64 bits.
 
-Si usa la macro IMPLEMENT_DYNAMIC o IMPLEMENT_SERIAL en la implementación de la clase y, a continuación, el operador de inserción a través de `CObject::Dump`, imprimirá el nombre de su `CObject`-clase derivada. En caso contrario, imprimirá `CObject`. Si invalida el `Dump` función de la clase, a continuación, puede proporcionar una salida más significativa de contenido del objeto en lugar de un volcado hexadecimal.
+Si utiliza la IMPLEMENT_DYNAMIC o IMPLEMENT_SERIAL macro en la implementación `CObject::Dump`de la clase, `CObject`el operador de inserción, a través de , imprimirá el nombre de la clase derivada. De lo contrario, se imprimirá `CObject`. Si invalida `Dump` la función de la clase, puede proporcionar una salida más significativa del contenido del objeto en lugar de un volcado hexadecimal.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-##  <a name="setdepth"></a>  CDumpContext::SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::SetDepth
 
-Establece la profundidad para el volcado de memoria.
+Establece la profundidad del volcado.
 
-```
+```cpp
 void SetDepth(int nNewDepth);
 ```
 
@@ -258,19 +258,19 @@ void SetDepth(int nNewDepth);
 *nNewDepth*<br/>
 El nuevo valor de profundidad.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si el volcado de un tipo primitivo o simple `CObject` que no contiene punteros a otros objetos, a continuación, basta con un valor de 0. Un valor mayor que 0 especifica un volcado de memoria detallado donde todos los objetos están volcadas de forma recursiva. Por ejemplo, un volcado de profundidad de una colección volcará todos los elementos de la colección. Puede usar otros valores específicos de profundidad en sus clases derivadas.
+Si va a volcar un `CObject` tipo primitivo o simple que no contiene punteros a otros objetos, un valor de 0 es suficiente. Un valor mayor que 0 especifica un volcado profundo donde todos los objetos se vuelcan recursivamente. Por ejemplo, un volcado profundo de una colección volque todos los elementos de la colección. Puede utilizar otros valores de profundidad específicos en las clases derivadas.
 
 > [!NOTE]
->  Las referencias circulares no se detectan en profundidad volcados de memoria y pueden dar lugar a bucles infinitos.
+> Las referencias circulares no se detectan en volcados profundos y pueden dar lugar a bucles infinitos.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CFile (clase)](../../mfc/reference/cfile-class.md)<br/>
-[CObject (clase)](../../mfc/reference/cobject-class.md)
+[Clase CObject](../../mfc/reference/cobject-class.md)

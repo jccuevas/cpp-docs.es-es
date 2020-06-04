@@ -1,5 +1,5 @@
 ---
-title: automatización
+title: Automation
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers, about Automation servers
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: de376c6c5ab2be0da5f6b9495c6adb61e19d6622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572762"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370822"
 ---
-# <a name="automation"></a>automatización
+# <a name="automation"></a>Automation
 
 La automatización (antes conocida como automatización OLE) permite que una aplicación manipule objetos implementados en otra aplicación o exponga objetos para que se puedan manipular.
 
@@ -37,7 +37,7 @@ Los servidores y clientes de automatización usan interfaces COM que se derivan 
 
 - Automatización (local).
 
-- Automatización remota (a través de una red, mediante COM distribuido o DCOM).
+- Automatización remota (a través de una red, mediante COM distribuido, o DCOM).
 
 La exposición de objetos es beneficiosa si las aplicaciones proporcionan funcionalidad útil para otras aplicaciones. Por ejemplo, un control ActiveX es un tipo de servidor de automatización; la aplicación que hospeda el control ActiveX es el cliente de automatización de ese control.
 
@@ -45,29 +45,29 @@ Como otro ejemplo, un procesador de textos podría exponer su funcionalidad de r
 
 Más importante es la compatibilidad que la automatización proporciona a los usuarios y a los proveedores de soluciones. Al exponer la funcionalidad de la aplicación mediante una interfaz común bien definida, la automatización permite generar soluciones completas en un único lenguaje de programación general, como Microsoft Visual Basic, en lugar de en lenguajes distintos de macro específicos de la aplicación.
 
-Muchas aplicaciones comerciales, como Microsoft Excel y Microsoft Visual C++, permiten automatizar gran parte de su funcionalidad. Por ejemplo, en Visual C++, puede escribir macros de VBScript para automatizar las compilaciones, aspectos de edición o tareas de depuración de código.
+Muchas aplicaciones comerciales, como Microsoft Excel y Microsoft Visual C++, permiten automatizar gran parte de su funcionalidad. Por ejemplo, en Visual C++, puede escribir macros de VBScript para automatizar compilaciones, aspectos de edición de código o tareas de depuración.
 
-##  <a name="_core_passing_parameters_in_automation"></a> Pasar parámetros en la automatización
+## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> Pasar parámetros en la automatización
 
-Una dificultad a la hora de crear métodos de automatización es ayudar a proporcionar un mecanismo uniforme "seguro" para pasar datos entre clientes y servidores de automatización. La automatización usa el tipo **VARIANT** para pasar datos. El tipo **VARIANT** es una unión etiquetada. Tiene un miembro de datos para el valor (es decir, una unión anónima C++) y un miembro de datos que indica el tipo de información almacenada en la unión. El tipo **VARIANT** admite varios tipos de datos estándar: enteros de 2 y 4 bytes, números de punto flotante de 4 y 8 bytes, cadenas y valores booleanos. Además, admite la **HRESULT** (códigos de error OLE), **moneda** (un tipo numérico punto fijo), y **fecha** tipos (fecha y hora absolutas), así como punteros a `IUnknown` y `IDispatch` interfaces.
+Una dificultad a la hora de crear métodos de automatización es ayudar a proporcionar un mecanismo uniforme "seguro" para pasar datos entre clientes y servidores de automatización. La automatización usa el tipo **VARIANT** para pasar datos. El tipo **VARIANT** es una unión etiquetada. Tiene un miembro de datos para el valor (es decir, una unión anónima C++) y un miembro de datos que indica el tipo de información almacenada en la unión. El tipo **VARIANT** admite varios tipos de datos estándar: enteros de 2 y 4 bytes, números de punto flotante de 4 y 8 bytes, cadenas y valores booleanos. Además, admite los tipos **HRESULT** (códigos de error OLE), **CURRENCY** (un tipo numérico de punto `IUnknown` fijo) y **DATE** (fecha y hora absolutas), así como punteros e `IDispatch` interfaces.
 
 El tipo **VARIANT** se encapsula en la clase [COleVariant](../mfc/reference/colevariant-class.md) . Las clases auxiliares **CURRENCY** y **DATE** están encapsuladas en las clases [COleCurrency](../mfc/reference/colecurrency-class.md) y [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .
 
 ## <a name="automation-samples"></a>Ejemplos de automatización
 
-- [AUTOCLIK](../visual-cpp-samples.md) Use este ejemplo para aprender técnicas de automatización y como base para aprender sobre automatización remota.
+- [AUTOCLIK](../overview/visual-cpp-samples.md) Use este ejemplo para aprender técnicas de automatización y como base para aprender sobre automatización remota.
 
-- [ACDUAL](../visual-cpp-samples.md) Agrega interfaces duales a una aplicación de servidor de automatización.
+- [ACDUAL](../overview/visual-cpp-samples.md) Agrega interfaces duales a una aplicación de servidor de automatización.
 
-- [CALCDRIV](../visual-cpp-samples.md) Aplicación de cliente de automatización que controla MFCCALC.
+- [CALCDRIV](../overview/visual-cpp-samples.md) Aplicación de cliente de automatización que controla MFCCALC.
 
-- [INPROC](../visual-cpp-samples.md) Ilustra una aplicación de servidor de automatización en proceso.
+- [INPROC](../overview/visual-cpp-samples.md) Ilustra una aplicación de servidor de automatización en proceso.
 
-- [IPDRIVE](../visual-cpp-samples.md) Aplicación de cliente de automatización que controla INPROC.
+- [IPDRIVE](../overview/visual-cpp-samples.md) Aplicación de cliente de automatización que controla INPROC.
 
-- [MFCCALC](../visual-cpp-samples.md) Muestra una aplicación de cliente de automatización.
+- [MFCCALC](../overview/visual-cpp-samples.md) Muestra una aplicación de cliente de automatización.
 
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué quieres saber más sobre
 
 - [Clientes de automatización](../mfc/automation-clients.md)
 
@@ -77,7 +77,7 @@ El tipo **VARIANT** se encapsula en la clase [COleVariant](../mfc/reference/cole
 
 - [tecnología activa](../mfc/mfc-com.md)
 
-## <a name="what-do-you-want-to-do"></a>Qué quieres hacer
+## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
 - [Agregar una clase de automatización](../mfc/automation-servers.md)
 
@@ -87,6 +87,6 @@ El tipo **VARIANT** se encapsula en la clase [COleVariant](../mfc/reference/cole
 
 - [Escribir clientes de automatización en C++](../mfc/automation-clients.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [MFC COM](../mfc/mfc-com.md)

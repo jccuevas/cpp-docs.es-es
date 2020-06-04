@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-ms.openlocfilehash: 1036a3756a736ee3916ed9fca84aa935bb0ba2cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80592a6fca274533a798b2f5a2459d336ee2c301
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666195"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452734"
 ---
 # <a name="isdestructible-class"></a>Clase is_destructible
 
@@ -26,12 +26,12 @@ struct is_destructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* puede destruir tipo es, en caso contrario, es false. Los tipos que se pueden destruir son tipos de referencia, tipos de objetos y tipos en los que para algún tipo `U` igual a `remove_all_extents_t<T>` el operando no evaluado `std::declval<U&>.~U()` tiene un formato correcto. Otros tipos, incluidos los tipos incompletos, **void**y tipos de función, no se pueden destruir.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo puede destruir; en caso contrario, contiene false. Los tipos que se pueden destruir son tipos de referencia, tipos de objetos y tipos en los que para algún tipo `U` igual a `remove_all_extents_t<T>` el operando no evaluado `std::declval<U&>.~U()` tiene un formato correcto. Otros tipos, incluidos los tipos incompletos, **void**y los tipos de función, no son tipos puede destruir.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Una instancia del predicado de tipo contiene true si el tipo *T* puede destruir 
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

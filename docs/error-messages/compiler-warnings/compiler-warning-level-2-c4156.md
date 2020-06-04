@@ -1,29 +1,29 @@
 ---
-title: Compilador advertencia (nivel 2) C4156
+title: ADVERTENCIA del compilador (nivel 2) C4156
 ms.date: 11/04/2016
 f1_keywords:
 - C4156
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: 7d9a4ed09f026267e2c0f37fbbe4550ecd668dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9add4af0fddf8d68bbba0293530f2bb0ce3800d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514431"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162093"
 ---
-# <a name="compiler-warning-level-2-c4156"></a>Compilador advertencia (nivel 2) C4156
+# <a name="compiler-warning-level-2-c4156"></a>ADVERTENCIA del compilador (nivel 2) C4156
 
-eliminación de una expresión de matriz sin utilizar el formato de matriz de 'delete'; formato de matriz sustituido
+eliminación de una expresión de matriz sin utilizar el formato de matriz de ' delete '; formulario de matriz sustituido
 
-La forma que no son de matriz de **eliminar** no se puede eliminar una matriz. El compilador traducía **eliminar** a la forma de matriz.
+La forma de **eliminación** que no es de matriz no puede eliminar una matriz. El compilador ha traducido **Delete** al formulario de la matriz.
 
-Esta advertencia se produce solo en las extensiones de Microsoft (/Ze).
+Esta advertencia solo se produce en las extensiones de Microsoft (/ZE).
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4156.cpp
 // compile with: /W2
 int main()

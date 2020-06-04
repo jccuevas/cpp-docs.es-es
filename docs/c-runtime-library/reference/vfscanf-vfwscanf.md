@@ -1,10 +1,10 @@
 ---
 title: vfscanf, vfwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfwscanf
 - vfscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 3076f63e05e156a479372adfca9dc707255f9e6a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521510"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945523"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -49,7 +52,7 @@ int vfwscanf(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*stream*<br/>
 Puntero a la estructura **FILE**.
 
 *format*<br/>
@@ -62,13 +65,13 @@ Lista de argumentos de variable.
 
 Cada una de estas funciones devuelve el número de campos que se convierten y asignan correctamente; el valor devuelto no incluye los campos leídos pero no asignados. Un valor devuelto de 0 indica que no se ha asignado ningún campo. Si se produce un error, o si se alcanza el final de la secuencia de archivo antes de la primera conversión, el valor devuelto es **EOF** para **vfscanf** y **vfwscanf**.
 
-Estas funciones validan sus parámetros. Si *secuencia* o *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
+Estas funciones validan sus parámetros. Si *Stream* o *Format* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecen **errno** en **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **vfscanf** función lee los datos de la posición actual del *secuencia* en las ubicaciones que proporcionan el *arglist* lista de argumentos. Cada argumento de la lista debe ser un puntero a una variable de un tipo que se corresponde con un especificador de tipo en *formato*. *formato* controla la interpretación de la entrada campos y tiene el mismo formato y función que el *formato* argumento para **scanf**; vea [scanf](scanf-scanf-l-wscanf-wscanf-l.md) para un Descripción de *formato*.
+La función **vfscanf** lee datos de la posición actual de la *secuencia* en las ubicaciones que proporciona la lista de argumentos *arglist* . Cada argumento de la lista debe ser un puntero a una variable de un tipo que se corresponda con un especificador de tipo en *formato*. el *formato* controla la interpretación de los campos de entrada y tiene el mismo formato y función que el argumento de *formato* para **scanf**; vea [scanf](scanf-scanf-l-wscanf-wscanf-l.md) para obtener una descripción del *formato*.
 
-**vfwscanf** es una versión con caracteres anchos de **vfscanf**; el argumento format para **vfwscanf** es una cadena de caracteres anchos. Estas funciones se comportan igual si el flujo se abre en modo ANSI. **vfscanf** no admite la entrada desde un flujo UNICODE.
+**vfwscanf** es una versión con caracteres anchos de **vfscanf**; el argumento de formato para **vfwscanf** es una cadena de caracteres anchos. Estas funciones se comportan igual si el flujo se abre en modo ANSI. **vfscanf** no admite la entrada de una secuencia Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

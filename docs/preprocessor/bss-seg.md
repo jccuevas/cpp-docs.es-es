@@ -1,6 +1,6 @@
 ---
-title: bss_seg
-ms.date: 10/22/2018
+title: bss_seg (Pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.bss_seg
 - bss_seg_CPP
@@ -8,51 +8,52 @@ helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a343fb45b4bbe4789f38b7a1102572cf4241ec53
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566314"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218548"
 ---
-# <a name="bssseg"></a>bss_seg
+# <a name="bss_seg-pragma"></a>bss_seg (Pragma)
 
-Especifica el segmento en el que las variables sin inicializar se almacenan en el archivo .obj.
+Especifica la sección (segmento) en la que se almacenan las variables sin inicializar en el archivo objeto (. obj).
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-#pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma bss_seg (** ["*section-Name*" [ **,** "*section-Class*"]] **)** \
+> **#pragma bss_seg (** { **inserte** | **pop** } [ **,** *Identifier* ] [ **,** "*section-Name*" [ **,** "*section-Class*"]] **)**
 
 ### <a name="parameters"></a>Parámetros
 
-**push**<br/>
-(Opcional) Inserta un registro en la pila interna del compilador. Un *pu*sh * puede tener un *identificador* y *nombre de segmento*.
+**enviar**\
+Opta Coloca un registro en la pila interna del compilador. Una **inserciones** puede tener un *identificador* y un *nombre de sección*.
 
-**pop**<br/>
-(Opcional) Quita un registro de la parte superior de la pila interna del compilador.
+**emergente**\
+Opta Quita un registro de la parte superior de la pila interna del compilador. Un **pop** puede tener un *identificador* y un *nombre de sección*. Puede extraer varios registros con un solo comando **pop** mediante el *identificador*. La *sección-Name* se convierte en el nombre de la sección de BSS activa después del pop.
 
-*identifier*<br/>
-(Opcional) Cuando se usa con **inserción**, asigna un nombre para el registro en la pila interna del compilador. *identificador* permite varios registros que se saque con una sola **pop** comando. Cuando se usa con **pop**, la directiva extrae los registros de la pila interna hasta *identificador* se quita; si *identificador* no se encuentra en la pila interna, no hay nada extrae.
+*identificador*\
+Opta Cuando se usa con la **extracción**, asigna un nombre al registro en la pila interna del compilador. Cuando se usa con **pop**, la Directiva extrae los registros de la pila interna hasta que se quita el *identificador* . Si no se encuentra el *identificador* en la pila interna, no se extrae nada.
 
-*"segment-name"*<br/>
-(Opcional) El nombre de un segmento. Cuando se usa con **pop**, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.
+*"Section-name"* \
+Opta Nombre de una sección. Cuando se usa con **pop**, se extrae la pila y *section-Name* se convierte en el nombre de la sección de BSS activa.
 
-*"segmento-class"*<br/>
-(Opcional) Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.
+*"Section-Class"* \
+Opta Se omite, pero se incluye por compatibilidad con versiones C++ de Microsoft anteriores a la versión 2,0.
 
 ## <a name="remarks"></a>Comentarios
 
-. Archivos obj pueden verse con el [dumpbin](../build/reference/dumpbin-command-line.md) aplicación. El segmento predeterminado del archivo .obj para los datos sin inicializar es .bss. En algunos casos de uso de **bss_seg** puede acelerar tiempos de carga mediante la agrupación de datos sin inicializar en una sección.
+Una *sección* de un archivo objeto es un bloque de datos con nombre que se carga en la memoria como una unidad. Una *sección de BSS* es una sección que contiene datos no inicializados. En este artículo, los términos *segmento* y *sección* tienen el mismo significado.
 
-**bss_seg** sin parámetros restablece el segmento a. BSS.
+La Directiva pragma **bss_seg** indica al compilador que Coloque todos los elementos de datos no inicializados de la unidad de traducción en una sección de BSS denominada *section-Name*. En algunos casos, el uso de **bss_seg** puede acelerar los tiempos de carga agrupando los datos no inicializados en una sección. De forma predeterminada, la sección de BSS utilizada para los datos no inicializados en un archivo `.bss`objeto se denomina. Una directiva pragma **bss_seg** sin un parámetro *section-Name* restablece el nombre de la sección de BSS para los elementos de datos no inicializados subsiguientes en `.bss`.
 
-Los datos asignados mediante el **bss_seg** pragma no conservan información sobre su ubicación.
+Los datos asignados mediante la pragma **bss_seg** no conservan ninguna información sobre su ubicación.
 
-También puede especificar secciones para datos inicializados ([data_seg](../preprocessor/data-seg.md)), las funciones ([code_seg](../preprocessor/code-seg.md)) y las variables const ([const_seg](../preprocessor/const-seg.md)).
+Para obtener una lista de los nombres que no se deben usar para crear una sección, vea [/section](../build/reference/section-specify-section-attributes.md).
 
-Consulte [/SECTION](../build/reference/section-specify-section-attributes.md) para obtener una lista de los nombres no debe utilizar cuando cree una sección.
+También puede especificar secciones para los datos inicializados ([data_seg](../preprocessor/data-seg.md)), las funciones ([code_seg](../preprocessor/code-seg.md)) y las variables const ([const_seg](../preprocessor/const-seg.md)).
+
+Puede usar [dumpbin. Aplicación EXE](../build/reference/dumpbin-command-line.md) para ver los archivos de objeto. Las versiones de DUMPBIN para cada arquitectura de destino compatible se incluyen con Visual Studio.
 
 ## <a name="example"></a>Ejemplo
 
@@ -74,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

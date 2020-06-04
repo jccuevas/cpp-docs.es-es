@@ -8,12 +8,12 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: 5f46d55dc3898fdf5fede075a0d44f04a9f8326a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325866"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189031"
 ---
 # <a name="explicit-overrides-c"></a>Invalidaciones explícitas (C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "51325866"
 
 Si la misma función virtual se declara en dos o más [interfaces](../cpp/interface.md) y si una clase se deriva de estas interfaces, puede invalidar explícitamente cada función virtual.
 
-Para obtener información sobre explícita se invalida en código administrado mediante la nueva sintaxis administrada, consulte [invalidaciones explícitas](../windows/explicit-overrides-cpp-component-extensions.md).
+Para obtener información sobre las invalidaciones explícitas en C++código administrado con/CLI, vea [invalidaciones explícitas](../extensions/explicit-overrides-cpp-component-extensions.md).
 
 **FIN de Específicos de Microsoft**
 
@@ -119,6 +119,6 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Herencia](../cpp/inheritance-cpp.md)

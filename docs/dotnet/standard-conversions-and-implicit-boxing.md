@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - boxing, implicit
 ms.assetid: 33f7fc7d-5674-44a2-a859-0e6a04fae519
-ms.openlocfilehash: 086de06159b8d9195b4a4a275af8a95f56a46ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc2c804474be55a9aea7d590abb1e0ac2b72ad90
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438022"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545148"
 ---
 # <a name="standard-conversions-and-implicit-boxing"></a>Conversiones estándar y conversión boxing implícita
 
-El compilador elegirá una conversión estándar a través de una conversión que requiere la conversión boxing.
+El compilador elegirá una conversión estándar a través de una conversión que requiere conversión boxing.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // clr_implicit_boxing_Std_conversion.cpp
 // compile with: /clr
 int f3(int ^ i) {   // requires boxing
@@ -38,6 +38,6 @@ int main() {
 2
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Conversión boxing](../windows/boxing-cpp-component-extensions.md)
+[Conversión boxing](../extensions/boxing-cpp-component-extensions.md)

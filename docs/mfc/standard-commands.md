@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Help [MFC], menus
 - programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
-ms.openlocfilehash: fa98a250e6f9de3005cf4978fe66689363865879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 987023322e38584d10901c1ab1fe20ac46926bd2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307164"
 ---
 # <a name="standard-commands"></a>Comandos estándar
 
@@ -57,4 +57,3 @@ Para obtener más información acerca de los comandos admitidos y el nivel de im
 ## <a name="see-also"></a>Vea también
 
 [Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)
-

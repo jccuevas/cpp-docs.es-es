@@ -2,41 +2,40 @@
 title: Expresiones regulares (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
-- Visual C++, regular expressions
-- regular expressions, Visual C++
-- regular expressions
+- regular expressions [C++]
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6ff0fafce9f4b3e029be053d27ca68d096ec108
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368527"
 ---
 # <a name="regular-expressions-c"></a>Expresiones regulares (C++)
 
-La biblioteca estándar de C++ admite varias gramáticas de expresiones regulares. Este tema describen las variaciones de gramática disponibles al utilizar expresiones regulares.
+La biblioteca estándar C++ admite varias gramáticas de expresiones regulares. En este tema se describen las variaciones gramaticales disponibles cuando se usan expresiones regulares.
 
-## <a name="regexgrammar"></a> Gramática de expresiones regulares
+## <a name="regular-expression-grammar"></a><a name="regexgrammar"></a> Gramática de expresiones regulares
 
-La gramática de expresiones regulares para usar al especificado por el uso de uno de los `std::regex_constants::syntax_option_type` valores de enumeración. Estos gramáticas de expresiones regulares se definen en std::regex_constants:
+La gramática de expresión regular que se va a `std::regex_constants::syntax_option_type` usar se especifica mediante el uso de uno de los valores de enumeración. Estas gramáticas de expresiones regulares se definen en std::regex_constants:
 
-- `ECMAScript`: Se trata más cercana a la gramática usada JavaScript y los lenguajes. NET.
-- `basic`: Las expresiones regulares de POSIX básicas o BRE.
-- `extended`: El POSIX amplía las expresiones regulares o ERE.
-- `awk`: Se trata de `extended`, pero tiene más secuencias de escape para caracteres no imprimibles.
-- `grep`: Se trata de `basic`, sino que también permite newline caracteres ('\n') separar alternancias.
-- `egrep`: Se trata de `extended`, sino que también permite caracteres de nueva línea separar alternancias.
+- `ECMAScript`: Esto es más cercano a la gramática utilizada por JavaScript y los lenguajes .NET.
+- `basic`: las expresiones regulares básicas POSIX o BRE.
+- `extended`: Las expresiones regulares extendidas POSIX o ERE.
+- `awk`: Esto `extended`es , pero tiene escapes adicionales para caracteres no imprimibles.
+- `grep`: Esto `basic`es , pero también permite que los caracteres de nueva línea ('n') separen las alternancias.
+- `egrep`: Esto `extended`es , pero también permite que los caracteres de nueva línea separen las alternancias.
 
-De forma predeterminada, si no se especifica ninguna gramática, `ECMAScript` se da por hecho. Se puede especificar sólo una gramática.
+De forma predeterminada, si no `ECMAScript` se especifica ninguna gramática, se asume. Solo se puede especificar una gramática.
 
-Además de la gramática, se pueden aplicar varias marcas:
-- `icase`: Omitir mayúsculas y minúsculas al comparar.
-- `nosubs`: Omitir coincidencias marcadas (es decir, las expresiones entre paréntesis); no se almacenan las sustituciones.
-- `optimize`: Asegúrese de coincidencia con mayor rapidez, con el posible costo de mayor tiempo de construcción.
-- `collate`: Use las secuencias de intercalación de la configuración regional (por ejemplo, los intervalos de la forma "[a-z]").
+Además de la gramática, se pueden aplicar varias banderas:
 
-Cero o más marcadores se pueden combinar con la gramática para especificar el comportamiento del motor de expresiones regulares. Si solo se especifican las marcas, `ECMAScript` se asume que la gramática.
+- `icase`: Ignore el caso al hacer coincidir.
+- `nosubs`: Omitir coincidencias marcadas (es decir, expresiones entre paréntesis); no se almacenan sustituciones.
+- `optimize`: Hacer el emparejamiento más rápido, a expensas posibles de un mayor tiempo de construcción.
+- `collate`: Utilice secuencias de intercalación sensibles a la configuración regional (por ejemplo, rangos de la forma "[a-z]").
+
+Se pueden combinar cero o más indicadores con la gramática para especificar el comportamiento del motor de expresiones regulares. Si solo se especifican `ECMAScript` indicadores, se asume como gramática.
 
 ### <a name="element"></a>Elemento
 
@@ -50,21 +49,21 @@ Un elemento puede ser algo de lo siguiente:
 
    La expresión `expr` puede contener cualquier combinación de lo siguiente:
 
-   - Un carácter individual. Agrega ese carácter al conjunto definido por `expr`.
+  - Un carácter individual. Agrega ese carácter al conjunto definido por `expr`.
 
-   - Un *intervalo de caracteres* con la forma "`ch1`-`ch2`". Agrega los caracteres representados por valores del intervalo cerrado [`ch1`, `ch2`] al conjunto definido por `expr`.
+  - Un rango de *caracteres* de la forma "`ch1`-`ch2`". Agrega los caracteres representados por valores del intervalo cerrado [`ch1`, `ch2`] al conjunto definido por `expr`.
 
-   - Una *clase de carácter* con la forma "[:`name`:]". Agrega los caracteres de la clase con nombre al conjunto definido por `expr`.
+  - Una *clase de carácter* con la forma "[:`name`:]". Agrega los caracteres de la clase con nombre al conjunto definido por `expr`.
 
-   - Una *clase de equivalencia* con la forma "[=`elt`=]". Agrega los elementos de intercalación que son equivalentes a `elt` al conjunto definido por `expr`.
+  - Una *clase de equivalencia* con la forma "[=`elt`=]". Agrega los elementos de intercalación que son equivalentes a `elt` al conjunto definido por `expr`.
 
-   - Un *símbolo de intercalación* con la forma "[.`elt`.]". Agrega el elemento de intercalación `elt` al conjunto definido por `expr`.
+  - Un *símbolo de intercalación* con la forma "[.`elt`.]". Agrega el elemento de intercalación `elt` al conjunto definido por `expr`.
 
 - Un *delimitador*. El delimitador “^” coincide con el inicio de la secuencia de destino; el delimitador “$” coincide con el final de la secuencia de destino.
 
 Un *grupo de capturas* con la forma "( *subexpresión* )" o "\\( *subexpresión* \\)" en `basic` y `grep`, que coincide con la secuencia de caracteres de la secuencia de destino que coincide con el patrón entre los delimitadores.
 
-- Un *carácter de escape de identidad* con la forma "\\`k`", que coincide con el carácter `k` en la secuencia de destino.
+- Un *escape* de identidad\\`k`de la forma `k` " ", que coincide con el carácter de la secuencia de destino.
 
 Ejemplos:
 
@@ -78,11 +77,11 @@ Ejemplos:
 
 - “(a)” coincide con la secuencia de destino “a” y asocia el grupo de captura 1 con la subsecuencia “a”, pero no coincide con las secuencias de destino “B”, “b” o “c”.
 
-En `ECMAScript`, `basic` y `grep`, un elemento también puede ser una *referencia inversa* con la forma "\\`dd`", donde `dd` representa un valor N decimal que coincide con una secuencia de caracteres de la secuencia de destino, que es igual que la secuencia de caracteres que coincide con el eNésimo *grupo de capturas*. Por ejemplo, “(a) \1” coincide con la secuencia de destino “aa” porque el primer grupo de captura (y único) coincide con la secuencia inicial “a” y, después, el \1 coincide con la secuencia final “a”.
+En `ECMAScript` `basic`, `grep`, y , un elemento también puede\\`dd`ser `dd` una *referencia inversa* del formulario " ", donde representa un valor decimal N que coincide con una secuencia de caracteres en la secuencia de destino que es la misma que la secuencia de caracteres que coincide con el Nth grupo de *captura.* Por ejemplo, “(a) \1” coincide con la secuencia de destino “aa” porque el primer grupo de captura (y único) coincide con la secuencia inicial “a” y, después, el \1 coincide con la secuencia final “a”.
 
 En `ECMAScript`, un elemento también puede ser una de las siguientes cosas:
 
-- Un *grupo de no-captura* del formulario "(?: *subexpresión* )". Coincide con la secuencia de caracteres de la secuencia de destino que coincide con el patrón entre los delimitadores.
+- Un *grupo que no* sea de captura con el formato "(?: *subexpresión* )". Coincide con la secuencia de caracteres de la secuencia de destino que coincide con el patrón entre los delimitadores.
 
 - Una *secuencia de escape de caracteres* limitada con la forma "\f", "\n", "\r", "\t" o "\v". Estos coinciden con un avance de página, una nueva línea, un retorno de carro, una tabulación horizontal y una tabulación vertical, respectivamente, en la secuencia de destino.
 
@@ -116,13 +115,13 @@ Ejemplos:
 
 En `awk`, un elemento también puede ser una de las siguientes cosas:
 
-- Una *secuencia de escape de caracteres* con la forma "\\\\", "\a", "\b", "\f", "\n", "\r", "\t" o "\v". Estos coinciden con una barra diagonal inversa, una alerta, un retroceso, un avance de página, una nueva línea, un retorno de carro, una tabulación horizontal y una tabulación vertical, respectivamente, en la secuencia de destino.
+- Un escape de *formato* \\\\de archivo de la forma " ", "a", "b", "f", "n", "s", "t" o "v". Estos coinciden con una barra diagonal inversa, una alerta, un retroceso, un avance de página, una nueva línea, un retorno de carro, una tabulación horizontal y una tabulación vertical, respectivamente, en la secuencia de destino.
 
-- Una *secuencia de escape octal* con la forma "\\`ooo`". Coincide con un carácter en la secuencia de destino cuya representación es el valor representado por uno, dos o tres de los dígitos octales `ooo`.
+- Una secuencia de *escape octal* de la forma "\\`ooo`". Coincide con un carácter en la secuencia de destino cuya representación es el valor representado por uno, dos o tres de los dígitos octales `ooo`.
 
 ### <a name="repetition"></a>Repetición
 
-Cualquier elemento que no sea una *aserción positiva*, una *aserción negativa* o un *delimitador* puede ir seguido de un recuento de repetición. La forma más general de recuento de repetición adopta la forma "{`min`,`max`}" o "\\{`min`,`max`\\}" en `basic` y `grep`. Un elemento al que sigue esta forma de recuento de repetición coincide al menos con las sucesivas repeticiones de `min` y no más que las sucesivas repeticiones de `max` de una secuencia que coincide con el elemento. Por ejemplo, "un{2,3}" coincide con la secuencia de destino "aa" y la secuencia de destino "aaa", pero no la secuencia de destino "a" o la secuencia de destino "aaaa".
+Cualquier elemento que no sea una *aserción positiva*, una *aserción negativa* o un *delimitador* puede ir seguido de un recuento de repetición. La forma más general de recuento de repetición adopta la forma "{`min`,`max`}" o "\\{`min`,`max`\\}" en `basic` y `grep`. Un elemento al que sigue esta forma de recuento de repetición coincide al menos con las sucesivas repeticiones de `min` y no más que las sucesivas repeticiones de `max` de una secuencia que coincide con el elemento. Por ejemplo,{2,3}"a" coincide con la secuencia de destino "aa" y la secuencia de destino "aaa", pero no con la secuencia de destino "a" o la secuencia de destino "aaaa".
 
 Un recuento de repetición también puede adoptar una de las siguientes formas:
 
@@ -134,29 +133,29 @@ Un recuento de repetición también puede adoptar una de las siguientes formas:
 
 Ejemplos:
 
-- "un{2}" coincide con la secuencia de destino "aa", pero no la secuencia de destino "a" o la secuencia de destino "aaa".
+- {2}"a" coincide con la secuencia de destino "aa" pero no con la secuencia de destino "a" o la secuencia de destino "aaa".
 
-- "un{2,}" coincide con la secuencia de destino "aa", la secuencia de destino "aaa" etc., pero no coincide con la secuencia de destino "a".
+- {2,}"a" coincide con la secuencia de destino "aa", la secuencia de destino "aaa", etc., pero no coincide con la secuencia de destino "a".
 
-- "un\*" coincide con la secuencia de destino "", el destino de secuencia "a", la secuencia de destino "aa" y así sucesivamente.
+- \*"a" coincide con la secuencia de destino "", la secuencia de destino "a", la secuencia de destino "aa", etc.
 
 En todas las gramáticas excepto `basic` y `grep`, un recuento de repetición también puede adoptar una de las siguientes formas:
 
-- "?". Equivalente a "{0,1}".
+- "?". Equivalente a{0,1}" ".
 
 - "+". Equivalente a "{1,unbounded}".
 
 Ejemplos:
 
-- ¿"a"? coincide con la secuencia de destino "" y la secuencia de destino "a", pero no la secuencia de destino "aa".
+- "a?" coincide con la secuencia de destino "" y la secuencia de destino "a", pero no con la secuencia de destino "aa".
 
 - "a+" coincide con las secuencias de destino “a” y "aa", etcétera, pero no con la secuencia de destino "".
 
-En `ECMAScript`, todos los formularios de recuento de repetición pueden ir seguidos por el carácter '?', que designa un *repetición no expansiva*.
+En `ECMAScript`, todas las formas de recuento de repeticiones pueden ir seguidas por el carácter '?', que designa una *repetición no expansiva.*
 
 ### <a name="concatenation"></a>Concatenación
 
-Los elementos de expresión regular, con o sin *recuentos de repetición*, se pueden concatenar para formar expresiones regulares más largas. La expresión resultante coincide con una secuencia de destino que es una concatenación de las secuencias que coinciden con los elementos individuales. Por ejemplo, "un{2,3}b" coincide con la secuencia de destino "aab" y la secuencia de destino "aaab", pero no coincide con las secuencias de destino "ab" o la secuencia de destino "aaaab".
+Los elementos de expresión regular, con o sin *recuentos de repetición*, se pueden concatenar para formar expresiones regulares más largas. La expresión resultante coincide con una secuencia de destino que es una concatenación de las secuencias que coinciden con los elementos individuales. Por ejemplo,{2,3}"a b" coincide con la secuencia de destino "aab" y la secuencia de destino "aaab", pero no coincide con la secuencia de destino "ab" o la secuencia de destino "aaaab".
 
 ### <a name="alternation"></a>Alternancia
 
@@ -170,11 +169,11 @@ En `grep` y `egrep`, un carácter de nueva línea (“\n ") se puede utilizar pa
 
 En `basic` y `grep`, una subexpresión es una concatenación. En el resto de las gramáticas de expresiones regulares, una subexpresión es una alternancia.
 
-## <a name="grammarsummary"></a> Resumen de la gramática
+## <a name="grammar-summary"></a><a name="grammarsummary"></a> Resumen de la gramática
 
 En la siguiente tabla se resumen las características que están disponibles en las diferentes gramáticas de expresiones regulares:
 
-|Elemento|básicos|extendidos|ECMAScript|grep|egrep|awk|
+|Elemento|basic|extendidos|ECMAScript|grep|egrep|awk|
 |-------------|---------|---------|----------|----------|-----------|---------|
 |alternancia usando "&#124;"||+|+||+|+|
 |alternancia usando '\n'||||+|+||
@@ -195,15 +194,15 @@ En la siguiente tabla se resumen las características que están disponibles en 
 |secuencia de escape octal||||||+|
 |caracteres ordinarios|+|+|+|+|+|+|
 |aserción positiva|||+||||
-|repetición usando "{}"||+|+||+|+|
+|repetición usando " "{}||+|+||+|+|
 |repetición usando "\\{\\}"|+|||+|||
-|repetición usando '\*'|+|+|+|+|+|+|
+|repetición usando ' '\*|+|+|+|+|+|+|
 |repetición usando “?” y “+”||+|+||+|+|
 |secuencia de escape Unicode|||+||||
 |carácter comodín|+|+|+|+|+|+|
 |aserción de límite de palabra|||+||||
 
-## <a name="semanticdetails"></a> Detalles semánticos
+## <a name="semantic-details"></a><a name="semanticdetails"></a> Detalles semánticos
 
 ### <a name="anchor"></a>Delimitador
 
@@ -243,7 +242,7 @@ Ejemplos:
 
 Una clase de caracteres en una expresión entre corchetes agrega todos los caracteres de la clase con nombre al conjunto de caracteres definido por la expresión entre corchetes. Para crear una clase de caracteres, use “[:” seguido del nombre de la clase seguido de “:]”. Internamente, los nombres de las clases de caracteres se reconocen llamando a `id = traits.lookup_classname`. Un carácter `ch` pertenece a una clase de esas si `traits.isctype(ch, id)` devuelve true. La plantilla `regex_traits` predeterminada admite los nombres de clase incluidos en la tabla siguiente.
 
-|Nombre de clase|Descripción|
+|Class Name (Nombre de clase)|Descripción|
 |----------------|-----------------|
 |“alnum”|letras minúsculas, mayúsculas y dígitos|
 |"alpha"|letras minúsculas y mayúsculas|
@@ -253,7 +252,7 @@ Una clase de caracteres en una expresión entre corchetes agrega todos los carac
 |"graph"|letras minúsculas, mayúsculas, dígitos y signos de puntuación|
 |"lower"|letras minúsculas|
 |"print"|letras minúsculas, mayúsculas, dígitos, signos de puntuación y espacios|
-|"punct"|punctuation|
+|"punct"|puntuación|
 |"space"|espacio|
 |"upper|caracteres en mayúsculas|
 |"xdigit"|dígitos, “a”, “b”, “c”, “d”, “e”, “f”, “A”, “b”, “C”, “d”, “E”, “f”|
@@ -304,7 +303,7 @@ Un escape de carácter dsw es un nombre corto para una clase de caracteres, como
 |"\s"|"[[:s:]]"|"[[:space:]]"|
 |"\S"|"[^[:s:]]"|"[^[:space:]]"|
 |"\w"|"[[:w:]]"|"[a-zA-Z0-9_]"\*|
-|"\W"|"[^[:w:]]"|"[^ a-zA-Z0-9_]"\*|
+|"\W"|"[^[:w:]]"|"[a-zA-Z0-9_]"\*|
 
 \*Juego de caracteres ASCII
 
@@ -324,18 +323,18 @@ Una secuencia de escape hexadecimal es una barra diagonal inversa seguida de la 
 
 Un escape de identidad es una barra diagonal inversa seguida de un único carácter. Coincide con ese carácter. Se requiere cuando el carácter tiene un significado especial; mediante el escape de identidad, se quita el significado especial. Por ejemplo:
 
-- "un\*" coincide con la secuencia de destino "aaa", pero no coincide con la secuencia de destino "un\*".
+- \*"a" coincide con la secuencia de destino "aaa",\*pero no coincide con la secuencia de destino "a".
 
-- "un\\\*" no coincide con la secuencia de destino "aaa", pero coincide con la secuencia de destino "un\*".
+- \\"a" no coincide con la secuencia de destino "aaa", pero coincide con la secuencia de destino "a".\*\*
 
 El conjunto de caracteres que se permite en un escape de identidad depende de la gramática de expresiones regulares, como se muestra en la tabla siguiente.
 
 |Gramática|Caracteres de escape de identidad permitidos|
 |-------------|----------------------------------------|
 |`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|
-|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|
+|`extended`, `egrep`|• '(',')', ''',',',','','''',''','''''&#124;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\\\*|
 |`awk`|`extended` plus { '"', '/' }|
-|`ECMAScript`|Todos los caracteres excepto los que pueden formar parte de un identificador. Normalmente, esto incluye letras, dígitos, '$', '\_' y las secuencias de escape unicode. Para obtener más información, vea la Especificación del lenguaje ECMAScript.|
+|`ECMAScript`|Todos los caracteres excepto los que pueden formar parte de un identificador. Normalmente, esto incluye letras, dígitos,\_'$', ' ' y secuencias de escape unicode. Para obtener más información, vea la Especificación del lenguaje ECMAScript.|
 
 ### <a name="individual-character"></a>Carácter individual
 
@@ -369,7 +368,7 @@ Ejemplos:
 
 ### <a name="negative-assert"></a>Aserción negativa
 
-Una aserción negativa coincide con todo menos con su contenido. No consume ningún carácter de la secuencia de destino. Por ejemplo, "(!aa) (una\*)" coincide con la secuencia de destino "a" y asocia el grupo 1 de captura con la subsecuencia "a". No coincide con la secuencia de destino “aa” ni con la secuencia de destino “aaa”.
+Una aserción negativa coincide con todo menos con su contenido. No consume ningún carácter de la secuencia de destino. Por ejemplo, "(!aa)(a\*)" coincide con la secuencia de destino "a" y asocia el grupo de captura 1 con la subsecuencia "a". No coincide con la secuencia de destino “aa” ni con la secuencia de destino “aaa”.
 
 ### <a name="negative-word-boundary-assert"></a>Aserción de límite de palabra negativa
 
@@ -377,11 +376,11 @@ Una aserción de límite de palabra negativa coincide si la posición actual en 
 
 ### <a name="non-capture-group"></a>Grupo de no-captura
 
-Un grupo de no-captura marca su contenido como una sola unidad en la gramática de expresiones regulares, pero no etiqueta el texto de destino. Por ejemplo, "(a)(?:b)\*(c)" coincide con el texto de destino "abbc" y asocia el grupo de captura 1 con la subsecuencia "un"y grupo de captura 2 con la subsecuencia "c".
+Un grupo de no-captura marca su contenido como una sola unidad en la gramática de expresiones regulares, pero no etiqueta el texto de destino. Por ejemplo, "(a)(?:b)\*(c)" coincide con el texto de destino "abbc" y asocia el grupo de captura 1 con la subsecuencia "a" y el grupo de captura 2 con la subsecuencia "c".
 
 ### <a name="non-greedy-repetition"></a>Repetición no expansiva
 
-Una repetición no expansiva usa la subsecuencia más corta de la secuencia de destino que coincida con el patrón. Una repetición expansiva usa la más larga. Por ejemplo, "(a+) (un\*b)" coincide con la secuencia de destino "aaab". Cuando se utiliza una repetición no expansiva, esta asocia el grupo de captura 1 con la subsecuencia “a” al principio de la secuencia de destino y el grupo de destino 2 con la subsecuencia “aab” al final de la secuencia de destino. Cuando se utiliza una coincidencia expansiva, esta asocia el grupo de captura 1 con la subsecuencia “aaa” y el grupo de captura 2 con la subsecuencia “b”.
+Una repetición no expansiva usa la subsecuencia más corta de la secuencia de destino que coincida con el patrón. Una repetición expansiva usa la más larga. Por ejemplo, "(a+)(a\*b)" coincide con la secuencia de destino "aaab". Cuando se utiliza una repetición no expansiva, esta asocia el grupo de captura 1 con la subsecuencia “a” al principio de la secuencia de destino y el grupo de destino 2 con la subsecuencia “aab” al final de la secuencia de destino. Cuando se utiliza una coincidencia expansiva, esta asocia el grupo de captura 1 con la subsecuencia “aaa” y el grupo de captura 2 con la subsecuencia “b”.
 
 ### <a name="octal-escape-sequence"></a>Secuencia de escape octal
 
@@ -393,7 +392,7 @@ Un carácter ordinario es cualquier carácter válido que no tiene ningún signi
 
 En `ECMAScript`, los caracteres siguientes tienen significados especiales:
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*+  ?  ( \[ ) ] á &#124;
 
 En `basic` y `grep`, los caracteres siguientes tienen significados especiales:
 
@@ -401,7 +400,7 @@ En `basic` y `grep`, los caracteres siguientes tienen significados especiales:
 
 También en `basic` y `grep`, los caracteres siguientes tienen significados especiales cuando se utilizan en un contexto determinado:
 
-- '\*' tiene un significado especial en todos los casos excepto cuando es el primer carácter en una expresión regular o el primer carácter que sigue un inicial ' ^' en una expresión regular, o cuando es el primer carácter de una captura de grupo o el primer carácter que sigue un inicial ' ^' en un grupo de capturas.
+- '\*' tiene un significado especial en todos los casos, excepto cuando es el primer carácter de una expresión regular o el primer carácter que sigue a una inicial '' en una expresión regular, o cuando es el primer carácter de un grupo de captura o el primer carácter que sigue a una inicial '' en un grupo de captura.
 
 - “^” tiene un significado especial cuando es el primer carácter de una expresión regular.
 
@@ -409,7 +408,7 @@ También en `basic` y `grep`, los caracteres siguientes tienen significados espe
 
 En `extended` y `egrep` y `awk`, los caracteres siguientes tienen significados especiales:
 
-- .   \[   \   (   \*   +   ?   {   &#124;
+- .   \[\   (   \*   +   ?   • &#124;
 
 También en `extended` y `egrep` y `awk`, los caracteres siguientes tienen significados especiales cuando se utilizan en un contexto determinado:
 
@@ -427,9 +426,9 @@ Una aserción positiva coincide con su contenido, pero no utiliza ningún carác
 
 Ejemplos:
 
-- "(=AA) (una\*)" coincide con la secuencia de destino "aaaa" y asocia el grupo de captura 1 con la subsecuencia "aaaa".
+- "(aa)(a\*)" coincide con la secuencia de destino "aaaa" y asocia el grupo de captura 1 con la subsecuencia "aaaa".
 
-- "(aa) (un\*)" coincide con la secuencia de destino "aaaa" y asocia el grupo de captura 1 con la subsecuencia "aa" al principio de la secuencia y captura de grupo de destino 2 con la subsecuencia "aa" al final de la secuencia de destino.
+- "(aa)(a\*)" coincide con la secuencia de destino "aaaa" y asocia el grupo de captura 1 con la subsecuencia "aa" al principio de la secuencia de destino y el grupo de captura 2 con la subsecuencia "aa" al final de la secuencia de destino.
 
 - "(=aa)(a)&#124;(a)" coincide con la secuencia de destino "a" y asocia el grupo de capturas 1 con una secuencia vacía (porque se produjo un error en la aserción positiva) y el grupo de capturas 2 con la subsecuencia "a". También coincide con la secuencia de destino “aa” y asocia el grupo de captura 1 con la subsecuencia “aa” y el grupo de captura 2 con una secuencia vacía.
 
@@ -457,7 +456,7 @@ Un límite de palabra aparece en las situaciones siguientes:
 
 Una aserción de límite de palabra coincide cuando la posición actual en la cadena de destino está inmediatamente después de un *límite de palabra*.
 
-## <a name="matchingandsearching"></a> Coincidencias y búsquedas
+## <a name="matching-and-searching"></a><a name="matchingandsearching"></a> Coincidencias y búsquedas
 
 Para que una expresión regular coincida con una secuencia de destino, la expresión regular completa debe coincidir con la secuencia de destino completa. Por ejemplo, la expresión regular “bcd” coincide con la secuencia de destino “bcd” pero no coincide con la secuencia de destino “abcd” ni “bcde”.
 
@@ -473,19 +472,19 @@ Si hay más de una subsecuencia que coincida en alguna ubicación en la secuenci
 
 Una coincidencia parcial da resultado si la coincidencia llega al final de la secuencia de destino sin dar error, incluso si no alcanza el final de la expresión regular. Por consiguiente, después de que una coincidencia parcial dé resultado, anexar los caracteres a la secuencia de destino puede causar que una coincidencia parcial posterior dé error. Sin embargo, después de que una coincidencia parcial dé error, anexar los caracteres a la secuencia de destino no puede causar que una coincidencia parcial posterior dé resultado correcto. Por ejemplo, con una coincidencia parcial, “ab” coincide con la secuencia de destino “a” pero no con “ac”.
 
-## <a name="formatflags"></a> Marcas de formato
+## <a name="format-flags"></a><a name="formatflags"></a> Marcas de formato
 
 |Reglas de formato de ECMAScript|Reglas de formato usadas|Texto de sustitución|
 |-----------------------------|----------------------|----------------------|
 |"$&"|"&"|La secuencia de caracteres que coincide con la expresión regular completa (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (signo de dólar seguido de comilla de atrás)||La secuencia de caracteres que precede a la subsecuencia que coincide con la expresión regular (`[match.prefix().first, match.prefix().second)`)|
+|"$\`(signo de dólar seguido de cotización de fondo) La secuencia de caracteres que precede a`[match.prefix().first, match.prefix().second)`la subsecuencia que coincide con la expresión regular ( )|
 |"$'" (signo de dólar seguido de comilla simple de cierre)||La secuencia de caracteres que sigue a la subsecuencia que coincide con la expresión regular (`[match.suffix().first, match.suffix().second)`)|
-|"$n"|"\n"|La secuencia de caracteres que coincide con el grupo de captura en la posición `n`, donde `n` es un número entre 0 y 9 (`[match[n].first, match[n].second)`)|
+|"$n"|"\n"|La secuencia de caracteres que `n`coincide `n` con el grupo de`[match[n].first, match[n].second)`captura en la posición , donde hay un número entre 0 y 9 ( )|
 ||"\\\n"|"\n"|
-|"$nn"||La secuencia de caracteres que coincide con el grupo de captura en la posición `nn`, donde `nn` es un número entre 10 y 99 (`[match[nn].first, match[nn].second)`)|
+|"$nn"||La secuencia de caracteres que `nn`coincide `nn` con el grupo de captura`[match[nn].first, match[nn].second)`en la posición, donde hay un número entre 10 y 99 ( )|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Descripción general de la biblioteca estándar C++](../standard-library/cpp-standard-library-overview.md)

@@ -1,6 +1,6 @@
 ---
 title: _AddressOfReturnAddress
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _AddressOfReturnAddress_cpp
 - _AddressOfReturnAddress
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-ms.openlocfilehash: 678128c4b09b083b4afe3a86c9b2315eb3c87b1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d705029c30fdbc117c4c6e96923691e43e072e23
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584489"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221077"
 ---
-# <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
+# <a name="_addressofreturnaddress"></a>_AddressOfReturnAddress
 
 **Específicos de Microsoft**
 
-Proporciona la dirección de la ubicación de memoria que contiene la dirección de devolución de la función actual. Esta dirección no puede usarse para tener acceso a otras ubicaciones de memoria (por ejemplo, los argumentos de función).
+Proporciona la dirección de la ubicación de memoria que contiene la dirección de devolución de la función actual. No se puede usar esta dirección para tener acceso a otras ubicaciones de memoria (por ejemplo, los argumentos de la función).
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void * _AddressOfReturnAddress();
 ```
 
@@ -31,19 +31,19 @@ void * _AddressOfReturnAddress();
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
-|`_AddressOfReturnAddress`|x86, x64|
+|`_AddressOfReturnAddress`|x86, x64, ARM, ARM64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando `_AddressOfReturnAddress` se utiliza en un programa compilado con [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la función que contiene el `_AddressOfReturnAddress` llamada se compila como una función nativa. Cuando se compila una función como administrado llama a la función que contiene `_AddressOfReturnAddress`, `_AddressOfReturnAddress` podrían no funcionar según lo previsto.
+Cuando `_AddressOfReturnAddress` se usa en un programa compilado con [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la función que contiene `_AddressOfReturnAddress` la llamada se compila como una función nativa. Cuando una función compilada como llamada administrada en `_AddressOfReturnAddress`la `_AddressOfReturnAddress` función que contiene, podría no tener el comportamiento esperado.
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // compiler_intrinsics_AddressOfReturnAddress.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -77,5 +77,5 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Palabras clave](../cpp/keywords-cpp.md)

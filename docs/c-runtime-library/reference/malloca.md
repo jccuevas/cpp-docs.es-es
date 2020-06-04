@@ -1,9 +1,9 @@
 ---
 title: _malloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _malloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloca
 - _malloca
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850415"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952777"
 ---
-# <a name="malloca"></a>_malloca
+# <a name="_malloca"></a>_malloca
 
 Asigna memoria en la pila. Se trata de una versión de [_alloca](alloca.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -49,28 +52,28 @@ Bytes que se van a asignar desde la pila.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **_malloca** rutinarias devuelve un **void** puntero en el espacio asignado, que se garantiza que se alinee correctamente para el almacenamiento de cualquier tipo de objeto. Si *tamaño* es 0, **_malloca** asigna un elemento de longitud cero y devuelve un puntero válido para ese elemento.
+La rutina **_malloca** devuelve un puntero **void** al espacio asignado, cuya alineación es adecuada para el almacenamiento de cualquier tipo de objeto. Si *el tamaño* es 0, **_malloca** asigna un elemento de longitud cero y devuelve un puntero válido a ese elemento.
 
-Si *tamaño* es mayor que **_ALLOCA_S_THRESHOLD**, a continuación, **_malloca** intenta asignar en el montón y devuelve un puntero nulo si no se puede asignar el espacio. Si *tamaño* es menor o igual que **_ALLOCA_S_THRESHOLD**, a continuación, **_malloca** intenta asignar en la pila y una excepción de desbordamiento de pila se genera si el espacio no se asigna. La excepción de desbordamiento de pila no es una excepción de C++; es una excepción estructurada. En lugar de usar el control de excepciones de C++, debe usar [Structured Exception Handling](../../cpp/structured-exception-handling-c-cpp.md) (SEH) para detectar esta excepción.
+Si el *tamaño* es mayor que **_ALLOCA_S_THRESHOLD**, **_malloca** intenta asignar en el montón y devuelve un puntero nulo si no se puede asignar el espacio. Si el *tamaño* es menor o igual que **_ALLOCA_S_THRESHOLD**, **_malloca** intenta asignar en la pila y se genera una excepción de desbordamiento de pila si no se puede asignar el espacio. La excepción de desbordamiento de pila C++ no es una excepción; se trata de una excepción estructurada. En lugar de usar C++ el control de excepciones, debe usar el [control de excepciones estructurado](../../cpp/structured-exception-handling-c-cpp.md) (SEH) para detectar esta excepción.
 
 ## <a name="remarks"></a>Comentarios
 
-**_malloca** asigna *tamaño* bytes a partir de la pila del programa o el montón si la solicitud supera un determinado tamaño en bytes proporcionado por **_ALLOCA_S_THRESHOLD**. La diferencia entre **_malloca** y **_alloca** es que **_alloca** siempre se asigna en la pila, independientemente del tamaño. A diferencia de **_alloca**, que no requiere ni permite ninguna llamada a **libre** para liberar la memoria asignada, **_malloca** requiere el uso de [_freea](freea.md)para liberar memoria. En modo de depuración, **_malloca** siempre asigna memoria del montón.
+**_malloca** asigna bytes de *tamaño* de la pila del programa o del montón si la solicitud supera un determinado tamaño en bytes dado por **_ALLOCA_S_THRESHOLD**. La diferencia entre **_malloca** y _ **alloca** es que _ **alloca** siempre asigna en la pila, independientemente del tamaño. A diferencia de _ **alloca**, que no requiere ni permite una **llamada a Free** para liberar la memoria de modo que se asigne, **_malloca** requiere el uso de [_freea](freea.md) para liberar memoria. En el modo de depuración, **_malloca** siempre asigna memoria del montón.
 
-Hay restricciones para llamar explícitamente a **_malloca** en un controlador de excepciones (EH). Rutinas de controlador de eventos que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: Realizan sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función envolvente. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por lo tanto, llamar explícitamente a **_malloca** en cualquiera de lo siguientes escenarios, se produce un error del programa durante la devolución de la rutina de controlador de eventos que realiza la llamada:
+Existen restricciones para llamar explícitamente a **_malloca** en un controlador de excepciones (EH). Las rutinas EH que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: Realizan sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función de inclusión. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por consiguiente, si se llama explícitamente a **_malloca** en cualquiera de los siguientes escenarios, se produce un error en el programa durante la devolución a la rutina de llamada EH:
 
-- Expresión de filtro de excepciones SEH de Windows NT: **__except** (`_malloca ()` )
+- Expresión de filtro de excepciones SEH de Windows NT`_malloca ()` : **_ _ Except** ()
 
-- Controlador de excepciones finales SEH de Windows NT: **__finally** {`_malloca ()` }
+- Controlador de excepciones final de SEH de Windows NT`_malloca ()` : **_ _ Finally** {}
 
 - Expresión de la cláusula catch del controlador de excepciones de C++
 
-Sin embargo, **_malloca** pueden llamarse directamente desde dentro de una rutina de controlador de excepciones o desde una devolución de llamada proporcionada por la aplicación que se invoca mediante uno de los escenarios EH enumerados anteriormente.
+Sin embargo, se puede llamar a **_malloca** directamente desde una rutina EH o desde una devolución de llamada proporcionada por la aplicación que se invoca mediante uno de los escenarios EH descritos anteriormente.
 
 > [!IMPORTANT]
-> En Windows XP, si **_malloca** se llama dentro de un bloque try/catch, se debe llamar a [_resetstkoflw](resetstkoflw.md) en el bloque catch.
+> En Windows XP, si se llama a **_malloca** dentro de un bloque try/catch, debe llamar a [_resetstkoflw](resetstkoflw.md) en el bloque catch.
 
-Además de las restricciones anteriores, cuando se usa el [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) opción, **_malloca** no se puede usar en **__except** bloques. Para obtener más información, consulta [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Además de las restricciones anteriores, al usar la opción [/CLR (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , **_malloca** no se puede usar en bloques **_ _ Except** . Para obtener más información, consulta [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Requisitos
 

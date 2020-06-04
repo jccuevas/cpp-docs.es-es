@@ -1,17 +1,17 @@
 ---
-title: sincronizar (atributo de COM de C++)
+title: Synchronize (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: e5afec6257c421c0d3d5c95ba77c29767d0df280
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0f4702de4cfde8586cc573f9ff5a6195984d207
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214518"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -23,17 +23,17 @@ Sincroniza el acceso al método de destino.
 [synchronize]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **sincronizar** atributo de C++ implementa la compatibilidad con el método de destino de un objeto de sincronización. La sincronización permite varios objetos usar un recurso común (por ejemplo, un método de una clase) controlando el acceso del método de destino.
+El atributo **Synchronize** C++ implementa la compatibilidad para sincronizar el método de destino de un objeto. La sincronización permite que varios objetos usen un recurso común (por ejemplo, un método de una clase) controlando el acceso del método de destino.
 
-El código insertado por este atributo llama adecuada `Lock` método (determinado por el modelo de subprocesos) al principio del método de destino. Cuando se sale del método, `Unlock` se llama automáticamente. Para obtener más información sobre estas funciones, vea [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
+El código insertado por este atributo llama al método `Lock` adecuado (determinado por el modelo de subprocesos) al principio del método de destino. Cuando se sale del método, se llama automáticamente a `Unlock`. Para obtener más información sobre estas funciones, vea [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
-Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
+Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si se aplica `progid`, también se aplican `vi_progid` y `coclass`.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente proporciona sincronización para el `UpdateBalance` método de la `CMyClass` objeto.
+El código siguiente proporciona la sincronización para el método `UpdateBalance` del objeto `CMyClass`.
 
 ```cpp
 // cpp_attr_ref_synchronize.cpp
@@ -68,11 +68,11 @@ class CMyClass {
 |-|-|
 |**Se aplica a**|Método de clase, método|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|Uno o varios de los siguientes: `coclass`, `progid`o `vi_progid`.|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos COM](com-attributes.md)

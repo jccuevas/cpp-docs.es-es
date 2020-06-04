@@ -1,93 +1,94 @@
 ---
-title: Referencia de operadores MASM
-ms.date: 08/30/2018
+title: Referencia de operadores de MASM
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430465"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318766"
 ---
-# <a name="masm-operators-reference"></a>Referencia de operadores MASM
+# <a name="masm-operators-reference"></a>Referencia de operadores de MASM
 
 ## <a name="arithmetic"></a>Operadores aritméticos
 
 ||||
 |-|-|-|
 |[* (multiplicar)](operator-multiply.md)|[+ (sumar)](operator-add.md)|[-(restar o negar)](operator-subtract-2.md)|
-|[. (campo)](operator-dot.md)|[/ (dividir)](operator-subtract-1.md)|[&#91;&#93;(índice)](operator-brackets.md)|
+|[. campo](operator-dot.md)|[/(dividir)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[MOD (resto)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Flujo de control
 
 ||||
 |-|-|-|
-|[\! (not lógico en tiempo de ejecución)](operator-logical-not-masm-run-time.md)|[\!= (tiempo de ejecución no es igual)](operator-not-equal-masm.md)|[&#124;&#124;(en tiempo de ejecución lógico o)](operator-logical-or.md)|
-|[& & (tiempo de ejecución lógico y)](operator-logical-and-masm-run-time.md)|[< (tiempo de ejecución menor que)](operator-less-than-masm-run-time.md)|[\<= (tiempo de ejecución menor o igual que)](operator-less-or-equal-masm-run-time.md)|
-|[== (igual runtime)](operator-equal-masm-run-time.md)|[> (mayor que el runtime)](operator-greater-than-masm-run-time.md)|[> = (tiempo de ejecución mayor o igual)](operator-greater-or-equal-masm-run-time.md)|
-|[& (tiempo de ejecución bit a bit y)](operator-bitwise-and.md)|||
-|[¿CARRY? (prueba de transporte en tiempo de ejecución)](operator-carry-q.md)|[¿OVERFLOW? (comprobación de desbordamiento en tiempo de ejecución)](operator-overflow-q.md)|[¿PARIDAD? (comprobación de paridad en tiempo de ejecución)](operator-parity-q.md)|
-|[¿INICIO DE SESIÓN? (en tiempo de ejecución de prueba de inicio de sesión)](operator-sign-q.md)|[¿CERO? (cero en tiempo de ejecución de prueba)](operator-zero-q.md)||
+|[\! (no lógico en tiempo de ejecución)](operator-logical-not-masm-run-time.md)|[\!= (tiempo de ejecución no igual)](operator-not-equal-masm.md)|[&#124;&#124;(OR lógico en tiempo de ejecución)](operator-logical-or.md)|
+|[& & (and lógico en tiempo de ejecución)](operator-logical-and-masm-run-time.md)|[< (tiempo de ejecución menor que)](operator-less-than-masm-run-time.md)|[\<= (tiempo de ejecución menor o igual que)](operator-less-or-equal-masm-run-time.md)|
+|[= = (tiempo de ejecución igual)](operator-equal-masm-run-time.md)|[> (tiempo de ejecución mayor que)](operator-greater-than-masm-run-time.md)|[> = (tiempo de ejecución mayor o igual que)](operator-greater-or-equal-masm-run-time.md)|
+|[& (and bit a bit en tiempo de ejecución)](operator-bitwise-and.md)|||
+|[PROCEDE? (Ejecutar prueba en tiempo de ejecución)](operator-carry-q.md)|[DESBORDAMIENTO? (prueba de desbordamiento en tiempo de ejecución)](operator-overflow-q.md)|[PARITY? (prueba de paridad en tiempo de ejecución)](operator-parity-q.md)|
+|[SESIÓN? (prueba de firma en tiempo de ejecución)](operator-sign-q.md)|[NULO? (prueba de cero en tiempo de ejecución)](operator-zero-q.md)||
 
-## <a name="logical-and-shift"></a>Lógico- and -Shift
+## <a name="logical-and-shift"></a>And lógico
 
 ||||
 |-|-|-|
-|[Y (bit a bit y)](operator-and.md)|[NO (not bit a bit)](operator-not.md)|[OR (bit a bit o)](operator-or.md)|
-|[SHL (MAYÚS bits a la izquierda)](operator-shl.md)|[SHR (MAYÚS bits derecha)](operator-shr.md)|[XOR (exclusivo bit a bit o)](operator-xor.md)|
+|[AND (and bit a bit)](operator-and.md)|[NOT (not bit a bit)](operator-not.md)|[OR (OR bit a bit)](operator-or.md)|
+|[SHL (bits de desplazamiento a la izquierda)](operator-shl.md)|[SHR (bits de desplazamiento a la derecha)](operator-shr.md)|[XOR (or exclusivo bit a bit)](operator-xor.md)|
 
 ## <a name="macro"></a>Macro
 
 ||||
 |-|-|-|
-|[\! (el carácter literal)](operator-logical-not-masm.md)|[% (tratado como texto)](operator-percent.md)||
-|[;; (tratar como comentario)](operator-semicolons.md)|[&lt; &gt; (tratar como un literal)](operator-literal.md)|[& & (sustituya el valor de parámetro)](operator-logical-and-masm.md)|
+|[\! (literal de carácter)](operator-logical-not-masm.md)|[% (tratar como texto)](operator-percent.md)||
+|[;; (tratar como comentario)](operator-semicolons.md)|[&lt; &gt; (tratar como un literal)](operator-literal.md)|[& & (valor del parámetro Substitute)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Varios
 
 ||||
 |-|-|-|
 |[' ' (tratar como cadena)](operator-single-quote.md)|["" (tratar como cadena)](operator-double-quote.md)||
-|: (definición de etiqueta local)|:: (registrar el segmento y el desplazamiento)|:: (definición de etiqueta global)|
+|: (definición de etiqueta local)|:: (registrar segmento y desplazamiento)|:: (definición de etiqueta global)|
 |[; (tratar como comentario)](operator-semicolon.md)|[DUP (declaración de repetición)](operator-dup.md)||
 
 ## <a name="record"></a>Record
 
 |||
 |-|-|
-|[MÁSCARA (obtener el registro o campo de máscara de bits)](operator-mask.md)|[ANCHO (obtener el ancho de campo o de registro)](operator-width.md)|
+|[Máscara (obtener máscara de subred de registro o campo)](operator-mask.md)|[WIDTH (obtener registro o ancho de campo)](operator-width.md)|
 
 ## <a name="relational"></a>Relacional
 
 ||||
 |-|-|-|
 |[EQ (igual)](operator-eq.md)|[GE (mayor o igual que)](operator-ge.md)|[GT (mayor que)](operator-gt.md)|
-|[LE (menor o igual)](operator-le.md)|[LT (menor que)](operator-lt.md)|[NE (no igual)](operator-ne.md)|
+|[LE (menor o igual que)](operator-le.md)|[LT (menor que)](operator-lt.md)|[NE (no es igual)](operator-ne.md)|
 
 ## <a name="segment"></a>Segmento
 
 |||
 |-|-|
-|[: (invalidación de segmento)](operator-colon.md)|:: (registrar el segmento y el desplazamiento)|
-|[IMAGEREL (desplazamiento relativo de imagen)](operator-imagerel.md)|[LROFFSET (el cargador resuelve desplazamiento)](operator-lroffset.md)|
-|[DESPLAZAMIENTO (desplazamiento relativo del segmento)](operator-offset.md)|[SECTIONREL (desplazamiento relativo de sección)](operator-sectionrel.md)|
-|[SEG (get segmento)](operator-seg.md)||
+|[: (invalidación de segmento)](operator-colon.md)|:: (registrar segmento y desplazamiento)|
+|[IMAGEREL (desplazamiento relativo de la imagen)](operator-imagerel.md)|[LROFFSET (cargador de desplazamiento resuelto)](operator-lroffset.md)|
+|[DESPLAZAMIENTO (desplazamiento relativo de segmento)](operator-offset.md)|[SECTIONREL (desplazamiento relativo de la sección)](operator-sectionrel.md)|
+|[SEG (obtener segmento)](operator-seg.md)||
 
-## <a name="type"></a>Tipo
+## <a name="type"></a>Tipo de
 
 ||||
 |-|-|-|
-|[HIGH (altos 8 bits de 16 bits más bajas)](operator-high.md)|[HIGH32 (32 bits superiores de 64 bits)](operator-high32.md)|[HIGHWORD (16 bits superiores de 32 bits más bajas)](operator-highword.md)|
-|[LONGITUD (número de elementos de matriz)](operator-length.md)|[LENGTHOF (número de elementos de matriz)](operator-lengthof.md)|[BAJA (8 bits inferiores)](operator-low.md)|
-|[LOW32 (32 bits inferiores)](operator-low32.md)|[LOWWORD (16 bits inferiores)](operator-lowword.md)|[OPATTR (información de tipo de argumento get)](operator-opattr.md)|
-|[PTR (puntero a o como tipo)](operator-ptr.md)|[SHORT (tipo de marca de etiqueta cortos)](operator-short.md)|[(Tamaño del tipo o variable)](operator-size.md)|
-|[SIZEOF (tamaño de tipo o variable)](operator-sizeof.md)|[(Esta ubicación actual)](operator-this.md)|[TIPO (tipo de expresión de get)](operator-type.md)|
-|[. TIPO (información de tipo de argumento get)](operator-dot-type.md)|||
+|[ALTO (8 bits superiores de 16 bits más bajos)](operator-high.md)|[HIGH32 (alto 32 bits de 64 bits)](operator-high32.md)|[HIGHWORD (16 bits superiores de los 32 bits más bajos)](operator-highword.md)|
+|[LONGITUD (número de elementos de la matriz)](operator-length.md)|[LONGITUD (número de elementos de la matriz)](operator-lengthof.md)|[BAJO (8 bits inferiores)](operator-low.md)|
+|[LOW32 (Low 32 bits)](operator-low32.md)|[LOWWORD (bajo 16 bits)](operator-lowword.md)|[OPATTR (obtener información de tipo de argumento)](operator-opattr.md)|
+|[PTR (puntero a o como tipo)](operator-ptr.md)|[SHORT (marcar tipo corto de etiqueta)](operator-short.md)|[TAMAÑO (tamaño del tipo o variable)](operator-size.md)|
+|[SIZEOF (tamaño del tipo o variable)](operator-sizeof.md)|[THIS (ubicación actual)](operator-this.md)|[TYPE (obtener tipo de expresión)](operator-type.md)|
+|[. TYPE (obtener información de tipo de argumento)](operator-dot-type.md)|||
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)<br/>
+[Referencia de Microsoft macro assembler](microsoft-macro-assembler-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

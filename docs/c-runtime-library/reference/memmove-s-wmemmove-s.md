@@ -1,10 +1,11 @@
 ---
 title: memmove_s, wmemmove_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+- _o_wmemmove_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +17,12 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -24,14 +30,14 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561192"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914098"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
 Mueve un búfer a otro. Se trata de versiones de [memmove, wmemmove](memmove-wmemmove.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -64,7 +70,7 @@ Tamaño del búfer de destino.
 Objeto de origen.
 
 *count*<br/>
-Número de bytes (**memmove_s**) o caracteres (**wmemmove_s**) para copiar.
+Número de bytes (**memmove_s**) o caracteres (**wmemmove_s**) que se van a copiar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -74,15 +80,17 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |*dest*|*numberOfElements*|*src*|Valor devuelto|Contenido de *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|any|any|**EINVAL**|no modificado|
-|any|any|**NULL**|**EINVAL**|no modificado|
-|any|< *recuento*|any|**ERANGE**|no modificado|
+|**ACEPTA**|cualquiera|cualquiera|**EINVAL**|no modificado|
+|cualquiera|cualquiera|**ACEPTA**|**EINVAL**|no modificado|
+|cualquiera|< *recuento*|cualquiera|**ERANGE**|no modificado|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Copias *recuento* bytes de caracteres de *src* a *dest*. Si algunas regiones del área de origen y el destino se superponen, **memmove_s** garantiza que se copian los bytes de origen original en la región superpuesta antes de que se sobrescriban.
+Copia los bytes de *número* de caracteres de *src* a *dest*. Si algunas regiones del área de origen y de destino se superponen, **memmove_s** garantiza que se copian los bytes de origen originales en la región superpuesta antes de que se sobrescriban.
 
-Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan un controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
+Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -91,7 +99,7 @@ Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado 
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

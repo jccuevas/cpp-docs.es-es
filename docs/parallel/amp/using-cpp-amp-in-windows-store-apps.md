@@ -2,12 +2,12 @@
 title: Usar C++ AMP en aplicaciones UWP
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-ms.openlocfilehash: 9e17cb8691408d664f403b53e9cd8ad70fe6e5e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405357"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Usar C++ AMP en aplicaciones UWP
 
@@ -15,7 +15,7 @@ Puede utilizar C++ AMP (C++ Accelerated Massive Parallelism) en la aplicación d
 
 ## <a name="performance-considerations"></a>Consideraciones sobre el rendimiento
 
-Si usa extensiones de componentes de C++ de Visual C++ / c++ / CX para crear la aplicación de plataforma Universal de Windows (UWP), le recomendamos que use tipos de datos de antiguos sin formato (POD) junto con almacenamiento contiguo, por ejemplo, `std::vector` o matrices de estilo C, para los datos que serán Puede usar con C++ AMP. Esto puede ayudarle a conseguir un rendimiento mayor que el logrado mediante tipos o contenedores que no sean POD o Windows RT, ya que no se debe realizar ninguna serialización.
+Si usa extensiones de componentes de C++ de Visual C++ / c++ / CX para crear la aplicación de plataforma Universal de Windows (UWP), le recomendamos que use tipos de datos de antiguos sin formato (POD) junto con almacenamiento contiguo, por ejemplo, `std::vector` o matrices de estilo C, para los datos que serán Puede usar con C++ AMP. Esto puede ayudarle a conseguir un rendimiento mayor que el logrado mediante tipos o contenedores que no sean POD o Windows RT, ya que no se debe realizar ningún cálculo de referencias.
 
 En un kernel de C++ AMP, para obtener acceso a los datos que se almacenan de esta manera, simplemente ajuste `std::vector` o el almacenamiento para la matriz en `concurrency::array_view` y use la vista de matriz en un bucle `concurrency::parallel_for_each`:
 
@@ -37,7 +37,7 @@ concurrency::parallel_for_each(av0.extent, [=](concurrency::index<1> idx) restri
     });
 ```
 
-## <a name="marshaling-windows-runtime-types"></a>Serialización de tipos de Windows Runtime
+## <a name="marshaling-windows-runtime-types"></a>Calcular referencias de tipos de Windows en tiempo de ejecución
 
 Cuando se trabaja con Windows Runtime APIs, desea utilizar C++ AMP en los datos que se almacenan en un contenedor de Windows en tiempo de ejecución, como un `Platform::Array<T>^` o en tipos de datos complejos como clases o structs que se declaran mediante la **ref** palabra clave o el **valor** palabra clave. En estas situaciones, tiene que realizar alguna tarea adicional para que los datos estén disponibles para C++ AMP.
 
@@ -52,7 +52,7 @@ concurrency::array_view<float, 1> av(arr->Length, &arr->get(0));
 
 Si T no es un tipo POD, use la técnica que se describe en la sección siguiente para utilizar los datos con C++ AMP.
 
-### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Tipos de Windows en tiempo de ejecución: clases de referencia y clases de valor
+### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Tipos de Windows Runtime: clases de referencia y clases de valor
 
 C++ AMP no admite tipos de datos complejos. Esto incluye tipos que no sean POD y cualquier tipo que se declara mediante la **ref** palabra clave o el **valor** palabra clave. Si se usa un tipo no compatible en un contexto `restrict(amp)`, se genera un error en tiempo de compilación.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2973
 ms.assetid: 18b4a1c1-0ef6-43af-887a-1b5b1ab88d5b
-ms.openlocfilehash: 993c5187239598a5d379be2a70bf7b8c3d3fd331
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bba90f1bbb0be0eeffbe142602feb63ba8c32751
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563194"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201583"
 ---
 # <a name="compiler-error-c2973"></a>Error del compilador C2973
 

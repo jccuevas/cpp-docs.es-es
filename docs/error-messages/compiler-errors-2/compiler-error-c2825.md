@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2825
 ms.assetid: c832f1c1-5184-4fc2-9356-12b21daa7af3
-ms.openlocfilehash: 1e2f8e8cd38b90a698994743609892896ef0d1a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a51901477958056356a96d71adde4241d60a2ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625880"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750590"
 ---
 # <a name="compiler-error-c2825"></a>Error del compilador C2825
 
-var: debe ser una clase o espacio de nombres cuando seguido de '::'
+var: debe ser una clase o un espacio de nombres cuando va seguido de ':: '
 
-Se realizó un intento incorrecto para formar un nombre completo.
+Se intentó crear un nombre completo.
 
-Por ejemplo, asegúrese de que el código no contiene una declaración de función donde el nombre de función comienza con::.
+Por ejemplo, asegúrese de que el código no contiene una declaración de función en la que el nombre de función comienza por::.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2825:
+En el ejemplo siguiente se genera C2825:
 
-```
+```cpp
 // C2825.cpp
 typedef int i;
 int main() {

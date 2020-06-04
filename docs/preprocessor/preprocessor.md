@@ -1,18 +1,19 @@
 ---
 title: Preprocesador
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-ms.openlocfilehash: bd139dcbbbe519cc4c9750a657f8b47c5a5bcd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7188d7a6803c9eec109a59906cf0c016a460819d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530974"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337501"
 ---
 # <a name="preprocessor"></a>Preprocesador
-El preprocesador es un procesador de texto que manipula el texto de un archivo de código fuente como parte de la primera fase de traducción. El preprocesador no analiza el texto original, sino que lo divide en tokens con el fin de buscar llamadas a macros. Aunque el compilador invoca normalmente el preprocesador en el primer paso, también se puede invocar el preprocesador por separado para procesar el texto sin compilación.
+
+El preprocesador es un procesador de texto que manipula el texto de un archivo de código fuente como parte de la primera fase de traducción. El preprocesador no analiza el texto de origen, pero sí lo divide en tokens para localizar llamadas de macro. Aunque el compilador invoca normalmente el preprocesador en el primer paso, también se puede invocar el preprocesador por separado para procesar el texto sin compilación.
 
 El material de referencia del preprocesador incluye las siguientes secciones:
 
@@ -24,19 +25,19 @@ El material de referencia del preprocesador incluye las siguientes secciones:
 
 - [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
-Puede obtener una lista de código fuente tras el preprocesamiento mediante el uso de la [/E](../build/reference/e-preprocess-to-stdout.md) o [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opción del compilador. Ambas opciones invocan el preprocesador y envían el texto resultante al dispositivo de salida estándar que, en la mayoría de los casos, es la consola. La diferencia entre las dos opciones es que /E incluye las directivas `#line` y /EP elimina estas directivas.
+Puede obtener una lista del código fuente después del preprocesamiento mediante la opción del compilador [/E](../build/reference/e-preprocess-to-stdout.md) o [/EP.](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) Ambas opciones invocan el preprocesador y envían el texto resultante al dispositivo de salida estándar, que, en la mayoría de los casos, es la consola. La diferencia entre las `/E` dos `#line` opciones es `/EP` que incluye directivas y elimina estas directivas.
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
-##  <a name="_predir_special_terminology"></a> Terminología especial
+## <a name="special-terminology"></a><a name="_predir_special_terminology"></a>Terminología especial
 
-En la documentación del preprocesador, el término “argumento” hace referencia a la entidad que se pasa a una función. En algunos casos, se cambia por “real” o “formal”, que describe la expresión de argumento especificada en la llamada de función y la declaración de argumento especificada en la definición de función, respectivamente.
+En la documentación del preprocesador, el término “argumento” hace referencia a la entidad que se pasa a una función. En algunos casos, se modifica por "real" o "formal", que describe la expresión de argumento especificada en la llamada de función y la declaración de argumento especificada en la definición de función, respectivamente.
 
-El término “variable” hace referencia a un objeto de datos de tipo C. El término “objeto” hace referencia tanto a objetos como a variables de C++; es un término inclusivo.
+El término “variable” hace referencia a un objeto de datos de tipo C. El término "objeto" se refiere tanto a los objetos c++ como a las variables; es un término inclusivo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Referencia del preprocesador de C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Referencia del preprocesador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)\
 [Fases de traducción](../preprocessor/phases-of-translation.md)

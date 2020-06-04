@@ -1,9 +1,10 @@
 ---
 title: _write
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _write
-apilocation:
+- _o__write
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _write
 helpviewer_keywords:
@@ -23,14 +28,14 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519254"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916703"
 ---
-# <a name="write"></a>_write
+# <a name="_write"></a>_write
 
 Escribe datos en un archivo.
 
@@ -49,7 +54,7 @@ int _write(
 *FD*<br/>
 Descriptor de archivo del archivo en el que se van a escribir datos.
 
-*buffer*<br/>
+*búfer*<br/>
 Datos que se van a escribir.
 
 *count*<br/>
@@ -57,19 +62,21 @@ Número de bytes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **_write** devuelve el número de bytes escritos realmente. Si el espacio real que queda en el disco es menor que el tamaño del búfer está intentando escribir en el disco, la función **_write** se produce un error y no se vuelca ningún contenido del búfer en el disco. Un valor devuelto de -1 indica un error. Si se pasan parámetros no válidos, esta función invoca al controlador de parámetros no válidos, como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** se establece en uno de estos tres valores: **EBADF**, lo que significa que el descriptor de archivo no es válido o el archivo no está abierto para escritura; **ENOSPC**, lo que significa que no hay suficiente espacio restante en el dispositivo para la operación; o **EINVAL**, lo que significa que *búfer* era un puntero nulo o que un impar *recuento* de bytes que se pasó para escribirse en un archivo en modo Unicode.
+Si se realiza correctamente, **_write** devuelve el número de bytes escritos. Si el espacio real que queda en el disco es menor que el tamaño del búfer que la función está intentando escribir en el disco, **_write** produce un error y no vacía el contenido del búfer en el disco. Un valor devuelto de-1 indica un error. Si se pasan parámetros no válidos, esta función invoca al controlador de parámetros no válidos, como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y **errno** se establece en uno de estos tres valores: **EBADF**, lo que significa que el descriptor de archivo no es válido o que el archivo no está abierto para escritura. **ENOSPC**, lo que significa que no queda suficiente espacio en el dispositivo para la operación; o **EINVAL**, lo que significa que el *búfer* era un puntero nulo o que se pasó un *recuento* impar de bytes para que se escriba en un archivo en modo Unicode.
 
-Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para más información sobre estos y otros códigos devueltos, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Si el archivo se abre en modo de texto, se reemplaza cada carácter de avance de línea con un retorno de carro - par de avance de línea en la salida. Este reemplazo no tiene efecto alguno en el valor devuelto.
+Si el archivo se abre en modo de texto, cada carácter de avance de línea se reemplaza por un par de retorno de carro y avance de línea en la salida. El reemplazo no afecta al valor devuelto.
 
-Cuando se abre el archivo en modo de traducción de Unicode, por ejemplo, si *fd* se abre mediante **_open** o **_sopen** y un parámetro de modo que incluya **_O_ WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o si se abre mediante el uso de **fopen** y un parámetro de modo que incluya **ccs = UNICODE**, **ccs = UTF-16LE**, o **ccs = UTF-8**, o si se cambia el modo de un modo de traducción de Unicode utilizando **_setmode**:*búfer* se interpreta como un puntero a una matriz de **wchar_t** que contiene **UTF-16** datos. Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.
+Cuando el archivo se abre en el modo de conversión Unicode (por ejemplo, si se abre *FD* con **_open** o **_sopen** y un parámetro de modo que incluye **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o si se abre mediante **fopen** y un parámetro de modo que incluye **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**, o si el modo se cambia a un modo de conversión Unicode mediante **_setmode**; el*búfer* se interpreta como un puntero a una matriz de **wchar_t** que contiene datos **UTF-16** . Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_write** función escrituras *recuento* bytes a partir de *búfer* en el archivo asociado *fd*. La operación de escritura se inicia en la posición actual del puntero de archivo (si existe) asociado al archivo en cuestión. Si el archivo se abre para anexarlo, la operación comenzará en el final actual del archivo. Tras la operación de escritura, el puntero de archivo se incrementará según el número de bytes escrito realmente.
+La función **_write** escribe bytes de *recuento* desde el *búfer* en el archivo asociado a *FD*. La operación de escritura se inicia en la posición actual del puntero de archivo (si existe) asociado al archivo en cuestión. Si el archivo se abre para anexarlo, la operación comenzará en el final actual del archivo. Después de la operación de escritura, el puntero de archivo aumenta en función del número de bytes escritos.
 
-Al escribir en los archivos abiertos en modo de texto, **_write** trata un carácter CTRL+Z como la lógica final del archivo. Cuando se escribe en un dispositivo, **_write** trata un carácter CTRL+Z en el búfer como un terminador de salida.
+Cuando se escribe en archivos abiertos en modo de texto, **_write** trata un carácter Ctrl + Z como el final lógico del archivo. Al escribir en un dispositivo, **_write** trata un carácter Ctrl + Z en el búfer como un terminador de salida.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,7 +84,7 @@ Al escribir en los archivos abiertos en modo de texto, **_write** trata un cará
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -121,7 +128,7 @@ int main( void )
             perror("Invalid parameter: buffer was NULL!");
             break;
          default:
-            // An unrelated error occured
+            // An unrelated error occurred
             perror("Unexpected error!");
       }
    }
@@ -137,7 +144,7 @@ int main( void )
 Wrote 36 bytes to file.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

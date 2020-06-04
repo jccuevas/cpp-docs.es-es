@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 3f3fac9d5410595fe5653e257d97d2fd7c858545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751006"
 ---
 # <a name="compiler-error-c2027"></a>Error del compilador C2027
 
-el uso de un tipo no definido 'type'
+uso del tipo no definido ' tipo '
 
-No se puede usar un tipo hasta que se define. Para resolver el error, asegúrese de que el tipo se define completamente antes de hacer referencia a ella.
+No se puede usar un tipo hasta que se haya definido. Para resolver el error, asegúrese de que el tipo está totalmente definido antes de hacer referencia a él.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2027.
+En el ejemplo siguiente se genera C2027.
 
-```
+```cpp
 // C2027.cpp
 class C;
 class D {
@@ -43,11 +43,11 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Es posible declarar un puntero a un tipo declarado pero no definido.  Pero Visual C++ no permite una referencia a un tipo no definido.
+Es posible declarar un puntero a un tipo declarado pero no definido. Pero C++ no permite una referencia a un tipo sin definir.
 
-El ejemplo siguiente genera C2027.
+En el ejemplo siguiente se genera C2027.
 
-```
+```cpp
 // C2027_b.cpp
 class A;
 A& CreateA();

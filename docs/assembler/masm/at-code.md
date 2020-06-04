@@ -1,26 +1,27 @@
 ---
 title: '@code'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@code'
 helpviewer_keywords:
 - '@code symbol'
 ms.assetid: 44e050e6-d254-4157-9022-cf6afbaa0515
-ms.openlocfilehash: 94eb743c9d8af33f4043339223cf2d79bbd566fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 841f75f45477938fc7d92703f6e2b9c11e568480
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472948"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316452"
 ---
-# <a name="code"></a>@code
+# <a name="code"></a>\@code
 
-El nombre del segmento de código (macro de texto).
+Nombre del segmento de código (macro de texto).
 
 ## <a name="syntax"></a>Sintaxis
 
-> @code
+> **código de \@**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referencia de símbolos](symbols-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

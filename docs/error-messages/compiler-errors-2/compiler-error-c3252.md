@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3252
 ms.assetid: aa9ad096-e9ac-41c7-8ad9-b966751c7c75
-ms.openlocfilehash: ee9245fb8eb89b9234e76dc10304b1d05bc1fdcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbfe3ffaca66cad4922b5771ee8c9003acba7571
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600387"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754334"
 ---
 # <a name="compiler-error-c3252"></a>Error del compilador C3252
 
@@ -23,7 +23,7 @@ Tenga en cuenta que todos los métodos de una interfaz son públicos.
 
 En el ejemplo siguiente se genera el error C3252 y se muestra cómo corregirlo.
 
-```
+```cpp
 // C3252.cpp
 // compile with: /clr /c
 ref class A {

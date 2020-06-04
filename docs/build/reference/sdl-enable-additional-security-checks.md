@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318451"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (habilitar comprobaciones adicionales de seguridad)
 
@@ -23,7 +23,7 @@ Agrega las comprobaciones recomendadas del ciclo de vida de desarrollo de seguri
 
 ## <a name="remarks"></a>Comentarios
 
-**/SDL** habilita un supraconjunto de las comprobaciones de seguridad de línea de base proporcionado por [/GS](../../build/reference/gs-buffer-security-check.md) e invalida **/GS-**. De forma predeterminada, **/sdl** está desactivada. **/SDL-** deshabilita las comprobaciones de seguridad adicionales.
+**/SDL** habilita un supraconjunto de las comprobaciones de seguridad de línea de base proporcionado por [/GS](gs-buffer-security-check.md) e invalida **/GS-**. De forma predeterminada, **/sdl** está desactivada. **/SDL-** deshabilita las comprobaciones de seguridad adicionales.
 
 ## <a name="compile-time-checks"></a>Comprobaciones en tiempo de compilación
 
@@ -39,7 +39,7 @@ Agrega las comprobaciones recomendadas del ciclo de vida de desarrollo de seguri
 |[C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|/we4703|Uso de una variable de puntero local potencialmente no inicializada.|
 |[C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|Saturación del búfer cuando se utilizan funciones específicas de C en tiempo de ejecución (CRT).|
 |[C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|/we4995|Uso de una función marcada con pragma [en desuso](../../preprocessor/deprecated-c-cpp.md).|
-|[ADVERTENCIA C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Uso de una función marcada como [en desuso](../../cpp/deprecated-cpp.md).|
+|[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Uso de una función marcada como [en desuso](../../cpp/deprecated-cpp.md).|
 
 ## <a name="runtime-checks"></a>Comprobaciones en tiempo de ejecución
 
@@ -67,7 +67,7 @@ Para obtener más información, consulte [advertencias, /sdl y mejora de la dete
 
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **C o C++** carpeta.
 
@@ -75,5 +75,5 @@ Para obtener más información, consulte [advertencias, /sdl y mejora de la dete
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

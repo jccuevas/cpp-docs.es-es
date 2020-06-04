@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4481
 ms.assetid: 7bfd4e0c-b452-4e6c-b7c4-ac5cc93fe4ea
-ms.openlocfilehash: f88a61a40a789c31e80875d785b95136ac69253c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 853720b1c2476d9d8012916d42fe31dc884b16a7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466942"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990782"
 ---
 # <a name="compiler-warning-level-4-c4481"></a>Advertencia del compilador (nivel 4) C4481
 
-ha utilizado una extensión no estándar: 'keyword' especificador de invalidación
+se ha utilizado una extensión no estándar: especificador de invalidación ' palabra clave '
 
-Se utilizó una palabra clave que no está en el estándar de C++, por ejemplo, uno de los especificadores de invalidación que también funciona en/CLR.  Para obtener más información, vea
+Se usó una palabra clave que no está en C++ el estándar, por ejemplo, uno de los especificadores de invalidación que también funcionan en/CLR.  Para obtener más información, vea
 
 - [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [Especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md)
+- [Especificadores de invalidación](../../extensions/override-specifiers-cpp-component-extensions.md)
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4481.
+En el ejemplo siguiente se genera C4481.
 
-```
+```cpp
 // C4481.cpp
 // compile with: /W4 /c
 class B {

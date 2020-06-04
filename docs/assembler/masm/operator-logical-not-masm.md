@@ -1,6 +1,6 @@
 ---
-title: operador ! (MASM)
-ms.date: 08/30/2018
+title: operador ! MASM
+ms.date: 12/17/2019
 f1_keywords:
 - operator !
 helpviewer_keywords:
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - '! operator'
 - operator !
 ms.assetid: 220bb468-7c88-4a5c-8303-2bd7f966fdeb
-ms.openlocfilehash: cf7346a861e38bdaaf2bcd7e90541b7dfa34e513
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37557391c9e3d7c338926fbda002cf68a5961e9c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429762"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311252"
 ---
-# <a name="operator--masm"></a>operador ! (MASM)
+# <a name="operator--masm"></a>operador ! MASM
 
-Trata `character` como un carácter literal en lugar de un operador o símbolo.
+Trata el *carácter* como un carácter literal en lugar de como un operador o símbolo.
 
 ## <a name="syntax"></a>Sintaxis
 
-> ! *Carácter*
+> **!** *character*
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

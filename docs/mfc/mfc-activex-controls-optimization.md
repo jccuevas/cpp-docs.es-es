@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: cc4d210abe0bca5ba8d3a442796173111f45f6e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186897"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Controles ActiveX MFC: Optimización
 
@@ -68,4 +68,3 @@ Para obtener más información, consulte:
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

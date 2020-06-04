@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-ms.openlocfilehash: a736e89565bb7ab6bc49c3c0f65d12fc9508200c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d96046c629e812e342ce86b850b6d52a57094997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484271"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188446"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Resolución de sobrecarga de llamadas de plantilla de función
 
-Una plantilla de función puede sobrecargar funciones que no son de plantilla con el mismo nombre. En este escenario, las llamadas a función se resuelven utilizando primero la deducción de argumento de plantilla para crear instancias de la plantilla de función con una especialización exclusiva. Si la deducción de argumento de plantilla no se produce correctamente, se considera que las demás sobrecargas de función resuelven la llamada. Estas otras sobrecargas, también conocidas como conjunto de candidato, incluyen funciones que no son de plantilla y otras plantillas de función de las que se pueden crear instancias. Si la deducción de argumento de plantilla se realiza correctamente, la función generada se compara con las demás funciones para determinar la mejor coincidencia, de acuerdo con las reglas para la resolución de sobrecarga. Para obtener más información, consulte [sobrecarga de funciones](function-overloading.md).
+Una plantilla de función puede sobrecargar funciones que no son de plantilla con el mismo nombre. En este escenario, las llamadas a función se resuelven utilizando primero la deducción de argumento de plantilla para crear instancias de la plantilla de función con una especialización exclusiva. Si la deducción de argumento de plantilla no se produce correctamente, se considera que las demás sobrecargas de función resuelven la llamada. Estas otras sobrecargas, también conocidas como conjunto de candidato, incluyen funciones que no son de plantilla y otras plantillas de función de las que se pueden crear instancias. Si la deducción de argumento de plantilla se realiza correctamente, la función generada se compara con las demás funciones para determinar la mejor coincidencia, de acuerdo con las reglas para la resolución de sobrecarga. Para obtener más información, vea [sobrecarga de funciones](function-overloading.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -80,7 +80,7 @@ int main()
 void f(T1, T2)
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Resolución de nombres](../cpp/templates-and-name-resolution.md)<br/>
 [typename](../cpp/typename.md)

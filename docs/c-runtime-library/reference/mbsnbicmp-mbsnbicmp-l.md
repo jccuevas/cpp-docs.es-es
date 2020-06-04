@@ -1,10 +1,12 @@
 ---
 title: _mbsnbicmp, _mbsnbicmp_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
-apilocation:
+- _o__mbsnbicmp
+- _o__mbsnbicmp_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,17 +18,15 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
 - _mbsnbicmp
 - mbsnbicmp
 - mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
 - _mbsnbicmp_l
 helpviewer_keywords:
 - _tcsnicmp_l function
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 059d0781e465f6491f27fd634bbc4479104bc12f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e84e6b367c428dc26a1864db80f6828f7ec9c176
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581901"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911828"
 ---
-# <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
+# <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Compara **n** bytes de caracteres multibyte dos cadenas y no distingue entre mayúsculas.
+Compara **n** bytes de dos cadenas de caracteres multibyte y omite el uso de mayúsculas y minúsculas.
 
 > [!IMPORTANT]
 > Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -78,23 +78,25 @@ El valor devuelto indica la relación entre las subcadenas.
 
 |Valor devuelto|Descripción|
 |------------------|-----------------|
-|< 0|*cadena1* subcadena menor *cadena2* subcadena.|
-|0|*cadena1* idéntico de la subcadena *cadena2* subcadena.|
-|> 0|*cadena1* subcadena mayor *cadena2* subcadena.|
+|< 0|la subcadena de *cadena1* es menor que *cadena2* subcadena.|
+|0|la subcadena *cadena1* es idéntica a la subcadena *cadena2* .|
+|> 0|la subcadena *cadena1* es mayor que *cadena2* subcadena.|
 
-Produce un error, **_mbsnbicmp** devuelve **_NLSCMPERROR**, que se define en String.h y Mbstring.h.
+En un error, **_mbsnbicmp** devuelve **_NLSCMPERROR**, que se define en String. h y mbstring. h.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_mbsnbicmp** función realiza una comparación ordinal de a lo sumo *recuento* bytes de *string1* y *cadena2*. La comparación se realiza mediante la conversión de cada carácter a minúscula. [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) es una versión entre mayúsculas y minúsculas de **_mbsnbicmp**. La comparación finaliza si se alcanza un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan los caracteres. Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una de las cadenas antes de *recuento* se comparan los caracteres, la cadena más corta es menor.
+La función **_mbsnbicmp** realiza una comparación ordinal de como máximo los primeros bytes de *número* de *cadena1* y *cadena2*. La comparación se realiza mediante la conversión de cada carácter a minúsculas. [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) es una versión de **_mbsnbicmp**que distingue mayúsculas de minúsculas. La comparación finaliza si se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* . Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* , la cadena más corta es menor.
 
-**_mbsnbicmp** es similar a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), salvo por que compara cadenas hasta *recuento* bytes en lugar de caracteres.
+**_mbsnbicmp** es similar a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), salvo que compara las cadenas hasta *contar* bytes en lugar de caracteres.
 
-Dos cadenas que contienen caracteres situados entre la 'Z' y la 'a' en la tabla ASCII ('[', '\\', ']', '^', '_' y '\`') se comparan de forma distinta. Por ejemplo, las dos cadenas "ABCDE" y "ABCD ^" comparan de un modo si la comparación es minúscula ("abcde" > "abcd ^") y la otra manera ("ABCDE" < "ABCD ^") si está en mayúsculas.
+Dos cadenas que contienen caracteres situados entre la 'Z' y la 'a' en la tabla ASCII ('[', '\\', ']', '^', '_' y '\`') se comparan de forma distinta. Por ejemplo, las dos cadenas "ABCDe" y "ABCD ^" se comparan de una manera si la comparación es minúscula ("ABCDE" > "ABCD ^") y la otra ("ABCDe" < "ABCD ^") si está en mayúsculas.
 
-**_mbsnbicmp** reconoce secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. La configuración regional actual no le afecta.
+**_mbsnbicmp** reconoce secuencias de caracteres multibyte según la [Página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. La configuración regional actual no le afecta.
 
-Si bien *string1* o *cadena2* es un puntero nulo, **_mbsnbicmp** invoca el controlador de parámetros no válidos, como se describe en [devalidacióndeparámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **_NLSCMPERROR** y establece **errno** a **EINVAL**.
+Si *string1* o *cadena2* es un puntero nulo, **_mbsnbicmp** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **_NLSCMPERROR** y establece **errno** en **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -109,13 +111,13 @@ Si bien *string1* o *cadena2* es un puntero nulo, **_mbsnbicmp** invoca el contr
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

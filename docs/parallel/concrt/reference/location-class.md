@@ -1,5 +1,5 @@
 ---
-title: location (Clase)
+title: location (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - location
@@ -10,46 +10,46 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: ffb469ec5f5542b5037d31bfdb5fd1eaab47ed38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596549"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139825"
 ---
-# <a name="location-class"></a>location (Clase)
+# <a name="location-class"></a>location (clase)
 
 Una abstracción de una ubicación física en el hardware.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class location;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Ubicación](#ctor)|Sobrecargado. Construye un objeto `location`.|
-|[~ location (destructor)](#dtor)|Destruye un objeto `location`.|
+|[ubicación](#ctor)|Sobrecargado. Construye un objeto `location`.|
+|[~ Location (destructor)](#dtor)|Destruye un objeto `location`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Actual](#current)|Devuelve un `location` objeto que representa el lugar más específico que se está ejecutando el subproceso que realiza la llamada.|
-|[from_numa_node](#from_numa_node)|Devuelve un `location` el objeto que representa un nodo NUMA determinado.|
+|[corrientes](#current)|Devuelve un objeto `location` que representa la posición más específica en la que se está ejecutando el subproceso que realiza la llamada.|
+|[from_numa_node](#from_numa_node)|Devuelve un objeto `location` que representa un nodo NUMA determinado.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Determina si dos `location` objetos representan otra ubicación.|
-|[operator=](#operator_eq)|Asigna el contenido de otro `location` objeto a ésta.|
-|[operator==](#operator_eq_eq)|Determina si dos `location` objetos representan la misma ubicación.|
+|[operator!=](#operator_neq)|Determina si dos objetos `location` representan una ubicación diferente.|
+|[operator=](#operator_eq)|Asigna el contenido de un objeto de `location` diferente a este.|
+|[operator==](#operator_eq_eq)|Determina si dos objetos `location` representan la misma ubicación.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -57,52 +57,52 @@ class location;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrt.h
+**Encabezado:** concrt. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="dtor"></a> ~ ubicación
+## <a name="dtor"></a>~ Ubicación
 
 Destruye un objeto `location`.
 
-```
+```cpp
 ~location();
 ```
 
-##  <a name="current"></a> Actual
+## <a name="current"></a>corrientes
 
-Devuelve un `location` objeto que representa el lugar más específico que se está ejecutando el subproceso que realiza la llamada.
+Devuelve un objeto `location` que representa la posición más específica en la que se está ejecutando el subproceso que realiza la llamada.
 
-```
+```cpp
 static location __cdecl current();
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una ubicación que representa la ubicación más específica en la que está ejecutando el subproceso que realiza la llamada.
+Ubicación que representa la posición más específica en la que se está ejecutando el subproceso que realiza la llamada.
 
-##  <a name="from_numa_node"></a> from_numa_node
+## <a name="from_numa_node"></a>from_numa_node
 
-Devuelve un `location` el objeto que representa un nodo NUMA determinado.
+Devuelve un objeto `location` que representa un nodo NUMA determinado.
 
-```
+```cpp
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *_NumaNodeNumber*<br/>
-El número de nodos NUMA para construir una ubicación para.
+Número de nodo NUMA para el que se va a construir una ubicación.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una ubicación que representa el nodo NUMA especificado por el `_NumaNodeNumber` parámetro.
+Ubicación que representa el nodo NUMA especificado por el parámetro `_NumaNodeNumber`.
 
-##  <a name="ctor"></a> Ubicación
+## <a name="ctor"></a>Cód
 
 Construye un objeto `location`.
 
-```
+```cpp
 location();
 
 location(
@@ -121,39 +121,39 @@ location(
 
 *_LocationType*<br/>
 
-*_ID*<br/>
+*_Id*<br/>
 
 *_BindingId*<br/>
 
 *_PBinding*<br/>
-(Opcional) Puntero de enlace.
+Opta Puntero de enlace.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Una ubicación construido de forma predeterminada, representa el sistema como un todo.
+Una ubicación construida de forma predeterminada representa el sistema en su conjunto.
 
-##  <a name="operator_neq"></a> operador! =
+## <a name="operator_neq"></a>operador! =
 
-Determina si dos `location` objetos representan otra ubicación.
+Determina si dos objetos `location` representan una ubicación diferente.
 
-```
+```cpp
 bool operator!= (const location& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *_Rhs*<br/>
-Operando `location`.
+`location`de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si las dos ubicaciones son diferentes, **false** en caso contrario.
+**true** si las dos ubicaciones son diferentes; de lo contrario, **false** .
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operador =
 
-Asigna el contenido de otro `location` objeto a ésta.
+Asigna el contenido de un objeto de `location` diferente a este.
 
-```
+```cpp
 location& operator= (const location& _Rhs);
 ```
 
@@ -164,23 +164,23 @@ Objeto `location` de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
-##  <a name="operator_eq_eq"></a> operador ==
+## <a name="operator_eq_eq"></a>operador = =
 
-Determina si dos `location` objetos representan la misma ubicación.
+Determina si dos objetos `location` representan la misma ubicación.
 
-```
+```cpp
 bool operator== (const location& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *_Rhs*<br/>
-Operando `location`.
+`location`de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si las dos ubicaciones son idénticas, y **false** en caso contrario.
+**true** si las dos ubicaciones son idénticas y **false** en caso contrario.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

@@ -1,10 +1,12 @@
 ---
 title: puts, _putws
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _putws
 - puts
-apilocation:
+- _o__putws
+- _o_puts
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putts
 - _putws
@@ -30,14 +36,14 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e581237c7b839af87df7bc88369f21751b855d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667329"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916107"
 ---
-# <a name="puts-putws"></a>puts, _putws
+# <a name="puts-_putws"></a>puts, _putws
 
 Escribe una cadena en **stdout**.
 
@@ -54,22 +60,24 @@ int _putws(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena de salida
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un valor no negativo si se ejecuta correctamente. Si **coloca** produce un error, devuelve **EOF**; si **_putws** produce un error, devuelve **WEOF**. Si *str* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** a **EINVAL** y devolver **EOF** o **WEOF**.
+Devuelve un valor no negativo si se ejecuta correctamente. Si se produce un error en **puts** , devuelve **EOF**; Si **_putws** produce un error, devuelve **WEOF**. Si *Str* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** en **EINVAL** y devuelven **EOF** o **WEOF**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **coloca** función escrituras *str* al flujo de salida estándar **stdout**, reemplazando la cadena del carácter nulo de terminación ('\0') con un carácter de nueva línea ('\n') en el flujo de salida.
+La función **puts** escribe *Str* en el flujo de salida estándar **stdout**, reemplazando el carácter nulo de finalización de la cadena (' \ 0 ') por un carácter de nueva línea (' \n ') en el flujo de salida.
 
-**_putws** es la versión de caracteres anchos de **coloca**; las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. **coloca** no admite actualmente la salida en un flujo UNICODE.
+**_putws** es la versión de caracteres anchos de **puts**; las dos funciones se comportan exactamente igual si la secuencia se abre en modo ANSI. **Put** no admite actualmente la salida en un flujo Unicode.
 
-**_putwch** escribe caracteres Unicode mediante la configuración regional de la consola actual.
+**_putwch** escribe caracteres Unicode mediante la configuración regional actual de la consola.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -84,7 +92,7 @@ El **coloca** función escrituras *str* al flujo de salida estándar **stdout**,
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

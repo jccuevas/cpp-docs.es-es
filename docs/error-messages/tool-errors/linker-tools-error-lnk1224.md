@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1224
 ms.assetid: e190b5d0-ce0c-4f65-8cc0-753f1cc9758a
-ms.openlocfilehash: 7e2c8da7443a9251d8111f643a785f5d75149cac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b84a2390baad5ac307fa025e3fffafa0f093fb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481749"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183883"
 ---
 # <a name="linker-tools-error-lnk1224"></a>Error de las herramientas del vinculador LNK1224
 
-dirección base de imagen no válido
+Dirección base de imagen no válida
 
-Especifica una dirección base no válida para la imagen. Las direcciones base deben ser de 64KB alineados (los últimos cuatro dígitos hexadecimales deben ser cero) y la imagen base debe ajustarse a un valor de 32 bits con signo o sin signo.
+Especificó una dirección base no válida para la imagen. Las direcciones base deben estar alineadas con 64 KB (los cuatro últimos dígitos hexadecimales deben ser cero) y la base de la imagen debe caber en un valor con signo de 32 bits o sin signo.

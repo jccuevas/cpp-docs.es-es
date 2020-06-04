@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: ba2b413d40da601029f5c4e1d861576212c10494
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737629"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448422"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrar de OpenMP al Runtime de simultaneidad
 
 El Runtime de simultaneidad ofrece una variedad de modelos de programación. Estos modelos pueden superponerse o complementar los modelos de otras bibliotecas. Los documentos en esta sección comparar [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) al Runtime de simultaneidad y se proporcionan ejemplos sobre cómo migrar código existente de OpenMP para usar el Runtime de simultaneidad.
 
-El modelo de programación de OpenMP se define con un estándar abierto y tiene enlaces bien definidos con los lenguajes de programación Fortran y C/C++. Las versiones 2.0 y 2.5, que son compatibles con el compilador de Visual C++, OpenMP son adecuadas para los algoritmos paralelos que son iterativos; es decir, realizan la iteración paralela a través de una matriz de datos. OpenMP 3.0 admite tareas que no son iterativas además de las tareas iterativas.
+El modelo de programación de OpenMP se define con un estándar abierto y tiene enlaces bien definidos con los lenguajes de programación Fortran y C/C++. Las versiones 2.0 y 2.5, que son compatibles con Microsoft OpenMP C++ compilador, son adecuada para los algoritmos paralelos que son iterativos; es decir, realizan la iteración paralela a través de una matriz de datos. OpenMP 3.0 admite tareas que no son iterativas además de las tareas iterativas.
 
 OpenMP es más eficaz cuando el grado de paralelismo se determina previamente y coincide con los recursos disponibles en el sistema. El modelo de OpenMP es una coincidencia de métodos especialmente adecuados para informática de alto rendimiento, que se distribuyen los problemas de cálculo muy grandes a través de los recursos de procesamiento de un equipo. En este escenario, el entorno de hardware generalmente es fijo y el desarrollador puede esperar a tener acceso exclusivo a todos los recursos informáticos cuando se ejecuta el algoritmo.
 
@@ -48,17 +48,17 @@ Los casos siguientes describen quizás no sea adecuado para migrar código exist
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Cómo: Convertir un bucle usar el Runtime de simultaneidad OpenMP paralelo](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Cómo: Convertir un bucle OpenMP paralelo para usar el runtime de simultaneidad](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Dado un bucle básico que usa el OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) y [para](../../parallel/openmp/reference/for-openmp.md) directivas, se muestra cómo convertir para que use el Runtime de simultaneidad [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
 
-[Cómo: Convertir un bucle OpenMP que usa la cancelación para usar el Runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Cómo: Convertir un bucle OpenMP que usa la cancelación para usar el runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Dado un OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) bucle que no requiere que todas las iteraciones que se ejecutan, se muestra cómo convertir para que use el mecanismo de cancelación del Runtime de simultaneidad.
 
-[Cómo: Convertir un bucle OpenMP que usa el control de excepciones para usar el Runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[Cómo: Convertir un bucle OpenMP que usa el control de excepciones para usar el runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Dado un OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) bucle que realiza el control de excepciones, se muestra cómo convertir para que use el mecanismo de control de excepciones de Runtime de simultaneidad.
 
-[Cómo: Convertir un bucle OpenMP que usa una Variable de reducción para usar el Runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Cómo: Convertir un bucle OpenMP que usa una variable de reducción para usar el Runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Dado un OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) bucle que usa el [reducción](../../parallel/openmp/reference/reduction.md) cláusula, se muestra cómo convertir para que use el Runtime de simultaneidad.
 
 ## <a name="see-also"></a>Vea también
@@ -67,4 +67,3 @@ Dado un OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-wr
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [Biblioteca de patrones de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)
-

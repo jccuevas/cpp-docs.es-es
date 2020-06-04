@@ -1,38 +1,38 @@
 ---
-title: C Runtime Error R6009
+title: Error en tiempo de ejecución de C R6009
 ms.date: 11/04/2016
 f1_keywords:
 - R6009
 helpviewer_keywords:
 - R6009
 ms.assetid: edfb1f8b-3807-48f4-a994-318923b747ae
-ms.openlocfilehash: 5e1914d5d2f665609cfc24c2db3dc8a123d7e83f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64391f8ec05a99bb85a9d6cd00d6488a945fdb62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197358"
 ---
-# <a name="c-runtime-error-r6009"></a>C Runtime Error R6009
+# <a name="c-runtime-error-r6009"></a>Error en tiempo de ejecución de C R6009
 
-No hay suficiente espacio para el entorno
+no hay espacio suficiente para el entorno
 
 > [!NOTE]
-> Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo está provocada por una condición de memoria muy baja, demasiada memoria usada por las variables de entorno o un error en el programa.
+> Si encuentra este mensaje de error mientras se ejecuta una aplicación, la aplicación se cerró porque tiene un problema de memoria interna. Hay varias razones posibles para este error, pero a menudo se debe a una condición de memoria extremadamente baja, demasiada memoria para las variables de entorno o un error en el programa.
 >
 > Puede intentar seguir estos pasos para corregir este error:
 >
 > - Cierre otras aplicaciones en ejecución o reinicie el equipo para liberar memoria.
-> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
-> - Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> - Use la página **aplicaciones y características** o **programas y características** del **Panel de control** para reparar o reinstalar el programa.
+> - Compruebe **Windows Update** en el **Panel de control** para las actualizaciones de software.
 > - Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
 
 **Información para programadores**
 
-Había memoria suficiente para cargar el programa, pero no hay suficiente memoria para crear el **envp** matriz.  La causa puede ser extremadamente bajos de memoria, o bien el uso de variables de entorno inusualmente grande. Tenga en cuenta las siguientes soluciones:
+Memoria suficiente para cargar el programa, pero no hay suficiente memoria para crear la matriz **envp** .  Esto puede deberse a condiciones de memoria extremadamente bajas o a un uso de variables de entorno inusualmente grande. Considere una de las siguientes soluciones:
 
 - Aumente la cantidad de memoria disponible para el programa.
 
-- Reducir el número y tamaño de los argumentos de línea de comandos.
+- Reduzca el número y el tamaño de los argumentos de la línea de comandos.
 
-- Reducir el tamaño del entorno quitando variables innecesarias.
+- Reduzca el tamaño del entorno quitando las variables innecesarias.

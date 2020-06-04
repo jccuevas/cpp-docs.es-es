@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
-ms.openlocfilehash: a6d75ca671e22203cb40ca18de21606834eeefa8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f2bac38166a8972193a7aaa7e84913b941c799
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527366"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518327"
 ---
 # <a name="compiler-error-c2346"></a>Error del compilador C2346
 
-'function' no se puede compilar como nativa: razón
+' function ' no se puede compilar como Native: Reason
 
 El compilador no pudo compilar una función en MSIL.
 
-Para obtener más información, consulte [managed, unmanaged](../../preprocessor/managed-unmanaged.md) y [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
+Para obtener más información, vea [Managed, Unmanaged](../../preprocessor/managed-unmanaged.md) y [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>Para corregir este error
 
-1. Quite el código en la función que no se puede compilar en MSIL.
+1. Quite el código de la función que no se puede compilar en MSIL.
 
-1. Cualquiera que no compile el módulo con **/CLR**, o marque la función como no administrados con el pragma no administrada.
+1. No compile el módulo con **/CLR**o marque la función como no administrada con la Directiva Pragma no administrada.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2346.
+En el ejemplo siguiente se genera C2346.
 
-```
+```cpp
 // C2346.cpp
 // processor: x86
 // compile with: /clr
@@ -45,7 +45,7 @@ struct S
    virtual __clrcall ~S() { }
 };
 
-void main()
+int main()
 {
    S s;
 }

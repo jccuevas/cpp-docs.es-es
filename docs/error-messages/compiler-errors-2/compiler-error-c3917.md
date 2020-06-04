@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3917
 ms.assetid: a24cd0c9-262f-46e5-9488-1c01f945933d
-ms.openlocfilehash: 393d1213f58ab50424093927cbc975651ce34e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d527f8447306ff74606a0aa733014d45f985dc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567486"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165475"
 ---
 # <a name="compiler-error-c3917"></a>Error del compilador C3917
 
-'*propiedad*': estilo de declaración de construcción obsoleto
+'*Property*': estilo de declaración de construcción obsoleto
 
-Una definición de propiedad o evento utilizó la sintaxis de una versión anterior de Visual Studio 2005.
+Una definición de propiedad o de evento utiliza una sintaxis de una versión anterior a Visual Studio 2005.
 
-Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).
+Para obtener más información, consulta [property](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

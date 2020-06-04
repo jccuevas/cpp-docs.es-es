@@ -18,7 +18,6 @@ f1_keywords:
 - ATL.CDataSource.GetProperties
 - CDataSource.GetProperties
 - ATL::CDataSource::GetProperties
-- GetProperties
 - ATL::CDataSource::GetProperty
 - ATL.CDataSource.GetProperty
 - CDataSource.GetProperty
@@ -57,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 646d4b3548a1c5ee1bdfaf64f7823fa584abaac5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557081"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212042"
 ---
 # <a name="cdatasource-class"></a>CDataSource (Clase)
 
@@ -78,31 +77,31 @@ class CDataSource
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[Cerrar](#close)|Cierra la conexión.|
-|[GetInitializationString](#getinitializationstring)|Recupera la cadena de inicialización del origen de datos que está abierto actualmente.|
-|[GetProperties](#getproperties)|Obtiene los valores de propiedades establecidas actualmente para el origen de datos conectado.|
-|[GetProperty](#getproperty)|Obtiene el valor de una propiedad única establecido actualmente para el origen de datos conectado.|
-|[Abrir](#open)|Crea una conexión a un proveedor (origen de datos) mediante un `CLSID`, `ProgID`, o un `CEnumerator` moniker proporcionado por el llamador.|
+|[Close](#close)|Cierra la conexión.|
+|[GetInitializationString](#getinitializationstring)|Recupera la cadena de inicialización del origen de datos que está abierta actualmente.|
+|[GetProperties](#getproperties)|Obtiene los valores de las propiedades establecidas actualmente para el origen de datos conectado.|
+|[GetProperty](#getproperty)|Obtiene el valor de una sola propiedad establecida actualmente para el origen de datos conectado.|
+|[Abrir](#open)|Crea una conexión a un proveedor (origen de datos) mediante una `CLSID`, `ProgID`o un moniker `CEnumerator` proporcionado por el autor de la llamada.|
 |[OpenFromFileName](#openfromfilename)|Abre un origen de datos desde un archivo especificado por el nombre de archivo proporcionado por el usuario.|
-|[OpenFromInitializationString](#openfrominitializationstring)|Se abre el origen de datos especificado por una cadena de inicialización.|
-|[OpenWithPromptFileName](#openwithpromptfilename)|Permite al usuario seleccionar un archivo de vínculo de datos creado anteriormente para abrir el origen de datos correspondiente.|
-|[OpenWithServiceComponents](#openwithservicecomponents)|Abre un objeto de origen de datos mediante el cuadro de diálogo de vínculo de datos.|
+|[OpenFromInitializationString](#openfrominitializationstring)|Abre el origen de datos especificado por una cadena de inicialización.|
+|[OpenWithPromptFileName](#openwithpromptfilename)|Permite al usuario seleccionar un archivo de vínculo de datos creado previamente para abrir el origen de datos correspondiente.|
+|[OpenWithServiceComponents](#openwithservicecomponents)|Abre un objeto de origen de datos mediante el cuadro de diálogo vínculo de datos.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Una o varias sesiones de base de datos se pueden crear para una sola conexión. Estas sesiones se representan mediante `CSession`. Debe llamar a [CDataSource:: Open](../../data/oledb/cdatasource-open.md) para abrir la conexión antes de crear una sesión con `CSession::Open`.
+Se pueden crear una o varias sesiones de base de datos para una única conexión. Estas sesiones se representan mediante `CSession`. Debe llamar a [CDataSource:: Open](../../data/oledb/cdatasource-open.md) para abrir la conexión antes de crear una sesión con `CSession::Open`.
 
-Para obtener un ejemplo de cómo usar `CDataSource`, consulte el [CatDB](../../visual-cpp-samples.md) ejemplo.
+Para obtener un ejemplo de cómo usar `CDataSource`, vea el ejemplo [CatDB](../../overview/visual-cpp-samples.md) .
 
-## <a name="close"></a> CDataSource:: Close
+## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource:: Close
 
-Cierra la conexión al liberar el `m_spInit` puntero.
+Cierra la conexión liberando el puntero `m_spInit`.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -110,7 +109,7 @@ Cierra la conexión al liberar el `m_spInit` puntero.
 void Close() throw();
 ```
 
-## <a name="getinitializationstring"></a> CDataSource:: Getinitializationstring
+## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a>CDataSource:: GetInitializationString
 
 Recupera la cadena de inicialización de un origen de datos que está abierto actualmente.
 
@@ -124,20 +123,20 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 #### <a name="parameters"></a>Parámetros
 
 *pInitializationString*<br/>
-[out] Un puntero a la cadena de inicialización.
+enuncia Puntero a la cadena de inicialización.
 
 *bIncludePassword*<br/>
-[in] **true** si la cadena incluye una contraseña; de lo contrario **false**.
+de **true** si la cadena incluye una contraseña; en caso contrario, **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La cadena de inicialización resultante puede utilizarse para posteriormente vuelve a abrir esta conexión de origen de datos.
+La cadena de inicialización resultante se puede usar para volver a abrir posteriormente esta conexión a un origen de datos.
 
-## <a name="getproperties"></a> CDataSource:: GetProperties
+## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a>CDataSource:: GetProperties
 
 Devuelve la información de propiedad solicitada para el objeto de origen de datos conectado.
 
@@ -152,17 +151,17 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IDBProperties:: GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) en el *referencia del programador OLE DB* en el SDK de Windows.
+Vea [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) en la *Referencia del programador de OLE DB* en el Windows SDK.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener una propiedad única, utilice [GetProperty](../../data/oledb/cdatasource-getproperty.md).
+Para obtener una propiedad única, use [GetProperty](../../data/oledb/cdatasource-getproperty.md).
 
-## <a name="getproperty"></a> CDataSource:: GetProperty
+## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a>CDataSource:: GetProperty
 
 Devuelve el valor de una propiedad especificada para el objeto de origen de datos conectado.
 
@@ -176,26 +175,26 @@ HRESULT GetProperty(const GUID& guid,
 
 #### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
-[in] Un GUID que identifica el conjunto de propiedades para que se va a devolver la propiedad.
+*guid*<br/>
+de GUID que identifica el conjunto de propiedades para el que se va a devolver la propiedad.
 
 *PROPID*<br/>
-[in] Identificador de propiedad para la propiedad para devolver.
+de IDENTIFICADOR de propiedad de la propiedad que se va a devolver.
 
 *pVariant*<br/>
-[out] Un puntero a la variante donde `GetProperty` devuelve el valor de la propiedad.
+enuncia Puntero a la variante donde `GetProperty` devuelve el valor de la propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener varias propiedades, use [GetProperties](../../data/oledb/cdatasource-getproperties.md).
 
-## <a name="open"></a> CDataSource:: Open
+## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource:: Open
 
-Abre una conexión a un origen de datos mediante un `CLSID`, `ProgID`, o `CEnumerator` moniker o pide al usuario con un cuadro de diálogo del localizador.
+Abre una conexión a un origen de datos mediante un moniker `CLSID`, `ProgID`o `CEnumerator` o solicita al usuario un cuadro de diálogo de localizador.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -241,13 +240,13 @@ HRESULT Open(LPCSTR szProgID,
 #### <a name="parameters"></a>Parámetros
 
 *CLSID*<br/>
-[in] El `CLSID` del proveedor de datos.
+de `CLSID` del proveedor de datos.
 
 *pPropSet*<br/>
-[in] Un puntero a una matriz de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) en el *referencia del programador OLE DB* en el SDK de Windows.
+de Puntero a una matriz de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) que contiene las propiedades y los valores que se van a establecer. Vea [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696(v=vs.85)) en la *Referencia del programador de OLE DB* en el Windows SDK.
 
 *nPropertySets*<br/>
-[in] El número de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) pasan las estructuras en el *pPropSet* argumento.
+de El número de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) pasadas en el argumento *pPropSet* .
 
 *pName*<br/>
 [in] El nombre de la base de datos con la que se va a conectar.
@@ -259,37 +258,37 @@ HRESULT Open(LPCSTR szProgID,
 [in] La contraseña del usuario.
 
 *nInitMode*<br/>
-[in] El modo de inicialización de la base de datos. Consulte [propiedades de inicialización](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))en el *referencia del programador de OLE DB* en el SDK de Windows para obtener una lista de modos de inicialización válido. Si *nInitMode* es la inicialización cero, no se incluye el modo en el conjunto de propiedades utilizado para abrir la conexión.
+[in] El modo de inicialización de la base de datos. Vea [propiedades de inicialización](/previous-versions/windows/desktop/ms723127(v=vs.85))en la *Referencia del programador de OLE DB* en la Windows SDK para obtener una lista de los modos de inicialización válidos. Si *nInitMode* es cero, no se incluye ningún modo de inicialización en el conjunto de propiedades que se usa para abrir la conexión.
 
 *szProgID*<br/>
 [in] Un identificador de programa.
 
 *enumerator*<br/>
-[in] Un [CEnumerator](../../data/oledb/cenumerator-class.md) objeto utilizado para obtener un moniker para abrir la conexión cuando el llamador no especifica un `CLSID`.
+de Un objeto [CEnumerator](../../data/oledb/cenumerator-class.md) que se usa para obtener un moniker para abrir la conexión cuando el autor de la llamada no especifica un `CLSID`.
 
 *hWnd*<br/>
-[in] Identificador de la ventana que va a ser el elemento primario del cuadro de diálogo. Mediante la sobrecarga de función que usa el *hWnd* parámetro invocará automáticamente los componentes del servicio; vea la sección Comentarios para obtener más información.
+[in] Identificador de la ventana que va a ser el elemento primario del cuadro de diálogo. Al usar la sobrecarga de función que usa el parámetro *hWnd* , se invocarán automáticamente los componentes de servicio; Vea la sección Comentarios para obtener más información.
 
 *dwPromptOptions*<br/>
 [in] Determina el estilo del cuadro de diálogo de localizador que se va a mostrar. Consulte los valores posibles en Msdasc.h.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La sobrecarga del método que utiliza el *hWnd* parámetro abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes del servicio como la agrupación de recursos, automático La inscripción en transacciones y así sucesivamente. Para obtener más información, vea "Servicios OLE DB" en referencia del programador de OLE DB en [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+La sobrecarga del método que usa el parámetro *hWnd* abre un objeto de origen de datos con los componentes del servicio en oledb32. dll; este archivo DLL contiene la implementación de características de componentes de servicio como la agrupación de recursos, la inscripción automática de transacciones, etc. Para obtener más información, vea la referencia de OLE DB en la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-Las sobrecargas del método que no usan el *hWnd* parámetro abrir un objeto de origen de datos sin usar los componentes del servicio en oledb32.dll. Un [CDataSource](../../data/oledb/cdatasource-class.md) objeto abierto con estas sobrecargas de función no se puede usar cualquiera de la funcionalidad de los componentes de servicio.
+Las sobrecargas del método que no usan el parámetro *hWnd* abren un objeto de origen de datos sin utilizar los componentes del servicio en oledb32. dll. Un objeto [CDataSource](../../data/oledb/cdatasource-class.md) abierto con estas sobrecargas de función no podrá usar ninguna de las funciones de los componentes del servicio.
 
 ### <a name="example"></a>Ejemplo
 
-En el código siguiente se muestra cómo abrir un origen de datos de Jet 4.0 con plantillas OLE DB. Trate el origen de datos de Jet como origen de datos OLE DB. Sin embargo, la llamada a `Open` necesita dos conjuntos de propiedades: uno para DBPROPSET_DBINIT y otro para DBPROPSET_JETOLEDB_DBINIT, para que pueda establecer DBPROP_JETOLEDB_DATABASEPASSWORD.
+En el código siguiente se muestra cómo abrir un origen de datos de Jet 4.0 con plantillas OLE DB. Trate el origen de datos de Jet como origen de datos OLE DB. Sin embargo, la llamada a `Open` necesita dos conjuntos de propiedades: uno para DBPROPSET_DBINIT y el otro para DBPROPSET_JETOLEDB_DBINIT, de modo que pueda establecer DBPROP_JETOLEDB_DATABASEPASSWORD.
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="openfromfilename"></a> CDataSource:: Openfromfilename
+## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a>CDataSource:: OpenFromFileName
 
 Abre un origen de datos desde un archivo especificado por el nombre de archivo proporcionado por el usuario.
 
@@ -304,19 +303,19 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] El nombre de un archivo, normalmente una conexión de origen de datos. Archivo (.UDL).
 
-Para obtener más información acerca de los archivos de vínculo de datos (archivos .udl), consulte [Introducción a la API de vínculo de datos](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)) en el SDK de Windows.
+Para obtener más información acerca de los archivos de vínculo de datos (archivos. udl), consulte [información general](/previous-versions/windows/desktop/ms718102(v=vs.85)) sobre la API de vínculo de datos en el Windows SDK.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio, como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea "Servicios OLE DB" en referencia del programador de OLE DB en [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio, como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea la referencia de OLE DB en la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="openfrominitializationstring"></a> CDataSource:: OpenFromInitializationString
+## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource:: OpenFromInitializationString
 
-Se abre un origen de datos especificado por la cadena de inicialización proporcionada por el usuario.
+Abre un origen de datos especificado por la cadena de inicialización proporcionada por el usuario.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -328,22 +327,22 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 #### <a name="parameters"></a>Parámetros
 
 *szInitializationString*<br/>
-[in] La cadena de inicialización.
+de Cadena de inicialización.
 
 *fPromptForInfo*<br/>
-[in] Si este argumento se establece en **true**, a continuación, `OpenFromInitializationString` establecerá la propiedad DBPROP_INIT_PROMPT en DBPROMPT_COMPLETEREQUIRED, que especifica que se solicita al usuario solo si se necesita más información. Esto es útil para situaciones en que la cadena de inicialización especifica una base de datos que requiere una contraseña, pero la cadena no contiene la contraseña. El usuario se solicitará una contraseña (o cualquier otra información que falta) al intentar conectarse a la base de datos.
+de Si este argumento se establece en **true**, `OpenFromInitializationString` establecerá la propiedad DBPROP_INIT_PROMPT en DBPROMPT_COMPLETEREQUIRED, que especifica que solo se solicitará al usuario si se necesita más información. Esto resulta útil en situaciones en las que la cadena de inicialización especifica una base de datos que requiere una contraseña, pero la cadena no contiene la contraseña. Al usuario se le solicitará una contraseña (o cualquier otra información que falte) al intentar conectarse a la base de datos.
 
-El valor predeterminado es **false**, que especifica que el usuario nunca sea solicitados (conjuntos de DBPROP_INIT_PROMPT en DBPROMPT_NOPROMPT).
+El valor predeterminado es **false**, que especifica que nunca se solicitará al usuario (establece DBPROP_INIT_PROMPT en DBPROMPT_NOPROMPT).
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio, como la agrupación de recursos y la inscripción automática de transacciones, entre otras.
 
-## <a name="openwithpromptfilename"></a> CDataSource:: Openwithpromptfilename
+## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource:: OpenWithPromptFileName
 
 Este método muestra al usuario un cuadro de diálogo y después abre un origen de datos mediante el archivo especificado por el usuario.
 
@@ -368,13 +367,13 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio, como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea "Servicios OLE DB" en referencia del programador de OLE DB en [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio, como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea la referencia de OLE DB en la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="openwithservicecomponents"></a> CDataSource:: Openwithservicecomponents
+## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource:: OpenWithServiceComponents
 
 Abre un objeto de origen de datos usando los componentes del servicio en oledb32.dll.
 
@@ -393,26 +392,26 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 #### <a name="parameters"></a>Parámetros
 
 *CLSID*<br/>
-[in] El `CLSID` de un proveedor de datos.
+de `CLSID` de un proveedor de datos.
 
 *szProgID*<br/>
 [in] Identificador de programa del proveedor de datos.
 
 *pPropset*<br/>
-[in] Un puntero a una matriz de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) en el *referencia del programador OLE DB* en el SDK de Windows. Si el objeto de origen de datos se inicializa, las propiedades tienen que pertenecer al grupo de propiedades Data Source. Si la misma propiedad se especifica más de una vez en *pPropset*, a continuación, qué valor se utiliza es específica del proveedor. Si *ulPropSets* es cero, se omite este parámetro.
+de Puntero a una matriz de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) que contiene las propiedades y los valores que se van a establecer. Vea [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696(v=vs.85)) en la *Referencia del programador de OLE DB* en el Windows SDK. Si el objeto de origen de datos se inicializa, las propiedades tienen que pertenecer al grupo de propiedades Data Source. Si se especifica la misma propiedad más de una vez en *pPropset*, el valor que se usa es específico del proveedor. Si *ulPropSets* es cero, este parámetro se omite.
 
 *ulPropSets*<br/>
-[in] El número de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) pasan las estructuras en el *pPropSet* argumento. Si es cero, el proveedor omite *pPropset*.
+de El número de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) pasadas en el argumento *pPropSet* . Si es cero, el proveedor omite *pPropset*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio, como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea "Servicios OLE DB" en referencia del programador de OLE DB en [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio, como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea la referencia de OLE DB en la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,12 +1,16 @@
 ---
 title: strtol, wcstol, _strtol_l, _wcstol_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - strtol
 - wcstol
 - _strtol_l
 - _wcstol_l
-apilocation:
+- _o__strtol_l
+- _o__wcstol_l
+- _o_strtol
+- _o_wcstol
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +22,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcstol_l
 - strtol
@@ -37,39 +45,71 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-ms.openlocfilehash: 73df5dd3ffcd4a9b2fca8b6b713b645ef94addb5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+no-loc:
+- strtol
+- wcstol
+- _strtol_l
+- _wcstol_l
+- LONG_MAX
+- LONG_MIN
+- errno
+- ERANGE
+- EINVAL
+- LC_NUMERIC
+- _tcstol
+- _tcstol_l
+- localeconv
+- setlocale
+- _wsetlocale
+- strtod
+- _strtod_l
+- wcstod
+- _wcstod_l
+- strtoll
+- _strtoll_l
+- wcstoll
+- _wcstoll_l
+- strtoul
+- _strtoul_l
+- wcstoul
+- _wcstoul_l
+- atof
+- _atof_l
+- _wtof
+- _wtof_l
+ms.openlocfilehash: cc54884cd32ffa9118abfb6d46d659125a44262c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326724"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912647"
 ---
-# <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
+# <a name="strtol-wcstol-_strtol_l-_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
-Convierte cadenas en un valor entero largo sin signo.
+Convierte cadenas en un valor entero **largo** .
 
 ## <a name="syntax"></a>Sintaxis
 
 ```C
 long strtol(
-   const char *strSource,
-   char **endptr,
+   const char *string,
+   char **end_ptr,
    int base
 );
 long wcstol(
-   const wchar_t *strSource,
-   wchar_t **endptr,
+   const wchar_t *string,
+   wchar_t **end_ptr,
    int base
 );
 long _strtol_l(
-   const char *strSource,
-   char **endptr,
+   const char *string,
+   char **end_ptr,
    int base,
    _locale_t locale
 );
 long _wcstol_l(
-   const wchar_t *strSource,
-   wchar_t **endptr,
+   const wchar_t *string,
+   wchar_t **end_ptr,
    int base,
    _locale_t locale
 );
@@ -77,29 +117,39 @@ long _wcstol_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*strSource*<br/>
+*String@*\
 Cadena terminada en NULL que se va a convertir.
 
-*endptr*<br/>
-Puntero al carácter que detiene el examen.
+*end_ptr*\
+Un parámetro de salida, establecido para que apunte al carácter situado después del último carácter interpretado. Se omite si **es null**.
 
-*base*<br/>
+*básica*\
 Base numérica que se va a usar.
 
-*locale*<br/>
+*configuración regional*\
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**strtol** devuelve el valor representado en la cadena *strSource*, excepto cuando la representación produciría desbordamiento, en cuyo caso devuelve **LONG_MAX** o **LONG_ MIN**. **strtol** devuelve 0 si no se puede realizar ninguna conversión. **wcstol** devuelve valores de manera parecida a **strtol**. Para ambas funciones, **errno** está establecido en **ERANGE** si se produce desbordamiento o subdesbordamiento.
+**strtol**, **wcstol**, **_strtol_l**y **_wcstol_l** devuelven el valor representado en *String*. Devuelven 0 si no es posible realizar ninguna conversión. Cuando la representación provocaría un desbordamiento, devolverán **LONG_MAX** o **LONG_MIN**.
 
-Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
+**errno** se establece en **ERANGE** si se produce desbordamiento o subdesbordamiento. Se establece en **EINVAL** si *String* es **null**. O bien, si *base* es distinto de cero y menor que 2 o mayor que 36. Para obtener más información sobre **ERANGE**, **EINVAL**y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **strtol** función convierte *strSource* a un **largo**. **strtol** deja de leer la cadena *strSource* en el primer carácter que no se reconoce como parte de un número. Esto puede ser el carácter nulo final, o puede ser el primer carácter numérico mayor o igual a *base*.
+Las funciones **strtol**, **wcstol**, **_strtol_l**y **_wcstol_l** convierten la *cadena* en un **valor Long**. Dejan de leer la *cadena* en el primer carácter que no se reconoce como parte de un número. Puede ser el carácter de terminación null o el primer carácter alfanumérico mayor o igual que *base*.
 
-**wcstol** es una versión con caracteres anchos de **strtol**; su *strSource* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+**wcstol** y **_wcstol_l** son versiones con caracteres anchos de **strtol** y **_strtol_l**. Su argumento de *cadena* es una cadena de caracteres anchos. Estas funciones se comportan de manera idéntica a **strtol** y **_strtol_l** en caso contrario. La configuración de la categoría **LC_NUMERIC** de la configuración regional determina el reconocimiento del carácter de base (el marcador fraccionario o el separador decimal) en la *cadena*. Las funciones **strtol** y **wcstol** usan la configuración regional actual. **_strtol_l** y **_wcstol_l** usan en su lugar la configuración regional que se pasa. Para obtener más información, vea [setlocale] y [configuración regional](../../c-runtime-library/locale.md).
+
+Cuando *end_ptr* es **null**, se omite. De lo contrario, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que señala *end_ptr*. No es posible realizar ninguna conversión si no se encuentran dígitos válidos o se ha especificado una base no válida. Después, el valor de *cadena* se almacena en la ubicación a la que apunta *end_ptr*.
+
+**strtol** espera que la *cadena* señale a una cadena con el formato siguiente:
+
+> [*espacio en blanco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*alfanuméricos*]
+
+Los corchetes`[ ]`() rodean los elementos opcionales. Las llaves y las alternativas de barra vertical`{ | }`() para un único elemento. los *espacios en blanco* pueden constar de caracteres de espacio y tabulación, que se omiten. los *caracteres alfanuméricos* son dígitos decimales o las letras de la ' a ' a la ' z ' (o de la ' a ' a la ' z '). El primer carácter que no se ajusta a este formulario detiene el examen. Si *base* se encuentra entre 2 y 36, se usa como base del número. Si *base* es 0, los caracteres iniciales de la cadena a la que apunta la *cadena* se usan para determinar la base. Si el primer carácter es 0 y el segundo carácter no es ' x ' ni ' X ', la cadena se interpreta como un entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la ' a ' a la ' z ' (o de la ' a ' a la ' Z ') se les asignan los valores del 10 al 35. El examen solo permite Letras cuyos valores son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, supongamos que la *cadena* comienza con "01". Si *base* es 0, el analizador supone que es un entero octal. Un carácter "8" o "9" detiene el examen.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -108,16 +158,6 @@ El **strtol** función convierte *strSource* a un **largo**. **strtol** deja de 
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-La configuración regional actual **LC_NUMERIC** valor de la categoría determina el reconocimiento del carácter base en *strSource*; para obtener más información, consulte [setlocale](setlocale-wsetlocale.md). Las funciones sin el **_l** sufijo usar la configuración regional actual. **_strtol_l** y **_wcstol_l** son idénticas a las funciones correspondientes sin el **_l** sufijo, salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
-
-Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación señalada por *endptr*. Si no se puede realizar ninguna conversión (no se encontró ningún dígito válido o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación señalada por *endptr*.
-
-**strtol** espera *strSource* para que apunte a una cadena de la forma siguiente:
-
-> [*espacio en blanco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*dígitos* &#124; *letras*]  
-
-Un *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten; *dígitos* son uno o más dígitos decimales; *letras* son una o varias de las letras 'a' a 'z' (o 'A' a 'Z').  El primer carácter que no se ajusta a este formato detiene el análisis. Si *base* está entre 2 y 36, se puede usar como base del número. Si *base* es 0, los caracteres iniciales de la cadena señalada por *strSource* se usan para determinar la base. Si el primer carácter es 0 y el segundo carácter no es 'x' ni 'X', la cadena se interpreta como entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter examinado es "0", se supone un entero octal y un carácter '8' o '9' detiene el análisis.
-
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
@@ -125,20 +165,22 @@ Un *espacio en blanco* puede constar de caracteres de espacio y tabulación, que
 |**strtol**|\<stdlib.h>|
 |**wcstol**|\<stdlib.h> o \<wchar.h>|
 |**_strtol_l**|\<stdlib.h>|
+|**_wcstol_l**|\<stdlib.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Las **_strtol_l** funciones **_wcstol_l** y son específicas de Microsoft, no forman parte de la biblioteca estándar de C. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
-[localeconv](localeconv.md)<br/>
-[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Funciones de conversión de valores de cadena en valores numéricos](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
-[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
-[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
-[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[Conversión de datos](../data-conversion.md)\
+[Configuración regional](../locale.md)\
+[localeconv](localeconv.md)\
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)\
+[Funciones de cadena en valores numéricos](../string-to-numeric-value-functions.md)\
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)\
+[strtoll, _strtoll_l, wcstoll, _wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)\
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)\
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)

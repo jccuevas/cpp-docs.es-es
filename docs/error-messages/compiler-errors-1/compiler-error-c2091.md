@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2091
 ms.assetid: 247c3b57-f123-4420-b68e-d65a364b63cb
-ms.openlocfilehash: 836aad27fa1d3c5b23ad0c14be9810a61f731c3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d56263b7b11ee0e3a9dbe6b0d3b12cd0ce09df70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580247"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207692"
 ---
 # <a name="compiler-error-c2091"></a>Error del compilador C2091
 
-función devuelve una función
+función devuelve la función
 
-Una función no puede devolver una función. Devuelve un puntero a una función en su lugar.
+Una función no puede devolver una función. En su lugar, devuelve un puntero a una función.

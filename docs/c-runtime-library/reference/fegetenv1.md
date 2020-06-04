@@ -1,9 +1,9 @@
 ---
 title: fegetenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetegenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetenv
 - fenv/fegetenv
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-ms.openlocfilehash: d3985e4dd2b3944bcdddb79605887def7ba15473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2e3566eb96174d0f0ccd6beb401824cc052c995
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668096"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941242"
 ---
 # <a name="fegetenv"></a>fegetenv
 
@@ -44,7 +47,7 @@ int fegetenv(
 ### <a name="parameters"></a>Parámetros
 
 *penv*<br/>
-Puntero a un **fenv_t** objeto para contener los valores actuales del entorno de punto flotante.
+Puntero a un objeto **fenv_t** que contiene los valores actuales del entorno de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -52,7 +55,7 @@ Devuelve 0 si el entorno de punto flotante se almacenó correctamente en *penv*.
 
 ## <a name="remarks"></a>Comentarios
 
-El **fegetenv** función almacena el entorno actual de punto flotante en el objeto al que señala *penv*. El entorno de punto flotante consiste en el conjunto de marcas de estado y modos de control que afectan a los cálculos de punto flotante. Incluye el modo de dirección de redondeo y las marcas de estado de las excepciones de punto flotante.  Si *penv* no señala a una **fenv_t** objeto, el comportamiento posterior es indefinido.
+La función **fegetenv** almacena el entorno de punto flotante actual en el objeto al que apunta *penv*. El entorno de punto flotante consiste en el conjunto de marcas de estado y modos de control que afectan a los cálculos de punto flotante. Incluye el modo de dirección de redondeo y las marcas de estado de las excepciones de punto flotante.  Si *penv* no apunta a un objeto **fenv_t** válido, el comportamiento posterior es indefinido.
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 

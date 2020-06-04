@@ -40,65 +40,65 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de55059834a0887d487b7be38377af9984512b75
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336406"
 ---
 # <a name="managing-a-library"></a>Administrar una biblioteca
 
-Es el modo predeterminado de LIB crear o modificar una biblioteca de objetos COFF. LIB se ejecuta en este modo, cuando no se especifica/Extract (para copiar un objeto en un archivo) o /DEF (para crear una biblioteca de importación).
+El modo predeterminado para LIB es crear o modificar una biblioteca de objetos COFF. LIB se ejecuta en este modo cuando no se especifica /EXTRACT (para copiar un objeto en un archivo) o /DEF (para crear una biblioteca de importación).
 
-Para generar una biblioteca de objetos o bibliotecas, use la sintaxis siguiente:
+Para crear una biblioteca a partir de objetos y/o bibliotecas, utilice la sintaxis siguiente:
 
 ```
 LIB [options...] files...
 ```
 
-Este comando crea una biblioteca de la entrada de uno o varios *archivos*. El *archivos* pueden ser archivos objeto COFF, archivos de objeto OMF de 32 bits o bibliotecas COFF existentes. LIB crea una biblioteca que contiene todos los objetos en los archivos especificados. Si un archivo de entrada es un archivo de objeto OMF de 32 bits, LIB lo convierte a COFF antes de compilar la biblioteca. LIB no puede aceptar un objeto OMF de 32 bits que se encuentra en una biblioteca creada por la versión de 16 bits de LIB. En primer lugar, debe usar la biblioteca de 16 bits para extraer el objeto; a continuación, puede usar el archivo objeto extraído como entrada de LIB de 32 bits.
+Este comando crea una biblioteca a partir de uno o varios *archivos*de entrada. Los *archivos* pueden ser archivos de objetos COFF, archivos de objetos OMF de 32 bits o bibliotecas COFF existentes. LIB crea una biblioteca que contiene todos los objetos de los archivos especificados. Si un archivo de entrada es un archivo de objeto OMF de 32 bits, LIB lo convierte en COFF antes de crear la biblioteca. LIB no puede aceptar un objeto OMF de 32 bits que se encuentra en una biblioteca creada por la versión de 16 bits de LIB. Primero debe utilizar el LIB de 16 bits para extraer el objeto; a continuación, puede utilizar el archivo de objeto extraído como entrada para el LIB de 32 bits.
 
-De forma predeterminada, el archivo de salida con el nombre base del primer archivo de biblioteca u objeto y la extensión de los nombres de LIB. lib. El archivo de salida se coloca en el directorio actual. Si ya existe un archivo con el mismo nombre, el archivo de salida reemplaza el archivo existente. Para mantener una biblioteca existente, utilice la opción /OUT para especificar un nombre para el archivo de salida.
+De forma predeterminada, LIB nombra el archivo de salida utilizando el nombre base del primer objeto o archivo de biblioteca y la extensión .lib. El archivo de salida se coloca en el directorio actual. Si ya existe un archivo con el mismo nombre, el archivo de salida reemplaza el archivo existente. Para conservar una biblioteca existente, utilice la opción /OUT para especificar un nombre para el archivo de salida.
 
 Las siguientes opciones se aplican a la creación y modificación de una biblioteca:
 
-**/ LIBPATH:** *dir*<br/>
-Reemplaza la ruta de acceso a la biblioteca de entorno. Para obtener más información, vea la descripción del vínculo [/libpath](../../build/reference/libpath-additional-libpath.md) opción.
+**/LIBPATH:** *dir*<br/>
+Reemplaza la ruta de acceso a la biblioteca de entorno. Para obtener más información, consulte la descripción de la opción LINK [/LIBPATH.](libpath-additional-libpath.md)
 
-**/ LIST**<br/>
-Muestra información acerca de la biblioteca de salida a la salida estándar. La salida se puede redirigir a un archivo. Puede usar /LIST para determinar el contenido de una biblioteca existente sin modificarlo.
+**/LISTA**<br/>
+Muestra información sobre la biblioteca de salida en la salida estándar. La salida se puede redirigir a un archivo. Puede utilizar /LIST para determinar el contenido de una biblioteca existente sin modificarla.
 
-**/ NAME:** *nombre de archivo*<br/>
-Al compilar una biblioteca de importación, especifica el nombre del archivo DLL para el que se está compilando la biblioteca de importación.
+**/NAME:** *nombre de archivo*<br/>
+Al crear una biblioteca de importación, especifica el nombre del archivo DLL para el que se está compilando la biblioteca de importación.
 
 **/NODEFAULTLIB**<br/>
-Quita una o más bibliotecas predeterminadas de la lista de bibliotecas que realiza búsquedas al resolver referencias externas. Consulte [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) para obtener más información.
+Quita una o más bibliotecas predeterminadas de la lista de bibliotecas que busca al resolver referencias externas. Consulte [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) para obtener más información.
 
-**/ OUT:** *nombre de archivo*<br/>
-Invalida el nombre de archivo de salida predeterminado. De forma predeterminada, se crea la biblioteca de salida en el directorio actual, con el nombre base del primer archivo objeto o biblioteca en la línea de comandos y la extensión. lib.
+**/OUT:** *nombre de archivo*<br/>
+Reemplaza el nombre de archivo de salida predeterminado. De forma predeterminada, la biblioteca de salida se crea en el directorio actual, con el nombre base de la primera biblioteca o archivo de objeto en la línea de comandos y la extensión .lib.
 
-**/ REMOVE:** *objeto*<br/>
-Omite especificado *objeto* desde la biblioteca de salida. LIB crea una biblioteca de salida combinando todos los objetos (en archivos objeto o bibliotecas) y, a continuación, elimina los objetos especificados con/Remove.
+**/REMOVE:** *objeto*<br/>
+Omite el *objeto* especificado de la biblioteca de salida. LIB crea una biblioteca de salida combinando todos los objetos (ya sea en archivos de objetoos o bibliotecas) y, a continuación, eliminando los objetos especificados con /REMOVE.
 
-**/ SUBSYSTEM:**{**CONSOLA** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM** &AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **NATIVO** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [, #[. ##]]<br/>
-Indica al sistema operativo cómo ejecutar un programa creado mediante la vinculación a la biblioteca de salida. Para obtener más información, vea la descripción del vínculo [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opción.
+**/SUBSYSTEM:****CONSOLE** **&#124; EFI_APPLICATION** &#124; **&#124; EFI_BOOT_SERVICE_DRIVER** &#124; EFI_ROM EFI_ROM **&#124;** **EFI_RUNTIME_DRIVER** **&#124;** EFI_RUNTIME_DRIVER &#124; **WINDOWS** &#124; **WINDOWS** **&#124; WINDOWSCE**[,[.-]]<br/>
+Indica al sistema operativo cómo ejecutar un programa creado mediante la vinculación a la biblioteca de salida. Para obtener más información, consulte la descripción de la opción LINK [/SUBSYSTEM.](subsystem-specify-subsystem.md)
 
-Opciones de LIB especificadas en la línea de comandos no distinguen mayúsculas de minúsculas.
+Las opciones de LIB especificadas en la línea de comandos no distinguen entre mayúsculas y minúsculas.
 
 Puede utilizar LIB para realizar las siguientes tareas de administración de bibliotecas:
 
-- Para agregar objetos a una biblioteca, especifique el nombre de archivo para la biblioteca existente y los nombres de archivo para los nuevos objetos.
+- Para agregar objetos a una biblioteca, especifique el nombre de archivo de la biblioteca existente y los nombres de archivo de los nuevos objetos.
 
-- Para combinar las bibliotecas, especifique los nombres de archivo de biblioteca. Puede agregar objetos y combinar bibliotecas con un solo comando LIB.
+- Para combinar bibliotecas, especifique los nombres de archivo de biblioteca. Puede agregar objetos y combinar bibliotecas con un único comando LIB.
 
-- Para reemplazar a un miembro de biblioteca con un nuevo objeto, especifique el nombre de archivo para el nuevo objeto (o la biblioteca que lo contiene) y de la biblioteca que contiene el objeto de miembro que se debe reemplazar. Cuando existe un objeto que tiene el mismo nombre en más de un archivo de entrada, LIB coloca el último objeto especificado en el comando LIB en la biblioteca de salida. Al reemplazar un miembro de biblioteca, asegúrese de especificar el nuevo objeto o biblioteca después de la biblioteca que contiene el objeto antiguo.
+- Para reemplazar un miembro de biblioteca con un nuevo objeto, especifique la biblioteca que contiene el objeto miembro que se va a reemplazar y el nombre de archivo para el nuevo objeto (o la biblioteca que lo contiene). Cuando existe un objeto que tiene el mismo nombre en más de un archivo de entrada, LIB coloca el último objeto especificado en el mandato LIB en la biblioteca de salida. Cuando reemplace un miembro de biblioteca, asegúrese de especificar el nuevo objeto o biblioteca después de la biblioteca que contiene el objeto antiguo.
 
-- Para eliminar a un miembro de una biblioteca, use la opción/Remove. LIB procesa las especificaciones de /REMOVE después de combinar todos los objetos de entrada, independientemente del criterio de línea de comandos.
+- Para eliminar un miembro de una biblioteca, utilice la opción /REMOVE. LIB procesa cualquier especificación de /REMOVE después de combinar todos los objetos de entrada, independientemente del orden de la línea de comandos.
 
 > [!NOTE]
->  No puede eliminar a un miembro y extráigalo en un archivo en el mismo paso. En primer lugar, debe extraer el objeto miembro mediante/Extract y luego ejecutar LIB nuevo con/Remove. Este comportamiento difiere de la biblioteca de 16 bits (para las bibliotecas OMF) proporcionada en otros productos de Microsoft.
+> No puede eliminar un miembro y extraerlo en un archivo en el mismo paso. Primero debe extraer el objeto miembro mediante /EXTRACT y, a continuación, ejecutar LIB de nuevo con /REMOVE. Este comportamiento difiere del de la LIB de 16 bits (para bibliotecas OMF) proporcionada en otros productos de Microsoft.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Referencia de LIB](../../build/reference/lib-reference.md)
+[Referencia de LIB](lib-reference.md)

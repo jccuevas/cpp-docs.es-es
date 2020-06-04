@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2602
 ms.assetid: 6c07a40e-537e-4954-b5c5-1e0e58fe1952
-ms.openlocfilehash: da38600ea099c9b0d73e929a100a8c338bd3388f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cac8bd8aca0a811e1e009a2fdf07cbc200634f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466357"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737899"
 ---
 # <a name="compiler-error-c2602"></a>Error del compilador C2602
 
-'Class:: identifier' no es un miembro de una clase base de 'class'
+' Class:: Identifier ' no es un miembro de una clase base de ' Class '
 
-`Identifier` no se puede tener acceso porque no es un miembro heredado de ninguna clase base.
+no se puede tener acceso a `Identifier` porque no es un miembro heredado de ninguna clase base.
 
-El ejemplo siguiente genera C2602:
+En el ejemplo siguiente se genera C2602:
 
-```
+```cpp
 // C2602.cpp
 // compile with: /c
 struct X {

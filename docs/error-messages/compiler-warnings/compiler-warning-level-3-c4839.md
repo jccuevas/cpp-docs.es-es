@@ -1,29 +1,29 @@
 ---
-title: Compilador advertencia (nivel 3) C4839
+title: ADVERTENCIA del compilador (nivel 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
 - C4839
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 09b6e5b8dc984b35df7de96f5cf8610f2b0f16af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198580"
 ---
-# <a name="compiler-warning-level-3-c4839"></a>Compilador advertencia (nivel 3) C4839
+# <a name="compiler-warning-level-3-c4839"></a>ADVERTENCIA del compilador (nivel 3) C4839
 
-> uso no estándar de la clase*tipo*' como argumento a una función variádica
+> uso no estándar de la clase '*Type*' como argumento de una función variádicas
 
-Clases o structs que se pasan a una función variádica como `printf` deben poder copiar trivialmente. Al pasar objetos de este tipo, el compilador simplemente realiza una copia bit a bit y no llama al constructor ni al destructor.
+Las clases o Structs que se pasan a una función variádicas como `printf` se deben poder copiar de forma trivial. Al pasar objetos de este tipo, el compilador simplemente realiza una copia bit a bit y no llama al constructor ni al destructor.
 
 Esta advertencia está disponible a partir de Visual Studio 2017.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4839:
+En el ejemplo siguiente se genera C4839:
 
 ```cpp
 // C4839.cpp
@@ -51,7 +51,7 @@ Para corregir el error, puede llamar a una función miembro que devuelva un tipo
     printf("%i\n", i.load());
 ```
 
-Para las cadenas compiladas y administradas mediante `CStringW`, proporcionado `operator LPCWSTR()` debe usarse para convertir un `CStringW` objeto en el puntero C esperado por la cadena de formato.
+En el caso de las cadenas compiladas y administradas mediante `CStringW`, se debe usar el `operator LPCWSTR()` proporcionado para convertir un objeto `CStringW` en el puntero C esperado por la cadena de formato.
 
 ```cpp
     CStringW str1;

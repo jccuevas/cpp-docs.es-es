@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], mouse interaction
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
-ms.openlocfilehash: bb4b5059e9a3a712a63d5693f3f3ffe95d14ecf0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37deeec06551ae8bf340c99a9759327ce2ec2b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297130"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Proporcionar interacción con el mouse mientras está inactivo
 
@@ -33,5 +33,4 @@ Habilitar la `IPointerInactive` interfaz significa normalmente que desea que el 
 
 ## <a name="see-also"></a>Vea también
 
-[Controles ActiveX MFC: Optimización](../mfc/mfc-activex-controls-optimization.md)
-
+[Controles ActiveX de MFC: optimización](../mfc/mfc-activex-controls-optimization.md)

@@ -1,26 +1,29 @@
 ---
 title: vprintf (Funciones)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vprintf
 helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: da4f2c8586085e57925d277c452d6ed28db467d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: db4927e983a27110e587dacd9acf909f0c735b87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573243"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365675"
 ---
 # <a name="vprintf-functions"></a>vprintf (Funciones)
 
@@ -35,7 +38,7 @@ Cada una de las funciones `vprintf` toma un puntero a una lista de argumentos y,
 |[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|[vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|
 |[_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las funciones `vprintf` son similares a sus funciones equivalentes, como se muestra en la tabla siguiente. Sin embargo, cada función `vprintf` acepta un puntero a una lista de argumentos, mientras que cada una de las funciones equivalentes acepta una lista de argumentos.
 
@@ -43,14 +46,14 @@ Estas funciones aplican formato a los datos para la salida en los destinos como 
 
 |Función|Función equivalente|Destino de salida|Validación de parámetros|Compatibilidad con parámetros posicionales|
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|consola|Buscar valores Null.|No|
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|consola|Buscar valores Null.|No|
-|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Secuencia*|Buscar valores Null.|No|
-|**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Secuencia*|Buscar valor Null y formato válido.|sí|
-|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Secuencia*|Buscar valor Null y formato válido.|No|
-|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Secuencia*|Buscar valores Null.|No|
-|**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Secuencia*|Buscar valor Null y formato válido.|sí|
-|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Secuencia*|Buscar valor Null y formato válido.|No|
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Buscar valores Null.|No|
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Buscar valores Null.|No|
+|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Buscar valores Null.|No|
+|**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Buscar valor Null y formato válido.|sí|
+|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Buscar valor Null y formato válido.|No|
+|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Buscar valores Null.|No|
+|**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Buscar valor Null y formato válido.|sí|
+|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Buscar valor Null y formato válido.|No|
 |`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Buscar valores Null.|No|
 |**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Buscar valor Null y formato válido.|sí|
 |`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Buscar valor Null y formato válido.|No|
@@ -76,14 +79,14 @@ Las versiones de estas funciones con el infijo **w** en el nombre son versiones 
 
 Las versiones de estas funciones con los sufijos **_s** y **_p** son las versiones más seguras. Estas versiones validan las cadenas de formato y generarán una excepción si la cadena de formato no está bien formada (por ejemplo, si se utilizan caracteres de formato no válidos).
 
-Las versiones de estas funciones con el sufijo **_p** proporcionan la capacidad de especificar el orden en el que se sustituyen los argumentos proporcionados en la cadena de formato. Para obtener más información, consulte [printf_p (Parámetros de posición)](../c-runtime-library/printf-p-positional-parameters.md).
+Las versiones de estas funciones con el sufijo **_p** proporcionan la capacidad de especificar el orden en el que se sustituyen los argumentos proporcionados en la cadena de formato. Para más información, vea [printf_p (Parámetros de posición)](../c-runtime-library/printf-p-positional-parameters.md).
 
-En el caso de **vsprintf**, `vswprintf`, `_vsnprintf` y `_vsnwprintf`, si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+Para **vsprintf** `_vsnprintf` , `_vsnwprintf` `vswprintf`, y , si se produce la copia entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
->  Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer). Si usa las versiones seguras de estas funciones (con los sufijos **_s** o **_p**), una cadena de formato proporcionada por el usuario podría desencadenar una excepción de parámetro no válido si dicha cadena contiene caracteres de formato no válidos.
+> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer). Si usa las versiones seguras de estas funciones (con los sufijos **_s** o **_p**), una cadena de formato proporcionada por el usuario podría desencadenar una excepción de parámetro no válido si dicha cadena contiene caracteres de formato no válidos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../c-runtime-library/stream-i-o.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

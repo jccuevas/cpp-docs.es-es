@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592625"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957009"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 Restablece el paquete de punto flotante.
 
@@ -43,9 +46,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Comentarios
 
-El **_fpreset** función reinicializa el paquete matemático de punto flotante. **_fpreset** normalmente se usa con **señal**, **sistema**, o el **_exec** o **_spawn** funciones. Si un programa intercepta las señales de error de punto flotante (**SIGFPE**) con **señal**, puede recuperar de forma segura errores de punto flotante mediante la invocación **_fpreset** y el uso de **longjmp**.
+La función **_fpreset** reinicializa el paquete matemático de punto flotante. **_fpreset** se suele usar con las funciones **Signal**, **System**o **_exec** o **_spawn** . Si un programa intercepta señales de error de punto flotante (**SIGFPE**) con **señal**, se puede recuperar de forma segura a partir de errores de punto flotante mediante la invocación de **_fpreset** y el uso de **longjmp**.
 
-Esta función está en desuso cuando se compila con [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime solo admite la precisión de punto flotante predeterminada.
+Esta función está en desuso al compilar con [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque el Common Language Runtime solo admite la precisión de punto flotante predeterminada.
 
 ## <a name="requirements"></a>Requisitos
 

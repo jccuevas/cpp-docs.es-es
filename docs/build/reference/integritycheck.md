@@ -7,18 +7,18 @@ helpviewer_keywords:
 - -INTEGRITYCHECK editbin options
 - /INTEGRITYCHECK editbin options
 - INTEGRITYCHECK editbin options
-ms.openlocfilehash: b3f6622e3628db53c363b239c59accd94f708ab0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4174e22dcdadb3b3319998614285c13741fe3a88
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269770"
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
 
 Especifica que la firma digital de la imagen binaria debe estar activada en tiempo de carga.
 
-> **/ INTEGRITYCHECK**[**: N**]
+> **/INTEGRITYCHECK**[**:NO**]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -26,4 +26,4 @@ En el encabezado del archivo DLL o el archivo ejecutable, esta opción establece
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de EDITBIN](../../build/reference/editbin-options.md)
+[Opciones de EDITBIN](editbin-options.md)

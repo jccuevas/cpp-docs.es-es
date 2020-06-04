@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: 71696e4ffae91ed1fa8a13e69e75523ce66e8361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293763"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Compilar un archivo DLL)
 
@@ -29,9 +29,9 @@ La opción /DLL genera un archivo DLL como el archivo de salida principal. Norma
 
 1. [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) en el código fuente
 
-1. Un [exportaciones](../../build/reference/exports.md) instrucción en un archivo .def
+1. Un [exportaciones](exports.md) instrucción en un archivo .def
 
-1. Un [/EXPORT](../../build/reference/export-exports-a-function.md) especificación en un comando LINK
+1. Un [/EXPORT](export-exports-a-function.md) especificación en un comando LINK
 
 Un programa puede usar más de un método.
 
@@ -43,7 +43,7 @@ Tenga en cuenta que si crea la biblioteca de importación en un paso preliminar,
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **propiedades de configuración** carpeta.
 
@@ -57,5 +57,5 @@ Tenga en cuenta que si crea la biblioteca de importación en un paso preliminar,
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

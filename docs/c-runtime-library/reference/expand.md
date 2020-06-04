@@ -1,9 +1,10 @@
 ---
 title: _expand
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _expand
-apilocation:
+- _o__expand
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _bexpand
 - fexpand
@@ -30,14 +35,14 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: c1606bedbb1264bddb7674c829fe456f506d6584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665665"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920256"
 ---
-# <a name="expand"></a>_expand
+# <a name="_expand"></a>_expand
 
 Cambia el tamaño de un bloque de memoria.
 
@@ -60,24 +65,26 @@ Nuevo tamaño en bytes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_expandir** devuelve un puntero void al bloque de memoria reasignado. **_expandir**, a diferencia **realloc**, no se puede mover un bloque para cambiar su tamaño. Por lo tanto, si no hay suficiente memoria disponible para expandir el bloque sin moverlo, el *memblock* parámetro **_expand** es el mismo que el valor devuelto.
+**_expand** devuelve un puntero void al bloque de memoria reasignado. **_expand**, a diferencia de **realloc**, no puede desplace un bloque para cambiar su tamaño. Por lo tanto, si hay suficiente memoria disponible para expandir el bloque sin moverlo, el parámetro *memblock* para **_expand** es el mismo que el valor devuelto.
 
-**_expandir** devuelve **NULL** cuando se detecta un error durante su funcionamiento. Por ejemplo, si **_expand** es usa para reducir un bloque de memoria, podría detectar daños en el montón en bloque pequeño o un puntero de bloque no válido y devolver **NULL**.
+**_expand** devuelve **null** cuando se detecta un error durante su funcionamiento. Por ejemplo, si se usa **_expand** para reducir un bloque de memoria, podría detectar daños en el montón de bloques pequeños o en un puntero de bloque no válido y devolver **null**.
 
-Si no hay suficiente memoria disponible para expandir el bloque al tamaño determinado sin moverlo, la función devuelve **NULL**. **_expandir** nunca devuelve un bloque expandido a un tamaño menor que solicitado. Si se produce un error, **errno** indica la naturaleza del error. Para obtener más información acerca de **errno**, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si no hay suficiente memoria disponible para expandir el bloque al tamaño dado sin moverlo, la función devuelve **null**. **_expand** nunca devuelve un bloque expandido a un tamaño menor que el solicitado. Si se produce un error, **errno** indica la naturaleza del error. Para obtener más información acerca de **errno**, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para comprobar el nuevo tamaño del elemento, use **_msize**. Para obtener un puntero a un tipo distinto **void**, use un conversión de tipo en el valor devuelto.
+El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para comprobar el nuevo tamaño del elemento, use **_msize**. Para obtener un puntero a un tipo distinto de **void**, use una conversión de tipo en el valor devuelto.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_expand** función cambia el tamaño de un bloque de memoria asignado previamente intentando expandir o contraer el bloque sin mover su ubicación en el montón. El *memblock* parámetro apunta al principio del bloque. El *tamaño* parámetro proporciona el nuevo tamaño del bloque, en bytes. El contenido del bloque queda sin modificar hasta el menor de los tamaños nuevos y antiguos. *memblock* no debe ser un bloque que se ha liberado.
+La función **_expand** cambia el tamaño de un bloque de memoria asignado previamente intentando expandir o contraer el bloque sin mover su ubicación en el montón. El parámetro *memblock* apunta al principio del bloque. El parámetro *size* proporciona el nuevo tamaño del bloque, en bytes. El contenido del bloque queda sin modificar hasta el menor de los tamaños nuevos y antiguos. *memblock* no debe ser un bloque que se ha liberado.
 
 > [!NOTE]
-> En las plataformas de 64 bits, **_expand** no se puede contraer el bloque si el nuevo tamaño es menor que el tamaño actual; en concreto, si el bloque era inferior a 16 KB de tamaño y, por tanto, se asigna en el montón de baja fragmentación, **_expandir**  deja el bloque sin modificar y devuelve *memblock*.
+> En las plataformas de 64 bits, **_expand** podría no contratar el bloque si el nuevo tamaño es menor que el tamaño actual; en concreto, si el bloque tenía menos de 16 k de tamaño y, por lo tanto, se asigna en el montón de fragmentación baja, **_expand** deja el bloque sin cambios y devuelve *memblock*.
 
-Cuando la aplicación se vincula con una versión de depuración de las bibliotecas de tiempo de ejecución de C, **_expand** se resuelve como [_expand_dbg](expand-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
+Cuando la aplicación se vincula con una versión de depuración de las bibliotecas en tiempo de ejecución de C, **_expand** se resuelve en [_expand_dbg](expand-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Esta función valida sus parámetros. Si *memblock* es un puntero nulo, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**. Si *tamaño* es mayor que **_HEAP_MAXREQ**, **errno** está establecido en **ENOMEM** y la función devuelve **NULL**.
+Esta función valida sus parámetros. Si *memblock* es un puntero nulo, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**. Si *el tamaño* es mayor que **_HEAP_MAXREQ**, **errno** se establece en **ENOMEM** y la función devuelve **null**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -85,7 +92,7 @@ Esta función valida sus parámetros. Si *memblock* es un puntero nulo, esta fun
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -121,11 +128,11 @@ Allocated 512 bytes at 002C12BC
 Expanded block to 1024 bytes at 002C12BC
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asignación de memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[ningún](free.md)<br/>
 [malloc](malloc.md)<br/>
 [_msize](msize.md)<br/>
 [realloc](realloc.md)<br/>

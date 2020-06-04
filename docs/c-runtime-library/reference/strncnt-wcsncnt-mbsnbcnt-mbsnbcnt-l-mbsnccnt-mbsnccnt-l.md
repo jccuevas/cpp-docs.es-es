@@ -1,14 +1,18 @@
 ---
 title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
 - _wcsncnt
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
-apilocation:
+- _o__mbsnbcnt
+- _o__mbsnbcnt_l
+- _o__mbsnccnt
+- _o__mbsnccnt_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +24,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnbcnt
 - wcsncnt
@@ -50,19 +58,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 456a11ae98fe8fb40c2ef1d6f4e6d86583f4b7b3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520219"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914207"
 ---
-# <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
+# <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
 Devuelve el número de caracteres o bytes de un recuento especificado.
 
 > [!IMPORTANT]
-> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**, y **_mbsnccnt_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**y **_mbsnccnt_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -97,30 +105,32 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*CAD*<br/>
 Cadena que se va a examinar.
 
 *count*<br/>
-Número de caracteres o bytes que se va a examinar en *str*.
+Número de caracteres o bytes que se van a examinar en *Str*.
 
 *locale*<br/>
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_mbsnbcnt** y **_mbsnbcnt_l** devuelve el número de bytes que se encuentran en la primera *recuento* de caracteres multibyte de *str*. **_mbsnccnt** y **_mbsnccnt_l** devuelve el número de caracteres que se encuentran en la primera *recuento* de bytes de *str*. Si se encuentra un carácter nulo antes del examen de *str* ha terminado, devuelven el número de bytes o caracteres que se encuentran antes del carácter nulo. Si *str* consta de menos de *recuento* caracteres o bytes, devuelven el número de caracteres o bytes de la cadena. Si *recuento* es menor que cero, devuelven 0. En versiones anteriores, estas funciones tenían un valor devuelto de tipo **int** lugar **size_t**.
+**_mbsnbcnt** y **_mbsnbcnt_l** devuelven el número de bytes que se encuentran en el primer *recuento* de caracteres multibyte de *Str*. **_mbsnccnt** y **_mbsnccnt_l** devuelven el número de caracteres que se encuentran en el primer *recuento* de bytes de *Str*. Si se encuentra un carácter nulo antes de que se haya completado el examen de *Str* , devuelven el número de bytes o caracteres encontrados antes del carácter nulo. Si *Str* consta de menos de caracteres de *recuento* o bytes, devuelve el número de caracteres o bytes de la cadena. Si *Count* es menor que cero, devuelven 0. En versiones anteriores, estas funciones tenían un valor devuelto de tipo **int** en lugar de **size_t**.
 
-**_strncnt** devuelve el número de caracteres de la primera *recuento* bytes de la cadena de un byte *str*. **_wcsncnt** devuelve el número de caracteres de la primera *recuento* caracteres anchos de la cadena de caracteres anchos *str*.
+**_strncnt** devuelve el número de caracteres en el primer *número* de bytes de la cadena de un solo byte *Str*. **_wcsncnt** devuelve el número de caracteres en el primer número de caracteres anchos de la cadena de *caracteres anchos* *Str*.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**_mbsnbcnt** y **_mbsnbcnt_l** contar el número de bytes que se encuentran en la primera *recuento* de caracteres multibyte de *str*. **_mbsnbcnt** y **_mbsnbcnt_l** reemplazar **mtob** y debe usarse en lugar de **mtob**.
+**_mbsnbcnt** y **_mbsnbcnt_l** cuentan el número de bytes que se encuentran en el primer *recuento* de caracteres multibyte de *Str*. **_mbsnbcnt** y **_mbsnbcnt_l** reemplazan a **mtob** y deben usarse en lugar de **mtob**.
 
-**_mbsnccnt** y **_mbsnccnt_l** contar el número de caracteres que se encuentran en la primera *recuento* de bytes de *str*. Si **_mbsnccnt** y **_mbsnccnt_l** se produce un carácter nulo en el segundo byte de un carácter de doble byte, el primer byte también se considera null y no se incluye en el valor de recuento devuelto. **_mbsnccnt** y **_mbsnccnt_l** reemplazar **btom** y debe usarse en lugar de **btom**.
+**_mbsnccnt** y **_mbsnccnt_l** cuentan el número de caracteres que se encuentran en el primer *recuento* de bytes de *Str*. Si **_mbsnccnt** y **_mbsnccnt_l** encuentran un carácter nulo en el segundo byte de un carácter de doble byte, el primer byte también se considera NULL y no se incluye en el valor de recuento devuelto. **_mbsnccnt** y **_mbsnccnt_l** reemplazan a **btom** y deben usarse en lugar de **btom**.
 
-Si *str* es un **NULL** puntero o es *recuento* es 0, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), **errno** está establecido en **EINVAL**, y la función devuelve 0.
+Si *Str* es un puntero **nulo** o *Count* es 0, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), **errno** se establece en **EINVAL**y la función devuelve 0.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -143,7 +153,7 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 |**_strncnt**|\<tchar.h>|
 |**_wcsncnt**|\<tchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -175,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>Vea también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

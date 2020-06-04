@@ -4,16 +4,16 @@ ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB providers, using
 ms.assetid: 002a9731-7e06-49ac-be50-3cc26aa43759
-ms.openlocfilehash: 77869dbde4b177967dd2a75ab5b94506a365219c
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: e9a3a9b7cf9a7c7cadeec956a118737038807140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265014"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212323"
 ---
 # <a name="advanced-provider-techniques"></a>Técnicas avanzadas para proveedores
 
-Para obtener más información sobre las técnicas avanzadas para proveedores, vea los temas siguientes:
+Para obtener más información acerca de las técnicas avanzadas de proveedor, consulte los temas siguientes:
 
 - [Admitir notificaciones](../../data/oledb/supporting-notifications.md)
 
@@ -25,7 +25,7 @@ Para obtener más información sobre las técnicas avanzadas para proveedores, v
 
 - [Servicios y agrupación de recursos OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

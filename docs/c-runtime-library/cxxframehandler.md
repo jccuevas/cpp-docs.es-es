@@ -1,9 +1,9 @@
 ---
 title: __CxxFrameHandler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __CxxFrameHandler
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __CxxFrameHandler
 helpviewer_keywords:
 - __CxxFrameHandler
 ms.assetid: b79ac97f-425a-42ae-9b91-8beaef935333
-ms.openlocfilehash: d059df597826c68f4f51eb85f592b7eb44ac7d1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: db856850688e378cde9eaa1fb510cb325ce0644b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170987"
 ---
-# <a name="cxxframehandler"></a>__CxxFrameHandler
+# <a name="__cxxframehandler"></a>__CxxFrameHandler
 
 Función de CRT interna. CRT la usa para controlar los marcos de excepción estructurados.
 
@@ -57,7 +60,7 @@ Información extra sobre la entrada de la función y el marco de pila.
 
 Uno de los valores de *expresión de filtro* usado por la [instrucción try-except](../cpp/try-except-statement.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 ## <a name="requirements"></a>Requisitos
 

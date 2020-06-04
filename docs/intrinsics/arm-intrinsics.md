@@ -1,6 +1,7 @@
 ---
 title: Intrínsecos ARM
-ms.date: 11/04/2016
+description: Lista de referencia de elementos intrínsecos de ARM64 admitidos por el compilador de Microsoft C++ en Visual Studio.
+ms.date: 09/02/2019
 f1_keywords:
 - arm_neon/vsetq_lane_p8
 - armintr/_arm_uxtb
@@ -1928,34 +1929,1959 @@ f1_keywords:
 - arm_neon/vabdl_u16
 - arm_neon/vsliq_n_s32
 helpviewer_keywords:
-- cl.exe compiler, intrinsics
+- cl.exe compiler, ARM intrinsics
 - intrinsics, ARM
+- __cps ARM intrinsic
+- __dmb ARM intrinsic
+- __dsb ARM intrinsic
+- __emit ARM intrinsic
+- __hvc ARM intrinsic
+- __isb ARM intrinsic
+- __iso_volatile_load16 ARM intrinsic
+- __iso_volatile_load32 ARM intrinsic
+- __iso_volatile_load64 ARM intrinsic
+- __iso_volatile_load8 ARM intrinsic
+- __iso_volatile_store16 ARM intrinsic
+- __iso_volatile_store32 ARM intrinsic
+- __iso_volatile_store64 ARM intrinsic
+- __iso_volatile_store8 ARM intrinsic
+- __ldrexd ARM intrinsic
+- __prefetch ARM intrinsic
+- __rdpmccntr64 ARM intrinsic
+- __sev ARM intrinsic
+- __static_assert ARM intrinsic
+- __swi ARM intrinsic
+- __trap ARM intrinsic
+- __wfe ARM intrinsic
+- __wfi ARM intrinsic
+- _AddSatInt ARM intrinsic
+- _arm_bfc ARM intrinsic
+- _arm_bfi ARM intrinsic
+- _arm_clz ARM intrinsic
+- _arm_pkhbt ARM intrinsic
+- _arm_pkhtb ARM intrinsic
+- _arm_qadd ARM intrinsic
+- _arm_qadd16 ARM intrinsic
+- _arm_qadd8 ARM intrinsic
+- _arm_qasx ARM intrinsic
+- _arm_qdadd ARM intrinsic
+- _arm_qdsub ARM intrinsic
+- _arm_qsax ARM intrinsic
+- _arm_qsub ARM intrinsic
+- _arm_qsub16 ARM intrinsic
+- _arm_qsub8 ARM intrinsic
+- _arm_rbit ARM intrinsic
+- _arm_rev ARM intrinsic
+- _arm_rev16 ARM intrinsic
+- _arm_revsh ARM intrinsic
+- _arm_sadd16 ARM intrinsic
+- _arm_sadd8 ARM intrinsic
+- _arm_sasx ARM intrinsic
+- _arm_sbfx ARM intrinsic
+- _arm_sdiv ARM intrinsic
+- _arm_shadd16 ARM intrinsic
+- _arm_shadd8 ARM intrinsic
+- _arm_shasx ARM intrinsic
+- _arm_shsax ARM intrinsic
+- _arm_shsub16 ARM intrinsic
+- _arm_shsub8 ARM intrinsic
+- _arm_smlabb ARM intrinsic
+- _arm_smlabt ARM intrinsic
+- _arm_smlad ARM intrinsic
+- _arm_smladx ARM intrinsic
+- _arm_smlal ARM intrinsic
+- _arm_smlalbb ARM intrinsic
+- _arm_smlalbt ARM intrinsic
+- _arm_smlald ARM intrinsic
+- _arm_smlaldx ARM intrinsic
+- _arm_smlaltb ARM intrinsic
+- _arm_smlaltt ARM intrinsic
+- _arm_smlatb ARM intrinsic
+- _arm_smlatt ARM intrinsic
+- _arm_smlawb ARM intrinsic
+- _arm_smlawt ARM intrinsic
+- _arm_smlsd ARM intrinsic
+- _arm_smlsdx ARM intrinsic
+- _arm_smlsld ARM intrinsic
+- _arm_smlsldx ARM intrinsic
+- _arm_smmla ARM intrinsic
+- _arm_smmlar ARM intrinsic
+- _arm_smmls ARM intrinsic
+- _arm_smmlsr ARM intrinsic
+- _arm_smmul ARM intrinsic
+- _arm_smmulr ARM intrinsic
+- _arm_smuad ARM intrinsic
+- _arm_smuadx ARM intrinsic
+- _arm_smulbb ARM intrinsic
+- _arm_smulbt ARM intrinsic
+- _arm_smull ARM intrinsic
+- _arm_smultb ARM intrinsic
+- _arm_smultt ARM intrinsic
+- _arm_smulwb ARM intrinsic
+- _arm_smulwt ARM intrinsic
+- _arm_smusd ARM intrinsic
+- _arm_smusdx ARM intrinsic
+- _arm_ssat ARM intrinsic
+- _arm_ssat16 ARM intrinsic
+- _arm_ssax ARM intrinsic
+- _arm_ssub16 ARM intrinsic
+- _arm_ssub8 ARM intrinsic
+- _arm_sxtab ARM intrinsic
+- _arm_sxtab16 ARM intrinsic
+- _arm_sxtah ARM intrinsic
+- _arm_sxtb ARM intrinsic
+- _arm_sxtb16 ARM intrinsic
+- _arm_sxth ARM intrinsic
+- _arm_uadd16 ARM intrinsic
+- _arm_uadd8 ARM intrinsic
+- _arm_uasx ARM intrinsic
+- _arm_ubfx ARM intrinsic
+- _arm_udiv ARM intrinsic
+- _arm_uhadd16 ARM intrinsic
+- _arm_uhadd8 ARM intrinsic
+- _arm_uhasx ARM intrinsic
+- _arm_uhsax ARM intrinsic
+- _arm_uhsub16 ARM intrinsic
+- _arm_uhsub8 ARM intrinsic
+- _arm_umaal ARM intrinsic
+- _arm_umlal ARM intrinsic
+- _arm_umull ARM intrinsic
+- _arm_uqadd16 ARM intrinsic
+- _arm_uqadd8 ARM intrinsic
+- _arm_uqasx ARM intrinsic
+- _arm_uqsax ARM intrinsic
+- _arm_uqsub16 ARM intrinsic
+- _arm_uqsub8 ARM intrinsic
+- _arm_usad8 ARM intrinsic
+- _arm_usada8 ARM intrinsic
+- _arm_usat ARM intrinsic
+- _arm_usat16 ARM intrinsic
+- _arm_usax ARM intrinsic
+- _arm_usub16 ARM intrinsic
+- _arm_usub8 ARM intrinsic
+- _arm_uxtab ARM intrinsic
+- _arm_uxtab16 ARM intrinsic
+- _arm_uxtah ARM intrinsic
+- _arm_uxtb ARM intrinsic
+- _arm_uxtb16 ARM intrinsic
+- _arm_uxth ARM intrinsic
+- _CopyDoubleFromInt64 ARM intrinsic
+- _CopyFloatFromInt32 ARM intrinsic
+- _CopyInt32FromFloat ARM intrinsic
+- _CopyInt64FromDouble ARM intrinsic
+- _CountLeadingOnes ARM intrinsic
+- _CountLeadingOnes64 ARM intrinsic
+- _CountLeadingSigns ARM intrinsic
+- _CountLeadingSigns64 ARM intrinsic
+- _CountLeadingZeros ARM intrinsic
+- _CountLeadingZeros64 ARM intrinsic
+- _CountOneBits ARM intrinsic
+- _CountOneBits64 ARM intrinsic
+- _DAddSatInt ARM intrinsic
+- _DSubSatInt ARM intrinsic
+- _isunordered ARM intrinsic
+- _isunorderedf ARM intrinsic
+- _MoveFromCoprocessor ARM intrinsic
+- _MoveFromCoprocessor2 ARM intrinsic
+- _MoveFromCoprocessor64 ARM intrinsic
+- _MoveToCoprocessor ARM intrinsic
+- _MoveToCoprocessor2 ARM intrinsic
+- _MoveToCoprocessor64 ARM intrinsic
+- _MulHigh ARM intrinsic
+- _MulUnsignedHigh ARM intrinsic
+- _ReadBankedReg ARM intrinsic
+- _ReadStatusReg ARM intrinsic
+- _SubSatInt ARM intrinsic
+- _WriteBankedReg ARM intrinsic
+- _WriteStatusReg ARM intrinsic
+- float32x2_t ARM intrinsic
+- float32x2x2_t ARM intrinsic
+- float32x2x3_t ARM intrinsic
+- float32x2x4_t ARM intrinsic
+- float32x4_t ARM intrinsic
+- float32x4x2_t ARM intrinsic
+- float32x4x3_t ARM intrinsic
+- float32x4x4_t ARM intrinsic
+- int16x4_t ARM intrinsic
+- int16x4x2_t ARM intrinsic
+- int16x4x3_t ARM intrinsic
+- int16x4x4_t ARM intrinsic
+- int16x8_t ARM intrinsic
+- int16x8x2_t ARM intrinsic
+- int16x8x3_t ARM intrinsic
+- int16x8x4_t ARM intrinsic
+- int32x2_t ARM intrinsic
+- int32x2x2_t ARM intrinsic
+- int32x2x3_t ARM intrinsic
+- int32x2x4_t ARM intrinsic
+- int32x4_t ARM intrinsic
+- int32x4x2_t ARM intrinsic
+- int32x4x3_t ARM intrinsic
+- int32x4x4_t ARM intrinsic
+- int64x1_t ARM intrinsic
+- int64x1x2_t ARM intrinsic
+- int64x1x3_t ARM intrinsic
+- int64x1x4_t ARM intrinsic
+- int64x2_t ARM intrinsic
+- int64x2x2_t ARM intrinsic
+- int64x2x3_t ARM intrinsic
+- int64x2x4_t ARM intrinsic
+- int8x16_t ARM intrinsic
+- int8x16x2_t ARM intrinsic
+- int8x16x3_t ARM intrinsic
+- int8x16x4_t ARM intrinsic
+- int8x8_t ARM intrinsic
+- int8x8x2_t ARM intrinsic
+- int8x8x3_t ARM intrinsic
+- int8x8x4_t ARM intrinsic
+- poly16_t ARM intrinsic
+- poly16x4_t ARM intrinsic
+- poly16x4x2_t ARM intrinsic
+- poly16x4x3_t ARM intrinsic
+- poly16x4x4_t ARM intrinsic
+- poly16x8_t ARM intrinsic
+- poly16x8x2_t ARM intrinsic
+- poly16x8x3_t ARM intrinsic
+- poly16x8x4_t ARM intrinsic
+- poly8_t ARM intrinsic
+- poly8x16_t ARM intrinsic
+- poly8x16x2_t ARM intrinsic
+- poly8x16x3_t ARM intrinsic
+- poly8x16x4_t ARM intrinsic
+- poly8x8_t ARM intrinsic
+- poly8x8x2_t ARM intrinsic
+- poly8x8x3_t ARM intrinsic
+- poly8x8x4_t ARM intrinsic
+- uint16x4_t ARM intrinsic
+- uint16x4x2_t ARM intrinsic
+- uint16x4x3_t ARM intrinsic
+- uint16x4x4_t ARM intrinsic
+- uint16x8_t ARM intrinsic
+- uint16x8x2_t ARM intrinsic
+- uint16x8x3_t ARM intrinsic
+- uint16x8x4_t ARM intrinsic
+- uint32x2_t ARM intrinsic
+- uint32x2x2_t ARM intrinsic
+- uint32x2x3_t ARM intrinsic
+- uint32x2x4_t ARM intrinsic
+- uint32x4_t ARM intrinsic
+- uint32x4x2_t ARM intrinsic
+- uint32x4x3_t ARM intrinsic
+- uint32x4x4_t ARM intrinsic
+- uint64x1_t ARM intrinsic
+- uint64x1x2_t ARM intrinsic
+- uint64x1x3_t ARM intrinsic
+- uint64x1x4_t ARM intrinsic
+- uint64x2_t ARM intrinsic
+- uint64x2x2_t ARM intrinsic
+- uint64x2x3_t ARM intrinsic
+- uint64x2x4_t ARM intrinsic
+- uint8x16_t ARM intrinsic
+- uint8x16x2_t ARM intrinsic
+- uint8x16x3_t ARM intrinsic
+- uint8x16x4_t ARM intrinsic
+- uint8x8_t ARM intrinsic
+- uint8x8x2_t ARM intrinsic
+- uint8x8x3_t ARM intrinsic
+- uint8x8x4_t ARM intrinsic
+- vaba_s16 ARM intrinsic
+- vaba_s32 ARM intrinsic
+- vaba_s8 ARM intrinsic
+- vaba_u16 ARM intrinsic
+- vaba_u32 ARM intrinsic
+- vaba_u8 ARM intrinsic
+- vabal_s16 ARM intrinsic
+- vabal_s32 ARM intrinsic
+- vabal_s8 ARM intrinsic
+- vabal_u16 ARM intrinsic
+- vabal_u32 ARM intrinsic
+- vabal_u8 ARM intrinsic
+- vabaq_s16 ARM intrinsic
+- vabaq_s32 ARM intrinsic
+- vabaq_s8 ARM intrinsic
+- vabaq_u16 ARM intrinsic
+- vabaq_u32 ARM intrinsic
+- vabaq_u8 ARM intrinsic
+- vabd_f32 ARM intrinsic
+- vabd_s16 ARM intrinsic
+- vabd_s32 ARM intrinsic
+- vabd_s8 ARM intrinsic
+- vabd_u16 ARM intrinsic
+- vabd_u32 ARM intrinsic
+- vabd_u8 ARM intrinsic
+- vabdl_s16 ARM intrinsic
+- vabdl_s32 ARM intrinsic
+- vabdl_s8 ARM intrinsic
+- vabdl_u16 ARM intrinsic
+- vabdl_u32 ARM intrinsic
+- vabdl_u8 ARM intrinsic
+- vabdq_f32 ARM intrinsic
+- vabdq_s16 ARM intrinsic
+- vabdq_s32 ARM intrinsic
+- vabdq_s8 ARM intrinsic
+- vabdq_u16 ARM intrinsic
+- vabdq_u32 ARM intrinsic
+- vabdq_u8 ARM intrinsic
+- vabs_f32 ARM intrinsic
+- vabs_s16 ARM intrinsic
+- vabs_s32 ARM intrinsic
+- vabs_s8 ARM intrinsic
+- vabsq_f32 ARM intrinsic
+- vabsq_s16 ARM intrinsic
+- vabsq_s32 ARM intrinsic
+- vabsq_s8 ARM intrinsic
+- vadd_f32 ARM intrinsic
+- vadd_s16 ARM intrinsic
+- vadd_s32 ARM intrinsic
+- vadd_s64 ARM intrinsic
+- vadd_s8 ARM intrinsic
+- vadd_u16 ARM intrinsic
+- vadd_u32 ARM intrinsic
+- vadd_u64 ARM intrinsic
+- vadd_u8 ARM intrinsic
+- vaddhn_s16 ARM intrinsic
+- vaddhn_s32 ARM intrinsic
+- vaddhn_s64 ARM intrinsic
+- vaddhn_u16 ARM intrinsic
+- vaddhn_u32 ARM intrinsic
+- vaddhn_u64 ARM intrinsic
+- vaddl_s16 ARM intrinsic
+- vaddl_s32 ARM intrinsic
+- vaddl_s8 ARM intrinsic
+- vaddl_u16 ARM intrinsic
+- vaddl_u32 ARM intrinsic
+- vaddl_u8 ARM intrinsic
+- vaddq_f32 ARM intrinsic
+- vaddq_s16 ARM intrinsic
+- vaddq_s32 ARM intrinsic
+- vaddq_s64 ARM intrinsic
+- vaddq_s8 ARM intrinsic
+- vaddq_u16 ARM intrinsic
+- vaddq_u32 ARM intrinsic
+- vaddq_u64 ARM intrinsic
+- vaddq_u8 ARM intrinsic
+- vaddw_s16 ARM intrinsic
+- vaddw_s32 ARM intrinsic
+- vaddw_s8 ARM intrinsic
+- vaddw_u16 ARM intrinsic
+- vaddw_u32 ARM intrinsic
+- vaddw_u8 ARM intrinsic
+- vand_s16 ARM intrinsic
+- vand_s32 ARM intrinsic
+- vand_s64 ARM intrinsic
+- vand_s8 ARM intrinsic
+- vand_u16 ARM intrinsic
+- vand_u32 ARM intrinsic
+- vand_u64 ARM intrinsic
+- vand_u8 ARM intrinsic
+- vandq_s16 ARM intrinsic
+- vandq_s32 ARM intrinsic
+- vandq_s64 ARM intrinsic
+- vandq_s8 ARM intrinsic
+- vandq_u16 ARM intrinsic
+- vandq_u32 ARM intrinsic
+- vandq_u64 ARM intrinsic
+- vandq_u8 ARM intrinsic
+- vbic_s16 ARM intrinsic
+- vbic_s32 ARM intrinsic
+- vbic_s64 ARM intrinsic
+- vbic_s8 ARM intrinsic
+- vbic_u16 ARM intrinsic
+- vbic_u32 ARM intrinsic
+- vbic_u64 ARM intrinsic
+- vbic_u8 ARM intrinsic
+- vbicq_s16 ARM intrinsic
+- vbicq_s32 ARM intrinsic
+- vbicq_s64 ARM intrinsic
+- vbicq_s8 ARM intrinsic
+- vbicq_u16 ARM intrinsic
+- vbicq_u32 ARM intrinsic
+- vbicq_u64 ARM intrinsic
+- vbicq_u8 ARM intrinsic
+- vbsl_f32 ARM intrinsic
+- vbsl_p16 ARM intrinsic
+- vbsl_p8 ARM intrinsic
+- vbsl_s16 ARM intrinsic
+- vbsl_s32 ARM intrinsic
+- vbsl_s64 ARM intrinsic
+- vbsl_s8 ARM intrinsic
+- vbsl_u16 ARM intrinsic
+- vbsl_u32 ARM intrinsic
+- vbsl_u64 ARM intrinsic
+- vbsl_u8 ARM intrinsic
+- vbslq_f32 ARM intrinsic
+- vbslq_p16 ARM intrinsic
+- vbslq_p8 ARM intrinsic
+- vbslq_s16 ARM intrinsic
+- vbslq_s32 ARM intrinsic
+- vbslq_s64 ARM intrinsic
+- vbslq_s8 ARM intrinsic
+- vbslq_u16 ARM intrinsic
+- vbslq_u32 ARM intrinsic
+- vbslq_u64 ARM intrinsic
+- vbslq_u8 ARM intrinsic
+- vcage_f32 ARM intrinsic
+- vcageq_f32 ARM intrinsic
+- vcagt_f32 ARM intrinsic
+- vcagtq_f32 ARM intrinsic
+- vcale_f32 ARM intrinsic
+- vcaleq_f32 ARM intrinsic
+- vcalt_f32 ARM intrinsic
+- vcaltq_f32 ARM intrinsic
+- vceq_f32 ARM intrinsic
+- vceq_p8 ARM intrinsic
+- vceq_s16 ARM intrinsic
+- vceq_s32 ARM intrinsic
+- vceq_s8 ARM intrinsic
+- vceq_u16 ARM intrinsic
+- vceq_u32 ARM intrinsic
+- vceq_u8 ARM intrinsic
+- vceqq_f32 ARM intrinsic
+- vceqq_p8 ARM intrinsic
+- vceqq_s16 ARM intrinsic
+- vceqq_s32 ARM intrinsic
+- vceqq_s8 ARM intrinsic
+- vceqq_u16 ARM intrinsic
+- vceqq_u32 ARM intrinsic
+- vceqq_u8 ARM intrinsic
+- vcge_f32 ARM intrinsic
+- vcge_s16 ARM intrinsic
+- vcge_s32 ARM intrinsic
+- vcge_s8 ARM intrinsic
+- vcge_u16 ARM intrinsic
+- vcge_u32 ARM intrinsic
+- vcge_u8 ARM intrinsic
+- vcgeq_f32 ARM intrinsic
+- vcgeq_s16 ARM intrinsic
+- vcgeq_s32 ARM intrinsic
+- vcgeq_s8 ARM intrinsic
+- vcgeq_u16 ARM intrinsic
+- vcgeq_u32 ARM intrinsic
+- vcgeq_u8 ARM intrinsic
+- vcgt_f32 ARM intrinsic
+- vcgt_s16 ARM intrinsic
+- vcgt_s32 ARM intrinsic
+- vcgt_s8 ARM intrinsic
+- vcgt_u16 ARM intrinsic
+- vcgt_u32 ARM intrinsic
+- vcgt_u8 ARM intrinsic
+- vcgtq_f32 ARM intrinsic
+- vcgtq_s16 ARM intrinsic
+- vcgtq_s32 ARM intrinsic
+- vcgtq_s8 ARM intrinsic
+- vcgtq_u16 ARM intrinsic
+- vcgtq_u32 ARM intrinsic
+- vcgtq_u8 ARM intrinsic
+- vcle_f32 ARM intrinsic
+- vcle_s16 ARM intrinsic
+- vcle_s32 ARM intrinsic
+- vcle_s8 ARM intrinsic
+- vcle_u16 ARM intrinsic
+- vcle_u32 ARM intrinsic
+- vcle_u8 ARM intrinsic
+- vcleq_f32 ARM intrinsic
+- vcleq_s16 ARM intrinsic
+- vcleq_s32 ARM intrinsic
+- vcleq_s8 ARM intrinsic
+- vcleq_u16 ARM intrinsic
+- vcleq_u32 ARM intrinsic
+- vcleq_u8 ARM intrinsic
+- vcls_s16 ARM intrinsic
+- vcls_s32 ARM intrinsic
+- vcls_s8 ARM intrinsic
+- vclsq_s16 ARM intrinsic
+- vclsq_s32 ARM intrinsic
+- vclsq_s8 ARM intrinsic
+- vclt_f32 ARM intrinsic
+- vclt_s16 ARM intrinsic
+- vclt_s32 ARM intrinsic
+- vclt_s8 ARM intrinsic
+- vclt_u16 ARM intrinsic
+- vclt_u32 ARM intrinsic
+- vclt_u8 ARM intrinsic
+- vcltq_f32 ARM intrinsic
+- vcltq_s16 ARM intrinsic
+- vcltq_s32 ARM intrinsic
+- vcltq_s8 ARM intrinsic
+- vcltq_u16 ARM intrinsic
+- vcltq_u32 ARM intrinsic
+- vcltq_u8 ARM intrinsic
+- vclz_s16 ARM intrinsic
+- vclz_s32 ARM intrinsic
+- vclz_s8 ARM intrinsic
+- vclz_u16 ARM intrinsic
+- vclz_u32 ARM intrinsic
+- vclz_u8 ARM intrinsic
+- vclzq_s16 ARM intrinsic
+- vclzq_s32 ARM intrinsic
+- vclzq_s8 ARM intrinsic
+- vclzq_u16 ARM intrinsic
+- vclzq_u32 ARM intrinsic
+- vclzq_u8 ARM intrinsic
+- vcnt_p8 ARM intrinsic
+- vcnt_s8 ARM intrinsic
+- vcnt_u8 ARM intrinsic
+- vcntq_p8 ARM intrinsic
+- vcntq_s8 ARM intrinsic
+- vcntq_u8 ARM intrinsic
+- vcombine_f16 ARM intrinsic
+- vcombine_f32 ARM intrinsic
+- vcombine_p16 ARM intrinsic
+- vcombine_p8 ARM intrinsic
+- vcombine_s16 ARM intrinsic
+- vcombine_s32 ARM intrinsic
+- vcombine_s64 ARM intrinsic
+- vcombine_s8 ARM intrinsic
+- vcombine_u16 ARM intrinsic
+- vcombine_u32 ARM intrinsic
+- vcombine_u64 ARM intrinsic
+- vcombine_u8 ARM intrinsic
+- vcreate_f16 ARM intrinsic
+- vcreate_f32 ARM intrinsic
+- vcreate_p16 ARM intrinsic
+- vcreate_p8 ARM intrinsic
+- vcreate_s16 ARM intrinsic
+- vcreate_s32 ARM intrinsic
+- vcreate_s64 ARM intrinsic
+- vcreate_s8 ARM intrinsic
+- vcreate_u16 ARM intrinsic
+- vcreate_u32 ARM intrinsic
+- vcreate_u64 ARM intrinsic
+- vcreate_u8 ARM intrinsic
+- vcvt_f16_f32 ARM intrinsic
+- vcvt_f32_f16 ARM intrinsic
+- vcvt_f32_s32 ARM intrinsic
+- vcvt_f32_u32 ARM intrinsic
+- vcvt_n_f32_s32 ARM intrinsic
+- vcvt_n_f32_u32 ARM intrinsic
+- vcvt_n_s32_f32 ARM intrinsic
+- vcvt_n_u32_f32 ARM intrinsic
+- vcvt_s32_f32 ARM intrinsic
+- vcvt_u32_f32 ARM intrinsic
+- vcvtq_f32_s32 ARM intrinsic
+- vcvtq_f32_u32 ARM intrinsic
+- vcvtq_n_f32_s32 ARM intrinsic
+- vcvtq_n_f32_u32 ARM intrinsic
+- vcvtq_n_s32_f32 ARM intrinsic
+- vcvtq_n_u32_f32 ARM intrinsic
+- vcvtq_s32_f32 ARM intrinsic
+- vcvtq_u32_f32 ARM intrinsic
+- vdup_lane_f32 ARM intrinsic
+- vdup_lane_p16 ARM intrinsic
+- vdup_lane_p8 ARM intrinsic
+- vdup_lane_s16 ARM intrinsic
+- vdup_lane_s32 ARM intrinsic
+- vdup_lane_s64 ARM intrinsic
+- vdup_lane_s8 ARM intrinsic
+- vdup_lane_u16 ARM intrinsic
+- vdup_lane_u32 ARM intrinsic
+- vdup_lane_u64 ARM intrinsic
+- vdup_lane_u8 ARM intrinsic
+- vdup_n_f32 ARM intrinsic
+- vdup_n_p16 ARM intrinsic
+- vdup_n_p8 ARM intrinsic
+- vdup_n_s16 ARM intrinsic
+- vdup_n_s32 ARM intrinsic
+- vdup_n_s64 ARM intrinsic
+- vdup_n_s8 ARM intrinsic
+- vdup_n_u16 ARM intrinsic
+- vdup_n_u32 ARM intrinsic
+- vdup_n_u64 ARM intrinsic
+- vdup_n_u8 ARM intrinsic
+- vdupq_lane_f32 ARM intrinsic
+- vdupq_lane_p16 ARM intrinsic
+- vdupq_lane_p8 ARM intrinsic
+- vdupq_lane_s16 ARM intrinsic
+- vdupq_lane_s32 ARM intrinsic
+- vdupq_lane_s64 ARM intrinsic
+- vdupq_lane_s8 ARM intrinsic
+- vdupq_lane_u16 ARM intrinsic
+- vdupq_lane_u32 ARM intrinsic
+- vdupq_lane_u64 ARM intrinsic
+- vdupq_lane_u8 ARM intrinsic
+- vdupq_n_f32 ARM intrinsic
+- vdupq_n_p16 ARM intrinsic
+- vdupq_n_p8 ARM intrinsic
+- vdupq_n_s16 ARM intrinsic
+- vdupq_n_s32 ARM intrinsic
+- vdupq_n_s64 ARM intrinsic
+- vdupq_n_s8 ARM intrinsic
+- vdupq_n_u16 ARM intrinsic
+- vdupq_n_u32 ARM intrinsic
+- vdupq_n_u64 ARM intrinsic
+- vdupq_n_u8 ARM intrinsic
+- veor_s16 ARM intrinsic
+- veor_s32 ARM intrinsic
+- veor_s64 ARM intrinsic
+- veor_s8 ARM intrinsic
+- veor_u16 ARM intrinsic
+- veor_u32 ARM intrinsic
+- veor_u64 ARM intrinsic
+- veor_u8 ARM intrinsic
+- veorq_s16 ARM intrinsic
+- veorq_s32 ARM intrinsic
+- veorq_s64 ARM intrinsic
+- veorq_s8 ARM intrinsic
+- veorq_u16 ARM intrinsic
+- veorq_u32 ARM intrinsic
+- veorq_u64 ARM intrinsic
+- veorq_u8 ARM intrinsic
+- vext_p16 ARM intrinsic
+- vext_p8 ARM intrinsic
+- vext_s16 ARM intrinsic
+- vext_s32 ARM intrinsic
+- vext_s64 ARM intrinsic
+- vext_s8 ARM intrinsic
+- vext_u16 ARM intrinsic
+- vext_u32 ARM intrinsic
+- vext_u64 ARM intrinsic
+- vext_u8 ARM intrinsic
+- vextq_p16 ARM intrinsic
+- vextq_p8 ARM intrinsic
+- vextq_s16 ARM intrinsic
+- vextq_s32 ARM intrinsic
+- vextq_s64 ARM intrinsic
+- vextq_s8 ARM intrinsic
+- vextq_u16 ARM intrinsic
+- vextq_u32 ARM intrinsic
+- vextq_u64 ARM intrinsic
+- vextq_u8 ARM intrinsic
+- vget_high_f16 ARM intrinsic
+- vget_high_f32 ARM intrinsic
+- vget_high_p16 ARM intrinsic
+- vget_high_p8 ARM intrinsic
+- vget_high_s16 ARM intrinsic
+- vget_high_s32 ARM intrinsic
+- vget_high_s64 ARM intrinsic
+- vget_high_s8 ARM intrinsic
+- vget_high_u16 ARM intrinsic
+- vget_high_u32 ARM intrinsic
+- vget_high_u64 ARM intrinsic
+- vget_high_u8 ARM intrinsic
+- vget_lane_f32 ARM intrinsic
+- vget_lane_p16 ARM intrinsic
+- vget_lane_p8 ARM intrinsic
+- vget_lane_s16 ARM intrinsic
+- vget_lane_s32 ARM intrinsic
+- vget_lane_s64 ARM intrinsic
+- vget_lane_s8 ARM intrinsic
+- vget_lane_u16 ARM intrinsic
+- vget_lane_u32 ARM intrinsic
+- vget_lane_u64 ARM intrinsic
+- vget_lane_u8 ARM intrinsic
+- vget_low_f16 ARM intrinsic
+- vget_low_f32 ARM intrinsic
+- vget_low_p16 ARM intrinsic
+- vget_low_p8 ARM intrinsic
+- vget_low_s16 ARM intrinsic
+- vget_low_s32 ARM intrinsic
+- vget_low_s64 ARM intrinsic
+- vget_low_s8 ARM intrinsic
+- vget_low_u16 ARM intrinsic
+- vget_low_u32 ARM intrinsic
+- vget_low_u64 ARM intrinsic
+- vget_low_u8 ARM intrinsic
+- vgetq_lane_f32 ARM intrinsic
+- vgetq_lane_p16 ARM intrinsic
+- vgetq_lane_p8 ARM intrinsic
+- vgetq_lane_s16 ARM intrinsic
+- vgetq_lane_s32 ARM intrinsic
+- vgetq_lane_s64 ARM intrinsic
+- vgetq_lane_s8 ARM intrinsic
+- vgetq_lane_u16 ARM intrinsic
+- vgetq_lane_u32 ARM intrinsic
+- vgetq_lane_u64 ARM intrinsic
+- vgetq_lane_u8 ARM intrinsic
+- vhadd_s16 ARM intrinsic
+- vhadd_s32 ARM intrinsic
+- vhadd_s8 ARM intrinsic
+- vhadd_u16 ARM intrinsic
+- vhadd_u32 ARM intrinsic
+- vhadd_u8 ARM intrinsic
+- vhaddq_s16 ARM intrinsic
+- vhaddq_s32 ARM intrinsic
+- vhaddq_s8 ARM intrinsic
+- vhaddq_u16 ARM intrinsic
+- vhaddq_u32 ARM intrinsic
+- vhaddq_u8 ARM intrinsic
+- vhsub_s16 ARM intrinsic
+- vhsub_s32 ARM intrinsic
+- vhsub_s8 ARM intrinsic
+- vhsub_u16 ARM intrinsic
+- vhsub_u32 ARM intrinsic
+- vhsub_u8 ARM intrinsic
+- vhsubq_s16 ARM intrinsic
+- vhsubq_s32 ARM intrinsic
+- vhsubq_s8 ARM intrinsic
+- vhsubq_u16 ARM intrinsic
+- vhsubq_u32 ARM intrinsic
+- vhsubq_u8 ARM intrinsic
+- vld1_dup_f16 ARM intrinsic
+- vld1_dup_f32 ARM intrinsic
+- vld1_dup_p16 ARM intrinsic
+- vld1_dup_p8 ARM intrinsic
+- vld1_dup_s16 ARM intrinsic
+- vld1_dup_s32 ARM intrinsic
+- vld1_dup_s64 ARM intrinsic
+- vld1_dup_s8 ARM intrinsic
+- vld1_dup_u16 ARM intrinsic
+- vld1_dup_u32 ARM intrinsic
+- vld1_dup_u64 ARM intrinsic
+- vld1_dup_u8 ARM intrinsic
+- vld1_f16 ARM intrinsic
+- vld1_f32 ARM intrinsic
+- vld1_lane_f32 ARM intrinsic
+- vld1_lane_p16 ARM intrinsic
+- vld1_lane_p8 ARM intrinsic
+- vld1_lane_s16 ARM intrinsic
+- vld1_lane_s32 ARM intrinsic
+- vld1_lane_s64 ARM intrinsic
+- vld1_lane_s8 ARM intrinsic
+- vld1_lane_u16 ARM intrinsic
+- vld1_lane_u32 ARM intrinsic
+- vld1_lane_u64 ARM intrinsic
+- vld1_lane_u8 ARM intrinsic
+- vld1_p16 ARM intrinsic
+- vld1_p8 ARM intrinsic
+- vld1_s16 ARM intrinsic
+- vld1_s32 ARM intrinsic
+- vld1_s64 ARM intrinsic
+- vld1_s8 ARM intrinsic
+- vld1_u16 ARM intrinsic
+- vld1_u32 ARM intrinsic
+- vld1_u64 ARM intrinsic
+- vld1_u8 ARM intrinsic
+- vld1q_dup_f16 ARM intrinsic
+- vld1q_dup_f32 ARM intrinsic
+- vld1q_dup_p16 ARM intrinsic
+- vld1q_dup_p8 ARM intrinsic
+- vld1q_dup_s16 ARM intrinsic
+- vld1q_dup_s32 ARM intrinsic
+- vld1q_dup_s64 ARM intrinsic
+- vld1q_dup_s8 ARM intrinsic
+- vld1q_dup_u16 ARM intrinsic
+- vld1q_dup_u32 ARM intrinsic
+- vld1q_dup_u64 ARM intrinsic
+- vld1q_dup_u8 ARM intrinsic
+- vld1q_f16 ARM intrinsic
+- vld1q_f32 ARM intrinsic
+- vld1q_lane_f16 ARM intrinsic
+- vld1q_lane_f32 ARM intrinsic
+- vld1q_lane_p16 ARM intrinsic
+- vld1q_lane_p8 ARM intrinsic
+- vld1q_lane_s16 ARM intrinsic
+- vld1q_lane_s32 ARM intrinsic
+- vld1q_lane_s64 ARM intrinsic
+- vld1q_lane_s8 ARM intrinsic
+- vld1q_lane_u16 ARM intrinsic
+- vld1q_lane_u32 ARM intrinsic
+- vld1q_lane_u64 ARM intrinsic
+- vld1q_lane_u8 ARM intrinsic
+- vld1q_p16 ARM intrinsic
+- vld1q_p8 ARM intrinsic
+- vld1q_s16 ARM intrinsic
+- vld1q_s32 ARM intrinsic
+- vld1q_s64 ARM intrinsic
+- vld1q_s8 ARM intrinsic
+- vld1q_u16 ARM intrinsic
+- vld1q_u32 ARM intrinsic
+- vld1q_u64 ARM intrinsic
+- vld1q_u8 ARM intrinsic
+- vld2_dup_f16 ARM intrinsic
+- vld2_dup_f32 ARM intrinsic
+- vld2_dup_p16 ARM intrinsic
+- vld2_dup_p8 ARM intrinsic
+- vld2_dup_s16 ARM intrinsic
+- vld2_dup_s32 ARM intrinsic
+- vld2_dup_s64 ARM intrinsic
+- vld2_dup_s8 ARM intrinsic
+- vld2_dup_u16 ARM intrinsic
+- vld2_dup_u32 ARM intrinsic
+- vld2_dup_u64 ARM intrinsic
+- vld2_dup_u8 ARM intrinsic
+- vld2_f16 ARM intrinsic
+- vld2_f32 ARM intrinsic
+- vld2_lane_f16 ARM intrinsic
+- vld2_lane_f32 ARM intrinsic
+- vld2_lane_p16 ARM intrinsic
+- vld2_lane_p8 ARM intrinsic
+- vld2_lane_s16 ARM intrinsic
+- vld2_lane_s32 ARM intrinsic
+- vld2_lane_s8 ARM intrinsic
+- vld2_lane_u16 ARM intrinsic
+- vld2_lane_u32 ARM intrinsic
+- vld2_lane_u8 ARM intrinsic
+- vld2_p16 ARM intrinsic
+- vld2_p8 ARM intrinsic
+- vld2_s16 ARM intrinsic
+- vld2_s32 ARM intrinsic
+- vld2_s64 ARM intrinsic
+- vld2_s8 ARM intrinsic
+- vld2_u16 ARM intrinsic
+- vld2_u32 ARM intrinsic
+- vld2_u64 ARM intrinsic
+- vld2_u8 ARM intrinsic
+- vld2q_f16 ARM intrinsic
+- vld2q_f32 ARM intrinsic
+- vld2q_lane_f16 ARM intrinsic
+- vld2q_lane_f32 ARM intrinsic
+- vld2q_lane_p16 ARM intrinsic
+- vld2q_lane_s16 ARM intrinsic
+- vld2q_lane_s32 ARM intrinsic
+- vld2q_lane_u16 ARM intrinsic
+- vld2q_lane_u32 ARM intrinsic
+- vld2q_p16 ARM intrinsic
+- vld2q_p8 ARM intrinsic
+- vld2q_s16 ARM intrinsic
+- vld2q_s32 ARM intrinsic
+- vld2q_s8 ARM intrinsic
+- vld2q_u16 ARM intrinsic
+- vld2q_u32 ARM intrinsic
+- vld2q_u8 ARM intrinsic
+- vld3_dup_f16 ARM intrinsic
+- vld3_dup_f32 ARM intrinsic
+- vld3_dup_p16 ARM intrinsic
+- vld3_dup_p8 ARM intrinsic
+- vld3_dup_s16 ARM intrinsic
+- vld3_dup_s32 ARM intrinsic
+- vld3_dup_s64 ARM intrinsic
+- vld3_dup_s8 ARM intrinsic
+- vld3_dup_u16 ARM intrinsic
+- vld3_dup_u32 ARM intrinsic
+- vld3_dup_u64 ARM intrinsic
+- vld3_dup_u8 ARM intrinsic
+- vld3_f16 ARM intrinsic
+- vld3_f32 ARM intrinsic
+- vld3_lane_f16 ARM intrinsic
+- vld3_lane_f32 ARM intrinsic
+- vld3_lane_p16 ARM intrinsic
+- vld3_lane_p8 ARM intrinsic
+- vld3_lane_s16 ARM intrinsic
+- vld3_lane_s32 ARM intrinsic
+- vld3_lane_s8 ARM intrinsic
+- vld3_lane_u16 ARM intrinsic
+- vld3_lane_u32 ARM intrinsic
+- vld3_lane_u8 ARM intrinsic
+- vld3_p16 ARM intrinsic
+- vld3_p8 ARM intrinsic
+- vld3_s16 ARM intrinsic
+- vld3_s32 ARM intrinsic
+- vld3_s64 ARM intrinsic
+- vld3_s8 ARM intrinsic
+- vld3_u16 ARM intrinsic
+- vld3_u32 ARM intrinsic
+- vld3_u64 ARM intrinsic
+- vld3_u8 ARM intrinsic
+- vld3q_f16 ARM intrinsic
+- vld3q_f32 ARM intrinsic
+- vld3q_lane_f16 ARM intrinsic
+- vld3q_lane_f32 ARM intrinsic
+- vld3q_lane_p16 ARM intrinsic
+- vld3q_lane_s16 ARM intrinsic
+- vld3q_lane_s32 ARM intrinsic
+- vld3q_lane_u16 ARM intrinsic
+- vld3q_lane_u32 ARM intrinsic
+- vld3q_p16 ARM intrinsic
+- vld3q_p8 ARM intrinsic
+- vld3q_s16 ARM intrinsic
+- vld3q_s32 ARM intrinsic
+- vld3q_s8 ARM intrinsic
+- vld3q_u16 ARM intrinsic
+- vld3q_u32 ARM intrinsic
+- vld3q_u8 ARM intrinsic
+- vld4_dup_f16 ARM intrinsic
+- vld4_dup_f32 ARM intrinsic
+- vld4_dup_p16 ARM intrinsic
+- vld4_dup_p8 ARM intrinsic
+- vld4_dup_s16 ARM intrinsic
+- vld4_dup_s32 ARM intrinsic
+- vld4_dup_s64 ARM intrinsic
+- vld4_dup_s8 ARM intrinsic
+- vld4_dup_u16 ARM intrinsic
+- vld4_dup_u32 ARM intrinsic
+- vld4_dup_u64 ARM intrinsic
+- vld4_dup_u8 ARM intrinsic
+- vld4_f16 ARM intrinsic
+- vld4_f32 ARM intrinsic
+- vld4_lane_f16 ARM intrinsic
+- vld4_lane_f32 ARM intrinsic
+- vld4_lane_p16 ARM intrinsic
+- vld4_lane_p8 ARM intrinsic
+- vld4_lane_s16 ARM intrinsic
+- vld4_lane_s32 ARM intrinsic
+- vld4_lane_s8 ARM intrinsic
+- vld4_lane_u16 ARM intrinsic
+- vld4_lane_u32 ARM intrinsic
+- vld4_lane_u8 ARM intrinsic
+- vld4_p16 ARM intrinsic
+- vld4_p8 ARM intrinsic
+- vld4_s16 ARM intrinsic
+- vld4_s32 ARM intrinsic
+- vld4_s64 ARM intrinsic
+- vld4_s8 ARM intrinsic
+- vld4_u16 ARM intrinsic
+- vld4_u32 ARM intrinsic
+- vld4_u64 ARM intrinsic
+- vld4_u8 ARM intrinsic
+- vld4q_f16 ARM intrinsic
+- vld4q_f32 ARM intrinsic
+- vld4q_lane_f16 ARM intrinsic
+- vld4q_lane_f32 ARM intrinsic
+- vld4q_lane_p16 ARM intrinsic
+- vld4q_lane_s16 ARM intrinsic
+- vld4q_lane_s32 ARM intrinsic
+- vld4q_lane_u16 ARM intrinsic
+- vld4q_lane_u32 ARM intrinsic
+- vld4q_p16 ARM intrinsic
+- vld4q_p8 ARM intrinsic
+- vld4q_s16 ARM intrinsic
+- vld4q_s32 ARM intrinsic
+- vld4q_s8 ARM intrinsic
+- vld4q_u16 ARM intrinsic
+- vld4q_u32 ARM intrinsic
+- vld4q_u8 ARM intrinsic
+- vmax_f32 ARM intrinsic
+- vmax_s16 ARM intrinsic
+- vmax_s32 ARM intrinsic
+- vmax_s8 ARM intrinsic
+- vmax_u16 ARM intrinsic
+- vmax_u32 ARM intrinsic
+- vmax_u8 ARM intrinsic
+- vmaxq_f32 ARM intrinsic
+- vmaxq_s16 ARM intrinsic
+- vmaxq_s32 ARM intrinsic
+- vmaxq_s8 ARM intrinsic
+- vmaxq_u16 ARM intrinsic
+- vmaxq_u32 ARM intrinsic
+- vmaxq_u8 ARM intrinsic
+- vmin_f32 ARM intrinsic
+- vmin_s16 ARM intrinsic
+- vmin_s32 ARM intrinsic
+- vmin_s8 ARM intrinsic
+- vmin_u16 ARM intrinsic
+- vmin_u32 ARM intrinsic
+- vmin_u8 ARM intrinsic
+- vminq_f32 ARM intrinsic
+- vminq_s16 ARM intrinsic
+- vminq_s32 ARM intrinsic
+- vminq_s8 ARM intrinsic
+- vminq_u16 ARM intrinsic
+- vminq_u32 ARM intrinsic
+- vminq_u8 ARM intrinsic
+- vmla_f32 ARM intrinsic
+- vmla_lane_f32 ARM intrinsic
+- vmla_lane_s16 ARM intrinsic
+- vmla_lane_s32 ARM intrinsic
+- vmla_lane_u16 ARM intrinsic
+- vmla_lane_u32 ARM intrinsic
+- vmla_n_f32 ARM intrinsic
+- vmla_n_s16 ARM intrinsic
+- vmla_n_s32 ARM intrinsic
+- vmla_n_u16 ARM intrinsic
+- vmla_n_u32 ARM intrinsic
+- vmla_s16 ARM intrinsic
+- vmla_s32 ARM intrinsic
+- vmla_s8 ARM intrinsic
+- vmla_u16 ARM intrinsic
+- vmla_u32 ARM intrinsic
+- vmla_u8 ARM intrinsic
+- vmlal_lane_s16 ARM intrinsic
+- vmlal_lane_s32 ARM intrinsic
+- vmlal_lane_u16 ARM intrinsic
+- vmlal_lane_u32 ARM intrinsic
+- vmlal_n_s16 ARM intrinsic
+- vmlal_n_s32 ARM intrinsic
+- vmlal_n_u16 ARM intrinsic
+- vmlal_n_u32 ARM intrinsic
+- vmlal_s16 ARM intrinsic
+- vmlal_s32 ARM intrinsic
+- vmlal_s8 ARM intrinsic
+- vmlal_u16 ARM intrinsic
+- vmlal_u32 ARM intrinsic
+- vmlal_u8 ARM intrinsic
+- vmlaq_f32 ARM intrinsic
+- vmlaq_lane_f32 ARM intrinsic
+- vmlaq_lane_s16 ARM intrinsic
+- vmlaq_lane_s32 ARM intrinsic
+- vmlaq_lane_u16 ARM intrinsic
+- vmlaq_lane_u32 ARM intrinsic
+- vmlaq_n_f32 ARM intrinsic
+- vmlaq_n_s16 ARM intrinsic
+- vmlaq_n_s32 ARM intrinsic
+- vmlaq_n_u16 ARM intrinsic
+- vmlaq_n_u32 ARM intrinsic
+- vmlaq_s16 ARM intrinsic
+- vmlaq_s32 ARM intrinsic
+- vmlaq_s8 ARM intrinsic
+- vmlaq_u16 ARM intrinsic
+- vmlaq_u32 ARM intrinsic
+- vmlaq_u8 ARM intrinsic
+- vmls_f32 ARM intrinsic
+- vmls_lane_f32 ARM intrinsic
+- vmls_lane_s16 ARM intrinsic
+- vmls_lane_s32 ARM intrinsic
+- vmls_lane_u16 ARM intrinsic
+- vmls_lane_u32 ARM intrinsic
+- vmls_n_f32 ARM intrinsic
+- vmls_n_s16 ARM intrinsic
+- vmls_n_s32 ARM intrinsic
+- vmls_n_u16 ARM intrinsic
+- vmls_n_u32 ARM intrinsic
+- vmls_s16 ARM intrinsic
+- vmls_s32 ARM intrinsic
+- vmls_s8 ARM intrinsic
+- vmls_u16 ARM intrinsic
+- vmls_u32 ARM intrinsic
+- vmls_u8 ARM intrinsic
+- vmlsl_lane_s16 ARM intrinsic
+- vmlsl_lane_s32 ARM intrinsic
+- vmlsl_lane_u16 ARM intrinsic
+- vmlsl_lane_u32 ARM intrinsic
+- vmlsl_n_s16 ARM intrinsic
+- vmlsl_n_s32 ARM intrinsic
+- vmlsl_n_u16 ARM intrinsic
+- vmlsl_n_u32 ARM intrinsic
+- vmlsl_s16 ARM intrinsic
+- vmlsl_s32 ARM intrinsic
+- vmlsl_s8 ARM intrinsic
+- vmlsl_u16 ARM intrinsic
+- vmlsl_u32 ARM intrinsic
+- vmlsl_u8 ARM intrinsic
+- vmlsq_lane_f32 ARM intrinsic
+- vmlsq_lane_s16 ARM intrinsic
+- vmlsq_lane_s32 ARM intrinsic
+- vmlsq_lane_u16 ARM intrinsic
+- vmlsq_lane_u32 ARM intrinsic
+- vmlsq_n_f32 ARM intrinsic
+- vmlsq_n_s16 ARM intrinsic
+- vmlsq_n_s32 ARM intrinsic
+- vmlsq_n_u16 ARM intrinsic
+- vmlsq_n_u32 ARM intrinsic
+- vmlsq_s16 ARM intrinsic
+- vmlsq_s32 ARM intrinsic
+- vmlsq_s8 ARM intrinsic
+- vmov_n_f32 ARM intrinsic
+- vmov_n_p16 ARM intrinsic
+- vmov_n_p8 ARM intrinsic
+- vmov_n_s16 ARM intrinsic
+- vmov_n_s32 ARM intrinsic
+- vmov_n_s64 ARM intrinsic
+- vmov_n_s8 ARM intrinsic
+- vmov_n_u16 ARM intrinsic
+- vmov_n_u32 ARM intrinsic
+- vmov_n_u64 ARM intrinsic
+- vmov_n_u8 ARM intrinsic
+- vmovl_s16 ARM intrinsic
+- vmovl_s32 ARM intrinsic
+- vmovl_s8 ARM intrinsic
+- vmovl_u16 ARM intrinsic
+- vmovl_u32 ARM intrinsic
+- vmovl_u8 ARM intrinsic
+- vmovn_s16 ARM intrinsic
+- vmovn_s32 ARM intrinsic
+- vmovn_s64 ARM intrinsic
+- vmovn_u16 ARM intrinsic
+- vmovn_u32 ARM intrinsic
+- vmovn_u64 ARM intrinsic
+- vmovq_n_f32 ARM intrinsic
+- vmovq_n_p16 ARM intrinsic
+- vmovq_n_p8 ARM intrinsic
+- vmovq_n_s16 ARM intrinsic
+- vmovq_n_s32 ARM intrinsic
+- vmovq_n_s64 ARM intrinsic
+- vmovq_n_s8 ARM intrinsic
+- vmovq_n_u16 ARM intrinsic
+- vmovq_n_u32 ARM intrinsic
+- vmovq_n_u64 ARM intrinsic
+- vmovq_n_u8 ARM intrinsic
+- vmul_f32 ARM intrinsic
+- vmul_n_f32 ARM intrinsic
+- vmul_n_s16 ARM intrinsic
+- vmul_n_s32 ARM intrinsic
+- vmul_n_u16 ARM intrinsic
+- vmul_n_u32 ARM intrinsic
+- vmul_p8 ARM intrinsic
+- vmul_s16 ARM intrinsic
+- vmul_s32 ARM intrinsic
+- vmul_s8 ARM intrinsic
+- vmul_u16 ARM intrinsic
+- vmul_u32 ARM intrinsic
+- vmul_u8 ARM intrinsic
+- vmull_lane_s16 ARM intrinsic
+- vmull_lane_s32 ARM intrinsic
+- vmull_lane_u16 ARM intrinsic
+- vmull_lane_u32 ARM intrinsic
+- vmull_n_s16 ARM intrinsic
+- vmull_n_s32 ARM intrinsic
+- vmull_n_u16 ARM intrinsic
+- vmull_n_u32 ARM intrinsic
+- vmull_p8 ARM intrinsic
+- vmull_s16 ARM intrinsic
+- vmull_s32 ARM intrinsic
+- vmull_s8 ARM intrinsic
+- vmull_u16 ARM intrinsic
+- vmull_u32 ARM intrinsic
+- vmull_u8 ARM intrinsic
+- vmulq_f32 ARM intrinsic
+- vmulq_n_f32 ARM intrinsic
+- vmulq_n_s16 ARM intrinsic
+- vmulq_n_s32 ARM intrinsic
+- vmulq_n_u16 ARM intrinsic
+- vmulq_n_u32 ARM intrinsic
+- vmulq_p8 ARM intrinsic
+- vmulq_s16 ARM intrinsic
+- vmulq_s32 ARM intrinsic
+- vmulq_s8 ARM intrinsic
+- vmulq_u16 ARM intrinsic
+- vmulq_u32 ARM intrinsic
+- vmulq_u8 ARM intrinsic
+- vmvn_p8 ARM intrinsic
+- vmvn_s16 ARM intrinsic
+- vmvn_s32 ARM intrinsic
+- vmvn_s8 ARM intrinsic
+- vmvn_u16 ARM intrinsic
+- vmvn_u32 ARM intrinsic
+- vmvn_u8 ARM intrinsic
+- vmvnq_p8 ARM intrinsic
+- vmvnq_s16 ARM intrinsic
+- vmvnq_s32 ARM intrinsic
+- vmvnq_s8 ARM intrinsic
+- vmvnq_u16 ARM intrinsic
+- vmvnq_u32 ARM intrinsic
+- vmvnq_u8 ARM intrinsic
+- vneg_f32 ARM intrinsic
+- vneg_s16 ARM intrinsic
+- vneg_s32 ARM intrinsic
+- vneg_s8 ARM intrinsic
+- vnegq_f32 ARM intrinsic
+- vnegq_s16 ARM intrinsic
+- vnegq_s32 ARM intrinsic
+- vnegq_s8 ARM intrinsic
+- vorn_s16 ARM intrinsic
+- vorn_s32 ARM intrinsic
+- vorn_s64 ARM intrinsic
+- vorn_s8 ARM intrinsic
+- vorn_u16 ARM intrinsic
+- vorn_u32 ARM intrinsic
+- vorn_u64 ARM intrinsic
+- vorn_u8 ARM intrinsic
+- vornq_s16 ARM intrinsic
+- vornq_s32 ARM intrinsic
+- vornq_s64 ARM intrinsic
+- vornq_s8 ARM intrinsic
+- vornq_u16 ARM intrinsic
+- vornq_u32 ARM intrinsic
+- vornq_u64 ARM intrinsic
+- vornq_u8 ARM intrinsic
+- vorr_s16 ARM intrinsic
+- vorr_s32 ARM intrinsic
+- vorr_s64 ARM intrinsic
+- vorr_s8 ARM intrinsic
+- vorr_u16 ARM intrinsic
+- vorr_u32 ARM intrinsic
+- vorr_u64 ARM intrinsic
+- vorr_u8 ARM intrinsic
+- vorrq_s16 ARM intrinsic
+- vorrq_s32 ARM intrinsic
+- vorrq_s64 ARM intrinsic
+- vorrq_s8 ARM intrinsic
+- vorrq_u16 ARM intrinsic
+- vorrq_u32 ARM intrinsic
+- vorrq_u64 ARM intrinsic
+- vorrq_u8 ARM intrinsic
+- vpadal_s16 ARM intrinsic
+- vpadal_s32 ARM intrinsic
+- vpadal_s8 ARM intrinsic
+- vpadal_u16 ARM intrinsic
+- vpadal_u32 ARM intrinsic
+- vpadal_u8 ARM intrinsic
+- vpadalq_s16 ARM intrinsic
+- vpadalq_s32 ARM intrinsic
+- vpadalq_s8 ARM intrinsic
+- vpadalq_u16 ARM intrinsic
+- vpadalq_u32 ARM intrinsic
+- vpadalq_u8 ARM intrinsic
+- vpadd_f32 ARM intrinsic
+- vpadd_s16 ARM intrinsic
+- vpadd_s32 ARM intrinsic
+- vpadd_s8 ARM intrinsic
+- vpadd_u16 ARM intrinsic
+- vpadd_u32 ARM intrinsic
+- vpadd_u8 ARM intrinsic
+- vpaddl_s16 ARM intrinsic
+- vpaddl_s32 ARM intrinsic
+- vpaddl_s8 ARM intrinsic
+- vpaddl_u16 ARM intrinsic
+- vpaddl_u32 ARM intrinsic
+- vpaddl_u8 ARM intrinsic
+- vpaddlq_s16 ARM intrinsic
+- vpaddlq_s32 ARM intrinsic
+- vpaddlq_s8 ARM intrinsic
+- vpaddlq_u16 ARM intrinsic
+- vpaddlq_u32 ARM intrinsic
+- vpaddlq_u8 ARM intrinsic
+- vpmax_f32 ARM intrinsic
+- vpmax_s16 ARM intrinsic
+- vpmax_s32 ARM intrinsic
+- vpmax_s8 ARM intrinsic
+- vpmax_u16 ARM intrinsic
+- vpmax_u32 ARM intrinsic
+- vpmax_u8 ARM intrinsic
+- vpmin_f32 ARM intrinsic
+- vpmin_s16 ARM intrinsic
+- vpmin_s32 ARM intrinsic
+- vpmin_s8 ARM intrinsic
+- vpmin_u16 ARM intrinsic
+- vpmin_u32 ARM intrinsic
+- vpmin_u8 ARM intrinsic
+- vqabs_s16 ARM intrinsic
+- vqabs_s32 ARM intrinsic
+- vqabs_s8 ARM intrinsic
+- vqabsq_s16 ARM intrinsic
+- vqabsq_s32 ARM intrinsic
+- vqabsq_s8 ARM intrinsic
+- vqadd_s16 ARM intrinsic
+- vqadd_s32 ARM intrinsic
+- vqadd_s64 ARM intrinsic
+- vqadd_s8 ARM intrinsic
+- vqadd_u16 ARM intrinsic
+- vqadd_u32 ARM intrinsic
+- vqadd_u64 ARM intrinsic
+- vqadd_u8 ARM intrinsic
+- vqaddq_s16 ARM intrinsic
+- vqaddq_s32 ARM intrinsic
+- vqaddq_s64 ARM intrinsic
+- vqaddq_s8 ARM intrinsic
+- vqaddq_u16 ARM intrinsic
+- vqaddq_u32 ARM intrinsic
+- vqaddq_u64 ARM intrinsic
+- vqaddq_u8 ARM intrinsic
+- vqdmlal_lane_s16 ARM intrinsic
+- vqdmlal_lane_s32 ARM intrinsic
+- vqdmlal_n_s16 ARM intrinsic
+- vqdmlal_n_s32 ARM intrinsic
+- vqdmlal_s16 ARM intrinsic
+- vqdmlal_s32 ARM intrinsic
+- vqdmlsl_lane_s16 ARM intrinsic
+- vqdmlsl_lane_s32 ARM intrinsic
+- vqdmlsl_n_s16 ARM intrinsic
+- vqdmlsl_n_s32 ARM intrinsic
+- vqdmlsl_s16 ARM intrinsic
+- vqdmlsl_s32 ARM intrinsic
+- vqdmulh_lane_s16 ARM intrinsic
+- vqdmulh_lane_s32 ARM intrinsic
+- vqdmulh_n_s16 ARM intrinsic
+- vqdmulh_n_s32 ARM intrinsic
+- vqdmulh_s16 ARM intrinsic
+- vqdmulh_s32 ARM intrinsic
+- vqdmulhq_lane_s16 ARM intrinsic
+- vqdmulhq_lane_s32 ARM intrinsic
+- vqdmulhq_n_s16 ARM intrinsic
+- vqdmulhq_n_s32 ARM intrinsic
+- vqdmulhq_s16 ARM intrinsic
+- vqdmulhq_s32 ARM intrinsic
+- vqdmull_lane_s16 ARM intrinsic
+- vqdmull_lane_s32 ARM intrinsic
+- vqdmull_n_s16 ARM intrinsic
+- vqdmull_n_s32 ARM intrinsic
+- vqdmull_s16 ARM intrinsic
+- vqdmull_s32 ARM intrinsic
+- vqmovn_s16 ARM intrinsic
+- vqmovn_s32 ARM intrinsic
+- vqmovn_s64 ARM intrinsic
+- vqmovn_u16 ARM intrinsic
+- vqmovn_u32 ARM intrinsic
+- vqmovn_u64 ARM intrinsic
+- vqmovun_s16 ARM intrinsic
+- vqmovun_s32 ARM intrinsic
+- vqmovun_s64 ARM intrinsic
+- vqneg_s16 ARM intrinsic
+- vqneg_s32 ARM intrinsic
+- vqneg_s8 ARM intrinsic
+- vqnegq_s16 ARM intrinsic
+- vqnegq_s32 ARM intrinsic
+- vqnegq_s8 ARM intrinsic
+- vqrdmulh_lane_s16 ARM intrinsic
+- vqrdmulh_lane_s32 ARM intrinsic
+- vqrdmulh_n_s16 ARM intrinsic
+- vqrdmulh_n_s32 ARM intrinsic
+- vqrdmulh_s16 ARM intrinsic
+- vqrdmulh_s32 ARM intrinsic
+- vqrdmulhq_lane_s16 ARM intrinsic
+- vqrdmulhq_lane_s32 ARM intrinsic
+- vqrdmulhq_n_s16 ARM intrinsic
+- vqrdmulhq_n_s32 ARM intrinsic
+- vqrdmulhq_s16 ARM intrinsic
+- vqrdmulhq_s32 ARM intrinsic
+- vqrshl_s16 ARM intrinsic
+- vqrshl_s32 ARM intrinsic
+- vqrshl_s64 ARM intrinsic
+- vqrshl_s8 ARM intrinsic
+- vqrshl_u16 ARM intrinsic
+- vqrshl_u32 ARM intrinsic
+- vqrshl_u64 ARM intrinsic
+- vqrshl_u8 ARM intrinsic
+- vqrshlq_s16 ARM intrinsic
+- vqrshlq_s32 ARM intrinsic
+- vqrshlq_s64 ARM intrinsic
+- vqrshlq_s8 ARM intrinsic
+- vqrshlq_u16 ARM intrinsic
+- vqrshlq_u32 ARM intrinsic
+- vqrshlq_u64 ARM intrinsic
+- vqrshlq_u8 ARM intrinsic
+- vqrshrn_n_s16 ARM intrinsic
+- vqrshrn_n_s32 ARM intrinsic
+- vqrshrn_n_s64 ARM intrinsic
+- vqrshrn_n_u16 ARM intrinsic
+- vqrshrn_n_u32 ARM intrinsic
+- vqrshrn_n_u64 ARM intrinsic
+- vqrshrun_n_s16 ARM intrinsic
+- vqrshrun_n_s32 ARM intrinsic
+- vqrshrun_n_s64 ARM intrinsic
+- vqshl_n_s16 ARM intrinsic
+- vqshl_n_s32 ARM intrinsic
+- vqshl_n_s64 ARM intrinsic
+- vqshl_n_s8 ARM intrinsic
+- vqshl_n_u16 ARM intrinsic
+- vqshl_n_u32 ARM intrinsic
+- vqshl_n_u64 ARM intrinsic
+- vqshl_n_u8 ARM intrinsic
+- vqshl_s16 ARM intrinsic
+- vqshl_s32 ARM intrinsic
+- vqshl_s64 ARM intrinsic
+- vqshl_s8 ARM intrinsic
+- vqshl_u16 ARM intrinsic
+- vqshl_u32 ARM intrinsic
+- vqshl_u64 ARM intrinsic
+- vqshl_u8 ARM intrinsic
+- vqshlq_n_s16 ARM intrinsic
+- vqshlq_n_s32 ARM intrinsic
+- vqshlq_n_s64 ARM intrinsic
+- vqshlq_n_s8 ARM intrinsic
+- vqshlq_n_u16 ARM intrinsic
+- vqshlq_n_u32 ARM intrinsic
+- vqshlq_n_u64 ARM intrinsic
+- vqshlq_n_u8 ARM intrinsic
+- vqshlq_s16 ARM intrinsic
+- vqshlq_s32 ARM intrinsic
+- vqshlq_s64 ARM intrinsic
+- vqshlq_s8 ARM intrinsic
+- vqshlq_u16 ARM intrinsic
+- vqshlq_u32 ARM intrinsic
+- vqshlq_u64 ARM intrinsic
+- vqshlq_u8 ARM intrinsic
+- vqshlu_n_s16 ARM intrinsic
+- vqshlu_n_s32 ARM intrinsic
+- vqshlu_n_s64 ARM intrinsic
+- vqshlu_n_s8 ARM intrinsic
+- vqshluq_n_s16 ARM intrinsic
+- vqshluq_n_s32 ARM intrinsic
+- vqshluq_n_s64 ARM intrinsic
+- vqshluq_n_s8 ARM intrinsic
+- vqshrn_n_s16 ARM intrinsic
+- vqshrn_n_s32 ARM intrinsic
+- vqshrn_n_s64 ARM intrinsic
+- vqshrn_n_u16 ARM intrinsic
+- vqshrn_n_u32 ARM intrinsic
+- vqshrn_n_u64 ARM intrinsic
+- vqshrun_n_s16 ARM intrinsic
+- vqshrun_n_s32 ARM intrinsic
+- vqshrun_n_s64 ARM intrinsic
+- vqsub_s16 ARM intrinsic
+- vqsub_s32 ARM intrinsic
+- vqsub_s64 ARM intrinsic
+- vqsub_s8 ARM intrinsic
+- vqsub_u16 ARM intrinsic
+- vqsub_u32 ARM intrinsic
+- vqsub_u64 ARM intrinsic
+- vqsub_u8 ARM intrinsic
+- vqsubq_s16 ARM intrinsic
+- vqsubq_s32 ARM intrinsic
+- vqsubq_s64 ARM intrinsic
+- vqsubq_s8 ARM intrinsic
+- vqsubq_u16 ARM intrinsic
+- vqsubq_u32 ARM intrinsic
+- vqsubq_u64 ARM intrinsic
+- vqsubq_u8 ARM intrinsic
+- vraddhn_s16 ARM intrinsic
+- vraddhn_s32 ARM intrinsic
+- vraddhn_s64 ARM intrinsic
+- vraddhn_u16 ARM intrinsic
+- vraddhn_u32 ARM intrinsic
+- vraddhn_u64 ARM intrinsic
+- vrecpe_f32 ARM intrinsic
+- vrecpe_u32 ARM intrinsic
+- vrecpeq_f32 ARM intrinsic
+- vrecpeq_u32 ARM intrinsic
+- vrecps_f32 ARM intrinsic
+- vrecpsq_f32 ARM intrinsic
+- vrev16_p8 ARM intrinsic
+- vrev16_s8 ARM intrinsic
+- vrev16_u8 ARM intrinsic
+- vrev16q_p8 ARM intrinsic
+- vrev16q_s8 ARM intrinsic
+- vrev16q_u8 ARM intrinsic
+- vrev32_p8 ARM intrinsic
+- vrev32_s16 ARM intrinsic
+- vrev32_s8 ARM intrinsic
+- vrev32_u16 ARM intrinsic
+- vrev32_u8 ARM intrinsic
+- vrev32q_p8 ARM intrinsic
+- vrev32q_s16 ARM intrinsic
+- vrev32q_s8 ARM intrinsic
+- vrev32q_u16 ARM intrinsic
+- vrev32q_u8 ARM intrinsic
+- vrev64_f32 ARM intrinsic
+- vrev64_p16 ARM intrinsic
+- vrev64_p8 ARM intrinsic
+- vrev64_s16 ARM intrinsic
+- vrev64_s32 ARM intrinsic
+- vrev64_s8 ARM intrinsic
+- vrev64_u16 ARM intrinsic
+- vrev64_u32 ARM intrinsic
+- vrev64_u8 ARM intrinsic
+- vrev64q_f32 ARM intrinsic
+- vrev64q_p16 ARM intrinsic
+- vrev64q_p8 ARM intrinsic
+- vrev64q_s16 ARM intrinsic
+- vrev64q_s32 ARM intrinsic
+- vrev64q_s8 ARM intrinsic
+- vrev64q_u16 ARM intrinsic
+- vrev64q_u32 ARM intrinsic
+- vrev64q_u8 ARM intrinsic
+- vrhadd_s16 ARM intrinsic
+- vrhadd_s32 ARM intrinsic
+- vrhadd_s8 ARM intrinsic
+- vrhadd_u16 ARM intrinsic
+- vrhadd_u32 ARM intrinsic
+- vrhadd_u8 ARM intrinsic
+- vrhaddq_s16 ARM intrinsic
+- vrhaddq_s32 ARM intrinsic
+- vrhaddq_s8 ARM intrinsic
+- vrhaddq_u16 ARM intrinsic
+- vrhaddq_u32 ARM intrinsic
+- vrhaddq_u8 ARM intrinsic
+- vrshl_s16 ARM intrinsic
+- vrshl_s32 ARM intrinsic
+- vrshl_s64 ARM intrinsic
+- vrshl_s8 ARM intrinsic
+- vrshl_u16 ARM intrinsic
+- vrshl_u32 ARM intrinsic
+- vrshl_u64 ARM intrinsic
+- vrshl_u8 ARM intrinsic
+- vrshlq_s16 ARM intrinsic
+- vrshlq_s32 ARM intrinsic
+- vrshlq_s64 ARM intrinsic
+- vrshlq_s8 ARM intrinsic
+- vrshlq_u16 ARM intrinsic
+- vrshlq_u32 ARM intrinsic
+- vrshlq_u64 ARM intrinsic
+- vrshlq_u8 ARM intrinsic
+- vrshr_n_s16 ARM intrinsic
+- vrshr_n_s32 ARM intrinsic
+- vrshr_n_s64 ARM intrinsic
+- vrshr_n_s8 ARM intrinsic
+- vrshr_n_u16 ARM intrinsic
+- vrshr_n_u32 ARM intrinsic
+- vrshr_n_u64 ARM intrinsic
+- vrshr_n_u8 ARM intrinsic
+- vrshrn_n_s16 ARM intrinsic
+- vrshrn_n_s32 ARM intrinsic
+- vrshrn_n_s64 ARM intrinsic
+- vrshrn_n_u16 ARM intrinsic
+- vrshrn_n_u32 ARM intrinsic
+- vrshrn_n_u64 ARM intrinsic
+- vrshrq_n_s16 ARM intrinsic
+- vrshrq_n_s32 ARM intrinsic
+- vrshrq_n_s64 ARM intrinsic
+- vrshrq_n_s8 ARM intrinsic
+- vrshrq_n_u16 ARM intrinsic
+- vrshrq_n_u32 ARM intrinsic
+- vrshrq_n_u64 ARM intrinsic
+- vrshrq_n_u8 ARM intrinsic
+- vrsqrte_f32 ARM intrinsic
+- vrsqrte_u32 ARM intrinsic
+- vrsqrteq_f32 ARM intrinsic
+- vrsqrteq_u32 ARM intrinsic
+- vrsqrts_f32 ARM intrinsic
+- vrsqrtsq_f32 ARM intrinsic
+- vrsra_n_s16 ARM intrinsic
+- vrsra_n_s32 ARM intrinsic
+- vrsra_n_s64 ARM intrinsic
+- vrsra_n_s8 ARM intrinsic
+- vrsra_n_u16 ARM intrinsic
+- vrsra_n_u32 ARM intrinsic
+- vrsra_n_u64 ARM intrinsic
+- vrsra_n_u8 ARM intrinsic
+- vrsraq_n_s16 ARM intrinsic
+- vrsraq_n_s32 ARM intrinsic
+- vrsraq_n_s64 ARM intrinsic
+- vrsraq_n_s8 ARM intrinsic
+- vrsraq_n_u16 ARM intrinsic
+- vrsraq_n_u32 ARM intrinsic
+- vrsraq_n_u64 ARM intrinsic
+- vrsraq_n_u8 ARM intrinsic
+- vrsubhn_s16 ARM intrinsic
+- vrsubhn_s32 ARM intrinsic
+- vrsubhn_s64 ARM intrinsic
+- vrsubhn_u16 ARM intrinsic
+- vrsubhn_u32 ARM intrinsic
+- vrsubhn_u64 ARM intrinsic
+- vset_lane_f32 ARM intrinsic
+- vset_lane_p16 ARM intrinsic
+- vset_lane_p8 ARM intrinsic
+- vset_lane_s16 ARM intrinsic
+- vset_lane_s32 ARM intrinsic
+- vset_lane_s64 ARM intrinsic
+- vset_lane_s8 ARM intrinsic
+- vset_lane_u16 ARM intrinsic
+- vset_lane_u32 ARM intrinsic
+- vset_lane_u64 ARM intrinsic
+- vset_lane_u8 ARM intrinsic
+- vsetq_lane_f32 ARM intrinsic
+- vsetq_lane_p16 ARM intrinsic
+- vsetq_lane_p8 ARM intrinsic
+- vsetq_lane_s16 ARM intrinsic
+- vsetq_lane_s32 ARM intrinsic
+- vsetq_lane_s64 ARM intrinsic
+- vsetq_lane_s8 ARM intrinsic
+- vsetq_lane_u16 ARM intrinsic
+- vsetq_lane_u32 ARM intrinsic
+- vsetq_lane_u64 ARM intrinsic
+- vsetq_lane_u8 ARM intrinsic
+- vshl_n_s16 ARM intrinsic
+- vshl_n_s32 ARM intrinsic
+- vshl_n_s64 ARM intrinsic
+- vshl_n_s8 ARM intrinsic
+- vshl_n_u16 ARM intrinsic
+- vshl_n_u32 ARM intrinsic
+- vshl_n_u64 ARM intrinsic
+- vshl_n_u8 ARM intrinsic
+- vshl_s16 ARM intrinsic
+- vshl_s32 ARM intrinsic
+- vshl_s64 ARM intrinsic
+- vshl_s8 ARM intrinsic
+- vshl_u16 ARM intrinsic
+- vshl_u32 ARM intrinsic
+- vshl_u64 ARM intrinsic
+- vshl_u8 ARM intrinsic
+- vshll_n_s16 ARM intrinsic
+- vshll_n_s32 ARM intrinsic
+- vshll_n_s8 ARM intrinsic
+- vshll_n_u16 ARM intrinsic
+- vshll_n_u32 ARM intrinsic
+- vshll_n_u8 ARM intrinsic
+- vshlq_n_s16 ARM intrinsic
+- vshlq_n_s32 ARM intrinsic
+- vshlq_n_s64 ARM intrinsic
+- vshlq_n_s8 ARM intrinsic
+- vshlq_n_u16 ARM intrinsic
+- vshlq_n_u32 ARM intrinsic
+- vshlq_n_u64 ARM intrinsic
+- vshlq_n_u8 ARM intrinsic
+- vshlq_s16 ARM intrinsic
+- vshlq_s32 ARM intrinsic
+- vshlq_s64 ARM intrinsic
+- vshlq_s8 ARM intrinsic
+- vshlq_u16 ARM intrinsic
+- vshlq_u32 ARM intrinsic
+- vshlq_u64 ARM intrinsic
+- vshlq_u8 ARM intrinsic
+- vshr_n_s16 ARM intrinsic
+- vshr_n_s32 ARM intrinsic
+- vshr_n_s64 ARM intrinsic
+- vshr_n_s8 ARM intrinsic
+- vshr_n_u16 ARM intrinsic
+- vshr_n_u32 ARM intrinsic
+- vshr_n_u64 ARM intrinsic
+- vshr_n_u8 ARM intrinsic
+- vshrn_n_s16 ARM intrinsic
+- vshrn_n_s32 ARM intrinsic
+- vshrn_n_s64 ARM intrinsic
+- vshrn_n_u16 ARM intrinsic
+- vshrn_n_u32 ARM intrinsic
+- vshrn_n_u64 ARM intrinsic
+- vshrq_n_s16 ARM intrinsic
+- vshrq_n_s32 ARM intrinsic
+- vshrq_n_s64 ARM intrinsic
+- vshrq_n_s8 ARM intrinsic
+- vshrq_n_u16 ARM intrinsic
+- vshrq_n_u32 ARM intrinsic
+- vshrq_n_u64 ARM intrinsic
+- vshrq_n_u8 ARM intrinsic
+- vsli_n_p16 ARM intrinsic
+- vsli_n_p8 ARM intrinsic
+- vsli_n_s16 ARM intrinsic
+- vsli_n_s32 ARM intrinsic
+- vsli_n_s64 ARM intrinsic
+- vsli_n_s8 ARM intrinsic
+- vsli_n_u16 ARM intrinsic
+- vsli_n_u32 ARM intrinsic
+- vsli_n_u64 ARM intrinsic
+- vsli_n_u8 ARM intrinsic
+- vsliq_n_p16 ARM intrinsic
+- vsliq_n_p8 ARM intrinsic
+- vsliq_n_s16 ARM intrinsic
+- vsliq_n_s32 ARM intrinsic
+- vsliq_n_s64 ARM intrinsic
+- vsliq_n_s8 ARM intrinsic
+- vsliq_n_u16 ARM intrinsic
+- vsliq_n_u32 ARM intrinsic
+- vsliq_n_u64 ARM intrinsic
+- vsliq_n_u8 ARM intrinsic
+- vsra_n_s16 ARM intrinsic
+- vsra_n_s32 ARM intrinsic
+- vsra_n_s64 ARM intrinsic
+- vsra_n_s8 ARM intrinsic
+- vsra_n_u16 ARM intrinsic
+- vsra_n_u32 ARM intrinsic
+- vsra_n_u64 ARM intrinsic
+- vsra_n_u8 ARM intrinsic
+- vsraq_n_s16 ARM intrinsic
+- vsraq_n_s32 ARM intrinsic
+- vsraq_n_s64 ARM intrinsic
+- vsraq_n_s8 ARM intrinsic
+- vsraq_n_u16 ARM intrinsic
+- vsraq_n_u32 ARM intrinsic
+- vsraq_n_u64 ARM intrinsic
+- vsraq_n_u8 ARM intrinsic
+- vsri_n_p16 ARM intrinsic
+- vsri_n_p8 ARM intrinsic
+- vsri_n_s16 ARM intrinsic
+- vsri_n_s32 ARM intrinsic
+- vsri_n_s64 ARM intrinsic
+- vsri_n_s8 ARM intrinsic
+- vsri_n_u16 ARM intrinsic
+- vsri_n_u32 ARM intrinsic
+- vsri_n_u64 ARM intrinsic
+- vsri_n_u8 ARM intrinsic
+- vsriq_n_p16 ARM intrinsic
+- vsriq_n_p8 ARM intrinsic
+- vsriq_n_s16 ARM intrinsic
+- vsriq_n_s32 ARM intrinsic
+- vsriq_n_s64 ARM intrinsic
+- vsriq_n_s8 ARM intrinsic
+- vsriq_n_u16 ARM intrinsic
+- vsriq_n_u32 ARM intrinsic
+- vsriq_n_u64 ARM intrinsic
+- vsriq_n_u8 ARM intrinsic
+- vst1_f16 ARM intrinsic
+- vst1_f32 ARM intrinsic
+- vst1_lane_f16 ARM intrinsic
+- vst1_lane_f32 ARM intrinsic
+- vst1_lane_p16 ARM intrinsic
+- vst1_lane_p8 ARM intrinsic
+- vst1_lane_s16 ARM intrinsic
+- vst1_lane_s32 ARM intrinsic
+- vst1_lane_s64 ARM intrinsic
+- vst1_lane_s8 ARM intrinsic
+- vst1_lane_u16 ARM intrinsic
+- vst1_lane_u32 ARM intrinsic
+- vst1_lane_u64 ARM intrinsic
+- vst1_lane_u8 ARM intrinsic
+- vst1_p16 ARM intrinsic
+- vst1_p8 ARM intrinsic
+- vst1_s16 ARM intrinsic
+- vst1_s32 ARM intrinsic
+- vst1_s64 ARM intrinsic
+- vst1_s8 ARM intrinsic
+- vst1_u16 ARM intrinsic
+- vst1_u32 ARM intrinsic
+- vst1_u64 ARM intrinsic
+- vst1_u8 ARM intrinsic
+- vst1q_f16 ARM intrinsic
+- vst1q_f32 ARM intrinsic
+- vst1q_lane_f16 ARM intrinsic
+- vst1q_lane_f32 ARM intrinsic
+- vst1q_lane_p16 ARM intrinsic
+- vst1q_lane_p8 ARM intrinsic
+- vst1q_lane_s16 ARM intrinsic
+- vst1q_lane_s32 ARM intrinsic
+- vst1q_lane_s64 ARM intrinsic
+- vst1q_lane_s8 ARM intrinsic
+- vst1q_lane_u16 ARM intrinsic
+- vst1q_lane_u32 ARM intrinsic
+- vst1q_lane_u64 ARM intrinsic
+- vst1q_lane_u8 ARM intrinsic
+- vst1q_p16 ARM intrinsic
+- vst1q_p8 ARM intrinsic
+- vst1q_s16 ARM intrinsic
+- vst1q_s32 ARM intrinsic
+- vst1q_s64 ARM intrinsic
+- vst1q_s8 ARM intrinsic
+- vst1q_u16 ARM intrinsic
+- vst1q_u32 ARM intrinsic
+- vst1q_u64 ARM intrinsic
+- vst1q_u8 ARM intrinsic
+- vst2_f16 ARM intrinsic
+- vst2_f32 ARM intrinsic
+- vst2_lane_f16 ARM intrinsic
+- vst2_lane_f32 ARM intrinsic
+- vst2_lane_p16 ARM intrinsic
+- vst2_lane_p8 ARM intrinsic
+- vst2_lane_s16 ARM intrinsic
+- vst2_lane_s32 ARM intrinsic
+- vst2_lane_s8 ARM intrinsic
+- vst2_lane_u16 ARM intrinsic
+- vst2_lane_u32 ARM intrinsic
+- vst2_lane_u8 ARM intrinsic
+- vst2_p16 ARM intrinsic
+- vst2_p8 ARM intrinsic
+- vst2_s16 ARM intrinsic
+- vst2_s32 ARM intrinsic
+- vst2_s64 ARM intrinsic
+- vst2_s8 ARM intrinsic
+- vst2_u16 ARM intrinsic
+- vst2_u32 ARM intrinsic
+- vst2_u64 ARM intrinsic
+- vst2_u8 ARM intrinsic
+- vst2q_f16 ARM intrinsic
+- vst2q_f32 ARM intrinsic
+- vst2q_lane_f16 ARM intrinsic
+- vst2q_lane_f32 ARM intrinsic
+- vst2q_lane_p16 ARM intrinsic
+- vst2q_lane_s16 ARM intrinsic
+- vst2q_lane_s32 ARM intrinsic
+- vst2q_lane_u16 ARM intrinsic
+- vst2q_lane_u32 ARM intrinsic
+- vst2q_p16 ARM intrinsic
+- vst2q_p8 ARM intrinsic
+- vst2q_s16 ARM intrinsic
+- vst2q_s32 ARM intrinsic
+- vst2q_s8 ARM intrinsic
+- vst2q_u16 ARM intrinsic
+- vst2q_u32 ARM intrinsic
+- vst2q_u8 ARM intrinsic
+- vst3_f16 ARM intrinsic
+- vst3_f32 ARM intrinsic
+- vst3_lane_f16 ARM intrinsic
+- vst3_lane_f32 ARM intrinsic
+- vst3_lane_p16 ARM intrinsic
+- vst3_lane_p8 ARM intrinsic
+- vst3_lane_s16 ARM intrinsic
+- vst3_lane_s32 ARM intrinsic
+- vst3_lane_s8 ARM intrinsic
+- vst3_lane_u16 ARM intrinsic
+- vst3_lane_u32 ARM intrinsic
+- vst3_lane_u8 ARM intrinsic
+- vst3_p16 ARM intrinsic
+- vst3_p8 ARM intrinsic
+- vst3_s16 ARM intrinsic
+- vst3_s32 ARM intrinsic
+- vst3_s64 ARM intrinsic
+- vst3_s8 ARM intrinsic
+- vst3_u16 ARM intrinsic
+- vst3_u32 ARM intrinsic
+- vst3_u64 ARM intrinsic
+- vst3_u8 ARM intrinsic
+- vst3q_f16 ARM intrinsic
+- vst3q_f32 ARM intrinsic
+- vst3q_lane_f16 ARM intrinsic
+- vst3q_lane_f32 ARM intrinsic
+- vst3q_lane_p16 ARM intrinsic
+- vst3q_lane_s16 ARM intrinsic
+- vst3q_lane_s32 ARM intrinsic
+- vst3q_lane_u16 ARM intrinsic
+- vst3q_lane_u32 ARM intrinsic
+- vst3q_p16 ARM intrinsic
+- vst3q_p8 ARM intrinsic
+- vst3q_s16 ARM intrinsic
+- vst3q_s32 ARM intrinsic
+- vst3q_s8 ARM intrinsic
+- vst3q_u16 ARM intrinsic
+- vst3q_u32 ARM intrinsic
+- vst3q_u8 ARM intrinsic
+- vst4_f16 ARM intrinsic
+- vst4_f32 ARM intrinsic
+- vst4_lane_f16 ARM intrinsic
+- vst4_lane_f32 ARM intrinsic
+- vst4_lane_p16 ARM intrinsic
+- vst4_lane_p8 ARM intrinsic
+- vst4_lane_s16 ARM intrinsic
+- vst4_lane_s32 ARM intrinsic
+- vst4_lane_s8 ARM intrinsic
+- vst4_lane_u16 ARM intrinsic
+- vst4_lane_u32 ARM intrinsic
+- vst4_lane_u8 ARM intrinsic
+- vst4_p16 ARM intrinsic
+- vst4_p8 ARM intrinsic
+- vst4_s16 ARM intrinsic
+- vst4_s32 ARM intrinsic
+- vst4_s64 ARM intrinsic
+- vst4_s8 ARM intrinsic
+- vst4_u16 ARM intrinsic
+- vst4_u32 ARM intrinsic
+- vst4_u64 ARM intrinsic
+- vst4_u8 ARM intrinsic
+- vst4q_f16 ARM intrinsic
+- vst4q_f32 ARM intrinsic
+- vst4q_lane_f16 ARM intrinsic
+- vst4q_lane_f32 ARM intrinsic
+- vst4q_lane_p16 ARM intrinsic
+- vst4q_lane_s16 ARM intrinsic
+- vst4q_lane_s32 ARM intrinsic
+- vst4q_lane_u16 ARM intrinsic
+- vst4q_lane_u32 ARM intrinsic
+- vst4q_p16 ARM intrinsic
+- vst4q_p8 ARM intrinsic
+- vst4q_s16 ARM intrinsic
+- vst4q_s32 ARM intrinsic
+- vst4q_s8 ARM intrinsic
+- vst4q_u16 ARM intrinsic
+- vst4q_u32 ARM intrinsic
+- vst4q_u8 ARM intrinsic
+- vsub_f32 ARM intrinsic
+- vsub_s16 ARM intrinsic
+- vsub_s32 ARM intrinsic
+- vsub_s64 ARM intrinsic
+- vsub_s8 ARM intrinsic
+- vsub_u16 ARM intrinsic
+- vsub_u32 ARM intrinsic
+- vsub_u64 ARM intrinsic
+- vsub_u8 ARM intrinsic
+- vsubhn_s16 ARM intrinsic
+- vsubhn_s32 ARM intrinsic
+- vsubhn_s64 ARM intrinsic
+- vsubhn_u16 ARM intrinsic
+- vsubhn_u32 ARM intrinsic
+- vsubhn_u64 ARM intrinsic
+- vsubl_s16 ARM intrinsic
+- vsubl_s32 ARM intrinsic
+- vsubl_s8 ARM intrinsic
+- vsubl_u16 ARM intrinsic
+- vsubl_u32 ARM intrinsic
+- vsubl_u8 ARM intrinsic
+- vsubq_f32 ARM intrinsic
+- vsubq_s16 ARM intrinsic
+- vsubq_s32 ARM intrinsic
+- vsubq_s64 ARM intrinsic
+- vsubq_s8 ARM intrinsic
+- vsubq_u16 ARM intrinsic
+- vsubq_u32 ARM intrinsic
+- vsubq_u64 ARM intrinsic
+- vsubq_u8 ARM intrinsic
+- vsubw_s16 ARM intrinsic
+- vsubw_s32 ARM intrinsic
+- vsubw_s8 ARM intrinsic
+- vsubw_u16 ARM intrinsic
+- vsubw_u32 ARM intrinsic
+- vsubw_u8 ARM intrinsic
+- vtbl1_p8 ARM intrinsic
+- vtbl1_s8 ARM intrinsic
+- vtbl1_u8 ARM intrinsic
+- vtbl2_p8 ARM intrinsic
+- vtbl2_s8 ARM intrinsic
+- vtbl2_u8 ARM intrinsic
+- vtbl3_p8 ARM intrinsic
+- vtbl3_s8 ARM intrinsic
+- vtbl3_u8 ARM intrinsic
+- vtbl4_p8 ARM intrinsic
+- vtbl4_s8 ARM intrinsic
+- vtbl4_u8 ARM intrinsic
+- vtbx1_p8 ARM intrinsic
+- vtbx1_s8 ARM intrinsic
+- vtbx1_u8 ARM intrinsic
+- vtbx2_p8 ARM intrinsic
+- vtbx2_s8 ARM intrinsic
+- vtbx2_u8 ARM intrinsic
+- vtbx3_p8 ARM intrinsic
+- vtbx3_s8 ARM intrinsic
+- vtbx3_u8 ARM intrinsic
+- vtbx4_p8 ARM intrinsic
+- vtbx4_s8 ARM intrinsic
+- vtbx4_u8 ARM intrinsic
+- vtrn_f32 ARM intrinsic
+- vtrn_p16 ARM intrinsic
+- vtrn_p8 ARM intrinsic
+- vtrn_s16 ARM intrinsic
+- vtrn_s32 ARM intrinsic
+- vtrn_s8 ARM intrinsic
+- vtrn_u16 ARM intrinsic
+- vtrn_u32 ARM intrinsic
+- vtrn_u8 ARM intrinsic
+- vtrnq_f32 ARM intrinsic
+- vtrnq_p16 ARM intrinsic
+- vtrnq_p8 ARM intrinsic
+- vtrnq_s16 ARM intrinsic
+- vtrnq_s32 ARM intrinsic
+- vtrnq_s8 ARM intrinsic
+- vtrnq_u16 ARM intrinsic
+- vtrnq_u32 ARM intrinsic
+- vtrnq_u8 ARM intrinsic
+- vtst_p8 ARM intrinsic
+- vtst_s16 ARM intrinsic
+- vtst_s32 ARM intrinsic
+- vtst_s8 ARM intrinsic
+- vtst_u16 ARM intrinsic
+- vtst_u32 ARM intrinsic
+- vtst_u8 ARM intrinsic
+- vtstq_p8 ARM intrinsic
+- vtstq_s16 ARM intrinsic
+- vtstq_s32 ARM intrinsic
+- vtstq_s8 ARM intrinsic
+- vtstq_u16 ARM intrinsic
+- vtstq_u32 ARM intrinsic
+- vtstq_u8 ARM intrinsic
+- vuzp_f32 ARM intrinsic
+- vuzp_p16 ARM intrinsic
+- vuzp_p8 ARM intrinsic
+- vuzp_s16 ARM intrinsic
+- vuzp_s32 ARM intrinsic
+- vuzp_s8 ARM intrinsic
+- vuzp_u16 ARM intrinsic
+- vuzp_u32 ARM intrinsic
+- vuzp_u8 ARM intrinsic
+- vuzpq_f32 ARM intrinsic
+- vuzpq_p16 ARM intrinsic
+- vuzpq_p8 ARM intrinsic
+- vuzpq_s16 ARM intrinsic
+- vuzpq_s32 ARM intrinsic
+- vuzpq_s8 ARM intrinsic
+- vuzpq_u16 ARM intrinsic
+- vuzpq_u32 ARM intrinsic
+- vuzpq_u8 ARM intrinsic
+- vzip_f32 ARM intrinsic
+- vzip_p16 ARM intrinsic
+- vzip_p8 ARM intrinsic
+- vzip_s16 ARM intrinsic
+- vzip_s8 ARM intrinsic
+- vzip_u16 ARM intrinsic
+- vzip_u8 ARM intrinsic
+- vzipq_f32 ARM intrinsic
+- vzipq_p16 ARM intrinsic
+- vzipq_p8 ARM intrinsic
+- vzipq_s16 ARM intrinsic
+- vzipq_s32 ARM intrinsic
+- vzipq_s8 ARM intrinsic
+- vzipq_u16 ARM intrinsic
+- vzipq_u32 ARM intrinsic
+- vzipq_u8 ARM intrinsic
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: e4c962b7911c97095e22c670dabfaa3d3d4b2709
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0b0ad779ad9d4c8de1623ea84dd6bc54e30703cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525514"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754492"
 ---
 # <a name="arm-intrinsics"></a>Intrínsecos ARM
 
-El compilador de Visual C++ hace que los siguientes intrínsecos estén disponibles en la arquitectura ARM. Para obtener más información sobre ARM, consulte el [manuales de referencia de arquitectura ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) y [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) en el sitio Web de centro de información de ARM.
+El compilador de Microsoft C++ (MSVC) hace que los siguientes elementos intrínsecos estén disponibles en la arquitectura ARM. Para obtener más información acerca de ARM, consulte las secciones Herramientas de arquitectura y desarrollo de software del sitio web [documentación para desarrolladores](https://developer.arm.com/docs) de ARM.
 
-##  <a name="top"></a> NEON
+## <a name="neon"></a><a name="top"></a>Neón
 
-Las extensiones de conjuntos de instrucciones de vector NEON de ARM proporcionan Single Instruction Multiple Data (SIMD, una instrucción, múltiples datos) similares a los de los conjuntos de instrucciones de vector de MMX y SSE que son comunes a los procesadores de arquitectura x86 y x64.
+Las extensiones de conjunto de instrucciones vectoriales NEON para ARM proporcionan capacidades de datos múltiples de instrucción única (SIMD) que se asemejan a las de los conjuntos de instrucciones vectoriales MMX y SSE que son comunes a los procesadores de arquitectura x86 y x64.
 
-Se admiten intrínsecos NEON, como se dispone en el archivo de encabezado `arm_neon.h`. La compatibilidad del compilador de Visual C++ funciones intrínsecas de NEÓN se parece del compilador ARM, que se documenta en el apéndice G de la [cadena de herramientas del compilador ARM, versión 4.1 del compilador referencia](http://go.microsoft.com/fwlink/p/?LinkId=251083) en el sitio Web de centro de información de ARM.
+Se admiten intrínsecos NEON, como se dispone en el archivo de encabezado `arm_neon.h`. La compatibilidad de MSVC para los elementos intrínsecos de NEON es similar a la del compilador ARM, que se documenta en el Apéndice G de la cadena de herramientas del [compilador ARM, Versión 4.1 Referencia del compilador](https://go.microsoft.com/fwlink/p/?LinkId=251083) en el sitio web de ARM Infocenter.
 
-La diferencia principal entre el compilador de Visual C++ y el compilador ARM es que el compilador de Visual C++ agrega variantes `_ex` de la carga de vector `vldX` y `vstX` e instrucciones de almacenamiento. Las variantes `_ex` toman un parámetro adicional que especifica la alineación del argumento de puntero, pero por lo demás son idénticas a sus equivalentes que no son `_ex`.
+La principal diferencia entre MSVC y el compilador `_ex` ARM es `vldX` `vstX` que MSVC agrega variantes de las instrucciones de carga vectorial y de almacén. Las variantes `_ex` toman un parámetro adicional que especifica la alineación del argumento de puntero, pero por lo demás son idénticas a sus equivalentes que no son `_ex`.
 
-##  <a name="A"></a> Lista de intrínsecos específicos de ARM
+## <a name="arm-specific-intrinsics-listing"></a><a name="A"></a>Listado de Intrínsecos específicos de ARM
 
 |Nombre de la función|Instrucción|Prototipo de función|
 |-------------------|-----------------|------------------------|
-|_arm_smlal|SMLAL|__int64 _arm_smlal (\__int64 _RdHiLo, _Rn int, int _Rm)|
-|_arm_umlal|UMLAL|unsigned __int64 _arm_umlal (unsigned \__int64 _RdHiLo, _Rn int sin signo, unsigned int _Rm)|
+|_arm_smlal|SMLAL|__int64 _arm_smlal(\__RdHiLo _int64, int _Rn, int _Rm)|
+|_arm_umlal|UMLAL|_arm_umlal __int64 sin \_signo (_RdHiLo _int64 sin signo, int _Rn sin signo, int _Rm sin signo)|
 |_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|
 |_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|
 |_arm_qdadd|QDADD|int _arm_qdadd(int _Rm, int _Rn)|
@@ -1965,10 +3891,10 @@ La diferencia principal entre el compilador de Visual C++ y el compilador ARM es
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|
 |_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|
-|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb (\__int64 _RdHiLo, _Rn int, int _Rm)|
-|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt (\__int64 _RdHiLo, _Rn int, int _Rm)|
-|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb (\__int64 _RdHiLo, _Rn int, int _Rm)|
-|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt (\__int64 _RdHiLo, _Rn int, int _Rm)|
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt(_RdHiLo\__int64, int _Rn, int _Rm)|
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|
 |_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|
 |_arm_smulbb|SMULBB|int _arm_smulbb(int _Rn, int _Rm)|
@@ -2046,10 +3972,10 @@ La diferencia principal entre el compilador de Visual C++ y el compilador ARM es
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|
-|_arm_smlald|SMLALD|__int64 _arm_smlald (\__int64 _RdHiLo, _Rn int, int _Rm)|
-|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx (\__int64 _RdHiLo, _Rn int, int _Rm)|
-|_arm_smlsld|SMLSLD|__int64 _arm_smlsld (\__int64 _RdHiLo, _Rn int, int _Rm)|
-|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx (\__int64 _RdHiLo, _Rn int, int _Rm)|
+|_arm_smlald|SMLALD|__int64 _arm_smlald(_int64\__RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|
 |_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|
 |_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|
@@ -2065,41 +3991,41 @@ La diferencia principal entre el compilador de Visual C++ y el compilador ARM es
 |_arm_sdiv|SDIV|int _arm_sdiv(int _Rn, int _Rm)|
 |_arm_udiv|UDIV|unsigned int _arm_udiv(unsigned int _Rn, unsigned int _Rm)|
 |__cps|CPS|void __cps(unsigned int _Ops, unsigned int _Flags, unsigned int _Mode)|
-|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> Inserta una operación de barrera de memoria en la secuencia de instrucciones. El parámetro `_Type` especifica el tipo de restricción que impone la barrera.<br /><br /> Para obtener más información sobre los tipos de restricciones que se pueden aplicar, vea [restricciones de la barrera de memoria](#BarrierRestrictions).|
-|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> Inserta una operación de barrera de memoria en la secuencia de instrucciones. El parámetro `_Type` especifica el tipo de restricción que impone la barrera.<br /><br /> Para obtener más información sobre los tipos de restricciones que se pueden aplicar, vea [restricciones de la barrera de memoria](#BarrierRestrictions).|
-|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> Inserta una operación de barrera de memoria en la secuencia de instrucciones. El parámetro `_Type` especifica el tipo de restricción que impone la barrera.<br /><br /> Para obtener más información sobre los tipos de restricciones que se pueden aplicar, vea [restricciones de la barrera de memoria](#BarrierRestrictions).|
-|__emit||void __emit (unsigned \_opcode __int32)<br /><br /> Inserta una instrucción especificada en la secuencia de instrucciones generada por el compilador.<br /><br /> El valor de `opcode` debe ser una expresión constante que se conozca en el momento de la compilación. El tamaño de una palabra de instrucción es de 16 bits y los 16 bits más significativos de `opcode` se omiten.<br /><br /> El compilador no intenta interpretar el contenido de `opcode` y no garantiza un estado de CPU o de memoria antes de que se ejecute la instrucción insertada.<br /><br /> El compilador supone que los estados de CPU y de memoria no se modifican después de ejecutarse la instrucción insertada. Por lo tanto, las instrucciones que cambian de estado pueden tener un impacto negativo en el código normal generado por el compilador.<br /><br /> Por este motivo, utilice `emit` solo para insertar instrucciones que afectan a un estado de CPU que el compilador no procesa normalmente (por ejemplo, el estado de coprocesador) o para implementar las funciones que se declaran mediante `declspec(naked)`.|
+|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> Inserta una operación de barrera de memoria en la secuencia de instrucciones. El parámetro `_Type` especifica el tipo de restricción que impone la barrera.<br /><br /> Para obtener más información acerca de los tipos de restricciones que se pueden aplicar, consulte [Restricciones](#BarrierRestrictions)de barrera de memoria .|
+|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> Inserta una operación de barrera de memoria en la secuencia de instrucciones. El parámetro `_Type` especifica el tipo de restricción que impone la barrera.<br /><br /> Para obtener más información acerca de los tipos de restricciones que se pueden aplicar, consulte [Restricciones](#BarrierRestrictions)de barrera de memoria .|
+|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> Inserta una operación de barrera de memoria en la secuencia de instrucciones. El parámetro `_Type` especifica el tipo de restricción que impone la barrera.<br /><br /> Para obtener más información acerca de los tipos de restricciones que se pueden aplicar, consulte [Restricciones](#BarrierRestrictions)de barrera de memoria .|
+|__emit||vacío __emit (código de _int32 sin signo) \_<br /><br /> Inserta una instrucción especificada en la secuencia de instrucciones generada por el compilador.<br /><br /> El valor de `opcode` debe ser una expresión constante que se conozca en el momento de la compilación. El tamaño de una palabra de instrucción es de 16 bits y los 16 bits más significativos de `opcode` se omiten.<br /><br /> El compilador no intenta interpretar `opcode` el contenido de un estado de CPU o memoria antes de que se ejecute la instrucción insertada y no garantiza un estado de CPU o memoria.<br /><br /> El compilador supone que los estados de CPU y de memoria no se modifican después de ejecutarse la instrucción insertada. Por lo tanto, las instrucciones que cambian de estado pueden tener un impacto perjudicial en el código normal generado por el compilador.<br /><br /> Por este motivo, solo se usa `emit` para insertar instrucciones que afectan a un estado de CPU que el compilador `declspec(naked)`normalmente no procesa (por ejemplo, estado de coprocesador) o para implementar funciones que se declaran mediante .|
 |__hvc|HVC|unsigned int __hvc(unsigned int, ...)|
-|__iso_volatile_load16||__int16 \__iso_volatile_load16 (const volatile \__int16 \*)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store las características propias](#IsoVolatileLoadStore).|
-|__iso_volatile_load32||__int32 \__iso_volatile_load32 (const volatile \__int32 \*)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store las características propias](#IsoVolatileLoadStore).|
-|__iso_volatile_load64||__int64 \__iso_volatile_load64 (const volatile \__int64 \*)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store las características propias](#IsoVolatileLoadStore).|
-|__iso_volatile_load8||__int8 \__iso_volatile_load8 (const volatile \__int8 \*)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store las características propias](#IsoVolatileLoadStore).|
-|__iso_volatile_store16||void __iso_volatile_store16 (volátil \___int16 \*, \___int16)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store las características propias](#IsoVolatileLoadStore).|
-|__iso_volatile_store32||void __iso_volatile_store32 (volátil \___int32 \*, \___int32)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store las características propias](#IsoVolatileLoadStore).|
-|__iso_volatile_store64||void __iso_volatile_store64 (volátil \__int64 \*, \___int64)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store las características propias](#IsoVolatileLoadStore).|
-|__iso_volatile_store8||void __iso_volatile_store8 (volátil \__int8 \*, \__int8)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store las características propias](#IsoVolatileLoadStore).|
-|__ldrexd|LDREXD|__int64 \__ldrexd (const volatile \__int64 \*)|
-|__prefetch|PLD|void __cdecl \__prefetch (const void \*)<br /><br /> Proporciona una sugerencia de memoria `PLD` al sistema para indicarle que pronto podría accederse a la memoria en la dirección especificada, o cerca de ella. Algunos sistemas pueden optar por optimizarse para que ese modelo de acceso a memoria aumente el rendimiento en tiempo de ejecución. Sin embargo, desde el punto de vista del lenguaje C++, la función no tiene ningún efecto observable y podría no hacer nada.|
-|__rdpmccntr64||__int64 sin signo \__rdpmccntr64(void)|
+|__iso_volatile_load16||__int16 \__iso_volatile_load16(const \_ \*volatile _int16 )<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store intrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load32||__int32 \__iso_volatile_load32(const \_ \*volatile _int32 )<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store intrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load64||__int64 \__iso_volatile_load64(const \_ \*volatile _int64 )<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store intrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load8||__int8 \__iso_volatile_load8(const \_ \*_int8 volátil )<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store intrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store16||__iso_volatile_store16 del \_vacío \* \_(_int16 volátil, _int16)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store intrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store32||vacío __iso_volatile_store32 \_ \*(_int32 \_volátil, _int32)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store intrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store64||__iso_volatile_store64 del \_vacío \* \_(_int64 volátil, _int64)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store intrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store8||__iso_volatile_store8 del \_vacío \* \_(_int8 volátil, _int8)<br /><br /> Para obtener más información, consulte [__iso_volatile_load/store intrinsics](#IsoVolatileLoadStore).|
+|__ldrexd|LDREXD|__int64 \__ldrexd(const \_ \*volatile _int64 )|
+|__prefetch|PLD|vacío \___cdecl _prefetch(const void \*)<br /><br /> Proporciona una sugerencia de memoria `PLD` al sistema para indicarle que pronto podría accederse a la memoria en la dirección especificada, o cerca de ella. Algunos sistemas pueden optar por optimizarse para que ese modelo de acceso a memoria aumente el rendimiento en tiempo de ejecución. Sin embargo, desde el punto de vista del lenguaje C++, la función no tiene ningún efecto observable y podría no hacer nada.|
+|__rdpmccntr64||_rdpmccntr64 __int64 \_sin signo (vacío)|
 |__sev|SEV|void __sev(void)|
-|__static_assert||void __static_assert (int, const char \*)|
+|__static_assert||vacío __static_assert(int, const char \*)|
 |__swi|SVC|unsigned int __swi(unsigned int, ...)|
 |__trap|BKPT|int __trap(int, ...)|
 |__wfe|WFE|void __wfe(void)|
 |__wfi|WFI|void __wfi(void)|
 |_AddSatInt|QADD|int _AddSatInt(int, int)|
-|_CopyDoubleFromInt64||Double _CopyDoubleFromInt64 (\__int64)|
-|_CopyFloatFromInt32||float _CopyFloatFromInt32 (\__int32)|
+|_CopyDoubleFromInt64||doble _CopyDoubleFromInt64\_(_int64)|
+|_CopyFloatFromInt32||flotador\__CopyFloatFromInt32( _int32)|
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|
-|_CountLeadingOnes64||unsigned int _CountLeadingOnes64 (unsigned \___int64)|
+|_CountLeadingOnes64||int _CountLeadingOnes64 sin \_signo (_int64 sin signo)|
 |_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|
-|_CountLeadingSigns64||_CountLeadingSigns64 int sin signo (\___int64)|
+|_CountLeadingSigns64||int _CountLeadingSigns64(\__int64)|
 |_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|
-|_CountLeadingZeros64||unsigned int _CountLeadingZeros64 (unsigned \___int64)|
+|_CountLeadingZeros64||int _CountLeadingZeros64 sin \_signo (_int64 sin signo)|
 |_CountOneBits||unsigned int _CountOneBits(unsigned long)|
-|_CountOneBits64||unsigned int _CountOneBits64 (unsigned \___int64)|
+|_CountOneBits64||int _CountOneBits64 sin \_signo (_int64 sin signo)|
 |_DAddSatInt|QDADD|int _DAddSatInt(int, int)|
 |_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|
 |_isunordered||int _isunordered(double, double)|
@@ -2109,7 +4035,7 @@ La diferencia principal entre el compilador de Visual C++ y el compilador ARM es
 |_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> Lee datos de un coprocesador ARM mediante las instrucciones de transferencia de datos del coprocesador. Para obtener más información, consulte [_MoveFromCoprocessor64](#MoveFromCo64).|
 |_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Lee datos de un coprocesador ARM mediante las instrucciones de transferencia de datos del coprocesador. Para obtener más información, consulte [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|
 |_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Lee datos de un coprocesador ARM mediante las instrucciones de transferencia de datos del coprocesador. Para obtener más información, consulte [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|
-|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (unsigned \__int64, unsigned int, int sin signo, unsigned int)<br /><br /> Lee datos de un coprocesador ARM mediante las instrucciones de transferencia de datos del coprocesador. Para obtener más información, consulte [_MoveToCoprocessor64](#MoveToCo64).|
+|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64(unsigned \__int64, unsigned int, unsigned int, unsigned int)<br /><br /> Lee datos de un coprocesador ARM mediante las instrucciones de transferencia de datos del coprocesador. Para obtener más información, consulte [_MoveToCoprocessor64](#MoveToCo64).|
 |_MulHigh||long _MulHigh(long, long)|
 |_MulUnsignedHigh||unsigned long _MulUnsignedHigh(unsigned long, unsigned long)|
 |_ReadBankedReg|MRS|int _ReadBankedReg(int _Reg)|
@@ -2118,11 +4044,11 @@ La diferencia principal entre el compilador de Visual C++ y el compilador ARM es
 |_WriteBankedReg|MSR|void _WriteBankedReg(int _Value, int _Reg)|
 |_WriteStatusReg|MSR|void _WriteStatusReg(int, int, int)|
 
-[[NEON](#top)]
+[[Volver a la parte superior](#top)]
 
-###  <a name="BarrierRestrictions"></a> Restricciones de la barrera de memoria
+### <a name="memory-barrier-restrictions"></a><a name="BarrierRestrictions"></a>Restricciones de barrera de memoria
 
-Las funciones intrínsecas `__dmb` (barrera de memoria de datos), `__dsb` (barrera de sincronización de datos) y `__isb` (barrera de sincronización de instrucciones) usan los siguientes valores predefinidos para especificar la restricción de la barrera de memoria en el tipo de acceso y dominio compartido que se ven afectados por la operación.
+Las funciones intrínsecas `__dmb` `__dsb` (barrera de memoria `__isb` de datos), (barrera de sincronización de datos) y (barrera de sincronización de instrucciones) utilizan los siguientes valores predefinidos para especificar la restricción de barrera de memoria en términos del dominio de uso compartido y el tipo de acceso que se ven afectados por la operación.
 
 |Valor de restricción|Descripción|
 |-----------------------|-----------------|
@@ -2137,52 +4063,52 @@ Las funciones intrínsecas `__dmb` (barrera de memoria de datos), `__dsb` (barre
 
 Para el intrínseco `__isb`, la única restricción válida actualmente es _ARM_BARRIER_SY; todos los demás valores se los reserva la arquitectura.
 
-###  <a name="IsoVolatileLoadStore"></a> características propias de __iso_volatile_load/store
+### <a name="__iso_volatile_loadstore-intrinsics"></a><a name="IsoVolatileLoadStore"></a>__iso_volatile_load/tienda intrínseca
 
 Estas funciones intrínsecas realizan explícitamente cargas y almacenes que no están sujetos a optimizaciones del compilador.
 
-```
-__int16 __iso_volatile_load16(const volatile __int16 * Location)
-__int32 __iso_volatile_load32(const volatile __int32 * Location)
-__int64 __iso_volatile_load64(const volatile __int64 * Location)
-__int8 __iso_volatile_load8(const volatile __int8 * Location)
+```C
+__int16 __iso_volatile_load16(const volatile __int16 * Location);
+__int32 __iso_volatile_load32(const volatile __int32 * Location);
+__int64 __iso_volatile_load64(const volatile __int64 * Location);
+__int8 __iso_volatile_load8(const volatile __int8 * Location);
 
-void __iso_volatile_store16(volatile __int16 * Location, __int16 Value)
-void __iso_volatile_store32(volatile __int32 * Location, __int32 Value)
-void __iso_volatile_store64(volatile __int64 * Location, __int64 Value)
-void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
+void __iso_volatile_store16(volatile __int16 * Location, __int16 Value);
+void __iso_volatile_store32(volatile __int32 * Location, __int32 Value);
+void __iso_volatile_store64(volatile __int64 * Location, __int64 Value);
+void __iso_volatile_store8(volatile __int8 * Location, __int8 Value);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*Ubicación*<br/>
+*Ubicación*\
 La dirección de una ubicación de memoria para leer o escribir.
 
-*Valor*<br/>
-El valor para escribir en la ubicación de memoria especificado (solo intrínsecos de almacén).
+*Valor*\
+Valor que se va a escribir en la ubicación de memoria especificada (solo los intrínsecos de almacén).
 
 #### <a name="return-value-load-intrinsics-only"></a>Valor devuelto (solo intrínsecos de carga)
 
 El valor de la ubicación de memoria especificado por `Location`.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-Puede utilizar los intrínsecos `__iso_volatile_load8/16/32/64` y `__iso_volatile_store8/16/32/64` para realizar explícitamente accesos a memoria que no están sujetos a optimizaciones del compilador. El compilador no puede quitar, sintetizar, o cambiar el orden relativo de estas operaciones, pero no genera barreras de memoria de hardware implícitas. Por lo tanto, el hardware todavía puede reordenar los accesos de memoria observables en varios subprocesos. Más concretamente, estos intrínsecos son equivalentes a las siguientes expresiones compiladas en **/volatile: ISO**.
+Puede usar `__iso_volatile_load8/16/32/64` los `__iso_volatile_store8/16/32/64` intrínsecos para realizar explícitamente accesos a la memoria que no están sujetos a optimizaciones del compilador. El compilador no puede quitar, synthetize o cambiar el orden relativo de estas operaciones, pero no genera barreras de memoria de hardware implícitas. Por lo tanto, el hardware todavía puede reordenar los accesos de memoria observables en varios subprocesos. Más precisamente, estos elementos intrínsecos son equivalentes a las siguientes expresiones compiladas en **/volatile:iso**.
 
 ```cpp
 int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;
 ```
 
-Observe que los intrínsecos tienen punteros volátiles para dar cabida a variables volátiles. Sin embargo, no hay ningún requisito ni recomendación para usar punteros volátiles como argumentos; la semántica de estas operaciones es exactamente igual que si se utiliza un tipo normal, no volátil.
+Observe que los intrínsecos tienen punteros volátiles para dar cabida a variables volátiles. Sin embargo, no hay ningún requisito o recomendación para usar punteros volátiles como argumentos. La semántica de estas operaciones es exactamente la misma si se utiliza un tipo normal y no volátil.
 
-Para obtener más información sobre la **/volatile: ISO** argumento de línea de comandos, consulte [/volatile (interpretación de la palabra clave volatile)](../build/reference/volatile-volatile-keyword-interpretation.md).
+Para obtener más información sobre el argumento de línea de comandos **/volatile:iso,** vea [/volatile (volatile Keyword Interpretation)](../build/reference/volatile-volatile-keyword-interpretation.md).
 
-###  <a name="MoveFromCo"></a> _MoveFromCoprocessor, _MoveFromCoprocessor2
+### <a name="_movefromcoprocessor-_movefromcoprocessor2"></a><a name="MoveFromCo"></a>_MoveFromCoprocessor, _MoveFromCoprocessor2
 
 Estas funciones intrínsecas leen datos del coprocesadores ARM siguiendo las instrucciones de transferencia de datos de coprocesador.
 
-```
+```C
 int _MoveFromCoprocessor(
       unsigned int coproc,
       unsigned int opcode1,
@@ -2202,36 +4128,36 @@ int _MoveFromCoprocessor2(
 
 #### <a name="parameters"></a>Parámetros
 
-*coproc*<br/>
+*coproc*\
 Número de coprocesador comprendido entre 0 y 15.
 
-*opcode1*<br/>
+*opcode1*\
 Código de operación específicos del coprocesador entre 0 y 7.
 
-*CRN*<br/>
+*Crn*\
 Número de registro del coprocesador, entre 0 y 15, que especifica el primer operando de la instrucción.
 
-*CRM*<br/>
+*Crm*\
 Número de registro del coprocesador, entre 0 y 15, que especifica un operando adicional de origen o de destino.
 
-*opcode2*<br/>
+*opcode2*\
 Código de operación específico del coprocesador adicional entre 0 y 7.
 
 #### <a name="return-value"></a>Valor devuelto
 
 El valor que se lee desde el coprocesador.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-Los valores de los cinco parámetros de este intrínseco deben ser expresiones constantes que se conozcan en el momento de la compilación.
+Los valores de los cinco parámetros del intrínseco deben ser expresiones constantes que se conocen en tiempo de compilación.
 
 `_MoveFromCoprocessor` utiliza la instrucción MRC; `_MoveFromCoprocessor2` utiliza MRC2. Los parámetros corresponden a los campos de bits que se codifican directamente en la palabra de instrucción. La interpretación de los parámetros depende del coprocesador. Para obtener más información, vea el manual del coprocesador en cuestión.
 
-###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
+### <a name="_movefromcoprocessor64"></a><a name="MoveFromCo64"></a>_MoveFromCoprocessor64
 
 Lee datos de coprocesadores ARM mediante las instrucciones de transferencia de datos del coprocesador.
 
-```
+```C
 unsigned __int64 _MoveFromCoprocessor64(
       unsigned int coproc,
       unsigned int opcode1,
@@ -2241,30 +4167,30 @@ unsigned __int64 _MoveFromCoprocessor64(
 
 #### <a name="parameters"></a>Parámetros
 
-*coproc*<br/>
+*coproc*\
 Número de coprocesador comprendido entre 0 y 15.
 
-*opcode1*<br/>
+*opcode1*\
 Código de operación específico del coprocesador entre 0 y 15.
 
-*CRM*<br/>
+*Crm*\
 Número de registro del coprocesador, entre 0 y 15, que especifica un operando adicional de origen o de destino.
 
-**Devuelve el valor**
+#### <a name="return-value"></a>Valor devuelto
 
 El valor que se lee desde el coprocesador.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-Los valores de los tres parámetros de este intrínseco deben ser expresiones constantes que se conozcan en el momento de la compilación.
+Los valores de los tres parámetros del intrínseco deben ser expresiones constantes que se conocen en tiempo de compilación.
 
 `_MoveFromCoprocessor64` utiliza la instrucción MRRC. Los parámetros corresponden a los campos de bits que se codifican directamente en la palabra de instrucción. La interpretación de los parámetros depende del coprocesador. Para obtener más información, vea el manual del coprocesador en cuestión.
 
-###  <a name="MoveToCo"></a> _MoveToCoprocessor, _MoveToCoprocessor2
+### <a name="_movetocoprocessor-_movetocoprocessor2"></a><a name="MoveToCo"></a>_MoveToCoprocessor, _MoveToCoprocessor2
 
 Estas funciones intrínsecas escriben datos en coprocesadores ARM siguiendo las instrucciones de transferencia de datos del coprocesador.
 
-```
+```C
 void _MoveToCoprocessor(
       unsigned int value,
       unsigned int coproc,
@@ -2286,39 +4212,39 @@ void _MoveToCoprocessor2(
 
 #### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*Valor*\
 El que se va a escribir en el coprocesador.
 
-*coproc*<br/>
+*coproc*\
 Número de coprocesador comprendido entre 0 y 15.
 
-*opcode1*<br/>
+*opcode1*\
 Código de operación específico del coprocesador entre 0 y 7.
 
-*CRN*<br/>
+*Crn*\
 Número de registro del coprocesador, entre 0 y 15, que especifica el primer operando de la instrucción.
 
-*CRM*<br/>
+*Crm*\
 Número de registro del coprocesador, entre 0 y 15, que especifica un operando adicional de origen o de destino.
 
-*opcode2*<br/>
+*opcode2*\
 Código de operación específico del coprocesador adicional entre 0 y 7.
 
 #### <a name="return-value"></a>Valor devuelto
 
 Ninguno.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-Los valores de los parámetros `coproc`, `opcode1`, `crn`, `crm` y `opcode2` de este intrínseco deben ser expresiones constantes que se conozcan en el momento de la compilación.
+Los valores `coproc`de `opcode1` `crn`los `crm`parámetros , , , , y `opcode2` del intrínseco deben ser expresiones constantes que se conocen en tiempo de compilación.
 
 `_MoveToCoprocessor` utiliza la instrucción MCR; `_MoveToCoprocessor2` utiliza MCR2. Los parámetros corresponden a los campos de bits que se codifican directamente en la palabra de instrucción. La interpretación de los parámetros depende del coprocesador. Para obtener más información, vea el manual del coprocesador en cuestión.
 
-###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
+### <a name="_movetocoprocessor64"></a><a name="MoveToCo64"></a>_MoveToCoprocessor64
 
 Estas funciones intrínsecas escriben datos en coprocesadores ARM siguiendo las instrucciones de transferencia de datos del coprocesador.
 
-```
+```C
 void _MoveFromCoprocessor64(
       unsigned __int64 value,
       unsigned int coproc,
@@ -2329,254 +4255,255 @@ void _MoveFromCoprocessor64(
 
 #### <a name="parameters"></a>Parámetros
 
-*coproc*<br/>
+*coproc*\
 Número de coprocesador comprendido entre 0 y 15.
 
-*opcode1*<br/>
+*opcode1*\
 Código de operación específico del coprocesador entre 0 y 15.
 
-*CRM*<br/>
+*Crm*\
 Número de registro del coprocesador, entre 0 y 15, que especifica un operando adicional de origen o de destino.
 
 #### <a name="return-value"></a>Valor devuelto
 
 Ninguno.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-Los valores de los parámetros `coproc`, `opcode1` y `crm` de este intrínseco deben ser expresiones constantes que se conozcan en el momento de la compilación.
+Los valores `coproc`de `opcode1`los `crm` parámetros , , y del intrínseco deben ser expresiones constantes que se conocen en tiempo de compilación.
 
 `_MoveFromCoprocessor64` utiliza la instrucción MCRR. Los parámetros corresponden a los campos de bits que se codifican directamente en la palabra de instrucción. La interpretación de los parámetros depende del coprocesador. Para obtener más información, vea el manual del coprocesador en cuestión.
 
-##  <a name="I"></a> Compatibilidad de ARM con intrínsecos de otras arquitecturas
+## <a name="arm-support-for-intrinsics-from-other-architectures"></a><a name="I"></a>Soporte ARM para intrínsecos de otras arquitecturas
 
 La siguiente tabla enumera los intrínsecos de otras arquitecturas que son compatibles con las plataformas ARM. Se incluyen detalles adicionales en los casos en que el comportamiento de un intrínseco en ARM difiere de su comportamiento en otras arquitecturas de hardware.
 
 |Nombre de la función|Prototipo de función|
 |-------------------|------------------------|
 |__assume|void __assume(int)|
-|__code_seg|void __code_seg (const char \*)|
-|__debugbreak|void __cdecl \__debugbreak(void)|
-|__fastfail|__declspec (noreturn) void \__fastfail (int sin signo)|
-|__nop|void __nop(void) **Nota:** plataformas en ARM, esta función genera una instrucción NOP si uno está implementado en la arquitectura de destino; de lo contrario, es una instrucción alternativa que no cambia el estado del programa o la CPU genera, por ejemplo, `MOV r8, r8`. Esto es funcionalmente equivalente a la \__nop intrínsecos de otras arquitecturas de hardware. Dado que la arquitectura de destino podría omitir una instrucción que no tiene ningún efecto en el estado de la CPU o del programa al considerarla como una optimización, la instrucción no consume necesariamente ciclos de CPU. Por lo tanto, no utilice el \__nop intrínseco para manipular el tiempo de ejecución de una secuencia de código, a menos que esté seguro de cómo se comportará la CPU. En su lugar, puede usar el \__nop intrínseco para alinear la siguiente instrucción con una dirección de límites concreto de 32 bits.|
-|__yield|void __yield(void) **Nota:** plataformas en ARM, esta función genera la instrucción YIELD, que indica que el subproceso está realizando una tarea que se puede suspender temporalmente de la ejecución, por ejemplo, un bloqueo por subproceso, sin afectando negativamente al programa. Esto permite que la CPU ejecute otras tareas durante los ciclos de ejecución que, de lo contrario, se desperdiciarían.|
-|_AddressOfReturnAddress|void \* _AddressOfReturnAddress(void)|
-|_BitScanForward|unsigned char _BitScanForward (unsigned long \* _Index, my_mask long sin signo)|
-|_BitScanReverse|unsigned char _BitScanReverse (unsigned long \* _Index, my_mask long sin signo)|
-|_bittest|unsigned char _bittest (long const \*, long)|
-|_bittestandcomplement|unsigned char _bittestandcomplement (long \*, long)|
-|_bittestandreset|unsigned char _bittestandreset (long \*, long)|
-|_bittestandset|unsigned char _bittestandset (long \*, long)|
-|_byteswap_uint64|__int64 sin signo \__cdecl _byteswap_uint64 (unsigned \___int64)|
+|__code_seg|vacío __code_seg(const \*char )|
+|__debugbreak|_debugbreak \_de __cdecl de vacío (vacío)|
+|__fastfail|__declspec(noreturn) \_void _fastfail(unsigned int)|
+|__nop|void __nop(void) **Nota:** En las plataformas ARM, esta función genera una instrucción NOP si se implementa una en la arquitectura de destino; de lo contrario, se genera una instrucción alternativa que no cambia `MOV r8, r8`el estado del programa o CPU, por ejemplo, . Es funcionalmente equivalente al \__nop intrínseco para otras arquitecturas de hardware. Dado que una instrucción que no tiene ningún efecto en el estado del programa o CPU puede ser ignorada por la arquitectura de destino como una optimización, la instrucción no consume necesariamente ciclos de CPU. Por lo tanto, \_no utilice el _nop intrínseco para manipular el tiempo de ejecución de una secuencia de código a menos que esté seguro de cómo se comportará la CPU. En su lugar, \_puede utilizar el _nop intrínseco para alinear la siguiente instrucción con una dirección de límite de 32 bits específica.|
+|__yield|void __yield(void) **Nota:** En las plataformas ARM, esta función genera la instrucción YIELD, que indica que el subproceso está realizando una tarea que se puede suspender temporalmente de la ejecución( por ejemplo, un spinlock), sin afectar negativamente al programa. Permite a la CPU ejecutar otras tareas durante los ciclos de ejecución que, de lo contrario, se desperdiciarían.|
+|_AddressOfReturnAddress|vacío \* _AddressOfReturnAddress (vacío)|
+|_BitScanForward|unsigned char _BitScanForward(unsigned long \* _Index, unsigned long _Mask)|
+|_BitScanReverse|_BitScanReverse char sin signo \* (sin signo, long _Index, sin signo _Mask largo)|
+|_bittest|char _bittest sin signo \*(const largo, largo)|
+|_bittestandcomplement|char sin signo \*_bittestandcomplement (largo, largo)|
+|_bittestandreset|char _bittestandreset sin \*signo (largo, largo)|
+|_bittestandset|char _bittestandset sin \*signo (largo, largo)|
+|_byteswap_uint64|_byteswap_uint64 de \__cdecl __int64 \_sin signo (_int64 sin signo)|
 |_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|
 |_byteswap_ushort|unsigned short __cdecl _byteswap_ushort(unsigned short)|
-|_disable|void __cdecl _disable(void) **Nota:** en plataformas ARM, esta función genera la instrucción CPSID; solo está disponible como intrínseco.|
-|_enable|void __cdecl _enable(void) **Nota:** en plataformas ARM, esta función genera la instrucción CPSIE; solo está disponible como intrínseco.|
+|_disable|void __cdecl _disable(void) **Nota:** En las plataformas ARM, esta función genera la instrucción CPSID; sólo está disponible como intrínseco.|
+|_enable|void __cdecl _enable(void) **Nota:** En las plataformas ARM, esta función genera la instrucción CPSIE; sólo está disponible como intrínseco.|
 |_lrotl|unsigned long __cdecl _lrotl(unsigned long, int)|
 |_lrotr|unsigned long __cdecl _lrotr(unsigned long, int)|
 |_ReadBarrier|void _ReadBarrier(void)|
 |_ReadWriteBarrier|void _ReadWriteBarrier(void)|
-|_ReturnAddress|void \* _ReturnAddress(void)|
+|_ReturnAddress|vacío \* _ReturnAddress (vacío)|
 |_rotl|unsigned int __cdecl _rotl(unsigned int _Value, int _Shift)|
 |_rotl16|unsigned short _rotl16(unsigned short _Value, unsigned char _Shift)|
-|_rotl64|__int64 sin signo \_los _rotl64 _cdecl (unsigned \__int64 _Value, _Shift int)|
+|_rotl64|_rotl64 _cdecl \___int64 sin \_signo (_Value _int64 sin signo, int _Shift)|
 |_rotl8|unsigned char _rotl8(unsigned char _Value, unsigned char _Shift)|
 |_rotr|unsigned int __cdecl _rotr(unsigned int _Value, int _Shift)|
 |_rotr16|unsigned short _rotr16(unsigned short _Value, unsigned char _Shift)|
-|_rotr64|__int64 sin signo \__cdecl _rotr64 (unsigned \__int64 _Value, _Shift int)|
+|_rotr64|_rotr64 _cdecl \___int64 sin \_signo (_Value _int64 sin signo, int _Shift)|
 |_rotr8|unsigned char _rotr8(unsigned char _Value, unsigned char _Shift)|
 |_setjmpex|int __cdecl _setjmpex(jmp_buf)|
 |_WriteBarrier|void _WriteBarrier(void)|
 
-[[NEON](#top)]
+[[Volver a la parte superior](#top)]
 
 ## <a name="interlocked-intrinsics"></a>Intrínsecos entrelazados
 
-Los intrínsecos entrelazados son un conjunto de intrínsecos que se usan para realizar operaciones atómicas de lectura-modificación-escritura. Algunos de ellos son comunes a todas las plataformas. Aquí se enumeran por separado porque existen muchos, pero dado que sus definiciones son redundantes en su mayoría, es más fácil pensar en ellos en términos generales. Sus nombres pueden utilizarse para derivar los comportamientos exactos.
+Los intrínsecos entrelazados son un conjunto de intrínsecos que se usan para realizar operaciones atómicas de lectura-modificación-escritura. Algunos de ellos son comunes a todas las plataformas. Se enumeran por separado aquí porque hay un gran número de ellos, pero debido a que sus definiciones son en su mayoría redundantes, es más fácil pensar en ellos en términos generales. Sus nombres pueden utilizarse para derivar los comportamientos exactos.
 
-En la tabla siguiente se resume la compatibilidad con ARM de los intrínsecos entrelazados que no son bittest. Cada celda de la tabla corresponde a un nombre que se crea agregando el nombre de la operación de la celda del extremo izquierdo de la fila y el nombre de tipo de la celda de la parte superior de la columna a `_Interlocked`. Por ejemplo, la celda en la intersección de la `Xor` fila y la **8** columna corresponde a `_InterlockedXor8` y es totalmente compatible. La mayoría de las funciones admitidas ofrecen estos sufijos opcionales: `_acq`, `_rel` y `_nf`. El sufijo `_acq` indica una semántica de "adquisición" y el sufijo `_rel` indica una semántica de "versión". El sufijo `_nf` o “sin límite” es exclusivo de ARM y se describe en la sección siguiente.
+En la tabla siguiente se resume la compatibilidad con ARM de los intrínsecos entrelazados que no son bittest. Cada celda de la tabla corresponde a un nombre que se crea agregando el nombre de la operación de la celda del extremo izquierdo de la fila y el nombre de tipo de la celda de la parte superior de la columna a `_Interlocked`. Por ejemplo, la celda en `Xor` la `8` intersección de `_InterlockedXor8` la fila y la columna corresponde y es totalmente compatible. La mayoría de las funciones admitidas ofrecen estos sufijos opcionales: `_acq`, `_rel` y `_nf`. El sufijo `_acq` indica una semántica de "adquisición" y el sufijo `_rel` indica una semántica de "versión". El `_nf` sufijo o "sin valla" es exclusivo de ARM y se describe en la siguiente sección.
 
 ||8|16|32|64|P|
 |-|-------|--------|--------|--------|-------|
-|Add|Ninguna|Ninguna|Completo|Completo|Ninguna|
-|Y|Completo|Completo|Completo|Completo|Ninguna|
+|Sumar|None|None|Completo|Completo|None|
+|Y|Completo|Completo|Completo|Completo|None|
 |CompareExchange|Completo|Completo|Completo|Completo|Completo|
-|Decremento|Ninguna|Completo|Completo|Completo|Ninguna|
-|Exchange|Partial|Partial|Partial|Partial|Partial|
-|ExchangeAdd|Completo|Completo|Completo|Completo|Ninguna|
-|Incremento|Ninguna|Completo|Completo|Completo|Ninguna|
-|O bien|Completo|Completo|Completo|Completo|Ninguna|
-|Xor|Completo|Completo|Completo|Completo|Ninguna|
+|Decremento|None|Completo|Completo|Completo|None|
+|Exchange|Parcial|Parcial|Parcial|Parcial|Parcial|
+|ExchangeAdd|Completo|Completo|Completo|Completo|None|
+|Incremento|None|Completo|Completo|Completo|None|
+|O bien|Completo|Completo|Completo|Completo|None|
+|Xor|Completo|Completo|Completo|Completo|None|
 
-Explicación:
+Clave:
 
-- **Completa**: admite simple, `_acq`, `_rel`, y `_nf` formularios.
+- **Completo**: soporta `_acq` `_rel`formularios `_nf` simples, , , y.
 
-- **Parcial**: admite simple, `_acq`, y `_nf` formularios.
+- **Parcial**: soporta `_acq`formularios `_nf` simples, y formularios.
 
-- **Ninguno**: no compatible
+- **Ninguno**: No soportado
 
-###  <a name="nf_suffix"></a> Sufijo _nf (sin límite)
+### <a name="_nf-no-fence-suffix"></a><a name="nf_suffix"></a>_nf (sin valla) Sufijo
 
-El sufijo `_nf` o "sin límite" indica que la operación no se comporta como una barrera de memoria. Esto contrasta con los otros tres formularios (sin formato, `_acq` y `_rel`), que se comportan como una especie de barrera. Un uso posible de los formularios `_nf` consiste en mantener un contador estadístico que se actualiza con varios subprocesos al mismo tiempo, pero cuyo valor no se utiliza de otro modo durante la ejecución de varios subprocesos.
+El `_nf` sufijo o "sin valla" indica que la operación no se comporta como ningún tipo `_acq`de `_rel`barrera de memoria, a diferencia de las otras tres formas (simple, , y ), que se comportan como algún tipo de barrera. Un posible uso `_nf` de los formularios es mantener un contador de estadísticas que se actualiza mediante varios subprocesos al mismo tiempo, pero cuyo valor no se usa de otro modo mientras se ejecutan varios subprocesos.
 
 ### <a name="list-of-interlocked-intrinsics"></a>Lista de intrínsecos entrelazados
 
 |Nombre de la función|Prototipo de función|
 |-------------------|------------------------|
-|_InterlockedAdd|_InterlockedAdd largo (long _volatile \*, long)|
-|_InterlockedAdd64|__int64 _InterlockedAdd64 (\___int64 volatile \*, \___int64)|
-|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq (\___int64 volatile \*, \___int64)|
-|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf (\___int64 volatile \*, \___int64)|
-|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel (\___int64 volatile \*, \___int64)|
-|_InterlockedAdd_acq|_InterlockedAdd_acq largo (long volatile \*, long)|
-|_InterlockedAdd_nf|_InterlockedAdd_nf largo (long volatile \*, long)|
-|_InterlockedAdd_rel|_InterlockedAdd_rel largo (long volatile \*, long)|
-|_InterlockedAnd|Long _InterlockedAnd (long volatile \*, long)|
-|_InterlockedAnd16|short _InterlockedAnd16 (short volatile \*, short)|
-|_InterlockedAnd16_acq|_InterlockedAnd16_acq corto (short volatile \*, short)|
-|_InterlockedAnd16_nf|_InterlockedAnd16_nf corto (short volatile \*, short)|
-|_InterlockedAnd16_rel|_InterlockedAnd16_rel corto (short volatile \*, short)|
-|_InterlockedAnd64|__int64 _InterlockedAnd64 (\___int64 volatile \*, \___int64)|
-|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq (\___int64 volatile \*, \___int64)|
-|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf (\___int64 volatile \*, \___int64)|
-|_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel (\___int64 volatile \*, \___int64)|
-|_InterlockedAnd8|Char _InterlockedAnd8 (volátil char \*, char)|
-|_InterlockedAnd8_acq|Char _InterlockedAnd8_acq (volátil char \*, char)|
-|_InterlockedAnd8_nf|Char _InterlockedAnd8_nf (volátil char \*, char)|
-|_InterlockedAnd8_rel|Char _InterlockedAnd8_rel (volátil char \*, char)|
-|_InterlockedAnd_acq|_InterlockedAnd_acq largo (long volatile \*, long)|
-|_InterlockedAnd_nf|_InterlockedAnd_nf largo (long volatile \*, long)|
-|_InterlockedAnd_rel|_InterlockedAnd_rel largo (long volatile \*, long)|
-|_InterlockedCompareExchange|_InterlockedCompareExchange __cdecl largo (long volatile \*, long, long)|
-|_InterlockedCompareExchange16|_InterlockedCompareExchange16 corto (short volatile \*, short, short)|
-|_InterlockedCompareExchange16_acq|_InterlockedCompareExchange16_acq corto (short volatile \*, short, short)|
-|_InterlockedCompareExchange16_nf|_InterlockedCompareExchange16_nf corto (short volatile \*, short, short)|
-|_InterlockedCompareExchange16_rel|_InterlockedCompareExchange16_rel corto (short volatile \*, short, short)|
-|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64 (\___int64 volatile \*, \__int64, \___int64)|
-|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq (\___int64 volatile \*, \__int64, \___int64)|
-|_InterlockedCompareExchange64_nf|__int64 _InterlockedCompareExchange64_nf (\___int64 volatile \*, \__int64, \___int64)|
-|_InterlockedCompareExchange64_rel|__int64 _InterlockedCompareExchange64_rel (\___int64 volatile \*, \__int64, \___int64)|
-|_InterlockedCompareExchange8|Char _InterlockedCompareExchange8 (volátil char \*, char, char)|
-|_InterlockedCompareExchange8_acq|Char _InterlockedCompareExchange8_acq (volátil char \*, char, char)|
-|_InterlockedCompareExchange8_nf|Char _InterlockedCompareExchange8_nf (volátil char \*, char, char)|
-|_InterlockedCompareExchange8_rel|Char _InterlockedCompareExchange8_rel (volátil char \*, char, char)|
-|_InterlockedCompareExchangePointer|void \* _InterlockedCompareExchangePointer (void \* volátil \*, void \*, void \*)|
-|_InterlockedCompareExchangePointer_acq|void \* _InterlockedCompareExchangePointer_acq (void \* volátil \*, void \*, void \*)|
-|_InterlockedCompareExchangePointer_nf|void \* _InterlockedCompareExchangePointer_nf (void \* volátil \*, void \*, void \*)|
-|_InterlockedCompareExchangePointer_rel|void \* _InterlockedCompareExchangePointer_rel (void \* volátil \*, void \*, void \*)|
-|_InterlockedCompareExchange_acq|_InterlockedCompareExchange_acq largo (long volatile \*, long, long)|
-|_InterlockedCompareExchange_nf|_InterlockedCompareExchange_nf largo (long volatile \*, long, long)|
-|_InterlockedCompareExchange_rel|_InterlockedCompareExchange_rel largo (long volatile \*, long, long)|
-|_InterlockedDecrement|Long __cdecl _InterlockedDecrement (long volatile \*)|
-|_InterlockedDecrement16|_InterlockedDecrement16 corto (short volatile \*)|
-|_InterlockedDecrement16_acq|_InterlockedDecrement16_acq corto (short volatile \*)|
-|_InterlockedDecrement16_nf|_InterlockedDecrement16_nf corto (short volatile \*)|
-|_InterlockedDecrement16_rel|_InterlockedDecrement16_rel corto (short volatile \*)|
-|_InterlockedDecrement64|__int64 _InterlockedDecrement64 (\___int64 volatile \*)|
-|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq (\___int64 volatile \*)|
-|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf (\___int64 volatile \*)|
-|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel (\___int64 volatile \*)|
-|_InterlockedDecrement_acq|_InterlockedDecrement_acq largo (long volatile \*)|
-|_InterlockedDecrement_nf|_InterlockedDecrement_nf largo (long volatile \*)|
-|_InterlockedDecrement_rel|_InterlockedDecrement_rel largo (long volatile \*)|
-|_InterlockedExchange|Long __cdecl _InterlockedExchange (long volatile \* _destino, long)|
-|_InterlockedExchange16|_InterlockedExchange16 corto (short volatile \* _destino, short)|
-|_InterlockedExchange16_acq|_InterlockedExchange16_acq corto (short volatile \* _destino, short)|
-|_InterlockedExchange16_nf|_InterlockedExchange16_nf corto (short volatile \* _destino, short)|
-|_InterlockedExchange64|__int64 _InterlockedExchange64 (\___int64 volatile \* _destino, \___int64)|
-|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq (\___int64 volatile \* _destino, \___int64)|
-|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf (\___int64 volatile \* _destino, \___int64)|
-|_InterlockedExchange8|Char _InterlockedExchange8 (volátil char \* _destino, char)|
-|_InterlockedExchange8_acq|Char _InterlockedExchange8_acq (volátil char \* _destino, char)|
-|_InterlockedExchange8_nf|Char _InterlockedExchange8_nf (volátil char \* _destino, char)|
-|_InterlockedExchangeAdd|Long __cdecl _InterlockedExchangeAdd (long volatile \*, long)|
-|_InterlockedExchangeAdd16|short _InterlockedExchangeAdd16 (short volatile \*, short)|
-|_InterlockedExchangeAdd16_acq|_InterlockedExchangeAdd16_acq corto (short volatile \*, short)|
-|_InterlockedExchangeAdd16_nf|_InterlockedExchangeAdd16_nf corto (short volatile \*, short)|
-|_InterlockedExchangeAdd16_rel|_InterlockedExchangeAdd16_rel corto (short volatile \*, short)|
-|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 (\___int64 volatile \*, \___int64)|
-|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq (\___int64 volatile \*, \___int64)|
-|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf (\___int64 volatile \*, \___int64)|
-|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel (\___int64 volatile \*, \___int64)|
-|_InterlockedExchangeAdd8|Char _InterlockedExchangeAdd8 (volátil char \*, char)|
-|_InterlockedExchangeAdd8_acq|Char _InterlockedExchangeAdd8_acq (volátil char \*, char)|
-|_InterlockedExchangeAdd8_nf|Char _InterlockedExchangeAdd8_nf (volátil char \*, char)|
-|_InterlockedExchangeAdd8_rel|Char _InterlockedExchangeAdd8_rel (volátil char \*, char)|
-|_InterlockedExchangeAdd_acq|_InterlockedExchangeAdd_acq largo (long volatile \*, long)|
-|_InterlockedExchangeAdd_nf|_InterlockedExchangeAdd_nf largo (long volatile \*, long)|
-|_InterlockedExchangeAdd_rel|_InterlockedExchangeAdd_rel largo (long volatile \*, long)|
-|_InterlockedExchangePointer|void \* _InterlockedExchangePointer (void \* volátil \* _destino, void \*)|
-|_InterlockedExchangePointer_acq|void \* _InterlockedExchangePointer_acq (void \* volátil \* _destino, void \*)|
-|_InterlockedExchangePointer_nf|void \* _InterlockedExchangePointer_nf (void \* volátil \* _destino, void \*)|
-|_InterlockedExchange_acq|_InterlockedExchange_acq largo (long volatile \* _destino, long)|
-|_InterlockedExchange_nf|_InterlockedExchange_nf largo (long volatile \* _destino, long)|
-|_InterlockedIncrement|Long __cdecl _InterlockedIncrement (long volatile \*)|
-|_InterlockedIncrement16|_InterlockedIncrement16 corto (short volatile \*)|
-|_InterlockedIncrement16_acq|_InterlockedIncrement16_acq corto (short volatile \*)|
-|_InterlockedIncrement16_nf|_InterlockedIncrement16_nf corto (short volatile \*)|
-|_InterlockedIncrement16_rel|_InterlockedIncrement16_rel corto (short volatile \*)|
-|_InterlockedIncrement64|__int64 _InterlockedIncrement64 (\___int64 volatile \*)|
-|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq (\___int64 volatile \*)|
-|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf (\___int64 volatile \*)|
-|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel (\___int64 volatile \*)|
-|_InterlockedIncrement_acq|_InterlockedIncrement_acq largo (long volatile \*)|
-|_InterlockedIncrement_nf|_InterlockedIncrement_nf largo (long volatile \*)|
-|_InterlockedIncrement_rel|_InterlockedIncrement_rel largo (long volatile \*)|
-|_InterlockedOr|Long _InterlockedOr (long volatile \*, long)|
-|_InterlockedOr16|short _InterlockedOr16 (short volatile \*, short)|
-|_InterlockedOr16_acq|_InterlockedOr16_acq corto (short volatile \*, short)|
-|_InterlockedOr16_nf|_InterlockedOr16_nf corto (short volatile \*, short)|
-|_InterlockedOr16_rel|_InterlockedOr16_rel corto (short volatile \*, short)|
-|_InterlockedOr64|__int64 _InterlockedOr64 (\___int64 volatile \*, \___int64)|
-|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq (\___int64 volatile \*, \___int64)|
-|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf (\___int64 volatile \*, \___int64)|
-|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel (\___int64 volatile \*, \___int64)|
-|_InterlockedOr8|Char _InterlockedOr8 (volátil char \*, char)|
-|_InterlockedOr8_acq|Char _InterlockedOr8_acq (volátil char \*, char)|
-|_InterlockedOr8_nf|Char _InterlockedOr8_nf (volátil char \*, char)|
-|_InterlockedOr8_rel|Char _InterlockedOr8_rel (volátil char \*, char)|
-|_InterlockedOr_acq|_InterlockedOr_acq largo (long volatile \*, long)|
-|_InterlockedOr_nf|_InterlockedOr_nf largo (long volatile \*, long)|
-|_InterlockedOr_rel|_InterlockedOr_rel largo (long volatile \*, long)|
-|_InterlockedXor|Long _InterlockedXor (long volatile \*, long)|
-|_InterlockedXor16|short _InterlockedXor16 (short volatile \*, short)|
-|_InterlockedXor16_acq|_InterlockedXor16_acq corto (short volatile \*, short)|
-|_InterlockedXor16_nf|_InterlockedXor16_nf corto (short volatile \*, short)|
-|_InterlockedXor16_rel|_InterlockedXor16_rel corto (short volatile \*, short)|
-|_InterlockedXor64|__int64 _InterlockedXor64 (\___int64 volatile \*, \___int64)|
-|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq (\___int64 volatile \*, \___int64)|
-|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf (\___int64 volatile \*, \___int64)|
-|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel (\___int64 volatile \*, \___int64)|
-|_InterlockedXor8|Char _InterlockedXor8 (volátil char \*, char)|
-|_InterlockedXor8_acq|Char _InterlockedXor8_acq (volátil char \*, char)|
-|_InterlockedXor8_nf|Char _InterlockedXor8_nf (volátil char \*, char)|
-|_InterlockedXor8_rel|Char _InterlockedXor8_rel (volátil char \*, char)|
-|_InterlockedXor_acq|_InterlockedXor_acq largo (long volatile \*, long)|
-|_InterlockedXor_nf|_InterlockedXor_nf largo (long volatile \*, long)|
-|_InterlockedXor_rel|_InterlockedXor_rel largo (long volatile \*, long)|
+|_InterlockedAdd|_InterlockedAdd largo (_volatile \*largo, largo)|
+|_InterlockedAdd64|__int64 _InterlockedAdd64(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq\_(_int64 volátil \*, \__int64)|
+|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel(\_ \*_int64 \_volátil, _int64)|
+|_InterlockedAdd_acq|_InterlockedAdd_acq largo (largo volátil, \*largo)|
+|_InterlockedAdd_nf|_InterlockedAdd_nf largo (largo volátil, \*largo)|
+|_InterlockedAdd_rel|_InterlockedAdd_rel largo (largo volátil, \*largo)|
+|_InterlockedAnd|_InterlockedAnd largo (largo volátil, \*largo)|
+|_InterlockedAnd16|_InterlockedAnd16 corto (corto volátil, \*corto)|
+|_InterlockedAnd16_acq|_InterlockedAnd16_acq corto (corto volátil, \*corto)|
+|_InterlockedAnd16_nf|_InterlockedAnd16_nf corto (corto volátil, \*corto)|
+|_InterlockedAnd16_rel|_InterlockedAnd16_rel corto (corto volátil, \*corto)|
+|_InterlockedAnd64|__int64 _InterlockedAnd64\_( \* \__int64 volátil , _int64)|
+|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel\_( \* \__int64 volátil , _int64)|
+|_InterlockedAnd8|char _InterlockedAnd8(char \*volatile , char)|
+|_InterlockedAnd8_acq|char _InterlockedAnd8_acq(char \*volatile , char)|
+|_InterlockedAnd8_nf|char _InterlockedAnd8_nf(char \*volatile , char)|
+|_InterlockedAnd8_rel|char _InterlockedAnd8_rel(char \*volatile , char)|
+|_InterlockedAnd_acq|_InterlockedAnd_acq largo (largo volátil, \*largo)|
+|_InterlockedAnd_nf|_InterlockedAnd_nf largo (largo volátil, \*largo)|
+|_InterlockedAnd_rel|_InterlockedAnd_rel largo (largo volátil, \*largo)|
+|_InterlockedCompareExchange|_InterlockedCompareExchange de __cdecl \*largo (largo volátil, largo, largo)|
+|_InterlockedCompareExchange16|_InterlockedCompareExchange16 corto (corto volátil, \*corto, corto)|
+|_InterlockedCompareExchange16_acq|_InterlockedCompareExchange16_acq corto (corto volátil, \*corto, corto)|
+|_InterlockedCompareExchange16_nf|_InterlockedCompareExchange16_nf corto (corto volátil, \*corto, corto)|
+|_InterlockedCompareExchange16_rel|_InterlockedCompareExchange16_rel corto (corto volátil, \*corto, corto)|
+|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64\_ \*(_int64 \_volátil, _int64, \__int64)|
+|_InterlockedCompareExchange64_acq|\___int64 _InterlockedCompareExchange64_acq( \*_int64 \_volátil \_, _int64, _int64)|
+|_InterlockedCompareExchange64_nf|\___int64 _InterlockedCompareExchange64_nf( \*_int64 \_volátil \_, _int64, _int64)|
+|_InterlockedCompareExchange64_rel|\___int64 _InterlockedCompareExchange64_rel( \*_int64 \_volátil \_, _int64, _int64)|
+|_InterlockedCompareExchange8|char _InterlockedCompareExchange8(char \*volatile , char, char)|
+|_InterlockedCompareExchange8_acq|char _InterlockedCompareExchange8_acq(char \*volatile , char, char)|
+|_InterlockedCompareExchange8_nf|char _InterlockedCompareExchange8_nf(char \*volatile , char, char)|
+|_InterlockedCompareExchange8_rel|char _InterlockedCompareExchange8_rel(char \*volatile , char, char)|
+|_InterlockedCompareExchangePointer|vacío \* \* _InterlockedCompareExchangePointer(void \*volatile \*, \*void , void )|
+|_InterlockedCompareExchangePointer_acq|vacío \* _InterlockedCompareExchangePointer_acq \* (vacío \* \*volátil \*, vacío , vacío )|
+|_InterlockedCompareExchangePointer_nf|vacío \* _InterlockedCompareExchangePointer_nf \* (vacío \* \*volátil \*, vacío , vacío )|
+|_InterlockedCompareExchangePointer_rel|vacío \* _InterlockedCompareExchangePointer_rel \* (vacío \* \*volátil \*, vacío , vacío )|
+|_InterlockedCompareExchange_acq|_InterlockedCompareExchange_acq largo (largo volátil, \*largo, largo)|
+|_InterlockedCompareExchange_nf|_InterlockedCompareExchange_nf largo (largo volátil, \*largo, largo)|
+|_InterlockedCompareExchange_rel|_InterlockedCompareExchange_rel largo (largo volátil, \*largo, largo)|
+|_InterlockedDecrement|_InterlockedDecrement de __cdecl \*largo (larga volátil)|
+|_InterlockedDecrement16|_InterlockedDecrement16 corto (breve volátil) \*|
+|_InterlockedDecrement16_acq|_InterlockedDecrement16_acq corto (breve volátil) \*|
+|_InterlockedDecrement16_nf|_InterlockedDecrement16_nf cortos (breve volátil) \*|
+|_InterlockedDecrement16_rel|_InterlockedDecrement16_rel corto (breve volátil) \*|
+|_InterlockedDecrement64|__int64 _InterlockedDecrement64(\_ \*_int64 volatile )|
+|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq(\_ \*_int64 volátil )|
+|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf(\_ \*_int64 volátil )|
+|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel(\_ \*_int64 volátil )|
+|_InterlockedDecrement_acq|_InterlockedDecrement_acq largo (larga volátil) \*|
+|_InterlockedDecrement_nf|_InterlockedDecrement_nf largo (larga volátil) \*|
+|_InterlockedDecrement_rel|_InterlockedDecrement_rel largo (larga volátil) \*|
+|_InterlockedExchange|_InterlockedExchange de __cdecl \* largo (_Target volátil largo, largo)|
+|_InterlockedExchange16|_InterlockedExchange16 corto (_Target volátil \* corto, corto)|
+|_InterlockedExchange16_acq|_InterlockedExchange16_acq cortos (_Target volátiles \* cortos, cortos)|
+|_InterlockedExchange16_nf|_InterlockedExchange16_nf corto (_Target volátil \* corto, corto)|
+|_InterlockedExchange64|__int64 _InterlockedExchange64(\_ \* _int64 \__Target volátil, _int64)|
+|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq(\_ \* _int64 \__Target volátil, _int64)|
+|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf(\_ \* _int64 \__Target volátil, _int64)|
+|_InterlockedExchange8|char _InterlockedExchange8(char \* volatile _Target, char)|
+|_InterlockedExchange8_acq|char _InterlockedExchange8_acq(char \* volatile _Target, char)|
+|_InterlockedExchange8_nf|char _InterlockedExchange8_nf(char \* volatile _Target, char)|
+|_InterlockedExchangeAdd|_InterlockedExchangeAdd de __cdecl \*largo (largo volátil, largo)|
+|_InterlockedExchangeAdd16|_InterlockedExchangeAdd16 corto (corto volátil, \*corto)|
+|_InterlockedExchangeAdd16_acq|_InterlockedExchangeAdd16_acq corto (corto volátil, \*corto)|
+|_InterlockedExchangeAdd16_nf|_InterlockedExchangeAdd16_nf corto (corto volátil, \*corto)|
+|_InterlockedExchangeAdd16_rel|_InterlockedExchangeAdd16_rel corto (corto volátil, \*corto)|
+|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq(\_ \*_int64 \_volátil, _int64)|
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedExchangeAdd8|char _InterlockedExchangeAdd8(char \*volatile , char)|
+|_InterlockedExchangeAdd8_acq|char _InterlockedExchangeAdd8_acq(char \*volatile , char)|
+|_InterlockedExchangeAdd8_nf|char _InterlockedExchangeAdd8_nf(char \*volatile , char)|
+|_InterlockedExchangeAdd8_rel|char _InterlockedExchangeAdd8_rel(char \*volatile , char)|
+|_InterlockedExchangeAdd_acq|_InterlockedExchangeAdd_acq largo (largo volátil, \*largo)|
+|_InterlockedExchangeAdd_nf|_InterlockedExchangeAdd_nf largo (largo volátil, \*largo)|
+|_InterlockedExchangeAdd_rel|_InterlockedExchangeAdd_rel largo (largo volátil, \*largo)|
+|_InterlockedExchangePointer|vacío \* _InterlockedExchangePointer(_Target \* volátil \*esana, \* vacío)|
+|_InterlockedExchangePointer_acq|vacío \* \* _InterlockedExchangePointer_acq(vacío \* _Target \*volátil, vacío )|
+|_InterlockedExchangePointer_nf|vacío \* _InterlockedExchangePointer_nf(_Target \* volátil \*vacío, \* vacío )|
+|_InterlockedExchange_acq|_InterlockedExchange_acq largo (_Target volátil \* largo, largo)|
+|_InterlockedExchange_nf|_InterlockedExchange_nf largo (_Target volátil \* largo, largo)|
+|_InterlockedIncrement|_InterlockedIncrement de __cdecl \*largo (larga volátil)|
+|_InterlockedIncrement16|_InterlockedIncrement16 corto (breve volátil) \*|
+|_InterlockedIncrement16_acq|_InterlockedIncrement16_acq cortos (breve volátil) \*|
+|_InterlockedIncrement16_nf|_InterlockedIncrement16_nf corto (breve volátil) \*|
+|_InterlockedIncrement16_rel|_InterlockedIncrement16_rel corto (breve volátil) \*|
+|_InterlockedIncrement64|__int64 _InterlockedIncrement64(\_ \*_int64 volátil )|
+|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq(\_ \*_int64 volátil )|
+|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf(\_ \*_int64 volátil )|
+|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel(\_ \*_int64 volátil )|
+|_InterlockedIncrement_acq|_InterlockedIncrement_acq largo (larga volátil) \*|
+|_InterlockedIncrement_nf|_InterlockedIncrement_nf largo (larga volátil) \*|
+|_InterlockedIncrement_rel|_InterlockedIncrement_rel largo (larga volátil) \*|
+|_InterlockedOr|_InterlockedOr largo (largo volátil, \*largo)|
+|_InterlockedOr16|_InterlockedOr16 corto (corto volátil, \*corto)|
+|_InterlockedOr16_acq|_InterlockedOr16_acq corto (corto volátil, \*corto)|
+|_InterlockedOr16_nf|_InterlockedOr16_nf corto (corto volátil, \*corto)|
+|_InterlockedOr16_rel|_InterlockedOr16_rel corto (corto volátil, \*corto)|
+|_InterlockedOr64|__int64 _InterlockedOr64(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf(\_ \*_int64 \_volátil, _int64)|
+|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel\_( \* \__int64 volátil , _int64)|
+|_InterlockedOr8|char _InterlockedOr8(char \*volatile , char)|
+|_InterlockedOr8_acq|char _InterlockedOr8_acq(char \*volatile , char)|
+|_InterlockedOr8_nf|char _InterlockedOr8_nf(char \*volatile , char)|
+|_InterlockedOr8_rel|char _InterlockedOr8_rel(char \*volatile , char)|
+|_InterlockedOr_acq|_InterlockedOr_acq largo (largo volátil, \*largo)|
+|_InterlockedOr_nf|_InterlockedOr_nf largo (largo volátil, \*largo)|
+|_InterlockedOr_rel|_InterlockedOr_rel largo (largo volátil, \*largo)|
+|_InterlockedXor|_InterlockedXor largo (largo volátil, \*largo)|
+|_InterlockedXor16|_InterlockedXor16 corto (corto volátil, \*corto)|
+|_InterlockedXor16_acq|_InterlockedXor16_acq corto (corto volátil, \*corto)|
+|_InterlockedXor16_nf|_InterlockedXor16_nf corto (corto volátil, \*corto)|
+|_InterlockedXor16_rel|_InterlockedXor16_rel corto (corto volátil, \*corto)|
+|_InterlockedXor64|__int64 _InterlockedXor64(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq\_( \* \__int64 volátil , _int64)|
+|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf(\_ \*_int64 \_volátil, _int64)|
+|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel(\_ \*_int64 \_volátil , _int64)|
+|_InterlockedXor8|char _InterlockedXor8(char \*volatile , char)|
+|_InterlockedXor8_acq|char _InterlockedXor8_acq(char \*volatile , char)|
+|_InterlockedXor8_nf|char _InterlockedXor8_nf(char \*volatile , char)|
+|_InterlockedXor8_rel|char _InterlockedXor8_rel(char \*volatile , char)|
+|_InterlockedXor_acq|_InterlockedXor_acq largo (largo volátil, \*largo)|
+|_InterlockedXor_nf|_InterlockedXor_nf largo (largo volátil, \*largo)|
+|_InterlockedXor_rel|_InterlockedXor_rel largo (largo volátil, \*largo)|
 
-[[NEON](#top)]
+[[Volver a la parte superior](#top)]
 
-### <a name="interlockedbittest-intrinsics"></a>Intrínsecos _interlockedbittest
+### <a name="_interlockedbittest-intrinsics"></a>_interlockedbittest intrínsecos
 
-Los intrínsecos bittest entrelazados normales son comunes a todas las plataformas. ARM agrega `_acq`, `_rel`, y `_nf` variantes, que solo modifican la semántica de barrera de una operación, como se describe en [sufijo _nf (sin límite)](#nf_suffix) anteriormente en este artículo.
+Los elementos intrínsecos de prueba de bits entrelazados simple son comunes a todas las plataformas. ARM agrega `_acq` `_rel`, `_nf` , y variantes, que simplemente modifican la semántica de barrera de una operación, como se describe en [_nf sufijo (sin valla) Sufijo](#nf_suffix) anteriormente en este artículo.
 
 |Nombre de la función|Prototipo de función|
 |-------------------|------------------------|
-|_interlockedbittestandreset|unsigned char _interlockedbittestandreset (long volatile \*, long)|
-|_interlockedbittestandreset_acq|unsigned char _interlockedbittestandreset_acq (long volatile \*, long)|
-|_interlockedbittestandreset_nf|unsigned char _interlockedbittestandreset_nf (long volatile \*, long)|
-|_interlockedbittestandreset_rel|unsigned char _interlockedbittestandreset_rel (long volatile \*, long)|
-|_interlockedbittestandset|unsigned char _interlockedbittestandset (long volatile \*, long)|
-|_interlockedbittestandset_acq|unsigned char _interlockedbittestandset_acq (long volatile \*, long)|
-|_interlockedbittestandset_nf|unsigned char _interlockedbittestandset_nf (long volatile \*, long)|
-|_interlockedbittestandset_rel|unsigned char _interlockedbittestandset_rel (long volatile \*, long)|
+|_interlockedbittestandreset|char _interlockedbittestandreset sin \*signo (largo volátil, largo)|
+|_interlockedbittestandreset_acq|char _interlockedbittestandreset_acq sin \*signo (largo volátil, largo)|
+|_interlockedbittestandreset_nf|char _interlockedbittestandreset_nf sin \*signo (largo volátil, largo)|
+|_interlockedbittestandreset_rel|char _interlockedbittestandreset_rel sin \*signo (largo volátil, largo)|
+|_interlockedbittestandset|char _interlockedbittestandset sin \*signo (largo volátil, largo)|
+|_interlockedbittestandset_acq|char _interlockedbittestandset_acq sin \*signo (largo volátil, largo)|
+|_interlockedbittestandset_nf|char _interlockedbittestandset_nf sin \*signo (largo volátil, largo)|
+|_interlockedbittestandset_rel|char _interlockedbittestandset_rel sin \*signo (largo volátil, largo)|
 
-[[NEON](#top)]
+[[Volver a la parte superior](#top)]
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
-[Referencia del ensamblador de ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
+[ARM64 intrínsecos](arm64-intrinsics.md)\
+[Referencia del ensamblador ARM](../assembler/arm/arm-assembler-reference.md)\
+[Referencia de idioma C++](../cpp/cpp-language-reference.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2498
 ms.assetid: 0839f12c-aaa4-4a02-bb33-7f072715dd14
-ms.openlocfilehash: 1087dbb2297058f752e0a15776e4a7185e32a5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6f6469a221c914e0eef9e190c79a2b2706e651
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462275"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756999"
 ---
 # <a name="compiler-error-c2498"></a>Error del compilador C2498
 
-'function': 'novtable' solo se puede aplicar a definiciones o declaraciones de clase
+' función ': ' novtable ' solo se puede aplicar a definiciones o declaraciones de clase
 
-Este error puede deberse al uso `__declspec(novtable)` con una función.
+Este error puede deberse al uso de `__declspec(novtable)` con una función.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2498:
+En el ejemplo siguiente se genera C2498:
 
-```
+```cpp
 // C2498.cpp
 // compile with: /c
 void __declspec(novtable) f() {}   // C2498

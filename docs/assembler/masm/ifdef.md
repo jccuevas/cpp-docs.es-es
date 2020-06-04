@@ -1,30 +1,31 @@
 ---
 title: IFDEF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IFDEF
 helpviewer_keywords:
 - IFDEF directive
 ms.assetid: d8fadaa9-2b9c-44d7-a9e9-b103d16904f7
-ms.openlocfilehash: 509bf82646e60aee1d3f7bd230c42c0ddf8f7116
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 646d5d0769b6de9268e3c8b085d5618c1983901b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676322"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313098"
 ---
 # <a name="ifdef"></a>IFDEF
 
-Concede al ensamblado si *nombre* es una etiqueta definida anteriormente, una variable o un símbolo.
+Concede el ensamblado si *el nombre* es una etiqueta, una variable o un símbolo definidos previamente.
 
 ## <a name="syntax"></a>Sintaxis
 
-> Nombre IFDEF
+> **Ifdef** ( *nombre* )
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Consulte [IF](../../assembler/masm/if-masm.md) para conocer la sintaxis completa.
+Vea [si](if-masm.md) para obtener la sintaxis completa.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

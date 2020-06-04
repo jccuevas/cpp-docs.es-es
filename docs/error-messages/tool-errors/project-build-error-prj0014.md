@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0014
 ms.assetid: b08c6df1-1df1-4573-9fca-49de6c5a0c17
-ms.openlocfilehash: e3e878cd22df2139732b7b381159f2e532e90775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e23e259f4a0ff6f70b260d497ceb563dd07c8cfc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192710"
 ---
 # <a name="project-build-error-prj0014"></a>Error PRJ0014 al compilar el proyecto
 
-Error del objeto job utilizado para controlar los procesos de compilación.  La compilación no puede continuar.
+Error en el objeto de trabajo usado para controlar los procesos generados.  La compilación no puede continuar.
 
 Se produjo un error en el entorno de desarrollo.
 

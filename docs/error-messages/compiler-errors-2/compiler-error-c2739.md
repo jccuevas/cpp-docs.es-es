@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2739
 ms.assetid: 5b63e435-7631-43d7-805e-f2adefb7e517
-ms.openlocfilehash: f7e7b20f64c8975e747fe84138cbcb18c3fd14fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18cece8d9630aa93e867329acc7cefea30da3286
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623228"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759664"
 ---
 # <a name="compiler-error-c2739"></a>Error del compilador C2739
 
@@ -21,7 +21,7 @@ Una dimensión de matriz no estaba comprendida entre 1 y 32.
 
 El ejemplo siguiente genera el error C2739 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2739.cpp
 // compile with: /clr
 int main() {

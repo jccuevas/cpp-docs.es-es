@@ -8,12 +8,12 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589467"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334432"
 ---
 # <a name="c-run-time-library-reference"></a>Referencia de la biblioteca en tiempo de ejecución de C
 
@@ -34,6 +34,9 @@ Proporciona vínculos a las variables globales y los tipos estándar proporciona
 
 [Constantes globales](../c-runtime-library/global-constants.md)<br/>
 Proporciona vínculos a las constantes globales definidas por la biblioteca en tiempo de ejecución.
+
+[Estado global](../c-runtime-library/global-state.md)<br/>
+Describe el ámbito del estado global en la biblioteca en tiempo de ejecución de C.
 
 [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 Proporciona un punto de entrada de la tabla de contenido en una lista alfabética de todas las funciones de la biblioteca en tiempo de ejecución de C.

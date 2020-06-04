@@ -7,43 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-ms.openlocfilehash: 6fd4e25b3ca7b56e2221cb99b64f7c8e109bf452
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521926"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424768"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; (Operadores)
 
-|||
-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto al que se puede llamar está vacío.
 
 ```cpp
 template <class Fty>
-bool operator==(const function<Fty>& f, null_ptr_type npc);
+    bool operator==(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator==(null_ptr_type npc, const function<Fty>& f);
+    bool operator==(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Fty*<br/>
+\ *fty*
 Tipo de función que se va a contener.
 
-*f*<br/>
+\ *f*
 Objeto de función
 
-*NPC*<br/>
+\ *NPC*
 Un puntero nulo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los dos operadores toman un argumento que es una referencia a un objeto `function` y un argumento que es una constante de puntero nulo. Ambos devuelven true únicamente si el objeto `function` está vacío.
 
@@ -79,30 +75,30 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto al que se puede llamar no está vacío.
 
 ```cpp
 template <class Fty>
-bool operator!=(const function<Fty>& f, null_ptr_type npc);
+    bool operator!=(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator!=(null_ptr_type npc, const function<Fty>& f);
+    bool operator!=(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Fty*<br/>
+\ *fty*
 Tipo de función que se va a contener.
 
-*f*<br/>
+\ *f*
 Objeto de función
 
-*NPC*<br/>
+\ *NPC*
 Un puntero nulo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los dos operadores toman un argumento que es una referencia a un objeto `function` y un argumento que es una constante de puntero nulo. Ambos devuelven True solo si el objeto `function` no está vacío.
 
@@ -137,7 +133,3 @@ int main()
 not empty == false
 not empty == true
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<functional>](../standard-library/functional.md)<br/>

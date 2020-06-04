@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2723
 ms.assetid: 86925601-2297-4cfd-94e2-2caf27c474c4
-ms.openlocfilehash: bc07a99f12ed0e447427990969e54f7f3d3d3b7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9b169f856dba7a76e5f67e1980c4ca47ba912de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635400"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737457"
 ---
 # <a name="compiler-error-c2723"></a>Error del compilador C2723
 
@@ -21,7 +21,7 @@ El especificador no puede aparecer con una definición de función fuera de una 
 
 El ejemplo siguiente genera el error C2723 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2723.cpp
 struct X {
    virtual void f();

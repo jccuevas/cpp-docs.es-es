@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1050
 ms.assetid: 3bb2937e-a804-4592-a9e6-afb63360f554
-ms.openlocfilehash: 596174817ecd9c7b66aa2cd2006e71035c2500ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c569c405852dd820cf5cffd55f2890f72c4e886
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659542"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173314"
 ---
 # <a name="nmake-fatal-error-u1050"></a>Error grave de NMAKE U1050
 
 message
 
-El mensaje especificado con el **! ERROR** se mostró la directiva.
+El mensaje especificado con el parámetro **!** Se mostró la Directiva de error.

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3715
 ms.assetid: ee5dce88-ddc4-4bdb-9464-47467ce1674f
-ms.openlocfilehash: 94a451bbe936507ac3b33747065a9b6aac9edd02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13befc17b94fdf2c22cb84bc64ed55b9375b3473
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660621"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165917"
 ---
 # <a name="compiler-error-c3715"></a>Error del compilador C3715
 
-'pointer': debe ser un puntero a 'class'
+' Pointer ': debe ser un puntero a ' Class '
 
-Se especificó un puntero en [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md) que no señala a una clase válida. Para corregir este error, asegúrese de que su `__hook` y `__unhook` llamadas especifican punteros a clases válidas.
+Ha especificado un puntero en [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md) que no apuntaba a una clase válida. Para corregir este error, asegúrese de que las llamadas a `__hook` y `__unhook` especifican punteros a clases válidas.

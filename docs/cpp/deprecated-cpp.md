@@ -7,30 +7,30 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 34f9c10cd898b0359463d5933141822576fa4a11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485858"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189486"
 ---
 # <a name="deprecated-c"></a>en desuso (C++)
 
-Este tema trata sobre el específico de Microsoft declspec declaración en desuso. Para obtener información acerca de C ++ 14 `[[deprecated]]` atributo y orientación sobre cuándo usar ese atributo frente el modificador declspec específico de Microsoft o pragma, consulte [atributos estándar de C++](attributes.md).
+Este tema trata sobre la declaración de declspec obsoleto específica de Microsoft. Para obtener información sobre el atributo de `[[deprecated]]` de c++ 14, así como instrucciones sobre Cuándo usar ese atributo frente al declspec o pragma específico de Microsoft, vea [ C++ atributos estándar](attributes.md).
 
-Con las excepciones que se indica a continuación, el **en desuso** declaración ofrece la misma funcionalidad que el [en desuso](../preprocessor/deprecated-c-cpp.md) pragma:
+Con las excepciones que se indican a continuación, la declaración en **desuso** ofrece la misma funcionalidad que la pragma [desusada](../preprocessor/deprecated-c-cpp.md) :
 
-- El **en desuso** declaración le permite especificar formas determinadas de sobrecargas de función como en desuso, mientras que la forma pragma se aplica a todas las formas sobrecargadas de un nombre de función.
+- La declaración en **desuso** permite especificar formas determinadas de sobrecargas de función como desusadas, mientras que la forma pragma se aplica a todas las formas sobrecargadas de un nombre de función.
 
-- El **en desuso** declaración le permite especificar un mensaje que se mostrará en tiempo de compilación. El texto del mensaje puede proceder de una macro.
+- La declaración en **desuso** permite especificar un mensaje que se mostrará en tiempo de compilación. El texto del mensaje puede proceder de una macro.
 
-- Macros solo se pueden marcar como en desuso con la **en desuso** pragma.
+- Las macros solo se pueden marcar como desusadas con la pragma **desusada** .
 
-Si el compilador encuentra el uso de un identificador en desuso o la norma [ `[[deprecated]]` ](attributes.md) atributo, un [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) se produce la advertencia.
+Si el compilador encuentra el uso de un identificador en desuso o el atributo de [`[[deprecated]]`](attributes.md) estándar, se produce una advertencia [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) .
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo marcar funciones como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la función en desuso.
+En el ejemplo siguiente se muestra cómo marcar funciones como desusadas y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la función desusada.
 
 ```cpp
 // deprecated.cpp
@@ -51,7 +51,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo marcar clases como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la clase en desuso.
+En el ejemplo siguiente se muestra cómo marcar clases como desusadas y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la clase desusada.
 
 ```cpp
 // deprecate_class.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

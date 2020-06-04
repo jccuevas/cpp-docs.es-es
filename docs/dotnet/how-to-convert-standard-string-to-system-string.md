@@ -7,20 +7,20 @@ helpviewer_keywords:
 - string conversion [C++], C++ Standard Library string
 - strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-ms.openlocfilehash: 5c09ac5e86066e4382c511dce45e4ec6e5301d54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3714cf519bcffc41ce8bfcf646dea11654d22ae1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575570"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545058"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Cómo: Convertir cadenas estándar en System::String
 
-En este tema muestra cómo convertir una cadena de la biblioteca estándar de C++ ([\<cadena >](../standard-library/string.md)) a un <xref:System.String>.
+En este tema se muestra cómo C++ convertir una cadena de biblioteca estándar ([\<cadena >](../standard-library/string.md)) en un <xref:System.String>.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // convert_standard_string_to_system_string.cpp
 // compile with: /clr
 #include <string>
@@ -46,6 +46,6 @@ test
 test
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

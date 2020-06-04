@@ -1,10 +1,12 @@
 ---
 title: fgetc, fgetwc
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - fgetwc
 - fgetc
-apilocation:
+- _o_fgetc
+- _o_fgetwc
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgettc
 - fgetwc
@@ -30,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639928"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912865"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -54,24 +60,26 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fgetc** devuelve el carácter leído como un **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como un [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter leído, o bien devuelve **WEOF** para indicar un error o el final del archivo. Para ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de final de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *secuencia* es **NULL**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, tal y como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EOF**.
+**fgetc** devuelve el carácter leído como un valor **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter que se lee o devuelve **WEOF** para indicar un error o el final del archivo. En ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de fin de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *Stream* es **null**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EOF**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cada una de estas funciones lee un carácter único de la posición actual del archivo asociado con *secuencia*. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
+Cada una de estas funciones Lee un solo carácter de la posición actual del archivo asociado a la *secuencia*. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
 
-**fgetc** es equivalente a **getc**, pero se implementa solo como una función, en lugar de una función y una macro.
+**fgetc** es equivalente a **GETC**, pero solo se implementa como una función, en lugar de como una función y una macro.
 
-**fgetwc** es la versión de caracteres anchos de **fgetc**; lee **c** como un carácter multibyte o carácter ancho en función de si *flujo* se abre en modo de texto o modo binario.
+**fgetwc** es la versión con caracteres anchos de **fgetc**; Lee **c** como carácter multibyte o carácter ancho en función de si la *secuencia* se abre en modo de texto o en modo binario.
 
 Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos.
 
 Para obtener más información sobre el procesamiento de caracteres anchos y caracteres multibyte en los modos binarios y de texto, consulte [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -86,7 +94,7 @@ Para obtener más información sobre el procesamiento de caracteres anchos y car
 |**fgetc**|\<stdio.h>|
 |**fgetwc**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -125,7 +133,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetctxt"></a>Entrada: crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>Entrada: crt_fgetc.txt
 
 ```Input
 Line one.

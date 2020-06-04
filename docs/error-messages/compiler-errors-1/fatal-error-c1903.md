@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1903
 ms.assetid: 4b4719d6-35d2-4ca5-81ce-903ecd28dfb9
-ms.openlocfilehash: 87623de883346d879326b30715299850ab62d0b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d67372c91257cdc0a3b6810b2d8de7031badf89f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662714"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202766"
 ---
 # <a name="fatal-error-c1903"></a>Error irrecuperable C1903
 

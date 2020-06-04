@@ -1,26 +1,27 @@
 ---
 title: '@WordSize'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@WordSize'
 helpviewer_keywords:
 - '@WordSize symbol'
 ms.assetid: a4fb3bf1-4f87-4306-ad4d-27d999ce2b3a
-ms.openlocfilehash: b1ce903f4a37707a8563b4f1f0b3e62eaa91a787
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b75d2507696f9a6d4d235c7114e93274c83f78aa
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541926"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315282"
 ---
-# <a name="wordsize"></a>@WordSize
+# <a name="wordsize"></a>\@palabras
 
-Dos para cuatro de un segmento de 32 bits o de un segmento de 16 bits (equivalen numérico).
+Dos para un segmento de 16 bits o cuatro para un segmento de 32 bits (numérico igual).
 
 ## <a name="syntax"></a>Sintaxis
 
-> @WordSize
+> **\@palabras**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referencia de símbolos](symbols-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

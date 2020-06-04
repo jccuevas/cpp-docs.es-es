@@ -6,12 +6,12 @@ helpviewer_keywords:
 - frame windows [MFC], tasks
 - MFC, frame windows
 ms.assetid: 1148a952-6786-4622-b5a8-68a2d7eae584
-ms.openlocfilehash: ea35b98e5234c10a10143bad1d35fdd1b4510ced
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594700ef1cbe0030bbe452adaa40b29b4a72f4d0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405682"
 ---
 # <a name="what-frame-windows-do"></a>¿Para qué sirven las ventanas de marco?
 
@@ -38,4 +38,3 @@ La ventana de marco también envía comandos a sus vistas y puede responder a me
 ## <a name="see-also"></a>Vea también
 
 [Ventanas de marco](../mfc/frame-windows.md)
-

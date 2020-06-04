@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: 03247f6abd01b00fbbed3b33016cd4a12d8a13f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f41c5b238f74e85bc18e9ff5c3aa6a0050fe27e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543759"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376925"
 ---
 # <a name="ltatomicgt-enums"></a>Enumeraciones &lt;atomic&gt;
 
-## <a name="memory_order_enum"></a>  memory_order (Enumeración)
+## <a name="memory_order-enum"></a><a name="memory_order_enum"></a>memory_order Enum
 
 Proporciona nombres simbólicos para las operaciones de sincronización en ubicaciones de memoria. Estas operaciones afectan a cómo las asignaciones de un subproceso se hacen visibles en otro.
 
@@ -30,7 +30,7 @@ typedef enum memory_order {
 } memory_order;
 ```
 
-### <a name="enumeration-members"></a>Miembros de enumeración
+### <a name="enumeration-members"></a>Miembros de la enumeración
 
 |||
 |-|-|
@@ -41,6 +41,6 @@ typedef enum memory_order {
 |`memory_order_acq_rel`|Combina `memory_order_acquire` y `memory_order_release`.|
 |`memory_order_seq_cst`|Combina `memory_order_acquire` y `memory_order_release`. Los accesos a memoria marcados como `memory_order_seq_cst` debe ser secuencialmente coherentes.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<atomic>](../standard-library/atomic.md)<br/>
+[\<>atómica](../standard-library/atomic.md)

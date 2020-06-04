@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-ms.openlocfilehash: eb320dda9a69937e49f669153bb77e484c5a15fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c762ca80dc52398d9f246ada86ab29cb6e902129
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549596"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741552"
 ---
 # <a name="compiler-error-c3833"></a>Error del compilador C3833
 
-'type': tipo de destino no válido para tipo_de_puntero
+' type ': tipo de destino no válido para pointer_type
 
-Un [interior_ptr](../../windows/interior-ptr-cpp-cli.md) o [pin_ptr](../../windows/pin-ptr-cpp-cli.md) se ha declarado incorrectamente.
+[Interior_ptr](../../extensions/interior-ptr-cpp-cli.md) o [pin_ptr](../../extensions/pin-ptr-cpp-cli.md) se ha declarado incorrectamente.
 
-El ejemplo siguiente genera C3833:
+En el ejemplo siguiente se genera C3833:
 
-```
+```cpp
 // C3833.cpp
 // compile with: /clr
 
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-El ejemplo siguiente genera C3833:
+En el ejemplo siguiente se genera C3833:
 
-```
+```cpp
 // C3833b.cpp
 // compile with: /clr /c
 ref class G {

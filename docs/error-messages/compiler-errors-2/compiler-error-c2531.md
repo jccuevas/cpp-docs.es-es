@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2531
 ms.assetid: c49afe15-55f8-4dc8-ac01-bf653622a7db
-ms.openlocfilehash: 03e055e9830b8168fb19885a04c8d40d24713d23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4247e026f6680adab45ceebe2b395ad781ccfc7e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567511"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737119"
 ---
 # <a name="compiler-error-c2531"></a>Error del compilador C2531
 
-'identifier': referencia de un campo no válida a bits
+' Identifier ': la referencia a un campo de bits no es válida
 
-No se permiten las referencias a campos de bits.
+No se permiten referencias a campos de bits.
 
-El ejemplo siguiente genera C2531:
+En el ejemplo siguiente se genera C2531:
 
-```
+```cpp
 // C2531.cpp
 // compile with: /c
 class P {

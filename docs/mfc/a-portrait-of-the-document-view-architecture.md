@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: a4d89189b5389685be6b69c8502ffedb8aa731e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51f963acf5aacdfe4050a076d3bb0e651a92d021
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392980"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Un retrato de la arquitectura documento/vista
 
@@ -48,4 +48,3 @@ En una aplicación con varias vistas del mismo documento, como una ventana divis
 ## <a name="see-also"></a>Vea también
 
 [Arquitectura documento/vista](../mfc/document-view-architecture.md)
-

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2892
 ms.assetid: c22a5084-2f50-42c2-a56b-6dfe5442edc9
-ms.openlocfilehash: 296224532b19d9ff85c8644aa653b6d842205213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3868a44cf04d6c87092759ea473aa78aa0ad4c4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622825"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760894"
 ---
 # <a name="compiler-error-c2892"></a>Error del compilador C2892
 
-clase local no debe tener plantillas de miembro
+la clase local no debe tener plantillas de miembro
 
-Las funciones miembro de plantilla no son válidas en una clase que se define en una función.
+Las funciones miembro con plantilla no son válidas en una clase que se define en una función.
 
-El ejemplo siguiente genera C2892:
+En el ejemplo siguiente se genera C2892:
 
-```
+```cpp
 // C2892.cpp
 int main() {
    struct local {

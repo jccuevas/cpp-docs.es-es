@@ -1,11 +1,12 @@
 ---
 title: sin, sinf, sinl
-ms.date: 04/10/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+- _o_sin
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430367"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915768"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Calcula el seno del valor de punto flotante.
+Calcula el seno de un valor de punto flotante.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -62,26 +67,28 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **pecado** funciones devuelven el seno de *x*. Si *x* es mayor o igual que 263 o menor o igual que -263, se produce una pérdida de significado en el resultado.
+Las funciones **sin** devuelven el seno de *x*. Si *x* es mayor o igual que 263, o menor o igual que-263, se produce una pérdida de significado en el resultado.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Ninguna|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
 
-Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información sobre los códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **pecado** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **pecado** siempre toma y devuelve **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **sin** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **sin** siempre toma y devuelve **Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-|-|-|
-|**seno**, **sinf**, **sinl**|\<math.h>|\<cmath> o \<math.h>|
+|**sin**, **sinf**, **Sinl**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -111,7 +118,7 @@ sin( 1.570796 ) = 1.000000
 cos( 1.570796 ) = 0.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

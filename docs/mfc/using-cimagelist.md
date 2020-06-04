@@ -1,24 +1,22 @@
 ---
 title: Usar CImageList
 ms.date: 11/04/2016
-f1_keywords:
-- CImageList
 helpviewer_keywords:
 - image list control
 - CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
-ms.openlocfilehash: 92d639468e7465415b3553558090ca2d6811de9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09fd0e95ce2981afbebbfe10d87b26f88a7b5e13
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502679"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447225"
 ---
 # <a name="using-cimagelist"></a>Usar CImageList
 
-Una lista de imágenes, representada por la clase [CImageList](../mfc/reference/cimagelist-class.md), es una colección de imágenes de un mismo tamaño, cada uno de los cuales se puede hacer referencia a por su índice. Listas de imágenes se usan para administrar eficazmente grandes conjuntos de iconos o mapas de bits. Listas de imágenes no son propiamente controles, ya que no son windows; Sin embargo, se usan con distintos tipos de controles, incluidos los controles de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)), controles de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) y controles de ficha ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).
+Una lista de imágenes, representada por la clase [CImageList](../mfc/reference/cimagelist-class.md), es una colección de imágenes del mismo tamaño, a las que se puede hacer referencia a través de su índice. Las listas de imágenes se utilizan para administrar de forma eficaz grandes conjuntos de iconos o mapas de bits. Las listas de imágenes no son los mismos controles, ya que no son ventanas; sin embargo, se utilizan con distintos tipos de controles, como controles de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)), controles de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) y controles de ficha ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).
 
-Todas las imágenes en una lista de imágenes se encuentran en un mapa de bits única y amplia en formato de dispositivo de pantalla. Una lista de imágenes también puede incluir un mapa de bits monocromo que contiene las máscaras utilizadas para dibujar imágenes de forma transparente (estilo de icono). `CImageList` proporciona funciones miembro que permiten dibujar imágenes, crear y destruir listas de imágenes, agregar y quitar imágenes, reemplazar imágenes, combinar imágenes y arrastrar imágenes.
+Todas las imágenes de una lista de imágenes están contenidas en un único mapa de bits ancho en formato de dispositivo de pantalla. Una lista de imágenes también puede incluir un mapa de bits monocromo que contenga máscaras utilizadas para dibujar imágenes de forma transparente (estilo de icono). `CImageList` proporciona funciones miembro que permiten dibujar imágenes, crear y destruir listas de imágenes, agregar y quitar imágenes, reemplazar imágenes, combinar imágenes y arrastrar imágenes.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -36,7 +34,6 @@ Todas las imágenes en una lista de imágenes se encuentran en un mapa de bits �
 
 - [Información de imágenes en las listas de imágenes](../mfc/image-information-in-image-lists.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles](../mfc/controls-mfc.md)
-

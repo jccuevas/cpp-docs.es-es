@@ -1,56 +1,56 @@
 ---
-title: 'Cómo: Personalizar la barra de herramientas de acceso rápido'
-ms.date: 11/19/2018
+title: Procedimiento Personalizar la barra de herramientas de acceso rápido
+ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176333"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907778"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Cómo: Personalizar la barra de herramientas de acceso rápido
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Procedimiento Personalizar la barra de herramientas de acceso rápido
 
-La barra de herramientas de acceso rápido (QAT) es una barra de herramientas personalizable que contiene un conjunto de comandos que se muestran al lado del botón de la aplicación o en las fichas de categoría. La siguiente ilustración muestra una barra de herramientas de acceso rápido típico.
+La barra de herramientas de acceso rápido (QAT) es una barra de herramientas personalizable que contiene un conjunto de comandos que se muestran junto al botón aplicación o en las pestañas categoría. En la ilustración siguiente se muestra una barra de herramientas de acceso rápido típica.
 
-![Barra de herramientas de acceso rápido de cinta de opciones MFC](../mfc/media/quick_access_toolbar.png "barra de herramientas de acceso rápido de cinta de opciones MFC")
+![Barra de herramientas de acceso rápido de cinta MFC](../mfc/media/quick_access_toolbar.png "Barra de herramientas de acceso rápido de cinta MFC")
 
-Para personalizar la barra de herramientas de acceso rápido, ábralo en el **propiedades** , modifique sus comandos y, a continuación, obtener una vista previa del control de la cinta de opciones.
+Para personalizar la barra de herramientas de acceso rápido, ábrala en la ventana **propiedades** , modifique sus comandos y, a continuación, obtenga una vista previa del control de la cinta de opciones.
 
-### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Para abrir la barra de herramientas de acceso rápido en la ventana Propiedades
+### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Para abrir la barra de herramientas de acceso rápido en el ventana Propiedades
 
-1. En Visual Studio, en el **vista** menú, haga clic en **vista de recursos**.
+1. En Visual Studio, en el menú **Ver** , haga clic en **vista de recursos**.
 
-1. En **vista de recursos**, haga doble clic en el recurso de cinta para que se muestre en la superficie de diseño.
+1. En **vista de recursos**, haga doble clic en el recurso de la cinta de opciones para mostrarlo en la superficie de diseño.
 
-1. En la superficie de diseño, haga clic en el menú de la barra de herramientas de acceso rápido y, a continuación, haga clic en **propiedades**.
+1. En la superficie de diseño, haga clic con el botón secundario en el menú de la barra de herramientas acceso rápido y haga clic en **propiedades**.
 
 ## <a name="quick-access-toolbar-properties"></a>Propiedades de la barra de herramientas de acceso rápido
 
-En la tabla siguiente define las propiedades de la barra de herramientas de acceso rápido.
+En la tabla siguiente se definen las propiedades de la barra de herramientas de acceso rápido.
 
-|Property|de esquema JSON|
+|Propiedad|Definición|
 |--------------|----------------|
-|Posición de QAT|Especifica la posición de la barra de herramientas de acceso rápido al iniciar la aplicación. La posición puede ser **anteriormente** o **debajo** el control de la cinta de opciones.|
+|Posición QAT|Especifica la posición de la barra de herramientas de acceso rápido cuando se inicia la aplicación. La posición puede estar **por encima** o **por debajo** del control de la cinta de opciones.|
 |Elementos QAT|Especifica los comandos que están disponibles para la barra de herramientas de acceso rápido.|
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Para agregar o quitar comandos en la barra de herramientas de acceso rápido
 
-1. En el **propiedades** ventana, haga clic en **QAT Items**y, a continuación, haga clic en el botón de puntos suspensivos **(...)** .
+1. En la ventana **propiedades** , haga clic en **Qat elementos**y, a continuación, haga clic en el botón de puntos suspensivos **(...)** .
 
-1. En el **Editor de elementos de QAT** cuadro de diálogo, use el **agregar** y **quitar** botones para modificar la lista de comandos en la barra de herramientas de acceso rápido.
+1. En el cuadro de diálogo **Editor de elementos de Qat** , use los botones **Agregar** y **quitar** para modificar la lista de comandos de la barra de herramientas de acceso rápido.
 
-1. Si desea que un comando aparezca en la barra de herramientas de acceso rápido y el menú de la barra de herramientas de acceso rápido, active la casilla situada junto al comando. Si desea que el comando aparezca sólo en el menú, desactive la casilla.
+1. Si desea que aparezca un comando en la barra de herramientas de acceso rápido y en el menú de la barra de herramientas de acceso rápido, active la casilla situada junto al comando. Si desea que el comando solo aparezca en el menú, desactive la casilla.
 
-## <a name="previewing-the-ribbon"></a>Vista previa de la cinta de opciones
+## <a name="previewing-the-ribbon"></a>Obtener una vista previa de la cinta de opciones
 
-Comandos de barra de herramientas acceso rápidos no aparecen en la superficie de diseño. Para verlos, debe obtener una vista previa de la cinta de opciones o ejecutar la aplicación.
+Los comandos de la barra de herramientas de acceso rápido no aparecen en la superficie de diseño. Para verlos, debe obtener una vista previa de la cinta de opciones o ejecutar la aplicación.
 
-#### <a name="to-preview-the-ribbon-control"></a>Para obtener una vista previa del control de la cinta de opciones
+#### <a name="to-preview-the-ribbon-control"></a>Para obtener una vista previa del control Ribbon
 
-- En el **barra de herramientas del Editor de Ribbon**, haga clic en **Ribbon de prueba**.
+- En la **barra de herramientas del editor**de la cinta de opciones, haga clic en **probar cinta**.
 
 ## <a name="see-also"></a>Vea también
 

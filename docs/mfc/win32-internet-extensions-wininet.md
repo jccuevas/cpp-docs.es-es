@@ -7,12 +7,12 @@ helpviewer_keywords:
 - client applications [MFC], Win32 Internet
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: f8c80f0b-ce14-4f0d-a3cf-4f7d8c5cca59
-ms.openlocfilehash: 3fce3960723beac15cae6ea33cf8232e8a98fb77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64e699753a3cf266f1162df848afab6ab0b3904f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326578"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Extensiones de Internet Win32 (WinInet)
 
@@ -50,4 +50,3 @@ Los temas siguientes proporcionan los pasos para realizar tareas típicas de Win
 
 [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Conceptos básicos de WinInet](../mfc/wininet-basics.md)
-

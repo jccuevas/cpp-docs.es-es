@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2112
 ms.assetid: 527a2fea-f585-4d00-bbb4-477aee17144b
-ms.openlocfilehash: 5f7009f62a0c6e0a08830a914ced22875b8b7fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edeedf67d43a88bfbd3cb384cfe741aa5d764c88
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616078"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207512"
 ---
 # <a name="compiler-error-c2112"></a>Error del compilador C2112
 
-'-': resta de punteros requiere un operando de tipo puntero o integral
+'-': la resta de punteros requiere un operando de entero o de puntero
 
-Se ha intentado restar punteros que señalan a distintos tipos.
+Se intentó restar punteros que señalan a tipos diferentes.

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3886
 ms.assetid: 485f6c12-cc1b-4146-9034-409a0a5e615e
-ms.openlocfilehash: 68ed8d6cf208ae2a53e196e7b430eae1f8fe3ca0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e7ba0fcc76d723cebb5b82315faf36313b1d7db
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471804"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736638"
 ---
 # <a name="compiler-error-c3886"></a>Error del compilador C3886
 
-'var': debe inicializarse un miembro de datos literal
+' var ': se debe inicializar un miembro de datos literal
 
-Un [literal](../../windows/literal-cpp-component-extensions.md) variable debe inicializarse cuando se declara.
+Una variable literal se debe inicializar cuando se [delitera](../../extensions/literal-cpp-component-extensions.md) .
 
-El ejemplo siguiente genera C3886:
+En el ejemplo siguiente se genera C3886:
 
-```
+```cpp
 // C3886.cpp
 // compile with: /clr /c
 ref struct Y1 {

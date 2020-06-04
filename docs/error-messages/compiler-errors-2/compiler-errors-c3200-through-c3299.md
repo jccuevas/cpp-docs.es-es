@@ -1,6 +1,6 @@
 ---
-title: Errores de compilador C3200 a C3299
-ms.date: 11/17/2017
+title: Errores del compilador de C3200 a C3299
+ms.date: 04/21/2019
 f1_keywords:
 - C3220
 - C3221
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - C3281
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-ms.openlocfilehash: e8a9c1db4cba837a5780e51f84035492cd0e9e76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856966"
 ---
-# <a name="compiler-errors-c3200-through-c3299"></a>Errores de compilador C3200 a C3299
+# <a name="compiler-errors-c3200-through-c3299"></a>Errores del compilador de C3200 a C3299
 
 Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de error generados por el compilador.
 
@@ -53,7 +53,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |-----------|-------------|
 |[Error del compilador C3200](compiler-error-c3200.md)|'*tipo*': argumento de plantilla no válido para el parámetro de plantilla '*parámetro*', se esperaba una plantilla de clase|
 |[Error del compilador C3201](compiler-error-c3201.md)|la lista de parámetros de plantilla de clase '*plantilla*'no coincide con la lista de parámetros de plantilla para el parámetro de plantilla'*parámetro*'|
-|[Error de compilador C3202](compiler-error-c3202.md)|'*identificador*': valor predeterminado no válido de argumento, se esperaba una plantilla de clase|
+|[Error del compilador C3202](compiler-error-c3202.md)|'*identificador*': valor predeterminado no válido de argumento, se esperaba una plantilla de clase|
 |[Error del compilador C3203](compiler-error-c3203.md)|'*identificador*': genérica o plantilla de clase no especializada no puede usarse como un argumento de plantilla o genérico para el parámetro de plantilla o genérico '*parámetro*', se esperaba un tipo real|
 |[Error del compilador C3204](compiler-error-c3204.md)|'*función*' no pueden llamarse desde dentro de un bloque catch|
 |[Error del compilador C3205](compiler-error-c3205.md)|lista de argumentos para el parámetro de plantilla '*identificador*' le falta|
@@ -71,8 +71,8 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3217](compiler-error-c3217.md)|'*parámetro*': parámetro genérico no se puede restringir en esta declaración|
 |[Error del compilador C3218](compiler-error-c3218.md)|'*tipo*': no se permite como restricción de tipo|
 |[Error del compilador C3219](compiler-error-c3219.md)|'*parámetro*': parámetro genérico no puede ser restringido por varios elementos sin interfaz: '*tipo*'|
-|C3220 de Error del compilador|'*interfaz*': interfaz no puede tener el Id.|
-|C3221 de Error del compilador|'*miembro*': varios 'default' y 'casos' atributos no está permitidos en un miembro|
+|Error del compilador C3220|'*interfaz*': interfaz no puede tener el Id.|
+|Error del compilador C3221|'*miembro*': varios 'default' y 'casos' atributos no está permitidos en un miembro|
 |[Error del compilador C3222](compiler-error-c3222.md)|'*función*': no se puede declarar argumentos predeterminados para miembros de un tipo WinRT o administrado o funciones genéricas|
 |[Error del compilador C3223](compiler-error-c3223.md)|'*propiedad*': no se puede aplicar 'typeid' a una propiedad|
 |[Error del compilador C3224](compiler-error-c3224.md)|'*tipo*': toma ninguna clase genérica sobrecargada*número*' argumentos de tipo genérico|
@@ -96,25 +96,25 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3242](compiler-error-c3242.md)|'*función*': solo explícitamente pueden invalidar funciones virtuales|
 |[Error del compilador C3243](compiler-error-c3243.md)|ninguna de las funciones de sobrecarga se introdujeron por '*interfaz*'|
 |[Error del compilador C3244](compiler-error-c3244.md)|'*miembro*': este método lo incluyó '*Interfaz1*'no por'*Interfaz2*'|
-|C3245 de Error del compilador|'*función*': uso de una plantilla de variables requiere la lista de argumentos de plantilla|
+|Error del compilador C3245|'*función*': uso de una plantilla de variables requiere la lista de argumentos de plantilla|
 |[Error del compilador C3246](compiler-error-c3246.md)|'*clase*': no puede heredar de '*$base_class*'tal y como se ha declarado como'*herencia*'|
 |[Error del compilador C3247](compiler-error-c3247.md)|'*coclase*': una coclase no puede heredar de otra coclase *$base_class*'|
 |[Error del compilador C3248](compiler-error-c3248.md)|Obsoleto. '*función*': función declarada como 'sealed' no se puede reemplazar por '*función*'|
-|C3249 de Error del compilador|instrucción no válida o subexpresión para la función 'constexpr'|
-|C3250 de Error del compilador|'*declaración*': no se permite la declaración en el cuerpo de la función 'constexpr'|
+|Error del compilador C3249|instrucción no válida o subexpresión para la función 'constexpr'|
+|Error del compilador C3250|'*declaración*': no se permite la declaración en el cuerpo de la función 'constexpr'|
 |[Error del compilador C3251](compiler-error-c3251.md)|no se puede invocar el método de clase base en una instancia de tipo de valor|
 |[Error del compilador C3252](compiler-error-c3252.md)|'*función*': no se puede reducir la accesibilidad de un método virtual en un tipo administrado o WinRT|
 |[Error del compilador C3253](compiler-error-c3253.md)|'*función*': error con invalidación explícita|
 |[Error del compilador C3254](compiler-error-c3254.md)|'*función*': clase contiene la invalidación explícita '*función*' pero no se deriva de una interfaz que contiene la declaración de función|
 |[Error del compilador C3255](compiler-error-c3255.md)|'*tipo*': no se puede asignar dinámicamente este objeto de tipo de valor en el montón nativo|
-|C3256 de Error del compilador|'*función*': variable use no produce una expresión constante|
+|Error del compilador C3256|'*función*': variable use no produce una expresión constante|
 |Error del compilador C3257|Obsoleto.|
-|C3258 de Error del compilador|Obsoleto.|
-|C3259 de Error del compilador|las funciones 'constexpr' solo pueden tener una instrucción return|
-|C3260 de Error del compilador|'*token*': se omitirá los tokens no esperados antes del cuerpo lambda|
-|C3261 de Error del compilador|una función que devuelve una matriz administrada o WinRT debe tener corchetes de matriz al final de la declaración: '*identificador*(...) []'|
+|Error del compilador C3258|Obsoleto.|
+|Error del compilador C3259|las funciones 'constexpr' solo pueden tener una instrucción return|
+|Error del compilador C3260|'*token*': se omitirá los tokens no esperados antes del cuerpo lambda|
+|Error del compilador C3261|una función que devuelve una matriz administrada o WinRT debe tener corchetes de matriz al final de la declaración: '*identificador*(...) []'|
 |[Error del compilador C3262](compiler-error-c3262.md)|indización de matriz no válido: *número* especificaron *número*-dimensional '*tipo*'|
-|C3263 de Error del compilador|Obsoleto.|
+|Error del compilador C3263|Obsoleto.|
 |[Error del compilador C3264](compiler-error-c3264.md)|'*identificador*': un constructor de clase no puede tener un tipo de valor devuelto|
 |[Error del compilador C3265](compiler-error-c3265.md)|no puede declarar un '*managed_construct*'in unmanaged"*unmanaged_construct*'|
 |[Error del compilador C3266](compiler-error-c3266.md)|'*función*': un constructor de clase debe tener una lista de parámetros 'void'|
@@ -132,7 +132,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3278](compiler-error-c3278.md)|llamada de interfaz o método puro directa '*función*' se producirá un error en tiempo de ejecución|
 |[Error del compilador C3279](compiler-error-c3279.md)|no se permiten especializaciones parciales o explícitas ni creaciones de instancias explícitas de plantillas de clase declaradas en el espacio de nombres cli|
 |[Error del compilador C3280](compiler-error-c3280.md)|'*función*': una función miembro de un tipo administrado no puede compilarse como una función no administrada|
-|C3281 de Error del compilador|'*función*': operador global no puede tener el tipo administrado o WinRT '*tipo*' en la firma|
+|Error del compilador C3281|'*función*': operador global no puede tener el tipo administrado o WinRT '*tipo*' en la firma|
 |[Error del compilador C3282](compiler-error-c3282.md)|listas de parámetros genéricos solamente pueden aparecer en clases administradas o WinRT, structs o funciones|
 |[Error del compilador C3283](compiler-error-c3283.md)|'*interfaz*': una interfaz no puede tener un constructor de instancia|
 |[Error del compilador C3284](compiler-error-c3284.md)|las restricciones del parámetro genérico '*parámetro*'de la función'*declarador*'debe coincidir con las restricciones del parámetro genérico'*parámetro*'de la función'*declarador*'|
@@ -151,3 +151,8 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3297](compiler-error-c3297.md)|' *constraint2*': no se puede usar ' *constraint1*' como restricción porque ' *constraint1*' tiene la restricción de valor|
 |[Error del compilador C3298](compiler-error-c3298.md)|' *constraint1*': no se puede usar ' *constraint2*' como restricción porque ' *constraint2*' tiene la restricción de referencia y ' *constraint1*' tiene la restricción de valor|
 |[Error del compilador C3299](compiler-error-c3299.md)|' *función*': no se puede especificar restricciones, se heredan del método base|
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errores del compilador de C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

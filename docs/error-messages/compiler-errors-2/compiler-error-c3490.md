@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: 55580533d6a1a6b80f79b017ba78a08fb44df744
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940eae39222548ec74bda8ccb38e669748ffa74f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478161"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738406"
 ---
 # <a name="compiler-error-c3490"></a>Error del compilador C3490
 
@@ -27,7 +27,7 @@ Una expresión lambda que se declara en un método `const` no puede modificar lo
 
 El ejemplo siguiente genera C3490 porque modifica la variable miembro `_i` en un método `const` :
 
-```
+```cpp
 // C3490a.cpp
 // compile with: /c
 
@@ -46,7 +46,7 @@ class C
 
 En el ejemplo siguiente se resuelve C3490 quitando el modificador `const` de la declaración del método:
 
-```
+```cpp
 // C3490b.cpp
 // compile with: /c
 

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: 1872672e776ad13bf16be5ae69729f4f68d8f3b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531786"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759924"
 ---
 # <a name="compiler-error-c2357"></a>Error del compilador C2357
 
-'identifier': debe ser una función de tipo 'type'
+' Identifier ': debe ser una función de tipo ' type '
 
-El código declara una versión de la `atexit` función que no coincide con la versión declarada internamente por el compilador. Declarar `atexit` como sigue:
+El código declara una versión de la función `atexit` que no coincide con la versión declarada internamente por el compilador. Declare `atexit` como se indica a continuación:
 
 ```
 int __cdecl atexit(void (__cdecl *)());
 ```
 
-Para obtener más información, consulte [init_seg](../../preprocessor/init-seg.md).
+Para obtener más información, vea [init_seg](../../preprocessor/init-seg.md).
 
-El ejemplo siguiente genera C2357:
+En el ejemplo siguiente se genera C2357:
 
-```
+```cpp
 // C2357.cpp
 // compile with: /c
 // C2357 expected

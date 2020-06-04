@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: 50c6d108c8f2bc42a624ce6376d66111df00478b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608915"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761548"
 ---
 # <a name="compiler-error-c3538"></a>Error del compilador C3538
 
@@ -27,7 +27,7 @@ No todas las variables declaradas en una lista de declaraciones se resuelven en 
 
 Las instrucciones siguientes producen C3538. Cada instrucción declara múltiples variables, pero no todos los usos de la palabra clave `auto` se deducen en el mismo tipo.
 
-```
+```cpp
 // C3538.cpp
 // Compile with /Zc:auto
 // C3538 expected

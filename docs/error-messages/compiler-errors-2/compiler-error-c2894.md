@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2894
 ms.assetid: 4e250579-2b59-4993-a6f4-49273e7ecf06
-ms.openlocfilehash: 4184f6360e36a4e8ca0cfc55dc6d9c515cf655d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffc87008c1874f8f5c7e275778237f611dcbb5af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494606"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760828"
 ---
 # <a name="compiler-error-c2894"></a>Error del compilador C2894
 
-las plantillas no se pueden declarar tenga vinculación 'C'
+las plantillas no se pueden declarar para que tengan vinculación ' C '
 
-Este error puede deberse a una plantilla definida dentro de un `extern` bloque "C".
+Este error puede deberse a una plantilla definida dentro de un bloque `extern` "C".
 
-El ejemplo siguiente genera C2894:
+En el ejemplo siguiente se genera C2894:
 
-```
+```cpp
 // C2894.cpp
 extern "C" {
    template<class T> class stack {};   // C2894 fail
@@ -30,9 +30,9 @@ extern "C" {
 }
 ```
 
-El ejemplo siguiente genera C2894:
+En el ejemplo siguiente se genera C2894:
 
-```
+```cpp
 // C2894b.cpp
 // compile with: /c
 extern "C" template<class T> void f(const T &aT) {}   // C2894

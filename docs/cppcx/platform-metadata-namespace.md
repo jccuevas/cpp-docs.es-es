@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-ms.openlocfilehash: 39a4709c8f66c4dcc2ee5185f2a1df27b0666445
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9626b3a9d28d28fd52a0d2295af8fda8855cd90c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387609"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (Espacio de nombres)
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 Aunque este espacio de nombres está previsto para uso interno, los exploradores pueden mostrar los siguientes miembros de este espacio de nombres.
 
-|nombre|Observación|
+|Name|Observación|
 |----------|------------|
 |Atributo|La clase base de los atributos.|
 |[Platform::Metadata::DefaultMemberAttribute (Atributo)](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indica la función preferida que se va a invocar entre varias funciones sobrecargadas posibles.|
@@ -45,7 +45,7 @@ Aunque este espacio de nombres está previsto para uso interno, los exploradores
 
 **Metadatos:** platform.winmd
 
-**Espacio de nombres:** Platform::Metadata
+**Espacio de nombres**: Platform:: Metadata
 
 ## <a name="see-also"></a>Vea también
 

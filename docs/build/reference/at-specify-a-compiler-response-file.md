@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '@ compiler option'
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-ms.openlocfilehash: 90dcadbb47cdc7eb4fa1ff039f5074a3141eac83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2b5578e1ce1db590bdf5abbff0c91e858803ad7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273007"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Especificar un archivo de respuesta del compilador)
 
@@ -46,5 +46,5 @@ Desde la línea de comandos puede especificar tantas opciones de archivo de resp
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

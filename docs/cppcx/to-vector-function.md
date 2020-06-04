@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - to_vector Function
 ms.assetid: 9cdd5123-7243-4def-a1d3-162e0bf6219e
-ms.openlocfilehash: a2054e6e787dcf9137a087dd53264c7f98461d69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fa4e9c620519cc6bb2f96d346ded88b6cc826ae
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404629"
 ---
 # <a name="tovector-function"></a>to_vector (Función)
 
@@ -41,8 +41,8 @@ Una interfaz IVector o IVectorView que proporciona acceso a un objeto Vector o V
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Windows::Foundation::Collections
+**Espacio de nombres**: Windows::Foundation::Collections
 
 ## <a name="see-also"></a>Vea también
 
-[Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows::Foundation::Collections (Espacio de nombres)](../cppcx/windows-foundation-collections-namespace-c-cx.md)

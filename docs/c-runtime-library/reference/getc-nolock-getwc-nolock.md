@@ -1,10 +1,12 @@
 ---
 title: _getc_nolock, _getwc_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getc_nolock
 - _getwc_nolock
-apilocation:
+- _o__getc_nolock
+- _o__getwc_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getc_nolock
 - _gettc_nolock
@@ -35,14 +41,14 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26e72783e3188c663ab1e0b8f824a1da43fe3d16
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465356"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919644"
 ---
-# <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
+# <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
 Lee un carácter de una secuencia.
 
@@ -59,16 +65,18 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*misiones*<br/>
 Flujo de entrada.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Consulte [getc, getwc](getc-getwc.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estas funciones son idénticas a **getc** y **getwc** , salvo que no bloquean el subproceso de llamada. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Estas funciones son idénticas a **GETC** y **getwc** , salvo que no bloquean el subproceso que realiza la llamada. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -83,7 +91,7 @@ Estas funciones son idénticas a **getc** y **getwc** , salvo que no bloquean el
 |**getc_nolock**|\<stdio.h>|
 |**getwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -121,7 +129,7 @@ int main()
 }
 ```
 
-### <a name="input-crtgetcnolocktxt"></a>Entrada: crt_getc_nolock.txt
+### <a name="input-crt_getc_nolocktxt"></a>Entrada: crt_getc_nolock.txt
 
 ```Input
 Line the first.

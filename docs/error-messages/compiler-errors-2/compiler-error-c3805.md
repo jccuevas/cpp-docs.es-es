@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3805
 ms.assetid: 166bbc35-5488-46b4-8e4c-9cd26ee5644e
-ms.openlocfilehash: 4560fb4bb264f2ddd79ddc80a063925d874094b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2da70c31eab756f83bf0f4ad279700730f2619c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165644"
 ---
 # <a name="compiler-error-c3805"></a>Error del compilador C3805
 
-'token': token inesperado, se esperaba '}' o un identificador
+' token ': token inesperado; se esperaba '} ' o un identificador
 
 Al definir una propiedad, se encontró un token no válido. Quite el token no válido.

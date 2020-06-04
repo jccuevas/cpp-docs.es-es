@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4206
 ms.assetid: 3df97812-3ed7-4003-9769-057acf97ce3c
-ms.openlocfilehash: b4125e598aa7df946b16b3d41af1c6eabab00531
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae1e4d814d38409f362efd27cecae983eb86479a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649038"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173990"
 ---
 # <a name="compiler-warning-level-4-c4206"></a>Advertencia del compilador (nivel 4) C4206
 
-**extensión no estándar utilizada: unidad de traducción está vacía**
+**se usó una extensión no estándar: la unidad de traducción está vacía**
 
-El archivo estaba vacío tras el preprocesamiento.
+El archivo estaba vacío después del preprocesamiento.
 
-Esta extensión puede impedir que el código que se va a otros compiladores. Genera un error en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) y solo se aplica a código fuente de C.
+Esta extensión puede impedir que el código sea portable a otros compiladores. Genera un error con compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) y solo se aplica al código fuente de C.

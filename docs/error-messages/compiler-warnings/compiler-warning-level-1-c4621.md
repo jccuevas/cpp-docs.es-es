@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a48934fd097f9039988db32511ca87cbd66b22d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555639"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199761"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>Advertencia del compilador (nivel 1) C4621
 
-ninguna forma postfija de 'operator--' encontrado para el tipo 'type', con formato de prefijo
+no se encontró ninguna forma postfija de ' Operator--' para el tipo ' type ', con el formato de prefijo
 
-Se ha producido ningún operador de decremento de postfijo definido para el tipo especificado. El compilador usa el operador prefijo sobrecargado.
+No hay ningún operador de decremento postfijo definido para el tipo dado. El compilador usa el operador prefijo sobrecargado.
 
-Esta advertencia puede evitarse definiendo un operador `--` postfijo. Crear una versión de dos argumentos de la `--` operador tal como se muestra a continuación:
+Esta advertencia puede evitarse definiendo un operador `--` postfijo. Cree una versión de dos argumentos del operador `--` como se muestra a continuación:
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

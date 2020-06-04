@@ -1,9 +1,9 @@
 ---
 title: _amsg_exit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _amsg_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,20 +14,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _amsg_exit
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-ms.openlocfilehash: 87cd08a6c60a1e29b8a8e15edbfdd69d338d875d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31979a3181dc57644f1e6877277884e55cebf733
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170946"
 ---
-# <a name="amsgexit"></a>_amsg_exit
+# <a name="_amsg_exit"></a>_amsg_exit
 
 Emite un mensaje de error en tiempo de ejecución y se cierra la aplicación con el código de error 255.
 
@@ -42,7 +45,7 @@ void _amsg_exit ( int rterrnum );
 *rterrnum*<br/>
 Número de identificación de un mensaje de error en tiempo de ejecución definido por el sistema.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta función emite el mensaje de error en tiempo de ejecución para **stderr** en aplicaciones de consola o muestra un mensaje en un cuadro de mensaje en aplicaciones de Windows. En modo de depuración, puede invocar al depurador antes de salir.
 

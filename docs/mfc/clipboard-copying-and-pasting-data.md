@@ -5,69 +5,68 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74348dd3e790cceada9aafd718464694997316ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437045"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374567"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Portapapeles: Copiar y pegar datos
 
-Este tema describe el trabajo mínimo necesario implementar copiar a y pegar del Portapapeles en una aplicación OLE. Se recomienda que lea el [objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md) temas antes de continuar.
+En este tema se describe el trabajo mínimo necesario para implementar la copia y el pegado desde el Portapapeles en la aplicación OLE. Se recomienda leer los temas Objetos de datos y orígenes de [datos (OLE)](../mfc/data-objects-and-data-sources-ole.md) antes de continuar.
 
-Para poder implementar copiar o pegar, primero debe proporcionar las funciones para administrar las opciones de copiar, cortar y pegar en el menú Edición.
+Para poder implementar la copia o el pegado, primero debe proporcionar funciones para controlar las opciones Copiar, Cortar y Pegar en el menú Editar.
 
-##  <a name="_core_copying_or_cutting_data"></a> Copiar o cortar datos
+## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a>Copiar o cortar datos
 
 #### <a name="to-copy-data-to-the-clipboard"></a>Para copiar datos en el Portapapeles
 
-1. Determinar si los datos que se va a copiar son datos nativos o es un elemento incrustado o vinculado.
+1. Determine si los datos que se van a copiar son datos nativos o es un elemento incrustado o vinculado.
 
-   - Si los datos están incrustados o vinculados, obtener un puntero a la `COleClientItem` objeto que se ha seleccionado.
+   - Si los datos están incrustados o vinculados, obtenga un puntero al `COleClientItem` objeto que se ha seleccionado.
 
-   - Si los datos son nativos y la aplicación es un servidor, cree un nuevo objeto derivado de `COleServerItem` que contiene los datos seleccionados. De lo contrario, cree un `COleDataSource` objeto para los datos.
+   - Si los datos son nativos y la aplicación es `COleServerItem` un servidor, cree un nuevo objeto derivado de la que contiene los datos seleccionados. De lo `COleDataSource` contrario, cree un objeto para los datos.
 
-1. Llamar al elemento seleccionado `CopyToClipboard` función miembro.
+1. Llame a la `CopyToClipboard` función miembro del elemento seleccionado.
 
-1. Si el usuario selecciona una operación de cortar en lugar de una operación de copia, eliminar los datos seleccionados de la aplicación.
+1. Si el usuario eligió una operación de corte en lugar de una operación de copia, elimine los datos seleccionados de la aplicación.
 
-Para ver un ejemplo de esta secuencia, vea la `OnEditCut` y `OnEditCopy` programas de ejemplo de funciones en la aplicación OLE [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md). Tenga en cuenta que estos ejemplos mantienen un puntero a los datos seleccionados actualmente, por lo que el paso 1 ya está completando.
+Para ver un ejemplo de `OnEditCut` esta `OnEditCopy` secuencia, vea y funciones en los programas de ejemplo OLE de MFC [OCLIENT](../overview/visual-cpp-samples.md) y [HIERSVR](../overview/visual-cpp-samples.md). Tenga en cuenta que estos ejemplos mantienen un puntero a los datos seleccionados actualmente, por lo que el paso 1 ya está completo.
 
-##  <a name="_core_pasting_data"></a> Pegar datos
+## <a name="pasting-data"></a><a name="_core_pasting_data"></a>Pegar datos
 
-Pegado de datos es más complicado que copiarlo, debe elegir el formato que se usará para pegar los datos en la aplicación.
+Pegar datos es más complicado que copiarlos porque debe elegir el formato que se usará para pegar los datos en la aplicación.
 
 #### <a name="to-paste-data-from-the-clipboard"></a>Para pegar datos desde el Portapapeles
 
-1. En la clase de vista, implemente `OnEditPaste` para administrar los usuarios elegir la opción Pegar en el menú Edición.
+1. En la clase `OnEditPaste` de vista, implemente para controlar a los usuarios que elijan la opción Pegar en el menú Edición.
 
-1. En el `OnEditPaste` función, cree un `COleDataObject` objeto y llamar a su `AttachClipboard` función miembro para vincular este objeto a los datos en el Portapapeles.
+1. En `OnEditPaste` la función, cree `COleDataObject` `AttachClipboard` un objeto y llame a su función miembro para vincular este objeto a los datos del Portapapeles.
 
-1. Llame a `COleDataObject::IsDataAvailable` para comprobar si un formato determinado está disponible.
+1. Llame `COleDataObject::IsDataAvailable` para comprobar si un formato determinado está disponible.
 
-   Como alternativa, puede usar `COleDataObject::BeginEnumFormats` para buscar otros formatos hasta que encuentre uno más adecuados para su aplicación.
+   Como alternativa, puede `COleDataObject::BeginEnumFormats` usar para buscar otros formatos hasta que encuentre uno más adecuado para su aplicación.
 
-1. La operación de pegar el formato.
+1. Realice la pasta del formato.
 
-Para obtener un ejemplo de cómo funciona esto, vea la implementación de la `OnEditPaste` funciones miembro en las clases de vista definidas en los programas de ejemplo OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md).
+Para obtener un ejemplo de cómo funciona `OnEditPaste` esto, vea la implementación de las funciones miembro en las clases de vista definidas en los programas de ejemplo OLE de MFC [OCLIENT](../overview/visual-cpp-samples.md) y [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
->  La principal ventaja de separar la operación de pegado en su propia función es que se puede usar el mismo código de pegar cuando se colocan los datos en la aplicación durante una operación de arrastrar y colocar. Al igual que en OCLIENT y HIERSVR, su `OnDrop` también puede llamar la función `DoPasteItem`, reutilizar el código escrito para implementar operaciones de pegar.
+> La principal ventaja de separar la operación de pegar en su propia función es que se puede usar el mismo código de pegado cuando se quitan datos en la aplicación durante una operación de arrastrar y colocar. Al igual que en OCLIENT `OnDrop` y HIERSVR, la función también puede llamar, `DoPasteItem`reutilizando el código escrito para implementar operaciones de pegado.
 
-Para controlar la opción Pegado especial en el menú Edición, vea el tema [cuadros de diálogo en OLE](../mfc/dialog-boxes-in-ole.md).
+Para controlar la opción Pegar especial del menú Edición, vea el tema [Cuadros](../mfc/dialog-boxes-in-ole.md)de diálogo en OLE .
 
-### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+### <a name="what-do-you-want-to-know-more-about"></a>¿Qué quieres saber más sobre
 
-- [Agregar otros formatos](../mfc/clipboard-adding-other-formats.md)
+- [Adición de otros formatos](../mfc/clipboard-adding-other-formats.md)
 
-- [Transferencia de datos uniformes y orígenes de datos y objetos de datos OLE](../mfc/data-objects-and-data-sources-ole.md)
+- [Objetos de datos OLE y orígenes de datos y transferencia de datos uniforme](../mfc/data-objects-and-data-sources-ole.md)
 
-- [Arrastrar y colocar OLE](../mfc/drag-and-drop-ole.md)
+- [Funciones OLE de arrastrar y colocar](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Portapapeles: Usar el mecanismo del Portapapeles de OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

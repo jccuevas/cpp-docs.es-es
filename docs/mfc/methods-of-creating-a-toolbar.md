@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-ms.openlocfilehash: 5296c0454e035770e196c3d6a4d15291d0c4ca6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f269ad990042f51554ec598b0bddbe5a6d7776b8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383930"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Métodos de creación de una barra de herramientas
 
@@ -34,4 +34,3 @@ Cualquiera de estos métodos le dará acceso a las funciones miembro del control
 
 [Uso de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2267
 ms.assetid: ea63bebb-6208-4367-8440-39be07f9c360
-ms.openlocfilehash: 5ff8b0bee1f79d9534841e4368fd5a5249cbb413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c897f8e6b38743ee98ec29707b222901ddde9d7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534854"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758741"
 ---
 # <a name="compiler-error-c2267"></a>Error del compilador C2267
 
-'function': las funciones static con ámbito de bloque no son válidas
+' función ': las funciones estáticas con ámbito de bloque no son válidas
 
-Se declara una función local `static`. Funciones estáticas deben tener un ámbito global.
+Una función local se declara `static`. Las funciones estáticas deben tener ámbito global.
 
-El ejemplo siguiente genera C2267:
+En el ejemplo siguiente se genera C2267:
 
-```
+```cpp
 // C2267.cpp
 static int func2();   // OK
 int main() {

@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: 119cc79cf0f3ed5784e1b3b291fce52f06695d36
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fa85bc7947b3b446ec7c6d3fdb0d7b62d308fb53
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556288"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210332"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP (Clase)
 
-Implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)).
+Implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -53,39 +53,39 @@ class IRowsetNotifyCP :
 Una clase derivada de `IRowsetNotifyCP`.
 
 *ReentrantEventSync*<br/>
-Una clase de exclusión mutua que admite la reentrada (el valor predeterminado es `CComSharedMutex`). Una exclusión mutua es un objeto de sincronización que permite que un subproceso tenga acceso de manera mutuamente a un recurso.
+Una clase mutex que admite la reentrada (el valor predeterminado es `CComSharedMutex`). Una exclusión mutua es un objeto de sincronización que permite que un subproceso tenga acceso mutuamente exclusivo a un recurso.
 
 *piid*<br/>
-Un puntero de identificador de interfaz (`IID*`) para un `IRowsetNotify` interfaz puntos de conexión. El valor predeterminado es `&__uuidof(IRowsetNotify)`.
+Un puntero de identificador de interfaz (`IID*`) para una interfaz de punto de conexión `IRowsetNotify`. El valor predeterminado es `&__uuidof(IRowsetNotify)`.
 
 *DynamicUnkArray*<br/>
-Una matriz de tipo [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), que es una matriz asignada dinámicamente de `IUnknown` interfaces de receptor de punteros al cliente.
+Matriz de tipo [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), que es una matriz asignada dinámicamente de `IUnknown` punteros a las interfaces de receptor de cliente.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldb.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[Fire_OnFieldChange](#onfieldchange)|Notifica al consumidor de un cambio en el valor de una columna.|
-|[Fire_OnRowChange](#onrowchange)|Notifica al consumidor de un cambio que afecte a las filas.|
-|[Fire_OnRowsetChange](#onrowsetchange)|Notifica al consumidor de un cambio que afecte a todo el conjunto de filas.|
+|[Fire_OnFieldChange](#onfieldchange)|Notifica al consumidor un cambio en el valor de una columna.|
+|[Fire_OnRowChange](#onrowchange)|Notifica al consumidor un cambio que afecta a las filas.|
+|[Fire_OnRowsetChange](#onrowsetchange)|Notifica al consumidor un cambio que afecta a todo el conjunto de filas.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`IRowsetNotifyCP` implementa funciones aconsejar a los agentes de escucha en el punto de conexión de difusión `IID_IRowsetNotify` de los cambios en el contenido del conjunto de filas.
+`IRowsetNotifyCP` implementa funciones de difusión para informar a los agentes de escucha en el punto de conexión `IID_IRowsetNotify` de los cambios en el contenido del conjunto de filas.
 
-Tenga en cuenta que también debe implementar y registrar `IRowsetNotify` en el consumidor (también conocido como "receptor") mediante [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que el consumidor puede controlar las notificaciones. Consulte [recibir notificaciones](../../data/oledb/receiving-notifications.md) acerca de cómo implementar la interfaz de punto de conexión del consumidor.
+Tenga en cuenta que también debe implementar y registrar `IRowsetNotify` en el consumidor (también conocido como "receptor") con [irowsetnotifyimpl (](../../data/oledb/irowsetnotifyimpl-class.md) para que el consumidor pueda controlar las notificaciones. Vea [recibir notificaciones](../../data/oledb/receiving-notifications.md) sobre la implementación de la interfaz de punto de conexión en el consumidor.
 
-Para obtener información detallada sobre la implementación de notificaciones, consulte "Compatibilidad con notificaciones" en [crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md).
+Para obtener información detallada sobre la implementación de notificaciones, vea el tema sobre las notificaciones de soporte técnico en [creación de un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md).
 
-## <a name="onfieldchange"></a> IRowsetNotifyCP:: Fire_onfieldchange
+## <a name="irowsetnotifycpfire_onfieldchange"></a><a name="onfieldchange"></a>IRowsetNotifyCP:: Fire_OnFieldChange
 
-Difunde un [OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) eventos para notificar a los consumidores de un cambio en el valor de una columna.
+Difunde un evento [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) para notificar a los consumidores de un cambio en el valor de una columna.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -101,11 +101,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IRowsetNotify:: OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="onrowchange"></a> IRowsetNotifyCP:: Fire_onrowchange
+## <a name="irowsetnotifycpfire_onrowchange"></a><a name="onrowchange"></a>IRowsetNotifyCP:: Fire_OnRowChange
 
-Difunde un [OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) eventos en todos los agentes de escucha en el punto de conexión `IID_IRowsetNotify` para notificar a los consumidores de un cambio que afecte a las filas.
+Difunde un evento [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) a todos los agentes de escucha en el punto de conexión `IID_IRowsetNotify` para notificar a los consumidores de un cambio que afecte a las filas.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -120,11 +120,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetNotify::OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IRowsetNotify:: OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="onrowsetchange"></a> IRowsetNotifyCP:: Fire_onrowsetchange
+## <a name="irowsetnotifycpfire_onrowsetchange"></a><a name="onrowsetchange"></a>IRowsetNotifyCP:: Fire_OnRowsetChange
 
-Difunde un [OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) eventos en todos los agentes de escucha en el punto de conexión `IID_IRowsetNotify` para notificar a los consumidores de un cambio que afecte a todo el conjunto de filas.
+Difunde un evento [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) en todos los agentes de escucha del punto de conexión `IID_IRowsetNotify` para notificar a los consumidores de un cambio que afecta a todo el conjunto de filas.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -137,13 +137,13 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IRowsetNotify:: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[Notificaciones (COM)](/windows/desktop/com/notifications)<br/>
+[Notificaciones (COM)](/windows/win32/com/notifications)<br/>
 [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
 [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
 [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>

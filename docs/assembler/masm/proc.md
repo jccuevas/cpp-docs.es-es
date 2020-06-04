@@ -1,36 +1,38 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439634"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318675"
 ---
 # <a name="proc"></a>PROC
 
-Marca el principio y final de un bloque de procedimiento llamado *etiqueta*. Las instrucciones en el bloque se pueden llamar con la **llamar** instrucciones o [INVOKE](../../assembler/masm/invoke.md) directiva.
+Marca el inicio y el final de un bloque de procedimiento denominado *etiqueta*. Las instrucciones del bloque se pueden llamar con la instrucción **Call** o la directiva [INVOKE](invoke.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
-> *etiqueta* PROC [[*distancia*]] [[*langtype*]] [[*visibilidad*]] [[\<*prologuearg*>]] [[ USA *reglist*]] [[, *parámetro* [[:*etiqueta*]]]...<br/>
-> [[Marco [[:*ehandler dirección*]]]]<br/>
-> *Instrucciones*<br/>
-> *etiqueta* ENDP
+> *Label* **proc** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ **Public** | **Private** | **Export** ⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**usa** *reglist*⟧ ⟦ __,__ *parámetro* ⟦ __:__ *Tag*⟧... ⟧\
+> ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ \
+> *instrucciones*\
+> *etiqueta* **ENDP**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-[[Marco [[:*ehandler dirección*]]]] solo es válido con ml64.exe y hace que MASM generar una entrada de tabla de funciones en .pdata e información de desenredo en .xdata para estructurado de una función comportamiento de control de excepciones de desenredado.
+Los argumentos ⟦*Distance*⟧ y ⟦*Language-Type*⟧ solo son válidos en MASM de 32 bits.
 
-Cuando el **marco** se usa el atributo, debe ir seguido un [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva.
+⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ solo es válido con ml64. exe y hace que MASM genere una entrada de tabla de función en. pdata e información de desenredado en. xdata para el comportamiento de desenredado de la excepción estructurada de una función.
 
-Consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obtener más información sobre el uso de ml64.exe.
+Cuando se usa el atributo de **marco** , debe ir seguido de un [. Directiva ENDPROLOG](dot-endprolog.md) .
+
+Consulte [MASM para x64 (ml64. exe)](masm-for-x64-ml64-exe.md) para obtener más información sobre el uso de ml64. exe.
 
 ## <a name="example"></a>Ejemplo
 
@@ -54,7 +56,7 @@ _text ENDS
 END
 ```
 
-El código anterior se emita la siguiente tabla de funciones e información de desenredo:
+El código anterior emitirá la siguiente tabla de funciones y la información de desenredo:
 
 ```Output
 FileHeader->Machine 34404
@@ -79,4 +81,5 @@ Dumping Unwind Information for file ex2.exe
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

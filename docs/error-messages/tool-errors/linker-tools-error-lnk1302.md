@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1302
 ms.assetid: aea3c753-c2c4-4249-bbc3-f2d4f0164b5e
-ms.openlocfilehash: c3b1117b31db4759b385943323a581da7a58f0c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8323fa234851ce3ba12083adb74d5ee0fba0ac69
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194933"
 ---
 # <a name="linker-tools-error-lnk1302"></a>Error de las herramientas del vinculador LNK1302
 
-solo admite la vinculación de elementos .netmodule seguros; no se puede vincular el archivo .netmodule
+solo admite la vinculación de Safe. netmodule; no se puede vincular el archivo. netmodule
 
-Un archivo .netmodule (compilado con **/LN**) se pasó un usuario está intentando invocar la vinculación de MSIL al vinculador.  Un módulo de C++ es válido para la vinculación de MSIL si se ha compilado con **/CLR: safe**.
+Se pasó un. netmodule (compilado con **/LN**) al vinculador en un intento del usuario de invocar la vinculación de MSIL.  Un C++ módulo es válido para la vinculación de MSIL si se compila con **/clr: Safe**.
 
-Para corregir este error, compile con **/CLR: safe** para habilitar la vinculación de MSIL o pasar el **/CLR** o **/CLR: pure** archivo obj al vinculador en lugar del módulo.
+Para corregir este error, compile con **/clr: Safe** para habilitar la vinculación de MSIL o pase el archivo **/CLR** o **/clr: Pure** . obj al enlazador en lugar del módulo.
 
-Para obtener más información, consulte
+Para obtener más información, vea
 
 - [/LN (Crear un módulo MSIL)](../../build/reference/ln-create-msil-module.md)
 

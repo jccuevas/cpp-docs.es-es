@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 7e85ad445743cc02ba078eb3c09342f69915c09c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518533"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257109"
 ---
 # <a name="tuple-class"></a>tupla (Clase)
 
@@ -20,9 +20,8 @@ Ajusta una secuencia de elementos de longitud fija.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class tuple {
-public:
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
    tuple(const tuple&);
@@ -37,17 +36,17 @@ public:
       tuple& operator=(const tuple<U1, U2, ..., UN>&);
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
-   };
+};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+\ de *TN*
 Tipo del enésimo elemento de la tupla.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase de plantilla describe un objeto que almacena los objetos de tipos N `T1`, `T2`,..., `TN`, respectivamente, donde `0 <= N <= Nmax`. La extensión de una instancia de la tupla `tuple<T1, T2, ..., TN>` es el número `N` de sus argumentos de plantilla. El índice del argumento de plantilla `Ti` y del valor almacenado correspondiente de ese tipo es `i - 1`. Por lo tanto, aunque el número de los tipos de 1 a N en esta documentación, el índice correspondiente valores comprendidos entre 0 y N - 1.
+La plantilla de clase describe un objeto que almacena N objetos de tipos `T1`, `T2`,..., `TN`, respectivamente, donde `0 <= N <= Nmax`. La extensión de una instancia de tupla `tuple<T1, T2, ..., TN>` es el número `N` de sus argumentos de plantilla. El índice del argumento de plantilla `Ti` y del valor almacenado correspondiente de ese tipo es `i - 1`. Por lo tanto, aunque se numeran los tipos de 1 a N en esta documentación, los valores de índice correspondientes van de 0 a N-1.
 
 ## <a name="example"></a>Ejemplo
 
@@ -117,13 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<tuple>
-
-**Espacio de nombres:** std
-
-## <a name="op_eq"></a>  tuple::operator=
+## <a name="op_eq"></a>operador =
 
 Asigna un objeto `tuple`.
 
@@ -144,15 +137,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parámetros
 
-*ANULAR*<br/>
+*UN*\
 Tipo del enésimo elemento copiado de la tupla.
 
-*right*<br/>
+\ *derecha*
 Tupla de la que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Los dos primeros operadores miembro asignan los elementos de *derecho* a los elementos correspondientes de `*this`. El tercer operador miembro asigna `right.first` al elemento en el índice 0 de `*this` y `right.second` al elemento en el índice 1. Los tres operadores miembro devuelven `*this`.
+Los dos primeros operadores miembro asignan los elementos de la *derecha* a los elementos correspondientes de `*this`. El tercer operador miembro asigna `right.first` al elemento en el índice 0 de `*this` y `right.second` al elemento en el índice 1. Los tres operadores miembro devuelven `*this`.
 
 Los operadores miembro restantes son análogos a los anteriores, pero con [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -196,7 +189,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -205,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>  tuple:swap
+## <a name="tuple_swap"></a>pasar
 
 Intercambia los elementos de dos tuplas.
 
@@ -216,16 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*left*|Una tupla cuyos elementos se van a intercambiar con los de la tupla *derecho*.|
-|*right*|Una tupla cuyos elementos se van a intercambiar con los de la tupla *izquierdo*.|
+\ *izquierda*
+Tupla cuyos elementos se van a intercambiar con los del *derecho*de la tupla.
 
-### <a name="remarks"></a>Comentarios
+\ *derecha*
+Tupla cuyos elementos se van a intercambiar con los de la tupla *izquierda*.
+
+### <a name="remarks"></a>Observaciones
 
 La función ejecuta `left.swap(right)`.
 
-## <a name="tuple"></a>  tuple::tuple
+## <a name="tuple"></a>organizar
 
 Construye un objeto `tuple`.
 
@@ -252,19 +246,19 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parámetros
 
-*ANULAR*<br/>
+*UN*\
 Tipo del enésimo elemento copiado de la tupla.
 
-*right*<br/>
+\ *derecha*
 Tupla de la que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer constructor crea un objeto cuyos elementos se han construido de forma predeterminada.
 
 El segundo constructor crea un objeto cuyos elementos se han creado a partir de los argumentos `P1`, `P2`, ..., `PN` con cada `Pi` inicializando el elemento en el índice `i - 1`.
 
-El tercer y cuarto constructores crean un objeto cuyos elementos se han copiado a partir del elemento correspondiente de *derecho*.
+El tercer y cuarto constructores crean un objeto cuyos elementos se construyen a partir del elemento correspondiente de la *derecha*.
 
 El quinto constructor crea un objeto cuyo elemento en el índice 0 se ha copiado a partir de `right.first` y cuyo elemento en el índice 1 se ha copiado a partir de `right.second`.
 
@@ -338,8 +332,3 @@ x 4
 0 1 2 3
 4 5 6 7
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

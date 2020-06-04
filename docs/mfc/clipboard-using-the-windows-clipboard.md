@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-ms.openlocfilehash: 67bc337af2cf55a4f39698f730ce14a3369ef742
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326994"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>Portapapeles: Usar el Portapapeles de Windows
 
@@ -30,7 +30,7 @@ Mayoría de las aplicaciones para Windows admite Cortar o copiar datos en el Por
 
 Los comandos Cortar, copiar y pegar solo son significativos en ciertos contextos. Los comandos Cortar y copiar deben habilitarse únicamente cuando se selecciona un elemento y el comando Pegar sólo cuando algo está en el Portapapeles. Puede proporcionar este comportamiento mediante la definición de funciones del controlador de actualización que habilitan o deshabilitan estos comandos en función del contexto. Para obtener más información, consulte [cómo actualizar objetos de interfaz de usuario](../mfc/how-to-update-user-interface-objects.md).
 
-La biblioteca Microsoft Foundation Class proporcionan compatibilidad con el Portapapeles para su edición de texto con el `CEdit` y `CEditView` clases. Las clases OLE también simplifican la implementación las operaciones del Portapapeles que incluyen elementos OLE. Para obtener más información sobre las clases OLE, vea [Portapapeles: usar el mecanismo del Portapapeles OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
+La biblioteca Microsoft Foundation Class proporcionan compatibilidad con el Portapapeles para su edición de texto con el `CEdit` y `CEditView` clases. Las clases OLE también simplifican la implementación las operaciones del Portapapeles que incluyen elementos OLE. Para obtener más información sobre las clases OLE, vea [Portapapeles: Usar el mecanismo del Portapapeles OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
 
 Implementación de otra edición comandos de menú, como deshacer (**ID_EDIT_UNDO**) y Rehacer (**ID_EDIT_REDO**), también se deja para usted. Si la aplicación no es compatible con estos comandos, puede eliminarlos fácilmente desde el archivo de recursos con los editores de recursos de Visual C++.
 
@@ -43,4 +43,3 @@ Implementación de otra edición comandos de menú, como deshacer (**ID_EDIT_UND
 ## <a name="see-also"></a>Vea también
 
 [Portapapeles](../mfc/clipboard.md)
-

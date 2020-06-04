@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 454d6686a389b1578bb777e8573e9281b2a5e6c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2c7a8d79ebf5e6483a06354b280e474d7b8e61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642966"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374834"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog (clase)
 
@@ -31,19 +31,19 @@ class COleUpdateDialog : public COleLinksDialog
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Construye un objeto `COleUpdateDialog`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[COleUpdateDialog::DoModal](#domodal)|Muestra el **editar vínculos** cuadro de diálogo en el modo de actualización.|
+|[COleUpdateDialog::DoModal](#domodal)|Muestra el cuadro de diálogo **Editar vínculos** en modo de actualización.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Para obtener más información sobre los cuadros de diálogo OLE específicos, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).
+Para obtener más información acerca de los cuadros de diálogo específicos de OLE, vea el artículo [Cuadros](../../mfc/dialog-boxes-in-ole.md)de diálogo en OLE .
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -67,7 +67,7 @@ Para obtener más información sobre los cuadros de diálogo OLE específicos, v
 
 **Encabezado:** afxodlgs.h
 
-##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog
+## <a name="coleupdatedialogcoleupdatedialog"></a><a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog
 
 Construye un objeto `COleUpdateDialog`.
 
@@ -82,24 +82,24 @@ explicit COleUpdateDialog(
 ### <a name="parameters"></a>Parámetros
 
 *pDoc*<br/>
-Señala el documento que contiene los vínculos que necesiten actualizarse.
+Señala el documento que contiene los vínculos que pueden necesitar actualización.
 
 *bUpdateLinks*<br/>
-Marca que determina si los objetos vinculados deben actualizarse.
+Marcador que determina si se van a actualizar los objetos vinculados.
 
 *bUpdateEmbeddings*<br/>
-Marca que determina si los objetos incrustados se van a actualizarse.
+Marcador que determina si se van a actualizar los objetos incrustados.
 
 *pParentWnd*<br/>
-Señala al objeto de ventana principal o propietaria (de tipo `CWnd`) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del cuadro de diálogo se establecerá en la ventana principal de la aplicación.
+Apunta al objeto de ventana principal `CWnd`o propietario (de tipo ) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del cuadro de diálogo se establecerá en la ventana principal de la aplicación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta función solo construye un `COleUpdateDialog` objeto. Para mostrar el cuadro de diálogo, llame a [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Esta clase se debe usar en lugar de `COleLinksDialog` cuando desea actualizar solo existentes elementos vinculados o incrustados.
+Esta función construye `COleUpdateDialog` solo un objeto. Para mostrar el cuadro de diálogo, llame a [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Esta clase se debe `COleLinksDialog` usar en lugar de cuando desea actualizar solo los elementos vinculados o incrustados existentes.
 
-##  <a name="domodal"></a>  COleUpdateDialog::DoModal
+## <a name="coleupdatedialogdomodal"></a><a name="domodal"></a>COleUpdateDialog::DoModal
 
-Muestra el cuadro de diálogo Editar vínculos cuadro en modo de actualización.
+Muestra el cuadro de diálogo Editar vínculos en modo de actualización.
 
 ```
 virtual INT_PTR DoModal();
@@ -107,21 +107,21 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Estado de finalización para el cuadro de diálogo. Uno de los siguientes valores:
+Estado de finalización del cuadro de diálogo. Uno de los valores siguientes:
 
-- IDOK si se devolvió correctamente el cuadro de diálogo.
+- IDOK si el cuadro de diálogo se devolvió correctamente.
 
-- IDCANCEL si ninguno de los elementos vinculados o incrustados en el documento actual deben actualizar.
+- IDCANCEL si ninguno de los elementos vinculados o incrustados en el documento actual necesita actualizarse.
 
-- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) función en el SDK de Windows.
+- IDABORT si se ha producido un error. Si se devuelve IDABORT, llame a la [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea la función [OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) en el Windows SDK.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Todos los vínculos o incrustaciones se actualizan a menos que el usuario selecciona el botón Cancelar.
+Todos los vínculos y/o incrustaciones se actualizan a menos que el usuario seleccione el botón Cancelar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleLinksDialog (clase)](../../mfc/reference/colelinksdialog-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [COleLinksDialog (clase)](../../mfc/reference/colelinksdialog-class.md)

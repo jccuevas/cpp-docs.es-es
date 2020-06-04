@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1383
 ms.assetid: ca224d14-d687-4fd6-80c2-8b82f28924ea
-ms.openlocfilehash: 4ab96c0516ee5593a969669c03ae22f0c211ae27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c0be830cb56b760f1397ea2b2f81b42a87e9ba6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626137"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203091"
 ---
 # <a name="fatal-error-c1383"></a>Error irrecuperable C1383
 

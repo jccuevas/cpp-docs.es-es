@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: c0a8e42cb7ee78c399459be82e50ef37ab203816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631275"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375837"
 ---
 # <a name="ltthreadgt-functions"></a>Funciones de &lt;thread&gt;
 
@@ -28,7 +28,7 @@ ms.locfileid: "50631275"
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
 |[swap](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>  get_id
+## <a name="get_id"></a><a name="get_id"></a>get_id
 
 Identifica de forma única el subproceso de ejecución actual.
 
@@ -40,7 +40,7 @@ thread::id this_thread::get_id() noexcept;
 
 Un objeto de tipo [thread::id](../standard-library/thread-class.md) que identifica de forma única el subproceso de ejecución actual.
 
-## <a name="sleep_for"></a>  sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
 
 Bloquea el subproceso de llamada.
 
@@ -52,14 +52,14 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rel_time*<br/>
+*Rel_time*\
 Un objeto [duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función bloquea el subproceso que realiza la llamada para al menos el tiempo especificado por *Rel_time*. Esta función no produce ninguna excepción.
+La función bloquea el subproceso de llamada durante al menos el tiempo especificado por *Rel_time*. Esta función no produce ninguna excepción.
 
-## <a name="sleep_until"></a>  sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
 Bloquea el subproceso de llamada al menos hasta la hora especificada.
 
@@ -72,16 +72,16 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parámetros
 
-*Abs_time*<br/>
+*Abs_time*\
 Representa un punto en el tiempo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Intercambio
 
-Intercambia los Estados de dos **subproceso** objetos.
+Intercambia los estados de dos objetos de **subproceso.**
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
-La izquierda **subproceso** objeto.
+*Izquierda*\
+El objeto **de subproceso** izquierdo.
 
-*Derecha*<br/>
-El derecho de **subproceso** objeto.
+*Correcto*\
+El objeto **de subproceso** correcto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función llama a `Left.swap(Right)`.
 
-## <a name="yield"></a>  yield
+## <a name="yield"></a><a name="yield"></a>Rendimiento
 
 Indica al sistema operativo que ejecute otros subprocesos, incluso si el subproceso actual seguiría ejecutándose en condiciones normales.
 
@@ -107,6 +107,6 @@ Indica al sistema operativo que ejecute otros subprocesos, incluso si el subproc
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<>de hilo](../standard-library/thread.md)

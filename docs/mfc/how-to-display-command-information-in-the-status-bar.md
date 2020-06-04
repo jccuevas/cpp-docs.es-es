@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Mostrar información de comandos en la barra de estado'
+title: Procedimiento Mostrar información de comandos en la barra de estado
 ms.date: 11/04/2016
 helpviewer_keywords:
 - prompts [MFC]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: 6da45edf611d70920340d8f9a9c2fd8de5cc0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c93787b3799306d6008299e7c1be6e429bc4c2d9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160294"
 ---
-# <a name="how-to-display-command-information-in-the-status-bar"></a>Cómo: Mostrar información de comandos en la barra de estado
+# <a name="how-to-display-command-information-in-the-status-bar"></a>Procedimiento Mostrar información de comandos en la barra de estado
 
 Al ejecutar el Asistente para aplicaciones para crear el esqueleto de la aplicación, puede admitir una barra de herramientas y una barra de estado. Sólo una opción en el Asistente para la aplicación es compatible con ambos. Cuando hay una barra de estado, la aplicación proporciona comentarios útiles automáticamente cuando el usuario mueve el puntero sobre los elementos en los menús. La aplicación muestra automáticamente una cadena de mensaje en la barra de estado cuando se resalta el elemento de menú. Por ejemplo, cuando el usuario mueve el puntero sobre el **cortar** comando el **editar** menú, puede mostrar la barra de estado "Se corta la selección y lo coloca en el Portapapeles" en el área de mensajes de la barra de estado. El símbolo del sistema de ayuda al usuario a comprender el propósito del elemento de menú. Esto también funciona cuando el usuario hace clic en un botón de barra de herramientas.
 
@@ -25,4 +25,3 @@ De forma predeterminada, el Asistente para la aplicación agrega **AFX_IDS_IDLEM
 ## <a name="see-also"></a>Vea también
 
 [Control y asignación de mensajes](../mfc/message-handling-and-mapping.md)
-

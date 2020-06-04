@@ -1,6 +1,6 @@
 ---
 title: _enable
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _enable
 - _enable_cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - _enable intrinsic
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
-ms.openlocfilehash: 1d129db17b489972555efb0b5df2de52e01fa649
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7adcd4eac807b8d0937efbbe6d89f8ad6dcb157c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631257"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217874"
 ---
-# <a name="enable"></a>_enable
+# <a name="_enable"></a>_enable
 
 **Específicos de Microsoft**
 
@@ -24,7 +24,7 @@ Habilita las interrupciones.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void _enable(void);
 ```
 
@@ -32,9 +32,9 @@ void _enable(void);
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
-|`_enable`|x86, ARM, x64|
+|`_enable`|x86, ARM, x64, ARM64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -46,4 +46,4 @@ Esta función solo está disponible en modo kernel. Si se utiliza en modo de usu
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

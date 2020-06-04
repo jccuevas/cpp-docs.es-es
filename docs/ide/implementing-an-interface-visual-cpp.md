@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces, implementing
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-ms.openlocfilehash: 8e166f806d247cd93ff0f471360d749fa95e430b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bb1db35e269ef884f3ebdf4564d8f0a3e579db50
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692906"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509515"
 ---
 # <a name="implement-an-interface"></a>Implementar una interfaz
 
@@ -50,13 +50,13 @@ Si va a incorporar una interfaz nueva, debe agregarla de forma manual al archivo
 
 Este asistente implementa una interfaz para un objeto COM. Las implementaciones de muchas interfaces se incluyen en las bibliotecas COM disponibles con Visual Studio y Windows. Se asocia una implementación de interfaz a un objeto cuando se crea una instancia de ese objeto. Además, proporciona los servicios que ofrece el objeto.
 
-Para obtener una explicación de las interfaces y las implementaciones, vea [Interfaces and interface implementations](/windows/desktop/com/interfaces-and-interface-implementations) (Interfaces e implementaciones de interfaz) en Windows SDK.
+Para obtener una explicación de las interfaces y las implementaciones, vea [Interfaces and interface implementations](/windows/win32/com/interfaces-and-interface-implementations) (Interfaces e implementaciones de interfaz) en Windows SDK.
 
 - **Implementar interfaz desde**
 
   Especifica la ubicación de la biblioteca de tipos, desde la que se crea la interfaz.
 
-  |Opción|Descripción|
+  |Opción|DESCRIPCIÓN|
   |------------|-----------------|
   |**Proyecto**|La biblioteca de tipos forma parte del proyecto.|
   |**Registry**|La biblioteca de tipos se registra en el sistema. Las bibliotecas de tipos registradas se enumeran en **Bibliotecas de tipos disponibles**.|
@@ -77,7 +77,7 @@ Para obtener una explicación de las interfaces y las implementaciones, vea [Int
   > [!NOTE]
   > Las interfaces con el mismo nombre que las ya implementadas por el objeto seleccionado no se muestran en el cuadro **Interfaces**.
 
-  |Botón de transferencia|Descripción|
+  |Botón de transferencia|DESCRIPCIÓN|
   |---------------------|-----------------|
   |**>**|Agrega el nombre de interfaz seleccionado actualmente en la lista **Interfaces** a la lista **Implementar interfaces**.|
   |**>>**|Agrega todos los nombre de interfaz disponibles en la lista **Interfaces** a la lista **Implementar interfaces**.|

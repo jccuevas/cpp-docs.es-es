@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2814
 ms.assetid: 7d165136-a08b-4497-a76d-60a21bb19404
-ms.openlocfilehash: 6562e8a0968f83a0e7e968b538b4d94dc1047fa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cc22afa29160ce50d658a4a8d4b2a56e5145527
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474860"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750863"
 ---
 # <a name="compiler-error-c2814"></a>Error del compilador C2814
 
@@ -21,7 +21,7 @@ ms.locfileid: "50474860"
 
 Un tipo nativo no se puede anidar en un tipo CLR o WinRT. El ejemplo siguiente genera el error C2814 y muestra cómo corregirlo.
 
-```
+```cpp
 // C2814.cpp
 // compile with: /clr /c
 ref class A {

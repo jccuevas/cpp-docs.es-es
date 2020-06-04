@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 64e8918b052b05088ff48aefb0f0f9ab8c6df586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da9259df8c527e44a4adea3a53be31b3c3ffc10b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432878"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687601"
 ---
-# <a name="numpunctbyname-class"></a>numpunct_byname (Clase)
+# <a name="numpunct_byname-class"></a>numpunct_byname (Clase)
 
-La clase de plantilla derivada describe un objeto que puede actuar como una faceta `numpunct` de una configuración regional concreta, lo que habilita el formato y la puntuación de expresiones numéricas y booleanas.
+La plantilla de clase derivada describe un objeto que puede actuar como una faceta `numpunct` de una configuración regional determinada que habilita el formato y la puntuación de expresiones numéricas y booleanas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,4 +49,4 @@ Su comportamiento viene determinado por la configuración regional [con nombre](
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

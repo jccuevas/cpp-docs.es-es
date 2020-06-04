@@ -1,41 +1,82 @@
 ---
-title: Actualizar proyectos desde versiones anteriores de Visual C++
-ms.date: 11/04/2016
+title: Actualizar C++ proyectos desde versiones anteriores de Visual Studio
+description: Cómo actualizar proyectos de Microsoft C++ desde versiones anteriores de Visual Studio.
+ms.date: 01/21/2020
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 3b9740c47e7fc0b449bf53a11a0ba7a4486a9ce4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592821"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416110"
 ---
-# <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Actualizar proyectos desde versiones anteriores de Visual C++
+# <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Actualizar C++ proyectos desde versiones anteriores de Visual Studio
 
-En la mayoría de los casos, es posible abrir un proyecto creado en una versión anterior de Visual Studio. Sin embargo, para ello, Visual Studio actualiza el proyecto. Si se guarda este proyecto actualizado, no se puede abrir en la versión anterior.
+Para actualizar un proyecto creado en una versión anterior de Visual Studio, solo tiene que abrir el proyecto en la versión más reciente de Visual Studio. Visual Studio ofrece la actualización del proyecto al esquema actual.
 
-> [!IMPORTANT]
-> Si se intenta convertir un proyecto que ya se convirtió, Visual Studio pide confirmación porque la reconversión elimina archivos existentes.
+Si elige **no**, el proyecto no se actualizará. En el caso de los proyectos creados en Visual Studio 2010 y versiones posteriores, puede seguir usando el proyecto en la versión más reciente de Visual Studio. Solo tiene que establecer las propiedades del proyecto para seguir teniendo como destino el conjunto de herramientas anterior. Si deja la versión anterior de Visual Studio en el equipo, su conjunto de herramientas está disponible en versiones posteriores. Por ejemplo, si el proyecto debe seguir ejecutándose en Windows XP, puede actualizar a Visual Studio 2019. A continuación, especifique el conjunto de herramientas como v141_xp o anterior en las propiedades del proyecto. Para obtener más información, vea [Use native multi-targeting in Visual Studio to build old projects](use-native-multi-targeting.md) (Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos).
 
-Muchos proyectos y soluciones actualizados se pueden compilar correctamente sin realizar modificaciones. Sin embargo, en algunos proyectos puede ser necesario realizar cambios en la configuración, el código fuente o ambos. Se recomienda usar las instrucciones siguientes para solucionar primero los problemas de configuración y, a continuación, si el proyecto no se compila, solucionar los problemas de código. Para obtener más información, vea [Información general sobre posibles problemas de actualización](../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
+Si elige **sí**, el proyecto se actualizará en su lugar. No se puede volver a convertir a la versión anterior. En escenarios de actualización, esta es la razón por la que se recomienda realizar una copia de seguridad de los archivos de proyecto y de solución existentes.
 
-1. Haga una copia de los archivos de proyecto y de solución existentes. Instale la versión actual de Visual Studio y la versión anterior en paralelo para poder comparar las versiones de los archivos si lo desea.
+## <a name="upgrade-reports"></a>Actualización de informes
 
-2. En la versión actual de Visual Studio, abra (y por tanto actualice) la copia del proyecto o la solución y guárdela.
+Al actualizar un proyecto, obtendrá un informe de actualización. El informe también se guarda en la carpeta del proyecto como UpgradeLog. htm. El informe de actualización muestra un resumen de los problemas encontrados durante la conversión. Muestra información acerca de los cambios que se realizaron, entre los que se incluyen:
 
-3. Para cada proyecto convertido, abra el menú contextual y elija **Propiedades**. En **Propiedades de configuración**, seleccione **General** y después, en **Conjunto de herramientas de la plataforma**, seleccione la versión actual. (Por ejemplo, para Visual Studio 2017, seleccione **v141**).
+- Propiedades del proyecto.
 
-4. Compile la solución. Si se produce un error en la compilación, modifique los valores y recompile.
+- Archivos de inclusión.
 
-Los orígenes de datos están en un proyecto de base de datos independiente de forma que pueda modificar y depurar más fácilmente los procedimientos almacenados en esos orígenes. Si actualiza un proyecto de C++ que contiene orígenes de datos, se crea automáticamente un proyecto de base de datos independiente.
+- Código que ya no se compila correctamente debido a las mejoras de conformidad del compilador o a los cambios en el estándar.
 
-Para obtener información sobre cómo actualizar las versiones de Windows de destino, consulte [Modificar WINVER y _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).
+- Código que se basa en las características de Windows o Visual Studio que ya no están disponibles. O, los archivos de encabezado que no se incluyen en una instalación predeterminada de Visual Studio o que se han quitado del producto.
 
-## <a name="see-also"></a>Vea también
+- Código que ya no se compila debido a cambios en las API, como las API cuyo nombre ha cambiado, firmas de función cambiadas o funciones en desuso.
 
-[Cambios del sistema de compilación](../build/build-system-changes.md)<br/>
-[Novedades de Visual C++ en Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-[Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
-[Comportamiento no estándar](../cpp/nonstandard-behavior.md)
+- Código que ya no se compila debido a cambios en los diagnósticos, como una advertencia que se convierte en un error.
+
+- Errores del enlazador debido a las bibliotecas que se cambiaron, especialmente cuando se utiliza/NODEFAULTLIB.
+
+- Errores en tiempo de ejecución o resultados inesperados debido a cambios de comportamiento.
+
+- Errores que se introdujeron en las herramientas. Si encuentra un problema, informe al equipo visual C++ a través de los canales de soporte técnico normales o mediante la página de la comunidad de desarrolladores de [Visual Studio C++ ](https://developercommunity.visualstudio.com/spaces/62/index.html) .
+
+Algunos proyectos y soluciones actualizados se pueden compilar correctamente sin modificarlos. Sin embargo, es probable que la mayoría de los proyectos requieran cambios en la configuración del proyecto y en el código fuente. No hay ninguna manera correcta de solucionar estos problemas, pero se recomienda usar un enfoque por fases. Antes de empezar, revise la [información general de los posibles problemas de actualización](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) para obtener más información sobre muchos tipos de errores comunes.
+
+1. Establezca el conjunto de herramientas C++ de la plataforma, el estándar del lenguaje y la versión Windows SDK (si procede) a las versiones preferidas. ( **Propiedades del** **proyecto** >  > **propiedades de configuración** > **General**)
+
+1. Si tiene muchos errores, puede desactivar temporalmente algunas opciones mientras las corrige. Para desactivar la opción [/permissive-](../build/reference/permissive-standards-conformance.md) , use las **propiedades** de **Project** >  > **propiedades de configuración** > **lenguaje** **C/C++**  > . Para desactivar la opción [de análisis de código](/cpp/code-quality/code-analysis-for-c-cpp-overview) , use **propiedades** del **proyecto** >  > **propiedades de configuración** > análisis de **código**.
+
+1. Asegúrese de que todas las dependencias están presentes y de que las rutas de acceso de inclusión o las ubicaciones de biblioteca son correctas. (Propiedades del**proyecto** ** >  > ** **propiedades de configuración** > directorios de **VC + +** )
+
+1. Identifique y corrija los errores causados por las referencias a las API que ya no existen.
+
+1. Corrija los errores restantes que impidan la compilación. Consulte [información general sobre posibles problemas de actualización](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) para las correcciones de errores comunes.
+
+1. Vuelva a activar **/permissive-** y corrija los errores nuevos causados por código no compatible que se compiló previamente en MSVC.
+
+1. Active el análisis de código para identificar los posibles problemas o los patrones de codificación obsoletos que ya no se consideran aceptables. Si el análisis de código marca muchos errores, puede desactivar algunas de las advertencias para centrarse primero en las más importantes. El IDE puede ayudar con correcciones rápidas para algunos tipos de problemas.
+
+1. Tenga en cuenta otras oportunidades para modernizar el código. Por ejemplo, reemplace los algoritmos y las estructuras de datos personalizados por C++ los de la biblioteca estándar, o por la biblioteca de código abierto de Boost. Mediante el uso de características estándar, es más fácil para otros usuarios mantener el código. Puede estar seguro de que este código está bien probado y revisado por muchos expertos en el Comité de estándares y la C++ comunidad más amplia.
+
+En caso de errores difíciles de corregir, intente buscar o publicar una pregunta en Stack Overflow o [ C++ ](https://developercommunity.visualstudio.com/spaces/62/index.html)en la comunidad de desarrolladores.
+
+## <a name="in-this-section"></a>En esta sección
+
+[Información general sobre posibles problemas de actualización](overview-of-potential-upgrade-issues-visual-cpp.md)\
+[Actualice el código al\ de CRT universal](upgrade-your-code-to-the-universal-crt.md)
+[Actualizar winver y _WIN32_WINNT](modifying-winver-and-win32-winnt.md)\
+[Corrección de las dependencias en los\ internos de la biblioteca](fix-your-dependencies-on-library-internals.md)
+[Problemas de migración de punto flotante](floating-point-migration-issues.md)\
+[características desusadas en Visual Studio 2019\ C++ ](features-deprecated-in-visual-studio.md)
+\ de [VCBUILD frente a MSBuild](build-system-changes.md)
+[Puerto de bibliotecas de terceros](porting-third-party-libraries.md)
+
+## <a name="see-also"></a>Consulte también
+
+[Novedades de Visual C++ en Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
+[Historial C++ de cambios visuales 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\
+[Comportamiento no estándar](../cpp/nonstandard-behavior.md)\
+[Aplicaciones de datos de Puerto](../data/data-access-programming-mfc-atl.md)

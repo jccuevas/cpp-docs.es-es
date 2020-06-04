@@ -1,10 +1,13 @@
 ---
 title: _popen, _wpopen
-ms.date: 11/04/2016
-apiname:
+description: Una referencia para las funciones _popen de la biblioteca en tiempo de ejecución de _wpopenMicrosoft C (CRT) y.
+ms.date: 4/2/2020
+api_name:
 - _popen
 - _wpopen
-apilocation:
+- _o__popen
+- _o__wpopen
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tpopen
 - popen
@@ -33,14 +40,23 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 37e5bb491234e46a0e3330bc2fd42c16e54793fc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498909"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915291"
 ---
-# <a name="popen-wpopen"></a>_popen, _wpopen
+# <a name="_popen-_wpopen"></a>_popen, _wpopen
 
 Crea una canalización y ejecuta un comando.
 
@@ -62,33 +78,35 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>Parámetros
 
-*command*<br/>
+*Command*\
 Comando que se va a ejecutar.
 
-*mode*<br/>
+*modo*\
 Modo del flujo devuelto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un flujo asociado a un extremo de la canalización creada. El otro extremo de la canalización se asocia a la entrada o salida estándar del comando generado. Las funciones devuelven **NULL** si se produce un error. Si el error es un parámetro no válido, por ejemplo, si *comando* o *modo* es un puntero nulo, o *modo* no es un modo válido, **errno** está establecido en **EINVAL**. Vea los modos válidos en la sección de comentarios.
+Devuelve un flujo asociado a un extremo de la canalización creada. El otro extremo de la canalización se asocia a la entrada o salida estándar del comando generado. Las funciones devuelven **NULL** si se produce un error. Si el error se debe a un parámetro no válido, **errno** se establece en **EINVAL**. Vea los modos válidos en la sección de comentarios.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_popen** función crea una canalización y ejecuta de forma asincrónica una copia generada del procesador de comandos con la cadena especificada de *comando*. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
+La función **_popen** crea una canalización. A continuación, ejecuta de forma asincrónica una copia generada del procesador de comandos y usa el *comando* como línea de comandos. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
 
 |Modo de acceso|Descripción|
 |-|-|
-|**"r"**|El proceso de llamada puede leer la salida estándar del comando generado mediante el flujo devuelto.|
-|**"w"**|El proceso de llamada puede escribir en la entrada estándar del comando generado mediante el flujo devuelto.|
-|**"b"**|Abrir en modo binario.|
-|**"t"**|Abrir en modo de texto.|
+|**c**|El proceso de llamada puede leer la salida estándar del comando generado mediante el flujo devuelto.|
+|**con**|El proceso de llamada puede escribir en la entrada estándar del comando generado mediante el flujo devuelto.|
+|**b**|Abrir en modo binario.|
+|**h**|Abrir en modo de texto.|
 
 > [!NOTE]
-> Si se usa en un programa de Windows, el **_popen** función devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y salida, consulte [crear un proceso secundario con redirección de entrada y salida](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el SDK de Windows.
+> Si se usa en un programa de Windows, la función **_popen** devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y la salida, vea [crear un proceso secundario con entrada y salida redirigidas](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el Windows SDK.
 
-**_wpopen** es una versión con caracteres anchos de **_popen**; el *ruta* argumento **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan exactamente igual.
+**_wpopen** es una versión con caracteres anchos de **_popen**; el argumento de *ruta de acceso* para **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan de manera idéntica.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -103,7 +121,7 @@ El **_popen** función crea una canalización y ejecuta de forma asincrónica un
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -138,7 +156,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -153,9 +171,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
-
-En este resultado se supone que solo hay un archivo en el directorio actual con la extensión de nombre de archivo .c.
+Esta salida supone que hay un solo archivo en el directorio actual que tiene una `.c` extensión de nombre de archivo.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -170,8 +186,8 @@ Directory of D:\proj\console\test1
 Process returned 0
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)\
+[_pclose](pclose.md)\
+[_pipe](pipe.md)

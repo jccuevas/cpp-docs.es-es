@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
-ms.openlocfilehash: 2a1d76d21005ecffc74f9fc64d4bdeb197e9653d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a497de92d782f65bfc27db27755718e7c6bbdbe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531997"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735885"
 ---
 # <a name="compiler-error-c3028"></a>Error del compilador C3028
 
-'member': solo un miembro de datos estático o variable puede usarse en una cláusula de uso compartido de datos
+' Member ': solo se puede usar una variable o un miembro de datos estático en una cláusula de uso compartido de datos
 
-Se pasó un símbolo que no sea un miembro de datos estático o variable a la cláusula de reducción.
+Un símbolo distinto de una variable o un miembro de datos estático se pasó a la cláusula Reduction.
 
-El ejemplo siguiente genera C3028:
+En el ejemplo siguiente se genera C3028:
 
-```
+```cpp
 // C3028.cpp
 // compile with: /openmp /link vcomps.lib
 int g_i;

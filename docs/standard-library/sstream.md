@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: cc08fb426df289b3478ad9d29b03f9a6dd5d3978
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f1fb202692d09fa87eb775677e46e1c3f36dbad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605584"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688946"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
-Define varias clases de plantilla que admiten operaciones de iostreams en secuencias almacenadas en un objeto de matriz asignado. Dichas secuencias fácilmente se convierten a y desde objetos de clase de plantilla [basic_string](../standard-library/basic-string-class.md).
+Define varias plantillas de clase que admiten operaciones de iostreams en secuencias almacenadas en un objeto de matriz asignado. Estas secuencias se convierten fácilmente en objetos de la plantilla de clase [basic_string](../standard-library/basic-string-class.md)y desde ellos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -77,20 +77,20 @@ void swap (
 
 ## <a name="remarks"></a>Comentarios
 
-Los objetos de tipo `char *` pueden usar la funcionalidad de [\<strstream>](../standard-library/strstream.md) para streaming. Sin embargo, \<strstream > está en desuso y el uso de \<sstream > se anima.
+Los objetos de tipo `char *` pueden usar la funcionalidad de [\<strstream>](../standard-library/strstream.md) para streaming. Sin embargo, \<strstream > está en desuso y se recomienda el uso de \<sstream >.
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |Nombre de tipo|Descripción|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Crea un tipo `basic_istringstream` especializado en un **char** parámetro de plantilla.|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Crea un tipo `basic_ostringstream` especializado en un **char** parámetro de plantilla.|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Crea un tipo `basic_stringbuf` especializado en un **char** parámetro de plantilla.|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Crea un tipo `basic_stringstream` especializado en un **char** parámetro de plantilla.|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Crea un tipo `basic_istringstream` especializado en un **wchar_t** parámetro de plantilla.|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Crea un tipo `basic_ostringstream` especializado en un **wchar_t** parámetro de plantilla.|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Crea un tipo `basic_stringbuf` especializado en un **wchar_t** parámetro de plantilla.|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Crea un tipo `basic_stringstream` especializado en un **wchar_t** parámetro de plantilla.|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Crea un tipo `basic_istringstream` especializado en un parámetro de plantilla **Char** .|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Crea un tipo `basic_ostringstream` especializado en un parámetro de plantilla **Char** .|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Crea un tipo `basic_stringbuf` especializado en un parámetro de plantilla **Char** .|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Crea un tipo `basic_stringstream` especializado en un parámetro de plantilla **Char** .|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Crea un tipo `basic_istringstream` especializado en un parámetro de plantilla **wchar_t** .|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Crea un tipo `basic_ostringstream` especializado en un parámetro de plantilla **wchar_t** .|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Crea un tipo `basic_stringbuf` especializado en un parámetro de plantilla **wchar_t** .|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Crea un tipo `basic_stringstream` especializado en un parámetro de plantilla **wchar_t** .|
 
 ### <a name="manipulators"></a>Manipuladores
 
@@ -103,9 +103,9 @@ Los objetos de tipo `char *` pueden usar la funcionalidad de [\<strstream>](../s
 |Clase|Descripción|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Describe un búfer de secuencia que controla la transmisión bidireccional entre elementos de tipo `Elem` —cuyos rasgos de caracteres están determinados por la clase `Tr`— y una secuencia de elementos almacenados en un objeto Array.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`, y cuyos elementos están asignados mediante un asignador de clase `Alloc`.|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Describe un objeto que controla la inserción de elementos y objetos codificados en un búfer de secuencia de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`, y cuyos elementos están asignados mediante un asignador de clase `Alloc`.|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Describe un objeto que controla la inserción y extracción de elementos y objetos codificados usando un búfer de secuencia de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`, y cuyos elementos están asignados mediante un asignador de clase `Alloc`.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia de la clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**Elem**, **TR**`Alloc` >, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr` y cuyos elementos están asignados por un asignador de clase `Alloc`.|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Describe un objeto que controla la inserción de objetos codificados y elementos en un búfer de secuencia de la clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**Elem**, **TR**`Alloc` >, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por el objeto `Tr` de clase y cuyos elementos están asignados por un asignador de clase `Alloc`.|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Describe un objeto que controla la inserción y extracción de elementos y objetos codificados mediante un búfer de secuencia de la clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**Elem**, **TR**`Alloc` >, con elementos de tipo `Elem`, cuyos rasgos de caracteres son determinado por la clase `Tr` y cuyos elementos están asignados por un asignador de clase `Alloc`.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -115,7 +115,7 @@ Los objetos de tipo `char *` pueden usar la funcionalidad de [\<strstream>](../s
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programación con iostream](../standard-library/iostream-programming.md)<br/>
-[Convenciones de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programación con iostream](../standard-library/iostream-programming.md)\
+[Convenciones de iostreams](../standard-library/iostreams-conventions.md)

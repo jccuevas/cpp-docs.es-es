@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 7f716e5ebdc3cf8c832442295897ba44509ff4e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435638"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752896"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Value (Clases y structs) (C++/CX)
 
-Un *struct de valor* o *clase de valor* es un Windows en tiempo de ejecución compatible ("estructura POD plain old data"). Tiene un tamaño fijo y solo se compone de campos; a diferencia de una clase ref, no tiene propiedades.
+Una *estructura de valor* o clase de *valor* es un POD compatible con Windows Runtime ("estructura de datos antigua simple"). Tiene un tamaño fijo y solo se compone de campos; a diferencia de una clase ref, no tiene propiedades.
 
 En los ejemplos siguientes se muestra cómo declarar e inicializar structs de valor.
 
@@ -52,7 +52,7 @@ Cuando una variable de un tipo de valor se asigna a otra variable, se copia el v
 
 Una *clase de valor* es exactamente igual que un `value struct` salvo que a sus campos se les debe dar accesibilidad pública de forma explícita. Se declara mediante la palabra clave `value class` .
 
-Un struct de valor o una clase de valor puede contener como campos solo tipos numéricos fundamentales, clases enum, `Platform::String^`, o [ibox \<T > ^](../cppcx/platform-ibox-interface.md) donde T es una clase de enumeración o tipo numérico o clase de valor o struct. Un campo `IBox<T>^` puede tener un valor `nullptr`; esta es la forma que tiene C++ de implementar el concepto de *tipos de valor que aceptan valores NULL*.
+Una estructura de valor o una clase de valor puede `Platform::String^`contener como campos solo tipos numéricos fundamentales, clases de enumeración, o [Platform::IBox \<T>,](../cppcx/platform-ibox-interface.md) donde T es un tipo numérico o una clase de enumeración o una clase de valor o struct. Un campo `IBox<T>^` puede tener un valor `nullptr`; esta es la forma que tiene C++ de implementar el concepto de *tipos de valor que aceptan valores NULL*.
 
 Una clase de valor o struct de valor que contiene un tipo `Platform::String^` o `IBox<T>^` como miembro no se puede convertir en `memcpy`.
 
@@ -68,13 +68,13 @@ Si tiene un tipo de valor como un parámetro de función o de método, normalmen
 
 Para declarar un parámetro que pasa un tipo de valor por valor, use código como el siguiente:
 
-```
+```cpp
 void Method1(MyValueType obj);
 ```
 
 Para declarar un parámetro que pasa un tipo de valor por referencia, use el símbolo de referencia (&), como se muestra a continuación:
 
-```
+```cpp
 void Method2(MyValueType& obj);
 ```
 
@@ -90,7 +90,7 @@ También puede usar un símbolo de puntero (*) para pasar un tipo de valor por r
 
 ## <a name="nullable-value-types"></a>Tipos de valor que aceptan valores NULL
 
-Como se mencionó anteriormente, una clase de valor o struct de valor puede tener un campo de tipo [ibox\<T > ^](../cppcx/platform-ibox-interface.md)— por ejemplo, `IBox<int>^`. Este tipo de campo puede tener cualquier valor numérico válido para el tipo `int` , o puede tener un valor `nullptr`. Puedes pasar un campo que acepta valores NULL como argumento a un método cuyo parámetro se declara como opcional, o a cualquier otra estructura en la que no se requiera que un tipo de valor tenga un valor.
+Como se mencionó anteriormente, una clase de valor o una estructura de valor puede tener un campo de tipo [Platform::IBox\<T>,](../cppcx/platform-ibox-interface.md)por ejemplo, `IBox<int>^`. Este tipo de campo puede tener cualquier valor numérico válido para el tipo `int` , o puede tener un valor `nullptr`. Puedes pasar un campo que acepta valores NULL como argumento a un método cuyo parámetro se declara como opcional, o a cualquier otra estructura en la que no se requiera que un tipo de valor tenga un valor.
 
 En el ejemplo siguiente se muestra cómo inicializar un struct con un campo que acepta valores NULL.
 
@@ -149,7 +149,7 @@ public:
 
 ## <a name="see-also"></a>Vea también
 
-[Sistema de tipos (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Sistema de tipo (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
+[Referencia del lenguaje C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Ref (Clases y structs) (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

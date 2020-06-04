@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 37001815710b197ec77ed0d45a16ea971ad1edce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613216"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456594"
 ---
 # <a name="addcv-class"></a>add_cv (Clase)
 
-Hace que **const volatile** tipo del tipo.
+Crea un tipo **const volatile** a partir de un tipo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,12 +30,12 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del tipo modificado `add_cv<T>` tiene un `type` miembro **typedef** equivalente a *T* modificado por [add_volatile](../standard-library/add-volatile-class.md) y [ add_const](../standard-library/add-const-class.md), a menos que *T* ya tiene los calificadores cv, es una referencia o es una función.
+Una instancia del tipo modificado tiene `add_cv<T>` `type` una **definición** de tipo de miembro equivalente a *T* modificada por [add_volatile](../standard-library/add-volatile-class.md) y [add_const](../standard-library/add-const-class.md), a menos que *T* ya tenga los calificadores CV, sea una referencia o sea un funcionalidad.
 
 El tipo del asistente `add_cv_t<T>` es un acceso directo para acceder al typedef de miembro `add_cv<T>``type`.
 
@@ -92,6 +92,6 @@ invoked const volatile S.f()
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const (Clase)](../standard-library/remove-const-class.md)<br/>
-[remove_volatile (Clase)](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_const (Clase)](../standard-library/remove-const-class.md)\
+[remove_volatile (Clase)](../standard-library/remove-volatile-class.md)

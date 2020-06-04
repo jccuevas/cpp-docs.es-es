@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: f4755e04a744d94636b4b37aaf727e0d733008ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602116"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191733"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Error del compilador de recursos RC2001
 
 nueva línea en constante
 
-Una constante de cadena continuó en una segunda línea sin una barra diagonal inversa (**\\**) o de apertura y cierre entre comillas dobles (**"**).
+Una constante de cadena se continuó en una segunda línea sin una barra diagonal inversa ( **\\** ) ni el cierre y la apertura de comillas dobles ( **"** ).
 
-Para interrumpir una constante de cadena que se encuentra en dos líneas en el archivo de origen, realice una de las siguientes acciones:
+Para dividir una constante de cadena que se encuentra en dos líneas en el archivo de código fuente, realice una de las acciones siguientes:
 
-- La primera línea con el carácter de continuación de línea, una barra diagonal inversa final.
+- Finaliza la primera línea con el carácter de continuación de línea, una barra diagonal inversa.
 
-- La cadena en la primera línea con comillas dobles de cierre y abra la cadena en la línea siguiente con otra comilla.
+- Cierre la cadena de la primera línea con comillas dobles y abra la cadena en la línea siguiente con otra comilla.
 
-No es suficiente finalizar la primera línea con \n, la secuencia de escape para incrustar un carácter de nueva línea en una constante de cadena.
+No es suficiente finalizar la primera línea con \n, la secuencia de escape para insertar un carácter de nueva línea en una constante de cadena.

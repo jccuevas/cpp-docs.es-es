@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4326
 ms.assetid: d44d2c4e-9456-42d3-b35b-4ba4b2d42ec7
-ms.openlocfilehash: d14a1902db4dcf2224ce6a58db120a81ebb5620f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32bcd85b1cd1bb6c89678daae02f4f31a9318b6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601167"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162977"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>Advertencia del compilador (nivel 1) C4326
 
-> tipo de valor devuelto '*función*'debe ser'*type1*'en lugar de'*type2*'
+> el tipo de valor devuelto de '*function*' debe ser '*tipo1*' en lugar de '*tipo2*'
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Una función devuelve un tipo distinto *type1*. Por ejemplo, mediante [/Za](../../build/reference/za-ze-disable-language-extensions.md), **principal** no devolvió un **int**.
+Una función devolvió un tipo distinto de *tipo1*. Por ejemplo, con [/za](../../build/reference/za-ze-disable-language-extensions.md), **Main** no devolvió un valor **int**.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4326 y muestra cómo corregirlo:
+En el ejemplo siguiente se genera C4326 y se muestra cómo corregirlo:
 
 ```cpp
 // C4326.cpp

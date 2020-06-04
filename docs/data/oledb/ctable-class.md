@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211151"
 ---
 # <a name="ctable-class"></a>CTable (Clase)
 
-Proporciona un medio para tener acceso directamente a un conjunto de filas sencillo (uno sin parámetros).
+Proporciona un medio para tener acceso directamente a un conjunto de filas simple (uno sin parámetros).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,21 +45,21 @@ Una clase de conjunto de filas.
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[Abrir](#open)|Se abre en la tabla.|
+|[Abrir](#open)|Abre la tabla.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Consulte [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando para obtener acceso a un conjunto de filas.
+Vea [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando para tener acceso a un conjunto de filas.
 
-## <a name="open"></a> CTable:: Open
+## <a name="ctableopen"></a><a name="open"></a>CTable:: Open
 
-Se abre en la tabla.
+Abre la tabla.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -82,33 +82,33 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parámetros
 
-*Sesión*<br/>
-[in] La sesión para el que se abre en la tabla.
+*sesión*<br/>
+de Sesión para la que se abre la tabla.
 
 *wszTableName*<br/>
-[in] El nombre de la tabla para poder abrirlos, se pasa como una cadena Unicode.
+de Nombre de la tabla que se va a abrir, pasado como una cadena Unicode.
 
 *szTableName*<br/>
-[in] El nombre de la tabla para poder abrirlos, se pasa como una cadena ANSI.
+de Nombre de la tabla que se va a abrir, pasado como una cadena ANSI.
 
 *dbid*<br/>
-[in] El `DBID` de la tabla que desea abrir.
+de `DBID` de la tabla que se va a abrir.
 
 *pPropSet*<br/>
-[in] Un puntero a una matriz de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) en el *referencia del programador OLE DB* en el SDK de Windows. El valor predeterminado es null, especifica ninguna propiedad.
+de Puntero a una matriz de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) que contiene las propiedades y los valores que se van a establecer. Vea [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696(v=vs.85)) en la *Referencia del programador de OLE DB* en el Windows SDK. El valor predeterminado de NULL no especifica ninguna propiedad.
 
 *ulPropSets*<br/>
-[in] El número de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) pasan las estructuras en el *pPropSet* argumento.
+de El número de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) pasadas en el argumento *pPropSet* .
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, consulte [IOpenRowset:: OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador de OLE DB*.
+Para obtener más información, vea [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

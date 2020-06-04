@@ -1,32 +1,31 @@
 ---
 title: DWORD
-ms.date: 08/30/2018
-f1_keywords:
-- DWORD
+ms.date: 12/17/2019
 helpviewer_keywords:
 - DWORD directive
 ms.assetid: 20efd7c6-1ee6-45a1-9feb-86ce7978142a
-ms.openlocfilehash: 0c1768197927cf5a87187a77b4ed6681422d869a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 430a8ed36ab581b7e1476812875a7d9258ea8455
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467393"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440930"
 ---
 # <a name="dword"></a>DWORD
 
-Asigna e inicializa, opcionalmente, una palabra doble (4 bytes) de almacenamiento para cada `initializer`.
+Asigna y, opcionalmente, Inicializa una palabra doble (4 bytes) de almacenamiento para cada *inicializador*. **DWORD** es un sinónimo de [DD](dd.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-> [[nombre]] Inicializador DWORD [[, inicializador]]...
+> ⟦*nombre*⟧ **DWORD** *inicializador* DWORD ⟦ __,__ *inicializador* ... ⟧
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.
+También se puede usar como especificador de tipo en cualquier lugar en el que un tipo sea válido.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
-[SDWORD](../../assembler/masm/sdword.md)<br/>
-[DD](../../assembler/masm/dd.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+\ [SDWORD](sdword.md)
+\ [DD](dd.md)
+[Gramática BNF de MASM](masm-bnf-grammar.md)

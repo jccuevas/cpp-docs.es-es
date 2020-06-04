@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAddLargeStatistic
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAddLargeStatistic
 - _InterlockedAddLargeStatistic_cpp
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: 88ada0a906b777ab8ac676ddfe0a5166e906999d
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: de8c5b7dfd2462dddcb98324ebacc44c8148d85e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627477"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222088"
 ---
-# <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
+# <a name="_interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
 **Específicos de Microsoft**
 
-Realiza una suma entrelazada en el que el primer operando es un valor de 64 bits.
+Realiza una adición entrelazada en la que el primer operando es un valor de 64 bits.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 long _InterlockedAddLargeStatistic(
    __int64 volatile * Addend,
    long Value
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Sumando*<br/>
-[in, out] Un puntero al primer operando a la operación de adición. El valor al que señala se reemplaza por el resultado de la suma.
+*Addend*\
+[in, out] Puntero al primer operando de la operación de adición. El valor al que apunta se reemplaza por el resultado de la suma.
 
-*Valor*<br/>
-[in] El segundo operando; valor que se va a agregar para el primer operando.
+*Valor*\
+de Segundo operando; valor que se va a agregar al primer operando.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor del segundo operando.
+Valor del segundo operando.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ El valor del segundo operando.
 |---------------|------------------|
 |`_InterlockedAddLargeStatistic`|x86|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función intrínseca no es atómica porque se implementa como dos diferentes instrucciones bloqueadas. Una lectura atómica de 64 bits que se produce en otro subproceso durante la ejecución de este intrínseco podría dar lugar a un valor no es coherente que se va a leer.
+El `_InterlockedAddLargeStatistic` intrínseco no es atómico, ya que se implementa como dos instrucciones bloqueadas independientes. Una lectura atómica de 64 bits que se produce en otro subproceso durante la ejecución de la función intrínseca podría producir una lectura de un valor incoherente.
 
-Esta función se comporta como una barrera de lectura y escritura. Para obtener más información, consulte [_ReadWriteBarrier](../intrinsics/readwritebarrier.md).
+`_InterlockedAddLargeStatistic`se comporta como una barrera de lectura y escritura. Para obtener más información, vea [_ReadWriteBarrier](../intrinsics/readwritebarrier.md).
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Conflictos con el compilador de x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

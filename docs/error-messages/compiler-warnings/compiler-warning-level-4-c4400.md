@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4400
 ms.assetid: f135fe98-4f92-4e07-9d71-2621b36ee755
-ms.openlocfilehash: 61a6d3090355c9bda8aa11c041b302e4ec77ec8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f04bd30c4d390cecfa7e4e636f1a3771f26cfff
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557292"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990848"
 ---
 # <a name="compiler-warning-level-4-c4400"></a>Advertencia del compilador (nivel 4) C4400
 
-'type': no se admiten los calificadores const/volatile en este tipo
+' type ': no se admiten calificadores const/volatile en este tipo
 
-El [const](../../cpp/const-cpp.md)y [volátil](../../cpp/volatile-cpp.md)calificadores no funcionará con las variables de tipos common language runtime.
+Los calificadores [const](../../cpp/const-cpp.md)y [volatile](../../cpp/volatile-cpp.md)no funcionarán con variables de tipos de Common Language Runtime.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4400.
+En el ejemplo siguiente se genera C4400.
 
-```
+```cpp
 // C4400.cpp
 // compile with: /clr /W4
 // C4401 expected

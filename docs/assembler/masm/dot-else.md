@@ -1,28 +1,29 @@
 ---
 title: .ELSE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .ELSE
 helpviewer_keywords:
 - .ELSE directive
 ms.assetid: ebfec69d-7107-47d1-9cb3-87c99cc8dff7
-ms.openlocfilehash: 0ecc23a3b9a8c7140c7bcd2daedf1cd73afbc430
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08d3d3d6dbf423d25081cfd9c866bba717c50d29
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596929"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313839"
 ---
-# <a name="else"></a>.ELSE
+# <a name="else-32-bit-masm"></a>. ELSE (MASM de 32 bits)
 
 ## <a name="syntax"></a>Sintaxis
 
-> .ELSE
+> **.ELSE**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Consulte [. IF](../../assembler/masm/dot-if.md).
+(solo para MASM de 32 bits). Vea [. Si](dot-if.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

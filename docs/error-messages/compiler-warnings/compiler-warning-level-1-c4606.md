@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-ms.openlocfilehash: e471ca3e478d1166b150e49bf25efa4b9d5803cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b38e9670157fd15dc7c4b6a96ced7ad40c43e34
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569278"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186002"
 ---
 # <a name="compiler-warning-level-1-c4606"></a>Advertencia del compilador (nivel 1) C4606
 
-\#advertencia pragma: 'advertencia_número'; Advertencias de análisis de código no están asociadas con niveles de advertencia
+\#pragma warning: ' warning_number ' omitido; Las advertencias de análisis de código no están asociadas a los niveles de advertencia
 
-Para las advertencias de análisis de código, solo `error`, `once`, y `default` son compatibles con el [advertencia](../../preprocessor/warning.md) pragma.
+En el caso de las advertencias de análisis de código, solo se admiten `error`, `once`y `default` con la pragma [Warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4606.
+En el ejemplo siguiente se genera C4606.
 
-```
+```cpp
 // C4606.cpp
 // compile with: /c /W1
 #pragma warning(1: 6001)   // C4606

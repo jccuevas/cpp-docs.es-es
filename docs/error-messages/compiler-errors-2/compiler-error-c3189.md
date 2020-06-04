@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3189
 ms.assetid: b254de79-931e-4a59-a9f4-1c690d90ca5e
-ms.openlocfilehash: fe9dc38748fd667734c5d80f1284348184fed450
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b53056cf8a7b4b9b49720ef17e8f9318390059a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456984"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761626"
 ---
 # <a name="compiler-error-c3189"></a>Error del compilador C3189
 
-' typeid\<escriba declarador abstracto >': esta sintaxis ya no se admite, utilice:: typeid en su lugar
+' typeid\<Type Abstract declarator > ': esta sintaxis ya no se admite, use:: typeid en su lugar
 
-Una forma obsoleta de [typeid](../../windows/typeid-cpp-component-extensions.md) era usar, use el nuevo formulario.
+Se usó un formulario obsoleto de [typeid](../../extensions/typeid-cpp-component-extensions.md) , use el nuevo formulario.
 
-El ejemplo siguiente genera C3189:
+En el ejemplo siguiente se genera C3189:
 
-```
+```cpp
 // C3189.cpp
 // compile with: /clr
 int main() {

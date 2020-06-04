@@ -1,48 +1,47 @@
 ---
 title: /NXCOMPAT (compatible con la prevención de ejecución de datos)
-ms.date: 12/29/2017
+description: Describe la opción del vinculador Microsoft C/C++ (MSVC)/NXCompat, que marca un ejecutable como compatible con la prevención de ejecución de datos (DEP).
+ms.date: 12/17/2019
 f1_keywords:
 - /NXCOMPAT
 helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 815719468e7dcf9325d19efe879b8f4ace040094
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3a0906a49e3524fff3e1ef1643d1eceee28f169
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490498"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298992"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatible con la prevención de ejecución de datos)
 
-Indica que un archivo ejecutable es compatible con la característica Prevención de ejecución de datos de Windows.
+Indica que un ejecutable es compatible con la característica prevención de ejecución de datos de Windows.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ NXCOMPAT**[**: N**]
+> **/NXCOMPAT**[ **:NO**]
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-De forma predeterminada, **/NXCOMPAT** está activado.
+De forma predeterminada, **/NXCompat** está activado.
 
-**: No** puede usarse para especificar explícitamente un archivo ejecutable como no compatible con la prevención de ejecución de datos.
+**/NXCompat: no** se puede usar para especificar explícitamente un ejecutable como incompatible con la prevención de ejecución de datos.
 
 Para obtener más información sobre la Prevención de ejecución de datos, vea estos artículos:
 
-- [Una descripción detallada de la característica de prevención de ejecución de datos (DEP)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
-
-- [Prevención de ejecución de datos](/windows/desktop/Memory/data-execution-prevention)
+- [Prevención de ejecución de datos](/windows/win32/Memory/data-execution-prevention)
 
 - [Prevención de ejecución de datos (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Elija la **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
+1. Elija las **propiedades de configuración** > **enlazador** > página de propiedades **línea de comandos** .
 
-1. Especifique la opción en el **opciones adicionales** cuadro. Elija **Aceptar** o **aplicar** para aplicar el cambio.
+1. Escriba la opción en el cuadro **opciones adicionales** . Elija **Aceptar** o **aplicar** para aplicar el cambio.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
@@ -50,5 +49,5 @@ Para obtener más información sobre la Prevención de ejecución de datos, vea 
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador de MSVC](linking.md)\
+[Opciones del enlazador MSVC](linker-options.md)

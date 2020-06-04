@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4684
 ms.assetid: e95f1a83-2784-4b05-ae94-12148e056e26
-ms.openlocfilehash: 8ba3d75ecb370ac86c9a6ab47f05dd49fc12ba23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 017d2ad9ac327e99bdd9afb0914d17946103771c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479123"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175459"
 ---
 # <a name="compiler-warning-level-1-c4684"></a>Advertencia del compilador (nivel 1) C4684
 
-'attribute': advertencia!! atributo puede causar una generación de código no válido: usar con precaución
+' atributo ': ADVERTENCIA!! el atributo puede producir una generación de código no válida: use con precaución
 
-Utiliza un atributo que no debe se usan con frecuencia.
+Usó un atributo que no debe usarse normalmente.
 
-El ejemplo siguiente genera C4684:
+En el ejemplo siguiente se genera C4684:
 
-```
+```cpp
 // C4684.cpp
 // compile with: /W1 /LD
 [module(name="xx")]; // C4684 expected

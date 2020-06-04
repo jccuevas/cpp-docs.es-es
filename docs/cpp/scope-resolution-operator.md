@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452278"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178891"
 ---
 # <a name="scope-resolution-operator-"></a>Operador de resolución de ámbito: ::
 
-El operador de resolución de ámbito **::** se usa para identificar y eliminar la ambigüedad de los identificadores usados en distintos ámbitos. Para obtener más información acerca del ámbito, consulte [ámbito](../cpp/scope-visual-cpp.md).
+El operador de resolución de ámbito **::** se usa para identificar y eliminar la ambigüedad de los identificadores utilizados en ámbitos diferentes. Para obtener más información sobre el ámbito, vea [ámbito](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,7 +30,7 @@ enum class :: identifier
 enum struct :: identifier
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El `identifier` puede ser una variable, una función o un valor de enumeración.
 
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>Con enumeraciones de ámbito
 
-El operador de resolución de ámbito también se usa con los valores de una enumeración con ámbito [declaraciones de enumeración](../cpp/enumerations-cpp.md), como en el ejemplo siguiente:
+El operador de resolución de ámbito también se usa con los valores de las declaraciones de [enumeración](../cpp/enumerations-cpp.md)de ámbito, como en el ejemplo siguiente:
 
 ```cpp
 enum class EnumA{
@@ -164,7 +164,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Espacios de nombres](../cpp/namespaces-cpp.md)

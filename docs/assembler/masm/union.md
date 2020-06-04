@@ -1,28 +1,29 @@
 ---
 title: UNION
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - union
 helpviewer_keywords:
 - UNION directive
 ms.assetid: 52504abf-7dc1-47c5-944c-b886803a0c6a
-ms.openlocfilehash: 37d486c6a9b8ba66a892e3cf9b3f68532509782d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0455e6cf05d5a4b3a9c3b3294fae0407d6341298
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454605"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319104"
 ---
 # <a name="union"></a>UNION
 
-Declara una unión de uno o más tipos de datos. El *declaraciones de campo* deben ser las definiciones de datos válido. Omitir la [finaliza](../../assembler/masm/ends-masm.md) *nombre* etiqueta anidada **unión** definiciones.
+Declara una Unión de uno o más tipos de datos. Las *declaraciones de campo* deben ser definiciones de datos válidas. Omita la etiqueta de *nombre* de [finalización](ends-masm.md) en las definiciones de **Unión** anidadas.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *nombre* UNION [[*alineación*]] [[único y]]<br/>
-> *declaraciones de campo*<br/>
-> [[*nombre*]] finaliza
+> *nombre* **Union** ⟦*alignment*⟧ ⟦ __,__ **ununique**⟧ \
+> *declaraciones de campo*\
+> ⟦*nombre*⟧ **finaliza**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

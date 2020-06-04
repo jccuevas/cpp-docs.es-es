@@ -6,16 +6,16 @@ helpviewer_keywords:
 - BLOB (binary large object), retrieving
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-ms.openlocfilehash: 30551af0e74759d21cecae54714ca6eca1a37768
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 23bc20355e1e2b17ac20cf975df2ff58d6553ef9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404551"
 ---
 # <a name="retrieving-a-blob"></a>Recuperar un objeto BLOB
 
-Puede recuperar un objeto grande binario (BLOB) de varias maneras. Puede usar `DBTYPE_BYTES` para recuperar el BLOB como una secuencia de bytes o usar una interfaz como `ISequentialStream`. Para obtener más información, consulte [BLOB y objetos OLE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)) en el **referencia del programador de OLE DB**.
+Puede recuperar un objeto grande binario (BLOB) de varias maneras. Puede usar `DBTYPE_BYTES` para recuperar el BLOB como una secuencia de bytes o usar una interfaz como `ISequentialStream`. Para obtener más información, consulte [BLOB y objetos OLE](/previous-versions/windows/desktop/ms711511(v=vs.85)) en el **referencia del programador de OLE DB**.
 
 El código siguiente muestra cómo recuperar un BLOB mediante `ISequentialStream`. La macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) le permite especificar la interfaz y los marcadores utilizados para la interfaz. Después de abrir la tabla, el código llama a `Read` repetidamente en `ISequentialStream` para leer los bytes del BLOB. El código llama a `Release` para desechar el puntero de interfaz antes de llamar a `MoveNext` para ir al siguiente registro.
 

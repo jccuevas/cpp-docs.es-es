@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2074
 ms.assetid: 1abe5934-61db-4374-8c48-1fa7281317f4
-ms.openlocfilehash: 48b02fde345cc79b091fb5c61b3da41a445698c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bf76287295887c117011753dfde92392e84ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595720"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207769"
 ---
 # <a name="compiler-error-c2074"></a>Error del compilador C2074
 

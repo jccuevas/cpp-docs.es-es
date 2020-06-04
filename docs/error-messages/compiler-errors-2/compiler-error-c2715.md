@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2715
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
-ms.openlocfilehash: 80dd28136b220585a62ed288795d565c07b360f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24f972452f9c823d2082e1c29758b39f088021d0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600598"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760535"
 ---
 # <a name="compiler-error-c2715"></a>Error del compilador C2715
 
-'type': no se puede producir o detectar este tipo
+' type ': no se puede producir o detectar este tipo
 
-Tipos de valor no son argumentos válidos al usar el control de excepciones en código administrado (vea [Exception Handling](../../windows/exception-handling-cpp-component-extensions.md) para obtener más información).
+Los tipos de valor no son argumentos válidos cuando se usa el control de excepciones en código administrado (consulte [control de excepciones](../../extensions/exception-handling-cpp-component-extensions.md) para obtener más información).
 
-```
+```cpp
 // C2715a.cpp
 // compile with: /clr
 using namespace System;

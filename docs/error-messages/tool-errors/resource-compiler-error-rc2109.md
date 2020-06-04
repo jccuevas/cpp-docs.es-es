@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2109
 ms.assetid: b800aa67-33c0-42f5-81a2-7a64a3b6b824
-ms.openlocfilehash: adfbc32adc9e55f4cc0e1a49d3b5505efead5d25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49edd32da192816ba22cb030958f87cd049ec59c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191566"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Error del compilador de recursos RC2109
 
-se esperaba una constante numérica del cuadro de diálogo
+se esperaba una constante de cuadro de diálogo numérica
 
-Un **diálogo** instrucción requiere valores enteros para el *x, y, ancho*, y *alto* campos. Asegúrese de que estos valores se incluyen después de la **diálogo** palabra clave y que no son negativos.
+Una instrucción **Dialog** requiere valores enteros para los campos *x, y, ancho*y *alto* . Asegúrese de que estos valores se incluyen después de la palabra clave **Dialog** y que no son negativos.

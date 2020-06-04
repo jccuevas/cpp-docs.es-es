@@ -1,25 +1,25 @@
 ---
 title: Advertencia A4004 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A4004
 helpviewer_keywords:
 - A4004
 ms.assetid: f11b13c9-fa8d-49f2-b816-a6b7871c7261
-ms.openlocfilehash: c413847f05afd5baecf5a891903be502fa7ca840
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da5e1045a420fb8e9da910b63115a92bf7cf94f3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592696"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316777"
 ---
 # <a name="ml-warning-a4004"></a>Advertencia A4004 de ML
 
-**no se puede SUPONER CS**
+**no se puede asumir CS**
 
-Se intentó suponen un valor para el registro de CS. CS siempre se establece en el segmento actual o el grupo.
+Se intentó asumir un valor para el registro CS. CS siempre se establece en el segmento o el grupo actual.
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

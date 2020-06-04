@@ -8,31 +8,30 @@ helpviewer_keywords:
 - columns [MFC], adding to CListCtrl
 - CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
-ms.openlocfilehash: e40a923c755f8b32ca3a6ed1884eb7f7a1d6abfb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34d7b62985748b9b9d741c083ec9b34fce06b309
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370870"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>Agregar columnas al control (Vista de informe)
 
 > [!NOTE]
->  El siguiente procedimiento se aplica ya sea un [CListView](../mfc/reference/clistview-class.md) o [CListCtrl](../mfc/reference/clistctrl-class.md) objeto.
+> El siguiente procedimiento se aplica a un [CListView](../mfc/reference/clistview-class.md) o [CListCtrl](../mfc/reference/clistctrl-class.md) objeto.
 
-Cuando un control de lista está en vista de informe, se muestran las columnas, que proporciona un método para organizar los distintos subelementos de cada elemento del control de lista. Esta organización se implementa con una correspondencia uno a uno entre una columna en el control de lista y el subelemento del elemento de control de lista asociado. Para obtener más información sobre los subelementos, consulte [agregar elementos al Control](../mfc/adding-items-to-the-control.md). Se proporciona un ejemplo de un control de lista en vista de informe en la vista de detalles en Windows 95 y Windows 98 Explorer. La primera columna enumera etiquetas, iconos de archivo y carpeta. Otras columnas de lista tamaño de archivo, tipo de archivo, fecha de última modificado y así sucesivamente.
+Cuando un control de lista está en la vista de informe, se muestran columnas, lo que proporciona un método para organizar los distintos subelementos de cada elemento de control de lista. Esta organización se implementa con una correspondencia uno a uno entre una columna del control de lista y el subelemento asociado del elemento de control de lista. Para obtener más información sobre los subelementos, vea [Agregar elementos al control](../mfc/adding-items-to-the-control.md). Un ejemplo de un control de lista en la vista de informe se proporciona mediante la vista Detalles en el Explorador de Windows 95 y Windows 98. La primera columna enumera la carpeta, los iconos de archivo y las etiquetas. Otras columnas enumeran el tamaño del archivo, el tipo de archivo, la fecha de última modificación, etc.
 
-Aunque se pueden agregar columnas a un control de lista en cualquier momento, las columnas están visibles solo cuando el control tiene el `LVS_REPORT` activado el bit de estilo.
+Aunque las columnas se pueden agregar a un control de lista en `LVS_REPORT` cualquier momento, las columnas solo son visibles cuando el control tiene activado el bit de estilo.
 
-Cada columna tiene un elemento de encabezado asociado (consulte [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) objeto que la columna de etiqueta y permite a los usuarios cambiar el tamaño de la columna.
+Cada columna tiene un elemento de encabezado asociado (consulte [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) objeto que etiqueta la columna y permite a los usuarios cambiar el tamaño de la columna.
 
-Si el control de lista admite una vista de informe, deberá agregar una columna para cada subelemento posibles en un elemento de control de lista. Agregar una columna al preparar una [estructura LV_COLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) estructura y, a continuación, realizar una llamada a [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). Después de agregar las columnas necesarias (a veces denominadas elementos de encabezado), puede reordenar con las funciones miembro y estilos que pertenecen al control de encabezado incrustado. Para obtener más información, consulte [ordenar elementos en el Control de encabezado](../mfc/ordering-items-in-the-header-control.md).
+Si el control de lista admite una vista de informe, debe agregar una columna para cada subelemento posible en un elemento de control de lista. Agregue una columna preparando una estructura [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) y, a continuación, realice una llamada a [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). Después de agregar las columnas necesarias (a veces denominadas elementos de encabezado), puede reordenarlas mediante funciones miembro y estilos que pertenecen al control de encabezado incrustado. Para obtener más información, consulte Pedido de [elementos en el control de encabezado](../mfc/ordering-items-in-the-header-control.md).
 
 > [!NOTE]
->  Si el control de lista se crea con el **LVS_NOCOLUMNHEADER** estilos, cualquier intento para insertar columnas se pasará por alto.
+> Si el control de lista se crea con el **estilo LVS_NOCOLUMNHEADER,** se omitirá cualquier intento de insertar columnas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

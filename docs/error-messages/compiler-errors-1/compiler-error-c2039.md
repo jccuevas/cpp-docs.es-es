@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-ms.openlocfilehash: ff795a551c091deb73c5fae1e3b67a61d9966ff0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c64de676c624369fb5a8bc07b9b5de4833fe7f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482815"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757688"
 ---
 # <a name="compiler-error-c2039"></a>Error del compilador C2039
 
@@ -21,9 +21,9 @@ El código hace referencia o llama incorrectamente a un miembro de una estructur
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2039.
+En el ejemplo siguiente se genera C2039.
 
-```
+```cpp
 // C2039.cpp
 struct S {
    int mem0;
@@ -37,9 +37,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2039.
+En el ejemplo siguiente se genera C2039.
 
-```
+```cpp
 // C2039_b.cpp
 // compile with: /clr
 using namespace System;
@@ -52,9 +52,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2039.
+En el ejemplo siguiente se genera C2039.
 
-```
+```cpp
 // C2039_c.cpp
 // compile with: /clr /c
 ref struct S {
@@ -87,9 +87,9 @@ public class B {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2039.
+En el ejemplo siguiente se genera C2039.
 
-```
+```cpp
 // C2039_e.cpp
 // compile with: /clr
 using namespace System;
@@ -106,9 +106,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-C2039 también puede producirse cuando se utilizan genéricos. El ejemplo siguiente genera C2039.
+C2039 también puede producirse cuando se utilizan genéricos. En el ejemplo siguiente se genera C2039.
 
-```
+```cpp
 // C2039_f.cpp
 // compile with: /clr
 interface class I {};
@@ -131,11 +131,11 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-C2039 se puede producir al intentar liberar los recursos administrados o no administrados. Para obtener más información, consulte [destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+C2039 se puede producir al intentar liberar los recursos administrados o no administrados. Para obtener más información, vea [destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-El ejemplo siguiente genera C2039.
+En el ejemplo siguiente se genera C2039.
 
-```
+```cpp
 // C2039_g.cpp
 // compile with: /clr
 using namespace System;

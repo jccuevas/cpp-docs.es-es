@@ -1,11 +1,14 @@
 ---
 title: rint, rintf, rintl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+- _o_rint
+- _o_rintf
+- _o_rintl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +20,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609487"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917718"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -58,24 +65,26 @@ Valor de punto flotante que se va a redondear.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **rint** funciones devuelven un valor de punto flotante que representa el entero más cercano al *x*. Los valores a medio camino se redondean según la configuración actual del modo de redondeo de punto flotante, el mismo que el **nearbyint** funciones. A diferencia de la **nearbyint** funciones, la **rint** funciones pueden generar el **FE_INEXACT** excepción de punto flotante si el resultado es diferente en el valor del argumento. No se devuelve ningún error.
+Las funciones **rimir** devuelven un valor de punto flotante que representa el entero más cercano a *x*. Los valores de la mitad se redondean de acuerdo con la configuración actual del modo de redondeo de punto flotante, igual que las funciones de **nearbyint (** . A diferencia de las funciones **nearbyint (** , las funciones **rimir** pueden generar la **FE_INEXACT** excepción de punto flotante si el resultado difiere en el valor del argumento. No se devuelve ningún error.
 
-|Entrada|Excepción SEH|**_matherr** excepción|
+|Entrada|Excepción SEH|**_matherr** Excepcional|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|ninguna|ninguna|
-|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguna|
+|± ∞, QNAN, IND|ninguno|ninguno|
+|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguno|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **rint** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **rint** siempre toma y devuelve un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **rimir** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **rimir** siempre toma y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rimir**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -113,7 +122,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'TN020: Convenciones de nomenclatura y numeración de identificadores'
+title: 'TN020: Id. de nomenclatura y numeración convenciones'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306069"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Convenciones de nomenclatura y numeración de identificadores
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Id. de nomenclatura y numeración convenciones
 
 En esta nota se describen las convenciones de nomenclatura y numeración de identificadores que MFC 2.0 utiliza para los recursos, los comandos, las cadenas, los controles y las ventanas secundarias.
 
@@ -107,4 +107,3 @@ Los motivos de estos límites de intervalo son las siguientes:
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

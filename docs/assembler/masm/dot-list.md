@@ -1,30 +1,31 @@
 ---
 title: .LIST
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LIST
 helpviewer_keywords:
 - .LIST directive
 ms.assetid: f7e134de-6039-4343-b921-f70aea5e1c96
-ms.openlocfilehash: c4a43ad0edec6bf85b55e09e799d64cc8d4308fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cf695a1ecf0c2e43322c9d10d832a261185695
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537753"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317700"
 ---
 # <a name="list"></a>.LIST
 
-Se inicia el listado de instrucciones.
+Inicia la lista de instrucciones.
 
 ## <a name="syntax"></a>Sintaxis
 
-> .LIST
+> **.LIST**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Este es el valor predeterminado.
+Esta es la opción predeterminada.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

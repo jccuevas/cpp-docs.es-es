@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4811
 ms.assetid: fbd79351-3dc1-45cf-b5b3-411f48c1590f
-ms.openlocfilehash: de2495b87ed8fdb1df3ce8e08401b163f84b72c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45e349d61d9d582ce47d7b4c907d922781e8c665
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615831"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174926"
 ---
 # <a name="compiler-warning-level-1-c4811"></a>Advertencia del compilador (nivel 1) C4811
 

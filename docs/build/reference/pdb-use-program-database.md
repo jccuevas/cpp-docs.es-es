@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, creating
 - .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-ms.openlocfilehash: c7d3b571a429d780c0c5eea0ad498499c615245f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddcf83cafd5f499158f3116f04e40397b7f8d0a8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320089"
 ---
 # <a name="pdb-use-program-database"></a>/PDB (Utilizar la base de datos de programa)
 
@@ -31,17 +31,17 @@ Un nombre especificado por el usuario para la base de datos de programa (PDB) qu
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, cuando [/DEBUG](../../build/reference/debug-generate-debug-info.md) se especifica, el vinculador crea una base de datos de programa (PDB) que contiene información de depuración. El nombre de archivo predeterminado para el archivo PDB tiene el nombre base del programa y el archivo .pdb de la extensión.
+De forma predeterminada, cuando [/DEBUG](debug-generate-debug-info.md) se especifica, el vinculador crea una base de datos de programa (PDB) que contiene información de depuración. El nombre de archivo predeterminado para el archivo PDB tiene el nombre base del programa y el archivo .pdb de la extensión.
 
 / PDB:*filename* para especificar el nombre del archivo PDB. Si no se especifica/debug, se omite la opción/PDB.
 
 Un archivo PDB puede ser de hasta 2GB.
 
-Para obtener más información, consulte [archivos .pdb como entrada del vinculador](../../build/reference/dot-pdb-files-as-linker-input.md).
+Para obtener más información, consulte [archivos .pdb como entrada del vinculador](dot-pdb-files-as-linker-input.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -55,5 +55,5 @@ Para obtener más información, consulte [archivos .pdb como entrada del vincula
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

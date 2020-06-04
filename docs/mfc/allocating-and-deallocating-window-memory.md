@@ -9,12 +9,12 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: a9bbf92a586a910dfa4e81774ce4817c9cf458e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394707"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Asignar y desasignar memoria de ventana
 
@@ -31,4 +31,3 @@ No use C++ **eliminar** operador para destruir una ventana de marco o vista. En 
 ## <a name="see-also"></a>Vea también
 
 [Destrucción de objetos de ventana](../mfc/destroying-window-objects.md)
-

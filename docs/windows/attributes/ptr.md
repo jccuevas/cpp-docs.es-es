@@ -1,17 +1,17 @@
 ---
-title: PTR (atributo de COM de C++)
+title: PTR (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 7ed08403f32e5e4609266975c5c479a7b758fe89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166424"
 ---
 # <a name="ptr"></a>ptr
 
@@ -23,13 +23,13 @@ Designa un puntero como un puntero completo.
 [ptr]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **ptr** atributo de C++ tiene la misma funcionalidad que el [ptr](/windows/desktop/Midl/ptr) atributo MIDL.
+El atributo **ptr** C++ tiene la misma funcionalidad que el atributo MIDL de [ptr](/windows/win32/Midl/ptr) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [defaultvalue](defaultvalue.md) para un ejemplo de uso de **ptr**.
+Vea el ejemplo de [DefaultValue](defaultvalue.md) para obtener un ejemplo de uso de **ptr**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,14 +37,14 @@ Vea el ejemplo de [defaultvalue](defaultvalue.md) para un ejemplo de uso de **pt
 
 |||
 |-|-|
-|**Se aplica a**|Parámetro de interfaz, el método de interfaz, **(typedef)**|
+|**Se aplica a**|Parámetro de interfaz, método de interfaz, **typedef**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)<br/>

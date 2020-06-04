@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-ms.openlocfilehash: c6400c8060664713fdd004a5aa9536e0617bc0c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93e8d9b0b445d1120ec15911eb763ae1d7d2d359
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588089"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188667"
 ---
 # <a name="final-specifier"></a>final (especificador)
 
-Puede usar el **final** palabra clave para designar funciones virtuales que no puede invalidarse en una clase derivada. También puede utilizarla para designar clases que no se pueden heredar.
+Puede usar la palabra clave **final** para designar funciones virtuales que no se pueden invalidar en una clase derivada. También puede utilizarla para designar clases que no se pueden heredar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,15 +24,15 @@ function-declaration final;
 class class-name final base-classes
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**final** es contextual y tiene un significado especial solo cuando se usa después de una declaración de función o nombre de clase; en caso contrario, no es una palabra clave reservada.
+**final** es contextual y tiene un significado especial solo cuando se utiliza después de una declaración de función o un nombre de clase. de lo contrario, no es una palabra clave reservada.
 
-Cuando **final** se utiliza en declaraciones de clase, `base-classes` es una parte opcional de la declaración.
+Cuando se usa **final** en las declaraciones de clase, `base-classes` es una parte opcional de la declaración.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se usa el **final** palabra clave para especificar que no se puede invalidar una función virtual.
+En el ejemplo siguiente se usa la palabra clave **final** para especificar que una función virtual no se puede invalidar.
 
 ```cpp
 class BaseClass
@@ -49,7 +49,7 @@ class DerivedClass: public BaseClass
 
 Para obtener información sobre cómo especificar que se pueden invalidar las funciones miembro, vea [especificador de invalidación](../cpp/override-specifier.md).
 
-El ejemplo siguiente se usa el **final** palabra clave para especificar que una clase no puede heredarse.
+En el ejemplo siguiente se usa la palabra clave **final** para especificar que una clase no se puede heredar.
 
 ```cpp
 class BaseClass final
@@ -62,7 +62,7 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
 [override (Especificador)](../cpp/override-specifier.md)

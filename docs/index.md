@@ -2,20 +2,21 @@
 layout: HubPage
 title: Documentación de Visual C++
 description: Obtenga información sobre cómo usar C++ para desarrollar aplicaciones, servicios y herramientas para sus plataformas y dispositivos.
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: e8fe8dec14560579e255446c4de3ee5a17e302f6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.topic: hub-page
+ms.openlocfilehash: f8d9b683e8030cbbafa9b3da57b4f7fd738ed3ac
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703212"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446106"
 ---
+<!-- markdownlint-disable MD033 -->
+
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/visualstudio/install/install-visual-studio">
+                <a href="/cpp/build/vscpp-step-0-installation">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -33,7 +34,7 @@ ms.locfileid: "55703212"
                 </a>
             </li>
             <li>
-                <a href="/visualstudio/ide/getting-started-with-cpp-in-visual-studio">
+                <a href="/cpp/get-started/tutorial-console-cpp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -51,7 +52,7 @@ ms.locfileid: "55703212"
                 </a>
             </li>
             <li>
-                <a href="/cpp/what-s-new-for-visual-cpp-in-visual-studio">
+                <a href="/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -61,7 +62,7 @@ ms.locfileid: "55703212"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Novedades para C++ en Visual Studio 2017</h3>
+                                    <h3>Novedades de C++ en Visual Studio</h3>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +81,7 @@ ms.locfileid: "55703212"
                         <a href="#workloads1">Cargas de trabajo</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
-                                <a href="/cpp/windows/universal-windows-apps-cpp">
+                                <a href="/cpp/cppcx/universal-windows-apps-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -223,7 +224,7 @@ ms.locfileid: "55703212"
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/ide/building-cpp-projects-in-visual-studio">
+                                <a href="/cpp/build/projects-and-build-systems-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -280,7 +281,7 @@ ms.locfileid: "55703212"
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/ide/deploying-native-desktop-applications-visual-cpp">
+                                <a href="/cpp/windows/deploying-native-desktop-applications-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -366,7 +367,7 @@ ms.locfileid: "55703212"
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/windows/component-extensions-for-runtime-platforms">
+                                <a href="/cpp/extensions/component-extensions-for-runtime-platforms">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -423,7 +424,7 @@ ms.locfileid: "55703212"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Microsoft/cpprestsdk">
+                                <a href="/cpp/cloud/cloud-and-web-programming-in-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -433,8 +434,8 @@ ms.locfileid: "55703212"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Bibliotecas de redes</h3>
-                                                    <p>Biblioteca de código abierto de C++ REST SDK (nombre código Casablanca) para la programación web.</p>
+                                                    <h3>Bibliotecas de redes y de la nube</h3>
+                                                    <p>Use los SDK de Microsoft Azure C/C++ para IoT, el almacenamiento y mucho más, y la biblioteca de código abierto de C++ REST SDK para la programación web.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -442,7 +443,7 @@ ms.locfileid: "55703212"
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/windows/windows-runtime-cpp-template-library-wrl">
+                                <a href="/cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

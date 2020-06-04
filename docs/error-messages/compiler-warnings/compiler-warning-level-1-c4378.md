@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be3cdaac79c60143648985c1782df76422a1fc98
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162834"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Advertencia del compilador (nivel 1) C4378
 
-Debe obtener punteros a función para ejecutar a los inicializadores; ModuleHandle:: ResolveMethodHandle
+Debe obtener punteros de función para ejecutar inicializadores. considere System:: ModuleHandle:: ResolveMethodHandle
 
-En **/CLR**, símbolos del inicializador contienen funciones de los tokens, no los punteros de funciones.  Debe convertir los tokens a punteros utilizando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+En **/CLR**, los símbolos de inicializador contienen tokens de función, no punteros de funciones.  Debe convertir los tokens en punteros mediante <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4378.
+En el ejemplo siguiente se genera C4378.
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -65,9 +65,9 @@ int main () {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo resolver C4378.
+En el ejemplo siguiente se muestra cómo resolver C4378.
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

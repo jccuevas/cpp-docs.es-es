@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-ms.openlocfilehash: eaa1c178a8d93315d5477efa1213ed0698cd460c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411479"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Usar las clases para escribir aplicaciones para Windows
 
@@ -38,7 +38,7 @@ Esta serie de artículos presenta una amplia visión general del marco de la apl
 
 Otras partes de framework se incluyen:
 
-- [Window (objetos): información general](../mfc/window-objects.md)
+- [Objetos de ventana: información general](../mfc/window-objects.md)
 
 - [Controlar y asignar mensajes](../mfc/message-handling-and-mapping.md)
 
@@ -73,4 +73,3 @@ Para obtener una guía general para la documentación de MFC, vea [temas general
 ## <a name="see-also"></a>Vea también
 
 [Temas generales de MFC](../mfc/general-mfc-topics.md)
-

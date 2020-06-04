@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2677
 ms.assetid: 76bc0b65-f52a-45a6-b6d6-0555f89da9a8
-ms.openlocfilehash: 1be3701c2befbacc11d6a3dea4b99547375286d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c318d3c7f78ad2844b7a94a372634886a1ad56d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528887"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760353"
 ---
 # <a name="compiler-error-c2677"></a>Error del compilador C2677
 
-'operator' binario: encontró un ningún operador global que adopte el tipo 'type' (o no hay ninguna conversión aceptable)
+' Operator ' binario: no se encontró ningún operador global que tenga el tipo ' type ' (o bien no hay una conversión aceptable)
 
 Para usar este operador, debe sobrecargarlo para el tipo especificado o definir una conversión a un tipo para el que esté definido el operador.
 
-El ejemplo siguiente genera C2677:
+En el ejemplo siguiente se genera C2677:
 
-```
+```cpp
 // C2677.cpp
 class C {
 public:

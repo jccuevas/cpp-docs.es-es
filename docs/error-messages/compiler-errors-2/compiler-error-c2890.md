@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2890
 ms.assetid: 49147375-182c-42b1-b170-f475cd436d47
-ms.openlocfilehash: 43c05fba15ee78c8e1454c115246f557f98f897e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d51748e80dad0370b5f735180455dd6c8d113c7a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661479"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760907"
 ---
 # <a name="compiler-error-c2890"></a>Error del compilador C2890
 
-'class': una clase ref solo puede tener una clase base sin interfaz
+' Class ': una clase Ref solo puede tener una clase base que no sea de interfaz
 
-Una clase de referencia sólo puede tener una clase base.
+Una clase de referencia solo puede tener una clase base.
 
-El ejemplo siguiente genera C2890:
+En el ejemplo siguiente se genera C2890:
 
-```
+```cpp
 // C2890.cpp
 // compile with: /clr /c
 ref class A {};

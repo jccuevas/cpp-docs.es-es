@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4553
 ms.assetid: d8aacbe0-3cb5-4367-a6e5-fd7e28f0ff9d
-ms.openlocfilehash: 7a299d4a99818699e9be31e7d15d9e589de05c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43ee844f3d6a3d55fae1ac65043e543998571894
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470348"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186106"
 ---
 # <a name="compiler-warning-level-1-c4553"></a>Advertencia del compilador (nivel 1) C4553
 
-'operador': operador no tiene ningún efecto; ¿ha pensado en 'operador'?
+' Operator ': el operador no tiene ningún efecto; ¿deseaba ' operador '?
 
-Si una instrucción de expresión tiene un operador con ningún efecto secundario como la parte superior de la expresión, probablemente es un error.
+Si una instrucción de expresión tiene un operador sin ningún efecto secundario como parte superior de la expresión, es probable que se trate de un error.
 
-El ejemplo siguiente genera C4553:
+En el ejemplo siguiente se genera C4553:
 
-```
+```cpp
 // C4553.cpp
 // compile with: /W1
 int func()

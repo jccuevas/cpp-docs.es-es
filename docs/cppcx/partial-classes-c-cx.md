@@ -2,12 +2,12 @@
 title: Clases parciales (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: feee9033662b118e7c6b25a9b5cae50020c2ae79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605457"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740468"
 ---
 # <a name="partial-classes-ccx"></a>Clases parciales (C++/CX)
 
@@ -98,5 +98,5 @@ En el ejemplo siguiente se define la clase `Address` en dos archivos de código.
 ## <a name="see-also"></a>Vea también
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referencia del lenguaje C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)

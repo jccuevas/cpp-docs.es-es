@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: 8f92692fb19b0eeff2fe9af179fc8fe3fa6c2f7e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 3984fe84e1761c785f3b3c4d7c5ef3c43d2528a2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149731"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334626"
 ---
 # <a name="c-tokens"></a>Tokens de C
 
@@ -31,9 +31,9 @@ En un programa de origen de C, el elemento básico que el compilador reconoce es
 *punctuator*
 
 > [!NOTE]
->  Vea la introducción a [Resumen de la sintaxis de lenguaje C](../c-language/c-language-syntax-summary.md) para obtener una explicación de las convenciones de sintaxis de ANSI.
+> Vea la introducción a [Resumen de la sintaxis de lenguaje C](../c-language/c-language-syntax-summary.md) para obtener una explicación de las convenciones de sintaxis de ANSI.
 
-Las palabras clave, identificadores, constantes, literales de cadena y operadores descritos en esta sección son ejemplos de tokens. Los caracteres de puntuación, como corchetes (**[ ]**), llaves (**{ }**), paréntesis ( **( )** ) y comas (**,**) también son tokens.
+Las palabras clave, identificadores, constantes, literales de cadena y operadores descritos en esta sección son ejemplos de tokens. Los caracteres de puntuación, como corchetes ( **[ ]** ), llaves ( **{ }** ), paréntesis ( **( )** ) y comas ( **,** ) también son tokens.
 
 ## <a name="see-also"></a>Vea también
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 9205791995bc113e4f560ab6085fc3acf47c8182
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 884d8e8479b7cad28d99e19adfac4d05dbeec5f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320479"
 ---
 # <a name="notification-hooks"></a>Enlaces de notificación
 
@@ -27,7 +27,7 @@ Se habilita el enlace de notificación:
 
 - Si se suministra una nueva definición del puntero **__pfnDliNotifyHook2** que se inicializa para que apunte a su propia función que recibe las notificaciones.
 
-   \-o -
+   O bien
 
 - Al establecer el puntero **__pfnDliNotifyHook2** a la función de enlace antes de que todas las llamadas a la DLL que el programa es retrasar la carga.
 
@@ -77,8 +77,8 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-Las notificaciones pasan una **DelayLoadInfo** estructura a la función de enlace junto con el valor de notificación. Estos datos son idénticos al utilizado por la rutina de aplicación auxiliar de carga retrasada. El valor de notificación será uno de los valores definidos en [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md).
+Las notificaciones pasan una **DelayLoadInfo** estructura a la función de enlace junto con el valor de notificación. Estos datos son idénticos al utilizado por la rutina de aplicación auxiliar de carga retrasada. El valor de notificación será uno de los valores definidos en [definiciones de estructura y constante](structure-and-constant-definitions.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Notificación y control de errores](../../build/reference/error-handling-and-notification.md)
+[Notificación y control de errores](error-handling-and-notification.md)

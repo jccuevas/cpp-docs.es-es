@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
-ms.openlocfilehash: 8238dcec821256dad8101cd7ad59b2d85882c218
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 263eb03b7a9f45458f8d8b586adc6f1cfc5805be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622877"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745985"
 ---
 # <a name="compiler-error-c3149"></a>Error del compilador C3149
 
-'type': no se puede usar este tipo aquí sin un nivel superior 'char'
+' type ': no se puede usar este tipo aquí sin un ' char ' de nivel superior
 
-Una declaración no se especificó correctamente.
+No se especificó correctamente una declaración.
 
-Por ejemplo, es posible que tiene definido un tipo CLR en el ámbito global y ha intentado crear una variable del tipo como parte de la definición. Dado que no se permiten variables globales de tipos CLR, el compilador genera el error C3149.
+Por ejemplo, puede que haya definido un tipo CLR en el ámbito global e intente crear una variable del tipo como parte de la definición. Dado que no se permiten variables globales de tipos CLR, el compilador generará C3149.
 
-Para resolver este error, declare las variables de tipos CLR dentro de una definición de función o tipo.
+Para resolver este error, declare variables de tipos CLR dentro de una función o una definición de tipo.
 
-El ejemplo siguiente genera el error C3149:
+En el ejemplo siguiente se genera C3149:
 
-```
+```cpp
 // C3149.cpp
 // compile with: /clr
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-El ejemplo siguiente genera el error C3149:
+En el ejemplo siguiente se genera C3149:
 
-```
+```cpp
 // C3149b.cpp
 // compile with: /clr /c
 delegate int MyDelegate(const int, int);

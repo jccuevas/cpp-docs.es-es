@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2200
 ms.assetid: a04139a6-ce18-404b-9bfd-2369fc0af3cb
-ms.openlocfilehash: 6aeaad159095625ed890864b2e6921da743bea68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9629ba7b7aa8464a59da0d68559985bd9229559a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511753"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206770"
 ---
 # <a name="compiler-error-c2200"></a>Error del compilador C2200
 

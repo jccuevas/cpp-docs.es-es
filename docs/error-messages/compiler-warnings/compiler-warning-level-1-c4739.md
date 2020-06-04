@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4739
 ms.assetid: 600873b3-7c85-4cd4-944e-cd8e01bfcbb0
-ms.openlocfilehash: 4c48ad9349361324c18ec790c51d1095cce104e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c68a9e0a2873de7e919fafbef68835f0970c03b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185703"
 ---
 # <a name="compiler-warning-level-1-c4739"></a>Advertencia del compilador (nivel 1) C4739
 
@@ -23,7 +23,7 @@ Para resolver esta advertencia, solo tiene que asignar un valor a una variable c
 
 El ejemplo siguiente genera la advertencia C4739:
 
-```
+```cpp
 // C4739.cpp
 // compile with: /RTCs /Zi /W1 /c
 char *pc;

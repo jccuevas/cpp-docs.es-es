@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3192
 ms.assetid: 8b0083d4-706f-46f6-858a-e1d9af464cf8
-ms.openlocfilehash: 685657857b2ed41c29c704633b07dc677fc32fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 977987c0c4a6d3ba86eaad2a0c1b4ff2664ce37c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481112"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761600"
 ---
 # <a name="compiler-error-c3192"></a>Error del compilador C3192
 
-error de sintaxis: ' ^' no es un operador de prefijo (¿pretendía utilizar ' *'?)
+error de sintaxis: ' ^ ' no es un operador de prefijo (¿quiso decir ' * '?)
 
-No se puede usar un identificador como un operador de desreferenciación.
+No se puede usar un identificador como operador de desreferencia.
 
-El ejemplo siguiente genera C3192:
+En el ejemplo siguiente se genera C3192:
 
-```
+```cpp
 // C3192.cpp
 // compile with: /clr
 using namespace System;

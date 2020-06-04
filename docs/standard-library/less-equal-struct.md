@@ -2,17 +2,17 @@
 title: less_equal (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::less_equal
+- functional/std::less_equal
 helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-ms.openlocfilehash: 942b5da850f03eef026533e7168fa8d3d1ea9002
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67a686b139ae4abbf25a42a994cceaba008decf5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595590"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245381"
 ---
 # <a name="lessequal-struct"></a>less_equal (struct)
 
@@ -39,12 +39,13 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*, *T*, *U* cualquier tipo que admita un `operator<=` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U*\
+Cualquier tipo que admite un `operator<=` que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda*<br/>
+*Izquierda*\
 Operando izquierdo de la operación menor o igual que. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-*Derecha*<br/>
+*Correcto*\
 Operando derecho de la operación menor o igual que. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -53,7 +54,7 @@ Resultado de `Left <= Right`. La plantilla especializada realiza el reenvío dir
 
 ## <a name="remarks"></a>Comentarios
 
-El predicado binario `less_equal` <  `Type`> proporciona una ordenación débil estricta de un conjunto de valores de elemento de tipo *tipo* en clases de equivalencia, si y solo si este tipo satisface el estándar de matemático requisitos para lo que se ordenan. Las especializaciones para cualquier tipo de puntero producen una ordenación total de los elementos, en la que todos los elementos de valores distintos están ordenados unos con respecto a otros.
+El predicado binario `less_equal` < `Type`> proporciona una ordenación débil estricta de un conjunto de valores de elemento de tipo *tipo* en clases de equivalencia, si y solo si este tipo satisface el estándar de matemático requisitos para lo que se ordenan. Las especializaciones para cualquier tipo de puntero producen una ordenación total de los elementos, en la que todos los elementos de valores distintos están ordenados unos con respecto a otros.
 
 ## <a name="example"></a>Ejemplo
 
@@ -109,19 +110,7 @@ int main( )
 }
 ```
 
-## <a name="sample-output"></a>Resultados del ejemplo
-
 ```Output
 Original vector v1 = (31247 37154 48755 15251 6205 2836 2836 2836)
 Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

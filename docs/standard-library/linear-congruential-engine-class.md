@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c1824eb22ed97e65e0556bc63b374f705f5c591
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568181"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689446"
 ---
-# <a name="linearcongruentialengine-class"></a>linear_congruential_engine (Clase)
+# <a name="linear_congruential_engine-class"></a>linear_congruential_engine (Clase)
 
 Genera una secuencia aleatoria mediante un algoritmo congruencial lineal.
 
@@ -45,16 +45,16 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parámetros
 
-*UIntType*<br/>
+@No__t_1 *UIntType*
 El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*A*<br/>
+*Un* \
 **Multiplicador**. **Condición previa**: vea la sección Comentarios.
 
-*C*<br/>
+*C* \
 **Incremento**. **Condición previa**: vea la sección Comentarios.
 
-*M*<br/>
+*M* \
 **Módulo**. **Condición previa**: vea los comentarios.
 
 ## <a name="members"></a>Miembros
@@ -70,13 +70,13 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla `linear_congruential_engine` es el motor de generador más sencillo, pero no el más rápido ni de mejor calidad. Una mejora realizada sobre este motor es el [motor de resta llevando](../standard-library/subtract-with-carry-engine-class.md). Ninguno de estos motores logra unos resultados tan rápidos y de tan alta calidad como el [motor Mersenne Twister](../standard-library/mersenne-twister-engine-class.md).
+La plantilla de clase `linear_congruential_engine` es el motor de generador más sencillo, pero no la más rápida o más alta. Una mejora realizada sobre este motor es el [motor de resta llevando](../standard-library/subtract-with-carry-engine-class.md). Ninguno de estos motores logra unos resultados tan rápidos y de tan alta calidad como el [motor Mersenne Twister](../standard-library/mersenne-twister-engine-class.md).
 
 Este motor genera valores de un tipo integral sin signo especificado por el usuario mediante la relación de repetición (*período*) `x(i) = (A * x(i-1) + C) mod M`.
 
 Si *M* es cero, el valor utilizado para esta operación de módulo es `numeric_limits<result_type>::max() + 1`. El estado del motor es el último valor devuelto, o bien el valor de inicialización si no se ha llamado a `operator()`.
 
-Si *M* no es cero, los valores de los argumentos de plantilla *A* y *C* debe ser menor que *M*.
+Si *M* no es cero, los valores de los argumentos de plantilla *A* y *C* deben ser menores que *M*.
 
 Aunque puede construir un generador directamente a partir de este motor, también puede usar una de estas definiciones de tipo predefinidas.
 
@@ -92,7 +92,7 @@ typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_ra
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
 ```
 
-Para obtener más información sobre el algoritmo de motor congruencial lineal, vea el artículo de la Wikipedia sobre el [generador congruencial lineal](http://go.microsoft.com/fwlink/p/?linkid=402446).
+Para obtener más información sobre el algoritmo de motor congruencial lineal, vea el artículo de la Wikipedia sobre el [generador congruencial lineal](https://go.microsoft.com/fwlink/p/?linkid=402446).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -102,4 +102,4 @@ Para obtener más información sobre el algoritmo de motor congruencial lineal, 
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

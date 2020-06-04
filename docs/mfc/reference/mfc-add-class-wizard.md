@@ -1,53 +1,55 @@
 ---
 title: Asistente para agregar clases MFC
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.class.mfc.simple.overview
 helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 245963d4222188f16fd334d6950e04584ac1e978
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2c82e084de2123c579299ca6490bdfcfdac5d255
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520847"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908030"
 ---
 # <a name="mfc-add-class-wizard"></a>Asistente para agregar clases MFC
 
-Use este asistente de código para agregar una clase a un proyecto MFC existente, o para agregar una clase a un proyecto ATL compatible con MFC. También puede agregar clases MFC a proyectos de Win32 que tienen compatibilidad con MFC. Las características que se especificó cuando creó el proyecto de determinarán las opciones disponibles en este cuadro de diálogo.
+Utilice este asistente para código para agregar una clase a un proyecto de MFC existente o para agregar una clase a un proyecto ATL que admita MFC. También puede Agregar clases MFC a proyectos Win32 que tengan compatibilidad con MFC. Las características que especificó al crear el proyecto determinan las opciones disponibles en este cuadro de diálogo. Para obtener acceso al asistente, haga clic en **Agregar clase** en el [Asistente para clases](mfc-class-wizard.md).
+
+![Asistente para agregar clases MFC](media/add-mfc-class-wizard.png "Asistente para agregar clases MFC")
 
 ## <a name="names"></a>Nombres
 
-En esta página, especifique el nombre de clase, la clase base y los nombres de archivo para la nueva clase.
+En esta página, especifique el nombre de clase, la clase base y los nombres de archivo de la nueva clase.
 
 - **Nombre de la clase**
 
-  Especifica el nombre de la nueva clase y proporciona la base predeterminada para los nombres de identificadores y archivos en esta página. Las clases de C++, suele empiezan por "C", por ejemplo, "CMiClase" se convierte en "MiClase.h", y así sucesivamente.
+  Especifica el nombre de la nueva clase y proporciona la base predeterminada de los nombres de los identificadores y archivos de esta página. C++las clases normalmente comienzan con "C", por lo que, por ejemplo, "CMyClass" se convierte en "MyClass. h", etc.
 
 - **Clase base**
 
   Especifica el nombre de la clase base para la nueva clase. De forma predeterminada, la clase base es [CWnd](../../mfc/reference/cwnd-class.md). La clase base que seleccione determina si otros cuadros de esta página están activos.
 
-  El tipo de clase que se establece como la clase base determina si la clase tiene un Id. de cuadro de diálogo o un identificador de recurso. Los tipos generales de las clases son los siguientes:
+  El tipo de clase que se establece como clase base determina si la clase tiene un identificador de cuadro de diálogo o un identificador de recurso. Los tipos generales de clases son los siguientes:
 
-  - Las clases como [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), o [CDocument](../../mfc/reference/cdocument-class.md), que no requieren un cuadro de diálogo ID o identificador de recurso. Estas clases no usen un identificador de recurso o el cuadro de diálogo. Si selecciona una de estas clases para la clase base, el **Id. del cuadro de diálogo** cuadro y **Id. de recurso DHTML** cuadro aparecen atenuados.
+  - Clases como [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md)o [CDocument](../../mfc/reference/cdocument-class.md), que no requieren un identificador de cuadro de diálogo o un identificador de recurso. Estas clases no usan un cuadro de diálogo o un identificador de recurso. Si selecciona una de estas clases para la clase base, el cuadro **ID** . de diálogo y el cuadro ID. de **recurso DHTML** aparecen atenuados.
 
-  - Las clases como [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), o [CPropertyPage](../../mfc/reference/cpropertypage-class.md), que requieren un Id.
+  - Clases como [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md)o [CPROPERTYPAGE](../../mfc/reference/cpropertypage-class.md), que requieren un identificador de cuadro de diálogo.
 
-  - La clase [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), lo que requiere un identificador de diálogo, un identificador de recurso DHTML y un nombre de archivo HTML.
+  - La clase [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), que requiere un identificador de cuadro de diálogo, un identificador de recurso DHTML y un nombre de archivo HTML.
 
-  Para las clases que requieren un identificador de diálogo, le resultará más eficaz utilizar la [editor de recursos](../../windows/resource-editors.md) para crear el recurso de cuadro de diálogo, asigne su identificador en el [ventana propiedades](/visualstudio/ide/reference/properties-window)y, a continuación, cree una clase asociada con ese identificador de recurso. Consulte [crear un nuevo cuadro de diálogo](../../windows/creating-a-new-dialog-box.md) para obtener más información sobre la creación de un cuadro de diálogo estándar de Windows.
+  En el caso de las clases que requieren un identificador de cuadro de diálogo, puede que le resulte más eficaz usar el [Editor de recursos](../../windows/resource-editors.md) para crear el recurso de cuadro de diálogo, asignar su identificador en el [Asistente para clases](mfc-class-wizard.md)y, a continuación, crear una clase asociada a ese identificador de recurso. Consulte [crear un nuevo cuadro de diálogo](../../windows/creating-a-new-dialog-box.md) para obtener más información sobre cómo crear un cuadro de diálogo estándar de Windows.
 
   > [!NOTE]
-  > Si primero crea un recurso de cuadro de diálogo y derivar su nueva clase de `CDHtmlDialog`, eliminar el Windows estándar **Aceptar** y **cancelar** botones que aparecen en el cuadro de diálogo de forma predeterminada. El cuadro de diálogo estándar de Windows hospeda el formulario DHTML, que contiene su propio **Aceptar** y **cancelar** botones.
+  > Si crea primero un recurso de diálogo y deriva su nueva clase de `CDHtmlDialog`, elimine los botones estándar **Aceptar** y **Cancelar** de Windows que aparecen en el cuadro de diálogo predeterminado. El cuadro de diálogo estándar de Windows hospeda el formulario DHTML, que contiene sus propios botones **Aceptar** y **Cancelar** .
 
-  Mientras que el cuadro de diálogo puede contener los controles de Windows y controles DHTML, no se recomienda.
+  Aunque el cuadro de diálogo puede contener controles de Windows y controles DHTML, no se recomienda.
 
-- **Id. del cuadro de diálogo**
+- **ID. de cuadro de diálogo**
 
-  Especifica el identificador del cuadro de diálogo, si seleccionó `CDialog`, `CFormView`, `CPropertyPage`, o `CDHtmlDialog` como el **clase Base**.
+  Especifica el identificador del cuadro de diálogo, `CDialog`si seleccionó `CFormView` `CPropertyPage`,, o `CDHtmlDialog` como la **clase base**.
 
 - **Archivo .h**
 
@@ -61,29 +63,15 @@ En esta página, especifique el nombre de clase, la clase base y los nombres de 
 
   El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **Finalizar**, el asistente le pedirá que indique si se debe anexar la implementación de clase al contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **No** para volver al asistente y especificar otro nombre de archivo.
 
-- **Active accessibility**
+- **Accesibilidad activa**
 
-  Habilita la compatibilidad con de MFC Active Accessibility llamando a [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) en el constructor. Esta opción está disponible para las clases derivadas de [CWnd](../../mfc/reference/cwnd-class.md).
-
-- **Id. de recurso DHTML**
-
-  Se aplica a las clases derivadas de `CDHtmlDialog` solo. Especifica el identificador de recurso del cuadro de diálogo DHTML. El identificador de recurso aparece en la sección HTML del archivo .rc del proyecto, junto con el nombre de archivo del cuadro de diálogo HTML. El recurso DHTML, identificado por este identificador, se hospeda en el cuadro de diálogo, identificado por **Id. del cuadro de diálogo**.
-
-- **. Archivo HTM**
-
-  Se aplica a las clases derivadas de `CDHtmlDialog` solo. Establece el nombre del archivo HTML para el cuadro de diálogo DHTML. De forma predeterminada, este nombre de archivo se basa en el nombre de clase. El nombre de archivo aparece en la sección HTML del archivo .rc del proyecto, junto con el identificador de recurso de cuadro de diálogo DHTML.
+  Habilita la compatibilidad de MFC con Active Accessibility llamando a [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) en el constructor. Esta opción está disponible para las clases derivadas de [CWnd](../../mfc/reference/cwnd-class.md).
 
 - **Automatización**
 
-  Establece el nivel de clase de soporte técnico para [automatización](../../mfc/automation.md). La automatización en el nivel de clase está disponible para todas las clases que admiten la automatización. También está disponible para los proyectos creados con compatibilidad para automatización. Es decir, un proyecto MFC que [admite ATL](../../atl/reference/mfc-support-in-atl-projects.md), o un proyecto MFC para la que ha seleccionado la **automatización** casilla de verificación en la [características avanzadas](../../mfc/reference/advanced-features-mfc-application-wizard.md) página de MFC Asistente para la aplicación.
+  Establece el nivel de clase de compatibilidad para la [automatización](../../mfc/automation.md). La automatización en el nivel de clase está disponible para todas las clases que admiten la automatización. También está disponible para los proyectos creados con compatibilidad con Automation. Es decir, un proyecto MFC que [admita ATL](../../atl/reference/mfc-support-in-atl-projects.md)o un proyecto MFC para el que se haya activado la casilla **automatización** en la página [características avanzadas](../../mfc/reference/advanced-features-mfc-application-wizard.md) del Asistente para aplicaciones MFC.
 
-  |Opción|Descripción|
-  |------------|-----------------|
-  |**Ninguno**|Indica que la clase no tiene ninguna compatibilidad de automatización.|
-  |**Automatización**|Indica que la clase admite automatización. Si selecciona esta opción, la clase recién creada está disponible como un objeto programable por las aplicaciones cliente de automatización, como Microsoft Visual Basic y Microsoft Excel. Esta opción no está disponible para las clases bases que se muestran después de esta tabla.|
-  |**Puede crear Id. de tipo**|Indica que la clase y el proyecto compatible con otras aplicaciones que crean objetos de esta clase utilizando la automatización. Con esta opción, los clientes de automatización pueden crear directamente un objeto de automatización. El identificador de tipo en el cuadro de texto se usa la aplicación cliente para especificar el objeto crearse; es todo el sistema y debe ser único. Esta opción no está disponible para las clases bases que se muestran después de esta tabla.|
-
-  Compatibilidad de automatización no está disponible para las clases base siguientes:
+   La compatibilidad con automatización no está disponible para las clases base siguientes:
 
   - `CAsyncMonitorFile`
 
@@ -106,16 +94,6 @@ En esta página, especifique el nombre de clase, la clase base y los nombres de 
   - `CObject`
 
   - `CSocket`
-
-- **Id. de tipo**
-
-  Establece el identificador de tipo de la clase. El **Type_id** cuadro concatena el nombre del proyecto y el nuevo nombre de clase como sigue: *ProyectoMFC.ClaseMFC*. Este identificador es modificable sólo si seleccionó la **automatización** opción **Creatable por Id. de tipo**.
-
-- **Generar recursos DocTemplate**
-
-  Indica que los documentos creados por la aplicación tienen recursos de plantilla de documento. Para activar esta casilla, el proyecto debe admitir la arquitectura documento/vista MFC y la clase base de esta clase debe ser [CFormView](../../mfc/reference/cformview-class.md).
-
-  Consulte [plantillas de documento y el proceso de creación de documento/vista](../../mfc/document-templates-and-the-document-view-creation-process.md) para obtener más información.
 
 ## <a name="see-also"></a>Vea también
 

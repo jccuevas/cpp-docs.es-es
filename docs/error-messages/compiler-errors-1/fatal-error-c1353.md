@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1353
 ms.assetid: 37f55b1d-9e7a-4932-a41e-d593190895d3
-ms.openlocfilehash: 2ff1490d45829ca2b186c8345e35777aa62bb841
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b103cf60cad0450ef458d6268b8910f46d574d44
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676543"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203117"
 ---
 # <a name="fatal-error-c1353"></a>Error irrecuperable C1353
 

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636779"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425302"
 ---
 # <a name="ltostreamgt-functions"></a>Funciones &lt;ostream&gt;
 
-Estas son las funciones de plantilla global definidas en &lt;ostream&gt;. Para las funciones miembro, vea el [basic_ostream (clase)](basic-ostream-class.md) documentación.
+Estas son las funciones de plantilla globales definidas en &lt;&gt;ostream. Para las funciones miembro, vea la documentación de la [clase basic_ostream](basic-ostream-class.md) .
 
 ||||
 |-|-|-|
@@ -40,22 +40,22 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+\ *Elem*
 El tipo de elemento.
 
-*Ostr*<br/>
-Un objeto de tipo **basic_ostream**.
+\ *ostr*
+Objeto de tipo **basic_ostream**.
 
-*Tr*<br/>
+*Tr*\
 Rasgos de los caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un objeto de tipo **basic_ostream**.
+Objeto de tipo **basic_ostream**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El manipulador llama a *Ostr*.[ colocar](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ ampliar](../standard-library/basic-ios-class.md#widen)('\n')) y, a continuación, llama a *Ostr*.[ Vaciar](../standard-library/basic-ostream-class.md#flush). Devuelve *Ostr*.
+El manipulador llama a *ostr*. [Put](../standard-library/basic-ostream-class.md#put)(*ostr*.[ ensancha](../standard-library/basic-ios-class.md#widen)(' \n ')) y, a continuación, llama a *ostr*. [vaciar](../standard-library/basic-ostream-class.md#flush). Devuelve *ostr*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -87,22 +87,22 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+\ *Elem*
 El tipo de elemento.
 
-*Ostr*<br/>
+\ *ostr*
 Objeto de tipo `basic_ostream`.
 
-*Tr*<br/>
+*Tr*\
 Rasgos de los caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Objeto de tipo `basic_ostream`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El manipulador llama a *Ostr*.[ colocar](../standard-library/basic-ostream-class.md#put)(*Elem*('\0')). Devuelve *Ostr*.
+El manipulador llama a *ostr*. [Put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 ')). Devuelve *ostr*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -136,22 +136,22 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+\ *Elem*
 El tipo de elemento.
 
-*Ostr*<br/>
+\ *ostr*
 Objeto de tipo `basic_ostream`.
 
-*Tr*<br/>
+*Tr*\
 Rasgos de los caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Objeto de tipo `basic_ostream`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El manipulador llama a *Ostr*.[ Vaciar](../standard-library/basic-ostream-class.md#flush). Devuelve *Ostr*.
+El manipulador llama a *ostr*. [vaciar](../standard-library/basic-ostream-class.md#flush). Devuelve *ostr*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -184,22 +184,22 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+\ *Elem*
 El tipo de elemento.
 
-*Tr*<br/>
+*Tr*\
 Rasgos de los caracteres.
 
-*left*<br/>
+\ *izquierda*
 Referencia lvalue a un objeto `basic_ostream`.
 
-*right*<br/>
+\ *derecha*
 Referencia lvalue a un objeto `basic_ostream`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla `swap` ejecuta `left.swap(right)`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<ostream>](../standard-library/ostream.md)

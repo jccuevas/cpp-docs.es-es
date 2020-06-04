@@ -1,14 +1,17 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _hypotf
 - hypot
 - hypotf
 - _hypot
 - _hypotl
 - hypotl
-apilocation:
+- _o__hypot
+- _o__hypotf
+- _o_hypot
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +23,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - hypotf
 - hypotl
@@ -37,14 +44,14 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439538"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919844"
 ---
-# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
+# <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
 Calcula la hipotenusa.
 
@@ -84,15 +91,17 @@ Valores de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **hypot** devuelve la longitud de la hipotenusa; en caso de desbordamiento, **hypot** devuelve INF (infinito) y la **errno** variable se establece en **ERANGE** . Puede usar **_matherr** para modificar el control de errores.
+Si se realiza correctamente, **hypot** devuelve la longitud de la hipotenusa; en el desbordamiento, **hypot** devuelve el archivo INF (infinito) y la variable **errno** se establece en **ERANGE**. Puede usar **_matherr** para modificar el control de errores.
 
-Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información sobre los códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **hypot** funciones calculan la longitud de la hipotenusa de un triángulo rectángulo, dada la longitud de los dos lados *x* y *y* (en otras palabras, la raíz cuadrada de *x*<sup>2</sup> + *y*<sup>2</sup>).
+Las funciones **hypot** calculan la longitud de la hipotenusa de un triángulo de la derecha, dada la longitud de los dos lados *x* *e y* (es decir, la raíz cuadrada de *x*<sup>2</sup> + *y*<sup>2</sup>).
 
 Las versiones de las funciones que tienen un carácter de subrayado inicial se proporcionan por compatibilidad con estándares anteriores. Su comportamiento es idéntico al de las versiones sin carácter de subrayado inicial. Se recomienda el uso de las versiones sin carácter de subrayado inicial para código nuevo.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -100,7 +109,7 @@ Las versiones de las funciones que tienen un carácter de subrayado inicial se p
 |-------------|---------------------|
 |**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -124,7 +133,7 @@ int main( void )
 If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>

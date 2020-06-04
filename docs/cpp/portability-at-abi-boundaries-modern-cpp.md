@@ -1,22 +1,23 @@
 ---
-title: Portabilidad en los límites de ABI (C++ moderno)
-ms.date: 11/04/2016
+title: Portabilidad en los límites de ABI
+description: Acople C++ las interfaces a las convenciones de llamada de C en los límites de la interfaz binaria.
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 3f72bc32e436c2f7a2f76ed6bbb9553b5e5be6b8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: b3b2b217739ff5900c8ef0329ff3e8909a3fe036
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220314"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303324"
 ---
-# <a name="portability-at-abi-boundaries-modern-c"></a>Portabilidad en los límites de ABI (C++ moderno)
+# <a name="portability-at-abi-boundaries"></a>Portabilidad en los límites de ABI
 
-Usar tipos lo suficientemente portátiles y convenciones en los límites de la interfaz binaria. Un "tipo portátil" es un tipo integrado de C o un struct que contiene solo tipos integrados de C. Tipos de clase solo pueden utilizarse al llamador y destinatario de acuerdo en el diseño, una llamada a la convención, etcetera. Esto solo es posible cuando se compilan con el mismo compilador y la configuración del compilador.
+Utilice tipos y convenciones suficientemente portátiles en los límites de la interfaz binaria. Un "tipo portátil" es un tipo integrado de C o un struct que solo contiene tipos integrados de C. Los tipos de clase solo se pueden usar cuando el llamador y el destinatario acuerdan el diseño, la Convención de llamada, etc. Esto solo es posible cuando ambos se compilan con la misma configuración del compilador y del compilador.
 
-## <a name="how-to-flatten-a-class-for-c-portability"></a>Cómo eliminar el formato de una clase para la portabilidad de C
+## <a name="how-to-flatten-a-class-for-c-portability"></a>Cómo aplanar una clase para la portabilidad de C
 
-Cuando los autores de llamadas puede compilarse con otro compilador/lenguaje, "aplanar" a un **extern "C"** API con una convención de llamada específica:
+Cuando los autores de la llamada se pueden compilar con otro lenguaje o compilador, "aplanar" en una API de **"C" externa** con una Convención de llamada específica:
 
 ```cpp
 // class widget {
@@ -34,6 +35,6 @@ extern "C" {        // functions using explicit "this"
 
 ## <a name="see-also"></a>Vea también
 
-[Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenido de nuevo aC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CString objects, assignment semantics
 - assignment statements, assigning CString objects
 ms.assetid: d4023480-526f-499a-85f6-324b4de5b85f
-ms.openlocfilehash: f563b24a9df61a91711433a4e4987f8f800545ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5398f8a0f17ffcc93c7f5f6158ecc56606e9279
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236266"
 ---
 # <a name="cstring-semantics"></a>Semántica de CString
 
@@ -26,4 +26,3 @@ Tenga en cuenta en el ejemplo que los dos `CString` objetos se consideran "equal
 ## <a name="see-also"></a>Vea también
 
 [Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

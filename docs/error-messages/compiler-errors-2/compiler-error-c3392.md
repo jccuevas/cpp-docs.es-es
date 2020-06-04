@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 34097de7d50e260ee82a8891cee988b1533debdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31975d39d67697573af7f9142326660acc4f7226
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556577"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201050"
 ---
 # <a name="compiler-error-c3392"></a>Error del compilador C3392
 
 'arg_tipo': argumento de tipo no válido para el parámetro genérico 'parámetro' del 'tipo_genérico' genérico, debe tener un constructor sin parámetros público.
 
-Se crearon incorrectamente instancias de un tipo genérico. Compruebe la definición de tipo. Para obtener más información, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).
+Se crearon incorrectamente instancias de un tipo genérico. Compruebe la definición de tipo. Para obtener más información, vea [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente ejemplo usa C# para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos en C / c++ / CLI. Para obtener más información, vea [Restricciones de tipos de parámetros](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+En el ejemplo siguiente C# se usa para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos C++en/CLI. Para obtener más información, vea [Restricciones de tipos de parámetros](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3392.cs
 // Compile by using: csc /target:library C3392.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Cuando el componente C3392.dll está disponible, el ejemplo siguiente genera la advertencia C3392.
+Cuando el componente C3392. dll está disponible, el ejemplo siguiente genera C3392.
 
 ```cpp
 // C3392_b.cpp

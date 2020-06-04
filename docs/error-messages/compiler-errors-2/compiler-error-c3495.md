@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-ms.openlocfilehash: 81fcbb8102d5df8059aad00772b7ee0cc07c01d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fe4286142c90f341925d7e76ca8de6d3b7daa9f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452473"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075010"
 ---
 # <a name="compiler-error-c3495"></a>Error del compilador C3495
 
@@ -25,9 +25,9 @@ No se puede capturar una variable que no tiene una duración de almacenamiento a
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C3495 porque la variable de `static` `n` aparece en la lista de captura de una expresión lambda:
+El ejemplo siguiente genera el error C3495 porque la variable de `static``n` aparece en la lista de captura de una expresión lambda:
 
-```
+```cpp
 // C3495.cpp
 
 int main()
@@ -37,7 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones lambda](../../cpp/lambda-expressions-in-cpp.md)
-

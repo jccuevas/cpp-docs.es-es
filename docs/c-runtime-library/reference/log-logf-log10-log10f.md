@@ -1,14 +1,16 @@
 ---
-title: registro, logf, logl, log10, log10f, log10l
-ms.date: 04/05/2018
-apiname:
+title: log, logf, logl, log10, log10f, log10l
+ms.date: 4/2/2020
+api_name:
 - log10f
 - logf
 - log10
 - log
 - log10l
 - logl
-apilocation:
+- _o_log
+- _o_log10
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +22,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logf
 - logl
@@ -40,14 +46,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543304"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911480"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>registro, logf, logl, log10, log10f, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
 Calcula logaritmos.
 
@@ -76,27 +82,29 @@ Valor cuyo logaritmo hay que calcular.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **registro** funciones devuelven el logaritmo natural (base *e*) de *x* si se realiza correctamente. El **log10** funciones devuelven el logaritmo en base 10. Si *x* es negativo, estas funciones devuelven un indefinido (IND), de forma predeterminada. Si *x* es 0, devuelve infinito (INF).
+Las funciones de **registro** devuelven el logaritmo natural (base *e*) de *x* si se realiza correctamente. Las funciones **log10** devuelven el logaritmo en base 10. Si *x* es negativo, estas funciones devuelven un valor indefinido (Ind), de forma predeterminada. Si *x* es 0, devuelven infinito (INF).
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|+ QNAN, IND|ninguna|_DOMAIN|
+|± QNAN, IND|ninguno|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**Registro** y **log10** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Consulte [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
+**log** y **log10** tienen una implementación que usa las extensiones SIMD de streaming 2 (sse2). Vea [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **registro** y **log10** que toman y devuelven **float** o **long double** valores. En un programa C, **registro** y **log10** siempre toman y devuelven un **doble**.
+C++ permite las sobrecargas, por lo que puede llamar a las sobrecargas de **log** y **log10** que toman y devuelven valores de tipo **float** o **Long Double** . En un programa de C, **log** y **log10** siempre toman y devuelven un valor **Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**Registro**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+|**log**, **LOGF (**, **logl**, **log10**, **log10f (**, **log10l**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -153,7 +161,7 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

@@ -1,17 +1,17 @@
 ---
 title: .ERRB
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRB
 helpviewer_keywords:
 - .ERRB directive
 ms.assetid: d7834c95-c5b8-45d9-9224-692c2d7bff17
-ms.openlocfilehash: 95772c73b507abfa511e4fed68c247a26072b6e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7b701bd648f6fc811541c499f7d70d8faa77b7f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668330"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313748"
 ---
 # <a name="errb"></a>.ERRB
 
@@ -19,8 +19,9 @@ Genera un error si *textitem* está en blanco.
 
 ## <a name="syntax"></a>Sintaxis
 
-> . ERRB *textitem* [[, *mensaje*]]
+> **. ERRB** *textitem* ⟦ __,__ *mensaje*⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

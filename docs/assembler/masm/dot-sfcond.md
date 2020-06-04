@@ -1,26 +1,27 @@
 ---
 title: .SFCOND
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .SFCOND
 helpviewer_keywords:
 - .SFCOND directive
 ms.assetid: 3a1ce2d0-cf18-4f08-b4cf-b72cded4d164
-ms.openlocfilehash: a18210c1ea45d57b7a2ee642533532ff737cae4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7906b0bc260ed47553bdba76057f303f70c04448
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444959"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317531"
 ---
 # <a name="sfcond"></a>.SFCOND
 
-Consulte [. NOLISTIF](../../assembler/masm/dot-nolistif.md).
+Vea [. NOLISTIF](dot-nolistif.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-> .SFCOND
+> **.SFCOND**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

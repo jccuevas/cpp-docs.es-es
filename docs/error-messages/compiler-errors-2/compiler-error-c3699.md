@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: e413e4a08ce22ef109179ff0f98baf32ebba41c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525858"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758039"
 ---
 # <a name="compiler-error-c3699"></a>Error del compilador C3699
 
-'operador': no se puede utilizar este direccionamiento indirecto en el tipo 'type'
+' Operator ': no se puede usar este direccionamiento indirecto en el tipo ' type '
 
 Se intentó usar el direccionamiento indirecto no permitido en `type`.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3699.
+En el ejemplo siguiente se genera C3699.
 
-```
+```cpp
 // C3699.cpp
 // compile with: /clr /c
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Una propiedad trivial no puede tener tipo de referencia. Vea [property](../../windows/property-cpp-component-extensions.md) para obtener más información. El ejemplo siguiente genera C3699.
+Una propiedad trivial no puede tener un tipo de referencia. Vea [property](../../extensions/property-cpp-component-extensions.md) para obtener más información. En el ejemplo siguiente se genera C3699.
 
-```
+```cpp
 // C3699_b.cpp
 // compile with: /clr /c
 ref struct C {
@@ -49,9 +49,9 @@ ref struct C {
 
 ## <a name="example"></a>Ejemplo
 
-El equivalente de una sintaxis de "puntero a un puntero" es un identificador para una referencia de seguimiento. El ejemplo siguiente genera C3699.
+El equivalente de una sintaxis de "puntero a puntero" es un identificador de una referencia de seguimiento. En el ejemplo siguiente se genera C3699.
 
-```
+```cpp
 // C3699_c.cpp
 // compile with: /clr /c
 using namespace System;

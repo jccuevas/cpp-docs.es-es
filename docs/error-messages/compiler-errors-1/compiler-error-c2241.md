@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2241
 ms.assetid: 2f4e2c2c-b95c-4afe-bbe0-4214cd39d140
-ms.openlocfilehash: 88f25931d84fe3884ebecbc97b9ddd73390bacc2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d09af5b29318e1481c666fcfe56b3f80434d4a0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206526"
 ---
 # <a name="compiler-error-c2241"></a>Error del compilador C2241
 
@@ -19,7 +19,7 @@ ms.locfileid: "50618897"
 
 El código intenta acceder a un miembro privado o protegido.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones
 
 1. Cambie el nivel de acceso del miembro.
 

@@ -1,11 +1,13 @@
 ---
 title: _futime, _futime32, _futime64
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _futime64
 - _futime32
 - _futime
-apilocation:
+- _o__futime32
+- _o__futime64
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - futime
 - _futime
@@ -32,14 +38,14 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: f21e394acdcc7fbf8a91c5450a4c04daa050db21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615e436abf9d763e73d26db61d9063d5e586232b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652509"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909914"
 ---
-# <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
+# <a name="_futime-_futime32-_futime64"></a>_futime, _futime32, _futime64
 
 Define la hora de modificación de un archivo abierto.
 
@@ -70,13 +76,15 @@ Puntero a una estructura que contiene la nueva fecha de modificación.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve 0. Si se produce un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EBADF**, que indica un descriptor de archivo no válido, o **EINVAL**, que indica un no válido parámetro.
+Si la operación se realiza correctamente, devuelve 0. Si se produce un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y **errno** se establece en **EBADF**, lo que indica un descriptor de archivo no válido o **EINVAL**, que indica un parámetro no válido.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_futime** rutina establece la fecha de modificación y la hora de acceso en el archivo abierto asociado *fd*. **_futime** es idéntico al [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), salvo que su argumento es el descriptor de archivo de un archivo abierto, en lugar del nombre de un archivo o una ruta de acceso a un archivo. El **_utimbuf** estructura contiene campos para la nueva fecha de modificación y la hora de acceso. Ambos campos deben contener valores válidos. **_utimbuf32** y **_utimbuf64** son idénticas a **_utimbuf** excepto para el uso de los tipos en tiempo de 32 bits y 64 bits, respectivamente. **_futime** y **_utimbuf** usan un tipo de tiempo de 64 bits y **_futime** es un comportamiento idéntico a **_futime64**. Si necesita forzar el comportamiento anterior, defina **_USE_32BIT_TIME_T**. Si lo hace esto hace que **_futime** sea un comportamiento idéntico a **_futime32** y hace que el **_utimbuf** estructura que se utiliza el tipo en tiempo de 32 bits, lo que equivale a **__utimbuf32**.
+La rutina **_futime** establece la fecha de modificación y la hora de acceso en el archivo abierto asociado a *FD*. **_futime** es idéntica a [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), salvo que su argumento es el descriptor de archivo de un archivo abierto, en lugar del nombre de un archivo o una ruta de acceso a un archivo. La estructura de **_utimbuf** contiene campos para la nueva fecha de modificación y hora de acceso. Ambos campos deben contener valores válidos. **_utimbuf32** y **_utimbuf64** son idénticos a **_utimbuf** excepto el uso de los tipos de tiempo de 32 y 64 bits, respectivamente. **_futime** y **_utimbuf** usan un tipo de tiempo de 64 bits y **_futime** es idéntico en comportamiento a **_futime64**. Si necesita forzar el comportamiento anterior, defina **_USE_32BIT_TIME_T**. Esto hace que **_futime** tenga un comportamiento idéntico al de **_futime32** y hace que la estructura de **_utimbuf** utilice el tipo de tiempo de 32 bits, convirtiéndolo en equivalente a **__utimbuf32**.
 
-**_futime64**, que usa el **__utimbuf64** estructura, puede leer y modificar fechas de archivo hasta las 23:59:59, 31 de diciembre de 3000, UTC; mientras que una llamada a **_futime32** se produce un error si la fecha en el archivo es más adelante a las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para estas funciones.
+**_futime64**, que usa la estructura de **__utimbuf64** , puede leer y modificar fechas de archivo hasta 23:59:59, 31 de diciembre de 3000, UTC; mientras que una llamada a **_futime32** produce un error si la fecha del archivo es posterior al 23:59:59 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para estas funciones.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -86,7 +94,7 @@ El **_futime** rutina establece la fecha de modificación y la hora de acceso en
 |**_futime32**|\<sys/utime.h>|\<errno.h>|
 |**_futime64**|\<sys/utime.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -124,13 +132,13 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfutimecinput"></a>Entrada: crt_futime.c_input
+### <a name="input-crt_futimec_input"></a>Entrada: crt_futime.c_input
 
 ```Input
 Arbitrary file contents.
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Volume in drive Z has no label.
@@ -152,6 +160,6 @@ Directory of Z:\crt
 File time modified
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>

@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: 248a559735750f912030a37aea85a2cb34156887
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 384ea563853906a76e2c9993cbcedb3b15c354f2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664547"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217593"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Compatibilidad del vinculador con las DLL de carga retrasada
 
-El vinculador de Visual C++ ahora admite la carga retrasada de DLL. Esto evita la necesidad de utilizar las funciones de Windows SDK **LoadLibrary** y **GetProcAddress** para implementar la carga retrasada de DLL.
+El vinculador MSVC ahora admite la carga retrasada de DLL. Esto evita la necesidad de utilizar las funciones de Windows SDK **LoadLibrary** y **GetProcAddress** para implementar la carga retrasada de DLL.
 
 Antes de Visual C++ 6.0, la única manera de cargar un archivo DLL en tiempo de ejecución era mediante **LoadLibrary** y **GetProcAddress**; el sistema operativo cargaba la DLL cuando el archivo ejecutable o DLL mediante archivos que se cargó.
 
-A partir de Visual C++ 6.0, cuando se vinculan estáticamente con un archivo DLL, el vinculador proporciona opciones para retrasar cargar el archivo DLL hasta que el programa llama a una función en ese archivo DLL.
+A partir de Visual C++ 6.0, cuando se vinculan implícitamente a un archivo DLL, el vinculador proporciona opciones para retrasar cargar el archivo DLL hasta que el programa llama a una función en ese archivo DLL.
 
-Una aplicación puede retrasar la carga de un archivo DLL mediante la [/DELAYLOAD (Retrasar importación de carga)](../../build/reference/delayload-delay-load-import.md) opción del vinculador con una función auxiliar (implementación de predeterminada proporcionada por Visual C++). La función auxiliar cargará el archivo DLL en tiempo de ejecución mediante una llamada a **LoadLibrary** y **GetProcAddress** para usted.
+Una aplicación puede retrasar la carga de un archivo DLL mediante la [/DELAYLOAD (Retrasar importación de carga)](delayload-delay-load-import.md) opción del vinculador con una función auxiliar (implementación de predeterminada proporcionada por Visual C++). La función auxiliar cargará el archivo DLL en tiempo de ejecución mediante una llamada a **LoadLibrary** y **GetProcAddress** para usted.
 
 Debe considerar el retraso al cargar un archivo DLL si:
 
@@ -31,25 +31,25 @@ La carga retrasada de DLL se puede especificar durante la generación de una. EX
 
 Los temas siguientes describen la DLL de carga retrasada:
 
-- [Especificar archivos DLL para carga retrasada](../../build/reference/specifying-dlls-to-delay-load.md)
+- [Especificar archivos DLL para carga retrasada](specifying-dlls-to-delay-load.md)
 
-- [Descargar explícitamente un archivo DLL de carga retrasada](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [Descargar explícitamente un archivo DLL de carga retrasada](explicitly-unloading-a-delay-loaded-dll.md)
 
-- [Cargar todas las importaciones para un archivo DLL de carga retrasada](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)
+- [Cargar todas las importaciones para un archivo DLL de carga retrasada](loading-all-imports-for-a-delay-loaded-dll.md)
 
-- [Enlazar importaciones](../../build/reference/binding-imports.md)
+- [Enlazar importaciones](binding-imports.md)
 
-- [Notificación y control de errores](../../build/reference/error-handling-and-notification.md)
+- [Notificación y control de errores](error-handling-and-notification.md)
 
-- [Volcar importaciones de carga retrasada](../../build/reference/dumping-delay-loaded-imports.md)
+- [Volcar importaciones de carga retrasada](dumping-delay-loaded-imports.md)
 
-- [Restricciones de las DLL de carga retrasada](../../build/reference/constraints-of-delay-loading-dlls.md)
+- [Restricciones de las DLL de carga retrasada](constraints-of-delay-loading-dlls.md)
 
 - [Descripción de la función auxiliar](understanding-the-helper-function.md)
 
-- [Crear una función auxiliar personalizada](../../build/reference/developing-your-own-helper-function.md)
+- [Crear una función auxiliar personalizada](developing-your-own-helper-function.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../../build/dlls-in-visual-cpp.md)<br/>
-[Vinculación](../../build/reference/linking.md)
+[Crear archivos DLL de C o C++ en Visual Studio](../dlls-in-visual-cpp.md)<br/>
+[Referencia del enlazador MSVC](linking.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2287
 ms.assetid: 64556299-4e1f-4437-88b7-2464fc0b95bb
-ms.openlocfilehash: f5493220c4380d1fd67b38995414f48a2ef72a41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 234d0e85d0d6772340797fb6880e0ef79d4191ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514028"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759144"
 ---
 # <a name="compiler-error-c2287"></a>Error del compilador C2287
 
-'class': representación de herencia: 'representación1' es menos general que la representación 'representación2'
+' Class ': representación de herencia: ' representation1 ' es menos general que el ' representation2 ' requerido
 
-Una clase se declara con una representación más sencilla de las necesarias.
+Una clase se declara con una representación más simple de la necesaria.
 
-El ejemplo siguiente genera C2287:
+En el ejemplo siguiente se genera C2287:
 
-```
+```cpp
 // C2287.cpp
 // compile with: /vmg /c
 class __single_inheritance X;

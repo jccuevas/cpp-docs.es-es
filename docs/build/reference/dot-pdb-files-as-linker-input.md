@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .pdb files, as linker input
 - PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-ms.openlocfilehash: 23974a9e20f8259c3a38af15664d328ded7ff7d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 365f2955f5bc9e8082221a070af454c820c665f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273292"
 ---
 # <a name="pdb-files-as-linker-input"></a>Archivos .Pdb como entrada del vinculador
 
@@ -20,5 +20,5 @@ VÍNCULO también utiliza un archivo PDB que contiene información de depuració
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de entrada de LINK](../../build/reference/link-input-files.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Archivos de entrada de LINK](link-input-files.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

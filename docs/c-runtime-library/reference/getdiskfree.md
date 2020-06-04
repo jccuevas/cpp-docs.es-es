@@ -1,9 +1,10 @@
 ---
 title: _getdiskfree
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getdiskfree
-apilocation:
+- _o__getdiskfree
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdiskfree
 - _getdiskfree
@@ -26,16 +31,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602285"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913814"
 ---
-# <a name="getdiskfree"></a>_getdiskfree
+# <a name="_getdiskfree"></a>_getdiskfree
 
-Información sobre una unidad de disco se utiliza para rellenar un **_diskfree_t** estructura.
+Utiliza información sobre una unidad de disco para rellenar una estructura de **_diskfree_t** .
 
 > [!IMPORTANT]
 > Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -51,19 +56,19 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>Parámetros
 
-*Unidad*<br/>
+*dispositivo*<br/>
 Unidad de disco de la que desea obtener información.
 
 *DriveInfo*<br/>
-Un **_diskfree_t** estructura que se rellenará con información acerca de la unidad.
+**_Diskfree_t** estructura que se rellenará con información sobre la unidad.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la función es correcta, el valor devuelto es cero. Si la función no es correcta, el valor devuelto es un código de error. El valor **errno** se establece para los errores devueltos por el sistema operativo. Para obtener más información acerca de las condiciones de error que se indican mediante **errno**, consulte [errno (constantes)](../../c-runtime-library/errno-constants.md).
+Si la función es correcta, el valor devuelto es cero. Si la función no es correcta, el valor devuelto es un código de error. El valor **errno** se establece para los errores devueltos por el sistema operativo. Para obtener más información acerca de las condiciones de error que se indican en **errno**, consulte [errno (constantes](../../c-runtime-library/errno-constants.md)).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_diskfree_t** estructura se define en Direct.h.
+La estructura de **_diskfree_t** se define en Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -74,7 +79,9 @@ struct _diskfree_t {
 };
 ```
 
-Esta función valida sus parámetros. Si el *driveinfo* puntero es **NULL** o *unidad* especifica una unidad no válida, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** a **EINVAL**. Las unidades válidas oscilan entre 0 y 26. Un *unidad* el valor 0 especifica la unidad actual; por lo tanto, se asignan números a letras del alfabeto inglés de forma tal que 1 indica la unidad A, 3 indica que la unidad C y así sucesivamente.
+Esta función valida sus parámetros. Si el puntero de *DriveInfo* es **null** o la *unidad* especifica una unidad no válida, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** en **EINVAL**. Las unidades válidas oscilan entre 0 y 26. Un valor de *unidad* de 0 especifica la unidad actual; después, los números se asignan a letras del alfabeto inglés, de modo que 1 indica la unidad A, 3 indica la unidad C, y así sucesivamente.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,7 +89,7 @@ Esta función valida sus parámetros. Si el *driveinfo* puntero es **NULL** o *u
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -186,6 +193,6 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 ======================================================================
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>

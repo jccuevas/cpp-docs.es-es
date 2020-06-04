@@ -1,26 +1,24 @@
 ---
 title: DCOMCNFG
 ms.date: 11/04/2016
-f1_keywords:
-- DCOMCNFG
 helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: 8bf85c32093051b124d007a04eed2bbf10a56039
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a389a46cd02b40cef46d687743fd3416cc4f3154
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250789"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG es una utilidad de Windows NT 4.0 que le permite configurar diversos valores específicos de DCOM en el registro. La ventana DCOMCNFG tiene tres páginas: seguridad predeterminada, propiedades predeterminadas y las aplicaciones. En Windows 2000 una cuarta página, protocolos predeterminados, está presente.
+DCOMCNFG es una utilidad de Windows NT 4.0 que le permite configurar diversos valores específicos de DCOM en el registro. La ventana DCOMCNFG tiene tres páginas: Seguridad predeterminada, las propiedades predeterminadas y las aplicaciones. En Windows 2000 una cuarta página, protocolos predeterminados, está presente.
 
 ## <a name="default-security-page"></a>Página seguridad predeterminada
 
-Puede usar la página de seguridad predeterminada para especificar los permisos predeterminados para los objetos en el sistema. La página de seguridad predeterminada tiene tres secciones: acceso, inicio y configuración. Para cambiar los valores predeterminados de una sección, haga clic en el correspondiente **editar valores predeterminados** botón. Esta configuración de seguridad predeterminada se almacena en el registro bajo `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
+Puede usar la página de seguridad predeterminada para especificar los permisos predeterminados para los objetos en el sistema. La página de seguridad predeterminada tiene tres secciones: Acceso, inicio y configuración. Para cambiar los valores predeterminados de una sección, haga clic en el correspondiente **editar valores predeterminados** botón. Esta configuración de seguridad predeterminada se almacena en el registro bajo `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
 
 ## <a name="default-protocols-page"></a>Página protocolos predeterminados
 
@@ -47,4 +45,3 @@ Cambiar la configuración de un objeto determinado con la página de aplicacione
 ## <a name="see-also"></a>Vea también
 
 [Servicios](../atl/atl-services.md)
-

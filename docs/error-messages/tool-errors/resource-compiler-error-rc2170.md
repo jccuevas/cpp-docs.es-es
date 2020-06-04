@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC2170
 ms.assetid: 6ea80c98-0942-41a8-b0b2-2c16c255adf5
-ms.openlocfilehash: c2183e20cab08c4750a4c27ceeffbbe97c8c7f44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9389a5825e168efbbbd549375de0ce158650b608
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579195"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190877"
 ---
 # <a name="resource-compiler-error-rc2170"></a>Error del compilador de recursos RC2170
 

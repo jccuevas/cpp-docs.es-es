@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-ms.openlocfilehash: bb3aca47b61bdcc5b28eeedc1a6b4edefc303c4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330c97cd945e161d2bf47deb377dd732bf53b3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583760"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455978"
 ---
 # <a name="isnothrowcopyassignable-class"></a>Clase is_nothrow_copy_assignable
 
@@ -26,12 +26,12 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true para un tipo de referencia *T* donde `is_nothrow_assignable<T&, const T&>` es true; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true para un tipo *T* al que `is_nothrow_assignable<T&, const T&>` se hace referencia, donde contiene true; en caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,5 +41,5 @@ Una instancia del predicado de tipo contiene true para un tipo de referencia *T*
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_nothrow_assignable (Clase)](../standard-library/is-nothrow-assignable-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Clase is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)

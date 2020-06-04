@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
 ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345321"
 ---
 # <a name="trigraphs"></a>Trígrafos
 
@@ -48,7 +48,7 @@ En la tabla siguiente se muestran nueve secuencias de trígrafos. Todas las apar
 
 Un trígrafo siempre se trata como un único carácter de origen. La traducción de los trígrafos se produce en la primera [fase de traducción](../preprocessor/phases-of-translation.md), antes del reconocimiento de caracteres de escape en literales de cadena y constantes de caracteres. Solo se reconocen los nueve trígrafos mostrados en la tabla anterior. El resto de las secuencias de caracteres se quedan sin traducir.
 
-La secuencia de escape de caracteres, **\\?**, evita la interpretación incorrecta de secuencias de caracteres que se parecen a un trígrafo. (Para obtener más información sobre las secuencias de escape, consulte [Secuencias de escape](../c-language/escape-sequences.md)). Por ejemplo, si intenta imprimir la cadena `What??!` con esta instrucción `printf`
+La secuencia de escape de caracteres, **\\?** , evita la interpretación incorrecta de secuencias de caracteres que se parecen a un trígrafo. (Para obtener más información sobre las secuencias de escape, consulte [Secuencias de escape](../c-language/escape-sequences.md)). Por ejemplo, si intenta imprimir la cadena `What??!` con esta instrucción `printf`
 
 ```C
 printf( "What??!\n" );

@@ -1,11 +1,11 @@
 ---
 title: ctanh, ctanhf, ctanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctanh
 - ctanhf
 - ctanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctanh
 - ctanhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702692"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941971"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -68,16 +71,16 @@ Número complejo que representa un ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La tangente hiperbólica compleja de *z*.
+Tangente hiperbólica compleja de *z*.
 
-|Entrada|Excepción SEH|**_matherr** excepción|
+|Entrada|Excepción SEH|**_matherr** Excepcional|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|ninguna|_DOMAIN|
-|+ ∞ (tan, tanf)|INVALID|_DOMAIN|
+|± ∞ (tan, TANF ()|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ctanh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ctanh** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **ctanh** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **ctanh** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

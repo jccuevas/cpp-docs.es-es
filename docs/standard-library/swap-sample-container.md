@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-ms.openlocfilehash: 0bbb86e4300b76c7166e880f514bc9526f5a4a6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d89a59e90c3e4258c8ca7bf9e981536f3779d4b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576848"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450336"
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;contenedor de ejemplo&gt;)
 
 > [!NOTE]
-> Este tema se incluye en la documentación de Visual C++ como un ejemplo no funcional de los contenedores usados en la biblioteca estándar de C++. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
+> Este tema se encuentra en la C++ documentación de Microsoft como un ejemplo no funcional de contenedores usados en C++ la biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
 
-Ejecuta `left.` [intercambio](../standard-library/container-class-swap.md)`(right)`.
+Ejecuta `left.`[swap](../standard-library/container-class-swap.md)`(right)`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,4 +33,4 @@ void swap(
 
 ## <a name="see-also"></a>Vea también
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

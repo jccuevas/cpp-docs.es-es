@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1023
 ms.assetid: 1fe0964a-a8cc-4ffa-a427-dbce39f23173
-ms.openlocfilehash: da4f9588d115654fd676585cad4256ca91ea8ac3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60ac821a6b0dd3841f9d26a4441d8e00f83ae2cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660856"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182375"
 ---
 # <a name="resource-compiler-fatal-error-rw1023"></a>Error irrecuperable del compilador de recursos RW1023
 
-Error de E/S al escribir archivo, unidad completa
+Error de e/s al escribir el archivo, unidad llena
 
-Espacio libre debe ser igual al menos dos veces el tamaño del archivo ejecutable que se va a crear.
+El espacio disponible debe ser al menos el doble del tamaño del archivo ejecutable que se está creando.

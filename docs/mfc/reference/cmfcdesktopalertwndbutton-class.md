@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: daa2f978b306bbe45f91514ada0f264a848521c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b18a15f8bfd98396acae0558d121b32bc4127c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450614"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367623"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton (clase)
 
-Permite que los botones que se agregarán a un cuadro de diálogo de alerta de escritorio.
+Permite agregar botones a un cuadro de diálogo de alerta de escritorio.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,7 +33,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 |||
 |-|-|
-|Name|Descripción|
+|Nombre|Descripción|
 |`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Constructor predeterminado.|
 |`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Destructor.|
 
@@ -41,7 +41,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 |||
 |-|-|
-|Name|Descripción|
+|Nombre|Descripción|
 |[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Determina si el botón se muestra en el área de título del cuadro de diálogo de alerta.|
 |[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Determina si el botón cierra el cuadro de diálogo de alerta.|
 
@@ -49,19 +49,19 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 |||
 |-|-|
-|nombre|Descripción|
-|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Un valor booleano que especifica si el botón se muestra en el área de título del cuadro de diálogo de alerta.|
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Un valor booleano que especifica si el botón cierra el cuadro de diálogo de alerta.|
+|Nombre|Descripción|
+|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Valor booleano que especifica si el botón se muestra en el área de título del cuadro de diálogo de alerta.|
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Valor booleano que especifica si el botón cierra el cuadro de diálogo de alerta.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el constructor establece la `m_bIsCaptionButton` y `m_bIsCloseButton` los miembros de datos en FALSE. El elemento primario `CMFCDesktopAlertDialog` conjuntos de objetos `m_bIsCaptionButton` en TRUE si el botón está situado en el área de título del cuadro de diálogo de alerta. El `CMFCDesktopAlertDialog` clase crea un `CMFCDesktopAlertWndButton` objeto que actúa como el botón que cierra el cuadro de diálogo de alerta cuadro y establece `m_bIsCloseButton` en TRUE.
+De forma predeterminada, `m_bIsCaptionButton` el `m_bIsCloseButton` constructor establece los miembros de datos y FALSE. El `CMFCDesktopAlertDialog` objeto `m_bIsCaptionButton` primario se establece en TRUE si el botón se coloca en el área de título del cuadro de diálogo de alerta. La `CMFCDesktopAlertDialog` clase `CMFCDesktopAlertWndButton` crea un objeto que actúa como el botón que cierra el cuadro de diálogo de alerta y se establece en `m_bIsCloseButton` TRUE.
 
-Agregar `CMFCDesktopAlertWndButton` objetos a un `CMFCDesktopAlertDialog` como lo haría cualquier botón de objeto. Para obtener más información acerca de `CMFCDesktopAlertDialog`, consulte [CMFCDesktopAlertDialog (clase)](../../mfc/reference/cmfcdesktopalertdialog-class.md).
+Agregue `CMFCDesktopAlertWndButton` objetos `CMFCDesktopAlertDialog` a un objeto como agregaría cualquier botón. Para obtener `CMFCDesktopAlertDialog`más información acerca de , vea [CMFCDesktopAlertDialog (Clase)](../../mfc/reference/cmfcdesktopalertdialog-class.md).
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `SetImage` método en el `CMFCDesktopAlertWndButton` clase. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).
+En el ejemplo siguiente se `SetImage` muestra `CMFCDesktopAlertWndButton` cómo utilizar el método en la clase. Este fragmento de código forma parte del [ejemplo Demostración de alertas](../../overview/visual-cpp-samples.md)de escritorio.
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]
@@ -84,7 +84,7 @@ En el ejemplo siguiente se muestra cómo usar el `SetImage` método en el `CMFCD
 
 **Encabezado:** afxdesktopalertwnd.h
 
-##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton
+## <a name="cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton
 
 Determina si el botón se muestra en el área de título del cuadro de diálogo de alerta.
 
@@ -94,9 +94,9 @@ BOOL IsCaptionButton() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el botón se muestra en el área de título del cuadro de diálogo de alerta; en caso contrario, es 0.
+Distinto de cero si el botón se muestra en el área de título del cuadro de diálogo de alerta; de lo contrario, 0.
 
-##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton
+## <a name="cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton
 
 Determina si el botón cierra el cuadro de diálogo de alerta.
 
@@ -106,9 +106,9 @@ BOOL IsCloseButton() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el botón cierra el cuadro de diálogo de alerta; en caso contrario, es 0.
+Distinto de cero si el botón cierra el cuadro de diálogo de alerta; de lo contrario, 0.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>

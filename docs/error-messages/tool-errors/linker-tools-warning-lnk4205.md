@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4205
 ms.assetid: d63b9d18-ef3c-4081-9d8d-93077dad13c2
-ms.openlocfilehash: 7c90ec737e6d52fee81bb2a1c5a21a58a49af272
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b0cef76bf8b351bdf2bb73860906509c9574c46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652483"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183168"
 ---
 # <a name="linker-tools-warning-lnk4205"></a>Advertencia de las herramientas del vinculador LNK4205
 
-'filename' no tiene información de depuración actual para hacer referencia al módulo; vinculación de objetos como si no hay información de depuración
+' FILENAME ' no tiene información de depuración actual para hacer referencia al módulo; vincular objeto como si no hubiera información de depuración
 
-El archivo .pdb tiene información no actualizada. El vinculador continuará vincular el objeto sin información de depuración. Puede que desee volver a compilar el archivo de objeto mediante el [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción.
+El archivo. pdb tiene información no actualizada. El vinculador seguirá vinculando el objeto sin información de depuración. Puede que desee volver a compilar el archivo objeto mediante la opción [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) .

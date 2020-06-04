@@ -2,17 +2,17 @@
 title: equal_to (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::equal_to
+- functional/std::equal_to
 helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: ffea2a9329e08796c49aa06888b8cc9a6dac8642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607433"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245834"
 ---
 # <a name="equalto-struct"></a>equal_to (struct)
 
@@ -39,12 +39,13 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*, *T*, *U* cualquier tipo que admita un `operator==` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U*\
+Cualquier tipo que admite un `operator==` que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda*<br/>
+*Izquierda*\
 Operando izquierdo de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-*Derecha*<br/>
+*Correcto*\
 Operando derecho de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -114,4 +115,3 @@ The vector v2 = ( -0 1 -4 5 -8 9 )
 The result of the element-wise equal_to comparison
 between v1 & v2 is: ( 1 1 0 1 0 1 )
 ```
-

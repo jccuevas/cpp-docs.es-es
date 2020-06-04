@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: 194f8d2c87eb6aa307f417ff022e7975edf2ccc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270398"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Restringir la longitud de los nombres externos)
 
@@ -27,7 +27,7 @@ Desusado. Restringe la longitud de los nombres externos.
 
 ## <a name="arguments"></a>Argumentos
 
-*Número*<br/>
+*number*<br/>
 Especifica la longitud máxima de los nombres externos permitidos en un programa.
 
 ## <a name="remarks"></a>Comentarios
@@ -68,13 +68,13 @@ void func2(void) {}
 
 También debe ser cuidadoso al usar el **/H** opción debido a los identificadores de compilador predefinidos. Si la longitud máxima del identificador es demasiado pequeña, algunos identificadores predefinidos será biblioteca sin resolver, así como ciertas llamadas de función. Por ejemplo, si la `printf` se utiliza la función y la opción **/H5** se especifica en tiempo de compilación, el símbolo **_prin** se creará para hacer referencia a `printf`, y esto no se encuentra en la biblioteca.
 
-El uso de **/H** no es compatible con [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md).
+El uso de **/H** no es compatible con [/GL (Whole Program Optimization)](gl-whole-program-optimization.md).
 
-El **/H** opción está en desuso desde Visual Studio 2005; han aumentado los límites de longitud máxima y **/H** ya no es necesario. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](../../build/reference/compiler-options-listed-by-category.md).
+El **/H** opción está en desuso desde Visual Studio 2005; han aumentado los límites de longitud máxima y **/H** ya no es necesario. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
@@ -86,5 +86,5 @@ El **/H** opción está en desuso desde Visual Studio 2005; han aumentado los l�
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: ffe7aa276e9380b6544a78c1c1735ab57765507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4471c0df352a4d40d863ac36f0245cf8194f588c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495971"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685464"
 ---
-# <a name="timeputbyname-class"></a>time_put_byname (Clase)
+# <a name="time_put_byname-class"></a>time_put_byname (Clase)
 
-Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta de configuración regional de tipo `time_put`\< CharType, OutputIterator >.
+La plantilla de clase derivada describe un objeto que puede actuar como una faceta de configuración regional de tipo `time_put` \< CharType, OutputIterator >.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,15 +40,15 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname*<br/>
+@No__t_1 *_Locname*
 Un nombre de configuración regional.
 
-*_Refs*<br/>
+@No__t_1 *_Refs*
 Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 
-Su comportamiento viene determinado por la [denominado](../standard-library/locale-class.md#name) configuración regional *_Locname*. Cada constructor inicializa su objeto base con [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
+Su comportamiento viene determinado por el *_Locname*de configuración regional [con nombre](../standard-library/locale-class.md#name) . Cada constructor inicializa su objeto base con [time_put](../standard-library/time-put-class.md#time_put) \<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -58,4 +58,4 @@ Su comportamiento viene determinado por la [denominado](../standard-library/loca
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

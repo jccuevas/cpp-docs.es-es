@@ -1,14 +1,20 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - scalblnl
 - scalbnl
 - scalbnf
 - scalblnf
 - scalbn
 - scalbln
-apilocation:
+- _o_scalbln
+- _o_scalblnf
+- _o_scalblnl
+- _o_scalbn
+- _o_scalbnf
+- _o_scalbnl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +26,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalblnf
 - scalbnl
@@ -36,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646256"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918190"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -97,28 +107,30 @@ long double scalblnl(
 *x*<br/>
 Valor de punto flotante.
 
-*exp*<br/>
+*consumo*<br/>
 Exponente de entero.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **scalbn** funciones devuelven el valor de *x* \* **FLT_RADIX**<sup>exp</sup> cuando se realiza correctamente. En caso de desbordamiento (según cuál sea el signo de *x*), **scalbn** devuelve **HUGE_VAL**; el **errno** valor se establece en **ERANGE** .
+Las funciones **scalbn (** devuelven el valor de *x* \* **FLT_RADIX**<sup>exp</sup> cuando se realiza correctamente. En el desbordamiento (dependiendo del signo de *x*), **scalbn (** devuelve +/- **HUGE_VAL**; el valor **errno** se establece en **ERANGE**.
 
-Para obtener más información acerca de **errno** y los posibles valores devueltos erróneos, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información sobre **errno** y los posibles valores devueltos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**FLT_RADIX** se define en \<float.h > como la base de punto flotante nativa; en los sistemas binarios, tiene un valor de 2, y **scalbn** es equivalente a [ldexp](ldexp.md).
+**FLT_RADIX** se define en \<float. h> como la base de punto flotante nativa; en los sistemas binarios, tiene un valor de 2 y **scalbn (** es equivalente a [ldexp](ldexp.md).
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **scalbn** y **scalbln** que toman y devuelven **float** o **largo** **doble** tipos. En un programa C, **scalbn** siempre toma un **doble** y un **int** y devuelve un **doble**, y **scalbln**siempre toma un **doble** y un **largo** y devuelve un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **scalbn (** y **scalbln** que toman y devuelven los tipos **float** o **Long** **Double** . En un programa de C, **scalbn (** siempre toma un **valor Double** y un valor **int** y devuelve **Double**, y **scalbln** siempre toma **Double** y **Long** y devuelve un valor **Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn (**, **scalbnf (**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,9 +1,10 @@
 ---
 title: srand
-ms.date: 1/02/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - srand
-apilocation:
+- _o_srand
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,12 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - srand
 helpviewer_keywords:
@@ -28,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: e1670c030d8f073d928ccf23f38ac4b611e68632
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6f97ad9a3bd0d7e4e88ad1797d369f012bbe5e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530226"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913594"
 ---
 # <a name="srand"></a>srand
 
-Establece el valor de inicialización inicial para el generador de números pseudoaleatorio utilizado por el **rand** función.
+Establece el valor de inicialización inicial para el generador de números pseudoaleatorios utilizado por la función **Rand** .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,12 +55,14 @@ void srand(
 
 ### <a name="parameters"></a>Parámetros
 
-*Valor de inicialización*<br/>
+*seed*<br/>
 Valor de inicialización para la generación de números pseudoaleatorios
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **srand** función establece el punto de partida para generar una serie de enteros pseudoaleatorios en el subproceso actual. Para reinicializar el generador para crear la misma secuencia de resultados, llame a la **srand** funcionar y utilizar el mismo *inicialización* nuevo argumento. Cualquier otro valor para *inicialización* establece el generador en otro punto de partida en la secuencia pseudoaleatoria. **RAND** recupera los números pseudaleatorios que se generan. Una llamada a **rand** antes de cualquier llamada a **srand** genera la misma secuencia que una llamada a **srand** con *inicialización* pasa como 1.
+La función **srand** establece el punto de partida para generar una serie de enteros pseudoaleatorios en el subproceso actual. Para reinicializar el generador y crear la misma secuencia de resultados, llame a la función **srand** y use de nuevo el mismo argumento de *inicialización* . Cualquier otro valor de *SEED* establece el generador en un punto inicial diferente en la secuencia pseudoaleatorio. **Rand** recupera los números pseudoaleatorios que se generan. Si se llama a **Rand** antes de cualquier llamada a **srand** , se genera la misma secuencia que si se llama a **srand** con la *inicialización* pasada como 1.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -62,13 +70,13 @@ El **srand** función establece el punto de partida para generar una serie de en
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [rand](rand.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>

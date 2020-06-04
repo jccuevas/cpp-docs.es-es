@@ -10,12 +10,12 @@ helpviewer_keywords:
 - checksum setting
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-ms.openlocfilehash: 6a45e6caa94054d4d485476786ecc5149545ed8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dc09b38beeb763733f8fa6a8ffa972059b30e03
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318932"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (Establecer la suma de comprobación)
 
@@ -29,11 +29,11 @@ La opción /RELEASE establece la suma de comprobación en el encabezado de un ar
 
 El sistema operativo requiere la suma de comprobación para los controladores de dispositivos. Establecer la suma de comprobación para las versiones de los controladores de dispositivos para garantizar la compatibilidad con futuros sistemas operativos.
 
-La opción /RELEASE se establece de forma predeterminada cuando la [/SUBSYSTEM: Native](../../build/reference/subsystem-specify-subsystem.md) se especifica la opción.
+La opción /RELEASE se establece de forma predeterminada cuando la [/SUBSYSTEM: Native](subsystem-specify-subsystem.md) se especifica la opción.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -47,5 +47,5 @@ La opción /RELEASE se establece de forma predeterminada cuando la [/SUBSYSTEM: 
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

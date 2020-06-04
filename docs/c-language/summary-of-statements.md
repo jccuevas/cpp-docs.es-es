@@ -2,12 +2,12 @@
 title: Resumen de instrucciones
 ms.date: 11/04/2016
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
-ms.openlocfilehash: 76a549de7791f8af36fbf150c19cf6ed0de2cbe6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 1a230ca7d998316d2ec96e76b54ac60575acd2ee
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152760"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857000"
 ---
 # <a name="summary-of-statements"></a>Resumen de instrucciones
 
@@ -28,7 +28,7 @@ ms.locfileid: "56152760"
 &nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
@@ -57,10 +57,10 @@ ms.locfileid: "56152760"
 &nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
 *try-except-statement*:   /\* Específico de Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
 
 *try-finally-statement*:   /\* Específico de Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__finally**  *compound-statement*
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,44 +1,42 @@
 ---
-title: rename_namespace
-ms.date: 10/18/2018
+title: atributo de importación rename_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - rename_namespace
 helpviewer_keywords:
 - rename_namespace attribute
 ms.assetid: 45006d2b-36cd-4bec-98b9-3b8ec45299e3
-ms.openlocfilehash: 6521fe0a5bfbe482bf2aed8f5a32221abdc6d6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d319d7390e7c7dce070a35be44aad37c7a34e1a0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531604"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216656"
 ---
-# <a name="renamenamespace"></a>rename_namespace
+# <a name="rename_namespace-import-attribute"></a>atributo de importación rename_namespace
 
-**Específicos de C++**
+**C++Cuestión**
 
 Cambia el espacio de nombres que incluye el contenido de la biblioteca de tipos.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-rename_namespace("NewName")
-```
+> **#import** *biblioteca de tipos* **rename_namespace (** "*NewName*" **)**
 
 ### <a name="parameters"></a>Parámetros
 
-*NewName*<br/>
+*NewName*\
 Nuevo nombre del espacio de nombres.
 
 ## <a name="remarks"></a>Comentarios
 
-Toma un único argumento, *NewName*, que especifica el nuevo nombre para el espacio de nombres.
+El atributo **rename_namespace** toma un solo argumento, *NewName*, que especifica el nuevo nombre del espacio de nombres.
 
-Para quitar el espacio de nombres, use el [no_namespace](../preprocessor/no-namespace.md) atributo en su lugar.
+Para quitar el espacio de nombres, use el atributo [no_namespace](../preprocessor/no-namespace.md) en su lugar.
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

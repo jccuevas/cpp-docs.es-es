@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: b37b28b4332b46aaaf803f58090a72c25e83f47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e30ed7016ca3a4d4948a08c5c09268e52c9a407d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587764"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761678"
 ---
 # <a name="compiler-error-c3181"></a>Error del compilador C3181
 
-'type': operando no válido para el operador
+' type ': operando no válido para el operador
 
-Se pasó un parámetro no válido para el [typeid](../../windows/typeid-cpp-component-extensions.md) operador. El parámetro debe ser un tipo administrado.
+Se pasó un parámetro no válido al operador [typeid](../../extensions/typeid-cpp-component-extensions.md) . El parámetro debe ser un tipo administrado.
 
-Tenga en cuenta que el compilador utiliza alias para tipos nativos que se asignan a los tipos de common language runtime.
+Tenga en cuenta que el compilador utiliza alias para los tipos nativos que se asignan a los tipos en el Common Language Runtime.
 
-El ejemplo siguiente genera C3181:
+En el ejemplo siguiente se genera C3181:
 
-```
+```cpp
 // C3181a.cpp
 // compile with: /clr
 using namespace System;

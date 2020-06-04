@@ -1,21 +1,21 @@
 ---
-title: library_block (atributo de COM de C++)
+title: library_block (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 76e643cb45d8a87408015e6e0726e47d423147f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214778"
 ---
-# <a name="libraryblock"></a>library_block
+# <a name="library_block"></a>library_block
 
-Coloca una construcción dentro del bloque de biblioteca IDL.
+Coloca una construcción dentro del bloque de la biblioteca IDL.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,13 +23,13 @@ Coloca una construcción dentro del bloque de biblioteca IDL.
 [library_block]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cuando se coloca una construcción dentro del bloque de biblioteca, asegúrese de que se pasarán en la biblioteca de tipos, independientemente de si se hace referencia. De forma predeterminada, solo construcciones modificación el [coclase](coclass.md), [dispinterface](dispinterface.md), y [idl_module](idl-module.md) atributos se colocan en el bloque de biblioteca.
+Cuando se coloca una construcción dentro del bloque de biblioteca, se garantiza que se pasará a la biblioteca de tipos, independientemente de si se hace referencia a ella. De forma predeterminada, solo las construcciones modificadas por los atributos [CoClass](coclass.md), [dispinterface](dispinterface.md)y [idl_module](idl-module.md) se colocan en el bloque de biblioteca.
 
 ## <a name="example"></a>Ejemplo
 
-En el código siguiente, se coloca una interfaz personalizada dentro del bloque de biblioteca.
+En el código siguiente, una interfaz personalizada se coloca dentro del bloque de biblioteca.
 
 ```cpp
 // cpp_attr_ref_library_block.cpp
@@ -50,12 +50,12 @@ __interface IMyInterface {
 |-|-|
 |**Se aplica a**|En cualquier lugar|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)

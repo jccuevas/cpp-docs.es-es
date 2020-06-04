@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - unboxing
 ms.assetid: 75794696-9275-47bf-9a7d-5abe6585ab91
-ms.openlocfilehash: b2919ecce254a81d6a140fc7906d28646b50ab8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b184b0b534e2720af833f34b908ede5b998803ec
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618535"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544872"
 ---
 # <a name="how-to-unbox"></a>Cómo: Aplicar la conversión unboxing
 
-Muestra cómo aplicar la conversión unboxing y modificar un valor.
+Muestra cómo hacer una conversión unboxing y modificar un valor.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // vcmcppv2_unboxing.cpp
 // compile with: /clr
 using namespace System;
@@ -39,6 +39,6 @@ int main() {
 14
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Conversión boxing](../windows/boxing-cpp-component-extensions.md)
+[Conversión boxing](../extensions/boxing-cpp-component-extensions.md)

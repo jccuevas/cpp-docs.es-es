@@ -1,9 +1,10 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getdrive
-apilocation:
+- _o__getdrive
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getdrive
 - getdrive
@@ -25,14 +30,14 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470686"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913768"
 ---
-# <a name="getdrive"></a>_getdrive
+# <a name="_getdrive"></a>_getdrive
 
 Obtiene la unidad de disco actual.
 
@@ -47,7 +52,11 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve la unidad (predeterminada) actual (1=A, 2=B, etc.). No se devuelve ningún error.
+Devuelve la unidad (predeterminada) actual (1=A, 2=B, etc.). Un valor devuelto de cero significa que la ruta de acceso actual no comienza con un nombre de unidad de letra, como una ruta de acceso UNC. O bien, significa que se ha producido un error en la asignación del búfer interno. Si se produce un error en `errno` una asignación interna, se establece en ENOMEM.
+
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -55,7 +64,7 @@ Devuelve la unidad (predeterminada) actual (1=A, 2=B, etc.). No se devuelve ning
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -107,7 +116,7 @@ F: (Current directory is F:\)
 G: (Current directory is G:\)
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>
 [_chdrive](chdrive.md)<br/>

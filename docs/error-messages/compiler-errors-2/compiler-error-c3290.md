@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3290
 ms.assetid: 0baf684b-1143-4953-ac99-a2fa267d8017
-ms.openlocfilehash: d82d3272563f7a5af5de399a2f7fff621500e612
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7a73c13c28923761674294d8d6e601b95ffad96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490486"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760158"
 ---
 # <a name="compiler-error-c3290"></a>Error del compilador C3290
 
@@ -19,13 +19,13 @@ ms.locfileid: "50490486"
 
 Se ha declarado incorrectamente una propiedad. Cuando se declara una propiedad trivial, el compilador crea una variable que actualizará la propiedad y no es posible tener una variable de referencia de seguimiento en una clase.
 
-Consulte [propiedad](../../windows/property-cpp-component-extensions.md) y [operador de referencia de seguimiento](../../windows/tracking-reference-operator-cpp-component-extensions.md) para obtener más información.
+Vea operador de [referencia](../../extensions/tracking-reference-operator-cpp-component-extensions.md) de [propiedad](../../extensions/property-cpp-component-extensions.md) y seguimiento para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C3290.
 
-```
+```cpp
 // C3290.cpp
 // compile with: /clr /c
 ref struct R {};

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nologo compiler option [C++]
 - banners, suppressing startup
 ms.assetid: 75930d8b-b11c-4db8-99e5-b52f97da0693
-ms.openlocfilehash: cb6ed379423be1562bb731c531f76c8a8e5dcec8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e48989a8e433296856ae58560823e601e36008f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320466"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/NOLOGO (Suprimir el titular de inicio) (C/C++)
 
@@ -31,7 +31,7 @@ Suprime la presentación de la pancarta de copyright cuando se inicia el compila
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -45,5 +45,5 @@ Suprime la presentación de la pancarta de copyright cuando se inicia el compila
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

@@ -1,9 +1,10 @@
 ---
 title: fflush
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - fflush
-apilocation:
+- _o_fflush
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fflush
 helpviewer_keywords:
@@ -23,12 +28,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: d03d20ee5024915d0ca4c5a21db4159e8c4f876a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329116"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912893"
 ---
 # <a name="fflush"></a>fflush
 
@@ -44,7 +49,7 @@ int fflush(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -52,19 +57,21 @@ Puntero a la estructura **FILE**.
 **fflush** devuelve 0 si el búfer se ha vaciado correctamente. También se devuelve el valor 0 en los casos en que la secuencia especificada no tiene ningún búfer o solo se abre para lectura. Un valor devuelto de **EOF** indica un error.
 
 > [!NOTE]
-> Si **fflush** devuelve **EOF**, pueden haberse perdidos debido a un error de escritura de datos. Al configurar un controlador de errores críticos, resulta más seguro desactivar el almacenamiento en búfer con el **setvbuf** función o usar rutinas de E/S de bajo nivel como **_open**, **_close**, y **_write** en lugar de las funciones de E/S de secuencia.
+> Si **fflush** devuelve **EOF**, es posible que se hayan perdido datos debido a un error de escritura. Al configurar un controlador de errores crítico, es más seguro desactivar el almacenamiento en búfer con la función **setvbuf (** o usar rutinas de e/s de bajo nivel, como **_open**, **_close**y **_write** en lugar de las funciones de e/s de secuencias.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **fflush** función vuelca el flujo *secuencia*. Si la secuencia se ha abierto en modo de escritura, o se ha abierto en modo de actualización y la última operación ha sido una operación de escritura, el contenido del búfer de la secuencia se escribe en el archivo o dispositivo subyacentes y el búfer se descarta. Si la secuencia se ha abierto en modo de lectura, o si la secuencia no tiene ningún búfer, la llamada a **fflush** no tiene ningún efecto y se conserva ningún búfer. Una llamada a **fflush** anula el efecto de cualquier llamada anterior a **ungetc** para la secuencia. La secuencia sigue abierta después de la llamada.
+La función **fflush** vacía el *flujo*de la secuencia. Si la secuencia se ha abierto en modo de escritura, o se ha abierto en modo de actualización y la última operación ha sido una operación de escritura, el contenido del búfer de la secuencia se escribe en el archivo o dispositivo subyacentes y el búfer se descarta. Si la secuencia se abrió en modo de lectura, o si la secuencia no tiene ningún búfer, la llamada a **fflush** no tiene ningún efecto y se conserva cualquier búfer. Una llamada a **fflush** niega el efecto de cualquier llamada anterior a **ungetc** para la secuencia. La secuencia sigue abierta después de la llamada.
 
-Si *secuencia* es **NULL**, el comportamiento es el mismo que una llamada a **fflush** en cada secuencia abierta. Se vacían todas las secuencias abiertas en modo de escritura y en modo de actualización en las que la última operación ha sido de escritura. La llamada no tiene ningún efecto en otras secuencias.
+Si *Stream* es **null**, el comportamiento es el mismo que una llamada a **fflush** en cada flujo abierto. Se vacían todas las secuencias abiertas en modo de escritura y en modo de actualización en las que la última operación ha sido de escritura. La llamada no tiene ningún efecto en otras secuencias.
 
-Normalmente, el sistema operativo mantiene los búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra una secuencia o cuando un programa finaliza con normalidad sin cerrar la secuencia. La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escriben directamente en el disco y no en los búferes del sistema operativo. Sin tener que volver a escribir un programa existente, puede habilitar esta característica vinculando los archivos objeto del programa a COMMODE.OBJ. En el archivo ejecutable resultante, las llamadas a **_flushall** escribir el contenido de todos los búferes en el disco. Solo **_flushall** y **fflush** se ven afectadas por COMMODE.OBJ.
+Normalmente, el sistema operativo mantiene los búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra una secuencia o cuando un programa finaliza con normalidad sin cerrar la secuencia. La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escriben directamente en el disco y no en los búferes del sistema operativo. Sin tener que volver a escribir un programa existente, puede habilitar esta característica vinculando los archivos objeto del programa a COMMODE.OBJ. En el archivo ejecutable resultante, las llamadas a **_flushall** escriben el contenido de todos los búferes en el disco. COMMODE. OBJ solo afecta a **_flushall** y **fflush** .
 
 Para obtener información sobre cómo controlar la característica de confirmación en disco, consulte [E/S de secuencia](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) y [_fdopen](fdopen-wfdopen.md).
 
 Esta función bloquea el subproceso de llamada y por lo tanto es segura para subprocesos. Para obtener una versión que no sea de bloqueo, consulte **_fflush_nolock**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,47 +85,53 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 ```C
 // crt_fflush.c
+// Compile with: cl /W4 crt_fflush.c
+// This sample gets a number from the user, then writes it to a file.
+// It ensures the write isn't lost on crash by calling fflush.
 #include <stdio.h>
-#include <conio.h>
 
-int main( void )
+int * crash_the_program = 0;
+
+int main(void)
 {
-   int integer;
-   char string[81];
+    FILE * my_file;
+    errno_t err = fopen_s(&my_file, "myfile.txt", "w");
+    if (my_file && !err)
+    {
+        printf("Write a number: ");
 
-   // Read each word as a string.
-   printf( "Enter a sentence of four words with scanf: " );
-   for( integer = 0; integer < 4; integer++ )
-   {
-      scanf_s( "%s", string, sizeof(string) );
-      printf( "%s\n", string );
-   }
+        int my_number = 0;
+        scanf_s("%d", &my_number);
 
-   // You must flush the input buffer before using gets.
-   // fflush on input stream is an extension to the C standard
-   fflush( stdin );
-   printf( "Enter the same sentence with gets: " );
-   gets_s( string, sizeof(string) );
-   printf( "%s\n", string );
+        fprintf(my_file, "User selected %d\n", my_number);
+
+        // Write data to a file immediately instead of buffering.
+        fflush(my_file);
+
+        if (my_number == 5)
+        {
+            // Without using fflush, no data was written to the file
+            // prior to the crash, so the data is lost.
+            *crash_the_program = 5;
+        }
+
+        // Normally, fflush is not needed as closing the file will write the buffer.
+        // Note that files are automatically closed and flushed during normal termination.
+        fclose(my_file);
+    }
+    return 0;
 }
 ```
 
 ```Input
-This is a test
-This is a test
+5
 ```
 
-```Output
-Enter a sentence of four words with scanf: This is a test
-This
-is
-a
-test
-Enter the same sentence with gets: This is a test
-This is a test
+```myfile.txt
+User selected 5
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

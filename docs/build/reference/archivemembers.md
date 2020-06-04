@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ARCHIVEMEMBERS dumpbin option
 - -ARCHIVEMEMBERS dumpbin option
 ms.assetid: 47056a7a-a1ba-42bc-9f2e-0599195ef79a
-ms.openlocfilehash: 3032e2f386ae40b8205823274cc83f70c08b71f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 880e36219b45367ff96e0d292b9728bf797c308a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295125"
 ---
 # <a name="archivemembers"></a>/ARCHIVEMEMBERS
 
@@ -25,8 +25,8 @@ ms.locfileid: "50457634"
 
 Esta opción muestra información mínima sobre objetos miembro en una biblioteca.
 
-Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.
+Solo el [/HEADERS](headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](gl-whole-program-optimization.md) opción del compilador.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opciones de DUMPBIN](dumpbin-options.md)

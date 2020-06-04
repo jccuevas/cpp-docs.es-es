@@ -1,6 +1,6 @@
 ---
 title: Operador IMAGEREL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator IMAGEREL
 - IMAGEREL
@@ -8,27 +8,28 @@ helpviewer_keywords:
 - operator IMAGEREL
 - IMAGEREL operator
 ms.assetid: 5b5ea425-36f0-467c-9262-62c484b7fdb4
-ms.openlocfilehash: 1363297cc1627775093f0f5e78937b981e41bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 343e68f31d396e008fb42622271f39b63287b287
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439474"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317934"
 ---
 # <a name="operator-imagerel"></a>Operador IMAGEREL
 
-Devuelve el desplazamiento relativo de la imagen de `expression`.
+Devuelve el desplazamiento relativo de la imagen de la *expresión*.
 
 ## <a name="syntax"></a>Sintaxis
 
-> Expresión IMAGEREL
+> *Expresión* IMAGEREL
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-El valor resultante a menudo se conoce como una RVA o la dirección Virtual relativa.
+El valor resultante se denomina a menudo RVA o una dirección virtual relativa.
 
-IMAGEREL solo está disponible con las emisiones de objeto COFF.
+IMAGEREL solo está disponible con la emisión de objetos COFF.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

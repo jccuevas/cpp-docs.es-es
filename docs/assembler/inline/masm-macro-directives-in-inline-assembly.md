@@ -7,21 +7,21 @@ helpviewer_keywords:
 - macros, directives
 - MASM (Microsoft Macro Assembler), inline assembly macro directives
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
-ms.openlocfilehash: 7e1bed782d28a5bf7c934c3f57f50aae70038578
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38b73346fc52f6b5efe478f8eb960ad049fae924
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169284"
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>Directivas de macro de MASM de ensamblado insertado
 
 **Específicos de Microsoft**
 
-El ensamblador alineado no es un Macro Assembler. No se puede usar directivas de macro MASM (**MACRO**, `REPT`, **IRC**, `IRP`, y `ENDM`) ni operadores de macro (**<>**, **!** , **&**, `%`, y `.TYPE`). Sin embargo, un bloque `__asm` puede usar directivas de preprocesador de C. Consulte [uso de C o C++ en bloques __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) para obtener más información.
+El ensamblador alineado no es un Macro Assembler. No se pueden usar las directivas de macro de MASM (**macro**, `REPT`, **IRC**, `IRP`y `ENDM`) ni los operadores de macro ( **<>** , **!** , **&** , `%`y `.TYPE`). Sin embargo, un bloque `__asm` puede usar directivas de preprocesador de C. Vea [uso de C C++ o en bloques de __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) para obtener más información.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso del lenguaje de ensamblado en bloques __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

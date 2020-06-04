@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0042
 ms.assetid: 682c9999-6f85-409f-b102-00c93243f74f
-ms.openlocfilehash: c91e40b6ad56d6201fc7d0ba7c9fbf23e620e8b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45de1de889dedbc03c556e4c88dc76f21e1c8c63
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492032"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191917"
 ---
 # <a name="project-build-warning-prj0042"></a>Advertencia PRJ0042 al compilar el proyecto
 
-> La propiedad' Outputs' del paso de compilación personalizada para el archivo de'*archivo*' no se ha establecido. El paso de compilación personalizada se omitirá.
+> No se ha establecido la propiedad ' Outputs ' del paso de compilación personalizada para el archivo '*File*'. Se omitirá el paso de compilación personalizada.
 
-No se ha ejecutado un paso de compilación personalizada porque se especificó ningún resultado.
+No se ejecutó un paso de compilación personalizada porque no se especificó ninguna salida.
 
-Para resolver este error, realice una de las siguientes:
+Para resolver este error, realice una de las acciones siguientes:
 
-- Excluir el paso de compilación personalizada de la compilación.
+- Excluya el paso de compilación personalizada de la compilación.
 
-- Agrega una salida.
+- Agregue una salida.
 
 - Elimine el contenido del comando del paso de compilación personalizada.

@@ -1,17 +1,17 @@
 ---
 title: .NOLISTIF
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .NOLISTIF
 helpviewer_keywords:
 - .NOLISTIF directive
 ms.assetid: 9243af7a-7221-4531-bbc3-281b6b292bfd
-ms.openlocfilehash: 43cde027f5c909b13e90255efccee3c8dac080c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3f474528bee5b8838dedef4717295a1cbf82695
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676192"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317596"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
@@ -19,12 +19,13 @@ Suprime la lista de bloques condicionales cuya condición se evalúa como false 
 
 ## <a name="syntax"></a>Sintaxis
 
-> .NOLISTIF
+> **.NOLISTIF**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Este es el valor predeterminado. Igual que [. SFCOND](../../assembler/masm/dot-sfcond.md).
+Esta es la opción predeterminada. Igual que [. SFCOND](dot-sfcond.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)
+[gramática BnF de MASM](masm-bnf-grammar.md)

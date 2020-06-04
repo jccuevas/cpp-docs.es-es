@@ -5,18 +5,16 @@ f1_keywords:
 - _com_ptr_t.operator=
 - _com_ptr_t::operator=
 helpviewer_keywords:
-- operator = [C++], pointers
-- = operator [C++], with specific Visual C++ objects
-- operator= [C++], pointers
+- _com_ptr_t [C++]
 ms.assetid: 46849455-371c-4d0f-bae4-c1f737d2ca4a
-ms.openlocfilehash: 7ce2d83df4068cf7a71452887dbe8fb7e51a9702
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 489d2a3f098d5d1bf1df56cca7eaf6ac8ae776b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170701"
 ---
-# <a name="comptrtoperator-"></a>_com_ptr_t::operator =
+# <a name="_com_ptr_toperator-"></a>_com_ptr_t::operator =
 
 **Específicos de Microsoft**
 
@@ -41,7 +39,7 @@ _com_ptr_t& operator=(_InterfaceType* p );
 // AddRef is called to increment the reference count for the encapsulated
 // interface pointer, and Release is called to decrement the reference
 // count for the previously encapsulated pointer.
-template<> _com_ptr_t& 
+template<> _com_ptr_t&
 operator=( Interface* pInterface ) throw();
 
 // Sets a smart pointer to be a copy of another instance of the same
@@ -61,12 +59,12 @@ _com_ptr_t& operator=( int null );
 _com_ptr_t& operator=( const _variant_t& varSrc );
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Asigna un puntero de interfaz a este objeto `_com_ptr_t`.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

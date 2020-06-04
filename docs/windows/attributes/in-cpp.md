@@ -1,21 +1,21 @@
 ---
-title: (atributo de COM de C++)
+title: in (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: bf23b1c776eccc284e5329b62bd45b0bd678823f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f25f15148621d7092858577825dbdd6caa1ae0be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449704"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166801"
 ---
 # <a name="in-c"></a>in (C++)
 
-Indica que es un parámetro que se pasan desde el procedimiento que realiza la llamada al procedimiento llamado.
+Indica que se va a pasar un parámetro del procedimiento que realiza la llamada al procedimiento llamado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,13 +23,13 @@ Indica que es un parámetro que se pasan desde el procedimiento que realiza la l
 [in]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **en** atributo de C++ tiene la misma funcionalidad que el [en](/windows/desktop/Midl/in) atributo MIDL.
+El atributo **in** C++ tiene la misma funcionalidad que el atributo MIDL [en](/windows/win32/Midl/in) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [enlazable](bindable.md) para obtener un ejemplo de cómo usar **en**.
+Vea [enlazable](bindable.md) para obtener un ejemplo de cómo usar **en**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,18 +37,18 @@ Consulte [enlazable](bindable.md) para obtener un ejemplo de cómo usar **en**.
 
 |||
 |-|-|
-|**Se aplica a**|Parámetro de interfaz, el método de interfaz|
+|**Se aplica a**|Parámetro de interfaz, método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|**retval**|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[identificador](id.md)<br/>
+[id](id.md)<br/>
 [out](out-cpp.md)

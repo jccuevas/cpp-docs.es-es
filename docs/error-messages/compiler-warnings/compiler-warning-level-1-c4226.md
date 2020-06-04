@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4226
 ms.assetid: 69d6bbde-1300-4e48-8a9c-3648c80ab441
-ms.openlocfilehash: 7792674049c200652f4fe1b63c43a8f5fdf9ff6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0d9008ba9610f9678533969f8bd9019b82241d9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580666"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175927"
 ---
 # <a name="compiler-warning-level-1-c4226"></a>Advertencia del compilador (nivel 1) C4226
 
-> ha utilizado una extensión no estándar: '*palabra clave*' es una palabra clave obsoleta
+> se ha utilizado una extensión no estándar: '*Keyword*' es una palabra clave obsoleta
 
 La versión actual de Visual C++ no utiliza esta palabra clave.
 

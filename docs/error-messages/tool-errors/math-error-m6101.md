@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - M6101
 ms.assetid: 8c8d5097-d725-4a2c-92e9-fcf28c871d74
-ms.openlocfilehash: a32378b12586141b844dc5d631f0f83ba6e8faf2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b120b069a329cb1158b26574b935b6374661bf67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173782"
 ---
 # <a name="math-error-m6101"></a>Error matemático M6101
 
-no válidos
+no válido
 
 Operación no válida.
 
-Este error puede deberse al operando es NaN (no un número) o infinito.
+Este error puede deberse a que un operando es NaN (no un número) o infinito.
 
-El programa termina con el código de salida 129.
+El programa finaliza con el código de salida 129.

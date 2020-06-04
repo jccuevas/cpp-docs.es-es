@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
-ms.openlocfilehash: 8a8c99f2651d10d4fc2aff413a06256127f32d7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4028d57a6e8898f85a37d9731e7e8d4cda19a2f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582798"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453715"
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 
@@ -35,7 +35,7 @@ Los errores de tiempo de ejecución se producen debido a errores en las funcione
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|Clase|DESCRIPCIÓN|
 |-|-|
 |[domain_error (Clase)](../standard-library/domain-error-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un error de dominio.|
 |[invalid_argument (Clase)](../standard-library/invalid-argument-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un argumento inválido.|
@@ -49,5 +49,5 @@ Los errores de tiempo de ejecución se producen debido a errores en las funcione
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

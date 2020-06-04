@@ -1,10 +1,12 @@
 ---
 title: rename, _wrename
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - rename
 - _wrename
-apilocation:
+- _o__wrename
+- _o_rename
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +40,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326145"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917802"
 ---
-# <a name="rename-wrename"></a>rename, _wrename
+# <a name="rename-_wrename"></a>rename, _wrename
 
 Cambia el nombre de un archivo o de un directorio.
 
@@ -68,7 +74,7 @@ Puntero al nombre nuevo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si se realiza correctamente. Produce un error, la función devuelve un valor distinto de cero y establece **errno** a uno de los siguientes valores:
+Cada una de estas funciones devuelve 0 si se realiza correctamente. En un error, la función devuelve un valor distinto de cero y establece **errno** en uno de los valores siguientes:
 
 |valor de errno|Condición|
 |-|-|
@@ -78,11 +84,13 @@ Cada una de estas funciones devuelve 0 si se realiza correctamente. Produce un e
 
 Para otros valores devueltos posibles, vea [_doserrno, _errno, syserrlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **rename** cambia el nombre del archivo o directorio especificado por *oldname* por el nombre proporcionado por *newname*. El nombre anterior debe ser la ruta de acceso de un archivo o directorio existente. El nombre nuevo no debe ser el nombre de un archivo o directorio existente. Puede usar **rename** para mover un archivo de un directorio o dispositivo a otro indicando una ruta de acceso diferente en el argumento *newname*. Sin embargo, no puede usar **rename** para mover un directorio. Se puede cambiar el nombre de los directorios, pero estos no se pueden mover.
 
-**_wrename** es una versión con caracteres anchos de **_rename**; los argumentos de **_wrename** son cadenas de caracteres anchos. **_wrename** y **_rename** se comportan exactamente igual.
+**_wrename** es una versión con caracteres anchos de **_rename**; los argumentos para **_wrename** son cadenas de caracteres anchos. **_wrename** y **_rename** se comportan de manera idéntica.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -97,7 +105,7 @@ La función **rename** cambia el nombre del archivo o directorio especificado po
 |**rename**|\<io.h> o \<stdio.h>|
 |**_wrename**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

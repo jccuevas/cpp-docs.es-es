@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
-ms.openlocfilehash: da80a10cbf7246ad0aeaecffe20992d2050abb3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7e6bde7ce07edf7a75f38c37f3e4cbb3c6c3486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637871"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752462"
 ---
 # <a name="compiler-error-c3745"></a>Error del compilador C3745
 
-'function': sólo genera un evento puede ser' '
+' función ': solo un evento puede ser ' generated '
 
-Sólo una función definida con la [__event](../../cpp/event.md) palabra clave se puede pasar a la [__raise](../../cpp/raise.md) palabra clave.
+Solo se puede pasar una función definida con la palabra clave [__event](../../cpp/event.md) a la palabra clave [__raise](../../cpp/raise.md) .
 
-El ejemplo siguiente genera C3745:
+En el ejemplo siguiente se genera C3745:
 
-```
+```cpp
 // C3745.cpp
 struct E {
    __event void func();

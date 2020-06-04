@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501407"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685821"
 ---
-# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine (Clase)
+# <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine (Clase)
 
 Genera una secuencia aleatoria mediante el algoritmo resta por acarreo (Fibonacci retrasado).
 
@@ -36,16 +36,16 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*UIntType*<br/>
+@No__t_1 *UIntType*
 El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*W* \
 **Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*S* \
 **Intervalo corto**. Número de valores íntegros. **Condición previa:** `0 < S < R`
 
-*R*<br/>
+*R*\
 **Intervalo largo**. Determina la recurrencia en la serie generada.
 
 ## <a name="members"></a>Miembros
@@ -60,9 +60,9 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla `substract_with_carry_engine` es una mejora respecto al [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ninguno de estos motores es tan rápido o tiene unos resultados de mayor calidad que el [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+La plantilla de clase `substract_with_carry_engine` es una mejora respecto al [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ninguno de estos motores es tan rápido o tiene unos resultados de mayor calidad que el [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Este motor produce valores de un tipo entero sin signo especificado por el usuario que usa la relación de periodicidad ( *periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, en la que `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`. De lo contrario `0`, y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un carry de indicador de signo más *R* valores. Estos valores consisten en los últimos *R* valores que se devuelve si `operator()` se ha llamado al menos *R* agota el tiempo, en caso contrario, el `N` valores que se han devuelto y los últimos `R - N` valores de la inicialización.
+Este motor produce valores de un tipo entero sin signo especificado por el usuario mediante la relación de periodicidad ( *período*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, donde `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`, de lo contrario `0` y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un indicador de transporte más valores de *R* . Estos valores se componen de los últimos valores de *r* devueltos si se ha llamado a `operator()` al menos *R* veces, de lo contrario, los valores `N` que se han devuelto y los últimos valores `R - N` de la inicialización.
 
 El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `M - 1`.
 
@@ -84,4 +84,4 @@ Para más detalles sobre el algoritmo de motor de resta con llevadas, vea el art
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

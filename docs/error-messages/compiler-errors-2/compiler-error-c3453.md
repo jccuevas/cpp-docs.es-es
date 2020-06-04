@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3453
 ms.assetid: dbefdbcf-f697-4239-b7a5-1d99b85e9e7f
-ms.openlocfilehash: 2b3288d02c611bf6785ca1ea7757e2283d889050
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 993300d4bf3b4fd6f0bd05392fc5263b3c8671d9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472727"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756700"
 ---
 # <a name="compiler-error-c3453"></a>Error del compilador C3453
 
@@ -23,7 +23,7 @@ Los atributos de ensamblado o de nivel de módulo pueden especificarse como inst
 
 El ejemplo siguiente genera la advertencia C3453.
 
-```
+```cpp
 // C3453.cpp
 // compile with: /clr /c
 [assembly:System::CLSCompliant(true)]   // C3453

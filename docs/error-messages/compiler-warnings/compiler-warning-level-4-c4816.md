@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4816
 ms.assetid: 60f730ae-d942-4db9-ab97-41d4a874d8da
-ms.openlocfilehash: 719a950f2cc15b51dcbbb7e8f4f476f92fe326c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96cb81d78b0e49e6978ff6ec78cdbfcfdc89e6d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626660"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990064"
 ---
 # <a name="compiler-warning-level-4-c4816"></a>Advertencia del compilador (nivel 4) C4816
 
@@ -23,7 +23,7 @@ Un parámetro para un objeto con una matriz de tamaño cero no se pasó por refe
 
 El ejemplo siguiente genera la advertencia C4816:
 
-```
+```cpp
 // C4816.cpp
 // compile with: /W4
 #include <stdio.h>

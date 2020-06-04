@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3047
 ms.assetid: 91c14566-5958-433d-8549-0e8bc3196f76
-ms.openlocfilehash: c73cdce4520b139c872c29b7809a46f55c3bebd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6b8530aa1a1d5b8a0bfa735a9cc759a698ae841
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434940"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761330"
 ---
 # <a name="compiler-error-c3047"></a>Error del compilador C3047
 
@@ -21,7 +21,7 @@ Cualquier código en un bloque de código introducido por una directiva [section
 
 El ejemplo siguiente genera la advertencia C3047:
 
-```
+```cpp
 // C3047.cpp
 // compile with: /openmp /c
 #include "omp.h"

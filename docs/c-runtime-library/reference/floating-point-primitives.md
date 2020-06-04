@@ -1,7 +1,7 @@
 ---
 title: Tipos primitivos de punto flotante
-ms.date: 01/31/2019
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _dclass
 - _ldclass
 - _fdclass
@@ -37,7 +37,38 @@ apiname:
 - _dsin
 - _ldsin
 - _fdsin
-apilocation:
+- _o__d_int
+- _o__dclass
+- _o__dlog
+- _o__dnorm
+- _o__dpcomp
+- _o__dpoly
+- _o__dscale
+- _o__dsign
+- _o__dsin
+- _o__dtest
+- _o__dunscale
+- _o__fd_int
+- _o__fdclass
+- _o__fdexp
+- _o__fdlog
+- _o__fdpcomp
+- _o__fdpoly
+- _o__fdscale
+- _o__fdsign
+- _o__fdsin
+- _o__ld_int
+- _o__ldclass
+- _o__ldexp
+- _o__ldlog
+- _o__ldpcomp
+- _o__ldpoly
+- _o__ldscale
+- _o__ldsign
+- _o__ldsin
+- _o__ldtest
+- _o__ldunscale
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -49,7 +80,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _dclass
 - _ldclass
@@ -122,18 +157,20 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703481"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916695"
 ---
 # <a name="floating-point-primitives"></a>Tipos primitivos de punto flotante
 
-Funciones primitivas específicas de Microsoft que se usan para implementar algunas funciones punto flotante de C runtime library (CRT) estándares. Estos se documentan aquí por integridad, pero no se recomiendan para su uso. Algunas de estas funciones son indican como no usados, porque se conocen a tener problemas de conformidad con respecto al comportamiento de IEEE-754, control de excepciones y precisión. Existen en la biblioteca sólo para compatibilidad con versiones anteriores. Para el comportamiento correcto, portabilidad y cumplimiento de estándares, prefieren las funciones de punto flotante estándar a través de estas funciones.
+Funciones primitivas específicas de Microsoft que se usan para implementar algunas funciones de punto flotante estándar de la biblioteca en tiempo de ejecución de C (CRT). Se documentan aquí por integridad, pero no se recomienda su uso. Algunas de estas funciones se indican como no utilizadas, ya que se sabe que tienen problemas de precisión, control de excepciones y cumplimiento del comportamiento IEEE-754. Solo existen en la biblioteca para mantener la compatibilidad con versiones anteriores. Para un comportamiento correcto, la portabilidad y el cumplimiento de los estándares, es preferible utilizar las funciones de punto flotante estándar en estas funciones.
 
-## <a name="dclass-ldclass-fdclass"></a>_dclass, _ldclass, _fdclass
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
+
+## <a name="_dclass-_ldclass-_fdclass"></a>_dclass, _ldclass, _fdclass
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -146,23 +183,23 @@ short __cdecl _fdclass(float x);
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Argumento de función de punto flotante.
+Argumento de la función de punto flotante.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante implementan las versiones de C de la macro de CRT [fpclassify](fpclassify.md) para tipos de punto flotante. La clasificación del argumento *x* se devuelve como una de estas constantes, definidas en math.h:
+Estos primitivos de punto flotante implementan las versiones de C de la macro de CRT [fpclassify (](fpclassify.md) para los tipos de punto flotante. La clasificación del argumento *x* se devuelve como una de estas constantes, definidas en Math. h:
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 | **FP_NAN** | NaN reservado, de señalización o indeterminado |
 | **FP_INFINITE** | Infinito positivo o negativo |
 | **FP_NORMAL** | Valor positivo o negativo normalizado distinto de cero |
-| **FP_SUBNORMAL** | Valor positivo o negativo subnormal (desnormalizado) |
+| **FP_SUBNORMAL** | Valor de subnormalización positivo o negativo (desnormalizado) |
 | **FP_ZERO** | Valor cero positivo o negativo |
 
-Para obtener detalles adicionales, puede usar el específico de Microsoft [_fpclass, _fpclassf](fpclass-fpclassf.md) funciones. Use la [fpclassify](fpclassify.md) macro o función para la portabilidad.
+Para obtener detalles adicionales, puede usar las funciones de [_fpclassf de _fpclass](fpclass-fpclassf.md) específicas de Microsoft. Use la macro o la función [fpclassify (](fpclassify.md) para la portabilidad.
 
-## <a name="dsign-ldsign-fdsign"></a>_dsign, _ldsign, _fdsign
+## <a name="_dsign-_ldsign-_fdsign"></a>_dsign, _ldsign, _fdsign
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -175,13 +212,13 @@ int __cdecl _fdsign(float x);
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Argumento de función de punto flotante.
+Argumento de la función de punto flotante.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Implementan estas primitivas de punto flotante del [signbit](signbit.md) macro o función de CRT. Devuelven un valor distinto de cero si el bit de signo se establece en el significado (mantisa) del argumento *x*y 0 si no se establece el bit de signo.
+Estos primitivos de punto flotante implementan la macro o la función [signbit (](signbit.md) en CRT. Devuelven un valor distinto de cero si el bit de signo se establece en el significado (mantisa) del argumento *x*y 0 si no se establece el bit de signo.
 
-## <a name="dpcomp-ldpcomp-fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
+## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -194,21 +231,21 @@ int __cdecl _fdpcomp(float x, float y);
 ### <a name="parameters"></a>Parámetros
 
 *x*, *y*<br/>
-Argumentos de función de punto flotante.
+Argumentos de la función de punto flotante.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante toman dos argumentos, *x* y *y*y devuelve un valor que indica su relación de ordenación, expresada como el bit a bit o de estas constantes, definidas en math.h:
+Estos primitivos de punto flotante toman dos argumentos, *x* e y, y devuelven un valor que muestra su relación de ordenación, expresada como la operación OR *bit a bit*de estas constantes, definidas en Math. h:
 
-| Valor | Descripción |
+| Value | Descripción |
 |------------|-----------------|
-| **_FP_LT** | *x* puede considerarse menor *y* |
-| **_FP_EQ** | *x* pueden considerarse iguales a *y* |
-| **_FP_GT** | *x* puede considerarse mayor *y* |
+| **_FP_LT** | *x* se puede considerar menor que *y* |
+| **_FP_EQ** | *x* se puede considerar igual a *y* |
+| **_FP_GT** | *x* se puede considerar mayor que *y* |
 
-Implementan estas primitivas el [isgreater, isgreaterequal, isless, islessequal, islessgreater y isunordered](floating-point-ordering.md) macros y funciones de CRT.
+Estos primitivos implementan las macros y funciones [isgreater, isgreaterequal, isless, islessequal, islessgreater y isunordered](floating-point-ordering.md) en CRT.
 
-## <a name="dtest-ldtest-fdtest"></a>_dtest, _ldtest, _fdtest
+## <a name="_dtest-_ldtest-_fdtest"></a>_dtest, _ldtest, _fdtest
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -220,24 +257,24 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="parameters"></a>Parámetros
 
-*px*<br/>
+*píxeles*<br/>
 Puntero a un argumento de punto flotante.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante implementan las versiones de C++ de la función de CRT [fpclassify](fpclassify.md) para tipos de punto flotante. El argumento *x* se evalúa y se devuelve la clasificación como una de estas constantes, definidas en math.h:
+Estos primitivos de punto flotante implementan las versiones de C++ de la función de CRT [fpclassify (](fpclassify.md) para los tipos de punto flotante. El argumento *x* se evalúa y la clasificación se devuelve como una de estas constantes, definidas en Math. h:
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 | **FP_NAN** | NaN reservado, de señalización o indeterminado |
 | **FP_INFINITE** | Infinito positivo o negativo |
 | **FP_NORMAL** | Valor positivo o negativo normalizado distinto de cero |
-| **FP_SUBNORMAL** | Valor positivo o negativo subnormal (desnormalizado) |
+| **FP_SUBNORMAL** | Valor de subnormalización positivo o negativo (desnormalizado) |
 | **FP_ZERO** | Valor cero positivo o negativo |
 
-Para obtener detalles adicionales, puede usar el específico de Microsoft [_fpclass, _fpclassf](fpclass-fpclassf.md) funciones. Use la [fpclassify](fpclassify.md) función para la portabilidad.
+Para obtener detalles adicionales, puede usar las funciones de [_fpclassf de _fpclass](fpclass-fpclassf.md) específicas de Microsoft. Utilice la función [fpclassify (](fpclassify.md) para la portabilidad.
 
-## <a name="dint-ldint-fdint"></a>_d_int, _ld_int, _fd_int
+## <a name="_d_int-_ld_int-_fd_int"></a>_d_int, _ld_int, _fd_int
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -249,17 +286,17 @@ short __cdecl _fd_int(float* px, short exp);
 
 ### <a name="parameters"></a>Parámetros
 
-*px*<br/>
+*píxeles*<br/>
 Puntero a un argumento de punto flotante.
 
-*exp*<br/>
-Un exponente como un tipo entero.
+*consumo*<br/>
+Exponente como un tipo entero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante tienen un puntero a un valor de punto flotante *px* y un valor de exponente *exp*y quitar la parte fraccionaria del valor de punto flotante a continuación el exponente determinado, si es posible . El valor devuelto es el resultado de **fpclassify** en el valor de entrada en *px* si es un NaN o infinito y en el valor de salida en *px* en caso contrario.
+Estos primitivos de punto flotante toman un puntero a un valor de punto flotante *PX* y un valor de exponente *exp*, y quitan la parte fraccionaria del valor de punto flotante situado debajo del exponente dado, si es posible. El valor devuelto es el resultado de **fpclassify (** en el valor de entrada en *PX* si es un Nan o infinito, y en el valor de salida en *PX* en caso contrario.
 
-## <a name="dscale-ldscale-fdscale"></a>_dscale, _ldscale, _fdscale
+## <a name="_dscale-_ldscale-_fdscale"></a>_dscale, _ldscale, _fdscale
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -271,17 +308,17 @@ short __cdecl _fdscale(float* px, long exp);
 
 ### <a name="parameters"></a>Parámetros
 
-*px*<br/>
+*píxeles*<br/>
 Puntero a un argumento de punto flotante.
 
-*exp*<br/>
-Un exponente como un tipo entero.
+*consumo*<br/>
+Exponente como un tipo entero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante tienen un puntero a un valor de punto flotante *px* y un valor de exponente *exp*, y el valor de escala *px* 2<sup> *exp*</sup>, si es posible. El valor devuelto es el resultado de **fpclassify** en el valor de entrada en *px* si es un NaN o infinito y en el valor de salida en *px* en caso contrario. Para la portabilidad, prefiere la [ldexp, ldexpf y ldexpl](ldexp.md) funciones.
+Estas primitivas de punto flotante toman un puntero a un valor de punto flotante *PX* y un valor de exponente *exp*, y escalan el valor en *PX* por 2<sup>*exp*</sup>, si es posible. El valor devuelto es el resultado de **fpclassify (** en el valor de entrada en *PX* si es un Nan o infinito, y en el valor de salida en *PX* en caso contrario. Para portabilidad, prefiere las funciones [ldexp, ldexpf (y ldexpl](ldexp.md) .
 
-## <a name="dunscale-ldunscale-fdunscale"></a>_dunscale, _ldunscale, _fdunscale
+## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale, _ldunscale, _fdunscale
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -296,14 +333,14 @@ short __cdecl _fdunscale(short* pexp, float* px);
 *pexp*<br/>
 Un puntero a un exponente como un tipo entero.
 
-*px*<br/>
+*píxeles*<br/>
 Puntero a un argumento de punto flotante.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante desglosar el valor de punto flotante al que apunta *px* en una mantisa (mantisa) y un exponente, si es posible. La mantisa se escala de forma que el valor absoluto es mayor o igual a 0,5 y menor que 1,0. El exponente es el valor *n*, donde el valor de punto flotante original es igual a la mantisa escalada veces 2<sup>*n*</sup>. Este exponente de entero *n* se almacena en la ubicación señalada por *pexp*. El valor devuelto es el resultado de **fpclassify** en el valor de entrada en *px* si es un NaN o infinito y en el valor de salida en caso contrario. Para la portabilidad, prefiere la [frexp, frexpf, frexpl](frexp.md) funciones.
+Estas primitivas de punto flotante dividen el valor de punto flotante señalado por *PX* en un significado (mantisa) y un exponente, si es posible. El significado se escala de forma que el valor absoluto sea mayor o igual que 0,5 y menor que 1,0. El exponente es el valor *n*, donde el valor de punto flotante original es igual que el tamaño de escalado de 2<sup>*n*</sup>. Este exponente entero *n* se almacena en la ubicación a la que señala *pexp*. El valor devuelto es el resultado de **fpclassify (** en el valor de entrada en *PX* si es un Nan o infinito, y en el valor de salida de lo contrario. Para portabilidad, prefiere las funciones [frexp (, frexpf (, frexpl](frexp.md) .
 
-## <a name="dexp-ldexp-fdexp"></a>_dexp, _ldexp, _fdexp
+## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp, _fdexp
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -315,20 +352,20 @@ short __cdecl _fdexp(float* px, float y, long exp);
 
 ### <a name="parameters"></a>Parámetros
 
-*y*<br/>
-Argumento de función de punto flotante.
+*sí*<br/>
+Argumento de la función de punto flotante.
 
-*px*<br/>
+*píxeles*<br/>
 Puntero a un argumento de punto flotante.
 
-*exp*<br/>
-Un exponente como un tipo entero.
+*consumo*<br/>
+Exponente como un tipo entero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante construcción un valor de punto flotante en la ubicación apuntado a *px* igual a *y* * 2<sup>*exp*</sup>. El valor devuelto es el resultado de **fpclassify** en el valor de entrada en *y* si es un NaN o infinito y en el valor de salida en *px* en caso contrario. Para la portabilidad, prefiere la [ldexp, ldexpf y ldexpl](ldexp.md) funciones.
+Estos primitivos de punto flotante construyen un valor de punto flotante en la ubicación a la que apunta en *PX* igual a *y* * 2<sup>*exp*</sup>. El valor devuelto es el resultado de **fpclassify (** en el valor de entrada en *y* si es un Nan o infinito y en el valor de salida en *PX* en caso contrario. Para portabilidad, prefiere las funciones [ldexp, ldexpf (y ldexpl](ldexp.md) .
 
-## <a name="dnorm-fdnorm"></a>_dnorm, _fdnorm
+## <a name="_dnorm-_fdnorm"></a>_dnorm, _fdnorm
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -339,14 +376,14 @@ short __cdecl _fdnorm(unsigned short* ps);
 
 ### <a name="parameters"></a>Parámetros
 
-*ps*<br/>
-Puntero a la representación de bit a bit de un valor de punto flotante expresado como una matriz de **sin signo** **corto**.
+*PS*<br/>
+Puntero a la representación bit a bit de un valor de punto flotante expresado como una matriz de **Short** **sin signo** .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante normalizar la parte fraccionaria de un valor de punto flotante underflowed y ajustar el *característica*, o exponente sesgado, para hacer coincidir. El valor se pasa como la representación del tipo de punto flotante se convierte en una matriz de bit a bit **sin signo** **corto** a través de la `_double_val`, `_ldouble_val`, o `_float_val` tipo Unión punning declarado en math.h. El valor devuelto es el resultado de **fpclassify** en el valor de punto flotante de entrada si es un NaN o infinito y en el valor de salida en caso contrario.
+Estos primitivos de punto flotante normalizan la parte fraccionaria de un valor de punto flotante subdesbordamiento y ajustan la *característica*, o exponente sesgada, para que coincidan. El valor se pasa como la representación bit a bit del tipo de punto flotante convertido en una matriz de **Short** **sin signo** a través `_double_val`de `_ldouble_val`, o `_float_val` el tipo punning Union declarado en Math. h. El valor devuelto es el resultado de **fpclassify (** en el valor de punto flotante de entrada si es un Nan o infinito y en el valor de salida de lo contrario.
 
-## <a name="dpoly-ldpoly-fdpoly"></a>_dpoly, _ldpoly, _fdpoly
+## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -359,19 +396,19 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Argumento de función de punto flotante.
+Argumento de la función de punto flotante.
 
 *table*<br/>
-Puntero a una tabla de coeficientes constantes para un polinómico.
+Puntero a una tabla de coeficientes constantes de un polinomio.
 
 *n*<br/>
-Orden del polinomio para evaluar.
+Orden del polinomio que se va a evaluar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante devuelven la evaluación de *x* en polinomio de orden *n* cuyos coeficientes están representados por los valores constantes correspondientes en *tabla*. Por ejemplo, si *tabla*\[0] = 3.0, *tabla*\[1] = 4.0, *tabla*\[2] = 5.0, y *n* = 2, representa la x 5.0 polinómica<sup>2</sup> + 4.0 x + 3.0. Si se evalúa este polinómica para *x* de 2.0, el resultado es 31.0. Estas funciones no se usan internamente.
+Estos primitivos de punto flotante devuelven la evaluación de *x* en el polinomio de orden *n* cuyos coeficientes se representan mediante los valores constantes correspondientes de la *tabla*. Por ejemplo, si la *tabla*\[0] = 3,0, *tabla*\[1] = 4,0 *, tabla*\[2] = 5,0 y *n* = 2, representa el polinómico 5,0 x<sup>2</sup> + 4.0 x + 3,0. Si este polinomio se evalúa para *x* de 2,0, el resultado es 31,0. Estas funciones no se usan internamente.
 
-## <a name="dlog-dlog-dlog"></a>_dlog, _dlog, _dlog
+## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -384,16 +421,16 @@ float __cdecl _fdlog(float x, int base_flag);
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Argumento de función de punto flotante.
+Argumento de la función de punto flotante.
 
 *base_flag*<br/>
-Marca que controla la base que se usará, 0 para base *e* y distinto de cero para la base 10.
+Marca que controla la base que se va a usar, 0 para base *e* y distinto de cero para base 10.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante devuelven el logaritmo natural de *x*, ln (*x*) o de registro<sub>*e*</sub>(*x*), Cuando *base_flag* es 0. Devuelven el registro de base 10 de *x*, o de registro<sub>10</sub>(*x*), cuando *base_flag* es distinto de cero. Estas funciones no se usan internamente. Para la portabilidad, prefiere las funciones [logf, registro, logl, log10, log10f y log10l](log-logf-log10-log10f.md).
+Estos primitivos de punto flotante devuelven el registro natural de *x*, LN (*x*) o log<sub>*e*</sub>(*x*), cuando *base_flag* es 0. Devuelven la base logarítmica 10 de *x*o log<sub>10</sub>(*x*), cuando *base_flag* es distinto de cero. Estas funciones no se usan internamente. Para portabilidad, prefiere las funciones [log, LOGF (, logl, log10, log10f (y log10l](log-logf-log10-log10f.md).
 
-## <a name="dsin-ldsin-fdsin"></a>_dsin, _ldsin, _fdsin
+## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -406,32 +443,32 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Argumento de función de punto flotante.
+Argumento de la función de punto flotante.
 
-*quadrant*<br/>
-Desplazamiento de cuadrante de 0, 1, 2 o 3 para utilizar para generar `sin`, `cos`, `-sin`, y `-cos` resultados.
+*fases*<br/>
+Desplazamiento del cuadrante de 0, 1, 2 o 3 que se va `sin`a `cos`usar `-sin`para generar `-cos` los resultados de,, y.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estas primitivas de punto flotante devuelven el seno de *x* desplazamiento por el *cuadrante* módulo 4. De hecho, devuelven el seno, coseno, seno y - coseno de *x* cuando *cuadrante* módulo 4 es 0, 1, 2 o 3, respectivamente. Estas funciones no se usan internamente. Para la portabilidad, prefiere la [sin, sinf, sinl](sin-sinf-sinl.md), [cos, cosf y cosl](cos-cosf-cosl.md) funciones.
+Estos primitivos de punto flotante devuelven el seno del desplazamiento *x* por el módulo de *cuadrante* 4. De hecho, devuelven el seno, el coseno, el seno y el coseno de *x* cuando el módulo de *cuadrante* 4 es 0, 1, 2 o 3, respectivamente. Estas funciones no se usan internamente. Para portabilidad, prefiere las funciones [sin, sinf, Sinl](sin-sinf-sinl.md), [cos, cosf (y COSL](cos-cosf-cosl.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-Encabezado: \<math.h >
+Encabezado: \<Math. h>
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad de punto flotante](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf (](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [frexp, frexpf, frexpl](frexp.md)<br/>
-[ldexp, ldexpf y ldexpl](ldexp.md)<br/>
+[ldexp, ldexpf (y ldexpl](ldexp.md)<br/>
 [log, logf, logl, log10, log10f, log10l](log-logf-log10-log10f.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>

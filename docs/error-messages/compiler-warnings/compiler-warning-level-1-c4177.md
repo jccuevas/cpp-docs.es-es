@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4177
 ms.assetid: 2b05a5b3-696e-4f21-818e-227b9335e748
-ms.openlocfilehash: 5c8f3dc37c76ad0d016108b792ee61c67cce63d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd7e4bc42b38b335585a3f057aef521b5cf76b05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529228"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199958"
 ---
 # <a name="compiler-warning-level-1-c4177"></a>Advertencia del compilador (nivel 1) C4177
 
@@ -21,7 +21,7 @@ El pragma [pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.m
 
 El ejemplo siguiente genera la advertencia C4177:
 
-```
+```cpp
 // C4177.cpp
 // compile with: /W1
 // #pragma bss_seg("global")   // OK

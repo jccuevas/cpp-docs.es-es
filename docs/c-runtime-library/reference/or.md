@@ -1,7 +1,7 @@
 ---
-title: o
+title: or
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - std::or
 - std.or
@@ -20,14 +23,14 @@ f1_keywords:
 helpviewer_keywords:
 - or function
 ms.assetid: 6523b3ac-0a18-44ec-9e9a-b9bab8525ead
-ms.openlocfilehash: 9973533e0c871048c2bd586a4503dec3942fc14c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0a3a6800fba71a6b6edc77cca91ec40fe5476509
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517610"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170155"
 ---
-# <a name="or"></a>o
+# <a name="or"></a>or
 
 Alternativa al operador &#124;&#124;.
 
@@ -38,7 +41,7 @@ Alternativa al operador &#124;&#124;.
 #define or ||
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La macro produce el operador &#124;&#124;.
 
@@ -72,4 +75,4 @@ true
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<iso646.h>
+**Encabezado:** \<iso646. h >

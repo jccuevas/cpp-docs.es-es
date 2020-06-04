@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0021
 ms.assetid: bcab794d-4a6d-4b4d-aaca-73676c0cec75
-ms.openlocfilehash: 715198307654b56f813d7d18f8a66b7795dc1dea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f838bc2fdf03b2e1056e76caa7a06155f5535e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192398"
 ---
 # <a name="project-build-error-prj0021"></a>Error PRJ0021 al compilar el proyecto
 
-> Herramienta '*herramienta*', propiedad '*propiedad*' contiene el nombre de archivo no válido.
+> La herramienta '*Tool*', la propiedad '*Property*' contiene un nombre de archivo no válido.
 
-El nombre de archivo especificado en la propiedad *propiedad* para la herramienta *herramienta* no era válido.
+El nombre de archivo especificado en la *propiedad* Property de la *herramienta* de herramienta no era válido.
 
-Ha usado una macro desconocida o no es válida.
+Es posible que haya usado una macro desconocida o no válida.
 
-Consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md) para obtener información sobre cómo obtener acceso a las propiedades del proyecto.
+Vea [establecer las C++ propiedades de un proyecto visual](../../build/working-with-project-properties.md) para obtener información sobre cómo obtener acceso a las propiedades del proyecto.

@@ -5,20 +5,20 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: b590559b01bb8f5db21fca9f78d220d8bad5c27e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537649"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363077"
 ---
 # <a name="ltistreamgt-functions"></a>Funciones &lt;istream&gt;
 
 |||
 |-|-|
-|[swap](#istream_swap)|[ws](#ws)|
+|[swap](#istream_swap)|[Ws](#ws)|
 
-## <a name="istream_swap"></a>  swap
+## <a name="swap"></a><a name="istream_swap"></a>Intercambio
 
 Intercambia los elementos de dos objetos stream.
 
@@ -36,13 +36,13 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Flujo.
 
-*right*<br/>
+*Correcto*\
 Flujo.
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a><a name="ws"></a>Ws
 
 Omite los espacios en blanco en el flujo.
 
@@ -52,16 +52,16 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parámetros
 
-*_Istr*<br/>
+*_Istr*\
 Flujo.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La secuencia.
+Flujo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El manipulador extrae y descarta todos los elementos `ch` para los que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) sea true.
+El manipulador extrae y `ch` descarta cualquier elemento para el que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) sea true.
 
 La función llama a [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) si encuentra el final del archivo al extraer elementos. Devuelve *_Istr*.
 
@@ -69,6 +69,6 @@ La función llama a [setstate](../standard-library/basic-ios-class.md#setstate)(
 
 Vea [operator>>](../standard-library/istream-operators.md#op_gt_gt) para obtener un ejemplo que usa `ws`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<>istream](../standard-library/istream.md)

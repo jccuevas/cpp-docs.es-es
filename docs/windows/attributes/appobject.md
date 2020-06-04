@@ -1,21 +1,21 @@
 ---
-title: appobject (atributo de COM de C++)
+title: appobject (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 269c5bd3b51e2cc65fbb9c1c7766613595f8b547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486416"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168517"
 ---
 # <a name="appobject"></a>appobject
 
-Identifica la coclase como un objeto de aplicación, que está asociado a una aplicación completa .exe e indica que las funciones y propiedades de la coclase están disponibles globalmente en este [biblioteca de tipos](../../mfc/automation-clients-using-type-libraries.md).
+Identifica la coclase como un objeto de aplicación, que está asociado a una aplicación completa. exe e indica que las funciones y propiedades de la coclase están disponibles globalmente en esta [biblioteca de tipos](../../mfc/automation-clients-using-type-libraries.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,13 +23,13 @@ Identifica la coclase como un objeto de aplicación, que está asociado a una ap
 [appobject]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **appobject** atributo de C++ tiene la misma funcionalidad que el [appobject](/windows/desktop/Midl/appobject) atributo MIDL.
+El atributo **appobject** C++ tiene la misma funcionalidad que el atributo MIDL [appobject](/windows/win32/Midl/appobject) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra una definición de clase simple precedida por un bloque de atributos que incluye **appobject**:
+En el código siguiente se muestra una definición de clase simple precedida por un bloque de atributos que incluye **appobject**:
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -55,11 +55,11 @@ class A : public ICustom {
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|No|
 |**Atributos requeridos**|`coclass`|
-|**Atributos no válidos**|Ninguna|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>

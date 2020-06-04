@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PDBPATH dumpbin option
 - PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-ms.openlocfilehash: d77ab2eb056326ba372a60cc79688d26b252ac44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29b8e61fbfbdb0f373e3e7510cb3f1fe0b9cc2a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319855"
 ---
 # <a name="pdbpath"></a>/PDBPATH
 
@@ -28,7 +28,7 @@ ms.locfileid: "50527223"
 *filename*<br/>
 El nombre del archivo .dll o .exe para el que desea buscar el archivo .pdb correspondiente.
 
-**: DETALLADO**<br/>
+**:VERBOSE**<br/>
 (Opcional) Notifica todos los directorios donde se ha intentado para buscar el archivo PDB.
 
 ## <a name="remarks"></a>Comentarios
@@ -51,5 +51,5 @@ Al usar al depurador de Visual Studio, puede experimentar un problema por el hec
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)<br/>
-[/PDBALTPATH (Usar ruta de PDB alternativa)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+[Opciones de DUMPBIN](dumpbin-options.md)<br/>
+[/PDBALTPATH (Usar ruta de PDB alternativa)](pdbaltpath-use-alternate-pdb-path.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454865"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162041"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Advertencia del compilador (nivel 2) C4250
 
-'class1': hereda 'clase2:: miembro' mediante dominación
+' Class1 ': hereda ' clase2:: Member ' mediante dominación
 
-Dos o más miembros tienen el mismo nombre. En `class2` es heredado, porque es una clase base para las otras clases que contiene este miembro.
+Dos o más miembros tienen el mismo nombre. El de `class2` se hereda porque es una clase base para las demás clases que contenían este miembro.
 
-Para suprimir C4250, utilice el [advertencia](../../preprocessor/warning.md) pragma.
+Para suprimir C4250, use la pragma [Warning](../../preprocessor/warning.md) .
 
-Dado que una clase base virtual se comparte entre varias clases derivadas, un nombre en una clase derivada domina un nombre en una clase base. Por ejemplo, dada la siguiente jerarquía de clases, hay dos definiciones de funciones heredadas dentro del rombo: la instancia vbc::Func() a través de la clase débil y el dominante:: func() a través de la clase dominante. Una llamada incompleta de func() a través de un objeto de clase de rombo siempre llama a la instancia dominate:: func.  Si la clase débil fuera a introducir una instancia de func(), ni podría dominar la definición y la llamada se marcaría como ambigua.
+Dado que una clase base virtual se comparte entre varias clases derivadas, un nombre en una clase derivada domina un nombre en una clase base. Por ejemplo, dada la siguiente jerarquía de clases, hay dos definiciones de FUNC heredadas en el rombo: la instancia de VBC:: FUNC () a través de la clase débil y la dominante:: FUNC () a través de la clase dominante. Una llamada incompleta de FUNC () a través de un objeto de clase de rombo, siempre llama a la instancia de dominate:: FUNC ().  Si la clase débil fuera a introducir una instancia de FUNC (), ninguna definición dominaría y la llamada se marcaría como ambigua.
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -47,9 +47,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera la advertencia C4250.
+En el ejemplo siguiente se genera C4250.
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se muestra una situación más compleja. El ejemplo siguiente genera la advertencia C4250.
+Este ejemplo muestra una situación más compleja. En el ejemplo siguiente se genera C4250.
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

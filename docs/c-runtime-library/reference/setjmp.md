@@ -1,9 +1,9 @@
 ---
 title: setjmp
 ms.date: 08/14/2018
-apiname:
+api_name:
 - setjmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,11 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setjmp
 helpviewer_keywords:
@@ -22,12 +26,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: 69af720c70393dbcad1e267b58e08876cdc2b77e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a88467f5b94ceae4281a35f1486380a877be2e5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575069"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948235"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -48,24 +52,24 @@ Variable donde se almacena el entorno.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve 0 después de guardar el entorno de pila. Si **setjmp** devuelve como resultado de una `longjmp` llamar a, devuelve el *valor* argumento de `longjmp`, o si el *valor* argumento de `longjmp` es 0, **setjmp** devuelve 1. No se devuelve ningún error.
+Devuelve 0 después de guardar el entorno de pila. Si **setjmp** devuelve como `longjmp` resultado de una llamada a, devuelve el argumento *de valor* de `longjmp`, o si el argumento de *valor* de `longjmp` es 0, **setjmp** devuelve 1. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **setjmp** función guarda un entorno de pila, que puede restaurar posteriormente usando `longjmp`. Cuando se usan juntos, **setjmp** y `longjmp` proporcionan una forma de ejecutar un no locales **goto**. Se utilizan normalmente para pasar el control de la ejecución al control de errores o al código de recuperación en una rutina invocada anteriormente sin utilizar convenciones habituales de llamada o devolución.
+La función **setjmp** guarda un entorno de pila, que posteriormente se puede restaurar mediante `longjmp`. Cuando se usan juntos , setjmp `longjmp` y proporcionan una forma de ejecutar un método **goto**no local. Se utilizan normalmente para pasar el control de la ejecución al control de errores o al código de recuperación en una rutina invocada anteriormente sin utilizar convenciones habituales de llamada o devolución.
 
-Una llamada a **setjmp** guarda el entorno de pila actual en *env*. Una llamada subsiguiente a `longjmp` restaura el entorno guardado y devuelve el control al punto justo después de la correspondiente **setjmp** llamar. Todas las variables (excepto las variables de registro) a las que se puede obtener acceso en la rutina que recibe el control contienen los valores que tenían cuando se llamó a `longjmp`.
+Una llamada a **setjmp** guarda el entorno de pila actual en *env*. Una llamada subsiguiente a `longjmp` restaura el entorno guardado y devuelve el control al punto inmediatamente posterior a la llamada **setjmp** correspondiente. Todas las variables (excepto las variables de registro) a las que se puede obtener acceso en la rutina que recibe el control contienen los valores que tenían cuando se llamó a `longjmp`.
 
-No es posible usar **setjmp** para pasar del código nativo a código administrado.
+No es posible usar **setjmp** para saltar de código nativo a código administrado.
 
 **Específicos de Microsoft**
 
-En el código de C++ de Microsoft en Windows, **longjmp** usa la misma semántica de desenredo de pila como código de control de excepciones. Es seguro utilizar en los mismos lugares que se pueden producir excepciones de C++. Sin embargo, este uso no es portátil y viene con algunas advertencias importantes. Para obtener más información, consulte [longjmp](longjmp.md).
+En Microsoft C++ Code en Windows, **longjmp** usa la misma semántica de desenredo de pila que el código de control de excepciones. Es seguro usar en los mismos lugares en los que C++ se pueden generar excepciones. Sin embargo, este uso no es portable e incluye algunas advertencias importantes. Para obtener más información, consulte [longjmp](longjmp.md).
 
 **FIN de Específicos de Microsoft**
 
 > [!NOTE]
-> En el código C++ portátil, no puede suponer `setjmp` y `longjmp` admiten la semántica de objeto de C++. En concreto, un `setjmp` / `longjmp` llamada par tiene un comportamiento indefinido si se reemplaza el `setjmp` y `longjmp` por **catch** y **throw** invocaría los destructores no triviales para los objetos automáticos. En programas de C++, se recomienda que usar el mecanismo de control de excepciones de C++.
+> En código C++ portable, no se puede `setjmp` asumir `longjmp` y C++ admitir la semántica de objetos. En concreto, `setjmp` un / `longjmp` `longjmp` pardellamadastieneuncomportamientoindefinidosialreemplazaryCatchyThrowseinvocaríanlosdestructoresnotrivialesparalosobjetosautomáticos`setjmp` . En C++ los programas, se recomienda usar el C++ mecanismo de control de excepciones.
 
 Para obtener más información, vea [Usar setjmp/longjmp](../../cpp/using-setjmp-longjmp.md).
 

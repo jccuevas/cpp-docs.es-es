@@ -8,12 +8,12 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-ms.openlocfilehash: 73aae3391f07ba5ba2fe54e2c45179fe4b347a0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70740922ec7f2030d14eebee72144a373550aacc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218721"
 ---
 # <a name="printing-and-print-preview"></a>Impresión y vista previa de impresión
 
@@ -29,7 +29,7 @@ Esta serie de artículos explica cómo implementar la impresión en la bibliotec
 
 - [Arquitectura de vista previa de impresión](../mfc/print-preview-architecture.md)
 
-- [Ejemplo](../visual-cpp-samples.md)
+- [Ejemplo](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vea también
 

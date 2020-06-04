@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4722
 ms.assetid: d8660710-f67b-4f59-a5fd-59259475529e
-ms.openlocfilehash: 320061c2daf2be042afe45828af637638399beaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fee3296eba4476680f4948b4a1f7fdee03e8840
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469477"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175212"
 ---
 # <a name="compiler-warning-level-1-c4722"></a>Advertencia del compilador (nivel 1) C4722
 
@@ -25,7 +25,7 @@ Para resolver el problema, quite la llamada de función que hace que el destruct
 
 El ejemplo siguiente genera la advertencia C4722:
 
-```
+```cpp
 // C4722.cpp
 // compile with: /O1 /W1 /c
 #include <stdlib.h>

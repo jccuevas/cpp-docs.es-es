@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
-ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b0750fe50e18214e0841eff6b3459438e9a6aec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519813"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197956"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>Advertencia del compilador (niveles 2 y 4) C4200
 

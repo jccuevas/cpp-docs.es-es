@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-ms.openlocfilehash: a62b10ca96dc9c27e57eafdcc87cf0d5e0605b4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88671dea6b0d96f33ad6a84611b0ded9746c699f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444751"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174810"
 ---
 # <a name="compiler-warning-level-1-c4906"></a>Advertencia del compilador (nivel 1) C4906
 
@@ -23,9 +23,9 @@ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias d
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4906:
+En el ejemplo siguiente se genera C4906:
 
-```
+```cpp
 // C4906.cpp
 // compile with: /W1
 #pragma warning(default : 4906)

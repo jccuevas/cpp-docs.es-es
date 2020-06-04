@@ -1,10 +1,12 @@
 ---
 title: _fputchar, _fputwchar
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fputchar
 - _fputwchar
-apilocation:
+- _o__fputchar
+- _o__fputwchar
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,13 +18,16 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputtchar
 - _fputwchar
 - fputwchar
 - _fputtchar
-- fputchar
 - _fputchar
 helpviewer_keywords:
 - fputchar function
@@ -33,14 +38,14 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08997730e0ef80072e29de5bc5e7c106cb6cb9e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477979"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912013"
 ---
-# <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
+# <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
 Escribe un carácter en **stdout**.
 
@@ -57,18 +62,20 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter que se va a escribir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el carácter escrito. Para **_fputchar**, un valor devuelto de **EOF** indica un error. Para **_fputwchar**, un valor devuelto de **WEOF** indica un error. Si c es **NULL**, estas funciones generan una excepción de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven **EOF** (o **WEOF**) y establezca **errno** a **EINVAL**.
+Cada una de estas funciones devuelve el carácter escrito. Por **_fputchar**, un valor devuelto de **EOF** indica un error. Por **_fputwchar**, un valor devuelto de **WEOF** indica un error. Si c es **null**, estas funciones generan una excepción de parámetro no válido, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven **EOF** (o **WEOF**) y establecen **errno** en **EINVAL**.
 
 Para obtener más información sobre estos y otros códigos error, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Ambas funciones escribe el carácter único *c* a **stdout** y hace avanzar el indicador según corresponda. **_fputchar** es equivalente a `fputc( stdout )`. También es equivalente a **putchar**, pero implementado solo como una función, en lugar de una función y una macro. A diferencia de **fputc** y **putchar**, estas funciones no son compatibles con el estándar ANSI.
+Ambas funciones escriben el carácter *c* en **stdout** y avanzan el indicador según corresponda. **_fputchar** es equivalente a `fputc( stdout )`. También es equivalente a **putchar**, pero solo se implementa como una función, en lugar de como una función y una macro. A diferencia de **fputc** y **putchar**, estas funciones no son compatibles con el estándar ANSI.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -83,7 +90,7 @@ Ambas funciones escribe el carácter único *c* a **stdout** y hace avanzar el i
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -110,7 +117,7 @@ int main( void )
 This is a test of _fputchar!!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

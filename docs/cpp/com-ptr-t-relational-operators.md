@@ -28,18 +28,18 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: d3b1d6d1579c9f9bf5eca4f8a3f6733f27584674
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 95d1e7a1e4322eb497a2d7ed410065bb92f17e09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326750"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170655"
 ---
-# <a name="comptrt-relational-operators"></a>_com_ptr_t (Operadores relacionales)
+# <a name="_com_ptr_t-relational-operators"></a>_com_ptr_t (Operadores relacionales)
 
 **Específicos de Microsoft**
 
-Comparar el objeto de puntero inteligente a otro puntero inteligente, puntero de interfaz sin formato, o NULL.
+Compara el objeto de puntero inteligente con otro puntero inteligente, puntero de interfaz sin formato o NULL.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,7 +47,7 @@ Comparar el objeto de puntero inteligente a otro puntero inteligente, puntero de
 template<typename _OtherIID>
 bool operator==( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
+template<typename _OtherIID>
 bool operator==( _com_ptr_t<_OtherIID>& p );
 
 template<typename _InterfaceType>
@@ -112,12 +112,12 @@ template<typename _InterfaceType>
 bool operator>=( _InterfaceType* p );
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Compara un puntero inteligente de objeto a otro inteligente de puntero, un puntero de interfaz sin formato, o NULL. Excepto para las pruebas de puntero NULL, estos operadores consultan primero ambos punteros para `IUnknown`y comparar los resultados.
+Compara el objeto de puntero inteligente a otro puntero inteligente, puntero de interfaz sin formato o NULL. A excepción de las pruebas de puntero NULL, estos operadores consultan primero ambos punteros para `IUnknown`y comparan los resultados.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

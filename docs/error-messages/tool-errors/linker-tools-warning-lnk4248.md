@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: db9432c505b7348c9bef5ed34aac1cb4edecb17b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461235"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988099"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Advertencia de las herramientas del vinculador LNK4248
 
-símbolo (token) de typeref sin resolver de 'type'; imagen no se puede ejecutar
+token de TypeRef sin resolver (token) para ' tipo '; es posible que la imagen no se ejecute
 
-Un tipo no tiene una definición en metadatos MSIL.
+Un tipo no tiene una definición en los metadatos de MSIL.
 
-LNK4248 puede producirse cuando hay solo una declaración adelantada para un tipo en un módulo MSIL (compilado con **/CLR**), donde se hace referencia al tipo en el módulo MSIL, y el módulo MSIL se vincula con un módulo nativo que tiene una definición para el tipo.
+LNK4248 se puede producir cuando solo hay una declaración adelantada para un tipo en un módulo MSIL (compilado con **/CLR**), donde se hace referencia al tipo en el módulo MSIL y donde el módulo MSIL está vinculado a un módulo nativo que tiene una definición para el tipo.
 
-En esta situación, el vinculador proporcionará la definición de tipo nativo en los metadatos MSIL y se pueden proporcionar el comportamiento correcto.
+En esta situación, el vinculador proporcionará la definición de tipo nativo en los metadatos de MSIL y esto puede proporcionar el comportamiento correcto.
 
-Sin embargo, si una declaración de tipo de enrutamiento es un tipo CLR, a continuación, definición de tipo nativo del vinculador puede no ser correcta
+Sin embargo, si una declaración de tipo de avance es un tipo CLR, es posible que la definición de tipo nativo del enlazador no sea correcta.
 
 Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>Para corregir este error
 
-1. Proporcionar la definición de tipo en el módulo MSIL.
+1. Proporcione la definición de tipo en el módulo MSIL.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera la advertencia LNK4248. Definir un struct a resolver.
+En el ejemplo siguiente se genera LNK4248. Defina el struct a que se va a resolver.
 
-```
+```cpp
 // LNK4248.cpp
 // compile with: /clr /W1
 // LNK4248 expected
@@ -49,9 +49,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente tiene una definición de hacia delante de un tipo.
+El ejemplo siguiente tiene una definición hacia delante de un tipo.
 
-```
+```cpp
 // LNK4248_2.cpp
 // compile with: /clr /c
 class A;   // provide a definition for A here to resolve
@@ -66,9 +66,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera la advertencia LNK4248.
+En el ejemplo siguiente se genera LNK4248.
 
-```
+```cpp
 // LNK4248_3.cpp
 // compile with: /c
 // post-build command: link LNK4248_2.obj LNK4248_3.obj

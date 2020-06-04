@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2818
 ms.assetid: 715fc7c9-0c6d-452b-b7f5-1682cea5e907
-ms.openlocfilehash: f6e33d0e0ee139138df7d8e11357100b3ec3a1a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00952e55f1b732bd9af3733f5c0ec575a39116fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593445"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202117"
 ---
 # <a name="compiler-error-c2818"></a>Error del compilador C2818
 
-aplicación de sobrecargado 'operator ->' es recursiva mediante el tipo 'type'
+la aplicación de ' operator-> ' sobrecargada es recursiva a través del tipo ' type '
 
-Una nueva definición de operador de acceso de miembro de clase contiene una recursiva `return` instrucción. Para volver a definir el `->` operador con la recursión, debe mover la rutina recursiva a una función independiente que se llama desde el operador de reemplazar la función.
+Una nueva definición del operador de acceso a miembros de clase contiene una instrucción `return` recursiva. Para volver a definir el operador de `->` con recursividad, debe trasladar la rutina recursiva a una función independiente llamada desde la función de invalidación de operador.

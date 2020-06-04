@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551260"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205314"
 ---
 # <a name="compiler-error-c2441"></a>Error del compilador C2441
 
-> '*variable*': un símbolo declarado con __declspec (proceso) debe ser constante en/CLR: modo puro
+> '*variable*': un símbolo declarado con __declspec (proceso) debe ser const en el modo/CLR: Pure
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+Las opciones del compilador **/clr: Pure** y **/clr: Safe** están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017.
 
-De forma predeterminada, las variables son por dominio de aplicación bajo **/CLR: pure**. Marcado de una variable `__declspec(process)` en **/CLR: pure** propenso a errores si se modifica en un dominio de aplicación y leer en otro.
+De forma predeterminada, las variables son por dominio de aplicación en **/clr: Pure**. Una variable marcada como `__declspec(process)` en **/clr: Pure** es propensa a errores si se modifica en un dominio de aplicación y se lee en otro.
 
-Por lo tanto, el compilador exige por proceso de ser variables `const` en **/CLR: pure**, realizar ellos leer sólo en todos los dominios de aplicación.
+Por consiguiente, el compilador exige que las variables por proceso se `const` en **/clr: Pure**, lo que hace que sean de solo lectura en todos los dominios de aplicación.
 
-Para obtener más información, consulte [proceso](../../cpp/process.md) y [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
+Para obtener más información, vea [Process](../../cpp/process.md) y [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2441.
+En el ejemplo siguiente se genera C2441.
 
 ```cpp
 // C2441.cpp

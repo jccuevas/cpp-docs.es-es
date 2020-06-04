@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: e71cc1d253d3c280f6004d99c4906610dc7f98bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603026"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126648"
 ---
-# <a name="int2-class"></a>int_2 (Clase)
+# <a name="int_2-class"></a>int_2 (Clase)
 
 Representa un vector corto de dos enteros.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class int_2;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor int_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de int_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_2::get_x||
 |int_2::get_xy||
@@ -69,8 +69,8 @@ class int_2;
 |int_2::get_yx||
 |int_2::ref_g||
 |int_2::ref_r||
-|int_2:: ref_x||
-|int_2:: ref_y||
+|int_2::ref_x||
+|int_2::ref_y||
 |int_2::set_x||
 |int_2::set_xy||
 |int_2::set_y||
@@ -78,7 +78,7 @@ class int_2;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_2::operator-||
 |int_2::operator--||
@@ -91,29 +91,29 @@ class int_2;
 |int_2::operator~||
 |int_2::operator++||
 |int_2::operator+=||
-|int_2::operator<\<=||
+|int_2:: Operator <\<=||
 |int_2::operator=||
 |int_2::operator-=||
 |int_2::operator>>=||
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#int_2__size)||
+|[Size (constante)](#int_2__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_2::g||
 |int_2::gr||
 |int_2::r||
 |int_2::rg||
-|int_2:: x||
-|int_2:: XY||
-|int_2:: y||
-|int_2:: YX||
+|int_2::x||
+|int_2::xy||
+|int_2::y||
+|int_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -121,15 +121,15 @@ class int_2;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> int_2
+## <a name="ctor"></a>int_2
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 int_2() restrict(amp,
     cpu);
 
@@ -170,23 +170,23 @@ explicit inline int_2(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="int_2__size"></a> Tamaño
+## <a name="int_2__size"></a>ajusta
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fd68f57db082ab0b0da0e8248e0be239c63c99a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411531"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Usar hojas de propiedades en una aplicación
 
@@ -58,9 +58,8 @@ Para utilizar una hoja de propiedades en la aplicación, complete los pasos sigu
 
 1. Intercambiar datos entre páginas de propiedades y el propietario de la hoja de propiedades. Esto se explica en el artículo [intercambiar datos](../mfc/exchanging-data.md).
 
-Para obtener un ejemplo de cómo usar las hojas de propiedades, vea el ejemplo General de MFC [PROPDLG](../visual-cpp-samples.md).
+Para obtener un ejemplo de cómo usar las hojas de propiedades, vea el ejemplo General de MFC [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Hojas de propiedades](../mfc/property-sheets-mfc.md)
-

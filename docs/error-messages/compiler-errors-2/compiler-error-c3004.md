@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3004
 ms.assetid: 819c2b57-8366-4ca7-9135-1f0c5e5b6bb6
-ms.openlocfilehash: 88f781f8cb3e661998651bb4b1a7b0d54b183a0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb5fe5572774c77d4f9f982e271dce8c2d986300
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657193"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302294"
 ---
 # <a name="compiler-error-c3004"></a>Error del compilador C3004
 
@@ -21,7 +21,7 @@ Se usó una cláusula de OpenMP en una directiva para la que no está habilitada
 
 El ejemplo siguiente genera la advertencia C3004:
 
-```
+```c
 // C3004.c
 // compile with: /openmp
 int main()

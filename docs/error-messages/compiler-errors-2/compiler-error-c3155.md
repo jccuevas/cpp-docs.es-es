@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3155
 ms.assetid: b04a42e1-64e7-40f8-81fe-c7945348b2cf
-ms.openlocfilehash: 85ee53dff7ae50717eabfd1ac6504ebb74deaa2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccbe96075a22ef67d7ebd1f2998b42820bbc79f9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644368"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745907"
 ---
 # <a name="compiler-error-c3155"></a>Error del compilador C3155
 
 no se permiten atributos en un indizador de propiedad
 
-Una propiedad indizada se ha declarado incorrectamente. Para obtener más información, consulte [Cómo: utilizar propiedades en C++ / c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Se declaró incorrectamente una propiedad indizada. Para obtener más información, consulte [Cómo: usar propiedades en C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3155.
+En el ejemplo siguiente se genera C3155.
 
-```
+```cpp
 // C3155.cpp
 // compile with: /clr /c
 using namespace System;

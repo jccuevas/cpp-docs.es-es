@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4296
 ms.assetid: 9d99aafe-f6bd-4ee0-b8d0-98ce5712274d
-ms.openlocfilehash: 74a2df69120436d0bb3a0a02809a1523a3766445
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36412dd636816ce15b78edfc8bffdd5fb45963d6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624654"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991296"
 ---
 # <a name="compiler-warning-level-4-c4296"></a>Advertencia del compilador (nivel 4) C4296
 
-'operator': expresión siempre es false
+' Operator ': la expresión siempre es false
 
-Se utilizó una variable sin signo en una operación de comparación con cero.
+Se usó una variable sin signo en una operación de comparación con cero.
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 
-El ejemplo siguiente genera C4296:
+En el ejemplo siguiente se genera C4296:
 
-```
+```cpp
 // C4296.cpp
 // compile with: /W4
 #pragma warning(default : 4296)

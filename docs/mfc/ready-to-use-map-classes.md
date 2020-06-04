@@ -8,12 +8,12 @@ helpviewer_keywords:
 - classes [MFC], map
 - map classes [MFC]
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
-ms.openlocfilehash: 4a538e469521d8fdae6d2b74b155794bf559d6dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6136557bd436fb9964498384f277d48e8525a027
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253999"
 ---
 # <a name="ready-to-use-map-classes"></a>Clases de mapa listas para usar
 
@@ -43,4 +43,3 @@ Usa datos de tipo **WORD** encontrar **void** punteros.
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../mfc/class-library-overview.md)
-

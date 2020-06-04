@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2307
 ms.assetid: ce6c8033-a673-4679-9883-bedec36ae385
-ms.openlocfilehash: 5be197e61e48e47db70e8f23c7ef5b9ade22b1ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9d5addc18dd548e584a1cceed8b880cb62ed40d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506280"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206284"
 ---
 # <a name="compiler-error-c2307"></a>Error del compilador C2307
 
-pragma 'pragma' debe estar fuera de la función si la compilación incremental está habilitada
+pragma ' pragma ' debe estar fuera de la función si la compilación incremental está habilitada
 
-Debe colocar el `data_seg` pragma entre funciones si está usando la compilación incremental.
+Si utiliza la compilación incremental, debe colocar el `data_seg` pragma entre las funciones.

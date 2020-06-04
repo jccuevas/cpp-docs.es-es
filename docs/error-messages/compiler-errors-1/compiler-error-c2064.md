@@ -1,19 +1,19 @@
 ---
-title: Error del compilador C2064
+title: Error del compilador error c2064
 ms.date: 11/04/2016
 f1_keywords:
 - C2064
 helpviewer_keywords:
 - C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
-ms.openlocfilehash: 8af20c5172cddd0194ed018c13960bbed7859674
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: cd62ea825e3ae7d9e4acc1cb6d93d4bc102be0eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520444"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737327"
 ---
-# <a name="compiler-error-c2064"></a>Error del compilador C2064
+# <a name="compiler-error-c2064"></a>Error del compilador error c2064
 
 el término no se evalúa como una función con N argumentos
 
@@ -21,7 +21,7 @@ Se realiza una llamada a una función a través de una expresión. La expresión
 
 En este ejemplo, el código intenta llamar a elementos que no son funciones como funciones. El ejemplo siguiente genera el error C2064:
 
-```
+```cpp
 // C2064.cpp
 int i, j;
 char* p;
@@ -33,7 +33,7 @@ void func() {
 
 Debe llamar a punteros como funciones miembro no estáticas desde el contexto de una instancia de objeto. El ejemplo siguiente genera el error C2064 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2064b.cpp
 struct C {
    void func1(){}
@@ -52,7 +52,7 @@ int main() {
 
 En una clase, los punteros de función miembro también deben indicar el contexto del objeto de llamada. El ejemplo siguiente genera el error C2064 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2064d.cpp
 // Compile by using: cl /c /W4 C2064d.cpp
 struct C {

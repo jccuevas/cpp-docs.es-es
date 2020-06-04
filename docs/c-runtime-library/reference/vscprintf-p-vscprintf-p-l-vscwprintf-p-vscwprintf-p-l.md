@@ -1,12 +1,12 @@
 ---
 title: _vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vscprintf_p_l
 - _vscprintf_p
 - _vscwprintf_p_l
 - _vscwprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vscprintf_p
 - _vscprintf_p_l
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 357cc1f28e5495385b67fdb7c1b86bbc15f79950
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 102ec617e42061e673cd14aea9c96916c907cf58
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627934"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945429"
 ---
-# <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
+# <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
 Devuelve el número de caracteres de la cadena de formato mediante un puntero a una lista de argumentos, con la posibilidad de especificar el orden en que se usan los argumentos.
 
@@ -90,18 +93,18 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_vscprintf_p** devuelve el número de caracteres que se generarían si la cadena señalada por la lista de argumentos se imprimiera o enviara a un archivo o códigos de búfer mediante el formato especificado. El valor devuelto no incluye el carácter nulo de finalización. **_vscwprintf_p** realiza la misma función para caracteres anchos.
+**_vscprintf_p** devuelve el número de caracteres que se generarían si la cadena a la que apunta la lista de argumentos se imprimiera o se enviara a un archivo o búfer mediante los códigos de formato especificados. El valor devuelto no incluye el carácter nulo de finalización. **_vscwprintf_p** realiza la misma función para caracteres anchos.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones se diferencian de **_vscprintf** y **_vscwprintf** solo en que admiten la capacidad de especificar el orden en que se usan los argumentos. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
+Estas funciones se diferencian de **_vscprintf** y **_vscwprintf** solo en que admiten la capacidad de especificar el orden en el que se usan los argumentos. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
-Si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**.
+Si *Format* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 > [!IMPORTANT]
-> Garantizar que, si *formato* es una cadena definida por el usuario, se termina en null y tiene el número correcto y el tipo de parámetros. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> Asegúrese de que si *Format* es una cadena definida por el usuario, termina en NULL y tiene el número y tipo de parámetros correctos. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

@@ -2,12 +2,12 @@
 title: /APPCONTAINER (aplicación de UWP/Microsoft Store)
 ms.date: 11/04/2016
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-ms.openlocfilehash: 306ffc7cda7cc6045b5decd6824fdc3848233824
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ab8cf1ce034580953fdf1403264e8ef3d3ff09
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295128"
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (aplicación de Microsoft Store)
 
@@ -29,7 +29,7 @@ La opción /APPCONTAINER se introdujo en Windows 8.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el nodo **Propiedades de configuración**.
 
@@ -41,5 +41,5 @@ La opción /APPCONTAINER se introdujo en Windows 8.
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

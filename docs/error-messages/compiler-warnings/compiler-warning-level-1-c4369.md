@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-ms.openlocfilehash: b374b67fa3319be35490358d7664bcb45bc640db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0d99792e3e0ea372c8629319553dd9a59ad4b47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623962"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187068"
 ---
 # <a name="compiler-warning-level-1-c4369"></a>Advertencia del compilador (nivel 1) C4369
 
-'enumerador': el valor de enumerador 'valor' no se puede representar como 'type', el valor es 'new_value'
+' enumerador ': el valor del enumerador ' valor ' no se puede representar como ' tipo ', el valor es ' new_value '
 
-Un enumerador se calculó para que sea mayor que el valor máximo para el tipo subyacente especificado.  Esto provocó un desbordamiento y el compilador ajusta el valor del enumerador para el valor más bajo posible para el tipo.
+Un enumerador se calculó como mayor que el valor más alto para el tipo subyacente especificado.  Esto produjo un desbordamiento y el compilador ajustó el valor del enumerador al valor más bajo posible para el tipo.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4369.
+En el ejemplo siguiente se genera C4369.
 
-```
+```cpp
 // C4369.cpp
 // compile with: /W1
 int main() {

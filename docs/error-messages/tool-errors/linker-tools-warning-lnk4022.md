@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4022
 ms.assetid: 890f487e-db98-45dd-a226-c7ccead82b1e
-ms.openlocfilehash: 1c9ccfe6ca201ae4deed69c7d01429c67cce4bda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b9ce09a7133c0bdc18957f6ade213583e9540eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194192"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>Advertencia de las herramientas del vinculador LNK4022
 
-no se puede encontrar una coincidencia única para el símbolo 'symbol'
+no se encuentra una coincidencia única para el símbolo ' Symbol '
 
-VÍNCULO o LIB encuentra varias coincidencias para el símbolo dado no representativo y no se pudo resolver la ambigüedad. Se genera ningún archivo de salida (.exe, .dll, .exp o .lib). Esta advertencia va seguida de una advertencia [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) para cada símbolo de duplicar y, por último, va seguido de un error irrecuperable [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+LINK o LIB encontró varias coincidencias para el símbolo no representativo dado y no pudo resolver la ambigüedad. No se genera ningún archivo de salida (. exe,. dll,. exp o. lib). Esta advertencia va seguida de una advertencia [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) para cada símbolo duplicado y, por último, va seguida del error irrecuperable [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
 
-Para evitar esta advertencia, especifique el símbolo en forma representativa. Ejecute [DUMPBIN](../../build/reference/dumpbin-options.md) en el objeto para ver nombres representativos.
+Para evitar esta advertencia, especifique el símbolo en su forma representativa. Ejecute [dumpbin](../../build/reference/dumpbin-options.md) en el objeto para ver los nombres representativos.

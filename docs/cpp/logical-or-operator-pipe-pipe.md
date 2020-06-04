@@ -1,5 +1,5 @@
 ---
-title: 'Operador lógico OR: ||'
+title: 'Operador OR lógico: ||'
 ms.date: 06/14/2018
 f1_keywords:
 - '||'
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-ms.openlocfilehash: 5db1af870644d1552aeac813edce0985a31d95b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94b2bc024dd7223ac7adacc72924f5ee289bab37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618888"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178085"
 ---
-# <a name="logical-or-operator-"></a>Operador lógico OR: ||
+# <a name="logical-or-operator-"></a>Operador OR lógico: ||
 
 ## <a name="syntax"></a>Sintaxis
 
-> *Logical-or-expression* **||** *-y-expresión lógica*
+> *Logical-or-expression* **||** *Logical-and-Expression*
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El operador lógico OR (**||**) devuelve el valor booleano TRUE si uno o ambos operandos es TRUE y devuelve FALSE en caso contrario. Los operandos se convierten implícitamente al tipo **bool** antes de la evaluación y el resultado es de tipo **bool**. El operador OR lógico tiene asociatividad de izquierda a derecha.
+El operador lógico OR ( **||** ) devuelve el valor booleano true si uno o ambos OPERANDOS son true y devuelve false en caso contrario. Los operandos se convierten implícitamente al tipo **bool** antes de la evaluación y el resultado es de tipo **bool**. El operador OR lógico tiene asociatividad de izquierda a derecha.
 
 Los operandos del operador OR lógico no tienen por qué ser del mismo tipo, pero deben ser de tipo entero o puntero. Los operandos son normalmente expresiones relacionales o de igualdad.
 
@@ -38,9 +38,9 @@ printf( "%d" , (x == w || x == y || x == z) );
 
 En el ejemplo anterior, si `x` es igual a `w`, `y` o `z`, el segundo argumento de la función `printf` se evalúa como true y se imprime el valor 1. De lo contrario, se evalúa como false y se imprime el valor 0. En cuanto una de las condiciones se evalúe como true, se interrumpe la evaluación.
 
-## <a name="operator-keyword-for-124124"></a>Palabra clave del operador para&#124;&#124;
+## <a name="operator-keyword-for-124124"></a>Operator (palabra clave) para&#124;&#124;
 
-El **o** operador es el equivalente textual de **||**. Hay dos maneras de acceder a la **o** operador en los programas: incluir el archivo de encabezado \<iso646.h >, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).
+El operador **or** es el equivalente de texto de **||** . Hay dos maneras de tener acceso al operador **or** en los programas: incluir el archivo de encabezado \<iso646. h > o compilar con la opción del compilador [/za](../build/reference/za-ze-disable-language-extensions.md) (deshabilitar extensiones de lenguaje).
 
 ## <a name="example"></a>Ejemplo
 
@@ -62,8 +62,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Operadores integrados de C++ prioridad y asociatividad](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++Precedencia y asociatividad de los operadores integrados](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operadores lógicos de C](../c-language/c-logical-operators.md)

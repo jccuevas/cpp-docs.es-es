@@ -1,27 +1,27 @@
 ---
 title: Error recuperable A2047 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2047
 helpviewer_keywords:
 - A2047
 ms.assetid: 7799f988-6c2e-4022-a447-c56b48473f0c
-ms.openlocfilehash: 71c8ece29ee38b4b5d4cfcf762fdafb0215e94ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e13a5aabe44f0f6cc4ba97ba5eb9dbf9347cd63
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525585"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317024"
 ---
 # <a name="ml-nonfatal-error-a2047"></a>Error recuperable A2047 de ML
 
-**cadena (null) vacía**
+**cadena vacía (NULL)**
 
-Una cadena formada por un par de comillas y sin caracteres dentro de delimitador.
+Cadena formada por un par de delimitadores de Comillas y ningún carácter en.
 
-Una cadena ser válido, debe contener de 1 a 255 caracteres.
+Para que una cadena sea válida, debe contener 1-255 caracteres.
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

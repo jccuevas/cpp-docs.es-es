@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
-ms.openlocfilehash: 34f035c089b183670e87a23eb62f995b2af23c9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d0fef86908f3ba5a547417d0625febc5226454
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567497"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752709"
 ---
 # <a name="compiler-error-c3739"></a>Error del compilador C3739
 
-'class': sintaxis solo se admite cuando el parámetro 'layout_dependent' de event_receiver es true
+' Class ': la sintaxis solo se admite cuando el parámetro ' layout_dependent ' de event_receiver es true
 
-Se intentó enlazar una interfaz completa de eventos pero `layout_dependent` en [event_receiver](../../windows/event-receiver.md) atributo no es true; debe enlazar un único evento cada vez.
+Intentó enlazar una interfaz completa de eventos pero `layout_dependent` en [event_receiver](../../windows/event-receiver.md) atributo no es true; debe enlazar un solo evento cada vez.
 
-El ejemplo siguiente genera C3739:
+En el ejemplo siguiente se genera C3739:
 
-```
+```cpp
 // C3739.cpp
 struct A
 {

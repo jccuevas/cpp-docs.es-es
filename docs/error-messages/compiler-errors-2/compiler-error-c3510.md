@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
-ms.openlocfilehash: dbb65628aa6e0da94a91a59724ca8e1cd5b56491
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9dea77b739aa59474e60cf852fff2577ab6ba9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620886"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753632"
 ---
 # <a name="compiler-error-c3510"></a>Error del compilador C3510
 
-no se puede encontrar la biblioteca de tipos dependiente 'tipos'
+no se encuentra la biblioteca de tipos dependiente ' type_lib '
 
-[no_registry](../../preprocessor/no-registry.md) y [auto_search](../../preprocessor/auto-search.md) se pasaron a `#import` , pero el compilador no pudo encontrar una biblioteca de tipos que se hace referencia.
+se pasaron [no_registry](../../preprocessor/no-registry.md) y [auto_search](../../preprocessor/auto-search.md) a `#import` pero el compilador no pudo encontrar una biblioteca de tipos a la que se hace referencia.
 
-Para resolver este error, asegúrese de que todas las bibliotecas de tipos y bibliotecas de tipos que se hace referencia están disponibles para el compilador.
+Para resolver este error, asegúrese de que todas las bibliotecas de tipos y bibliotecas de tipos a las que se hace referencia estén disponibles para el compilador.
 
-El ejemplo siguiente genera C3510:
+En el ejemplo siguiente se genera C3510:
 
-Suponga que se crearon las siguientes dos bibliotecas de tipos, y que se eliminó C3510a.tlb o no en la ruta de acceso.
+Supongamos que se han creado las dos bibliotecas de tipos siguientes y que C3510a. tlb se ha eliminado o no está en la ruta de acceso.
 
 ```
 // C3510a.idl
@@ -38,7 +38,7 @@ library C3510aLib
 };
 ```
 
-Y, a continuación, el código fuente para la segunda biblioteca de tipos:
+Y, a continuación, el código fuente de la segunda biblioteca de tipos:
 
 ```
 // C3510b.idl
@@ -56,7 +56,7 @@ library C3510bLib
 
 Y, a continuación, el código de cliente:
 
-```
+```cpp
 // C3510.cpp
 #import "c3510b.tlb" no_registry auto_search   // C3510
 int main() {

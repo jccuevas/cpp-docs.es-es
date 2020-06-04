@@ -1,19 +1,17 @@
 ---
 title: default::(type_name)::GetHashCode (Método)
 ms.date: 12/30/2016
-f1_keywords:
-- VCCORLIB/Platform::Object::GetHashCode
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-ms.openlocfilehash: 4d70140091779904965ac8c3a55973c41d69e780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f64607ab21cd0fd5deccbd16f3f69f96e4d245b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650858"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444305"
 ---
-# <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode (Método)
+# <a name="defaulttype_namegethashcode-method"></a>default::(type_name)::GetHashCode (Método)
 
-Devuelve el código hash de esta instancia.
+Devuelve el código hash para esta instancia.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,6 +33,6 @@ Código hash de esta instancia.
 
 **Encabezado:** vccorlib.h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [espacio de nombres predeterminado](../cppcx/default-namespace.md)

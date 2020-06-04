@@ -10,11 +10,11 @@ helpviewer_keywords:
 - binary data, binary expressions
 ms.assetid: 13bc4c8e-2dc9-4b23-9f3a-25064e8777ed
 ms.openlocfilehash: 139eedf54ab42ddc34b5c049abfcd1c2638c5efc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326383"
 ---
 # <a name="c-operators"></a>Operadores de C
 
@@ -24,7 +24,7 @@ Hay tres tipos de operadores. Una expresión unaria consta de un operador unario
 
 C incluye los operadores unarios siguientes:
 
-|Símbolo|nombre|
+|Símbolo|NOMBRE|
 |------------|----------|
 |**-** **~** **!**|Operadores de negación y complemento|
 |**&#42;** **&**|Operadores de direccionamiento indirecto y address-of|
@@ -34,7 +34,7 @@ C incluye los operadores unarios siguientes:
 
 Los operadores binarios se asocian de izquierda a derecha. C proporciona los operadores binarios siguientes:
 
-|Símbolo|nombre|
+|Símbolo|NOMBRE|
 |------------|----------|
 |**&#42;** **/** **%**|Operadores de multiplicación|
 |**+** **-**|Operadores aditivos|
@@ -44,11 +44,11 @@ Los operadores binarios se asocian de izquierda a derecha. C proporciona los ope
 |**&&** **&#124;&#124;**|Operadores lógicos|
 |**,**|Operador de evaluación secuencial|
 
-El operador base(**:>**), compatible con las versiones anteriores del compilador de C de 16 bits de Microsoft, se describe en [Resumen de la sintaxis de lenguaje C](../c-language/c-language-syntax-summary.md).
+El operador base( **:>** ), compatible con las versiones anteriores del compilador de C de 16 bits de Microsoft, se describe en [Resumen de la sintaxis de lenguaje C](../c-language/c-language-syntax-summary.md).
 
 El operador de expresión condicional tiene menos prioridad que las expresiones binarias y se diferencia de ellas en que es asociativo a la derecha.
 
-Las expresiones con operadores también incluyen expresiones de asignación, que usan operadores de asignación unarios o binarios. Los operadores de asignación unarios son los operadores de incremento (**++**) y decremento (**--**); los operadores de asignación binarios son el operador de asignación simple (**=**) y los operadores de asignación compuesta. Cada operador de asignación compuesta es una combinación de otro operador binario con el operador de asignación simple.
+Las expresiones con operadores también incluyen expresiones de asignación, que usan operadores de asignación unarios o binarios. Los operadores de asignación unarios son los operadores de incremento ( **++** ) y decremento ( **--** ); los operadores de asignación binarios son el operador de asignación simple ( **=** ) y los operadores de asignación compuesta. Cada operador de asignación compuesta es una combinación de otro operador binario con el operador de asignación simple.
 
 ## <a name="see-also"></a>Vea también
 

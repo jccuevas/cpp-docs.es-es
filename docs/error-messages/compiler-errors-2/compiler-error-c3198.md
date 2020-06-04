@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3198
 ms.assetid: ec4ecf61-0067-4aa4-b443-a91013a1e59d
-ms.openlocfilehash: 61a3d14f9ad47edaa1e9b9f2b25d38b8dae7165c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9e0ce4a84b312e3a9277898b3fc264ea3ae22bb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567458"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739160"
 ---
 # <a name="compiler-error-c3198"></a>Error del compilador C3198
 
-uso no válido de pragmas de punto flotante: el pragma fenv_access solamente funciona en el modo preciso
+uso no válido de pragmas de punto flotante: fenv_access pragma solo funciona en modo preciso
 
-[fenv_access](../../preprocessor/fenv-access.md) pragma se usó en un [/FP](../../build/reference/fp-specify-floating-point-behavior.md) valor distinto **/fp: precisa**.
+[fenv_access](../../preprocessor/fenv-access.md) pragma se usó en un valor de [/FP](../../build/reference/fp-specify-floating-point-behavior.md) que no sea **/FP: precise**.
 
-El ejemplo siguiente genera C3198:
+En el ejemplo siguiente se genera C3198:
 
-```
+```cpp
 // C3198.cpp
 // compile with: /fp:fast
 #pragma fenv_access(on)   // C3198

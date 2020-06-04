@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd82b5c5112bc322717f2b58d79d4c8f34f5bbd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603223"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368169"
 ---
 # <a name="ischeduler-structure"></a>IScheduler (Estructura)
 
@@ -27,7 +27,7 @@ Una interfaz a una abstracción de un programador de trabajo. El Administrador d
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 struct IScheduler;
 ```
 
@@ -35,19 +35,19 @@ struct IScheduler;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Proporciona a un programador con un conjunto de raíces de procesador virtual para su uso. Cada `IVirtualProcessorRoot` interfaz representa el derecho para ejecutar un subproceso único que puede realizar el trabajo en nombre del programador.|
-|[IScheduler:: GetId](#getid)|Devuelve un identificador único para el programador.|
-|[IScheduler:: GetPolicy](#getpolicy)|Devuelve una copia de la directiva del programador. Para obtener más información sobre las directivas del programador, consulte [SchedulerPolicy](schedulerpolicy-class.md).|
-|[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` ahora están siendo utilizados por otros programadores.|
-|[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` no se usan por otros programadores.|
-|[IScheduler:: RemoveVirtualProcessors](#removevirtualprocessors)|Inicia la eliminación de raíces de procesador virtual que se asignaron previamente a este programador.|
-|[IScheduler:: STATISTICS](#statistics)|Proporciona información relacionada con las tasas de llegada y finalización de tarea y cambio de longitud de cola para un programador.|
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Proporciona un programador con un conjunto de raíces de procesador virtual para su uso. Cada `IVirtualProcessorRoot` interfaz representa el derecho a ejecutar un único subproceso que puede realizar el trabajo en nombre del programador.|
+|[IScheduler::GetId](#getid)|Devuelve un identificador único para el programador.|
+|[IScheduler::GetPolicy](#getpolicy)|Devuelve una copia de la directiva del programador. Para obtener más información sobre las directivas del programador, vea [SchedulerPolicy](schedulerpolicy-class.md).|
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` ahora están siendo utilizados por otros programadores.|
+|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` no están siendo utilizados por otros programadores.|
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Inicia la eliminación de las raíces del procesador virtual que se asignaron previamente a este programador.|
+|[IScheduler::Estadísticas](#statistics)|Proporciona información relacionada con las tasas de llegada y finalización de tareas, y cambio en la longitud de la cola para un programador.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si está implementando un programador personalizado que se comunica con el Administrador de recursos, debe proporcionar una implementación de la `IScheduler` interfaz. Esta interfaz es un extremo de un canal bidireccional de comunicación entre un programador y el Administrador de recursos. El otro extremo es representado por la `IResourceManager` y `ISchedulerProxy` interfaces implementadas por Resource Manager.
+Si va a implementar un programador personalizado que se comunica con `IScheduler` Resource Manager, debe proporcionar una implementación de la interfaz. Esta interfaz es un extremo de un canal bidireccional de comunicación entre un programador y Resource Manager. El otro extremo está `IResourceManager` representado `ISchedulerProxy` por las interfaces y que implementa Resource Manager.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -59,11 +59,11 @@ Si está implementando un programador personalizado que se comunica con el Admin
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="addvirtualprocessors"></a>  AddVirtualProcessors (método)
+## <a name="ischeduleraddvirtualprocessors-method"></a><a name="addvirtualprocessors"></a>IScheduler::AddVirtualProcessors Método
 
-Proporciona a un programador con un conjunto de raíces de procesador virtual para su uso. Cada `IVirtualProcessorRoot` interfaz representa el derecho para ejecutar un subproceso único que puede realizar el trabajo en nombre del programador.
+Proporciona un programador con un conjunto de raíces de procesador virtual para su uso. Cada `IVirtualProcessorRoot` interfaz representa el derecho a ejecutar un único subproceso que puede realizar el trabajo en nombre del programador.
 
-```
+```cpp
 virtual void AddVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -72,38 +72,38 @@ virtual void AddVirtualProcessors(
 ### <a name="parameters"></a>Parámetros
 
 *ppVirtualProcessorRoots*<br/>
-Una matriz de `IVirtualProcessorRoot` raíces de las interfaces que representa el procesador virtual que se agrega al programador.
+Matriz de `IVirtualProcessorRoot` interfaces que representan las raíces del procesador virtual que se agregan al programador.
 
 *count*<br/>
-El número de `IVirtualProcessorRoot` interfaces de la matriz.
+El número `IVirtualProcessorRoot` de interfaces en la matriz.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El Administrador de recursos invoca el `AddVirtualProcessor` método conceder un conjunto inicial de raíces de procesador virtual a un programador. También puede invocar el método para agregar raíces de procesador virtual al programador cuando vuelve a equilibrar los recursos entre los programadores.
+Resource Manager invoca `AddVirtualProcessor` el método para conceder un conjunto inicial de raíces de procesador virtual a un programador. También podría invocar el método para agregar raíces de procesador virtual al programador cuando reequilibra los recursos entre programadores.
 
-##  <a name="getid"></a>  IScheduler:: GetId (método)
+## <a name="ischedulergetid-method"></a><a name="getid"></a>IScheduler::GetId Método
 
 Devuelve un identificador único para el programador.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un identificador entero único.
+Identificador entero único.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Debe usar el [GetSchedulerId](concurrency-namespace-functions.md) función para obtener un identificador único para el objeto que implementa el `IScheduler` interfaz antes de usar la interfaz como un parámetro a los métodos proporcionados por el Administrador de recursos. Se espera que devuelva el mismo identificador cuando el `GetId` se invoca la función.
+Debe usar la función [GetSchedulerId](concurrency-namespace-functions.md) para obtener un identificador `IScheduler` único para el objeto que implementa la interfaz, antes de usar la interfaz como parámetro para los métodos proporcionados por el Administrador de recursos. Se espera que devuelva el `GetId` mismo identificador cuando se invoca la función.
 
-Un identificador obtenido de un origen diferente podría provocar un comportamiento indefinido.
+Un identificador obtenido de un origen diferente podría dar lugar a un comportamiento indefinido.
 
-##  <a name="getpolicy"></a>  IScheduler:: GetPolicy (método)
+## <a name="ischedulergetpolicy-method"></a><a name="getpolicy"></a>IScheduler::GetPolicy Método
 
-Devuelve una copia de la directiva del programador. Para obtener más información sobre las directivas del programador, consulte [SchedulerPolicy](schedulerpolicy-class.md).
+Devuelve una copia de la directiva del programador. Para obtener más información sobre las directivas del programador, vea [SchedulerPolicy](schedulerpolicy-class.md).
 
-```
+```cpp
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
@@ -111,11 +111,11 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 
 Una copia de la directiva del programador.
 
-##  <a name="notifyresourcesexternallybusy"></a>  NotifyResourcesExternallyBusy (método)
+## <a name="ischedulernotifyresourcesexternallybusy-method"></a><a name="notifyresourcesexternallybusy"></a>IScheduler::NotifyResourcesExternallyBusy Método
 
 Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` ahora están siendo utilizados por otros programadores.
 
-```
+```cpp
 virtual void NotifyResourcesExternallyBusy(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -124,26 +124,26 @@ virtual void NotifyResourcesExternallyBusy(
 ### <a name="parameters"></a>Parámetros
 
 *ppVirtualProcessorRoots*<br/>
-Una matriz de `IVirtualProcessorRoot` interfaces asociadas con los subprocesos de hardware en el que otros programadores han ocupado.
+Matriz de `IVirtualProcessorRoot` interfaces asociadas a los subprocesos de hardware en los que otros programadores han ocupado.
 
 *count*<br/>
-El número de `IVirtualProcessorRoot` interfaces de la matriz.
+El número `IVirtualProcessorRoot` de interfaces en la matriz.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Es posible que un subproceso de hardware determinado que se asignará a los programadores varias al mismo tiempo. Un motivo para esto podría ser que no hay suficientes subprocesos de hardware en el sistema para cumplir el mínimo de simultaneidad para todos los programadores, sin uso compartido de recursos. Otra posibilidad es que los recursos se asignan temporalmente a otros programadores cuando el programador propietario no las usa, por medio de todas sus raíces de procesador virtual en ese subproceso de hardware que se está desactivando.
+Es posible que un subproceso de hardware determinado se asigne a varios programadores al mismo tiempo. Una razón para esto podría ser que no hay suficientes subprocesos de hardware en el sistema para satisfacer la simultaneidad mínima para todos los programadores, sin compartir recursos. Otra posibilidad es que los recursos se asignen temporalmente a otros programadores cuando el programador propietario no los está utilizando, a través de todas sus raíces de procesador virtual en ese subproceso de hardware que se está desactivando.
 
-El nivel de suscripción de un subproceso de hardware se indica mediante el número de subprocesos está suscritos y activa las raíces de procesador virtual asociadas a ese subproceso del hardware. Desde el punto de vista de un programador determinado, el nivel de suscripción externo de un subproceso de hardware es la parte de la suscripción que otros programadores contribuyen. Cuando el nivel de suscripción externo para un subproceso de hardware se mueve desde cero en el territorio positivo, se envían notificaciones que los recursos están ocupados externamente a un programador.
+El nivel de suscripción de un subproceso de hardware se indica por el número de subprocesos suscritos y las raíces de procesador virtual activadas asociadas a ese subproceso de hardware. Desde el punto de vista de un programador determinado, el nivel de suscripción externo de un subproceso de hardware es la parte de la suscripción a la que contribuyen otros programadores. Las notificaciones de que los recursos están ocupados externamente se envían a un programador cuando el nivel de suscripción externa de un subproceso de hardware se mueve de cero a territorio positivo.
 
-Las notificaciones a través de este método solo se envían a los programadores que tienen una directiva donde el valor de la `MinConcurrency` es igual al valor de clave de la directiva el `MaxConcurrency` clave de la directiva. Para obtener más información sobre las directivas del programador, consulte [SchedulerPolicy](schedulerpolicy-class.md).
+Las notificaciones a través de este método solo se `MinConcurrency` envían a programadores que `MaxConcurrency` tienen una directiva donde el valor de la clave de directiva es igual al valor de la clave de directiva. Para obtener más información sobre las directivas del programador, vea [SchedulerPolicy](schedulerpolicy-class.md).
 
-Un programador que califica las notificaciones Obtiene un conjunto de notificaciones iniciales cuando se crea, para informar de si los recursos que se asignó solo son externamente ocupado o inactivo.
+Un programador que califica para las notificaciones obtiene un conjunto de notificaciones iniciales cuando se crea, informándolo si los recursos que se le acaban de asignar están ocupados externamente o inactivos.
 
-##  <a name="notifyresourcesexternallyidle"></a>  NotifyResourcesExternallyIdle (método)
+## <a name="ischedulernotifyresourcesexternallyidle-method"></a><a name="notifyresourcesexternallyidle"></a>IScheduler::NotifyResourcesExternallyIdle Método
 
-Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` no se usan por otros programadores.
+Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` no están siendo utilizados por otros programadores.
 
-```
+```cpp
 virtual void NotifyResourcesExternallyIdle(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -152,26 +152,26 @@ virtual void NotifyResourcesExternallyIdle(
 ### <a name="parameters"></a>Parámetros
 
 *ppVirtualProcessorRoots*<br/>
-Una matriz de `IVirtualProcessorRoot` interfaces asociadas con los subprocesos de hardware en el que otros programadores se han vuelto inactivas.
+Matriz de `IVirtualProcessorRoot` interfaces asociadas a subprocesos de hardware en los que otros programadores se han quedado inactivos.
 
 *count*<br/>
-El número de `IVirtualProcessorRoot` interfaces de la matriz.
+El número `IVirtualProcessorRoot` de interfaces en la matriz.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Es posible que un subproceso de hardware determinado que se asignará a los programadores varias al mismo tiempo. Un motivo para esto podría ser que no hay suficientes subprocesos de hardware en el sistema para cumplir el mínimo de simultaneidad para todos los programadores, sin uso compartido de recursos. Otra posibilidad es que los recursos se asignan temporalmente a otros programadores cuando el programador propietario no las usa, por medio de todas sus raíces de procesador virtual en ese subproceso de hardware que se está desactivando.
+Es posible que un subproceso de hardware determinado se asigne a varios programadores al mismo tiempo. Una razón para esto podría ser que no hay suficientes subprocesos de hardware en el sistema para satisfacer la simultaneidad mínima para todos los programadores, sin compartir recursos. Otra posibilidad es que los recursos se asignen temporalmente a otros programadores cuando el programador propietario no los está utilizando, a través de todas sus raíces de procesador virtual en ese subproceso de hardware que se está desactivando.
 
-El nivel de suscripción de un subproceso de hardware se indica mediante el número de subprocesos está suscritos y activa las raíces de procesador virtual asociadas a ese subproceso del hardware. Desde el punto de vista de un programador determinado, el nivel de suscripción externo de un subproceso de hardware es la parte de la suscripción que otros programadores contribuyen. Cuando el nivel de suscripción externo para un subproceso de hardware llega a cero de un valor positivo anterior, se envían notificaciones que los recursos están ocupados externamente a un programador.
+El nivel de suscripción de un subproceso de hardware se indica por el número de subprocesos suscritos y las raíces de procesador virtual activadas asociadas a ese subproceso de hardware. Desde el punto de vista de un programador determinado, el nivel de suscripción externo de un subproceso de hardware es la parte de la suscripción a la que contribuyen otros programadores. Las notificaciones de que los recursos están ocupados externamente se envían a un programador cuando el nivel de suscripción externa de un subproceso de hardware cae a cero desde un valor positivo anterior.
 
-Las notificaciones a través de este método solo se envían a los programadores que tienen una directiva donde el valor de la `MinConcurrency` es igual al valor de clave de la directiva el `MaxConcurrency` clave de la directiva. Para obtener más información sobre las directivas del programador, consulte [SchedulerPolicy](schedulerpolicy-class.md).
+Las notificaciones a través de este método solo se `MinConcurrency` envían a programadores que `MaxConcurrency` tienen una directiva donde el valor de la clave de directiva es igual al valor de la clave de directiva. Para obtener más información sobre las directivas del programador, vea [SchedulerPolicy](schedulerpolicy-class.md).
 
-Un programador que califica las notificaciones Obtiene un conjunto de notificaciones iniciales cuando se crea, para informar de si los recursos que se asignó solo son externamente ocupado o inactivo.
+Un programador que califica para las notificaciones obtiene un conjunto de notificaciones iniciales cuando se crea, informándolo si los recursos que se le acaban de asignar están ocupados externamente o inactivos.
 
-##  <a name="removevirtualprocessors"></a>  RemoveVirtualProcessors (método)
+## <a name="ischedulerremovevirtualprocessors-method"></a><a name="removevirtualprocessors"></a>IScheduler::RemoveVirtualProcessors Método
 
-Inicia la eliminación de raíces de procesador virtual que se asignaron previamente a este programador.
+Inicia la eliminación de las raíces del procesador virtual que se asignaron previamente a este programador.
 
-```
+```cpp
 virtual void RemoveVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -180,22 +180,22 @@ virtual void RemoveVirtualProcessors(
 ### <a name="parameters"></a>Parámetros
 
 *ppVirtualProcessorRoots*<br/>
-Una matriz de `IVirtualProcessorRoot` interfaces que representan las raíces de procesador virtual que va a quitar.
+Matriz de `IVirtualProcessorRoot` interfaces que representan las raíces del procesador virtual que se van a quitar.
 
 *count*<br/>
-El número de `IVirtualProcessorRoot` interfaces de la matriz.
+El número `IVirtualProcessorRoot` de interfaces en la matriz.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El Administrador de recursos invoca el `RemoveVirtualProcessors` método para volver a tomar un conjunto de raíces de procesador virtual de un programador. Se espera que el programador de invocar el [quitar](iexecutionresource-structure.md#remove) método en cada interfaz cuando se hace con las raíces de procesador virtual. No use un `IVirtualProcessorRoot` interfaz una vez que se han invocado el `Remove` método en él.
+Resource Manager invoca `RemoveVirtualProcessors` el método para recuperar un conjunto de raíces de procesador virtual de un programador. Se espera que el programador invoque el método [Remove](iexecutionresource-structure.md#remove) en cada interfaz cuando se realiza con las raíces del procesador virtual. No utilice `IVirtualProcessorRoot` una interfaz una `Remove` vez que haya invocado el método en ella.
 
-El parámetro `ppVirtualProcessorRoots` apunta a una matriz de interfaces. Entre el conjunto de raíces de procesador virtual va a quitar, nunca se han activado las raíces pueden devolverse inmediatamente mediante el `Remove` método. Las raíces que se han activado y son ejecutar el trabajo, o se han desactivado y están esperando a que llegue trabajo, se deben devolver de forma asincrónica. El programador debe hacer todo lo posible para quitar la raíz del procesador virtual tan pronto como sea posible. Retraso en la eliminación de las raíces de procesador virtual puede provocar la sobresuscripción involuntaria dentro del programador.
+El `ppVirtualProcessorRoots` parámetro apunta a una matriz de interfaces. Entre el conjunto de raíces de procesador virtual que se va a `Remove` eliminar, las raíces nunca se han activado se pueden devolver inmediatamente utilizando el método. Las raíces que se han activado y están ejecutando el trabajo, o se han desactivado y están esperando a que llegue el trabajo, deben devolverse de forma asincrónica. El programador debe realizar todos los intentos para quitar la raíz del procesador virtual lo antes posible. Retrasar la eliminación de las raíces del procesador virtual puede dar lugar a una sobresuscripción involuntaria dentro del programador.
 
-##  <a name="statistics"></a>  IScheduler:: Statistics (método)
+## <a name="ischedulerstatistics-method"></a><a name="statistics"></a>IScheduler::Método de estadísticas
 
-Proporciona información relacionada con las tasas de llegada y finalización de tarea y cambio de longitud de cola para un programador.
+Proporciona información relacionada con las tasas de llegada y finalización de tareas, y cambio en la longitud de la cola para un programador.
 
-```
+```cpp
 virtual void Statistics(
     _Out_ unsigned int* pTaskCompletionRate,
     _Out_ unsigned int* pTaskArrivalRate,
@@ -205,28 +205,28 @@ virtual void Statistics(
 ### <a name="parameters"></a>Parámetros
 
 *pTaskCompletionRate*<br/>
-El número de tareas que se han completado por el programador desde la última llamada a este método.
+El número de tareas que ha completado el programador desde la última llamada a este método.
 
 *pTaskArrivalRate*<br/>
-El número de tareas que se recibieron en el programador desde la última llamada a este método.
+El número de tareas que han llegado al programador desde la última llamada a este método.
 
 *pNumberOfTasksEnqueued*<br/>
 El número total de tareas en todas las colas del programador.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método se invoca el Administrador de recursos con el fin de recopilar las estadísticas para un programador. Las estadísticas que se recopilan aquí se usará para controlar los algoritmos de comentarios dinámicos para determinar cuándo es adecuado asignar más recursos al programador y cuándo se debe quitar recursos. Los valores proporcionados por el programador pueden ser optimistas y no necesariamente deben reflejar con precisión el recuento actual.
+El Administrador de recursos invoca este método para recopilar estadísticas para un programador. Las estadísticas recopiladas aquí se utilizarán para generar algoritmos de retroalimentación dinámica para determinar cuándo es apropiado asignar más recursos al programador y cuándo quitar recursos. Los valores proporcionados por el programador pueden ser optimistas y no necesariamente tienen que reflejar el recuento actual con precisión.
 
-Debe implementar este método si desea que el Administrador de recursos para usar comentarios sobre aspectos tales como la llegada de la tarea para determinar cómo equilibrar los recursos entre su programador y otros programadores registrados con el Administrador de recursos. Si decide no recopilar las estadísticas, puede establecer la clave de directiva `DynamicProgressFeedback` al valor `DynamicProgressFeedbackDisabled` en la directiva de su programador y el recurso administrador no invocará este método en su programador.
+Debe implementar este método si desea que Resource Manager use comentarios sobre aspectos como la llegada de tareas para determinar cómo equilibrar el recurso entre el programador y otros programadores registrados con Resource Manager. Si decide no recopilar estadísticas, puede establecer `DynamicProgressFeedback` la `DynamicProgressFeedbackDisabled` clave de directiva en el valor de la directiva del programador y Resource Manager no invocará este método en el programador.
 
-En ausencia de información estadística, el Administrador de recursos usará los niveles de suscripción del subproceso de hardware para tomar decisiones de migración y asignación de recursos. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
+En ausencia de información estadística, Resource Manager usará niveles de suscripción de subprocesos de hardware para tomar decisiones de migración y asignación de recursos. Para obtener más información sobre los niveles de suscripción, vea [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
+[espacio de nombres de simultaneidad](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
-[SchedulerPolicy (clase)](schedulerpolicy-class.md)<br/>
+[SchedulerPolicy (Clase)](schedulerpolicy-class.md)<br/>
 [IExecutionContext (estructura)](iexecutioncontext-structure.md)<br/>
 [IThreadProxy (estructura)](ithreadproxy-structure.md)<br/>
 [IVirtualProcessorRoot (estructura)](ivirtualprocessorroot-structure.md)<br/>
-[IResourceManager (estructura)](iresourcemanager-structure.md)
+[IResourceManager (Estructura)](iresourcemanager-structure.md)

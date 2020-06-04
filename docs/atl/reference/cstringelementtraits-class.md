@@ -1,5 +1,5 @@
 ---
-title: CStringElementTraits (clase)
+title: Clase CStringElementTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CStringElementTraits
@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-ms.openlocfilehash: f3e0bd447d2ff7c04ecf3c4a72b7dd2340c6bb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 078cfd5ff93bfcd8acc747904ea05e6a2e762bc1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534230"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330619"
 ---
-# <a name="cstringelementtraits-class"></a>CStringElementTraits (clase)
+# <a name="cstringelementtraits-class"></a>Clase CStringElementTraits
 
-Esta clase proporciona funciones estáticas usadas por las clases de colección para almacenar `CString` objetos.
+Esta clase proporciona funciones estáticas `CString` utilizadas por las clases de colección que almacenan objetos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,38 +35,38 @@ class CStringElementTraits
 #### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-El tipo de datos que se almacenará en la colección.
+El tipo de datos que se almacenarán en la colección.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CStringElementTraits::INARGTYPE](#inargtype)|El tipo de datos que se usará para agregar elementos al objeto de clase de colección.|
-|[CStringElementTraits::OUTARGTYPE](#outargtype)|El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.|
+|[CStringElementTraits::OUTARGTYPE](#outargtype)|El tipo de datos que se va a utilizar para recuperar elementos del objeto de clase de colección.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CStringElementTraits::CompareElements](#compareelements)|(Estático) Llame a esta función para comparar dos elementos de cadena para la igualdad.|
 |[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Estático) Llame a esta función para comparar dos elementos de cadena.|
-|[CStringElementTraits::CopyElements](#copyelements)|(Estático) Llame a esta función para copiar `CString` elementos almacenados en un objeto de clase de colección.|
-|[CStringElementTraits::Hash](#hash)|(Estático) Llame a esta función para calcular un valor hash para el elemento de la cadena especificada.|
-|[CStringElementTraits::RelocateElements](#relocateelements)|(Estático) Llame a esta función para reubicar `CString` elementos almacenados en un objeto de clase de colección.|
+|[CStringElementTraits::CopyElements](#copyelements)|(Estático) Llame a esta `CString` función para copiar los elementos almacenados en un objeto de clase de colección.|
+|[CStringElementTraits::Hash](#hash)|(Estático) Llame a esta función para calcular un valor hash para el elemento de cadena especificado.|
+|[CStringElementTraits::RelocateElements](#relocateelements)|(Estático) Llame a esta `CString` función para reubicar los elementos almacenados en un objeto de clase de colección.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase proporciona funciones estáticas para copiar, mover y comparar cadenas y para crear un valor hash. Estas funciones son útiles cuando se usa una clase de colección para almacenar los datos basados en cadena. Use [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) cuando sean necesarias comparaciones entre mayúsculas y minúsculas. Use [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) cuando los objetos de cadena deben tratarse como referencias.
+Esta clase proporciona funciones estáticas para copiar, mover y comparar cadenas y para crear un valor hash. Estas funciones son útiles cuando se usa una clase de colección para almacenar datos basados en cadenas. Utilice [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) cuando se requieren comparaciones sin distinción entre mayúsculas y minúsculas. Utilice [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) cuando los objetos de cadena se van a tratar como referencias.
 
-Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).
+Para obtener más información, vea Clases de [colección ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** cstringt.h
 
-##  <a name="compareelements"></a>  CStringElementTraits::CompareElements
+## <a name="cstringelementtraitscompareelements"></a><a name="compareelements"></a>CStringElementTraits::CompareElements
 
 Llame a esta función estática para comparar dos elementos de cadena para la igualdad.
 
@@ -80,13 +80,13 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 El primer elemento de cadena.
 
 *str2*<br/>
-La segunda cadena de elemento.
+El segundo elemento de cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve true si los elementos si no son iguales, es false.
+Devuelve true si los elementos son iguales, false en caso contrario.
 
-##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered
+## <a name="cstringelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered
 
 Llame a esta función estática para comparar dos elementos de cadena.
 
@@ -100,15 +100,15 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 El primer elemento de cadena.
 
 *str2*<br/>
-La segunda cadena de elemento.
+El segundo elemento de cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Cero si las cadenas son idénticas, < 0 si *str1* es menor que *str2*, o 0 > Si *str1* es mayor que *str2*. El [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método se usa para realizar las comparaciones.
+Cero si las cadenas son idénticas, < 0 si *str1* es menor que *str2*, o > 0 si *str1* es mayor que *str2*. El [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método se utiliza para realizar las comparaciones.
 
-##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
+## <a name="cstringelementtraitscopyelements"></a><a name="copyelements"></a>CStringElementTraits::CopyElements
 
-Llame a esta función estática para copiar `CString` elementos almacenados en un objeto de clase de colección.
+Llame a esta `CString` función estática para copiar los elementos almacenados en un objeto de clase de colección.
 
 ```
 static void CopyElements(
@@ -120,21 +120,21 @@ static void CopyElements(
 ### <a name="parameters"></a>Parámetros
 
 *pDest*<br/>
-Puntero al primer elemento que va a recibir los datos copiados.
+Puntero al primer elemento que recibirá los datos copiados.
 
 *pSrc*<br/>
-Puntero en el primer elemento que se va a copiar.
+Puntero al primer elemento que se va a copiar.
 
-*nElements*<br/>
+*nElementos*<br/>
 Número de elementos que se van a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-No deben superponerse a los elementos de origen y destino.
+Los elementos de origen y destino no deben superponerse.
 
-##  <a name="hash"></a>  CStringElementTraits::Hash
+## <a name="cstringelementtraitshash"></a><a name="hash"></a>CStringElementTraits::Hash
 
-Llame a esta función estática para calcular un valor hash para el elemento de la cadena especificada.
+Llame a esta función estática para calcular un valor hash para el elemento de cadena especificado.
 
 ```
 static ULONG Hash(INARGTYPE str);
@@ -142,14 +142,14 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*Str*<br/>
 El elemento de cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un valor de hash, calculado con contenido de la cadena.
+Devuelve un valor hash, calculado con el contenido de la cadena.
 
-##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE
+## <a name="cstringelementtraitsinargtype"></a><a name="inargtype"></a>CStringElementTraits::INARGTYPE
 
 El tipo de datos que se usará para agregar elementos al objeto de clase de colección.
 
@@ -157,17 +157,17 @@ El tipo de datos que se usará para agregar elementos al objeto de clase de cole
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE
+## <a name="cstringelementtraitsoutargtype"></a><a name="outargtype"></a>CStringElementTraits::OUTARGTYPE
 
-El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.
+El tipo de datos que se va a utilizar para recuperar elementos del objeto de clase de colección.
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements
+## <a name="cstringelementtraitsrelocateelements"></a><a name="relocateelements"></a>CStringElementTraits::RelocateElements
 
-Llame a esta función estática para reubicar `CString` elementos almacenados en un objeto de clase de colección.
+Llame a esta función estática para reubicar `CString` los elementos almacenados en un objeto de clase de colección.
 
 ```
 static void RelocateElements(
@@ -179,20 +179,20 @@ static void RelocateElements(
 ### <a name="parameters"></a>Parámetros
 
 *pDest*<br/>
-Puntero al primer elemento que va a recibir los datos trasladados.
+Puntero al primer elemento que recibirá los datos reubicados.
 
 *pSrc*<br/>
-Puntero al primer elemento para cambiar la posición.
+Puntero al primer elemento que se va a reubicar.
 
-*nElements*<br/>
-El número de elementos que se va a cambiar la ubicación.
+*nElementos*<br/>
+El número de elementos que se van a reubicar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llama esta función estática [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que es suficiente para la mayoría de los tipos de datos. Si los objetos que se está moviendo contienen punteros a sus propios miembros, esta función estática debe reemplazarse.
+Esta función estática llama a [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que es suficiente para la mayoría de los tipos de datos. Si los objetos que se mueven contienen punteros a sus propios miembros, esta función estática tendrá que invalidarse.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CElementTraitsBase (clase)](../../atl/reference/celementtraitsbase-class.md)<br/>
-[CStringElementTraitsI (clase)](../../atl/reference/cstringelementtraitsi-class.md)<br/>
+[Clase CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
+[Clase CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

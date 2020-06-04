@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -Wp64 compiler option [C++]
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
-ms.openlocfilehash: 504d7594ab9c636fd3ce7415f3866fb4c0a5aadd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5c30ac9096094948a83195f5b3990794c421685
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601843"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335883"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Detectar problemas de portabilidad de 64 bits)
 
@@ -28,12 +28,12 @@ Esta opción del compilador está obsoleta. En versiones de Visual Studio anteri
 /Wp64
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-De forma predeterminada, en las versiones de Visual Studio anteriores a Visual Studio 2013, el **/Wp64** opción del compilador está desactivada en el compilador de Visual C++ que las compilaciones de 32 bits x86 código, y en el compilador de Visual C++ que compilaciones de 64 bits, x64 código.
+De forma predeterminada, en versiones de Visual Studio anteriores a Visual Studio 2013, la opción del compilador **/Wp64** está desactivada en el compilador MSVC que compila código x86 de 32 bits y en el compilador MSVC que compila código x64 de 64 bits.
 
 > [!IMPORTANT]
->  La opción del compilador [/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) y la palabra clave [__w64](../../cpp/w64.md) está en desuso en Visual Studio 2010 y Visual Studio 2012 y no se admite a partir de Visual Studio 2013. Si convierte un proyecto que usa este modificador, el modificador no se migrará durante la conversión. Para usar esta opción en Visual Studio 2010 o Visual Studio 2012, debe escribir el modificador del compilador en **Opciones adicionales** , en la sección **Línea de comandos** de las propiedades del proyecto. Si usa la opción del compilador **/Wp64** en la línea de comandos, el compilador emite la Advertencia de la línea de comandos D9002. En lugar de utilizar esta opción y la palabra clave para detectar problemas de portabilidad a 64 bits, use un compilador de Visual C++ cuyo destino sea una plataforma de 64 bits y especifique la opción [/W4](../../build/reference/compiler-option-warning-level.md) . Para obtener más información, consulte [configurar Visual C++ de 64 bits, x64 destinos](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+> La opción del compilador [/Wp64](wp64-detect-64-bit-portability-issues.md) y la palabra clave [__w64](../../cpp/w64.md) está en desuso en Visual Studio 2010 y Visual Studio 2012 y no se admite a partir de Visual Studio 2013. Si convierte un proyecto que usa este modificador, el modificador no se migrará durante la conversión. Para usar esta opción en Visual Studio 2010 o Visual Studio 2012, debe escribir el modificador del compilador en **Opciones adicionales** , en la sección **Línea de comandos** de las propiedades del proyecto. Si usa la opción del compilador **/Wp64** en la línea de comandos, el compilador emite la Advertencia de la línea de comandos D9002. En lugar de usar esta opción y palabra clave para detectar problemas de portabilidad de 64 bits, use un compilador MSVC que tenga como destino una plataforma de 64 bits y especifique la opción [/W4.](compiler-option-warning-level.md) Para obtener más información, consulte [Configurar proyectos C++ para destinos x64 de 64 bits.](../configuring-programs-for-64-bit-visual-cpp.md)
 
 Las variables de los tipos siguientes se comprueban en un sistema operativo de 32 bits como si se usaran en un sistema operativo de 64 bits:
 
@@ -43,13 +43,13 @@ Las variables de los tipos siguientes se comprueban en un sistema operativo de 3
 
 - puntero
 
-Si compila regularmente la aplicación mediante el uso de un compilador que genera 64 bits, x64 código, puede deshabilitar **/Wp64** en las compilaciones de 32 bits porque el compilador de 64 bits detectará todos los problemas. Para obtener más información acerca de cómo el sistema operativo de destino Windows 64 bits, consulte [configurar Visual C++ de 64 bits, x64 destinos](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+Si compila regularmente la aplicación mediante un compilador que compila código x64 de 64 bits, puede deshabilitar **/Wp64** en las compilaciones de 32 bits porque el compilador de 64 bits detectará todos los problemas. Para obtener más información acerca de cómo dirigirse a un sistema operativo Windows de 64 bits, vea [Configurar proyectos C++ para destinos x64 de 64 bits.](../configuring-programs-for-64-bit-visual-cpp.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.
 
-   Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+   Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -61,8 +61,8 @@ Si compila regularmente la aplicación mediante el uso de un compilador que gene
 
 - Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Configuración de Visual C++ en destinos de 64 bits, x64](../../build/configuring-programs-for-64-bit-visual-cpp.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Configuración de proyectos de Visual C++ para destinos x64 de 64 bits](../configuring-programs-for-64-bit-visual-cpp.md)

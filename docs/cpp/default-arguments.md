@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528926"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189551"
 ---
 # <a name="default-arguments"></a>Argumentos predeterminados
 
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-La implementación de la `print` función cambia ligeramente para reflejar el hecho de que existe sólo una función de tipo **doble**:
+La implementación de la función `print` se cambia ligeramente para reflejar el hecho de que solo existe una de estas funciones para el tipo **Double**:
 
 ```cpp
 // default_arguments.cpp

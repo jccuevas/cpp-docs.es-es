@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: c0075bf0e3749966a5e5b9fcd775b5d73171bf17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9542f1904c6797a77c88c88a37aff9348364268
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599425"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738185"
 ---
 # <a name="compiler-error-c3496"></a>Error del compilador C3496
 
@@ -27,7 +27,7 @@ No se puede capturar el `this` puntero por referencia.
 
 El ejemplo siguiente genera C3496 porque una referencia al puntero `this` aparece en la lista de captura de una expresión lambda:
 
-```
+```cpp
 // C3496.cpp
 // compile with: /c
 

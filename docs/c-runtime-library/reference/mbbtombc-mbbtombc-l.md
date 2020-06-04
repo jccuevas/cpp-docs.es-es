@@ -1,10 +1,12 @@
 ---
 title: _mbbtombc, _mbbtombc_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _mbbtombc_l
 - _mbbtombc
-apilocation:
+- _o__mbbtombc
+- _o__mbbtombc_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbbtombc_l
 - _mbbtombc
@@ -28,14 +34,14 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2088ea83729a74a60e75d1710529480f34cd638
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547997"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919603"
 ---
-# <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
+# <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
 Convierte un carácter multibyte de byte único en el carácter multibyte de doble byte correspondiente.
 
@@ -56,7 +62,7 @@ unsigned int _mbbtombc_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter de byte único que se va a convertir.
 
 *locale*<br/>
@@ -64,15 +70,17 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **_mbbtombc** convierte correctamente *c*, devuelve un carácter multibyte; de lo contrario, devuelve *c*.
+Si **_mbbtombc** convierte correctamente *c*, devuelve un carácter multibyte. de lo contrario, devuelve *c*.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_mbbtombc** función convierte un determinado carácter multibyte de byte único en un carácter multibyte de doble byte correspondiente. Caracteres deben estar dentro del intervalo 0 x 20-0x7E o 0xA1 - 0xDF va a convertir.
+La función **_mbbtombc** convierte un carácter multibyte de un solo byte determinado en un carácter multibyte de doble byte correspondiente. Los caracteres deben estar dentro del intervalo 0x20-0x7E o 0xA1-0xDF que se va a convertir.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de esta función son idénticas, salvo que **_mbbtombc** usa la configuración regional actual para este comportamiento dependiente de la configuración regional y **_mbbtombc_l** en su lugar utiliza el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional. vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de esta función son idénticas, salvo que **_mbbtombc** usa la configuración regional actual para este comportamiento dependiente de la configuración regional y **_mbbtombc_l** en su lugar usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En versiones anteriores, **_mbbtombc** se denominaba **hantozen**. Para código nuevo, use **_mbbtombc**.
+En versiones anteriores, **_mbbtombc** se llamaba **hantozen**. Para el nuevo código, use **_mbbtombc**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -81,9 +89,9 @@ En versiones anteriores, **_mbbtombc** se denominaba **hantozen**. Para código 
 |**_mbbtombc**|\<mbstring.h>|
 |**_mbbtombc_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [_mbctombb, _mbctombb_l](mbctombb-mbctombb-l.md)<br/>

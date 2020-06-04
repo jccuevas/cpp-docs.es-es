@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
-ms.openlocfilehash: 6c1aa2bb9593cdf12aadc39ef8a85cc8ad14078a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189f3d824c008845570eac6eead4a35be1e483d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677479"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369085"
 ---
 # <a name="cd2droundedrect-class"></a>Clase CD2DRoundedRect
 
@@ -29,9 +29,9 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Sobrecargado. Construye un `CD2DRoundedRect` objeto `D2D1_ROUNDED_RECT` objeto.|
+|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Sobrecargado. Construye un `CD2DRoundedRect` objeto `D2D1_ROUNDED_RECT` a partir de un objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -43,9 +43,9 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect
+## <a name="cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect
 
-Construye un objeto CD2DRoundedRect del objeto CD2DRectF.
+Construye un objeto CD2DRoundedRect a partir del objeto CD2DRectF.
 
 ```
 CD2DRoundedRect(
@@ -62,8 +62,8 @@ CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
 rectángulo de origen
 
 *sizeRadius*<br/>
-tamaño de RADIUS
+tamaño del radio
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

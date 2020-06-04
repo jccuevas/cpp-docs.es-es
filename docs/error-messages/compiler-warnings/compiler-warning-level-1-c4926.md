@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4926
 ms.assetid: 5717fce0-146f-4ef2-bde0-e9a01c0922d1
-ms.openlocfilehash: 839d0b8ffad947e7031ca618b255588f54b82770
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 090b0b005c9374ad409ee580b3c726ce60db258f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634907"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174627"
 ---
 # <a name="compiler-warning-level-1-c4926"></a>Advertencia del compilador (nivel 1) C4926
 
@@ -21,7 +21,7 @@ Se encontró una declaración adelantada, pero ya existe una construcción con a
 
 El ejemplo siguiente genera la advertencia C4926:
 
-```
+```cpp
 // C4926.cpp
 // compile with: /W1
 [module(name="MyLib")];

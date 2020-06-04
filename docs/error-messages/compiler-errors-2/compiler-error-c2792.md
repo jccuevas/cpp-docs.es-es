@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2792
 ms.assetid: 392cf748-4f5e-4e62-a364-3118d5658408
-ms.openlocfilehash: 40047cb557fba49f94e5c4e42f172cbcd999c65a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 175ec7ff6b842eb5f41896c5ec3cc0a0f5db817c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492775"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739537"
 ---
 # <a name="compiler-error-c2792"></a>Error del compilador C2792
 
-'super': esta palabra clave debe ir seguida por '::'
+' Super ': esta palabra clave debe ir seguida de ':: '
 
-El token único que puede seguir la palabra clave `__super` es `::`.
+El único token que puede seguir la palabra clave `__super` es `::`.
 
-El ejemplo siguiente genera C2792:
+En el ejemplo siguiente se genera C2792:
 
-```
+```cpp
 // C2792.cpp
 struct B {
    void mf();

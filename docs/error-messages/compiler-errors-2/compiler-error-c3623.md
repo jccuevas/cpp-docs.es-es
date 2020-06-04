@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3623
 ms.assetid: a0341b45-062a-4f67-beb9-ba74201ed1ed
-ms.openlocfilehash: dd12e64e775807220b4ece1f4c26a2f52437c69e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d83e75d46fb078db3e74bf389563ca2ff34bb61
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473468"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740876"
 ---
 # <a name="compiler-error-c3623"></a>Error del compilador C3623
 
@@ -21,7 +21,7 @@ No se permite el uso de campos de bits en variables de tipo administrado o clase
 
 El ejemplo siguiente genera el error C3623:
 
-```
+```cpp
 // C3623.cpp
 // compile with: /clr
 using namespace System;

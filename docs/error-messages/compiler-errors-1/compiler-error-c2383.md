@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2383
 ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
-ms.openlocfilehash: 06d4c19208bd242169e1cd07a71e8a568f46f7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2aa922ebeadb374a7eac73a0f452376472b00984
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206033"
 ---
 # <a name="compiler-error-c2383"></a>Error del compilador C2383
 
-'*símbolo*': no se permiten argumentos predeterminados en este símbolo
+'*Symbol*': no se permiten argumentos predeterminados en este símbolo
 
-El compilador de C++ no permiten argumentos predeterminados en punteros a funciones.
+El C++ compilador no permite argumentos predeterminados en punteros a funciones.
 
-Este código fue aceptado por el compilador de Visual C++ en las versiones anteriores de Visual Studio 2005, pero ahora produce un error. Para el código que funciona en todas las versiones de Visual C++, no asigne un valor predeterminado para un argumento de puntero a función.
+Este código fue aceptado por el compilador de Microsoft C++ en las versiones anteriores a Visual Studio 2005, pero ahora produce un error. Para el código que funciona en todas las versiones C++de Visual, no asigne un valor predeterminado a un argumento de puntero a función.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C2383 y muestra una posible solución:
+En el ejemplo siguiente se genera C2383 y se muestra una posible solución:
 
 ```cpp
 // C2383.cpp

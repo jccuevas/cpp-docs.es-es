@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2996
 ms.assetid: f0ca9f8b-1751-4182-adab-1424f0c5e0c0
-ms.openlocfilehash: 870e04c0faec32ee1430e06771021e728425d92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d8d678f88dc3754b235c6a0b1d691603a6860f7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431842"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176694"
 ---
 # <a name="compiler-error-c2996"></a>Error del compilador C2996
 

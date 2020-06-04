@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 9bf6a9ab1b4849b562637c11fffb578aec11ac34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8b879d08595150b2db61f4840131e3ccc500a2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533047"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210176"
 ---
 # <a name="issuing-a-parameterized-query"></a>Realizar consultas parametrizadas
 
-En el ejemplo siguiente, se emite una consulta parametrizada simple que recupera los registros con un campo de edad (que es mayor que 30) de una tabla en una base de datos de Microsoft Access. Para admitir el parámetro, el registro de usuario debe tener una asignación adicional. El código siguiente, en un proyecto ATL, usa el `CCommand` clase en lugar de la `CTable` clase usada en el ejemplo anterior, [recorrer un conjunto de filas Simple](../../data/oledb/traversing-a-simple-rowset.md).
+En el ejemplo siguiente se emite una consulta parametrizada simple que recupera registros con un campo Age (que es mayor que 30) de una tabla en una base de datos de Microsoft Access. Para admitir el parámetro, el registro de usuario debe tener un mapa adicional. En el código siguiente, en un proyecto ATL, se usa la clase `CCommand` en lugar de la clase `CTable` utilizada en el ejemplo anterior, [recorriendo un conjunto de filas simple](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-El registro de usuario, `CArtists`, similar a este ejemplo:
+El registro de usuario, `CArtists`, es similar al de este ejemplo:
 
 ```cpp
 class CArtists
@@ -77,6 +77,6 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

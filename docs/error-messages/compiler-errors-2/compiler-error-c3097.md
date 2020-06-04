@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3097
 ms.assetid: b24bd8f8-e04f-4fbb-be57-4feb9165572e
-ms.openlocfilehash: 8e83a92911e40df099ff5986d13dd44bd117d92d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7762d03c600fed71d76a19088fb70ce311f67
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452772"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756817"
 ---
 # <a name="compiler-error-c3097"></a>Error del compilador C3097
 
@@ -19,13 +19,13 @@ ms.locfileid: "50452772"
 
 Un atributo global se usó incorrectamente.
 
-Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Para obtener más información, consulta [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C3097.
 
-```
+```cpp
 // C3097.cpp
 // compile with: /clr /c
 using namespace System;

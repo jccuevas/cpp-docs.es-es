@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 1f8ef4c25ad921dad66e5587f4005585b3e017f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635661"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209319"
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
 
-Antes de abrir el conjunto de filas, se debe indicar al proveedor que desea utilizar marcadores. Para ello, establezca el `DBPROP_BOOKMARKS` propiedad **true** en conjunto de sus propiedades. El proveedor recupera los marcadores como columna cero, lo que debe usar la macro especial BOOKMARK_ENTRY y `CBookmark` clase si está usando un descriptor de acceso estático. `CBookmark` es una clase de plantilla donde el argumento es la longitud en bytes del búfer del marcador. La longitud del búfer necesario para un marcador depende del proveedor. Si usa el proveedor OLE DB de ODBC, como se muestra en el ejemplo siguiente, el búfer debe ser de 4 bytes.
+Antes de abrir el conjunto de filas, debe indicar al proveedor que desea utilizar marcadores. Para ello, establezca la propiedad `DBPROP_BOOKMARKS` en **true** en el conjunto de propiedades. El proveedor recupera los marcadores como columna cero, por lo que debe usar la macro especial BOOKMARK_ENTRY y la clase `CBookmark` si usa un descriptor de acceso estático. `CBookmark` es una clase de plantilla en la que el argumento es la longitud en bytes del búfer del marcador. La longitud del búfer necesario para un marcador depende del proveedor. Si utiliza el proveedor de OLE DB ODBC, como se muestra en el ejemplo siguiente, el búfer debe ser de 4 bytes.
 
 ```cpp
 class CProducts
@@ -30,7 +30,7 @@ public:
 };
 ```
 
-A continuación, usa el código siguiente:
+A continuación, utilizado por el código siguiente:
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-Si usa `CDynamicAccessor`, el búfer se establece dinámicamente en tiempo de ejecución. En este caso, puede usar una versión especializada de `CBookmark` para el que no se especifica una longitud de búfer. Use la función `GetBookmark` para recuperar el marcador del registro actual, como se muestra en este ejemplo de código:
+Si utiliza `CDynamicAccessor`, el búfer se establece dinámicamente en tiempo de ejecución. En este caso, puede usar una versión especializada de `CBookmark` para la que no especifique una longitud de búfer. Utilice la función `GetBookmark` para recuperar el marcador del registro actual, como se muestra en este ejemplo de código:
 
 ```cpp
 CTable<CDynamicAccessor> product;
@@ -55,8 +55,8 @@ product.MoveNext();
 product.GetBookmark(&bookmark);
 ```
 
-Para obtener información sobre la compatibilidad con marcadores en proveedores, vea [proveedor de compatibilidad con los marcadores](../../data/oledb/provider-support-for-bookmarks.md).
+Para obtener información acerca de la compatibilidad de marcadores en proveedores, vea [compatibilidad de](../../data/oledb/provider-support-for-bookmarks.md)proveedores con marcadores.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

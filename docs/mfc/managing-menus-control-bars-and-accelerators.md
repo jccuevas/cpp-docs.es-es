@@ -12,12 +12,12 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-ms.openlocfilehash: 905a015de6a675de80c49991750f72eccf06afaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a089829658265cd835a8c7344aa5bc45fbc109a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226175"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Administrar menús, barras de control y aceleradores
 
@@ -44,4 +44,3 @@ Cada ventana de marco mantiene una tabla de aceleradores opcional que traducció
 ## <a name="see-also"></a>Vea también
 
 [Uso de ventanas de marco](../mfc/using-frame-windows.md)
-

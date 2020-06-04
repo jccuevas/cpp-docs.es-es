@@ -9,12 +9,12 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616236"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169336"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Salto a etiquetas en un ensamblado alineado
 
@@ -66,7 +66,7 @@ exit:
    ; More __asm code follows
 ```
 
-Dado que **salir** es el nombre de una función de biblioteca de C, este código podría producir un salto a la **salir** función en lugar de a la ubicación deseada.
+Dado que **Exit** es el nombre de una función de la biblioteca de C, este código podría provocar un salto a la función **Exit** en lugar de a la ubicación deseada.
 
 Como sucede en los programas MASM, el símbolo de dólar (`$`) sirve de contador para la ubicación actual. Es una etiqueta para la instrucción que se ensambla actualmente. En los bloques `__asm`, su uso principal es crear saltos condicionales largos:
 
@@ -81,6 +81,6 @@ farlabel:
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

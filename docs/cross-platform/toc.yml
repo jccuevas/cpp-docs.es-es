@@ -1,0 +1,40 @@
+- name: Desarrollo móvil multiplataforma con C++
+  href: ../cross-platform/index.yml
+- name: Información general
+  href: ../cross-platform/visual-cpp-for-cross-platform-mobile-development.md
+- name: Primeros pasos
+  expanded: true
+  items:
+    - name: Instalación del desarrollo móvil multiplataforma con C++
+      href: ../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md
+    - name: Instalar y configurar herramientas para compilar con iOS
+      href: ../cross-platform/install-and-configure-tools-to-build-using-ios.md
+- name: Tutoriales
+  expanded: true
+  items:
+    - name: Creación de una aplicación de Android Native Activity
+      href: ../cross-platform/create-an-android-native-activity-app.md
+    - name: Crear una aplicación de OpenGL ES en Android e iOS
+      href: ../cross-platform/build-an-opengl-es-application-on-android-and-ios.md
+    - name: Importación de un proyecto de Xcode
+      href: ../cross-platform/import-an-xcode-project.md
+    - name: Sincronización de cambios entre Xcode y Visual Studio
+      href: ../cross-platform/sync-changes-between-xcode-and-visual-studio.md
+- name: Ejemplos
+  href: ../cross-platform/cross-platform-mobile-development-examples.md
+- name: Referencia
+  items:
+    - name: Referencia de página de propiedades multiplataforma de C++
+      href: ../cross-platform/cross-platform-prop-pages.md
+    - name: Propiedades de proyectos generales (C++ para Android)
+      href: ../cross-platform/general-android-prop-page.md
+    - name: Propiedades del depurador de Android
+      href: ../cross-platform/android-debugger-prop-page.md
+    - name: Propiedades de proyectos Clang (C++ para Android)
+      href: ../cross-platform/clang-android-prop-page.md
+    - name: Propiedades de proyectos generales (archivos Make de C++ para Android)
+      href: ../cross-platform/general-makefile-android-prop-page.md
+    - name: Propiedades del enlazador de Clang (C++ para Android)
+      href: ../cross-platform/clanglink-prop-page.md
+    - name: Propiedades de NMake (C++ para Android)
+      href: ../cross-platform/nmake-android-prop-page.md

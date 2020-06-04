@@ -1,6 +1,6 @@
 ---
 title: Operadores de asignación
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184392"
 ---
 # <a name="assignment-operators"></a>Operadores de asignación
 
 ## <a name="syntax"></a>Sintaxis
 
-*expresión* *operador de asignación* *expresión*
+*expression* *assignment-operator* *expression*
 
 *operador de asignación* : uno de<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
@@ -57,7 +57,7 @@ Los operadores de asignación almacenan un valor en el objeto designado por el o
 
 Todos los operadores de asignación de la tabla siguiente, salvo el operador =, son operadores de asignación compuesta.
 
-### <a name="assignment-operators"></a>Operadores de asignación
+### <a name="assignment-operators-table"></a>Tabla de operadores de asignación
 
 |Operador|Significado|
 |--------------|-------------|
@@ -73,7 +73,7 @@ Todos los operadores de asignación de la tabla siguiente, salvo el operador =, 
 |**^=**|Obtiene el OR exclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|
 |**\|=**|Obtiene el OR inclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|
 
-**Palabras clave de operador**
+### <a name="operator-keywords"></a>Palabras clave de operador
 
 Tres de los operadores de asignación compuesta tienen equivalentes de texto. Son estos:
 
@@ -180,7 +180,7 @@ puede tener uno de los efectos siguientes:
 
 ## <a name="compound-assignment"></a>Asignación compuesta
 
-Los operadores de asignación compuesta, se muestra en la tabla de [operadores de asignación](#assignment-operators), se especifican en el formulario *e1* *op*= *e2*, donde *e1* es un valor l modificable no de **const** tipo y *e2* es uno de los siguientes:
+Los operadores de asignación compuesta, se muestra en el [tabla operadores de asignación](#assignment-operators-table), se especifican en el formulario *e1* *op*= *e2*, donde *e1* es un valor l modificable no de **const** tipo y *e2* es uno de los siguientes:
 
 - Un tipo aritmético
 

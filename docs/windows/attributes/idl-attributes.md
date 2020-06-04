@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593498"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448405"
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 
@@ -27,7 +27,7 @@ Ahora, puede modificar el archivo .idl desde un archivo de código fuente con at
 
 Cuando no se usa con [atributos COM](com-attributes.md), los atributos IDL le permiten definir interfaces. Cuando se compila el código fuente, los atributos se usan para definir el archivo .idl generado. Cuando se usa con atributos COM en un proyecto ATL, algunos atributos IDL, tales como `coclass`, para insertarse en el proyecto de código.
 
-Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL que no se admiten en la versión actual de Visual C++. Este y otros atributos como [importlib](importlib.md) y [includelib](includelib-cpp.md) le ayudarán a utilizar los archivos .idl existentes en el proyecto actual de Visual C++.
+Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL que no se admiten en la versión actual de Visual C++. Este y otros atributos como [importlib](importlib.md) y [includelib](includelib-cpp.md) le ayudarán a utilizar los archivos .idl existentes en Visual Studio actual C++ proyecto.
 
 |Atributo|Descripción|
 |---------------|-----------------|
@@ -94,7 +94,7 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[range](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
 |[readonly](readonly-cpp.md)|Prohíbe la asignación a una variable.|
 |[ref](ref-cpp.md)|Identifica un puntero de referencia.|
-|[requestedit](requestedit.md)|Indica que la propiedad admite la `OnRequestEdit` notificación.|
+|[requestedit](requestedit.md)|Indica que la propiedad admite la notificación `OnRequestEdit`.|
 |[restricted](restricted.md)|Especifica que una biblioteca o miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.|
 |[retval](retval.md)|Designa el parámetro que recibe el valor devuelto del miembro.|
 |[size_is](size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo - o matrices multidimensionales.|

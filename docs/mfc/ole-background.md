@@ -4,59 +4,59 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7d65f48c1af678f6626ba7d315ceb735d3e960a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364518"
 ---
 # <a name="ole-background"></a>Nociones de OLE
 
-OLE es un mecanismo que permite a los usuarios crear y editar documentos que contengan elementos u "objetos" creado por varias aplicaciones.
+OLE es un mecanismo que permite a los usuarios crear y editar documentos que contienen elementos u "objetos" creados por varias aplicaciones.
 
 > [!NOTE]
->  OLE era originalmente un acrónimo de Object Linking and Embedding. Sin embargo, se ahora se conoce a como OLE. Las partes de OLE no relacionadas con la vinculación e incrustación de objetos ahora forman parte de la tecnología activa.
+> OLE fue originalmente un acrónimo de Object Linking and Embedding. Sin embargo, ahora se conoce como OLE. Las partes de OLE no relacionadas con la vinculación y la incrustación ahora forman parte de la tecnología Activa.
 
-Documentos OLE, históricamente se les denominados documentos compuestos, integran varios tipos de datos o los componentes. Clips de sonido, hojas de cálculo y los mapas de bits son ejemplos típicos de componentes que se encuentran en documentos OLE. En la aplicación es compatible con OLE permite que los usuarios usen documentos OLE sin preocuparse sobre cómo cambiar entre las diferentes aplicaciones. OLE hace que el cambio automáticamente.
+Los documentos OLE, llamados históricamente documentos compuestos, integran sin problemas varios tipos de datos o componentes. Los clips de sonido, hojas de cálculo y mapas de bits son ejemplos típicos de componentes que se encuentran en documentos OLE. La compatibilidad con OLE en la aplicación permite a los usuarios usar documentos OLE sin preocuparse por cambiar entre las diferentes aplicaciones; OLE realiza el cambio por usted.
 
-Usar una aplicación de contenedor para crear documentos compuestos y una aplicación de servidor o el componente de aplicación para crear los elementos dentro del documento contenedor. Puede ser cualquier aplicación que escriba un contenedor, un servidor o ambos.
+Utilice una aplicación contenedora para crear documentos compuestos y una aplicación de servidor o una aplicación de componente para crear los elementos dentro del documento contenedor. Cualquier aplicación que escriba puede ser un contenedor, un servidor o ambos.
 
-OLE incorpora muchos conceptos diferentes que funcionan hacia el objetivo de interacción perfecta entre aplicaciones. Estas áreas incluyen lo siguiente:
+OLE incorpora muchos conceptos diferentes que funcionan hacia el objetivo de una interacción perfecta entre las aplicaciones. Estas áreas incluyen lo siguiente:
 
 - Vinculación e incrustación de objetos
 
-   Vinculación e incrustación de objetos son los dos métodos para almacenar los elementos creados dentro de un documento OLE que se crearon en otra aplicación. Para obtener información general sobre las diferencias entre los dos, consulte el artículo [fondo OLE: vincular e incrustar](../mfc/ole-background-linking-and-embedding.md). Para obtener más información, consulte los artículos [contenedores](../mfc/containers.md) y [servidores](../mfc/servers.md).
+   La vinculación y la incrustación son los dos métodos para almacenar elementos creados dentro de un documento OLE que se crearon en otra aplicación. Para obtener información general sobre las diferencias entre los dos, vea el artículo [Fondo OLE: Vincular e incrustar](../mfc/ole-background-linking-and-embedding.md). Para obtener información más detallada, consulte los artículos [Contenedores](../mfc/containers.md) y [servidores](../mfc/servers.md).
 
-- Activación en contexto (edición Visual)
+- Activación in situ (edición visual)
 
-   Activación de un elemento incrustado en el contexto del documento contenedor se denomina activación en contexto o la edición visual. Interfaz de la aplicación contenedora cambia para incorporar las características de la aplicación de componente que creó el elemento incrustado. Los elementos vinculados nunca se activan en su lugar, porque los datos reales para el elemento está contenidos en un archivo independiente, fuera del contexto de la aplicación que contiene el vínculo. Para obtener más información sobre la activación en contexto, vea el artículo [activación](../mfc/activation-cpp.md).
-
-   > [!NOTE]
-   > Vinculación e incrustación y activación en contexto proporcionan las principales características de edición visual OLE.
-
-- Automatización de la automatización permite a una aplicación controlar otra aplicación. La aplicación de conducción se conoce como un cliente de automatización y la aplicación controlada se conoce como un servidor de automatización o el componente de automatización. Para obtener más información sobre la automatización, consulte los artículos [los clientes de automatización](../mfc/automation-clients.md) y [servidores de automatización](../mfc/automation-servers.md).
+   La activación de un elemento incrustado en el contexto del documento contenedor se denomina activación in situ o edición visual. La interfaz de la aplicación contenedora cambia para incorporar las características de la aplicación de componente que creó el elemento incrustado. Los elementos vinculados nunca se activan en su lugar porque los datos reales del elemento están contenidos en un archivo independiente, fuera del contexto de la aplicación que contiene el vínculo. Para obtener más información sobre la activación in situ, consulte el artículo [Activación](../mfc/activation-cpp.md).
 
    > [!NOTE]
-   > Automation funciona en los contextos de tecnología OLE y activo. Puede automatizar cualquier objeto basado en COM.
+   > La vinculación e incrustación y la activación in situ proporcionan las principales características de la edición visual OLE.
 
-- Archivos compuestos
+- Automation Automation Automation permite que una aplicación conduzca otra aplicación. La aplicación de conducción se conoce como cliente de automatización y la aplicación que se está controlando se conoce como un servidor de automatización o componente de automatización. Para obtener más información sobre la automatización, consulte los [artículos Clientes](../mfc/automation-clients.md) de automatización y Servidores de [automatización](../mfc/automation-servers.md).
 
-   Archivos compuestos proporcionan un formato de archivo estándar que simplifica el almacenamiento estructurado de documentos compuestos para las aplicaciones OLE. Dentro de un archivo compuesto, almacenamientos tienen muchas características de directorios y las secuencias tienen muchas características de archivos. Esta tecnología también se denomina almacenamiento estructurado. Para obtener más información sobre los archivos compuestos, vea el artículo [contenedores: archivos compuestos](../mfc/containers-compound-files.md).
+   > [!NOTE]
+   > La automatización funciona en contextos de tecnología OLE y Active. Puede automatizar cualquier objeto basado en COM.
 
-- Transferencia de datos uniforme
+- archivos compuestos
 
-   Transferencia de datos uniforme (UDT) es un conjunto de interfaces que permiten a los datos enviados y recibidos en un modo estándar, independientemente del método real elegido para transferir los datos. Formularios UDT mediante que transfiere de la base de datos arrastrar y colocar. Ahora sirve como base para la transferencia de datos existente de Windows, como el Portapapeles y el intercambio dinámico de datos (DDE). Para obtener más información sobre UDT, vea el artículo [objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md).
+   Los archivos compuestos proporcionan un formato de archivo estándar que simplifica el almacenamiento estructurado de documentos compuestos para aplicaciones OLE. Dentro de un archivo compuesto, los almacenamientos tienen muchas características de directorios y las secuencias tienen muchas características de archivos. Esta tecnología también se denomina almacenamiento estructurado. Para obtener más información sobre los archivos compuestos, consulte el artículo [Contenedores: Archivos compuestos](../mfc/containers-compound-files.md).
+
+- Transferencia uniforme de datos
+
+   La transferencia uniforme de datos (UDT) es un conjunto de interfaces que permiten enviar y recibir datos de forma estándar, independientemente del método real elegido para transferir los datos. UDT constituye la base para las transferencias de datos mediante arrastrar y soltar. UDT ahora sirve como base para la transferencia de datos de Windows existente, como el Portapapeles y el intercambio dinámico de datos (DDE). Para obtener más información sobre UDT, vea el artículo Objetos de datos y orígenes de [datos (OLE)](../mfc/data-objects-and-data-sources-ole.md).
 
 - Arrastrar y colocar
 
-   Arrastrar y colocar es una técnica fácil de usar, la manipulación directa de transferir datos entre aplicaciones, entre las ventanas dentro de una aplicación, o incluso en una sola ventana en una aplicación. Los datos que se transfieren está activados y arrastrados hasta el destino deseado. Arrastrar y colocar se basa en la transferencia de datos uniforme. Para obtener más información acerca de arrastrar y colocar, vea el artículo [arrastrar y colocar](../mfc/drag-and-drop-ole.md).
+   Arrastrar y soltar es una técnica de manipulación directa fácil de usar para transferir datos entre aplicaciones, entre ventanas dentro de una aplicación o incluso dentro de una sola ventana de una aplicación. Los datos que se van a transferir se seleccionan y se arrastran al destino deseado. Arrastrar y colocar se basa en la transferencia de datos uniforme. Para obtener más información sobre arrastrar y colocar, consulte el artículo [Arrastrar y colocar](../mfc/drag-and-drop-ole.md).
 
 - Modelo de objetos componentes
 
-   El modelo de objetos componentes (COM) proporciona la infraestructura usa al comunican entre sí los objetos OLE. Las clases OLE de MFC simplifican COM para el programador. COM es parte de la tecnología Active, porque los objetos COM subyacen de la tecnología OLE y activo. Para obtener más información acerca de COM, consulte el [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md) temas.
+   El modelo de objetos componentes (COM) proporciona la infraestructura utilizada cuando los objetos OLE se comunican entre sí. Las clases OLE de MFC simplifican COM para el programador. COM forma parte de la tecnología Active, ya que los objetos COM subyacen a la tecnología OLE y Active. Para obtener más información acerca de COM, consulte los temas de la biblioteca de plantillas activas [(ATL).](../atl/active-template-library-atl-concepts.md)
 
-En los artículos siguientes se tratan algunos de los temas más importantes de OLE:
+Algunos de los temas OLE más importantes se tratan en los siguientes artículos:
 
 - [Nociones de OLE: Vincular e incrustar](../mfc/ole-background-linking-and-embedding.md)
 
@@ -66,9 +66,8 @@ En los artículos siguientes se tratan algunos de los temas más importantes de 
 
 - [Nociones de OLE: Implementación de MFC](../mfc/ole-background-mfc-implementation.md)
 
-Para ver información general sobre OLE que no se encuentra en los artículos anteriores, busque OLE en MSDN.
+Para obtener información OLE general que no se encuentra en los artículos anteriores, busque OLE en MSDN.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [OLE](../mfc/ole-in-mfc.md)
-

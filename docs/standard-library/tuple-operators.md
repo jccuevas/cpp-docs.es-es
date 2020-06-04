@@ -9,21 +9,16 @@ f1_keywords:
 - tuple/std::operator<=
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: e60de54a78f3a206ef77776761c3419bf8a2f3b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677044"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427810"
 ---
 # <a name="lttuplegt-operators"></a>Operadores de &lt;tuple&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operador! =
 
 Compara objetos `tuple` para determinar si no son iguales.
 
@@ -36,10 +31,10 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+\ de *TN*
 Tipo del enésimo elemento de la tupla.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función devuelve false cuando `N` es 0, de lo contrario `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
@@ -101,10 +96,10 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+\ de *TN*
 Tipo del enésimo elemento de la tupla.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función devuelve true cuando `N` es mayor que 0 y el primer valor distinto de `tpl1` es menor que el valor correspondiente en `tpl2`, de lo contrario, devuelve false.
 
@@ -153,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Compara objetos `tuple` para detectar valores inferiores o iguales.
 
@@ -166,10 +161,10 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+\ de *TN*
 Tipo del enésimo elemento de la tupla.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función devuelve `!(tpl2 < tpl1)`.
 
@@ -218,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Compara objetos `tuple` para determinar si son iguales.
 
@@ -231,10 +226,10 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+\ de *TN*
 Tipo del enésimo elemento de la tupla.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función devuelve true cuando `N` es 0, de lo contrario `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
@@ -296,10 +291,10 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+\ de *TN*
 Tipo del enésimo elemento de la tupla.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función devuelve `tpl2 < tpl1`.
 
@@ -348,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Compara objetos `tuple` para determinar si son mayores o iguales.
 
@@ -361,10 +356,10 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+\ de *TN*
 Tipo del enésimo elemento de la tupla.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función devuelve `!(tpl1 < tpl2)`.
 
@@ -412,7 +407,3 @@ int main() {
 true
 false
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<tuple>](../standard-library/tuple.md)<br/>

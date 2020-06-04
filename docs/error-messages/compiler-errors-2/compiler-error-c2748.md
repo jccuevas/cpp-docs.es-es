@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2748
 ms.assetid: b63ac78b-a200-499c-afea-15af1a1e819e
-ms.openlocfilehash: a85ee151d9a4d62cc4b95248d669ff924365a95a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e43defbf28c76dadcc7921ca76778413c41490a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655642"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759638"
 ---
 # <a name="compiler-error-c2748"></a>Error del compilador C2748
 
 la creación de matrices administradas o WinRT debe disponer de un tamaño de matriz o un inicializador de matriz
 
-Una matriz administrada o WinRT estaba mal formada. Para obtener más información, vea [Matriz](../../windows/arrays-cpp-component-extensions.md).
+Una matriz administrada o WinRT estaba mal formada. Para obtener más información, vea [Matriz](../../extensions/arrays-cpp-component-extensions.md).
 
 El ejemplo siguiente genera el error C2748 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2748.cpp
 // compile with: /clr
 int main() {

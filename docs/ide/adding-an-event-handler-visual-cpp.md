@@ -3,19 +3,18 @@ title: Agregar un controlador de eventos
 ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.eventhandler.overview
-- vc.codewiz.eventhandler.overview
 helpviewer_keywords:
 - event handlers, adding
 - properties [Visual Studio], MSBuild
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694522"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447510"
 ---
 # <a name="add-an-event-handler"></a>Agregar un controlador de eventos
 
@@ -25,7 +24,7 @@ Puede agregar un evento a la clase que implementa el cuadro de diálogo mediante
 
 **Para agregar un controlador de eventos a un control de cuadro de diálogo:**
 
-1. Haga doble clic en el recurso de cuadro de diálogo en la [Vista de recursos](../windows/resource-view-window.md) para abrir el recurso de cuadro de diálogo que contiene el control en el [Editor de cuadros de diálogo](../windows/dialog-editor.md).
+1. Haga doble clic en el recurso de cuadro de diálogo en la [Vista de recursos](../windows/how-to-create-a-resource-script-file.md#create-resources) para abrir el recurso de cuadro de diálogo que contiene el control en el [Editor de cuadros de diálogo](../windows/dialog-editor.md).
 
 1. Haga clic con el botón derecho en el control para el que quiera controlar el evento de notificación.
 

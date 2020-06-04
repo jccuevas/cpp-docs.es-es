@@ -7,12 +7,12 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-ms.openlocfilehash: 17c90eb6350a2bf3cd5b695a99dea954dd89a033
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ced1cdb0b40b13fbda68150030efde5735ba7b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307918"
 ---
 # <a name="servers-implementing-server-documents"></a>Servidores: Implementar documentos de servidor
 
@@ -28,7 +28,7 @@ En este artículo se explica los pasos que debe seguir para implementar correcta
 
    `OnGetEmbeddedItem` se llama cuando el usuario de una aplicación de contenedor se crea o modifica un elemento incrustado. Debe devolver un elemento que representa el documento completo. Debe tratarse de un objeto de su `COleServerItem`-clase derivada.
 
-1. Invalidar el `Serialize` función miembro para serializar el contenido del documento. No es necesario serializar la lista de elementos del servidor si no utiliza para representar los datos nativos en el documento. Para obtener más información, consulte *implementar elementos de servidor* en el artículo [servidores: elementos del servidor](../mfc/servers-server-items.md).
+1. Invalidar el `Serialize` función miembro para serializar el contenido del documento. No es necesario serializar la lista de elementos del servidor si no utiliza para representar los datos nativos en el documento. Para obtener más información, consulte *implementar elementos de servidor* en el artículo [servidores: Los elementos del servidor](../mfc/servers-server-items.md).
 
 Cuando se crea un documento de servidor, el marco de trabajo registra automáticamente el documento con la DLL del sistema OLE. Esto permite que los archivos DLL identificar los documentos de servidor.
 
@@ -37,7 +37,6 @@ Para obtener más información, consulte [COleServerItem](../mfc/reference/coles
 ## <a name="see-also"></a>Vea también
 
 [Servidores](../mfc/servers.md)<br/>
-[Servidores: Elementos de servidor](../mfc/servers-server-items.md)<br/>
-[Servidores: Implementar un servidor](../mfc/servers-implementing-a-server.md)<br/>
-[Servidores: Implementar ventanas de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md)
-
+[Servidores: elementos del servidor](../mfc/servers-server-items.md)<br/>
+[Servidores: implementar un servidor](../mfc/servers-implementing-a-server.md)<br/>
+[Servidores: implementar ventanas de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md)

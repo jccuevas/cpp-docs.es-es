@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: bac1f9a139d2fb0092ef0869587ae8b54342fe82
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330325"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190032"
 ---
-# <a name="comptrt-extractors"></a>_com_ptr_t (Extractores)
+# <a name="_com_ptr_t-extractors"></a>_com_ptr_t (Extractores)
 
 **Específicos de Microsoft**
 
@@ -44,22 +44,22 @@ Interface** operator&( ) throw( );
 operator bool( ) const throw( );
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-- **operador Interface** <strong>\*</strong> devuelve el puntero de interfaz encapsulado, que puede ser NULL.
+- **Operator interface** <strong>\*</strong> devuelve el puntero de interfaz encapsulado, que puede ser null.
 
-- **operador Interface &** devuelve una referencia al puntero de interfaz encapsulado y emite un error si el puntero es NULL.
+- **interfaz de operador &** Devuelve una referencia al puntero de interfaz encapsulado y genera un error si el puntero es NULL.
 
-- **operador** <strong>\*</strong> permite a un objeto de puntero inteligente para que actúe como si fuese la interfaz encapsulada real cuando se desreferencia.
+- **operator** <strong>\*</strong> permite que un objeto de puntero inteligente actúe como si fuera la interfaz encapsulada real al desreferenciarse.
 
-- **operador ->** permite a un objeto de puntero inteligente para que actúe como si fuese la interfaz encapsulada real cuando se desreferencia.
+- **operador->** Permite que un objeto de puntero inteligente actúe como si fuera la interfaz encapsulada real al desreferenciarse.
 
-- **operador &** libera cualquier puntero de interfaz encapsulado, lo reemplaza con el valor NULL y devuelve la dirección del puntero encapsulado. Esto permite que el puntero inteligente que se pasará por dirección a una función que tiene un *out* parámetro a través del cual devuelve un puntero de interfaz.
+- **operador &** Libera cualquier puntero de interfaz encapsulado, reemplazándolo por NULL y devuelve la dirección del puntero encapsulado. Esto permite pasar el puntero inteligente por dirección a una función que tiene un parámetro *out* a través del cual devuelve un puntero de interfaz.
 
-- **operador booleano** permite a un objeto de puntero inteligente que se usará en una expresión condicional. Este operador devuelve TRUE si el puntero no es NULL.
+- **operador bool** Permite usar un objeto de puntero inteligente en una expresión condicional. Este operador devuelve TRUE si el puntero no es NULL.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

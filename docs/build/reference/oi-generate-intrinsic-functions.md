@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 067b8b11b716935c684a127632a8fadaf3d9a447
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320349"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generar funciones intrínsecas)
 
@@ -41,7 +41,7 @@ Consulte [intrínseco](../../preprocessor/intrinsic.md) para obtener más inform
 
 Las funciones intrínsecas de punto flotante no se realiza ninguna comprobación especial en los valores de entrada y por lo que funcionan en intervalos de entrada restringidos y tener control de excepciones diferentes y las condiciones de límite que las rutinas de biblioteca con el mismo nombre. El uso de las formas intrínsecas auténticas implica la pérdida de control de excepciones de IEEE y de `_matherr` y `errno` funcionalidad; esta última implica la pérdida de conformidad con ANSI. Sin embargo, las formas intrínsecas pueden acelerar considerablemente los programas que usan punto flotante, y muchos programas, los problemas de conformidad tienen poco valor práctico.
 
-Puede usar el [Za](../../build/reference/za-ze-disable-language-extensions.md) opción del compilador para reemplazar la generación de opciones verdaderas intrínsecas de punto flotante. En este caso, las funciones se generan como rutinas de biblioteca que pasan los argumentos directamente al chip de punto flotante, en lugar de insertarlos en la pila del programa.
+Puede usar el [Za](za-ze-disable-language-extensions.md) opción del compilador para reemplazar la generación de opciones verdaderas intrínsecas de punto flotante. En este caso, las funciones se generan como rutinas de biblioteca que pasan los argumentos directamente al chip de punto flotante, en lugar de insertarlos en la pila del programa.
 
 **END x86 específico**
 
@@ -49,7 +49,7 @@ También usa [intrínseco](../../preprocessor/intrinsic.md) para crear funciones
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -63,7 +63,7 @@ También usa [intrínseco](../../preprocessor/intrinsic.md) para crear funciones
 
 ## <a name="see-also"></a>Vea también
 
-[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
+[/O (Opciones) (Optimizar código)](o-options-optimize-code.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Intrínsecos del controlador](../../intrinsics/compiler-intrinsics.md)

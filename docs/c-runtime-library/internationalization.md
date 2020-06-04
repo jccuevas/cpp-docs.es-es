@@ -1,20 +1,18 @@
 ---
 title: Internacionalización
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - localization, routines for
 - locale-dependent routines
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 32ac86804ac4701dfeca20fb03071198f0291f81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 215caf2051458bda4597713cf7b22c03b416f5c7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460494"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443157"
 ---
 # <a name="internationalization"></a>Internacionalización
 
@@ -22,6 +20,6 @@ La biblioteca en tiempo de ejecución de Microsoft proporciona muchas rutinas qu
 
 También se incluyen las alternativas a los operadores de ISO646.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

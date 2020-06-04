@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1097
 ms.assetid: dc6868b3-8425-4920-858a-774ad0c4c5f1
-ms.openlocfilehash: 52339a00511c8d41270fff8c9ca532ac193d8df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f42d63ada85c2f27fc9681e6168c9f80e7f96cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596266"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193412"
 ---
 # <a name="nmake-fatal-error-u1097"></a>Error grave de NMAKE U1097
 
-sintaxis de partes del nombre de archivo requiere dependientes
+la sintaxis de los elementos de nombre de archivo requiere dependent
 
-La dependencia actual no tiene un dependiente explícito o implícito. Sintaxis de partes del nombre de archivo, que utiliza el porcentaje (`%`) especificador, representa los componentes del primer dependiente del destino actual.
+La dependencia actual no tiene un dependiente explícito o un dependiente implícito. La sintaxis de los elementos de nombre de archivo, que usa el especificador de porcentaje (`%`), representa los componentes del primer dependiente del destino actual.

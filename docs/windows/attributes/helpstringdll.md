@@ -1,21 +1,21 @@
 ---
-title: helpstringdll (atributo de COM de C++)
+title: helpstringdll (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 17e70a54024b8e5a3ab29e2420f60fbf3eec08a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677245"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168127"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
-Especifica el nombre del archivo DLL a utilizar para realizar la búsqueda de cadenas de documento (localización).
+Especifica el nombre del archivo DLL que se va a usar para realizar la búsqueda de cadenas de documento (localización).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,11 +26,11 @@ Especifica el nombre del archivo DLL a utilizar para realizar la búsqueda de ca
 ### <a name="parameters"></a>Parámetros
 
 *string*<br/>
-DLL que se va a utilizar para realizar la búsqueda de cadenas de documento.
+DLL que se va a usar para realizar la búsqueda de cadenas de documento.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **helpstringdll** atributo de C++ tiene la misma funcionalidad que el [helpstringdll](/windows/desktop/Midl/helpstringdll) atributo MIDL.
+El atributo **helpstringdll** C++ tiene la misma funcionalidad que el atributo MIDL [helpstringdll](/windows/win32/Midl/helpstringdll) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -55,12 +55,12 @@ __interface IMyI
 |-|-|
 |**Se aplica a**|**clase**, **interfaz**, método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)<br/>

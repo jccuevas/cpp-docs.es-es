@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2572
 ms.assetid: f1a42d69-727d-4ce5-88c8-d5f55dea66ac
-ms.openlocfilehash: 78402c054573de8c9860e96b6abe60ec5c3cfe38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed2e9771d1a407b947926a6f0d8beeb51e724ac7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621252"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755491"
 ---
 # <a name="compiler-error-c2572"></a>Error del compilador C2572
 
-'clase:: miembro': nueva definición de parámetro predeterminado: parámetro param
+' Class:: Member ': nueva definición del parámetro predeterminado: parámetro param
 
-No se puede redefinir los parámetros predeterminados. Si necesita otro valor para el parámetro, el parámetro predeterminado debe dejarse sin definir.
+Los parámetros predeterminados no se pueden redefinir. Si necesita otro valor para el parámetro, el parámetro predeterminado debe dejarse sin definir.
 
-El ejemplo siguiente genera C2572:
+En el ejemplo siguiente se genera C2572:
 
-```
+```cpp
 // C2572.cpp
 // compile with: /c
 void f(int i = 1);   // function declaration

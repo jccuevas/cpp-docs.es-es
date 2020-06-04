@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2360
 ms.assetid: 51bfd2ee-8108-4777-aa93-148b9cebfa83
-ms.openlocfilehash: 6e956ccb021dc3bce4d107e4aa6e0bbe4356283b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 226fcd8a27c9abdb789b8191a5cf4e59cc4a66cc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498181"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759911"
 ---
 # <a name="compiler-error-c2360"></a>Error del compilador C2360
 
-inicialización de 'identificador' se omite en la etiqueta 'case'
+la inicialización de ' Identifier ' se omite en la etiqueta ' Case '
 
-La inicialización de `identifier` puede omitirse en un `switch` instrucción. No se puede saltar una declaración con un inicializador a menos que la declaración está incluida en un bloque. (A menos que se declara dentro de un bloque, la variable está dentro del ámbito hasta el final de la `switch` instrucción.)
+La inicialización de `identifier` se puede omitir en una instrucción `switch`. No se puede saltar una declaración con un inicializador a menos que la declaración se incluya en un bloque. (A menos que se declare dentro de un bloque, la variable está dentro del ámbito hasta el final de la instrucción `switch`).
 
-El ejemplo siguiente genera C2360:
+En el ejemplo siguiente se genera C2360:
 
-```
+```cpp
 // C2360.cpp
 int main() {
    int x = 0;
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C2360b.cpp
 int main() {
    int x = 0;

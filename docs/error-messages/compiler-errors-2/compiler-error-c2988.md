@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2988
 ms.assetid: c07ada8d-7cdf-4496-8656-cc3851e76b46
-ms.openlocfilehash: ddc0fca41d52156143965d40bbf7f678a232678b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a26c6e85eba21a9bca94869acea9a3239f1e11b3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648401"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201557"
 ---
 # <a name="compiler-error-c2988"></a>Error del compilador C2988
 

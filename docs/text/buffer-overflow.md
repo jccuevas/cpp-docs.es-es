@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-ms.openlocfilehash: 97488f3023481c20599e8cf5201fbce68dd23516
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f9864e6b49446ea68d82e76e877ce9c677b893d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410764"
 ---
 # <a name="buffer-overflow"></a>Desbordamiento de búfer
 
@@ -23,7 +23,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;
 ```
 
-¿La pregunta es: es el último byte copia un byte inicial? El siguiente no soluciona el problema porque puede provocar un desbordamiento del búfer:
+La pregunta es: ¿Es el último byte copia un byte inicial? El siguiente no soluciona el problema porque puede provocar un desbordamiento del búfer:
 
 ```cpp
 cb = 0;

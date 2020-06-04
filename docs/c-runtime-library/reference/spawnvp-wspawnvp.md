@@ -1,10 +1,12 @@
 ---
 title: _spawnvp, _wspawnvp
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wspawnvp
 - _spawnvp
-apilocation:
+- _o__spawnvp
+- _o__wspawnvp
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wspawnvp
 - _spawnvp
@@ -30,14 +36,14 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: b697eabd7a45eedbf9c892acee570a9e8b818d1b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3ed6b780fb06db9e5951a943f52a556ad0f0748e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330728"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916121"
 ---
-# <a name="spawnvp-wspawnvp"></a>_spawnvp, _wspawnvp
+# <a name="_spawnvp-_wspawnvp"></a>_spawnvp, _wspawnvp
 
 Crea un proceso y lo ejecuta.
 
@@ -64,31 +70,33 @@ intptr_t _wspawnvp(
 *mode*<br/>
 Modo de ejecución para llamar al proceso.
 
-*CmdName*<br/>
+*cmdname*<br/>
 Ruta de acceso del archivo que se va a ejecutar.
 
 *argv*<br/>
-Matriz de punteros a argumentos. El argumento *argv*[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido, y *argv*[1] a través de *argv*[**n**] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento *argv*[**n** + 1] debe ser un **NULL** puntero para marcar el final de la lista de argumentos.
+Matriz de punteros a argumentos. El argumento *argv*[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido, y *argv*[1] a *argv*[**n**] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento *argv*[**n** + 1] debe ser un puntero **nulo** para marcar el final de la lista de argumentos.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto de un valor sincrónico **_spawnvp** o **_wspawnvp** (**_P_WAIT** especificado para *modo*) es el estado de salida del nuevo proceso . El valor devuelto de asincrónico **_spawnvp** o **_wspawnvp** (**_P_NOWAIT** o **_P_NOWAITO** especificado para  *modo*) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado usa específicamente un argumento distinto de cero para llamar a la **salir** rutina. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (no se inicia el proceso de nuevo). En este caso, **errno** se establece en uno de los siguientes valores:
+El valor devuelto de una **_spawnvp** o **_wspawnvp** sincrónica (**_P_WAIT** especificado para el *modo*) es el estado de salida del nuevo proceso. El valor devuelto de una **_spawnvp** o **_wspawnvp** asincrónica (**_P_NOWAIT** o **_P_NOWAITO** especificados para el *modo*) es el identificador del proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado usa específicamente un argumento distinto de cero para llamar a la rutina de **salida** . Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de-1 indica un error (el nuevo proceso no se inicia). En este caso, **errno** se establece en uno de los valores siguientes:
 
 |||
 |-|-|
 | **E2BIG** | La lista de argumentos supera los 1024 bytes. |
-| **EINVAL** | *modo* argumento no es válido. |
+| **EINVAL** | el argumento del *modo* no es válido. |
 | **ENOENT** | El archivo o la ruta de acceso no se encuentra. |
 | **ENOEXEC** | El archivo especificado no es ejecutable o no tiene un formato de archivo ejecutable válido. |
 | **ENOMEM** | Memoria insuficiente para ejecutar el nuevo proceso. |
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cada una de estas funciones crea un nuevo proceso y lo ejecuta y se pasa una matriz de punteros a argumentos de línea de comandos y usa el **ruta** variable de entorno para buscar el archivo para ejecutar.
+Cada una de estas funciones crea un proceso nuevo y lo ejecuta, y pasa una matriz de punteros a los argumentos de la línea de comandos y usa la variable de entorno **path** para buscar el archivo que se va a ejecutar.
 
-Estas funciones validan sus parámetros. Si bien *cmdname* o *argv* es un puntero nulo, o si *argv* apunta a un puntero nulo o *argv*[0] es una cadena vacía, el no válido se invoca el controlador de parámetros, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL**y devuelven -1. No se genera ningún proceso nuevo.
+Estas funciones validan sus parámetros. Si *cmdname* o *argv* es un puntero nulo, o si *argv* apunta a un puntero nulo, o *argv*[0] es una cadena vacía, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL**y devuelven-1. No se genera ningún proceso nuevo.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -97,19 +105,19 @@ Estas funciones validan sus parámetros. Si bien *cmdname* o *argv* es un punter
 |**_spawnvp**|\<stdio.h> o \<process.h>|
 |**_wspawnvp**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [Funciones _spawn y _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
+Consulte el ejemplo de [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_spawn, _wspawn (funciones)](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[abort](abort.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn, _wspawn funciones](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[aborta](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec, _wexec (funciones)](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

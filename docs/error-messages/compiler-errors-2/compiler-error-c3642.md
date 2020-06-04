@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
-ms.openlocfilehash: d524c49075c400caa345dd26ed681734ea0cfb94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c3f9f05bf04c9a1c20fff7910836e7b50468a8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582658"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742462"
 ---
 # <a name="compiler-error-c3642"></a>Error del compilador C3642
 
-' return_type/args': no se puede llamar a una función con la convención de llamada desde código nativo __clrcall
+' return_type/args ': no se puede llamar a una función con __clrcall Convención de llamada desde código nativo
 
-Una función marcada con el [__clrcall](../../cpp/clrcall.md) convención de llamada no se puede llamar desde código nativo (no administrado).
+No se puede llamar a una función marcada con la Convención de llamada [__clrcall](../../cpp/clrcall.md) desde código nativo (no administrado).
 
-*return_type/args* es el nombre de la función o el tipo de la `__clrcall` función intenta llamar.  Se utiliza un tipo al que está llamando a través de un puntero de función.
+*return_type/args* es el nombre de la función o el tipo de la función de `__clrcall` a la que intenta llamar.  Se utiliza un tipo cuando se llama a través de un puntero a función.
 
-Para llamar a una función administrada desde un contexto nativo, puede agregar una función de "contenedor" que llamará el `__clrcall` función. O bien, puede usar el mecanismo de cálculo de referencias de CLR; consulte [Cómo: serializar punteros de función Using PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) para obtener más información.
+Para llamar a una función administrada desde un contexto nativo, puede Agregar una función de "contenedor" que llamará a la función `__clrcall`. O bien, puede usar el mecanismo de serialización de CLR; vea [Cómo: calcular las referencias de punteros de función mediante PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) para obtener más información.
 
-El ejemplo siguiente genera C3642:
+En el ejemplo siguiente se genera C3642:
 
-```
+```cpp
 // C3642.cpp
 // compile with: /clr
 using namespace System;

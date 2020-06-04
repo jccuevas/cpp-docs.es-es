@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-ms.openlocfilehash: 52e203380045c3e23b04950cb241176f10321c2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e31b42c1d9422d44c5f106f40c4a60a38f23425b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270853"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Controlar llamadas de comprobación de la pila)
 
@@ -25,7 +25,7 @@ Controla el umbral para las comprobaciones de la pila.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/GS**[*tamaño*]
+> **/Gs**[*size*]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -55,7 +55,7 @@ Puede activar o desactivar las comprobaciones de la pila mediante la [check_stac
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
@@ -67,5 +67,5 @@ Puede activar o desactivar las comprobaciones de la pila mediante la [check_stac
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

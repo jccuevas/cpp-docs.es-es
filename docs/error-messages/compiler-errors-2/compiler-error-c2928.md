@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2928
 ms.assetid: 869e57f4-7024-4cbe-b47b-6e1e2a6005c5
-ms.openlocfilehash: ab6e73ec10c7611338e2ee331985842dfa401ef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d290ffaef839d7ac0b91bc1ef54ca57af15ddee0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438702"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176942"
 ---
 # <a name="compiler-error-c2928"></a>Error del compilador C2928
 

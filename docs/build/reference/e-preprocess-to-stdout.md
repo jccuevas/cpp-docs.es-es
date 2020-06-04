@@ -9,12 +9,12 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: 892203d300c07711d06cff602128ec6e9ceb351c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273266"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Preprocesar para stdout)
 
@@ -28,15 +28,15 @@ Preprocesa archivos de código fuente de C y C++ y copia los archivos preprocesa
 
 ## <a name="remarks"></a>Comentarios
 
-En este proceso, las directivas de preprocesador se llevan a cabo, expansiones de macros y se eliminan los comentarios. Para conservar los comentarios en el resultado preprocesado, utilice la [/C (conservar los comentarios durante el preprocesamiento)](../../build/reference/c-preserve-comments-during-preprocessing.md) también la opción del compilador.
+En este proceso, las directivas de preprocesador se llevan a cabo, expansiones de macros y se eliminan los comentarios. Para conservar los comentarios en el resultado preprocesado, utilice la [/C (conservar los comentarios durante el preprocesamiento)](c-preserve-comments-during-preprocessing.md) también la opción del compilador.
 
 **/E** agrega `#line` directivas a los resultados al principio y al final de cada archivo incluido y alrededor de las líneas eliminadas por las directivas de preprocesador para la compilación condicional. Estas directivas numeración las líneas del archivo preprocesado. Como resultado, los errores generados durante las fases finales del procesamiento hacen referencia a los números de línea del archivo de origen original en lugar de líneas en el archivo preprocesado.
 
-El **/E** opción suprime la compilación. Debe volver a enviar el archivo preprocesado para la compilación. **/E** también suprime los archivos de salida desde el **/FA**, **/Fa**, y **/Fm** opciones. Para obtener más información, consulte [/FA, /Fa (archivo de lista)](../../build/reference/fa-fa-listing-file.md) y [/Fm (nombre de archivo de asignaciones)](../../build/reference/fm-name-mapfile.md).
+El **/E** opción suprime la compilación. Debe volver a enviar el archivo preprocesado para la compilación. **/E** también suprime los archivos de salida desde el **/FA**, **/Fa**, y **/Fm** opciones. Para obtener más información, consulte [/FA, /Fa (archivo de lista)](fa-fa-listing-file.md) y [/Fm (nombre de archivo de asignaciones)](fm-name-mapfile.md).
 
-Para suprimir `#line` directivas, utilice la [/EP (Preprocesar para stdout sin directivas #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opción en su lugar.
+Para suprimir `#line` directivas, utilice la [/EP (Preprocesar para stdout sin directivas #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) opción en su lugar.
 
-Para enviar el resultado preprocesado en un archivo en lugar de como `stdout`, utilice el [/P (Preprocesar para un archivo)](../../build/reference/p-preprocess-to-a-file.md) opción en su lugar.
+Para enviar el resultado preprocesado en un archivo en lugar de como `stdout`, utilice el [/P (Preprocesar para un archivo)](p-preprocess-to-a-file.md) opción en su lugar.
 
 Para suprimir `#line` directivas y enviar el resultado preprocesado en un archivo, use **/P** y **/EP** juntos.
 
@@ -62,7 +62,7 @@ cl -E test.cpp > test2.cpp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -84,5 +84,5 @@ CL /E /C ADD.C
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

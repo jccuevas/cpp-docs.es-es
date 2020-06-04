@@ -1,9 +1,10 @@
 ---
 title: _cabs
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _cabs
-apilocation:
+- _o__cabs
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,27 +16,27 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645814"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913356"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 Calcula el valor absoluto de un número complejo.
 
@@ -54,11 +55,13 @@ Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_cabs** devuelve el valor absoluto de su argumento si se realiza correctamente. En caso de desbordamiento, **_cabs** devuelve **HUGE_VAL** y establece **errno** a **ERANGE**. Puede cambiar el control de errores con [_matherr](matherr.md).
+**_cabs** devuelve el valor absoluto de su argumento si se realiza correctamente. En el desbordamiento, **_cabs** devuelve **HUGE_VAL** y establece **errno** en **ERANGE**. Puede cambiar el control de errores con [_matherr](matherr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_cabs** función calcula el valor absoluto de un número complejo, que debe ser una estructura de tipo [_complex](../../c-runtime-library/standard-types.md). La estructura *z* se compone de un componente real *x* y un componente imaginario *y*. Una llamada a **_cabs** genera un valor equivalente de la expresión `sqrt( z.x * z.x + z.y * z.y )`.
+La función **_cabs** calcula el valor absoluto de un número complejo, que debe ser una estructura de tipo [_complex](../../c-runtime-library/standard-types.md). La estructura *z* se compone de un componente real *x* y un componente imaginario *y*. Una llamada a **_cabs** genera un valor equivalente al de la expresión `sqrt( z.x * z.x + z.y * z.y )`.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,7 +69,7 @@ El **_cabs** función calcula el valor absoluto de un número complejo, que debe
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -93,7 +96,7 @@ int main( void )
 The absolute value of 3.000000 + 4.000000i is 5.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

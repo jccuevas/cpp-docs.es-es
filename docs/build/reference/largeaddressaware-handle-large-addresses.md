@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -LARGEADDRESSAWARE linker option
 - /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-ms.openlocfilehash: 6a83ac89c6ddf14885107193b32d9b7fe7853659
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a560ebf083e2f93d9bb514fc401186291d7f41
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269560"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Procesar direcciones largas)
 
@@ -26,11 +26,11 @@ ms.locfileid: "50543060"
 
 La opción /LARGEADDRESSAWARE indica al vinculador que la aplicación puede controlar direcciones superiores a 2 gigabytes. En los compiladores de 64 bits, esta opción está habilitada de forma predeterminada. En los compiladores de 32 bits, / LARGEADDRESSAWARE: no está habilitado si /LARGEADDRESSAWARE no se especifica en la línea del vinculador.
 
-Si una aplicación se vinculó con /LARGEADDRESSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) mostrará información al respecto.
+Si una aplicación se vinculó con /LARGEADDRESSAWARE, DUMPBIN [/HEADERS](headers.md) mostrará información al respecto.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -44,5 +44,5 @@ Si una aplicación se vinculó con /LARGEADDRESSAWARE, DUMPBIN [/HEADERS](../../
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

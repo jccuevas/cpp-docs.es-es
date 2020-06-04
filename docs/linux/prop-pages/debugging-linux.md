@@ -1,28 +1,39 @@
 ---
 title: Propiedades del depurador (C++ para Linux) | Microsoft Docs
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: ac5992ca9921a87616b9ff10e5744791510b7a7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bebee7a2b3bcfd880a538acae35c9616b3b1bd46
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448066"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "79446181"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Propiedades de depuración de C++ (C++ para Linux)
 
-Propiedad. | Descripción | Opciones
---- | ---| ---
-Comando anterior al inicio | Comando que se ejecuta en el shell antes de que se inicie la depuración y antes de que se ejecute el depurador. Se puede usar para modificar el entorno de depuración.
-Programa | Ruta de acceso completa al programa que se va a depurar en el sistema remoto. Es una ruta de acceso del sistema remoto. Si deja en blanco o sin modificar, el valor predeterminado es la salida del proyecto actual.
-Argumentos de programa | Argumentos de la línea de comandos que deben pasarse al programa que se va a depurar.
-Directorio de trabajo | Directorio de trabajo de la aplicación remota. De forma predeterminada, es el directorio principal de usuario.
-Comandos adicionales del depurador | Comandos gdb adicionales para que los ejecute el depurador antes de iniciar la depuración.
-Número de puerto del depurador | Número de puerto para la comunicación del depurador con el depurador remoto. El puerto no debe estar usándose en el sistema local. Este valor debe ser positivo y estar comprendido entre 1 y 65535. Si no se proporciona, se usará un número de puerto que esté libre.
-Número de puerto del depurador remoto | Número de puerto en el que está escuchando el servidor del depurador remoto (gdbserver) en el sistema remoto. El puerto debe estar libre en el sistema remoto. Este valor debe ser positivo y estar comprendido entre 1 y 65535. Si no se proporciona, se usará un número de puerto libre a partir de 4444.
-Modo de depuración | Especifica la manera en que el depurador se interrelaciona con gdb. En el modo gdb, el depurador controla gdb a través del shell en el sistema remoto. En el modo gdbserver, gdb se ejecuta en modo local y se conecta al gdbserver que se ejecuta en el sistema remoto. | **gdbserver**<br>**gdb**<br>
-Rutas de búsqueda de símbolos adicionales | Ruta de búsqueda adicional para símbolos de depuración (solib-search-path).
-Depurar procesos secundarios | Especifica si se habilita la depuración de procesos secundarios.
-Habilitar impresión con sangría de Python | Habilite la impresión con sangría de los valores de expresión. Solo se admite en el modo de depuración gdb.
-Archivo de visualización | Archivo de visualización nativo predeterminado (.natvis) que contiene directivas de visualización para los tipos SLT. Otros archivos .natvis que pertenecen a la solución actual se cargarán automáticamente.
-Asignación de ruta de acceso de archivo para orígenes adicionales | Equivalencias de ruta de acceso adicionales para que use el depurador a fin de asignar nombres de archivo de origen de Windows a nombres de archivo de origen de Linux. El formato es "\<windows-path> =\<linux-path>;...". Se hará referencia a un nombre de archivo de origen encontrado en la ruta de acceso de Windows como si se hubiera encontrado en la misma posición relativa en la ruta de acceso de Linux. Los archivos encontrados en el proyecto local no requieren ninguna asignación adicional.
+::: moniker range="vs-2015"
+
+La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones posteriores.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+| Propiedad. | Descripción | Opciones |
+|--|--|--|
+| Equipo de depuración remoto | **Visual Studio 2019 versión 16.1**: Especifica el equipo donde se va a depurar el programa. Puede ser diferente del equipo de compilación remoto especificado en la página [General](general-linux.md). Puede agregar o editar una conexión a una máquina de destino con **Herramientas** > **Opciones** > **Multiplataforma** > **Administrador de conexiones**. |
+| Comando anterior al inicio | Comando que se ejecuta en el shell antes de que el depurador se inicie, y que se puede usar para modificar el entorno de depuración. |
+| Programa | Ruta de acceso completa en el equipo remoto al programa que se va a depurar. Si se deja en blanco o sin modificar, el valor predeterminado es la salida del proyecto actual. |
+| Argumentos de programa | Argumentos de la línea de comandos que deben pasarse al programa que se va a depurar. |
+| Directorio de trabajo | Directorio de trabajo de la aplicación remota. De forma predeterminada, es el directorio principal de usuario. |
+| Comandos adicionales del depurador | Comandos `gdb` adicionales para que los ejecute el depurador antes de iniciar la depuración. |
+| Número de puerto del depurador | Número de puerto para la comunicación del depurador con el depurador remoto. El puerto no debe estar usándose en el sistema local. Este valor debe ser positivo y estar comprendido entre 1 y 65 535. Si no se proporciona, se usa un número de puerto que esté libre. |
+| Número de puerto del depurador remoto | Número de puerto en el que está escuchando el servidor del depurador remoto `gdbserver` en el sistema remoto. El puerto debe estar libre en el sistema remoto. Este valor debe ser positivo y estar comprendido entre 1 y 65 535. Si no se proporciona, se usa un número de puerto libre a partir de 4444. |
+| Modo de depuración | Especifica la manera en que el depurador se interrelaciona con `gdb`. En el *modo gdb*, el depurador controla `gdb` a través del shell en el sistema remoto. En el *modo gdbserver*, `gdb` se ejecuta en modo local y se conecta al `gdbserver` que se ejecuta en el sistema remoto. | **gdbserver**<br/>**gdb** |
+| Rutas de búsqueda de símbolos adicionales | Ruta de búsqueda adicional para símbolos de depuración (solib-search-path). |
+| Depurar procesos secundarios | Especifica si se habilita la depuración de procesos secundarios. |
+| Habilitar impresión con sangría de Python | Habilite la impresión con sangría de los valores de expresión. Solo se admite en el modo de depuración gdb. |
+| Archivo de visualización | Archivo de visualización nativo predeterminado (.natvis) que contiene directivas de visualización para los tipos SLT. Otros archivos .natvis que pertenecen a la solución actual se cargan automáticamente. |
+| Asignación de ruta de acceso de archivo para orígenes adicionales | Equivalencias de ruta de acceso adicionales para que use el depurador a fin de asignar nombres de archivo de origen de Windows a nombres de archivo de origen de Linux. El formato es "\<windows-path> =\<linux-path>;...". Se hace referencia a un nombre de archivo de origen encontrado en la ruta de acceso de Windows como si se encontrara en la misma posición relativa en la ruta de acceso de Linux. Los archivos encontrados en el proyecto local no requieren ninguna asignación adicional. |
+
+::: moniker-end

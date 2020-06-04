@@ -1,25 +1,25 @@
 ---
-title: Compilador advertencia (nivel 3) C4101
+title: ADVERTENCIA del compilador (nivel 3) C4101
 ms.date: 11/04/2016
 f1_keywords:
 - C4101
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: d1109a32e754a6055e5e1d90632ad85332d832f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ac34fbaf4cbb54583394dff5b8645fe56b8b9cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661128"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199051"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>Compilador advertencia (nivel 3) C4101
+# <a name="compiler-warning-level-3-c4101"></a>ADVERTENCIA del compilador (nivel 3) C4101
 
-'identificador': variable local sin referencia
+' Identifier ': variable local sin referencia
 
-La variable local nunca se utiliza. Esta advertencia se produce en la siguiente situación:
+La variable local nunca se usa. Esta advertencia se producirá en la situación obvia:
 
-```
+```cpp
 // C4101a.cpp
 // compile with: /W3
 int main() {
@@ -27,9 +27,9 @@ int i;   // C4101
 }
 ```
 
-Sin embargo, esta advertencia también se produce cuando se llama a un **estático** función miembro a través de una instancia de la clase:
+Sin embargo, esta advertencia también se produce cuando se llama a una función miembro **estática** a través de una instancia de la clase:
 
-```
+```cpp
 // C4101b.cpp
 // compile with:  /W3
 struct S {
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-En esta situación, el compilador utiliza información acerca de `si` para tener acceso a la **estático** función, pero la instancia de la clase no es necesaria para llamar a la **estático** función; por lo tanto, la advertencia. Para resolver esta advertencia, puede:
+En esta situación, el compilador usa información sobre `si` para tener acceso a la función **estática** , pero la instancia de la clase no es necesaria para llamar a la función **estática** ; por lo tanto, la advertencia. Para resolver esta advertencia, puede:
 
-- Agregue un constructor, en el que el compilador utilizará la instancia de `si` en la llamada a `func`.
+- Agregue un constructor, en el que el compilador usaría la instancia de `si` en la llamada a `func`.
 
-- Quitar el **estático** palabra clave de la definición de `func`.
+- Quite la palabra clave **static** de la definición de `func`.
 
-- Llame a la **estático** explícitamente la función: `int y = S::func();`.
+- Llame a la función **estática** explícitamente: `int y = S::func();`.

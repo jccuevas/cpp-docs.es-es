@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 09e328171657c3c6557a5d77acae0f034e517955
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241216"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objetos de datos y orígenes de datos (OLE)
 
@@ -27,9 +27,9 @@ Al realizar una transferencia de datos, ya sea mediante el Portapapeles o arrast
 
 Los siguientes artículos explican cómo usar objetos de datos y orígenes de datos en sus aplicaciones. Esta información se aplica a las aplicaciones de contenedor y servidor, porque ambos se pueden invocar para copiar y pegar datos.
 
-- [Objetos de datos y orígenes de datos: Creación y destrucción](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [Objetos de datos y orígenes de datos: creación y destrucción](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Objetos de datos y orígenes de datos: Manipulación](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Objetos de datos y orígenes de datos: manipulación](../mfc/data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>En esta sección
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-ms.openlocfilehash: 973c4a12f3b3bdc91269736874b7193130290a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079dc26fdd355c5b5e3f89f28219902e5fd74a79
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240242"
 ---
 # <a name="handling-tool-tip-notifications"></a>Controlar las notificaciones de información sobre herramientas
 
@@ -47,4 +47,3 @@ Para una función de controlador de ejemplo y obtener más información acerca d
 
 [Uso de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

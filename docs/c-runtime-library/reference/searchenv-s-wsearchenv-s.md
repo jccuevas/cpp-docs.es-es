@@ -1,10 +1,12 @@
 ---
 title: _searchenv_s, _wsearchenv_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wsearchenv_s
 - _searchenv_s
-apilocation:
+- _o__searchenv_s
+- _o__wsearchenv_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _searchenv_s
 - _wsearchenv_s
@@ -36,14 +42,14 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dd21013c8910ba07e2d23606af49bc80458dbc6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505682"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918995"
 ---
-# <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
+# <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
 Busca un archivo mediante rutas de acceso del entorno. Estas versiones de [_searchenv, _wsearchenv](searchenv-wsearchenv.md) incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -81,17 +87,17 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*<br/>
+*extensión*<br/>
 Nombre del archivo que se va a buscar.
 
-*VarName*<br/>
+*insertar*<br/>
 Entorno en el que se va a buscar.
 
-*ruta de acceso*<br/>
+*Ruta*<br/>
 Búfer en el que se va a almacenar la ruta de acceso completa.
 
 *numberOfElements*<br/>
-Tamaño de la *pathname* búfer.
+Tamaño del búfer de *ruta de directorio* .
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -101,25 +107,27 @@ Si *filename* es una cadena vacía, el valor devuelto es **ENOENT**.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*filename*|*VarName*|*ruta de acceso*|*numberOfElements*|Valor devuelto|Contenido de *pathname*|
+|*extensión*|*insertar*|*Ruta*|*numberOfElements*|Valor devuelto|Contenido de *PathName*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|any|any|**NULL**|any|**EINVAL**|N/D|
-|**NULL**|any|any|any|**EINVAL**|no cambia|
-|any|any|any|<= 0|**EINVAL**|no cambia|
+|cualquiera|cualquiera|**ACEPTA**|cualquiera|**EINVAL**|N/D|
+|**ACEPTA**|cualquiera|cualquiera|cualquiera|**EINVAL**|no cambia|
+|cualquiera|cualquiera|cualquiera|<= 0|**EINVAL**|no cambia|
 
-Si se da alguna de estas condiciones de error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
+Si se da alguna de estas condiciones de error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_searchenv_s** búsquedas rutinarias para el archivo de destino en el dominio especificado. El *varname* variable puede ser cualquier entorno o una variable definida por el usuario que especifica una lista de rutas de acceso de directorio, como **ruta**, **LIB**, y **INCLUDE** . Dado que **_searchenv_s** distingue mayúsculas de minúsculas *varname* debe coincidir con el caso de la variable de entorno. Si *varname* no coincide con el nombre de una variable de entorno definido en el entorno del proceso, la función devuelve cero y el *pathname* se modifica la variable.
+La rutina **_searchenv_s** busca el archivo de destino en el dominio especificado. La *variable varname* puede ser cualquier variable de entorno o definida por el usuario que especifique una lista de rutas de **acceso**de directorio, como Path, **lib**e **include**. Dado que **_searchenv_s** distingue entre mayúsculas y minúsculas, *varname* debe coincidir con las mayúsculas y minúsculas de la variable de entorno. Si *varname* no coincide con el nombre de una variable de entorno definida en el entorno del proceso, la función devuelve cero y la variable *PathName* no cambia.
 
-La rutina busca el archivo primero en el directorio de trabajo actual. Si no encuentra el archivo, busca en los directorios especificados por la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso recién creada se copia en *pathname*. Si el *filename* no se encuentra el archivo, *pathname* contiene una cadena vacía terminada en null.
+La rutina busca el archivo primero en el directorio de trabajo actual. Si no encuentra el archivo, busca en los directorios especificados por la variable de entorno. Si el archivo de destino se encuentra en uno de esos directorios, la ruta de acceso recién creada se copia en el *directorio*. Si no se encuentra el archivo *filename* , *PathName* contiene una cadena terminada en NULL vacía.
 
-El *pathname* búfer debe ser al menos **_MAX_PATH** caracteres de longitud para dar cabida a la longitud total del nombre de ruta de acceso construido. En caso contrario, **_searchenv_s** puede saturar el *pathname* resultante en un comportamiento inesperado del búfer.
+El *búfer del nombre de ruta de* acceso debe tener al menos **_MAX_PATH** caracteres para dar cabida a la longitud total del nombre de ruta de acceso construido. De lo contrario, **_searchenv_s** podría saturar el búfer de *ruta de nombres* , lo que produce un comportamiento inesperado.
 
-**_wsearchenv_s** es una versión con caracteres anchos de **_searchenv_s**; los argumentos de **_wsearchenv_s** son cadenas de caracteres anchos. **_wsearchenv_s** y **_searchenv_s** se comportan exactamente igual.
+**_wsearchenv_s** es una versión con caracteres anchos de **_searchenv_s**; los argumentos para **_wsearchenv_s** son cadenas de caracteres anchos. **_wsearchenv_s** y **_searchenv_s** se comportan de manera idéntica.
 
-En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -134,7 +142,7 @@ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla
 |**_searchenv_s**|\<stdlib.h>|
 |**_wsearchenv_s**|\<stdlib.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -172,7 +180,7 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>
 [_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>

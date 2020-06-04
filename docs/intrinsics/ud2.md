@@ -1,36 +1,36 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: dd876f26349c39e0af0d2e0f100fb4e13efa50f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666549"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219760"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
 **Específicos de Microsoft**
 
-Genera una instrucción no definida.
+Genera una instrucción sin definir.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>Comentarios
 
-El procesador genera una excepción de código de operación no válida si ejecuta una instrucción no definida.
+Si ejecuta una instrucción sin definir, el procesador genera una excepción de código de operación no válida.
 
-El `__ud2` función es equivalente a la `UD2` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](https://software.intel.com/articles/intel-sdm) sitio.
+La `__ud2` función es equivalente a la `UD2` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento "manual del desarrollador de software de arquitectura Intel, volumen 2: Referencia del conjunto de instrucciones, en el sitio de [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,15 +38,15 @@ El `__ud2` función es equivalente a la `UD2` instrucción máquina y solo está
 |---------------|------------------|
 |`__ud2`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente ejecuta una instrucción no definida, que produce una excepción. El controlador de excepciones, a continuación, cambia el código de retorno de cero a uno.
+En el ejemplo siguiente se ejecuta una instrucción undefined, que genera una excepción. Después, el controlador de excepciones cambia el código de retorno de cero a uno.
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -84,4 +84,4 @@ After __ud2().  Return code = 1.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

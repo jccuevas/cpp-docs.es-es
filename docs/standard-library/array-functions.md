@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 719377be2ac130100e3f9e9ea608c5c27be3101f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562310"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364939"
 ---
 # <a name="ltarraygt-functions"></a>Funciones &lt;array&gt;
 
-El \<matriz > encabezado incluye dos funciones no miembro, `get` y `swap`, que operan en **matriz** objetos.
+El \<encabezado de> de matriz `get` `swap`incluye dos funciones que no son miembros y , que funcionan en objetos de **matriz.**
 
 |||
 |-|-|
 |[get](#get)|[swap](#swap)|
 
-## <a name="get"></a>  get
+## <a name="get"></a><a name="get"></a>Obtener
 
 Devuelve una referencia al elemento especificado de la matriz.
 
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Index*<br/>
+*Índice*\
 El desplazamiento del elemento.
 
-*T*<br/>
+*T*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Número de elementos de la matriz.
 
-*arr*<br/>
+*Arr*\
 La matriz de la que se selecciona.
 
 ### <a name="example"></a>Ejemplo
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Intercambio
 
-Una especialización de plantilla que no es miembro de `std::swap` que intercambia dos **matriz** objetos.
+Una especialización de `std::swap` plantilla no miembro de que intercambia dos objetos de **matriz.**
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,19 +97,19 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Se refiere al tamaño de la matriz.
 
-*left*<br/>
+*Izquierda*\
 Primera matriz que se va a intercambiar.
 
-*right*<br/>
+*Correcto*\
 Segunda matriz que se va a intercambiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla ejecuta `left.swap(right)`.
 
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<array>](../standard-library/array.md)<br/>
+[\<matriz>](../standard-library/array.md)

@@ -2,17 +2,15 @@
 title: NotifyHandler
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- NotifyHandler
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 72c8fa3a0773a67c32a0652eb048885564a734be
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 16fb330d2da83ddfd013e33a2d4b688b2711103b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694613"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492296"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -30,17 +28,17 @@ LRESULT NotifyHandler(
 #### <a name="parameters"></a>Parámetros
 
 *idCtrl*<br/>
-El identificador del control que envía el mensaje.
+Identificador del control que envía el mensaje.
 
 *pnmh*<br/>
-Dirección de un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) estructura que contiene el código de notificación e información adicional. Para algunos mensajes de notificación, este parámetro señala a una estructura más grande que tiene el `NMHDR` estructura como su primer miembro.
+Dirección de una estructura [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) que contiene el código de notificación e información adicional. En algunos mensajes de notificación, este parámetro apunta a una estructura más grande que `NMHDR` tiene la estructura como primer miembro.
 
 *bHandled*<br/>
-Los conjuntos de mapa de mensajes *bHandled* en TRUE antes de *NotifyHandler* se llama. Si *NotifyHandler* no controla totalmente el mensaje, se debe establecer *bHandled* a **FALSE** para indicar que el mensaje requiere un procesamiento posterior.
+El mapa de mensajes establece *bHandled* en true antes de llamar a *NotifyHandler* . Si *NotifyHandler* no controla por completo el mensaje, debe establecer *bHandled* en **false** para indicar que el mensaje necesita más procesamiento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El resultado del procesamiento de mensajes. 0 si es correcto.
+Resultado del procesamiento de mensajes. 0 si se realiza correctamente.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -50,4 +48,4 @@ Para obtener un ejemplo del uso de este controlador de mensajes en un mapa de me
 
 [Implementar una ventana](../atl/implementing-a-window.md)<br/>
 [Mapas de mensajes](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

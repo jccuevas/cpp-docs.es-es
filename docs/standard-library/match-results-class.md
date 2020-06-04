@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 31154a38f8bbcb879fd871f1eb1bf5a4b15af79b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657466"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371018"
 ---
-# <a name="matchresults-class"></a>match_results (Clase)
+# <a name="match_results-class"></a>match_results (Clase)
 
 Contiene una secuencia de subcoincidencias.
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 El tipo de iterador para subcoincidencias.
 
-*Alloc*<br/>
+*Alloc*\
 El tipo de un asignador para administrar el almacenamiento.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase de plantilla describe un objeto que controla una secuencia no modificable del tipo `sub_match<BidIt>` generada por una búsqueda de expresión regular. Cada elemento apunta a la subsecuencia que coincide con el grupo de capturas que corresponde a ese elemento.
+La plantilla de clase describe un objeto que controla una `sub_match<BidIt>` secuencia no modificable de elementos de tipo generados por una búsqueda de expresiones regulares. Cada elemento apunta a la subsecuencia que coincide con el grupo de capturas que corresponde a ese elemento.
 
 ### <a name="constructors"></a>Constructores
 
@@ -44,43 +44,43 @@ La clase de plantilla describe un objeto que controla una secuencia no modificab
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[allocator_type](#allocator_type)|El tipo de un asignador para administrar el almacenamiento.|
 |[char_type](#char_type)|El tipo de un elemento.|
 |[const_iterator](#const_iterator)|El tipo de iterador constante para subcoincidencias.|
 |[const_reference](#const_reference)|Tipo de una referencia const a un elemento.|
 |[difference_type](#difference_type)|El tipo de diferencia de un iterador.|
-|[iterator](#iterator)|El tipo de iterador para subcoincidencias.|
-|[reference](#reference)|El tipo de una referencia a un elemento.|
+|[Iterador](#iterator)|El tipo de iterador para subcoincidencias.|
+|[Referencia](#reference)|El tipo de una referencia a un elemento.|
 |[size_type](#size_type)|El tipo de recuento de subcoincidencias.|
 |[string_type](#string_type)|El tipo de una cadena.|
 |[value_type](#value_type)|El tipo de una subcoincidencia.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
-|[begin](#begin)|Indica el principio de la secuencia de subcoincidencia.|
-|[empty](#empty)|Comprueba que no haya subcoincidencias.|
-|[end](#end)|Designa el final de la secuencia de subcoincidencia.|
-|[format](#format)|Subcoincidencias de formato.|
+|[Comenzar](#begin)|Indica el principio de la secuencia de subcoincidencia.|
+|[Vacío](#empty)|Comprueba que no haya subcoincidencias.|
+|[Final](#end)|Designa el final de la secuencia de subcoincidencia.|
+|[Formato](#format)|Subcoincidencias de formato.|
 |[get_allocator](#get_allocator)|Devuelve el asignador almacenado.|
 |[length](#length)|Devuelve la longitud de una subcoincidencia.|
 |[max_size](#max_size)|Obtiene el número máximo de subcoincidencias.|
 |[Posición](#position)|Permite obtener el desplazamiento inicial de un subgrupo.|
 |[Prefijo](#prefix)|Obtiene la secuencia antes de la primera subcoincidencia.|
-|[size](#size)|Número de recuentos de subcoincidencias.|
-|[str](#str)|Devuelve una subcoincidencia.|
-|[Sufijo](#suffix)|Obtiene la secuencia después de la última subcoincidencia.|
+|[Tamaño](#size)|Número de recuentos de subcoincidencias.|
+|[Str](#str)|Devuelve una subcoincidencia.|
+|[suffix](#suffix)|Obtiene la secuencia después de la última subcoincidencia.|
 |[swap](#swap)|Intercambia dos objetos match_results.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operator|Descripción|
 |-|-|
-|[operator=](#op_eq)|Copiar un objeto match_results.|
-|[operator\[\]](#op_at)|Permite acceder a un subobjeto.|
+|[operador](#op_eq)|Copiar un objeto match_results.|
+|[Operador\[\]](#op_at)|Permite acceder a un subobjeto.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -188,7 +188,7 @@ next submatch: matched == false
 empty == false
 ```
 
-## <a name="allocator_type"></a>  match_results::allocator_type
+## <a name="match_resultsallocator_type"></a><a name="allocator_type"></a>match_results::allocator_type
 
 El tipo de un asignador para administrar el almacenamiento.
 
@@ -196,11 +196,11 @@ El tipo de un asignador para administrar el almacenamiento.
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La definición de tipo es un sinónimo del argumento de plantilla *Alloc*.
+Typedef es un sinónimo del argumento de plantilla *Alloc*.
 
-## <a name="begin"></a>  match_results::begin
+## <a name="match_resultsbegin"></a><a name="begin"></a>match_results::comenzar
 
 Indica el principio de la secuencia de subcoincidencia.
 
@@ -208,11 +208,11 @@ Indica el principio de la secuencia de subcoincidencia.
 const_iterator begin() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve un iterador de acceso aleatorio que apunta al primer elemento de la secuencia (o más allá del final de una secuencia vacía).
 
-## <a name="char_type"></a>  match_results::char_type
+## <a name="match_resultschar_type"></a><a name="char_type"></a>match_results::char_type
 
 El tipo de un elemento.
 
@@ -220,11 +220,11 @@ El tipo de un elemento.
 typedef typename iterator_traits<BidIt>::value_type char_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La definición de tipo es un sinónimo del tipo `iterator_traits<BidIt>::value_type`, que es el tipo de elemento de la secuencia de caracteres que se busca.
 
-## <a name="const_iterator"></a>  match_results::const_iterator
+## <a name="match_resultsconst_iterator"></a><a name="const_iterator"></a>match_results::const_iterator
 
 El tipo de iterador constante para subcoincidencias.
 
@@ -232,11 +232,11 @@ El tipo de iterador constante para subcoincidencias.
 typedef T0 const_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La definición de tipo describe un objeto que puede actuar como un iterador de acceso aleatorio para la secuencia controlada.
 
-## <a name="const_reference"></a>  match_results::const_reference
+## <a name="match_resultsconst_reference"></a><a name="const_reference"></a>match_results::const_reference
 
 Tipo de una referencia const a un elemento.
 
@@ -244,11 +244,11 @@ Tipo de una referencia const a un elemento.
 typedef const typename Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La definición de tipo describe un objeto que puede actuar como referencia constante a un elemento de la secuencia controlada.
 
-## <a name="difference_type"></a>  match_results::difference_type
+## <a name="match_resultsdifference_type"></a><a name="difference_type"></a>match_results::difference_type
 
 El tipo de diferencia de un iterador.
 
@@ -256,11 +256,11 @@ El tipo de diferencia de un iterador.
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La definición de tipo es un sinónimo del tipo `iterator_traits<BidIt>::difference_type`; describe un objeto que puede representar la diferencia entre dos iteradores que apuntan a elementos de la secuencia controlada.
 
-## <a name="empty"></a>  match_results::empty
+## <a name="match_resultsempty"></a><a name="empty"></a>match_results::vacío
 
 Comprueba que no haya subcoincidencias.
 
@@ -268,11 +268,11 @@ Comprueba que no haya subcoincidencias.
 bool empty() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve true solo si hay error en la búsqueda de expresión regular.
 
-## <a name="end"></a>  match_results::end
+## <a name="match_resultsend"></a><a name="end"></a>match_results::fin
 
 Designa el final de la secuencia de subcoincidencia.
 
@@ -280,11 +280,11 @@ Designa el final de la secuencia de subcoincidencia.
 const_iterator end() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve un iterador que apunta inmediatamente después del final de la secuencia.
 
-## <a name="format"></a>  match_results::format
+## <a name="match_resultsformat"></a><a name="format"></a>match_results::formato
 
 Subcoincidencias de formato.
 
@@ -298,25 +298,25 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parámetros
 
-*OutIt*<br/>
+*OutIt*\
 Tipo de iterador de salida.
 
-*out*<br/>
+*hacia fuera*\
 Flujo de salida donde se va a escribir.
 
-*FMT*<br/>
-Cadena de formato.
+*Fmt*\
+Formato de cadena.
 
-*flags*<br/>
+*Banderas*\
 Marcas de formato.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada función miembro genera texto con formato bajo el control del formato *fmt*. La primera función miembro escribe el texto con formato en la secuencia definida por su argumento *out* y devuelve *out*. La segunda función miembro devuelve un objeto de cadena que contiene una copia del texto con formato.
 
 Para generar texto con formato El texto literal de la cadena de formato se copia normalmente en la secuencia de destino. Cada secuencia de escape de la cadena de formato se reemplaza por el texto que representa. Las marcas de formato pasadas a la función controlan los detalles de copiar y reemplazar.
 
-## <a name="get_allocator"></a>  match_results::get_allocator
+## <a name="match_resultsget_allocator"></a><a name="get_allocator"></a>match_results::get_allocator
 
 Devuelve el asignador almacenado.
 
@@ -324,11 +324,11 @@ Devuelve el asignador almacenado.
 allocator_type get_allocator() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve una copia del objeto de asignador usado por `*this` para asignar sus objetos `sub_match`.
 
-## <a name="iterator"></a>  match_results::iterator
+## <a name="match_resultsiterator"></a><a name="iterator"></a>match_results::iterator
 
 El tipo de iterador para subcoincidencias.
 
@@ -336,11 +336,11 @@ El tipo de iterador para subcoincidencias.
 typedef const_iterator iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede actuar como un iterador de acceso aleatorio de la secuencia controlada.
 
-## <a name="length"></a>  match_results::length
+## <a name="match_resultslength"></a><a name="length"></a>match_results::longitud
 
 Devuelve la longitud de una subcoincidencia.
 
@@ -350,14 +350,14 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Sub*<br/>
+*Sub*\
 El índice de la subcoincidencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve `(*this)[sub].length()`.
 
-## <a name="match_results"></a>  match_results::match_results
+## <a name="match_resultsmatch_results"></a><a name="match_results"></a>match_results::match_results
 
 Construye el objeto.
 
@@ -369,17 +369,17 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Alloc*<br/>
+*Alloc*\
 Objeto de asignador que se va a almacenar.
 
-*right*<br/>
+*Correcto*\
 Objeto match_results que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El primer constructor construye un objeto `match_results` que no contiene subcoincidencias. El segundo constructor crea un `match_results` objeto que es una copia de *derecho*.
+El primer constructor construye un objeto `match_results` que no contiene subcoincidencias. El segundo constructor `match_results` construye un objeto que es una copia de *right*.
 
-## <a name="max_size"></a>  match_results::max_size
+## <a name="match_resultsmax_size"></a><a name="max_size"></a>match_results::max_size
 
 Obtiene el número máximo de subcoincidencias.
 
@@ -387,11 +387,11 @@ Obtiene el número máximo de subcoincidencias.
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve la longitud de la secuencia más larga que puede controlar el objeto.
 
-## <a name="op_eq"></a>  match_results::operator=
+## <a name="match_resultsoperator"></a><a name="op_eq"></a>match_results::operador ?
 
 Copiar un objeto match_results.
 
@@ -401,14 +401,14 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*Correcto*\
 Objeto match_results que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El operador miembro reemplaza la secuencia controlada por `*this` con una copia de la secuencia controlada por *derecho*.
+El operador miembro reemplaza la `*this` secuencia controlada por una copia de la secuencia controlada por *right*.
 
-## <a name="op_at"></a>  match_results::operator[]
+## <a name="match_resultsoperator"></a><a name="op_at"></a>match_results::operador[]
 
 Permite acceder a un subobjeto.
 
@@ -418,14 +418,14 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*n*<br/>
+*N*\
 Índice de la subcoincidencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve una referencia al elemento *n* de la secuencia controlada o una referencia a un valor vacío `sub_match` objeto si `size() <= n` o si el grupo de captura *n* no formaba parte de la coincidencia.
+La función miembro devuelve una referencia al elemento *n* de `sub_match` la `size() <= n` secuencia controlada, o una referencia a un objeto vacío si o si el grupo de captura *n* no formaba parte de la coincidencia.
 
-## <a name="position"></a>  match_results::position
+## <a name="match_resultsposition"></a><a name="position"></a>match_results::position
 
 Permite obtener el desplazamiento inicial de un subgrupo.
 
@@ -435,14 +435,14 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Sub*<br/>
+*Sub*\
 Índice de la subcoincidencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve `std::distance(prefix().first, (*this)[sub].first)`; es decir, la distancia desde el primer carácter de la secuencia de destino hasta el primer carácter de la subcoincidencia señalado por el elemento `n` de la secuencia controlada.
 
-## <a name="prefix"></a>  match_results::prefix
+## <a name="match_resultsprefix"></a><a name="prefix"></a>match_results::prefix
 
 Obtiene la secuencia antes de la primera subcoincidencia.
 
@@ -450,11 +450,11 @@ Obtiene la secuencia antes de la primera subcoincidencia.
 const_reference prefix() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve una referencia a un objeto del tipo `sub_match<BidIt>` que apunta a la secuencia de caracteres que comienza en el inicio de la secuencia de destino y terminan en `(*this)[0].first`; es decir, señala el texto que precede a la subsecuencia coincidente.
 
-## <a name="reference"></a>  match_results::reference
+## <a name="match_resultsreference"></a><a name="reference"></a>match_results::referencia
 
 El tipo de una referencia a un elemento.
 
@@ -462,11 +462,11 @@ El tipo de una referencia a un elemento.
 typedef const_reference reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del tipo `const_reference`.
 
-## <a name="size"></a>  match_results::size
+## <a name="match_resultssize"></a><a name="size"></a>match_results::tamaño
 
 Número de recuentos de subcoincidencias.
 
@@ -474,11 +474,11 @@ Número de recuentos de subcoincidencias.
 size_type size() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve uno más que el número de grupos de captura en la expresión regular que se usó para la búsqueda o cero si no se hizo ninguna búsqueda.
 
-## <a name="size_type"></a>  match_results::size_type
+## <a name="match_resultssize_type"></a><a name="size_type"></a>match_results::size_type
 
 El tipo de recuento de subcoincidencias.
 
@@ -486,11 +486,11 @@ El tipo de recuento de subcoincidencias.
 typedef typename Alloc::size_type size_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del tipo `Alloc::size_type`.
 
-## <a name="str"></a>  match_results::str
+## <a name="match_resultsstr"></a><a name="str"></a>match_results::str
 
 Devuelve una subcoincidencia.
 
@@ -500,14 +500,14 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Sub*<br/>
+*Sub*\
 Índice de la subcoincidencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve `string_type((*this)[sub])`.
 
-## <a name="string_type"></a>  match_results::string_type
+## <a name="match_resultsstring_type"></a><a name="string_type"></a>match_results::string_type
 
 El tipo de una cadena.
 
@@ -515,11 +515,11 @@ El tipo de una cadena.
 typedef basic_string<char_type> string_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del tipo `basic_string<char_type>`.
 
-## <a name="suffix"></a>  match_results::suffix
+## <a name="match_resultssuffix"></a><a name="suffix"></a>match_results::suffix
 
 Obtiene la secuencia después de la última subcoincidencia.
 
@@ -527,11 +527,11 @@ Obtiene la secuencia después de la última subcoincidencia.
 const_reference suffix() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve una referencia a un objeto del tipo `sub_match<BidIt>` que apunta a la secuencia de caracteres que comienza en `(*this)[size() - 1].second` y termina al final de la secuencia de destino; es decir, señala el texto que sigue a la subsecuencia coincidente.
 
-## <a name="swap"></a>  match_results::swap
+## <a name="match_resultsswap"></a><a name="swap"></a>match_results::swap
 
 Intercambia dos objetos match_results.
 
@@ -541,14 +541,14 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*Correcto*\
 El objeto match_results con el que se intercambia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro intercambia el contenido de `*this` y *derecho* en tiempo constante y no inicia excepciones.
+La función miembro intercambia el contenido `*this` de y *right* en tiempo constante y no produce excepciones.
 
-## <a name="value_type"></a>  match_results::value_type
+## <a name="match_resultsvalue_type"></a><a name="value_type"></a>match_results::value_type
 
 El tipo de una subcoincidencia.
 
@@ -556,10 +556,10 @@ El tipo de una subcoincidencia.
 typedef sub_match<BidIt> value_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La definición de tipo es un sinónimo del tipo `sub_match<BidIt>`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<regex>](../standard-library/regex.md)<br/>
+[\<regex>](../standard-library/regex.md)

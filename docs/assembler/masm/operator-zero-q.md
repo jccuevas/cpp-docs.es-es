@@ -1,6 +1,6 @@
 ---
 title: Operador ZERO?
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator ZERO?
 - ZERO?
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - ZERO? operator
 - operator ZERO?
 ms.assetid: c7629c0b-3254-4f50-9bd6-31be762eb03b
-ms.openlocfilehash: 440a9e1d16991b9c7a094bc1267536a26613926a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4da82cb6837a683c259c29591b4bf512e4954c17
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594901"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318779"
 ---
 # <a name="operator-zero"></a>Operador ZERO?
 
-Estado de la marca de cero. Utilizan solo en [. IF](../../assembler/masm/dot-if.md), [. MIENTRAS](../../assembler/masm/dot-while.md), o [. Repita](../../assembler/masm/dot-repeat.md) bloquea y se evalúan en tiempo de ejecución, no en tiempo de ensamblado.
+Estado de la marca cero. Se usa solo dentro de [. Si](dot-if.md)es, [. WHILE](dot-while.md), o [. REPETIR](dot-repeat.md) bloques y evaluarlos en tiempo de ejecución, no en tiempo de ensamblado.
 
 ## <a name="syntax"></a>Sintaxis
 
-> ¿CERO?
+> **NULO?**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

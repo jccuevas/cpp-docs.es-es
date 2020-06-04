@@ -1,30 +1,31 @@
 ---
 title: IFNDEF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IFNDEF
 helpviewer_keywords:
 - IFNDEF directive
 ms.assetid: 8c93efc4-9375-45b6-8583-95f0c92f2a3a
-ms.openlocfilehash: 6312b012ca49633da44272825e09aa9d9b0320f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb8479d9df1eb238960d8f8a794c904847660e6b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630742"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317219"
 ---
 # <a name="ifndef"></a>IFNDEF
 
-Concede al ensamblado si *nombre* no se ha definido.
+Concede el ensamblado si *el nombre* no se ha definido.
 
 ## <a name="syntax"></a>Sintaxis
 
-> Nombre IFNDEF
+> **Ifndef** ( *nombre* )
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Consulte [IF](../../assembler/masm/if-masm.md) para conocer la sintaxis completa.
+Vea [si](if-masm.md) para obtener la sintaxis completa.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

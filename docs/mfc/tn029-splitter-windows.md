@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305715"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Ventanas divisoras
 
@@ -46,7 +46,7 @@ El número máximo de paneles que se pueden especificar para los separadores din
 
 ## <a name="splitter-examples"></a>Ejemplos del divisor
 
-Muchos de los programas de ejemplo MFC usan ventanas divisoras directa o indirectamente. El ejemplo General de MFC [VIEWEX](../visual-cpp-samples.md) se muestran varios usos de divisores estáticas, incluida la forma de colocar un divisor en un divisor.
+Muchos de los programas de ejemplo MFC usan ventanas divisoras directa o indirectamente. El ejemplo General de MFC [VIEWEX](../overview/visual-cpp-samples.md) se muestran varios usos de divisores estáticas, incluida la forma de colocar un divisor en un divisor.
 
 También puede usar ClassWizard para crear un nuevo varios documento MDI (interfaz) ventana clase de marco secundario que contiene una ventana divisora. Para obtener más información sobre las ventanas divisoras, consulte [varios tipos de documentos, vistas y marco Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 
@@ -60,9 +60,9 @@ Panel: Una ventana específica de la aplicación que un `CSplitterWnd` administr
 
 Para usar un `CWnd`-derivados de objeto, pase el RUNTIME_CLASS del objeto para el `CreateView` funcionando como lo haría si estuviera usando un `CView`-clase derivada. Debe utilizar la clase DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE porque el marco de trabajo utiliza la creación dinámica en tiempo de ejecución. Aunque hay una gran cantidad de código en `CSplitterWnd` que es específico para el `CView` (clase), [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) siempre se utiliza antes de que se llevan a cabo esas acciones.
 
-Barra divisora: Un control que se coloca entre las filas y columnas de paneles. Se puede usar para ajustar los tamaños de las filas o columnas de paneles.
+Barra de división: Un control que se coloca entre las filas y columnas de paneles. Se puede usar para ajustar los tamaños de las filas o columnas de paneles.
 
-: Divisor un control de cuadro En dinámico `CSplitterWnd` que puede usar para crear nuevas filas o columnas de paneles. Se encuentra en la parte superior de las barras de desplazamiento vertical o a la izquierda de las barras de desplazamiento horizontal.
+Divisor de cuadro: Un control en un dinámico `CSplitterWnd` que puede usar para crear nuevas filas o columnas de paneles. Se encuentra en la parte superior de las barras de desplazamiento vertical o a la izquierda de las barras de desplazamiento horizontal.
 
 Divisor intersección: La intersección de una barra divisora vertical y una barra divisora horizontal. Puede arrastrar para ajustar el tamaño de una fila y columna de paneles al mismo tiempo.
 
@@ -140,4 +140,3 @@ El `CView` clase usa los siguientes comandos de alto niveles para delegar a los 
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

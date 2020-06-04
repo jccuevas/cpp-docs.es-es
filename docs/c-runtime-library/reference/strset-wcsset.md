@@ -1,10 +1,10 @@
 ---
 title: strset, wcsset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsset
 - strset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strset
 - wcsset
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - wcsset function
 - strset function
 ms.assetid: 20e132d8-4b6c-4341-b1eb-8e19b46047e2
-ms.openlocfilehash: 352e2f0591c74b98ade309759b5d286c597fb624
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 399f046d295c040c166ff7f7c1b5563e14976838
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170129"
 ---
 # <a name="strset-wcsset"></a>strset, wcsset
 

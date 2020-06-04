@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: ebf1a80a695f1d25652f239f66d8d40c0e1099ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09bd33b5a8d9148c7959f69fcab4a260fe05c332
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542225"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126505"
 ---
-# <a name="norm2-class"></a>norm_2 (Clase)
+# <a name="norm_2-class"></a>norm_2 (Clase)
 
 Representa un vector corto de dos números normales.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class norm_2;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor norm_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de norm_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |norm_2::get_x||
 |norm_2::get_xy||
@@ -70,7 +70,7 @@ class norm_2;
 |norm_2::ref_g||
 |norm_2::ref_r||
 |norm_2::ref_x||
-|norm_2:: ref_y||
+|norm_2::ref_y||
 |norm_2::set_x||
 |norm_2::set_xy||
 |norm_2::set_y||
@@ -78,7 +78,7 @@ class norm_2;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |norm_2::operator-||
 |norm_2::operator--||
@@ -91,22 +91,22 @@ class norm_2;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#norm_2__size)||
+|[Size (constante)](#norm_2__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|norm_2:: g||
-|norm_2:: GR||
-|norm_2:: r||
-|norm_2:: RG||
-|norm_2:: x||
-|norm_2:: XY||
-|norm_2:: y||
-|norm_2:: YX||
+|norm_2::g||
+|norm_2::gr||
+|norm_2::r||
+|norm_2::rg||
+|norm_2::x||
+|norm_2::xy||
+|norm_2::y||
+|norm_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -114,15 +114,15 @@ class norm_2;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> norm_2
+## <a name="ctor"></a>norm_2
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 norm_2() restrict(amp,
     cpu);
 
@@ -177,23 +177,23 @@ explicit inline norm_2(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="norm_2__size"></a> Tamaño
+## <a name="norm_2__size"></a>ajusta
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

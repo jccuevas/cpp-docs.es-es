@@ -1,47 +1,45 @@
 ---
-title: Archivo de salida (-F) opciones
+title: Opciones de archivo de salida (-F)
 ms.date: 11/04/2016
-f1_keywords:
-- /f
 helpviewer_keywords:
 - output files
 - output files, compiler options [C++]
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
-ms.openlocfilehash: e815eff674fbf56806b6c9fc33edd9df41aad3f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a9aea2080ecadbc398186251e4cff34a0d240c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590260"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439080"
 ---
 # <a name="output-file-f-options"></a>/F (Opciones del archivo de resultados)
 
-Las opciones de archivo de salida creación o cambiar el nombre de los archivos de salida. Afectan a todos los archivos de origen de C o C++ especificados en la variable de entorno de CL, en la línea de comandos o en cualquier archivo de comandos.
+Las opciones de archivo de salida crean o cambiar el nombre de los archivos de salida. Afectan a todos los archivos C++ de código fuente de C o especificados en la variable de entorno de cl, en la línea de comandos o en cualquier archivo de comandos.
 
-- [/FA, /Fa (Archivo de lista)](../../build/reference/fa-fa-listing-file.md)
+- [/FA, /Fa (Archivo de lista)](fa-fa-listing-file.md)
 
-- [Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)
+- [Especificar la ruta de acceso](specifying-the-pathname.md)
 
-- [/FD (nombre del archivo PDB)](../../build/reference/fd-program-database-file-name.md)
+- [/FD (asignar nombre al archivo PDB)](fd-program-database-file-name.md)
 
-- [/Fe (Asignar nombre a un archivo ejecutable)](../../build/reference/fe-name-exe-file.md)
+- [/Fe (Asignar nombre a un archivo ejecutable)](fe-name-exe-file.md)
 
-- [/FI (Dar nombre al archivo de inclusión obligatorio)](../../build/reference/fi-name-forced-include-file.md)
+- [/FI (Dar nombre al archivo de inclusión obligatorio)](fi-name-forced-include-file.md)
 
-- [/Fm (Asignar nombre al archivo de asignaciones)](../../build/reference/fm-name-mapfile.md)
+- [/Fm (Asignar nombre al archivo de asignaciones)](fm-name-mapfile.md)
 
-- [/Fo (nombre del archivo objeto)](../../build/reference/fo-object-file-name.md)
+- [/FO (nombre del archivo objeto)](fo-object-file-name.md)
 
-- [/Fp (nombre al archivo .pch)](../../build/reference/fp-name-dot-pch-file.md)
+- [/FP (nombre del archivo. pch)](fp-name-dot-pch-file.md)
 
-- [/ FR, /Fr (crear archivo .sbr)](../../build/reference/fr-fr-create-dot-sbr-file.md)
+- [/FR,/fr (crear archivo. SBR)](fr-fr-create-dot-sbr-file.md)
 
-- [/FU (Asignar nombre al archivo #using obligatorio)](../../build/reference/fu-name-forced-hash-using-file.md)
+- [/FU (Asignar nombre al archivo #using obligatorio)](fu-name-forced-hash-using-file.md)
 
-- [/Fx (Combinar código insertado)](../../build/reference/fx-merge-injected-code.md)
+- [/Fx (Combinar código insertado)](fx-merge-injected-code.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

@@ -1,5 +1,5 @@
 ---
-title: CAtlAutoThreadModuleT (clase)
+title: Clase CAtlAutoThreadModuleT
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlAutoThreadModuleT
@@ -8,54 +8,54 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-ms.openlocfilehash: 8492127af8a1267da3beed678f8a66424ba26442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7308e3a51c531fbe942e2df326c03273eeb326e2
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483403"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168729"
 ---
-# <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT (clase)
+# <a name="catlautothreadmodulet-class"></a>Clase CAtlAutoThreadModuleT
 
-Esta clase proporciona métodos para implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso.
+Esta clase proporciona métodos para implementar un servidor COM de modelo de apartamento y agrupado de subprocesos.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
          DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
 La clase que implementará el servidor COM.
 
 *ThreadAllocator*<br/>
-La clase de administración de selección de subprocesos. El valor predeterminado es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
+La clase que administra la selección del subproceso. El valor predeterminado es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 *dwWait*<br/>
-Especifica el intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, lo que significa que intervalo de tiempo de espera del método nunca transcurre.
+Especifica el intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, lo que significa que el intervalo de tiempo de espera del método nunca transcurre.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Esta función estática dinámicamente calcula y devuelve el número máximo de subprocesos para el módulo ejecutable, en función del número de procesadores.|
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Esta función estática calcula y devuelve dinámicamente el número máximo de subprocesos para el módulo EXE, en función del número de procesadores.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva `CAtlAutoThreadModuleT` con el fin de implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso. Reemplaza a la clase obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+La clase [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva de `CAtlAutoThreadModuleT` para implementar un servidor com de modelo de apartamento y agrupado de subprocesos. Reemplaza la clase obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
 
 > [!NOTE]
->  Esta clase no debe usarse en un archivo DLL, como el valor predeterminado *dwWait* valor de infinito producirá un interbloqueo cuando se descarga el archivo DLL.
+> Esta clase no se debe usar en un archivo DLL, ya que el valor predeterminado de *dwWait* de Infinite producirá un interbloqueo cuando se descargue el archivo dll.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -65,27 +65,27 @@ La clase [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.m
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
-##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads
+## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads
 
-Esta función estática dinámicamente calcula y devuelve el número máximo de subprocesos para el módulo ejecutable, en función del número de procesadores.
+Esta función estática calcula y devuelve dinámicamente el número máximo de subprocesos para el módulo EXE, en función del número de procesadores.
 
-```
+```cpp
 static int GetDefaultThreads();
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de subprocesos que se creará en el módulo del archivo EXE.
+Número de subprocesos que se van a crear en el módulo EXE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Invalide este método si desea usar otro método para calcular el número de subprocesos. De forma predeterminada, el número de subprocesos se basa en el número de procesadores.
+Invalide este método si desea utilizar un método diferente para calcular el número de subprocesos. De forma predeterminada, el número de subprocesos se basa en el número de procesadores.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Clase IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
-[IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Clase IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Clases de módulo](../../atl/atl-module-classes.md)

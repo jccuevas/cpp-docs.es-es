@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C4603
 ms.assetid: f065994e-e3e5-4694-b868-c124472b3342
-ms.openlocfilehash: 6d5d5b1d2d959c8c2da87f1cad949895be7331b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a971325a7a05628d0d2ea0ca4526eccab9351433
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186029"
 ---
 # <a name="compiler-warning-level-1-c4603"></a>Advertencia del compilador (nivel 1) C4603
 
-'\<identificador >': no está definida la macro o definición es diferente después del uso del encabezado precompilado
+'\<identificador > ': no se ha definido la macro o la definición es diferente después del uso del encabezado precompilado
 
 La macro especificada por el marcador de posición *identificador* es diferente o ya no está definido después de usar el encabezado precompilado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Crear archivos de encabezado precompilados](../../build/reference/creating-precompiled-header-files.md)
+[Crear archivos de encabezado precompilados](../../build/creating-precompiled-header-files.md)

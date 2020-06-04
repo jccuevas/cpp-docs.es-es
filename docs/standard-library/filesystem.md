@@ -1,129 +1,135 @@
 ---
 title: '&lt;filesystem&gt;'
-ms.date: 11/04/2016
+description: Describe las clases, las funciones y los tipos del encabezado filesystem de la biblioteca C++ estándar.
+ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+no-loc:
+- filesystem
+- experimental
+- char
+- wchar_t
+- char16_t
+- char32_t
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473390"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076507"
 ---
-# <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
+# &lt;filesystem&gt;
 
-Incluya el encabezado &lt;filesystem> para tener acceso a las clases y funciones con las que se manipula y recupera información sobre las rutas de acceso, los archivos y los directorios.
+Incluya el encabezado &lt;filesystem> para el acceso a las clases y funciones que manipulan y recuperan información sobre rutas de acceso, archivos y directorios.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-#include <experimental/filesystem> // C++-standard header file name
-#include <filesystem> // Microsoft-specific implementation header file name
+#include <filesystem> // C++17 standard header file name
+#include <experimental/filesystem> // Header file for pre-standard implementation
 using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> A partir de la versión de Visual Studio 2017, el \<filesystem > encabezado aún no era un estándar de C++. Visual C++ 2017 implementa el borrador final del estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> En el lanzamiento de Visual Studio 2017, el encabezado \<filesystem> no era todavía un C++ estándar. C++en Visual Studio 2017 RTW implementa el último borrador estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100). Visual Studio 2017 versión 15,7 y versiones posteriores admiten el nuevo \<de C++ 17 filesystem> estándar.
+> Se trata de una implementación completamente nueva, incompatible con la versión de `std::experimental` anterior. Lo hizo necesario la compatibilidad con symlink, las correcciones de errores y los cambios en el comportamiento estándar requerido. Actualmente, incluido \<filesystem> proporciona el nuevo `std::filesystem` y el `std::experimental::filesystem`anterior. La inclusión de \<experimental/filesystem> solo proporciona la implementación de experimental anterior. La implementación de experimental se quitará en la próxima versión de lanzamiento de las bibliotecas.
 
-Este encabezado admite sistemas de archivos para uno de dos tipos amplios de sistemas operativos host: Microsoft Windows y Posix.
+Este encabezado admite sistemas de archivos para una de las dos clases generales de sistemas operativos host: Microsoft Windows y POSIX.
 
 Mientras que la mayoría de las funciones son comunes a ambos sistemas operativos, en este documento se identifican las diferencias. Por ejemplo:
 
-- Windows admite varios nombres de raíz, como c: o \\\network_name. Un sistema de archivos consta de un bosque de árboles, cada uno con su propio directorio raíz (por ejemplo, c:\ o \\\network_name\\), y cada uno con su propio directorio actual, para completar una ruta de acceso relativa (una que no es una ruta de acceso absoluta).
+- Windows admite varios nombres de raíz, como `c:` o `\\network_name`. Un sistema de archivos consta de un bosque de árboles, cada uno con su propio directorio raíz, como `c:\` o `\\network_name\`, y cada uno con su propio directorio actual, para completar un nombreruta relativo (uno que no es un nombreruta absoluto).
 
-- Posix admite un único árbol, sin nombre de raíz, el directorio raíz único / y un único directorio actual.
+- POSIX admite un único árbol, sin nombre de raíz, el directorio raíz único `/`y un único directorio actual.
 
 Otra diferencia importante es la representación nativa de rutas de acceso:
 
-- Windows usa una secuencia terminada en null de wchar_t, codificada como UTF-16 (uno o dos elementos para cada carácter).
+- Windows usa una secuencia terminada en NULL de **wchar_t** codificada como UTF-16 (uno o varios elementos para cada carácter).
 
-- Posix usa una secuencia terminada en null de char, codificada como UTF-8 (uno o varios elementos para cada carácter).
+- POSIX usa una secuencia terminada en NULL de **char** codificada como UTF-8 (uno o varios elementos para cada carácter).
 
-- Un objeto de ruta de acceso de clase almacena la ruta de acceso en forma nativa, pero admite la conversión sencilla entre esta forma almacenada y varias formas externas:
+- Un objeto de clase `path` almacena el nombreruta en forma nativa, pero admite la conversión sencilla entre esta forma almacenada y varias formas externas:
 
-- Una secuencia terminada en null de char, codificada según la preferencia del sistema operativo.
+  - Una secuencia terminada en NULL de **char** , codificada como favoreceda por el sistema operativo.
 
-- Una secuencia terminada en null de char, codificada como UTF-8.
+  - Una secuencia terminada en NULL de **char** codificada como UTF-8.
 
-- Una secuencia terminada en null de wchar_t, codificada según la preferencia del sistema operativo.
+  - Una secuencia terminada en NULL de **wchar_t** , codificada como favoreceda por el sistema operativo.
 
-- Una secuencia terminada en null de char16_t, codificada como UTF-16.
+  - Una secuencia terminada en NULL de **char16_t** codificada como UTF-16.
 
-- Una secuencia terminada en null de char32_t, codificada como UTF-32.
+  - Una secuencia terminada en NULL de **char32_t** codificada como UTF-32.
 
-Las interconversiones entre estas representaciones se realizan, según sea necesario, mediante el uso de una o varias facetas `codecvt`. Si no se designa un objeto de configuración regional específica, estas facetas se obtienen de la configuración regional global.
+  Las interconversiones entre estas representaciones se realizan, según sea necesario, mediante el uso de una o varias facetas `codecvt`. Si no se especifica ningún objeto de configuración regional específico, estas caras se obtienen de la configuración regional global.
 
 Otra diferencia es el detalle con el que cada sistema operativo permite especificar permisos de acceso a archivos o directorios:
 
-1. Windows registra si un archivo es de solo lectura o editable, un atributo que no tiene sentido en el caso de los directorios.
+- Windows registra si un archivo es de solo lectura o grabable, un atributo que no tiene ningún significado para los directorios.
 
-1. Posix registra si el propietario, el grupo del propietario o todos los usuarios pueden leer, editar o ejecutar un archivo (examinar si se trata de un directorio), además de algunos otros permisos.
+- POSIX registra si un archivo se puede leer, escribir o ejecutar (examinar, si se trata de un directorio). Además, si cada operación se permite para el propietario, el grupo del propietario o para todos los demás permisos.
 
-Un aspecto común a ambos sistemas es la estructura impuesta en una ruta de acceso una vez superado el nombre de raíz. Para la ruta de acceso c:/abc/xyz/def.ext:
+Un aspecto común a ambos sistemas es la estructura impuesta en una ruta de acceso una vez superado el nombre de raíz. En el `c:/abc/xyz/def.ext`pathname:
 
-- El nombre de raíz es c:.
+- El nombre de raíz es `c:`.
 
-- El directorio raíz es /.
+- El directorio raíz es `/`.
 
-- La ruta de acceso raíz es c:/.
+- La ruta de acceso raíz es `c:/`.
 
-- La ruta de acceso relativa es abc/xyz/def.ext.
+- La ruta de acceso relativa es `abc/xyz/def.ext`.
 
-- La ruta de acceso principal es c:/abc/xyz.
+- La ruta de acceso primaria es `c:/abc/xyz`.
 
-- El nombre de archivo es def.ext.
+- El nombre de archivo es `def.ext`.
 
-- La raíz es def.
+- El tallo es `def`.
 
-- La extensión es. ext.
+- La extensión es `.ext`.
 
-Una diferencia menor es el **separador preferido**, entre la secuencia de directorios de una ruta de acceso. Ambos sistemas operativos le permiten escribir una barra diagonal /, pero, en algunos contextos, Windows prefiere una barra diagonal inversa \\.
+Una diferencia menor es el separador preferido entre la secuencia de directorios de un nombreruta. Ambos sistemas operativos permiten escribir una barra diagonal `/`, pero en algunos contextos Windows prefiere una barra diagonal inversa `\`. La implementación almacena su separador preferido en el `preferred_separator` del miembro de datos en `path`.
 
-Por último, una característica importante de los objetos de ruta de acceso es que pueden usarse cada vez que se necesite un argumento filename en las clases definidas en el encabezado \<fstream>.
+Por último, los objetos `path` tienen una característica importante: puede usarlos siempre que se necesite un argumento FILENAME en las clases definidas en el encabezado [\<fstream >](fstream.md).
 
-Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).
+Para obtener más información y ejemplos de código, vea [navegación delC++sistema de archivos ()](../standard-library/file-system-navigation.md).
 
-## <a name="classes"></a>Clases
+## <a name="members"></a>Members
 
-|Name|Descripción|
-|----------|-----------------|
-|[directory_entry (Clase)](../standard-library/directory-entry-class.md)|Describe un objeto devuelto por un `directory_iterator` o `recursive_directory_iterator` y que contiene una ruta de acceso.|
-|[directory_iterator (Clase)](../standard-library/directory-iterator-class.md)|Describe un iterador de entrada que establece una secuencia por los nombres de archivo en un directorio de sistema de archivos.|
-|[filesystem_error (Clase)](../standard-library/filesystem-error-class.md)|Clase base para excepciones que se producen para notificar un desbordamiento de sistema de bajo nivel.|
-|[path (Clase)](../standard-library/path-class.md)|Define una clase que almacena un objeto de tipo de plantilla `String` adecuado para su uso como nombre de archivo.|
-|[recursive_directory_iterator (Clase)](../standard-library/recursive-directory-iterator-class.md)|Describe un iterador de entrada que establece una secuencia por los nombres de archivo en un directorio de sistema de archivos. El iterador también puede descender a subdirectorios.|
-|[file_status (Clase)](../standard-library/file-status-class.md)|Ajusta un `file_type`.|
+### <a name="classes"></a>Clases
 
-## <a name="structs"></a>Estructuras
+|||
+|-|-|
+|[directory_entry (clase)](../standard-library/directory-entry-class.md)|Describe un objeto devuelto por un `directory_iterator` o un `recursive_directory_iterator` y contiene un `path`.|
+|[directory_iterator (clase)](../standard-library/directory-iterator-class.md)|Describe un iterador de entrada que establece una secuencia por los nombres de archivo en un directorio de sistema de archivos.|
+|[filesystem_error (clase)](../standard-library/filesystem-error-class.md)|Clase base para excepciones que se producen para notificar un desbordamiento de sistema de bajo nivel.|
+|[Path (clase)](../standard-library/path-class.md)|Define una clase que almacena un objeto de tipo de plantilla `String` adecuado para su uso como nombre de archivo.|
+|[recursive_directory_iterator (clase)](../standard-library/recursive-directory-iterator-class.md)|Describe un iterador de entrada que establece una secuencia por los nombres de archivo en un directorio de sistema de archivos. El iterador también puede descender a subdirectorios.|
+|[file_status (clase)](../standard-library/file-status-class.md)|Ajusta un `file_type`.|
 
-|nombre|Descripción|
-|----------|-----------------|
-|[space_info (Estructura)](../standard-library/space-info-structure.md)|Contiene información sobre un volumen.|
+### <a name="structs"></a>Estructuras
 
-## <a name="functions"></a>Funciones
+|||
+|-|-|
+|[estructura de space_info](../standard-library/space-info-structure.md)|Contiene información sobre un volumen.|
 
-[\<filesystem> (Funciones)](../standard-library/filesystem-functions.md)
+## <a name="functions"></a>Functions
+
+[\<filesystemfunciones >](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>Operadores
 
-[\<filesystem> (Operadores)](../standard-library/filesystem-operators.md)
+[operadores de > de filesystemde \<](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>Enumeraciones
 
-|nombre|Descripción|
-|----------|-----------------|
-|[copy_options)](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
-|[copy_options)](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
+|||
+|-|-|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|
-|[Perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| Enumera las opciones de la función `permissions`. |
+|[perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

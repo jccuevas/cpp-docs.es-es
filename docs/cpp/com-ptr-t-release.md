@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: cf4cea35386d1f781d6d2946c1730ba2e18dacea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73de3c2d19063f0738b8b0a3c510ea520f58de0b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624049"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745056"
 ---
-# <a name="comptrtrelease"></a>_com_ptr_t::Release
+# <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
-Las llamadas del **versión** función miembro de `IUnknown` en el puntero de interfaz encapsulado.
+Llama **Release** a la `IUnknown` función miembro Release de en el puntero de interfaz encapsulado.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Release( );
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Las llamadas `IUnknown::Release` en el puntero de interfaz encapsulado y generar un `E_POINTER` error si este puntero de interfaz es NULL.
+Llama `IUnknown::Release` al puntero de interfaz `E_POINTER` encapsulado, generando un error si este puntero de interfaz es NULL.
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
 ## <a name="see-also"></a>Vea también
 
-[_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)
+[Clase _com_ptr_t](../cpp/com-ptr-t-class.md)

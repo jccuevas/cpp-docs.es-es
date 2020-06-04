@@ -1,5 +1,5 @@
 ---
-title: CComCriticalSection (clase)
+title: Clase CComCriticalSection
 ms.date: 11/04/2016
 f1_keywords:
 - CComCriticalSection
@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: ddd6c6a36c05d92d2f53bc4937826581942470dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3991d217fbc201bd428ed2522a5c4c25e074928
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491772"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327965"
 ---
-# <a name="ccomcriticalsection-class"></a>CComCriticalSection (clase)
+# <a name="ccomcriticalsection-class"></a>Clase CComCriticalSection
 
 Esta clase proporciona métodos para obtener y liberar la propiedad de un objeto de sección crítica.
 
@@ -34,38 +34,38 @@ class CComCriticalSection
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CComCriticalSection::CComCriticalSection](#ccomcriticalsection)|El constructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CComCriticalSection::Init](#init)|Crea e inicializa un objeto de sección crítica.|
+|[CComCriticalSection::Init](#init)|Crea e inicializa un objeto de sección crítico.|
 |[CComCriticalSection::Lock](#lock)|Obtiene la propiedad del objeto de sección crítica.|
 |[CComCriticalSection::Term](#term)|Libera los recursos del sistema utilizados por el objeto de sección crítica.|
 |[CComCriticalSection::Unlock](#unlock)|Libera la propiedad del objeto de sección crítica.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CComCriticalSection::m_sec](#m_sec)|Un objeto CRITICAL_SECTION.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CComCriticalSection` es similar a la clase [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), salvo que explícitamente se debe inicializar y liberar la sección crítica.
+`CComCriticalSection`es similar a la clase [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), excepto que debe inicializar y liberar explícitamente la sección crítica.
 
-Normalmente, se utiliza `CComCriticalSection` a través de la **typedef** nombre [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Este nombre hace referencia a `CComCriticalSection` cuando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) se está usando.
+Normalmente, se `CComCriticalSection` usa a través del nombre **typedef** [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Este nombre `CComCriticalSection` hace referencia cuando se usa [CComMultiThreadModel.](../../atl/reference/ccommultithreadmodel-class.md)
 
-Consulte [CComCritSecLock (clase)](../../atl/reference/ccomcritseclock-class.md) para una forma más segura de usar esta clase de llamar al `Lock` y `Unlock` directamente.
+Consulte [CComCritSecLock (clase)](../../atl/reference/ccomcritseclock-class.md) para obtener una `Lock` `Unlock` forma más segura de usar esta clase que llamar y directamente.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlcore.h
 
-##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection
+## <a name="ccomcriticalsectionccomcriticalsection"></a><a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection
 
 El constructor.
 
@@ -73,13 +73,13 @@ El constructor.
 CComCriticalSection() throw();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Establece el [m_sec](#m_sec) miembro de datos en NULL.
 
-##  <a name="init"></a>  CComCriticalSection::Init
+## <a name="ccomcriticalsectioninit"></a><a name="init"></a>CComCriticalSection::Init
 
-Llama a la función de Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), que inicializa el objeto de sección crítica contenido en el [m_sec](#m_sec) miembro de datos.
+Llama a la función [Win32 InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), que inicializa el objeto de sección crítica contenido en el [m_sec](#m_sec) miembro de datos.
 
 ```
 HRESULT Init() throw();
@@ -87,11 +87,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, E_OUTOFMEMORY o E_FAIL en caso de error.
+Devuelve S_OK en caso de éxito, E_OUTOFMEMORY o E_FAIL en caso de error.
 
-##  <a name="lock"></a>  CComCriticalSection::Lock
+## <a name="ccomcriticalsectionlock"></a><a name="lock"></a>CComCriticalSection::Lock
 
-Llama a la función de Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), que espera hasta que el subproceso puede tomar posesión del objeto de sección crítica contenida en el [m_sec](#m_sec) miembro de datos.
+Llama a la función [De32 EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), que espera hasta que el subproceso puede tomar la propiedad del objeto de sección crítica contenido en el [m_sec](#m_sec) miembro de datos.
 
 ```
 HRESULT Lock() throw();
@@ -99,23 +99,23 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, E_OUTOFMEMORY o E_FAIL en caso de error.
+Devuelve S_OK en caso de éxito, E_OUTOFMEMORY o E_FAIL en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-En primer lugar se debe inicializar el objeto de sección crítica con una llamada a la [Init](#init) método. Cuando el código protegido ha terminado de ejecutarse, el subproceso debe llamar a [Unlock](#unlock) para liberar la propiedad de la sección crítica.
+El objeto de sección crítica debe inicializarse primero con una llamada a la [Init](#init) método. Cuando el código protegido ha terminado de ejecutarse, el subproceso debe llamar a [Unlock](#unlock) para liberar la propiedad de la sección crítica.
 
-##  <a name="m_sec"></a>  CComCriticalSection::m_sec
+## <a name="ccomcriticalsectionm_sec"></a><a name="m_sec"></a>CComCriticalSection::m_sec
 
-Contiene un objeto de sección crítica que usen todas `CComCriticalSection` métodos.
+Contiene un objeto de sección `CComCriticalSection` crítico que se utiliza en todos los métodos.
 
 ```
 CRITICAL_SECTION m_sec;
 ```
 
-##  <a name="term"></a>  CComCriticalSection::Term
+## <a name="ccomcriticalsectionterm"></a><a name="term"></a>CComCriticalSection::Term
 
-Llama a la función de Win32 [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), que libera todos los recursos utilizados por el objeto de sección crítica contenido en el [m_sec](#m_sec) miembro de datos.
+Llama a la función [Win32 DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), que libera todos los recursos utilizados por el objeto de sección crítica contenido en el miembro de datos [m_sec.](#m_sec)
 
 ```
 HRESULT Term() throw();
@@ -125,13 +125,13 @@ HRESULT Term() throw();
 
 Devuelve S_OK.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Una vez `Term` se ha llamado, críticos sección ya no se puede usar para la sincronización.
+Una `Term` vez que se ha llamado, la sección crítica ya no se puede utilizar para la sincronización.
 
-##  <a name="unlock"></a>  CComCriticalSection::Unlock
+## <a name="ccomcriticalsectionunlock"></a><a name="unlock"></a>CComCriticalSection::Unlock
 
-Llama a la función de Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), lo que libera la propiedad del objeto de sección crítica contenida en el [m_sec](#m_sec) miembro de datos.
+Llama a la función [Win32 LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), que libera la propiedad del objeto de sección crítica contenido en el [m_sec](#m_sec) miembro de datos.
 
 ```
 HRESULT Unlock() throw();
@@ -141,12 +141,12 @@ HRESULT Unlock() throw();
 
 Devuelve S_OK.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener la propiedad en primer lugar, el subproceso debe llamar a la [bloqueo](#lock) método. Cada llamada a `Lock` requiere una llamada correspondiente a `Unlock` para liberar la propiedad de la sección crítica.
+Para obtener primero la propiedad, el subproceso debe llamar a la [Lock](#lock) método. Cada llamada `Lock` requiere una llamada `Unlock` correspondiente para liberar la propiedad de la sección crítica.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CComFakeCriticalSection (clase)](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
+[Clase CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
-[CComCritSecLock (clase)](../../atl/reference/ccomcritseclock-class.md)
+[Clase CComCritSecLock](../../atl/reference/ccomcritseclock-class.md)

@@ -1,9 +1,9 @@
 ---
 title: fwide
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwide
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwide
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: d992ebc527744beeb4ef14175e3f10646a77a064
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 652aee03bfb5504a51d74efb326cc7a3d7c28649
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557854"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171208"
 ---
 # <a name="fwide"></a>fwide
 
@@ -42,17 +45,17 @@ int fwide(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
-Puntero a **archivo** estructura (omitido).
+*stream*<br/>
+Puntero a la estructura de **archivo** (omitido).
 
 *mode*<br/>
 Nuevo ancho de la secuencia: positivo para carácter ancho, negativo para byte, cero para dejarlo sin cambios. (Este valor se omite).
 
 ## <a name="return-value"></a>Valor devuelto
 
-Actualmente, solo devuelve esta función *modo*.
+Esta función solo devuelve el *modo*.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La versión actual de esta función no cumple con el estándar.
 
@@ -62,4 +65,4 @@ La versión actual de esta función no cumple con el estándar.
 |--------------|---------------------|
 |**fwide**|\<wchar.h>|
 
-Para obtener más información, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).

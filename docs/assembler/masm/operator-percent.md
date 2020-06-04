@@ -1,6 +1,6 @@
 ---
 title: Operador %
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '%'
 - operator %
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - operator %
 - '% operator'
 ms.assetid: 7f07018e-b664-4655-aa93-9854eb271bbb
-ms.openlocfilehash: de759c3ac788c5c9c4037a3665c07f8a07a205f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52b7dd5e25e6aa2bfc0539588b34deab14199d36
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622786"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319078"
 ---
 # <a name="operator-"></a>Operador %
 
-Trata el valor de *expresión* en un argumento de la macro como texto.
+Trata el valor de *Expression* en un argumento de macro como texto.
 
 ## <a name="syntax"></a>Sintaxis
 
-> % *Expresión*
+> **%** *expresión* )
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

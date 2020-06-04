@@ -25,61 +25,60 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-ms.openlocfilehash: 26ea2cce8891d145740d2f91e06e15c2a1161566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ada1c801b2d9d62f1cc4cd5bf72a2995225b3de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513742"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364625"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Controles ActiveX de MFC: distribuir controles ActiveX
 
-En este artículo se describe varios problemas relacionados con redistribuir controles ActiveX:
+En este artículo se describen varios problemas relacionados con la redistribución de controles ActiveX:
 
-- [Versiones ANSI o Unicode de un Control](#_core_ansi_or_unicode_control_versions)
+- [Versiones de control ANSI o Unicode](#_core_ansi_or_unicode_control_versions)
 
-- [Instalar controles ActiveX y archivos DLL redistribuibles](#_core_installing_activex_controls_and_redistributable_dlls)
+- [Instalación de controles ActiveX y archivos DLL redistribuibles](#_core_installing_activex_controls_and_redistributable_dlls)
 
-- [Registrar controles](#_core_registering_controls)
+- [Registro de controles](#_core_registering_controls)
 
 >[!IMPORTANT]
-> ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que sustituyen a ActiveX, vea [controles ActiveX](activex-controls.md).
+> ActiveX es una tecnología heredada que no debe utilizarse para el nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que reemplazan a ActiveX, vea [Controles ActiveX](activex-controls.md).
 
-##  <a name="_core_ansi_or_unicode_control_versions"></a> Versiones ANSI o Unicode de un Control
+## <a name="ansi-or-unicode-control-versions"></a><a name="_core_ansi_or_unicode_control_versions"></a>Versiones de control ANSI o Unicode
 
-Debe decidir si se debe enviar una versión ANSI o Unicode del control, o ambos. Esta decisión se basa en factores de portabilidad inherentes en juegos de caracteres ANSI y Unicode.
+Debe decidir si desea enviar una versión ANSI o Unicode del control, o ambos. Esta decisión se basa en factores de portabilidad inherentes a los conjuntos de caracteres ANSI y Unicode.
 
-Controles de ANSI, que funcionan en todos los sistemas operativos de Win32, se permiten para la máxima portabilidad entre los distintos sistemas operativos de Win32. Los controles de Unicode funcionan en sólo Windows NT (versión 3.51 o versiones posterior), pero no en Windows 95 o Windows 98. Si la portabilidad es la principal preocupación, suministre controles ANSI. Si los controles se ejecutarán solo en Windows NT, se pueden enviar controles Unicode. También puede elegir enviar ambos y hacer que la aplicación se instale la versión más adecuada para el sistema operativo del usuario.
+Los controles ANSI, que funcionan en todos los sistemas operativos Win32, permiten la máxima portabilidad entre los distintos sistemas operativos Win32. Los controles Unicode solo funcionan en Windows NT (versión 3.51 o posterior), pero no en Windows 95 o Windows 98. Si la portabilidad es su principal preocupación, envíe los controles ANSI. Si los controles se ejecutarán solo en Windows NT, puede enviar controles Unicode. También puede optar por enviar ambos y hacer que la aplicación instale la versión más adecuada para el sistema operativo del usuario.
 
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Instalar controles ActiveX y archivos DLL redistribuibles
+## <a name="installing-activex-controls-and-redistributable-dlls"></a><a name="_core_installing_activex_controls_and_redistributable_dlls"></a>Instalación de controles ActiveX y archivos DLL redistribuibles
 
-El programa de instalación que proporcionan con los controles ActiveX debe crear un subdirectorio especial del directorio de Windows e instalar los controles. Archivos OCX en ella.
+El programa de instalación que proporcione con los controles ActiveX debe crear un subdirectorio especial del directorio de Windows e instalar los controles». OCX en él.
 
 > [!NOTE]
->  Usar el Windows `GetWindowsDirectory` API en el programa de instalación para obtener el nombre del directorio de Windows. Es posible que desee derivar el nombre del subdirectorio en el nombre de su empresa o producto.
+> Utilice la `GetWindowsDirectory` API de Windows en el programa de instalación para obtener el nombre del directorio de Windows. Es posible que desee derivar el nombre del subdirectorio del nombre de su empresa o producto.
 
-El programa de instalación debe instalar los archivos DLL redistribuibles necesarios en el directorio del sistema de Windows. Si cualquiera de los archivos DLL ya están presente en el equipo del usuario, el programa de instalación debe comparar sus versiones con las versiones que se va a instalar. Vuelva a instalar un archivo solo si su número de versión es mayor que el archivo ya está instalado.
+El programa de instalación debe instalar los archivos DLL redistribuibles necesarios en el directorio del sistema de Windows. Si alguno de los archivos DLL ya está presente en el equipo del usuario, el programa de instalación debe comparar sus versiones con las versiones que está instalando. Vuelva a instalar un archivo solo si su número de versión es mayor que el archivo ya instalado.
 
-Dado que los controles ActiveX se pueden usar únicamente en aplicaciones de contenedor OLE, no hay ninguna necesidad de distribuir el conjunto completo de las DLL OLE con los controles. Puede asumir que la aplicación contenedora (o el propio sistema operativo) tiene los archivos DLL de OLE instalados.
+Dado que los controles ActiveX solo se pueden usar en aplicaciones de contenedor OLE, no es necesario distribuir el conjunto completo de archivos DLL OLE con los controles. Puede suponer que la aplicación contenedora (o el propio sistema operativo) tiene instalados los archivos DLL OLE estándar.
 
-##  <a name="_core_registering_controls"></a> Registrar controles
+## <a name="registering-controls"></a><a name="_core_registering_controls"></a>Registro de controles
 
-Antes de que se puede usar un control, se deben crear las entradas apropiadas para él en la base de datos de registro de Windows. Algunos contenedores de controles ActiveX proporcionan un elemento de menú para los usuarios se registren los nuevos controles, pero esta característica puede no estar disponible en todos los contenedores. Por lo tanto, puede que el programa de instalación para registrar los controles cuando se instalan.
+Antes de que se pueda usar un control, se deben crear entradas adecuadas para él en la base de datos de registro de Windows. Algunos contenedores de controles ActiveX proporcionan un elemento de menú para que los usuarios registren nuevos controles, pero es posible que esta característica no esté disponible en todos los contenedores. Por lo tanto, es posible que desee que el programa de instalación registre los controles cuando se instalan.
 
-Si lo prefiere, puede escribir el programa de instalación para registrar el control directamente en su lugar.
+Si lo prefiere, puede escribir su programa de instalación para registrar el control directamente en su lugar.
 
-Use el `LoadLibrary` API de Windows para cargar la DLL del control. A continuación, use `GetProcAddress` para obtener la dirección de la función "DllRegisterServer". Por último, llame a la `DllRegisterServer` función. Ejemplo de código siguiente muestra un posible método donde `hLib` almacena el identificador de la biblioteca de controles, y `lpDllEntryPoint` almacena la dirección de la función "DllRegisterServer".
+Use `LoadLibrary` la API de Windows para cargar el archivo DLL de control. A continuación, se utiliza `GetProcAddress` para obtener la dirección de la función "DllRegisterServer". Por último, `DllRegisterServer` llame a la función. En el ejemplo de código siguiente `hLib` se muestra un método `lpDllEntryPoint` posible, donde almacena el identificador de la biblioteca de controles y almacena la dirección de la función "DllRegisterServer".
 
 [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]
 
-La ventaja de registrar el control directamente es que no deberá invocar y cargar un proceso independiente (es decir, REGSVR32), lo que reduce el tiempo de instalación. Además, dado que el registro es un proceso interno, el programa de instalación puede controlar los errores y situaciones imprevistas mejor que un proceso externo pueden.
+La ventaja de registrar el control directamente es que no es necesario invocar y cargar un proceso independiente (es decir, REGSVR32), lo que reduce el tiempo de instalación. Además, debido a que el registro es un proceso interno, el programa de instalación puede manejar errores y situaciones imprevistas mejor que un proceso externo.
 
 > [!NOTE]
->  Antes de que el programa de instalación instala un control ActiveX, debe llamar a `OleInitialize`. Cuando el programa de instalación haya finalizado, llame a `OleUnitialize`. Esto garantiza que la DLL del sistema OLE están en el estado apropiado para el registro de un control ActiveX.
+> Antes de que el programa de instalación `OleInitialize`instale un control ActiveX, debe llamar a . Cuando finalice el programa `OleUnitialize`de instalación, llame a . Esto garantiza que los archivos DLL del sistema OLE están en el estado adecuado para registrar un control ActiveX.
 
 Debe registrar MFCx0.DLL.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

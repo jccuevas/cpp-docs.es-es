@@ -5,20 +5,20 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: a27ef8e320f59464f15603c330346db86bc30aac
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f062c4fd0332525a8b8940d2d93df41df56d2baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373124"
 ---
-# <a name="ltunorderedmapgt-operators"></a>Operadores de &lt;unordered_map&gt;
+# <a name="ltunordered_mapgt-operators"></a>Operadores de &lt;unordered_map&gt;
 
 |||||
 |-|-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
+|[¡Operador!](#op_neq)|[operadora](#op_eq_eq)|[¡Operador!](#op_neq_multimap)|[operadora](#op_eq_eq_multimap)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>¡Operador!
 
 Comprueba si el objeto [unordered_map](../standard-library/unordered-map-class.md) del lado izquierdo del operador no es igual que el objeto unordered_map del lado derecho.
 
@@ -28,17 +28,17 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `unordered_map`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los unordered_map no son iguales; **false** si son iguales.
+**true** si los unordered_maps no son iguales; **falso** si son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos unordered_map no se ve afectada por el orden arbitrario en el que almacenan sus elementos. Dos unordered_map son iguales si tienen el mismo número de elementos y los elementos de un contenedor son una permutación de los elementos del otro contenedor. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -82,7 +82,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operadora
 
 Comprueba si el objeto [unordered_map](../standard-library/unordered-map-class.md) del lado izquierdo del operador es igual que el objeto unordered_map del lado derecho.
 
@@ -92,17 +92,17 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `unordered_map`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los unordered_map son iguales; **false** si no son iguales.
+**true** si los unordered_maps son iguales; **falso** si no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos unordered_map no se ve afectada por el orden arbitrario en el que almacenan sus elementos. Dos unordered_map son iguales si tienen el mismo número de elementos y los elementos de un contenedor son una permutación de los elementos del otro contenedor. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -138,7 +138,7 @@ int main( )
 }
 ```
 
-**Resultado:**
+**Salida:**
 
 `um1 == um2: false`
 
@@ -146,7 +146,7 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="op_neq_multimap"></a> operator!=
+## <a name="operator"></a><a name="op_neq_multimap"></a>¡Operador!
 
 Comprueba si el objeto [unordered_multimap](../standard-library/unordered-multimap-class.md) del lado izquierdo del operador no es igual que el objeto unordered_multimap del lado derecho.
 
@@ -156,17 +156,17 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `unordered_multimap`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los unordered_multimap no son iguales; **false** si son iguales.
+**true** si los unordered_multimaps no son iguales; **falso** si son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos unordered_multimap no se ve afectada por el orden arbitrario en el que almacenan sus elementos. Dos unordered_multimap son iguales si tienen el mismo número de elementos y los elementos de un contenedor son una permutación de los elementos del otro contenedor. De lo contrario, no son iguales.
 
@@ -211,7 +211,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq_multimap"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operadora
 
 Comprueba si el objeto [unordered_multimap](../standard-library/unordered-multimap-class.md) del lado izquierdo del operador es igual que el objeto unordered_multimap del lado derecho.
 
@@ -221,17 +221,17 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `unordered_multimap`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los unordered_multimap son iguales; **false** si no son iguales.
+**true** si los unordered_multimaps son iguales; **falso** si no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos unordered_multimap no se ve afectada por el orden arbitrario en el que almacenan sus elementos. Dos unordered_multimap son iguales si tienen el mismo número de elementos y los elementos de un contenedor son una permutación de los elementos del otro contenedor. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -276,6 +276,6 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

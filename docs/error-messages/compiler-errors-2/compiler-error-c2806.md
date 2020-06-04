@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2806
 ms.assetid: 7c9ff1f4-1590-4c47-991d-b1075a173b48
-ms.openlocfilehash: 1d37f5d1c6e253c01ae8a3b7640fb3ee4cf12534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be991d26cb822221051316f3557b23a2b82e732d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490381"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760626"
 ---
 # <a name="compiler-error-c2806"></a>Error del compilador C2806
 
-'operator operator' tiene demasiados parámetros formales
+' operator Operator ' tiene demasiados parámetros formales
 
 Un operador sobrecargado tiene demasiados parámetros.
 
-El ejemplo siguiente genera C2806:
+En el ejemplo siguiente se genera C2806:
 
-```
+```cpp
 // C2806.cpp
 // compile with: /c
 class X {

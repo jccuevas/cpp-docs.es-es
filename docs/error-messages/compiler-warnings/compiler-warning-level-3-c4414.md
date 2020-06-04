@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4414
 ms.assetid: bc81d3ad-55dc-4a6b-a6f2-ec0ef38347df
-ms.openlocfilehash: 0a9ceb332888e306b8cb3bcbe1832f773d02d63d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4625f6bdb4aa6fe86ca881a8e36e5673e55ccb87
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629819"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185599"
 ---
 # <a name="compiler-warning-level-3-c4414"></a>Advertencia del compilador (nivel 3) C4414
 
-'function': salto short a la función ha convertido en near
+' función ': salto corto a función convertida en near
 
-Los saltos short generan una instrucción compacta que se dirige a una dirección dentro de un intervalo limitado de la instrucción. La instrucción incluye un desplazamiento short que representa la distancia entre el salto y la dirección de destino, la definición de función. Durante la vinculación de una función puede ser mover o están sujetas a optimizaciones en tiempo de vínculo que consiguen que dicha función puede moverse fuera del intervalo alcanzable desde un desplazamiento short. El compilador debe generar un registro especial para el salto, que requiere la instrucción jmp NEAR o FAR. El compilador realiza la conversión.
+Los saltos cortos generan instrucciones compactas que se bifurcan en una dirección dentro de un intervalo limitado de la instrucción. La instrucción incluye un desplazamiento corto que representa la distancia entre el salto y la dirección de destino, la definición de función. Durante la vinculación, es posible que la función se mueva o esté sujeta a optimizaciones en tiempo de vínculo que hacen que la función se mueva fuera del intervalo accesible desde un desplazamiento corto. El compilador debe generar un registro especial para el salto, que requiere que la instrucción JMP esté cerca o lejos. El compilador realizó la conversión.
 
 Por ejemplo, el código siguiente genera C4414:
 
-```
+```cpp
 // C4414.cpp
 // compile with: /W3 /c
 // processor: x86

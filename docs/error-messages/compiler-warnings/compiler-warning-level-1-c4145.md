@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
-ms.openlocfilehash: 10c0211bfda354a00e05cba3131d047fce843df8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5028ae20c2413c98fa55bd81081552d22381cdbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553795"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163681"
 ---
 # <a name="compiler-warning-level-1-c4145"></a>Advertencia del compilador (nivel 1) C4145
 
@@ -23,7 +23,7 @@ Una instrucción `switch` utiliza una expresión relacional como su expresión d
 
 El ejemplo siguiente genera la advertencia C4145:
 
-```
+```cpp
 // C4145.cpp
 // compile with: /W1
 int main() {

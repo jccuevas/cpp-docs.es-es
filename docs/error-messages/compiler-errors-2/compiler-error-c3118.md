@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3118
 ms.assetid: 40fbe681-8868-4cb2-a2b2-4db4449319a7
-ms.openlocfilehash: 072bb821a9dc2547c9a2758fb1ca542bdbc66f86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 876b007ce7e537a8871147637188b10a100e997b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427409"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741123"
 ---
 # <a name="compiler-error-c3118"></a>Error del compilador C3118
 
-'interface': las interfaces no admiten la herencia virtual
+' interfaz ': las interfaces no admiten la herencia virtual
 
-Se intentó prácticamente heredar de una interfaz. Por ejemplo,
+Ha intentado heredar virtualmente de una interfaz. Por ejemplo,
 
-```
+```cpp
 // C3118.cpp
 __interface I1 {
 };

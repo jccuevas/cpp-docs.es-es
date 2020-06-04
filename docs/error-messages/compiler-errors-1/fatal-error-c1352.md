@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1352
 ms.assetid: d044e8b0-b6ef-4d57-8eb5-6254071be707
-ms.openlocfilehash: fbba87cea05d666d6dc3a385ca1fe52e143fdb5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07bd0f28e35dd2992ca537dbe744d756cc2afe80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648687"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203130"
 ---
 # <a name="fatal-error-c1352"></a>Error irrecuperable C1352
 

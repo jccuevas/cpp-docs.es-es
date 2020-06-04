@@ -1,24 +1,20 @@
 ---
-title: Tipos de valor (C++ moderno)
-ms.date: 11/04/2016
+title: Clases C++ como tipos de valor
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 1aabcad46e848e1a499a142adaba5002a829bbf5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220353"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246021"
 ---
-# <a name="value-types-modern-c"></a>Tipos de valor (C++ moderno)
+# <a name="c-classes-as-value-types"></a>Clases C++ como tipos de valor
 
-Las clases de C++ son tipos de valor predeterminado. En este tema se proporciona una introducción de tipos de valor y los problemas relacionados con su uso.
+C++las clases son de forma predeterminada tipos de valor. Se pueden especificar como tipos de referencia, lo que permite que el comportamiento polimórfico admita la programación orientada a objetos. A veces, los tipos de valor se ven desde la perspectiva de la memoria y el control de diseño, mientras que los tipos de referencia son acerca de las clases base y las funciones virtuales para propósitos polimórficos. De forma predeterminada, los tipos de valor se pueden copiar, lo que significa que siempre hay un constructor de copias y un operador de asignación de copia. En el caso de los tipos de referencia, hace que la clase sea no copiable (deshabilite el constructor de copias y el operador de asignación de copia) y use un destructor virtual, que admite el polimorfismo previsto. Los tipos de valor también son sobre el contenido, que, cuando se copian, siempre proporcionan dos valores independientes que se pueden modificar por separado. Tipos de referencia sobre identidad: ¿Qué tipo de objeto es? Por este motivo, los "tipos de referencia" también se conocen como "tipos polimórficos".
 
-## <a name="value-vs-reference-types"></a>Valor frente a tipos de referencia
-
-Como se mencionó anteriormente, las clases de C++ son tipos de valor predeterminado. Se pueden especificar como tipos de referencia, lo que permite un comportamiento polimórfico admitir la programación orientada a objetos. Tipos de valor a veces se ven desde la perspectiva de control de memoria y el diseño, mientras que son tipos de referencia acerca de las clases base y funciones virtuales fines polimórfico. De forma predeterminada, los tipos de valor son copiar, lo que significa que siempre hay un constructor de copias y un operador de asignación de copia. Tipos de referencia, hace que la clase no se puede copiar (deshabilitar el constructor de copias y un operador de asignación de copia) y usar un destructor virtual, que es compatible con su polimorfismo previsto. Tipos de valor están también relacionados con el contenido que, cuando se copian, siempre le ofrece dos valores independientes que se pueden modificar por separado. ¿Son tipos de referencia acerca de la identidad - el tipo de objeto es? Por este motivo, "tipos de referencia" también se conocen como "tipos polimórficos".
-
-Si desea realmente un tipo de referencia similar (clase base, las funciones virtuales), deberá deshabilitar explícitamente la copia, como se muestra en el `MyRefType` clase en el código siguiente.
+Si realmente desea un tipo de referencia (clase base, funciones virtuales), debe deshabilitar explícitamente la copia, como se muestra en la clase `MyRefType` en el código siguiente.
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -39,7 +35,7 @@ int main()
 }
 ```
 
-Compilar el código anterior dará como resultado el siguiente error:
+Al compilar el código anterior se producirá el siguiente error:
 
 ```Output
 test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private member declared in class 'MyRefType'
@@ -47,13 +43,13 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
         meow.cpp(3) : see declaration of 'MyRefType'
 ```
 
-## <a name="value-types-and-move-efficiency"></a>Tipos de valor y mover la eficacia
+## <a name="value-types-and-move-efficiency"></a>Tipos de valor y eficiencia de movimiento
 
-Se evita la sobrecarga de asignación de copia debido a optimizaciones de copia de nuevo. Por ejemplo, cuando se inserta una cadena en el medio de un vector de cadenas, no habrá ninguna sobrecarga de reasignación de copia, sólo un movimiento - incluso si da como resultado un aumento del vector propio. Esto se aplica también a otras operaciones, por ejemplo realizar una operación de agregar en dos objetos muy grandes. ¿Cómo habilitar estas optimizaciones de operación valor? En algunos compiladores de C++, el compilador habilitará esto por usted implícitamente, al igual que el compilador pueden generarse automáticamente constructores de copia. Sin embargo, en Visual C++, su clase necesitará "participar en" para mover la asignación y constructores declarándolo en la definición de clase. Esto se logra mediante el uso de la y comercial doble (& &) referencia rvalue del miembro adecuado de declaraciones y definición de constructor de movimiento de funciones y los métodos de asignación de desplazamiento.  También deberá insertar el código correcto para "robar las interioridades" fuera el objeto de origen.
+La sobrecarga de asignación de copia se evita debido a nuevas optimizaciones de copia. Por ejemplo, al insertar una cadena en medio de un vector de cadenas, no habrá ninguna sobrecarga de reasignación de copia, solo un movimiento, incluso si se produce un aumento del propio vector. Esto también se aplica a otras operaciones, por ejemplo, realizar una operación de agregar en dos objetos de gran tamaño. ¿Cómo se habilitan estas optimizaciones de operaciones de valores? En algunos C++ compiladores, el compilador lo habilitará de forma implícita, al igual que el compilador puede generar automáticamente los constructores de copia. Sin embargo, C++en, la clase deberá "participar" para trasladar la asignación y los constructores declarándolos en la definición de clase. Esto se logra mediante el uso de la referencia rvalue de comillas dobles (& &) en las declaraciones de función miembro apropiadas y la definición de los métodos de asignación y movimiento del constructor de movimiento.  También debe insertar el código correcto para "robar el Trip" del objeto de origen.
 
-¿Cómo se decide si necesita mover habilitado? Si ya sabe que necesita copiar construcción habilitado, probablemente desee mover habilitado si puede ser más barato que una copia en profundidad. Sin embargo, si sabe que necesita mover soporte técnico, no significa necesariamente que desea copia habilitado. Este último caso, se llama un "Mover tipo solo". Es un ejemplo ya está en la biblioteca estándar de `unique_ptr`. Como una nota al margen, la antigua `auto_ptr` está en desuso y se ha sustituido por `unique_ptr` debido precisamente a la falta de compatibilidad de la semántica de movimiento en la versión anterior de C++.
+¿Cómo se decide si se necesita el traslado habilitado? Si ya sabe que necesita la construcción de copias habilitada, es probable que desee habilitar el movimiento si puede ser más barato que una copia en profundidad. Sin embargo, si sabe que necesita la compatibilidad con Move, no significa necesariamente que desee que la copia esté habilitada. Este último caso se denominaría "tipo de solo movimiento". Un ejemplo que ya está en la biblioteca estándar es `unique_ptr`. Como nota lateral, el `auto_ptr` antiguo está en desuso y se ha reemplazado por `unique_ptr` precisamente debido a la falta de compatibilidad con la semántica de transferencia en la versión C++anterior de.
 
-Mediante el uso de la semántica de movimiento puede valor devuelto o insertar en medio. Movimiento es una optimización de copia. No hay necesidad de asignación del montón como solución alternativa. Considere el siguiente seudocódigo:
+Mediante el uso de la semántica de movimiento, puede devolver por valor o insertar en el medio. Move es una optimización de la copia. La asignación del montón es necesaria como solución alternativa. Considere el siguiente seudocódigo:
 
 ```cpp
 #include <set>
@@ -82,9 +78,9 @@ HugeMatrix operator+(      HugeMatrix&&,       HugeMatrix&&);
 hm5 = hm1+hm2+hm3+hm4+hm5;   // efficient, no extra copies
 ```
 
-### <a name="enabling-move-for-appropriate-value-types"></a>Habilitación de movimiento para los tipos de valor adecuado
+### <a name="enabling-move-for-appropriate-value-types"></a>Habilitar Move para tipos de valor adecuados
 
-Para una clase de valor similar a donde mover puede ser más barato que una copia en profundidad, permiten la construcción de movimiento y mover la asignación para mejorar la eficacia. Considere el siguiente seudocódigo:
+En el caso de una clase de valor, donde el movimiento puede ser más barato que una copia en profundidad, habilite la construcción de movimiento y la asignación de movimiento para mayor eficacia. Considere el siguiente seudocódigo:
 
 ```cpp
 #include <memory>
@@ -106,17 +102,13 @@ public:
 };
 ```
 
-Si habilita la construcción/asignación de copia, también habilitar construcción/asignación de movimiento si puede ser más barato que una copia en profundidad.
+Si habilita la construcción/asignación de copia, habilite también la construcción o asignación de movimiento si puede ser más barata que una copia en profundidad.
 
-Algunos *sin valor* tipos son de solo movimiento, por ejemplo, cuando no se puede clonar un recurso, sólo transferir la propiedad. Ejemplo: `unique_ptr`.
-
-## <a name="section"></a>Sección
-
-Contenido
+Algunos tipos *que no son de valor* son de solo movimiento, como cuando no se puede clonar un recurso, solo se transfiere la propiedad. Ejemplo: `unique_ptr`.
 
 ## <a name="see-also"></a>Vea también
 
-[Sistema de tipos de C++ (C++ moderno)](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++sistema de tipos](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Bienvenido de nuevo aC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,10 +1,11 @@
 ---
 title: perror, _wperror
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wperror
 - perror
-apilocation:
+- _o__wperror
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +17,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wperror
 - _tperror
@@ -30,14 +35,14 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474482"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919335"
 ---
-# <a name="perror-wperror"></a>perror, _wperror
+# <a name="perror-_wperror"></a>perror, _wperror
 
 Imprime un mensaje de error.
 
@@ -57,9 +62,11 @@ void _wperror(
 *message*<br/>
 Mensaje de cadena para imprimir.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **perror** función imprime un mensaje de error **stderr**. **_wperror** es una versión con caracteres anchos de **_perror**; el *mensaje* argumento **_wperror** es una cadena de caracteres anchos. **_wperror** y **_perror** se comportan exactamente igual.
+La función **perror** imprime un mensaje de error en **stderr**. **_wperror** es una versión con caracteres anchos de **_perror**; el argumento de *mensaje* para **_wperror** es una cadena de caracteres anchos. **_wperror** y **_perror** se comportan de manera idéntica.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -67,13 +74,13 @@ El **perror** función imprime un mensaje de error **stderr**. **_wperror** es u
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*mensaje* se imprime en primer lugar, seguido por un coma, a continuación, el mensaje de error del sistema de la última llamada a biblioteca que generó el error y, finalmente, por un carácter de nueva línea. Si *mensaje* es un puntero nulo o un puntero a una cadena nula, **perror** imprime el mensaje de error del sistema.
+primero se imprime el *mensaje* , seguido de un signo de dos puntos y, a continuación, el mensaje de error del sistema de la última llamada de biblioteca que generó el error y, por último, un carácter de nueva línea. Si el *mensaje* es un puntero nulo o un puntero a una cadena nula, el **perror** solo imprime el mensaje de error del sistema.
 
-El número de error se almacena en la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definida en ERRNO.H). Se obtiene acceso a los mensajes de error del sistema a través de la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que es una matriz de mensajes ordenados por número de error. **pError** imprime el mensaje de error adecuado mediante la **errno** valor como un índice en **_sys_errlist**. El valor de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se define como el número máximo de elementos de la **_sys_errlist** matriz.
+El número de error se almacena en la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definida en ERRNO.H). Se obtiene acceso a los mensajes de error del sistema a través de la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que es una matriz de mensajes ordenados por número de error. **perror** imprime el mensaje de error correspondiente usando el valor **errno** como índice para **_sys_errlist**. El valor de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se define como el número máximo de elementos de la matriz de **_sys_errlist** .
 
-Para obtener resultados precisos, llame a **perror** inmediatamente después de una rutina de biblioteca devuelva un error. En caso contrario, las llamadas subsiguientes pueden sobrescribir el **errno** valor.
+Para obtener resultados precisos, llame a **perror** inmediatamente después de que una rutina de biblioteca devuelva un error. De lo contrario, las llamadas subsiguientes pueden sobrescribir el valor **errno** .
 
-En el Windows del sistema operativo, algunas **errno** valores enumeran en ERRNO. H se usan. Estos valores están reservados para su uso en el sistema operativo UNIX. Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener una lista de **errno** valores utilizados por el sistema operativo Windows. **pError** imprime una cadena vacía para cualquier **errno** valor no utilizado por estas plataformas.
+En el sistema operativo Windows, algunos valores **errno** enumerados en errno. H no se usan. Estos valores están reservados para su uso en el sistema operativo UNIX. Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener una lista de los valores **errno** utilizados por el sistema operativo Windows. **perror** imprime una cadena vacía para cualquier valor **errno** no utilizado por estas plataformas.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,7 +89,7 @@ En el Windows del sistema operativo, algunas **errno** valores enumeran en ERRNO
 |**perror**|\<stdio.h> o \<stdlib.h>|
 |**_wperror**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -136,9 +143,9 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
 [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

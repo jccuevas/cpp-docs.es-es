@@ -1,9 +1,9 @@
 ---
 title: clock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clock
 helpviewer_keywords:
@@ -25,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 836d0c6448adb4c99a251a0e97aa642e30362dcb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492658"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939129"
 ---
 # <a name="clock"></a>clock
 
@@ -44,13 +47,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-El tiempo transcurrido desde la inicialización de CRT al principio del proceso, medido en **CLOCKS_PER_SEC** unidades por segundo. Si el tiempo transcurrido no está disponible o ha superado el tiempo máximo positivo que puede registrarse como un **clock_t** tipo, la función devuelve el valor `(clock_t)(-1)`.
+Tiempo transcurrido desde la inicialización de CRT al inicio del proceso, medido en unidades de **CLOCKS_PER_SEC** por segundo. Si el tiempo transcurrido no está disponible o ha superado el tiempo positivo máximo que se puede registrar como un tipo **clock_t** , la función devuelve `(clock_t)(-1)`el valor.
 
 ## <a name="remarks"></a>Comentarios
 
-El **reloj** función indica cuánto tiempo de reloj transcurrido desde que la inicialización de CRT durante el inicio del proceso. Tenga en cuenta que esta función no se ajusta estrictamente a ISO C, que especifica el tiempo de CPU neto como el valor devuelto. Para obtener tiempos de CPU, use la función [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) de Win32. Para determinar el tiempo transcurrido en segundos, divida el valor devuelto por la **reloj** función mediante la macro **CLOCKS_PER_SEC**.
+La función **Clock** indica la cantidad de tiempo de reloj que ha transcurrido desde la inicialización de CRT durante el inicio del proceso. Tenga en cuenta que esta función no se ajusta estrictamente a ISO C, que especifica el tiempo de CPU neto como el valor devuelto. Para obtener tiempos de CPU, use la función [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) de Win32. Para determinar el tiempo transcurrido en segundos, divida el valor devuelto por la función **Clock** por la macro **CLOCKS_PER_SEC**.
 
-Con el tiempo suficiente, el valor devuelto por **reloj** puede superar el valor positivo máximo de **clock_t**. Cuando el proceso ha ejecutado más tiempo, el valor devuelto por **reloj** siempre `(clock_t)(-1)`, tal y como especifica el estándar ISO C99 (7.23.2.1) y el estándar ISO C11 (7.27.2.1). Microsoft implementa **clock_t** como un **largo**, un entero de 32 bits con signo y el **CLOCKS_PER_SEC** macro se define como 1000. Esto proporciona un máximo **reloj** función de valor devuelto de 2.147.483,647 segundos o aproximadamente 24,8 días. No confíe en el valor devuelto por **reloj** en procesos que se han ejecutado durante más tiempo que esta cantidad de tiempo. Puede usar el modo de 64 bits [tiempo](time-time32-time64.md) función o el Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) función a los tiempos transcurridos de proceso de registro de muchos años.
+Dado el tiempo suficiente, el valor devuelto por **Clock** puede superar el valor positivo máximo de **clock_t**. Cuando el proceso se ha ejecutado durante más tiempo, el valor devuelto `(clock_t)(-1)`por Clock siempre es, tal y como especifica el estándar ISO C99 (7.23.2.1) y el estándar ISO C11 (7.27.2.1). Microsoft implementa **clock_t** como **Long**, un entero de 32 bits con signo y la macro **CLOCKS_PER_SEC** se define como 1000. Esto proporciona un valor devuelto de la función de **reloj** máximo de 2147483,647 segundos o aproximadamente 24,8 días. No confíe en el valor devuelto por **Clock** en los procesos que se han ejecutado durante más tiempo que esta cantidad de tiempo. Puede usar la función de [tiempo](time-time32-time64.md) de 64 bits o la función [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) de Windows para registrar los tiempos transcurridos en el proceso de muchos años.
 
 ## <a name="requirements"></a>Requisitos
 

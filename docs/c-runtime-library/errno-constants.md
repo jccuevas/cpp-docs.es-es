@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
-ms.translationtype: HT
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220613"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898744"
 ---
 # <a name="errno-constants"></a>errno (Constantes)
 
@@ -56,7 +56,7 @@ ms.locfileid: "54220613"
 #include <errno.h>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Los valores **errno** son constantes asignadas a [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) en caso de diversas condiciones de error.
 
@@ -78,7 +78,7 @@ Se admiten los siguientes valores **errno**:
 |**EEXIST**|Existen archivos. Se intentó crear un archivo que ya existe. Por ejemplo, las marcas **_O_CREAT** y **_O_EXCL** se especifican en una llamada **_open**, pero el archivo especificado ya existe.|
 |**EILSEQ**|Secuencia no válida de bytes (por ejemplo, en una cadena de MBCS).|
 |**EINVAL**|Argumento no válido. Se asignó un valor no válido para uno de los argumentos a una función. Por ejemplo, el valor proporcionado para el origen al colocar un puntero de archivo (mediante una llamada a **fseek**) está antes del comienzo del archivo.|
-|**EMFILE**|Demasiados archivos abiertos. No hay más descriptores de archivo disponibles, por lo que no se pueden abrir más archivos.|
+|**EMFILE**|demasiados archivos abiertos. No hay más descriptores de archivo disponibles, por lo que no se pueden abrir más archivos.|
 |**ENOENT**|No existe ese archivo o directorio. El archivo o directorio especificado no existe o no se encuentra. Este mensaje puede aparecer cuando un archivo especificado no existe o un componente de una ruta de acceso no especifica un directorio existente.|
 |**ENOEXEC**|Error de formato exec. Se intentó ejecutar un archivo que no es ejecutable o que tiene un formato de archivo ejecutable no válido.|
 |**ENOMEM**|Memoria central insuficiente. No hay suficiente memoria disponible para el operador con el que se ha realizado el intento. Por ejemplo, este mensaje puede producirse cuando no hay suficiente memoria disponible para ejecutar un proceso secundario o cuando no se puede atender la solicitud de asignación de una llamada **_getcwd**.|
@@ -87,7 +87,7 @@ Se admiten los siguientes valores **errno**:
 |**EXDEV**|Vínculo de dispositivo cruzado. Se ha intentado mover un archivo a otro dispositivo (mediante la función **rename** ).|
 |**STRUNCATE**|Una copia de la cadena o una concatenación generó una cadena truncada. Vea [_TRUNCATE](../c-runtime-library/truncate.md).
 
-Se admiten los siguientes valores para la compatibilidad con Posix. Son los valores necesarios en los sistemas que no son Posix.
+Los valores siguientes se admiten por compatibilidad con POSIX. Son valores obligatorios en sistemas que no son POSIX.
 
 ```C
 #define E2BIG /* argument list too long */

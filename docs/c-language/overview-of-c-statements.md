@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147053"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857078"
 ---
 # <a name="overview-of-c-statements"></a>Información general sobre las instrucciones de C
 
@@ -33,11 +33,11 @@ Las instrucciones de C se componen de tokens, expresiones y otras instrucciones.
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-statement](../c-language/try-except-statement-c.md)
+[try-except-statement](../c-language/try-except-statement-c.md) /* Específico de Microsoft \*/
 
-/* Específico de Microsoft \*/[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Específico de Microsoft \*/
+[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Específico de Microsoft \*/
 
-Con frecuencia, el cuerpo de la instrucción es una "instrucción compuesta". Una instrucción compuesta consta de otras instrucciones que pueden incluir palabras clave. La instrucción compuesta está delimitada por llaves (**{ }**). El resto de las instrucciones de C finalizan con un punto y coma (**;**). El punto y coma es un terminador de instrucciones.
+Con frecuencia, el cuerpo de la instrucción es una "instrucción compuesta". Una instrucción compuesta consta de otras instrucciones que pueden incluir palabras clave. La instrucción compuesta está delimitada por llaves ( **{ }** ). El resto de las instrucciones de C finalizan con un punto y coma ( **;** ). El punto y coma es un terminador de instrucciones.
 
 La instrucción de expresión contiene una expresión de C que puede contener los operadores aritméticos o lógicos que se presentan en [Expresiones y asignaciones](../c-language/expressions-and-assignments.md). La instrucción nula es una instrucción vacía.
 

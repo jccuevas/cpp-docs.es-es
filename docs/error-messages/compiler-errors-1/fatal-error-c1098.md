@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1098
 ms.assetid: 09a1a14b-95bd-49db-b644-192efbaf9f45
-ms.openlocfilehash: 58a511c6f4e311674491db6a4446ee56ff6cdfa6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe953049e1c39ce6ef949a1e42f8a288445a231d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502558"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203869"
 ---
 # <a name="fatal-error-c1098"></a>Error irrecuperable C1098
 

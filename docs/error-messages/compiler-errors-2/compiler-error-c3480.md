@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3480
 ms.assetid: 7b2e055a-9604-4d13-861b-b38bda1a6940
-ms.openlocfilehash: b856f607d764ac0a42781a80787663d965748317
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 255fb12d587a94aac798814736f0b26770f608b0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626907"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760483"
 ---
 # <a name="compiler-error-c3480"></a>Error del compilador C3480
 
@@ -27,7 +27,7 @@ La variable de captura lambda no pertenece al ámbito de una función de inclusi
 
 El ejemplo siguiente genera el error C3480 porque la variable `global` no pertenece al ámbito de una función de inclusión:
 
-```
+```cpp
 // C3480a.cpp
 
 int global = 0;
@@ -41,7 +41,7 @@ int main()
 
 En el ejemplo siguiente se resuelve C3480 quitando la variable `global` de la lista de captura de la expresión lambda:
 
-```
+```cpp
 // C3480b.cpp
 
 int global = 0;

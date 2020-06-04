@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: 032b2cb39d75c108239d882039f7c797a357a6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358869"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Ejemplo de contención de documentos activos: Cuaderno de Office
 
@@ -31,4 +31,3 @@ Por supuesto, hay otros tipos de contenedores, además de los cuadernos. Explora
 ## <a name="see-also"></a>Vea también
 
 [Contención de documentos activos](../mfc/active-document-containment.md)
-

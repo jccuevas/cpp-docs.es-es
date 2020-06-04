@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 460f79fe0f23643fafcebb64aecf2988bdb0debe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580276"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376581"
 ---
-# <a name="submatch-class"></a>sub_match (Clase)
+# <a name="sub_match-class"></a>sub_match (Clase)
 
 Describe a una subcoincidencia.
 
@@ -41,12 +41,12 @@ class sub_match
 
 ## <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 El tipo de iterador para subcoincidencias.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase de plantilla describe un objeto que designa una secuencia de caracteres que coinciden con un grupo de capturas en una llamada a [regex_match](../standard-library/regex-functions.md#regex_match) o [regex_search](../standard-library/regex-functions.md#regex_search). Los objetos del tipo [match_results (clase)](../standard-library/match-results-class.md) contienen una matriz de estos objetos, uno para cada grupo de capturas en la expresión regular usada en la búsqueda.
+La plantilla de clase describe un objeto que designa una secuencia de caracteres que coincide con un grupo de captura en una llamada a [regex_match](../standard-library/regex-functions.md#regex_match) o para [regex_search](../standard-library/regex-functions.md#regex_search). Los objetos del tipo [match_results (clase)](../standard-library/match-results-class.md) contienen una matriz de estos objetos, uno para cada grupo de capturas en la expresión regular usada en la búsqueda.
 
 Si no hay coincidencia con el grupo de capturas, el miembro de datos `matched` del objeto se considera false y los dos iteradores `first` y `second` (heredados de la base `std::pair`) son iguales. Si hay coincidencia con el grupo de capturas, `matched` es true, el iterador `first` apunta al primer carácter de la secuencia de destino que coincide con el grupo de capturas y el iterador `second` apunta a una posición más allá del último carácter de la secuencia de destino que coincide con el grupo de capturas. Observe que para una coincidencia de longitud cero, el miembro `matched` es true, los dos iteradores son iguales y ambos apuntan a la posición de la coincidencia.
 
@@ -58,26 +58,26 @@ Una coincidencia de longitud cero puede aparecer cuando un grupo de capturas sol
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[difference_type](#difference_type)|El tipo de diferencia de un iterador.|
-|[iterator](#iterator)|Tipo de un iterador.|
+|[Iterador](#iterator)|Tipo de un iterador.|
 |[value_type](#value_type)|El tipo de un elemento.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
-|[compare](#compare)|Comparar la subcoincidencia con una secuencia.|
+|[Comparar](#compare)|Comparar la subcoincidencia con una secuencia.|
 |[length](#length)|Devuelve la longitud de una subcoincidencia.|
-|[coincide con](#matched)|Indica si la coincidencia se realizó correctamente.|
-|[str](#str)|Convierte la subcoincidencia a una cadena.|
+|[Emparejado](#matched)|Indica si la coincidencia se realizó correctamente.|
+|[Str](#str)|Convierte la subcoincidencia a una cadena.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operator|Descripción|
 |-|-|
-|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Convierte la subcoincidencia en una cadena.|
+|[value_type><value_type basic_string operador](#op_basic_string_lt_value_type_gt)|Convierte la subcoincidencia en una cadena.|
 
 ## <a name="example"></a>Ejemplo
 
@@ -137,7 +137,7 @@ compare(sub) == 0
 
 **Espacio de nombres:** std
 
-## <a name="compare"></a>  sub_match::compare
+## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match::comparar
 
 Comparar la subcoincidencia con una secuencia.
 
@@ -149,16 +149,16 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*Correcto*\
 Subcoincidencia con la que se va comparar.
 
-*str*<br/>
+*Str*\
 Cadena con la que se va a comparar.
 
-*ptr*<br/>
+*Ptr*\
 La secuencia terminada en un valor nulo con la que se va a comparar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La primera función miembro compara la secuencia coincidente `[first, second)` con la secuencia coincidente `[right.first, right.second)`. La segunda función miembro compara la secuencia coincidente `[first, second)` con la secuencia de caracteres `[right.begin(), right.end())`. La tercera función miembro compara la secuencia coincidente `[first, second)` con la secuencia de caracteres `[right, right + std::char_traits<value_type>::length(right))`.
 
@@ -170,7 +170,7 @@ cero si los dos son iguales elemento a elemento y tienen la misma longitud
 
 un valor positivo en caso contrario
 
-## <a name="difference_type"></a>  sub_match::difference_type
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::difference_type
 
 El tipo de diferencia de un iterador.
 
@@ -178,11 +178,11 @@ El tipo de diferencia de un iterador.
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La definición de tipo es un sinónimo de `iterator_traits<BidIt>::difference_type`.
 
-## <a name="iterator"></a>  sub_match::iterator
+## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match::iterator
 
 Tipo de un iterador.
 
@@ -190,11 +190,11 @@ Tipo de un iterador.
 typedef BidIt iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del argumento de tipo de plantilla `Bidit`.
 
-## <a name="length"></a>  sub_match::length
+## <a name="sub_matchlength"></a><a name="length"></a>sub_match::longitud
 
 Devuelve la longitud de una subcoincidencia.
 
@@ -202,11 +202,11 @@ Devuelve la longitud de una subcoincidencia.
 difference_type length() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve la longitud de la secuencia coincidente, o cero si no se ha producido ninguna secuencia coincidente.
 
-## <a name="matched"></a>  sub_match::matched
+## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match::matched
 
 Indica si la coincidencia se realizó correctamente.
 
@@ -214,11 +214,11 @@ Indica si la coincidencia se realizó correctamente.
 bool matched;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El miembro contiene **true** sólo si el grupo de capturas asociado `*this` formaba parte de la coincidencia de expresión regular.
+El miembro solo es **true** si `*this` el grupo de captura asociado formaba parte de la coincidencia de expresiones regulares.
 
-## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match::operador&lt;basic_string value_type&gt;
 
 Convierte la subcoincidencia en una cadena.
 
@@ -226,11 +226,11 @@ Convierte la subcoincidencia en una cadena.
 operator basic_string<value_type>() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El operador miembro devuelve `str()`.
 
-## <a name="str"></a>  sub_match::str
+## <a name="sub_matchstr"></a><a name="str"></a>sub_match::str
 
 Convierte la subcoincidencia a una cadena.
 
@@ -238,11 +238,11 @@ Convierte la subcoincidencia a una cadena.
 basic_string<value_type> str() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve `basic_string<value_type>(first, second)`.
 
-## <a name="value_type"></a>  sub_match::value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match::value_type
 
 El tipo de un elemento.
 
@@ -250,11 +250,11 @@ El tipo de un elemento.
 typedef typename iterator_traits<BidIt>::value_type value_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La definición de tipo es un sinónimo de `iterator_traits<BidIt>::value_type`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

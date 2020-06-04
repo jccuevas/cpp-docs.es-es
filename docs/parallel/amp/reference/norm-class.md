@@ -2,48 +2,47 @@
 title: norm (Clase)
 ms.date: 11/04/2016
 f1_keywords:
-- norm
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 2d37dcb430be9941444a90ac0a4ba34f3ee30515
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5740f33dea6aad79770f77f179803023432248a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630768"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447526"
 ---
 # <a name="norm-class"></a>norm (Clase)
 
-Representa un número de la norma. Cada elemento flotante es un número de punto en el intervalo de [-1, 0F, 1, 0F].
+Representa un número de norma. Cada elemento es un número de punto flotante en el intervalo de [-1,0 f, 1.0 f].
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class norm;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[NORM Constructor](#ctor)|Sobrecargado. Constructor predeterminado. Inicializar en 0, 0f.|
+|[norma (constructor)](#ctor)|Sobrecargado. Constructor predeterminado. Inicializar en 0.0 f.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|NORM::operator-||
-|NORM::operator--||
-|NORM::operator float|Operador de conversión. Convertir el número de la norma en flotante valor de punto.|
-|NORM::operator * =||
-|NORM::operator / =||
-|NORM::operator ++||
-|NORM::operator +=||
-|NORM::operator =||
-|NORM::operator =||
+|norm::operator-||
+|norm::operator--||
+|norma:: Operator Float|Operador de conversión. Convierta el número de norma en un valor de punto flotante.|
+|norm::operator*=||
+|norm::operator/=||
+|norma:: Operator + +||
+|norm::operator+=||
+|norm::operator=||
+|norm::operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -51,15 +50,15 @@ class norm;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> NORM
+## <a name="ctor"></a>norma
 
-Constructor predeterminado. Inicializar en 0, 0f.
+Constructor predeterminado. Inicializar en 0.0 f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -92,11 +91,11 @@ norm(
 ### <a name="parameters"></a>Parámetros
 
 *_V*<br/>
-El valor utilizado para inicializar.
+Valor que se usa para inicializar.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

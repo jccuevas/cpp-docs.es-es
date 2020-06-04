@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
-ms.openlocfilehash: e5f03d644ab6c25b7eb0da0dc1684c7de5c2e6a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 585823c2114befa3e6d432e3cf8100fa14ed1a7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176733"
 ---
 # <a name="compiler-error-c2989"></a>Error del compilador C2989
 
-'class': tipo de clase ya se ha declarado como un tipo que no son de clase
+' Class ': el tipo de clase ya se ha declarado como un tipo que no es de clase
 
-La clase genérica o plantilla vuelve a definir una clase que no son de plantilla o genérica. Compruebe los archivos de encabezado de conflictos.
+La clase genérica o plantilla redefine una clase no genérica o no de plantilla. Compruebe si hay conflictos en los archivos de encabezado.
 
-El ejemplo siguiente genera C2989:
+En el ejemplo siguiente se genera C2989:
 
 ```cpp
 // C2989.cpp
@@ -31,7 +31,7 @@ class C{};  // C2989
 class C2{};
 ```
 
-C2989 también puede producirse al usar genéricos:
+C2989 también puede producirse cuando se usan genéricos:
 
 ```cpp
 // C2989b.cpp

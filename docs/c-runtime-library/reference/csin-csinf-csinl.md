@@ -1,11 +1,11 @@
 ---
 title: csin, csinf, csinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csin
 - csinf
 - csinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csin
 - csinf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633498"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941985"
 ---
 # <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
@@ -68,17 +71,17 @@ Número complejo que representa un ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El seno de *z*, en radianes.
+Seno de *z*, en radianes.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **csin** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **csin** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **CSIN** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **CSIN** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
+|**csin**,               **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

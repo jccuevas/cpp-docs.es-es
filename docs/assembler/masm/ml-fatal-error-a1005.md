@@ -1,27 +1,27 @@
 ---
 title: Error irrecuperable A1005 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A1005
 helpviewer_keywords:
 - A1005
 ms.assetid: 42c7a6c5-277d-417c-acc1-d84c370e8d24
-ms.openlocfilehash: 2a2771d2e09856470eca184d3b00e0633214f931
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dd64d5bc9fdd0ea6d9c53a425ba922a81df6193
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520331"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313150"
 ---
 # <a name="ml-fatal-error-a1005"></a>Error irrecuperable A1005 de ML
 
-**límite del ensamblador: tabla de nombres de parámetro de macro completa**
+**límite de ensamblador: tabla de nombres de parámetro de macro completa**
 
-Hay demasiados parámetros, variables locales o etiquetas de macro se han definido para una macro. No se produjo ningún más espacio en la tabla de nombres de macro.
+Se definieron demasiados parámetros, variables locales o etiquetas de macro para una macro. No había más espacio en la tabla nombre de macro.
 
-Definir más corta o menos nombres ni quitar innecesarios macros.
+Defina más cortos o menos nombres o quite macros innecesarias.
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

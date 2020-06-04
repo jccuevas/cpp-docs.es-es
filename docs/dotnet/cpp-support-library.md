@@ -7,16 +7,16 @@ helpviewer_keywords:
 - C++ Support Library
 - Visual C++ Support Library
 ms.assetid: fe6246eb-9ac7-478d-a272-dc9b09b14788
-ms.openlocfilehash: 88b7112962e003d825bac85112224130b5827b9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6fb61eb871df91dd7fe308c7f9ab103f8a7a915
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575440"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208867"
 ---
 # <a name="c-support-library"></a>Biblioteca de compatibilidad de C++
 
-C++ Support Library proporciona clases que admiten la programación administrada en C++.
+La C++ biblioteca de compatibilidad proporciona clases que admiten la C++programación administrada en.
 
 ## <a name="in-this-section"></a>En esta sección
 

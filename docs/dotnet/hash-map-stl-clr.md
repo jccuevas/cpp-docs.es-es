@@ -99,16 +99,16 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
-ms.openlocfilehash: fb7db25785d041786f5dfc0d2c3986a76d776d5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d87444fe5a62bac30d62cd7e44dfba7934083ef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658515"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208746"
 ---
-# <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
+# <a name="hash_map-stlclr"></a>hash_map (STL/CLR)
 
-La clase de plantilla describe un objeto que controla una secuencia de elementos de longitud variable que tiene acceso bidireccional. Usar el contenedor `hash_map` para administrar una secuencia de elementos como una tabla hash, cada entrada de la tabla almacenar un bidireccional vinculado lista de nodos y cada nodo almacenar un elemento. Un elemento consta de una clave, para ordenar la secuencia y un valor asignado que va a lo largo de la carrera.
+La clase de plantilla describe un objeto que controla una secuencia de elementos de longitud variable que tiene acceso bidireccional. Use el `hash_map` de contenedor para administrar una secuencia de elementos como una tabla hash, cada entrada de tabla que almacena una lista de nodos vinculada bidireccional y cada nodo que almacena un elemento. Un elemento se compone de una clave, para ordenar la secuencia y un valor asignado, que va junto a la conducción.
 
 En la descripción siguiente, `GValue` es igual que:
 
@@ -116,9 +116,9 @@ En la descripción siguiente, `GValue` es igual que:
 
 donde:
 
-`GKey` es el mismo que `Key` a menos que este último es un tipo de referencia, en cuyo caso es `Key^`
+`GKey` es igual que `Key` a menos que la segunda sea un tipo de referencia, en cuyo caso se `Key^`
 
-`GMapped` es el mismo que `Mapped` a menos que este último es un tipo de referencia, en cuyo caso es `Mapped^`
+`GMapped` es igual que `Mapped` a menos que la segunda sea un tipo de referencia, en cuyo caso se `Mapped^`
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -140,17 +140,17 @@ template<typename Key,
 
 ### <a name="parameters"></a>Parámetros
 
-*Key*<br/>
-El tipo del componente clave de un elemento de la secuencia controlada.
+*Clave*<br/>
+Tipo del componente clave de un elemento en la secuencia controlada.
 
-*Asignado*<br/>
-El tipo del componente adicional de un elemento de la secuencia controlada.
+*Les*<br/>
+Tipo del componente adicional de un elemento en la secuencia controlada.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<cliext/hash_map >
+**Encabezado:** \<cliext (/hash_map >
 
-**Namespace:** cliext
+**Espacio de nombres:** cliext (
 
 ## <a name="declarations"></a>Declaraciones
 
@@ -159,19 +159,19 @@ El tipo del componente adicional de un elemento de la secuencia controlada.
 |[hash_map::const_iterator (STL/CLR)](#const_iterator)|El tipo de un iterador constante para la secuencia controlada.|
 |[hash_map::const_reference (STL/CLR)](#const_reference)|El tipo de una referencia constante a un elemento.|
 |[hash_map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|El tipo de un iterador invertido constante para la secuencia controlada.|
-|[hash_map::difference_type (STL/CLR)](#difference_type)|El tipo de una distancia entre dos elementos (posiblemente con signo).|
-|[hash_map::generic_container (STL/CLR)](#generic_container)|El tipo de la interfaz genérica para el contenedor.|
-|[hash_map::generic_iterator (STL/CLR)](#generic_iterator)|El tipo de iterador para la interfaz genérica para el contenedor.|
-|[hash_map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|El tipo de un iterador inverso de la interfaz genérica para el contenedor.|
-|[hash_map::generic_value (STL/CLR)](#generic_value)|El tipo de un elemento de la interfaz genérica para el contenedor.|
-|[hash_map::hasher (STL/CLR)](#hasher)|El delegado de hash para una clave.|
+|[hash_map::difference_type (STL/CLR)](#difference_type)|El tipo de una distancia (posiblemente firmada) entre dos elementos.|
+|[hash_map::generic_container (STL/CLR)](#generic_container)|Tipo de la interfaz genérica para el contenedor.|
+|[hash_map::generic_iterator (STL/CLR)](#generic_iterator)|El tipo de un iterador para la interfaz genérica del contenedor.|
+|[hash_map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|El tipo de un iterador inverso para la interfaz genérica del contenedor.|
+|[hash_map::generic_value (STL/CLR)](#generic_value)|Tipo de un elemento de la interfaz genérica para el contenedor.|
+|[hash_map::hasher (STL/CLR)](#hasher)|Delegado de hash para una clave.|
 |[hash_map::iterator (STL/CLR)](#iterator)|El tipo de un iterador para la secuencia controlada.|
 |[hash_map::key_compare (STL/CLR)](#key_compare)|Delegado de ordenación para dos claves.|
 |[hash_map::key_type (STL/CLR)](#key_type)|El tipo de una clave de ordenación.|
-|[hash_map::mapped_type (STL/CLR)](#mapped_type)|El tipo del valor asignado asociado a cada clave.|
+|[hash_map::mapped_type (STL/CLR)](#mapped_type)|Tipo del valor asignado asociado a cada clave.|
 |[hash_map::reference (STL/CLR)](#reference)|El tipo de una referencia a un elemento.|
 |[hash_map::reverse_iterator (STL/CLR)](#reverse_iterator)|El tipo de un iterador invertido para la secuencia controlada.|
-|[hash_map::size_type (STL/CLR)](#size_type)|El tipo de una distancia (no negativo) entre dos elementos.|
+|[hash_map::size_type (STL/CLR)](#size_type)|El tipo de una distancia (no negativa) entre dos elementos.|
 |[hash_map::value_compare (STL/CLR)](#value_compare)|Delegado de ordenación para dos valores de elemento.|
 |[hash_map::value_type (STL/CLR)](#value_type)|El tipo de un elemento.|
 
@@ -180,16 +180,16 @@ El tipo del componente adicional de un elemento de la secuencia controlada.
 |[hash_map::begin (STL/CLR)](#begin)|Designa el principio de la secuencia controlada.|
 |[hash_map::bucket_count (STL/CLR)](#bucket_count)|Cuenta el número de depósitos.|
 |[hash_map::clear (STL/CLR)](#clear)|Quita todos los elementos.|
-|[hash_map::count (STL/CLR)](#count)|Recuentos de elementos que coinciden con una clave especificada.|
+|[hash_map::count (STL/CLR)](#count)|Cuenta los elementos que coinciden con una clave especificada.|
 |[hash_map::empty (STL/CLR)](#empty)|Comprueba si no hay ningún elemento presente.|
 |[hash_map::end (STL/CLR)](#end)|Designa el final de la secuencia controlada.|
 |[hash_map::equal_range (STL/CLR)](#equal_range)|Busca el intervalo que coincide con una clave especificada.|
 |[hash_map::erase (STL/CLR)](#erase)|Quita los elementos de las posiciones especificadas.|
 |[hash_map::find (STL/CLR)](#find)|Busca un elemento que coincide con una clave especificada.|
-|[hash_map::hash_delegate (STL/CLR)](#hash_delegate)|Copia al delegado de hash para una clave.|
+|[hash_map::hash_delegate (STL/CLR)](#hash_delegate)|Copia el delegado hash para una clave.|
 |[hash_map::hash_map (STL/CLR)](#hash_map)|Construye un objeto contenedor.|
 |[hash_map::insert (STL/CLR)](#insert)|Agrega elementos.|
-|[hash_map::key_comp (STL/CLR)](#key_comp)|Copia al delegado de ordenación de dos claves.|
+|[hash_map::key_comp (STL/CLR)](#key_comp)|Copia el delegado de ordenación de dos claves.|
 |[hash_map::load_factor (STL/CLR)](#load_factor)|Cuenta los elementos promedio por depósito.|
 |[hash_map::lower_bound (STL/CLR)](#lower_bound)|Busca el principio del intervalo que coincide con una clave especificada.|
 |[hash_map::make_value (STL/CLR)](#make_value)|Construye un objeto de valor.|
@@ -199,11 +199,11 @@ El tipo del componente adicional de un elemento de la secuencia controlada.
 |[hash_map::rend (STL/CLR)](#rend)|Designa el final de la secuencia controlada inversa.|
 |[hash_map::size (STL/CLR)](#size)|Cuenta el número de elementos.|
 |[hash_map::swap (STL/CLR)](#swap)|Intercambia el contenido de dos contenedores.|
-|[hash_map::to_array (STL/CLR)](#to_array)|Copia la secuencia controlada a una nueva matriz.|
+|[hash_map::to_array (STL/CLR)](#to_array)|Copia la secuencia controlada en una nueva matriz.|
 |[hash_map::upper_bound (STL/CLR)](#upper_bound)|Busca el final del intervalo que coincide con una clave especificada.|
-|[hash_map::value_comp (STL/CLR)](#value_comp)|Copia al delegado de ordenación de dos valores de elemento.|
+|[hash_map::value_comp (STL/CLR)](#value_comp)|Copia el delegado de ordenación para dos valores de elemento.|
 
-|Operador|Descripción|
+|Operator|Descripción|
 |--------------|-----------------|
 |[hash_map::operator= (STL/CLR)](#op_as)|Reemplaza la secuencia controlada.|
 |[hash_map::operator(STL/CLR)](#op)|Asigna una clave a su valor asignado asociado.|
@@ -213,50 +213,50 @@ El tipo del componente adicional de un elemento de la secuencia controlada.
 |Interfaz|Descripción|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicar un objeto.|
-|<xref:System.Collections.IEnumerable>|Secuencia a través de los elementos.|
-|<xref:System.Collections.ICollection>|Mantener el grupo de elementos.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Secuencia a través de los elementos con tipo.|
-|<xref:System.Collections.Generic.ICollection%601>|Mantener el grupo de elementos con tipo.|
-|<xref:System.Collections.Generic.IDictionary%602>|Mantener el grupo de {clave, valor} pares.|
-|IHash < clave, valor >|Mantener contenedor genérico.|
+|<xref:System.Collections.IEnumerable>|Secuencia a través de elementos.|
+|<xref:System.Collections.ICollection>|Mantiene el grupo de elementos.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Secuencia a través de elementos con tipo.|
+|<xref:System.Collections.Generic.ICollection%601>|Mantiene el grupo de elementos con tipo.|
+|<xref:System.Collections.Generic.IDictionary%602>|Mantener el grupo de {Key, Value} pares.|
+|IHash < clave, valor >|Mantenga el contenedor genérico.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El objeto asigna y libera almacenamiento para la secuencia que controla como nodos individuales en una lista vinculada bidireccional. Para acelerar el acceso, el objeto también mantiene una matriz de longitud variable de punteros en la lista (la tabla hash), administrar de forma eficaz la lista completa como una secuencia de sublistas, o cubos. Inserta elementos en un cubo que mantiene ordenada por la modificación de los vínculos entre los nodos nunca copiando el contenido de un nodo a otro. Esto significa que puede insertar y quitar elementos libremente sin perturbar elementos restantes.
+El objeto asigna y libera almacenamiento para la secuencia que controla como nodos individuales en una lista vinculada bidireccional. Para agilizar el acceso, el objeto también mantiene una matriz de longitud variable de punteros en la lista (la tabla hash), administrando eficazmente toda la lista como una secuencia de sublistas o depósitos. Inserta elementos en un depósito que mantiene ordenado modificando los vínculos entre los nodos, nunca copiando el contenido de un nodo en otro. Esto significa que puede insertar y quitar elementos libremente sin molestar a los elementos restantes.
 
-El objeto ordena cada depósito controla mediante una llamada a un objeto delegado almacenado de tipo [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Puede especificar el objeto de delegado almacenado cuando se construye el objeto hash_set; Si se especifica ningún objeto de delegado, el valor predeterminado es la comparación `operator<=(key_type, key_type)`.
+El objeto ordena cada depósito que controla llamando a un objeto delegado almacenado de tipo [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Puede especificar el objeto delegado almacenado al construir el hash_set; Si no especifica ningún objeto delegado, el valor predeterminado es el `operator<=(key_type, key_type)`de comparación.
 
-Tiene acceso al objeto de delegado almacenado mediante una llamada a la función miembro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Este tipo de objeto de delegado debe definir una ordenación equivalente entre las claves de tipo [hash_set:: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Esto significa que, en las dos claves `X` y `Y`:
+Tiene acceso al objeto delegado almacenado llamando a la función miembro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Dicho objeto delegado debe definir una ordenación equivalente entre las claves de tipo [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Esto significa que, para dos claves `X` y `Y`:
 
-`key_comp()(X, Y)` Devuelve el valor booleano mismo resultado en cada llamada.
+`key_comp()(X, Y)` devuelve el mismo resultado booleano en cada llamada.
 
-Si `key_comp()(X, Y) && key_comp()(Y, X)` es true, a continuación, `X` y `Y` se dice que tienen una ordenación equivalente.
+Si `key_comp()(X, Y) && key_comp()(Y, X)` es true, se dice que `X` y `Y` tienen una ordenación equivalente.
 
-Cualquier regla de ordenación que se comporta como `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` o `operator==(key_type, key_type)` define eqivalent orden.
+Cualquier regla de ordenación que se comporta como `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` o `operator==(key_type, key_type)` define el orden eqivalent.
 
-Tenga en cuenta que el contenedor solo garantiza que los elementos cuyas claves tienen una ordenación equivalente (y qué hash en el mismo valor entero) son adyacentes dentro de un depósito. A diferencia de la clase de plantilla [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md), un objeto de clase de plantilla `hash_map` garantiza que las claves para todos los elementos son únicas. (No hay dos claves tienen una ordenación equivalente).
+Tenga en cuenta que el contenedor solo garantiza que los elementos cuyas claves tienen una ordenación equivalente (y el hash al mismo valor entero) son adyacentes dentro de un depósito. A diferencia de la clase de plantilla [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md), un objeto de clase de plantilla `hash_map` garantiza que las claves para todos los elementos son únicas. (Dos claves no tienen una ordenación equivalente).
 
-El objeto determina qué cubo debe contener una clave de ordenación especificada mediante una llamada a un objeto delegado almacenado de tipo [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Acceder a este objeto almacenado llamando a la función miembro [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` para obtener un valor entero que depende del valor de clave. Puede especificar el objeto de delegado almacenado cuando se construye el objeto hash_set; Si se especifica ningún objeto de delegado, el valor predeterminado es la función `System::Object::hash_value(key_type)`. Esto significa que para cualquier clave `X` y `Y`:
+El objeto determina qué depósito debe contener una clave de ordenación determinada llamando a un objeto delegado almacenado de tipo [hash_set:: Hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Puede tener acceso a este objeto almacenado llamando a la función miembro [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` para obtener un valor entero que dependa del valor de clave. Puede especificar el objeto delegado almacenado al construir el hash_set; Si no especifica ningún objeto delegado, el valor predeterminado es la función `System::Object::hash_value(key_type)`. Esto significa que, para cualquier clave `X` y `Y`:
 
-`hash_delegate()(X)` Devuelve el mismo resultado entero en cada llamada.
+`hash_delegate()(X)` devuelve el mismo resultado entero en cada llamada.
 
-Si `X` y `Y` tienen una ordenación equivalente, a continuación, `hash_delegate()(X)` debe devolver el mismo resultado entero como `hash_delegate()(Y)`.
+Si `X` y `Y` tienen una ordenación equivalente, `hash_delegate()(X)` debe devolver el mismo resultado entero que `hash_delegate()(Y)`.
 
-Cada elemento contiene una clave independiente y un valor asignado. La secuencia se representa de forma que permita la búsqueda, inserción y eliminación de un elemento arbitrario con un número de operaciones que es independiente del número de elementos de la secuencia (tiempo constante): al menos en el mejor de los casos. Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.
+Cada elemento contiene una clave independiente y un valor asignado. La secuencia se representa de forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con varias operaciones que son independientes del número de elementos de la secuencia (tiempo constante), al menos en el mejor de los casos. Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.
 
-Si los valores hash no se distribuyen uniformemente, sin embargo, puede degenerar una tabla hash. En casos extremos, para una función hash que siempre devuelve el mismo valor, búsqueda, inserción y eliminación son proporcionales al número de elementos de la secuencia (tiempo lineal). El contenedor protegida elegir una función hash razonable, el tamaño de depósito promedio y tamaño de la tabla hash (número total de depósitos), pero puede invalidar cualquiera o todas estas opciones. Consulte, por ejemplo, las funciones [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) y [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
+Sin embargo, si los valores con hash no se distribuyen uniformemente, se puede degenerar una tabla hash. En el extremo--para una función hash que siempre devuelve el mismo valor, la búsqueda, la inserción y la eliminación son proporcionales al número de elementos de la secuencia (tiempo lineal). El contenedor está orientado a elegir una función hash razonable, el tamaño medio del depósito y el tamaño de la tabla hash (número total de cubos), pero puede invalidar cualquiera de estas opciones o todas ellas. Consulte, por ejemplo, las funciones [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) y [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
 
-Un objeto hash_map es compatible con los iteradores bidireccionales, lo que significa que puede ejecutar paso a paso para los elementos adyacentes que proporciona un iterador que designa un elemento de la secuencia controlada. Un nodo principal especial que se corresponde con el iterador devuelto por [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`. Puede reducir este iterador para alcanzar el último elemento de la secuencia controlada, si está presente. Puede incrementar un iterador de hash_map para alcanzar el nodo principal y, a continuación, comparará igual a `end()`. Pero no se puede desreferenciar el iterador devuelto por `end()`.
+Un hash_map admite iteradores bidireccionales, lo que significa que puede ir a los elementos adyacentes dado un iterador que designa un elemento en la secuencia controlada. Un nodo principal especial corresponde al iterador devuelto por [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`. Puede reducir este iterador para llegar al último elemento de la secuencia controlada, si está presente. Puede incrementar un iterador hash_map para llegar al nodo principal y, a continuación, se comparará como igual a `end()`. Pero no se puede desreferenciar el iterador devuelto por `end()`.
 
-Tenga en cuenta que no puede hacer referencia a un elemento de hash_map directamente dado su posición numérica--que requiera un iterador de acceso aleatorio.
+Tenga en cuenta que no puede hacer referencia a un elemento de hash_map directamente a su posición numérica, que requiere un iterador de acceso aleatorio.
 
-Un iterador de hash_map almacena un identificador a su nodo asociado hash_map, que a su vez almacena un identificador de su contenedor asociado. Puede usar iteradores sólo con sus objetos de contenedor asociado. Un iterador de hash_map sigue siendo válido siempre y cuando su nodo asociado hash_map está asociado a algún objeto hash_map. Además, un iterador válido es dereferenceable, puede usar para tener acceso o modificar el valor del elemento designa--siempre y cuando no es igual a `end()`.
+Un iterador hash_map almacena un identificador para su nodo de hash_map asociado, que a su vez almacena un identificador en su contenedor asociado. Solo se pueden usar iteradores con sus objetos de contenedor asociados. Un iterador hash_map sigue siendo válido, siempre y cuando su nodo de hash_map asociado esté asociado a algunos hash_map. Además, un iterador válido es dereferenceable--se puede usar para obtener acceso al valor del elemento que designa, y siempre que no sea igual que `end()`.
 
-Borrar o quitar un elemento llama al destructor para su valor almacenado. Destruir el contenedor, borra todos los elementos. Por lo tanto, un contenedor cuyo tipo de elemento es una clase ref garantiza que ningún elemento durar más que el contenedor. Sin embargo, tenga en cuenta que un contenedor de controladores no *no* destruir sus elementos.
+Al borrar o quitar un elemento, se llama al destructor para su valor almacenado. Al destruir el contenedor, se borran todos los elementos. Por lo tanto, un contenedor cuyo tipo de elemento es una clase Ref garantiza que ningún elemento durar más el contenedor. Sin embargo, tenga en cuenta que un contenedor de controladores *no destruye sus* elementos.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-## <a name="begin"></a> hash_map:: begin (STL/CLR)
+## <a name="hash_mapbegin-stlclr"></a><a name="begin"></a>hash_map:: Begin (STL/CLR)
 
 Designa el principio de la secuencia controlada.
 
@@ -266,9 +266,9 @@ Designa el principio de la secuencia controlada.
 iterator begin();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve un iterador bidireccional que designa el primer elemento de la secuencia controlada o justo después del final de una secuencia vacía. Se usa para obtener un iterador que designa el `current` principio de la secuencia controlada, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
+La función miembro devuelve un iterador bidireccional que designa el primer elemento de la secuencia controlada o más allá del final de una secuencia vacía. Se usa para obtener un iterador que designe el principio de la secuencia controlada, indicado por `current`, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -307,7 +307,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="bucket_count"></a> hash_map::bucket_count (STL/CLR)
+## <a name="hash_mapbucket_count-stlclr"></a><a name="bucket_count"></a>hash_map:: bucket_count (STL/CLR)
 
 Cuenta el número de depósitos.
 
@@ -317,9 +317,9 @@ Cuenta el número de depósitos.
 int bucket_count();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las funciones miembro devuelve el número actual de depósitos. Se usa para determinar el tamaño de la tabla hash.
+Las funciones miembro devuelven el número actual de depósitos. Se utiliza para determinar el tamaño de la tabla hash.
 
 ### <a name="example"></a>Ejemplo
 
@@ -381,7 +381,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_map:: Clear (STL/CLR)
+## <a name="hash_mapclear-stlclr"></a><a name="clear"></a>hash_map:: CLEAR (STL/CLR)
 
 Quita todos los elementos.
 
@@ -391,9 +391,9 @@ Quita todos los elementos.
 void clear();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro llama eficazmente a [hash_map:: Erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md) `(` [hash_map:: begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md) `(),` [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `())`. Usarlo para asegurarse de que está vacía la secuencia controlada.
+La función miembro llama eficazmente a [hash_map:: Erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)`(` [hash_map:: Begin (STL/clr)](../dotnet/hash-map-begin-stl-clr.md)`(),` [HASH_MAP:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`())`. Se utiliza para asegurarse de que la secuencia controlada está vacía.
 
 ### <a name="example"></a>Ejemplo
 
@@ -439,7 +439,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_map:: const_iterator (STL/CLR)
+## <a name="hash_mapconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_map:: const_iterator (STL/CLR)
 
 El tipo de un iterador constante para la secuencia controlada.
 
@@ -449,9 +449,9 @@ El tipo de un iterador constante para la secuencia controlada.
 typedef T2 const_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un objeto de tipo sin especificar `T2` que puede actuar como un iterador constante bidireccional para la secuencia controlada.
+El tipo describe un objeto de tipo sin especificar `T2` que puede actuar como iterador bidireccional constante para la secuencia controlada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -481,7 +481,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> hash_map:: const_reference (STL/CLR)
+## <a name="hash_mapconst_reference-stlclr"></a><a name="const_reference"></a>hash_map:: const_reference (STL/CLR)
 
 El tipo de una referencia constante a un elemento.
 
@@ -491,7 +491,7 @@ El tipo de una referencia constante a un elemento.
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe una referencia constante a un elemento.
 
@@ -526,9 +526,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> hash_map:: const_reverse_iterator (STL/CLR)
+## <a name="hash_mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_map:: const_reverse_iterator (STL/CLR)
 
-El tipo de un iterador inverso constante de la secuencia controlada...
+Tipo de un iterador inverso constante para la secuencia controlada.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -536,9 +536,9 @@ El tipo de un iterador inverso constante de la secuencia controlada...
 typedef T4 const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un objeto de tipo sin especificar `T4` que puede actuar como un iterador inverso constante de la secuencia controlada.
+El tipo describe un objeto de tipo sin especificar `T4` que puede actuar como un iterador inverso constante para la secuencia controlada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -568,7 +568,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> hash_map:: Count (STL/CLR)
+## <a name="hash_mapcount-stlclr"></a><a name="count"></a>hash_map:: Count (STL/CLR)
 
 Busca el número de elementos que coinciden con una clave especificada.
 
@@ -583,9 +583,9 @@ size_type count(key_type key);
 *key*<br/>
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve el número de elementos de la secuencia controlada que tienen una ordenación equivalente con *clave*. Se usa para determinar el número de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.
+La función miembro devuelve el número de elementos de la secuencia controlada que tienen una ordenación equivalente con la *clave*. Se usa para determinar el número de elementos que están actualmente en la secuencia controlada que coinciden con una clave especificada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -621,9 +621,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_map:: difference_type (STL/CLR)
+## <a name="hash_mapdifference_type-stlclr"></a><a name="difference_type"></a>hash_map::d ifference_type (STL/CLR)
 
-Los tipos de una distancia con signo entre dos elementos.
+Tipos de una distancia con signo entre dos elementos.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -631,9 +631,9 @@ Los tipos de una distancia con signo entre dos elementos.
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un recuento de elemento posiblemente negativo.
+El tipo describe un recuento de elementos posiblemente negativos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -676,7 +676,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_map:: Empty (STL/CLR)
+## <a name="hash_mapempty-stlclr"></a><a name="empty"></a>hash_map:: Empty (STL/CLR)
 
 Comprueba si no hay ningún elemento presente.
 
@@ -686,9 +686,9 @@ Comprueba si no hay ningún elemento presente.
 bool empty();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve true para una secuencia controlada vacía. Equivale a [hash_map:: Size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`. Usa para comprobar si el objeto hash_map está vacío.
+La función miembro devuelve true para una secuencia controlada vacía. Es equivalente a [hash_map:: Size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`. Se utiliza para comprobar si la hash_map está vacía.
 
 ### <a name="example"></a>Ejemplo
 
@@ -728,7 +728,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_map:: end (STL/CLR)
+## <a name="hash_mapend-stlclr"></a><a name="end"></a>hash_map:: end (STL/CLR)
 
 Designa el final de la secuencia controlada.
 
@@ -738,9 +738,9 @@ Designa el final de la secuencia controlada.
 iterator end();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve un iterador bidireccional que apunta justo después del final de la secuencia controlada. Se usa para obtener un iterador que designa el final de la secuencia controlada; su estado se no cambiar si cambia la longitud de la secuencia controlada.
+La función miembro devuelve un iterador bidireccional que apunta justo después del final de la secuencia controlada. Se usa para obtener un iterador que designe el final de la secuencia controlada. su estado no cambia si cambia la longitud de la secuencia controlada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -781,7 +781,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="equal_range"></a> hash_map:: equal_range (STL/CLR)
+## <a name="hash_mapequal_range-stlclr"></a><a name="equal_range"></a>hash_map:: equal_range (STL/CLR)
 
 Busca el intervalo que coincide con una clave especificada.
 
@@ -796,9 +796,9 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve un par de iteradores `cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`. Se usa para determinar el intervalo de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.
+La función miembro devuelve un par de iteradores `cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`. Se usa para determinar el intervalo de elementos que se encuentran actualmente en la secuencia controlada que coinciden con una clave especificada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -842,7 +842,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> hash_map:: Erase (STL/CLR)
+## <a name="hash_maperase-stlclr"></a><a name="erase"></a>hash_map:: Erase (STL/CLR)
 
 Quita los elementos de las posiciones especificadas.
 
@@ -860,23 +860,23 @@ bool erase(key_type key)
 Principio del intervalo que se va a borrar.
 
 *key*<br/>
-Valor de clave para borrar.
+Valor de clave que se va a borrar.
 
-*Último*<br/>
-Fin del intervalo que se va a borrar.
+*last*<br/>
+Final del intervalo que se va a borrar.
 
 *where*<br/>
 Elemento que se va a borrar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera función miembro quita el elemento de la secuencia controlada señalada por *donde*y devuelve un iterador que designa el primer elemento que permanece más allá del elemento quitado, o [hash_map:: end (STL / CLR)](../dotnet/hash-map-end-stl-clr.md) `()` si no existe ese elemento. Usa para quitar un elemento único.
+La primera función miembro quita el elemento de la secuencia controlada a la que apunta Where, y devuelve un iterador que designa el primer elemento que permanece más allá del elemento *que*se ha quitado o [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()` si no existe ese elemento. Se utiliza para quitar un solo elemento.
 
-La segunda función miembro quita los elementos de la secuencia controlada en el intervalo [`first`, `last`) y devuelve un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o `end()` si ningún elemento existe... Usa para quitar cero o más elementos contiguos.
+La segunda función miembro quita los elementos de la secuencia controlada en el intervalo [`first`, `last`) y devuelve un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o `end()` si no existe ese elemento. Se usa para quitar cero o más elementos contiguos.
 
-La tercera función miembro quita cualquier elemento de la secuencia controlada cuyo criterio de ordenación es equivalente a *clave*y devuelve un recuento del número de elementos quitados. Usa para quitar y contar todos los elementos que coinciden con una clave especificada.
+La tercera función miembro quita cualquier elemento de la secuencia controlada cuya clave tenga una ordenación equivalente a *key*y devuelve un recuento del número de elementos que se han quitado. Se usa para quitar y contar todos los elementos que coinciden con una clave especificada.
 
-Eliminación de cada elemento tarda tiempo proporcional al logaritmo del número de elementos de la secuencia controlada.
+Cada eliminación de elementos tarda un tiempo proporcional al logaritmo del número de elementos de la secuencia controlada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -935,7 +935,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> hash_map:: Find (STL/CLR)
+## <a name="hash_mapfind-stlclr"></a><a name="find"></a>hash_map:: Find (STL/CLR)
 
 Busca un elemento que coincide con una clave especificada.
 
@@ -950,9 +950,9 @@ iterator find(key_type key);
 *key*<br/>
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si al menos un elemento de la secuencia controlada tiene una ordenación equivalente con *clave*, la función miembro devuelve un iterador que designa uno de esos elementos; de lo contrario, devuelve [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `()`. Usa para buscar un elemento actualmente en la secuencia controlada que coincide con una clave especificada.
+Si al menos un elemento de la secuencia controlada tiene una ordenación equivalente con la *clave*, la función miembro devuelve un iterador que designa uno de esos elementos. en caso contrario, devuelve [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`. Se usa para buscar un elemento que se encuentra actualmente en la secuencia controlada que coincide con una clave especificada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -994,9 +994,9 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="generic_container"></a> hash_map::generic_container (STL/CLR)
+## <a name="hash_mapgeneric_container-stlclr"></a><a name="generic_container"></a>hash_map:: generic_container (STL/CLR)
 
-El tipo de la interfaz genérica para el contenedor.
+Tipo de la interfaz genérica para el contenedor.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -1006,9 +1006,9 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe la interfaz genérica para esta clase de contenedor de plantilla.
+El tipo describe la interfaz genérica para esta clase de contenedor de plantillas.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1058,9 +1058,9 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="generic_iterator"></a> hash_map::generic_iterator (STL/CLR)
+## <a name="hash_mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_map:: generic_iterator (STL/CLR)
 
-El tipo de iterador para su uso con la interfaz genérica para el contenedor.
+Tipo de un iterador que se va a usar con la interfaz genérica del contenedor.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -1070,9 +1070,9 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un iterador genérico que puede usarse con la interfaz genérica para esta clase de contenedor de plantilla.
+El tipo describe un iterador genérico que se puede usar con la interfaz genérica para esta clase de contenedor de plantillas.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1115,9 +1115,9 @@ int main()
 [a 1]
 ```
 
-## <a name="generic_reverse_iterator"></a> hash_map::generic_reverse_iterator (STL/CLR)
+## <a name="hash_mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_map:: generic_reverse_iterator (STL/CLR)
 
-El tipo de un iterador inverso para su uso con la interfaz genérica para el contenedor.
+Tipo de un iterador inverso que se va a usar con la interfaz genérica del contenedor.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -1127,9 +1127,9 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un iterador inverso genérico que puede usarse con la interfaz genérica para esta clase de contenedor de plantilla.
+El tipo describe un iterador inverso genérico que se puede usar con la interfaz genérica para esta clase de contenedor de plantillas.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1171,9 +1171,9 @@ int main()
 [c 3]
 ```
 
-## <a name="generic_value"></a> hash_map::generic_value (STL/CLR)
+## <a name="hash_mapgeneric_value-stlclr"></a><a name="generic_value"></a>hash_map:: generic_value (STL/CLR)
 
-El tipo de un elemento para su uso con la interfaz genérica para el contenedor.
+Tipo de un elemento que se va a usar con la interfaz genérica del contenedor.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -1181,9 +1181,9 @@ El tipo de un elemento para su uso con la interfaz genérica para el contenedor.
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un objeto de tipo `GValue` que describe el valor del elemento almacenados para su uso con la interfaz genérica para esta clase de contenedor de plantilla.
+El tipo describe un objeto de tipo `GValue` que describe el valor del elemento almacenado que se va a usar con la interfaz genérica para esta clase de contenedor de plantillas.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1225,7 +1225,7 @@ int main()
 [a 1]
 ```
 
-## <a name="hash_delegate"></a> hash_map::hash_delegate (STL/CLR)
+## <a name="hash_maphash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_map:: hash_delegate (STL/CLR)
 
 Busca un elemento que coincide con una clave especificada.
 
@@ -1235,9 +1235,9 @@ Busca un elemento que coincide con una clave especificada.
 hasher^ hash_delegate();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve al delegado que se usa para convertir un valor de clave en un entero. Se usa para una clave de hash.
+La función miembro devuelve el delegado que se usa para convertir un valor de clave en un entero. Se usa para aplicar un algoritmo hash a una clave.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1263,7 +1263,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_map"></a> hash_map:: hash_map (STL/CLR)
+## <a name="hash_maphash_map-stlclr"></a><a name="hash_map"></a>hash_map:: hash_map (STL/CLR)
 
 Construye un objeto contenedor.
 
@@ -1296,84 +1296,84 @@ hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,
 Principio del intervalo que se va a insertar.
 
 *hashfn*<br/>
-Función para las claves de asignación a los depósitos de hash.
+Función hash para asignar claves a cubos.
 
-*Último*<br/>
-Fin del intervalo que se va a insertar.
+*last*<br/>
+Final del intervalo que se va a insertar.
 
-*Pred*<br/>
-Orden de predicado de la secuencia controlada.
+*pronostica*<br/>
+Predicado de ordenación para la secuencia controlada.
 
 *right*<br/>
 Objeto o intervalo que se va a insertar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor:
 
 `hash_map();`
 
-Inicializa la secuencia controlada sin elementos, con el valor predeterminado ordenación predicado `key_compare()`y con la función hash predeterminada. Se usa para especificar una secuencia controlada inicial vacía, con el valor predeterminado ordenación en función de predicado y hash.
+Inicializa la secuencia controlada sin elementos, con el predicado de ordenación predeterminado `key_compare()`y con la función hash predeterminada. Se usa para especificar una secuencia controlada inicial vacía, con el predicado de ordenación y la función hash predeterminados.
 
 El constructor:
 
 `explicit hash_map(key_compare^ pred);`
 
-Inicializa la secuencia controlada con ningún elemento con el predicado de ordenación *pred*y con la función hash predeterminada. Se usa para especificar una secuencia controlada inicial vacía, con el predicado de ordenación especificado y la función hash predeterminada.
+Inicializa la secuencia controlada sin elementos, con el predicado de ordenación *Pred*y con la función hash predeterminada. Se usa para especificar una secuencia controlada inicial vacía, con el predicado de ordenación especificado y la función hash predeterminada.
 
 El constructor:
 
 `hash_map(key_compare^ pred, hasher^ hashfn);`
 
-Inicializa la secuencia controlada con ningún elemento con el predicado de ordenación *pred*y con la función hash *hashfn*. Se usa para especificar una secuencia controlada inicial vacía, con la función de predicado y hash de ordenación especificada.
+Inicializa la secuencia controlada sin elementos, con el predicado de ordenación *Pred*y con la función hash *hashfn*. Se usa para especificar una secuencia controlada inicial vacía, con el predicado de ordenación y la función hash especificados.
 
 El constructor:
 
 `hash_map(hash_map<Key, Mapped>% right);`
 
-Inicializa la secuencia controlada por la secuencia [`right.begin()`, `right.end()`), con el predicado del orden de predeterminado y con la función hash predeterminada. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto hash_map *derecho*, con el predicado de ordenación predeterminada y la función hash.
+Inicializa la secuencia controlada con la secuencia [`right.begin()`, `right.end()`), con el predicado de ordenación predeterminado y con la función hash predeterminada. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de hash_map *derecha*, con el predicado de ordenación y la función hash predeterminados.
 
 El constructor:
 
 `hash_map(hash_map<Key, Mapped>^ right);`
 
-Inicializa la secuencia controlada por la secuencia [`right->begin()`, `right->end()`), con el predicado del orden de predeterminado y con la función hash predeterminada. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto hash_map *derecho*, con el predicado de ordenación predeterminada y la función hash.
+Inicializa la secuencia controlada con la secuencia [`right->begin()`, `right->end()`), con el predicado de ordenación predeterminado y con la función hash predeterminada. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de hash_map *derecha*, con el predicado de ordenación y la función hash predeterminados.
 
 El constructor:
 
 `template<typename InIter> hash_map(InIter first, InIter last);`
 
-Inicializa la secuencia controlada por la secuencia [`first`, `last`), con el predicado del orden de predeterminado y con la función hash predeterminada. Usarlo para realizar una copia de otra secuencia de la secuencia controlada con el valor predeterminado ordenación en función de predicado y hash.
+Inicializa la secuencia controlada con la secuencia [`first`, `last`), con el predicado de ordenación predeterminado y con la función hash predeterminada. Se usa para convertir la secuencia controlada en una copia de otra secuencia, con el predicado de ordenación y la función hash predeterminados.
 
 El constructor:
 
 `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred);`
 
-Inicializa la secuencia controlada por la secuencia [`first`, `last`), con el predicado de ordenación *pred*y con la función hash predeterminada. Usa para realizar una copia de otra secuencia, con el predicado de ordenación especificado y la función hash predeterminada de la secuencia controlada.
+Inicializa la secuencia controlada con la secuencia [`first`, `last`), con el predicado de ordenación *Pred*y con la función hash predeterminada. Se usa para convertir la secuencia controlada en una copia de otra secuencia, con el predicado de ordenación especificado y la función hash predeterminada.
 
 El constructor:
 
 `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-Inicializa la secuencia controlada por la secuencia [`first`, `last`), con el predicado de ordenación *pred*y con la función hash *hashfn*. Usa para realizar una copia de otra secuencia, con la función de predicado y hash de ordenación especificada de la secuencia controlada.
+Inicializa la secuencia controlada con la secuencia [`first`, `last`), con el predicado de ordenación *Pred*y con la función hash *hashfn*. Se usa para convertir la secuencia controlada en una copia de otra secuencia, con el predicado de ordenación y la función hash especificados.
 
 El constructor:
 
 `hash_map(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Inicializa la secuencia controlada con la secuencia designada por el enumerador *derecho*, con el predicado del orden de predeterminado y con la función hash predeterminada. Usa para realizar una copia de otra secuencia que se describe mediante un enumerador, con el valor predeterminado ordenación en función de predicado y hash de la secuencia controlada.
+Inicializa la secuencia controlada con la secuencia designada por el *derecho*del enumerador, con el predicado de ordenación predeterminado y con la función hash predeterminada. Se usa para convertir la secuencia controlada en una copia de otra secuencia descrita por un enumerador, con el predicado de ordenación y la función hash predeterminados.
 
 El constructor:
 
 `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inicializa la secuencia controlada con la secuencia designada por el enumerador *derecho*, con el predicado de ordenación *pred*y con la función hash predeterminada. Usa para realizar una copia de otra secuencia descrita por un enumerador con la ordenación predeterminada y el predicado hash función especificada de la secuencia controlada.
+Inicializa la secuencia controlada con la secuencia designada por el *derecho*del enumerador, con el predicado de ordenación *Pred*y con la función hash predeterminada. Se usa para convertir la secuencia controlada en una copia de otra secuencia descrita por un enumerador, con el predicado de ordenación y la función hash predeterminados especificados.
 
 El constructor:
 
 `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-Inicializa la secuencia controlada con la secuencia designada por el enumerador *derecho*, con el predicado de ordenación *pred*y con la función hash *hashfn*. Usa para realizar una copia de otra secuencia descrita por un enumerador con la función de predicado y hash de ordenación especificado de la secuencia controlada.
+Inicializa la secuencia controlada con la secuencia designada por el *derecho*del enumerador, con el predicado de ordenación *Pred*y con la función hash *hashfn*. Se usa para convertir la secuencia controlada en una copia de otra secuencia descrita por un enumerador, con el predicado de ordenación y la función hash especificados.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1506,9 +1506,9 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hasher"></a> hash_map::hasher (STL/CLR)
+## <a name="hash_maphasher-stlclr"></a><a name="hasher"></a>hash_map:: Hasher (STL/CLR)
 
-El delegado de hash para una clave.
+Delegado de hash para una clave.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -1517,9 +1517,9 @@ Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>
     hasher;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe a un delegado que convierte un valor de clave en un entero.
+El tipo describe un delegado que convierte un valor de clave en un entero.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1545,7 +1545,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_map:: Insert (STL/CLR)
+## <a name="hash_mapinsert-stlclr"></a><a name="insert"></a>hash_map:: Insert (STL/CLR)
 
 Agrega elementos.
 
@@ -1564,31 +1564,31 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
-Fin del intervalo que se va a insertar.
+*last*<br/>
+Final del intervalo que se va a insertar.
 
 *right*<br/>
 Enumeración que se va a insertar.
 
-*Val*<br/>
-Valor de clave se va a insertar.
+*val*<br/>
+Valor de clave que se va a insertar.
 
 *where*<br/>
-Lugar en el contenedor que se va a insertar (sugerencia solo).
+Donde en el contenedor se va a insertar (solo sugerencia).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada una de las funciones miembro inserta una secuencia especificada por los operandos restantes.
 
-La primera función miembro protegida intenta insertar un elemento con el valor `val`y devuelve un par de valores `X`. Si `X.second` es true, `X.first` designa el elemento recién insertado; en caso contrario `X.first` designa un elemento con el equivalente de ordenación que ya existe y no se inserta ningún elemento nuevo. Usarlo para insertar un elemento único.
+La primera función miembro intenta insertar un elemento con el valor `val`y devuelve un par de valores `X`. Si `X.second` es true, `X.first` designa el elemento recién insertado; de lo contrario `X.first` designa un elemento con una ordenación equivalente que ya existe y no se inserta ningún elemento nuevo. Se usa para insertar un solo elemento.
 
-La segunda función miembro inserta un elemento con el valor *val*con *donde* como una sugerencia (para mejorar el rendimiento) y devuelve un iterador que designa el elemento recién insertado. Usarlo para insertar un elemento único que podría ser adyacente a un elemento que conoce.
+La segunda función miembro inserta un elemento con el valor *Val*, usando *Where* como una sugerencia (para mejorar el rendimiento) y devuelve un iterador que designa el elemento recién insertado. Se usa para insertar un elemento único que puede ser adyacente a un elemento conocido.
 
-La tercera función miembro inserta la secuencia [`first`, `last`). Usa para insertar cero o más de los elementos copiados desde la otra secuencia.
+La tercera función miembro inserta la secuencia [`first`, `last`). Se usa para insertar cero o más elementos copiados de otra secuencia.
 
-La cuarta función miembro inserta la secuencia designada por el *derecho*. Usa para insertar una secuencia descrita por un enumerador.
+La cuarta función miembro inserta la secuencia designada por la *derecha*. Se usa para insertar una secuencia descrita por un enumerador.
 
-Inserción de cada elemento tarda tiempo proporcional al logaritmo del número de elementos de la secuencia controlada. Inserción puede producirse en tiempo constante amortizado, sin embargo, dada una sugerencia que designa un elemento adyacente al punto de inserción.
+Cada inserción de elementos tarda un tiempo proporcional al logaritmo del número de elementos de la secuencia controlada. No obstante, la inserción se puede realizar en tiempo constante amortizado, dada una sugerencia que designa un elemento adyacente al punto de inserción.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1665,7 +1665,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> hash_map:: Iterator (STL/CLR)
+## <a name="hash_mapiterator-stlclr"></a><a name="iterator"></a>hash_map:: iterator (STL/CLR)
 
 El tipo de un iterador para la secuencia controlada.
 
@@ -1675,7 +1675,7 @@ El tipo de un iterador para la secuencia controlada.
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto de tipo sin especificar `T1` que puede actuar como un iterador bidireccional para la secuencia controlada.
 
@@ -1707,9 +1707,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> hash_map:: key_comp (STL/CLR)
+## <a name="hash_mapkey_comp-stlclr"></a><a name="key_comp"></a>hash_map:: key_comp (STL/CLR)
 
-Copia al delegado de ordenación de dos claves.
+Copia el delegado de ordenación de dos claves.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -1717,9 +1717,9 @@ Copia al delegado de ordenación de dos claves.
 key_compare^key_comp();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve al delegado de ordenación utilizado para ordenar la secuencia controlada. Usa para comparar dos claves.
+La función miembro devuelve el delegado de ordenación que se usa para ordenar la secuencia controlada. Se usa para comparar dos claves.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1766,7 +1766,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_map:: key_compare (STL/CLR)
+## <a name="hash_mapkey_compare-stlclr"></a><a name="key_compare"></a>hash_map:: key_compare (STL/CLR)
 
 Delegado de ordenación para dos claves.
 
@@ -1777,9 +1777,9 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
     key_compare;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo para el delegado que determina el orden de sus argumentos de la claves.
+El tipo es un sinónimo del delegado que determina el orden de sus argumentos clave.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1826,7 +1826,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_map:: KEY_TYPE (STL/CLR)
+## <a name="hash_mapkey_type-stlclr"></a><a name="key_type"></a>hash_map:: key_type (STL/CLR)
 
 El tipo de una clave de ordenación.
 
@@ -1836,9 +1836,9 @@ El tipo de una clave de ordenación.
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo del parámetro de plantilla *clave*.
+El tipo es un sinónimo de la *clave*de parámetro de plantilla.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1871,7 +1871,7 @@ int main()
 a b c
 ```
 
-## <a name="load_factor"></a> hash_map::load_factor (STL/CLR)
+## <a name="hash_mapload_factor-stlclr"></a><a name="load_factor"></a>hash_map:: load_factor (STL/CLR)
 
 Cuenta los elementos promedio por depósito.
 
@@ -1881,9 +1881,9 @@ Cuenta los elementos promedio por depósito.
 float load_factor();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve `(float)` [hash_map:: Size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md) `() /` [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)`()`. Se usa para determinar el tamaño de depósito promedio.
+La función miembro devuelve `(float)`[hash_map:: Size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() /` [hash_map:: bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)`()`. Se usa para determinar el tamaño promedio del depósito.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1945,7 +1945,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_map:: lower_bound (STL/CLR)
+## <a name="hash_maplower_bound-stlclr"></a><a name="lower_bound"></a>hash_map:: lower_bound (STL/CLR)
 
 Busca el principio del intervalo que coincide con una clave especificada.
 
@@ -1960,9 +1960,9 @@ iterator lower_bound(key_type key);
 *key*<br/>
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro determina el primer elemento `X` en la secuencia controlada que aplica un algoritmo hash al mismo depósito que *clave* y tiene una ordenación equivalente a *clave*. Si no existe ese elemento, devuelve [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; en caso contrario, devuelve un iterador que designa `X`. Usa para buscar el principio de una secuencia de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.
+La función miembro determina el primer elemento `X` en la secuencia controlada que aplica un algoritmo hash al mismo depósito como *clave* y tiene una ordenación equivalente a la *clave*. Si no existe ningún elemento de este tipo, devuelve [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; en caso contrario, devuelve un iterador que designa `X`. Se usa para buscar el principio de una secuencia de elementos que se encuentran actualmente en la secuencia controlada que coinciden con una clave especificada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2004,7 +2004,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="make_value"></a> hash_map::make_value (STL/CLR)
+## <a name="hash_mapmake_value-stlclr"></a><a name="make_value"></a>hash_map:: make_value (STL/CLR)
 
 Construye un objeto de valor.
 
@@ -2017,14 +2017,14 @@ static value_type make_value(key_type key, mapped_type mapped);
 #### <a name="parameters"></a>Parámetros
 
 *key*<br/>
-Valor de clave para usar.
+Valor de clave que se va a usar.
 
-*asignado*<br/>
-Valor asignado a buscar.
+*les*<br/>
+Valor asignado que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve un `value_type` objeto cuya clave es *clave* y cuyo valor asignado es *asignado*. Usarlo para crear un objeto adecuado para su uso con otras funciones de miembro.
+La función miembro devuelve un `value_type` objeto cuya clave es *clave* y cuyo valor asignado está *asignado*. Se usa para crear un objeto adecuado para su uso con otras funciones miembro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2053,7 +2053,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> hash_map:: mapped_type (STL/CLR)
+## <a name="hash_mapmapped_type-stlclr"></a><a name="mapped_type"></a>hash_map:: mapped_type (STL/CLR)
 
 El tipo de un valor asignado asociado a cada clave.
 
@@ -2063,7 +2063,7 @@ El tipo de un valor asignado asociado a cada clave.
 typedef Mapped mapped_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `Mapped`.
 
@@ -2098,7 +2098,7 @@ int main()
 1 2 3
 ```
 
-## <a name="max_load_factor"></a> hash_map::max_load_factor (STL/CLR)
+## <a name="hash_mapmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_map:: max_load_factor (STL/CLR)
 
 Obtiene o establece los elementos máximos por depósito.
 
@@ -2112,13 +2112,13 @@ void max_load_factor(float new_factor);
 #### <a name="parameters"></a>Parámetros
 
 *new_factor*<br/>
-Nuevo máximo cargar factor que hay que almacenar.
+Nuevo factor de carga máximo para almacenar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera función miembro devuelve el factor de carga máxima almacenado actual. Se usa para determinar el tamaño máximo de depósito promedio.
+La primera función miembro devuelve el factor de carga máximo almacenado actual. Se usa para determinar el tamaño promedio de cubo máximo.
 
-La segunda función miembro reemplaza el factor de carga máxima de la tienda con *new_factor*. Ningún recombinando automática se produce hasta que una inserción posteriores.
+La segunda función miembro reemplaza el factor de carga máximo del almacén por *new_factor*. No se produce ningún rehash automático hasta una inserción posterior.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2180,7 +2180,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op_as"></a> hash_map:: operator = (STL/CLR)
+## <a name="hash_mapoperator-stlclr"></a><a name="op_as"></a>hash_map:: Operator = (STL/CLR)
 
 Reemplaza la secuencia controlada.
 
@@ -2195,9 +2195,9 @@ hash_map<Key, Mapped>% operator=(hash_map<Key, Mapped>% right);
 *right*<br/>
 Contenedor que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las copias de operador miembro *derecho* al objeto, a continuación, devuelve `*this`. Se usa para reemplazar la secuencia controlada por una copia de la secuencia controlada en *derecho*.
+El operador miembro copia *directamente* en el objeto y, a continuación, devuelve `*this`. Se usa para reemplazar la secuencia controlada por una copia de la secuencia controlada a la *derecha*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2235,7 +2235,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op"></a> hash_map::operator(STL/CLR)
+## <a name="hash_mapoperatorstlclr"></a><a name="op"></a>hash_map:: Operator (STL/CLR)
 
 Asigna una clave a su valor asignado asociado.
 
@@ -2250,9 +2250,9 @@ mapped_type operator[](key_type key);
 *key*<br/>
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las funciones miembro para encontrar un elemento con una ordenación equivalente a los esfuerzos de *clave*. Si lo encuentra, devuelve el valor asignado asociado; en caso contrario, inserta `value_type(key, mapped_type())` y devuelve los asociados (valor predeterminado) asigna el valor. Usa para buscar un valor asignado tiene su clave asociada, o para asegurarse de que existe una entrada para la clave si se encuentra ninguno.
+Las funciones miembro intentan encontrar un elemento con una ordenación equivalente a la *clave*. Si encuentra uno, devuelve el valor asignado asociado; de lo contrario, inserta `value_type(key, mapped_type())` y devuelve el valor asignado (predeterminado) asociado. Se usa para buscar un valor asignado según su clave asociada o para asegurarse de que existe una entrada para la clave si no se encuentra ninguna.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2302,7 +2302,7 @@ c1[b] = 2
 [a 1] [A 10] [b 2] [c 13]
 ```
 
-## <a name="rbegin"></a> hash_map:: rbegin (STL/CLR)
+## <a name="hash_maprbegin-stlclr"></a><a name="rbegin"></a>hash_map:: rbegin (STL/CLR)
 
 Designa el principio de la secuencia controlada inversa.
 
@@ -2312,9 +2312,9 @@ Designa el principio de la secuencia controlada inversa.
 reverse_iterator rbegin();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve un iterador inverso que designa el último elemento de la secuencia controlada o inmediatamente después del principio de una secuencia vacía. Por tanto, designa el `beginning` de la secuencia inversa. Se usa para obtener un iterador que designa el `current` principio de la secuencia controlada mostrada en orden inverso, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
+La función miembro devuelve un iterador inverso que designa el último elemento de la secuencia controlada o justo después del principio de una secuencia vacía. Por lo tanto, designa el parámetro `beginning` de la secuencia inversa. Se usa para obtener un iterador que designe el principio de la secuencia controlada mostrada en orden inverso, indicado por `current`, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2353,7 +2353,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> hash_map:: Reference (STL/CLR)
+## <a name="hash_mapreference-stlclr"></a><a name="reference"></a>hash_map:: Reference (STL/CLR)
 
 El tipo de una referencia a un elemento.
 
@@ -2363,7 +2363,7 @@ El tipo de una referencia a un elemento.
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe una referencia a un elemento.
 
@@ -2398,7 +2398,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rehash"></a> hash_map::rehash (STL/CLR)
+## <a name="hash_maprehash-stlclr"></a><a name="rehash"></a>hash_map:: rehash (STL/CLR)
 
 Recompila la tabla hash.
 
@@ -2408,9 +2408,9 @@ Recompila la tabla hash.
 void rehash();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro se vuelve a generar la tabla hash, lo que garantiza que [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md) `() <=` [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md). En caso contrario, la tabla hash aumenta de tamaño según sea necesario después de una inserción. (Nunca disminuye de tamaño automáticamente.) Usa para ajustar el tamaño de la tabla hash.
+La función miembro vuelve a generar la tabla hash, asegurándose de que [hash_map:: load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)`() <=` [hash_map:: max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md). De lo contrario, la tabla hash solo aumenta de tamaño según sea necesario después de una inserción. (Nunca se reduce de tamaño automáticamente). Se usa para ajustar el tamaño de la tabla hash.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2472,7 +2472,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_map:: rend (STL/CLR)
+## <a name="hash_maprend-stlclr"></a><a name="rend"></a>hash_map:: Rend (STL/CLR)
 
 Designa el final de la secuencia controlada inversa.
 
@@ -2482,9 +2482,9 @@ Designa el final de la secuencia controlada inversa.
 reverse_iterator rend();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve un iterador inverso que apunta inmediatamente después del principio de la secuencia controlada. Por tanto, designa el `end` de la secuencia inversa. Se usa para obtener un iterador que designa el `current` final de la secuencia controlada mostrada en orden inverso, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
+La función miembro devuelve un iterador inverso que apunta inmediatamente después del principio de la secuencia controlada. Por lo tanto, designa el parámetro `end` de la secuencia inversa. Se usa para obtener un iterador que designe el final de la secuencia controlada mostrada en orden inverso, indicado por `current`, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2525,7 +2525,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> hash_map:: reverse_iterator (STL/CLR)
+## <a name="hash_mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_map:: reverse_iterator (STL/CLR)
 
 El tipo de un iterador invertido para la secuencia controlada.
 
@@ -2535,9 +2535,9 @@ El tipo de un iterador invertido para la secuencia controlada.
 typedef T3 reverse_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un objeto de tipo sin especificar `T3` que puede actuar como un iterador inverso de la secuencia controlada.
+El tipo describe un objeto de tipo sin especificar `T3` que puede actuar como iterador inverso para la secuencia controlada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2567,7 +2567,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> hash_map:: Size (STL/CLR)
+## <a name="hash_mapsize-stlclr"></a><a name="size"></a>hash_map:: Size (STL/CLR)
 
 Cuenta el número de elementos.
 
@@ -2577,9 +2577,9 @@ Cuenta el número de elementos.
 size_type size();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve la longitud de la secuencia controlada. Se usa para determinar el número de elementos actualmente en la secuencia controlada. Si lo único que interesa es si la secuencia tiene un tamaño distinto de cero, vea [hash_map:: Empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`.
+La función miembro devuelve la longitud de la secuencia controlada. Se utiliza para determinar el número de elementos que hay actualmente en la secuencia controlada. Si todo lo que le interesa es si la secuencia tiene un tamaño distinto de cero, vea [hash_map:: Empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2619,7 +2619,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_map:: size_type (STL/CLR)
+## <a name="hash_mapsize_type-stlclr"></a><a name="size_type"></a>hash_map:: size_type (STL/CLR)
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -2629,9 +2629,9 @@ El tipo de una distancia con signo entre dos elementos.
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un recuento de elemento no negativo.
+El tipo describe un recuento de elementos no negativos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2667,7 +2667,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_map:: swap (STL/CLR)
+## <a name="hash_mapswap-stlclr"></a><a name="swap"></a>hash_map:: swap (STL/CLR)
 
 Intercambia el contenido de dos contenedores.
 
@@ -2682,9 +2682,9 @@ void swap(hash_map<Key, Mapped>% right);
 *right*<br/>
 Contenedor con el que se va a intercambiar el contenido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro intercambia las secuencias controladas entre `this` y *derecho*. Lo hace en tiempo constante y no inicia ninguna excepción. Úselo como una forma rápida para intercambiar el contenido de dos contenedores.
+La función miembro intercambia las secuencias controladas entre `this` y *right*. Lo hace en tiempo constante y no inicia ninguna excepción. Se usa como una forma rápida de intercambiar el contenido de dos contenedores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2735,9 +2735,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="to_array"></a> hash_map::to_array (STL/CLR)
+## <a name="hash_mapto_array-stlclr"></a><a name="to_array"></a>hash_map:: to_array (STL/CLR)
 
-Copia la secuencia controlada a una nueva matriz.
+Copia la secuencia controlada en una nueva matriz.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -2745,9 +2745,9 @@ Copia la secuencia controlada a una nueva matriz.
 cli::array<value_type>^ to_array();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve una matriz que contiene la secuencia controlada. Se usa para obtener una copia de la secuencia controlada en forma de matriz.
+La función miembro devuelve una matriz que contiene la secuencia controlada. Se utiliza para obtener una copia de la secuencia controlada en forma de matriz.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2785,7 +2785,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> hash_map:: upper_bound (STL/CLR)
+## <a name="hash_mapupper_bound-stlclr"></a><a name="upper_bound"></a>hash_map:: upper_bound (STL/CLR)
 
 Busca el final del intervalo que coincide con una clave especificada.
 
@@ -2800,9 +2800,9 @@ iterator upper_bound(key_type key);
 *key*<br/>
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro determina el último elemento `X` en la secuencia controlada que aplica un algoritmo hash al mismo depósito que *clave* y tiene una ordenación equivalente a *clave*. Si no existe ese elemento, o si `X` es el último elemento de la secuencia controlada, se devuelve [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; en caso contrario, devuelve un iterador que designa el primer elemento más allá de `X`. Utiliza para localizar el final de una secuencia de elementos actualmente en la secuencia controlada que coinciden con una clave especificada.
+La función miembro determina el último elemento `X` en la secuencia controlada que aplica un algoritmo hash al mismo depósito como *clave* y tiene una ordenación equivalente a la *clave*. Si no existe ningún elemento de este tipo, o si `X` es el último elemento de la secuencia controlada, devuelve [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; en caso contrario, devuelve un iterador que designa el primer elemento más allá de `X`. Se usa para buscar el final de una secuencia de elementos que se encuentran actualmente en la secuencia controlada que coinciden con una clave especificada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2844,9 +2844,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> hash_map:: value_comp (STL/CLR)
+## <a name="hash_mapvalue_comp-stlclr"></a><a name="value_comp"></a>hash_map:: value_comp (STL/CLR)
 
-Copia al delegado de ordenación de dos valores de elemento.
+Copia el delegado de ordenación para dos valores de elemento.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -2854,9 +2854,9 @@ Copia al delegado de ordenación de dos valores de elemento.
 value_compare^ value_comp();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve al delegado de ordenación utilizado para ordenar la secuencia controlada. Usa para comparar dos valores de elemento.
+La función miembro devuelve el delegado de ordenación que se usa para ordenar la secuencia controlada. Se usa para comparar dos valores de elemento.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2891,7 +2891,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_compare"></a> hash_map::value_compare (STL/CLR)
+## <a name="hash_mapvalue_compare-stlclr"></a><a name="value_compare"></a>hash_map:: value_compare (STL/CLR)
 
 Delegado de ordenación para dos valores de elemento.
 
@@ -2902,9 +2902,9 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
     value_compare;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo para el delegado que determina el orden de sus argumentos de valor.
+El tipo es un sinónimo del delegado que determina el orden de sus argumentos de valor.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2939,7 +2939,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> hash_map:: value_type (STL/CLR)
+## <a name="hash_mapvalue_type-stlclr"></a><a name="value_type"></a>hash_map:: value_type (STL/CLR)
 
 El tipo de un elemento.
 
@@ -2949,7 +2949,7 @@ El tipo de un elemento.
 typedef generic_value value_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de `generic_value`.
 

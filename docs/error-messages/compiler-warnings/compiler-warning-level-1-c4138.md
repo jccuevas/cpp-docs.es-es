@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4138
 ms.assetid: 65ebf929-bba0-4237-923b-c1b66adfe17d
-ms.openlocfilehash: 96f8915b9bec166496ca4305d796ce8ef514ca15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1f28f5afb1879229ff0d408cb576312966e1c81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481684"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200114"
 ---
 # <a name="compiler-warning-level-1-c4138"></a>Advertencia del compilador (nivel 1) C4138
 
@@ -21,7 +21,7 @@ El delimitador de comentario de cierre no está precedido de un delimitador de c
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4138a.cpp
 // compile with: /W1
 int */*comment*/ptr;   // C4138 Ambiguous first delimiter causes warning
@@ -34,7 +34,7 @@ Esta advertencia puede producirse en un intento de anidar comentarios.
 
 Esta advertencia puede evitarse si convierte en comentario las secciones de código que contienen comentarios, incluye el código en un bloque **#if/#endif** y establece la expresión de control en cero:
 
-```
+```cpp
 // C4138b.cpp
 // compile with: /W1
 #if 0

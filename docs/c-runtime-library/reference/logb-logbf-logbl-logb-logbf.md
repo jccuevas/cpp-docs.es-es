@@ -1,13 +1,18 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - logb
 - _logb
 - _logbl
 - logbf
+- _logbf
 - logbl
-apilocation:
+- _o__logb
+- _o_logb
+- _o_logbf
+- _o_logbl
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +24,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logb
 - logbl
@@ -38,14 +47,14 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466292"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911402"
 ---
-# <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
+# <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
 Extrae el valor de exponente de un argumento de punto flotante.
 
@@ -82,18 +91,20 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**logb** devuelve el valor de exponente imparcial de *x* como un entero con signo, representado como un valor de punto flotante.
+**logb** devuelve el valor de exponente no sesgado de *x* como un entero con signo representado como un valor de punto flotante.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **logb** funciones extraen el valor exponencial del argumento de punto flotante *x*, como si *x* se representara con el intervalo infinito. Si el argumento *x* es desnormalizado, se trata como si fuera normalizado.
+Las funciones **logb** extraen el valor exponencial del argumento de punto flotante *x*, como si se representara *x* con intervalo infinito. Si el argumento *x* está desnormalizado, se trata como si estuviera normalizado.
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **logb** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **logb** siempre toma y devuelve un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **logb** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **logb** siempre toma y devuelve un **valor Double**.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Ninguna|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -102,13 +113,13 @@ Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **logb** que toma
 |**_logb**|\<float.h>|
 |**logb**, **logbf**, **logbl**, **_logbf**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
 Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

@@ -1,25 +1,27 @@
 ---
 title: CDocObjectServerItem (clase)
-ms.date: 09/12/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnDoVerb
 - AFXDOCOB/CDocObjectServerItem::OnHide
 - AFXDOCOB/CDocObjectServerItem::OnShow
 helpviewer_keywords:
 - CDocObjectServerItem [MFC], CDocObjectServerItem
 - CDocObjectServerItem [MFC], GetDocument
+- CDocObjectServerItem [MFC], OnDoVerb
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: cecbab366b64c85b39131a13233598abec83d5ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f0f5cf93aab35a17f7174b2beee0d1398564a3d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536531"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375523"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem (clase)
 
@@ -35,31 +37,31 @@ class CDocObjectServerItem : public COleServerItem
 
 ### <a name="protected-constructors"></a>Constructores protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Construye un objeto `CDocObjectServerItem`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDocObjectServerItem::GetDocument](#getdocument)|Recupera un puntero al documento que contiene el elemento.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Produce una excepción si el marco de trabajo intenta ocultar un elemento de DocObject.|
-|[CDocObjectServerItem::OnHide](#onhide)|Produce una excepción si el marco de trabajo intenta ocultar un elemento de DocObject.|
-|[CDocObjectServerItem::OnShow](#onshow)|Lo llama el marco para que sea el DocObject elemento en el sitio activo. Si el elemento no es un objeto DocObject, llama a [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Se llama para ejecutar un verbo.|
+|[CDocObjectServerItem::OnHide](#onhide)|Produce una excepción si el marco de trabajo intenta ocultar un DocObject elemento.|
+|[CDocObjectServerItem::OnShow](#onshow)|Llamado por el marco de trabajo para activar el elemento DocObject in situ. Si el elemento no es un DocObject, llame a [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CDocObjectServerItem` define las funciones miembro que se puede invalidar: [OnHide](#onhide), [OnDoVerb](#ondoverb), y [OnShow](#onshow).
+`CDocObjectServerItem`define las funciones miembro reemplazables: [OnHide](#onhide), [OnDoVerb](#ondoverb)y [OnShow](#onshow).
 
-Para usar `CDocObjectServerItem`, asegurarse de que el [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) invalidar en su `COleServerDoc`-devuelve una nueva clase derivada `CDocObjectServerItem` objeto. Si necesita cambiar ninguna funcionalidad en el elemento, puede crear una nueva instancia de su propio `CDocObjectServerItem`-clase derivada.
+Para `CDocObjectServerItem`usar , asegúrese de que la `COleServerDoc`invalidación [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) de la clase derivada devuelve un nuevo `CDocObjectServerItem` objeto. Si necesita cambiar cualquier funcionalidad del elemento, puede crear una `CDocObjectServerItem`nueva instancia de su propia clase derivada.
 
-Para obtener más información sobre DocObjects, consulte [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) y [COleCmdUI](../../mfc/reference/colecmdui-class.md) en el *referencia de MFC*.
+Para obtener más información sobre DocObjects, vea [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) y [COleCmdUI](../../mfc/reference/colecmdui-class.md) en la *referencia MFC*.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -77,7 +79,7 @@ Para obtener más información sobre DocObjects, consulte [CDocObjectServer](../
 
 **Encabezado:** afxdocob.h
 
-##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem
+## <a name="cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem
 
 Construye un objeto `CDocObjectServerItem`.
 
@@ -88,12 +90,12 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ### <a name="parameters"></a>Parámetros
 
 *pServerDoc*<br/>
-Un puntero al documento que contendrá el nuevo elemento de DocObject.
+Puntero al documento que contendrá el nuevo elemento DocObject.
 
 *bAutoDelete*<br/>
-Indica si el objeto se puede eliminar cuando se suelta un vínculo a él. Establezca el argumento FALSE si el `CDocObjectServerItem` objeto es una parte integral de los datos del documento. Establézcalo en TRUE si el objeto es una estructura secundaria utilizada para identificar un intervalo en los datos del documento que se pueden eliminar mediante el marco de trabajo.
+Indica si el objeto se puede eliminar cuando se libera un vínculo a él. Establezca el argumento en `CDocObjectServerItem` FALSE si el objeto es una parte integral de los datos del documento. Establézcalo en TRUE si el objeto es una estructura secundaria que se usa para identificar un intervalo en los datos del documento que se pueden eliminar por el marco de trabajo.
 
-##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument
+## <a name="cdocobjectserveritemgetdocument"></a><a name="getdocument"></a>CDocObjectServerItem::GetDocument
 
 Recupera un puntero al documento que contiene el elemento.
 
@@ -103,39 +105,56 @@ COleServerDoc* GetDocument() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al documento que contiene el elemento; Es NULL si el elemento no forma parte de un documento.
+Un puntero al documento que contiene el elemento; NULL si el elemento no forma parte de un documento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esto permite el acceso al documento de servidor que pasa como argumento a la [CDocObjectServerItem](#cdocobjectserveritem) constructor.
+Esto permite el acceso al documento de servidor que pasó como argumento al constructor [CDocObjectServerItem.](#cdocobjectserveritem)
 
-##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
+## <a name="cdocobjectserveritemondoverb"></a><a name="ondoverb"></a>CDocObjectServerItem::OnDoVerb
 
-Lo llama el marco para ocultar el elemento.
+Llamado por el marco de trabajo para ejecutar el verbo especificado.
+
+```
+virtual void OnDoVerb(LONG iVerb);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*iVerb*<br/>
+Especifica el verbo que se va a ejecutar. Para ver los valores posibles, vea [IOleObject::DoVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) en el Windows SDK.
+
+### <a name="remarks"></a>Observaciones
+
+La implementación predeterminada llama a la [OnShow](#onshow) función miembro si el elemento es un DocObject y se especifica el OLEIVERB_INPLACEACTIVATE o OLEIVERB_SHOW. Si el elemento no es un DocObject o se especifica un verbo diferente, la implementación predeterminada llama [a COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb).
+
+## <a name="cdocobjectserveritemonhide"></a><a name="onhide"></a>CDocObjectServerItem::OnHide
+
+Llamado por el marco de trabajo para ocultar el elemento.
 
 ```
 virtual void OnHide();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La implementación predeterminada produce una excepción si el elemento es un objeto DocObject. No se puede ocultar un elemento de DocObject activo porque toma la vista entera. Debe desactivar el elemento de DocObject para que desaparezca. Si el elemento no es un objeto DocObject, la implementación predeterminada llama [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).
+La implementación predeterminada produce una excepción si el elemento es un DocObject. No se puede ocultar un elemento DocObject activo porque toma toda la vista. Debe desactivar el elemento DocObject para que desaparezca. Si el elemento no es un DocObject, la implementación predeterminada llama [a COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).
 
-##  <a name="onshow"></a>  CDocObjectServerItem::OnShow
+## <a name="cdocobjectserveritemonshow"></a><a name="onshow"></a>CDocObjectServerItem::OnShow
 
-Lo llama el marco para indicar a la aplicación de servidor para que sea el DocObject elemento en el sitio activo.
+Llamado por el marco de trabajo para indicar a la aplicación de servidor que active el elemento DocObject in situ.
 
 ```
 virtual void OnShow();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si el elemento no es un objeto DocObject, la implementación predeterminada llama [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Reemplace esta función si desea realizar el procesamiento al abrir un elemento de DocObject especial.
+Si el elemento no es un DocObject, la implementación predeterminada llama [a COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Reemplace esta función si desea realizar un procesamiento especial al abrir un elemento DocObject.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [COleServerItem (clase)](../../mfc/reference/coleserveritem-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CDocObjectServer (clase)](../../mfc/reference/cdocobjectserver-class.md)<br/>
-[COleDocObjectItem (clase)](../../mfc/reference/coledocobjectitem-class.md)
+[Clase COleDocObjectItem](../../mfc/reference/coledocobjectitem-class.md)

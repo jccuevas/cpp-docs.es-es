@@ -6,12 +6,12 @@ helpviewer_keywords:
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd120d1fbe0f73ed0974efda5a1aa643a1afde9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439187"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143008"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Cómo: Usar contenedores paralelos para aumentar la eficacia
 
@@ -27,9 +27,9 @@ En el ejemplo siguiente se muestra la función `is_prime`, que determina si un v
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se usan las funciones `is_prime` e `is_carmichael` para calcular los conjuntos de números primos y números de Carmichael. El ejemplo se usa el [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) y [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmos para calcular cada conjunto en paralelo. Para obtener más información acerca de los algoritmos paralelos, vea [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
+En el siguiente ejemplo se usan las funciones `is_prime` e `is_carmichael` para calcular los conjuntos de números primos y números de Carmichael. En el ejemplo se usan los algoritmos [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) y [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) para calcular cada conjunto en paralelo. Para obtener más información sobre los algoritmos paralelos, vea [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
-Este ejemplo se usa un [Concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) números del objeto para almacenar el conjunto de Carmichael porque más adelante usará ese objeto como una cola de trabajo. Usa un [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objeto para almacenar el conjunto de números primos porque más adelante creará una iteración a través de este conjunto para buscar factores primos.
+En este ejemplo se usa un objeto [Concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) para contener el conjunto de números de Carmichael porque posteriormente usará ese objeto como cola de trabajo. Usa un objeto [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) para contener el conjunto de números primos, ya que más adelante recorrerá en iteración este conjunto para encontrar factores primos.
 
 [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]
 
@@ -37,7 +37,7 @@ Este ejemplo se usa un [Concurrency:: concurrent_queue](../../parallel/concrt/re
 
 En el siguiente ejemplo se muestra la función `prime_factors_of`, que usa la división por tentativa para encontrar todos los factores primos del valor especificado.
 
-Esta función usa el [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo para recorrer en iteración la colección de números primos. El objeto `concurrent_vector` permite al bucle paralelo agregar simultáneamente los factores primos al resultado.
+Esta función usa el algoritmo [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) para recorrer en iteración la colección de números primos. El objeto `concurrent_vector` permite al bucle paralelo agregar simultáneamente los factores primos al resultado.
 
 [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]
 
@@ -67,14 +67,14 @@ Prime factors of 1050985 are: 5 13 19 23 37.
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `carmichael-primes.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc carmichael-primes.cpp**
+> **cl. exe/EHsc carmichael-primes. cpp**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [Paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [concurrent_vector (clase)](../../parallel/concrt/reference/concurrent-vector-class.md)<br/>
 [concurrent_queue (clase)](../../parallel/concrt/reference/concurrent-queue-class.md)<br/>
-[parallel_invoke (función)](reference/concurrency-namespace-functions.md#parallel_invoke)<br/>
-[parallel_for (función)](reference/concurrency-namespace-functions.md#parallel_for)<br/>
+[parallel_invoke función)](reference/concurrency-namespace-functions.md#parallel_invoke)<br/>
+[parallel_for función)](reference/concurrency-namespace-functions.md#parallel_for)<br/>
 [task_group (clase)](reference/task-group-class.md)

@@ -1,11 +1,13 @@
 ---
 title: pow, powf, powl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - powl
 - pow
 - powf
-apilocation:
+- _o_pow
+- _o_powf
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +19,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - powl
 - pow
@@ -33,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452025"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916795"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -65,7 +71,7 @@ long double pow( long double x, int y );  // C++ only
 *x*<br/>
 Base.
 
-*y*<br/>
+*sí*<br/>
 Exponente.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -74,27 +80,29 @@ Devuelve el valor de *x*<sup>*y*</sup>. No se imprime ningún mensaje de error e
 
 |Valores de x e y|Valor devuelto de pow|
 |-----------------------|-------------------------|
-|*x* ! = 0,0 y *y* == 0.0|1|
-|*x* == 0.0 y *y* == 0.0|1|
-|*x* == 0.0 y *y* < 0|INF|
+|*x* ! = *0,0 e y = = 0,0*|1|
+|*x* = = *0,0 e y = = 0,0*|1|
+|*x* = = *0,0 e y* < 0|INF|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**Pow** no reconoce los valores de punto flotante enteros mayores que 2<sup>64</sup> (por ejemplo, 1.0E100).
+**Pow** no reconoce valores de punto flotante enteros mayores que 2<sup>64</sup> (por ejemplo, 1.0 E100).
 
-**Pow** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**Pow** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Dado que C++ admite sobrecargas, puede llamar a cualquiera de las distintas sobrecargas de **pow**. En un programa C, **pow** siempre toma dos **doble** valores y devuelve un **doble** valor.
+Dado que C++ permite las sobrecargas, puede llamar a cualquiera de las distintas sobrecargas de **Pow**. En un programa de C, **Pow** siempre toma dos valores **Double** y devuelve un valor **Double** .
 
-La sobrecarga de `pow(int, int)` ya no está disponible. Si utiliza esta sobrecarga, el compilador puede emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar este problema, convierta el primer parámetro **doble**, **float**, o **largo** **doble**.
+La sobrecarga de `pow(int, int)` ya no está disponible. Si utiliza esta sobrecarga, el compilador puede emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar este problema, convierta el primer parámetro en **Double**, **float**o **Long** **Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-|-|-|
-|**Pow**, **powf**, **powl**|\<math.h>|\<math.h> o \<cmath>|
+|**Pow**, **powf (**, **powl**|\<math.h>|\<math.h> o \<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -117,7 +125,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

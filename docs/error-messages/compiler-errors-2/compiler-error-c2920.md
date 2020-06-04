@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2920
 ms.assetid: 0a4cb2de-00a0-4209-8160-c7ce6ed7d9ab
-ms.openlocfilehash: 28bbbd30bcb16e2ea5fc14fe0f48f86814ee13c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b744729097f7e697c7a7695a849b5ee46d7a4ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616483"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761037"
 ---
 # <a name="compiler-error-c2920"></a>Error del compilador C2920
 
@@ -21,7 +21,7 @@ Una clase genérica o de plantilla tiene varias declaraciones que no son equival
 
 El ejemplo siguiente genera el error C2920 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2920.cpp
 // compile with: /c
 typedef int TC1;
@@ -32,7 +32,7 @@ struct TC2 {};   // OK - fix by using a different name
 
 También se puede producir C2920 al utilizar genéricos:
 
-```
+```cpp
 // C2920b.cpp
 // compile with: /clr /c
 typedef int GC1;

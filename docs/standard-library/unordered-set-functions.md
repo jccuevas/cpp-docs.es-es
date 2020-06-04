@@ -5,25 +5,20 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: a6e005918730a2ca1f52469130e2ea2cf1547fc8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522615"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427696"
 ---
-# <a name="ltunorderedsetgt-functions"></a>Funciones de &lt;unordered_set&gt;
+# <a name="ltunordered_setgt-functions"></a>Funciones de &lt;unordered_set&gt;
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a>swap (unordered_set)
 
 Intercambia el contenido de dos contenedores.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
@@ -32,25 +27,25 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Key*<br/>
+\ *clave*
 El tipo de clave.
 
-*hash*<br/>
+\ *hash*
 El tipo de objeto de la función hash.
 
-*Pred*<br/>
+*Pred*\
 El tipo de objeto de función de comparación de igualdad.
 
-*Alloc*<br/>
+\ de *asignación*
 Clase de asignador.
 
-*left*<br/>
+\ *izquierda*
 El primer contenedor que se va a cambiar.
 
-*right*<br/>
+\ *derecha*
 El segundo contenedor que se va a cambiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla ejecuta `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.
 
@@ -102,18 +97,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a>swap (unordered_multiset)
 
 Intercambia el contenido de dos contenedores.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,25 +115,25 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Key*<br/>
+\ *clave*
 El tipo de clave.
 
-*hash*<br/>
+\ *hash*
 El tipo de objeto de la función hash.
 
-*Pred*<br/>
+*Pred*\
 El tipo de objeto de función de comparación de igualdad.
 
-*Alloc*<br/>
+\ de *asignación*
 Clase de asignador.
 
-*left*<br/>
+\ *izquierda*
 El primer contenedor que se va a cambiar.
 
-*right*<br/>
+\ *derecha*
 El segundo contenedor que se va a cambiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla ejecuta `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.
 
@@ -194,12 +187,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## <a name="see-also"></a>Vea también
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>

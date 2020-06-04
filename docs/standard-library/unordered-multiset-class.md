@@ -134,16 +134,16 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 34fb3e16dc7369526895a011c7e192d2f51edf14
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 11a78de63952a1c52ac4d2ae8b6ba3a7dff7b07c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519794"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373102"
 ---
-# <a name="unorderedmultiset-class"></a>unordered_multiset (Clase)
+# <a name="unordered_multiset-class"></a>unordered_multiset (Clase)
 
-La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos de tipo `const Key`. La secuencia está ordenada débilmente por una función hash, que divide la secuencia en un conjunto ordenado subsecuencias denominadas depósitos. Dentro de cada depósito una función de comparación determina si algún par de elementos tiene una ordenación equivalente. Cada elemento actúa como clave de ordenación y como valor. La secuencia se representan de tal forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con una serie de operaciones que pueden ser independientes del número de elementos de la secuencia (tiempo constante), al menos cuando todos los depósitos tienen una longitud aproximadamente igual. En el peor de los casos, cuando todos los elementos están en un depósito, el número de operaciones es proporcional al número de elementos de la secuencia (tiempo lineal). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.
+La plantilla de clase describe un objeto que controla `const Key`una secuencia de longitud variable de elementos de tipo . La secuencia está ordenada débilmente por una función hash, que divide la secuencia en un conjunto ordenado subsecuencias denominadas depósitos. Dentro de cada depósito una función de comparación determina si algún par de elementos tiene una ordenación equivalente. Cada elemento actúa como clave de ordenación y como valor. La secuencia se representan de tal forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con una serie de operaciones que pueden ser independientes del número de elementos de la secuencia (tiempo constante), al menos cuando todos los depósitos tienen una longitud aproximadamente igual. En el peor de los casos, cuando todos los elementos están en un depósito, el número de operaciones es proporcional al número de elementos de la secuencia (tiempo lineal). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -159,8 +159,8 @@ class unordered_multiset;
 
 |Parámetro|Descripción|
 |-|-|
-|*Key*|El tipo de clave.|
-|*hash*|El tipo de objeto de la función hash.|
+|*Clave*|El tipo de clave.|
+|*Hash*|El tipo de objeto de la función hash.|
 |*Pred*|El tipo de objeto de función de comparación de igualdad.|
 |*Alloc*|Clase de asignador.|
 
@@ -174,59 +174,59 @@ class unordered_multiset;
 |[const_pointer](#const_pointer)|El tipo de un puntero constante a un elemento.|
 |[const_reference](#const_reference)|El tipo de una referencia constante a un elemento.|
 |[difference_type](#difference_type)|El tipo de una distancia con signo entre dos elementos.|
-|[hasher](#hasher)|El tipo de la función hash.|
-|[iterator](#iterator)|El tipo de un iterador para la secuencia controlada.|
+|[Hasher](#hasher)|El tipo de la función hash.|
+|[Iterador](#iterator)|El tipo de un iterador para la secuencia controlada.|
 |[key_equal](#key_equal)|El tipo de la función de comparación.|
 |[key_type](#key_type)|El tipo de una clave de ordenación.|
 |[local_iterator](#local_iterator)|El tipo de un iterador de depósito para la secuencia controlada.|
-|[pointer](#pointer)|El tipo de un puntero a un elemento.|
-|[reference](#reference)|El tipo de una referencia a un elemento.|
+|[puntero](#pointer)|El tipo de un puntero a un elemento.|
+|[Referencia](#reference)|El tipo de una referencia a un elemento.|
 |[size_type](#size_type)|El tipo de una distancia sin signo entre dos elementos.|
 |[value_type](#value_type)|El tipo de un elemento.|
 
 |Función miembro|Descripción|
 |-|-|
-|[begin](#begin)|Designa el principio de la secuencia controlada.|
-|[depósito](#bucket)|Obtiene el número de depósito para un valor de clave.|
+|[Comenzar](#begin)|Designa el principio de la secuencia controlada.|
+|[Cubo](#bucket)|Obtiene el número de depósito para un valor de clave.|
 |[bucket_count](#bucket_count)|Obtiene el número de depósitos.|
 |[bucket_size](#bucket_size)|Obtiene el tamaño de un depósito.|
 |[cbegin](#cbegin)|Designa el principio de la secuencia controlada.|
 |[cend](#cend)|Designa el final de la secuencia controlada.|
-|[clear](#clear)|Quita todos los elementos.|
+|[Claro](#clear)|Quita todos los elementos.|
 |[count](#count)|Busca el número de elementos que coinciden con una clave especificada.|
 |[emplace](#emplace)|Agrega un elemento construido en contexto.|
 |[emplace_hint](#emplace_hint)|Agrega un elemento construido en contexto, con sugerencia.|
-|[empty](#empty)|Comprueba si no hay ningún elemento presente.|
-|[end](#end)|Designa el final de la secuencia controlada.|
+|[Vacío](#empty)|Comprueba si no hay ningún elemento presente.|
+|[Final](#end)|Designa el final de la secuencia controlada.|
 |[equal_range](#equal_range)|Busca el intervalo que coincide con una clave especificada.|
 |[erase](#erase)|Quita los elementos de las posiciones especificadas.|
 |[find](#find)|Busca un elemento que coincide con una clave especificada.|
 |[get_allocator](#get_allocator)|Obtiene el objeto de asignador almacenado.|
 |[hash_function](#hash)|Obtiene el objeto de función hash almacenado.|
-|[insert](#insert)|Agrega elementos.|
+|[insertar](#insert)|Agrega elementos.|
 |[key_eq](#key_eq)|Obtiene el objeto de función de comparación almacenado.|
 |[load_factor](#load_factor)|Cuenta los elementos promedio por depósito.|
 |[max_bucket_count](#max_bucket_count)|Obtiene el número máximo de depósitos.|
 |[max_load_factor](#max_load_factor)|Obtiene o establece los elementos máximos por depósito.|
 |[max_size](#max_size)|Obtiene el tamaño máximo de la secuencia controlada.|
-|[rehash)](#rehash)|Recompila la tabla hash.|
-|[size](#size)|Cuenta el número de elementos.|
+|[Refrito](#rehash)|Recompila la tabla hash.|
+|[Tamaño](#size)|Cuenta el número de elementos.|
 |[swap](#swap)|Intercambia el contenido de dos contenedores.|
 |[unordered_multiset](#unordered_multiset)|Construye un objeto contenedor.|
 
-|Operador|Descripción|
+|Operator|Descripción|
 |-|-|
-|[unordered_multiset::operator=](#op_eq)|Copia una tabla hash.|
+|[unordered_multiset::operador ?](#op_eq)|Copia una tabla hash.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El objeto ordena la secuencia que controla llamando a dos objetos almacenados, un objeto de función de comparación de tipo [unordered_multiset::key_equal](#key_equal) y un objeto de función hash de tipo [unordered_multiset::hasher](#hasher). Se tiene acceso al primer objeto almacenado llamando a la función miembro [unordered_multiset::key_eq](#key_eq)`()` y se tiene acceso al segundo objeto almacenado llamando a la función miembro [unordered_multiset::hash_function](#hash)`()`. Concretamente, para todos los valores `X` e `Y` de tipo `Key`, la llamada a `key_eq()(X, Y)` solo devuelve true si los dos valores de argumento tienen una ordenación equivalente; la llamada a `hash_function()(keyval)` produce una distribución de valores de tipo `size_t`. A diferencia de la clase de plantilla [unordered_set](../standard-library/unordered-set-class.md), un objeto de clase de plantilla `unordered_multiset` no garantiza que `key_eq()(X, Y)` es siempre false para dos elementos cualesquiera de la secuencia controlada. (No es necesario que las claves sean únicas).
+El objeto ordena la secuencia que controla llamando a dos objetos almacenados, un objeto de función de comparación de tipo [unordered_multiset::key_equal](#key_equal) y un objeto de función hash de tipo [unordered_multiset::hasher](#hasher). Puede tener acceso al primer objeto almacenado llamando a la función miembro [unordered_multiset::key_eq](#key_eq)`()`; y tiene acceso al segundo objeto almacenado llamando a la función miembro [unordered_multiset::hash_function](#hash)`()`. Concretamente, para todos los valores `X` e `Y` de tipo `Key`, la llamada a `key_eq()(X, Y)` solo devuelve true si los dos valores de argumento tienen una ordenación equivalente; la llamada a `hash_function()(keyval)` produce una distribución de valores de tipo `size_t`. A diferencia de la plantilla `unordered_multiset` de clase `key_eq()(X, Y)` [unordered_set Class](../standard-library/unordered-set-class.md), un objeto de tipo no garantiza que siempre sea false para dos elementos de la secuencia controlada. (No es necesario que las claves sean únicas).
 
-El objeto también almacena un factor de carga máxima, que especifica el número promedio deseado máximo de elementos por depósito. Si la inserción de un elemento hace que [unordered_multiset::load_factor](#load_factor)`()` supere el factor de carga máxima, el contenedor aumenta el número de depósitos y recompila la tabla hash según sea necesario.
+El objeto también almacena un factor de carga máxima, que especifica el número promedio deseado máximo de elementos por depósito. Si la inserción de un elemento hace que [unordered_multiset::load_factor](#load_factor) `()` supere el factor de carga máximo, el contenedor aumenta el número de buckets y vuelve a generar la tabla hash según sea necesario.
 
 El orden real de los elementos de la secuencia controlada depende de la función hash, la función de comparación, el orden de inserción, el factor de carga máxima y el número actual de depósitos. En general no se puede predecir el orden de los elementos de la secuencia controlada. Sin embargo, siempre se puede asegurar que cualquier subconjunto de elementos que tengan una ordenación equivalente son adyacentes en la secuencia controlada.
 
-El objeto asigna y libera almacenamiento para la secuencia que controla a través de un objeto asignador almacenado de tipo [unordered_multiset::allocator_type](#allocator_type). Ese objeto de asignador debe tener la misma interfaz externa que un objeto de clase de plantilla `allocator`. Tenga en cuenta que el objeto de asignador almacenado no se copia cuando se asigna el objeto contenedor.
+El objeto asigna y libera almacenamiento para la secuencia que controla a través de un objeto asignador almacenado de tipo [unordered_multiset::allocator_type](#allocator_type). Este tipo de objeto de asignador debe tener `allocator`la misma interfaz externa que un objeto de tipo . Tenga en cuenta que el objeto de asignador almacenado no se copia cuando se asigna el objeto contenedor.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -234,7 +234,7 @@ El objeto asigna y libera almacenamiento para la secuencia que controla a travé
 
 **Espacio de nombres:** std
 
-## <a name="allocator_type"></a>  unordered_multiset::allocator_type
+## <a name="unordered_multisetallocator_type"></a><a name="allocator_type"></a>unordered_multiset::allocator_type
 
 El tipo de un asignador para administrar el almacenamiento.
 
@@ -242,7 +242,7 @@ El tipo de un asignador para administrar el almacenamiento.
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `Alloc`.
 
@@ -272,7 +272,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a>  unordered_multiset::begin
+## <a name="unordered_multisetbegin"></a><a name="begin"></a>unordered_multiset::comenzar
 
 Designa el principio de la secuencia controlada o un depósito.
 
@@ -292,9 +292,9 @@ const_local_iterator begin(size_type nbucket) const;
 |-|-|
 |*nbucket*|Número de depósito.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las dos primeras funciones miembro devuelven un iterador hacia delante que apunta al primer elemento de la secuencia (o más allá del final de una secuencia vacía). Las dos últimas funciones miembro devuelven un iterador hacia delante que apunta al primer elemento del depósito *nbucket* (o justo después del final de un depósito vacío).
+Las dos primeras funciones miembro devuelven un iterador hacia delante que apunta al primer elemento de la secuencia (o más allá del final de una secuencia vacía). Las dos últimas funciones miembro devuelven un iterador hacia delante que apunta al primer elemento de *bucket nbucket* (o justo más allá del final de un bucket vacío).
 
 ### <a name="example"></a>Ejemplo
 
@@ -340,7 +340,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a>  unordered_multiset::bucket
+## <a name="unordered_multisetbucket"></a><a name="bucket"></a>unordered_multiset::bucket
 
 Obtiene el número de depósito para un valor de clave.
 
@@ -350,10 +350,10 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*\
 Valor de clave que se va a asignar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve el número de depósito que corresponde actualmente al valor de clave `keyval`.
 
@@ -396,7 +396,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>  unordered_multiset::bucket_count
+## <a name="unordered_multisetbucket_count"></a><a name="bucket_count"></a>unordered_multiset::bucket_count
 
 Obtiene el número de depósitos.
 
@@ -404,7 +404,7 @@ Obtiene el número de depósitos.
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve el número actual de depósitos.
 
@@ -481,7 +481,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>  unordered_multiset::bucket_size
+## <a name="unordered_multisetbucket_size"></a><a name="bucket_size"></a>unordered_multiset::bucket_size
 
 Obtiene el tamaño de un depósito.
 
@@ -491,12 +491,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nbucket*<br/>
+*nbucket*\
 Número de depósito.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las funciones miembro devuelven el tamaño del número de depósito *nbucket*.
+Las funciones miembro devuelven el tamaño del número de bucket *nbucket*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -537,9 +537,9 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>  unordered_multiset::cbegin
+## <a name="unordered_multisetcbegin"></a><a name="cbegin"></a>unordered_multiset::cbegin
 
-Devuelve un **const** iterador que direcciona el primer elemento del intervalo.
+Devuelve un **iterador const** que direcciona el primer elemento del intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -547,13 +547,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un **const** hacia delante que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
+Iterador de acceso directo **const** que apunta al primer elemento del intervalo o a la ubicación `cbegin() == cend()`justo más allá del final de un intervalo vacío (para un intervalo vacío, ).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.
 
-Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `begin()` y `cbegin()`.
+Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el `Container` ejemplo, considere que es un contenedor modificable (no **const**) de cualquier tipo que admita `begin()` y `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -563,9 +563,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  unordered_multiset::cend
+## <a name="unordered_multisetcend"></a><a name="cend"></a>unordered_multiset::cend
 
-Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
+Devuelve un **iterador const** que direcciona la ubicación justo más allá del último elemento de un intervalo.
 
 ```cpp
 const_iterator cend() const;
@@ -573,13 +573,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un **const** hacia delante que apunta justo después del final del intervalo.
+Iterador de acceso directo **const** que apunta justo más allá del final del intervalo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
-Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `end()` y `cend()`.
+Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el `Container` ejemplo, considere que es un contenedor modificable (no **const**) de cualquier tipo que admita `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -591,7 +591,7 @@ auto i2 = Container.cend();
 
 El valor devuelto por `cend` no se debe desreferenciar.
 
-## <a name="clear"></a>  unordered_multiset::clear
+## <a name="unordered_multisetclear"></a><a name="clear"></a>unordered_multiset::claro
 
 Quita todos los elementos.
 
@@ -599,7 +599,7 @@ Quita todos los elementos.
 void clear();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro llama a [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`.
 
@@ -658,7 +658,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>  unordered_multiset::const_iterator
+## <a name="unordered_multisetconst_iterator"></a><a name="const_iterator"></a>unordered_multiset::const_iterator
 
 El tipo de un iterador constante para la secuencia controlada.
 
@@ -666,7 +666,7 @@ El tipo de un iterador constante para la secuencia controlada.
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede actuar como un iterador de avance constante de la secuencia controlada. Aquí se describe como sinónimo del tipo definido por implementación `T1`.
 
@@ -701,7 +701,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a>  unordered_multiset::const_local_iterator
+## <a name="unordered_multisetconst_local_iterator"></a><a name="const_local_iterator"></a>unordered_multiset::const_local_iterator
 
 El tipo de un iterador de depósito constante para la secuencia controlada.
 
@@ -709,7 +709,7 @@ El tipo de un iterador de depósito constante para la secuencia controlada.
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede actuar como iterador constante hacia delante para un depósito. Aquí se describe como sinónimo del tipo definido por implementación `T5`.
 
@@ -749,7 +749,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a>  unordered_multiset::const_pointer
+## <a name="unordered_multisetconst_pointer"></a><a name="const_pointer"></a>unordered_multiset::const_pointer
 
 El tipo de un puntero constante a un elemento.
 
@@ -757,7 +757,7 @@ El tipo de un puntero constante a un elemento.
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede actuar como puntero constante a un elemento de la secuencia controlada.
 
@@ -795,7 +795,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a>  unordered_multiset::const_reference
+## <a name="unordered_multisetconst_reference"></a><a name="const_reference"></a>unordered_multiset::const_reference
 
 El tipo de una referencia constante a un elemento.
 
@@ -803,7 +803,7 @@ El tipo de una referencia constante a un elemento.
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede actuar como referencia constante a un elemento de la secuencia controlada.
 
@@ -841,7 +841,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a>  unordered_multiset::count
+## <a name="unordered_multisetcount"></a><a name="count"></a>unordered_multiset::conde
 
 Busca el número de elementos que coinciden con una clave especificada.
 
@@ -851,12 +851,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*\
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve el número de elementos incluidos en el rango delimitado por [unordered_multiset::equal_range](#equal_range)`(keyval)`.
+La función miembro devuelve el número de elementos del intervalo delimitado por [unordered_multiset::equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -896,7 +896,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>  unordered_multiset::difference_type
+## <a name="unordered_multisetdifference_type"></a><a name="difference_type"></a>unordered_multiset::difference_type
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -904,7 +904,7 @@ El tipo de una distancia con signo entre dos elementos.
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo de entero con signo describe un objeto que puede representar la diferencia entre las direcciones de dos elementos cualesquiera de la secuencia controlada. Aquí se describe como sinónimo del tipo definido por implementación `T3`.
 
@@ -955,7 +955,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>  unordered_multiset::emplace
+## <a name="unordered_multisetemplace"></a><a name="emplace"></a>unordered_multiset::emplace
 
 Inserta un elemento construido en contexto (no se realiza ninguna operación de copia o de movimiento).
 
@@ -974,7 +974,7 @@ iterator emplace(Args&&... args);
 
 Iterador al elemento recién insertado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no invalida ninguna referencia a elementos contenedores, pero puede invalidar todos los iteradores al contenedor.
 
@@ -982,7 +982,7 @@ Durante la inserción, si se produce una excepción pero no ocurre en la funció
 
 Para obtener un ejemplo de código, vea [multiset::emplace](../standard-library/multiset-class.md#emplace).
 
-## <a name="emplace_hint"></a>  unordered_multiset::emplace_hint
+## <a name="unordered_multisetemplace_hint"></a><a name="emplace_hint"></a>unordered_multiset::emplace_hint
 
 Inserta un elemento construido en contexto (no se realiza ninguna operación de copia o de movimiento), con una sugerencia de colocación.
 
@@ -1004,7 +1004,7 @@ iterator emplace_hint(
 
 Iterador al elemento recién insertado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no invalida ninguna referencia a elementos contenedores, pero puede invalidar todos los iteradores al contenedor.
 
@@ -1012,7 +1012,7 @@ Durante la inserción, si se produce una excepción pero no ocurre en la funció
 
 Para obtener un ejemplo de código, vea [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a>  unordered_multiset::empty
+## <a name="unordered_multisetempty"></a><a name="empty"></a>unordered_multiset::vacío
 
 Comprueba si no hay ningún elemento presente.
 
@@ -1020,7 +1020,7 @@ Comprueba si no hay ningún elemento presente.
 bool empty() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve true para una secuencia controlada vacía.
 
@@ -1079,7 +1079,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>  unordered_multiset::end
+## <a name="unordered_multisetend"></a><a name="end"></a>unordered_multiset::fin
 
 Designa el final de la secuencia controlada.
 
@@ -1092,12 +1092,12 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nbucket*<br/>
+*nbucket*\
 Número de depósito.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las dos primeras funciones miembro devuelven un iterador hacia delante que apunta inmediatamente después del final de la secuencia. Las dos últimas funciones miembro devuelven un iterador hacia delante que apunta justo después del final del depósito *nbucket*.
+Las dos primeras funciones miembro devuelven un iterador hacia delante que apunta inmediatamente después del final de la secuencia. Las dos últimas funciones miembro devuelven un iterador hacia delante que apunta justo más allá del final del *bucket nbucket*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1145,7 +1145,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a>  unordered_multiset::equal_range
+## <a name="unordered_multisetequal_range"></a><a name="equal_range"></a>unordered_multiset::equal_range
 
 Busca el intervalo que coincide con una clave especificada.
 
@@ -1159,12 +1159,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*\
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve un par de iteradores `X` que `[X.first, X.second)` delimita únicamente los elementos de la secuencia controlada que tienen una ordenación equivalente con *keyval*. Si no hay elementos de este tipo, los dos iteradores son `end()`.
+La función miembro devuelve `X` un `[X.first, X.second)` par de iteradores de modo que delimita solo los elementos de la secuencia controlada que tienen un orden equivalente con *keyval*. Si no hay elementos de este tipo, los dos iteradores son `end()`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1214,7 +1214,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a>  unordered_multiset::erase
+## <a name="unordered_multiseterase"></a><a name="erase"></a>unordered_multiset::borrar
 
 Quita un elemento o un intervalo de elementos de un unordered_multiset de las posiciones especificadas o quita los elementos que coinciden con una clave especificada.
 
@@ -1232,16 +1232,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*Where*<br/>
+*Dónde*\
 Posición del elemento que se va a quitar.
 
-*Primero*<br/>
+*Primero*\
 Posición del primer elemento que se va a quitar.
 
-*Último*<br/>
+*Última*\
 Posición situada más allá del último elemento que se va a quitar.
 
-*Key*<br/>
+*Clave*\
 Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1250,11 +1250,11 @@ Para las dos primeras funciones miembro, iterador bidireccional que designa el p
 
 Para la tercera función miembro, devuelve el número de elementos que se han quitado de unordered_multiset.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener un ejemplo de código, vea [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a>  unordered_multiset::find
+## <a name="unordered_multisetfind"></a><a name="find"></a>unordered_multiset::encontrar
 
 Busca un elemento que coincide con una clave especificada.
 
@@ -1264,10 +1264,10 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*\
 Valor de clave que se va a buscar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [unordered_multiset::equal_range](#equal_range)`(keyval).first`.
 
@@ -1314,7 +1314,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a>  unordered_multiset::get_allocator
+## <a name="unordered_multisetget_allocator"></a><a name="get_allocator"></a>unordered_multiset::get_allocator
 
 Obtiene el objeto de asignador almacenado.
 
@@ -1322,7 +1322,7 @@ Obtiene el objeto de asignador almacenado.
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve el objeto de asignador almacenado.
 
@@ -1352,7 +1352,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>  unordered_multiset::hash_function
+## <a name="unordered_multisethash_function"></a><a name="hash"></a>unordered_multiset::hash_function
 
 Obtiene el objeto de función hash almacenado.
 
@@ -1360,7 +1360,7 @@ Obtiene el objeto de función hash almacenado.
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve el objeto de función hash almacenado.
 
@@ -1390,7 +1390,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>  unordered_multiset::hasher
+## <a name="unordered_multisethasher"></a><a name="hasher"></a>unordered_multiset::hasher
 
 El tipo de la función hash.
 
@@ -1398,7 +1398,7 @@ El tipo de la función hash.
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `Hash`.
 
@@ -1428,7 +1428,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>  unordered_multiset::insert
+## <a name="unordered_multisetinsert"></a><a name="insert"></a>unordered_multiset::insertar
 
 Inserta un elemento o un intervalo de elementos en un unordered_multiset.
 
@@ -1472,9 +1472,9 @@ IList);
 |-|-|
 |*Val*|Valor de un elemento que se va a insertar en el unordered_multiset.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto.|
-|*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que el unordered_multiset puede utilizar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.|
+|*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que el unordered_multiset puede usar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y reenvía *Val* como argumento.|
 |*Primero*|Posición del primer elemento que se va a copiar.|
-|*Último*|Posición situada más allá del último elemento que se va a copiar.|
+|*Última*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
 
@@ -1484,7 +1484,7 @@ Las funciones miembro de inserción de un solo elemento, (1) y (2), devuelven un
 
 Las funciones miembro de inserción de un solo elemento con sugerencia, (3) y (4), devuelven un iterador que apunta a la posición donde se insertó el nuevo elemento en el unordered_multiset.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no invalida ningún puntero ni ninguna referencia, pero puede invalidar todos los iteradores al contenedor.
 
@@ -1492,7 +1492,7 @@ Durante la inserción de un solo elemento, si se produce una excepción pero no 
 
 El objeto [value_type](../standard-library/map-class.md#value_type) de un contenedor es una definición de tipo que pertenece al contenedor y, para set, `unordered_multiset<V>::value_type` es de tipo `const V`.
 
-La función miembro de intervalo (5) inserta la secuencia de valores de elemento en un unordered_multiset que corresponde a cada elemento direccionado por un iterador en el intervalo `[First, Last)`; por lo tanto, *última* no se inserta. La función miembro de contenedor `end()` hace referencia a la posición situada justo después del último elemento del contenedor; por ejemplo, la instrucción `m.insert(v.begin(), v.end());` inserta todos los elementos de `v` en `m`.
+La función miembro de rango (5) inserta la secuencia de valores de elemento en `[First, Last)`un unordered_multiset que corresponde a cada elemento direccionado por un iterador en el intervalo ; por lo tanto, *Last* no se inserta. La función miembro de contenedor `end()` hace referencia a la posición situada justo después del último elemento del contenedor; por ejemplo, la instrucción `m.insert(v.begin(), v.end());` inserta todos los elementos de `v` en `m`.
 
 La función miembro de lista de inicializadores (6) usa una [initializer_list](../standard-library/initializer-list.md) para copiar los elementos al unordered_multiset.
 
@@ -1500,7 +1500,7 @@ Para la inserción de un elemento construido en contexto (es decir, no se realiz
 
 Para obtener un ejemplo de código, vea [multiset::insert](../standard-library/multiset-class.md#insert).
 
-## <a name="iterator"></a>  unordered_multiset::iterator
+## <a name="unordered_multisetiterator"></a><a name="iterator"></a>unordered_multiset::iterator
 
 Tipo que proporciona un [iterador hacia delante](../standard-library/forward-iterator-tag-struct.md) constante que puede leer elementos en un unordered_multiset.
 
@@ -1510,9 +1510,9 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [begin](../standard-library/multiset-class.md#begin) para obtener un ejemplo de cómo declarar y usar **iterator**.
+Vea el ejemplo de [begin](../standard-library/multiset-class.md#begin) para obtener un ejemplo de cómo declarar y usar un **iterador**.
 
-## <a name="key_eq"></a>  unordered_multiset::key_eq
+## <a name="unordered_multisetkey_eq"></a><a name="key_eq"></a>unordered_multiset::key_eq
 
 Obtiene el objeto de función de comparación almacenado.
 
@@ -1520,7 +1520,7 @@ Obtiene el objeto de función de comparación almacenado.
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve el objeto de función de comparación almacenado.
 
@@ -1552,7 +1552,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>  unordered_multiset::key_equal
+## <a name="unordered_multisetkey_equal"></a><a name="key_equal"></a>unordered_multiset::key_equal
 
 El tipo de la función de comparación.
 
@@ -1560,7 +1560,7 @@ El tipo de la función de comparación.
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `Pred`.
 
@@ -1592,7 +1592,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>  unordered_multiset::key_type
+## <a name="unordered_multisetkey_type"></a><a name="key_type"></a>unordered_multiset::key_type
 
 El tipo de una clave de ordenación.
 
@@ -1600,7 +1600,7 @@ El tipo de una clave de ordenación.
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `Key`.
 
@@ -1646,7 +1646,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a>  unordered_multiset::load_factor
+## <a name="unordered_multisetload_factor"></a><a name="load_factor"></a>unordered_multiset::load_factor
 
 Cuenta los elementos promedio por depósito.
 
@@ -1654,9 +1654,9 @@ Cuenta los elementos promedio por depósito.
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve `(float)`[unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()`, el promedio de elementos por depósito.
+La función `(float)`miembro devuelve [unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()`, el número medio de elementos por bucket.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1714,7 +1714,7 @@ int main()
 }
 ```
 
-## <a name="local_iterator"></a>  unordered_multiset::local_iterator
+## <a name="unordered_multisetlocal_iterator"></a><a name="local_iterator"></a>unordered_multiset::local_iterator
 
 Tipo de un iterador de depósito.
 
@@ -1722,7 +1722,7 @@ Tipo de un iterador de depósito.
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede actuar como iterador hacia delante para un depósito. Aquí se describe como sinónimo del tipo definido por implementación `T4`.
 
@@ -1762,7 +1762,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a>  unordered_multiset::max_bucket_count
+## <a name="unordered_multisetmax_bucket_count"></a><a name="max_bucket_count"></a>unordered_multiset::max_bucket_count
 
 Obtiene el número máximo de depósitos.
 
@@ -1770,7 +1770,7 @@ Obtiene el número máximo de depósitos.
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve el número máximo de depósitos que se admiten actualmente.
 
@@ -1848,7 +1848,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>  unordered_multiset::max_load_factor
+## <a name="unordered_multisetmax_load_factor"></a><a name="max_load_factor"></a>unordered_multiset::max_load_factor
 
 Obtiene o establece los elementos máximos por depósito.
 
@@ -1860,12 +1860,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parámetros
 
-*factor*<br/>
+*Factor*\
 El nuevo factor de carga máxima.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera función miembro devuelve el factor de carga máxima almacenado. La segunda función miembro reemplaza el factor de carga máxima almacenado con *factor*.
+La primera función miembro devuelve el factor de carga máxima almacenado. La segunda función miembro reemplaza el factor de carga máxima almacenado por *factor*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1941,7 +1941,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>  unordered_multiset::max_size
+## <a name="unordered_multisetmax_size"></a><a name="max_size"></a>unordered_multiset::max_size
 
 Obtiene el tamaño máximo de la secuencia controlada.
 
@@ -1949,7 +1949,7 @@ Obtiene el tamaño máximo de la secuencia controlada.
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve la longitud de la secuencia más larga que puede controlar el objeto.
 
@@ -1976,7 +1976,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="op_eq"></a>  unordered_multiset::operator=
+## <a name="unordered_multisetoperator"></a><a name="op_eq"></a>unordered_multiset::operador ?
 
 Copia una tabla hash.
 
@@ -1990,11 +1990,11 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 |Parámetro|Descripción|
 |-|-|
-|*right*|El [unordered_multiset](../standard-library/unordered-multiset-class.md) que se copia en el `unordered_multiset`.|
+|*Correcto*|El [unordered_multiset](../standard-library/unordered-multiset-class.md) que se copia en el `unordered_multiset`.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Después de borrar todos los elementos existentes en un `unordered_multiset`, `operator=` copia o mueve el contenido de *derecho* en el `unordered_multiset`.
+Después de borrar cualquier `unordered_multiset`elemento `operator=` existente en un , copia `unordered_multiset`o mueve el contenido del *derecho* en el archivo .
 
 ### <a name="example"></a>Ejemplo
 
@@ -2033,7 +2033,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  unordered_multiset::pointer
+## <a name="unordered_multisetpointer"></a><a name="pointer"></a>unordered_multiset::pointer
 
 El tipo de un puntero a un elemento.
 
@@ -2041,7 +2041,7 @@ El tipo de un puntero a un elemento.
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede actuar como puntero a un elemento de la secuencia controlada.
 
@@ -2080,7 +2080,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a>  unordered_multiset::reference
+## <a name="unordered_multisetreference"></a><a name="reference"></a>unordered_multiset::referencia
 
 El tipo de una referencia a un elemento.
 
@@ -2088,7 +2088,7 @@ El tipo de una referencia a un elemento.
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede actuar como referencia a un elemento de la secuencia controlada.
 
@@ -2127,7 +2127,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a>  unordered_multiset::rehash
+## <a name="unordered_multisetrehash"></a><a name="rehash"></a>unordered_multiset::rehash
 
 Recompila la tabla hash.
 
@@ -2137,12 +2137,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parámetros
 
-*nbuckets*<br/>
+*nbuckets*\
 Número solicitado de depósitos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro modifica el número de depósitos para que sea al menos *nbuckets* y recompila la tabla hash según sea necesario.
+La función miembro modifica el número de buckets que son al menos *nbuckets* y reconstruye la tabla hash según sea necesario.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2205,7 +2205,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>  unordered_multiset::size
+## <a name="unordered_multisetsize"></a><a name="size"></a>unordered_multiset::tamaño
 
 Cuenta el número de elementos.
 
@@ -2213,7 +2213,7 @@ Cuenta el número de elementos.
 size_type size() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve la longitud de la secuencia controlada.
 
@@ -2272,7 +2272,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>  unordered_multiset::size_type
+## <a name="unordered_multisetsize_type"></a><a name="size_type"></a>unordered_multiset::size_type
 
 El tipo de una distancia sin signo entre dos elementos.
 
@@ -2280,7 +2280,7 @@ El tipo de una distancia sin signo entre dos elementos.
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo de entero sin signo describe un objeto que puede representar la longitud de cualquier secuencia controlada. Aquí se describe como sinónimo del tipo definido por implementación `T2`.
 
@@ -2308,7 +2308,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>  unordered_multiset::swap
+## <a name="unordered_multisetswap"></a><a name="swap"></a>unordered_multiset::swap
 
 Intercambia el contenido de dos contenedores.
 
@@ -2318,12 +2318,12 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*Correcto*\
 El contenedor con el que se intercambia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro intercambia las secuencias controladas entre `*this` y *derecho*. Si [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`, lo hace en tiempo constante, inicia una excepción solo como resultado de copiar el objeto de rasgos almacenado de tipo `Tr` y no invalida referencias, punteros o iteradores que designan elementos en las dos secuencias controladas. De lo contrario, realiza varias asignaciones de elementos y llamadas de constructor proporcionales al número de elementos de ambas secuencias controladas.
+La función miembro intercambia las `*this` secuencias controladas entre y *derecha*. Si [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`, lo hace en tiempo constante, produce una excepción solo como `Tr`resultado de copiar el objeto de rasgos almacenados de tipo y no invalida ninguna referencia, puntero o iterador que designe elementos en las dos secuencias controladas. De lo contrario, realiza varias asignaciones de elementos y llamadas de constructor proporcionales al número de elementos de ambas secuencias controladas.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2380,7 +2380,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multiset"></a>  unordered_multiset::unordered_multiset
+## <a name="unordered_multisetunordered_multiset"></a><a name="unordered_multiset"></a>unordered_multiset::unordered_multiset
 
 Construye un objeto contenedor.
 
@@ -2438,27 +2438,27 @@ unordered_multiset(
 |-|-|
 |*InputIterator*|Tipo de iterador.|
 |*Al*|Objeto de asignador que se va a almacenar.|
-|*Comp.*|Objeto de función de comparación que se va a almacenar.|
-|*hash*|Objeto de función hash que se va a almacenar.|
+|*Comp*|Objeto de función de comparación que se va a almacenar.|
+|*Hash*|Objeto de función hash que se va a almacenar.|
 |*Bucket_count*|Número mínimo de depósitos.|
-|*Derecha*|Contenedor que se va a copiar.|
+|*Right*|Contenedor que se va a copiar.|
 |*IList*|initializer_list de la que se va a copiar.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El primer constructor especifica una copia de la secuencia controlada por *derecha*. El segundo constructor especifica una secuencia controlada vacía. El tercer constructor inserta la secuencia de valores de elemento `[First, Last)`. El cuarto constructor especifica una copia de la secuencia moviendo *derecha*.
+El primer constructor especifica una copia de la secuencia controlada por *Right*. El segundo constructor especifica una secuencia controlada vacía. El tercer constructor inserta la secuencia de valores de elemento `[First, Last)`. El cuarto constructor especifica una copia de la secuencia moviendo *Right*.
 
-Todos los constructores también inicializan varios valores almacenados. Constructor de copias, los valores se obtienen de *derecha*. De lo contrario:
+Todos los constructores también inicializan varios valores almacenados. Para el constructor de copias, los valores se obtienen de *Right*. De lo contrario:
 
-El número mínimo de depósitos es el argumento *Bucket_count*, si está presente; en caso contrario, es un valor predeterminado descrito aquí como el valor definido por la implementación `N0`.
+El número mínimo de buckets es el argumento *Bucket_count*, si está presente; de lo contrario, es un valor predeterminado `N0`descrito aquí como el valor definido por la implementación.
 
-El objeto de función hash es el argumento *Hash*, si está presente; de lo contrario es `Hash()`.
+El objeto de función hash es el argumento *Hash*, si está presente; de lo `Hash()`contrario es .
 
-El objeto de función de comparación es el argumento *Comp*, si está presente; de lo contrario es `Comp()`.
+El objeto de función de comparación es el argumento *Comp*, si está presente; de lo `Comp()`contrario es .
 
-El objeto de asignador es el argumento *Al*, si está presente; de lo contrario, es `Alloc()`.
+El objeto de asignador es el argumento *Al*, si está presente; de lo `Alloc()`contrario, es .
 
-## <a name="value_type"></a>  unordered_multiset::value_type
+## <a name="unordered_multisetvalue_type"></a><a name="value_type"></a>unordered_multiset::value_type
 
 El tipo de un elemento.
 
@@ -2466,7 +2466,7 @@ El tipo de un elemento.
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un elemento de la secuencia controlada.
 
@@ -2512,9 +2512,9 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
-[Contenedores](../cpp/containers-modern-cpp.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[unordered_set<>unordered_set](../standard-library/unordered-set.md)\
+[Contenedores](../cpp/containers-modern-cpp.md)\
+[Seguridad de roscas en la biblioteca estándar C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de la biblioteca estándar C++](../standard-library/cpp-standard-library-reference.md)

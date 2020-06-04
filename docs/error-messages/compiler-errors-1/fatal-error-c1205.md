@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1205
 ms.assetid: f855c145-8cf7-4dd1-bb19-257ee38b8382
-ms.openlocfilehash: c6e1fb545af0a069ac7d79957b967eba7659f825
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c37a1ece324971a3c0c68d584c04d78803212476
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499140"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203481"
 ---
 # <a name="fatal-error-c1205"></a>Error irrecuperable C1205
 

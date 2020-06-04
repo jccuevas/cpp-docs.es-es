@@ -1,9 +1,10 @@
 ---
 title: _set_abort_behavior
-ms.date: 1/02/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _set_abort_behavior
-apilocation:
+- _o__set_abort_behavior
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_abort_behavior
 - set_abort_behavior
@@ -23,19 +28,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06f72597a384cc5c90b2e345e62e13dee96c4dca
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643058"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913130"
 ---
-# <a name="setabortbehavior"></a>_set_abort_behavior
+# <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 Especifica la acción que se debe llevar a cabo cuando un programa finaliza de forma anormal.
 
 > [!NOTE]
-> No utilice el [anular](abort.md) función para que se cierre una aplicación de Microsoft Store, excepto en las pruebas o escenarios de depuración. No se permiten formas mediante programación o con la interfaz de usuario para cerrar una aplicación de Store según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación UWP](/windows/uwp/launch-resume/app-lifecycle).
+> No use la función [Abort](abort.md) para cerrar una Microsoft Store aplicación, excepto en escenarios de prueba o depuración. No se permiten las formas de cerrar una aplicación de la tienda mediante programación o la interfaz de usuario de acuerdo con las [directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte el ciclo de vida de las [aplicaciones para UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,18 +54,20 @@ unsigned int _set_abort_behavior(
 ### <a name="parameters"></a>Parámetros
 
 *flags*<br/>
-Nuevo valor de la [anular](abort.md) marcas.
+Nuevo valor de las marcas de [anulación](abort.md) .
 
-*Máscara*<br/>
-Máscara para el [anular](abort.md) marcas de bits para establecer.
+*máscara*<br/>
+Máscara de los bits de las marcas de [anulación](abort.md) que se van a establecer.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Valor anterior de las marcas.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Hay dos [anular](abort.md) marcas: **_WRITE_ABORT_MSG** y **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina si se imprime un mensaje de texto de ayuda cuando un programa de forma anormal. El mensaje indica que la aplicación ha llamado el [anular](abort.md) función. El comportamiento predeterminado consiste en imprimir el mensaje. **_CALL_REPORTFAULT**, si establece, especifica que se genera un volcado de bloqueo Watson y notifica cuando [anular](abort.md) se llama. De forma predeterminada, los informes de volcado de memoria están habilitados en las compilaciones que no son de DEBUG.
+Hay dos marcas de [anulación](abort.md) : **_WRITE_ABORT_MSG** y **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina si se imprime un mensaje de texto útil cuando un programa finaliza de forma anómala. El mensaje indica que la aplicación ha llamado a la función [Abort](abort.md) . El comportamiento predeterminado consiste en imprimir el mensaje. **_CALL_REPORTFAULT**, si se establece, especifica que se genera un volcado de memoria de Watson y se indica cuando se llama a [Abort](abort.md) . De forma predeterminada, los informes de volcado de memoria están habilitados en las compilaciones que no son de DEBUG.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -68,7 +75,7 @@ Hay dos [anular](abort.md) marcas: **_WRITE_ABORT_MSG** y **_CALL_REPORTFAULT**.
 |-------------|---------------------|
 |**_set_abort_behavior**|\<stdlib.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -91,6 +98,6 @@ int main()
 Suppressing the abort message. If successful, this message will be the only output.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[abort](abort.md)<br/>
+[aborta](abort.md)<br/>

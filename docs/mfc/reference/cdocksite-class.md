@@ -86,16 +86,16 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 08acf9e47a26d4cbc5bcb96cbff086b19768e972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 471d68ead1bc5a11ace29f572647c4a7f2406b4e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486312"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753272"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
-Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
+Para obtener más información, vea el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\mfc** de la instalación de Visual Studio.
 
 Proporciona la funcionalidad para organizar los paneles que se derivan de [CPane Class](../../mfc/reference/cpane-class.md) en conjuntos de filas.
 
@@ -109,18 +109,18 @@ class CDockSite: public CBasePane
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDockSite::AddRow](#addrow)||
-|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(Invalida [cbasepane:: Adjustdockinglayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|
-|[CDockSite::AdjustLayout](#adjustlayout)|(Invalida [cbasepane:: Adjustlayout](../../mfc/reference/cbasepane-class.md#adjustlayout).)|
+|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(Reemplaza [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|
+|[CDockSite::AdjustLayout](#adjustlayout)|(Reemplaza [CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout).)|
 |[CDockSite::AlignDockSite](#aligndocksite)||
-|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(Invalida [cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
-|[CDockSite::CanAcceptPane](#canacceptpane)|(Invalida [cbasepane:: Canacceptpane](../../mfc/reference/cbasepane-class.md#canacceptpane).)|
-|[CDockSite::CreateEx](#createex)|(Invalida [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|
+|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(Reemplaza [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CDockSite::CanAcceptPane](#canacceptpane)|(Reemplaza [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane).)|
+|[CDockSite::CreateEx](#createex)|(Reemplaza [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|
 |[CDockSite::CreateRow](#createrow)||
-|[CDockSite::DockPane](#dockpane)|(Invalida [cbasepane:: Dockpane](../../mfc/reference/cbasepane-class.md#dockpane).)|
-|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Invalida [cbasepane:: Doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[CDockSite::DockPane](#dockpane)|(Reemplaza [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane).)|
+|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Reemplaza [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
 |[CDockSite::FindRowIndex](#findrowindex)||
 |[CDockSite::FixupVirtualRects](#fixupvirtualrects)||
 |[CDockSite::GetDockSiteID](#getdocksiteid)||
@@ -129,7 +129,7 @@ class CDockSite: public CBasePane
 |[CDockSite::IsDragMode](#isdragmode)||
 |[CDockSite::IsLastRow](#islastrow)||
 |[CDockSite::IsRectWithinDockSite](#isrectwithindocksite)||
-|[CDockSite::IsResizable](#isresizable)|(Invalida [cbasepane:: isResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
+|[CDockSite::IsResizable](#isresizable)|(Reemplaza [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
 |[CDockSite::MovePane](#movepane)||
 |[CDockSite::OnInsertRow](#oninsertrow)||
 |[CDockSite::OnRemoveRow](#onremoverow)||
@@ -152,11 +152,11 @@ class CDockSite: public CBasePane
 |[CDockSite::ShowRow](#showrow)||
 |[CDockSite::SwapRows](#swaprows)||
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El marco de trabajo crea `CDockSite` objetos automáticamente cuando se llama a [cframewndex:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Las ventanas del sitio de vinculación están colocadas en el borde del área de cliente de la ventana de marco principal.
+El marco `CDockSite` de trabajo crea objetos automáticamente cuando se llama a [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Las ventanas del sitio de vinculación están colocadas en el borde del área de cliente de la ventana de marco principal.
 
-Normalmente no es necesario llamar a los servicios proporcionados por el sitio de vinculación porque [CFrameWndEx (clase)](../../mfc/reference/cframewndex-class.md) controla estos servicios.
+Normalmente no es necesario llamar a los servicios proporcionados por el sitio de acoplamiento porque [CFrameWndEx clase](../../mfc/reference/cframewndex-class.md) controla estos servicios.
 
 ## <a name="example"></a>Ejemplo
 
@@ -166,15 +166,17 @@ En el ejemplo siguiente se muestra cómo crear un objeto de la clase `CDockSite`
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CDockSite](../../mfc/reference/cdocksite-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)\
+.&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasepane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CDockSite](../../mfc/reference/cdocksite-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxDockSite.h
 
-##  <a name="addrow"></a>  CDockSite::AddRow
+## <a name="cdocksiteaddrow"></a><a name="addrow"></a>CDockSite::AddRow
 
 ```
 CDockingPanesRow* AddRow(
@@ -184,33 +186,33 @@ CDockingPanesRow* AddRow(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pos*<br/>
+[en] *pos*<br/>
 
-[in] *nHeight*<br/>
+[en] *nAltura*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="adjustdockinglayout"></a>  CDockSite::AdjustDockingLayout
+## <a name="cdocksiteadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CDockSite::AdjustDockingLayout
 
 ```
 virtual void AdjustDockingLayout();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="adjustlayout"></a>  CDockSite::AdjustLayout
+## <a name="cdocksiteadjustlayout"></a><a name="adjustlayout"></a>CDockSite::AdjustLayout
 
 ```
 virtual void AdjustLayout();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="aligndocksite"></a>  CDockSite::AlignDockSite
+## <a name="cdocksitealigndocksite"></a><a name="aligndocksite"></a>CDockSite::AlignDockSite
 
-```
+```cpp
 void AlignDockSite(
     const CRect& rectToAlignBy,
     CRect& rectResult,
@@ -219,15 +221,15 @@ void AlignDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rectToAlignBy*<br/>
+[en] *rectToAlignBy*<br/>
 
-[in] *rectResult*<br/>
+[en] *rectResult*<br/>
 
-[in] *bMoveImmediately*<br/>
+[en] *bMoveImmediately*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="calcfixedlayout"></a>  CDockSite::CalcFixedLayout
+## <a name="cdocksitecalcfixedlayout"></a><a name="calcfixedlayout"></a>CDockSite::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -237,15 +239,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bStretch*<br/>
+[en] *bStretch*<br/>
 
-[in] *bHorz*<br/>
+[en] *bHorz*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="canacceptpane"></a>  CDockSite::CanAcceptPane
+## <a name="cdocksitecanacceptpane"></a><a name="canacceptpane"></a>CDockSite::CanAcceptPane
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -253,13 +255,13 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pBar*<br/>
+[en] *pBar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="createex"></a>  CDockSite::CreateEx
+## <a name="cdocksitecreateex"></a><a name="createex"></a>CDockSite::CreateEx
 
 ```
 virtual BOOL CreateEx(
@@ -273,23 +275,23 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *dwStyleEx*<br/>
+[en] *dwStyleEx*<br/>
 
-[in] *dwStyle*<br/>
+[en] *dwStyle*<br/>
 
-[in] *rect*<br/>
+[en] *rect*<br/>
 
-[in] *pParentWnd*<br/>
+[en] *pParentWnd*<br/>
 
-[in] *dwControlBarStyle*<br/>
+[en] *dwControlBarStyle*<br/>
 
-[in] *pContext*<br/>
+[en] *pContext*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="createrow"></a>  CDockSite::CreateRow
+## <a name="cdocksitecreaterow"></a><a name="createrow"></a>CDockSite::CreateRow
 
 ```
 virtual CDockingPanesRow* CreateRow(
@@ -300,17 +302,17 @@ virtual CDockingPanesRow* CreateRow(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pParentDockBar*<br/>
+[en] *pParentDockBar*<br/>
 
-[in] *nOffset*<br/>
+[en] *nOffset*<br/>
 
-[in] *nRowHeight*<br/>
+[en] *nRowHeight*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="dockpane"></a>  CDockSite::DockPane
+## <a name="cdocksitedockpane"></a><a name="dockpane"></a>CDockSite::DockPane
 
 ```
 virtual void DockPane(
@@ -321,15 +323,15 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[en] *pWnd*<br/>
 
-[in] *dockMethod*<br/>
+[en] *dockMethod*<br/>
 
-[in] *lpRect*<br/>
+[en] *lpRect*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="dockpaneleftof"></a>  CDockSite::DockPaneLeftOf
+## <a name="cdocksitedockpaneleftof"></a><a name="dockpaneleftof"></a>CDockSite::DockPaneLeftOf
 
 Acopla un panel a la izquierda de otro panel.
 
@@ -342,18 +344,18 @@ virtual BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>Parámetros
 
 *pBarToDock*<br/>
-[in, out] Un puntero al panel para acoplar a la izquierda del *pTargetBar*.
+[adentro, fuera] Puntero al panel que se va a acoplar a la izquierda de *pTargetBar*.
 
 *pTargetBar*<br/>
-[in, out] Un puntero al panel de destino.
+[adentro, fuera] Un puntero al panel de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel está acoplado correctamente; en caso contrario, FALSE.
+TRUESi el panel se acopla correctamente; de lo contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="doesallowdyninsertbefore"></a>  CDockSite::DoesAllowDynInsertBefore
+## <a name="cdocksitedoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CDockSite::DoesAllowDynInsertBefore
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -361,9 +363,9 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="findpanebyid"></a>  CDockSite::FindPaneByID
+## <a name="cdocksitefindpanebyid"></a><a name="findpanebyid"></a>CDockSite::FindPaneByID
 
 Devuelve el panel con el identificador especificado.
 
@@ -374,15 +376,15 @@ CPane* FindPaneByID(UINT nID);
 ### <a name="parameters"></a>Parámetros
 
 *nID*<br/>
-[in] El identificador de comando del panel que se encuentra.
+[en] El identificador de comando del panel que se va a encontrar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero en el panel con el identificador de comando especificado, o NULL si no se encuentra el panel.
+Un puntero al panel con el identificador de comando especificado, o NULL si no se encuentra el panel.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="findrowindex"></a>  CDockSite::FindRowIndex
+## <a name="cdocksitefindrowindex"></a><a name="findrowindex"></a>CDockSite::FindRowIndex
 
 ```
 int FindRowIndex(CDockingPanesRow* pRow);
@@ -390,21 +392,21 @@ int FindRowIndex(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pRow*<br/>
+[en] *pRow*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="fixupvirtualrects"></a>  CDockSite::FixupVirtualRects
+## <a name="cdocksitefixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockSite::FixupVirtualRects
 
 ```
 virtual void FixupVirtualRects();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getdocksiteid"></a>  CDockSite::GetDockSiteID
+## <a name="cdocksitegetdocksiteid"></a><a name="getdocksiteid"></a>CDockSite::GetDockSiteID
 
 ```
 virtual UINT GetDockSiteID() const;
@@ -412,9 +414,9 @@ virtual UINT GetDockSiteID() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getdocksiterowslist"></a>  CDockSite::GetDockSiteRowsList
+## <a name="cdocksitegetdocksiterowslist"></a><a name="getdocksiterowslist"></a>CDockSite::GetDockSiteRowsList
 
 ```
 const CObList& GetDockSiteRowsList() const;
@@ -422,11 +424,11 @@ const CObList& GetDockSiteRowsList() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getpanelist"></a>  CDockSite::GetPaneList
+## <a name="cdocksitegetpanelist"></a><a name="getpanelist"></a>CDockSite::GetPaneList
 
-Devuelve una lista de paneles acoplados en el sitio de vinculación.
+Devuelve una lista de paneles acoplados en el sitio de acoplamiento.
 
 ```
 const CObList& GetPaneList() const;
@@ -434,9 +436,9 @@ const CObList& GetPaneList() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una referencia de solo lectura a la lista de paneles actualmente está acoplada en la barra de acoplamiento.
+Una referencia de solo lectura a la lista de paneles acoplados actualmente en la barra de acoplamiento.
 
-##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible
+## <a name="cdocksiteisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>CDockSite::IsAccessibilityCompatible
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -444,9 +446,9 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isdragmode"></a>  CDockSite::IsDragMode
+## <a name="cdocksiteisdragmode"></a><a name="isdragmode"></a>CDockSite::IsDragMode
 
 ```
 virtual BOOL IsDragMode() const;
@@ -454,9 +456,9 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="islastrow"></a>  CDockSite::IsLastRow
+## <a name="cdocksiteislastrow"></a><a name="islastrow"></a>CdockSite::IsLastRow
 
 ```
 bool IsLastRow(CDockingPanesRow* pRow) const;
@@ -464,13 +466,13 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pRow*<br/>
+[en] *pRow*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isrectwithindocksite"></a>  CDockSite::IsRectWithinDockSite
+## <a name="cdocksiteisrectwithindocksite"></a><a name="isrectwithindocksite"></a>CDockSite::IsRectWithinDockSite
 
 ```
 BOOL IsRectWithinDockSite(
@@ -480,15 +482,15 @@ BOOL IsRectWithinDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rect*<br/>
+[en] *rect*<br/>
 
-[in] *ptDelta*<br/>
+[en] *ptDelta*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isresizable"></a>  CDockSite::IsResizable
+## <a name="cdocksiteisresizable"></a><a name="isresizable"></a>CDockSite::IsResizable
 
 ```
 virtual BOOL IsResizable() const;
@@ -496,9 +498,9 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="movepane"></a>  CDockSite::MovePane
+## <a name="cdocksitemovepane"></a><a name="movepane"></a>CDockSite::MovePane
 
 ```
 virtual BOOL MovePane(
@@ -509,17 +511,17 @@ virtual BOOL MovePane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[en] *pWnd*<br/>
 
-[in] *nFlags*<br/>
+[en] *nFlags*<br/>
 
-[in] *ptOffset*<br/>
+[en] *ptOffset*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="oninsertrow"></a>  CDockSite::OnInsertRow
+## <a name="cdocksiteoninsertrow"></a><a name="oninsertrow"></a>CDockSite::OnInsertRow
 
 ```
 virtual void OnInsertRow(POSITION pos);
@@ -527,11 +529,11 @@ virtual void OnInsertRow(POSITION pos);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pos*<br/>
+[en] *pos*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onremoverow"></a>  CDockSite::OnRemoveRow
+## <a name="cdocksiteonremoverow"></a><a name="onremoverow"></a>CDockSite::OnRemoveRow
 
 ```
 virtual void OnRemoveRow(
@@ -541,13 +543,13 @@ virtual void OnRemoveRow(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pos*<br/>
+[en] *pos*<br/>
 
-[in] *bByShow*<br/>
+[en] *bByShow*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onresizerow"></a>  CDockSite::OnResizeRow
+## <a name="cdocksiteonresizerow"></a><a name="onresizerow"></a>CDockSite::OnResizeRow
 
 ```
 virtual int OnResizeRow(
@@ -557,15 +559,15 @@ virtual int OnResizeRow(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pRowToResize*<br/>
+[en] *pRowToResize*<br/>
 
-[in] *nOffset*<br/>
+[en] *nOffset*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onsizeparent"></a>  CDockSite::OnSizeParent
+## <a name="cdocksiteonsizeparent"></a><a name="onsizeparent"></a>CDockSite::OnSizeParent
 
 ```
 virtual void OnSizeParent(
@@ -577,17 +579,17 @@ virtual void OnSizeParent(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rectAvailable*<br/>
+[en] *rectAvailable*<br/>
 
-[in] *entro*<br/>
+[en] *nSide*<br/>
 
-[in] *bExpand*<br/>
+[en] *bExpandir*<br/>
 
-[in] *nOffset*<br/>
+[en] *nOffset*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onsetwindowpos"></a>  CDockSite::OnSetWindowPos
+## <a name="cdocksiteonsetwindowpos"></a><a name="onsetwindowpos"></a>CDockSite::OnSetWindowPos
 
 ```
 virtual BOOL OnSetWindowPos(
@@ -598,17 +600,17 @@ virtual BOOL OnSetWindowPos(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pWndInsertAfter*<br/>
+[en] *pWndInsertAfter*<br/>
 
-[in] *rectWnd*<br/>
+[en] *rectWnd*<br/>
 
-[in] *nFlags*<br/>
+[en] *nFlags*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onshowrow"></a>  CDockSite::OnShowRow
+## <a name="cdocksiteonshowrow"></a><a name="onshowrow"></a>CDockSite::OnShowRow
 
 ```
 virtual void OnShowRow(
@@ -618,13 +620,13 @@ virtual void OnShowRow(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pos*<br/>
+[en] *pos*<br/>
 
-[in] *bMostrar*<br/>
+[en] *bMostrar*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="panefrompoint"></a>  CDockSite::PaneFromPoint
+## <a name="cdocksitepanefrompoint"></a><a name="panefrompoint"></a>CDockSite::PaneFromPoint
 
 Devuelve un panel que está acoplado en el sitio de vinculación en el punto especificado por el parámetro dado.
 
@@ -634,16 +636,16 @@ virtual CPane* PaneFromPoint(CPoint pt);
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
-[in] Un punto en coordenadas de pantalla del panel recuperar.
+*Pt*<br/>
+[en] Un punto, en coordenadas de pantalla, para que el panel se recupere.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al panel ubicado en el punto especificado o NULL si ningún panel estaba presente en el punto especificado.
+Puntero al panel situado en el punto especificado o NULL si no había ningún panel en el punto especificado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="rectsidefrompoint"></a>  CDockSite::RectSideFromPoint
+## <a name="cdocksiterectsidefrompoint"></a><a name="rectsidefrompoint"></a>CDockSite::RectSideFromPoint
 
 ```
 static int __stdcall RectSideFromPoint(
@@ -653,15 +655,15 @@ static int __stdcall RectSideFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rect*<br/>
+[en] *rect*<br/>
 
-[in] *punto*<br/>
+[en] *punto*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="removepane"></a>  CDockSite::RemovePane
+## <a name="cdocksiteremovepane"></a><a name="removepane"></a>CDockSite::RemovePane
 
 ```
 virtual void RemovePane(
@@ -671,25 +673,25 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[en] *pWnd*<br/>
 
-[in] *dockMethod*<br/>
+[en] *dockMethod*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="removerow"></a>  CDockSite::RemoveRow
+## <a name="cdocksiteremoverow"></a><a name="removerow"></a>CDockSite::RemoveRow
 
-```
+```cpp
 void RemoveRow(CDockingPanesRow* pRow);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pRow*<br/>
+[en] *pRow*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="replacepane"></a>  CDockSite::ReplacePane
+## <a name="cdocksitereplacepane"></a><a name="replacepane"></a>CDockSite::ReplacePane
 
 ```
 BOOL ReplacePane(
@@ -699,15 +701,15 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pOldBar*<br/>
+[en] *pOldBar*<br/>
 
-[in] *pNewBar*<br/>
+[en] *pNewBar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="repositionpanes"></a>  CDockSite::RepositionPanes
+## <a name="cdocksiterepositionpanes"></a><a name="repositionpanes"></a>CDockSite::RepositionPanes
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -715,13 +717,13 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rectNewClientArea*<br/>
+[en] *rectNewClientArea*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="resizedocksite"></a>  CDockSite::ResizeDockSite
+## <a name="cdocksiteresizedocksite"></a><a name="resizedocksite"></a>CDockSite::ResizeDockSite
 
-```
+```cpp
 void ResizeDockSite(
     int nNewWidth,
     int nNewHeight);
@@ -729,13 +731,13 @@ void ResizeDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nNewWidth*<br/>
+[en] *nNewWidth*<br/>
 
-[in] *nNewHeight*<br/>
+[en] *nNewHeight*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="resizerow"></a>  CDockSite::ResizeRow
+## <a name="cdocksiteresizerow"></a><a name="resizerow"></a>CDockSite::ResizeRow
 
 ```
 int ResizeRow(
@@ -746,17 +748,17 @@ int ResizeRow(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pRow*<br/>
+[en] *pRow*<br/>
 
-[in] *nNewSize*<br/>
+[en] *nNewSize*<br/>
 
-[in] *bAdjustLayout*<br/>
+[en] *bAdjustLayout*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="showpane"></a>  CDockSite::ShowPane
+## <a name="cdocksiteshowpane"></a><a name="showpane"></a>CDockSite::ShowPane
 
 Muestra el panel.
 
@@ -771,28 +773,28 @@ virtual BOOL ShowPane(
 ### <a name="parameters"></a>Parámetros
 
 *pBar*<br/>
-[in, out] Un puntero al panel para mostrar u ocultar.
+[adentro, fuera] Puntero al panel que se va a mostrar u ocultar.
 
 *bMostrar*<br/>
-[in] TRUE para especificar que es el panel que se mostrarán; FALSE para especificar que el panel está a punto de ocultarse.
+[en] TRUE para especificar que se va a mostrar el panel; FALSE para especificar que el panel se va a ocultar.
 
 *bDelay*<br/>
-[in] TRUE para especificar que el diseño del panel debe retrasarse hasta después de que se muestre el panel; en caso contrario, FALSE.
+[en] TRUE para especificar que el diseño del panel debe retrasarse hasta después de mostrar el panel; de lo contrario, FALSE.
 
-*bActivate*<br/>
-[in] No se utiliza este parámetro.
+*bActivar*<br/>
+[en] Este parámetro no se utiliza.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se mostrarse u ocultarse correctamente. FALSE si el panel especificado no pertenece a este sitio de vinculación.
+TRUESi el panel se ha mostrado u ocultado correctamente. FALSE si el panel especificado no pertenece a este sitio de acoplamiento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a este método para mostrar u ocultar paneles acoplados. Normalmente, no es necesario llamar a `CDockSite::ShowPane` directamente, porque se llama mediante la ventana de marco principal o el panel de base.
+Llame a este método para mostrar u ocultar los paneles acoplados. Normalmente, no es `CDockSite::ShowPane` necesario llamar directamente, porque lo llama la ventana de marco principal o el panel base.
 
-##  <a name="showrow"></a>  CDockSite::ShowRow
+## <a name="cdocksiteshowrow"></a><a name="showrow"></a>CDockSite::ShowRow
 
-```
+```cpp
 void ShowRow(
     CDockingPanesRow* pRow,
     BOOL bShow,
@@ -801,17 +803,17 @@ void ShowRow(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pRow*<br/>
+[en] *pRow*<br/>
 
-[in] *bMostrar*<br/>
+[en] *bMostrar*<br/>
 
-[in] *bAdjustLayout*<br/>
+[en] *bAdjustLayout*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="swaprows"></a>  CDockSite::SwapRows
+## <a name="cdocksiteswaprows"></a><a name="swaprows"></a>CDockSite::SwapRows
 
-```
+```cpp
 void SwapRows(
     CDockingPanesRow* pFirstRow,
     CDockingPanesRow* pSecondRow);
@@ -819,11 +821,11 @@ void SwapRows(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pFirstRow*<br/>
+[en] *pFirstRow*<br/>
 
-[in] *pSecondRow*<br/>
+[en] *pSecondRow*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="see-also"></a>Vea también
 

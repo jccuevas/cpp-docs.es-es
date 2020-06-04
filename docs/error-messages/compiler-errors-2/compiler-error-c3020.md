@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 0e2d8e70dcc9b23c56a321487cd4b933a1086387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491278"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742124"
 ---
 # <a name="compiler-error-c3020"></a>Error del compilador C3020
 
-'var': variable de índice de 'bucle for' de OpenMP no puede modificarse en el cuerpo del bucle
+' var ': la variable de índice del bucle ' for ' de OpenMP no se puede modificar en el cuerpo del bucle
 
-OpenMP `for` bucle no puede modificar el índice (contador de bucle) en el cuerpo de la `for` bucle.
+Un bucle de `for` de OpenMP no puede modificar el índice (contador de bucle) en el cuerpo del bucle de `for`.
 
-El ejemplo siguiente genera C3020:
+En el ejemplo siguiente se genera C3020:
 
-```
+```cpp
 // C3020.cpp
 // compile with: /openmp
 int main() {
@@ -38,11 +38,11 @@ int main() {
 }
 ```
 
-Una variable declarada con [lastprivate](../../parallel/openmp/reference/lastprivate.md) no se puede usar como el índice dentro de un bucle en paralelo.
+Una variable declarada con [lastprivate](../../parallel/openmp/reference/lastprivate.md) no se puede utilizar como índice dentro de un bucle en paralelo.
 
-El siguiente ejemplo dará C3020 para el segundo lastprivate porque desencadenará una escritura en idx_a dentro de la más externa de bucle. La primera lastprivate no da error porque genera una escritura en idx_a fuera del extremo para el bucle (técnicamente, al final de la última iteración). El ejemplo siguiente genera C3020.
+En el ejemplo siguiente se proporcionará C3020 para el segundo lastprivate, ya que lastprivate desencadenará una escritura en idx_a dentro del bucle for más externo. La primera lastprivate no genera un error porque lastprivate desencadena una escritura en idx_a fuera del bucle for más externo (técnicamente, al final de la última iteración). En el ejemplo siguiente se genera C3020.
 
-```
+```cpp
 // C3020b.cpp
 // compile with: /openmp /c
 float a[100][100];
@@ -59,9 +59,9 @@ void test(int first, int last)
 }
 ```
 
-En el ejemplo siguiente se muestra una posible resolución:
+En el ejemplo siguiente se muestra una posible solución:
 
-```
+```cpp
 // C3020c.cpp
 // compile with: /openmp /c
 float a[100][100];

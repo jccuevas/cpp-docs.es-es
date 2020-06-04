@@ -8,12 +8,12 @@ helpviewer_keywords:
 - windows [C++], ATL
 - ATL, message handlers
 ms.assetid: cdea38a1-0d9b-4f8d-bbd5-b4f063fb3eeb
-ms.openlocfilehash: 6d812c70e7cec4739ee9477d30ad9744b4fddc50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc7631ac9e02891cee725b47133a273e756759d6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223472"
 ---
 # <a name="adding-an-atl-message-handler"></a>Agregar un controlador de mensajes ATL
 
@@ -30,4 +30,3 @@ Las condiciones siguientes se aplican solo a agregar un controlador de mensajes 
 ## <a name="see-also"></a>Vea también
 
 [Implementar una ventana](../atl/implementing-a-window.md)
-

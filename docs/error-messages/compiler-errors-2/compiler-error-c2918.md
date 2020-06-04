@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2918
 ms.assetid: e452f7ef-0590-45e6-9c7c-ee75dc014670
-ms.openlocfilehash: c45bb6785007c1cc7c4d1ce4cbc35724be88b38b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0411a159dffb98e40a968af24f805098e638e436
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443529"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201674"
 ---
 # <a name="compiler-error-c2918"></a>Error del compilador C2918
 

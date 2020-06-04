@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1209
 ms.assetid: aa9ee10f-abe3-4683-9792-adca4cbbabb5
-ms.openlocfilehash: 8b23ae3459178937c6af7ccb5c8ee882dd508c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0948debc2573ace269419641ca8facd495792341
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508079"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203442"
 ---
 # <a name="fatal-error-c1209"></a>Error irrecuperable C1209
 
 Ensamblados de confianza no admitidos por la versión del runtime instalada
 
-C1208 aparece cuando tiene un compilador para la versión actual, pero un Common Language Runtime de una versión anterior.
+El error C1208 se produce cuando tiene un compilador para la versión actual, pero una versión anterior de Common Language Runtime.
 
-Algunas funciones del compilador no funcionan en una versión anterior del tiempo de ejecución.
+Parte de la funcionalidad del compilador podría no funcionar en una versión anterior de runtime.
 
 Para resolver el error C1209, instale el Common Language Runtime que se incluye con el compilador que está usando.
 
-Para obtener más información, consulte [ensamblados Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
+Para obtener más información, vea [ensambladosC++de confianza ()](../../dotnet/friend-assemblies-cpp.md).

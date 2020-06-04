@@ -1,21 +1,21 @@
 ---
-title: size_is (atributo de COM de C++)
+title: size_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 95b0e16e5f5d085e526f45e8e98898474fc5a17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449444"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166255"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño punteros a punteros de tamaño y solo - o matrices multidimensionales.
+Especifique el tamaño de la memoria asignada para punteros de tamaño, punteros de tamaño a punteros de tamaño y matrices de un solo o multidimensionales.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,12 +25,12 @@ Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
-El tamaño de memoria asignada para un tamaño punteros.
+*expression*<br/>
+Tamaño de la memoria asignada para los punteros de tamaño.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **size_is** atributo de C++ tiene la misma funcionalidad que el [size_is](/windows/desktop/Midl/size-is) atributo MIDL.
+El atributo **size_is** C++ tiene la misma funcionalidad que el atributo MIDL [size_is](/windows/win32/Midl/size-is) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -42,14 +42,14 @@ Vea el ejemplo de [first_is](first-is.md) para obtener un ejemplo de cómo espec
 
 |||
 |-|-|
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
+|**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|`max_is`|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

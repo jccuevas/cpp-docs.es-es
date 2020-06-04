@@ -1,18 +1,16 @@
 ---
 title: 'Unicode: el juego de caracteres anchos'
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - Unicode [C++], wide character set
 - wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
-ms.openlocfilehash: 0432de1203d595947eb958a032870a929f00aeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 3a0c5698544c72e19feea8f35b7f5a516d95d561
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618301"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444486"
 ---
 # <a name="unicode-the-wide-character-set"></a>Unicode: el juego de caracteres anchos
 
@@ -22,7 +20,7 @@ Un carácter ancho es de tipo **wchar_t**. Una cadena de caracteres anchos se re
 
 En general, los caracteres anchos ocupan más espacio en la memoria que los caracteres multibyte, pero se procesan más rápido. Además, en la codificación multibyte no se pueden representar varias configuraciones regionales a la vez, mientras que la representación de Unicode representa simultáneamente a todos los juegos de caracteres del mundo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Internacionalización](../c-runtime-library/internationalization.md)<br/>
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -2,12 +2,12 @@
 title: /Qvec-report (Nivel de información de vectorizador automático)
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-ms.openlocfilehash: dc8c1d3bc65b0160fd489f1cdebe06e4fc9a0992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 655be3581eee4b23a8d0f2bcfaea7d07c8b1b07c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319257"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Nivel de información de vectorizador automático)
 
@@ -21,10 +21,10 @@ Habilita la característica informes del compilador [Vectorizador automático](.
 
 ## <a name="remarks"></a>Comentarios
 
-**/ Qvec-report: 1**<br/>
+**/Qvec-report:1**<br/>
 Genera un mensaje informativo para los bucles que se ha vectorizado.
 
-**/ Qvec-report: 2**<br/>
+**/Qvec-report:2**<br/>
 Genera un mensaje informativo para los bucles que se ha vectorizado y para los bucles que no vectorizados, junto con un código de motivo.
 
 Para obtener información sobre los códigos de motivo y mensajes, vea [mensajes del Vectorizador y Paralelizador](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
@@ -43,7 +43,7 @@ Para obtener información sobre los códigos de motivo y mensajes, vea [mensajes
 
 ## <a name="see-also"></a>Vea también
 
-[/Q (Opciones) (Operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
+[/Q (Opciones) (Operaciones de bajo nivel)](q-options-low-level-operations.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Programación en paralelo en código nativo](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

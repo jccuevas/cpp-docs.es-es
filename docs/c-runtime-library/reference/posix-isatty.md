@@ -1,9 +1,9 @@
 ---
 title: isatty
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,24 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isatty
 helpviewer_keywords:
 - isatty function
 ms.assetid: 610d0b09-a1db-41ef-9f45-a2c6076b4683
-ms.openlocfilehash: 658f214aa3c91d82be7f8032caea54ebe8787aa7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c42d68ae6471ae992783b7869e554448f0934289
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434906"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300955"
 ---
 # <a name="isatty"></a>isatty
 
-Esta función POSIX está en desuso. En su lugar, use la función [_isatty](isatty.md), compatible con ISO C++.
+El nombre de la función POSIX implementada por Microsoft `isatty` es un alias en desuso para la función [_isatty](isatty.md) . De forma predeterminada, genera una [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). El nombre está en desuso porque no sigue las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, todavía se admite la función.
+
+En su lugar, se recomienda usar [_isatty](isatty.md) . O bien, puede seguir usando el nombre de esta función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-ms.openlocfilehash: cefd97b377c2755b158830d8e649ac40f90fee11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310849"
 ---
 # <a name="mdi-tabbed-groups"></a>Grupos con pestañas MDI
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: ffe32a1df1fb85c7ae47b07c1ada6c53b269f5f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d963a7145ab2e8c8872dc21c485bdc8f877b0b76
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667303"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493144"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Evitar el enlace de archivos DLL)
 
@@ -29,15 +29,15 @@ ms.locfileid: "50667303"
 
 /ALLOWBIND:NO establece en el encabezado de una DLL un bit que le indica a Bind.exe que la imagen no se puede enlazar. Puede que quiera evitar que una DLL se enlace si se firmó digitalmente (el enlace invalida la firma).
 
-Puede editar una DLL existente con la funcionalidad /ALLOWBIND el [/ALLOWBIND](../../build/reference/allowbind.md) opción de la utilidad EDITBIN.
+Puede editar una DLL existente para la funcionalidad de/ALLOWBIND con la opción [/ALLOWBIND](allowbind.md) de la utilidad EDITBIN.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Expanda **propiedades de configuración**, **vinculador**y seleccione **línea de comandos**.
+1. Expanda **propiedades de configuración**, vinculador y seleccione **línea de comandos**.
 
-1. Escriba `/ALLOWBIND:NO` en **opciones adicionales**.
+1. Escriba `/ALLOWBIND:NO` en **otras opciones**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
@@ -45,7 +45,7 @@ Puede editar una DLL existente con la funcionalidad /ALLOWBIND el [/ALLOWBIND](.
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)<br/>
-[Función BindImage](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
-[Función BindImageEx](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)<br/>
+[BindImage (función)](/windows/win32/api/imagehlp/nf-imagehlp-bindimage)<br/>
+[BindImageEx función)](/windows/win32/api/imagehlp/nf-imagehlp-bindimageex)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4224
 ms.assetid: 1531cae0-5040-49fd-b149-005bb5085391
-ms.openlocfilehash: ed27e6ff63e3d5f3bab4f6d8d9639b84a5606ff2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2e6cde3cc3c6d3032bfbf4e81959ae791a91981
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563948"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199789"
 ---
 # <a name="compiler-warning-level-1-c4224"></a>Advertencia del compilador (nivel 1) C4224
 
-extensión no estándar utilizada: parámetro formal 'identifier' se definió anteriormente como un tipo
+se ha utilizado una extensión no estándar: el parámetro formal ' Identifier ' se definió previamente como un tipo
 
-El identificador se había utilizado previamente como un `typedef`. Esto hace que una advertencia de compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+El identificador se usó previamente como `typedef`. Esto produce una advertencia en la compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4224.cpp
 // compile with: /Za /W1 /LD
 typedef int I;

@@ -1,7 +1,7 @@
 ---
 title: not_eq
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - not_eq
 - std::not_eq
@@ -20,14 +23,14 @@ f1_keywords:
 helpviewer_keywords:
 - not_eq function
 ms.assetid: d87ad299-8b50-4393-a57f-06f70e1f23fb
-ms.openlocfilehash: 881aae0ba511d8339b6911720b6fc481ff2f59c0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: acce0e6bc50e50c8c5aadbcdf7ebf9b35a6aca00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520288"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168764"
 ---
-# <a name="noteq"></a>not_eq
+# <a name="not_eq"></a>not_eq
 
 Alternativa al operador !=.
 
@@ -38,7 +41,7 @@ Alternativa al operador !=.
 #define not_eq !=
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La macro produce el operador !=.
 
@@ -70,4 +73,4 @@ a is not equal to b
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<iso646.h>
+**Encabezado:** \<iso646. h >

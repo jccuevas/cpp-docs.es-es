@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4204
 ms.assetid: 298d2880-6737-448e-b711-15572d540200
-ms.openlocfilehash: e16cb9fb59ee6ec24bb9b68dad1be9432d9eee3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45ed4817dbf2c7ecd63cd0c669d6e1cf768184bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174055"
 ---
 # <a name="compiler-warning-level-4-c4204"></a>Advertencia del compilador (nivel 4) C4204
 
-ha utilizado una extensión no estándar: inicializador de agregado no constante
+se ha utilizado una extensión no estándar: inicializador agregado no constante
 
-Con las extensiones de Microsoft (/Ze), se pueden inicializar tipos agregados (matrices, estructuras, uniones y clases) con valores que no sean constantes.
+Con las extensiones de Microsoft (/ZE), puede inicializar tipos agregados (matrices, estructuras, uniones y clases) con valores que no son constantes.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```c
 // C4204.c
 // compile with: /W4
 int func1()
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Inicializaciones no son válidas en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Tales inicializaciones no son válidas con compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

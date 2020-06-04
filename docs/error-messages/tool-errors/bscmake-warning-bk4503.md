@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - BK4503
 ms.assetid: 68abcf23-6987-4bc5-9745-8b65d2578bbc
-ms.openlocfilehash: 9bbd717d45f9fa68795520ac7e9cd0c9a520ee16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d1e7cfad492db07eed1dedd1bfcef9de09821dd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469542"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197436"
 ---
 # <a name="bscmake-warning-bk4503"></a>Advertencia de BSCMAKE BK4503
 

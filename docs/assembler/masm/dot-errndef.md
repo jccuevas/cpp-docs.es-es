@@ -1,26 +1,27 @@
 ---
 title: .ERRNDEF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRNDEF
 helpviewer_keywords:
 - .ERRNDEF directive
 ms.assetid: 9fab57bb-02ad-486f-b46d-bcd23980f00d
-ms.openlocfilehash: 8cbd9be590be2483b5fa43b20ba0df2e7af2cb5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60682c052abbba566e0632405fc204a4170e0dca
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476237"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317804"
 ---
 # <a name="errndef"></a>.ERRNDEF
 
-Genera un error si *nombre* no se ha definido.
+Genera un error si no se ha definido *Name* .
 
 ## <a name="syntax"></a>Sintaxis
 
-> . Nombre ERRNDEF [[, mensaje]]
+> **. ERRNDEF** *nombre* ⟦ __,__ *mensaje*⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

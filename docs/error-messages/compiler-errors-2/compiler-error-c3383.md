@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3383
 ms.assetid: ceb7f725-f417-4dc3-8496-0f413bb76687
-ms.openlocfilehash: 38aea188eeac90cd23d9203a53b4e630be2f115b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceae17689cbcb9585fb3722580042187ff64a6ee
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755634"
 ---
 # <a name="compiler-error-c3383"></a>Error del compilador C3383
 
@@ -29,7 +29,7 @@ Para obtener más información, vea
 
 El ejemplo siguiente genera la advertencia C3383.
 
-```
+```cpp
 // C3383.cpp
 // compile with: /clr:safe
 int main() {

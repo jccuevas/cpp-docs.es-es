@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelperFalse (clase)
+title: Clase CSimpleMapEqualHelperFalse
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-ms.openlocfilehash: 7ccfe59e6741c267aded8f59828947a1d98bfbc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6bf1d4e3be849004e13e593fb5f4b5cb87f8123
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330741"
 ---
-# <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse (clase)
+# <a name="csimplemapequalhelperfalse-class"></a>Clase CSimpleMapEqualHelperFalse
 
-Esta clase es una aplicación auxiliar para el [CSimpleMap](../../atl/reference/csimplemap-class.md) clase.
+Esta clase es una aplicación auxiliar para la [clase CSimpleMap.](../../atl/reference/csimplemap-class.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,24 +31,24 @@ class CSimpleMapEqualHelperFalse
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Estático) Comprueba la igualdad de dos claves.|
-|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Estático) Devuelve "false".|
+|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Estático) Prueba dos claves para la igualdad.|
+|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Estático) Devuelve false.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase de rasgos es un complemento para el `CSimpleMap` clase. Proporciona un método para comparar dos elementos que contiene el `CSimpleMap` objeto específicamente dos elementos de valor o dos elementos clave.
+Esta clase de rasgos `CSimpleMap` es un suplemento a la clase. Proporciona un método para comparar dos elementos contenidos en el `CSimpleMap` objeto, específicamente dos elementos de valor o dos elementos clave.
 
-La comparación de valor siempre devolverá false y, además, se llamará a `ATLASSERT` con el argumento false si nunca se hace referencia. En situaciones donde no se define lo suficientemente la prueba de igualdad, esta clase permite que un mapa que contiene pares de clave/valor para funcionar correctamente para la mayoría de los métodos, pero producirá un error de forma bien definida para los métodos que dependen de las comparaciones como [CSimpleMap:: FindVal](../../atl/reference/csimplemap-class.md#findval).
+La comparación de valores siempre devolverá `ATLASSERT` false y, además, llamará con un argumento de false si alguna vez se hace referencia a ella. En situaciones donde la prueba de igualdad no está suficientemente definida, esta clase permite que un mapa que contenga pares clave/valor funcione correctamente para la mayoría de los métodos, pero se produce un error de forma bien definida para métodos que dependen de comparaciones como [CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval).
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey
+## <a name="csimplemapequalhelperfalseisequalkey"></a><a name="isequalkey"></a>CSimpleMapEqualHelperFalse::IsEqualKey
 
-Comprueba la igualdad de dos claves.
+Prueba dos claves para la igualdad.
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -57,20 +57,20 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="parameters"></a>Parámetros
 
 *k1*<br/>
-La primera clave.
+La primera llave.
 
 *k2*<br/>
-La segunda clave.
+La segunda llave.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve true si las claves si no son iguales, es false.
+Devuelve true si las claves son iguales, false en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método llama a [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md).
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue
+## <a name="csimplemapequalhelperfalseisequalvalue"></a><a name="isequalvalue"></a>CSimpleMapEqualHelperFalse::IsEqualValue
 
 Devuelve false.
 
@@ -82,11 +82,11 @@ static bool IsEqualValue(const TVal&, const TVal&);
 
 Devuelve false.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método siempre devuelve false y llamará a `ATLASSERT` con el argumento false si nunca se hace referencia. El propósito de `CSimpleMapEqualHelperFalse::IsEqualValue` es forzar a métodos mediante comparaciones genere un error de una manera bien definida cuando las pruebas de igualdad no se han definido correctamente.
+Este método siempre devuelve false `ATLASSERT` y llamará con un argumento de false si alguna vez se hace referencia a él. El propósito `CSimpleMapEqualHelperFalse::IsEqualValue` de ser forzar métodos que utilizan comparaciones fallan de manera bien definida cuando las pruebas de igualdad no se han definido adecuadamente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CSimpleMapEqualHelper (clase)](../../atl/reference/csimplemapequalhelper-class.md)<br/>
+[Clase CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

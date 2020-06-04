@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - initonly attribute [C++]
 ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
-ms.openlocfilehash: 85a127398997872a20a2360f1a852ebaaf17e33b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 970800968733a285929c3bfa42594360203e573a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651287"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545172"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 
-**initonly** es una palabra clave contextual que indica la asignación de esa variable se puede ejecutar únicamente como parte de la declaración o en un constructor estático de la misma clase.
+**InitOnly** es una palabra clave contextual que indica que la asignación de variables solo se puede producir como parte de la declaración o en un constructor estático de la misma clase.
 
 En el siguiente ejemplo se muestra cómo usar `initionly`:
 
-```
+```cpp
 // mcpp_initonly.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -36,6 +36,6 @@ ref struct Y1 {
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Clases y structs](../extensions/classes-and-structs-cpp-component-extensions.md)

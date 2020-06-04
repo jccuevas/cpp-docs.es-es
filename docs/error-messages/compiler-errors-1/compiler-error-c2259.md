@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 0310f20854185a6f8a5ccb0ce7b087c4d7c5f29d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440409"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758793"
 ---
 # <a name="compiler-error-c2259"></a>Error del compilador C2259
 
@@ -21,11 +21,11 @@ El código declara una instancia de una estructura o clase abstracta.
 
 No se puede crear instancias de una clase o estructura con una o varias funciones virtuales puras. Para crear instancias de objetos de una clase derivada, ésta deberá reemplazar a todas las funciones virtuales puras.
 
-Para obtener más información, consulte [clases abstractas implícitamente](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
+Para obtener más información, vea [clases abstractas implícitamente](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
 
-El ejemplo siguiente genera el error C2259:
+En el ejemplo siguiente se genera C2259:
 
-```
+```cpp
 // C2259.cpp
 // compile with: /c
 class V {
@@ -50,11 +50,11 @@ Hay dos posibles soluciones para el problema:
 
 - Usar el operador de resolución de ámbito para los métodos de interfaz implementados en la clase derivada para calificar el nombre del método implementado con el nombre de la interfaz.
 
-Error C2259 también se puede producir como resultado del trabajo de conformidad efectuado en Visual C++ 2005, **/Zc:** está activado de manera predeterminada. En esta situación, se puede resolver compilando con C2599 **/Zc:wchar_t-**, para obtener el comportamiento de las versiones anteriores o, preferiblemente, actualizando los tipos para que sean compatibles. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 también se puede producir como resultado del trabajo de conformidad realizado en Visual Studio 2005, **/Zc: wchar_t** ahora está activado de forma predeterminada. En esta situación, C2599 se puede resolver compilando con **/Zc: wchar_t-** , para obtener el comportamiento de versiones anteriores o, preferiblemente, actualizando los tipos para que sean compatibles. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-El ejemplo siguiente genera el error C2259:
+En el ejemplo siguiente se genera C2259:
 
-```
+```cpp
 // C2259b.cpp
 // compile with: /c
 #include <windows.h>
@@ -90,9 +90,9 @@ public:
 MyClass4 y;
 ```
 
-El ejemplo siguiente genera el error C2259:
+En el ejemplo siguiente se genera C2259:
 
-```
+```cpp
 // C2259c.cpp
 // compile with: /clr
 interface class MyInterface {

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-ms.openlocfilehash: 78438ef3378e5002396eecb32b9b7a76d5b50325
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1d536eed6727a5d1e828d358aa6b64521d748b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492917"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454268"
 ---
 # <a name="badweakptr-class"></a>bad_weak_ptr (Clase)
 
@@ -23,7 +23,6 @@ Informa de una excepción weak_ptr errónea.
 ```cpp
 class bad_weak_ptr : public std::exception
 {
-public:
     bad_weak_ptr();
     const char *what() throw();
 };
@@ -71,12 +70,6 @@ int main()
 bad weak pointer
 ```
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<memory>
-
-**Espacio de nombres:** std
-
 ## <a name="see-also"></a>Vea también
 
-[weak_ptr (Clase)](../standard-library/weak-ptr-class.md)<br/>
+[weak_ptr (Clase)](../standard-library/weak-ptr-class.md)

@@ -1,8 +1,6 @@
 ---
 title: Admitir IDispEventImpl
 ms.date: 11/04/2016
-f1_keywords:
-- IDispEventImpl
 helpviewer_keywords:
 - event sink maps, declaring
 - IDispEventImpl class, advising and unadvising
@@ -12,53 +10,53 @@ helpviewer_keywords:
 - BEGIN_SINK_MAP macro
 - IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-ms.openlocfilehash: 909f62c88908d7dabf4141fa8ea42be7ea1facb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31beff30a067416f71029c18051f214c8d4429de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517811"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329322"
 ---
 # <a name="supporting-idispeventimpl"></a>Admitir IDispEventImpl
 
-La clase de plantilla [IDispEventImpl](../atl/reference/idispeventimpl-class.md) puede utilizarse para proporcionar compatibilidad con receptores de puntos de conexión en una clase ATL. Un receptor de puntos de conexión permite que su clase controlar los eventos desencadenados desde objetos COM externos. Estos receptores de puntos de conexión se asignan mediante un mapa de receptor de eventos proporcionado por la clase.
+La clase de plantilla [IDispEventImpl](../atl/reference/idispeventimpl-class.md) se puede utilizar para proporcionar compatibilidad con receptores de puntos de conexión en la clase ATL. Un receptor de punto de conexión permite a la clase controlar eventos desencadenados desde objetos COM externos. Estos receptores de punto de conexión se asignan con un mapa de receptores de eventos, proporcionado por la clase.
 
-Para implementar correctamente un receptor de puntos de conexión para la clase, deben completar los pasos siguientes:
+Para implementar correctamente un receptor de punto de conexión para la clase, se deben completar los pasos siguientes:
 
 - Importar las bibliotecas de tipos para cada objeto externo
 
-- Declare el `IDispEventImpl` interfaces
+- Declarar `IDispEventImpl` las interfaces
 
-- Declarar un mapa de receptores de eventos
+- Declarar un mapa de receptor de eventos
 
 - Aconsejar y desaconsejar los puntos de conexión
 
-Todos los pasos implicados en la implementación de un receptor de puntos de conexión se llevan a cabo al modificar solo el archivo de encabezado (. h) de la clase.
+Los pasos necesarios para implementar un receptor de punto de conexión se realizan modificando solo el archivo de encabezado (.h) de la clase.
 
-## <a name="importing-the-type-libraries"></a>Importar las bibliotecas de tipos
+## <a name="importing-the-type-libraries"></a>Importación de las bibliotecas de tipos
 
-Para cada objeto externo cuyos eventos desee controlar, debe importar la biblioteca de tipos. Este paso define los eventos que pueden administrarse y proporciona información que se usa cuando se declara el mapa de receptores de eventos. El [#import](../preprocessor/hash-import-directive-cpp.md) directiva puede utilizarse para realizar esta acción. Agregar el necesario `#import` líneas de directiva para cada interfaz de envío que se admitirán en el archivo de encabezado (. h) de la clase.
+Para cada objeto externo cuyos eventos desee controlar, debe importar la biblioteca de tipos. Este paso define los eventos que se pueden controlar y proporciona información que se utiliza al declarar el mapa del receptor de eventos. La directiva [#import](../preprocessor/hash-import-directive-cpp.md) se puede utilizar para lograr esto. Agregue las `#import` líneas de directiva necesarias para cada interfaz de envío que admita al archivo de encabezado (.h) de la clase.
 
-El siguiente ejemplo importa la biblioteca de tipos de un servidor COM externo (`MSCAL.Calendar.7`):
+En el ejemplo siguiente se importa la`MSCAL.Calendar.7`biblioteca de tipos de un servidor COM externo ( ):
 
 [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]
 
 > [!NOTE]
->  Debe tener otro `#import` instrucción para cada biblioteca de tipo externo que se va a admitir.
+> Debe tener una `#import` instrucción independiente para cada biblioteca de tipos externa que admita.
 
-## <a name="declaring-the-idispeventimpl-interfaces"></a>Declarar las Interfaces IDispEventImpl
+## <a name="declaring-the-idispeventimpl-interfaces"></a>Declarar las interfaces IDispEventImpl
 
-Ahora que ha importado las bibliotecas de tipos de cada interfaz de envío, deberá declarar independiente `IDispEventImpl` interfaces para cada interfaz de envío externo. Modifique la declaración de la clase agregando un `IDispEventImpl` declaración para cada objeto externo de interfaz. Para obtener más información sobre los parámetros, vea [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
+Ahora que ha importado las bibliotecas de tipos de cada `IDispEventImpl` interfaz de envío, debe declarar interfaces independientes para cada interfaz de envío externa. Modifique la declaración de `IDispEventImpl` la clase agregando una declaración de interfaz para cada objeto externo. Para obtener más información sobre los parámetros, vea [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
 
-El código siguiente declara dos receptores de punto de conexión para el `DCalendarEvents` interfaz para el objeto COM implementado por la clase `CMyCompositCtrl2`:
+El código siguiente declara dos receptores `DCalendarEvents` de punto de conexión, para `CMyCompositCtrl2`la interfaz, para el objeto COM implementado por la clase:
 
 [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]
 
-## <a name="declaring-an-event-sink-map"></a>Declarar un mapa de receptores de eventos
+## <a name="declaring-an-event-sink-map"></a>Declarar un mapa de sumidero de eventos
 
-En el orden de las notificaciones de eventos ser controladas por la función adecuada, la clase debe enrutar cada evento a su controlador correcto. Esto se logra mediante la declaración de un mapa de receptores de eventos.
+Para que las notificaciones de eventos se controlen mediante la función adecuada, la clase debe enrutar cada evento a su controlador correcto. Esto se logra declarando un mapa de receptores de eventos.
 
-ATL proporciona varias macros, [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), y [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), que facilitan estas asignaciones. El formato estándar es como sigue:
+ATL proporciona varias macros, [BEGIN_SINK_MAP,](reference/composite-control-macros.md#begin_sink_map) [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map)y [SINK_ENTRY_EX,](reference/composite-control-macros.md#sink_entry_ex)que facilitan esta asignación. El formato estándar es el siguiente:
 
 ```cpp
 BEGIN_SINK_MAP(comClass)
@@ -67,21 +65,20 @@ BEGIN_SINK_MAP(comClass)
 END_SINK_MAP()
 ```
 
-El ejemplo siguiente declara un mapa de receptores de eventos con dos controladores de eventos:
+En el ejemplo siguiente se declara un mapa de receptor de eventos con dos controladores de eventos:
 
 [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]
 
-La implementación está casi completa. El último paso refiere a la de aconsejar y desaconsejar las interfaces externas.
+La implementación está casi completa. El último paso se refiere al asesoramiento y desasesoramiento de las interfaces externas.
 
-## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Aconsejar y desaconsejar las Interfaces IDispEventImpl
+## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Asesoramiento y desasesoramiento de las interfaces IDispEventImpl
 
-El último paso es implementar un método que se aconseja (o no notificar) todos los puntos de conexión en los momentos adecuados. Estos consejos deben realizarse antes de poder realizar la comunicación entre los clientes externos y el objeto. Antes de que el objeto se vuelve visible, se consulta cada interfaz de envío externos admitido por el objeto de interfaces de salida. Se establece una conexión y una referencia a la interfaz de salida se usa para controlar eventos desde el objeto. Este procedimiento se conoce como "aconsejar".
+El último paso es implementar un método que aconsejará (o desaconsejará) todos los puntos de conexión en los momentos adecuados. Este asesoramiento debe realizarse antes de que pueda tener lugar la comunicación entre los clientes externos y el objeto. Antes de que el objeto sea visible, se consulta cada interfaz de envío externa admitida por el objeto para las interfaces salientes. Se establece una conexión y se utiliza una referencia a la interfaz saliente para controlar los eventos del objeto. Este procedimiento se conoce como "asesoramiento".
 
-Cuando finalice el objeto con las interfaces externas, deben notificar las interfaces de salida que ya no se usan por la clase. Este proceso se conoce como "desaconsejar".
+Una vez que el objeto haya terminado con las interfaces externas, se debe notificar a las interfaces salientes que ya no las utiliza la clase. Este proceso se conoce como "desaconsejo".
 
-Dada la naturaleza única de objetos COM, este procedimiento puede variar, en detalle y la ejecución, entre las implementaciones. Estos detalles están fuera del ámbito de este tema y no se tratan.
+Debido a la naturaleza única de los objetos COM, este procedimiento varía, en detalle y en ejecución, entre implementaciones. Estos detalles están fuera del ámbito de este tema y no se tratan.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)
-
+[Fundamentos de los objetos COM de ATL](../atl/fundamentals-of-atl-com-objects.md)

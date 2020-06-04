@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3708
 ms.assetid: 45e71564-9c7f-437f-98d8-a735ce162ed0
-ms.openlocfilehash: 7ee9d59f12cc9e748b08b3e4a704420ea5c58be6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5a2688cf138733a7a2891238953bc9fd894e483
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661895"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757974"
 ---
 # <a name="compiler-error-c3708"></a>Error del compilador C3708
 
-'interface': uso incorrecto de 'keyword'; debe ser miembro de un origen de eventos compatible
+' interface ': uso incorrecto de ' keyword '; debe ser miembro de un origen de eventos compatible
 
 Para declarar una interfaz como un evento, la declaración de evento debe estar en un origen de eventos.
 
-El ejemplo siguiente genera C3708:
+En el ejemplo siguiente se genera C3708:
 
-```
+```cpp
 // C3708.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

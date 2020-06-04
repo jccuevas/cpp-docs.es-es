@@ -1,11 +1,12 @@
 ---
 title: floor, floorf, floorl
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+- _o_floor
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647741"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911636"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -67,25 +72,27 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **floor** funciones devuelven un valor de punto flotante que representa el entero más grande que sea menor o igual que *x*. No se devuelve ningún error.
+Las funciones de **piso** devuelven un valor de punto flotante que representa el entero más grande que es menor o igual que *x*. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|ninguna|_DOMAIN|
+|± QNAN,IND|ninguno|_DOMAIN|
 
-**Floor** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**Floor** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **floor** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **floor** siempre toma y devuelve un **doble**.
+C++ permite las sobrecargas, de modo que puede llamar a las sobrecargas de **piso** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **Floor** siempre toma y devuelve un **valor Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado necesario|
 |--------------|---------------------|
-|**Floor**, **floorf**, **floorl**|\<math.h>|
+|**Floor**, **floorf (**, **Floor**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -122,7 +129,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

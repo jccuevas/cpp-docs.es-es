@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2333
 ms.assetid: 2636fc1e-d3e7-4e68-8628-3c81a99ba813
-ms.openlocfilehash: e9119a8375a276a59cbf3a6db9541f6ccaef5122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cca7f0d3bd75cca8fdd621fb425dec42e6560f4e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432644"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747753"
 ---
 # <a name="compiler-error-c2333"></a>Error del compilador C2333
 
-'function': error en la declaración de función; omitiendo el cuerpo de la función
+' función ': error en la declaración de función; omitiendo el cuerpo de la función
 
 Este error se produce después de otro error, para las funciones miembro definidas dentro de su clase.
 
-El ejemplo siguiente genera C2333:
+En el ejemplo siguiente se genera C2333:
 
-```
+```cpp
 // C2333.cpp
 struct s1 {
    s1(s1) {}   // C2333

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
-ms.openlocfilehash: 5ef39e4580601dd90b5695d9115902bb5b834409
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2d74a637e2902fcf636b49068882f32aa706f94
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655694"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761769"
 ---
 # <a name="compiler-error-c3170"></a>Error del compilador C3170
 
-no puede tener identificadores de módulo distintos en un proyecto
+no se pueden tener identificadores de módulo diferentes en un proyecto
 
-[módulo](../../windows/module-cpp.md) se encontraron atributos con nombres diferentes en dos de los archivos en una compilación. Solo uno único `module` atributo se puede especificar cada compilación.
+se encontraron atributos de [módulo](../../windows/module-cpp.md) con nombres diferentes en dos de los archivos de una compilación. Solo se puede especificar un atributo de `module` único por compilación.
 
-Idéntico `module` atributos se pueden especificar más de un archivo de código fuente.
+Se pueden especificar atributos idénticos `module` en más de un archivo de código fuente.
 
-Por ejemplo, si se encontraron los siguientes atributos de módulo:
+Por ejemplo, si se encuentran los siguientes atributos de módulo:
 
-```
+```cpp
 // C3170.cpp
 [ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];
 int main() {}
@@ -31,11 +31,11 @@ int main() {}
 
 Y luego,
 
-```
+```cpp
 // C3170b.cpp
 // compile with: C3170.cpp
 // C3170 expected
 [ module(name="MyModule1", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];
 ```
 
-el compilador generará el error C3170 (tenga en cuenta los nombres diferentes).
+el compilador generaría C3170 (tenga en cuenta los nombres diferentes).

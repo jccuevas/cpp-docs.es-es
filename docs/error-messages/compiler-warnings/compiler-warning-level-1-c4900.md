@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4900
 ms.assetid: 826997ec-0803-4794-ad35-bb463f679658
-ms.openlocfilehash: 9066210327c932e66286bb4bd138b97af2dba7f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55ce73339cbea43de731835a1b5b5cc3918f164c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475194"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174848"
 ---
 # <a name="compiler-warning-level-1-c4900"></a>Advertencia del compilador (nivel 1) C4900
 

@@ -1,5 +1,5 @@
 ---
-title: bad_target (Clase)
+title: bad_target (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - bad_target
@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 0440955718bee3b426f5e4625b5eb3fc559a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434488"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142858"
 ---
-# <a name="badtarget-class"></a>bad_target (Clase)
+# <a name="bad_target-class"></a>bad_target (clase)
 
 Esta clase describe una excepción que se produce cuando un bloque de mensajería recibe un puntero a un destino que no es válido para la operación que se realiza.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class bad_target : public std::exception;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[bad_target](#ctor)|Sobrecargado. Construye un objeto `bad_target`.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta excepción se produce normalmente por razones como un destino al intentar utilizar un mensaje que se reserva para un destino diferente o liberando una reserva que no contiene.
+Esta excepción se produce normalmente por motivos como un destino que intenta consumir un mensaje que está reservado para un destino diferente o liberando una reserva que no contiene.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -45,15 +45,15 @@ Esta excepción se produce normalmente por razones como un destino al intentar u
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrt.h
+**Encabezado:** concrt. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> bad_target)
+## <a name="ctor"></a>bad_target
 
 Construye un objeto `bad_target`.
 
-```
+```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();
@@ -61,11 +61,10 @@ bad_target() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Mensaje descriptivo del error.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md)
-

@@ -1,9 +1,9 @@
 ---
 title: _set_SSE2_enable
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _set_SSE2_enable
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_SSE2_enable
 - set_SSE2_enable
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-ms.openlocfilehash: c340423e93b6487a4a951e4b96055cba6e474269
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8838282db851c6811a3f24c75a03b31c5870e6d3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539339"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948352"
 ---
-# <a name="setsse2enable"></a>_set_SSE2_enable
+# <a name="_set_sse2_enable"></a>_set_SSE2_enable
 
-Habilita o deshabilita el uso de instrucciones de extensiones SIMD de transmisión por secuencias 2 (SSE2) en las rutinas matemáticas de CRT. (esta función no está disponible en las arquitecturas x64 porque SSE2 está habilitada de forma predeterminada).
+Habilita o deshabilita el uso de las instrucciones de extensiones SIMD de streaming 2 (SSE2) en las rutinas matemáticas de CRT. (esta función no está disponible en las arquitecturas x64 porque SSE2 está habilitada de forma predeterminada).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,7 +48,7 @@ int _set_SSE2_enable(
 
 ### <a name="parameters"></a>Parámetros
 
-*Marca*<br/>
+*flag*<br/>
 1 para habilitar la implementación de SSE2 y 0 para deshabilitarla. De forma predeterminada, la implementación de SSE2 está habilitada en los procesadores compatibles.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -54,7 +57,7 @@ Valor distinto de cero si la implementación de SSE2 está habilitada; cero si e
 
 ## <a name="remarks"></a>Comentarios
 
-Las siguientes funciones tienen implementaciones de SSE2 que se pueden habilitar mediante el uso de **_set_SSE2_enable**:
+Las siguientes funciones tienen implementaciones SSE2 que se pueden habilitar mediante **_set_SSE2_enable**:
 
 - [atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
@@ -75,7 +78,7 @@ Las siguientes funciones tienen implementaciones de SSE2 que se pueden habilitar
 Las implementaciones de SSE2 de estas funciones pueden proporcionar respuestas algo diferentes que las implementaciones predeterminadas, porque los valores intermedios de SSE2 son cantidades de punto flotante de 64 bits, mientras que los valores intermedios de implementación predeterminados son cantidades de punto flotante de 80 bits.
 
 > [!NOTE]
-> Si usas el [/Oi (generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) opción del compilador para compilar el proyecto, puede parecer que **_set_SSE2_enable** no tiene ningún efecto. El **/Oi** opción del compilador da al compilador la autoridad para usar funciones intrínsecas para reemplazar las llamadas de CRT; este comportamiento invalida el efecto de **_set_SSE2_enable**. Si desea garantizar que **/Oi** no invalida **_set_SSE2_enable**, utilice **/Oi-** para compilar el proyecto. También sería conveniente cuando se usa otros modificadores de compilador que implican **/Oi**.
+> Si usa la opción del compilador [/OI (generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) para compilar el proyecto, puede parecer que **_set_SSE2_enable** no tiene ningún efecto. La opción del compilador **/OI** proporciona al compilador la autoridad para utilizar intrínsecos para reemplazar las llamadas de CRT; Este comportamiento invalida el efecto de **_set_SSE2_enable**. Si quiere garantizar que **/OI** no invalide **_set_SSE2_enable**, use **/OI-** para compilar el proyecto. Esto también podría ser recomendable cuando se usan otros modificadores de compilador que implican **/OI**.
 
 La implementación de SSE2 solo se usa si se enmascaran todas las excepciones. Use [_control87, _controlfp](control87-controlfp-control87-2.md) para enmascarar las excepciones.
 

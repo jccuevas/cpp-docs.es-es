@@ -1,38 +1,34 @@
 ---
 title: 'Tutorial: Adaptar el código existente para usar tareas ligeras'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: a0e724ff6f43dc0c888e787350f4841f14383f14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7c6096829a1cd45cfdb849a1899d6b4a2d4cb78
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654511"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141994"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Tutorial: Adaptar el código existente para usar tareas ligeras
 
 En este tema se muestra cómo adaptar código existente que usa la API de Windows para crear y ejecutar un subproceso para una tarea ligera.
 
-Un *tarea ligera* es una tarea que se programa directamente desde un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) o [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objeto. Las tareas ligeras son útiles cuando se adapta código existente para usar la funcionalidad de programación del Runtime de simultaneidad.
+Una *tarea ligera* es una tarea que se programa directamente desde un objeto [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) o [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) . Las tareas ligeras son útiles cuando se adapta código existente para usar la funcionalidad de programación del Runtime de simultaneidad.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Antes de empezar este tutorial, lea el tema [programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Antes de comenzar este tutorial, lea el tema [programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 ## <a name="example"></a>Ejemplo
 
-### <a name="description"></a>Descripción
+En el siguiente ejemplo se muestra el uso típico de la API de Windows para crear y ejecutar un subproceso. En este ejemplo se usa la función [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) para llamar al `MyThreadFunction` en un subproceso independiente.
 
-En el siguiente ejemplo se muestra el uso típico de la API de Windows para crear y ejecutar un subproceso. Este ejemplo se usa el [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) función para llamar a la `MyThreadFunction` en un subproceso independiente.
-
-### <a name="code"></a>Código
+### <a name="initial-code"></a>Código inicial
 
 [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]
-
-### <a name="comments"></a>Comentarios
 
 Este ejemplo produce el siguiente resultado:
 
@@ -56,15 +52,15 @@ Los siguientes pasos muestran cómo adaptar el ejemplo de código para usar el R
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. Modificar el `MyData` estructura para incluir un [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) objeto que señala a la aplicación principal que la tarea ha finalizado.
+1. Modifique la estructura `MyData` para incluir un objeto [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) que indique a la aplicación principal que la tarea ha finalizado.
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
-1. Reemplace la llamada a `CreateThread` con una llamada a la [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask) método.
+1. Reemplace la llamada a `CreateThread` por una llamada al método [Concurrency:: CurrentScheduler:: ScheduleTask](reference/currentscheduler-class.md#scheduletask) .
 
 [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]
 
-1. Reemplace la llamada a `WaitForSingleObject` con una llamada a la [concurrency::event::wait](reference/event-class.md#wait) método para esperar a que finalice la tarea.
+1. Reemplace la llamada a `WaitForSingleObject` por una llamada al método [Concurrency:: Event:: wait](reference/event-class.md#wait) para esperar a que finalice la tarea.
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
@@ -74,25 +70,19 @@ Los siguientes pasos muestran cómo adaptar el ejemplo de código para usar el R
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-9. Al final de la `MyThreadFunction` de función, llame a la [concurrency::event::set](reference/event-class.md#set) método para señalar a la aplicación principal que la tarea ha finalizado.
+1. Al final de la función `MyThreadFunction`, llame al método [Concurrency:: Event:: set](reference/event-class.md#set) para indicar a la aplicación principal que la tarea ha finalizado.
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
-10. Quite la instrucción `return` de `MyThreadFunction`.
+1. Quite la instrucción `return` de `MyThreadFunction`.
 
-## <a name="example"></a>Ejemplo
-
-### <a name="description"></a>Descripción
+### <a name="completed-code"></a>Código completado
 
 En el siguiente ejemplo completo se muestra código que usa una tarea ligera para llamar a la función `MyThreadFunction`.
 
-### <a name="code"></a>Código
-
 [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]
 
-### <a name="comments"></a>Comentarios
-
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Scheduler (clase)](../../parallel/concrt/reference/scheduler-class.md)

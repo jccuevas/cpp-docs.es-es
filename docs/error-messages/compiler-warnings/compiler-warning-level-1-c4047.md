@@ -1,29 +1,29 @@
 ---
-title: Compilador advertencia (nivel 1) C4047
+title: ADVERTENCIA del compilador (nivel 1) C4047
 ms.date: 11/04/2016
 f1_keywords:
 - C4047
 helpviewer_keywords:
 - C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-ms.openlocfilehash: 87c9e39e5dac40341adc63af45cc0e460806c736
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bed592325f864e41f7dfdf2edaad86630e4b205
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666510"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164201"
 ---
-# <a name="compiler-warning-level-1-c4047"></a>Compilador advertencia (nivel 1) C4047
+# <a name="compiler-warning-level-1-c4047"></a>ADVERTENCIA del compilador (nivel 1) C4047
 
 'operador': 'identificador1' se diferencia del 'identificador2' en los niveles de direccionamiento indirecto
 
-Un puntero puede señalar a una variable (un nivel de direccionamiento indirecto) a otro puntero que señala a una variable (dos niveles de direccionamiento indirecto) y así sucesivamente.
+Un puntero puede apuntar a una variable (un nivel de direccionamiento indirecto), a otro puntero que apunta a una variable (dos niveles de direccionamiento indirecto), etc.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4047:
+En el ejemplo siguiente se genera C4047:
 
-```
+```c
 // C4047.c
 // compile with: /W1
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4047:
+En el ejemplo siguiente se genera C4047:
 
-```
+```c
 // C4047b.c
 // compile with: /W1
 #include <stdio.h>

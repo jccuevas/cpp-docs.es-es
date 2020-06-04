@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2283
 ms.assetid: 8a5b3175-b480-4598-a1f7-0b50504c5caa
-ms.openlocfilehash: 1113236680241a80c462e382c8c9c7de342b5463
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f3568aa5dfee116a225256a4452465c05f72f6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630001"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759157"
 ---
 # <a name="compiler-error-c2283"></a>Error del compilador C2283
 
@@ -21,7 +21,7 @@ Una función miembro de una estructura o clase sin nombre se ha declarado con un
 
 El ejemplo siguiente genera la advertencia C2283:
 
-```
+```cpp
 // C2283.cpp
 // compile with: /c
 struct {

@@ -1,90 +1,137 @@
 ---
 title: Error de las herramientas del vinculador LNK1104
-ms.date: 05/17/2017
+description: Describe el LNK1104 de errores C++ del enlazador C y (MSVC) de Microsoft, sus causas y posibles soluciones.
+ms.date: 12/13/2019
 f1_keywords:
 - LNK1104
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: 0c5c0b84ad66fb44dad171710ff8915ca22b8ccf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8878db1b0829703b22b2f7863eb7955d17ad3096
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462795"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301787"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Error de las herramientas del vinculador LNK1104
 
-> no se puede abrir el archivo '*filename*'
+> no se puede abrir el archivo '*nombreDeArchivo*'
 
-El vinculador no pudo abrir el archivo especificado. Las causas más comunes de este problema son que el archivo está en uso o bloqueado por otro proceso, no existe, no se encuentra en uno de los directorios que el vinculador busca, o puede que no tenga permisos suficientes para tener acceso al archivo. Con menos frecuencia, puede haberse quedado sin espacio en disco, el archivo puede ser demasiado grande o la ruta de acceso al archivo puede ser demasiado larga.
+Este error se genera cuando el vinculador no puede abrir un archivo, ya sea para lectura o para escritura. Las dos causas más comunes del problema son las siguientes:
 
-## <a name="possible-causes-and-solutions"></a>Las posibles causas y soluciones
+- el programa ya se está ejecutando o está cargado en el depurador, y
 
-Este error puede producirse cuando el vinculador intenta abrir un archivo para lectura o escritura. Para restringir las causas posibles, compruebe qué tipo de archivo se encuentra y use las secciones siguientes para ayudar a identificar y corregir el problema específico.
+- las rutas de acceso de la biblioteca son incorrectas o no se incluyen entre comillas dobles.
 
-### <a name="cannot-open-your-app-or-its-pdb-file"></a>No se puede abrir la aplicación o su archivo .pdb
+Hay muchas otras causas posibles de este error. Para reducirlos, compruebe primero qué tipo de *nombre* de archivo es. A continuación, use las secciones siguientes para ayudar a identificar y corregir el problema específico.
 
-Si el nombre de archivo es el ejecutable compila el proyecto o un archivo .pdb asociado, la causa más común es que la aplicación ya se está ejecutando cuando se intenta volver a generarlo o se carga en un depurador. Para corregir este problema, detenga el programa y se descarga desde el depurador antes de volver a compilar. Si la aplicación está abierta en otro programa, por ejemplo, un editor de recursos, ciérrelo. En casos extremos, necesita usar el Administrador de tareas para finalizar el proceso, o detenga y reinicie Visual Studio.
+## <a name="cant-open-your-app-or-its-pdb-file"></a>No se puede abrir la aplicación ni su archivo. pdb
 
-Los programas antivirus a menudo temporalmente bloquear el acceso a los archivos recién creados especialmente .exe y .dll archivos ejecutables. Para corregir este problema, intente excluir los directorios de compilación del proyecto de la detección de virus.
+### <a name="your-app-is-running-or-its-loaded-in-the-debugger"></a>La aplicación se está ejecutando o está cargada en el depurador
 
-### <a name="cannot-open-a-microsoft-library-file"></a>No se puede abrir un archivo de Microsoft Library
+Cuando *filename* es el nombre del archivo ejecutable o un archivo. pdb asociado, vea si la aplicación ya se está ejecutando. A continuación, compruebe si se ha cargado en un depurador. Para corregir este problema, detenga el programa y descárguelo del depurador antes de compilarlo de nuevo. Si la aplicación está abierta en otro programa, como un editor de recursos, ciérrela. Si el programa no responde, puede que tenga que usar el administrador de tareas para finalizar el proceso. También podría necesitar cerrar y reiniciar Visual Studio.
 
-Si el archivo que no se puede abrir uno de los archivos de biblioteca estándar proporcionados por Microsoft, por ejemplo, kernel32.lib, es posible tener un error de configuración de proyecto o un error de instalación. Compruebe que se ha instalado el SDK de Windows y si el proyecto requiere otras bibliotecas de Microsoft, tales como MFC, asegúrese de que los componentes MFC también se han instalado por el instalador de Visual Studio. Puede ejecutar el instalador de nuevo para agregar componentes opcionales en cualquier momento. Para obtener más información, consulte [modificar Visual Studio](/visualstudio/install/modify-visual-studio). Utilice la pestaña componentes individuales en el instalador para elegir determinadas bibliotecas y SDK.
+### <a name="your-app-is-locked-by-an-antivirus-scan"></a>La aplicación está bloqueada por un examen antivirus
 
-Si va a compilar un proyecto que se creó con una versión anterior de Visual Studio, pueden no instalarse el conjunto de herramientas de plataforma y bibliotecas para esa versión. Si el mensaje de error se produce para un nombre de biblioteca con control de versiones, como msvcr100.lib, esta es probablemente la causa. Para corregir este problema, tiene dos opciones: puede actualizar el proyecto para usar el conjunto de herramientas de plataforma actual ha instalado, o puede instalar el conjunto de herramientas anterior y compile el proyecto sin cambios. Para obtener más información, consulte [actualizar proyectos desde versiones anteriores de Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) y [utilizar nativa con múltiples versiones de Visual Studio para compilar proyectos antiguos](../../porting/use-native-multi-targeting.md).
+Los programas antivirus suelen bloquear temporalmente el acceso a los archivos recién creados, especialmente a los archivos ejecutables. exe y. dll. Para solucionar este problema, pruebe a excluir los directorios de compilación del proyecto del detector de virus.
 
-Si ve este error al compilar para una nueva plataforma de destino o la configuración, las bibliotecas para ese conjunto de herramientas de plataforma o configuración de proyecto no pueden instalarse. Compruebe que la **conjunto de herramientas de plataforma** y **versión del SDK de Windows** especificado en el [página de propiedades General](../../ide/general-property-page-project.md) están instalados para el proyecto y compruebe que los necesarios las bibliotecas están disponibles en el **directorios de bibliotecas** especificado en el [VC ++ Directories Property Page](../../ide/vcpp-directories-property-page.md) para las opciones de configuración. Hay configuraciones independientes para la depuración y las configuraciones de venta directa, así como las configuraciones de 32 bits y 64 bits, por lo que si una compilación funciona pero sí produce un error, asegúrese de que la configuración es correcta y se instalan las bibliotecas y herramientas necesarias para cada compilar la configuración.
+## <a name="cant-open-a-microsoft-library-file"></a>No se puede abrir un archivo de biblioteca de Microsoft
 
-Si usas el IDE de Visual Studio para compilar un proyecto que se copió desde otro equipo, las ubicaciones de instalación para las bibliotecas pueden variar. Compruebe el **directorios de bibliotecas** propiedad en el [VC ++ Directories Property Page](../../ide/vcpp-directories-property-page.md) para el proyecto y actualizarla si es necesario. Para ver y editar las rutas de acceso de biblioteca actual establecidos en el IDE, elija el control de lista desplegable para la **directorios de bibliotecas** propiedad y elija **editar**. El **evalúa el valor** sección de la **directorios de bibliotecas** cuadro de diálogo enumera las rutas de acceso actuales a buscar archivos de biblioteca.
+### <a name="windows-libraries-such-as-kernel32lib"></a>Bibliotecas de Windows, como Kernel32. lib
 
-Este error también puede producirse cuando la ruta de acceso al SDK de Windows no está actualizada. Si ha instalado una versión del SDK de Windows más reciente que la versión de Visual Studio, asegúrese de que las rutas de acceso especifican en el [VC ++ Directories Property Page](../../ide/vcpp-directories-property-page.md) se actualizan para que coincida con el nuevo SDK. Si usa el símbolo del sistema para desarrolladores, asegúrese de que se actualiza el archivo por lotes que inicializa las variables de entorno para las nuevas rutas SDK. Este problema puede evitarse mediante el instalador de Visual Studio para instalar el SDK actualizados.
+Si el archivo que no se puede abrir es uno de los archivos de la biblioteca estándar que proporciona Microsoft, como *Kernel32. lib*, puede tener un error de configuración del proyecto o un error de instalación. Compruebe que se ha instalado el Windows SDK. Si el proyecto requiere otras bibliotecas de Microsoft, como MFC, asegúrese de que los componentes de MFC también se instalaron con el instalador de Visual Studio. Puede volver a ejecutar el instalador para agregar componentes opcionales en cualquier momento. Para obtener más información, vea [modificar Visual Studio](/visualstudio/install/modify-visual-studio). Use la pestaña **componentes individuales** del instalador para elegir bibliotecas y SDK específicos.
 
-### <a name="cannot-open-a-third-party-library-file"></a>No se puede abrir un archivo de biblioteca de terceros
+### <a name="versioned-vcruntime-libraries"></a>Bibliotecas de vcruntime de versiones
 
-Hay varias causas para este problema:
+Si el mensaje de error tiene una biblioteca de Microsoft con versión, como *msvcr120. lib*, es posible que el conjunto de herramientas de la plataforma para esa versión del compilador no esté instalado. Para corregir este problema, tiene dos opciones: actualizar el proyecto para usar el conjunto de herramientas de la plataforma actual o instalar el conjunto de herramientas anterior y compilar el proyecto sin cambios. Para obtener más información, vea [actualizar proyectos de versiones anteriores de Visual C++ ](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) y [usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos](../../porting/use-native-multi-targeting.md).
 
-- La ruta de acceso al archivo de biblioteca puede ser incorrecto o que no haya especificado el vinculador.
+### <a name="retail-debug-or-platform-specific-libraries"></a>Bibliotecas de venta directa, depuración o específicas de la plataforma
 
-- Es posible que ha instalado una versión de 32 bits de la biblioteca, pero va a compilar para 64 bits, o viceversa.
+El error puede producirse al compilar por primera vez una nueva plataforma o configuración de destino, como venta directa o ARM64. En el IDE, compruebe que el **conjunto de herramientas** de la plataforma y la versión de **Windows SDK** especificada en la [Página de propiedades general](../../build/reference/general-property-page-project.md) están instaladas. Compruebe también que las bibliotecas necesarias están disponibles en los **directorios de biblioteca** especificados en la página de [propiedades directorios de VC + +](../../build/reference/vcpp-directories-property-page.md). Compruebe las propiedades de cada configuración, como depurar, venta directa, x86 o ARM64. Si una compilación funciona pero otra no, compare la configuración de ambos. Instale las herramientas y bibliotecas necesarias que falten.
 
-- La biblioteca puede tener dependencias en otras bibliotecas que no están instalados.
+### <a name="the-vccorliblib-library"></a>La biblioteca vccorlib. lib
 
-Para corregir un problema de la ruta de acceso, compruebe que la variable de entorno LIB está establecida y contiene todos los directorios para las bibliotecas que usa para todas las configuraciones que compila. En el IDE, se establece la variable LIB el **directorios de bibliotecas** propiedad en el [VC ++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Asegúrese de que todos los directorios que contienen las bibliotecas que necesarias se muestran aquí, para cada configuración que cree.
+No hay ninguna biblioteca Spectre para los componentes o aplicaciones universales de Windows (UWP). Si el mensaje de error incluye *vccorlib. lib*, es posible que haya habilitado [/Qspectre](../../build/reference/qspectre.md) en un proyecto de UWP. Deshabilite la opción del compilador **/Qspectre** para corregir este problema. En Visual Studio, cambie la propiedad de **mitigación Spectre** . Se encuentra en la página **generación de código** de **CC++ /**  > del cuadro de diálogo páginas de **propiedades** del proyecto.
 
-Si tiene que proporcionar un directorio de biblioteca que invalida un directorio de la biblioteca estándar, puede usar el [/libpath](../../build/reference/libpath-additional-libpath.md) opción en la línea de comandos, o en el IDE, puede usar el **directorios de bibliotecas adicionales** propiedad en el **propiedades de configuración > vinculador > General** página de propiedades para el proyecto.
+### <a name="libraries-in-projects-from-online-or-other-sources"></a>Bibliotecas en proyectos de otros orígenes en línea
 
-Asegúrese de que ha instalado todas las versiones de la biblioteca que necesita para las configuraciones de que compilar. Considere el uso de la [vcpkg](../../vcpkg.md) utilidad de administración para automatizar la instalación y configuración de muchas bibliotecas comunes de paquetes. Cuando sea posible, es mejor crear sus propias copias de las bibliotecas de terceros, por lo que está seguro de que todas las dependencias locales que requieren las bibliotecas y que se compilan para la misma configuración que el proyecto.
+Si compila un proyecto copiado desde otro equipo, las ubicaciones de instalación de la biblioteca pueden ser diferentes. En el caso de las compilaciones de línea de comandos, compruebe que la variable de entorno LIB y las rutas de acceso de biblioteca están establecidas correctamente para la compilación. En Visual Studio, puede ver y editar las rutas de acceso de biblioteca actuales establecidas en las páginas de propiedades del proyecto. En la página **directorios de VC + +** , elija el control desplegable de la propiedad **directorios de biblioteca** y, a continuación, elija **Editar**. En la sección **valor evaluado** del cuadro de diálogo **directorios de biblioteca** se muestran las rutas de acceso actuales que se buscan en los archivos de biblioteca. Actualice estas rutas de acceso para que apunten a las bibliotecas locales.
 
-### <a name="cannot-open-a-file-built-by-your-project"></a>No se puede abrir un archivo compilado en el proyecto
+### <a name="updated-windows-sdk-libraries"></a>Bibliotecas de Windows SDK actualizadas
 
-Puede ver este error si el archivo *filename* se compila la solución, pero aún no existe cuando el vinculador intenta obtener acceso a él. Esto puede ocurrir cuando un proyecto depende de otro proyecto, pero no se compilan los proyectos en el orden correcto. Para corregir este problema, asegúrese de que las referencias del proyecto se establecen en el proyecto que usa el archivo, por lo que el archivo que falta se compila antes de que sea necesario. Para obtener más información, consulte [agregar referencias en proyectos de Visual C++](../../ide/adding-references-in-visual-cpp-projects.md) y [administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project).
+Este error puede producirse si la ruta de acceso de Visual Studio al Windows SDK no está actualizada. Puede ocurrir si instala una Windows SDK más reciente independientemente del instalador de Visual Studio. Para corregirlo en el IDE, actualice las rutas de acceso especificadas en la [Página de propiedades directorios de VC + +](../../build/reference/vcpp-directories-property-page.md). Establezca la versión de la ruta de acceso para que coincida con el nuevo SDK. Si usa el Símbolo del sistema para desarrolladores, actualice el archivo por lotes que inicializa las variables de entorno con las nuevas rutas de acceso del SDK. Este problema se puede evitar mediante el instalador de Visual Studio para instalar los SDK actualizados.
 
-### <a name="cannot-open-file-cprogramobj"></a>No se puede abrir el archivo ' C:\\Program.obj'
+## <a name="cant-open-a-third-party-library-file"></a>No se puede abrir un archivo de biblioteca de otro fabricante
 
-Si ve este error, o un error similar que implican un archivo .obj inesperado en la raíz de la unidad, el problema es casi seguro que una ruta de acceso de biblioteca que no se ajusta en comillas dobles.
+Hay varias causas comunes para este problema:
 
-Para corregir este problema para las compilaciones de línea de comandos, compruebe el [/libpath](../../build/reference/libpath-additional-libpath.md) opción parámetros, las rutas especificadas en la variable de entorno LIB y las rutas de acceso especificadas en la línea de comandos y asegúrese de utilizar comillas dobles alrededor de las rutas de acceso que incluyen espacios.
+- La ruta de acceso al archivo de biblioteca puede ser incorrecta o no debe incluirse entre comillas dobles. O bien, es posible que no se haya especificado en el enlazador.
 
-Para corregir este problema en el IDE, compruebe el **directorios de bibliotecas** propiedad en el [propiedades de configuración > directorios de VC ++](../../ide/vcpp-directories-property-page.md) página de propiedades, el **dedirectoriosdebibliotecasadicionales** propiedad en el **propiedades de configuración > vinculador > General** página de propiedades y el **dependencias adicionales** propiedad en el **configuración Propiedades > vinculador > entrada** página de propiedades para el proyecto. Asegúrese de que todas las rutas de acceso de directorio que contienen las bibliotecas que necesarias se encapsulan en comillas dobles si es necesario.
+- Es posible que haya instalado una versión de 32 bits de la biblioteca, pero está compilando para 64 bits o de otra manera.
 
-### <a name="other-common-issues"></a>Otros problemas comunes
+- La biblioteca puede tener dependencias en otras bibliotecas que no están instaladas.
 
-Este error puede producirse cuando se especifica el nombre de archivo de biblioteca o una ruta de acceso al enlazador en la línea de comandos o en un [#pragma comment (lib, "nombre_de_biblioteca")](../../preprocessor/comment-c-cpp.md) directiva es incorrecta o la ruta de acceso tiene una especificación de unidad no válida. Compruebe la ortografía y la extensión de archivo y que el archivo existe en la ubicación especificada.
+Para corregir un problema de ruta de acceso para las compilaciones de línea de comandos, compruebe que la variable de entorno LIB está establecida. Asegúrese de que incluye rutas de acceso para todas las bibliotecas que usa y para cada configuración que cree. En el IDE, las rutas de acceso de biblioteca se establecen mediante los **directorios de VC + +**  > propiedad **directorios de biblioteca** . Asegúrese de que todos los directorios que contienen las bibliotecas que necesita aparecen aquí, para cada configuración que cree.
 
-Puede que otro programa tenga el archivo abierto y que el enlazador no puede escribir en él. Los programas antivirus a menudo bloquean temporalmente el acceso a archivos recién creados. Para corregir este problema, intente excluir los directorios de compilación del proyecto de la detección de virus.
+Es posible que tenga que proporcionar un directorio de biblioteca que invalide un directorio de biblioteca estándar. En la línea de comandos, use la opción [/LIBPATH](../../build/reference/libpath-additional-libpath.md) . En el IDE, use la propiedad **directorios de biblioteca adicionales** en las **propiedades de configuración > enlazador >** página de propiedades general del proyecto.
 
-Si usa una opción de compilación paralela, es posible que Visual Studio ha bloqueado el archivo en otro subproceso. Para corregir este problema, compruebe que no genera el mismo objeto de código o la biblioteca en varios proyectos y usar dependencias de compilación o referencias de proyecto para recoger archivos binarios compilados en el proyecto.
+Asegúrese de instalar todas las versiones de la biblioteca que necesita para las configuraciones que cree. Considere la posibilidad de usar la utilidad de administración de paquetes [vcpkg](../../vcpkg.md) para automatizar la instalación y la configuración de muchas bibliotecas comunes. Cuando sea posible, es mejor crear sus propias copias de bibliotecas de terceros. A continuación, asegúrese de tener todas las dependencias locales de las bibliotecas, compiladas para la misma configuración que el proyecto.
 
-Al especificar bibliotecas individuales en el **dependencias adicionales** propiedad directamente, use espacios para separar los nombres de biblioteca, no comas o punto y coma. Si usas el **editar** elemento de menú para abrir el **dependencias adicionales** cuadro de diálogo, use las nuevas líneas para separar los nombres, no por comas, puntos y comas o espacios. Usar también las nuevas líneas al especificar las rutas de acceso de biblioteca en el **directorios de bibliotecas** y **directorios de bibliotecas adicionales** cuadros de diálogo.
+## <a name="cant-open-a-file-built-by-your-project"></a>No se puede abrir un archivo compilado por el proyecto
 
-Puede ver este error cuando la ruta de acceso *filename* más de 260 caracteres. Cambiar los nombres o reorganizar la estructura de directorios si es necesario para acortar las rutas de acceso a los archivos necesarios.
+Puede ver este error si el *nombre de archivo* no existe aún cuando el enlazador intenta tener acceso a él. Puede suceder cuando un proyecto depende de otro en la solución, pero los proyectos se compilan en el orden equivocado. Para corregir este problema, asegúrese de que las referencias del proyecto estén establecidas en el proyecto que utiliza el archivo. Después, el archivo que falta se compila antes de que sea necesario. Para obtener más información, vea [Agregar referencias en proyectos C++ de Visual Studio](../../build/adding-references-in-visual-cpp-projects.md) y [administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project).
 
-Este error puede producirse porque el archivo es demasiado grande. Las bibliotecas u objeto archivos de más de un gigabyte de tamaño puede causar problemas para el enlazador de 32 bits. Una posible solución para este problema es usar el conjunto de herramientas de 64 bits. Para obtener más información sobre cómo hacerlo en la línea de comandos, consulte [Cómo: habilitar un Toolset de 64 bits Visual C++ en la línea de comandos](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Para obtener información sobre cómo hacer esto en el IDE, vea [utilizar MSBuild con el compilador de 64 bits y herramientas](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) y esta entrada de Stack Overflow: [cómo hacer que Visual Studio utiliza la cadena de herramientas nativo amd64](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+## <a name="cannot-open-file-cprogramobj"></a>No se puede abrir el archivo ' C:\\Program. obj '
 
-Este error puede producirse si tiene permisos de archivo insuficientes para tener acceso a *filename*. Esto puede ocurrir si usar una cuenta de usuario normal y el intento de obtener acceso a archivos de biblioteca en los directorios del sistema protegidos o usar los archivos copiados a otros usuarios que tienen los permisos originales establecido. Para corregir este problema, mueva el archivo a un directorio de proyecto grabable. Si el archivo se encuentra en un directorio de escritura, pero tiene permisos de acceso, puede usar un símbolo del sistema de administrador y ejecute el comando de takeown.exe tomar posesión del archivo.
+Si ve el nombre de archivo *C:\\Program. obj* en el mensaje de error, ajuste las rutas de acceso de la biblioteca entre comillas dobles. Este error se produce cuando se pasa al enlazador una ruta de acceso desempaquetada que comienza con *C:\\archivos de programa* . Las rutas de acceso desempaquetadas también pueden producir errores similares. Normalmente, muestran un archivo. obj inesperado en la raíz de la unidad.
 
-El error puede producirse cuando no hay suficiente espacio en disco. El enlazador usa archivos temporales en varios casos. Aunque tenga suficiente espacio en disco, un vínculo muy grande puede agotar o fragmentar el espacio en disco disponible. Considere el uso de la [/OPT (optimizaciones)](../../build/reference/opt-optimizations.md) opción; la realización de lecturas de eliminación de COMDAT transitivas todos los archivos objeto varias veces.
+Para corregir este problema en las compilaciones de línea de comandos, compruebe los parámetros de la opción [/LIBPATH](../../build/reference/libpath-additional-libpath.md) . Compruebe también las rutas de acceso especificadas en la variable de entorno LIB y las rutas de acceso especificadas en la línea de comandos. Asegúrese de usar comillas dobles alrededor de cualquier ruta de acceso que incluya espacios.
 
-Si el *filename* se denomina LNK*nnn*, que es un nombre de archivo generado por el enlazador para un archivo temporal, el directorio especificado en la variable de entorno TMP no exista, o puede ser más de un directorio especificado para la variable de entorno TMP. Debe especificarse la ruta de acceso de un único directorio para la variable de entorno TMP.
+Para corregir este problema en el IDE, agregue comillas dobles según sea necesario a las siguientes propiedades del proyecto:
+
+- La propiedad **directorios de biblioteca** de las propiedades de configuración > Página de propiedades directorios de [VC + +](../../build/reference/vcpp-directories-property-page.md) ,
+
+- La propiedad **directorios de biblioteca adicionales** en las **propiedades de configuración > enlazador >** página de propiedades general,
+
+- La propiedad **dependencias adicionales** de las **propiedades de configuración > enlazador >** página de propiedades entrada.
+
+## <a name="other-common-issues"></a>Otros problemas comunes
+
+### <a name="path-or-filename-issues"></a>Problemas de ruta de acceso o nombre de archivo
+
+Este error puede producirse si el nombre de archivo o la ruta de acceso de la biblioteca especificados para el vinculador no son correctos. O bien, cuando la ruta de acceso tiene una especificación de unidad no válida. Busque problemas en la línea de comandos o en cualquier [#pragma Comentario (lib, "LIBRARY_NAME")](../../preprocessor/comment-c-cpp.md) . Compruebe la ortografía y la extensión de archivo y compruebe que el archivo existe en la ubicación especificada.
+
+### <a name="parallel-build-synchronization"></a>Sincronización de compilaciones paralelas
+
+Si usa una opción de compilación en paralelo, es posible que Visual Studio haya bloqueado el archivo en otro subproceso. Para corregir este problema, compruebe que el mismo objeto de código o la misma biblioteca no está integrado en varios proyectos. Use las dependencias de compilación o las referencias de proyecto para seleccionar archivos binarios compilados en el proyecto.
+
+### <a name="additional-dependencies-specified-in-the-ide"></a>Dependencias adicionales especificadas en el IDE
+
+Al especificar bibliotecas individuales en la propiedad **dependencias adicionales** directamente, use espacios para separar los nombres de biblioteca. No use comas ni signos de punto y coma. Si usa el elemento de menú **Editar** para abrir el cuadro de diálogo **dependencias adicionales** , use nuevas líneas para separar los nombres, no comas, puntos y comas o espacios. También puede usar nuevas líneas al especificar rutas de acceso de biblioteca en los cuadros de diálogo **directorios de biblioteca** y **directorios de biblioteca adicionales** .
+
+### <a name="paths-that-are-too-long"></a>Rutas de acceso demasiado largas
+
+Es posible que vea este error cuando la ruta de acceso del *nombre de archivo* se expande a más de 260 caracteres. Si es necesario, reorganice la estructura de directorios o acorte la carpeta y los nombres de archivo para acortar las rutas de acceso.
+
+### <a name="files-that-are-too-large"></a>Archivos demasiado grandes
+
+Este error puede producirse porque el archivo es demasiado grande. Los archivos de bibliotecas o de objetos con un tamaño superior a un Gigabyte pueden causar problemas en el enlazador de 32 bits. Una posible solución para este problema es usar el conjunto de herramientas de 64 bits. Para obtener más información sobre cómo usar el conjunto de herramientas de 64 bits en la línea de comandos, vea [Cómo: habilitar un conjunto de C++ herramientas visual de 64 bits en la línea de comandos](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Para obtener información sobre cómo usar el conjunto de herramientas de 64 bits en el IDE, vea [usar MSBuild con el compilador y las herramientas de 64 bits](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project). Consulte también esta Stack Overflow post: [Cómo hacer que Visual Studio use la cadena de herramientas AMD64 nativa](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+
+### <a name="incorrect-file-permissions"></a>Permisos de archivo incorrectos
+
+Este error puede producirse si no tiene suficientes permisos de archivo para tener acceso al *nombre*de archivo. Puede ocurrir si utiliza una cuenta de usuario normal para tener acceso a los archivos de biblioteca en directorios del sistema protegidos. O bien, si utiliza archivos copiados de otros usuarios que todavía tienen su conjunto de permisos original. Para corregir este problema, mueva el archivo a un directorio de proyecto grabable. Si el archivo que se ha descargado tiene permisos inaccesibles, ejecute el comando takeown. exe en una ventana de comandos de administrador para tomar posesión del archivo.
+
+### <a name="insufficient-disk-space"></a>Espacio de disco insuficiente
+
+El error puede producirse cuando no hay suficiente espacio en disco. El enlazador usa archivos temporales en varios casos. Aunque tenga suficiente espacio en disco, un vínculo grande puede agotar o fragmentar el espacio disponible en disco. Considere la posibilidad de usar la opción [/OPT (optimizaciones)](../../build/reference/opt-optimizations.md) ; la eliminación transitiva de COMDAT Lee todos los archivos objeto varias veces.
+
+### <a name="problems-in-the-tmp-environment-variable"></a>Problemas en la variable de entorno TMP
+
+Si el *nombre de archivo* se denomina lnk*nnn*, es un nombre de archivo generado por el enlazador para un archivo temporal. Es posible que el directorio especificado en la variable de entorno TMP no exista. O bien, se puede especificar más de un directorio para la variable de entorno TMP. Solo se debe especificar una ruta de acceso de directorio para la variable de entorno TMP.
+
+## <a name="help-my-issue-isnt-listed-here"></a>Ayuda, mi problema no aparece aquí.
+
+Si no se aplica ninguno de los problemas enumerados aquí, puede usar las herramientas de comentarios de Visual Studio para obtener ayuda. En el IDE, vaya a la barra de menús y elija **ayuda > enviar comentarios > notificar un problema**. O bien, envíe una sugerencia mediante la **ayuda > enviar comentarios > enviar una sugerencia**. También puede usar el sitio web de C++ la [comunidad de desarrolladores](https://developercommunity.visualstudio.com/spaces/62/index.html)de Visual Studio). Úselo para buscar respuestas a preguntas y solicitar ayuda. Para obtener más información, vea [Cómo notificar un problema con el C++ conjunto de herramientas visual o la documentación](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)de.
+
+Si ha descubierto un nuevo modo de corregir este problema que deberíamos agregar a este artículo, háganoslo saber. Puede enviarnos sus comentarios mediante el botón siguiente para **esta página**. Úselo para crear un nuevo problema en nuestro [ C++ repositorio de github de documentación](https://github.com/MicrosoftDocs/cpp-docs/issues). Gracias

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657228"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689449"
 ---
-# <a name="iteratortraits-struct"></a>iterator_traits (Struct)
+# <a name="iterator_traits-struct"></a>iterator_traits (Struct)
 
 Struct del asistente de plantilla usado para especificar todas las definiciones de tipo críticas que debe tener un iterador.
 
@@ -47,7 +47,7 @@ El struct de plantilla define los tipos de miembro:
 
 - `reference`: sinónimo de `Iterator::reference`.
 
-Las especializaciones parciales determinan los tipos críticos asociados con un puntero de objeto del tipo **tipo** <strong>\*</strong> o **tipo const**  <strong>\*</strong>.
+Las especializaciones parciales determinan los tipos críticos asociados a un puntero de objeto **de tipo** <strong>\*</strong> o <strong>\*</strong>de tipo **const** .
 
 En esta implementación también se pueden usar varias funciones de plantilla que no usan la especialización parcial:
 
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-que determinan algunos de estos mismos tipos más indirectamente. Estas funciones se usan como argumentos en una llamada de función. Su única finalidad es proporcionar un parámetro de clase de plantilla útil a la función a la que se llama.
+que determinan algunos de estos mismos tipos más indirectamente. Estas funciones se usan como argumentos en una llamada de función. Su única finalidad es proporcionar un parámetro de plantilla de clase útil a la función llamada.
 
 ## <a name="example"></a>Ejemplo
 
@@ -124,6 +124,6 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="see-also"></a>Vea también
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

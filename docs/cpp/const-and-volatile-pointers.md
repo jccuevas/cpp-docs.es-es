@@ -1,49 +1,49 @@
 ---
-title: Punteros const y volatile
-ms.date: 11/04/2016
+title: punteros const y volatile
+ms.date: 11/19/2019
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: c869adbbdc8a5a17d315e64e5ac15545e0c46e26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10dd3de05c5dd0b8de7399eaf36834ea22cd208a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628194"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180399"
 ---
-# <a name="const-and-volatile-pointers"></a>Punteros const y volatile
+# <a name="const-and-volatile-pointers"></a>punteros const y volatile
 
-El [const](../cpp/const-cpp.md) y [volátil](../cpp/volatile-cpp.md) palabras clave cambiar cómo se tratan los punteros. El **const** palabra clave especifica que el puntero no se puede modificar después de la inicialización; el puntero está protegido contra modificaciones a partir de entonces.
+Las palabras clave [const](const-cpp.md) y [volatile](volatile-cpp.md) cambian el modo en que se tratan los punteros. La palabra clave **const** especifica que el puntero no se puede modificar después de la inicialización; el puntero está protegido contra la modificación después.
 
-El **volátil** palabra clave especifica que se puede modificar el valor asociado con el nombre que sigue las acciones que no estén en la aplicación de usuario. Por lo tanto, el **volátil** palabra clave es útil para declarar objetos en la memoria compartida que se puede acceder mediante varios procesos o áreas de datos globales usadas para la comunicación con rutinas de interrupción de servicio.
+La palabra clave **volatile** especifica que el valor asociado al nombre que se indica a continuación puede ser modificado por acciones distintas de las de la aplicación de usuario. Por lo tanto, la palabra clave **volatile** es útil para declarar objetos en la memoria compartida a los que pueden tener acceso varios procesos o áreas de datos globales que se usan para la comunicación con rutinas de servicio de interrupción.
 
-Cuando se declara un nombre como **volátil**, el compilador vuelve a cargar el valor de la memoria cada vez que se accede mediante el programa. Esto reduce considerablemente las posibles optimizaciones. Sin embargo, cuando el estado de un objeto puede cambiar de forma inesperada, es la única forma garantizar un rendimiento predecible del programa.
+Cuando un nombre se declara como **volatile**, el compilador recarga el valor de la memoria cada vez que el programa obtiene acceso a él. Esto reduce considerablemente las posibles optimizaciones. Sin embargo, cuando el estado de un objeto puede cambiar de forma inesperada, es la única forma garantizar un rendimiento predecible del programa.
 
-Para declarar el objeto al que señala el puntero como **const** o **volátil**, utilice una declaración con el formato:
+Para declarar el objeto al que apunta el puntero como **const** o **volatile**, use una declaración con el formato:
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-Para declarar el valor del puntero, es decir, la dirección real almacenada en el puntero, como **const** o **volátil**, utilice una declaración de la forma:
+Para declarar el valor del puntero, es decir, la dirección real almacenada en el puntero (como **const** o **volatile**), utilice una declaración con el formato:
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-El lenguaje C++ evita asignaciones que pudieran permitir la modificación de un objeto o un puntero declarado como **const**. Estas asignaciones quitarían la información con la que se declaró el objeto o puntero, infringiendo así la intención de la declaración original. Considere las siguientes declaraciones:
+El C++ lenguaje impide las asignaciones que permitan la modificación de un objeto o puntero declarado como **const**. Estas asignaciones quitarían la información con la que se declaró el objeto o puntero, infringiendo así la intención de la declaración original. Considere las siguientes declaraciones:
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-Dadas las declaraciones anteriores de dos objetos (`cch`, del tipo **const char**, y `ch`, del tipo **char)**, la declaración o inicializaciones siguientes son válidas:
+Dadas las declaraciones anteriores de dos objetos (`cch`, de tipo **const char**y `ch`, de tipo **Char)** , las siguientes declaraciones o inicializaciones son válidas:
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-La declaración de `pch2` declara un puntero a través del cual podría modificarse un objeto constante y, por consiguiente, no se permite. La declaración de `pch3` especifica que el puntero es constante, no el objeto; la declaración no está permitida por la misma razón el `pch2` no se permite la declaración.
+La declaración de `pch2` declara un puntero a través del cual podría modificarse un objeto constante y, por consiguiente, no se permite. La declaración de `pch3` especifica que el puntero es constante, no el objeto; la declaración no se permite por la misma razón que la declaración de `pch2` no está permitida.
 
 Las ocho asignaciones siguientes muestran la asignación a través de un puntero y cómo se cambia el valor del puntero para las declaraciones anteriores; por ahora, supongamos que la inicialización era correcta para las declaraciones de `pch1` a `pch8`.
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-Los punteros declarados como **volátil**, o como una mezcla de **const** y **volátil**, siguen las mismas reglas.
+Los punteros declarados como **volatile**o como una combinación de **const** y **volatile**obedecen a las mismas reglas.
 
-Punteros a **const** objetos a menudo se usan en las declaraciones de función como sigue:
+Los punteros a objetos **const** se suelen usar en declaraciones de función de la manera siguiente:
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-La instrucción anterior declara una función, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), donde dos de los tres argumentos son de tipo puntero a **char**. Dado que los argumentos se pasan por referencia y no por valor, la función sería modificar libremente `strDestination` y `strSource` si `strSource` no se declaró como **const**. La declaración de `strSource` como **const** garantiza al llamador que `strSource` no se puede cambiar la función llamada.
+La instrucción anterior declara una función, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), donde dos de los tres argumentos son de tipo Pointer a **Char**. Dado que los argumentos se pasan por referencia y no por valor, la función sería gratuita para modificar `strDestination` y `strSource` si `strSource` no se declararon como **const**. La declaración de `strSource` como **const** garantiza que el llamador que `strSource` no pueda cambiar la función a la que se llama.
 
 > [!NOTE]
-> Dado que hay una conversión estándar de *typename* <strong>\*</strong> a **const** *typename* <strong>\*</strong>, es legal para pasar un argumento de tipo `char *` a [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Sin embargo, no es true; de lo contrario no existe ninguna conversión implícita para quitar el **const** atributo de un objeto o puntero.
+> Dado que hay una conversión estándar de *typename* <strong>\*</strong> a **const** *TypeName* <strong>\*</strong>, es válido pasar un argumento de tipo `char *` a [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Sin embargo, lo contrario no es cierto. no existe ninguna conversión implícita para quitar el atributo **const** de un objeto o puntero.
 
-Un **const** puntero de un tipo determinado se puede asignar a un puntero del mismo tipo. Sin embargo, un puntero que no es **const** no se puede asignar un **const** puntero. El código siguiente muestra las asignaciones correctas e incorrectas:
+Un puntero **const** de un tipo determinado se puede asignar a un puntero del mismo tipo. Sin embargo, un puntero que no es **const** no se puede asignar a un puntero **const** . El código siguiente muestra las asignaciones correctas e incorrectas:
 
 ```cpp
 // const_pointer.cpp
@@ -124,6 +124,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Punteros](../cpp/pointers-cpp.md)
+[Punteros](pointers-cpp.md)
+[punteros sin formato](raw-pointers.md)

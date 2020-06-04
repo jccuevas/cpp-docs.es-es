@@ -1,23 +1,23 @@
 ---
-title: 'Cómo: usar un tipo nativo en una compilación de clr:'
+title: 'Cómo: usar un tipo nativo en una compilación de-CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 0079be21b474858684e1abaaeb363820764a701d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459962"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545208"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Cómo: Utilizar un tipo nativo en una compilación con /clr
 
-Puede definir un tipo nativo en un **/CLR** compilación y cualquier uso de ese tipo nativo desde dentro del ensamblado es válido. Sin embargo, los tipos nativos no estará disponibles para su uso de los metadatos que se hace referencia.
+Puede definir un tipo nativo en una compilación **/CLR** y cualquier uso de ese tipo nativo desde dentro del ensamblado es válido. Sin embargo, los tipos nativos no estarán disponibles para su uso desde metadatos a los que se hace referencia.
 
-Cada ensamblado debe contener la definición de cada tipo nativo que se va a utilizar.
+Cada ensamblado debe contener la definición de todos los tipos nativos que utilizará.
 
 Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -25,7 +25,7 @@ Para obtener más información, consulte [/clr (Compilación de Common Language 
 
 Este ejemplo crea un componente que define y utiliza un tipo nativo.
 
-```
+```cpp
 // use_native_type_in_clr.cpp
 // compile with: /clr /LD
 public struct NativeClass {
@@ -42,9 +42,9 @@ public ref struct ManagedClass {
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo define a un cliente que utiliza el componente. Tenga en cuenta que es un error al tener acceso al tipo nativo, a menos que se define en la operación de compilación.
+Este ejemplo define un cliente que utiliza el componente. Tenga en cuenta que es un error el acceso al tipo nativo, a menos que esté definido en la compilación.
 
-```
+```cpp
 // use_native_type_in_clr_2.cpp
 // compile with: /clr
 #using "use_native_type_in_clr.dll"
@@ -61,6 +61,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

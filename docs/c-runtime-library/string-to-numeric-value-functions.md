@@ -1,14 +1,17 @@
 ---
 title: Funciones de conversión de valores de cadena en valores numéricos
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr120.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstoui64
 - _tcstoi64
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9d8218bd5a3151e17b7ac380bb86c85dac3e6a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544578"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944721"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funciones de conversión de valores de cadena en valores numéricos
 
@@ -39,7 +42,7 @@ ms.locfileid: "50544578"
 
 Cada función de la familia **strtod** convierte una cadena terminada en NULL en un valor numérico. Las funciones disponibles se enumeran en la tabla siguiente.
 
-|Función|Descripción|
+|Función|DESCRIPCIÓN|
 |--------------|-----------------|
 |`strtod`|Convertir una cadena en un valor de punto flotante de precisión doble|
 |`strtol`|Convertir una cadena en un entero largo|
@@ -57,15 +60,15 @@ Si el puntero proporcionado por el usuario a un carácter de final de conversió
 
 `strtod` espera una cadena con el formato siguiente:
 
-[*whitespace*] [*sign*] [`digits`] [**.**`digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]
+[*whitespace*] [*sign*] [`digits`] [ **.** `digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]
 
-Un *whitespace* puede constar de caracteres de espacio o de tabulación, que se omiten; *sign* es más (**+**) o menos (**-**); y `digits` se refiere a uno o varios dígitos decimales. Si no aparece ningún dígito antes del carácter de base, debe aparecer al menos uno después del carácter de base. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra inicial (**d**, **D**, **e** o **E**) y un entero con signo optativo. Si no aparece ni una parte exponencial ni un carácter de base, se supone que un carácter de base sigue al último dígito de la cadena. El primer carácter que no se ajusta a este formato detiene el análisis.
+Un *whitespace* puede constar de caracteres de espacio o de tabulación, que se omiten; *sign* es más ( **+** ) o menos ( **-** ); y `digits` se refiere a uno o varios dígitos decimales. Si no aparece ningún dígito antes del carácter de base, debe aparecer al menos uno después del carácter de base. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra inicial (**d**, **D**, **e** o **E**) y un entero con signo optativo. Si no aparece ni una parte exponencial ni un carácter de base, se supone que un carácter de base sigue al último dígito de la cadena. El primer carácter que no se ajusta a este formato detiene el análisis.
 
 Las funciones `strtol`, `strtoul`, `_strtoi64` y `_strtoui64` esperan una cadena con el formato siguiente:
 
-[*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]
+[*whitespace*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [`digits`]
 
-Si el argumento base está entre 2 y 36, se usa como base del número. Si es 0, los caracteres iniciales a los que se hace referencia mediante el puntero de la conversión final se usan para determinar la base. Si el primer carácter es 0 y el segundo carácter no es "x" ni "X", la cadena se interpreta como un entero octal; de otro modo, se interpreta como un número decimal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. `strtoul` y `_strtoui64` permiten un prefijo de signo más (**+**) o menos (**-**); un signo menos inicial indica que el valor devuelto es negativo.
+Si el argumento base está entre 2 y 36, se usa como base del número. Si es 0, los caracteres iniciales a los que se hace referencia mediante el puntero de la conversión final se usan para determinar la base. Si el primer carácter es 0 y el segundo carácter no es "x" ni "X", la cadena se interpreta como un entero octal; de otro modo, se interpreta como un número decimal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. `strtoul` y `_strtoui64` permiten un prefijo de signo más ( **+** ) o menos ( **-** ); un signo menos inicial indica que el valor devuelto es negativo.
 
 El valor de salida se ve afectado por el valor de la categoría `LC_NUMERIC` de la configuración regional; vea [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa.
 

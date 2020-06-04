@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /Zf
 - -Zf
-ms.openlocfilehash: 2c3f8d08f59c3a6803eda67126ef8a8f9ba6b1fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bed37a189e3eb1eb7b55dbdee1f81f360eafa721
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315855"
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (generación de PDB más rápida)
 
@@ -19,11 +19,11 @@ Habilitar generación de PDB más rápida en las compilaciones en paralelo, ya q
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ZF**
+> **/Zf**
 
 ## <a name="remarks"></a>Comentarios
 
-El **/Zf** opción habilita la compatibilidad de compilador para la generación más rápida de archivos PDB cuando se usa el [/MP (compilar con varios procesos)](mp-build-with-multiple-processes.md) opción, o cuando el sistema de compilación (por ejemplo, [MSBuild ](/visualstudio/msbuild/msbuild-reference) o [CMake](../../ide/cmake-tools-for-visual-cpp.md)) puede ejecutar cl.exe varios procesos de compilador al mismo tiempo. Esta opción hace que el front-end de compilador retrasar la generación de índices de tipos para cada registro de tipo en el archivo PDB hasta el final de la compilación, a continuación, se les solicita todo en una sola llamada RPC a mspdbsrv.exe, en lugar de realizar una solicitud RPC para cada registro. Esto puede mejorar considerablemente el rendimiento de la compilación al reducir la carga RPC en el proceso de mspdbsrv.exe en un entorno donde se ejecutan simultáneamente varios procesos de compilador cl.exe.
+El **/Zf** opción habilita la compatibilidad de compilador para la generación más rápida de archivos PDB cuando se usa el [/MP (compilar con varios procesos)](mp-build-with-multiple-processes.md) opción, o cuando el sistema de compilación (por ejemplo, [MSBuild ](/visualstudio/msbuild/msbuild-reference) o [CMake](../cmake-projects-in-visual-studio.md)) puede ejecutar cl.exe varios procesos de compilador al mismo tiempo. Esta opción hace que el front-end de compilador retrasar la generación de índices de tipos para cada registro de tipo en el archivo PDB hasta el final de la compilación, a continuación, se les solicita todo en una sola llamada RPC a mspdbsrv.exe, en lugar de realizar una solicitud RPC para cada registro. Esto puede mejorar considerablemente el rendimiento de la compilación al reducir la carga RPC en el proceso de mspdbsrv.exe en un entorno donde se ejecutan simultáneamente varios procesos de compilador cl.exe.
 
 Dado que el **/Zf** opción solo se aplica a la generación de PDB, requiere el [/Zi](z7-zi-zi-debug-information-format.md) o [/Zi](z7-zi-zi-debug-information-format.md) opción.
 
@@ -31,7 +31,7 @@ El **/Zf** opción está disponible a partir de Visual Studio 2017 versión 15.1
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 

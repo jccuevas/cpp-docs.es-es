@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2145
 ms.assetid: 158e5809-8adb-4195-8ca5-684501defbc8
-ms.openlocfilehash: b04853ea64c97e386ceb6dfe1fbb0e4325e0074f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d21d631fd5f484e0a99c8c0e5ae3a5ce20e6cb0f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427487"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207238"
 ---
 # <a name="compiler-error-c2145"></a>Error del compilador C2145
 

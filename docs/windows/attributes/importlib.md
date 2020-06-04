@@ -1,17 +1,17 @@
 ---
-title: importlib (atributo de COM de C++)
+title: importlib (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importlib
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: d0bedb4bac91aa1a5aa72c8334db07aea0f04a97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166814"
 ---
 # <a name="importlib"></a>importlib
 
@@ -28,13 +28,13 @@ Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén di
 *tlb_file*<br/>
 El nombre de un archivo .tlb, entre comillas, que desea importar en la biblioteca de tipos del proyecto actual.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **importlib** hace que el atributo de C++ un `importlib` instrucción que se colocarán en el bloque de biblioteca del archivo .idl generado. El **importlib** atributo tiene la misma funcionalidad que el [importlib](/windows/desktop/Midl/importlib) atributo MIDL.
+El atributo **importlib** C++ hace que se coloque una instrucción `importlib` en el bloque de biblioteca del archivo. idl generado. El atributo **importlib** tiene la misma funcionalidad que el atributo MIDL [importlib](/windows/win32/Midl/importlib) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra un ejemplo de cómo usar **importlib**:
+En el código siguiente se muestra un ejemplo de cómo usar **importlib**:
 
 ```cpp
 // cpp_attr_ref_importlib.cpp
@@ -51,12 +51,12 @@ El código siguiente muestra un ejemplo de cómo usar **importlib**:
 |-|-|
 |**Se aplica a**|En cualquier lugar|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>

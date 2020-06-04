@@ -1,9 +1,10 @@
 ---
 title: _putw
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _putw
-apilocation:
+- _o__putw
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,24 +16,27 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602688"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916083"
 ---
-# <a name="putw"></a>_putw
+# <a name="_putw"></a>_putw
 
 Escribe un entero en una secuencia.
 
@@ -50,18 +54,20 @@ int _putw(
 *binint*<br/>
 Entero binario que se generará.
 
-*secuencia*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el valor escrito. Un valor devuelto de **EOF** podría indicar un error. Dado que **EOF** también es un valor entero legítimo, use **ferror** para comprobar un error. Si *secuencia* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EOF**.
+Devuelve el valor escrito. Un valor devuelto de **EOF** puede indicar un error. Dado que **EOF** también es un valor entero legítimo, use **ferror** para comprobar un error. Si *Stream* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **EOF**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_putw** función escribe un valor de tipo binario **int** a la posición actual del *secuencia.* **_putw** no afecta a la alineación de los elementos de la secuencia ni tampoco supone ninguna alineación especial. **_putw** sirve principalmente para la compatibilidad con bibliotecas anteriores. Pueden producirse problemas de portabilidad con **_putw** porque el tamaño de un **int** y el orden de bytes en un **int** difieren entre sistemas.
+La función **_putw** escribe un valor binario de tipo **int** en la posición actual de la *secuencia.* **_putw** no afecta a la alineación de los elementos de la secuencia ni supone ninguna alineación especial. **_putw** es principalmente para la compatibilidad con bibliotecas anteriores. Pueden producirse problemas de portabilidad con **_putw** porque el tamaño de un **int** y el orden de los bytes dentro de un **int** difieren entre los sistemas.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -69,7 +75,7 @@ El **_putw** función escribe un valor de tipo binario **int** a la posición ac
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

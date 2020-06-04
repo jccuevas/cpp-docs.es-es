@@ -1,9 +1,9 @@
 ---
 title: feholdexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feholdexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd55a4ed627d731f7246d589d4b74b4173e31d4e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525744"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941185"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -44,17 +47,17 @@ int feholdexcept(
 ### <a name="parameters"></a>Parámetros
 
 *penv*<br/>
-Puntero a un **fenv_t** objeto que contiene una copia del entorno de punto flotante.
+Puntero a un objeto **fenv_t** que contiene una copia del entorno de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve cero si y solo si la función es capaz de activar correctamente el control de excepciones de punto flotante continuo.
+Devuelve cero si y solo si la función puede activar correctamente el control de excepciones de punto flotante no detenido.
 
 ## <a name="remarks"></a>Comentarios
 
-El **feholdexcept** función se utiliza para almacenar el estado del entorno de punto flotante actual en el **fenv_t** objeto señalado por *penv*y para establecer el entorno No interrumpa la ejecución en excepciones de punto flotante. Esto se conoce como modo continuo.  Este modo continúa hasta que el entorno se restaura mediante [fesetenv](fesetenv1.md) o [feupdateenv](feupdateenv.md).
+La función **feholdexcept** se usa para almacenar el estado del entorno de punto flotante actual en el objeto **fenv_t** al que apunta *penv*, y para establecer el entorno para que no interrumpa la ejecución en las excepciones de punto flotante. Esto se conoce como modo continuo.  Este modo continúa hasta que el entorno se restaura mediante [fesetenv](fesetenv1.md) o [feupdateenv](feupdateenv.md).
 
-Puede usar esta función al principio de una subrutina que tenga que ocultar una o varias excepciones de punto flotante del autor de llamada. Para notificar una excepción, simplemente puede borrar las excepciones no deseadas mediante [feclearexcept,](feclearexcept1.md) y luego finalice el modo continuo con una llamada a **feupdateenv**.
+Puede usar esta función al principio de una subrutina que tenga que ocultar una o varias excepciones de punto flotante del autor de llamada. Para notificar una excepción, simplemente puede borrar las excepciones no deseadas mediante [feclearexcept](feclearexcept1.md) y, a continuación, finalizar el modo sin interrupción con una llamada a **feupdateenv**.
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
-ms.openlocfilehash: 006f87691c6e0839115e2c02ab0d922aa95eaa93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 961aa0caf31d49917f6df67305bc01d465884b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165904"
 ---
 # <a name="compiler-error-c3733"></a>Error del compilador C3733
 
-'evento': sintaxis incorrecta para especificar un evento COM. ¿ha olvidado '__interface'?
+' Event ': Sintaxis incorrecta para especificar un evento COM; ¿olvidó ' __interface '?
 
-Se usó una sintaxis incorrecta para un evento COM. Para corregir este error, cambie el tipo de evento o corrija la sintaxis para cumplir con las reglas de eventos COM.
+Se usó una sintaxis incorrecta para un evento COM. Para corregir este error, cambie el tipo de evento o corrija la sintaxis para que cumpla las reglas de eventos COM.
 
-El ejemplo siguiente genera C3733:
+En el ejemplo siguiente se genera C3733:
 
 ```
 #define _ATL_ATTRIBUTES 1

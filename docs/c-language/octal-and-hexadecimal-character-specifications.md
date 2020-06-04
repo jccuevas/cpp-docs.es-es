@@ -6,17 +6,17 @@ helpviewer_keywords:
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
 ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148938"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343369"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Especificaciones de caracteres octales y hexadecimales
 
-La secuencia **\\**<em>ooo</em> significa que se puede especificar un carácter del juego de caracteres ASCII como código de carácter octal de tres dígitos. El valor numérico del entero octal especifica el valor del carácter o carácter ancho deseado.
+La secuencia **\\** <em>ooo</em> significa que se puede especificar un carácter del juego de caracteres ASCII como código de carácter octal de tres dígitos. El valor numérico del entero octal especifica el valor del carácter o carácter ancho deseado.
 
-De igual forma, la secuencia **\x**<em>hhh</em> permite especificar un carácter ASCII como código de carácter hexadecimal. Por ejemplo, el carácter de retroceso ASCII se puede proporcionar como secuencia de escape de C normal (**\b**) o se puede programar como **\010** (octal) o **\x008** (hexadecimal).
+De igual forma, la secuencia **\x**<em>hhh</em> permite especificar un carácter ASCII como código de carácter hexadecimal. Por ejemplo, el carácter de retroceso ASCII se puede proporcionar como secuencia de escape de C normal ( **\b**) o se puede programar como **\010** (octal) o **\x008** (hexadecimal).
 
 Puede usar solo los dígitos 0 a 7 en una secuencia de escape octal. Una secuencia de escape octal nunca pueden tener más de tres dígitos y finaliza con el primer carácter que no es un dígito octal. Aunque no es necesario utilizar los tres dígitos, se debe utilizar al menos uno. Por ejemplo, la representación octal es **\10** para el carácter de retroceso ASCII y **\101** para la letra A, como se indica en un gráfico ASCII.
 

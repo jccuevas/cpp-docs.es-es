@@ -9,20 +9,20 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: 26e9f5511c0205a3c484b85381fddde802f5469a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fcea7d54f5b3dcfe5fa75092463465711b1a505
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550506"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545046"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Cómo: Convertir System::String en wchar_t* o char*
+# <a name="how-to-convert-systemstring-to-wchar_t-or-char"></a>Cómo: Convertir System::String en wchar_t* o char*
 
-Puede usar `PtrToStringChars` en Vcclr.h para convertir <xref:System.String> a código nativo `wchar_t *` o `char *`.  Siempre devuelve un puntero de cadena ancho de Unicode porque las cadenas CLR son internamente Unicode. A continuación, puede convertir desde todo el tal como se muestra en el ejemplo siguiente.
+Puede usar `PtrToStringChars` en vcclr. h para convertir <xref:System.String> en `wchar_t *` o `char *`nativos.  Siempre devuelve un puntero de cadena Unicode ancho, ya que las cadenas CLR son internamente Unicode. Después, puede convertir desde Wide, tal y como se muestra en el ejemplo siguiente.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // convert_string_to_wchar.cpp
 // compile with: /clr
 #include < stdio.h >
@@ -64,6 +64,6 @@ Hello
 Hello
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

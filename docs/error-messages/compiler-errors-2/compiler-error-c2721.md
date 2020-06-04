@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2721
 ms.assetid: 7a97823c-3ce1-4112-8253-fc1448685235
-ms.openlocfilehash: bf33ebdc3f34efb22809cbc5e62070226df2fd5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6edda08807c752c9257bf09033538d57ac276ed7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543703"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202152"
 ---
 # <a name="compiler-error-c2721"></a>Error del compilador C2721
 
-'especificador': especificador de clase de almacenamiento no es válido entre la palabra clave operator y el tipo
+' Specifier ': el especificador de clase de almacenamiento no es válido entre la palabra clave Operator y el tipo
 
-Las conversiones de tipos definidos por el usuario se aplican a todas las clases de almacenamiento, por lo que no puede especificar una clase de almacenamiento en una conversión de tipos.
+Las conversiones de tipos definidos por el usuario se aplican a todas las clases de almacenamiento, por lo que no se puede especificar una clase de almacenamiento en una conversión de tipos.

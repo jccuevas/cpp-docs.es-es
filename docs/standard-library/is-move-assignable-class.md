@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_assignable
 ms.assetid: f33137f2-0639-4912-8745-bc0f9fd18d28
-ms.openlocfilehash: da4734507bac14ecf0278117deb7668518305be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8563db51eeb1988697b3e07a1a8673a777783e38
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610371"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456130"
 ---
 # <a name="ismoveassignable-class"></a>Clase is_move_assignable
 
@@ -26,7 +26,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
@@ -41,4 +41,4 @@ Un tipo se puede asignar mediante movimiento si una referencia a un valor R al t
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -1,6 +1,6 @@
 ---
 title: 'Ejemplo: Mostrar un cuadro de diálogo a través de un comando de menú'
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
 - MFC dialog boxes [MFC], displaying
@@ -10,85 +10,107 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 830ba27945ce8da2abd52c7f29d786d098113151
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483491"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078840"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Ejemplo: Mostrar un cuadro de diálogo a través de un comando de menú
 
 Este tema contiene procedimientos para:
 
-- Mostrar un cuadro de diálogo modal a través de un comando de menú.
+- Muestra un cuadro de diálogo modal a través de un comando de menú.
 
-- Mostrar un cuadro de diálogo no modal a través de un comando de menú.
+- Muestra un cuadro de diálogo no modal a través de un comando de menú.
 
-Ambos procedimientos de ejemplo son para aplicaciones MFC y funcionará en una aplicación creada con el [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md).
+Ambos procedimientos de ejemplo son para las aplicaciones MFC y funcionarán en una aplicación creada con el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md).
 
-Los procedimientos utilizan los nombres y los valores siguientes:
+Los procedimientos usan los siguientes nombres y valores:
 
 |Elemento|Nombre o valor|
 |----------|-------------------|
 |Application|DisplayDialog|
-|Comando de menú|Comando de prueba en el menú Ver; Identificador de comando = ID_VIEW_TEST|
-|Cuadro de diálogo|Cuadro de diálogo de prueba; Clase = CTestDialog; Archivo de encabezado = TestDialog.h; Variable = testdlg, ptestdlg|
+|Comando de menú|Comando probar en el menú Ver; IDENTIFICADOR de comando = ID_VIEW_TEST|
+|Cuadro de diálogo|Cuadro de diálogo probar; Clase = CTestDialog; Archivo de encabezado = TestDialog. h; Variable = testdlg, ptestdlg|
 |Controlador de comandos|OnViewTest|
 
 ### <a name="to-display-a-modal-dialog-box"></a>Para mostrar un cuadro de diálogo modal
 
-1. Crear un comando de menú; consulte [crear menús o elementos de menú](../windows/creating-a-menu.md).
+1. Cree el comando de menú. vea [crear menús o elementos de menú](../windows/creating-a-menu.md).
 
-1. Crear el cuadro de diálogo; consulte [al iniciar el Editor de cuadro de diálogo](../windows/creating-a-new-dialog-box.md).
+1. Crear el cuadro de diálogo; vea [iniciar el editor de cuadros de diálogo](../windows/creating-a-new-dialog-box.md).
 
-1. Agregue una clase para el cuadro de diálogo. Consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md) para obtener más información.
+1. Agregue una clase para el cuadro de diálogo. Vea [Agregar una clase](../ide/adding-a-class-visual-cpp.md) para obtener más información.
 
-1. En **vista de clases**, seleccione la clase de documento (CDisplayDialogDoc). En la ventana **Propiedades** , haga clic en el botón **Eventos** . Haga doble clic en el identificador del comando de menú (ID_VIEW_TEST) en el panel izquierdo de la **propiedades** ventana y seleccione **comando**. En el panel derecho, haga clic en la flecha hacia abajo y seleccione  **\<Agregar > OnViewTest**.
+1. En **vista de clases**, seleccione la clase de documento (CDisplayDialogDoc). En la ventana **Propiedades**, haga clic en el botón **Eventos**. Haga doble clic en el identificador del comando de menú (ID_VIEW_TEST). A continuación, haga clic en la flecha abajo y seleccione **\<agregar > OnViewTest**.
 
-   Si agrega el comando de menú al gran sistema de una aplicación MDI, seleccione la clase de aplicación (CDisplayDialogApp) en su lugar.
+   Si ha agregado el comando de menú al gran sistema (mainframe) de una aplicación MDI, en su lugar, seleccione la clase de aplicación (CDisplayDialogApp).
 
-1. Agregue la siguiente instrucción de inclusión a CDisplayDialogDoc.cpp (o CDisplayDialogApp.cpp) después de que el existente se incluyen instrucciones:
+1. Agregue la siguiente instrucción include a CDisplayDialogDoc. cpp (o CDisplayDialogApp. cpp) después de las instrucciones include existentes:
 
-   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
-1. Agregue el código siguiente al `OnViewTest` para implementar la función:
+1. Agregue el código siguiente a `OnViewTest` para implementar la función:
 
-   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   ```cpp
+   CTestDialog testdlg;
+   testdlg.DoModal();
+   ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Para mostrar un cuadro de diálogo no modal
 
-1. Siga los cuatro primeros pasos para mostrar un cuadro de diálogo modal, excepto la selección de la clase de vista (CDisplayDialogView) en el paso 4.
+1. Siga los cuatro primeros pasos para mostrar un cuadro de diálogo modal, excepto seleccionar la clase de vista (CDisplayDialogView) en el paso 4.
 
-1. Edite DisplayDialogView.h:
+1. Edite DisplayDialogView. h:
 
-   - Declare la clase de cuadro de diálogo anterior a la primera declaración de clase:
+   - Declare la clase de cuadro de diálogo que precede a la primera declaración de clase:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_3.h)]
+   ```cpp
+   class CTestDialog;
+   ```
 
-   - Declarar un puntero al cuadro de diálogo después de la sección pública de atributos:
+   - Declare un puntero al cuadro de diálogo después de la sección de atributos Public:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]
+   ```cpp
+   CTestDialog* m_pTestDlg;
+   ```
 
-1. Edite DisplayDialogView.cpp:
+1. Edite DisplayDialogView. cpp:
 
-   - Agregue que la siguiente instrucción de inclusión después instrucciones de inclusión existente:
+   - Agregue la siguiente instrucción include después de las instrucciones include existentes:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
    - Agregue el código siguiente al constructor:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]
+   ```cpp
+   m_pTestDlg = NULL;
+   ```
 
    - Agregue el código siguiente al destructor:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]
+   ```cpp
+   delete m_pTestDlg;
+   ```
 
-   - Agregue el código siguiente al `OnViewTest` para implementar la función:
+   - Agregue el código siguiente a `OnViewTest` para implementar la función:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
+   ```cpp
+   if (NULL == m_pTestDlg)
+   {
+      m_pTestDlg = new CTestDialog(this);
+      m_pTestDlg->Create(CTestDialog::IDD, this);
+   }
+   m_pTestDlg->ShowWindow(SW_SHOW);
+   ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
 [Cuadros de diálogo modales y no modales](../mfc/modal-and-modeless-dialog-boxes.md)

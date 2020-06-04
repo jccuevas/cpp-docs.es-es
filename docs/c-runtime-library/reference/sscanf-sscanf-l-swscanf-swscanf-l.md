@@ -1,12 +1,12 @@
 ---
 title: sscanf, _sscanf_l, swscanf, _swscanf_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 08/29/2019
+api_name:
 - swscanf
 - sscanf
 - _sscanf_l
 - _swscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sscanf_l
 - _stscanf
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3b453166278fff4c3230cb51895c487319e33d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661973"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958231"
 ---
-# <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
+# <a name="sscanf-_sscanf_l-swscanf-_swscanf_l"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
 Lea datos con formato de una cadena. Hay disponibles versiones más seguras de estas funciones; vea [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
@@ -86,7 +89,7 @@ Datos almacenados
 *format*<br/>
 Cadena de control de formato. Para obtener más información, vea [Especificaciones de formato](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*argumento*<br/>
+*argument*<br/>
 Argumentos opcionales
 
 *locale*<br/>
@@ -94,22 +97,24 @@ Configuración regional que se va a usar
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el número de campos convertidos y asignados correctamente; el valor devuelto no incluye los campos que se han leído pero no se han asignado. Un valor devuelto de 0 indica que no se ha asignado ningún campo. El valor devuelto es **EOF** para un error o si se alcanza el final de la cadena antes de la primera conversión.
+Cada una de estas funciones devuelve el número de campos convertidos y asignados correctamente; el valor devuelto no incluye los campos que se han leído pero no se han asignado. Un valor devuelto de 0 indica que no se ha asignado ningún campo. El valor devuelto es **EOF** para un error o si el final de la cadena se alcanza antes de la primera conversión.
 
-Si *búfer* o *formato* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
+Si *buffer* o *Format* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **sscanf** función lee los datos de *búfer* en la ubicación proporcionada por cada *argumento*. Cada *argumento* debe ser un puntero a una variable con un tipo que se corresponde con un especificador de tipo en *formato*. El *formato* controles de argumento campos de la interpretación de la entrada y tiene la misma forma y función que el *formato* argumento para el **scanf** función. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **sscanf** Lee los datos del *búfer* en la ubicación especificada por cada *argumento*. Cada *argumento* debe ser un puntero a una variable con un tipo que se corresponda con un especificador de tipo en *formato*. El argumento de *formato* controla la interpretación de los campos de entrada y tiene el mismo formato y función que el argumento de *formato* para la función **scanf** . Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+
+Para obtener información sobre los caracteres de campo de tipo scanf, vea [scanf (caracteres de campo de tipo](../scanf-type-field-characters.md)). Para obtener información sobre los campos de especificación de formato scanf, vea [campos de especificación de formato](../format-specification-fields-scanf-and-wscanf-functions.md).
 
 > [!IMPORTANT]
-> Al leer una cadena con **sscanf**, especifique siempre un ancho para el **%s** formato (por ejemplo, **"% 32s"** en lugar de **"%s"**); en caso contrario , la entrada con formato incorrecto puede provocar una saturación del búfer.
+> Al leer una cadena con **sscanf**, especifique siempre un ancho para el formato **% s** (por ejemplo, **"% 32s"** en lugar de **"% s"** ); de lo contrario, la entrada con formato incorrecto puede producir fácilmente una saturación del búfer.
 
-**swscanf** es una versión con caracteres anchos de **sscanf**; los argumentos de **swscanf** son cadenas de caracteres anchos. **sscanf** no controla caracteres hexadecimales multibyte. **swscanf** no controla hexadecimal de ancho completo Unicode o caracteres de "zona de compatibilidad". En caso contrario, **swscanf** y **sscanf** se comportan exactamente igual.
+**swscanf** es una versión con caracteres anchos de **sscanf**; los argumentos de **swscanf** son cadenas de caracteres anchos. **sscanf** no controla caracteres hexadecimales multibyte. **swscanf** no controla los caracteres de "zona de compatibilidad" o hexadecimal de ancho completo de Unicode. De lo contrario, **swscanf** y **sscanf** se comportan exactamente igual.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

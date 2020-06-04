@@ -5,12 +5,12 @@ helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 55eaac9d800730f3a01dcdb2eef943eb48d147b1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311168"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalización del teclado y del mouse
 
@@ -72,4 +72,3 @@ Para protegerse contra este tipo de ataque, agregue código al controlador de co
 [CKeyboardManager (clase)](../mfc/reference/ckeyboardmanager-class.md)<br/>
 [CMouseManager (clase)](../mfc/reference/cmousemanager-class.md)<br/>
 [Implicaciones de seguridad de la personalización](../mfc/security-implications-of-customization.md)
-

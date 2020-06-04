@@ -1,33 +1,33 @@
 ---
 title: Error recuperable A2050 de ML
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2050
 helpviewer_keywords:
 - A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-ms.openlocfilehash: 59d08b9c2743a3b45633527bcc54b3e1c4d6a58c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 311aedd0cc739fd862efb0a18cc444b3fb75b165
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439720"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316985"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>Error recuperable A2050 de ML
 
-**real o número de BCD no permitido**
+**número real o BCD no permitido**
 
-Se usó no sea un número (real) de punto flotante o una constante decimal codificado en binario (BCD) como un inicializador de datos.
+Se usó un número de punto flotante (real) o una constante decimal codificada binaria (BCD) que no es un inicializador de datos.
 
-Se produjo alguna de las siguientes acciones:
+Se produjo uno de los siguientes pasos:
 
-- Se utilizó un número real o un BCD en una expresión.
+- Se usó un número real o un BCD en una expresión.
 
-- Un número real utilizado para inicializar una directiva distinta [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), o [TBYTE](../../assembler/masm/tbyte.md).
+- Se usó un número real para inicializar una directiva que no sea el valor [DWORD](dword.md), [QWord](qword.md) o [TBYTE](tbyte.md).
 
-- Un BCD se usó para inicializar una directiva distinta `TBYTE`.
+- Se usó un BCD para inicializar una directiva que no sea `TBYTE`.
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

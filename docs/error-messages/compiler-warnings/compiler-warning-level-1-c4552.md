@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4552
 ms.assetid: ebbbb5ee-1c19-45bd-b386-41a19630fc76
-ms.openlocfilehash: 1fb2dc7fd4bc685e457898b47c513c21009146ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8435abc60a7ba93800858b22cfd4c5e1778f8587
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186119"
 ---
 # <a name="compiler-warning-level-1-c4552"></a>Advertencia del compilador (nivel 1) C4552
 
-'operador': operador no tiene ningún efecto; se esperaba un operador con efectos secundarios
+' Operator ': el operador no tiene ningún efecto; se esperaba un operador con efectos secundarios
 
-Si una instrucción de expresión tiene un operador con ningún efecto secundario como la parte superior de la expresión, probablemente es un error.
+Si una instrucción de expresión tiene un operador sin ningún efecto secundario como parte superior de la expresión, es probable que se trate de un error.
 
 Para invalidar esta advertencia, coloque la expresión entre paréntesis.
 
-El ejemplo siguiente genera C4552:
+En el ejemplo siguiente se genera C4552:
 
-```
+```cpp
 // C4552.cpp
 // compile with: /W1
 int main() {

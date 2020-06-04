@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2122
 ms.assetid: c2f02ec1-1ce8-4a13-b35e-7cd416fa9f41
-ms.openlocfilehash: 75793efd4f10711890b2d456a56c85ad45ea58ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90bad82853c07c508ad48263c3a08c522c1176c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579709"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191553"
 ---
 # <a name="resource-compiler-error-rc2122"></a>Error del compilador de recursos RC2122
 
-Subtipo de menú desconocido
+subtipo de menú desconocido
 
-El *definición de elemento* campo de la **menú** instrucción solo puede contener **MENUITEM** y **emergente** instrucciones.
+El campo *Item-Definition* de la instrucción de **menú** solo puede contener instrucciones **MenuItem** y **popup** .

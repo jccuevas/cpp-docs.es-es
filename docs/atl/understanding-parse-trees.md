@@ -4,45 +4,49 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: 11625ebda2e84d4a738a2d54e849e3406a5c4f70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de2cea9b0e7b7c62236f708f9aa8217eaa5df51d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510882"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168701"
 ---
-# <a name="understanding-parse-trees"></a>Comprender los árboles de análisis
+# <a name="understanding-parse-trees"></a>Descripción de los árboles de análisis
 
-Puede definir uno o varios árboles de análisis en el script de registrador, donde cada árbol de análisis tiene el formato siguiente:
+Puede definir uno o más árboles de análisis en el script de registrador, donde cada árbol de análisis tiene el formato siguiente:
 
-```
-<root key>{<registry expression>}+
-```
+> \<clave raíz> {\<expresión del registro>} +
 
-donde:
+Donde:
 
-```
-<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |
-    HKEY_LOCAL_MACHINE | HKEY_USERS |
-    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |
-    HKEY_CURRENT_CONFIG | HKCR | HKCU |
-    HKLM | HKU | HKPD | HKDD | HKCC
-<registry expression> ::= <Add Key> | <Delete Key>
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
-<Delete Key> ::= Delete<Key Name>
-<Key Name> ::= '<AlphaNumeric>+'
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
-<Key Value> ::== <Key Type><Key Name>
-<Key Type> ::= s | d
-<Key Value> ::= '<AlphaNumeric>'
-```
+> \<clave raíz>:: = HKEY_CLASSES_ROOT | HKEY_CURRENT_USER | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_LOCAL_MACHINE | HKEY_USERS | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_CURRENT_CONFIG | HKCR | HKCU | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKLM | HKU | HKPD | HKDD | HKCC
+
+> \<expresión del registro>:: \<= agregar clave> | \<Eliminar> de clave
+
+> \<Agregar clave>:: = [**ForceRemove** | **noremove** | **Val**]\<nombre de clave>\<[valor de clave>]\<[{Agregar clave>}]
+
+> \<Eliminar clave>:: = **eliminar**\<nombre de clave>
+
+> \<Nombre de clave>:: = **'**\<alfanumérica>+**'**
+
+> \<> alfanumérica:: = *cualquier carácter que no sea NULL, es decir, ASCII 0*
+
+> \<Valor de clave>:: \<= tipo de \<clave>nombre de clave>
+
+> \<Tipo de clave>:: = **s** | **d**
+
+> \<Valor de clave>:: = **'**\<alfanumérica>**'**
 
 > [!NOTE]
-> `HKEY_CLASSES_ROOT` y `HKCR` son equivalentes; `HKEY_CURRENT_USER` y `HKCU` son equivalentes; y así sucesivamente.
+> `HKEY_CLASSES_ROOT`y `HKCR` son equivalentes; `HKEY_CURRENT_USER` y `HKCU` son equivalentes; etc.
 
-Un árbol de análisis puede agregar varias claves y subclaves para el \<clave raíz >. Al hacerlo, mantiene abierto un identificador de subclave hasta que el analizador ha terminado de analizar todas sus subclaves. Este enfoque es más eficaz que funciona en una sola clave a la vez, tal como se muestra en el ejemplo siguiente:
+Un árbol de análisis puede agregar varias claves y subclaves \<a la clave raíz>. Al hacerlo, mantiene el identificador de una subclave abierto hasta que el analizador haya completado el análisis de todas sus subclaves. Este enfoque es más eficaz que trabajar en una sola clave cada vez, como se observa en el ejemplo siguiente:
 
-```
+```rgs
 HKEY_CLASSES_ROOT
 {
     'MyVeryOwnKey'
@@ -55,9 +59,8 @@ HKEY_CLASSES_ROOT
 }
 ```
 
-En este caso, el registrador abre inicialmente (crea) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. A continuación, ve que `MyVeryOwnKey` tiene una subclave. En lugar de cerrar la clave para `MyVeryOwnKey`, el registrador conserva el identificador y abre (crea) `HasASubKey` utilizando este identificador primario. (El registro del sistema puede ser más lento cuando no hay ningún identificador de elemento primario está abierto). Por tanto, abrir `HKEY_CLASSES_ROOT\MyVeryOwnKey` y, a continuación, abrir `HasASubKey` con `MyVeryOwnKey` como el elemento primario es más rápido que la apertura `MyVeryOwnKey`, cerrando `MyVeryOwnKey`y, a continuación, abrir `MyVeryOwnKey\HasASubKey`.
+En este caso, el registrador se abre `HKEY_CLASSES_ROOT\MyVeryOwnKey`inicialmente (crea). A continuación, ve `MyVeryOwnKey` que tiene una subclave. En lugar de cerrar la clave `MyVeryOwnKey`en, el registrador conserva el identificador y abre (crea `HasASubKey` ) con este identificador primario. (El registro del sistema puede ser más lento cuando no hay ningún identificador primario abierto). Por lo tanto `HKEY_CLASSES_ROOT\MyVeryOwnKey` , abrir y `HasASubKey` , `MyVeryOwnKey` a continuación, abrir con como elemento `MyVeryOwnKey`primario es `MyVeryOwnKey`más rápido que abrir `MyVeryOwnKey\HasASubKey`, cerrar y, a continuación, abrir.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Crear scripts del registrador](../atl/creating-registrar-scripts.md)
-
+[Crear scripts de registrador](../atl/creating-registrar-scripts.md)

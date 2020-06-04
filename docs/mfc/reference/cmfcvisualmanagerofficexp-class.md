@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOfficeXP class [MFC]
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
-ms.openlocfilehash: c3b198698b4404976842466dc9b830f72c08a72f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c975a2b7ae7de12c154954e44470e7af9feeaa1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337809"
 ---
 # <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP (clase)
 
@@ -33,7 +33,7 @@ Usa el `CMFCVisualManagerOfficeXP` clase para cambiar la apariencia visual de la
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar `CMFCVisualManagerOfficeXP`. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar `CMFCVisualManagerOfficeXP`. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]
 

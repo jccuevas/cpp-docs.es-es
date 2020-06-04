@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3734
 ms.assetid: 4e2afdcc-7da9-45a1-9c96-85f25e2986e8
-ms.openlocfilehash: 78b3d1a57d358eb11ba2f01ec184c5487a578228
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 381bb59dae523c05cdc67e33ba9d326e247abc7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648323"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752865"
 ---
 # <a name="compiler-error-c3734"></a>Error del compilador C3734
 
 'class': una clase administrada o de WinRT no puede ser una coclase
 
-El [coclase](../../windows/coclass.md) atributo no puede utilizarse con administrados o clases de WinRT.
+El atributo [CoClass](../../windows/coclass.md) no se puede usar con clases administradas o WinRT.
 
 En el siguiente ejemplo se genera el error C3734 y se muestra cómo corregirlo:
 
-```
+```cpp
 // C3734.cpp
 // compile with: /clr /c
 [module(name="x")];

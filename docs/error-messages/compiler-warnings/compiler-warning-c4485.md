@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 7138f1a3cecaaf75fbab01fd1aee18529b7a3a84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c92f805eb2960336ed34f5da93b6c13f46bf15ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652479"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165150"
 ---
 # <a name="compiler-warning-c4485"></a>Advertencia del compilador C4485
 
-'función_de_reemplazo': coincide con el método de clase ref base 'función_de_clase_base', pero no está marcada 'new' u 'override'; se supone 'new' (y 'virtual')
+' override_function ': coincide con el método de clase Ref base ' base_class_function ', pero no está marcado como ' New ' u ' override '; se presupone ' New ' (y ' virtual ')
 
-Reemplaza un descriptor de acceso, con o sin el `virtual` palabra clave, una función de descriptor de acceso de la clase base, pero la `override` o `new` especificador no formaba parte de la firma de función de reemplazo. Agregar el `new` o `override` especificador para resolver esta advertencia.
+Un descriptor de acceso invalida, con o sin la palabra clave `virtual`, una función de descriptor de acceso de clase base, pero el especificador `override` o `new` no formaba parte de la firma de la función de reemplazo. Agregue el especificador `new` o `override` para resolver esta advertencia.
 
-Consulte [invalidar](../../windows/override-cpp-component-extensions.md) y [new (nueva ranura en vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) para obtener más información.
+Vea [override](../../extensions/override-cpp-component-extensions.md) y [New (New slot in vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) para obtener más información.
 
-C4485 siempre se emite como un error. Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir C4485.
+C4485 siempre se emite como un error. Use la pragma [Warning](../../preprocessor/warning.md) para suprimir C4485.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4485
+En el ejemplo siguiente se genera C4485
 
-```
+```cpp
 // C4485.cpp
 // compile with: /clr
 delegate void Del();

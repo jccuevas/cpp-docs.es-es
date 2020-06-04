@@ -1,28 +1,29 @@
 ---
 title: QWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - QWORD
 helpviewer_keywords:
 - QWORD directive
 ms.assetid: 70fcad8f-db48-4cb0-9710-8feb58baab22
-ms.openlocfilehash: c3616332ad130d93290d55a7eb1a655f7942efed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a41327759c069d655293fcd031d81aeb3f18ab4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518006"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318571"
 ---
 # <a name="qword"></a>QWORD
 
-Asigna e inicializa opcionalmente 8 bytes de almacenamiento para cada `initializer`. También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.
+Asigna y, opcionalmente, inicializa 8 bytes de almacenamiento para cada *inicializador*. También se puede usar como especificador de tipo en cualquier lugar en el que un tipo sea válido. **QWord** es un sinónimo de [DQ](dq.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-> [[nombre]] Inicializador de tipo QWORD [[, inicializador]]...
+> ⟦*Name*⟧ **QWord** *initializer* ⟦ __,__ *initializer* ... ⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
-[SQWORD](../../assembler/masm/qword.md)<br/>
-[DQ](../../assembler/masm/dq.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+\ [SQWORD](qword.md)
+\ [DQ](dq.md)
+[Gramática BNF de MASM](masm-bnf-grammar.md)

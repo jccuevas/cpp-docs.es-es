@@ -1,5 +1,5 @@
 ---
-title: Estados de módulos de un archivo DLL de MFC estándar vinculados dinámicamente a MFC
+title: Estados del módulo de un archivo DLL de MFC estándar vinculado dinámicamente a MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - regular MFC DLLs [C++], dynamically linked to MFC
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - module states [C++], regular MFC DLLs dynamically linked to
 - DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-ms.openlocfilehash: bd485e484287a17b1f016acc7012178a2c74343d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: cedce676f5586369446c9856fd33e4d16c237b27
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462886"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220582"
 ---
-# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Estados de módulos de un archivo DLL de MFC estándar vinculados dinámicamente a MFC
+# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Estados del módulo de un archivo DLL de MFC estándar vinculado dinámicamente a MFC
 
-La capacidad para vincular dinámicamente una DLL de MFC normal a la DLL de MFC permite algunas configuraciones que son muy complicados. Por ejemplo, un archivo DLL MFC y el archivo ejecutable que lo usa pueden tanto dinámicamente vincular a la DLL de MFC a los archivos DLL de extensión MFC.
+La capacidad de vincular dinámicamente un archivo DLL de MFC estándar al archivo DLL de MFC permite algunas configuraciones muy complicadas. Por ejemplo, un archivo DLL de MFC estándar y el ejecutable que lo usa se pueden vincular de forma dinámica al archivo DLL de MFC y a cualquier DLL con la extensión de MFC.
 
-Esta configuración supone un problema con respecto a los datos globales de MFC, como el puntero a la actual `CWinApp` objeto y asignaciones de identificadores.
+Esta configuración plantea un problema con respecto a los datos globales de MFC, como el puntero al objeto `CWinApp` actual y asignaciones de identificadores.
 
-Antes de la versión 4.0 de MFC, estos datos globales residían en la propia DLL de MFC y se ha compartido por todos los módulos en el proceso. Dado que cada proceso que utiliza un archivo DLL para Win32 obtiene su propia copia de datos del archivo DLL, este esquema proporciona una manera fácil de realizar un seguimiento de los datos de cada proceso. Además, dado que el modelo AFXDLL suponía que podría haber sólo uno `CWinApp` objeto y solo un conjunto de asignaciones en el proceso de identificadores, se podrían realizar el seguimiento de estos elementos en la propia DLL de MFC.
+Antes de la versión 4.0 de MFC, estos datos globales residían en el propio archivo DLL de MFC y los compartían todos los módulos del proceso. Como cada proceso en el que se usa un archivo DLL de Win32 obtiene su propia copia de los datos del archivo DLL, este esquema proporcionaba una manera sencilla de realizar el seguimiento de los datos por proceso. Además, como el modelo AFXDLL presuponía que solo hubiera un objeto `CWinApp` y solo un conjunto de asignaciones de identificadores en el proceso, el seguimiento de estos elementos se podía realizar en el propio archivo DLL de MFC.
 
-Pero con la capacidad de vincular dinámicamente un archivo DLL MFC de la DLL de MFC, ahora es posible tener dos o más `CWinApp` objetos en un proceso y también dos o más conjuntos de asignaciones de identificadores. ¿Cómo MFC realizar un seguimiento de las que debería usar?
+Pero con la capacidad de vincular de forma dinámica un archivo DLL de MFC estándar al archivo DLL de MFC, ahora es posible tener dos o más objetos `CWinApp` en un proceso, además de dos o más conjuntos de asignaciones de identificadores. ¿Cómo realiza MFC el seguimiento de cuáles se deben usar?
 
-La solución consiste en proporcionar su propia copia de esta información de estado global de cada módulo (aplicación o DLL de MFC normal). Por lo tanto, una llamada a **AfxGetApp** en las tarifas DLL de MFC devuelve un puntero a la `CWinApp` objeto en el archivo DLL, no aparece en el archivo ejecutable. Esta copia por módulo de los datos globales de MFC se conoce como un estado del módulo y se describe en [Nota técnica 58 de MFC](../mfc/tn058-mfc-module-state-implementation.md).
+La solución consiste en proporcionar a cada módulo (aplicación o DLL de MFC estándar) su propia copia de esta información de estado global. Por tanto, una llamada a **AfxGetApp** en el archivo DLL de MFC estándar devuelve un puntero al objeto `CWinApp` en el archivo DLL, no al del ejecutable. Esta copia por módulo de los datos globales de MFC se conoce como estado del módulo y se describe en la [Nota técnica 58 de MFC](../mfc/tn058-mfc-module-state-implementation.md).
 
-El procedimiento de ventana común de MFC cambia automáticamente al estado de módulo correcto, por lo que no deberá preocuparse en los controladores de mensajes implementados en el archivo DLL MFC. Pero cuando el archivo ejecutable se llama a la DLL de MFC normal, es necesario establecer explícitamente el estado actual del módulo en uno para el archivo DLL. Para ello, use el **AFX_MANAGE_STATE** macro en todas las funciones que se exporta desde la DLL. Esto se realiza mediante la adición de la línea de código siguiente al principio de las funciones exportadas desde el archivo DLL:
+El procedimiento de ventana común de MFC cambia automáticamente al estado correcto del módulo, por lo que no es necesario preocuparse por él en los controladores de mensajes implementados en el archivo DLL de MFC estándar. Pero, cuando el ejecutable llama al archivo DLL de MFC estándar, debe establecer de forma explícita el estado actual del módulo en el del archivo DLL. Para ello, use la macro **AFX_MANAGE_STATE** en todas las funciones exportadas desde el archivo DLL. Para hacerlo, agregue la línea de código siguiente al principio de las funciones exportadas desde el archivo DLL:
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
@@ -35,12 +35,12 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Administrar los datos de estado de los módulos MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+- [Administración de los datos de estado de los módulos MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Archivos DLL de extensión MFC](../build/extension-dlls-overview.md)
+- [Archivos DLL de extensión MFC](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)
+[Creación de archivos DLL de C/C++ en Visual Studio](dlls-in-visual-cpp.md)

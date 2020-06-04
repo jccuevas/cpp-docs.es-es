@@ -1,45 +1,45 @@
 ---
 title: _mm_cvtsi64x_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtsi64x_ss
 helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 4b8d0e1a19441cd671143843ae4ac6e89bfeae50
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0e9bacc56f212e804467d1c6e0159a1749235976
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328947"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217454"
 ---
-# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
+# <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
 **Específicos de Microsoft**
 
-Genera el x64 extendidos versión del entero de convertir de 64 bits para el valor de punto flotante de precisión sencilla escalares (`cvtsi2ss`) instrucción.
+Genera la versión extendida de 64 bits del entero de 64 bits para la instrucción de valor de punto flotante (`cvtsi2ss`) de precisión sencilla escalar.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 __m128 _mm_cvtsi64x_ss(
    __m128 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*a*<br/>
-[in] Un `__m128` estructura que contiene cuatro valores de punto flotante de precisión sencilla.
+*un*\
+de `__m128` Estructura que contiene cuatro valores de punto flotante de precisión sencilla.
 
-*b*<br/>
-[in] Un entero de 64 bits se conviertan en un valor de punto flotante.
+*b*\
+de Entero de 64 bits que se va a convertir en un valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un `__m128` estructura cuyo primer valor de punto flotante es el resultado de la conversión. Los tres valores se copian sin cambios desde `a`.
+`__m128` Estructura cuyo primer valor de punto flotante es el resultado de la conversión. Los otros tres valores se copian sin cambios desde.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -47,17 +47,17 @@ Un `__m128` estructura cuyo primer valor de punto flotante es el resultado de la
 |---------------|------------------|
 |`_mm_cvtsi64x_ss`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El `__m128` estructura representa un registro XMM, por lo tanto, esta función intrínseca permite que el valor `b` desde la memoria del sistema que desea mover a un XMM registre.
+La `__m128` estructura representa un registro XMM, por lo que el intrínseco permite que el valor *b* de la memoria del sistema se mueva a un registro XMM.
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // _mm_cvtsi64x_ss.cpp
 // processor: x64
 
@@ -91,5 +91,5 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[__m128](../cpp/m128.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[__m128](../cpp/m128.md)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82c7ef9c20b62c0e082a7851bac0ec1e44a8f4c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186860"
 ---
 # <a name="compiler-warning-level-1-c4395"></a>Advertencia del compilador (nivel 1) C4395
 
-'function': función miembro se invocará en una copia del miembro de datos initonly 'miembro'
+' función ': la función miembro se invocará en una copia del miembro de datos initonly ' miembro '
 
-Se llamó a una función miembro en un [initonly (C++ / c++ / CLI)](../../dotnet/initonly-cpp-cli.md) miembro de datos.  C4395 advierte que el **initonly** miembro de datos no puede modificarse mediante la función.
+Se llamó a una función miembro en un miembro de datos [InitOnly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) .  C4395 advierte que el miembro de datos **InitOnly** no puede ser modificado por la función.
 
-El ejemplo siguiente genera C4395:
+En el ejemplo siguiente se genera C4395:
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {

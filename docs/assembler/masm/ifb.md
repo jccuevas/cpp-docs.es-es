@@ -1,30 +1,31 @@
 ---
 title: IFB
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IFB
 helpviewer_keywords:
 - IFB directive
 ms.assetid: 6395e313-e590-41b3-824c-577f200faf80
-ms.openlocfilehash: 815cb75e0d00cc660c8dfad896fbe0064881edd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8494918408e51c2bc7e8fa77f72c48115418c4c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658567"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317271"
 ---
 # <a name="ifb"></a>IFB
 
-Concede al ensamblado si *textitem* está en blanco.
+Concede el ensamblado si *textitem* está en blanco.
 
 ## <a name="syntax"></a>Sintaxis
 
-> IFB *textitem*
+> **IFB** *textitem*
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Consulte [IF](../../assembler/masm/if-masm.md) para conocer la sintaxis completa.
+Vea [si](if-masm.md) para obtener la sintaxis completa.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

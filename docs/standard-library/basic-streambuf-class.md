@@ -94,14 +94,14 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0cf7b61bde86a4643836346dafd36680fb8cf302
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524682"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376744"
 ---
-# <a name="basicstreambuf-class"></a>basic_streambuf (Clase)
+# <a name="basic_streambuf-class"></a>basic_streambuf (Clase)
 
 Describe una clase base abstracta para derivar un búfer de secuencia, que controla la transmisión de elementos a y desde una representación concreta de una secuencia.
 
@@ -114,19 +114,19 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+*Elem*\
 [char_type](#char_type).
 
-*Tr*<br/>
+*Tr*\
 Carácter [traits_type](#traits_type).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase de plantilla describe una clase base abstracta para derivar un búfer de secuencia, que controla la transmisión de elementos a y desde una representación concreta de una secuencia. Un objeto de clase `basic_streambuf` ayuda a controlar un flujo con elementos de tipo *Tr*, también conocida como [char_type](#char_type), cuyos rasgos de caracteres están determinados por la clase [char_traits](../standard-library/char-traits-struct.md), también conocida como [traits_type](#traits_type).
+La plantilla de clase describe una clase base abstracta para derivar un búfer de secuencia, que controla la transmisión de elementos hacia y desde una representación específica de una secuencia. Un objeto `basic_streambuf` de clase ayuda a controlar una secuencia con elementos de tipo *Tr*, también conocido como [char_type](#char_type), cuyos rasgos de carácter están determinados por la clase [char_traits](../standard-library/char-traits-struct.md), también conocido como [traits_type](#traits_type).
 
-Cada búfer de secuencia controla conceptualmente dos secuencias independientes: una para extracciones (entrada) y otra para inserciones (salida). Pero una representación específica podría hacer inaccesible una de estas secuencias o las dos. Normalmente mantiene cierta relación entre las dos secuencias. Lo que se inserta en el flujo de salida de un objeto [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`>, por ejemplo, es lo que más adelante se extraerá de su flujo de entrada. Al colocar un flujo de un objeto [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, se coloca el otro flujo en tándem.
+Cada búfer de secuencia controla conceptualmente dos secuencias independientes: una para extracciones (entrada) y otra para inserciones (salida). Pero una representación específica podría hacer inaccesible una de estas secuencias o las dos. Normalmente mantiene cierta relación entre las dos secuencias. Lo que se inserta en la `Tr` secuencia de salida de un [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`,> objeto, por ejemplo, es lo que se extrae más adelante de su secuencia de entrada. Al colocar una secuencia de `Tr` una [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`,> objeto, se coloca la otra secuencia en tándem.
 
-La interfaz pública a la clase de plantilla `basic_streambuf` proporciona las operaciones comunes a todos los búferes de secuencia, independientemente de lo especializados que sean. La interfaz protegida proporciona las operaciones necesarias para que una representación específica de una secuencia haga su trabajo. Las funciones miembro virtuales protegidas le permiten personalizar el comportamiento de un búfer de secuencia derivado para una representación específica de una secuencia. Cada búfer de secuencia derivado de esta biblioteca describe cómo especializa el comportamiento de sus funciones miembro virtuales protegidas. El comportamiento predeterminado de la clase base, que a menudo consiste en no hacer nada, se describe en este tema.
+La interfaz pública `basic_streambuf` a la plantilla de clase proporciona las operaciones que son comunes a todos los búferes de secuencia, sin embargo especializados. La interfaz protegida proporciona las operaciones necesarias para que una representación específica de una secuencia haga su trabajo. Las funciones miembro virtuales protegidas le permiten personalizar el comportamiento de un búfer de secuencia derivado para una representación específica de una secuencia. Cada búfer de secuencia derivado de esta biblioteca describe cómo especializa el comportamiento de sus funciones miembro virtuales protegidas. El comportamiento predeterminado de la clase base, que a menudo consiste en no hacer nada, se describe en este tema.
 
 Las restantes funciones miembro protegidas controlan las operaciones de copia a y desde cualquier almacenamiento proporcionado para almacenar en búfer las transmisiones a y desde secuencias. Por ejemplo, un búfer de entrada se caracteriza por:
 
@@ -166,7 +166,7 @@ Un objeto de clase `basic_streambuf`< `Elem`, `Tr`> almacena los seis punteros d
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Asocia un nombre de tipo con el parámetro de plantilla `Elem`.|
 |[int_type](#int_type)|Asocia un nombre de tipo dentro del ámbito `basic_streambuf` con el parámetro de plantilla `Elem`.|
@@ -176,7 +176,7 @@ Un objeto de clase `basic_streambuf`< `Elem`, `Tr`> almacena los seis punteros d
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[eback](#eback)|Función protegida que devuelve un puntero al principio del búfer de entrada.|
 |[egptr](#egptr)|Función protegida que devuelve un puntero justo después del final del búfer de entrada.|
@@ -184,18 +184,18 @@ Un objeto de clase `basic_streambuf`< `Elem`, `Tr`> almacena los seis punteros d
 |[gbump](#gbump)|Función protegida que agrega `count` al siguiente puntero del búfer de entrada.|
 |[getloc](#getloc)|Obtiene la configuración regional del objeto `basic_streambuf`.|
 |[gptr](#gptr)|Función protegida que devuelve un puntero al siguiente elemento del búfer de entrada.|
-|[imbue](#imbue)|Función virtual protegida a la que llama [pubimbue](#pubimbue).|
+|[imbue](#imbue)|Una función virtual protegida llamada por [pubimbue](#pubimbue).|
 |[in_avail](#in_avail)|Devuelve el número de elementos que están listos para ser leídos desde el búfer.|
-|[overflow](#overflow)|Función virtual protegida a la que se puede llamar cuando se inserta un carácter nuevo en un búfer lleno.|
+|[Desbordamiento](#overflow)|Función virtual protegida a la que se puede llamar cuando se inserta un carácter nuevo en un búfer lleno.|
 |[pbackfail](#pbackfail)|Función miembro virtual protegida que intenta volver a colocar un elemento en el flujo de entrada y convertirlo después en el elemento actual (indicado por el puntero siguiente).|
 |[pbase](#pbase)|Función protegida que devuelve un puntero al principio del búfer de salida.|
 |[pbump](#pbump)|Función protegida que agrega `count` al siguiente puntero del búfer de salida.|
 |[pptr](#pptr)|Función protegida que devuelve un puntero al siguiente elemento del búfer de salida.|
 |[pubimbue](#pubimbue)|Establece la configuración regional del objeto `basic_streambuf`.|
 |[pubseekoff](#pubseekoff)|Llama a [seekoff](#seekoff), una función virtual protegida que se invalida en una clase derivada.|
-|[pubseekpos](#pubseekpos)|Llama a [seekpos](#seekpos), una función virtual protegida que se invalida en una clase derivada, y restablece la posición actual del puntero.|
+|[pubseekpos](#pubseekpos)|Llamadas [seekpos](#seekpos), una función virtual protegida que se invalida en una clase derivada y restablece la posición actual del puntero.|
 |[pubsetbuf](#pubsetbuf)|Llama a [setbuf](#setbuf), una función virtual protegida que se invalida en una clase derivada.|
-|[pubsync](#pubsync)|Llama a [sync](#sync), una función virtual protegida que se invalida en una clase derivada, y actualiza el flujo externo asociado a este búfer.|
+|[pubsync](#pubsync)|Llamadas [de sincronización](#sync), una función virtual protegida que se invalida en una clase derivada y actualiza la secuencia externa asociada a este búfer.|
 |[sbumpc](#sbumpc)|Lee y devuelve el elemento actual, moviendo el puntero de la secuencia.|
 |[seekoff](#seekoff)|La función miembro virtual protegida trata de modificar las posiciones actuales de las secuencias controladas.|
 |[seekpos](#seekpos)|La función miembro virtual protegida trata de modificar las posiciones actuales de las secuencias controladas.|
@@ -212,17 +212,17 @@ Un objeto de clase `basic_streambuf`< `Elem`, `Tr`> almacena los seis punteros d
 |[stossc](#stossc)|Mueve más allá del elemento actual de la secuencia.|
 |[sungetc](#sungetc)|Obtiene un carácter de la secuencia.|
 |[swap](#swap)|Intercambia los valores de este objeto por los valores en el parámetro del objeto `basic_streambuf` proporcionado.|
-|[sync](#sync)|Función virtual protegida que intenta sincronizar las secuencias controladas con cualquier secuencia externa asociada.|
+|[Sincronizar](#sync)|Función virtual protegida que intenta sincronizar las secuencias controladas con cualquier secuencia externa asociada.|
 |[uflow](#uflow)|Función virtual protegida que extrae el elemento actual del flujo de entrada.|
-|[underflow](#underflow)|Función virtual protegida que extrae el elemento actual del flujo de entrada.|
+|[Desbordamiento](#underflow)|Función virtual protegida que extrae el elemento actual del flujo de entrada.|
 |[xsgetn](#xsgetn)|Función virtual protegida que extrae elementos del flujo de entrada.|
 |[xsputn](#xsputn)|Función virtual protegida que inserta elementos en el flujo de salida.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operator|Descripción|
 |-|-|
-|[operator=](#op_eq)|Asigna los valores de este objeto desde otro objeto `basic_streambuf`.|
+|[operador](#op_eq)|Asigna los valores de este objeto desde otro objeto `basic_streambuf`.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -230,7 +230,7 @@ Un objeto de clase `basic_streambuf`< `Elem`, `Tr`> almacena los seis punteros d
 
 **Espacio de nombres:** std
 
-## <a name="basic_streambuf"></a>  basic_streambuf::basic_streambuf
+## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a>basic_streambuf::basic_streambuf
 
 Construye un objeto de tipo `basic_streambuf`.
 
@@ -242,16 +242,16 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*Correcto*\
 Referencia a un valor L al objeto `basic_streambuf` que se usa para establecer los valores de este objeto `basic_streambuf`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer constructor protegido almacena un puntero nulo en todos los punteros que controlan el búfer de entrada y el de salida. También almacena `locale::classic` en el objeto de configuración regional. Para más información, vea [locale::classic](../standard-library/locale-class.md#classic).
 
-El segundo constructor protegido copia los punteros y la configuración regional de *derecho*.
+El segundo constructor protegido copia los punteros y la configuración regional desde *la derecha.*
 
-## <a name="char_type"></a>  basic_streambuf::char_type
+## <a name="basic_streambufchar_type"></a><a name="char_type"></a>basic_streambuf::char_type
 
 Asocia un nombre de tipo al parámetro de plantilla **Elem**.
 
@@ -259,7 +259,7 @@ Asocia un nombre de tipo al parámetro de plantilla **Elem**.
 typedef Elem char_type;
 ```
 
-## <a name="eback"></a>  basic_streambuf::eback
+## <a name="basic_streambufeback"></a><a name="eback"></a>basic_streambuf::eback
 
 Función protegida que devuelve un puntero al principio del búfer de entrada.
 
@@ -271,7 +271,7 @@ char_type *eback() const;
 
 Puntero al principio del búfer de entrada.
 
-## <a name="egptr"></a>  basic_streambuf::egptr
+## <a name="basic_streambufegptr"></a><a name="egptr"></a>basic_streambuf::egptr
 
 Función protegida que devuelve un puntero justo después del final del búfer de entrada.
 
@@ -283,7 +283,7 @@ char_type *egptr() const;
 
 Puntero inmediatamente después del final del búfer de entrada.
 
-## <a name="epptr"></a>  basic_streambuf::epptr
+## <a name="basic_streambufepptr"></a><a name="epptr"></a>basic_streambuf::epptr
 
 Función protegida que devuelve un puntero justo después del final del búfer de salida.
 
@@ -295,9 +295,9 @@ char_type *epptr() const;
 
 Puntero inmediatamente después del final del búfer de salida.
 
-## <a name="gbump"></a>  basic_streambuf::gbump
+## <a name="basic_streambufgbump"></a><a name="gbump"></a>basic_streambuf::gbump
 
-Función protegida que agrega *recuento* al siguiente puntero del búfer de entrada.
+Función protegida que agrega *count* al puntero siguiente para el búfer de entrada.
 
 ```cpp
 void gbump(int count);
@@ -305,10 +305,10 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parámetros
 
-*count*<br/>
+*Contar*\
 Cantidad por la que va a avanzar el puntero.
 
-## <a name="getloc"></a>  basic_streambuf::getloc
+## <a name="basic_streambufgetloc"></a><a name="getloc"></a>basic_streambuf::getloc
 
 Obtiene la configuración regional del objeto basic_streambuf.
 
@@ -320,7 +320,7 @@ locale getloc() const;
 
 Objeto de configuración regional almacenado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener información relacionada, vea [ios_base::getloc](../standard-library/ios-base-class.md#getloc).
 
@@ -342,7 +342,7 @@ int main( )
 C
 ```
 
-## <a name="gptr"></a>  basic_streambuf::gptr
+## <a name="basic_streambufgptr"></a><a name="gptr"></a>basic_streambuf::gptr
 
 Función protegida que devuelve un puntero al siguiente elemento del búfer de entrada.
 
@@ -354,7 +354,7 @@ char_type *gptr() const;
 
 Puntero al siguiente elemento del búfer de entrada.
 
-## <a name="imbue"></a>  basic_streambuf::imbue
+## <a name="basic_streambufimbue"></a><a name="imbue"></a>basic_streambuf::imbue
 
 Función virtual protegida a la que llama [pubimbue](#pubimbue).
 
@@ -364,14 +364,14 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Loc*<br/>
+*_Loc*\
 Referencia a una configuración regional.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El comportamiento predeterminado es no hacer nada.
 
-## <a name="in_avail"></a>  basic_streambuf::in_avail
+## <a name="basic_streambufin_avail"></a><a name="in_avail"></a>basic_streambuf::in_avail
 
 Devuelve el número de elementos que están listos para ser leídos desde el búfer.
 
@@ -383,9 +383,9 @@ streamsize in_avail();
 
 Número de elementos que están listos para leerse desde el búfer.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si un [posición de lectura](../standard-library/basic-streambuf-class.md) está disponible, la función miembro devuelve [egptr](#egptr) - [gptr](#gptr). De lo contrario, devuelve [showmanyc](#showmanyc).
+Si hay una posición de [lectura](../standard-library/basic-streambuf-class.md) disponible, la función miembro devuelve [egptr](#egptr) - [gptr](#gptr). De lo contrario, devuelve [showmanyc](#showmanyc).
 
 ### <a name="example"></a>Ejemplo
 
@@ -405,7 +405,7 @@ int main( )
 }
 ```
 
-## <a name="int_type"></a>  basic_streambuf::int_type
+## <a name="basic_streambufint_type"></a><a name="int_type"></a>basic_streambuf::int_type
 
 Asocia un nombre de tipo del ámbito basic_streambuf a uno de los tipos de un parámetro de plantilla.
 
@@ -413,7 +413,7 @@ Asocia un nombre de tipo del ámbito basic_streambuf a uno de los tipos de un pa
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="off_type"></a>  basic_streambuf::off_type
+## <a name="basic_streambufoff_type"></a><a name="off_type"></a>basic_streambuf::off_type
 
 Asocia un nombre de tipo del ámbito basic_streambuf a uno de los tipos de un parámetro de plantilla.
 
@@ -421,7 +421,7 @@ Asocia un nombre de tipo del ámbito basic_streambuf a uno de los tipos de un pa
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="op_eq"></a>  basic_streambuf::operator=
+## <a name="basic_streambufoperator"></a><a name="op_eq"></a>basic_streambuf::operador ?
 
 Asigna los valores de este objeto desde otro objeto `basic_streambuf`.
 
@@ -431,14 +431,14 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*Correcto*\
 Referencia a un valor L al objeto `basic_streambuf` que se usa para asignar valores a este objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El operador de miembro protegido copia desde *derecho* los punteros que controlan el búfer de entrada y el búfer de salida. También almacena `right.`[getloc()](#getloc) en `locale object`. Devuelve `*this`.
+El operador miembro protegido copia de la *derecha* los punteros que controlan el búfer de entrada y el búfer de salida. También almacena `right.`[getloc()](#getloc) en `locale object`. Devuelve `*this`.
 
-## <a name="overflow"></a>  basic_streambuf::overflow
+## <a name="basic_streambufoverflow"></a><a name="overflow"></a>basic_streambuf::desbordamiento
 
 Función virtual protegida a la que se puede llamar cuando se inserta un carácter nuevo en un búfer lleno.
 
@@ -448,16 +448,16 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parámetros
 
-*_Meta*<br/>
+*_Meta*\
 El carácter que se va a insertar en el búfer o **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valor devuelto
 
 Si la función no se ejecuta correctamente, devuelve **traits_type::eof** o inicia una excepción. De lo contrario, devuelve **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*). El comportamiento predeterminado es devolver **traits_type::eof**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si  *\_Meta* no son iguales a **traits_type:: EOF**, la función miembro virtual protegida intenta insertar el elemento **traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) en el flujo de salida. Puede hacerlo de varias maneras:
+Si * \_Meta* no se compara igual a **traits_type::eof**, la función miembro virtual protegida se esfuerza por insertar el elemento **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) en la secuencia de salida. Puede hacerlo de varias maneras:
 
 - Si hay una `write position` disponible, puede almacenar el elemento en la posición de escritura e incrementar el puntero siguiente para el búfer de salida.
 
@@ -473,7 +473,7 @@ La función usa los caracteres del área de colocación entre los punteros `pbas
 
 La definición de usar varía entre clases derivadas. Por ejemplo, la clase `filebuf` escribe sus caracteres en un archivo, mientras que la clase `strstreambuf` los mantiene en su búfer y (si el búfer se designa como dinámico) lo expande en respuesta a una llamada a overflow. Esta expansión se logra al liberar el búfer antiguo y reemplazarlo por uno nuevo y mayor. Los punteros se ajustan según sea necesario.
 
-## <a name="pbackfail"></a>  basic_streambuf::pbackfail
+## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a>basic_streambuf::pbackfail
 
 Función miembro virtual protegida que intenta volver a colocar un elemento en el flujo de entrada y convertirlo después en el elemento actual (indicado por el puntero siguiente).
 
@@ -483,16 +483,16 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parámetros
 
-*_Meta*<br/>
+*_Meta*\
 El carácter que se va a insertar en el búfer o **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valor devuelto
 
 Si la función no se ejecuta correctamente, devuelve **traits_type::eof** o inicia una excepción. De lo contrario, devuelve algún otro valor. El comportamiento predeterminado es devolver **traits_type::eof**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si  *\_Meta* igual a **traits_type:: EOF**, el elemento que se va a devolver es realmente el ya está en el flujo por delante del elemento actual. En caso contrario, ese elemento se sustituye por **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La función puede devolver un elemento de distintas maneras:
+Si * \_Meta* se compara igual a **traits_type::eof**, el elemento que se va a empujar es efectivamente el que ya está en la secuencia antes del elemento actual. De lo contrario, ese elemento se sustituye por **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La función puede devolver un elemento de distintas maneras:
 
 - Si hay una posición de devolución disponible, puede almacenar el elemento en ella y reducir el puntero siguiente para el búfer de entrada.
 
@@ -500,7 +500,7 @@ Si  *\_Meta* igual a **traits_type:: EOF**, el elemento que se va a devolver es 
 
 - En el caso de un búfer de flujo con flujos de entrada y salida comunes, puede facilitar una posición de devolución al escribir en algún destino externo algunos o todos los elementos situados entre los punteros inicial y siguientes para el búfer de salida.
 
-## <a name="pbase"></a>  basic_streambuf::pbase
+## <a name="basic_streambufpbase"></a><a name="pbase"></a>basic_streambuf::pbase
 
 Función protegida que devuelve un puntero al principio del búfer de salida.
 
@@ -512,9 +512,9 @@ char_type *pbase() const;
 
 Puntero al principio del búfer de salida.
 
-## <a name="pbump"></a>  basic_streambuf::pbump
+## <a name="basic_streambufpbump"></a><a name="pbump"></a>basic_streambuf::pbump
 
-Función protegida que agrega *recuento* al siguiente puntero del búfer de salida.
+Función protegida que agrega *count* al puntero siguiente para el búfer de salida.
 
 ```cpp
 void pbump(int count);
@@ -522,10 +522,10 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parámetros
 
-*count*<br/>
+*Contar*\
 Número de caracteres por el que se va a mover la posición de escritura hacia delante.
 
-## <a name="pos_type"></a>  basic_streambuf::pos_type
+## <a name="basic_streambufpos_type"></a><a name="pos_type"></a>basic_streambuf::pos_type
 
 Asocia un nombre de tipo del ámbito basic_streambuf a uno de los tipos de un parámetro de plantilla.
 
@@ -533,7 +533,7 @@ Asocia un nombre de tipo del ámbito basic_streambuf a uno de los tipos de un pa
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="pptr"></a>  basic_streambuf::pptr
+## <a name="basic_streambufpptr"></a><a name="pptr"></a>basic_streambuf::pptr
 
 Función protegida que devuelve un puntero al siguiente elemento del búfer de salida.
 
@@ -545,7 +545,7 @@ char_type *pptr() const;
 
 Puntero al siguiente elemento del búfer de salida.
 
-## <a name="pubimbue"></a>  basic_streambuf::pubimbue
+## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a>basic_streambuf::pubimbue
 
 Establece la configuración regional del objeto basic_streambuf.
 
@@ -555,14 +555,14 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Loc*<br/>
+*_Loc*\
 Referencia a una configuración regional.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Valor anterior almacenado en el objeto de configuración regional.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro almacena _ *Loc* en el objeto de configuración regional y llama a [imbue](#imbue).
 
@@ -570,7 +570,7 @@ La función miembro almacena _ *Loc* en el objeto de configuración regional y l
 
 Vea [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) para obtener un ejemplo de uso de `pubimbue`.
 
-## <a name="pubseekoff"></a>  basic_streambuf::pubseekoff
+## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a>basic_streambuf::pubseekoff
 
 Llama a [seekoff](#seekoff), una función virtual protegida que se invalida en una clase derivada.
 
@@ -582,24 +582,24 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
-La posición para buscar relativa a *_Way*.
+*_Off*\
+La posición a buscar en relación con *_Way*.
 
-*_Way*<br/>
+*_Way*\
 El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Which*<br/>
+*_Which*\
 Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la posición nueva o una posición de flujo no válida ([seekoff](#seekoff)(_ *Off*, `_Way`, `_Which`)).
+Devuelve la nueva posición o una posición de `_Way`secuencia `_Which`no válida ( [seekoff](#seekoff)(_ *Off*, , ) ).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Mueve el puntero en relación con *_Way*.
 
-## <a name="pubseekpos"></a>  basic_streambuf::pubseekpos
+## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a>basic_streambuf::pubseekpos
 
 Llama a [seekpos](#seekpos), una función virtual protegida que se invalida en una clase derivada, y restablece la posición actual del puntero.
 
@@ -609,21 +609,21 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parámetros
 
-*_Sp*<br/>
+*_Sp*\
 La posición que se va a buscar.
 
-*_Which*<br/>
+*_Which*\
 Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Posición nueva o una posición de flujo no válida. Para determinar si la posición del flujo no es válida, compare el valor devuelto con `pos_type(off_type(-1))`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [seekpos](#seekpos)(_ *Sp*, `_Which`).
 
-## <a name="pubsetbuf"></a>  basic_streambuf::pubsetbuf
+## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a>basic_streambuf::pubsetbuf
 
 Llama a [setbuf](#setbuf), una función virtual protegida que se invalida en una clase derivada.
 
@@ -635,17 +635,17 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Buffer*<br/>
+*_Buffer*\
 Puntero a `char_type` para esta instancia.
 
-*count*<br/>
+*Contar*\
 Tamaño del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve [setbuf](#setbuf)(`_Buffer`, `count`).
+Devuelve [setbuf](#setbuf)( `_Buffer`, `count`).
 
-## <a name="pubsync"></a>  basic_streambuf::pubsync
+## <a name="basic_streambufpubsync"></a><a name="pubsync"></a>basic_streambuf::pubsync
 
 Llama a [sync](#sync), una función virtual protegida que se invalida en una clase derivada, y actualiza el flujo externo asociado a este búfer.
 
@@ -655,9 +655,9 @@ int pubsync();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve [sincronización](#sync) o -1 si un error.
+Devuelve [sync](#sync) o -1 si se produce un error.
 
-## <a name="sbumpc"></a>  basic_streambuf::sbumpc
+## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a>basic_streambuf::sbumpc
 
 Lee y devuelve el elemento actual, moviendo el puntero de la secuencia.
 
@@ -669,7 +669,7 @@ int_type sbumpc();
 
 Elemento actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si hay una posición de lectura disponible, la función miembro devuelve **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(<strong>\*</strong>[gptr](#gptr)) e incrementa el puntero siguiente para el búfer de entrada. De lo contrario, devuelve [uflow](#uflow).
 
@@ -698,7 +698,7 @@ int main( )
 51
 ```
 
-## <a name="seekoff"></a>  basic_streambuf::seekoff
+## <a name="basic_streambufseekoff"></a><a name="seekoff"></a>basic_streambuf::seekoff
 
 Función miembro virtual protegida que trata de modificar las posiciones actuales de las secuencias controladas.
 
@@ -711,20 +711,20 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
-La posición para buscar relativa a *_Way*.
+*_Off*\
+La posición a buscar en relación con *_Way*.
 
-*_Way*<br/>
+*_Way*\
 El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Which*<br/>
+*_Which*\
 Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la posición nueva o una posición de flujo no válida (`seekoff` (_ *Off*, `_Way`, `_Which`)).
+Devuelve la nueva posición o `seekoff` una posición de `_Which`secuencia no válida ( (_ *Off*, `_Way`, ) ).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La nueva posición se determina de la siguiente forma:
 
@@ -732,13 +732,13 @@ La nueva posición se determina de la siguiente forma:
 
 - Si `_Way` == `ios_base::cur`, la nueva posición es la posición actual del flujo más _ *Off*.
 
-- Si `_Way` == `ios_base::end`, la nueva posición es el final del flujo más _ *Off*.
+- Si `_Way` == `ios_base::end`, la nueva posición es el final de la secuencia más _ *Off*.
 
 Normalmente, si **which & ios_base::in** es distinto de cero, el flujo de entrada se ve afectado y, si **which & ios_base::out** es distinto de cero, el flujo de salida se ve afectado. Pero el uso real de este parámetro varía entre búferes de flujo derivados.
 
 Si la función consigue modificar la posición o posiciones de flujo correctamente, devuelve la posición de flujo resultante o una de las posiciones de flujo resultantes. De lo contrario, devuelve una posición de flujo no válida. El comportamiento predeterminado es devolver una posición de flujo no válida.
 
-## <a name="seekpos"></a>  basic_streambuf::seekpos
+## <a name="basic_streambufseekpos"></a><a name="seekpos"></a>basic_streambuf::seekpos
 
 Función miembro virtual protegida que trata de modificar las posiciones actuales de las secuencias controladas.
 
@@ -748,17 +748,17 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parámetros
 
-*_Sp*<br/>
+*_Sp*\
 La posición que se va a buscar.
 
-*_Which*<br/>
+*_Which*\
 Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Posición nueva o una posición de flujo no válida. Para determinar si la posición del flujo no es válida, compare el valor devuelto con `pos_type(off_type(-1))`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La nueva posición es _ *Sp*.
 
@@ -766,7 +766,7 @@ Normalmente, si **which & ios_base::in** es distinto de cero, el flujo de entrad
 
 Si la función consigue modificar la posición o posiciones de flujo correctamente, devuelve la posición de flujo resultante o una de las posiciones de flujo resultantes. De lo contrario, devuelve una posición de flujo no válida (-1). El comportamiento predeterminado es devolver una posición de flujo no válida.
 
-## <a name="setbuf"></a>  basic_streambuf::setbuf
+## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a>basic_streambuf::setbuf
 
 Función miembro virtual protegida que realiza una operación específica de cada búfer de flujo derivado.
 
@@ -778,21 +778,21 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Buffer*<br/>
+*_Buffer*\
 Puntero a un búfer.
 
-*count*<br/>
+*Contar*\
 Tamaño del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
 
 El comportamiento predeterminado es devolver **this**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Vea [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf` proporciona un área de memoria para el objeto `streambuf` que se va a usar. En las clases derivadas se define cómo se va a usar el búfer.
 
-## <a name="setg"></a>  basic_streambuf::setg
+## <a name="basic_streambufsetg"></a><a name="setg"></a>basic_streambuf::setg
 
 Función protegida que almacena _ *Gbeg* en el puntero inicial, `_Gnext` en el siguiente puntero y `_Gend` en el puntero final del búfer de entrada.
 
@@ -804,18 +804,18 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Parámetros
 
-*_Gbeg*<br/>
+*_Gbeg*\
 Puntero al principio del búfer.
 
-*_Gnext*<br/>
+*_Gnext*\
 Puntero a cualquier ubicación en mitad del búfer.
 
-*_Gend*<br/>
+*_Gend*\
 Puntero al final del búfer.
 
-## <a name="setp"></a>  basic_streambuf::setp
+## <a name="basic_streambufsetp"></a><a name="setp"></a>basic_streambuf::setp
 
-Función protegida que almacena *_Pbeg* en el puntero inicial y *_Pend* en el puntero final del búfer de salida.
+Función protegida que almacena *_Pbeg* en el puntero inicial y *_Pend* en el puntero final para el búfer de salida.
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -823,13 +823,13 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pbeg*<br/>
+*_Pbeg*\
 Puntero al principio del búfer.
 
-*_Pend*<br/>
+*_Pend*\
 Puntero al final del búfer.
 
-## <a name="sgetc"></a>  basic_streambuf::sgetc
+## <a name="basic_streambufsgetc"></a><a name="sgetc"></a>basic_streambuf::sgetc
 
 Devuelve el elemento actual sin cambiar la posición en la secuencia.
 
@@ -841,7 +841,7 @@ int_type sgetc();
 
 Elemento actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si hay una posición de lectura disponible, la función miembro devuelve **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`*`[gptr](#gptr)). De lo contrario, devuelve [underflow](#underflow).
 
@@ -865,9 +865,9 @@ int main( )
 }
 ```
 
-## <a name="sgetn"></a>  basic_streambuf::sgetn
+## <a name="basic_streambufsgetn"></a><a name="sgetn"></a>basic_streambuf::sgetn
 
-Extrae hasta *recuento* caracteres del búfer de entrada y los almacena en el búfer proporcionado *ptr*.
+Extrae hasta *contar* caracteres del búfer de entrada y los almacena en el *búfer proporcionado ptr*.
 
 Este método es potencialmente inseguro, ya que se basa en el llamador para comprobar que los valores pasados son correctos.
 
@@ -879,19 +879,19 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*<br/>
+*Ptr*\
 Búfer que va a contener los caracteres extraídos.
 
-*count*<br/>
+*Contar*\
 Número de elementos que se van a leer.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Número de elementos leídos. Vea [streamsize](../standard-library/ios-typedefs.md#streamsize) para obtener más información.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve [xsgetn](#xsgetn)(`ptr`, `count`).
+La función miembro devuelve `ptr` [xsgetn](#xsgetn)( , `count`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -920,7 +920,7 @@ int main()
 }
 ```
 
-## <a name="showmanyc"></a>  basic_streambuf::showmanyc
+## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a>basic_streambuf::showmanyc
 
 Función miembro virtual protegida que devuelve un recuento del número de caracteres que se pueden extraer del flujo de entrada y garantiza que el programa no esté sujeto a una espera indefinida.
 
@@ -932,7 +932,7 @@ virtual streamsize showmanyc();
 
 El comportamiento predeterminado es devolver cero.
 
-## <a name="snextc"></a>  basic_streambuf::snextc
+## <a name="basic_streambufsnextc"></a><a name="snextc"></a>basic_streambuf::snextc
 
 Lee el elemento actual y devuelve el siguiente elemento.
 
@@ -944,7 +944,7 @@ int_type snextc();
 
 Siguiente elemento del flujo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro llama a [sbumpc](#sbumpc) y, si esa función devuelve **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), devuelve **traits_type::eof**. De lo contrario, devuelve [sgetc](#sgetc).
 
@@ -972,7 +972,7 @@ aa
 aa97
 ```
 
-## <a name="sputbackc"></a>  basic_streambuf::sputbackc
+## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a>basic_streambuf::sputbackc
 
 Coloca char_type en el flujo.
 
@@ -982,16 +982,16 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch*<br/>
+*_Ch*\
 Carácter.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve el carácter o el error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si está disponible una posición de devolución y *_Ch* igual que el carácter almacenado en esa posición, la función miembro disminuye el puntero siguiente para el búfer de entrada y devuelve **traits_type::** [ to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). De lo contrario, devuelve [pbackfail](#pbackfail)(`_Ch`).
+Si una posición de devolución está disponible y *_Ch* compara igual al carácter almacenado en esa posición, la función `_Ch`miembro disminuye el puntero siguiente para el búfer de entrada y devuelve **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( ). De lo contrario, devuelve `_Ch` [pbackfail](#pbackfail)( ).
 
 ### <a name="example"></a>Ejemplo
 
@@ -1020,7 +1020,7 @@ int main( )
 }
 ```
 
-## <a name="sputc"></a>  basic_streambuf::sputc
+## <a name="basic_streambufsputc"></a><a name="sputc"></a>basic_streambuf::sputc
 
 Coloca un carácter en la secuencia.
 
@@ -1030,16 +1030,16 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch*<br/>
+*_Ch*\
 Carácter.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve el carácter, si se ejecuta correctamente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si un `write position` está disponible, la función miembro almacena *_Ch* en la posición de escritura, incrementa el puntero siguiente para el búfer de salida y devuelve **traits_type::**[to_int_type ](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). De lo contrario, devuelve [overflow](#overflow)(`_Ch`).
+Si `write position` a está disponible, la función miembro almacena *_Ch* en la posición de escritura, incrementa el puntero siguiente para el búfer de salida y devuelve **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). De lo [overflow](#overflow)contrario, `_Ch`devuelve overflow ( ).
 
 ### <a name="example"></a>Ejemplo
 
@@ -1063,7 +1063,7 @@ a
 a
 ```
 
-## <a name="sputn"></a>  basic_streambuf::sputn
+## <a name="basic_streambufsputn"></a><a name="sputn"></a>basic_streambuf::sputn
 
 Coloca una cadena de caracteres en la secuencia.
 
@@ -1073,19 +1073,19 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*<br/>
+*Ptr*\
 Cadena de caracteres.
 
-*count*<br/>
+*Contar*\
 Recuento de caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Número de caracteres realmente insertados en el flujo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve [xsputn](#xsputn)(`ptr`, `count`). Para más información, vea la sección Comentarios de esta función miembro.
+La función miembro devuelve `ptr` [xsputn](#xsputn)( , `count`). Para más información, vea la sección Comentarios de esta función miembro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1109,7 +1109,7 @@ test
 4
 ```
 
-## <a name="stossc"></a>  basic_streambuf::stossc
+## <a name="basic_streambufstossc"></a><a name="stossc"></a>basic_streambuf::stossc
 
 Mueve más allá del elemento actual de la secuencia.
 
@@ -1117,7 +1117,7 @@ Mueve más allá del elemento actual de la secuencia.
 void stossc();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro llama a [sbumpc](#sbumpc). Tenga en cuenta que no se necesita una implementación para proporcionar esta función miembro.
 
@@ -1140,7 +1140,7 @@ int main( )
 }
 ```
 
-## <a name="sungetc"></a>  basic_streambuf::sungetc
+## <a name="basic_streambufsungetc"></a><a name="sungetc"></a>basic_streambuf::sungetc
 
 Obtiene un carácter de la secuencia.
 
@@ -1152,9 +1152,9 @@ int_type sungetc();
 
 Devuelve el carácter o un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si hay una posición de devolución disponible, la función miembro disminuye el puntero siguiente para el búfer de entrada y devuelve `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`*`[gptr](#gptr)). Pero no siempre es posible determinar el último carácter leído, por lo que se puede capturar en el estado del búfer actual. Si esto ocurre, la función devuelve [pbackfail](#pbackfail). Para evitar esta situación, realice un seguimiento del carácter que se va a devolver y llame a `sputbackc(ch)`, lo que no producirá un error siempre que no lo llame al principio del flujo ni intente devolver más de un carácter.
+Si hay una posición de devolución disponible, la función miembro disminuye `traits_type::`el `*`puntero siguiente para el búfer de entrada y devuelve [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( [gptr](#gptr)). Pero no siempre es posible determinar el último carácter leído, por lo que se puede capturar en el estado del búfer actual. Si esto ocurre, la función devuelve [pbackfail](#pbackfail). Para evitar esta situación, realice un seguimiento del carácter que se va a devolver y llame a `sputbackc(ch)`, lo que no producirá un error siempre que no lo llame al principio del flujo ni intente devolver más de un carácter.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1190,7 +1190,7 @@ int main( )
 }
 ```
 
-## <a name="swap"></a>  basic_streambuf::swap
+## <a name="basic_streambufswap"></a><a name="swap"></a>basic_streambuf::swap
 
 Intercambia los valores de este objeto por los valores del objeto `basic_streambuf` proporcionado.
 
@@ -1202,13 +1202,13 @@ void swap(basic_streambuf& right);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*right*|Referencia a un valor L al objeto `basic_streambuf` que se usa para intercambiar valores.|
+|*Correcto*|Referencia a un valor L al objeto `basic_streambuf` que se usa para intercambiar valores.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro protegida intercambia con *derecho* todos los punteros que controlan la `input buffer` y `output buffer`. También intercambia `right.`[getloc()](#getloc) con el objeto `locale`.
+La función miembro *right* protegida intercambia con right `input buffer` todos `output buffer`los punteros que controlan el archivo y el archivo . También intercambia `right.`[getloc()](#getloc) con el objeto `locale`.
 
-## <a name="sync"></a>  basic_streambuf::sync
+## <a name="basic_streambufsync"></a><a name="sync"></a>basic_streambuf::sincronización
 
 Función virtual protegida que intenta sincronizar las secuencias controladas con cualquier secuencia externa asociada.
 
@@ -1220,11 +1220,11 @@ virtual int sync();
 
 Si la función no se puede ejecutar correctamente, devuelve -1. El comportamiento predeterminado es devolver cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `sync` implica escribir cualquier elemento entre los punteros inicial y siguientes para el búfer de salida. No conlleva devolver ningún elemento entre los punteros siguientes y final para el búfer de entrada.
 
-## <a name="traits_type"></a>  basic_streambuf::traits_type
+## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a>basic_streambuf::traits_type
 
 Asocia un nombre de tipo al parámetro de plantilla **Tr**.
 
@@ -1232,7 +1232,7 @@ Asocia un nombre de tipo al parámetro de plantilla **Tr**.
 typedef Tr traits_type;
 ```
 
-## <a name="uflow"></a>  basic_streambuf::uflow
+## <a name="basic_streambufuflow"></a><a name="uflow"></a>basic_streambuf::uflow
 
 Función virtual protegida que extrae el elemento actual del flujo de entrada.
 
@@ -1244,7 +1244,7 @@ virtual int_type uflow();
 
 Elemento actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro virtual protegida intenta extraer el elemento actual **ch** del flujo de entrada, avanzar la posición de flujo actual y devolver el elemento como **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**ch**). Puede hacerlo de varias maneras:
 
@@ -1254,9 +1254,9 @@ La función miembro virtual protegida intenta extraer el elemento actual **ch** 
 
 - En el caso de un búfer de flujo con flujos de entrada y salida comunes, puede facilitar una posición de lectura al escribir en algún destino externo algunos o todos los elementos situados entre los punteros inicial y siguientes para el búfer de salida. O bien puede asignar almacenamiento nuevo o adicional para el búfer de entrada. Luego la función lee, desde algún origen externo, uno o más elementos.
 
-Si la función no se ejecuta correctamente, devuelve **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) o inicia una excepción. De lo contrario, devuelve el elemento actual `ch` en el flujo de entrada, convertido tal como se ha descrito arriba, y avanza el puntero siguiente para el búfer de entrada. El comportamiento predeterminado es llamar a [underflow](#underflow) y, si esa función devuelve **traits_type::eof**, devolver **traits_type::eof**. De lo contrario, la función devuelve el elemento actual **ch** en el flujo de entrada, convertido tal como se ha descrito anteriormente, y avanza el puntero siguiente para el búfer de entrada.
+Si la función no se puede realizar correctamente, devuelve **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)o produce una excepción. De lo contrario, devuelve el elemento actual `ch` en el flujo de entrada, convertido tal como se ha descrito arriba, y avanza el puntero siguiente para el búfer de entrada. El comportamiento predeterminado es llamar a [underflow](#underflow) y, si esa función devuelve **traits_type::eof**, devolver **traits_type::eof**. De lo contrario, la función devuelve el elemento actual **ch** en el flujo de entrada, convertido tal como se ha descrito anteriormente, y avanza el puntero siguiente para el búfer de entrada.
 
-## <a name="underflow"></a>  basic_streambuf::underflow
+## <a name="basic_streambufunderflow"></a><a name="underflow"></a>basic_streambuf::underflow
 
 Función virtual protegida que extrae el elemento actual de la secuencia de entrada.
 
@@ -1268,7 +1268,7 @@ virtual int_type underflow();
 
 Elemento actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro virtual protegida intenta extraer el elemento actual **ch** del flujo de entrada, sin avanzar la posición de flujo actual, y devolverlo como `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**ch**). Puede hacerlo de varias maneras:
 
@@ -1276,7 +1276,7 @@ La función miembro virtual protegida intenta extraer el elemento actual **ch** 
 
 - Puede facilitar una posición de lectura mediante la asignación de almacenamiento nuevo o adicional para el búfer de entrada y luego leer, desde algún origen externo, uno o más elementos. Para más información sobre esto, vea la sección Comentarios de [basic_streambuf (Clase)](../standard-library/basic-streambuf-class.md).
 
-Si la función no se puede ejecutar correctamente, devuelve `traits_type::`[eof](../standard-library/char-traits-struct.md#eof)`()` o inicia una excepción. De lo contrario, devuelve el elemento actual en el flujo de entrada, convertido tal como se ha descrito anteriormente. El comportamiento predeterminado es devolver `traits_type::eof()`.
+Si la función no `traits_type::`se puede realizar correctamente, devuelve [eof](../standard-library/char-traits-struct.md#eof) `()` o produce una excepción. De lo contrario, devuelve el elemento actual en el flujo de entrada, convertido tal como se ha descrito anteriormente. El comportamiento predeterminado es devolver `traits_type::eof()`.
 
 La función virtual `underflow`, junto con las funciones [sync](#sync) y [overflow](#overflow), define las características de la clase derivada de `streambuf`. Cada clase derivada podría implementar `underflow` de manera diferente, pero la interfaz con la clase stream que realiza la llamada es igual.
 
@@ -1286,7 +1286,7 @@ La función `underflow` proporciona al área de obtención caracteres desde el o
 
 En la clase `strstreambuf`, `underflow` ajusta el puntero [egptr](#egptr) para acceder al almacenamiento asignado dinámicamente mediante una llamada a `overflow`.
 
-## <a name="xsgetn"></a>  basic_streambuf::xsgetn
+## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a>basic_streambuf::xsgetn
 
 Función virtual protegida para extraer elementos del flujo de entrada.
 
@@ -1300,21 +1300,21 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*<br/>
+*Ptr*\
 Búfer que va a contener los caracteres extraídos.
 
-*count*<br/>
+*Contar*\
 Número de elementos que se van a extraer.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Número de elementos extraídos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro virtual protegida extrae hasta *recuento* elementos de la secuencia de entrada como si realizara llamadas repetidas a [sbumpc](#sbumpc)y los almacena en la matriz a partir *ptr*. Devuelve el número de elementos realmente extraídos.
+La función miembro virtual protegida extrae hasta para *contar* elementos de la secuencia de entrada, como si se realizaran llamadas repetidas a [sbumpc](#sbumpc)y los almacena en la matriz que comienza en *ptr*. Devuelve el número de elementos realmente extraídos.
 
-## <a name="xsputn"></a>  basic_streambuf::xsputn
+## <a name="basic_streambufxsputn"></a><a name="xsputn"></a>basic_streambuf::xsputn
 
 Función virtual protegida para insertar elementos en el flujo de salida.
 
@@ -1324,22 +1324,22 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*<br/>
+*Ptr*\
 Puntero a los elementos que se van a insertar.
 
-*count*<br/>
+*Contar*\
 Número de elementos que se van a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Número de elementos realmente insertados en el flujo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro virtual protegida inserta hasta *recuento* elementos en la salida de stream, como si realizara llamadas repetidas a [sputc](#sputc), desde el principio de la matriz en *ptr*. La inserción de caracteres en el flujo de salida una vez detiene todos *recuento* se han escrito caracteres, o si una llamada a `sputc( count)` devolvería `traits::eof()`. Devuelve el número de elementos realmente insertados.
+La función miembro virtual protegida inserta hasta *para contar* elementos en la secuencia de salida, como si se realizaran llamadas repetidas a [sputc](#sputc), desde la matriz que comienza en *ptr*. La inserción de caracteres en la secuencia de salida `sputc( count)` se `traits::eof()`detiene una vez que se han escrito todos los caracteres de *recuento,* o si se devuelve la llamada. Devuelve el número de elementos realmente insertados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programación con iostream](../standard-library/iostream-programming.md)<br/>
-[Convenciones de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Seguridad de roscas en la biblioteca estándar C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[programación iostream](../standard-library/iostream-programming.md)\
+[Convenciones de iostreams](../standard-library/iostreams-conventions.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: 7b87f8c57b0d871a577793936ea3cb7dbab7e58d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531175"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200582"
 ---
 # <a name="compiler-error-c3556"></a>Error del compilador C3556
 
-> '*expresión*': argumento incorrecto para 'decltype'
+> '*expresión*': argumento incorrecto para ' decltype '
 
 El compilador no puede deducir el tipo de la expresión que es el argumento para el especificador de tipo `decltype(`*expression*`)` .
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo de código siguiente, el compilador no puede deducir el tipo del argumento `myFunction` porque `myFunction` está sobrecargado. Para corregir este problema, puede usar `static_cast` para crear una instancia de un puntero a la instancia concreta de función para especificar en sobrecargada el `decltype` expresión.
+En el ejemplo de código siguiente, el compilador no puede deducir el tipo del argumento `myFunction` porque `myFunction` está sobrecargado. Para corregir este problema, puede usar `static_cast` para crear una instancia de un puntero a la función sobrecargada determinada para especificar en la expresión de `decltype`.
 
 ```cpp
 // C3556.cpp

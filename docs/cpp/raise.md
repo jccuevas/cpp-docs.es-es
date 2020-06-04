@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 865524fe91b7d137e3a943973dcca6d833bd16df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317232"
 ---
-# <a name="raise"></a>__raise
+# <a name="__raise"></a>__raise
 
 Resalta el sitio de llamada de un evento.
 
@@ -24,14 +24,14 @@ Resalta el sitio de llamada de un evento.
 __raise method-declarator;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-En código administrado, un evento solo se puede generar desde dentro de la clase donde se define. Consulte [evento](../windows/event-cpp-component-extensions.md) para obtener más información.
+En código administrado, un evento solo se puede generar desde dentro de la clase donde se define. Consulte [el evento](../extensions/event-cpp-component-extensions.md) para obtener más información.
 
-La palabra clave **__raise** genera un error que se genera si se llama a un no evento.
+La palabra clave **__raise** hace que se emita un error si se llama a un no evento.
 
 > [!NOTE]
->  Una clase o struct basada en plantilla no puede contener eventos.
+> Una clase o struct basada en plantilla no puede contener eventos.
 
 ## <a name="example"></a>Ejemplo
 
@@ -59,8 +59,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
-[Control de eventos](../cpp/event-handling.md)<br/>
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Manejo de eventos](../cpp/event-handling.md)<br/>
+[Extensiones de componentes para plataformas de tiempo de ejecución](../extensions/component-extensions-for-runtime-platforms.md)

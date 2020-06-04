@@ -1,6 +1,6 @@
 ---
 title: __stosw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: 4bfdf2191a4bf88ce6d061e1729e194236564330
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326425"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219928"
 ---
-# <a name="stosw"></a>__stosw
+# <a name="__stosw"></a>__stosw
 
 **Específicos de Microsoft**
 
-Genera una instrucción de cadena de la tienda (`rep stosw`).
+Genera una instrucción de cadena de`rep stosw`almacén ().
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __stosw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*dest*<br/>
-[out] El destino de la operación.
+*Destino*\
+enuncia Destino de la operación.
 
-*Data*<br/>
-[in] Para almacenar los datos.
+*Data*\
+de Datos que se van a almacenar.
 
-*Recuento*<br/>
-[in] La longitud del bloque de las palabras que desea escribir.
+*Contabiliza*\
+de Longitud del bloque de palabras que se va a escribir.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __stosw(
 |---------------|------------------|
 |`__stosw`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El resultado es que la palabra `Data` se escribe en un bloque de `Count` palabras en el `Dest` cadena.
+El resultado es que la palabra *Data* se escribe en un bloque de palabras de recuento en la cadena de *destino* .
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```C
 // stosw.c
 // processor: x86, x64
 #include <stdio.h>
@@ -84,4 +84,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

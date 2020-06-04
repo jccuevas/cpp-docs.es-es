@@ -1,9 +1,9 @@
 ---
 title: _query_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _query_new_handler
 - query_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949691"
 ---
-# <a name="querynewhandler"></a>_query_new_handler
+# <a name="_query_new_handler"></a>_query_new_handler
 
 Devuelve la dirección de la nueva rutina de controlador actual.
 
@@ -46,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve la dirección de la nueva rutina de controlador actual según lo establecido por **_set_new_handler**.
+Devuelve la dirección de la nueva rutina del controlador actual tal y como la establece **_set_new_handler**.
 
 ## <a name="remarks"></a>Comentarios
 
-El C++ **_query_new_handler** función devuelve la dirección de la función de control de excepciones actual establecida por la [_set_new_handler](set-new-handler.md) función. **_set_new_handler** se usa para especificar una función de control de excepciones que va a obtener el control si el **nuevo** operador no puede asignar memoria. Para obtener más información, vea la descripción de los [operadores new y delete](../../cpp/new-and-delete-operators.md) en la referencia del lenguaje de C++.
+La C++ función **_query_new_handler** devuelve la dirección de la función de control de excepciones actual establecida por C++ la función [_set_new_handler](set-new-handler.md) . **_set_new_handler** se utiliza para especificar una función de control de excepciones que se va a obtener control si el operador **New** no puede asignar memoria. Para obtener más información, vea la descripción de los [operadores new y delete](../../cpp/new-and-delete-operators.md) en la referencia del lenguaje de C++.
 
 ## <a name="requirements"></a>Requisitos
 

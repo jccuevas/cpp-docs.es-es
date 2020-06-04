@@ -1,30 +1,30 @@
 ---
 title: Advertencia de las herramientas del vinculador LNK4221
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - LNK4221
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: baea8643001c550aeb3cb35dc6fe414e4330c0c1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fb355b6d004d9488abac89ef44c9ec38c791ffda
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523473"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988043"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Advertencia de las herramientas del vinculador LNK4221
 
-Este archivo de objeto no define los símbolos públicos definidos previamente, por lo que no se utilizará en ninguna vinculación que utilice esta biblioteca
+Este archivo objeto no define ningún símbolo público que no se haya definido previamente, por lo que no se usará en ninguna operación de vínculo que consuma esta biblioteca.
 
-Tenga en cuenta los siguientes fragmentos de código de dos.
+Considere los dos fragmentos de código siguientes.
 
-```
+```cpp
 // a.cpp
 #include <atlbase.h>
 ```
 
-```
+```cpp
 // b.cpp
 #include <atlbase.h>
 int function()
@@ -33,10 +33,20 @@ int function()
 }
 ```
 
-Para compilar los archivos y crea dos archivos de objeto, ejecute **cl /c a.cpp b.cpp** en un símbolo del sistema. Si vincula los archivos objeto ejecutando **vincular/lib out a.obj b.obj**, recibirá la advertencia LNK4221. Si vincula los objetos mediante la ejecución de **vincular/lib out b.obj a.obj**, no recibirá una advertencia.
+Para compilar los archivos y crear dos archivos objeto, ejecute **cl/c a. cpp b. cpp** en un símbolo del sistema. Si vincula los archivos objeto mediante la ejecución de **Link/lib/out: test. lib a. obj b. obj**, recibirá la advertencia LNK4221. Si vincula los objetos ejecutando **Link/lib/out: test. lib b. obj a. obj**, no recibirá ninguna advertencia.
 
-Se genera ninguna advertencia en el segundo escenario porque el vinculador funciona de una manera de último en salir (LIFO). En el primer escenario, b.obj se procesa antes que a.obj y a.obj no tiene ningún símbolo nuevo para agregar. Si indica al vinculador que procese a.obj en primer lugar, puede evitar la advertencia.
+No se emite ninguna advertencia en el segundo escenario porque el enlazador funciona en el último en salir (LIFO). En el primer escenario, b. obj se procesa antes que un. obj y un. obj no tiene símbolos nuevos que agregar. Al indicar al enlazador que procese un. obj en primer lugar, puede evitar la advertencia.
 
-Una causa común de este error es cuando dos archivos de origen especifican la opción [/Yc (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md) con el mismo nombre de archivo de encabezado especificado en el **encabezado precompilado** campo. Una causa común de este problema se ocupa de stdafx.h ya que, de forma predeterminada, stdafx.cpp incluye stdafx.h y no agrega ningún nuevo símbolo. Si otro archivo de origen incluye stdafx.h con **/Yc** y el archivo .obj asociado se procesa antes que stdafx.obj, el vinculador producirá LNK4221.
+::: moniker range=">=vs-2019"
 
-Una manera de resolver este problema consiste en asegurarse de que para cada encabezado precompilado, hay solo un archivo de origen que se incluye con **/Yc**. Todos los demás archivos de origen deben utilizar encabezados precompilados. Para obtener más información acerca de cómo cambiar esta configuración, consulte [/Yu (utilizar el archivo de encabezado precompilado)](../../build/reference/yu-use-precompiled-header-file.md).
+Una causa común de este error es cuando dos archivos de código fuente especifican la opción [/YC (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md) con el mismo nombre de archivo de encabezado especificado en el campo de **encabezado precompilado** . Una causa común de este problema se centra en *PCH. h* , ya que, de forma predeterminada, *PCH. cpp* incluye PCH. *h* y no agrega ningún símbolo nuevo. Si otro archivo de código fuente incluye *PCH. h* con **/YC** y el archivo. obj asociado se procesa antes que PCH. obj, el vinculador producirá LNK4221.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Una causa común de este error es cuando dos archivos de código fuente especifican la opción [/YC (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md) con el mismo nombre de archivo de encabezado especificado en el campo de **encabezado precompilado** . Una causa común de este problema trata con *stdafx. h* , ya que, de forma predeterminada, *stdafx. cpp* incluye *stdafx. h* y no agrega ningún símbolo nuevo. Si otro archivo de código fuente incluye *stdafx. h* con **/YC** y el archivo. obj asociado se procesa antes que stdafx. obj, el vinculador producirá LNK4221.
+
+::: moniker-end
+
+Una manera de resolver este problema es asegurarse de que, para cada encabezado precompilado, solo hay un archivo de origen que lo incluye con **/YC**. El resto de los archivos de código fuente deben usar encabezados precompilados. Para obtener más información sobre cómo cambiar esta configuración, vea [/Yu (usar el archivo de encabezado precompilado)](../../build/reference/yu-use-precompiled-header-file.md).

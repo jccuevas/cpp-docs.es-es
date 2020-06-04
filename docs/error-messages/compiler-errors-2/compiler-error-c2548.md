@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2548
 ms.assetid: 01e9c835-9bf3-4020-9295-5ee448c519f3
-ms.openlocfilehash: 2c680d86a0ea69d67f9e53a481f2f096f4cc7878
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f89208314c1d2e8ddb5100da72aa600a411b4608
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659607"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756804"
 ---
 # <a name="compiler-error-c2548"></a>Error del compilador C2548
 
-'clase:: miembro': falta el parámetro predeterminado para un parámetro
+' Class:: Member ': falta el parámetro predeterminado para el parámetro Parameter
 
-Falta un parámetro en la lista de parámetros predeterminados. Si se proporciona un parámetro predeterminado en cualquier parte de una lista de parámetros, debe definir los parámetros predeterminados para todos los demás parámetros.
+Falta un parámetro en la lista de parámetros predeterminada. Si proporciona un parámetro predeterminado en cualquier parte de una lista de parámetros, debe definir los parámetros predeterminados para todos los parámetros subsiguientes.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2548:
+En el ejemplo siguiente se genera C2548:
 
-```
+```cpp
 // C2548.cpp
 // compile with: /c
 void func( int = 1, int, int = 3);  // C2548

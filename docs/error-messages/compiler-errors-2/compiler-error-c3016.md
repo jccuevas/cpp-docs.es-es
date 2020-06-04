@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3016
 ms.assetid: 3423467e-e8bb-4f35-b4db-7925cafa74c1
-ms.openlocfilehash: edb83c210ca7e3f6c648522b893e9ed90cea1874
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea552a987863207e708d3fd98bc64b1e99a34b51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479657"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742241"
 ---
 # <a name="compiler-error-c3016"></a>Error del compilador C3016
 
@@ -21,7 +21,7 @@ La variable de índice de una instrucción `for` de OpenMP debe ser un tipo ente
 
 El ejemplo siguiente genera la advertencia C3016:
 
-```
+```cpp
 // C3016.cpp
 // compile with: /openmp
 int main()

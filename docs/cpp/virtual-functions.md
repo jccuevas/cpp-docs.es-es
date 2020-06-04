@@ -1,17 +1,17 @@
 ---
 title: Funciones virtuales
-ms.date: 11/04/2016
+ms.date: 09/10/2019
 helpviewer_keywords:
 - functions [C++], virtual functions
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 07dfd8a602dca93c89a078b2eb69e04cf9d4a7a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613062"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926086"
 ---
 # <a name="virtual-functions"></a>Funciones virtuales
 
@@ -30,6 +30,7 @@ using namespace std;
 class Account {
 public:
    Account( double d ) { _balance = d; }
+   virtual ~Account() {}
    virtual double GetBalance() { return _balance; }
    virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
 private:
@@ -50,15 +51,15 @@ public:
 
 int main() {
    // Create objects of type CheckingAccount and SavingsAccount.
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+   CheckingAccount checking( 100.00 );
+   SavingsAccount  savings( 1000.00 );
 
    // Call PrintBalance using a pointer to Account.
-   Account *pAccount = pChecking;
+   Account *pAccount = &checking;
    pAccount->PrintBalance();
 
    // Call PrintBalance using a pointer to Account.
-   pAccount = pSavings;
+   pAccount = &savings;
    pAccount->PrintBalance();
 }
 ```
@@ -130,8 +131,6 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Salida
-
 ```Output
 Derived::NameOf
 Invoked by Base
@@ -141,11 +140,11 @@ Invoked by Derived
 
 Observe que, independientemente de si la función `NameOf` se invoca a través de un puntero a `Base` o un puntero a `Derived`, llama a la función para `Derived`. Llama a la función para `Derived` porque `NameOf` es una función virtual y tanto `pBase` como `pDerived` apuntan a un objeto de tipo `Derived`.
 
-Dado que se llama a funciones virtuales sólo para objetos de tipos de clase, no se puede declarar funciones globales o estáticas como **virtual**.
+Dado que solo se llama a las funciones virtuales para objetos de tipos de clase, no se pueden declarar funciones globales o estáticas como **virtuales**.
 
-El **virtual** se puede usar la palabra clave al declarar funciones de reemplazo en una clase derivada, pero no es necesario; reemplazos de funciones virtuales siempre son virtuales.
+La palabra clave **virtual** se puede usar al declarar funciones de reemplazo en una clase derivada, pero no es necesario. las invalidaciones de las funciones virtuales siempre son virtuales.
 
-Funciones virtuales en una clase base deben definirse a menos que se declaran mediante la *especificador puro*. (Para obtener más información acerca de las funciones virtuales puras, vea [clases abstractas](../cpp/abstract-classes-cpp.md).)
+Las funciones virtuales de una clase base se deben definir a menos que se declaren mediante el *especificador Pure*. (Para obtener más información sobre las funciones virtuales puras, vea [clases abstractas](../cpp/abstract-classes-cpp.md)).
 
 El mecanismo de llamada a funciones virtuales se puede suprimir calificando explícitamente el nombre de función con el operador de resolución de ámbito (`::`). Considere el ejemplo anterior que implica la clase de `Account`. Para llamar a `PrintBalance` en la clase base, utilice código como el siguiente:
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: c816c1b3f5481ccff19fd2a2377c5fc98f950fee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b83845f0ed0efeee6485780c7e4f828e40473e9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577832"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186704"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>Advertencia del compilador (nivel 1) C4488
 
-'function': requiere ' palabra clave para implementar el método de interfaz 'método_de_interfaz'
+' function ': requiere la palabra clave ' keyword ' para implementar el método de interfaz ' interface_method '
 
 Una clase debe implementar todos los miembros de una interfaz de la que hereda directamente. Un miembro implementado debe tener accesibilidad pública y debe marcarse como virtual.
 
 ## <a name="example"></a>Ejemplo
 
-C4488 puede producirse si un miembro implementado no es público. El ejemplo siguiente genera la advertencia C4488.
+C4488 puede producirse si un miembro implementado no es público. En el ejemplo siguiente se genera C4488.
 
-```
+```cpp
 // C4488.cpp
 // compile with: /clr /c /W1 /WX
 interface struct MyI {
@@ -42,9 +42,9 @@ public:
 
 ## <a name="example"></a>Ejemplo
 
-C4488 puede producirse si un miembro implementado no está marcado como virtual. El ejemplo siguiente genera la advertencia C4488.
+C4488 puede producirse si un miembro implementado no está marcado como virtual. En el ejemplo siguiente se genera C4488.
 
-```
+```cpp
 // C4488_b.cpp
 // compile with: /clr /c /W1 /WX
 interface struct MyI {

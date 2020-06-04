@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4293
 ms.assetid: babecd96-eb51-41a5-9835-462c7a46dbad
-ms.openlocfilehash: 03520e2018efd611985c0eeca8bb2cac259ff3cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f224996904c583001496e04c020de97bc932738
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598528"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175693"
 ---
 # <a name="compiler-warning-level-1-c4293"></a>Advertencia del compilador (nivel 1) C4293
 
-'operator': desplazar un recuento negativo o demasiado grande; comportamiento impredecible
+' operador ': recuento de desplazamiento negativo o demasiado grande; comportamiento no definido
 
-Si un valor de desplazamiento es negativo o demasiado grande, el comportamiento de la imagen resultante es indefinido.
+Si un recuento de desplazamiento es negativo o demasiado grande, el comportamiento de la imagen resultante es indefinido.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4293:
+En el ejemplo siguiente se genera C4293:
 
-```
+```cpp
 // C4293.cpp
 // compile with: /c /W1
 unsigned __int64 combine (unsigned lo, unsigned hi) {

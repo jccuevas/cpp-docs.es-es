@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 511da8ebe896cb2d0e2869f36bdb474cae5ba521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507762"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756284"
 ---
 # <a name="compiler-error-c3915"></a>Error del compilador C3915
 
-'type' no tiene ninguna propiedad indizada predeterminada (indizador de clase)
+' type ' no tiene una propiedad indizada predeterminada (indizador de clase)
 
-Un tipo no tiene un valor predeterminado, la propiedad indizada.
+Un tipo no tiene una propiedad indizada predeterminada.
 
-Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).
+Para obtener más información, consulta [property](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C3915.
+En el ejemplo siguiente se genera C3915.
 
-```
+```cpp
 // C3915.cpp
 // compile with: /clr
 ref class X {
@@ -48,11 +48,11 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-C3915 también puede producirse si se intenta consumir un indizador predeterminado en la misma operación de compilación donde se definió con <xref:System.Reflection.DefaultMemberAttribute>.
+C3915 también puede producirse si intenta utilizar un indizador predeterminado en la misma operación de compilación en la que se definió con <xref:System.Reflection.DefaultMemberAttribute>.
 
-El ejemplo siguiente genera el error C3915.
+En el ejemplo siguiente se genera C3915.
 
-```
+```cpp
 // C3915_b.cpp
 // compile with: /clr
 using namespace System;

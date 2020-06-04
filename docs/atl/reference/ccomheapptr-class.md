@@ -1,5 +1,5 @@
 ---
-title: CComHeapPtr (clase)
+title: Clase CComHeapPtr
 ms.date: 11/04/2016
 f1_keywords:
 - CComHeapPtr
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-ms.openlocfilehash: eaa21700f63ae07565dba4b8b3b5dabac69e0168
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78cadfff9a278cf080393ab919f3891b201c91aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553743"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327778"
 ---
-# <a name="ccomheapptr-class"></a>CComHeapPtr (clase)
+# <a name="ccomheapptr-class"></a>Clase CComHeapPtr
 
-Una clase de puntero inteligente para administrar los punteros de montón.
+Una clase de puntero inteligente para administrar punteros de montón.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,19 +29,19 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 #### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-El tipo de objeto que se almacenará en el montón.
+El tipo de objeto que se va a almacenar en el montón.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CComHeapPtr::CComHeapPtr](#ccomheapptr)|El constructor.|
+|[CComheapPtr::CComheapPtr](#ccomheapptr)|El constructor.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CComHeapPtr` se deriva de `CHeapPtr`, pero usa [CComAllocator](../../atl/reference/ccomallocator-class.md) para asignar memoria usa COM rutinas. Consulte [CHeapPtr](../../atl/reference/cheapptr-class.md) y [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) para los métodos disponibles.
+`CComHeapPtr`deriva de `CHeapPtr`, pero usa [CComAllocator](../../atl/reference/ccomallocator-class.md) para asignar memoria mediante rutinas COM. Consulte [CHeapPtr](../../atl/reference/cheapptr-class.md) y [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) para obtener los métodos disponibles.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -55,7 +55,7 @@ El tipo de objeto que se almacenará en el montón.
 
 **Encabezado:** atlbase.h
 
-##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr
+## <a name="ccomheapptrccomheapptr"></a><a name="ccomheapptr"></a>CComheapPtr::CComheapPtr
 
 El constructor.
 
@@ -69,13 +69,13 @@ explicit CComHeapPtr(T* pData) throw();
 *pData*<br/>
 Objeto `CComHeapPtr` existente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El puntero del montón, opcionalmente, puede crearse una existente `CComHeapPtr` objeto. Si es así, el nuevo `CComHeapPtr` objeto asume la responsabilidad de administrar los recursos y el nuevo puntero.
+El puntero de montón se `CComHeapPtr` puede crear opcionalmente utilizando un objeto existente. Si es así, el nuevo `CComHeapPtr` objeto asume la responsabilidad de administrar el nuevo puntero y los recursos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CHeapPtr (clase)](../../atl/reference/cheapptr-class.md)<br/>
-[CHeapPtrBase (clase)](../../atl/reference/cheapptrbase-class.md)<br/>
-[CComAllocator (clase)](../../atl/reference/ccomallocator-class.md)<br/>
+[Clase CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Clase CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
+[Clase CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - operator wchar_t* [C++]
 - operator char* [C++]
 ms.assetid: acd9f4a7-b427-42c2-aaae-acae21cab317
-ms.openlocfilehash: bfc149b0f0688bed567bf202fddb4ab2c3102630
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5fdce29b0be7e9aabae9e3c602822045a7bccafd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325814"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190306"
 ---
-# <a name="bstrtwchart-bstrtchar"></a>_bstr_t::wchar_t\*, _bstr_t::char\*
+# <a name="_bstr_twchar_t-_bstr_tchar"></a>_bstr_t::wchar_t\*, _bstr_t::char\*
 
 **Específicos de Microsoft**
 
@@ -30,12 +30,12 @@ operator const char*( ) const;
 operator char*( ) const;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Estos operadores pueden utilizarse para extraer los datos de caracteres encapsulados por el objeto `BSTR`. La asignación de un nuevo valor al puntero devuelto no modifica los datos BSTR originales.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_bstr_t (Clase)](../cpp/bstr-t-class.md)

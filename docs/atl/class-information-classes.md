@@ -2,17 +2,15 @@
 title: Clases de información de clase (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.classes.info
 helpviewer_keywords:
 - class information, retrieving
 ms.assetid: 39365025-f24a-41ae-87ab-4ae8ed085b98
-ms.openlocfilehash: ed3ede88b285f5c6a5209126e83f5364102ee154
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d95a3444b6f592833367750a26e3a0e4cc0938e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250652"
 ---
 # <a name="class-information-classes"></a>Clases de información de clase
 
@@ -23,4 +21,3 @@ La siguiente clase proporciona compatibilidad para recuperar información de la 
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../atl/atl-class-overview.md)
-

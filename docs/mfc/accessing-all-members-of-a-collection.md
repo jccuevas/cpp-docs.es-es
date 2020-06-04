@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: b6c79164bc1049f39ce0af4e00341df8f234b34a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae866b71d2a9f001c56b2c61d99749cab824b313
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392991"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acceso a todos los miembros de una colección
 
@@ -76,4 +76,3 @@ Para obtener más información, vea [Eliminar todos los objetos de una colecció
 ## <a name="see-also"></a>Vea también
 
 [Colecciones](../mfc/collections.md)
-

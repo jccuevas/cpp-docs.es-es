@@ -6,29 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523915"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686467"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Define las clases de plantilla de contenedor set y multiset, así como sus plantillas auxiliares.
+Define las plantillas de clase contenedoras set y MultiSet, así como sus plantillas auxiliares.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <set>
-```
+**Encabezado:** \<set>
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> La biblioteca de > de \<set también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="operators"></a>Operadores
 
-|Versión set |Versión multiset|Descripción|
-|-----------------|----------------------|-----------------|
+|Versión set|Versión multiset|Descripción|
+|-|-|-|
 |[operator!= (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|Comprueba si el objeto set o multiset a la izquierda del operador no es igual que el objeto set o multiset situado a la derecha del operador.|
 |[operator< (set)](../standard-library/set-operators.md#op_lt)|[operator< (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Comprueba si el objeto set o multiset a la izquierda del operador es menor que el objeto set o multiset situado a la derecha del operador.|
 |[operator<= (set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Comprueba si el objeto set o multiset a la izquierda del operador es menor o igual que el objeto set o multiset situado a la derecha del operador.|
@@ -38,19 +41,19 @@ Define las clases de plantilla de contenedor set y multiset, así como sus plant
 
 ### <a name="specialized-template-functions"></a>Funciones de plantilla especializadas
 
-|Versión set |Versión multiset|Descripción|
-|-----------------|----------------------|-----------------|
+|Versión set|Versión multiset|Descripción|
+|-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (conjunto mútiple)](../standard-library/set-functions.md#swap_multiset)|Intercambia los elementos de dos sets o multisets.|
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[set (Clase)](../standard-library/set-class.md)|Se usa para el almacenamiento y la recuperación de datos de una colección en la que los valores de los elementos contenidos son únicos y sirven como valores de clave según los cuales se ordenan automáticamente los datos.|
 |[multiset (Clase)](../standard-library/multiset-class.md)|Se usa para el almacenamiento y la recuperación de datos de una colección en la que los valores de los elementos contenidos no tienen que ser únicos y en la que sirven como valores de clave según los cuales se ordenan automáticamente los datos.|
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

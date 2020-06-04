@@ -4,29 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - rend method
 ms.assetid: 80f3dd04-dd2c-4b52-b0ed-d567ec5d186c
-ms.openlocfilehash: ecd784a5db7949301b23895d65ec70804fb75951
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 494099e8d9c96b143e8c9de14a2c7d4f48cfc4a1
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592002"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258177"
 ---
 # <a name="container-classrend"></a>Clase de contenedor::rend
 
 > [!NOTE]
-> Este tema se incluye en la documentación de Visual C++ como un ejemplo no funcional de los contenedores usados en la biblioteca estándar de C++. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
+> Este tema se encuentra en la C++ documentación de Microsoft como un ejemplo no funcional de contenedores usados en C++ la biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
 
 La función miembro devuelve un iterador inverso que apunta al primer elemento de la secuencia (o más allá del final de una secuencia vacía), para designar el final de la secuencia inversa.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-
-    const_reverse_iterator rend() const;
+```cpp
+const_reverse_iterator rend() const;
 
 reverse_iterator rend();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clase contenedora de ejemplo](../standard-library/sample-container-class.md)<br/>
+[Sample Container (Clase)](../standard-library/sample-container-class.md)

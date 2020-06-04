@@ -1,48 +1,50 @@
 ---
 title: __readeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readeflags
 helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-ms.openlocfilehash: e5294180904d0d7ca3bbd1de75e45e058a33c88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afdc0f20a3ae72865a80ba2eb7f896f79f63171
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594277"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857910"
 ---
-# <a name="readeflags"></a>__readeflags
+# <a name="__readeflags"></a>__readeflags
 
-Lee que el estado del programa y control (EFLAGS) se registran.
+**Específicos de Microsoft**
+
+Lee el registro de estado y control (EFLAGS) del programa.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-unsigned     int __readeflags(void);
-unsigned __int64 __readeflags(void);
+```C
+unsigned     int __readeflags(void); /* x86 */
+unsigned __int64 __readeflags(void); /* x64 */
 ```
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor del registro EFLAGS. El valor devuelto es de 32 bits largo en una plataforma de 32 bits y 64 bits largo en una plataforma de 64 bits.
+El valor del registro EFLAGS. El valor devuelto es de 32 bits de longitud en una plataforma de 32 bits y de 64 bits en una plataforma de 64 bits.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Estas rutinas sólo están disponibles como intrínsecos.
+Estas rutinas solo están disponibles como intrínsecos.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
 |`__readeflags`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del Compilador](../intrinsics/compiler-intrinsics.md)\
 [__writeeflags](../intrinsics/writeeflags.md)

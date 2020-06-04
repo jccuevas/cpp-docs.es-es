@@ -79,15 +79,14 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 55c870263fdf6bd96cf8a137308adb329866c9e5
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524552"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150672"
 ---
-# <a name="forwardlist-class"></a>forward_list (Clase)
+# <a name="forward_list-class"></a>forward_list (Clase)
 
 Describe un objeto que controla una secuencia de elementos de longitud variable. La secuencia se almacena como una lista de nodos vinculada individualmente, cada uno de los cuales contiene un miembro de tipo `Type`.
 
@@ -101,35 +100,38 @@ class forward_list
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Type*|Tipo de datos de elemento que se almacenará en forward_list.|
-|*Asignador*|Objeto de asignador almacenado que encapsula detalles sobre la asignación y desasignación de memoria de forward_list. Este parámetro es opcional. El valor predeterminado es allocator< `Type`>.|
+Escriba * \
+Tipo de datos de elemento que se almacenará en forward_list.
 
-## <a name="remarks"></a>Comentarios
+\ de *asignador*
+Objeto de asignador almacenado que encapsula detalles sobre la asignación y desasignación de memoria de forward_list. Este parámetro es opcional. El valor predeterminado es allocator <`Type`>.
 
-Un `forward_list` objeto asigna y libera almacenamiento para la secuencia que controla a través de un objeto almacenado de clase *asignador* que se basa en [Allocator (clase)](../standard-library/allocator-class.md) (conocidos comúnmente como `std::allocator)`. Para obtener más información, vea [Asignadores](../standard-library/allocators.md). Un objeto de asignador debe tener la misma interfaz externa que un objeto de clase de plantilla `allocator`.
+## <a name="remarks"></a>Observaciones
+
+Un objeto `forward_list` asigna y libera almacenamiento para la secuencia que controla a través de un objeto almacenado de clase *allocator* que se basa en la [clase allocator](../standard-library/allocator-class.md) (conocida comúnmente como `std::allocator)`. Para obtener más información, vea [Asignadores](../standard-library/allocators.md). Un objeto de asignador debe tener la misma interfaz externa que un objeto de tipo `allocator`.
 
 > [!NOTE]
 > El objeto de asignador almacenado no se copia cuando se asigna el objeto contenedor.
 
 Los iteradores, punteros y referencias pueden llegar a no ser válidos cuando los elementos de su secuencia controlada se borran mediante `forward_list`. Las inserciones y uniones realizados en la secuencia controlada mediante `forward_list` no invalidan los iteradores.
 
-Las adiciones a la secuencia controlada pueden realizarse mediante llamadas a [forward_list::insert_after](#insert_after), que es la única función miembro que llama al constructor `Type(const  T&)`. `forward_list` también puede llamar a constructores de movimiento. Si una expresión de ese tipo produce una excepción, el objeto contenedor no inserta ningún elemento nuevo y vuelve a producir la excepción. Así, un objeto de clase de plantilla `forward_list` se queda en un estado conocido cuando se producen esas excepciones.
+Las adiciones a la secuencia controlada pueden realizarse mediante llamadas a [forward_list::insert_after](#insert_after), que es la única función miembro que llama al constructor `Type(const  T&)`. `forward_list` también puede llamar a constructores de movimiento. Si una expresión de ese tipo produce una excepción, el objeto contenedor no inserta ningún elemento nuevo y vuelve a producir la excepción. Por lo tanto, un objeto de tipo `forward_list` se deja en un estado conocido cuando se producen esas excepciones.
+
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|||
 |-|-|
 |[forward_list](#forward_list)|Construye un objeto de tipo `forward_list`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|||
 |-|-|
 |[allocator_type](#allocator_type)|Tipo que representa la clase de asignador de un objeto de lista de reenvíos.|
 |[const_iterator](#const_iterator)|Tipo que proporciona un iterador constante para la lista de reenvíos.|
-|[const_pointer](#const_pointer)|Un tipo que proporciona un puntero a un **const** elemento en una lista de reenvíos.|
+|[const_pointer](#const_pointer)|Un tipo que proporciona un puntero a un elemento **const** de una lista de reenvíos.|
 |[const_reference](#const_reference)|Tipo que proporciona una referencia constante a un elemento de la lista de reenvíos.|
 |[difference_type](#difference_type)|Tipo entero con signo que se puede usar para representar el número de elementos de una lista de reenvíos en un intervalo entre elementos a los que apuntan los iteradores.|
 |[iterator](#iterator)|Tipo que proporciona un iterador para la lista de reenvíos.|
@@ -138,9 +140,9 @@ Las adiciones a la secuencia controlada pueden realizarse mediante llamadas a [f
 |[size_type](#size_type)|Tipo que representa la distancia sin signo entre dos elementos.|
 |[value_type](#value_type)|Tipo que representa el tipo de elemento almacenado en una lista de reenvíos.|
 
-### <a name="member-functions"></a>Funciones miembro
+### <a name="functions"></a>Functions
 
-|Función miembro|Descripción|
+|||
 |-|-|
 |[assign](#assign)|Borra elementos de una lista de reenvíos y copia un nuevo conjunto de elementos a una lista de reenvíos de destino.|
 |[before_begin](#before_begin)|Devuelve un iterador que direcciona la posición anterior al primer elemento de una lista de reenvíos.|
@@ -172,17 +174,11 @@ Las adiciones a la secuencia controlada pueden realizarse mediante llamadas a [f
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator=](#op_eq)|Reemplaza los elementos de la lista de reenvíos con una copia de otra lista de reenvíos.|
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<forward_list>
-
-**Espacio de nombres:** std
-
-## <a name="allocator_type"></a>  forward_list::allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
 
 Tipo que representa la clase de asignador de un objeto de lista de reenvíos.
 
@@ -190,11 +186,11 @@ Tipo que representa la clase de asignador de un objeto de lista de reenvíos.
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `allocator_type` es un sinónimo del parámetro de plantilla Allocator.
 
-## <a name="assign"></a>  forward_list::assign
+## <a name="assign"></a><a name="assign"></a>quitar
 
 Borra elementos de una lista de reenvíos y copia un nuevo conjunto de elementos a una lista de reenvíos de destino.
 
@@ -212,16 +208,25 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*first*|Principio del intervalo de reemplazo.|
-|*Último*|Final del intervalo de reemplazo.|
-|*count*|Número de elementos que se van a asignar.|
-|*Val*|Valor que se va a asignar a cada elemento.|
-|*Type*|Tipo del valor.|
-|* IList'|initializer_list que se va a copiar.|
+*primer*\
+Principio del intervalo de reemplazo.
 
-### <a name="remarks"></a>Comentarios
+*última*\
+Final del intervalo de reemplazo.
+
+*recuento*\
+Número de elementos que se van a asignar.
+
+\ *Val*
+Valor que se va a asignar a cada elemento.
+
+*Escriba*\
+Tipo del valor.
+
+*IList*\
+initializer_list que se va a copiar.
+
+### <a name="remarks"></a>Observaciones
 
 Si forward_list es un tipo entero, la primera función miembro tiene el mismo comportamiento que `assign((size_type)First, (Type)Last)`. De lo contrario, la primera función miembro reemplaza la secuencia controlada por `*this` con la secuencia [ `First, Last)`, que no debe superponerse a la secuencia controlada inicial.
 
@@ -229,7 +234,7 @@ La segunda función miembro reemplaza la secuencia controlada por `*this` con un
 
 La tercera función miembro copia los elementos de initializer_list a forward_list.
 
-## <a name="before_begin"></a>  forward_list::before_begin
+## <a name="before_begin"></a><a name="before_begin"></a>before_begin
 
 Devuelve un iterador que direcciona la posición anterior al primer elemento de una lista de reenvíos.
 
@@ -242,9 +247,9 @@ iterator before_begin();
 
 Un iterador hacia delante que apunta inmediatamente antes del primer elemento de la secuencia (o inmediatamente antes del final de una secuencia vacía).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="begin"></a>  forward_list::begin
+## <a name="begin"></a><a name="begin"></a>inicia
 
 Devuelve un iterador que direcciona el primer elemento de una lista de reenvíos.
 
@@ -257,9 +262,9 @@ iterator begin();
 
 Un iterador hacia delante que apunta al primer elemento de la secuencia (o más allá del final de una secuencia vacía).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="cbefore_begin"></a>  forward_list::cbefore_begin
+## <a name="cbefore_begin"></a><a name="cbefore_begin"></a>cbefore_begin
 
 Devuelve un iterador const que direcciona la posición anterior al primer elemento de una lista de reenvíos.
 
@@ -271,11 +276,11 @@ const_iterator cbefore_begin() const;
 
 Un iterador hacia delante que apunta inmediatamente antes del primer elemento de la secuencia (o inmediatamente antes del final de una secuencia vacía).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="cbegin"></a>  forward_list::cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin (
 
-Devuelve un **const** iterador que direcciona el primer elemento del intervalo.
+Devuelve un iterador **const** que direcciona el primer elemento del intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -283,13 +288,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un **const** hacia delante que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
+Un iterador de acceso hacia delante **constante** que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.
 
-Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `begin()` y `cbegin()`.
+Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere `Container` ser un contenedor modificable (no **const**) de cualquier tipo que admita `begin()` y `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -298,9 +303,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  forward_list::cend
+## <a name="cend"></a><a name="cend"></a>cend
 
-Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
+Devuelve un iterador **const** que direcciona la ubicación situada más allá del último elemento de un intervalo.
 
 ```cpp
 const_iterator cend() const;
@@ -310,11 +315,11 @@ const_iterator cend() const;
 
 Un iterador hacia delante que apunta justo después del final del intervalo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
-Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `end()` y `cend()`.
+Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere `Container` ser un contenedor modificable (no **const**) de cualquier tipo que admita `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -326,7 +331,7 @@ auto i2 = Container.cend();
 
 El valor devuelto por `cend` no se debe desreferenciar.
 
-## <a name="clear"></a>  forward_list::clear
+## <a name="clear"></a><a name="clear"></a>claridad
 
 Borra todos los elementos de una lista de reenvíos.
 
@@ -334,11 +339,11 @@ Borra todos los elementos de una lista de reenvíos.
 void clear();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro llama a `erase_after(before_begin(), end()).`.
 
-## <a name="const_iterator"></a>  forward_list::const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
 
 Tipo que proporciona un iterador constante para la lista de reenvíos.
 
@@ -346,22 +351,22 @@ Tipo que proporciona un iterador constante para la lista de reenvíos.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `const_iterator` describe un objeto que puede actuar como un iterador de avance constante de la secuencia controlada. Aquí se describe como sinónimo de un tipo definido por implementación.
 
-## <a name="const_pointer"></a>  forward_list::const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
-Un tipo que proporciona un puntero a un **const** elemento en una lista de reenvíos.
+Un tipo que proporciona un puntero a un elemento **const** de una lista de reenvíos.
 
 ```cpp
 typedef typename Allocator::const_pointer
     const_pointer;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="const_reference"></a>  forward_list::const_reference
+## <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
 Tipo que proporciona una referencia constante a un elemento de la lista de reenvíos.
 
@@ -369,9 +374,9 @@ Tipo que proporciona una referencia constante a un elemento de la lista de reenv
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="difference_type"></a>  forward_list::difference_type
+## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 Tipo entero con signo que se puede usar para representar el número de elementos de una lista de reenvíos en un intervalo entre elementos a los que apuntan los iteradores.
 
@@ -379,11 +384,11 @@ Tipo entero con signo que se puede usar para representar el número de elementos
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `difference_type` describe un objeto que puede representar la diferencia entre las direcciones de dos elementos cualesquiera de la secuencia controlada.
 
-## <a name="emplace_after"></a>  forward_list::emplace_after
+## <a name="emplace_after"></a><a name="emplace_after"></a>emplace_after
 
 Construye con movimiento un nuevo elemento después de una posición especificada.
 
@@ -394,41 +399,41 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Where*|Posición de la lista de reenvíos de destino donde se crea el nuevo elemento.|
-|*Val*|El argumento del constructor.|
+*Dónde*\
+Posición de la lista de reenvíos de destino donde se crea el nuevo elemento.
+
+\ *Val*
+El argumento del constructor.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Iterador que designa al elemento recién insertado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta función miembro inserta un elemento con los argumentos de constructor *val* justo después del elemento apuntado *donde* en la secuencia controlada. De lo contrario, su comportamiento es el mismo que [forward_list::insert_after](#insert_after).
+Esta función miembro inserta un elemento con los argumentos de constructor *Val* justo después del elemento *al que apunta en la* secuencia controlada. De lo contrario, su comportamiento es el mismo que [forward_list::insert_after](#insert_after).
 
-## <a name="emplace_front"></a>  forward_list::emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
 
 Agrega un elemento construido al principio de la lista.
 
 ```cpp
 template <class Type>
-void emplace_front(Type&& val);
+    void emplace_front(Type&& val);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Val*|El elemento que se agrega al principio de la lista de reenvíos.|
+\ *Val*
+El elemento que se agrega al principio de la lista de reenvíos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro inserta un elemento con los argumentos de constructor `_ val` al final de la secuencia controlada.
 
 Si se inicia una excepción, el contenedor se deja sin modificar y se vuelve a iniciar la excepción.
 
-## <a name="empty"></a>  forward_list::empty
+## <a name="empty"></a><a name="empty"></a>vacía
 
 Comprueba si una lista de reenvíos está vacía.
 
@@ -438,9 +443,9 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si la lista de reenvíos está vacía; en caso contrario, **false**.
+**true** si la lista de reenvíos está vacía; en caso contrario, **false**.
 
-## <a name="end"></a>  forward_list::end
+## <a name="end"></a><a name="end"></a>extremo
 
 Devuelve un iterador que direcciona la ubicación que sigue al último elemento de una lista de reenvíos.
 
@@ -453,7 +458,7 @@ iterator end();
 
 Un iterador hacia delante que apunta inmediatamente después del final de la secuencia.
 
-## <a name="erase_after"></a>  forward_list::erase_after
+## <a name="erase_after"></a><a name="erase_after"></a>erase_after
 
 Quita de la lista de reenvíos los elementos situados después de una posición especificada.
 
@@ -464,19 +469,22 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Where*|Posición de la lista de reenvíos de destino donde se borra el elemento.|
-|*first*|Comienzo del intervalo que se va a borrar.|
-|*Último*|Final del intervalo que se va a borrar.|
+*Dónde*\
+Posición de la lista de reenvíos de destino donde se borra el elemento.
+
+*primer*\
+Comienzo del intervalo que se va a borrar.
+
+*última*\
+Final del intervalo que se va a borrar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o [forward_list::end](#end) si no existe ese elemento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera función miembro quita el elemento de la controlada justo después de secuenciar *donde*.
+La primera función miembro quita el elemento de la secuencia controlada justo después de *Where*.
 
 La segunda función miembro quita los elementos de la secuencia controlada en el intervalo `( first,  last)` (no se incluye ningún extremo).
 
@@ -484,7 +492,7 @@ Al borrar `N` elementos, se producen `N` llamadas de destructor. Se produce una 
 
 Las funciones miembro nunca producen una excepción.
 
-## <a name="forward_list"></a>  forward_list::forward_list
+## <a name="forward_list"></a><a name="forward_list"></a>forward_list
 
 Construye un objeto de tipo `forward_list`.
 
@@ -507,33 +515,44 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Al*|La clase de asignador que se usa con este objeto.|
-|*Recuento*|Número de elementos de la lista construida.|
-|*Val*|Valor de los elementos de la lista construida.|
-|*Derecha*|Lista de la que la lista construida va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
-|*IList*|initializer_list que se va a copiar.|
+*Al*\
+La clase de asignador que se usa con este objeto.
 
-### <a name="remarks"></a>Comentarios
+*Recuento*\
+Número de elementos de la lista construida.
 
-Todos los constructores almacenan un [asignador](../standard-library/allocator-class.md) e inicializan la secuencia controlada. El objeto de asignador es el argumento *Al*, si está presente. Para el constructor de copias, es ` right.get_allocator()`. De lo contrario, es `Allocator()`.
+\ *Val*
+Valor de los elementos de la lista construida.
+
+\ *derecha*
+Lista de la que la lista construida va a ser una copia.
+
+*Primer*\
+Posición del primer elemento en el intervalo de elementos que se va a copiar.
+
+*Última*\
+Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
+
+*IList*\
+initializer_list que se va a copiar.
+
+### <a name="remarks"></a>Observaciones
+
+Todos los constructores almacenan un [asignador](../standard-library/allocator-class.md) e inicializan la secuencia controlada. El objeto de asignador es el argumento *al*, si está presente. Para el constructor de copias, es `right.get_allocator()`. De lo contrario, es `Allocator()`.
 
 Los dos primeros constructores especifican una secuencia controlada inicial vacía.
 
-El tercer constructor especifica una repetición de *recuento* elementos del valor `Type()`.
+El tercer constructor especifica una repetición de elementos de *recuento* de valores `Type()`.
 
-Los constructores cuarto y quinto especifican una repetición de *recuento* elementos del valor *Val*.
+Los constructores cuarto y quinto especifican una repetición de elementos de *recuento* de valor *Val*.
 
-El sexto constructor especifica una copia de la secuencia controlada por *derecha*. Si `InputIterator` es un tipo entero, los dos constructores siguientes especifican una repetición de elementos `(size_type)First` de valor `(Type)Last`. De lo contrario, los dos constructores siguientes especifican la secuencia `[First, Last)`.
+El sexto constructor especifica una copia de la secuencia controlada por la *derecha*. Si `InputIterator` es un tipo entero, los dos constructores siguientes especifican una repetición de elementos `(size_type)First` de valor `(Type)Last`. De lo contrario, los dos constructores siguientes especifican la secuencia `[First, Last)`.
 
 Los constructores noveno y décimo son iguales que el sexto, pero con una referencia [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 El último constructor especifica la secuencia controlada inicial con un objeto de clase `initializer_list<Type>`.
 
-## <a name="front"></a>  forward_list::front
+## <a name="front"></a><a name="front"></a>end
 
 Devuelve una referencia al primer elemento de una lista de reenvíos.
 
@@ -546,7 +565,7 @@ const_reference front() const;
 
 Una referencia al primer elemento de la secuencia controlada, que no debe estar vacío.
 
-## <a name="get_allocator"></a>  forward_list::get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 Devuelve una copia del objeto de asignador utilizado para construir una lista de reenvíos.
 
@@ -558,7 +577,7 @@ allocator_type get_allocator() const;
 
 El objeto de [asignador](../standard-library/allocator-class.md) almacenado.
 
-## <a name="insert_after"></a>  forward_list::insert_after
+## <a name="insert_after"></a><a name="insert_after"></a>insert_after
 
 Agrega elementos a la lista de reenvíos después de una posición especificada.
 
@@ -568,31 +587,40 @@ void insert_after(const_iterator Where, size_type Count, const Type& Val);
 void insert_after(const iterator Where, initializer_list<Type> IList);
 iterator insert_after(const_iterator Where, Type&& Val);
 template <class InputIterator>
-void insert_after(const_iterator Where, InputIterator First, InputIterator Last);
+    void insert_after(const_iterator Where, InputIterator First, InputIterator Last);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Where*|Posición de la lista de reenvíos de destino donde se inserta el primer elemento.|
-|*Recuento*|Número de elementos que se van a insertar.|
-|*Primero*|Principio del intervalo de inserción.|
-|*Último*|Final del intervalo de inserción.|
-|*Val*|Elemento agregado a la lista de reenvíos.|
-|*IList*|initializer_list que se va a insertar.|
+*Dónde*\
+Posición de la lista de reenvíos de destino donde se inserta el primer elemento.
+
+*Recuento*\
+Número de elementos que se van a insertar.
+
+*Primer*\
+Principio del intervalo de inserción.
+
+*Última*\
+Final del intervalo de inserción.
+
+\ *Val*
+Elemento agregado a la lista de reenvíos.
+
+*IList*\
+initializer_list que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Iterador que designa el elemento recién insertado (primera y última funciones miembro solamente).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cada uno de los miembros funciones inserciones, justo después del elemento al que apunta *donde* en la secuencia controlada, una secuencia que ' especificados por los operandos restantes.
+Cada una de las funciones miembro inserta, justo después del elemento *al que apunta en la* secuencia controlada, una secuencia especificada por los operandos restantes.
 
 La primera función miembro inserta un elemento que tiene el valor *Val* y devuelve un iterador que designa el elemento recién insertado.
 
-La segunda función miembro inserta una repetición de *recuento* elementos del valor *Val*.
+La segunda función miembro inserta una repetición de elementos *Count* de Value *Val*.
 
 Si `InputIterator` es un tipo entero, la tercera función miembro se comporta igual que `insert(it, (size_type)First, (Type)Last)`. De lo contrario, inserta la secuencia `[First, Last)`, que no se debe superponer a la secuencia controlada inicial.
 
@@ -604,7 +632,7 @@ La inserción de `N` elementos produce `N` llamadas de constructor. Se realiza u
 
 Si se produce una excepción durante la inserción de uno o más elementos, el contenedor permanece inalterado y se vuelve a producir la excepción.
 
-## <a name="iterator"></a>  forward_list::iterator
+## <a name="iterator"></a><a name="iterator"></a>apunta
 
 Tipo que proporciona un iterador para la lista de reenvíos.
 
@@ -612,11 +640,11 @@ Tipo que proporciona un iterador para la lista de reenvíos.
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `iterator` describe un objeto que puede actuar como un iterador de avance de la secuencia controlada. Aquí se describe como sinónimo de un tipo definido por implementación.
 
-## <a name="max_size"></a>  forward_list::max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 Devuelve la longitud máxima de una lista de reenvíos.
 
@@ -628,36 +656,37 @@ size_type max_size() const;
 
 La longitud de la secuencia más larga que puede controlar el objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="merge"></a>  forward_list::merge
+## <a name="merge"></a><a name="merge"></a>sin
 
 Combina dos secuencias ordenadas en una única secuencia ordenada en tiempo lineal. Quita los elementos de la lista de argumentos y los inserta en esta `forward_list`. Las dos listas deben ordenarse por el mismo objeto de función de comparación antes de llamar a `merge`. La lista combinada se ordenará por ese objeto de función de comparación.
 
 ```cpp
 void merge(forward_list& right);
 template <class Predicate>
-void merge(forward_list& right, Predicate comp);
+    void merge(forward_list& right, Predicate comp);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*right*|La lista de reenvíos desde la que se combinará.|
-|*Comp.*|El objeto de función de comparación que se usa para ordenar elementos.|
+\ *derecha*
+La lista de reenvíos desde la que se combinará.
 
-### <a name="remarks"></a>Comentarios
+\ *COMP*
+El objeto de función de comparación que se usa para ordenar elementos.
 
-`forward_list::merge` Quita los elementos de la `forward_list` `right`y se inserta en esta `forward_list`. Ambas secuencias deben estar ordenadas por el mismo predicado, que se describe a continuación. La secuencia combinada también está ordenada por ese objeto de función de comparación.
+### <a name="remarks"></a>Observaciones
 
-Para los iteradores `Pi` y `Pj` que designan elementos en posiciones `i` y `j`, la primera función miembro impone el orden `!(*Pj < *Pi)` siempre que `i < j`. (Los elementos se ordenan en orden `ascending`). La segunda función miembro impone el orden `! comp(*Pj, *Pi)` siempre que `i < j`.
+`forward_list::merge` quita los elementos del `right`de `forward_list` y los inserta en este `forward_list`. Ambas secuencias deben estar ordenadas por el mismo predicado, que se describe a continuación. La secuencia combinada también está ordenada por ese objeto de función de comparación.
+
+Para los iteradores `Pi` y `Pj` que designan elementos en posiciones `i` y `j`, la primera función miembro impone el orden `!(*Pj < *Pi)` siempre que `i < j`. (Los elementos se ordenan en `ascending` orden). La segunda función miembro impone el orden `! comp(*Pj, *Pi)` cada vez que `i < j`.
 
 Ningún par de elementos de la secuencia controlada original se invierte en la secuencia controlada resultante. Si un par de elementos de la secuencia controlada resultante equivale a (`!(*Pi < *Pj) && !(*Pj < *Pi)`), un elemento de la secuencia controlada original aparece antes de un elemento de la secuencia controlada por `right`.
 
 Se produce una excepción solo si `comp` inicia una excepción. En ese caso, la secuencia controlada se deja en un orden no especificado y se vuelve a iniciar la excepción.
 
-## <a name="op_eq"></a>  forward_list::operator=
+## <a name="operator"></a><a name="op_eq"></a>operador =
 
 Reemplaza los elementos de la lista de reenvíos con una copia de otra lista de reenvíos.
 
@@ -669,20 +698,21 @@ forward_list& operator=(forward_list&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*right*|La lista de reenvíos que se copia en la lista de reenvíos.|
-|*IList*|Una lista de inicializador entre llaves, que se comporta como una secuencia de elementos de tipo `Type`.|
+\ *derecha*
+La lista de reenvíos que se copia en la lista de reenvíos.
 
-### <a name="remarks"></a>Comentarios
+*IList*\
+Una lista de inicializador entre llaves, que se comporta como una secuencia de elementos de tipo `Type`.
 
-El primer operador miembro reemplaza la secuencia controlada por una copia de la secuencia controlada por *derecho*.
+### <a name="remarks"></a>Observaciones
+
+El primer operador miembro reemplaza la secuencia controlada por una copia de la secuencia controlada por la *derecha*.
 
 El segundo operador miembro reemplaza la secuencia controlada a partir de un objeto de clase `initializer_list<Type>`.
 
 El tercer operador miembro es igual que el primero, pero con una referencia [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="pointer"></a>  forward_list::pointer
+## <a name="pointer"></a><a name="pointer"></a>puntero
 
 Tipo que proporciona un puntero a un elemento de la lista de reenvíos.
 
@@ -690,9 +720,7 @@ Tipo que proporciona un puntero a un elemento de la lista de reenvíos.
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>Comentarios
-
-## <a name="pop_front"></a>  forward_list::pop_front
+## <a name="pop_front"></a><a name="pop_front"></a>pop_front
 
 Elimina el elemento situado al principio de una lista de reenvíos.
 
@@ -700,13 +728,13 @@ Elimina el elemento situado al principio de una lista de reenvíos.
 void pop_front();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer elemento de la lista de reenvíos no puede estar vacío.
 
 Las funciones miembro nunca lanzan una excepción.
 
-## <a name="push_front"></a>  forward_list::push_front
+## <a name="push_front"></a><a name="push_front"></a>push_front
 
 Agrega un elemento al principio de una lista de reenvíos.
 
@@ -717,15 +745,14 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Val*|El elemento que se agrega al principio de la lista de reenvíos.|
+\ *Val*
+El elemento que se agrega al principio de la lista de reenvíos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si se inicia una excepción, el contenedor se deja sin modificar y se vuelve a iniciar la excepción.
 
-## <a name="reference"></a>  forward_list::reference
+## <a name="reference"></a><a name="reference"></a>referencia
 
 Tipo que proporciona una referencia a un elemento de la lista de reenvíos.
 
@@ -733,9 +760,7 @@ Tipo que proporciona una referencia a un elemento de la lista de reenvíos.
 typedef typename Allocator::reference reference;
 ```
 
-### <a name="remarks"></a>Comentarios
-
-## <a name="remove"></a>  forward_list::remove
+## <a name="remove"></a><a name="remove"></a>retirar
 
 Borra elementos de una lista de reenvíos que coincide con un valor especificado.
 
@@ -745,38 +770,36 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Val*|Valor que, si lo contiene un elemento, hará que se quite ese elemento de la lista.|
+\ *Val*
+Valor que, si lo contiene un elemento, hará que se quite ese elemento de la lista.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro quita de la secuencia controlada todos los elementos, designados por el iterador `P`, para el que `*P ==  val`.
 
 Las funciones miembro nunca lanzan una excepción.
 
-## <a name="remove_if"></a>  forward_list::remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 Borra elementos de una lista de reenvíos para la que se cumple el predicado especificado.
 
 ```cpp
 template <class Predicate>
-void remove_if(Predicate pred);
+    void remove_if(Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Pred*|Predicado unario que, si lo satisface un elemento, da lugar a la eliminación de ese elemento de la lista.|
+*pred*\
+Predicado unario que, si lo satisface un elemento, da lugar a la eliminación de ese elemento de la lista.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro quita de la secuencia controlada todos los elementos, designados por el iterador `P`, para el que ` pred(*P)` es True.
+La función miembro quita de la secuencia controlada todos los elementos, designados por el iterador `P`, para el que `pred(*P)` es True.
 
-Se produce una excepción solo si *pred* produce una excepción. En ese caso, la secuencia controlada se deja en un estado no especificado y se vuelve a iniciar la excepción.
+Solo se produce una excepción si *Pred* produce una excepción. En ese caso, la secuencia controlada se deja en un estado no especificado y se vuelve a iniciar la excepción.
 
-## <a name="resize"></a>  forward_list::resize
+## <a name="resize"></a><a name="resize"></a>cambiar el tamaño
 
 Especifica un nuevo tamaño de una lista de reenvíos.
 
@@ -787,16 +810,17 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*_Newsize*|Número de elementos de la lista de reenvíos a la que se le ha cambiado el tamaño.|
-|*Val*|Valor que se va a usar para el relleno.|
+*_Newsize*\
+Número de elementos de la lista de reenvíos a la que se le ha cambiado el tamaño.
 
-### <a name="remarks"></a>Comentarios
+\ *Val*
+Valor que se va a usar para el relleno.
 
-Las funciones de miembro tanto aseguran de que el número de elementos en la lista de aquí en adelante *_Newsize*. Si tiene que realizar la secuencia controlada más larga, la primera función miembro anexa elementos con el valor `Type()`, mientras que la segunda función miembro anexa elementos con el valor *val*. Para que la secuencia controlada sea más corta, ambas funciones miembro llaman de forma eficaz a `erase_after(begin() + _Newsize - 1, end())`.
+### <a name="remarks"></a>Observaciones
 
-## <a name="reverse"></a>  forward_list::reverse
+Las funciones miembro garantizan que el número de elementos de la lista se *_Newsize*. Si debe hacer que la secuencia controlada sea más larga, la primera función miembro anexa elementos con el valor `Type()`, mientras que la segunda función miembro anexa elementos con el valor *Val*. Para que la secuencia controlada sea más corta, ambas funciones miembro llaman de forma eficaz a `erase_after(begin() + _Newsize - 1, end())`.
+
+## <a name="reverse"></a><a name="reverse"></a>viceversa
 
 Invierte el orden en que aparecen los elementos en una lista de reenvíos.
 
@@ -804,9 +828,7 @@ Invierte el orden en que aparecen los elementos en una lista de reenvíos.
 void reverse();
 ```
 
-### <a name="remarks"></a>Comentarios
-
-## <a name="size_type"></a>  forward_list::size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 Tipo que representa la distancia sin signo entre dos elementos.
 
@@ -814,11 +836,11 @@ Tipo que representa la distancia sin signo entre dos elementos.
 typedef typename Allocator::size_type size_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo de entero sin signo describe un objeto que puede representar la longitud de cualquier secuencia controlada.
 
-## <a name="sort"></a>  forward_list::sort
+## <a name="sort"></a><a name="sort"></a>clasificación
 
 Organiza los elementos en orden ascendente o con un orden especificado por un predicado.
 
@@ -830,19 +852,18 @@ void sort(Predicate pred);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Pred*|El predicado de ordenación.|
+*pred*\
+El predicado de ordenación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Ambas funciones miembro ordenan los elementos de la secuencia controlada por un predicado, que se describe a continuación.
 
-Para los iteradores `Pi` y `Pj` que designan elementos en posiciones `i` y `j`, la primera función miembro impone el orden `!(*Pj < *Pi)` siempre que `i < j`. (Los elementos se ordenan en orden `ascending`). La función de plantilla miembro impone el orden `! pred(*Pj, *Pi)` siempre que `i < j`. Ningún par ordenado de elementos de la secuencia controlada original se invierte en la secuencia controlada resultante. (El criterio de ordenación es estable).
+Para los iteradores `Pi` y `Pj` que designan elementos en posiciones `i` y `j`, la primera función miembro impone el orden `!(*Pj < *Pi)` siempre que `i < j`. (Los elementos se ordenan en `ascending` orden). La función de plantilla miembro impone el orden `! pred(*Pj, *Pi)` cada vez que `i < j`. Ningún par ordenado de elementos de la secuencia controlada original se invierte en la secuencia controlada resultante. (El criterio de ordenación es estable).
 
-Se produce una excepción solo si *pred* produce una excepción. En ese caso, la secuencia controlada se deja en un orden no especificado y se vuelve a iniciar la excepción.
+Solo se produce una excepción si *Pred* produce una excepción. En ese caso, la secuencia controlada se deja en un orden no especificado y se vuelve a iniciar la excepción.
 
-## <a name="splice_after"></a>  forward_list::splice_after
+## <a name="splice_after"></a><a name="splice_after"></a>splice_after
 
 Quita elementos de una forward_list de origen y los inserta en una forward_list de destino.
 
@@ -871,28 +892,28 @@ void splice_after(
 
 ### <a name="parameters"></a>Parámetros
 
-*Where*<br/>
+*Dónde*\
 La posición de la forward_list de destino después de la cual se insertan.
 
-*Origen*<br/>
+*Origen*\
 La forward_list de origen que debe insertarse en la forward_list de destino.
 
-*ITER*<br/>
+\ *ITER*
 El elemento que debe insertarse de la forward_list de origen.
 
-*Primero*<br/>
+*Primer*\
 El elemento del intervalo que debe insertarse de la forward_list de origen.
 
-*Último*<br/>
+*Última*\
 La primera posición de después del intervalo que debe insertarse de la forward_list de origen.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El primer par de funciones miembro inserta la secuencia controlada por *origen* justo después del elemento de la secuencia controlada señalada por *donde*. También quita todos los elementos de *origen*. (`&Source` no debe ser igual **esto**.)
+El primer par de funciones miembro inserta la secuencia controlada por el *origen* justo después del elemento en la secuencia controlada a *la que apunta.* También quita todos los elementos del *origen*. (`&Source` no **debe ser igual**que).
 
-El segundo par de funciones miembro quita el elemento justo después *Iter* en la secuencia controlada por *origen* y lo inserta justo después de que el elemento de la secuencia controlada señalada por *Donde*. (Si `Where == Iter || Where == ++Iter`, no ocurre ningún cambio.)
+El segundo par de funciones miembro quita el elemento justo después del *ITER* en la secuencia controlada por el *origen* y lo inserta justo después del elemento en la secuencia controlada a la *que apunta.* (Si `Where == Iter || Where == ++Iter`, no ocurre ningún cambio.)
 
-El tercer par de funciones miembro (unión del intervalo) inserta el subintervalo designado por `(First, Last)` desde la secuencia controlada por *origen* justo después del elemento de la secuencia controlada señalada por *donde*. También quita el subintervalo original de la secuencia controlada por *origen*. (Si `&Source == this`, el intervalo `(First, Last)` no debe incluir el elemento indicado por *donde*.)
+El tercer par de funciones miembro (empalme de intervalo) inserta el subintervalo designado por `(First, Last)` de la secuencia controlada por el *origen* justo después del elemento de la secuencia controlada apuntado por, *donde*. También quita el subintervalo original de la secuencia controlada por el *origen*. (Si `&Source == this`, el intervalo `(First, Last)` no debe incluir el elemento al que apunta *Where*).
 
 Si la unión del intervalo inserta `N` elementos y `&Source != this`, un objeto de clase [iterator](#iterator) se incrementa `N` veces.
 
@@ -971,7 +992,7 @@ int main()
 Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40) (41) (42) (43)After splicing c1 into c2:c1 =c2 = (20) (21) (10) (11) (22)After splicing the first element of c3 into c2:c3 = (30)c2 = (20) (21) (31) (10) (11) (22)After splicing a range of c4 into c2:c4 = (40) (41)c2 = (20) (21) (42) (43) (31) (10) (11) (22)
 ```
 
-## <a name="swap"></a>  forward_list::swap
+## <a name="swap"></a><a name="swap"></a>pasar
 
 Intercambia los elementos de dos listas de reenvío.
 
@@ -981,15 +1002,14 @@ void swap(forward_list& right);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*right*|La lista de reenvíos que proporciona los elementos que se van a intercambiar.|
+\ *derecha*
+La lista de reenvíos que proporciona los elementos que se van a intercambiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro intercambia las secuencias controladas entre `*this` y *derecho*. Si `get_allocator() ==  right.get_allocator()`, lo hace en tiempo constante, no inicia ninguna excepción y no invalida ninguna referencia, puntero o iterador que designen elementos en las dos secuencias controladas. De lo contrario, realiza varias asignaciones de elementos y llamadas de constructor proporcionales al número de elementos de ambas secuencias controladas.
+La función miembro intercambia las secuencias controladas entre `*this` y *right*. Si `get_allocator() ==  right.get_allocator()`, lo hace en tiempo constante, no inicia ninguna excepción y no invalida ninguna referencia, puntero o iterador que designen elementos en las dos secuencias controladas. De lo contrario, realiza varias asignaciones de elementos y llamadas de constructor proporcionales al número de elementos de ambas secuencias controladas.
 
-## <a name="unique"></a>  forward_list::unique
+## <a name="unique"></a><a name="unique"></a>espeficarse
 
 Elimina todo menos el primer elemento de cada grupo consecutivo de elementos iguales.
 
@@ -1001,21 +1021,20 @@ void unique(BinaryPredicate comp);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*Comp.*|El predicado binario que se usa para comparar los elementos sucesivos.|
+\ *COMP*
+El predicado binario que se usa para comparar los elementos sucesivos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Mantiene el primero de cada elemento único y elimina el resto. Los elementos deben estar ordenados para que los elementos del mismo valor sean adyacentes en la lista.
 
 La primera función miembro quita de la secuencia controlada todos los elementos que equivalen al elemento anterior. Para los iteradores `Pi` y `Pj` que designan elementos en posiciones `i` y `j`, la segunda función miembro quita todos los elementos para los que `i + 1 == j &&  comp(*Pi, *Pj)`.
 
-Para una secuencia controlada de longitud `N` (> 0), el predicado ` comp(*Pi, *Pj)` se evalúa `N - 1` veces.
+Para una secuencia controlada de longitud `N` (> 0), el predicado `comp(*Pi, *Pj)` se evalúa `N - 1` veces.
 
 Se produce una excepción solo si `comp` inicia una excepción. En ese caso, la secuencia controlada se deja en un estado no especificado y se vuelve a iniciar la excepción.
 
-## <a name="value_type"></a>  forward_list::value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Tipo que representa el tipo de elemento almacenado en una lista de reenvíos.
 
@@ -1023,10 +1042,6 @@ Tipo que representa el tipo de elemento almacenado en una lista de reenvíos.
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo del parámetro de plantilla _ `Ty`.
-
-## <a name="see-also"></a>Vea también
-
-[<forward_list>](../standard-library/forward-list.md)<br/>
+El tipo es un sinónimo del parámetro de plantilla `Type`.

@@ -1,11 +1,14 @@
 ---
 title: lgamma, lgammaf, lgammal
-ms.date: 04/05/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - lgamma
 - lgammaf
 - lgammal
-apilocation:
+- _o_lgamma
+- _o_lgammaf
+- _o_lgammal
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +20,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lgamma
 - lgammaf
@@ -30,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533489"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916443"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -61,34 +68,36 @@ Valor que se va a calcular.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve el logaritmo natural del valor absoluto de la función gamma de *x*.
+Si es correcto, devuelve el logaritmo natural del valor absoluto de la función gamma de *x*.
 
-|Problema|Volver|
+|Problema|Valor devuelto|
 |-----------|------------|
-|*x* = NaN|NaN|
+|*x* = Nan|NaN|
 |*x* = ± 0|+INFINITY|
 |*x*= entero negativo|+INFINITY|
-|±INFINITY|+INFINITY|
+|± INFINITO|+INFINITY|
 |error de polo|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
-|error de intervalo de desbordamiento|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|
+|error de intervalo de desbordamiento|± HUGE_VAL, ± HUGE_VALF o ± HUGE_VALL|
 
 Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **lgamma** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **lgamma** siempre toma y devuelve un **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **lgamma (** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **lgamma (** siempre toma y devuelve un **valor Double**.
 
-Si x es un número racional, esta función devuelve el logaritmo del factorial de (x - 1).
+Si x es un número racional, esta función devuelve el logaritmo del factorial de (x-1).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
+|**lgamma (**, **lgammaf (**, **lgammal**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
 [tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

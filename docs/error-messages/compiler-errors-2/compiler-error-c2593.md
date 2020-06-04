@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
-ms.openlocfilehash: c358553a36104b5c389076f5a5ce02f94f85e85a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a385e35376ddce528678980705595bfb98aca95
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667316"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759352"
 ---
 # <a name="compiler-error-c2593"></a>Error del compilador C2593
 
-'operador identificador' es ambiguo
+' operator Identifier ' es ambiguo
 
-Se define más de un operador para posibles para un operador sobrecargado.
+Se ha definido más de un operador posible para un operador sobrecargado.
 
-Este error puede corregirse si usa una conversión explícita en uno o varios parámetros reales.
+Este error puede corregirse si se usa una conversión explícita en uno o más parámetros reales.
 
-El ejemplo siguiente genera C2593:
+En el ejemplo siguiente se genera C2593:
 
-```
+```cpp
 // C2593.cpp
 struct A {};
 struct B : A {};
@@ -39,9 +39,9 @@ int main() {
 }
 ```
 
-Este error puede deberse a un punto flotante por medio de serializar un `CArchive` objeto. El compilador identifica la `<<` operador como ambigua. Tipos de C++ solo primitivos que `CArchive` puede serializar son los tipos de tamaño fijo `BYTE`, `WORD`, `DWORD`, y `LONG`. Todos los tipos de entero deben convertirse en uno de estos tipos para la serialización. Tipos de punto flotante pueden almacenarse utilizando el `CArchive::Write()` función miembro.
+Este error puede deberse a la serialización de una variable de punto flotante mediante un objeto `CArchive`. El compilador identifica el operador de `<<` como ambiguo. Los únicos tipos C++ primitivos que `CArchive` pueden serializar son los tipos de tamaño fijo `BYTE`, `WORD`, `DWORD`y `LONG`. Todos los tipos enteros deben convertirse en uno de estos tipos para la serialización. Los tipos de punto flotante se deben archivar mediante la función miembro `CArchive::Write()`.
 
-El ejemplo siguiente muestra cómo almacenar una variable de punto flotante (`f`) al archivo `ar`:
+En el ejemplo siguiente se muestra cómo archivar una variable de punto flotante (`f`) para archivar `ar`:
 
 ```
 ar.Write(&f, sizeof( float ));

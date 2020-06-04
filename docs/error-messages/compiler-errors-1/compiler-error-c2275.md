@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2275
 ms.assetid: c1eafa71-48de-46e0-82f3-b575538ef205
-ms.openlocfilehash: debf8779014badab69ffca13f3795f7e004b292a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e929adaf90c32cd489975057791a2866b6ba3e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601618"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759742"
 ---
 # <a name="compiler-error-c2275"></a>Error del compilador C2275
 
-'identifier': uso no válido de este tipo como una expresión.
+' Identifier ': uso no válido de este tipo como una expresión
 
-Una expresión usa el `->` operador con una `typedef` identificador.
+Una expresión usa el operador de `->` con un identificador de `typedef`.
 
-El ejemplo siguiente genera C2275:
+En el ejemplo siguiente se genera C2275:
 
-```
+```cpp
 // C2275.cpp
 typedef struct S {
     int mem;

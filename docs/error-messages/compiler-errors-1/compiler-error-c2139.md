@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
-ms.openlocfilehash: f462b7d26e21b9313949bb3968b5b39e81bb30b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38e2fd090f3a2b2222658c5fd491c84dd70fd5ea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437142"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756427"
 ---
 # <a name="compiler-error-c2139"></a>Error del compilador C2139
 
-'type': no se permite una clase no definida como argumento para el rasgo de tipo intrínseco 'rasgo'
+' type ': no se permite una clase no definida como argumento para el rasgo de tipo intrínseco ' traits ' del compilador
 
 Se pasó un argumento no válido a un rasgo de tipo.
 
-Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+Para obtener más información, consulte [Compiler Support for Type Traits](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md) (Compatibilidad de compilador con rasgos de tipo).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C2139.
+En el ejemplo siguiente se genera C2139.
 
-```
+```cpp
 // C2139.cpp
 // compile with: /EHsc
 #include <iostream>

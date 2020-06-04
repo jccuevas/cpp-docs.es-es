@@ -1,19 +1,22 @@
 ---
 title: Almacenar cadenas en el proveedor OLE DB
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 54dfdb347c621cf6f8645feb6d13742f32503f9f
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 1d6d2b73495d5ca6e275b13ed3c430f8169179d4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264624"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079112"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Almacenar cadenas en el proveedor OLE DB
 
-En *personalizado*RS.h, el **el Asistente para proveedores OLE DB ATL** crea un registro de usuario predeterminado denominado `CWindowsFile`. Para controlar las dos cadenas, modificar `CWindowsFile` tal como se muestra en el código siguiente:
+> [!NOTE]
+> El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
+
+En *Custom*RS.h, el **Asistente para proveedores OLE DB ATL** crea un registro de usuario predeterminado denominado `CWindowsFile`. Para controlar las dos cadenas, modifique `CWindowsFile` tal como se muestra en el código siguiente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -48,10 +51,10 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-Los miembros de datos `szCommand` y `szText` representan las dos cadenas, con `szCommand2` y `szText2` con columnas adicionales si es necesario. El miembro de datos `dwBookmark` no es necesario para este proveedor sencillo de sólo lectura, pero se utiliza posteriormente para agregar una `IRowsetLocate` interfaz; vea [mejorar lectura solo un proveedor sencillo](../../data/oledb/enhancing-the-simple-read-only-provider.md). El `==` operador compara instancias (implementación de este operador es opcional).
+Los miembros de datos `szCommand` y `szText` representan las dos cadenas, con `szCommand2` y `szText2` con columnas adicionales si es necesario. El miembro de datos `dwBookmark` no es necesario para este proveedor sencillo de solo lectura, pero se utiliza posteriormente para agregar una interfaz `IRowsetLocate`. Consulte el artículo sobre cómo [mejorar el proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md). El operador `==` compara instancias (la implementación de este operador es opcional).
 
-Cuando esto sucede, puede agregar la funcionalidad de [leer cadenas desde el proveedor OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
+Cuando esto sucede, puede agregar la funcionalidad de [leer cadenas en el proveedor OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Implementar un proveedor sencillo de solo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

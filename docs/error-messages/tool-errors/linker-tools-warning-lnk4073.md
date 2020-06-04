@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4073
 ms.assetid: a0c80242-3395-45bd-bbe7-4f31d7ac9e3a
-ms.openlocfilehash: e1cdb3274f118605353dbd3a3661ef6fc1cf37b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af4b9de1a02bf2d1bd3d4805e3bcfb514144851f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639821"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193997"
 ---
 # <a name="linker-tools-warning-lnk4073"></a>Advertencia de las herramientas del vinculador LNK4073
 
-no se puede crear el mapa para el archivo. vinculación de manera no incremental
+no se puede crear la asignación para el archivo. İlk; vincular de forma no incremental
 
-No hubo un gran suficiente espacio contiguo de memoria compartida para el vínculo crear el archivo de estado incremental (.ilk). VÍNCULO realiza una compilación no incremental.
+No había un espacio contiguo lo suficientemente grande en la memoria compartida para que el vínculo creara el archivo de estado incremental (. İlk). LINK realizó una compilación no incremental.

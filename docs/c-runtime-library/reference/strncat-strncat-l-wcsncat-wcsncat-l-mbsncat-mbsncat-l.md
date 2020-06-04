@@ -1,14 +1,16 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+- _o__mbsncat
+- _o__mbsncat_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +23,12 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -57,19 +64,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 6d44ec9f75ef1c6677c2f6053746592ba6e86382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574283"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918151"
 ---
-# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
+# <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 Anexa caracteres de una cadena. Hay disponibles versiones más seguras de estas funciones; vea [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncat** y **_mbsncat_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat** y **_mbsncat_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -140,18 +147,20 @@ Configuración regional que se va a usar.
 
 Devuelve un puntero a la cadena de destino. No se reserva ningún valor devuelto para indicar un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **strncat** función anexa, como máximo, los primeros *recuento* caracteres de *strSource* a *strDest*. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDest*. Si aparece un carácter nulo en *strSource* antes *recuento* se anexan caracteres, **strncat** anexa todos los caracteres desde *strSource*, hasta el carácter nulo. Si *recuento* es mayor que la longitud de *strSource*, la longitud de *strSource* se utiliza en lugar de *recuento*. En todos los casos, la cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **strncat** anexa, como máximo, los primeros caracteres de *recuento* de *strSource* a *strDest*. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDest*. Si aparece un carácter nulo en *strSource* antes de que se anexen los caracteres de *recuento* , **strncat** anexa todos los caracteres de *strSource*, hasta el carácter nulo. Si el *recuento* es mayor que la longitud de *strSource*, se usa la longitud de *strSource* en lugar del *recuento*. En todos los casos, la cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
-> **strncat** no comprueba si hay espacio suficiente en *strDest*; por lo tanto, es una posible causa de saturaciones del búfer. Tenga en cuenta que *recuento* limita el número de anexar caracteres; no es un límite del tamaño de *strDest*. Vea el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> **strncat** no comprueba si hay espacio suficiente en *strDest*; por lo tanto, es una posible causa de saturaciones del búfer. Tenga en cuenta que el *recuento* limita el número de caracteres anexados. no es un límite en cuanto al tamaño de *strDest*. Observe el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-**wcsncat** y **_mbsncat** son versiones de caracteres anchos y caracteres multibyte de **strncat**. Los argumentos de cadena y el valor devuelto de **wcsncat** son caracteres anchos cadenas; los de **_mbsncat** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcsncat** y **_mbsncat** son versiones de caracteres anchos y multibyte de **strncat**. Los argumentos de cadena y el valor devuelto de **wcsncat** son cadenas de caracteres anchos; los de **_mbsncat** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En C++, estas funciones tienen sobrecargas de plantilla. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -161,7 +170,7 @@ En C++, estas funciones tienen sobrecargas de plantilla. Para obtener más infor
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** y **_wcsncat_l** no tienen dependen de la configuración regional y no están diseñados para ser llamado directamente. Se proporcionan para uso interno por **_tcsncat_l**.
+> **_strncat_l** y **_wcsncat_l** no tienen ninguna dependencia de la configuración regional y no están diseñados para llamarse directamente. Se proporcionan para uso interno de **_tcsncat_l**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -172,7 +181,7 @@ En C++, estas funciones tienen sobrecargas de plantilla. Para obtener más infor
 |**_mbsncat**|\<mbstring.h>|
 |**_mbsncat_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -213,7 +222,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Output
 
 ```Output
 string can hold up to 39 characters
@@ -221,9 +230,9 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-Tenga en cuenta que **BadAppend** produjo una saturación del búfer.
+Tenga en cuenta que **BadAppend** causó una saturación del búfer.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
@@ -236,5 +245,5 @@ Tenga en cuenta que **BadAppend** produjo una saturación del búfer.
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

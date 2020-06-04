@@ -33,178 +33,164 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 80ef6cc9ec956d0041c4aa3fb6a6211868cc9d73
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320645"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167568"
 ---
 # <a name="accelerator-editor-c"></a>Editor de aceleradores (C++)
 
-Una tabla de aceleradores es un recurso de Windows de C++ que contiene una lista de teclas de aceleración (también conocido como teclas de método abreviado) y los identificadores de comandos que están asociados con ellas. Un programa puede tener más de una tabla de aceleradores.
+Una tabla de aceleradores C++ es un recurso de Windows que contiene una lista de teclas de aceleración, conocidas como teclas de método abreviado, y los identificadores de comando asociados a ellas. Un programa puede tener más de una tabla de aceleradores.
 
 Normalmente, los aceleradores se usan como métodos abreviados de teclado para comandos de programa que también están disponibles en un menú o una barra de herramientas. Sin embargo, puede usar la tabla de aceleradores para definir las combinaciones de teclas para los comandos que no tienen asociado un objeto de interfaz de usuario.
 
-Puede usar la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para enlazar comandos de teclas de aceleración al código.
+> [!TIP]
+> Al usar el **Editor de aceleradores**, haga clic con el botón secundario para mostrar un menú contextual de comandos frecuentes. Los comandos disponibles dependen del objeto al que apunta el puntero.
 
-Para obtener una lista de teclas de aceleración predefinidas, vea [teclas de aceleración predefinidas](../windows/predefined-accelerator-keys.md).
-
-   > [!TIP]
-   > Al usar el **acelerador** editor, hacer clic en para mostrar un menú contextual de comandos usados con frecuencia. Los comandos disponibles dependen del objeto al que apunta el puntero.
-
-   > [!NOTE]
-   > Windows no permite crear tablas de aceleradores vacías. Si crea una tabla de aceleradores sin entradas, se elimina automáticamente al guardar la tabla.
-
-## <a name="accelerator-properties"></a>Propiedades de Acelerador
-
-Puede establecer propiedades de acelerador el [ventana propiedades](/visualstudio/ide/reference/properties-window) en cualquier momento. También puede usar el **acelerador** editor para modificar las propiedades de Acelerador de la tabla de aceleradores. Los cambios realizados mediante el **propiedades** ventana o el **acelerador** editor tiene el mismo resultado: las modificaciones se reflejan inmediatamente en la tabla de aceleradores.
-
-### <a name="id-property"></a>ID (propiedad)
-
-El **ID** propiedad hace referencia a cada entrada de la tabla de aceleradores en código de programa. Esta entrada es el valor del comando que va a recibir el programa cuando un usuario presiona la tecla de aceleración o una combinación de teclas. Para realizar un acelerador igual que un elemento de menú, realice sus identificadores de la misma (siempre y cuando el identificador de la tabla de aceleradores es el mismo que el identificador para el recurso de menú).
-
-Hay tres propiedades para cada Id. de acelerador: el **modificador** propiedad, el **clave** propiedad y el **tipo** propiedad.
-
-#### <a name="modifier-property"></a>Modifier (propiedad)
-
-El **modificador** propiedad establece el control de combinaciones de teclas para el acelerador.
+Puede usar la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para enlazar comandos de teclas de aceleración al código. Para obtener una lista de teclas de aceleración predefinidas, vea [teclas de aceleración](../windows/predefined-accelerator-keys.md).
 
 > [!NOTE]
-> En el **propiedades** ventana, esta propiedad aparece como tres independiente **booleano** propiedades, que puede controlarse de forma independiente: **ALT**, **Ctrl**, y **MAYÚS**.
+> Windows no permite crear tablas de aceleradores vacías. Si crea una tabla de aceleradores sin entradas, se elimina automáticamente al guardar la tabla.
 
-Los siguientes son entradas legales para el **modificador** propiedad en la tabla de aceleradores:
+## <a name="accelerator-properties"></a>Propiedades de acelerador
 
-   |Valor|Descripción|
-   |-----------|-----------------|
-   |**Ninguno**|Usuario presiona sólo el **clave** valor. Este valor se utiliza la forma más eficaz con los valores ASCII/ANSI 001 a 026, que se interpreta como ^ A ^ Z (**CTRL+a** a través de **CTRL+z**).|
-   |**Alt**|El usuario debe presionar el **Alt** clave antes de la **clave** valor.|
-   |**Ctrl**|El usuario debe presionar el **Ctrl** clave antes de la **clave** valor. No es válido con el tipo de ASCII.|
-   |**Mayús**|El usuario debe presionar el **MAYÚS** clave antes de la **clave** valor.|
-   |**Ctrl+Alt**|El usuario debe presionar el **Ctrl** clave y el **Alt** clave antes de la **clave** valor. No es válido con el tipo de ASCII.|
-   |**CTRL + MAYÚS**|El usuario debe presionar el **Ctrl** clave y el **MAYÚS** clave antes de la **clave** valor. No es válido con el tipo de ASCII.|
-   |**ALT + MAYÚS**|El usuario debe presionar el **Alt** clave y el **MAYÚS** clave antes de la **clave** valor. No es válido con el tipo de ASCII.|
-   |**Ctrl + Alt + Mayús**|El usuario debe presionar **Ctrl**, **Alt**, y **MAYÚS** antes de la **clave** valor. No es válido con el tipo de ASCII.|
+Puede establecer propiedades de acelerador en el [ventana Propiedades](/visualstudio/ide/reference/properties-window) en cualquier momento. También puede usar el **Editor de aceleradores** para modificar las propiedades de acelerador en la tabla de aceleradores. Los cambios realizados mediante la ventana **propiedades** o el **Editor de aceleradores** tienen el mismo resultado, las modificaciones se reflejan inmediatamente en la tabla de aceleradores.
 
-#### <a name="key-property"></a>Key (propiedad)
+La propiedad **ID** hace referencia a cada entrada de la tabla de aceleradores en el código del programa. Esta entrada es el valor de comando que el programa recibe cuando un usuario presiona la tecla de aceleración o una combinación de teclas. Para que un acelerador sea el mismo que un elemento de menú, haga que el **identificador** sea el mismo, siempre que el **identificador** de la tabla de aceleradores sea el mismo que el **identificador** del recurso de menú.
 
-El **clave** propiedad establece la clave real que se usará como el acelerador.
+Cada **identificador** de acelerador tiene tres propiedades: **modificador**, **clave**y **tipo**
 
-Los siguientes son entradas legales para el **clave** propiedad en la tabla de aceleradores:
-
-   |Valor|Descripción|
-   |-----------|-----------------|
-   |Un entero entre 0 y 255 en formato decimal.|El valor determina si el valor se trata como ASCII o ANSI como sigue:<br/><br/>-Números de dígito siempre se interpretan como la clave correspondiente, en lugar de como valores ASCII o ANSI.<br/>-Los valores de 1 a 26, si van precedidos de ceros, se interpretan como ^ A ^ Z, que representa el valor ASCII de las letras del alfabeto cuando se presiona con la **Ctrl** clave se mantiene presionada.<br/>-Valores 27-32 siempre se interpretan como valores de tres dígitos decimales comprendidos entre 032 027.<br/>-Los valores de 033 a 255, ya sea precedido de 0 o no se interpretan como valores ANSI.|
-   |Un carácter único teclado.|Mayúscula A - Z o los números 0 - 9 pueden ser ASCII o valores de clave virtuales; cualquier otro carácter solo es ASCII.|
-   |Un carácter único teclado en el intervalo A - Z (sólo mayúsculas), precedida por un símbolo de intercalación (^) (por ejemplo, ^ C).|Esta opción especifica el valor de ASCII de la clave cuando se presiona con la **Ctrl** tecla presionada.|
-   |Cualquier identificador de clave virtual válido.|El cuadro de lista desplegable clave en la tabla de aceleradores contiene una lista de identificadores de clave virtuales estándares.|
+La propiedad **modificador** establece combinaciones de teclas de control para el acelerador.
 
 > [!NOTE]
-> Cuando escribe un valor ASCII, las opciones de la propiedad modificador son limitadas. La única clave de control disponible para su uso es la **Alt** clave.
+> En la ventana **propiedades** , la **propiedad modificador** aparece como tres propiedades **booleanas** independientes, que se pueden controlar de forma independiente: **Alt**, **Ctrl**y **MAYÚS**.
+
+A continuación se indican entradas válidas para la propiedad **modificador** en la tabla de aceleradores:
+
+   |Value|Descripción|
+   |-----------|-----------------|
+   |**None**|El usuario solo presiona el valor de **clave** .<br/><br/>Este valor se utiliza de forma más eficaz con los valores ASCII/ANSI 001 a través de 026, que se interpreta como ^ A a ^ Z (**Ctrl + a** a **Ctrl + Z**).|
+   |**Alt**|El usuario debe presionar **Alt** antes del valor de la **clave** .|
+   |**Ctrl**|El usuario debe presionar **Ctrl** antes del valor de **clave** , no válido con el tipo ASCII.|
+   |**Mayús**|El usuario debe presionar la tecla **MAYÚS** antes del valor de **clave** .|
+   |**Ctrl + Alt**|El usuario debe presionar **Ctrl** y **Alt** antes del valor de **clave** , no válido con el tipo ASCII.|
+   |**Ctrl + Mayús**|El usuario debe presionar **Ctrl** y **MAYÚS** antes del valor de **clave** , no es válido con el tipo ASCII.|
+   |**Alt + Mayús**|El usuario debe presionar **Alt** y **MAYÚS** antes del valor de **clave** , no válido con el tipo ASCII.|
+   |**Ctrl + Alt + Mayús**|El usuario debe presionar **Ctrl**, **Alt**y **MAYÚS** antes del valor de **clave** , no válido con el tipo ASCII.|
+
+La propiedad **clave** establece la clave real que se va a usar como acelerador.
+
+A continuación se indican entradas válidas para la propiedad **clave** de la tabla de aceleradores:
+
+   |Value|Descripción|
+   |-----------|-----------------|
+   |Entero comprendido entre 0 y 255 en formato decimal.|El valor determina si el valor se trata como ASCII o ANSI como se indica a continuación:<br/><br/>   -Los números de un solo dígito se interpretan siempre como la clave correspondiente, en lugar de como valores ASCII o ANSI.<br/>   -Los valores de 1 a 26, cuando están precedidos de ceros, se interpretan como ^ A a ^ Z, que representa el valor ASCII de las letras del alfabeto cuando se presiona con la tecla **Ctrl** presionada.<br/>   : Los valores de 27-32 se interpretan siempre como valores decimales de tres dígitos de 027 a 032.<br/>   : Los valores de 033 a 255, ya estén precedidos de 0 o no, se interpretan como valores ANSI.|
+   |Un solo carácter de teclado.|Mayúsculas A-Z o los números 0-9 pueden ser valores ASCII o de clave virtual. Cualquier otro carácter es solo ASCII.|
+   |Un solo carácter de teclado en el intervalo A-Z (solo en mayúsculas), precedido por un símbolo de intercalación (^), por ejemplo, ^ C.|Esta opción especifica el valor ASCII de la tecla cuando se presiona con la tecla **Ctrl** presionada.|
+   |Cualquier identificador de clave virtual válido.|El cuadro **clave** desplegable de la tabla de aceleradores contiene una lista de identificadores de clave virtual estándar.|
+
+> [!NOTE]
+> Al escribir un valor ASCII, las opciones de la propiedad **modificador** son limitadas. La única tecla de control disponible para su uso es la tecla **Alt** .
 
 > [!TIP]
-> Es otra manera de definir una tecla de aceleración para el botón derecho en una o varias entradas en la tabla de aceleradores, elija **tecla siguiente** en el menú contextual y, a continuación, presione cualquiera de las claves o combinaciones de teclas del teclado. El **tecla siguiente** comando también está disponible desde el **editar** menú.
+> Un acceso directo para definir una tecla de aceleración consiste en hacer clic con el botón secundario en una entrada o en varias entradas de la tabla de aceleradores y, a continuación, elegir la **tecla siguiente** con el teclado.
+>
+> Este comando de **tecla con tipo siguiente** también está disponible en el menú **edición** .
 
-#### <a name="type-property"></a>Type (propiedad)
+La propiedad **Type** determina si la combinación de teclas de método abreviado asociada al **identificador** de acelerador se interpreta como un valor de clave ASCII/ANSI o una combinación de clave virtual (VIRTKEY).
 
-El **tipo** propiedad determina si la combinación de teclas de método abreviado asociada con el Id. de acelerador se interpreta como un valor de clave ASCII/ANSI o una combinación de tecla virtual (VIRTKEY).
+- Si la propiedad **Type** es **ASCII**, la propiedad **modificadora** solo puede ser `None` o `Alt`, o bien puede tener un acelerador que use la tecla **Ctrl** , tal y como se especifica antes de la clave con una `^`.
 
-- Si el **tipo** propiedad es ASCII, el **modificador** sólo puede ser propiedad `None` o `Alt`, o puede tener un acelerador que usa el **Ctrl** clave () anteponer a la clave con un `^`).
-
-- Si el **tipo** propiedad es VIRTKEY, cualquier combinación de `Modifier` y `Key` valores es válido.
+- Si la propiedad **Type** es **VIRTKEY**, cualquier combinación de valores de **modificador** y **clave** es válida.
 
 > [!NOTE]
-> Si desea especificar un valor en la tabla de aceleradores y tienen el valor se tratan como ASCII/ANSI, simplemente haga clic en el **tipo** para la entrada en la tabla y seleccione ASCII en la lista desplegable. Sin embargo, si usa el **tecla siguiente** comando (**editar** menú) para especificar el `Key`, debe cambiar la **tipo** propiedad de VIRTKEY a ASCII *antes* escribir el `Key` código.
+> Si desea especificar un valor en la tabla de aceleradores y que el valor se trate como ASCII/ANSI, seleccione el **tipo** de la entrada en la tabla y seleccione **ASCII** en la lista desplegable. Sin embargo, si usa el **siguiente comando clave con tipo** en el **menú Edición** para especificar la **clave**, debe cambiar la propiedad **Type** de **VIRTKEY** a **ASCII** *antes* de escribir el código de **tecla** .
 
 ## <a name="accelerator-tables"></a>Tablas de aceleradores
 
-En un proyecto de C++, puede editar una tabla de aceleradores directamente con la edición en contexto en el **acelerador** editor.
+En un C++ proyecto de, puede editar una tabla de aceleradores directamente con la edición en contexto en el **Editor de aceleradores**.
 
-Los procedimientos siguientes hacen referencia al uso de páginas de propiedades estándar, sin embargo, tanto la edición en contexto y el método de página de propiedad tienen el mismo resultado. Los cambios realizados mediante las páginas de propiedades o mediante la edición en contexto se reflejan inmediatamente en la tabla de aceleradores.
+En los procedimientos siguientes se hace referencia al uso de páginas de propiedades estándar; sin embargo, la edición en contexto y el método de página de propiedades tienen el mismo resultado. Los cambios realizados mediante páginas de propiedades o mediante la edición en contexto se reflejan inmediatamente en la tabla de aceleradores.
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Para editar el contenido de una tabla de aceleradores
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de aceleradores haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Seleccione una entrada en la tabla y seleccione esta opción para activar la edición en contexto.
+1. Seleccione una entrada en la tabla y seleccione Activar la edición en contexto.
 
-1. Seleccione en el cuadro combinado desplegable o escriba para realizar cambios.
+1. Seleccione en el cuadro combinado desplegable o escriba en su lugar para realizar cambios:
 
-   - Para **ID**, seleccione en la lista o escriba para editar.
+   - En **ID**, seleccione en la lista o escriba para editar.
 
-   - Para **modificador**, seleccione en la lista.
+   - En **modificador**, seleccione en la lista.
 
-   - Para **clave**, seleccione en la lista o escriba para editar.
+   - En **Key (clave**), seleccione en la lista o escriba para editar.
 
-   - Para **tipo**, seleccione **ASCII** o **VIRTKEY** en la lista.
+   - En **tipo**, seleccione **ASCII** o **VIRTKEY** en la lista.
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Para buscar una entrada en una tabla de aceleradores abierta:
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de aceleradores haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Seleccione un encabezado de columna para ordenar el contenido de la columna alfabéticamente. Por ejemplo, seleccione **ID** para mostrar alfabéticamente todos los identificadores de la tabla de aceleradores.
+1. Seleccione un encabezado de columna para ordenar el contenido de la columna alfabéticamente. Por ejemplo, seleccione **ID** . para mostrar todos los identificadores de la tabla de aceleradores alfabéticamente.
 
-A continuación, puede examinar la lista y buscar la entrada.
+   A continuación, puede examinar la lista y buscar la entrada.
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Para agregar una entrada a una tabla de aceleradores
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de aceleradores haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Haga doble clic en la tabla de aceleradores y elija **nuevo acelerador** desde el menú contextual, o seleccione la entrada de fila vacía en la parte inferior de la tabla.
+1. Haga clic con el botón derecho en la tabla de aceleradores y elija **nuevo acelerador**, o bien seleccione la entrada de fila vacía en la parte inferior de la tabla.
 
-1. Seleccione un **Id. de** en la lista desplegable en el Id. de cuadro o escriba un nuevo identificador en el **ID** cuadro.
+1. Seleccione un **identificador** en la lista desplegable del cuadro **ID** o escriba un nuevo *identificador* en el cuadro **ID** .
 
-1. Tipo de la **clave** que desea usar como acelerador o contextual y elija **tecla siguiente** en el menú contextual para establecer una combinación de teclas (el **tecla siguiente** comando es También está disponible en el **editar** menú).
+1. Escriba la *clave* que desea usar como acelerador o haga clic con el botón derecho y elija **clave siguiente** con el tipo para establecer una combinación de teclas, o bien vaya a menú **Editar** > **siguiente clave con tipo**.
 
-1. Cambiar el **modificador** y **tipo**, si es necesario.
+1. Cambie el **modificador** y **Escriba**, si es necesario, y presione **entrar**.
 
-1. Presione **ENTRAR**.
-
-   > [!NOTE]
-   > Asegúrese de que todos los aceleradores que defina sean únicos. Puede tener varias combinaciones de teclas asignadas al mismo identificador no tiene ningún efecto negativos, por ejemplo, **Ctrl** + **P** y **F8** pueden asignarse a ID_PRINT. Sin embargo, tener una combinación de teclas asignada a más de un identificador no funcionará bien, por ejemplo, **Ctrl** + **Z** asignado a tanto a ID_SPELL_CHECK como a ID_THESAURUS.
+> [!NOTE]
+> Asegúrese de que todos los aceleradores que defina sean únicos. Puede tener varias combinaciones de claves asignadas al mismo identificador sin ningún efecto incorrecto; por ejemplo, **Ctrl**+**P** y **F8** pueden asignarse a ID_PRINT. Sin embargo, tener una combinación de teclas asignada a más de un identificador no funcionará bien, por ejemplo, **Ctrl**+**Z** asignada a ID_SPELL_CHECK y ID_THESAURUS.
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Para eliminar una entrada de una tabla de aceleradores
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de aceleradores haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Seleccione la entrada que quiera eliminar. (Mantenga presionada la **Ctrl** o **MAYÚS** clave durante la selección para elegir varias entradas.)
+1. Seleccione la entrada que desea eliminar o mantenga presionada la tecla **Ctrl** o **MAYÚS** mientras selecciona la opción para elegir varias entradas.
 
-1. Haga clic en y elija **eliminar** en el menú contextual (o seleccione **eliminar** desde el **editar** menú).
+1. Haga clic con el botón derecho y elija **eliminar**o vaya a menú **Editar** > **eliminar**.
 
 > [!TIP]
-> Un acceso directo para su eliminación consiste en presionar el **eliminar** clave.
+> También puede presionar la tecla **suprimir** para eliminar.
 
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos
 
-1. Abra las tablas de aceleradores en los dos archivos de script de recursos.
+1. Abra las tablas de aceleradores en los dos archivos de script de recursos y seleccione la entrada que desea trasladar.
 
-1. Seleccione la entrada que desea mover.
+1. En el menú **edición** , elija **copiar** o **cortar**.
 
-1. Desde el **editar** menú, elija **copia** o **cortar**.
+1. Seleccione una entrada en el archivo de script de recursos de destino y, en el menú **edición** , elija **pegar**.
 
-1. Seleccione una entrada en el archivo de script de recursos de destino.
-
-1. Desde el **editar** menú, elija **pegar**.
-
-   > [!NOTE]
-   > También puede usar las teclas de método abreviado para copiar y pegar.
+> [!NOTE]
+> También puede usar las teclas de método abreviado para copiar y pegar.
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Para cambiar las propiedades de varias teclas de aceleración
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de aceleradores haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Seleccione las teclas de aceleración que desee cambiar, mantenga presionada la **Ctrl** clave mientras selecciona cada uno de ellos.
+1. Seleccione las teclas de aceleración que desea cambiar manteniendo presionada la tecla **Ctrl** mientras selecciona cada una.
 
-1. Vaya a la [ventana propiedades](/visualstudio/ide/reference/properties-window) y escriba los valores que desea que todos los aceleradores seleccionados para compartir.
+1. Vaya al [ventana Propiedades](/visualstudio/ide/reference/properties-window) y escriba los valores que desea que compartan todos los aceleradores seleccionados.
 
-   > [!NOTE]
-   > Cada valor de modificador aparece como una propiedad booleana en el **propiedades** ventana. Si cambia un [modificador](../windows/accelerator-modifier-property.md) valor en el **propiedades** ventana, la tabla de aceleradores tratará al nuevo modificador como una adición a los modificadores que previamente contenía. Por este motivo, si establece los valores de modificador, deberá establecer todos ellos para asegurarse de que todos los aceleradores compartan la misma **modificador** configuración.
+> [!NOTE]
+> Cada valor modificador aparece como una propiedad booleana en la ventana **propiedades** . Si cambia un valor de [modificador](../windows/accelerator-modifier-property.md) en la ventana **propiedades** , la tabla de aceleradores tratará el nuevo modificador como una adición a los modificadores que antes estaban allí. Por este motivo, si establece los valores de modificador, deberá establecer todos ellos para asegurarse de que cada acelerador comparte la misma configuración de **modificador** .
 
 ## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
-[Teclas de aceleración predefinidas](../windows/predefined-accelerator-keys.md)<br/>
+[Teclas de aceleración](../windows/predefined-accelerator-keys.md)<br/>

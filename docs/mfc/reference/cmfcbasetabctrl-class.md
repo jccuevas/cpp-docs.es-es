@@ -238,17 +238,17 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330403"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754905"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
 Implementa la funcionalidad básica para las ventanas con pestañas.
-Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
+Para obtener más información, vea el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\mfc** de la instalación de Visual Studio.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -260,7 +260,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||
 |[CMFCBaseTabCtrl::AddTab](#addtab)|Agrega una pestaña nueva a la ventana con pestañas.|
@@ -317,7 +317,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Devuelve el número de pestañas visibles.|
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||
 |[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Establece una opción que oculta la pestaña de una ventana, pero solo si la ventana con pestañas muestra una sola pestaña visible.|
-|[Cmfcbasetabctrl:: insertTab](#inserttab)|Inserta una pestaña nueva.|
+|[CMFCBaseTabCtrl::InsertTab](#inserttab)|Inserta una pestaña nueva.|
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||
 |[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|Devuelve un valor que indica si una ventana con pestañas está en modo de color automático.|
@@ -348,7 +348,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir mensajes de ventana antes de que se distribuyen a la [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Vuelve a calcular el diseño interno de una ventana con pestañas.|
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Quita todas las pestañas de la ventana con pestañas.|
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Quita una pestaña de una ventana con pestañas.|
@@ -378,22 +378,22 @@ class CMFCBaseTabCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Crea un contenedor para un objeto derivado de [CWnd](../../mfc/reference/cwnd-class.md) que no deriva de `CDockablePane`. Para acoplar un objeto `CMFCBaseTabCtrl` , cada control incrustado debe tener un contenedor de acoplamiento o bien debe derivarse de `CDockablePane`.<br /><br /> Establece la clase del contenedor mediante `SetDockingBayWrapperRTC`.|
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Especifica si las pestañas se seleccionan con un clic en el botón izquierdo o secundario del mouse.|
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Especifica si los paneles incluidos en las pestañas se destruyen automáticamente.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase `CMFCBaseTabCtrl` es abstracta. Por lo tanto, no se pueden crear instancias en ella. Para crear una ventana con pestañas, debe derivar una clase de `CMFCBaseTabCtrl`. La biblioteca MFC contiene algunos ejemplos de clases derivadas, dos de las cuales son [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) y [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md).
+La clase `CMFCBaseTabCtrl` es una clase abstracta. Por lo tanto, no se pueden crear instancias en ella. Para crear una ventana con pestañas, debe derivar una clase de `CMFCBaseTabCtrl`. La biblioteca MFC contiene algunos ejemplos de clases derivadas, dos de las cuales son [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) y [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md).
 
-A partir de Visual Studio 2015, esta clase es compatible con Microsoft Active Accessibility.
+A partir de Visual Studio 2015, esta clase admite Microsoft Active Accessibility.
 
 ## <a name="customization-tips"></a>Sugerencias de personalización
 
@@ -405,7 +405,7 @@ Las siguientes sugerencias se refieren a la `CMFCBaseTabCtrl Class` y a todas su
 
 - De forma predeterminada, las pestañas son desasociables al agregarlas a un control de pestaña. También puede agregar pestañas no desasociables mediante [CMFCBaseTabCtrl::AddTab](#addtab). Si establece el parámetro `bDetachable` en `FALSE`, la pestaña no se podrá desasociar. También puede cambiar si las pestañas son desasociables llamando al método [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).
 
-- Los objetos que se derivan de la [CWnd Class](../../mfc/reference/cwnd-class.md) se pueden colocar en una barra de control acoplable o en una pestaña acoplable. Para que todo el control quede acoplado, debe convertir el objeto `CWnd` en acoplable. Para ello, MFC usa una clase contenedora. Esta clase de contenedor es [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Cualquier objeto `CWnd` que se agregue a una barra de control acoplable o a una pestaña acoplable se ajustará dentro de un objeto `CDockablePaneAdapter` . Puede deshabilitar el ajuste automático estableciendo el parámetro `m_bEnableWrapping` del objeto `CMFCBaseTablCtrl` en `FALSE`. También puede cambiar la clase de la aplicación podrá usar como un contenedor mediante el método [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
+- Los objetos que se derivan de la [clase CWnd](../../mfc/reference/cwnd-class.md) se pueden colocar en una barra de control acoplable o en una pestaña acoplable. Para que todo el control se acopla, debe hacer que el `CWnd` objeto sea acoplable. Para ello, MFC usa una clase contenedora. Esta clase de contenedor es [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Cualquier objeto `CWnd` que se agregue a una barra de control acoplable o a una pestaña acoplable se ajustará dentro de un objeto `CDockablePaneAdapter` . Puede deshabilitar el ajuste automático estableciendo el parámetro `m_bEnableWrapping` del objeto `CMFCBaseTablCtrl` en `FALSE`. También puede cambiar la clase de la aplicación podrá usar como un contenedor mediante el método [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -421,11 +421,11 @@ Las siguientes sugerencias se refieren a la `CMFCBaseTabCtrl Class` y a todas su
 
 **Encabezado:** afxbasetabctrl.h
 
-##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon
+## <a name="cmfcbasetabctrladdicon"></a><a name="addicon"></a>CMFCBaseTabCtrl::AddIcon
 
-Agrega un icono a la lista de iconos en el modo protegido `CMap m_mapAddedIcons` miembro.
+Agrega un icono a la lista de `CMap m_mapAddedIcons` iconos del miembro protegido.
 
-```
+```cpp
 void AddIcon(
     HICON hIcon,
     int iIcon);
@@ -434,14 +434,14 @@ void AddIcon(
 ### <a name="parameters"></a>Parámetros
 
 *hIcon*<br/>
-[in] Identificador del icono que se va a agregar.
+[en] Identificador del icono que se va a agregar.
 
-*Icono*<br/>
-[in] Índice de base cero del icono en el modo protegido `CImageList m_Images` miembro.
+*icono*<br/>
+[en] El índice de base cero del `CImageList m_Images` icono en el miembro protegido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="addtab"></a>  CMFCBaseTabCtrl::AddTab
+## <a name="cmfcbasetabctrladdtab"></a><a name="addtab"></a>CMFCBaseTabCtrl::AddTab
 
 Agrega una nueva pestaña al control de ficha.
 
@@ -462,25 +462,25 @@ virtual void AddTab(
 ### <a name="parameters"></a>Parámetros
 
 *pTabWnd*<br/>
-[in] Un puntero a la ventana que este método se representa como una nueva pestaña.
+[en] Puntero a la ventana que este método representa como una nueva pestaña.
 
 *lpszTabLabel*<br/>
-[in] Una cadena que contiene la etiqueta de la nueva pestaña.
+[en] Cadena que contiene la etiqueta de la nueva pestaña.
 
 *uiImageId*<br/>
-[in] Un identificador de la imagen de la lista de imágenes. El control de ficha utiliza esta imagen como el icono de la nueva pestaña.
+[en] Un ID de imagen de la lista de imágenes. El control de ficha utiliza esta imagen como icono de la nueva pestaña.
 
 *uiResTabLabel*<br/>
-[in] El identificador de recurso para la etiqueta.
+[en] El identificador de recurso de la etiqueta.
 
-*bDetachable*<br/>
-[in] Un parámetro booleano que determina si la nueva pestaña desmontable.
+*bDesmontable*<br/>
+[en] Parámetro booleano que determina si la nueva pestaña es desmontable.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si *pTabWnd* apunta a un objeto que no se deriva el [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) y si *bDetachable* es TRUE, el marco crea automáticamente un contenedor para el *pTabWnd* objeto. Hace que el contenedor la *pTabWnd* objeto desmontable. De forma predeterminada, el contenedor es una instancia de la [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Si la funcionalidad proporcionada por el contenedor predeterminado es aceptable, utilice el [cmfcbasetabctrl:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc) método para especificar un contenedor diferente.
+Si *pTabWnd* apunta a un objeto que no se deriva de la [CDockablePane clase](../../mfc/reference/cdockablepane-class.md) y si *bDetachable* es TRUE, el marco de trabajo crea automáticamente un contenedor para el *pTabWnd* objeto. El contenedor hace que el objeto *pTabWnd* se pueda separar. De forma predeterminada, el contenedor es una instancia de la [clase CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Si la funcionalidad ofrecida por el contenedor predeterminado es inaceptable, utilice el [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) método para especificar un contenedor diferente.
 
-##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo
+## <a name="cmfcbasetabctrlapplyrestoredtabinfo"></a><a name="applyrestoredtabinfo"></a>CMFCBaseTabCtrl::ApplyRestoredTabInfo
 
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
@@ -488,23 +488,23 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bUseTabIndexes*<br/>
+[en] *bUseTabIndexes*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow
+## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow
 
-```
+```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bAutoDestroy*<br/>
+[en] *bAutoDestroy*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit
+## <a name="cmfcbasetabctrlcalcrectedit"></a><a name="calcrectedit"></a>CMFCBaseTabCtrl::CalcRectEditar
 
 ```
 virtual void CalcRectEdit(CRect& rectEdit);
@@ -512,29 +512,29 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rectEdit*<br/>
+[en] *rectEdit*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp
+## <a name="cmfcbasetabctrlcleanup"></a><a name="cleanup"></a>CMFCBaseTabCtrl::CleanUp
 
 ```
 virtual void CleanUp();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList
+## <a name="cmfcbasetabctrlclearimagelist"></a><a name="clearimagelist"></a>CMFCBaseTabCtrl::ClearImageList
 
 ```
 virtual void ClearImageList();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="createwrapper"></a>  CMFCBaseTabCtrl::CreateWrapper
+## <a name="cmfcbasetabctrlcreatewrapper"></a><a name="createwrapper"></a>CMFCBaseTabCtrl::CreateWrapper
 
-Crea un contenedor para una ventana de marco que se deriva el [clase CWnd](../../mfc/reference/cwnd-class.md) pero no se deriva el [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).
+Crea un contenedor para una ventana de marco que se deriva de la [clase CWnd](../../mfc/reference/cwnd-class.md) pero no se deriva de la [clase CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
 ```
 virtual CWnd* CreateWrapper(
@@ -546,29 +546,29 @@ virtual CWnd* CreateWrapper(
 ### <a name="parameters"></a>Parámetros
 
 *pWndToWrap*<br/>
-[in] Un puntero a la ventana de marco que se ajusta.
+[en] Un puntero a la ventana de marco que se ajusta.
 
 *lpszTabLabel*<br/>
-[in] Cadena que contiene la etiqueta de la ventana.
+[en] Cadena que contiene la etiqueta de la ventana.
 
-*bDetachable*<br/>
-[in] Un parámetro booleano que indica si la ventana es desmontable.
+*bDesmontable*<br/>
+[en] Un parámetro booleano que indica si la ventana es desmontable.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al contenedor derivado de la `CDockablePane` clase si `CreateWrapper` crea correctamente una clase contenedora para *pWndToWrap*. Si se produce un error en el método, lo retruns *pWndToWrap*.
+Un puntero al contenedor `CDockablePane` derivado `CreateWrapper` de la clase si crea correctamente una clase contenedora para *pWndToWrap*. Si se produce un error en el método, vuelve a ejecutar *pWndToWrap*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Una ventana con pestañas puede acoplar a cualquier objeto derivado de `CWnd`. Sin embargo, en orden para una `CMFCBaseTabCtrl Class` objeto para que sea acoplable, cada objeto en el `CMFCBaseTabCtrl` debe ser desmontable. Por lo tanto, `CMFCBaseTabCtrl` ajusta de forma automática todos los objetos que no se derivan `CDockablePane`.
+Una ventana con pestañas puede `CWnd`acoplar cualquier objeto derivado de . Sin embargo, `CMFCBaseTabCtrl Class` para que un objeto sea `CMFCBaseTabCtrl` acoplable, cada objeto del debe ser desmontable. Por `CMFCBaseTabCtrl` lo tanto, ajusta automáticamente los `CDockablePane`objetos que no se derivan de .
 
-De forma predeterminada, el `CMFCBaseTabCtrl` crea instancias de la [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Para cambiar la clase de valor predeterminado del contenedor, llame a [cmfcbasetabctrl:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc).
+De forma `CMFCBaseTabCtrl` predeterminada, las instancias crea de la [clase CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Para cambiar la clase predeterminada del contenedor, llame a [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
 
-Si *pWndToWrap* se deriva de `CDockablePane`, este método no creará un contenedor. En su lugar, se producirá un error y devuelven *pWndToWrap*.
+Si *pWndToWrap* se `CDockablePane`deriva de , este método no creará un contenedor. En su lugar, se producirá un error y se devolverá *pWndToWrap*.
 
-##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab
+## <a name="cmfcbasetabctrldetachtab"></a><a name="detachtab"></a>CMFCBaseTabCtrl::DetachTab
 
-El marco llama a este método para desasociar una pestaña de control de ficha.
+El marco de trabajo llama a este método para separar una pestaña del control de ficha.
 
 ```
 virtual BOOL DetachTab(
@@ -580,56 +580,56 @@ virtual BOOL DetachTab(
 ### <a name="parameters"></a>Parámetros
 
 *dockMethod*<br/>
-[in] Tipo de datos enumerado proporcionado por el [CBasePane (clase)](../../mfc/reference/cbasepane-class.md). Este tipo de datos especifica el método que se usó para separar la ficha.
+[en] Un tipo de datos enumerado proporcionado por la [clase CBasePane](../../mfc/reference/cbasepane-class.md). Este tipo de datos especifica el método que se usó para separar la ficha.
 
 *nTabNum*<br/>
-[in] Índice de base cero de la pestaña para que se va a desasociar.
+[en] El índice de base cero de la pestaña que se va a separar.
 
-*bHide*<br/>
-[in] Un parámetro booleano que indica si el marco de trabajo debe ocultar la ficha desasociada.
+*bOcultar*<br/>
+[en] Un parámetro booleano que indica si el marco de trabajo debe ocultar la pestaña separada.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si la ficha especificada por *nTabNum* es que no sean separables, esta función se produce un error y devuelve FALSE.
+Si la pestaña especificada por *nTabNum* no es desmontable, se produce un error en esta función y devuelve FALSE.
 
-##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive
+## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive
 
-```
+```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *bLastActive*<br/>
+[en] *bLastActive*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="enableautocolor"></a>  CMFCBaseTabCtrl::EnableAutoColor
+## <a name="cmfcbasetabctrlenableautocolor"></a><a name="enableautocolor"></a>CMFCBaseTabCtrl::EnableAutoColor
 
-Controla si el marco de trabajo usa los colores de fondo automático cuando se dibuja una ficha.
+Controla si el marco de trabajo utiliza los colores de fondo automáticos al dibujar una ficha.
 
-```
+```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
-[in] Un parámetro booleano que determina si el marco de trabajo usa colores automáticos.
+*bHabilitar*<br/>
+[en] Un parámetro booleano que determina si el marco de trabajo utiliza colores automáticos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Un control de ficha tiene una matriz de varios colores predefinidos. Cuando el marco usa colores automáticos, cada pestaña en una serie de pestañas se asigna el color siguiente de esta matriz.
+Un control de ficha tiene una matriz de varios colores predefinidos. Cuando el marco de trabajo utiliza colores automáticos, a cada pestaña de una serie de pestañas se le asigna el siguiente color de esta matriz.
 
-De forma predeterminada, los colores automático dependen de los colores definidos en la biblioteca. Puede proporcionar una matriz de colores personalizada mediante una llamada a [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).
+De forma predeterminada, los colores automáticos se determinan mediante los colores definidos por la biblioteca. Puede proporcionar una matriz personalizada de colores llamando a [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).
 
-##  <a name="enablecustomtooltips"></a>  CMFCBaseTabCtrl::EnableCustomToolTips
+## <a name="cmfcbasetabctrlenablecustomtooltips"></a><a name="enablecustomtooltips"></a>CMFCBaseTabCtrl::EnableCustomToolTips
 
-Permite que la información sobre herramientas personalizada para el control de ficha.
+Habilita la información sobre herramientas personalizada para el control de ficha.
 
 ```
 BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
@@ -637,20 +637,20 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
-[in] Valor booleano que determina si se utiliza la información sobre herramientas personalizada.
+*bHabilitar*<br/>
+[en] Un valor booleano que determina si se debe utilizar información sobre herramientas personalizada.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si es correcto; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si se habilita la información sobre herramientas personalizada, el control de ficha envía el mensaje AFX_WM_ON_GET_TAB_TOOLTIP al marco principal. Si desea admitir la información sobre herramientas personalizada en la aplicación, la ventana de marco principal debe controlar este método y proporcione el texto de información sobre herramientas personalizada. Para obtener más información acerca de cómo proporcionar texto de información sobre herramientas personalizada, vea [CMFCTabToolTipInfo (estructura)](../../mfc/reference/cmfctabtooltipinfo-structure.md).
+Si la información sobre herramientas personalizada está habilitada, el control de ficha envía el mensaje AFX_WM_ON_GET_TAB_TOOLTIP al marco principal. Si desea admitir información sobre herramientas personalizada en la aplicación, la ventana de marco principal debe controlar este método y proporcionar el texto de información sobre herramientas personalizado. Para obtener más información acerca de cómo proporcionar texto de información sobre herramientas personalizada, vea [CMFCTabToolTipInfo Structure](../../mfc/reference/cmfctabtooltipinfo-structure.md).
 
-##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit
+## <a name="cmfcbasetabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>CMFCBaseTabCtrl::EnableInPlaceEditar
 
-Permite dirigir la modificación de las etiquetas de pestaña por el usuario.
+Habilita la edición directa de las etiquetas de pestaña por parte del usuario.
 
 ```
 virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
@@ -658,18 +658,18 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
-[in] Un parámetro booleano que especifica si se habilita la edición directa de las etiquetas de pestaña.
+*bHabilitar*<br/>
+[en] Parámetro booleano que especifica si se debe habilitar la edición directa de las etiquetas de tabulación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, la edición directa de las etiquetas de pestaña está deshabilitada para los controles de ficha.
 
-Puede habilitar la edición directa de un subconjunto de las pestañas en el control de ficha. Para ello, invalide el método `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab` debe devolver un valor distinto de cero para todas las pestañas que permiten la edición directa de etiquetas de pestaña.
+Puede habilitar la edición directa para un subconjunto de las fichas del control de ficha. Para ello, invalide `CMFCBaseTabCtrl::StartRenameTab`el método . `StartRenameTab`debe devolver un valor distinto de cero para todas las pestañas que admiten la edición directa de etiquetas de pestaña.
 
-En el `CMFCBaseTabCtrl Class`, este método es una función virtual pura y no tiene ninguna implementación. Si deriva una clase de `CMFCBaseTabCtrl`, debe implementar esta función.
+En `CMFCBaseTabCtrl Class`el , este método es una función virtual pura y no tiene ninguna implementación. Si deriva una `CMFCBaseTabCtrl`clase de , debe implementar esta función.
 
-##  <a name="enabletabdetach"></a>  CMFCBaseTabCtrl::EnableTabDetach
+## <a name="cmfcbasetabctrlenabletabdetach"></a><a name="enabletabdetach"></a>CMFCBaseTabCtrl::EnableTabDetach
 
 Habilita la capacidad de desasociar pestañas.
 
@@ -681,34 +681,34 @@ virtual BOOL EnableTabDetach(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de una pestaña.
+*Itab*<br/>
+[en] El índice de base cero de una ficha.
 
-*bHabilitar el*<br/>
-[in] Un valor booleano que indica si se debe establecer la pestaña desmontable.
+*bHabilitar*<br/>
+[en] Un valor booleano que indica si se debe hacer que la pestaña sea desmontable.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si es correcto; en caso contrario, FALSE.
 
-##  <a name="enabletabswap"></a>  CMFCBaseTabCtrl::EnableTabSwap
+## <a name="cmfcbasetabctrlenabletabswap"></a><a name="enabletabswap"></a>CMFCBaseTabCtrl::EnableTabSwap
 
-Permite al usuario cambiar el orden de tabulación usando un mouse.
+Permite al usuario cambiar el orden de tabulación con un ratón.
 
-```
+```cpp
 void EnableTabSwap(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
-[in] Un valor booleano que indica si se debe permitir el intercambio de ficha.
+*bHabilitar*<br/>
+[en] Un valor booleano que indica si se debe habilitar el intercambio de tabulaciones.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando se habilita el intercambio de ficha, el usuario puede arrastrar una pestaña y cambiar su posición relativa en el control de ficha.
+Cuando se habilita el intercambio de pestañas, el usuario puede arrastrar una pestaña y cambiar su posición relativa en el control de ficha.
 
-##  <a name="ensurevisible"></a>  CMFCBaseTabCtrl::EnsureVisible
+## <a name="cmfcbasetabctrlensurevisible"></a><a name="ensurevisible"></a>CMFCBaseTabCtrl::EnsureVisible
 
 Desplaza las pestañas hasta que la pestaña especificada sea visible.
 
@@ -718,28 +718,28 @@ virtual BOOL EnsureVisible(int iTab);
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de una pestaña.
+*Itab*<br/>
+[en] El índice de base cero de una ficha.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método no tiene ningún efecto si la ficha indicado por *iTab* ya está visible.
+Este método no tiene ningún efecto si la pestaña indicada por *iTab* ya está visible.
 
-De forma predeterminada, este método no es compatible con la `CMFCBaseTabCtrl Class`. Debe implementar esta función en una clase personalizada derivada de `CMFCBaseTabCtrl` si ese control de pestaña personalizada admite el desplazamiento de la pestaña. Este método es compatible con la [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md).
+De forma predeterminada, el `CMFCBaseTabCtrl Class`archivo . Debe implementar esta función en una `CMFCBaseTabCtrl` clase personalizada derivada de si ese control de ficha personalizado admite el desplazamiento de pestañas. Este método es compatible con la [CMFCTabCtrl (clase).](../../mfc/reference/cmfctabctrl-class.md)
 
-##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode
+## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode
 
-```
+```cpp
 void EnterDragMode();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="findtargetwnd"></a>  CMFCBaseTabCtrl::FindTargetWnd
+## <a name="cmfcbasetabctrlfindtargetwnd"></a><a name="findtargetwnd"></a>CMFCBaseTabCtrl::FindTargetWnd
 
 Identifica el panel que contiene un punto especificado.
 
@@ -749,18 +749,18 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
-[in] Un punto que se define utilizando el área de cliente de coordenadas de la [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto.
+*Pt*<br/>
+[en] Punto que se define mediante el uso de coordenadas de área de cliente de la [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto si es correcto; de lo contrario, NULL.
+Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto si se realiza correctamente; NULL.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-En el `CMFCBaseTabCtrl` (clase), este método es una función virtual pura: debe implementar si deriva una clase de `CMFCBaseTabCtrl`.
+En `CMFCBaseTabCtrl` la clase, este método es una función virtual pura: `CMFCBaseTabCtrl`debe implementarlo si deriva una clase de .
 
-##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab
+## <a name="cmfcbasetabctrlfirechangeactivetab"></a><a name="firechangeactivetab"></a>CMFCBaseTabCtrl::FireChangeActiveTab
 
 ```
 virtual void FireChangeActiveTab(int nNewTab);
@@ -768,11 +768,11 @@ virtual void FireChangeActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nNewTab*<br/>
+[en] *nNewTab*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab
+## <a name="cmfcbasetabctrlfirechangingactivetab"></a><a name="firechangingactivetab"></a>CMFCBaseTabCtrl::FireChangingActiveTab
 
 ```
 virtual BOOL FireChangingActiveTab(int nNewTab);
@@ -780,15 +780,15 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nNewTab*<br/>
+[en] *nNewTab*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getactivetab"></a>  CMFCBaseTabCtrl::GetActiveTab
+## <a name="cmfcbasetabctrlgetactivetab"></a><a name="getactivetab"></a>CMFCBaseTabCtrl::GetActiveTab
 
-Recupera el índice de la pestaña actualmente activa.
+Recupera el índice de la pestaña activa actualmente.
 
 ```
 virtual int GetActiveTab() const;
@@ -796,11 +796,11 @@ virtual int GetActiveTab() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero de la pestaña activa; -1 si no hay ninguna pestaña activa.
+El índice de base cero de la pestaña activa; -1 si no hay ninguna pestaña activa.
 
-##  <a name="getactivetabcolor"></a>  CMFCBaseTabCtrl::GetActiveTabColor
+## <a name="cmfcbasetabctrlgetactivetabcolor"></a><a name="getactivetabcolor"></a>CMFCBaseTabCtrl::GetActiveTabColor
 
-Recupera el color de fondo de la pestaña actualmente activa.
+Recupera el color de fondo de la pestaña activa actualmente.
 
 ```
 virtual COLORREF GetActiveTabColor() const;
@@ -808,13 +808,13 @@ virtual COLORREF GetActiveTabColor() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un [COLORREF](/windows/desktop/gdi/colorref) valor que especifica el color de fondo de la pestaña activa.
+Un valor [COLORREF](/windows/win32/gdi/colorref) que especifica el color de fondo de la ficha activa.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, el color de fondo de la pestaña activa es COLOR_WINDOW. Puede cambiar el color de fondo de la ficha activa mediante el método [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).
 
-##  <a name="getactivetabtextcolor"></a>  CMFCBaseTabCtrl::GetActiveTabTextColor
+## <a name="cmfcbasetabctrlgetactivetabtextcolor"></a><a name="getactivetabtextcolor"></a>CMFCBaseTabCtrl::GetActiveTabTextColor
 
 Recupera el color del texto de la pestaña activa.
 
@@ -824,15 +824,15 @@ virtual COLORREF GetActiveTabTextColor() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un [COLORREF](/windows/desktop/gdi/colorref) valor que especifica el color del texto de la pestaña activa.
+Un valor [COLORREF](/windows/win32/gdi/colorref) que especifica el color del texto de la ficha activa.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, el color del texto de las pestañas activas es COLOR_WINDOWTEXT. Puede cambiar el color del texto con el método [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).
 
-##  <a name="getactivewnd"></a>  CMFCBaseTabCtrl::GetActiveWnd
+## <a name="cmfcbasetabctrlgetactivewnd"></a><a name="getactivewnd"></a>CMFCBaseTabCtrl::GetActiveWnd
 
-Recupera un puntero a la ventana de la pestaña activa.
+Recupera un puntero a la ventana de ficha activa actualmente.
 
 ```
 virtual CWnd* GetActiveWnd() const;
@@ -842,9 +842,9 @@ virtual CWnd* GetActiveWnd() const;
 
 Un puntero a una ventana.
 
-##  <a name="getautocolors"></a>  CMFCBaseTabCtrl::GetAutoColors
+## <a name="cmfcbasetabctrlgetautocolors"></a><a name="getautocolors"></a>CMFCBaseTabCtrl::GetAutoColors
 
-Recupera la matriz de colores que se usan para el coloreado automático.
+Recupera la matriz de colores utilizada para colorear automáticamente.
 
 ```
 const CArray<COLORREF,COLORREF>& GetAutoColors() const;
@@ -852,13 +852,13 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una referencia a una matriz de [COLORREF](/windows/desktop/gdi/colorref) valores que el [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto se usa para coloreado automático de las pestañas.
+Una referencia a una matriz de [COLORREF](/windows/win32/gdi/colorref) valores que el [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto utiliza para el color de tabulación automática.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el marco de trabajo inicializa la matriz de colores a los colores definidos por la biblioteca. Puede proporcionar una matriz de colores personalizada llamando al método [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).
+De forma predeterminada, el marco de trabajo inicializa la matriz de colores en colores definidos por la biblioteca. Puede proporcionar una matriz personalizada de colores llamando al método [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).
 
-##  <a name="getfirstvisibletab"></a>  CMFCBaseTabCtrl::GetFirstVisibleTab
+## <a name="cmfcbasetabctrlgetfirstvisibletab"></a><a name="getfirstvisibletab"></a>CMFCBaseTabCtrl::GetFirstVisibleTab
 
 Recupera un puntero a la primera pestaña visible.
 
@@ -873,22 +873,22 @@ virtual CWnd* GetFirstVisibleTab(
 ### <a name="parameters"></a>Parámetros
 
 *iTabNum*<br/>
-[out] Una referencia a un entero. Este método escribe el índice de base cero de la primera pestaña visible para este parámetro.
+[fuera] Una referencia a un entero. Este método escribe el índice de base cero de la primera pestaña visible en este parámetro.
 
 *iStartFrom*<br/>
-[in] Índice de base cero de la primera pestaña para comprobar.
+[en] El índice de base cero de la primera pestaña que se debe comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la primera pestaña visible si se realiza correctamente; en caso contrario, es NULL.
+Un puntero a la primera pestaña visible si se realiza correctamente; NULL.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si se produce un error en este método, escriba el valor -1 para *iStartFrom*.
+Si se produce un error en este método, escribe el valor -1 en *iStartFrom*.
 
-Si *iStartFrom* es mayor o igual que el número de pestañas en el control de ficha, `GetFirstVisibleTab` automáticamente se produce un error.
+Si *iStartFrom* es mayor o igual que el número `GetFirstVisibleTab` de pestañas en el control de ficha, se produce un error automáticamente.
 
-##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum
+## <a name="cmfcbasetabctrlgetfirstvisibletabnum"></a><a name="getfirstvisibletabnum"></a>CMFCBaseTabCtrl::GetFirstVisibleTabNum
 
 ```
 virtual int GetFirstVisibleTabNum() const;
@@ -896,9 +896,9 @@ virtual int GetFirstVisibleTabNum() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gethighlightedtab"></a>  CMFCBaseTabCtrl::GetHighlightedTab
+## <a name="cmfcbasetabctrlgethighlightedtab"></a><a name="gethighlightedtab"></a>CMFCBaseTabCtrl::GetHighlightedTab
 
 Recupera el índice de la pestaña resaltada actualmente.
 
@@ -908,9 +908,9 @@ int GetHighlightedTab() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero de la ficha resaltada.
+El índice de base cero de la pestaña resaltada.
 
-##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList
+## <a name="cmfcbasetabctrlgetimagelist"></a><a name="getimagelist"></a>CMFCBaseTabCtrl::GetImageList
 
 ```
 virtual const CImageList* GetImageList() const;
@@ -918,9 +918,9 @@ virtual const CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize
+## <a name="cmfcbasetabctrlgetimagesize"></a><a name="getimagesize"></a>CMFCBaseTabCtrl::GetImageSize
 
 ```
 virtual CSize GetImageSize() const;
@@ -928,9 +928,9 @@ virtual CSize GetImageSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab
+## <a name="cmfcbasetabctrlgetlastvisibletab"></a><a name="getlastvisibletab"></a>CMFCBaseTabCtrl::GetLastVisibleTab
 
 ```
 virtual CWnd* GetLastVisibleTab(int& iTabNum);
@@ -938,15 +938,15 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTabNum*<br/>
+[en] *iTabNum*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getlocation"></a>  CMFCBaseTabCtrl::GetLocation
+## <a name="cmfcbasetabctrlgetlocation"></a><a name="getlocation"></a>CMFCBaseTabCtrl::GetLocation
 
-Recupera la ubicación de la parte del área de pestaña de control de ficha.
+Recupera la ubicación de la parte del área de ficha del control de ficha.
 
 ```
 Location GetLocation() const;
@@ -956,11 +956,11 @@ Location GetLocation() const;
 
 La ubicación del área de ficha.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Los valores de ubicación de área de pestaña posibles son LOCATION_BOTTOM y LOCATION_TOP.
+Los valores de ubicación de área de ficha posibles se LOCATION_BOTTOM y LOCATION_TOP.
 
-##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize
+## <a name="cmfcbasetabctrlgetmaxwindowsize"></a><a name="getmaxwindowsize"></a>CMFCBaseTabCtrl::GetMaxWindowSize
 
 ```
 virtual CSize GetMaxWindowSize() const;
@@ -968,11 +968,11 @@ virtual CSize GetMaxWindowSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gettabarea"></a>  CMFCBaseTabCtrl::GetTabArea
+## <a name="cmfcbasetabctrlgettabarea"></a><a name="gettabarea"></a>CMFCBaseTabCtrl::GetTabArea
 
-Recupera el tamaño y posición del área de pestaña de control de ficha.
+Recupera el tamaño y la posición del área de ficha del control de ficha.
 
 ```
 virtual void GetTabArea(
@@ -983,18 +983,18 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>Parámetros
 
 *rectTabAreaTop*<br/>
-[in] Una referencia a un `CRect` objeto. `GetTabArea` Este objeto se usa para almacenar el tamaño y posición del área de pestaña superior.
+[en] Una referencia `CRect` a un objeto. `GetTabArea`utiliza este objeto para almacenar el tamaño y la posición del área de la ficha superior.
 
 *rectTabAreaBottom*<br/>
-[in] Una referencia a un `CRect` objeto. `GetTabArea` Este objeto se usa para almacenar el tamaño y posición del área inferior de ficha.
+[en] Una referencia `CRect` a un objeto. `GetTabArea`utiliza este objeto para almacenar el tamaño y la posición del área de la pestaña inferior.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Después de `GetTabArea` que devuelve el `CRect` parámetros contienen el tamaño y posición del área de ficha en coordenadas de cliente del control de ficha. Si no hay ningún área de pestañas en la parte superior o inferior del control de ficha, `rectTabAreaTop` o `rectTabAreaBottom` están vacíos.
+Después `GetTabArea` de `CRect` los retornos, los parámetros contienen el tamaño y la posición del área de ficha en las coordenadas de cliente del control de ficha. Si no hay ningún área de ficha en `rectTabAreaTop` la `rectTabAreaBottom` parte superior o inferior del control de ficha, o si están vacías.
 
-En el `CMFCBaseTabCtrl Class`, este método es una función virtual pura y no tiene ninguna implementación. Si deriva una clase de `CMFCBaseTabCtrl`, tendrá que implementar esta función.
+En `CMFCBaseTabCtrl Class`el , este método es una función virtual pura y no tiene ninguna implementación. Si deriva una `CMFCBaseTabCtrl`clase de , debe implementar esta función.
 
-##  <a name="gettabbkcolor"></a>  CMFCBaseTabCtrl::GetTabBkColor
+## <a name="cmfcbasetabctrlgettabbkcolor"></a><a name="gettabbkcolor"></a>CMFCBaseTabCtrl::GetTabBkColor
 
 Recupera el color de fondo de la pestaña especificada.
 
@@ -1004,16 +1004,16 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un [COLORREF](/windows/desktop/gdi/colorref) valor que indica el color de fondo de la pestaña especificada; -1 si *iTab* está fuera del intervalo.
+Un valor [COLORREF](/windows/win32/gdi/colorref) que indica el color de fondo de la ficha especificada; -1 si *iTab* está fuera del alcance.
 
-##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize
+## <a name="cmfcbasetabctrlgettabbordersize"></a><a name="gettabbordersize"></a>CMFCBaseTabCtrl::GetTabBorderSize
 
-Recupera el tamaño de los bordes de pestaña en el control de ficha.
+Recupera el tamaño de los bordes de tabulación en el control de ficha.
 
 ```
 virtual int GetTabBorderSize() const;
@@ -1021,15 +1021,15 @@ virtual int GetTabBorderSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El tamaño del borde de ficha, en píxeles.
+El tamaño del borde de la pestaña, en píxeles.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tamaño predeterminado para el borde de ficha es tres píxeles. Puede cambiar el tamaño del borde con el método [CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize).
+El tamaño predeterminado para el borde de la ficha es de tres píxeles. Puede cambiar este tamaño de borde con el método [CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize).
 
-##  <a name="gettabbyid"></a>  CMFCBaseTabCtrl::GetTabByID
+## <a name="cmfcbasetabctrlgettabbyid"></a><a name="gettabbyid"></a>CMFCBaseTabCtrl::GetTabByID
 
-Recupera el índice de una pestaña en función de un identificador de pestaña.
+Recupera el índice de una pestaña basada en un identificador de ficha.
 
 ```
 virtual int GetTabByID(int id) const;
@@ -1037,18 +1037,18 @@ virtual int GetTabByID(int id) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*<br/>
-[in] Un identificador de pestaña.
+*id*<br/>
+[en] Un ID de pestaña.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero de una ficha, si se encuentra; -1 si no se encuentra el identificador de la pestaña.
+El índice de base cero de una pestaña si se encuentra; -1 si no se encuentra el ID de tabulación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La pestaña los identificadores se asignan automáticamente cuando se agregan las pestañas a un control de ficha.
+Los ides de ficha se asignan automáticamente cuando se agregan fichas a un control de ficha.
 
-##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton
+## <a name="cmfcbasetabctrlgettabclosebutton"></a><a name="gettabclosebutton"></a>CMFCBaseTabCtrl::GetTabCloseButton
 
 ```
 CRect GetTabCloseButton() const;
@@ -1056,11 +1056,11 @@ CRect GetTabCloseButton() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gettabfromhwnd"></a>  CMFCBaseTabCtrl::GetTabFromHwnd
+## <a name="cmfcbasetabctrlgettabfromhwnd"></a><a name="gettabfromhwnd"></a>CMFCBaseTabCtrl::GetTabFromHwnd
 
-Recupera el índice de la pestaña que contiene el objeto HWND especificado.
+Recupera el índice de la ficha que contiene el objeto HWND especificado.
 
 ```
 virtual int GetTabFromHwnd(HWND hwnd) const;
@@ -1068,14 +1068,14 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*HWND*<br/>
-[in] Identificador de una ventana.
+*Hwnd*<br/>
+[en] Un identificador de una ventana.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero de la ficha si se realiza correctamente; -1 si no hay pestaña contiene *hwnd*.
+El índice de base cero de la pestaña si se realiza correctamente; -1 si ninguna pestaña contiene *hwnd*.
 
-##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint
+## <a name="cmfcbasetabctrlgettabfrompoint"></a><a name="gettabfrompoint"></a>CMFCBaseTabCtrl::GetTabFromPoint
 
 Recupera la pestaña que contiene un punto especificado.
 
@@ -1085,14 +1085,14 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
-[in] Un punto en coordenadas de cliente del control de ficha.
+*Pt*<br/>
+[en] Un punto en las coordenadas de cliente del control de ficha.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El índice de la pestaña que contenga *pt*; -1 si no hay pestaña contiene *pt*.
+El índice de la pestaña que contiene *pt*; -1 si ninguna pestaña contiene *pt*.
 
-##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth
+## <a name="cmfcbasetabctrlgettabfullwidth"></a><a name="gettabfullwidth"></a>CMFCBaseTabCtrl::GetTabFullWidth
 
 ```
 virtual int GetTabFullWidth(int iTab) const;
@@ -1100,13 +1100,13 @@ virtual int GetTabFullWidth(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTab*<br/>
+[en] *iTab*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gettabhicon"></a>  CMFCBaseTabCtrl::GetTabHicon
+## <a name="cmfcbasetabctrlgettabhicon"></a><a name="gettabhicon"></a>CMFCBaseTabCtrl::GetTabHicon
 
 Devuelve el HICON asociado a la pestaña especificada.
 
@@ -1116,14 +1116,14 @@ virtual HICON GetTabHicon(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 ### <a name="return-value"></a>Valor devuelto
 
-HICON asociada con una etiqueta de ficha si se realiza correctamente; NULL si no hay ningún HICON o si se produce un error en el método.
+El HICON asociado a una etiqueta de tabulación si se realiza correctamente; NULL si no hay HICON o si se produce un error en el método.
 
-##  <a name="gettabicon"></a>  CMFCBaseTabCtrl::GetTabIcon
+## <a name="cmfcbasetabctrlgettabicon"></a><a name="gettabicon"></a>CMFCBaseTabCtrl::GetTabIcon
 
 Recupera el icono asociado a la pestaña especificada.
 
@@ -1133,20 +1133,20 @@ virtual UINT GetTabIcon(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El Id. de icono de la pestaña especificada si se realiza correctamente; -1 si el índice no es válido.
+El identificador de icono de la pestaña especificada si se realiza correctamente; -1 si el índice no es válido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto almacena los iconos en el interno [CImageList](../../mfc/reference/cimagelist-class.md) objeto.
 
-##  <a name="gettabid"></a>  CMFCBaseTabCtrl::GetTabID
+## <a name="cmfcbasetabctrlgettabid"></a><a name="gettabid"></a>CMFCBaseTabCtrl::GetTabID
 
-Recupera el identificador de una pestaña especificada por el índice de tabulación.
+Recupera el identificador de una ficha especificada por el índice de ficha.
 
 ```
 int GetTabID(int iTab) const;
@@ -1154,16 +1154,16 @@ int GetTabID(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un identificador de la pestaña o -1 si *iTab* está fuera del intervalo.
+Un identificador de la pestaña o -1 si *iTab* está fuera del rango.
 
-##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel
+## <a name="cmfcbasetabctrlgettablabel"></a><a name="gettablabel"></a>CMFCBaseTabCtrl::GetTabLabel
 
-Recupera el texto de una etiqueta de ficha.
+Recupera el texto de una etiqueta de tabulación.
 
 ```
 virtual BOOL GetTabLabel(
@@ -1173,25 +1173,25 @@ virtual BOOL GetTabLabel(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 *strLabel*<br/>
-[out] Una referencia a un `CString` objeto. Este método almacena la etiqueta de la pestaña de este parámetro.
+[fuera] Una referencia `CString` a un objeto. Este método almacena la etiqueta de la pestaña en este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se realiza correctamente; FALSE en caso contrario.
+TRUESi se realiza correctamente; FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método produce un error si el índice *iTab* no es válido.
+Se produce un error en este método si el índice *iTab* no es válido.
 
-Establece la etiqueta de una pestaña al crear la pestaña utilizando [cmfcbasetabctrl:: addTab](#addtab). También puede cambiar la etiqueta después de la creación con el método [CMFCBaseTabCtrl::SetTabLabel](#settablabel).
+La etiqueta de una ficha se establece al crear la ficha mediante [CMFCBaseTabCtrl::AddTab](#addtab). También puede cambiar la etiqueta después de la creación con el método [CMFCBaseTabCtrl::SetTabLabel](#settablabel).
 
-##  <a name="gettabrect"></a>  CMFCBaseTabCtrl::GetTabRect
+## <a name="cmfcbasetabctrlgettabrect"></a><a name="gettabrect"></a>CMFCBaseTabCtrl::GetTabRect
 
-Recupera el tamaño y posición de la pestaña especificada.
+Recupera el tamaño y la posición de la pestaña especificada.
 
 ```
 virtual BOOL GetTabRect(
@@ -1201,17 +1201,17 @@ virtual BOOL GetTabRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 *Rect*<br/>
-[out] Una referencia a un `CRect` objeto. Este método almacena el tamaño y posición de la pestaña en este parámetro.
+[fuera] Una referencia `CRect` a un objeto. Este método almacena el tamaño y la posición de la pestaña en este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se realiza correctamente; FALSE si no es válido el índice de tabulación.
+TRUESi se realiza correctamente; FALSE si el índice de ficha no es válido.
 
-##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight
+## <a name="cmfcbasetabctrlgettabsheight"></a><a name="gettabsheight"></a>CMFCBaseTabCtrl::GetTabsHeight
 
 ```
 virtual int GetTabsHeight() const;
@@ -1219,11 +1219,11 @@ virtual int GetTabsHeight() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gettabsnum"></a>  CMFCBaseTabCtrl::GetTabsNum
+## <a name="cmfcbasetabctrlgettabsnum"></a><a name="gettabsnum"></a>CMFCBaseTabCtrl::GetTabsNum
 
-Recupera el número de fichas del control de ficha.
+Recupera el número de pestañas en el control de ficha.
 
 ```
 virtual int GetTabsNum() const;
@@ -1231,9 +1231,9 @@ virtual int GetTabsNum() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de fichas del control de ficha.
+El número de pestañas en el control de ficha.
 
-##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect
+## <a name="cmfcbasetabctrlgettabsrect"></a><a name="gettabsrect"></a>CMFCBaseTabCtrl::GetTabsRect
 
 ```
 virtual void GetTabsRect(CRect& rect) const;
@@ -1241,11 +1241,11 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *rect*<br/>
+[en] *rect*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="gettabtextcolor"></a>  CMFCBaseTabCtrl::GetTabTextColor
+## <a name="cmfcbasetabctrlgettabtextcolor"></a><a name="gettabtextcolor"></a>CMFCBaseTabCtrl::GetTabTextColor
 
 Recupera el color del texto de la pestaña especificada.
 
@@ -1255,16 +1255,16 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que indica el color del texto de la pestaña especificada; -1 si *iTab* está fuera del intervalo.
+Un parámetro [COLORREF](/windows/win32/gdi/colorref) que indica el color del texto de la ficha especificada; -1 si *iTab* está fuera del alcance.
 
-##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd
+## <a name="cmfcbasetabctrlgettabwnd"></a><a name="gettabwnd"></a>CMFCBaseTabCtrl::GetTabWnd
 
-Devuelve el puntero en el panel que se encuentra en la ficha especificada.
+Devuelve el puntero al panel que reside en la pestaña especificada.
 
 ```
 virtual CWnd* GetTabWnd(int iTab) const;
@@ -1272,22 +1272,22 @@ virtual CWnd* GetTabWnd(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de una pestaña.
+*Itab*<br/>
+[en] El índice de base cero de una ficha.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la [CWnd](../../mfc/reference/cwnd-class.md) objeto que reside en la ficha que *iTab* especifica. NULL si *iTab* no es válido.
+Puntero al objeto [CWnd](../../mfc/reference/cwnd-class.md) que reside en la ficha que *especifica iTab.* NULL si *iTab* no es válido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El objeto devuelto es la que agregar la aplicación cuando llama a cualquiera [cmfcbasetabctrl:: addTab](#addtab) o [cmfcbasetabctrl:: insertTab](#inserttab).
+El objeto devuelto es el que la aplicación agregó cuando llamó a [CMFCBaseTabCtrl::AddTab](#addtab) o [CMFCBaseTabCtrl::InsertTab](#inserttab).
 
-Si el objeto en una pestaña tiene un contenedor, este método devolverá el contenedor para el objeto. Para obtener más información acerca de los contenedores, consulte [CMFCBaseTabCtrl::CreateWrapper](#createwrapper). Si desea obtener acceso a un puntero al objeto de direct sin el contenedor, utilice el método [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper).
+Si el objeto de una ficha tiene un contenedor, este método devolverá el contenedor para el objeto. Para obtener más información acerca de los contenedores, vea [CMFCBaseTabCtrl::CreateWrapper](#createwrapper). Si desea tener acceso a un puntero al objeto directo sin el contenedor, utilice el método [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper).
 
-##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper
+## <a name="cmfcbasetabctrlgettabwndnowrapper"></a><a name="gettabwndnowrapper"></a>CMFCBaseTabCtrl::GetTabWndNoWrapper
 
-Devuelve un puntero al control que se encuentra en una ficha, incluso si el control tiene un contenedor.
+Devuelve un puntero al control que reside en una ficha, incluso si el control tiene un contenedor.
 
 ```
 virtual CWnd* GetTabWndNoWrapper(int iTab) const;
@@ -1295,22 +1295,22 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de una pestaña.
+*Itab*<br/>
+[en] El índice de base cero de una ficha.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la [CWnd](../../mfc/reference/cwnd-class.md) objeto que reside en la pestaña especificada; NULL si *iTab* no es válido.
+Un puntero a la [CWnd](../../mfc/reference/cwnd-class.md) objeto que reside en la ficha especificada; NULL si *iTab* no es válido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método recupera un puntero directo a la `CWnd` objeto que agregó mediante el método [cmfcbasetabctrl:: addTab](#addtab) o [cmfcbasetabctrl:: insertTab](#inserttab). `GetTabWndNoWrapper` Recupera un puntero a agregado `CWnd`, incluso si el marco de trabajo agrega un contenedor para el objeto. Para obtener más información acerca de los contenedores y los [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md), consulte [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).
+Este método recupera un puntero `CWnd` directo al objeto que agregó mediante el método [CMFCBaseTabCtrl::AddTab](#addtab) o [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper`recuperará un puntero `CWnd`al agregado, incluso si el marco de trabajo agregó un contenedor para el objeto. Para obtener más información acerca de los contenedores y la [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md), vea [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).
 
 Utilice el método [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd) si no desea omitir la clase contenedora.
 
-##  <a name="gettooltipctrl"></a>  CMFCBaseTabCtrl::GetToolTipCtrl
+## <a name="cmfcbasetabctrlgettooltipctrl"></a><a name="gettooltipctrl"></a>CMFCBaseTabCtrl::GetToolTipCtrl
 
-Recupera una referencia a la información sobre herramientas de controlar.
+Recupera una referencia al contorl de información sobre herramientas.
 
 ```
 CToolTipCtrl& GetToolTipCtrl() const;
@@ -1320,7 +1320,7 @@ CToolTipCtrl& GetToolTipCtrl() const;
 
 Una referencia al control de información sobre herramientas.
 
-##  <a name="getvisibletabsnum"></a>  CMFCBaseTabCtrl::GetVisibleTabsNum
+## <a name="cmfcbasetabctrlgetvisibletabsnum"></a><a name="getvisibletabsnum"></a>CMFCBaseTabCtrl::GetVisibleTabsNum
 
 Recupera el número de pestañas visibles actualmente.
 
@@ -1332,7 +1332,7 @@ virtual int GetVisibleTabsNum() const;
 
 El número de pestañas visibles.
 
-##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage
+## <a name="cmfcbasetabctrlhasimage"></a><a name="hasimage"></a>CMFCBaseTabCtrl::HasImage
 
 ```
 virtual BOOL HasImage(int iTab) const;
@@ -1340,15 +1340,15 @@ virtual BOOL HasImage(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTab*<br/>
+[en] *iTab*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="hidesingletab"></a>  CMFCBaseTabCtrl::HideSingleTab
+## <a name="cmfcbasetabctrlhidesingletab"></a><a name="hidesingletab"></a>CMFCBaseTabCtrl::HideSingleTab
 
-Establece la opción para ocultar las fichas del control de ficha cuando hay una sola pestaña visible.
+Establece la opción para ocultar las fichas del control de ficha cuando hay una pestaña visible.
 
 ```
 virtual void HideSingleTab(BOOL bHide = TRUE);
@@ -1356,14 +1356,14 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHide*<br/>
-[in] Valor booleano que especifica si se habilita ocultar fichas únicas.
+*bOcultar*<br/>
+[en] Un valor booleano que especifica si se debe habilitar la ocultación de pestañas individuales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando la aplicación está configurada para ocultar fichas únicas, el marco de trabajo muestra pestañas automáticamente cuando se agrega una segunda pestaña para el control de ficha.
+Cuando la aplicación está configurada para ocultar pestañas individuales, el marco de trabajo muestra automáticamente las pestañas cuando se agrega una segunda pestaña al control de ficha.
 
-##  <a name="inserttab"></a>  Cmfcbasetabctrl:: insertTab
+## <a name="cmfcbasetabctrlinserttab"></a><a name="inserttab"></a>CMFCBaseTabCtrl::InsertTab
 
 Inserta una pestaña en el control de ficha.
 
@@ -1386,40 +1386,40 @@ virtual void InsertTab(
 ### <a name="parameters"></a>Parámetros
 
 *pNewWnd*<br/>
-[in] Un puntero a la ventana que este método se agrega como una nueva pestaña.
+[en] Un puntero a la ventana que este método agrega como una nueva pestaña.
 
 *lpszTabLabel*<br/>
-[in] Una cadena que contiene la etiqueta de la nueva pestaña.
+[en] Cadena que contiene la etiqueta de la nueva pestaña.
 
 *nInsertAt*<br/>
-[in] Índice de base cero de la nueva pestaña.
+[en] El índice de base cero de la nueva pestaña.
 
 *uiImageId*<br/>
-[in] Un identificador de la imagen de la lista de imágenes. El control de ficha utiliza esta imagen como el icono de la nueva pestaña.
+[en] Un ID de imagen de la lista de imágenes. El control de ficha utiliza esta imagen como icono de la nueva pestaña.
 
-*bDetachable*<br/>
-[in] Un parámetro booleano que determina si la nueva pestaña desmontable.
+*bDesmontable*<br/>
+[en] Parámetro booleano que determina si la nueva pestaña es desmontable.
 
 *uiResTabLabel*<br/>
-[in] El identificador de recurso para la etiqueta.
+[en] El identificador de recurso de la etiqueta.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si el objeto indicado por *pNewWnd* no se deriva el [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) y si el *bDetachable* parámetro es TRUE, el marco de trabajo crea un contenedor especial para la nueva pestaña. De forma predeterminada, el contenedor es una instancia de la [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Use la [cmfcbasetabctrl:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc) método para crear una clase de contenedor diferente. Cualquier clase de contenedor personalizado debe derivarse de `CDockablePaneAdapter`.
+Si el objeto indicado por *pNewWnd* no se deriva de la [Clase CDockablePane](../../mfc/reference/cdockablepane-class.md) y si el parámetro *bDetachable* es TRUE, el marco de trabajo crea un contenedor especial para la nueva pestaña. De forma predeterminada, el contenedor es una instancia de la [clase CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Utilice el [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) método para crear una clase contenedora diferente. Cualquier clase contenedora personalizada debe `CDockablePaneAdapter`derivarse de .
 
-##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab
+## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>CMFCBaseTabCtrl::InvalidateTab
 
-```
+```cpp
 void InvalidateTab(int iTab);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTab*<br/>
+[en] *iTab*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton
+## <a name="cmfcbasetabctrlisactivetabclosebutton"></a><a name="isactivetabclosebutton"></a>CMFCBaseTabCtrl::IsActiveTabCloseButton
 
 ```
 virtual BOOL IsActiveTabCloseButton() const;
@@ -1427,9 +1427,9 @@ virtual BOOL IsActiveTabCloseButton() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isautocolor"></a>  CMFCBaseTabCtrl::IsAutoColor
+## <a name="cmfcbasetabctrlisautocolor"></a><a name="isautocolor"></a>CMFCBaseTabCtrl::IsAutoColor
 
 Determina si el control de ficha está en modo de color automático.
 
@@ -1439,13 +1439,13 @@ BOOL IsAutoColor() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el control de ficha está en modo de color automático; FALSE en caso contrario.
+TRUESi el control de ficha está en modo de color automático; FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Puede habilitar o deshabilitar el modo de color automático mediante la [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) método.
+Puede habilitar o deshabilitar el modo de color automático mediante el [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) método.
 
-##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow
+## <a name="cmfcbasetabctrlisautodestroywindow"></a><a name="isautodestroywindow"></a>CMFCBaseTabCtrl::IsAutoDestroyWindow
 
 ```
 BOOL IsAutoDestroyWindow() const;
@@ -1453,9 +1453,9 @@ BOOL IsAutoDestroyWindow() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored
+## <a name="cmfcbasetabctrliscolored"></a><a name="iscolored"></a>CMFCBaseTabCtrl::IsColored
 
 ```
 virtual BOOL IsColored() const;
@@ -1463,9 +1463,9 @@ virtual BOOL IsColored() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl
+## <a name="cmfcbasetabctrlisdialogcontrol"></a><a name="isdialogcontrol"></a>CMFCBaseTabCtrl::IsDialogControl
 
 ```
 BOOL IsDialogControl() const;
@@ -1473,9 +1473,9 @@ BOOL IsDialogControl() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix
+## <a name="cmfcbasetabctrlisdrawnoprefix"></a><a name="isdrawnoprefix"></a>CMFCBaseTabCtrl::IsDrawNoPrefix
 
 ```
 BOOL IsDrawNoPrefix() const;
@@ -1483,9 +1483,9 @@ BOOL IsDrawNoPrefix() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isflatframe"></a>  CMFCBaseTabCtrl::IsFlatFrame
+## <a name="cmfcbasetabctrlisflatframe"></a><a name="isflatframe"></a>CMFCBaseTabCtrl::IsFlatFrame
 
 Indica si el marco del control de ficha se representa en un estilo plano o en un estilo 3D.
 
@@ -1495,15 +1495,15 @@ virtual BOOL IsFlatFrame() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el marco del control de ficha se representa en un estilo plano; FALSE si el marco se representa en un estilo 3D.
+TRUESi el marco del control de ficha se representa en un estilo plano; FALSE si el marco se representa en un estilo 3D.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Use [CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) para cambiar el estilo del marco del control de ficha.
+Utilice [CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) para cambiar el estilo del marco del control de ficha.
 
-No se puede representar los controles de ficha que usan el estilo de Outlook con fotogramas sin formato. Esto incluye la [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) y cualquier clase derivada de esa clase.
+Los controles de ficha que usan el estilo de Outlook no se pueden representar con marcos planos. Esto incluye la [CMFCOutlookBarTabCtrl clase](../../mfc/reference/cmfcoutlookbartabctrl-class.md) y cualquier clase derivada de esa clase.
 
-##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab
+## <a name="cmfcbasetabctrlisflattab"></a><a name="isflattab"></a>CMFCBaseTabCtrl::IsFlatTab
 
 ```
 virtual BOOL IsFlatTab() const;
@@ -1511,11 +1511,11 @@ virtual BOOL IsFlatTab() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="ishidesingletab"></a>  CMFCBaseTabCtrl::IsHideSingleTab
+## <a name="cmfcbasetabctrlishidesingletab"></a><a name="ishidesingletab"></a>CMFCBaseTabCtrl::IsHideSingleTab
 
-Determina si el control de ficha oculta la etiqueta de ficha si hay sólo una ficha.
+Determina si el control de ficha oculta la etiqueta de ficha si solo hay una pestaña.
 
 ```
 virtual BOOL IsHideSingleTab() const;
@@ -1523,13 +1523,13 @@ virtual BOOL IsHideSingleTab() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el control de ficha oculta la etiqueta de ficha cuando tiene una pestaña; en caso contrario, FALSE.
+TRUESi el control de ficha oculta la etiqueta de tabulación cuando tiene una pestaña; de lo contrario FALSO.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice el método [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) para habilitar la ocultación de la etiqueta de ficha cuando hay sólo una ficha.
+Utilice el método [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) para habilitar la ocultación de la etiqueta de ficha cuando solo hay una pestaña.
 
-##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded
+## <a name="cmfcbasetabctrlisiconadded"></a><a name="isiconadded"></a>CMFCBaseTabCtrl::IsIconAdded
 
 ```
 BOOL IsIconAdded(
@@ -1539,17 +1539,17 @@ BOOL IsIconAdded(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *hIcon*<br/>
+[en] *hIcon*<br/>
 
-[in] *el icono*<br/>
+[en] *icono*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isinplaceedit"></a>  CMFCBaseTabCtrl::IsInPlaceEdit
+## <a name="cmfcbasetabctrlisinplaceedit"></a><a name="isinplaceedit"></a>CMFCBaseTabCtrl::IsInPlaceEditar
 
-Indica si el control de ficha está configurado para permitir al usuario modificar de forma dinámica las etiquetas de pestaña.
+Indica si el control de ficha está configurado para permitir al usuario modificar dinámicamente las etiquetas de tabulación.
 
 ```
 virtual BOOL IsInPlaceEdit() const;
@@ -1557,13 +1557,13 @@ virtual BOOL IsInPlaceEdit() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si en el contexto de edición está habilitada; en caso contrario, es 0.
+Distinto de cero si la edición in situ está habilitada; de lo contrario 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Puede habilitar o deshabilitar la edición en contexto llamando al método [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit).
+Puede habilitar o deshabilitar la edición in situ llamando al método [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit).
 
-##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded
+## <a name="cmfcbasetabctrlisleftrightrounded"></a><a name="isleftrightrounded"></a>CMFCBaseTabCtrl::IsLeftRightRounded
 
 ```
 virtual BOOL IsLeftRightRounded() const;
@@ -1571,9 +1571,9 @@ virtual BOOL IsLeftRightRounded() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab
+## <a name="cmfcbasetabctrlismditab"></a><a name="ismditab"></a>CMFCBaseTabCtrl::IsMDITab
 
 ```
 BOOL IsMDITab() const;
@@ -1581,9 +1581,9 @@ BOOL IsMDITab() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="isonenotestyle"></a>  CMFCBaseTabCtrl::IsOneNoteStyle
+## <a name="cmfcbasetabctrlisonenotestyle"></a><a name="isonenotestyle"></a>CMFCBaseTabCtrl::IsOneNoteStyle
 
 Determina si las pestañas se muestran en el estilo de Microsoft OneNote.
 
@@ -1593,17 +1593,17 @@ virtual BOOL IsOneNoteStyle() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se muestran las fichas en el estilo de Microsoft OneNote; en caso contrario, FALSE.
+TRUESi las pestañas se muestran en el estilo de Microsoft OneNote; de lo contrario FALSO.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame al método [CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) para habilitar el estilo de Microsoft OneNote. También puede habilitar este estilo al crear instancias de la [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md): basta con pasar el estilo STYLE_3D_ONENOTE al método [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create).
+Llame al método [CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) para habilitar el estilo de Microsoft OneNote. También puede habilitar este estilo al crear instancias de la [clase CMFCTabCtrl:](../../mfc/reference/cmfctabctrl-class.md)simplemente pase el estilo STYLE_3D_ONENOTE al método [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create).
 
-De forma predeterminada, no se admite el estilo de Microsoft OneNote en una clase personalizada derivada de la `CMFCBaseTabCtrl Class`. Sin embargo, se admite en el `CMFCTabCtrl` clase.
+De forma predeterminada, el estilo de Microsoft OneNote no `CMFCBaseTabCtrl Class`se admite en una clase personalizada derivada del archivo . Sin embargo, se `CMFCTabCtrl` admite en la clase.
 
-##  <a name="isptintabarea"></a>  CMFCBaseTabCtrl::IsPtInTabArea
+## <a name="cmfcbasetabctrlisptintabarea"></a><a name="isptintabarea"></a>CMFCBaseTabCtrl::IsptInTabArea
 
-Determina si un punto está dentro del área de pestaña.
+Determina si un punto está dentro del área de tabulación.
 
 ```
 virtual BOOL IsPtInTabArea(CPoint point) const = 0;
@@ -1611,18 +1611,18 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
-[in] El punto de prueba.
+*Punto*<br/>
+[en] El punto a probar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el punto está en el área de pestañas en caso contrario, es 0.
+Distinto de cero si el punto está en el área de tabulación; 0 en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-En el `CMFCBaseTabCtrl Class`, este método es una función virtual pura y no tiene ninguna implementación. Si deriva una clase de `CMFCBaseTabCtrl`, tendrá que implementar esta función.
+En `CMFCBaseTabCtrl Class`el , este método es una función virtual pura y no tiene ninguna implementación. Si deriva una `CMFCBaseTabCtrl`clase de , debe implementar esta función.
 
-##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted
+## <a name="cmfcbasetabctrlistabclosebuttonhighlighted"></a><a name="istabclosebuttonhighlighted"></a>CMFCBaseTabCtrl::IsTabCloseButtonHighlighted
 
 ```
 BOOL IsTabCloseButtonHighlighted() const;
@@ -1630,9 +1630,9 @@ BOOL IsTabCloseButtonHighlighted() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed
+## <a name="cmfcbasetabctrlistabclosebuttonpressed"></a><a name="istabclosebuttonpressed"></a>CMFCBaseTabCtrl::IsTabCloseButtonPressed
 
 ```
 BOOL IsTabCloseButtonPressed() const;
@@ -1640,11 +1640,11 @@ BOOL IsTabCloseButtonPressed() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="istabdetachable"></a>  CMFCBaseTabCtrl::IsTabDetachable
+## <a name="cmfcbasetabctrlistabdetachable"></a><a name="istabdetachable"></a>CMFCBaseTabCtrl::IstabDetachable
 
-Determina si una pestaña es desmontable.
+Determina si una ficha es desmontable.
 
 ```
 virtual BOOL IsTabDetachable(int iTab) const;
@@ -1652,20 +1652,20 @@ virtual BOOL IsTabDetachable(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña para comprobar.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña que se ha de comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la pestaña es desmontable; FALSE en caso contrario.
+TRUESi la pestaña es desmontable; FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para hacer una pestaña desmontable, utilice el método [cmfcbasetabctrl:: Enabletabdetach](#enabletabdetach).
+Para que una ficha se pueda separar, utilice el método [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).
 
-##  <a name="istabicononly"></a>  CMFCBaseTabCtrl::IsTabIconOnly
+## <a name="cmfcbasetabctrlistabicononly"></a><a name="istabicononly"></a>CMFCBaseTabCtrl::IsTabIconOnly
 
-Determina si una etiqueta de ficha contiene sólo los iconos y ningún texto.
+Determina si una etiqueta de tabulación contiene solo iconos y no texto.
 
 ```
 virtual BOOL IsTabIconOnly(int iTab) const;
@@ -1673,20 +1673,20 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si una etiqueta de ficha tiene sólo iconos; FALSE en caso contrario.
+TRUESi una etiqueta de tabulación solo tiene iconos; FALSE en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para establecer las pestañas en la aplicación para mostrar sólo los iconos, llame al método [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly).
+Para establecer las fichas de la aplicación para mostrar solo iconos, llame al método [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly).
 
-##  <a name="istabswapenabled"></a>  CMFCBaseTabCtrl::IsTabSwapEnabled
+## <a name="cmfcbasetabctrlistabswapenabled"></a><a name="istabswapenabled"></a>CMFCBaseTabCtrl::IsTabSwapEnabled
 
-Determina si el control de ficha permite al usuario cambiar las posiciones de tabulación mediante el mouse.
+Determina si el control de ficha permite al usuario cambiar las posiciones de tabulación con el mouse.
 
 ```
 BOOL IsTabSwapEnabled() const;
@@ -1694,13 +1694,13 @@ BOOL IsTabSwapEnabled() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si las posiciones de tabulación pueden cambiarse por el usuario; en caso contrario, es 0.
+Distinto de cero si el usuario puede cambiar las posiciones de tabulación; de lo contrario 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, los usuarios no pueden cambiar el orden de las fichas en un control de ficha. Use la [cmfcbasetabctrl:: Enabletabswap](#enabletabswap) método para habilitar esta funcionalidad.
+De forma predeterminada, los usuarios no pueden cambiar el orden de las fichas en un control de ficha. Utilice el [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap) método para habilitar esta funcionalidad.
 
-##  <a name="istabvisible"></a>  CMFCBaseTabCtrl::IsTabVisible
+## <a name="cmfcbasetabctrlistabvisible"></a><a name="istabvisible"></a>CMFCBaseTabCtrl::IstabVisible
 
 Indica si la pestaña especificada está visible.
 
@@ -1710,14 +1710,14 @@ virtual BOOL IsTabVisible(int iTab) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña para comprobar.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña que se ha de comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la pestaña especificada está visible; en caso contrario, es 0.
+Distinto de cero si la pestaña especificada está visible; de lo contrario 0.
 
-##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style
+## <a name="cmfcbasetabctrlisvs2005style"></a><a name="isvs2005style"></a>CMFCBaseTabCtrl::IsVS2005Style
 
 ```
 virtual BOOL IsVS2005Style() const;
@@ -1725,33 +1725,33 @@ virtual BOOL IsVS2005Style() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="m_bactivatetabonrightclick"></a>  CMFCBaseTabCtrl::m_bActivateTabOnRightClick
+## <a name="cmfcbasetabctrlm_bactivatetabonrightclick"></a><a name="m_bactivatetabonrightclick"></a>CMFCBaseTabCtrl::m_bActivateTabOnRightClick
 
-`m_bActivateTabOnRightClick` Determina si las pestañas son de foco cuando el usuario hace clic en una etiqueta de ficha con el botón secundario del mouse.
+`m_bActivateTabOnRightClick`determina si las pestañas están enfocadas cuando el usuario hace clic en una etiqueta de pestaña mediante el botón derecho del ratón.
 
 ```
 BOOL m_bActivateTabOnRightClick;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El valor predeterminado para este miembro de datos es FALSE.
 
-##  <a name="m_bautodestroywindow"></a>  CMFCBaseTabCtrl::m_bAutoDestroyWindow
+## <a name="cmfcbasetabctrlm_bautodestroywindow"></a><a name="m_bautodestroywindow"></a>CMFCBaseTabCtrl::m_bAutoDestroyWindow
 
-`m_bAutoDestroyWindow` Determina si el marco de trabajo destruye automáticamente los objetos en las pestañas cuando se quitan las fichas.
+`m_bAutoDestroyWindow`determina si el marco de trabajo destruye automáticamente los objetos de las pestañas cuando se quitan las fichas.
 
 ```
 BOOL m_bAutoDestroyWindow;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, este miembro es FALSE.
 
-##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab
+## <a name="cmfcbasetabctrlmovetab"></a><a name="movetab"></a>CMFCBaseTabCtrl::MoveTab
 
 ```
 virtual void MoveTab(
@@ -1761,25 +1761,25 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *Norigen*<br/>
+[en] *nFuente*<br/>
 
-[in] *nDest*<br/>
+[en] *nDest*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onchangetabs"></a>  CMFCBaseTabCtrl::OnChangeTabs
+## <a name="cmfcbasetabctrlonchangetabs"></a><a name="onchangetabs"></a>CMFCBaseTabCtrl::OnChangeTabs
 
-El marco llama a este método cuando el número de fichas en una pestaña de control de cambios.
+El marco de trabajo llama a este método cuando cambia el número de pestañas en un control de ficha.
 
 ```
 virtual void OnChangeTabs();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, este método no hace nada. Invalide este método para ejecutar código personalizado cuando el número de pestañas en la pestaña control de cambios.
+De forma predeterminada, este método no hace nada. Invalide este método para ejecutar código personalizado cuando cambie el número de fichas del control de ficha.
 
-##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop
+## <a name="cmfcbasetabctrlondrop"></a><a name="ondrop"></a>CMFCBaseTabCtrl::OnDrop
 
 ```
 virtual BOOL OnDrop(
@@ -1790,17 +1790,17 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] _COleDataObject\*_<br/>
+[en] _COleDataObject\* _<br/>
 
-[in] *EFECTOCOLOCAR*<br/>
+[en] *DROPEFFECT*<br/>
 
-[in] *CPoint*<br/>
+[en] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver
+## <a name="cmfcbasetabctrlondragover"></a><a name="ondragover"></a>CMFCBaseTabCtrl::OnDragOver
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -1811,25 +1811,25 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] _COleDataObject\*_<br/>
+[en] _COleDataObject\* _<br/>
 
-[in] *DWORD*<br/>
+[en] *DWORD*<br/>
 
-[in] *CPoint*<br/>
+[en] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave
+## <a name="cmfcbasetabctrlondragleave"></a><a name="ondragleave"></a>CMFCBaseTabCtrl::OnDragLeave
 
 ```
 virtual void OnDragLeave();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter
+## <a name="cmfcbasetabctrlondragenter"></a><a name="ondragenter"></a>CMFCBaseTabCtrl::OnDragEnter
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -1840,17 +1840,17 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] _COleDataObject\*_<br/>
+[en] _COleDataObject\* _<br/>
 
-[in] *DWORD*<br/>
+[en] *DWORD*<br/>
 
-[in] *CPoint*<br/>
+[en] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab
+## <a name="cmfcbasetabctrlonrenametab"></a><a name="onrenametab"></a>CMFCBaseTabCtrl::OnRenameTab
 
 ```
 virtual BOOL OnRenameTab(int, CString&);
@@ -1858,15 +1858,15 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *int*<br/>
+[en] *int*<br/>
 
-[in] *CString &*<br/>
+[en] *CString&*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage
+## <a name="cmfcbasetabctrlpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCBaseTabCtrl::PreTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1874,13 +1874,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pMsg*<br/>
+[en] *pMsg*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="recalclayout"></a>  CMFCBaseTabCtrl::RecalcLayout
+## <a name="cmfcbasetabctrlrecalclayout"></a><a name="recalclayout"></a>CMFCBaseTabCtrl::RecalcLayout
 
 Vuelve a calcular el diseño interno del control de ficha.
 
@@ -1888,25 +1888,25 @@ Vuelve a calcular el diseño interno del control de ficha.
 virtual void RecalcLayout() = 0;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-En el `CMFCBaseTabCtrl Class`, este método es una función virtual pura. Si deriva una clase de `CMFCBaseTabCtrl`, tendrá que implementar esta función.
+En `CMFCBaseTabCtrl Class`el , este método es una función virtual pura. Si deriva una `CMFCBaseTabCtrl`clase de , debe implementar esta función.
 
-##  <a name="removealltabs"></a>  CMFCBaseTabCtrl::RemoveAllTabs
+## <a name="cmfcbasetabctrlremovealltabs"></a><a name="removealltabs"></a>CMFCBaseTabCtrl::RemoveAllTabs
 
-Quita todas las fichas del control de ficha.
+Quita todas las pestañas del control de ficha.
 
 ```
 virtual void RemoveAllTabs();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) es TRUE, las eliminaciones de framework todas la [CWnd](../../mfc/reference/cwnd-class.md) objetos se asocian a las pestañas quitadas.
+Si [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) es TRUE, el marco de trabajo elimina todos los [CWnd](../../mfc/reference/cwnd-class.md) objetos asociados a las fichas quitadas.
 
-##  <a name="removetab"></a>  CMFCBaseTabCtrl::RemoveTab
+## <a name="cmfcbasetabctrlremovetab"></a><a name="removetab"></a>CMFCBaseTabCtrl::RemoveTab
 
-Quita una pestaña de control de ficha.
+Quita una pestaña del control de ficha.
 
 ```
 virtual BOOL RemoveTab(
@@ -1916,21 +1916,21 @@ virtual BOOL RemoveTab(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de una pestaña.
+*Itab*<br/>
+[en] El índice de base cero de una ficha.
 
 *bRecalcLayout*<br/>
-[in] Un parámetro booleano que especifica si se vuelve a calcular el diseño de la pestaña.
+[en] Un parámetro booleano que especifica si se debe volver a calcular el diseño de la ficha.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el método quita la pestaña correctamente; en caso contrario, FALSE.
+TRUESi el método quita la pestaña correctamente; de lo contrario FALSO.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) es TRUE, `RemoveTab` destruye el [CWnd](../../mfc/reference/cwnd-class.md) objeto asociado a la pestaña especificada.
+Si [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) es `RemoveTab` TRUE, destruye el [CWnd](../../mfc/reference/cwnd-class.md) objeto asociado a la ficha especificada.
 
-##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab
+## <a name="cmfcbasetabctrlrenametab"></a><a name="renametab"></a>CMFCBaseTabCtrl::RenameTab
 
 ```
 virtual BOOL RenameTab();
@@ -1938,17 +1938,17 @@ virtual BOOL RenameTab();
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="resetimagelist"></a>  CMFCBaseTabCtrl::ResetImageList
+## <a name="cmfcbasetabctrlresetimagelist"></a><a name="resetimagelist"></a>CMFCBaseTabCtrl::ResetImageList
 
 Restablece la lista de imágenes de una instancia de la [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
-```
+```cpp
 void ResetImageList();
 ```
 
-##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize
+## <a name="cmfcbasetabctrlserialize"></a><a name="serialize"></a>CMFCBaseTabCtrl::Serialize
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -1956,11 +1956,11 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *ar*<br/>
+[en] *ar*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="setactivetab"></a>  CMFCBaseTabCtrl::SetActiveTab
+## <a name="cmfcbasetabctrlsetactivetab"></a><a name="setactivetab"></a>CMFCBaseTabCtrl::SetActiveTab
 
 Activa la pestaña especificada.
 
@@ -1970,20 +1970,20 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de una ficha `SetActiveTab` activa de la pestaña con este índice.
+*Itab*<br/>
+[en] El índice de base cero `SetActiveTab` de una ficha. activa la pestaña con este índice.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si es correcto; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-En el `CMFCBaseTabCtrl Class`, este método es una función virtual pura. Si deriva una clase de `CMFCBaseTabCtrl`, tendrá que implementar esta función.
+En `CMFCBaseTabCtrl Class`el , este método es una función virtual pura. Si deriva una `CMFCBaseTabCtrl`clase de , debe implementar esta función.
 
-##  <a name="setactivetabcolor"></a>  CMFCBaseTabCtrl::SetActiveTabColor
+## <a name="cmfcbasetabctrlsetactivetabcolor"></a><a name="setactivetabcolor"></a>CMFCBaseTabCtrl::SetActiveTabColor
 
-Establece el color de fondo de la pestaña activa.
+Establece el color de fondo de la ficha activa.
 
 ```
 virtual void SetActiveTabColor(COLORREF clr);
@@ -1991,14 +1991,14 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
-[in] Especifica el nuevo color de fondo.
+*Clr*<br/>
+[en] Especifica el nuevo color de fondo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El marco de trabajo Obtiene el color de fondo predeterminado de las pestañas activas desde el [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)método.
+El marco de trabajo obtiene el color de fondo predeterminado para las pestañas activas de la [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor)método.
 
-##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor
+## <a name="cmfcbasetabctrlsetactivetabtextcolor"></a><a name="setactivetabtextcolor"></a>CMFCBaseTabCtrl::SetActiveTabTextColor
 
 Establece el color del texto de las pestañas activas.
 
@@ -2008,54 +2008,54 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
-[in] Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que especifica el color del texto nuevo.
+*Clr*<br/>
+[en] Un parámetro [COLORREF](/windows/win32/gdi/colorref) que especifica el nuevo color de texto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, el marco de trabajo Obtiene el color del texto de [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Reemplazar este color predeterminado mediante el `SetActiveTabTextColor` método.
+De forma predeterminada, el marco de trabajo obtiene el color de texto de [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor). Invalide este color `SetActiveTabTextColor` predeterminado mediante el método.
 
-##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors
+## <a name="cmfcbasetabctrlsetautocolors"></a><a name="setautocolors"></a>CMFCBaseTabCtrl::SetAutoColors
 
-Establece los colores del control de ficha que utiliza el marco de trabajo en el modo de color automático.
+Establece los colores del control de ficha que el marco de trabajo utiliza en el modo de color automático.
 
-```
+```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *arColors*<br/>
-[in] Una matriz de colores RGB.
+[en] Una matriz de colores RGB.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si proporciona una matriz de colores personalizada, se omite la matriz predeterminada de colores. Si el parámetro *arColors* está vacío, el marco de trabajo se revierte a la matriz predeterminada de colores.
+Si proporciona una matriz personalizada de colores, se omite la matriz predeterminada de colores. Si el parámetro *arColors* está vacío, el marco de trabajo vuelve a la matriz predeterminada de colores.
 
-Para habilitar el modo de color automático, use el [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) método.
+Para habilitar el modo de color automático, utilice el [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) método.
 
-##  <a name="setdockingbarwrapperrtc"></a>  CMFCBaseTabCtrl::SetDockingBarWrapperRTC
+## <a name="cmfcbasetabctrlsetdockingbarwrapperrtc"></a><a name="setdockingbarwrapperrtc"></a>CMFCBaseTabCtrl::SetDockingBarWrapperRTC
 
 Establece la clase de contenedor que se usa para los objetos que no derivan de la [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).
 
-```
+```cpp
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pRTC*<br/>
-[in] La información de clase en tiempo de ejecución para la nueva clase de contenedor.
+[en] La información de clase en tiempo de ejecución para la nueva clase contenedora.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Agregar pestañas a un control de ficha con los métodos [cmfcbasetabctrl:: addTab](#addtab) y [cmfcbasetabctrl:: insertTab](#inserttab). Cuando se agrega una ficha, cada control en esa pestaña debe ser acoplable. Todos los objetos que no se derivan `CDockablePane` deben ir. `AddTab` y `InsertTab` crear un contenedor para estos objetos. La clase de contenedor predeterminado es el [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). El método `SetDockingBarWrapperRTC` le permite cambiar la clase que se usa como una clase contenedora. La clase contenedora que proporcione debe derivarse de `CDockablePaneAdapter`.
+Las fichas se agregan a un control de ficha mediante los métodos [CMFCBaseTabCtrl::AddTab](#addtab) y [CMFCBaseTabCtrl::InsertTab](#inserttab). Al agregar una pestaña, cada control de esa ficha debe ser acoplable. Los objetos que no `CDockablePane` se deriven deben ajustarse. `AddTab`y `InsertTab` crear un contenedor para estos objetos. La clase contenedora predeterminada es la [clase CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). El `SetDockingBarWrapperRTC` método permite cambiar la clase que se utiliza como una clase contenedora. La clase contenedora que proporcione `CDockablePaneAdapter`debe derivarse de .
 
-##  <a name="setdrawnoprefix"></a>  CMFCBaseTabCtrl::SetDrawNoPrefix
+## <a name="cmfcbasetabctrlsetdrawnoprefix"></a><a name="setdrawnoprefix"></a>CMFCBaseTabCtrl::SetDrawNoPrefix
 
-Habilita y deshabilita el procesamiento de caracteres de prefijo de las etiquetas de pestaña.
+Habilita y deshabilita el procesamiento de caracteres de prefijo en etiquetas de tabulación.
 
-```
+```cpp
 void SetDrawNoPrefix(
     BOOL bNoPrefix,
     BOOL bRedraw = TRUE);
@@ -2064,18 +2064,18 @@ void SetDrawNoPrefix(
 ### <a name="parameters"></a>Parámetros
 
 *bNoPrefix*<br/>
-[in] TRUE si desea procesar los caracteres de prefijo; en caso contrario, FALSE.
+[en] TRUESi desea procesar caracteres de prefijo; de lo contrario FALSO.
 
 *bRedraw*<br/>
-[in] TRUE si desea volver a dibujar la ventana con pestañas. en caso contrario, FALSE.
+[en] TRUESi desea volver a dibujar la ventana con pestañas; de lo contrario FALSO.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Un carácter de prefijo es un carácter de tecla de acceso que está precedido por una y comercial (&).
+Un carácter de prefijo es un carácter mnemotécnico precedido por una y una y una y comoión (&).
 
-##  <a name="setimagelist"></a>  CMFCBaseTabCtrl::SetImageList
+## <a name="cmfcbasetabctrlsetimagelist"></a><a name="setimagelist"></a>CMFCBaseTabCtrl::SetImageList
 
-Establece la lista de imágenes de icono para el control de ficha.
+Establece la lista de imágenes de iconos para el control de ficha.
 
 ```
 virtual BOOL SetImageList(
@@ -2089,30 +2089,30 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="parameters"></a>Parámetros
 
 *uiID*<br/>
-[in] Un identificador de recurso de mapa de bits. `SetImageList` carga la lista de imágenes de este recurso.
+[en] Un identificador de recurso de mapa de bits. `SetImageList`carga la lista de imágenes de este recurso.
 
-*CX*<br/>
-[in] El ancho de cada imagen en píxeles.
+*Cx*<br/>
+[en] El ancho de cada imagen en píxeles.
 
 *clrTransp*<br/>
-[in] Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que indica el color transparente de la imagen.
+[en] Parámetro [COLORREF](/windows/win32/gdi/colorref) que indica el color transparente de la imagen.
 
 *hImageList*<br/>
-[in] Identificador de una lista de imágenes cargadas previamente.
+[en] Identificador de una lista de imágenes precargada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el método se realizó correctamente; en caso contrario, es 0.
+Distinto de cero si el método se realizó correctamente; 0 en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Se muestran las imágenes de la lista de imágenes de icono junto a las etiquetas de la pestaña. Para mostrar un icono, debe especificar su índice cuando se llama a [cmfcbasetabctrl:: addTab](#addtab).
+Las imágenes de la lista de imágenes de iconos se muestran junto a las etiquetas de la pestaña. Para mostrar un icono, debe especificar su índice al llamar a [CMFCBaseTabCtrl::AddTab](#addtab).
 
-`SetImageList` se producirá un error si el control de ficha se creó con un estilo plano. También producirá un error si el marco de trabajo no puede cargar la imagen indicada por *uiID*.
+`SetImageList`fallará si el control de ficha se creó con un estilo plano. También se producirá un error si el marco de trabajo no puede cargar la imagen indicada por *uiID*.
 
-Este método vuelve a calcular el alto de la ficha de acuerdo con los tamaños de imagen y texto.
+Este método vuelve a calcular la altura de la pestaña según los tamaños de imagen y texto.
 
-##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation
+## <a name="cmfcbasetabctrlsetlocation"></a><a name="setlocation"></a>CMFCBaseTabCtrl::SetLocation
 
 ```
 virtual void SetLocation(Location location);
@@ -2120,13 +2120,13 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *ubicación*<br/>
+[en] *ubicación*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="settabbkcolor"></a>  CMFCBaseTabCtrl::SetTabBkColor
+## <a name="cmfcbasetabctrlsettabbkcolor"></a><a name="settabbkcolor"></a>CMFCBaseTabCtrl::SetTabBkColor
 
-Establece el color de fondo de la pestaña especificada.
+Establece el color de fondo de la ficha especificada.
 
 ```
 virtual BOOL SetTabBkColor(
@@ -2136,17 +2136,17 @@ virtual BOOL SetTabBkColor(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 *Color*<br/>
-[in] Para establecer el color.
+[en] El color que se ha establecido.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se realiza correctamente; FALSE en caso contrario.
+TRUESi se realiza correctamente; FALSE en caso contrario.
 
-##  <a name="settabbordersize"></a>  CMFCBaseTabCtrl::SetTabBorderSize
+## <a name="cmfcbasetabctrlsettabbordersize"></a><a name="settabbordersize"></a>CMFCBaseTabCtrl::SetTabBorderSize
 
 Establece un nuevo tamaño de borde para el control de ficha.
 
@@ -2159,14 +2159,14 @@ virtual void SetTabBorderSize(
 ### <a name="parameters"></a>Parámetros
 
 *nTabBorderSize*<br/>
-[in] El nuevo tamaño del borde, en píxeles.
+[en] El nuevo tamaño de borde, en píxeles.
 
 *bRepaint*<br/>
-[in] Un parámetro booleano que indica si el marco de trabajo, vuelve a dibujar el control.
+[en] Un parámetro booleano que indica si el marco de trabajo vuelve a dibujar el control.
 
-##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon
+## <a name="cmfcbasetabctrlsettabhicon"></a><a name="settabhicon"></a>CMFCBaseTabCtrl::SetTabHicon
 
-Establece el icono para una etiqueta de ficha.
+Establece el icono de una etiqueta de tabulación.
 
 ```
 virtual BOOL SetTabHicon(
@@ -2176,17 +2176,17 @@ virtual BOOL SetTabHicon(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de una pestaña. Este método cambia el icono para esta ficha.
+*Itab*<br/>
+[en] El índice de base cero de una ficha. Este método cambia el icono de esta pestaña.
 
 *hIcon*<br/>
-[in] Identificador de un icono.
+[en] Un identificador de un icono.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si es correcto; en caso contrario, FALSE.
 
-##  <a name="settabicon"></a>  CMFCBaseTabCtrl::SetTabIcon
+## <a name="cmfcbasetabctrlsettabicon"></a><a name="settabicon"></a>CMFCBaseTabCtrl::SetTabIcon
 
 Establece el icono de una pestaña.
 
@@ -2198,19 +2198,19 @@ virtual BOOL SetTabIcon(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña para actualizar.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña que se vaya a actualizar.
 
 *uiIcon*<br/>
-[in] El Id. de icono para el nuevo icono. Este identificador hace referencia a interno [CImageList](../../mfc/reference/cimagelist-class.md) objeto.
+[en] El identificador de icono para el nuevo icono. Este identificador hace referencia al objeto [CImageList](../../mfc/reference/cimagelist-class.md) interno.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si es correcto; en caso contrario, FALSE.
 
-##  <a name="settabicononly"></a>  CMFCBaseTabCtrl::SetTabIconOnly
+## <a name="cmfcbasetabctrlsettabicononly"></a><a name="settabicononly"></a>CMFCBaseTabCtrl::SetTabIconOnly
 
-Permite mostrar sólo aparecerá un icono (y ninguna etiqueta de texto) en una ficha específica.
+Permite mostrar solo un icono (y ninguna etiqueta de texto) en una pestaña específica.
 
 ```
 virtual BOOL SetTabIconOnly(
@@ -2221,26 +2221,26 @@ virtual BOOL SetTabIconOnly(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña para cambiar.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña que se ha de cambiar.
 
 *bIconOnly*<br/>
-[in] Un parámetro booleano que determina si se debe mostrar sólo los iconos.
+[en] Parámetro booleano que determina si se deben mostrar solo iconos.
 
 *bShowTooltipAlways*<br/>
-[in] Un parámetro booleano que determina si el marco de trabajo muestra información sobre herramientas para una etiqueta de ficha que muestra sólo los iconos.
+[en] Un parámetro booleano que determina si el marco de trabajo muestra información sobre herramientas para una etiqueta de ficha que muestra solo iconos.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si es correcto; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, un control de ficha muestra la etiqueta de icono y texto para cada pestaña.
+De forma predeterminada, un control de ficha muestra el icono y la etiqueta de texto para cada ficha.
 
-##  <a name="settablabel"></a>  CMFCBaseTabCtrl::SetTabLabel
+## <a name="cmfcbasetabctrlsettablabel"></a><a name="settablabel"></a>CMFCBaseTabCtrl::SetTabLabel
 
-Establece el texto de una etiqueta de ficha.
+Establece el texto de una etiqueta de tabulación.
 
 ```
 virtual BOOL SetTabLabel(
@@ -2250,25 +2250,25 @@ virtual BOOL SetTabLabel(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña para actualizar.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña que se vaya a actualizar.
 
 *strLabel*<br/>
-[in] Una referencia a una cadena que contiene el nuevo texto para la etiqueta de ficha.
+[en] Una referencia a una cadena que contiene el nuevo texto de la etiqueta de tabulación.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si se realiza correctamente; en caso contrario, es 0.
+Distinto de cero si se realiza correctamente; 0 en caso contrario.
 
-##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight
+## <a name="cmfcbasetabctrlsettabsheight"></a><a name="settabsheight"></a>CMFCBaseTabCtrl::SetTabsHeight
 
 ```
 virtual void SetTabsHeight();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="settabsorder"></a>  CMFCBaseTabCtrl::SetTabsOrder
+## <a name="cmfcbasetabctrlsettabsorder"></a><a name="settabsorder"></a>CMFCBaseTabCtrl::SetTabsOrder
 
 Organiza las pestañas en el orden especificado.
 
@@ -2279,19 +2279,19 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ### <a name="parameters"></a>Parámetros
 
 *arOrder*<br/>
-[in] Una matriz de índices de base cero que define el nuevo orden de tabulación.
+[en] Matriz de índices de base cero que define el nuevo orden de tabulación.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se realiza correctamente; Un error en caso contrario.
+TRUESi se realiza correctamente; FALLO de lo contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tamaño de la *arOrder* matriz debe ser igual al número de fichas del control de ficha.
+El tamaño de la matriz *arOrder* debe ser igual al número de fichas del control de ficha.
 
-##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor
+## <a name="cmfcbasetabctrlsettabtextcolor"></a><a name="settabtextcolor"></a>CMFCBaseTabCtrl::SetTabTextColor
 
-Establece el color del texto de una ficha específica.
+Establece el color del texto de una pestaña específica.
 
 ```
 virtual BOOL SetTabTextColor(
@@ -2301,17 +2301,17 @@ virtual BOOL SetTabTextColor(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] Índice de base cero de la pestaña.
+*Itab*<br/>
+[en] El índice de base cero de la pestaña.
 
 *Color*<br/>
-[in] Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que indica el color del texto nuevo.
+[en] Un parámetro [COLORREF](/windows/win32/gdi/colorref) que indica el nuevo color del texto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si se realiza correctamente; en caso contrario, es 0.
+Distinto de cero si se realiza correctamente; 0 en caso contrario.
 
-##  <a name="showtab"></a>  CMFCBaseTabCtrl::ShowTab
+## <a name="cmfcbasetabctrlshowtab"></a><a name="showtab"></a>CMFCBaseTabCtrl::ShowTab
 
 Muestra u oculta la pestaña especificada.
 
@@ -2325,27 +2325,27 @@ virtual BOOL ShowTab(
 
 ### <a name="parameters"></a>Parámetros
 
-*iTab*<br/>
-[in] El índice de la pestaña que `ShowTab` mostrará u ocultará.
+*Itab*<br/>
+[en] El índice de `ShowTab` la pestaña que se mostrará u ocultará.
 
 *bMostrar*<br/>
-[in] Un parámetro booleano que indica si se debe mostrar la pestaña.
+[en] Un parámetro booleano que indica si se debe mostrar la pestaña.
 
 *bRecalcLayout*<br/>
-[in] Un parámetro booleano que indica si se debe recalcular inmediatamente el diseño de ventana.
+[en] Un parámetro booleano que indica si se debe volver a calcular inmediatamente el diseño de la ventana.
 
-*bActivate*<br/>
-[in] Un parámetro booleano que indica si se debe seleccionar la pestaña especificada por *iTab*.
+*bActivar*<br/>
+[en] Un parámetro booleano que indica si se debe seleccionar la pestaña especificada por *iTab*.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El parámetro *bActivate* solo se aplica si *bMostrar* es TRUE. Si *bActivate* es TRUE y si `ShowTab` es correcta, `ShowTab` enviará el mensaje AFX_WM_CHANGE_ACTIVE_TAB con el elemento primario de la ventana de pestaña.
+El parámetro *bActivate* solo se aplica si *bShow* es TRUE. Si *bActivate* es `ShowTab` TRUE y `ShowTab` si se realiza correctamente, enviará el mensaje AFX_WM_CHANGE_ACTIVE_TAB al elemento primario de la ventana de ficha.
 
-##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab
+## <a name="cmfcbasetabctrlstartrenametab"></a><a name="startrenametab"></a>CMFCBaseTabCtrl::StartRenameTab
 
 ```
 virtual BOOL StartRenameTab(int iTab);
@@ -2353,13 +2353,13 @@ virtual BOOL StartRenameTab(int iTab);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iTab*<br/>
+[en] *iTab*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs
+## <a name="cmfcbasetabctrlswaptabs"></a><a name="swaptabs"></a>CMFCBaseTabCtrl::SwapTabs
 
 ```
 virtual void SwapTabs(
@@ -2369,15 +2369,15 @@ virtual void SwapTabs(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nFisrtTabID*<br/>
+[en] *nFisrtTabID*<br/>
 
-[in] *nSecondTabID*<br/>
+[en] *nSecondTabID*<br/>
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCTabCtrl (clase)](../../mfc/reference/cmfctabctrl-class.md)<br/>
-[CMFCOutlookBarTabCtrl (clase)](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
+[Clase CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)<br/>
+[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)

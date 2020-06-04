@@ -1,6 +1,6 @@
 ---
 title: __outwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: df7ca6ddbb80c21397beb91b8e671f248f2a1d9c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3cc5b0ae2101c86e3dc899b7924ec2524f0ea6e7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326295"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217121"
 ---
-# <a name="outwordstring"></a>__outwordstring
+# <a name="__outwordstring"></a>__outwordstring
 
 **Específicos de Microsoft**
 
-Genera el `rep outsw` instrucción, que envía `Count` palabras que empiezan en `Buffer` fuera del puerto de E/S especificado por `Port`.
+Genera la `rep outsw` instrucción, que envía las palabras de recuento a partir del *búfer* del puerto de e/s especificado por el *Puerto*.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __outwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __outwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Puerto*<br/>
-[in] El puerto para enviar los datos.
+*Casilla*\
+de Puerto al que se van a enviar los datos.
 
-*búfer*<br/>
-[in] Un puntero a los datos se envíen el puerto especificado.
+*Búfer*\
+de Puntero a los datos que se van a enviar al puerto especificado.
 
-*Recuento*<br/>
-[in] El número de palabras para enviar.
+*Contabiliza*\
+de Número de palabras que se van a enviar.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,7 +48,7 @@ void __outwordstring(
 |---------------|------------------|
 |`__outwordstring`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -58,4 +58,4 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

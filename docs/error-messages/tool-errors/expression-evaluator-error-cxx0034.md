@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CAN0034
 - CXX0034
 ms.assetid: afcee5f1-beff-489f-aea6-04f55e76364f
-ms.openlocfilehash: 34cb7de7382f43d41ab8f92343b4ae57eee2ed67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d764ce8b243c7004f95650f93e7a44a36962cef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195492"
 ---
 # <a name="expression-evaluator-error-cxx0034"></a>Error del evaluador de expresiones CXX0034
 
@@ -20,6 +20,6 @@ ms.locfileid: "50498138"
 
 Los tipos de operando especificados no son válidos para la operación.
 
-Por ejemplo, un puntero no se multiplica por cualquier valor.
+Por ejemplo, un puntero no se puede multiplicar por ningún valor.
 
-Es posible que deba escribir convertir los operandos en un tipo compatible con el operador.
+Puede que tenga que escribir convertir los operandos a un tipo compatible con el operador.

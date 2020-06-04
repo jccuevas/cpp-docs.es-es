@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 785e37c63653dde91176bedd0321fc58ac122c7e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180839"
 ---
 # <a name="user-defined-tools"></a>Herramientas definidas por el usuario
 

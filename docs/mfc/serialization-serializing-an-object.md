@@ -6,16 +6,16 @@ helpviewer_keywords:
 - serialization [MFC], objects
 - objects [MFC], serializing
 ms.assetid: 1db772b1-ad55-4fcf-b133-126cca082510
-ms.openlocfilehash: 10a7c52e6187f4db8345e1eadb88faeefa50b419
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c1106f180c587894283575a82a88e9e18b5c01a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308048"
 ---
 # <a name="serialization-serializing-an-object"></a>Serialización: Serializar un objeto
 
-El artículo [serialización: crear una clase Serializable](../mfc/serialization-making-a-serializable-class.md) se muestra cómo hacer que una clase sea serializable. Una vez que una clase serializable, se puede serializar objetos de esa clase a y desde un archivo a través de un [CArchive](../mfc/reference/carchive-class.md) objeto. En este artículo se explica:
+El artículo [serialización: Crear una clase Serializable](../mfc/serialization-making-a-serializable-class.md) se muestra cómo hacer que una clase sea serializable. Una vez que una clase serializable, se puede serializar objetos de esa clase a y desde un archivo a través de un [CArchive](../mfc/reference/carchive-class.md) objeto. En este artículo se explica:
 
 - [Es lo que un objeto CArchive](../mfc/what-is-a-carchive-object.md).
 
@@ -30,4 +30,3 @@ Puede permitir que el marco de crear el contenedor de un documento serializable 
 ## <a name="see-also"></a>Vea también
 
 [Serialización](../mfc/serialization-in-mfc.md)
-

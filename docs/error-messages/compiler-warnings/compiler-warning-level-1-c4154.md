@@ -1,27 +1,27 @@
 ---
-title: Compilador advertencia (nivel 1) C4154
+title: ADVERTENCIA del compilador (nivel 1) C4154
 ms.date: 11/04/2016
 f1_keywords:
 - C4154
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: 5d2d6316838e8f3ef4acdf60494a0450a5efbdbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07b4c6e0821c925e70ce1bce1d910f184d658982
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163617"
 ---
-# <a name="compiler-warning-level-1-c4154"></a>Compilador advertencia (nivel 1) C4154
+# <a name="compiler-warning-level-1-c4154"></a>ADVERTENCIA del compilador (nivel 1) C4154
 
-eliminación de una expresión de matriz; conversión a puntero proporcionado
+eliminación de una expresión de matriz; conversión al puntero proporcionado
 
-No puede usar `delete` en una matriz, por lo que el compilador convierte la matriz a un puntero.
+No se puede usar `delete` en una matriz, por lo que el compilador convierte la matriz en un puntero.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4154.cpp
 // compile with: /c /W1
 int main() {

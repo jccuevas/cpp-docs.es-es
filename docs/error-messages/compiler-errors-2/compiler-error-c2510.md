@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2510
 ms.assetid: bf6d28db-f2f4-48f8-8f4e-7d662ed278fe
-ms.openlocfilehash: e591ceec44f36bbba6a12b310d361350b9bed491
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8d2e63b6b3e15ab6babba6e943322b56921c49e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622513"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202663"
 ---
 # <a name="compiler-error-c2510"></a>Error del compilador C2510
 

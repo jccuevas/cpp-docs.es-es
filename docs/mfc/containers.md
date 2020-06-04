@@ -8,12 +8,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: 300561254df41dedf1a8a0ba60e288c1509ee429
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35416025339b8fc059ed44b2b3c55d9c38d18570
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153013"
 ---
 # <a name="containers"></a>Contenedores
 
@@ -37,4 +37,3 @@ Una aplicación de contenedor es una aplicación que puede incorporar elementos 
 [Servidores](../mfc/servers.md)<br/>
 [Activación](../mfc/activation-cpp.md)<br/>
 [Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)
-

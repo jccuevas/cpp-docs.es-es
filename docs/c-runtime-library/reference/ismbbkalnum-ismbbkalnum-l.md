@@ -1,10 +1,12 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
-apilocation:
+- _o__ismbbkalnum
+- _o__ismbbkalnum_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkalnum
 - ismbbkalnum
@@ -28,14 +34,14 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481060"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909518"
 ---
-# <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
+# <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
 Determina si un carácter multibyte determinado es un signo de texto no ASCII.
 
@@ -53,7 +59,7 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 *locale*<br/>
@@ -61,7 +67,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbkalnum** devuelve un valor distinto de cero si el entero *c* es un símbolo de texto no ASCII distinto de puntuación, o 0 si no lo está. **_ismbbkalnum** usa la configuración regional actual para la información sobre caracteres dependientes de la configuración regional. **_ismbbkalnum_l** es idéntico al **_ismbbkalnum** salvo que toma la configuración regional como parámetro. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** devuelve un valor distinto de cero si el entero *c* es un signo de texto no ASCII distinto de los signos de puntuación, o 0 si no lo es. **_ismbbkalnum** usa la configuración regional actual para la información de caracteres que dependen de la configuración regional. **_ismbbkalnum_l** es idéntica a **_ismbbkalnum** , salvo que toma la configuración regional como parámetro. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -70,9 +80,9 @@ Configuración regional que se va a usar.
 |**_ismbbkalnum**|\<mbctype.h>|
 |**_ismbbkalnum_l**|\<mbctype.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

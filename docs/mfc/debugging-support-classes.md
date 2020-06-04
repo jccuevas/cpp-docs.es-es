@@ -1,8 +1,6 @@
 ---
 title: Depurar las clases de depuración
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.debug
 helpviewer_keywords:
 - debugging memory leaks, MFC
 - memory allocation, debugging dynamic
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-ms.openlocfilehash: 6cabd2fb35a60f1b6b53d47d19e95fa65d92c620
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 570a1e87eadcce18feacf20f9c25562662eb17c9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521351"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446984"
 ---
 # <a name="debugging-support-classes"></a>Depurar las clases de depuración
 
@@ -27,9 +25,8 @@ MFC proporciona las siguientes clases para ayudarle a depurar problemas de asign
 Proporciona un destino para los volcados de diagnóstico.
 
 [CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
-Estructura que proporciona las instantáneas de uso de memoria. También se usa para comparar instantáneas de memoria anteriores y posteriores.
+Estructura que proporciona instantáneas del uso de memoria. También se usa para comparar las instantáneas de memoria anteriores y posteriores.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general de clases](../mfc/class-library-overview.md)
-
+[Información general sobre clases](../mfc/class-library-overview.md)

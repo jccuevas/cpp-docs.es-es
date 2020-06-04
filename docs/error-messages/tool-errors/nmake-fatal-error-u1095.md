@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1095
 ms.assetid: a392582b-06db-4568-9c13-450293a4fbda
-ms.openlocfilehash: 0ff71a229defe7a12886c1154a69bcf0432b8cca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c7ca7d237655b7e20406e7f28e5b2471bdec53
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548777"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193464"
 ---
 # <a name="nmake-fatal-error-u1095"></a>Error grave de NMAKE U1095
 
-línea de comandos expandida 'líneaDeComandos' es demasiado largo
+línea de comandos expandida ' CommandLine ' demasiado larga
 
-Después de la expansión de macro, la línea de comandos especificada supera el límite de longitud de las líneas de comandos para el sistema operativo.
+Después de la expansión de macros, la línea de comandos dada supera el límite de longitud de las líneas de comandos del sistema operativo.
 
 MS-DOS permite hasta 128 caracteres en una línea de comandos.
 
-Si el comando es para un programa que puede aceptar la entrada de línea de comandos desde un archivo, cambie el comando y proporcione la entrada desde un archivo en disco o un archivo en línea. Por ejemplo, vínculo y LIB aceptan la entrada desde un archivo de respuesta.
+Si el comando es para un programa que puede aceptar la entrada de la línea de comandos de un archivo, cambie el comando y proporcione la entrada de un archivo en disco o en un archivo insertado. Por ejemplo, LINK y LIB aceptan la entrada de un archivo de respuesta.

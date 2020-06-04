@@ -7,14 +7,14 @@ helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-ms.openlocfilehash: 97f0100d8a34253f3a1375d34b887d3d31a77f43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b7f499dd84a67020232aab84966647378daadad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432583"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181075"
 ---
-# <a name="bstrtoperator-"></a>_bstr_t::operator =
+# <a name="_bstr_toperator-"></a>_bstr_t::operator =
 
 **Específicos de Microsoft**
 
@@ -47,8 +47,8 @@ Un objeto `_variant_t` que se va a asignar a un objeto `_bstr_t` existente.
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [_bstr_t:: Assign](../cpp/bstr-t-assign.md) para obtener un ejemplo del uso de **operador =**.
+Vea [_bstr_t:: Assign](../cpp/bstr-t-assign.md) para obtener un ejemplo de uso del **operador =** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_bstr_t (Clase)](../cpp/bstr-t-class.md)

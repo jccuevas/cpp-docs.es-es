@@ -1,78 +1,64 @@
 ---
 title: Intrínsecos disponibles en todas las arquitecturas
-ms.date: 04/11/2018
+ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473286"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163468"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Intrínsecos disponibles en todas las arquitecturas
 
-El compilador de Microsoft C/C++ y la biblioteca de tiempo de ejecución de C Universal (UCRT) hacen que algunos intrínsecos disponibles en todas las arquitecturas.
+El compiladorC++ de Microsoft c/y la biblioteca en tiempo de ejecución de c universal (UCRT) hacen que algunos intrínsecos estén disponibles en todas las arquitecturas.
 
-## <a name="compiler-intrinsics"></a>Intrínsecos del compilador
+## <a name="compiler-intrinsics"></a>Intrínsecos del controlador
 
-Los siguientes intrínsecos están disponibles con las arquitecturas x86, AMD64 y ARM:
+Los siguientes intrínsecos están disponibles con las arquitecturas x86, AMD64, ARM y ARM64:
 
 |Función intrínseca|Header|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
-|[_BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
 |[_BitScanReverse](../intrinsics/bitscanreverse-bitscanreverse64.md)|intrin.h|
-|[_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)|intrin.h|
 |[_bittest](../intrinsics/bittest-bittest64.md)|intrin.h|
-|[_bittest64](../intrinsics/bittest-bittest64.md)|intrin.h|
 |[_bittestandcomplement](../intrinsics/bittestandcomplement-bittestandcomplement64.md)|intrin.h|
-|[_bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)|intrin.h|
 |[_bittestandreset](../intrinsics/bittestandreset-bittestandreset64.md)|intrin.h|
-|[_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)|intrin.h|
 |[_bittestandset](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|
-|[_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|
+|__code_seg|intrin.h|
 |[__debugbreak](../intrinsics/debugbreak.md)|intrin.h|
 |[_disable](../intrinsics/disable.md)|intrin.h|
 |[_enable](../intrinsics/enable.md)|intrin.h|
 |[__fastfail](../intrinsics/fastfail.md)|intrin.h|
 |[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
 |[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
-|[_InterlockedAnd64](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
 |[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
 |[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|intrin.h|
 |[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|intrin.h|
 |[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
-|[_InterlockedCompareExchange64](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|intrin.h|
+|[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
 |[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
-|[_InterlockedDecrement64](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
-|[_InterlockedExchange64](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
-|[_InterlockedExchangeAdd64](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|intrin.h|
 |[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
 |[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
-|[_InterlockedIncrement64](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
 |[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
-|[_InterlockedOr64](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
-|[_InterlockedXor64](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
-|[_mul128](../intrinsics/mul128.md)|intrin.h|
-|[__mulh](../intrinsics/mulh.md)|intrin.h|
 |[__nop](../intrinsics/nop.md)|intrin.h|
 |[_ReadBarrier](../intrinsics/readbarrier.md)|intrin.h|
 |[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)|intrin.h|
@@ -81,15 +67,11 @@ Los siguientes intrínsecos están disponibles con las arquitecturas x86, AMD64 
 |[_rotl8](../intrinsics/rotl8-rotl16.md)|intrin.h|
 |[_rotr16](../intrinsics/rotr8-rotr16.md)|intrin.h|
 |[_rotr8](../intrinsics/rotr8-rotr16.md)|intrin.h|
-|[__shiftleft128](../intrinsics/shiftleft128.md)|intrin.h|
-|[__shiftright128](../intrinsics/shiftright128.md)|intrin.h|
-|[_umul128](../intrinsics/umul128.md)|intrin.h|
-|[__umulh](../intrinsics/umulh.md)|intrin.h|
 |[_WriteBarrier](../intrinsics/writebarrier.md)|intrin.h|
 
-## <a name="ucrt-intrinsics"></a>Funciones intrínsecas UCRT
+## <a name="ucrt-intrinsics"></a>Intrínsecos UCRT
 
-Las siguientes funciones UCRT tienen formas intrínsecas en todas las arquitecturas:
+Las siguientes funciones de UCRT tienen formas intrínsecas en todas las arquitecturas:
 
 |Función intrínseca|Header|
 |---------------|------------|
@@ -122,7 +104,7 @@ Las siguientes funciones UCRT tienen formas intrínsecas en todas las arquitectu
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[Expl](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[sol](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
@@ -180,6 +162,7 @@ Las siguientes funciones UCRT tienen formas intrínsecas en todas las arquitectu
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos ARM](../intrinsics/arm-intrinsics.md)<br/>
-[Lista de intrínsecos de x86](../intrinsics/x86-intrinsics-list.md)<br/>
-[Lista de intrínsecos de x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[Intrínsecos de ARM](../intrinsics/arm-intrinsics.md)\
+\ [intrínsecos ARM64](../intrinsics/arm64-intrinsics.md)
+\ de la [lista de intrínsecos x86](../intrinsics/x86-intrinsics-list.md)
+[lista de intrínsecos x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)

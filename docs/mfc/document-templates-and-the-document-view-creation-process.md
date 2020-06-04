@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 79d24ef4b6687bce61295a92cdb90f4ce4a0d619
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389608"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Plantillas de documento y el proceso de creación de documentos y vistas
 
-Para administrar el complejo proceso de creación de documentos con sus vistas asociadas y las ventanas de marco, el marco de trabajo usa dos clases de plantilla de documento: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) para las aplicaciones SDI y [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) para aplicaciones MDI. Un `CSingleDocTemplate` puede crear y guardar un documento de un tipo a la vez. Un `CMultiDocTemplate` mantiene una lista de muchos documentos abiertos de un tipo.
+Para administrar el complejo proceso de creación de documentos con sus vistas asociadas y las ventanas de marco, el marco de trabajo usa dos clases de plantilla de documento: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) para las aplicaciones SDI y [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) para aplicaciones MDI. Un `CSingleDocTemplate` puede crear y guardar un documento de un tipo a la vez. Un `CMultiDocTemplate` mantiene una lista de muchos documentos abiertos de un tipo.
 
 Algunas aplicaciones admiten varios tipos de documentos. Por ejemplo, una aplicación podría admitir documentos de texto y gráficos. En este tipo de aplicación, cuando el usuario elige el comando nuevo en el menú archivo, un cuadro de diálogo muestra una lista de posibles tipos de documento de nuevo para abrir. Para cada tipo de documento admitidos, la aplicación utiliza un objeto de plantilla de documento distinto. La ilustración siguiente muestra la configuración de una aplicación MDI que admite dos tipos de documento y presenta varios documentos abiertos.
 
@@ -42,4 +42,3 @@ Por ejemplo, una plantilla de documento es el tercero de tres para la aplicació
 [Crear documentos y vistas](../mfc/document-view-creation.md)<br/>
 [Relaciones entre objetos MFC](../mfc/relationships-among-mfc-objects.md)<br/>
 [Creación de nuevos documentos, ventanas y vistas](../mfc/creating-new-documents-windows-and-views.md)
-

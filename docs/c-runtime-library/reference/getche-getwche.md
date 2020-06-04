@@ -1,10 +1,12 @@
 ---
 title: _getche, _getwche
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _getwche
 - _getche
-apilocation:
+- _o__getche
+- _o__getwche
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwche
 - _getche
@@ -29,14 +35,14 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: 87e9173e21ea51281276601b6fc5e3b73e244fca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd8c72d4c8d6eedb2485fc23e09e9118ab6d45ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612841"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910835"
 ---
-# <a name="getche-getwche"></a>_getche, _getwche
+# <a name="_getche-_getwche"></a>_getche, _getwche
 
 Obtiene un carácter de la consola con repetición.
 
@@ -54,11 +60,13 @@ wint_t _getwche( void );
 
 Devuelve el carácter leído. No se devuelve ningún error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_getche** y **_getwche** funciones leen un solo carácter de la consola con repetición, lo que significa que el carácter se muestra en la consola. Ninguna de estas funciones se puede usar para leer CTRL+C. Al leer una tecla de función o de dirección, se debe llamar dos veces a cada función: la primera llamada devuelve 0 o 0xE0, y la segunda devuelve el código de tecla real.
+Las funciones **_getche** y **_getwche** leen un solo carácter de la consola con el eco, lo que significa que el carácter se muestra en la consola. Ninguna de estas funciones se puede usar para leer CTRL+C. Al leer una tecla de función o de dirección, se debe llamar dos veces a cada función: la primera llamada devuelve 0 o 0xE0, y la segunda devuelve el código de tecla real.
 
 Estas funciones bloquean el subproceso de llamada y son, por consiguiente, seguras para subprocesos. Para obtener versiones que no sean de bloqueo, consulte [_getche_nolock, _getwche_nolock](getche-nolock-getwche-nolock.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -73,7 +81,7 @@ Estas funciones bloquean el subproceso de llamada y son, por consiguiente, segur
 |**_getche**|\<conio.h>|
 |**_getwche**|\<conio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -111,9 +119,9 @@ abcdefy
 Type 'Y' when finished typing keys: abcdefyY
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de consola y Puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>

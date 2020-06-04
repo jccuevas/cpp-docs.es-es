@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4117
 ms.assetid: c45aa281-4cc1-4dfd-bd32-bd7a60ddd577
-ms.openlocfilehash: 657963dd0199c1474f0cef566e5a177a16247521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2474645a555748b559b1661a2b5327ca1b83e534
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466227"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176383"
 ---
 # <a name="compiler-warning-level-1-c4117"></a>Advertencia del compilador (nivel 1) C4117
 
@@ -25,7 +25,7 @@ el nombre de macro 'name' está reservado; se omite 'Command'
 
 El ejemplo siguiente genera la advertencia C4117:
 
-```
+```cpp
 // C4117.cpp
 // compile with: /W1
 #define __FILE__ test         // C4117. __FILE__ is a predefined macro

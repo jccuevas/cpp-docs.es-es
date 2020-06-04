@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2415
 ms.assetid: f225c913-2bea-46b1-b096-3d358ac94a15
-ms.openlocfilehash: 81e2da31b39b323919132ae86cd365d9c119be32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0cdd528eca8ea267c62e6d44752d29ae16830c4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205626"
 ---
 # <a name="compiler-error-c2415"></a>Error del compilador C2415
 
@@ -23,4 +23,4 @@ El código de operación no utiliza los operandos de este tipo.
 
 1. El código de operación no admite el número de operandos utilizado. Revise el manual de referencia del lenguaje de ensamblado para determinar el número correcto de operandos.
 
-1. Un procesador más reciente admite la instrucción con tipos adicionales. Ajustar el [/arch (arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md) opción para usar el procesador más reciente.
+1. Un procesador más reciente admite la instrucción con tipos adicionales. Ajuste la opción [/Arch (arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md) para usar el procesador posterior.

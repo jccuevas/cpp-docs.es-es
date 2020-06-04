@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641589"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688295"
 ---
-# <a name="codecvtbyname-class"></a>codecvt_byname (Clase)
+# <a name="codecvt_byname-class"></a>codecvt_byname (Clase)
 
-Una clase de plantilla derivada que describe un objeto que puede actuar como faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las conversiones.
+Una plantilla de clase derivada que describe un objeto que puede actuar como una faceta de intercalación de una configuración regional determinada, lo que permite la recuperación de información específica de un área cultural relativa a las conversiones.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,17 +43,17 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname*<br/>
+@No__t_1 *_Locname*
 Una configuración regional con nombre.
 
-*_Refs*<br/>
+@No__t_1 *_Refs*
 Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 
 Las facetas byname se crean de forma automática cuando se crea una configuración regional con nombre.
 
-Su comportamiento viene determinado por la configuración regional con nombre *_Locname*. Cada constructor inicializa su objeto base con [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte. StateType>( `_Refs`).
+Su comportamiento viene determinado por el *_Locname*de configuración regional con nombre. Cada constructor inicializa su objeto base con [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte. StateType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -63,4 +63,4 @@ Su comportamiento viene determinado por la configuración regional con nombre *_
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

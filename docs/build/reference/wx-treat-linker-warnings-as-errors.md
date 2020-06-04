@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -WX linker option
 - WX linker option
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
-ms.openlocfilehash: 65585e35ac9de590636d9a116dcdb70cee0e785c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4b29ed364d39c5f105dded703b8530c08db35e6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316306"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Tratar advertencias del vinculador como errores)
 
@@ -25,13 +25,13 @@ ms.locfileid: "50517031"
 
 /WX hace que ningún archivo de salida si el vinculador genera una advertencia.
 
-Esto es similar a **/WX** para el compilador (consulte [/w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / WO, / wv, /WX (nivel de advertencia)](../../build/reference/compiler-option-warning-level.md) para obtener más información). Sin embargo, la especificación **/WX** para la compilación no implica que **/WX** también estará en vigor para la fase de vinculación; debe especificar explícitamente **/WX** para cada herramienta.
+Esto es similar a **/WX** para el compilador (consulte [/w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / WO, / wv, /WX (nivel de advertencia)](compiler-option-warning-level.md) para obtener más información). Sin embargo, la especificación **/WX** para la compilación no implica que **/WX** también estará en vigor para la fase de vinculación; debe especificar explícitamente **/WX** para cada herramienta.
 
 De forma predeterminada, **/WX** no está en vigor. Para tratar las advertencias del vinculador como errores, especifique **/WX**. **/WX:no** es el mismo que si no se especifica **/WX**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -45,5 +45,5 @@ De forma predeterminada, **/WX** no está en vigor. Para tratar las advertencias
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

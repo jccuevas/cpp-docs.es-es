@@ -6,12 +6,12 @@ helpviewer_keywords:
 - transactions [C++]
 - databases [C++], transactions
 ms.assetid: f80afbfe-1517-4fec-8870-9ffc70a58b05
-ms.openlocfilehash: d986250205f9d45c83d88811527e9561b3258b3d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 742e95d896d107fb89b3d65f0eeb6d418f1b2057
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552563"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209071"
 ---
 # <a name="transactions--mfc-data-access"></a>Transacciones (acceso a datos MFC)
 
@@ -23,18 +23,18 @@ Por ejemplo, en una transacción bancaria automatizada, si transfiere dinero de 
 
 Una transacción debe tener las propiedades ACID, que representan lo siguiente:
 
-- **Atomicidad** una transacción es una unidad atómica de trabajo y se ejecuta exactamente una vez; todo el trabajo se realiza o ninguno lo es.
+- **Atomicidad** Una transacción es una unidad atómica de trabajo y se ejecuta exactamente una vez; se realiza todo el trabajo o ninguno de ellos.
 
-- **Coherencia** una transacción mantiene la coherencia de datos, transformar un estado coherente de datos en otro estado coherente de datos. Los datos enlazados por una transacción deben conservarse semánticamente.
+- **Coherencia** Una transacción conserva la coherencia de los datos, transformando un estado coherente de los datos en otro estado coherente de los datos. Los datos enlazados por una transacción deben conservarse semánticamente.
 
-- **Aislamiento** una transacción es una unidad de aislamiento y cada una se produce por separado y con independencia de las transacciones simultáneas. Una transacción nunca debe ver las fases intermedias de otra transacción.
+- **Aislamiento** de Una transacción es una unidad de aislamiento y cada una se produce por separado e independiente de las transacciones simultáneas. Una transacción nunca debe ver las fases intermedias de otra transacción.
 
-- **Durabilidad** una transacción es una unidad de recuperación. Si una transacción tiene éxito, sus actualizaciones persisten, incluso si el sistema se bloquea o se apaga. Si se produce un error en una transacción, el sistema permanece en el estado anterior a la confirmación de la transacción.
+- **Durabilidad** Una transacción es una unidad de recuperación. Si una transacción tiene éxito, sus actualizaciones persisten, incluso si el sistema se bloquea o se apaga. Si se produce un error en una transacción, el sistema permanece en el estado anterior a la confirmación de la transacción.
 
-Puede admitir transacciones en OLE DB (consulte [admitir transacciones en OLE DB](../data/oledb/supporting-transactions-in-ole-db.md)) u ODBC (consulte [transacción (ODBC)](../data/odbc/transaction-odbc.md)).
+Puede admitir transacciones en OLE DB (vea el soporte [de transacciones en OLE DB](../data/oledb/supporting-transactions-in-ole-db.md)) o ODBC (vea [transacción (ODBC)](../data/odbc/transaction-odbc.md)).
 
-Una transacción distribuida es una transacción que actualiza datos distribuidos, es decir, datos en más de un sistema de equipos en red. Si desea admitir transacciones en un sistema distribuido, debe usar ADO.NET en lugar de la compatibilidad con transacciones de OLE DB.
+Una transacción distribuida es una transacción que actualiza datos distribuidos, es decir, datos en más de un sistema de equipos en red. Si desea admitir transacciones a través de un sistema distribuido, debe utilizar ADO.NET en lugar de la compatibilidad con transacciones OLE DB.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Acceso a los datos de programación (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[Programación del acceso a datos (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
-ms.openlocfilehash: 4790c9caafd28722f3631104cfe5cfc762cf6426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e20333a4fc18219f7f2514f3aefe73b81f284a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575479"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759495"
 ---
 # <a name="compiler-error-c3068"></a>Error del compilador C3068
 
-'function': una función 'naked' no puede contener objetos que requerirían desenredo si se ha producido una excepción de C++
+' function ': una función ' naked ' no puede contener objetos que requieran el desenredo C++ si se produjo una excepción
 
-El compilador no pudo realizar un desenredo de pila en un [naked](../../cpp/naked-cpp.md) función que produjo una excepción porque se creó un objeto temporal en la función y el control de excepciones de C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) se ha especificado.
+El compilador no pudo realizar el desenredo de la pila en una función [naked](../../cpp/naked-cpp.md) que produjo una excepción porque se ha creado un objeto temporal C++ en la función y se ha especificado el control de excepciones ([/EHsc](../../build/reference/eh-exception-handling-model.md)).
 
-Para resolver este error, realice al menos uno de los siguientes:
+Para resolver este error, realice al menos uno de los siguientes elementos:
 
-- No se compilan con/EHsc.
+- No compilar con/EHsc.
 
 - No marque la función como `naked`.
 
 - No cree un objeto temporal en la función.
 
-Si una función crea un objeto temporal en la pila, si la función produce una excepción, y si está habilitado el control de excepciones de C++, el compilador limpiará la pila si se produce una excepción.
+Si una función crea un objeto temporal en la pila, si la función produce una excepción y si C++ el control de excepciones está habilitado, el compilador limpiará la pila si se produce una excepción.
 
-Cuando se produce una excepción, compilador genera código, llamado el prólogo y epílogo y que no están presentes en una función naked, se ejecuta en una función.
+Cuando se inicia una excepción, el código generado por el compilador, denominado prólogo y epílogo y que no están presentes en una función Naked, se ejecuta para una función.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3068:
+En el ejemplo siguiente se genera C3068:
 
-```
+```cpp
 // C3068.cpp
 // compile with: /EHsc
 // processor: x86

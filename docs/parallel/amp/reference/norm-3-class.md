@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: f350e5c5707dad93fe2863523e816d309647acd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513807"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142160"
 ---
-# <a name="norm3-class"></a>norm_3 (Clase)
+# <a name="norm_3-class"></a>norm_3 (Clase)
 
 Representa un vector corto de tres números normales.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class norm_3;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor norm_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de norm_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |norm_3::get_x||
 |norm_3::get_xy||
@@ -125,8 +125,8 @@ class norm_3;
 |norm_3::ref_b||
 |norm_3::ref_g||
 |norm_3::ref_r||
-|norm_3:: ref_x||
-|norm_3:: ref_y||
+|norm_3::ref_x||
+|norm_3::ref_y||
 |norm_3::ref_z||
 |norm_3::set_x||
 |norm_3::set_xy||
@@ -146,7 +146,7 @@ class norm_3;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |norm_3::operator-||
 |norm_3::operator--||
@@ -159,44 +159,44 @@ class norm_3;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#size)||
+|[Size (constante)](#size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|norm_3:: b||
-|norm_3:: BG||
-|norm_3:: BGR||
-|norm_3:: br||
+|norm_3::b||
+|norm_3::bg||
+|norm_3::bgr||
+|norm_3::br||
 |norm_3::brg||
-|norm_3:: g||
-|norm_3:: GB||
-|norm_3:: GBR||
-|norm_3:: GR||
-|norm_3:: GRB||
-|norm_3:: r||
-|norm_3:: RB||
-|norm_3:: RBG||
-|norm_3:: RG||
-|norm_3:: RGB||
-|norm_3:: x||
-|norm_3:: XY||
-|norm_3:: XYZ||
+|norm_3::g||
+|norm_3::gb||
+|norm_3::gbr||
+|norm_3::gr||
+|norm_3::grb||
+|norm_3::r||
+|norm_3::rb||
+|norm_3::rbg||
+|norm_3::rg||
+|norm_3::rgb||
+|norm_3::x||
+|norm_3::xy||
+|norm_3::xyz||
 |norm_3::xz||
-|norm_3:: xzy||
+|norm_3::xzy||
 |norm_3:: y||
-|norm_3:: YX||
-|norm_3:: YXZ||
-|norm_3:: YZ||
-|norm_3:: yzx||
-|norm_3:: z||
+|norm_3::yx||
+|norm_3::yxz||
+|norm_3::yz||
+|norm_3::yzx||
+|norm_3::z||
 |norm_3::zx||
-|norm_3:: zxy||
+|norm_3::zxy||
 |norm_3:: ZY||
-|norm_3:: ZYX||
+|norm_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -204,17 +204,17 @@ class norm_3;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-## <a name="ctor"></a> Constructor norm_3
+## <a name="ctor"></a>Constructor de norm_3
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-## <a name="syntax"></a>Sintaxis
+### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,31 +257,31 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-## <a name="a-namesize-size-constant"></a><a name="size"> cambio de tamaño constante
+## <a name="a-namesize-size-constant"></a><a name="size"> constante de tamaño
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

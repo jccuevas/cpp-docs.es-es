@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: Compilar un proyecto (C++)'
-ms.date: 09/14/2018
+title: 'Tutorial: Compilación de un proyecto (C++)'
+ms.date: 04/25/2019
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d23412bcc740cbbda4227e0271842b4d44b436af
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524162"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400993"
 ---
-# <a name="walkthrough-building-a-project-c"></a>Tutorial: Compilar un proyecto (C++)
+# <a name="walkthrough-building-a-project-c"></a>Tutorial: Compilación de un proyecto (C++)
 
-En este tutorial, va a introducir deliberadamente un error de sintaxis de Visual C++ en el código para obtener información acerca de cómo es un error de compilación y cómo corregirlo. Cuando compila el proyecto, un mensaje de error indica cuál es el problema y donde se produjo.
+En este tutorial, va a introducir deliberadamente un error de sintaxis de C++ en el código para obtener información acerca de cómo es un error de compilación y cómo corregirlo. Cuando compila el proyecto, un mensaje de error indica cuál es el problema y donde se produjo.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -55,9 +55,9 @@ En este tutorial, va a introducir deliberadamente un error de sintaxis de Visual
 ## <a name="next-steps"></a>Pasos siguientes
 
 **Anterior:** [Tutorial: Trabajar con proyectos y soluciones (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Siguiente:** [Tutorial: Probar un proyecto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Siguiente:** [Tutorial: Probar un proyecto (C++)](../ide/walkthrough-testing-a-project-cpp.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>
+[Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>

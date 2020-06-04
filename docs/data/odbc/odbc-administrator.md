@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC Administrator [C++]
 - drivers [C++], ODBC
 ms.assetid: b8652790-3437-4e7d-bc83-6ea6981f008b
-ms.openlocfilehash: 5e83657462952be12a6a2d086aa2419093e06d0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e88492919eac80a4f3db2f94202d49011aa69de
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454809"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213202"
 ---
 # <a name="odbc-administrator"></a>Administrador de ODBC
 
-El Administrador de ODBC registra y configura el [orígenes de datos](../../data/odbc/data-source-odbc.md) disponibles localmente o a través de una red. Los asistentes utilizan la información proporcionada por el Administrador de ODBC para crear en las aplicaciones código que conecta a los usuarios con los orígenes de datos.
+El administrador de ODBC registra y configura los [orígenes de datos](../../data/odbc/data-source-odbc.md) disponibles, ya sea de forma local o a través de una red. Los asistentes utilizan la información proporcionada por el Administrador de ODBC para crear en las aplicaciones código que conecta a los usuarios con los orígenes de datos.
 
 Para configurar un origen de datos ODBC para su utilización con las clases ODBC de MFC o con las clases DAO de MFC, primero se debe registrar y configurar el origen de datos. Para agregar y quitar orígenes de datos se ha de utilizar el Administrador de ODBC. Dependiendo del controlador ODBC, se pueden crear también nuevos orígenes de datos.
 
-El Administrador de ODBC se instala durante el proceso de instalación. Si eligió **personalizado** instalación y no se ha seleccionado ningún controlador ODBC en el **opciones de base de datos** cuadro de diálogo, debe ejecutar el programa de instalación para instalar los archivos necesarios.
+El Administrador de ODBC se instala durante el proceso de instalación. Si eligió la instalación **personalizada** y no seleccionó ningún controlador ODBC en el cuadro de diálogo **Opciones de base de datos** , deberá volver a ejecutar el programa de instalación para instalar los archivos necesarios.
 
 Durante el proceso de instalación se seleccionan los controladores ODBC que se desea instalar. Posteriormente, se pueden instalar otros controladores que se incluyen en Visual C++ utilizando el programa de instalación de Visual C++.
 
@@ -36,21 +36,21 @@ Si se desea instalar controladores ODBC no incluidos en Visual C++, debe ejecuta
 
    Aparece el cuadro de diálogo inicial del programa de instalación.
 
-1. Haga clic en **siguiente** en cada cuadro de diálogo hasta que llegue a la **opciones de instalación** cuadro de diálogo. Seleccione **personalizado**y, a continuación, haga clic en **siguiente**.
+1. Haga clic en **siguiente** en cada cuadro de diálogo hasta llegar al cuadro de diálogo **Opciones de instalación** . Seleccione **personalizada**y, a continuación, haga clic en **siguiente**.
 
-1. Desactive las casillas de verificación en la **el programa de instalación de Microsoft Visual C++** cuadro de diálogo, excepto el **opciones de base de datos** casilla de verificación y, a continuación, haga clic en **detalles** para mostrar el **Opciones de base de datos** cuadro de diálogo.
+1. Desactive todas las casillas del cuadro de diálogo **instalación de C++ Microsoft Visual** , excepto la casilla Opciones de base de **datos** y, a continuación, haga clic en **detalles** para mostrar el cuadro de diálogo Opciones de **base de datos** .
 
-1. Desactive el **Microsoft Data Access Objects** casilla de verificación, seleccione el **controladores ODBC de Microsoft** casilla de verificación y, a continuación, haga clic en **detalles**.
+1. Desactive la casilla **Microsoft Data Access Objects** , active la casilla **controladores ODBC de Microsoft** y, a continuación, haga clic en **detalles**.
 
-   El **controladores ODBC de Microsoft** aparece el cuadro de diálogo.
+   Aparecerá el cuadro de diálogo **controladores ODBC de Microsoft** .
 
 1. Seleccione los controladores que desea instalar y, a continuación, haga clic en **Aceptar** dos veces.
 
-1. Haga clic en **siguiente** en los restantes cuadros de diálogo para iniciar la instalación. El programa de instalación notifica cuándo ha finalizado la instalación.
+1. Haga clic en **siguiente** en el resto de cuadros de diálogo para iniciar la instalación. El programa de instalación notifica cuándo ha finalizado la instalación.
 
 Una vez instalados los controladores, se puede configurar el origen de datos mediante el Administrador de ODBC. El icono ODBC se encuentra en el Panel de control.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Origen de datos (ODBC)](../../data/odbc/data-source-odbc.md)

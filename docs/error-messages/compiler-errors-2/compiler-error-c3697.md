@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3697
 ms.assetid: 2d3f63c4-b7f8-421d-a7a5-2bf17fd054f9
-ms.openlocfilehash: 55eadd55af8d4e6f088a0d0eb732d820242cae66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e642c744bbce5db4bb341a32769b2d9f74654044
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540457"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758065"
 ---
 # <a name="compiler-error-c3697"></a>Error del compilador C3697
 
-'calificador': no se puede utilizar este calificador en ' ^'
+' Qualifier ': no se puede usar este calificador en ' ^ '
 
 El identificador de seguimiento (^) se aplicó a un calificador para el que no se diseñó.
 
-El ejemplo siguiente genera C3697:
+En el ejemplo siguiente se genera C3697:
 
-```
+```cpp
 // C3697.cpp
 // compile with: /clr
 using namespace System;

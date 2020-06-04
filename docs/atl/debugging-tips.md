@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, debugging
 - services, debugging
 ms.assetid: 48c60244-d0ce-4466-85fa-6fa65fcfe86c
-ms.openlocfilehash: 2504df43ed4a4e5b324e8c058650ff0b2f343733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47c7a941d7d619b63bc0788bad7294efd743969f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250600"
 ---
 # <a name="debugging-tips"></a>Sugerencias de depuración
 
@@ -25,4 +25,3 @@ Los temas siguientes describen algunos pasos útiles para depurar el servicio:
 ## <a name="see-also"></a>Vea también
 
 [Servicios](../atl/atl-services.md)
-

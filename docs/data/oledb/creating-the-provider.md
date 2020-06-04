@@ -1,37 +1,47 @@
 ---
 title: Crear un proveedor
-ms.date: 10/15/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 05ab045e104e3035f8ccd2fa1924b6959164b8d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 7a8b4caf85ff7d0310c97cb953739796cca21c43
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538195"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707578"
 ---
 # <a name="creating-the-provider"></a>Crear un proveedor
 
-## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Para crear un proveedor OLE DB con el Asistente para proveedores OLE DB ATL
+::: moniker range="vs-2019"
 
-1. Haga clic en el proyecto.
+El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
 
-1. En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar clase**.
+::: moniker-end
 
-1. En el **Agregar clase** cuadro de diálogo **instalado** > **Visual C++** > **ATL**, seleccione el **Proveedor OLEDB ATL** icono y, a continuación, haga clic en **abierto**.
+::: moniker range="<=vs-2017"
 
-1. En el **el Asistente para proveedores OLE DB ATL**, escriba un nombre corto para el proveedor en el **nombre corto** cuadro. Los temas siguientes utilizan el nombre corto *personalizado*, pero puede usar otro nombre. Rellenan otros cuadros con nombre según el nombre especificado.
+## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Crear un proveedor OLE DB con el Asistente para proveedores OLE DB ATL
 
-1. Editar otros cuadros con nombre, si es necesario. Además de los nombres de objeto y el archivo, puede modificar lo siguiente:
+1. Haga clic con el botón derecho en el proyecto.
 
-   - **Coclase**: el nombre que utiliza COM para crear el proveedor.
+1. En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.
 
-   - **Id. de programa**: el identificador de programación, que es una cadena de texto que se puede usar en lugar de un GUID.
+1. En el cuadro de diálogo **Agregar clase**, en **Instalado** > **Visual C++** > **ATL**, seleccione el icono de **Proveedor OLEDB ATL** y, a continuación, haga clic en **Abrir**.
 
-   - **Versión**: se utiliza con los ProgID y Coclass para generar un identificador de programación dependientes de la versión.
+1. En el **Asistente para proveedores OLE DB ATL**, escriba un nombre corto para el proveedor en el cuadro **Nombre corto**. En los temas siguientes se usa el nombre corto *Personalizado*, pero puede usar otro. El resto de los cuadros se rellenan según el nombre especificado.
+
+1. Edite los otros cuadros de nombre si lo desea. Además de los nombres de objeto y archivo, puede modificar lo siguiente:
+
+   - **Coclass**: El nombre que utiliza COM para crear el proveedor.
+
+   - **ProgID**: El identificador de programación, que es una cadena de texto que se puede usar en lugar de un GUID.
+
+   - **Version**: Se utiliza con ProgID y Coclass para generar un identificador de programación dependiente de la versión.
 
 1. Haga clic en **Finalizar**.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 

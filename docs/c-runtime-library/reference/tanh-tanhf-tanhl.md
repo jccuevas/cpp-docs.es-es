@@ -1,11 +1,12 @@
 ---
-title: TANH, tanhf, tanhl
-ms.date: 04/10/2018
-apiname:
+title: tanh, tanhf, tanhl
+ms.date: 4/2/2020
+api_name:
 - tanh
 - tanhf
 - tanhl
-apilocation:
+- _o_tanh
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tanh
 - tanhf
@@ -30,14 +35,14 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432400"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912297"
 ---
-# <a name="tanh-tanhf-tanhl"></a>TANH, tanhf, tanhl
+# <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
 Calcula la tangente hiperbólica.
 
@@ -61,23 +66,25 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **tanh** funciones devuelven la tangente hiperbólica de *x*. No se devuelve ningún error.
+Las funciones **tanh** devuelven la tangente hiperbólica de *x*. No se devuelve ningún error.
 
-|Entrada|Excepción SEH|**_Matherr** excepción|
+|Entrada|Excepción SEH|**Matherr** Excepcional|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|ninguna|_DOMAIN|
+|± QNAN,IND|ninguno|_DOMAIN|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **tanh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **tanh** siempre toma y devuelve **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **tanh** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **tanh** siempre toma y devuelve **Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C)|
 |-------------|---------------------|-|
-|**TANH**, **tanhf**, **tanhl**|\<math.h>|\<cmath> o \<math.h>|
+|**tanh**, **tanhf (**, **tanhl**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -107,7 +114,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1012
 ms.assetid: 92cc83a7-b5b8-4da8-a128-9b7ccb510496
-ms.openlocfilehash: 66930b95fc568aa6efe7d3ba0551aecc568c0be9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0925d3bcf8bda2591efc73936c4182ac82e3cb05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522513"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204820"
 ---
 # <a name="fatal-error-c1012"></a>Error irrecuperable C1012
 

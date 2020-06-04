@@ -1,30 +1,38 @@
 ---
 title: '&lt;cstdbool&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <cstdbool>
+- cstdbool
+helpviewer_keywords:
+- cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 8d9b0ec81e0364b409b4518beb291a56648a6ab1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ed780e059a5e456731fd6a4f651639e282016f5e
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518117"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341101"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
-Incluye el encabezado \<stdbool.h> de la biblioteca estándar de C y agrega los nombres asociados al espacio de nombres `std`.
+Incluye el encabezado \<stdbool. > h de la biblioteca estándar de C y agrega los nombres `std` asociados al espacio de nombres.
 
-## <a name="syntax"></a>Sintaxis
+> [!NOTE]
+> Dado que \<el encabezado stdbool. h > define macros que son palabras C++clave en, incluso no tiene ningún efecto. El \<encabezado stdbool. h > está en desuso en C++. El \<encabezado cstdbool > está en desuso en c++ 17 y se ha quitado en el borrador c++ 20 standard.
 
-```cpp
-#include <cstdbool>
-```
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** \<> cstdbool
+
+**Espacio de nombres:** std
 
 ## <a name="remarks"></a>Comentarios
 
-Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.
+Incluir este encabezado garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar `std` de C se declaran en el espacio de nombres.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](cpp-standard-library-header-files.md)\
+[C++Información general de la biblioteca estándar](cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la C++ biblioteca estándar](thread-safety-in-the-cpp-standard-library.md)

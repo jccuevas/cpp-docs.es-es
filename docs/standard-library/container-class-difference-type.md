@@ -4,31 +4,30 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - difference_type typedef
 ms.assetid: fae52485-d424-484e-9856-13505cfe528c
-ms.openlocfilehash: aa742c0df9a8647bb08dcc0c7f5391afcdc94b96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f685c899593d5483e2c8cd619466eb226e4dc36
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620862"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258203"
 ---
-# <a name="container-classdifferencetype"></a>Clase de contenedor::difference_type
+# <a name="container-classdifference_type"></a>Clase de contenedor::difference_type
 
 > [!NOTE]
-> Este tema se incluye en la documentación de Visual C++ como un ejemplo no funcional de los contenedores usados en la biblioteca estándar de C++. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
+> Este tema se encuentra en la C++ documentación de Microsoft como un ejemplo no funcional de contenedores usados en C++ la biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
 
 Describe un objeto que puede representar la diferencia entre las direcciones de dos elementos cualesquiera de la secuencia controlada.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-
+```cpp
 typedef T1 difference_type;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Se describe como sinónimo del tipo sin especificar `T1` (normalmente `Alloc::difference_type`).
+Aquí se describe como sinónimo del tipo sin especificar `T1` (normalmente `Alloc::difference_type`).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clase contenedora de ejemplo](../standard-library/sample-container-class.md)<br/>
+[Sample Container (Clase)](../standard-library/sample-container-class.md)

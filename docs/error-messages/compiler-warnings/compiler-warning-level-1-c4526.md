@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4526
 ms.assetid: 490f8916-5fdc-4cad-b412-76c3382a5976
-ms.openlocfilehash: 892e6c37e54a868be48ced35354a1096aa7bf9d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4d772f3e505979a6ea5c3e7923fefa621601370
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536733"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186509"
 ---
 # <a name="compiler-warning-level-1-c4526"></a>Advertencia del compilador (nivel 1) C4526
 
-'function': función miembro estática no puede invalidar la función virtual ' reemplazará la función virtual se ocultará
+' función ': la función miembro estática no puede invalidar la función virtual ' function'override omitida; la función virtual se ocultará
 
-La función miembro estática cumple los criterios para invalidar la función virtual, lo que hace que la función miembro virtual y static.
+La función miembro estática cumple los criterios para invalidar la función virtual, que hace que la función miembro sea virtual y estática.
 
-El código siguiente genera la advertencia C4526:
+El código siguiente genera C4526:
 
-```
+```cpp
 // C4526.cpp
 // compile with: /W1 /c
 // C4526 expected
@@ -34,8 +34,8 @@ struct myStruct2: public myStruct1 {
 };
 ```
 
-Los siguientes son posibles soluciones:
+A continuación se indican las posibles correcciones:
 
-- Si la función se ha diseñado para reemplazar la función virtual de clase base, quite el especificador estático.
+- Si la función estaba pensada para invalidar la función virtual de clase base, quite el especificador estático.
 
-- Si la función esté destinada a ser una función miembro estática, cambie el nombre por lo que no entra en conflicto con la función virtual de clase base.
+- Si la función estaba diseñada para ser una función miembro estática, cambie su nombre para que no entre en conflicto con la función virtual de la clase base.

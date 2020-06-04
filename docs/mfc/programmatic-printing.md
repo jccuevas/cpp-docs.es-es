@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-ms.openlocfilehash: d01dcd901425fb3957201dca754a01042e629ebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb8804610832f91f4b24487fddfe9c24a3799117
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630664"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342096"
 ---
 # <a name="programmatic-printing"></a>Imprimir mediante programación
 
@@ -46,7 +46,7 @@ Además, `IPrint::SetInitialPageNum` admite la posibilidad de imprimir una serie
 
 Los objetos que admiten `IPrint` se marcan en el registro con la clave "Printable" almacenada en el CLSID del objeto:
 
-HKEY_CLASSES_ROOT\CLSID\\{...} \Printable
+HKEY_CLASSES_ROOT\CLSID\\{...}\Printable
 
 `IPrint` Normalmente se implementa en el mismo objeto que admite cualquiera `IPersistFile` o `IPersistStorage`. Los autores de llamadas, tenga en cuenta la capacidad de imprimir mediante programación el estado persistente de alguna clase mediante una búsqueda en el registro para la clave "Printable". Actualmente, "Imprimibles" indican compatibilidad con al menos `IPrint`; otras interfaces pueden definirse en el futuro, a continuación, lo que estaría disponible a través de `QueryInterface` donde `IPrint` simplemente representa el nivel de base de soporte técnico.
 
@@ -72,4 +72,3 @@ En los casos más genéricos, la `IContinueCallback::FContinue` cualquier proces
 ## <a name="see-also"></a>Vea también
 
 [Contenedores de documentos activos](../mfc/active-document-containers.md)
-

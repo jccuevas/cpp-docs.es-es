@@ -1,22 +1,23 @@
 ---
 title: .UNTILCXZ
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .UNTILCXZ
 helpviewer_keywords:
 - .UNTILCXZ directive
 ms.assetid: 07723c4c-789d-4dfa-9407-c60e72cb975f
-ms.openlocfilehash: 0e008f2712f497556273c56976f5235da014d520
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e351c2a35f2b0dddc80af2f0cfdd7b62baf5200
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641966"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317479"
 ---
-# <a name="untilcxz"></a>.UNTILCXZ
+# <a name="untilcxz-32-bit-masm"></a>. UNTILCXZ (MASM de 32 bits)
 
-Consulte [. Repita](../../assembler/masm/dot-repeat.md).
+(solo para MASM de 32 bits). Vea [. Repita el procedimiento](dot-repeat.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

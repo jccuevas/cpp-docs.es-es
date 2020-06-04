@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3644
 ms.assetid: 2e3f6c41-3ec5-4a01-82bc-f11b61ebe68e
-ms.openlocfilehash: 6d147d6a5955208bbca1ccf9a2f2bcfe3f485b4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b89ecc1e370edfb4d1365b3c7a7c42b29d5f1c6c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428033"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757857"
 ---
 # <a name="compiler-error-c3644"></a>Error del compilador C3644
 
-'function': no se puede compilar la función para generar código administrado
+' función ': no se puede compilar la función para generar código administrado
 
-La presencia de algunas palabras clave en una función hará que la función se compile en código nativo.
+La presencia de algunas palabras clave en una función hará que la función se compile en modo nativo.
 
-El ejemplo siguiente genera C3644:
+En el ejemplo siguiente se genera C3644:
 
-```
+```cpp
 // C3644.cpp
 // compile with: /clr
 // processor: x86

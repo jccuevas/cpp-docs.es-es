@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C4710
 ms.assetid: 76381ec7-3fc1-4bee-9a0a-c2c8307b92e2
-ms.openlocfilehash: 0f8e66982192f8af6498c9151d32a44226e0560a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c39848b9b3e94e35c4d0c0937a0974b717c6bd8d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487781"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198181"
 ---
 # <a name="compiler-warning-level-4-c4710"></a>Advertencia del compilador (nivel 4) C4710
 
-'function': función no está entre línea
+' función ': la función no está insertada
 
-La función especificada se ha seleccionado para la expansión en línea, pero el compilador no llevó a cabo la inserción.
+Se seleccionó la función especificada para la expansión en línea, pero el compilador no realizó la inserción.
 
-La inserción se realiza a discreción del compilador. El **inline** palabra clave, como el **registrar** palabra clave, se utiliza como una sugerencia para el compilador. El compilador usa la heurística para determinar si debe insertar una función concreta para acelerar el código al compilar para acelerar el proceso, o si debe insertar una función concreta para reducir el código al compilar para el espacio. El compilador incluirá solo funciones muy pequeñas al compilar para el espacio.
+La inserción se realiza a discreción del compilador. La palabra clave **inline** , como la palabra clave **Register** , se utiliza como una sugerencia para el compilador. El compilador usa la heurística para determinar si debe alinear una función concreta con el fin de acelerar el código al compilar para obtener velocidad, o si debe alinear una función concreta para reducir el código al compilar el espacio. El compilador solo insertará funciones muy pequeñas al compilar para el espacio.
 
-En algunos casos, el compilador no insertará una determinada función por motivos mecánicos. Consulte [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) para obtener una lista de motivos por los que el compilador no alinea una función.
+En algunos casos, el compilador no insertará una función concreta por motivos mecánicos. Vea [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) para obtener una lista de los motivos por los que el compilador no puede alinear una función.
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.

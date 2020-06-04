@@ -1,9 +1,9 @@
 ---
 title: _set_printf_count_output
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_printf_count_output
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d4847d850b39c7c03ea92a98499715b1e6a4913
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595616"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948419"
 ---
-# <a name="setprintfcountoutput"></a>_set_printf_count_output
+# <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-Habilitar o deshabilitar la compatibilidad de la **%n** formatear en [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-familia de funciones.
+Habilitar o deshabilitar la compatibilidad con el formato **% n** en las funciones [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-Family.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,16 +48,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Parámetros
 
-*habilitar*<br/>
-Un valor distinto de cero para habilitar **%n** admitir, 0 para deshabilitar **%n** admite.
+*enable*<br/>
+Un valor distinto de cero para habilitar la compatibilidad con **% n** , 0 para deshabilitar la compatibilidad con **% n** .
 
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
 
-El estado de **%n** admite antes de llamar a esta función: distinto de cero if **%n** se ha habilitado la compatibilidad, 0 si se deshabilitó.
+El estado de **% n** es compatible antes de llamar a esta función: distinto de cero si se habilitó la compatibilidad con **% n** , 0 si estaba deshabilitada.
 
 ## <a name="remarks"></a>Comentarios
 
-Por motivos de seguridad, compatibilidad con la **%n** especificador de formato está deshabilitado de forma predeterminada en **printf** y todas sus variantes. Si **%n** se encuentra en un **printf** especificación de formato, el comportamiento predeterminado consiste en invocar el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Una llamada a **_set_printf_count_output** con un argumento distinto de cero provocará **printf**-familia de funciones para interpretar **%n** como se describe en [formato Sintaxis de especificación: funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Por motivos de seguridad, la compatibilidad con el especificador de formato **% n** está deshabilitada de forma predeterminada en **printf** y en todas sus variantes. Si se encuentra **% n** en una especificación de formato **printf** , el comportamiento predeterminado es invocar el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). La llamada a **_set_printf_count_output** con un argumento distinto de cero provocará que las funciones de la familia **printf**interpreten **% n** como se describe en [Sintaxis de especificación de formato: funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Requisitos
 

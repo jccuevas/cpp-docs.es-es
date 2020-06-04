@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3021
 ms.assetid: 0cef6d97-e267-438a-ac8b-0daf5bbbc2cf
-ms.openlocfilehash: 4863947fe2fedf9301fac302820cb69193581222
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a90a3378690140c27fe938c269f4fb00f6eae12
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515133"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742111"
 ---
 # <a name="compiler-error-c3021"></a>Error del compilador C3021
 
@@ -23,7 +23,7 @@ Se necesita un argumento para una directiva de OpenMP.
 
 El ejemplo siguiente genera la advertencia C3021:
 
-```
+```cpp
 // C3021.cpp
 // compile with: /openmp
 #include <stdio.h>

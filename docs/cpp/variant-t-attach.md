@@ -9,36 +9,36 @@ helpviewer_keywords:
 - VARIANT object [C++], attach
 - VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
-ms.openlocfilehash: 510267c7ab00fe22a93dc01342def5fc262ddb04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0822dfc730cbbb64f8364e6fa8fe8bc7207f9f9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435079"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750743"
 ---
-# <a name="varianttattach"></a>_variant_t::Attach
+# <a name="_variant_tattach"></a>_variant_t::Attach
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
-Asocia un `VARIANT` objeto en el **_variant_t** objeto.
+Asocia un `VARIANT` objeto al objeto **_variant_t.**
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
 *varSrc*<br/>
-Un `VARIANT` se adjuntará a este objeto **_variant_t** objeto.
+Objeto `VARIANT` que se va a adjuntar a este **objeto _variant_t.**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Toma posesión de la `VARIANT` encapsulándolo. Esta función miembro libera cualquier encapsulado existente `VARIANT`, a continuación, copia proporcionado `VARIANT`y establece su `VARTYPE` en VT_EMPTY para asegurarse de que sólo se pueden liberar sus recursos por la **_variant_t** destructor.
+Toma la `VARIANT` propiedad de la encapsulando. Esta función miembro libera `VARIANT`cualquier encapsulado `VARIANT`existente y, a continuación, copia el proporcionado y establece su `VARTYPE` en VT_EMPTY para asegurarse de que sus recursos solo se pueden liberar por el destructor **_variant_t.**
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
 ## <a name="see-also"></a>Vea también
 
-[_variant_t (Clase)](../cpp/variant-t-class.md)
+[Clase _variant_t](../cpp/variant-t-class.md)

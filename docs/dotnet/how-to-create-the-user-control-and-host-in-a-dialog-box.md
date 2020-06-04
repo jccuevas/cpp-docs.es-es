@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Crear el control de usuario y el host en un cuadro de diálogo'
+title: Procedimiento Crear el Control de usuario y el Host en un cuadro de diálogo
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-ms.openlocfilehash: ccb7219b9c7b3a64da61a77097b147424a92a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf7e2f4961a16e6538c7bbcc690ef44ba87fcaf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378983"
 ---
-# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Cómo: Crear el control de usuario y el host en un cuadro de diálogo
+# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Procedimiento Crear el Control de usuario y el Host en un cuadro de diálogo
 
 Los pasos descritos en este artículo se suponen que va a crear un objeto basado en el cuadro de diálogo ([CDialog (clase)](../mfc/reference/cdialog-class.md)) proyecto de Microsoft Foundation Classes (MFC), pero también puede agregar compatibilidad para un control de Windows Forms a un cuadro de diálogo MFC existente.
 
@@ -45,7 +45,7 @@ Los pasos descritos en este artículo se suponen que va a crear un objeto basado
 
    En el menú **Archivo** , haga clic en **Nuevo** y, a continuación, haga clic en **Proyecto**. En el **Visual C++** carpeta, seleccione **aplicación MFC**.
 
-   En el cuadro **Nombre** , escriba `MFC01`. Cambie el valor de la solución a **agregar a solución**. Haga clic en **Aceptar**.
+   En el cuadro **Nombre**, escriba `MFC01`. Cambie el valor de la solución a **agregar a solución**. Haga clic en **Aceptar**.
 
    En el **MFC Application Wizard**, tipo de aplicación, seleccione **en función del cuadro de diálogo**. Acepte los valores predeterminados restantes y haga clic en **finalizar**. Esto crea una aplicación MFC que tiene un cuadro de diálogo MFC.
 

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - debugging and exceptions classes
 ms.assetid: d42d7649-9721-4a1a-8b38-d983a649fdb9
-ms.openlocfilehash: 8b27c62acb098a2e5c02c52165a2948e5c440dd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6e242b883689152f55c93a9e29f4e93e9f88737
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234965"
 ---
 # <a name="debugging-and-exceptions-classes"></a>Clases de excepciones y depuración
 
@@ -25,4 +25,3 @@ Estas clases proporcionan compatibilidad para control de excepciones y depuraci�
 [Información general de clases](../atl/atl-class-overview.md)<br/>
 [Funciones globales de depuración e informe de errores](../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
 [Macros de depuración e informe de errores](../atl/reference/debugging-and-error-reporting-macros.md)
-

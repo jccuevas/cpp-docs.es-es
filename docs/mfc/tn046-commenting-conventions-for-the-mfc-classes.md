@@ -1,24 +1,21 @@
 ---
-title: 'TN046: Convenciones de comentarios de las clases MFC'
+title: 'TN046: Convenciones de los comentarios de las clases MFC'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc
 helpviewer_keywords:
 - TN046
 ms.assetid: 0d6ff3c9-4a5d-44df-b121-be4b0a649947
-ms.openlocfilehash: e1787e91a94ca2fcbbe9f1f59f81bb3dfed61faa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2849e443854f95ad37a55f2167a30f01724a72c5
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476565"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612142"
 ---
-# <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: Convenciones de comentarios de las clases MFC
+# <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: Convenciones de los comentarios de las clases MFC
 
-Esta nota técnica descrita originalmente las convenciones utilizadas para comentar las clases MFC. Ahora se trata esta información en [MFC: usar los archivos de código fuente de MFC](../mfc/using-the-mfc-source-files.md).
+Esta nota técnica descrita originalmente las convenciones utilizadas para comentar las clases MFC. Ahora se trata esta información en [MFC: Los archivos de origen mediante la MFC](../mfc/using-the-mfc-source-files.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

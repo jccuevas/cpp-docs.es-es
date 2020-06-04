@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1088
 ms.assetid: e61ebbb4-ab50-4a66-b2f6-3cc4400d8511
-ms.openlocfilehash: b789250d6f935d4378251c7dc7d2ffe1fb0e9d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 145056c79b36a4570be4b8b2f7d4d21e92a2903b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628911"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203923"
 ---
 # <a name="fatal-error-c1088"></a>Error irrecuperable C1088
 

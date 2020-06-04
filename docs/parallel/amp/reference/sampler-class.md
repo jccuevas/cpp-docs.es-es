@@ -12,16 +12,16 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f47bf6e9b88dba1e94e9e2ed2b93c8d2d3f9b8c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535966"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126361"
 ---
 # <a name="sampler-class"></a>sampler (Clase)
 
-La clase de muestra agrega información de configuración de muestreo que se usará para el muestreo de textura.
+La clase muestreador agrega información de configuración de muestreo que se usará para el muestreo de textura.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,35 +29,35 @@ La clase de muestra agrega información de configuración de muestreo que se usa
 class sampler;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[muestra de Constructor](#ctor)|Sobrecargado. Construye una instancia de muestra.|
+|[Constructor de muestra](#ctor)|Sobrecargado. Construye una instancia de muestra.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[get_address_mode](#get_address_mode)|Devuelve el `address_mode` que está asociada con el objeto de muestra.|
-|[get_border_color](#get_border_color)|Devuelve el color del borde que está asociado con el objeto de muestra.|
-|[get_filter_mode](#get_filter_mode)|Devuelve el `filter_mode` que está asociada con el objeto de muestra.|
+|[get_address_mode](#get_address_mode)|Devuelve el `address_mode` asociado al objeto de muestra.|
+|[get_border_color](#get_border_color)|Devuelve el color del borde asociado al objeto de muestra.|
+|[get_filter_mode](#get_filter_mode)|Devuelve el `filter_mode` asociado al objeto de muestra.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[operator=](#operator_eq)|Sobrecargado. Operador de asignación.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[address_mode](#address_mode)|Obtiene el modo de direccionamiento de la `sampler` objeto.|
-|[border_color](#border_color)|Obtiene el color del borde de la `sampler` objeto.|
-|[filter_mode](#filter_mode)|Obtiene el modo de filtro de la `sampler` objeto.|
+|[address_mode](#address_mode)|Obtiene el modo de dirección del objeto `sampler`.|
+|[border_color](#border_color)|Obtiene el color del borde del objeto `sampler`.|
+|[filter_mode](#filter_mode)|Obtiene el modo de filtro del objeto `sampler`.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -65,13 +65,13 @@ class sampler;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_graphics.h
+**Encabezado:** amp_graphics. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> muestra
+## <a name="ctor"></a>muestras
 
-Construye una instancia de la [Sampler (clase)](sampler-class.md).
+Construye una instancia de la [clase de muestra](sampler-class.md).
 
 ```cpp
 sampler() restrict(cpu);    // [1] default constructor
@@ -106,46 +106,46 @@ sampler(                    // [6] move constructor
 ### <a name="parameters"></a>Parámetros
 
 *_Filter_mode*<br/>
-El modo de filtro que se usará en el muestreo.
+Modo de filtro que se va a utilizar en el muestreo.
 
 *_Address_mode*<br/>
-El modo de direccionamiento que se usará en el muestreo para todas las dimensiones.
+Modo de direccionamiento que se va a usar en el muestreo para todas las dimensiones.
 
 *_Border_color*<br/>
-El color del borde que se utilizará si el modo de direccionamiento es address_border. El valor predeterminado es `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
+Color de borde que se va a utilizar si el modo de dirección es address_border. El valor predeterminado es `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*_Otro*<br/>
-[5] Constructor de copia la `sampler` objeto que se va a copiar en el nuevo `sampler` instancia.
+*_Other*<br/>
+[5] constructor de copias el objeto `sampler` que se va a copiar en la nueva instancia de `sampler`.
 
-[6] Constructor de movimiento el `sampler` mover en el nuevo objeto `sampler` instancia.
+[6] constructor de movimiento el objeto de `sampler` que se va a desplace en la nueva instancia de `sampler`.
 
-##  <a name="address_mode"></a> address_mode
+## <a name="address_mode"></a>address_mode
 
-Obtiene el modo de direccionamiento de la `sampler` objeto.
+Obtiene el modo de dirección del objeto `sampler`.
 
 ```cpp
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;
 ```
 
-##  <a name="border_color"></a> border_color
+## <a name="border_color"></a>border_color
 
-Obtiene el color del borde de la `sampler` objeto.
+Obtiene el color del borde del objeto `sampler`.
 
 ```cpp
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;
 ```
 
-##  <a name="filter_mode"></a> filter_mode
+## <a name="filter_mode"></a>filter_mode
 
-Obtiene el modo de filtro de la `sampler` objeto.
+Obtiene el modo de filtro del objeto `sampler`.
 
 ```cpp
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;
 ```
 
-##  <a name="get_address_mode"></a> get_address_mode
+## <a name="get_address_mode"></a>get_address_mode
 
-Devuelve el modo de filtro que está configurado para este `sampler`.
+Devuelve el modo de filtro que se configura para este `sampler`.
 
 ```cpp
 Concurrency::graphics::address_mode get_address_mode() const __GPU;
@@ -153,9 +153,9 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El modo de direccionamiento que se configura para el muestrario.
+Modo de dirección que se configura para la muestra.
 
-##  <a name="get_border_color"></a> get_border_color
+## <a name="get_border_color"></a>get_border_color
 
 Devuelve el color del borde que se configura para este `sampler`.
 
@@ -165,11 +165,11 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor float_4 que contiene el color del borde.
+Float_4 que contiene el color del borde.
 
-##  <a name="get_filter_mode"></a> get_filter_mode
+## <a name="get_filter_mode"></a>get_filter_mode
 
-Devuelve el modo de filtro que está configurado para este `sampler`.
+Devuelve el modo de filtro que se configura para este `sampler`.
 
 ```cpp
 Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
@@ -177,11 +177,11 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valor devuelto
 
-El modo de filtro que está configurado para el muestrario.
+El modo de filtro que se configura para la muestra.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operador =
 
-Asigna el valor de otro objeto de muestra para una muestra existente.
+Asigna el valor de otro objeto de muestra a una muestra existente.
 
 ```cpp
 sampler& operator= (    // [1] copy assignment operator
@@ -193,15 +193,15 @@ sampler& operator= (    // [2] move assignment operator
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
-[1] operador de asignación el `sampler` objeto que se va a copiar en este `sampler`.
+*_Other*<br/>
+[1] operador de asignación de copia el objeto `sampler` que se va a copiar en esta `sampler`.
 
-[2] operador de asignación de movimiento del `sampler` mover este objeto `sampler`.
+[2] operador de asignación de movimiento el objeto `sampler` que se va a pasar a este `sampler`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una referencia a esta instancia de muestra.
+Referencia a esta instancia de muestra.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

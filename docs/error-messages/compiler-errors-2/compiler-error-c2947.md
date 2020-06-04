@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2947
 ms.assetid: 6c056f62-ec90-4883-8a67-aeeb6ec13546
-ms.openlocfilehash: 3738c257192134eedb8554b0d875023862441416
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7056c13edca534701ffe82f0169897ea804f40d7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566769"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755361"
 ---
 # <a name="compiler-error-c2947"></a>Error del compilador C2947
 
-se esperaba ' >' para terminar construcción, se encontró 'sintaxis'
+se esperaba ' > ' para terminar la construcción; se encontró ' syntax '
 
-No se puede haber finalizado correctamente una lista de argumentos de plantilla o genérico.
+Es posible que una lista de argumentos genérica o de plantilla no se haya terminado correctamente.
 
-También se puede generar C2947 por errores de sintaxis.
+C2947 también se puede generar mediante errores de sintaxis.
 
-El ejemplo siguiente genera C2947:
+En el ejemplo siguiente se genera C2947:
 
-```
+```cpp
 // C2947.cpp
 // compile with: /c
 template <typename T>=   // C2947

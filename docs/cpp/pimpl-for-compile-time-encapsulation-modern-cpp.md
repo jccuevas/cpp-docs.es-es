@@ -3,26 +3,26 @@ title: Pimpl para encapsulación en tiempo de compilación (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: 6e114e2802dd4b2e5d1497867e2224be90c4752d
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: f1eb06ad3a52be486f085babf699677951b1ee71
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220691"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245173"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl para encapsulación en tiempo de compilación (C++ moderno)
 
-El *pimpl modismo* es una técnica de C++ moderna para ocultar la implementación, para minimizar el acoplamiento y separar las interfaces. Pimpl es la abreviatura de "puntero a la implementación." Ya puede estar familiarizado con el concepto pero sabe otros nombres como expresión sonrisa Cat o Firewall del compilador.
+La *expresión pimpl* es una técnica C++ moderna para ocultar la implementación, para minimizar el acoplamiento y para separar las interfaces. Pimpl es la abreviatura de "puntero a implementación". Es posible que ya esté familiarizado con el concepto, pero lo sepa con otros nombres como Cheshire cat o la expresión de firewall del compilador.
 
 ## <a name="why-use-pimpl"></a>¿Por qué usar pimpl?
 
-Le mostramos cómo la expresión pimpl puede mejorar el ciclo de vida de desarrollo de software:
+A continuación se muestra cómo la expresión pimpl puede mejorar el ciclo de vida de desarrollo de software:
 
-- Minimización de dependencias de compilación.
+- Minimización de las dependencias de compilación.
 
 - Separación de la interfaz y la implementación.
 
-- Portabilidad de.
+- Portabilidad.
 
 ## <a name="pimpl-header"></a>Encabezado Pimpl
 
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-La expresión pimpl evita la recompilación cascadas y diseños de objeto frágil. También es adecuado para los tipos conocidos (de manera transitiva).
+La expresión pimpl evita la recompilación en cascada y los diseños de objeto frágiles. Es adecuado para los tipos populares (transitivamente).
 
 ## <a name="pimpl-implementation"></a>Implementación de Pimpl
 
-Definir la `impl` clase en el archivo. cpp.
+Defina la clase `impl` en el archivo. cpp.
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-Considere la posibilidad de agregar compatibilidad para la especialización de intercambio no producen excepciones.
+Considere la posibilidad de agregar compatibilidad para la especialización de intercambio que no inicia.
 
 ## <a name="see-also"></a>Vea también
 
-[Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenido de nuevo aC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

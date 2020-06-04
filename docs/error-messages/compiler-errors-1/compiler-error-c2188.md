@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2188
 ms.assetid: 2223147f-e487-4090-acdf-75ba4e1114f6
-ms.openlocfilehash: 75c9e7b982fb1b7d9ecbd9e9aaf61bf5ac5d004b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87c20c6f8c4b947f5dcc8aabe7c1f0bcbe97d5e6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206744"
 ---
 # <a name="compiler-error-c2188"></a>Error del compilador C2188
 

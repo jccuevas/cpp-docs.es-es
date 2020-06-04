@@ -10,12 +10,12 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-ms.openlocfilehash: 63bdc8372223075804d8c710909909382167b2c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7a7ea51bca134e965747db8aac7f8a62822c9eb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165845"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Monikers asincrónicos en Internet
 
@@ -67,4 +67,3 @@ Para obtener información sobre la descarga de forma asincrónica en un control 
 
 [Tareas de programación para Internet de MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)
-

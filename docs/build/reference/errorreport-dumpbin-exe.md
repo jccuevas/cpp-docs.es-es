@@ -1,32 +1,34 @@
 ---
 title: /ERRORREPORT (dumpbin.exe)
-ms.date: 11/04/2016
+description: Referencia de la opción de línea de comandos/ERRORREPORT de la utilidad Microsoft DUMPBIN.
+ms.date: 02/09/2020
 f1_keywords:
-- /ERRORREPORT
+- /ERRORREPORT_dumpbin
 helpviewer_keywords:
 - -ERRORREPORT dumpbin option
 - ERRORREPORT dumpbin option
 - /ERRORREPORT dumpbin option
 ms.assetid: 51178c43-4f95-4fda-8f97-50a257d1c948
-ms.openlocfilehash: 9f210685b7fc9d082d83ac9e2c9ed73c1c373023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f701c2e28dcf82194589877709bf6959de4bcbfc
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550454"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439934"
 ---
 # <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
 
-```
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
-```
+> [!NOTE]
+> La opción/ERRORREPORT está en desuso. A partir de Windows Vista, los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-## <a name="remarks"></a>Comentarios
+## <a name="syntax"></a>Sintaxis
 
-Si se produce un error en dumpbin.exe en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft sobre estos errores internos.
+> **/Errorreport**\[**NONE** \| **prompt** \| **Queue** \| **send** ]
 
-Para obtener más información acerca de **/errorreport**, consulte [/errorReport (informar de errores de compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+## <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+La configuración del servicio Informe de errores de Windows invalida los argumentos **/errorreport** . DUMPBIN envía automáticamente informes de errores internos a Microsoft, si los informes se habilitan mediante Informe de errores de Windows. No se envía ningún informe si está deshabilitado por Informe de errores de Windows.
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+## <a name="see-also"></a>Consulte también
+
+[Opciones de DUMPBIN](dumpbin-options.md)

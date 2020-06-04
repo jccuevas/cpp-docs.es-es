@@ -1,21 +1,21 @@
 ---
-title: nonbrowsable (atributo de COM de C++)
+title: nonbrowsableable (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 34b3c93b60009284897c4b7c1c29ceb4fefa2c49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0aae070c1c97695180797b228178b210493b7bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592639"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166567"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
-Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.
+Indica que un miembro de interfaz no se debe mostrar en un explorador de propiedades.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,9 +23,9 @@ Indica que un miembro de interfaz no debe mostrarse en un explorador de propieda
 [nonbrowsable]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **nonbrowsable** atributo de C++ tiene la misma funcionalidad que el [nonbrowsable](/windows/desktop/Midl/nonbrowsable) atributo MIDL.
+El **nonbrowsable** C++ atributo nonbrowsable tiene la misma funcionalidad que el atributo MIDL no [explorable](/windows/win32/Midl/nonbrowsable) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -51,12 +51,12 @@ __interface IMyI
 |-|-|
 |**Se aplica a**|Método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)

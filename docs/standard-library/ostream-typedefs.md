@@ -5,12 +5,12 @@ f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
-ms.openlocfilehash: 02936fdfc990ea65a99b2875cf7f482eb2ce4ebe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82539a3fdadf10d340ca957756e235e8ae00b267
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429749"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373585"
 ---
 # <a name="ltostreamgt-typedefs"></a>Definiciones de tipo &lt;ostream&gt;
 
@@ -18,30 +18,30 @@ ms.locfileid: "50429749"
 |-|-|
 |[ostream](#ostream)|[wostream](#wostream)|
 
-## <a name="ostream"></a> ostream
+## <a name="ostream"></a><a name="ostream"></a>ostream
 
-Crea un tipo de basic_ostream que está especializado en **char** y `char_traits` especializado en **char**.
+Crea un tipo a partir de `char_traits` basic_ostream especializado en **char** y especializado en **char**.
 
 ```cpp
 typedef basic_ostream<char, char_traits<char>> ostream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_ostream](../standard-library/basic-ostream-class.md), especializada en elementos del tipo **char** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_ostream](../standard-library/basic-ostream-class.md), especializada para elementos de tipo **char** con rasgos de carácter predeterminados.
 
-## <a name="wostream"></a> wostream
+## <a name="wostream"></a><a name="wostream"></a>wostream
 
-Crea un tipo de basic_ostream que está especializado en **wchar_t** y `char_traits` especializado en **wchar_t**.
+Crea un tipo a partir de `char_traits` basic_ostream especializado en **wchar_t** y especializado en **wchar_t**.
 
 ```cpp
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo de la clase de plantilla [basic_ostream](../standard-library/basic-ostream-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de plantilla de clase [basic_ostream](../standard-library/basic-ostream-class.md), especializada para elementos de tipo **wchar_t** con rasgos de carácter predeterminados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<ostream>](../standard-library/ostream.md)<br/>
+[\<>ostream](../standard-library/ostream.md)

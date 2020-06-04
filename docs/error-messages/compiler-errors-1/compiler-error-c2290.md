@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2290
 ms.assetid: 78c0feec-ccde-401b-8335-5b6ea6be8a13
-ms.openlocfilehash: 97480942d1062a9d1516e36b6a4698d77968cf46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13b58a00639c8b6b1850434e4395e127fa36496f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475834"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206422"
 ---
 # <a name="compiler-error-c2290"></a>Error del compilador C2290
 

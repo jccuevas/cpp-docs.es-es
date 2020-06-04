@@ -1,21 +1,21 @@
 ---
-title: idl_quote (atributo de COM de C++)
+title: idl_quote (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: edfeb18053f3ae4fa8c45211833e0ceaa037cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595577"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168034"
 ---
-# <a name="idlquote"></a>idl_quote
+# <a name="idl_quote"></a>idl_quote
 
-Le permite usar construcciones IDL que no se admiten en la versión actual de Visual C++ y pídales que pasen al archivo .idl generado.
+Permite usar construcciones IDL que no se admiten en la versión actual de Visual C++ y hacer que pasen al archivo. idl generado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,16 +25,16 @@ Le permite usar construcciones IDL que no se admiten en la versión actual de Vi
 
 ### <a name="parameters"></a>Parámetros
 
-*texto*<br/>
-El nombre del atributo que desea que el compilador de Visual C++ que pasan a través del archivo .idl generado sin devolver un error del compilador.
+*text*<br/>
+Nombre del atributo que desea que el compilador de Microsoft C++ pase por el archivo. idl generado sin devolver un error del compilador.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si el **idl_quote** atributo de C++ se usa como un atributo independiente (con un punto y coma después del corchete de cierre), a continuación, *texto* se coloca en el archivo .idl combinados tal cual. Si **idl_quote** se utiliza en un símbolo, *texto* se coloca dentro del bloque de atributos para dicho símbolo.
+Si el atributo **idl_quote** C++ se utiliza como un atributo independiente (con un punto y coma después del corchete de cierre), el *texto* se coloca en el archivo. idl combinado tal y como está. Si se utiliza **idl_quote** en un símbolo, el *texto* se coloca dentro del bloque de atributos de dicho símbolo.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo puede especificar un atributo no admitido (mediante **en**, que se admite) y cómo definir y usar una construcción de IDL no definido:
+En el código siguiente se muestra cómo se puede especificar un atributo no admitido (mediante **en**, que se admite) y cómo definir y usar una construcción. idl sin definir:
 
 ```cpp
 // cpp_attr_ref_idl_quote.cpp
@@ -69,7 +69,7 @@ __interface IStatic{
 };
 ```
 
-Este código provoca `MYFLOT` y `MYDUB` y *texto* entrada que se colocarán en el archivo .idl generado. El *nombre* parámetro fuerza *texto* colocarse antes de todo lo que hace referencia a *nombre* en el archivo .idl generado. El *dependencias* parámetro fuerza se coloca delante de las definiciones de lista dependencia *texto* en el archivo .idl generado.
+Este código hace que `MYFLOT` y `MYDUB` y la entrada de *texto* se coloquen en el archivo. idl generado. El parámetro *Name* fuerza el *texto* a colocarse delante de cualquier elemento que haga referencia al *nombre* en el archivo. idl generado. El parámetro *dependencies* obliga a que se coloquen las definiciones de lista de dependencias delante del *texto* del archivo. idl generado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -79,12 +79,12 @@ Este código provoca `MYFLOT` y `MYDUB` y *texto* entrada que se colocarán en e
 |-|-|
 |**Se aplica a**|En cualquier lugar|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)

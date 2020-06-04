@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2614
 ms.assetid: a550c1d5-8718-4e17-a888-b2619e00fe11
-ms.openlocfilehash: 71f0fe3211ce253bcf30347658692651e84ab608
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 202d7f4caec3aabfde5d69adeaafa3da5dd67623
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463601"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737678"
 ---
 # <a name="compiler-error-c2614"></a>Error del compilador C2614
 
-'class1': inicialización de miembro no válido: 'clase2' no es una base o miembro
+' Class1 ': inicialización de miembro no válida: ' clase2 ' no es una base o un miembro
 
-Solo los miembros o clases base pueden aparecer en la lista de inicialización para una clase o estructura.
+Solo las clases miembro o base pueden aparecer en la lista de inicialización de una clase o estructura.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2614.
+En el ejemplo siguiente se genera C2614.
 
-```
+```cpp
 // C2614.cpp
 // compile with: /c
 struct A {

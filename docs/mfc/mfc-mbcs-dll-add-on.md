@@ -1,27 +1,26 @@
 ---
 title: Complemento DLL de MBCS para MFC
-ms.date: 1/04/2018
+ms.date: 12/02/2019
 helpviewer_keywords:
 - MBCS
 - MFC
-ms.openlocfilehash: a78425ac92aa9ddfe7f0b1b61dde915b3e088383
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe74e0639664b6a6a86a4c3269f174de441002f4
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558923"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810371"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>Complemento DLL de MBCS para MFC
 
-Compatibilidad con MFC y sus bibliotecas de juegos de caracteres multibyte (MBCS) del conjunto requiere un paso adicional durante la instalación de Visual Studio en Visual Studio 2013, 2015 y 2017.
+La compatibilidad con MFC y sus bibliotecas de juegos de caracteres multibyte (MBCS) requiere un paso adicional durante la instalación de Visual Studio en Visual Studio 2013 y versiones posteriores.
 
-**Visual Studio 2013**: de forma predeterminada, las bibliotecas MFC instaladas en Visual Studio 2013 solo admiten el desarrollo de Unicode. Necesita las DLL de MBCS para compilar un proyecto MFC en Visual Studio 2013 que tenga el **del juego de caracteres** propiedad establecida en **utilizar juego de caracteres multibyte** o **Nenastaveno**. Descargue el archivo DLL en [Multibyte MFC Library para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770).
+**Visual Studio 2013**: de forma predeterminada, las bibliotecas MFC instaladas en Visual Studio 2013 admiten únicamente el desarrollo Unicode. Necesita los archivos dll de MBCS para compilar un proyecto MFC en Visual Studio 2013 que tenga la propiedad juego de **caracteres** establecida en **utilizar juego de caracteres multibyte** o **sin establecer**. Descargue el archivo DLL en la [biblioteca MFC multibyte para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770).
 
-**Visual Studio 2015**: tanto Unicode y MBCS DLL de MFC se incluyen en los componentes de instalación de Visual C++, pero la compatibilidad con MFC no está instalado de forma predeterminada. Visual C++ y MFC son configuraciones de instalación opcional en el programa de instalación de Visual Studio. Para asegurarse de que MFC está instalado, elija **Personalizado** en el programa de instalación y en **Lenguajes de programación**, asegúrese de que estén seleccionadas las opciones **Visual C++** y **Microsoft Foundation Classes para C++** . Si ya instaló Visual Studio, se le pedirá que instale Visual C++ o MFC cuando intente crear un proyecto MFC.
+**Visual Studio 2015**: los archivos dll de MFC Unicode y MBCS se incluyen en C++ los componentes del programa de instalación visual, pero la compatibilidad con MFC no se instala de forma predeterminada. Visual C++ y MFC son configuraciones de instalación opcional en el programa de instalación de Visual Studio. Para asegurarse de que MFC está instalado, elija **Personalizado** en el programa de instalación y en **Lenguajes de programación**, asegúrese de que estén seleccionadas las opciones **Visual C++** y **Microsoft Foundation Classes para C++** . Si ya instaló Visual Studio, se le pedirá que instale Visual C++ o MFC cuando intente crear un proyecto MFC.
 
-**Visual Studio 2017**: el Unicode y MBCS DLL de MFC se instalan con el **desarrollo de escritorio con C++** carga de trabajo cuando se selecciona **compatibilidad MFC y ATL** desde el **opcional Componentes** panel. Si la instalación no incluye estos componentes, navegue hasta la **archivo | Los proyectos nuevos** cuadro de diálogo y haga clic en el **abrir Visual Studio Installer** vínculo.
+**Visual Studio 2017 y versiones posteriores**: los archivos dll de MFC de Unicode y MBCS se instalan con el **desarrollo de escritorio C++ con** carga de trabajo cuando se selecciona **compatibilidad con MFC y ATL** en el panel **componentes opcionales** del programa instalador de Visual Studio. Si la instalación no incluye estos componentes, desplácese hasta el **archivo |** Cuadro de diálogo nuevos proyectos y haga clic en el vínculo **abrir instalador de Visual Studio** . Para obtener más información, vea [instalar Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="see-also"></a>Vea también
 
 [Versiones de la biblioteca MFC](../mfc/mfc-library-versions.md)
-

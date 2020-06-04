@@ -1,24 +1,29 @@
 ---
 title: Asistente para clases MFC
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.wizards.classwizard
 helpviewer_keywords:
-- wizards (MFC)
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-ms.openlocfilehash: d80dc10467b5180158fcb0f681bbc728ada60764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be829156d8fea8188a217b2c0a189ac5d6057a7e
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471778"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907993"
 ---
 # <a name="mfc-class-wizard"></a>Asistente para clases MFC
 
-Le permite agregar mensajes y controladores de mensajes a las clases del proyecto. Puede iniciar también otros asistentes o agregar una clase al proyecto.
+Use el **Asistente para clases** para crear clases MFC nuevas o agregar mensajes y controladores de mensajes a las clases existentes en el proyecto.
 
-Para abrir el **Asistente para clases MFC**, en el **proyecto** menú, haga clic en **Class Wizard**. Para abrir el asistente con un método abreviado de teclado, use CTRL+MAYÚS+X.
+Hay tres maneras de abrir el **Asistente para clases**:
+
+- En el menú **proyecto** , elija **Asistente para clases**.
+- Presione **Ctrl** > MAYÚSX > .
+- En **vista de clases**, haga clic con el botón derecho en una clase o en el nodo del proyecto y elija **Asistente para clases**.
+
+![Asistente para clases](media/class-wizard.png "Asistente para clases MFC")
 
 ## <a name="uielement-list"></a>Lista de UIElement
 
@@ -32,57 +37,55 @@ Para abrir el **Asistente para clases MFC**, en el **proyecto** menú, haga clic
 
    Nombre de una clase en el proyecto.
 
-   Al seleccionar una clase en el **nombre de la clase** rellenan de datos de la clase de lista, los controles en el **Asistente para clases MFC**. Al cambiar el valor de un control, se ven afectados los datos de la clase seleccionada.
+   Al seleccionar una clase en la lista **nombre de clase** , los datos de la clase rellenan los controles del **Asistente para clases MFC**. Al cambiar el valor de un control, se ven afectados los datos de la clase seleccionada.
 
 - **Agregar clase**
 
-   Le permite agregar una clase desde uno de varios orígenes.
-
-   Según su selección, el **Asistente para agregar clases de MFC**, **Asistente para agregar clases de la biblioteca de tipos**, **Agregar clase de Asistente para controles ActiveX**, o **ODBC de MFC Asistente para consumidores** se inicia.
+   Permite agregar una nueva clase al proyecto MFC.
 
 - **Clase base**
 
-   La clase base de la clase que se muestra en **nombre de la clase**.
+   La clase base de la clase que se muestra en **nombre de clase**.
 
 - **Declaración de clase**
 
-   La clase en la que el **nombre de la clase** clase se declara.
+   Clase en la que se declara la clase de **nombre de clase** .
 
-   El **declaración de clase** cuadro se muestra solo si el nombre de la que difiere del nombre en **implementación de la clase**.
+   Solo se muestra el cuadro **declaración de clase** si el nombre en él difiere del nombre de la implementación de la **clase**.
 
 - **Recurso**
 
-   El identificador del recurso en **nombre de la clase**, si la hubiera. En caso contrario, el **recursos** cuadro está vacío.
+   IDENTIFICADOR del recurso en el nombre de la **clase**, si existe. De lo contrario, el cuadro de **recurso** está vacío.
 
-- **Implementación de la clase**
+- **Implementación de clase**
 
-   El nombre del archivo que contiene la implementación de la clase en **nombre de la clase**.
+   Nombre del archivo que contiene la implementación de la clase en el **nombre de clase**.
 
    Puede seleccionar un archivo de implementación diferente si hace clic en la flecha. En la siguiente tabla se enumeran las opciones disponibles.
 
-   |Opción|Descripción|
+   |Opción|DESCRIPCIÓN|
    |------------|-----------------|
    |**Abrir archivo**|Sale del asistente para clases y abre el archivo de implementación de clase actual.|
    |**Abrir carpeta contenedora**|Abre la carpeta que contiene el archivo de implementación de clase actual.|
-   |**Copiar ruta de acceso completa en el Portapapeles**|Copia la ruta de acceso del archivo de implementación actual en el Portapapeles.|
+   |**Copiar ruta de acceso completa al portapapeles**|Copia la ruta de acceso del archivo de implementación actual en el Portapapeles.|
 
 - **Comandos**
 
    Le permite agregar, eliminar, editar o buscar un comando y su controlador de mensajes.
 
-   Para agregar un controlador, haga clic en **Agregar controlador**, o haga doble clic en un elemento en el **los identificadores de objeto** lista o **mensajes** lista. Nombre de la función, identificador y mensaje resultantes se muestran en el **funciones miembro** lista.
+   Para agregar un controlador, haga clic en **Agregar controlador**o haga doble clic en un elemento en la lista de **identificadores de objetos** o en la lista de **mensajes** . El nombre de función, el ID. y el mensaje resultantes se muestran en la lista de **funciones miembro** .
 
-   Para eliminar un controlador, seleccione un elemento en el **funciones miembro** lista y, a continuación, haga clic en **eliminar controlador**.
+   Para eliminar un controlador, seleccione un elemento en la lista **funciones miembro** y, a continuación, haga clic en **eliminar controlador**.
 
-   Para modificar un controlador, haga doble clic en el elemento correspondiente en el **funciones miembro** lista. O bien, seleccione un elemento en el cuadro de lista y, a continuación, haga clic en **modificar código**.
+   Para modificar un controlador, haga doble clic en el elemento correspondiente en la lista **funciones miembro** . O bien, seleccione un elemento en el cuadro de lista y, a continuación, haga clic en **editar código**.
 
 - **Mensajes**
 
    Le permite agregar, eliminar, editar o buscar un mensaje y su controlador de mensajes.
 
-   Para agregar un controlador, haga clic en **Agregar controlador**, o haga doble clic en un elemento en el **mensajes** lista.
+   Para agregar un controlador, haga clic en **Agregar controlador**o haga doble clic en un elemento de la lista de **mensajes** .
 
-   Para agregar un mensaje personalizado, haga clic en **Agregar mensaje personalizado** o presione la tecla ENTRAR y, a continuación, especifique los valores en el **Agregar mensaje personalizado** cuadro de diálogo. Este cuadro de diálogo, puede seleccionar también **mensaje registrado** para controlar un mensaje de ventana que se garantiza que sea único en todo el sistema operativo.
+   Para agregar un mensaje personalizado, haga clic en **Agregar mensaje personalizado** o presione la tecla entrar y, a continuación, especifique los valores en el cuadro de diálogo **Agregar mensaje personalizado** . En ese cuadro de diálogo, también puede seleccionar **mensaje registrado** para controlar un mensaje de ventana que se garantiza que es único en todo el sistema operativo.
 
 - **Funciones virtuales**
 
@@ -96,13 +99,13 @@ Para abrir el **Asistente para clases MFC**, en el **proyecto** menú, haga clic
 
    Le permite agregar, eliminar o buscar un método y también ir a la definición o declaración de un método.
 
-   Para agregar un método, haga clic en **Agregar método**y, a continuación, especifique los valores en el **Agregar método** cuadro de diálogo.
+   Para agregar un método, haga clic en **Agregar método**y, a continuación, especifique los valores en el cuadro de diálogo **Agregar método** .
 
-   Para eliminar un método, seleccione un elemento en el **métodos** lista y, a continuación, haga clic en **método Delete**.
+   Para eliminar un método, seleccione un elemento en la lista **métodos** y, a continuación, haga clic en **Eliminar método**.
 
-   Para mostrar una declaración, seleccione un elemento en el **métodos** lista y, a continuación, haga clic en **ir a declaración.**
+   Para mostrar una declaración, seleccione un elemento en la lista **métodos** y, a continuación, haga clic en **ir a declaración.**
 
-   Para mostrar una definición, haga doble clic en un elemento en el **métodos** lista. O bien, seleccione un elemento en el **métodos** lista y, a continuación, haga clic en el **ir a definición** botón.
+   Para mostrar una definición, haga doble clic en un elemento de la lista de **métodos** . O bien, seleccione un elemento en la lista **métodos** y, a continuación, haga clic en el botón **ir a definición** .
 
 ## <a name="see-also"></a>Vea también
 

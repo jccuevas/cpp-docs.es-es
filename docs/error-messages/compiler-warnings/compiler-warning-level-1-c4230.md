@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4230
 ms.assetid: a4be8729-74b6-44df-a5ea-e3f45aad0f8f
-ms.openlocfilehash: c8d223a286b8d42ca404fbfe7cbc51b67b3dd497
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be402eed4474dd736ab237cfb5c7986741338eec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529681"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163276"
 ---
 # <a name="compiler-warning-level-1-c4230"></a>Advertencia del compilador (nivel 1) C4230
 
-ha utilizado un anacronismo: los modificadores y calificadores están intercalados; kvalifikátor que se ignoruje.
+anachronizmus usado: modificadores/calificadores intercalados; calificador omitido
 
-Con un calificador delante de un modificador de Microsoft como `__cdecl` es una práctica obsoleta.
+El uso de un calificador antes de un modificador de Microsoft como `__cdecl` es una práctica no actualizada.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4230.cpp
 // compile with: /W1 /LD
 int __cdecl const function1();   // C4230 const ignored

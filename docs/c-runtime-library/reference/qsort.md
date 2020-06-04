@@ -1,9 +1,10 @@
 ---
 title: qsort
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - qsort
-apilocation:
+- _o_qsort
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +17,12 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort
 helpviewer_keywords:
@@ -25,12 +31,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327556"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913259"
 ---
 # <a name="qsort"></a>qsort
 
@@ -52,20 +58,20 @@ void qsort(
 *base*<br/>
 Inicio de la matriz de destino.
 
-*Número*<br/>
+*número*<br/>
 Tamaño de la matriz en elementos.
 
 *width*<br/>
 Tamaño del elemento en bytes.
 
-*compare*<br/>
+*Compare*<br/>
 Puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica su relación.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **qsort** función implementa un algoritmo de ordenación rápida para ordenar una matriz de *número* elementos, cada uno de *ancho* bytes. El argumento *base* es un puntero a la base de la matriz esté ordenada. **qsort** sobrescribe esta matriz mediante el uso de los elementos ordenados.
+La función **qsort** implementa un algoritmo de ordenación rápida para ordenar una matriz de elementos *numéricos* , cada uno de los bytes de *ancho* . La *base* del argumento es un puntero a la base de la matriz que se va a ordenar. **qsort** sobrescribe esta matriz mediante los elementos ordenados.
 
-**qsort** llamadas la *comparar* rutinaria uno o más veces durante la ordenación y pasa los punteros a dos elementos de matriz en cada llamada.
+**qsort** llama a la rutina de *comparación* una o más veces durante la ordenación y pasa los punteros a dos elementos de la matriz en cada llamada.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -75,13 +81,15 @@ La rutina compara los elementos y devuelve uno de los siguientes valores.
 
 |Valor devuelto por la función de comparación|Descripción|
 |-----------------------------------|-----------------|
-|< 0|**elem1** menor **elem2**|
-|0|**elem1** equivalente a **elem2**|
-|> 0|**elem1** mayor **elem2**|
+|< 0|**Elem1** menor que **Elem2**|
+|0|**Elem1** equivalente a **Elem2**|
+|> 0|**Elem1** mayor que **Elem2**|
 
 La matriz se clasifica en orden ascendente, de acuerdo con la función de comparación. Para clasificar una matriz en orden decreciente, invierta el sentido de "mayor que" y "menor que" en la función de comparación.
 
-Esta función valida sus parámetros. Si *comparar* o *número* es **NULL**, o si *base* es **NULL** y *número* es distinto de cero, o si *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** está establecido en **EINVAL**.
+Esta función valida sus parámetros. Si *comparar* o *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** se establece en **EINVAL**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -89,7 +97,7 @@ Esta función valida sus parámetros. Si *comparar* o *número* es **NULL**, o s
 |-------------|---------------------|
 |**qsort**|\<stdlib.h> y \<search.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -135,7 +143,7 @@ int compare( const void *arg1, const void *arg2 )
 boy deserves every favor good
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

@@ -1,9 +1,10 @@
 ---
 title: _configthreadlocale
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _configthreadlocale
-apilocation:
+- _o__configthreadlocale
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
@@ -26,14 +31,14 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 26bcfe0d93a8c2b1a14e6afc0d413a5c7e4a7f6e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326048"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917319"
 ---
-# <a name="configthreadlocale"></a>_configthreadlocale
+# <a name="_configthreadlocale"></a>_configthreadlocale
 
 Configurar las opciones de configuración regional por subproceso.
 
@@ -50,23 +55,25 @@ Opción que se va a establecer. Una de las opciones que se citan en la tabla sig
 
 ## <a name="return-value"></a>Valor devuelto
 
-El estado de configuración regional por subproceso anterior (**_DISABLE_PER_THREAD_LOCALE** o **_ENABLE_PER_THREAD_LOCALE**), o -1 en caso de error.
+Estado anterior de la configuración regional por subproceso (**_DISABLE_PER_THREAD_LOCALE** o **_ENABLE_PER_THREAD_LOCALE**) o-1 en caso de error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_configurethreadlocale** función se utiliza para controlar el uso de configuraciones regionales específicas del subproceso. Utilice uno de estos *per_thread_locale_type* opciones para especificar o determinar el estado de la configuración regional por subproceso:
+La función **_configurethreadlocale** se utiliza para controlar el uso de configuraciones regionales específicas del subproceso. Use una de estas *per_thread_locale_type* opciones para especificar o determinar el estado de la configuración regional por subproceso:
 
 | Opción | Descripción |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | Hace que el subproceso actual use una configuración regional específica del subproceso. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a la configuración regional de sólo del subproceso. |
-| **_DISABLE_PER_THREAD_LOCALE** | Hace que el subproceso actual use la configuración regional global. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a otros subprocesos mediante la configuración regional global. |
+| **_ENABLE_PER_THREAD_LOCALE** | Hace que el subproceso actual use una configuración regional específica del subproceso. Las llamadas subsiguientes a **setlocale** en este subproceso solo afectan a la configuración regional propia del subproceso. |
+| **_DISABLE_PER_THREAD_LOCALE** | Hace que el subproceso actual use la configuración regional global. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a otros subprocesos que usan la configuración regional global. |
 | **0** | Recupera el valor actual de este subproceso concreto. |
 
-Estas funciones afectan al comportamiento de **setlocale**, **_tsetlocale**, **_wsetlocale**, y **_setmbcp**. Cuando la configuración regional por subproceso está deshabilitado, cualquier llamada subsiguiente a **setlocale** o **_wsetlocale** cambia la configuración regional de todos los subprocesos que utilizan la configuración regional global. Cuando se habilita la configuración regional por subproceso, **setlocale** o **_wsetlocale** solo afecta a la configuración regional del subproceso actual.
+Estas funciones afectan al comportamiento de **setlocale**, **_tsetlocale**, **_wsetlocale**y **_setmbcp**. Cuando se deshabilita la configuración regional por subproceso, cualquier llamada subsiguiente a **setlocale** o **_wsetlocale** cambia la configuración regional de todos los subprocesos que usan la configuración regional global. Cuando se habilita la configuración regional por subproceso, **setlocale** o **_wsetlocale** solo afecta a la configuración regional del subproceso actual.
 
-Si usas **_configurethreadlocale** para habilitar una configuración regional de cada subproceso, se recomienda llamar **setlocale** o **_wsetlocale** para establecer la configuración regional preferida en ese subproceso inmediatamente después.
+Si usa **_configurethreadlocale** para habilitar una configuración regional por subproceso, se recomienda llamar a **setlocale** o **_wsetlocale** para establecer la configuración regional preferida en ese subproceso inmediatamente después.
 
-Si *per_thread_locale_type* no es uno de los valores enumerados en la tabla, esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve -1.
+Si *per_thread_locale_type* no es uno de los valores enumerados en la tabla, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve-1.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -183,9 +190,9 @@ The thread locale is now set to German_Germany.1252.
 The time in German locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Multithreading y configuraciones regionales](../../parallel/multithreading-and-locales.md)<br/>

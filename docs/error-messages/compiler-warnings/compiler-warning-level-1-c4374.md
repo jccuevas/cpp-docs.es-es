@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: 5cf18a3dcd94f59ce1ae8feb675f251bea5715a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0dbfbe931ec30c0bde2e82718e0817dcfa243b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652288"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187043"
 ---
 # <a name="compiler-warning-level-1-c4374"></a>Advertencia del compilador (nivel 1) C4374
 
-'function1': el método no virtual 'function2' no implementará el método de interfaz
+' function1 ': el método no virtual ' función2 ' no implementará el método de interfaz
 
-El compilador esperaba encontrar el [virtual](../../cpp/virtual-specifier.md) palabra clave en una definición de método.
+El compilador esperaba encontrar la palabra clave [virtual](../../cpp/virtual-specifier.md) en una definición de método.
 
-El ejemplo siguiente genera C4374:
+En el ejemplo siguiente se genera C4374:
 
-```
+```cpp
 // C4374.cpp
 // compile with: /clr /W1 /c /WX
 public interface class I {

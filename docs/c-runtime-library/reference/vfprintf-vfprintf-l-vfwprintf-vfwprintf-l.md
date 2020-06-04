@@ -1,12 +1,12 @@
 ---
 title: vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vfprintf_l
 - vfprintf
 - vfwprintf
 - _vfwprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwprintf
 - _vftprintf
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - _vfprintf_l function
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
-ms.openlocfilehash: 889fedde263b9815597702f1e9d5b252f3998bdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e72142f33c042e60ac6c06f6b84aa63b3de67457
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535035"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946642"
 ---
-# <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
+# <a name="vfprintf-_vfprintf_l-vfwprintf-_vfwprintf_l"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 
 Escribe un resultado con formato mediante un puntero a una lista de argumentos. Existen versiones más seguras de estas funciones; vea [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).
 
@@ -75,7 +78,7 @@ int _vfwprintf_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*stream*<br/>
 Puntero a la estructura **FILE**.
 
 *format*<br/>
@@ -91,20 +94,20 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-**vfprintf** y **vfwprintf** devuelve el número de caracteres escritos, sin incluir el carácter nulo final o un valor negativo si se produce un error de salida. Si bien *secuencia* o *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establezca **errno** a **EINVAL**.
+**vfprintf** y **vfwprintf** devuelven el número de caracteres escritos, sin incluir el carácter nulo de terminación, o un valor negativo si se produce un error de salida. Si *Stream* o *Format* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos, a continuación, da formato y escribe los datos especificados en *secuencia*.
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato y escribe los datos especificados en la *secuencia*.
 
-**vfwprintf** es la versión de caracteres anchos de **vfprintf**; las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. **vfprintf** no admite actualmente la salida en un flujo UNICODE.
+**vfwprintf** es la versión con caracteres anchos de **vfprintf**; las dos funciones se comportan exactamente igual si la secuencia se abre en modo ANSI. **vfprintf** no admite actualmente la salida en un flujo Unicode.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 > [!IMPORTANT]
-> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

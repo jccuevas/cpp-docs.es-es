@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4097
 ms.assetid: 2525be51-fac2-43b2-b57c-3bbf1a2268f7
-ms.openlocfilehash: d27e1d33db7a531d541bffdac015176de72077d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac5030715bd65c17902f4ad3cd0006d9f0477094
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472155"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163889"
 ---
 # <a name="compiler-warning-level-1-c4097"></a>Advertencia del compilador (nivel 1) C4097
 
@@ -21,7 +21,7 @@ Se pasó un valor no válido a pragma.
 
 El ejemplo siguiente genera la advertencia C4097:
 
-```
+```cpp
 // C4097.cpp
 // compile with: /W1
 #pragma runtime_checks("",test)   // C4097

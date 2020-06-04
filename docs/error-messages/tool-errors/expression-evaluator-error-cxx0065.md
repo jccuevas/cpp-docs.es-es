@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CAN0065
 - CXX0065
 ms.assetid: aac68f87-0b90-4c19-afa6-1c587625a5fd
-ms.openlocfilehash: 7b62e42da2a74d910e2dc56ce2dfcb5cb38f2bfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4120deec3c8e7ce14e381f782904cf83a588e43
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571787"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184429"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>Error del evaluador de expresiones CXX0065
 
-variable necesita el marco de pila
+la variable necesita el marco de pila
 
-Una expresión contiene una variable que existe dentro del ámbito actual, pero no se ha creado aún.
+Una expresión contenía una variable que existe dentro del ámbito actual, pero aún no se ha creado.
 
-Este error puede producirse cuando se ha ejecutado el prólogo de una función, pero todavía no configurar el marco de pila para la función, o si se ha ejecutado el código de salida para la función.
+Este error puede producirse cuando se ha ejecutado paso a paso el prólogo de una función pero aún no se ha configurado el marco de pila para la función, o si se ha ejecutado paso a paso el código de salida de la función.
 
-Recorrer el código de prólogo hasta que se ha configurado el marco de pila antes de evaluar la expresión.
+Recorra paso a paso el código de prólogo hasta que se haya configurado el marco de pila antes de evaluar la expresión.
 
 Este error es idéntico a CAN0065.

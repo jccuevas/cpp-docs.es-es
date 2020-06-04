@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: 5591570527946895d1e0456b23327d7fabc4bef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8d787fe03dfe6f67fb8e228308ec74b6e7f620a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646121"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688526"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; (Clase)
 
-Una especialización del asignador de clase de plantilla al tipo **void**, define los tipos que tengan sentido en este contexto.
+Una especialización del asignador de plantilla de clase para el tipo **void**, que define los tipos que tienen sentido en este contexto.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Comentarios
 
-La clase especializa explícitamente la clase de plantilla [asignador](../standard-library/allocator-class.md) tipo **void**. Sus constructores y el operador de asignación se comportan igual que para la clase de plantilla, aunque solo define los siguientes tipos:
+La clase especializa explícitamente el [asignador](../standard-library/allocator-class.md) de plantillas de clase para el tipo **void**. Sus constructores y el operador de asignación se comportan igual que para la plantilla de clase, pero solo define los siguientes tipos:
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).
 
@@ -49,14 +49,4 @@ La clase especializa explícitamente la clase de plantilla [asignador](../standa
 
 - [value_type](../standard-library/allocator-class.md#value_type).
 
-- [rebind](../standard-library/allocator-class.md#rebind), una clase de plantilla anidada.
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<memory>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+- volver a [enlazar](../standard-library/allocator-class.md#rebind), una plantilla de clase anidada.

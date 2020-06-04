@@ -1,21 +1,21 @@
 ---
-title: idl_module (atributo de COM de C++)
+title: idl_module (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: c58997928fb3121c1ab8e277790969a93d9066de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608696"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168049"
 ---
-# <a name="idlmodule"></a>idl_module
+# <a name="idl_module"></a>idl_module
 
-Especifica un punto de entrada en un archivo .dll.
+Especifica un punto de entrada en un archivo. dll.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,45 +27,45 @@ function declaration
 ### <a name="parameters"></a>Parámetros
 
 *name*<br/>
-Un nombre definido por el usuario para el bloque de código que va a aparecer en el archivo. idl.
+Un nombre definido por el usuario para el bloque de código que aparecerá en el archivo. idl.
 
-*dllname*<br/>
-(Opcional) El archivo .dll que contiene la exportación.
+*DllName*<br/>
+Opta El archivo. dll que contiene la exportación.
 
 *uuid*<br/>
-(Opcional) Un identificador único.
+Opta IDENTIFICADOR único.
 
 *helpstring*<br/>
-(Opcional) Una cadena de caracteres que se usa para describir la biblioteca de tipos.
+Opta Cadena de caracteres utilizada para describir la biblioteca de tipos.
 
 *helpstringcontext*<br/>
-(Opcional) El identificador de un tema de ayuda en un archivo .hlp o chm.
+Opta IDENTIFICADOR de un tema de ayuda en un archivo. hlp o. chm.
 
 *helpcontext*<br/>
-(Opcional) Identificador de ayuda para esta biblioteca de tipos.
+Opta El identificador de la ayuda para esta biblioteca de tipos.
 
 *hidden*<br/>
-(Opcional) Un parámetro que impide que aparezca la biblioteca. Consulte el atributo MIDL [hidden](/windows/desktop/Midl/hidden) para obtener más información.
+Opta Parámetro que impide que se muestre la biblioteca. Consulte el atributo MIDL [hidden](/windows/win32/Midl/hidden) para obtener más información.
 
 *restricted*<br/>
-(Opcional) Los miembros de la biblioteca no se puede llamar arbitrariamente. Consulte el atributo MIDL [restricted](/windows/desktop/Midl/restricted) para obtener más información.
+Opta No se puede llamar a los miembros de la biblioteca arbitrariamente. Consulte el atributo MIDL [restricted](/windows/win32/Midl/restricted) para obtener más información.
 
-*declaración de función*<br/>
-La función que va a definir.
+*Declaración de función*<br/>
+Función que se va a definir.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **idl_module** atributo de C++ le permite especificar el punto de entrada en un archivo .dll, que permite importar desde un archivo DLL.
+El atributo **idl_module** C++ permite especificar el punto de entrada en un archivo. dll, lo que permite importar desde un archivo. dll.
 
-El **idl_module** atributo tiene una funcionalidad similar a la [módulo](/windows/desktop/Midl/module) atributo MIDL.
+El atributo **idl_module** tiene una funcionalidad similar al atributo MIDL del [módulo](/windows/win32/Midl/module) .
 
-Puede exportar cualquier cosa desde un objeto COM que se puede exportar desde un archivo .dll colocando un punto de entrada del archivo DLL en el bloque de biblioteca de un archivo. idl.
+Puede exportar cualquier elemento de un objeto COM que pueda exportar desde un archivo. dll colocando un punto de entrada de DLL en el bloque de biblioteca de un archivo. idl.
 
-Su debe usar **idl_module** en dos pasos. En primer lugar, debe definir un par de nombre o DLL. A continuación, cuando utilice **idl_module** para especificar un punto de entrada, especifique el nombre y los atributos adicionales.
+Debe usar **idl_module** en dos pasos. En primer lugar, debe definir un par de nombre/DLL. A continuación, cuando use **idl_module** para especificar un punto de entrada, especifique el nombre y los atributos adicionales.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo usar el **idl_module** atributo:
+En el código siguiente se muestra cómo usar el atributo **idl_module** :
 
 ```cpp
 // cpp_attr_ref_idl_module.cpp
@@ -84,12 +84,12 @@ void FuncName(int i);
 |-|-|
 |**Se aplica a**|En cualquier lugar|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>

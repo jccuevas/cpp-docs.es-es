@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2971
 ms.assetid: fdb5467b-9a41-41ef-ac20-2e9428d5a4fc
-ms.openlocfilehash: 09f3578bff5806fc32a3b5599dcfa8caa3696974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9912224c5c871f9bae2c6d22f0d38f5f88c983a9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437303"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743294"
 ---
 # <a name="compiler-error-c2971"></a>Error del compilador C2971
 
-'class': parámetro de plantilla 'param': 'arg': no se puede usar una variable local como un argumento sin tipo
+' Class ': parámetro de plantilla ' param ': ' arg ': no se puede usar una variable local como argumento sin tipo
 
-No se puede usar el nombre o dirección de una variable local como un argumento de plantilla.
+No se puede usar el nombre o la dirección de una variable local como argumento de plantilla.
 
-El ejemplo siguiente genera C2971:
+En el ejemplo siguiente se genera C2971:
 
-```
+```cpp
 // C2971.cpp
 template <int *pi>
 class Y {};

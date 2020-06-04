@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519324"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425494"
 ---
 # <a name="ltmemorygt-operators"></a>Operadores &lt;memory&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operador! =
 
 Comprueba la desigualdad entre objetos.
 
@@ -48,23 +42,23 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Uno de los objetos cuya desigualdad se va a comprobar.
 
-*right*<br/>
+\ *derecha*
 Uno de los objetos cuya desigualdad se va a comprobar.
 
-*Ty1*<br/>
+\ *Ty1*
 Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2*<br/>
+\ *Ty2*
 Tipo controlado por el puntero compartido derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los objetos no son iguales y **false** si son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer operador de la plantilla devuelve false. (Todos los asignadores predeterminados son iguales).
 
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba la igualdad entre objetos.
 
@@ -149,23 +143,23 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Uno de los objetos cuya igualdad se va a comprobar.
 
-*right*<br/>
+\ *derecha*
 Uno de los objetos cuya igualdad se va a comprobar.
 
-*Ty1*<br/>
+\ *Ty1*
 Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2*<br/>
+\ *Ty2*
 Tipo controlado por el puntero compartido derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los objetos son iguales, **false** si los objetos no son iguales.
+**true** si los objetos son iguales, **false** si los objetos no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer operador de la plantilla devuelve true. (Todos los asignadores predeterminados son iguales).
 
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si un objeto es mayor o igual que un segundo objeto.
 
@@ -256,19 +250,19 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Uno de los objetos que se va a comparar.
 
-*right*<br/>
+\ *derecha*
 Uno de los objetos que se va a comparar.
 
-*Ty1*<br/>
+\ *Ty1*
 Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2*<br/>
+\ *Ty2*
 Tipo controlado por el puntero compartido derecho.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los operadores de plantilla devuelven `left.get() >= right.get()`.
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Uno de los objetos que se va a comparar.
 
-*right*<br/>
+\ *derecha*
 Uno de los objetos que se va a comparar.
 
-*Ty1*<br/>
+\ *Ty1*
 Tipo controlado por el puntero izquierdo.
 
-*Ty2*<br/>
+\ *Ty2*
 Tipo controlado por el puntero derecho.
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si un objeto es menor o igual que un segundo objeto.
 
@@ -320,19 +314,19 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Uno de los objetos que se va a comparar.
 
-*right*<br/>
+\ *derecha*
 Uno de los objetos que se va a comparar.
 
-*Ty1*<br/>
+\ *Ty1*
 Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2*<br/>
+\ *Ty2*
 Tipo controlado por el puntero compartido derecho.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los operadores de plantilla devuelven `left.get() <= right.get()`
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Uno de los objetos que se va a comparar.
 
-*right*<br/>
+\ *derecha*
 Uno de los objetos que se va a comparar.
 
-*Ty1*<br/>
+\ *Ty1*
 Tipo controlado por el puntero compartido izquierdo.
 
-*Ty2*<br/>
+\ *Ty2*
 Tipo controlado por el puntero compartido derecho.
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a>operador&lt;&lt;
 
 Escribe el puntero compartido en la secuencia.
 
@@ -378,22 +372,22 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+\ *Elem*
 El tipo del elemento de secuencia.
 
-*Tr*<br/>
+*Tr*\
 El tipo de rasgos del elemento de secuencia.
 
-*Ty*<br/>
+\ *Ty*
 Tipo controlado por el puntero compartido.
 
-*out*<br/>
+*out*\
 Secuencia de salida.
 
-*SP*<br/>
+\ *SP*
 El puntero compartido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve `out << sp.get()`.
 
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<memory>](../standard-library/memory.md)<br/>

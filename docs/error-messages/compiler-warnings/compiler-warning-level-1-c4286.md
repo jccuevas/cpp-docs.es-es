@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4286
 ms.assetid: 93eadd6c-6f36-413b-ba91-c9aa2314685a
-ms.openlocfilehash: be02d330678eaab7f538ed092641f957bdcb01b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27e7765c68b0bb6fb8c289260b16af1f3fe27054
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175810"
 ---
 # <a name="compiler-warning-level-1-c4286"></a>Advertencia del compilador (nivel 1) C4286
 
-'type1': ha sido detectada por la clase base ('tipo2') en la línea número
+' tipo1 ': se ha capturado por la clase base (' Type2 ') en el número de línea
 
-El tipo de excepción especificada está controlado por un controlador anterior. El tipo del segundo elemento catch se deriva el tipo de la primera. Excepciones para una clase base detectar las excepciones para una clase derivada.
+Un controlador anterior controla el tipo de excepción especificado. El tipo de la segunda instrucción Catch se deriva del tipo de la primera. Las excepciones de una clase base detectan excepciones para una clase derivada.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 //C4286.cpp
 // compile with: /W1
 #include <eh.h>

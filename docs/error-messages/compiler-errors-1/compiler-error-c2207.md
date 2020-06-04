@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2207
 ms.assetid: d7d7b537-68f1-420a-9835-b5b6f2cb5cfd
-ms.openlocfilehash: cbb5c099243e6aafd9ad050c8da1436eb2d71603
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f5bea563ae91df0e641af3911aa246b1f813336
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206705"
 ---
 # <a name="compiler-error-c2207"></a>Error del compilador C2207
 

@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 3de59c57c1303fec06e5926f445cdbbb21e13c55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631756"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139352"
 ---
-# <a name="double4-class"></a>double_4 (Clase)
+# <a name="double_4-class"></a>double_4 (Clase)
 
 Representa un vector corto de cuatro valores de tipo double.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class double_4;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[Constructor de double_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_4::get_w||
 |double_4::get_wx||
@@ -371,9 +371,9 @@ class double_4;
 |double_4::ref_b||
 |double_4::ref_g||
 |double_4::ref_r||
-|double_4:: ref_w||
-|double_4:: ref_x||
-|double_4:: ref_y||
+|double_4::ref_w||
+|double_4::ref_x||
+|double_4::ref_y||
 |double_4::ref_z||
 |double_4::set_w||
 |double_4::set_wx||
@@ -393,10 +393,10 @@ class double_4;
 |double_4::set_wzyx||
 |double_4::set_x||
 |double_4::set_xw||
-|double_4:: set_xwy||
+|double_4::set_xwy||
 |double_4::set_xwyz||
 |double_4::set_xwz||
-|double_4:: set_xwzy||
+|double_4::set_xwzy||
 |double_4::set_xy||
 |double_4::set_xyw||
 |double_4::set_xywz||
@@ -442,7 +442,7 @@ class double_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_4::operator-||
 |double_4::operator--||
@@ -455,142 +455,142 @@ class double_4;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#double_4__size)||
+|[Size (constante)](#double_4__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|double_4:: a||
-|double_4:: AB||
-|double_4:: abg||
+|double_4::a||
+|double_4::ab||
+|double_4::abg||
 |double_4::abgr||
-|double_4:: Abr||
+|double_4::abr||
 |double_4::abrg||
-|double_4:: AG||
-|double_4:: agb||
-|double_4:: agbr||
-|double_4:: Agr||
-|double_4:: agrb||
-|double_4:: ar||
-|double_4:: ARB||
-|double_4:: ARBG||
-|double_4:: arg||
-|double_4:: ARGB||
-|double_4:: b||
+|double_4::ag||
+|double_4::agb||
+|double_4::agbr||
+|double_4::agr||
+|double_4::agrb||
+|double_4::ar||
+|double_4::arb||
+|double_4::arbg||
+|double_4::arg||
+|double_4::argb||
+|double_4::b||
 |double_4::ba||
-|double_4:: bag||
-|double_4:: bagr||
-|double_4:: Bar||
-|double_4:: barg||
-|double_4:: BG||
+|double_4::bag||
+|double_4::bagr||
+|double_4::bar||
+|double_4::barg||
+|double_4::bg||
 |double_4::bga||
-|double_4:: bgar||
-|double_4:: BGR||
+|double_4::bgar||
+|double_4::bgr||
 |double_4::bgra||
-|double_4:: br||
+|double_4::br||
 |double_4::bra||
-|double_4:: brag||
+|double_4::brag||
 |double_4::brg||
 |double_4::brga||
-|double_4:: g||
+|double_4::g||
 |double_4::ga||
 |double_4::gab||
 |double_4::gabr||
-|double_4:: gar||
-|double_4:: garb||
-|double_4:: GB||
+|double_4::gar||
+|double_4::garb||
+|double_4::gb||
 |double_4::gba||
-|double_4:: gbar||
-|double_4:: GBR||
+|double_4::gbar||
+|double_4::gbr||
 |double_4::gbra||
-|double_4:: GR||
+|double_4::gr||
 |double_4::gra||
-|double_4:: Grab||
-|double_4:: GRB||
+|double_4::grab||
+|double_4::grb||
 |double_4::grba||
 |double_4:: r||
 |double_4::ra||
-|double_4:: rab||
+|double_4::rab||
 |double_4::rabg||
-|double_4:: rag||
-|double_4:: ragb||
-|double_4:: RB||
+|double_4::rag||
+|double_4::ragb||
+|double_4::rb||
 |double_4::rba||
-|double_4:: rbag||
-|double_4:: RBG||
+|double_4::rbag||
+|double_4::rbg||
 |double_4::rbga||
 |double_4:: RG||
 |double_4::rga||
-|double_4:: rgab||
-|double_4:: RGB||
+|double_4::rgab||
+|double_4::rgb||
 |double_4::rgba||
-|double_4:: w||
-|double_4:: WX||
-|double_4:: WXY||
-|double_4:: wxyz||
-|double_4:: wxz||
-|double_4:: wxzy||
-|double_4:: WY||
-|double_4:: wyx||
-|double_4:: wyxz||
-|double_4:: WYZ||
-|double_4:: wyzx||
-|double_4:: wZ||
-|double_4:: wzx||
-|double_4:: wzxy||
-|double_4:: wzy||
-|double_4:: wzyx||
-|double_4:: x||
-|double_4:: xw||
-|double_4:: xwy||
-|double_4:: xwyz||
-|double_4:: xwz||
-|double_4:: xwzy||
-|double_4:: XY||
-|double_4:: xyw||
-|double_4:: xywz||
-|double_4:: XYZ||
-|double_4:: xyzw||
-|double_4:: XZ||
-|double_4:: xzw||
-|double_4:: xzwy||
-|double_4:: xzy||
-|double_4:: xzyw||
-|double_4:: y||
-|double_4:: yw||
-|double_4:: ywx||
-|double_4:: ywxz||
-|double_4:: ywz||
-|double_4:: ywzx||
-|double_4:: YX||
-|double_4:: yxw||
-|double_4:: yxwz||
-|double_4:: YXZ||
-|double_4:: yxzw||
-|double_4:: YZ||
-|double_4:: yzw||
-|double_4:: yzwx||
-|double_4:: yzx||
-|double_4:: yzxw||
-|double_4:: z||
-|double_4:: ZW||
-|double_4:: zwx||
-|double_4:: zwxy||
-|double_4:: zwy||
-|double_4:: zwyx||
-|double_4:: ZX||
+|double_4::w||
+|double_4::wx||
+|double_4::wxy||
+|double_4::wxyz||
+|double_4::wxz||
+|double_4::wxzy||
+|double_4::wy||
+|double_4::wyx||
+|double_4::wyxz||
+|double_4::wyz||
+|double_4::wyzx||
+|double_4::wz||
+|double_4::wzx||
+|double_4::wzxy||
+|double_4::wzy||
+|double_4::wzyx||
+|double_4::x||
+|double_4::xw||
+|double_4::xwy||
+|double_4::xwyz||
+|double_4::xwz||
+|double_4::xwzy||
+|double_4::xy||
+|double_4::xyw||
+|double_4::xywz||
+|double_4::xyz||
+|double_4::xyzw||
+|double_4::xz||
+|double_4::xzw||
+|double_4::xzwy||
+|double_4::xzy||
+|double_4::xzyw||
+|double_4::y||
+|double_4::yw||
+|double_4::ywx||
+|double_4::ywxz||
+|double_4::ywz||
+|double_4::ywzx||
+|double_4::yx||
+|double_4::yxw||
+|double_4::yxwz||
+|double_4::yxz||
+|double_4::yxzw||
+|double_4::yz||
+|double_4::yzw||
+|double_4::yzwx||
+|double_4::yzx||
+|double_4::yzxw||
+|double_4::z||
+|double_4::zw||
+|double_4::zwx||
+|double_4::zwxy||
+|double_4::zwy||
+|double_4::zwyx||
+|double_4::zx||
 |double_4::zxw||
-|double_4:: zxwy||
-|double_4:: zxy||
-|double_4:: zxyw||
+|double_4::zxwy||
+|double_4::zxy||
+|double_4::zxyw||
 |double_4:: ZY||
 |double_4:: zyw||
-|double_4:: zywx||
-|double_4:: ZYX||
-|double_4:: zyxw||
+|double_4::zywx||
+|double_4::zyx||
+|double_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -598,15 +598,15 @@ class double_4;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_4
+## <a name="ctor"></a>double_4
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline double_4(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V3*<br/>
-El valor para inicializar el elemento 3.
+Valor para inicializar el elemento 3.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
-*_Otro*<br/>
-El objeto usado para inicializar.
+*_Other*<br/>
+Objeto usado para inicializar.
 
-##  <a name="double_4__size"></a> Tamaño
+## <a name="double_4__size"></a>ajusta
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

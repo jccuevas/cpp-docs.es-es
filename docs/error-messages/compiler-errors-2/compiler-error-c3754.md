@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3754
 ms.assetid: 14b877bc-9277-40ec-af1c-196a58b45f10
-ms.openlocfilehash: e03ac39213429fbbb9f289be3514718985c04b4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65b6a24c47df5fc40f0305de4890c2ef2bc3c28b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582122"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757298"
 ---
 # <a name="compiler-error-c3754"></a>Error del compilador C3754
 
-constructor delegado: función miembro 'function' no se puede llamar en una instancia de tipo 'type'
+constructor delegado: no se puede llamar a la función miembro ' function ' en una instancia de tipo ' type '
 
-Se realizó una llamada a una función mediante un puntero a un tipo que no contiene la función.
+Se realizó una llamada a una función a través de un puntero a un tipo que no contiene la función.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3754:
+En el ejemplo siguiente se genera C3754:
 
-```
+```cpp
 // C3754a.cpp
 // compile with: /clr
 using namespace System;

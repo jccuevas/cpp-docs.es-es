@@ -1,6 +1,6 @@
 ---
-title: auto_inline
-ms.date: 11/04/2016
+title: auto_inline (Pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - auto_inline_CPP
 - vc-pragma.auto_inline
@@ -8,26 +8,25 @@ helpviewer_keywords:
 - pragmas, auto_inline
 - auto_inline pragma
 ms.assetid: f7624cd1-be76-429a-881c-65c9040acf43
-ms.openlocfilehash: a3e49941271ec294ddb69861d12e3451332770fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59cda8cb73196215318c9570a5c067786284afaa
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633354"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216303"
 ---
-# <a name="autoinline"></a>auto_inline
-Excluye cualquier función definida dentro del intervalo donde **desactivar** se especifica a partir del que se consideran candidatas para la expansión automática alineada.
+# <a name="auto_inline-pragma"></a>auto_inline (Pragma)
+
+Excluye las funciones definidas en el intervalo en el que se especifica **OFF** para que se considere como candidatas para la expansión automática en línea.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-#pragma auto_inline( [{on | off}] )
-```
+> **#pragma auto_inline (** [{ **on** | **OFF** }] **)**
 
 ## <a name="remarks"></a>Comentarios
 
-Para usar el **auto_inline** pragma, colóquela delante e inmediatamente después (no en) una definición de función. La pragma surte efecto en cuanto aparece en la primera definición de función.
+Para usar la Directiva pragma **auto_inline** , colóquela antes y inmediatamente después de, no dentro, una definición de función. La Directiva pragma surte efecto en cuanto se ve la primera definición de función después de la Directiva pragma.
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

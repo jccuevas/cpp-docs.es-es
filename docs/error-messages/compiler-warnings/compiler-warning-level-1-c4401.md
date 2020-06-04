@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4401
 ms.assetid: 2e7ca136-f144-4b40-b847-82976e8643fc
-ms.openlocfilehash: c7e6cf8a52288d895b74481678dc91fee387a6a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe08509a05eed00f7e7d492e723e873d05e451ad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162665"
 ---
 # <a name="compiler-warning-level-1-c4401"></a>Advertencia del compilador (nivel 1) C4401
 
-'campo de bits': miembro es el campo de bits
+' bits ': el miembro es un campo de bits
 
-Código de ensamblado alineado intenta tener acceso a un miembro de campo de bits. Ensamblado alineado no puede acceder a los miembros del campo de bits, por lo que se utiliza el último límite de empaquetado antes del miembro de campo de bits.
+El código de ensamblado alineado intenta tener acceso a un miembro de campo de bits. El ensamblado alineado no puede tener acceso a los miembros de campo de bits, por lo que se usa el último límite de empaquetado antes del miembro de campo de bits.
 
-Para evitar esta advertencia, convierta el campo de bits a un tipo adecuado antes de crear la referencia en el código de ensamblado alineado. El ejemplo siguiente genera C4401:
+Para evitar esta advertencia, convierta el campo de bits a un tipo adecuado antes de hacer la referencia en el código de ensamblado alineado. En el ejemplo siguiente se genera C4401:
 
-```
+```cpp
 // C4401.cpp
 // compile with: /W1
 // processor: x86

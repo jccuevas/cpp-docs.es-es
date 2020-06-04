@@ -1,25 +1,25 @@
 ---
-title: IDocHostUIHandlerDispatch (interfaz)
-ms.date: 11/04/2016
+title: Interfaz IDocHostUIHandlerDispatch
+ms.date: 07/02/2019
 f1_keywords:
 - IDocHostUIHandlerDispatch
 - atlbase/ATL::IDocHostUIHandlerDispatch
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 5bf405f66bdef54f354f9e6c230207d2933ee352
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7072b80b738aa12635427a2604b38fb3585b452
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483643"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329723"
 ---
-# <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch (interfaz)
+# <a name="idochostuihandlerdispatch-interface"></a>Interfaz IDocHostUIHandlerDispatch
 
-Interfaz para el análisis de HTML de Microsoft y el motor de representación.
+Una interfaz para el motor de representación y análisis HTML de Microsoft.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,29 +32,29 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>Métodos públicos
 
 > [!NOTE]
->  Los vínculos de la tabla siguiente son los temas de referencia de INet SDK para los miembros de la [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interfaz. `IDocHostUIHandlerDispatch` tiene la misma funcionalidad que `IDocUIHostHandler`, con la diferencia que `IDocHostUIHandlerDispatch` es una interfaz dispinterface mientras que `IDocUIHostHandler` es una interfaz personalizada.
+> Los vínculos de la tabla siguiente son a los temas de referencia del SDK de INet para los miembros de la interfaz [IDocUIHostHandler.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\)) `IDocHostUIHandlerDispatch`tiene la misma `IDocUIHostHandler`funcionalidad que , `IDocHostUIHandlerDispatch` con la diferencia `IDocUIHostHandler` es que es una interfaz dispinterface mientras que es una interfaz personalizada.
 
 |||
 |-|-|
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Se llama desde la implementación de MSHTML de [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). También se llama cuando MSHTML muestra la interfaz de usuario modal.|
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Se llama en el host MSHTML para permitir que el host reemplazar el objeto de datos de MSHTML.|
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Lo llama MSHTML cuando lo está usando como un destino de colocación para permitir que el host proporcione una alternativa [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Lo llama MSHTML para obtener la interfaz de IDispatch del host.|
-|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Recupera las capacidades de la interfaz de usuario de host MSHTML.|
-|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Devuelve la clave del registro bajo la que MSHTML almacena las preferencias del usuario.|
-|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Se llama cuando MSHTML quita sus menús y barras de herramientas.|
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Se llama desde la implementación de MSHTML de [IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Se llama desde la implementación de MSHTML de [IOleInPlaceActiveObject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Se llama desde la implementación de MSHTML de [IOleInPlaceActiveObject::](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|
-|[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|Se llama para mostrar un menú contextual de Mshtml.|
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Permite al host reemplazar las barras de herramientas y menús MSHTML.|
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Lo llama MSHTML cuando [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) o [IOleControlSite:: TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) se llama.|
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Lo llama MSHTML para permitir que el host de una oportunidad modificar la dirección URL se va a cargar.|
-|[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|Notifica al host que cambió el estado del comando.|
+|[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|Llamado desde la implementación de MSHTML de [IOleInPlaceActiveObject::EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). También se llama cuando MSHTML muestra la interfaz de usuario modal.|
+|[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|Llamado en el host por MSHTML para permitir que el host reemplace el objeto de datos de MSHTML.|
+|[GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))|Llamado por MSHTML cuando se utiliza como destino de colocación para permitir que el host proporcione un [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)alternativo.|
+|[GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))|Llamado por MSHTML para obtener la interfaz IDispatch del host.|
+|[GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))|Recupera las capacidades de interfaz de usuario del host MSHTML.|
+|[GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))|Devuelve la clave del Registro en la que MSHTML almacena las preferencias del usuario.|
+|[HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))|Se llama cuando MSHTML quita sus menús y barras de herramientas.|
+|[OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))|Llamado desde la implementación MSHTML de [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|
+|[OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))|Llamado desde la implementación MSHTML de [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|
+|[ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))|Se llama desde la implementación de MSHTML de [IOleInPlaceActiveObject::ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|
+|[ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))|Se llama desde MSHTML para mostrar un menú contextual.|
+|[ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))|Permite que el host reemplace los menús y barras de herramientas MSHTML.|
+|[TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))|Llamado por MSHTML cuando [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) o [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) se llama.|
+|[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|Llamado por MSHTML para permitir al host una oportunidad de modificar la dirección URL que se va a cargar.|
+|[UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|Notifica al host que cambió el estado del comando.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Un host puede reemplazar los menús, barras de herramientas y menús contextuales utilizados por el análisis de HTML de Microsoft y el motor de representación (MSHTML) implementando esta interfaz.
+Un host puede reemplazar los menús, barras de herramientas y menús contextuales utilizados por el motor de representación y análisis HTML de Microsoft (MSHTML) mediante la implementación de esta interfaz.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -62,10 +62,9 @@ La definición de esta interfaz está disponible como IDL o C++, como se muestra
 
 |Tipo de definición|Archivo|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
-|C++|ATLIFace.h (que también se incluye en ATLBase.h)|
+|Idl|ATLIFace.idl|
+|C++|ATLIFace.h (también incluido en ATLBase.h)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
-
+[IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))

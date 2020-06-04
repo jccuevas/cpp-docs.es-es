@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534be9e3873276313335ca921264be92c9259b93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676752"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165748"
 ---
 # <a name="compiler-error-c3768"></a>Error del compilador C3768
 
 > no se puede adquirir la dirección de una función vararg virtual en código administrado puro
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+La opción del compilador **/clr: Pure** ha quedado en desuso en visual Studio 2015 y no se admite en visual Studio 2017.
 
-Cuando se compila con **/CLR: pure**, no puede tomar la dirección de una memoria virtual `vararg` función.
+Al compilar con **/clr: Pure**, no se puede tomar la dirección de una función de `vararg` virtual.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3768:
+En el ejemplo siguiente se genera C3768:
 
 ```cpp
 // C3768.cpp

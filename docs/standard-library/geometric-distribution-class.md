@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 600459784b4db620b6b717b5ffdfaf24d1ceb757
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44b624995ed274212a2699cb457c91dfa4530f03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579871"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370637"
 ---
-# <a name="geometricdistribution-class"></a>geometric_distribution (Clase)
+# <a name="geometric_distribution-class"></a>geometric_distribution (Clase)
 
 Genera una distribución geométrica.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType*<br/>
-El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*IntType*\
+El tipo de resultado entero, el valor predeterminado es **int**. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-*URNG*<br/>
-El uniforme generador motor de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*Urng*\
+El motor generador de números aleatorios uniforme. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase de plantilla describe una distribución que genera valores de un tipo integral especificado por el usuario con la distribución geométrica. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que produce valores de un tipo entero especificado por el usuario con una distribución geométrica. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -91,9 +91,9 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información acerca de las clases de distribución y sus miembros, vea [ \<>aleatorias ](../standard-library/random.md).
 
-Para obtener información detallada sobre la distribución chi cuadrado, vea el artículo de Wolfram MathWorld sobre la [distribución geométrica](http://go.microsoft.com/fwlink/p/?linkid=400529).
+Para obtener información detallada sobre la distribución chi cuadrado, vea el artículo de Wolfram MathWorld sobre la [distribución geométrica](https://go.microsoft.com/fwlink/p/?linkid=400529).
 
 ## <a name="example"></a>Ejemplo
 
@@ -209,7 +209,7 @@ Distribution for 100 samples:
 
 **Espacio de nombres:** std
 
-## <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution::geometric_distribution
 
 Construye la distribución.
 
@@ -220,21 +220,21 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*p*<br/>
+*P*\
 El parámetro de distribución `p`.
 
-*parm*<br/>
+*Parmesana*\
 La estructura de parámetros utilizada para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `0.0 < p && p < 1.0`
+**Condición previa:**`0.0 < p && p < 1.0`
 
 El primer constructor crea un objeto cuyo valor `p` almacenado contiene el valor *p*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="param_type"></a>  geometric_distribution::param_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::param_type
 
 Almacena los parámetros de la distribución.
 
@@ -251,18 +251,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*p*<br/>
+*P*\
 El parámetro de distribución `p`.
 
-*right*<br/>
+*Correcto*\
 La instancia `param_type` que comparar con esta.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `0.0 < p && p < 1.0`
+**Condición previa:**`0.0 < p && p < 1.0`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<>al azar](../standard-library/random.md)

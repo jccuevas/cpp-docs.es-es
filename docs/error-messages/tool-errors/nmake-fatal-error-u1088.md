@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1088
 ms.assetid: 75f3527b-9923-408b-a66e-701322c63803
-ms.openlocfilehash: 99d2ac2f2e3a75166ca338e890757ec40c2bd231
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b1f5e18fb9a225b5713264e6f12451889828fd6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193347"
 ---
 # <a name="nmake-fatal-error-u1088"></a>Error grave de NMAKE U1088
 
-separador no válido '::' en la regla de inferencia
+separador no válido ':: ' en la regla de inferencia
 
-Una regla de inferencia debe ir seguida por un signo de dos puntos (**:**).
+Una regla de inferencia debe ir seguida de un carácter de dos puntos ( **:** ).

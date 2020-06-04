@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4681
 ms.assetid: a4e6d85f-3e21-4b45-a551-c23d3c554d3f
-ms.openlocfilehash: b2f89948ddf77dda88e8ef94231ac9ba1e9ee85c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 543034c9b5369b5ceac082ebc4133faf29397c8b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585684"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990379"
 ---
 # <a name="compiler-warning-level-4-c4681"></a>Advertencia del compilador (nivel 4) C4681
 
@@ -21,7 +21,7 @@ Una interfaz [source](../../windows/source-cpp.md) no se especificó para una cl
 
 El ejemplo siguiente genera la advertencia C4681:
 
-```
+```cpp
 // C4681.cpp
 // compile with: /W4 /c
 #define _ATL_ATTRIBUTES 1

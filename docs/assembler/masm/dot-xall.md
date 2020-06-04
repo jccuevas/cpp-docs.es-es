@@ -1,26 +1,27 @@
 ---
 title: .XALL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .XALL
 helpviewer_keywords:
 - .XALL directive
 ms.assetid: b2d851dd-f79e-46c6-825d-1938b8487e8c
-ms.openlocfilehash: f218e412faaa338ce35987f72089d55cc1da25a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e724e53a876dd49a3d982ec9488daf161e9aa313
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487573"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317466"
 ---
 # <a name="xall"></a>.XALL
 
-Consulte [. LISTMACRO](../../assembler/masm/dot-listmacro.md).
+Vea [. LISTMACRO](dot-listmacro.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-> .XALL
+> **.XALL**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

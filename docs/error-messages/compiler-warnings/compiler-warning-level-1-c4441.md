@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-ms.openlocfilehash: 45d7a6af09677c1e63dab5ffcc55c35d8203b40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4de80a9b7ad5601d9f8760d7c55a64a8631307a8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539703"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162379"
 ---
 # <a name="compiler-warning-level-1-c4441"></a>Advertencia del compilador (nivel 1) C4441
 
-convención de llamada de 'cc1' omitida; en su lugar, usó 'cc2'
+se omitió la Convención de llamada de ' CC1 '; se usó ' CC2 ' en su lugar
 
-Las funciones miembro de tipos administrados definidos por el usuario y tipos genéricos de la función global deben usar el [__clrcall](../../cpp/clrcall.md) convención de llamada.  El compilador usa `__clrcall`.
+Las funciones miembro en los tipos administrados definidos por el usuario y los genéricos de funciones globales deben usar la Convención de llamada de [__clrcall](../../cpp/clrcall.md) .  El compilador usó `__clrcall`.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4441.
+En el ejemplo siguiente se genera C4441.
 
-```
+```cpp
 // C4441.cpp
 // compile with: /clr /W1 /c
 generic <class ItemType>

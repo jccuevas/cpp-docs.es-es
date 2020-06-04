@@ -1,7 +1,7 @@
 ---
-title: / DEPENDENTLOADFLAG (marcas de carga dependiente de conjunto de forma predeterminada)
-description: La opción /DEPENDENTLOADFLAG establece marcas predeterminadas para los archivos DLL cargados mediante LoadLibrary
-ms.date: 05/18/2018
+title: /DEPENDENTLOADFLAG (Establecer marcas de carga dependientes predeterminadas)
+description: La opción/DEPENDENTLOADFLAG establece los marcadores de carga dependientes predeterminados para los archivos dll cargados por este módulo.
+ms.date: 01/22/2020
 f1_keywords:
 - dependentloadflag
 helpviewer_keywords:
@@ -10,43 +10,57 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5e31a0d747e7186814cba3ae1c4cf243569d87a8
+ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326165"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725713"
 ---
-# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (marcas de carga dependiente de conjunto de forma predeterminada)
+# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (Establecer marcas de carga dependientes predeterminadas)
 
-Establece las marcas de carga predeterminado utiliza cuando `LoadLibrary` se usa para cargar los archivos DLL.
+::: moniker range="vs-2015"
+
+La opción **/DEPENDENTLOADFLAG** requiere Visual Studio 2017 o posterior.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+Establece las marcas de carga predeterminadas que se usan cuando el sistema operativo resuelve las importaciones vinculadas estáticamente de un módulo.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ DEPENDENTLOADFLAG**[**:**_loadflags_]
+> **/DEPENDENTLOADFLAG**[ __:__ *load_flags*]
 
 ### <a name="arguments"></a>Argumentos
 
-*loadflags*<br/>
-Un valor entero de 16 bits de "C"-style opcional en decimal, octal con un cero inicial o hexadecimal con uno de los principales `0x`, que especifica las marcas de carga dependiente que se aplicará a todos los [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) llamadas. El valor predeterminado es 0.
+*load_flags*<br/>
+Valor entero opcional que especifica las marcas de carga que se van a aplicar al resolver las dependencias de importación vinculadas estáticamente del módulo. El valor predeterminado es 0. Para obtener una lista de valores de marca compatibles, vea las entradas de `LOAD_LIBRARY_SEARCH_*` en [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Esta opción es nueva en Visual Studio 2017 y solo se aplica a aplicaciones que se ejecutan en Windows 10 RS1 y versiones posteriores. Esta opción se omite para otros sistemas operativos que ejecutan la aplicación.
+Cuando el sistema operativo resuelve las importaciones vinculadas estáticamente de un módulo, usa el [orden de búsqueda predeterminado](/windows/win32/dlls/dynamic-link-library-search-order). Use la opción **/DEPENDENTLOADFLAG** para especificar un valor *load_flags* que cambie la ruta de búsqueda usada para resolver estas importaciones. En los sistemas operativos compatibles, cambia el orden de búsqueda de la resolución de importación estática, de forma similar a lo que se hace [en el uso](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) de los parámetros de `LOAD_LIBRARY_SEARCH`. Para obtener información sobre el orden de búsqueda establecido por *load_flags*, vea [Buscar el orden mediante marcas de LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
 
-En sistemas operativos compatibles, esta opción tiene el efecto de cambiar las llamadas a `LoadLibrary("dependent.dll")` al equivalente de `LoadLibraryEx("dependent.dll", 0, loadflags)`. Las llamadas a [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) no se ven afectadas. Esta opción no aplica de forma recursiva a archivos DLL cargados por la aplicación.
+Esta marca se puede usar para hacer que un vector de [ataque](/windows/win32/dlls/dynamic-link-library-security) sea más difícil. Por ejemplo, considere una aplicación que ha vinculado estáticamente un archivo DLL:
 
-Esta marca se puede usar para evitar que la DLL plantar ataques. Por ejemplo, si una aplicación usa `LoadLibrary` para cargar un archivo DLL dependiente, un atacante podría implantar un archivo DLL con el mismo nombre en la ruta de acceso de búsqueda usando `LoadLibrary`, como el directorio actual, que se pueden comprobar antes de los directorios del sistema si es el modo seguro de búsqueda DLL deshabilitada. Modo seguro de búsqueda DLL coloca el directorio del usuario actual más adelante en el orden de búsqueda y está habilitado de forma predeterminada en Windows XP SP2 y versiones posteriores. Para obtener más información, consulte [orden de búsqueda de biblioteca de vínculos dinámicos](/windows/desktop/Dlls/dynamic-link-library-search-order).
+- Un atacante podría plantar un archivo DLL con el mismo nombre anteriormente en la ruta de búsqueda de la resolución de importación, como el directorio de la aplicación. Los directorios protegidos son más difíciles, pero no imposibles, para que un atacante cambie.
 
-Si especifica la opción de vínculo `/DEPENDENTLOADFLAG:0xA00` (el valor de las marcas combinados `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), a continuación, incluso si se deshabilita el modo seguro de búsqueda DLL en el equipo del usuario, la ruta de acceso de búsqueda DLL se limita a los directorios protegidos que están más difíciles que un atacante cambio. Para obtener información acerca de los indicadores disponibles y sus valores numéricos y simbólicos, consulte el *dwFlags* descripción del parámetro en [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa).
+- Si falta el archivo DLL de la aplicación,%Windows%\System32 y% Windows% directorios, la resolución de importación se realiza a través del directorio actual. Un atacante podría plantar allí un archivo DLL.
+
+En ambos casos, si se especifica la opción de vínculo `/DEPENDENTLOADFLAG:0x800` (el valor de la marca `LOAD_LIBRARY_SEARCH_SYSTEM32`), la ruta de acceso de búsqueda del módulo se limita al directorio%Windows%\System32 Ofrece cierta protección contra la plantación de ataques en los otros directorios. Para obtener más información, vea [seguridad de la biblioteca de vínculos dinámicos](/windows/win32/dlls/dynamic-link-library-security).
+
+Para ver el valor establecido por la opción **/DEPENDENTLOADFLAG** en cualquier archivo dll, use el comando [dumpbin](dumpbin-reference.md) con la opción [/LOADCONFIG](loadconfig.md) .
+
+La opción **/DEPENDENTLOADFLAG** es nueva en Visual Studio 2017. Solo se aplica a las aplicaciones que se ejecutan en Windows 10 RS1 y versiones posteriores. Otros sistemas operativos que ejecutan la aplicación omiten esta opción.
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Para establecer la opción del vinculador DEPENDENTLOADFLAG en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
+1. Seleccione las **propiedades de configuración** > **enlazador** > página de propiedades **línea de comandos** .
 
-1. Especifique la opción de **opciones adicionales**.
+1. Escriba la opción en **opciones adicionales**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
@@ -54,9 +68,12 @@ Si especifica la opción de vínculo `/DEPENDENTLOADFLAG:0xA00` (el valor de las
 
 ## <a name="see-also"></a>Vea también
 
-- [Establecer las opciones del vinculador](setting-linker-options.md)
-- [Opciones del vinculador](linker-options.md)
-- [Cómo vincular implícitamente a un archivo DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [Determinar qué método de vinculación para usar](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
-- [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
-- [Orden de búsqueda de la biblioteca de vínculos dinámicos](/windows/desktop/Dlls/dynamic-link-library-search-order)
+- [Referencia del enlazador MSVC](linking.md)
+- [Opciones del vinculador MSVC](linker-options.md)
+- [Vincular un ejecutable a un archivo DLL implícitamente](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Determinar el método de vinculación que se va a usar](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)
+- [Orden de búsqueda de la biblioteca de vínculos dinámicos](/windows/win32/Dlls/dynamic-link-library-search-order)
+- [Seguridad de la biblioteca de vínculos dinámicos](/windows/win32/dlls/dynamic-link-library-security)
+
+::: moniker-end

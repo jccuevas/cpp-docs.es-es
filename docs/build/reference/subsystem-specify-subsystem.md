@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318250"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Especificar subsistema)
 
@@ -42,7 +42,7 @@ Aplicación de modo de caracteres Win32. El sistema operativo proporciona una co
 Los subsistemas de Extensible Firmware Interface. Para obtener más información, vea la especificación EFI. Para obtener ejemplos, vea el sitio Web de Intel. La versión mínima y la versión predeterminada es 1.0.
 
 **NATIVO**<br/>
-Controladores de modo kernel para Windows NT. Esta opción se reserva normalmente para los componentes del sistema operativo Windows. Si [/Driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) se especifica, nativo es el valor predeterminado.
+Controladores de modo kernel para Windows NT. Esta opción se reserva normalmente para los componentes del sistema operativo Windows. Si [/Driver: WDM](driver-windows-nt-kernel-mode-driver.md) se especifica, nativo es el valor predeterminado.
 
 **POSIX**<br/>
 Aplicación que se ejecuta con el subsistema POSIX en Windows NT.
@@ -66,14 +66,14 @@ El mínimo opcional y el valor predeterminado *principales* y *menores* números
 |BOOT_APPLICATION|1.0|1.0|
 |CONSOLE|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
 |WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
-|NATIVE (con DRIVER:WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|
+|NATIVE (con DRIVER:WDM)|1.00 (x86) 1.10 (x64, ARM)|1.00 (x86) 1.10 (x64, ARM)|
 |NATIVE (sin /DRIVER:WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|
 |POSIX|1.0|19.90|
 |EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione la carpeta Vinculador.
 
@@ -87,5 +87,5 @@ El mínimo opcional y el valor predeterminado *principales* y *menores* números
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

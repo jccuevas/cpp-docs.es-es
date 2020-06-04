@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - composite controls, about composite controls
 ms.assetid: 2ac78cdd-1ec4-4d78-871c-1bcc23b5253e
-ms.openlocfilehash: 18190f4d35d69f167be075130c8332baf7b459ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a7b84b40dd74f42944e61cfd219638907502c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223390"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Fundamentos de controles compuestos de ATL
 
@@ -32,4 +32,3 @@ El Asistente para proyectos ATL y **Agregar clase** cuadro de diálogo automatiz
 [Conceptos](../atl/active-template-library-atl-concepts.md)<br/>
 [Funciones globales de control compuesto](../atl/reference/composite-control-global-functions.md)<br/>
 [Macros de control compuesto](../atl/reference/composite-control-macros.md)
-

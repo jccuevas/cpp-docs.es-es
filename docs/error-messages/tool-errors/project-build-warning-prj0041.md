@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0041
 ms.assetid: dc9f4cf9-6bd5-4222-89e8-7802a59bb96b
-ms.openlocfilehash: b0fceff05ffe35515965b7e0a880c8b4c941b07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb6469b1daf193223a9b3361cc3e4bfb96d0c751
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583214"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191942"
 ---
 # <a name="project-build-warning-prj0041"></a>Advertencia PRJ0041 al compilar el proyecto
 
-No se puede encontrar que falta la dependencia 'dependencia' archivo 'archivo'. El proyecto aún puede compilarse, pero puede que continúe pareciendo obsoleto hasta que se encuentra este archivo.
+No se encuentra la dependencia ' Dependency ' que falta para el archivo ' file '. El proyecto todavía puede compilarse, pero puede que siga apareciendo sin actualizar hasta que se encuentre este archivo.
 
-Un archivo (archivo de recursos o.idl/.odl, por ejemplo, contiene una instrucción include que el sistema del proyecto no se pudo resolver.
+Un archivo (archivo de recursos o archivo. idl/. ODL, por ejemplo, contiene una instrucción include que el sistema del proyecto no pudo resolver.
 
-Dado que el sistema del proyecto no procesa las instrucciones de preprocesador (#if, por ejemplo), la instrucción infractor no puede ser realmente parte de la compilación.
+Dado que el sistema del proyecto no procesa instrucciones de preprocesador (#if, por ejemplo), es posible que la instrucción infractora no forme parte realmente de la compilación.
 
-Para resolver esta advertencia, elimine todo el código en archivos .rc innecesario o agregar archivos de marcador de posición del nombre adecuado.
+Para resolver esta advertencia, elimine todo el código innecesario en los archivos. RC o agregue los archivos de marcador de posición con el nombre adecuado.

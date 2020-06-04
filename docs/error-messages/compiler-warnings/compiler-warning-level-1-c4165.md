@@ -1,27 +1,27 @@
 ---
-title: Compilador advertencia (nivel 1) C4165
+title: ADVERTENCIA del compilador (nivel 1) C4165
 ms.date: 11/04/2016
 f1_keywords:
 - C4165
 helpviewer_keywords:
 - C4165
 ms.assetid: f5bed515-2290-4f88-8dab-b45d95fe26ef
-ms.openlocfilehash: 4d6377730e262efafb38f5e714989e9075a77a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb036f7672a074e859d3e19083e256bd80c93578
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534386"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176108"
 ---
-# <a name="compiler-warning-level-1-c4165"></a>Compilador advertencia (nivel 1) C4165
+# <a name="compiler-warning-level-1-c4165"></a>ADVERTENCIA del compilador (nivel 1) C4165
 
-'HRESULT' se está convirtiendo en 'bool'; ¿está seguro de que desea realizar esta operación?
+' HRESULT ' se está convirtiendo en ' bool '; ¿está seguro de que es lo que desea?
 
-Cuando se usa un valor HRESULT en un [si](../../cpp/if-else-statement-cpp.md) instrucción, el valor HRESULT se convertirá en un [bool](../../cpp/bool-cpp.md) a menos que se pruebe explícitamente la variable como un valor HRESULT. De forma predeterminada, esta advertencia está desactivada.
+Cuando se usa un valor HRESULT en una instrucción [If](../../cpp/if-else-statement-cpp.md) , el valor HRESULT se convertirá en un [bool](../../cpp/bool-cpp.md) a menos que se compruebe explícitamente la variable como HRESULT. De forma predeterminada, esta advertencia está desactivada.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4165
+En el ejemplo siguiente se genera C4165
 
 ```cpp
 // C4165.cpp

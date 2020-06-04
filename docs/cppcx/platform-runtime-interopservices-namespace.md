@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-ms.openlocfilehash: 42d2dd6978fda7a88459c015b86ad8c02fdfd06d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c527c642228d97d8b185e3b97ff38304b09d5769
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330198"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices (Espacio de nombres)
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 Aunque este espacio de nombres está previsto para uso interno, los exploradores pueden mostrar los siguientes miembros de este espacio de nombres.
 
-|nombre|Observación|
+|Name|Observación|
 |----------|------------|
 |ComInterfaceType|enumeración|
 |InterfaceTypeAttribute||
@@ -47,7 +47,7 @@ Aunque este espacio de nombres está previsto para uso interno, los exploradores
 
 **Metadatos:** platform.winmd
 
-**Namespace:** Platform::InteropServices
+**Espacio de nombres**: Platform::InteropServices
 
 ## <a name="see-also"></a>Vea también
 

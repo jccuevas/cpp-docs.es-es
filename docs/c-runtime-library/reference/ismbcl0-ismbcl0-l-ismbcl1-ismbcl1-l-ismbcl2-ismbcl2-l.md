@@ -1,14 +1,20 @@
 ---
 title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _ismbcl2
 - _ismbcl1
 - _ismbcl0
 - _ismbcl2_l
 - _ismbcl1_l
 - _ismbcl0_l
-apilocation:
+- _o__ismbcl0
+- _o__ismbcl0_l
+- _o__ismbcl1
+- _o__ismbcl1_l
+- _o__ismbcl2
+- _o__ismbcl2_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +26,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbcl0
 - _ismbcl1_l
@@ -48,14 +58,14 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430893"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919739"
 ---
-# <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
+# <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
 **Funciones concretas de la página de códigos 932**, usando la configuración regional actual o la categoría de estado de conversión LC_CTYPE especificada.
 
@@ -90,7 +100,7 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter que se va a probar.
 
 *locale*<br/>
@@ -98,9 +108,9 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c* < = 255 y hay correspondiente **_ismbb** rutina (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de la correspondiente **_ismbb** rutina.
+Cada una de estas rutinas devuelve un valor distinto de cero si el carácter cumple la condición de prueba o 0 si no la cumple. Si *c* <= 255 y hay una rutina de **_ismbb** correspondiente (por ejemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), el resultado es el valor devuelto de la rutina de **_ismbb** correspondiente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cada una de estas funciones prueba si un carácter multibyte dado cumple una condición determinada.
 
@@ -108,16 +118,18 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 
 |Rutina|Condición de prueba (solo página de códigos 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS no Kanji: 0 x 8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS no Kanji: 0 x 8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS de nivel 1: 0x889F < =*c*< = 0 x 9872.|
-|**_ismbcl1_l**|JIS de nivel 1: 0x889F < =*c*< = 0 x 9872.|
-|**_ismbcl2**|JIS de nivel 2: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|JIS de nivel 2: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|JIS no kanji: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl0_l**|JIS no kanji: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl1**|JIS Level-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl1_l**|JIS Level-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl2**|JIS LEVEL-2:0x989F<=*c*<= 0xEAA4.|
+|**_ismbcl2_l**|JIS LEVEL-2:0x989F<=*c*<= 0xEAA4.|
 
-Las funciones comprueban que el valor especificado *c* coincide con las condiciones de prueba se ha descrito anteriormente, pero no comprueben que *c* es un carácter multibyte válido. Si el byte inferior está en los intervalos 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, estas funciones devuelven un valor distinto de cero, lo que indica que el carácter cumple la condición de prueba. Use [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) para comprobar si el carácter multibyte está definido.
+Las funciones comprueban que el valor especificado *c* coincide con las condiciones de prueba descritas anteriormente, pero no comprueban que *c* es un carácter multibyte válido. Si el byte inferior está en los intervalos 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, estas funciones devuelven un valor distinto de cero, lo que indica que el carácter cumple la condición de prueba. Use [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) para comprobar si el carácter multibyte está definido.
 
-**Información específica de la página de códigos de fin 932**
+**Final de la página de códigos 932 específica**
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -130,10 +142,10 @@ Las funciones comprueban que el valor especificado *c* coincide con las condicio
 |**_ismbcl2**|\<mbstring.h>|
 |**_ismbcl2_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc (rutinas)](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbc (Rutinas)](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>

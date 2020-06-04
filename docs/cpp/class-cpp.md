@@ -7,16 +7,16 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 5abd2ef73ff8af9ebc2f1827cb5403025d5383ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c1b9d8f6510dfe15644f0e47cad7e0aecbac36c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331001"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180981"
 ---
 # <a name="class-c"></a>class (C++)
 
-El **clase** palabra clave declara un tipo de clase o define un objeto de un tipo de clase.
+La palabra clave **Class** declara un tipo de clase o define un objeto de un tipo de clase.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,28 +31,28 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>Parámetros
 
-*especificación de plantilla*<br/>
+*Plantilla: Especificación*<br/>
 Especificaciones de plantilla opcionales. Para obtener más información, consulte [plantillas](templates-cpp.md).
 
 *class*<br/>
-El **clase** palabra clave.
+Palabra clave **Class** .
 
-*MS-decl-spec*<br/>
-Especificación opcional de clase de almacenamiento. Para obtener más información, consulte el [__declspec](../cpp/declspec.md) palabra clave.
+*MS-decl-Spec*<br/>
+Especificación opcional de clase de almacenamiento. Para obtener más información, consulte la palabra clave [__declspec](../cpp/declspec.md) .
 
-*Etiqueta*<br/>
-Nombre del tipo asignado a la clase. La etiqueta se convierte en una palabra reservada dentro del ámbito de la clase. La etiqueta es opcional. Si se omite, se define una clase anónima. Para obtener más información, consulte [tipos de clase anónima](../cpp/anonymous-class-types.md).
+*etiqueta*<br/>
+Nombre del tipo asignado a la clase. La etiqueta se convierte en una palabra reservada dentro del ámbito de la clase. La etiqueta es opcional. Si se omite, se define una clase anónima. Para obtener más información, vea [tipos de clase anónimos](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
-Lista opcional de clases o de estructuras de las que esta clase derivará sus miembros. Consulte [clases Base](../cpp/base-classes.md) para obtener más información. Cada nombre de clase o estructura base puede ir precedido por un especificador de acceso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) y el [virtual](../cpp/virtual-cpp.md) palabra clave. Vea la tabla de acceso a miembros de [controlar el acceso a los miembros de clase](member-access-control-cpp.md) para obtener más información.
+Lista opcional de clases o de estructuras de las que esta clase derivará sus miembros. Para obtener más información, vea [clases base](../cpp/base-classes.md) . Cada nombre de clase base o estructura puede ir precedido de un especificador de acceso ([Public](../cpp/public-cpp.md), [Private](../cpp/private-cpp.md), [Protected](../cpp/protected-cpp.md)) y la palabra clave [virtual](../cpp/virtual-cpp.md) . Vea la tabla de acceso a miembros en [controlar el acceso a miembros de clase](member-access-control-cpp.md) para obtener más información.
 
 *lista de miembros*<br/>
 Lista de miembros de clase. Consulte [información general sobre miembros de clase](../cpp/class-member-overview.md) para obtener más información.
 
-*declaradores*<br/>
-Lista de declaradores que especifica los nombres de una o más instancias del tipo de clase. Los declaradores pueden incluir listas de inicializadores si todos los miembros de datos de la clase son **pública**. Esto es más común en estructuras, cuyos miembros de datos son **pública** de forma predeterminada, que en las clases. Consulte [información general de los declaradores](../cpp/overview-of-declarators.md) para obtener más información.
+*declarators*<br/>
+Lista de declaradores que especifica los nombres de una o más instancias del tipo de clase. Los declaradores pueden incluir listas de inicializadores si todos los miembros de datos de la clase son **públicos**. Esto es más común en estructuras, cuyos miembros de datos son **públicos** de forma predeterminada, que en las clases. Vea [información general sobre declaradores](../cpp/overview-of-declarators.md) para obtener más información.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Para obtener más información sobre las clases en general, vea uno de los temas siguientes:
 
@@ -66,7 +66,7 @@ Para obtener más información sobre las clases en general, vea uno de los temas
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Para obtener información sobre las clases administradas y los structs, vea [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+Para obtener información sobre las clases y los Structs administrados en C++/CLI y C++/CX, vea [clases y Structs](../extensions/classes-and-structs-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -141,7 +141,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
 [Clases y structs](../cpp/classes-and-structs-cpp.md)

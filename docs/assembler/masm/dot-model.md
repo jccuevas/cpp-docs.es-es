@@ -1,58 +1,58 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: e72101d2d9cdea90b3304ccdb82e7b81fe2975d3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328556"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317635"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>. MODELO (MASM de 32 bits)
 
-Inicializa el modelo de memoria de programa.
+Inicializa el modelo de memoria de programas. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
-> . MODELO memorymodel [[, langtype]] [[, stackoption]]
+> **.**  *Memoria del modelo: modelo* ⟦ __,__ *tipo de idioma*⟧ ⟦ __,__ *Stack-Option*⟧
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
-*memorymodel*<br/>
-Parámetro necesario que determina el tamaño de los punteros de código y los datos.
+\ *de modelo de memoria*
+Parámetro necesario que determina el tamaño de los punteros de código y de datos.
 
-*langtype*<br/>
+\ *de tipo de idioma*
 Parámetro opcional que establece las convenciones de llamada y nomenclatura para los procedimientos y los símbolos públicos.
 
-*stackoption*<br/>
+\ *de la opción Stack*
 Parámetro opcional.
 
-*stackoption* no se utiliza si *memorymodel* es `FLAT`.
+*Stack-Option* no se utiliza si *el modelo de memoria* es **plano**.
 
-Especificar `NEARSTACK` agrupa el segmento de pila en un único segmento físico (`DGROUP`) junto con los datos. El registro de segmento de pila (`SS`) se supone que mantenga la misma dirección que el registro de segmento de datos (`DS`). `FARSTACK` no se agrupa la pila con `DGROUP`; por lo tanto `SS` no es igual a `DS`.
+Al especificar **NEARSTACK** , el segmento de pila se agrupa en un solo segmento físico (**DGROUP**) junto con los datos. Se supone que el registro del segmento de pila (**SS**) contiene la misma dirección que el registro de segmento de datos (**DS**). **FARSTACK** no agrupa la pila con **DGROUP**. por lo tanto, **SS** no es igual a **DS**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-.`MODEL` no se usa en [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. El modelo** no se utiliza en [MASM para x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
-En la tabla siguiente se enumera los valores posibles para cada parámetro cuando tenga como destino plataformas de 16 bits y 32 bits:
+En la tabla siguiente se enumeran los valores posibles para cada parámetro cuando tenga como destino plataformas de 16 y 32 bits:
 
-|Parámetro|valores de 32 bits|valores de 16 bits (compatibilidad para el desarrollo de 16 bits anterior)|
+|Parámetro|Valores de 32 bits|Valores de 16 bits (compatibilidad con el desarrollo de 16 bits anterior)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*stackoption*|No se utiliza|`NEARSTACK`, `FARSTACK`|
+|*modelo de memoria*|**PISO**|**diminuto**, **pequeño**, **compacto**, **mediano**, **grande**, **enorme**, **plano**|
+|*tipo de idioma*|**C**, **Stdcall**|**C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **Stdcall**|
+|*opción de pila*|No se utiliza|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Código
 
-Para obtener ejemplos relacionados con MASM, descargar los ejemplos del compilador desde [ejemplos de Visual C++ y la documentación relacionada para Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749).
+Para obtener ejemplos relacionados con MASM, descargue los ejemplos del compilador de [Ejemplos de Visual C++ y documentación relacionada de Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-En el ejemplo siguiente se muestra el uso de la `.MODEL` directiva.
+En el siguiente ejemplo se muestra el uso de la directiva `.MODEL`.
 
 ## <a name="example"></a>Ejemplo
 
@@ -88,5 +88,5 @@ end
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
-
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

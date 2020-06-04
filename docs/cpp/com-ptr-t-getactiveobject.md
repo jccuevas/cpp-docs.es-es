@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetActiveObject method [C++]
 ms.assetid: 2fa94853-0410-4620-91f2-136dae923f9f
-ms.openlocfilehash: 84e43de9c40baa3c596c68ed7739471c059cbac7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea8059a039b77811dd54d4a4937ad746b7ca0937
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484505"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170806"
 ---
-# <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
+# <a name="_com_ptr_tgetactiveobject"></a>_com_ptr_t::GetActiveObject
 
 **Específicos de Microsoft**
 
-Se asocia a una instancia existente de un objeto dada una `CLSID` o `ProgID`.
+Se adjunta a una instancia existente de un objeto, dado un `CLSID` o `ProgID`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -36,26 +36,26 @@ HRESULT GetActiveObject(
 #### <a name="parameters"></a>Parámetros
 
 *rclsid*<br/>
-El `CLSID` de un objeto.
+`CLSID` de un objeto.
 
 *clsidString*<br/>
-Una cadena Unicode que contiene un `CLSID` (empezando por "**{**") o un `ProgID`.
+Cadena Unicode que contiene un `CLSID` (a partir de " **{** ") o un `ProgID`.
 
 *clsidStringA*<br/>
-Una cadena multibyte, en la página de códigos ANSI, que contiene un `CLSID` (empezando por "**{**") o un `ProgID`.
+Una cadena multibyte, mediante la página de códigos ANSI, que contiene un `CLSID` (a partir de " **{** ") o un `ProgID`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estas funciones miembro llaman a **GetActiveObject** para recuperar un puntero a un objeto en ejecución que se ha registrado con OLE y, a continuación, el tipo de la interfaz de consultas para este puntero inteligente. El puntero resultante se encapsula dentro de este objeto `_com_ptr_t`. `Release` se llama para disminuir el recuento de referencias para el puntero previamente encapsulado. Esta rutina devuelve el valor HRESULT para indicar éxito o error.
+Estas funciones miembro llaman a **GetActiveObject** para recuperar un puntero a un objeto en ejecución que se ha registrado con OLE y, a continuación, consulta para el tipo de interfaz de este puntero inteligente. El puntero resultante se encapsula dentro de este objeto `_com_ptr_t`. se llama a `Release` para reducir el recuento de referencias del puntero encapsulado previamente. Esta rutina devuelve HRESULT para indicar si se ha realizado correctamente o no.
 
-- **GetActiveObject (**`rclsid`**)** adjunta a una instancia existente de un objeto, dado un `CLSID`.
+- **GetActiveObject (** `rclsid` **)** Se adjunta a una instancia existente de un objeto a partir de un `CLSID`.
 
-- **GetActiveObject (**`clsidString`**)** adjunta a una instancia existente de un objeto dada una cadena Unicode que contiene un `CLSID` (empezando por "**{**") o un `ProgID`.
+- **GetActiveObject (** `clsidString` **)** Se adjunta a una instancia existente de un objeto dada una cadena Unicode que contiene un `CLSID` (a partir de " **{** ") o un `ProgID`.
 
-- **GetActiveObject (**`clsidStringA`**)** adjunta a una instancia existente de un objeto dada una cadena de caracteres multibyte que contiene un `CLSID` (empezando por "**{**") o un `ProgID`. Las llamadas [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), que se da por supuesto que es la cadena en la página de códigos ANSI en lugar de una página de códigos OEM.
+- **GetActiveObject (** `clsidStringA` **)** Se adjunta a una instancia existente de un objeto, dada una cadena de caracteres multibyte que contiene un `CLSID` (a partir de " **{** ") o un `ProgID`. Llama a [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), que supone que la cadena está en la página de códigos ANSI en lugar de en una página de códigos OEM.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

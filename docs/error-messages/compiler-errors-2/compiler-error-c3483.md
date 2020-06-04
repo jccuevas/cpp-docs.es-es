@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3483
 ms.assetid: 18b3a2c5-dfc9-4661-9653-08a5798474cf
-ms.openlocfilehash: c958eee234d25b008eb8cb03f40b45b8aaba81a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d6c1467575e7fae7d5e4862f36e733a68210f8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573464"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743099"
 ---
 # <a name="compiler-error-c3483"></a>Error del compilador C3483
 
@@ -27,7 +27,7 @@ Pasó la misma variable a la lista de capturas de una expresión lambda más de 
 
 El ejemplo siguiente genera el error C3483 porque la variable `n` aparece más de una vez en la lista de capturas de la expresión lambda:
 
-```
+```cpp
 // C3483.cpp
 
 int main()

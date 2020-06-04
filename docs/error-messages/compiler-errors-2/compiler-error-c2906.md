@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2906
 ms.assetid: 30f652f1-6af6-4a2f-a69e-a1a4876cc8c6
-ms.openlocfilehash: 621b31cf362c1dcc740390cf9e405b7da3f05da8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21c4f14948d56fe781226e5aaf1b479059cb55
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587777"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748702"
 ---
 # <a name="compiler-error-c2906"></a>Error del compilador C2906
 
-'specialization': una especialización explícita requiere 'plantilla <>'
+' especialización ': la especialización explícita requiere ' template < > '
 
-Debe usar la nueva sintaxis para la especialización explícita de plantillas.
+Debe usar la nueva sintaxis para especializaciones explícitas de plantillas.
 
-El ejemplo siguiente genera C2906:
+En el ejemplo siguiente se genera C2906:
 
-```
+```cpp
 // C2906.cpp
 // compile with: /c
 template<class T> class X{};   // primary template

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - enumerator interfaces
 - collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
-ms.openlocfilehash: 8c7f782f52391b162a8b32a97961269178999ee0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f40c86d3bc8d9b4e4c752fe6657f6a5a14f19e0c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234837"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principios de diseño para la recopilación y las Interfaces de enumerador
 
@@ -25,4 +25,3 @@ Cada tipo de interfaz desempeña un rol diferente al proporcionar acceso a los e
 ## <a name="see-also"></a>Vea también
 
 [Las colecciones y enumeradores](../atl/atl-collections-and-enumerators.md)
-

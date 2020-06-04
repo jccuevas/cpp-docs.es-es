@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1014
 ms.assetid: 4c01ef70-e765-4d07-a3fe-a11c19fb610b
-ms.openlocfilehash: dc0781b7d948d511e8cf4ead6033c6cd399d18c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7a55cee67cbf7b8a7be4e9dd50b12425f6621c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451459"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204729"
 ---
 # <a name="fatal-error-c1014"></a>Error irrecuperable C1014
 

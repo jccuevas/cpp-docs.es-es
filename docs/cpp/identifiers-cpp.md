@@ -1,6 +1,6 @@
 ---
 title: Identificadores (C++)
-ms.date: 09/12/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c905d6acc52f2f4f2a7bf3e92426f76adf25390e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653666"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450317"
 ---
 # <a name="identifiers-c"></a>Identificadores (C++)
 
@@ -70,7 +70,7 @@ Solo los 2048 primeros caracteres de los identificadores de Microsoft C++ son si
 
 - El número de argumentos para una función.
 
-El signo de dólar `$` también es un identificador válido en Visual C++. Visual C++ también permite usar los caracteres reales representados por los rangos válidos de nombres de carácter universal en los identificadores. Para usar dichos caracteres, se debe guardar el archivo mediante una página de códigos para codificación de archivos que los incluya.  En este ejemplo muestra cómo dos caracteres extendidos y nombres de carácter universal se pueden usar indistintamente en el código.
+El signo de dólar `$` es un carácter de identificador válido en Microsoft C++ compilador (MSVC). MSVC también permite utilizar los caracteres reales representados por los rangos válidos de nombres de carácter universal en los identificadores. Para usar dichos caracteres, se debe guardar el archivo mediante una página de códigos para codificación de archivos que los incluya.  En este ejemplo muestra cómo dos caracteres extendidos y nombres de carácter universal se pueden usar indistintamente en el código.
 
 ```cpp
 // extended_identifier.cpp
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-El rango de caracteres permitidos en un identificador es menos restrictivo cuando se compila código C++/CLI. Los identificadores del código compilado con /clr deben regirse por el  [Estándar ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+El rango de caracteres permitidos en un identificador es menos restrictivo cuando se compila código C++/CLI. Los identificadores en el código compilado con/CLR deben seguir [estándar ECMA-335: Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 **FIN de Específicos de Microsoft**
 
@@ -95,7 +95,7 @@ El primer carácter de un identificador debe ser un carácter alfabético, en ma
 
 Los identificadores no pueden escribirse igual ni presentar el mismo uso de mayúsculas y minúsculas que las palabras clave. Los identificadores que contienen palabras clave son válidos. Por ejemplo, `Pint` es un identificador válido, aunque contenga **int**, que es una palabra clave.
 
-Uso de dos caracteres de subrayado secuenciales ( **__** ) en un identificador o un único carácter de subrayado inicial seguido por una letra mayúscula, está reservado para implementaciones de C++ en todos los ámbitos. Evite el uso de un carácter de subrayado inicial seguido de una letra minúscula en los nombres con ámbito de archivo a fin de evitar posibles conflictos con los identificadores reservados actuales o futuros.
+Uso de dos caracteres de subrayado secuenciales ( **__** ) en un identificador o un único carácter de subrayado inicial seguido por una letra mayúscula, se reserva para C++ implementaciones en todos los ámbitos. Evite el uso de un carácter de subrayado inicial seguido de una letra minúscula en los nombres con ámbito de archivo a fin de evitar posibles conflictos con los identificadores reservados actuales o futuros.
 
 ## <a name="see-also"></a>Vea también
 

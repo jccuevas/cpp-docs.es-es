@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501366"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756011"
 ---
 # <a name="compiler-error-c2664"></a>Error del compilador C2664
 
 'function': no se puede convertir el argumento n de 'type1' a 'type2'
 
-Este problema de conversión de parámetros puede suceder si se crea una instancia de una clase y se trata de realizar una conversión implícita en un constructor marcado con la palabra clave `explicit`. Para obtener más información sobre las conversiones explícitas, consulte [conversiones de tipos definidos por el usuario](../../cpp/user-defined-type-conversions-cpp.md).
+Este problema de conversión de parámetros puede suceder si se crea una instancia de una clase y se trata de realizar una conversión implícita en un constructor marcado con la palabra clave `explicit`. Para obtener más información sobre las conversiones explícitas, vea [conversiones de tipos definidos por el usuario](../../cpp/user-defined-type-conversions-cpp.md).
 
 Si se pasa un objeto temporal a una función que toma una referencia a un objeto como parámetro, dicha referencia debe ser una referencia `const`.
 
@@ -31,13 +31,13 @@ Para corregir el error C2664:
 
 El error C2664 también se puede generar si una clase oculta un miembro en una de sus clases base.
 
-Para obtener más información, consulte [Cómo: convertir System:: String en wchar_t * o char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Para obtener más información, vea [Cómo: convertir System:: String en wchar_t * o char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Ejemplo
 
 En el ejemplo siguiente se genera el error C2664 y se muestra cómo corregirlo.
 
-```
+```cpp
 // C2664.cpp
 // C2664
 struct A {
@@ -61,7 +61,7 @@ int main() {
 
 En este ejemplo también se genera el error C2664 y se muestra cómo corregirlo.
 
-```
+```cpp
 // C2664b.cpp
 // C2664 expected
 struct A {
@@ -80,7 +80,7 @@ int main() {
 
 En el ejemplo siguiente se muestra el error C2664 que se genera al usar un literal de cadena para llamar a `Test` y se muestra cómo corregirlo. Dado que el parámetro es una referencia `szString`, el constructor correspondiente debe crear un objeto. El resultado es un objeto temporal que no se puede usar para inicializar la referencia.
 
-```
+```cpp
 // C2664c.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -121,7 +121,7 @@ int main() {
 
 El compilador impone los requisitos estándar de C++ para que se aplique `const`. Este ejemplo genera el error C2664:
 
-```
+```cpp
 // C2664d.cpp
 // C2664 expected
 #include <windows.h>
@@ -146,7 +146,7 @@ int main()
 
 A continuación se muestra una situación más compleja en la que se genera el error C2664, con instrucciones sobre cómo solucionarlo:
 
-```
+```cpp
 // C2664e.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -189,9 +189,9 @@ int main( ) {
 
 ## <a name="example"></a>Ejemplo
 
-Una variable de enumeración no se convierte en un tipo subyacente capaz de satisfacer la llamada a la función. Para obtener más información, consulte [clase enum](../../windows/enum-class-cpp-component-extensions.md). En el ejemplo siguiente se genera el error C2664 y se muestra cómo corregirlo.
+Una variable de enumeración no se convierte en un tipo subyacente capaz de satisfacer la llamada a la función. Para obtener más información, vea [enum (clase](../../extensions/enum-class-cpp-component-extensions.md)). En el ejemplo siguiente se genera el error C2664 y se muestra cómo corregirlo.
 
-```
+```cpp
 // C2664f.cpp
 // compile with: /clr
 using namespace System;
@@ -232,13 +232,13 @@ library myproj1 {
 }
 ```
 
-El error C2664 también se genera si se utiliza `wchar_t` al trasladar código de Visual C++ 6.0 a versiones posteriores. En Visual C++ 6.0 y versiones anteriores, `wchar_t` era `typedef` para `unsigned short` y, por consiguiente, podía convertirse implícitamente en ese tipo. En versiones posteriores a Visual C++ 6.0, `wchar_t` es su propio tipo integrado, tal y como se especifica en el estándar de C++, y ya se puede convertir implícitamente en `unsigned short`. Consulte [/Zc: wchar_t (wchar_t es tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+El error C2664 también se genera si se utiliza `wchar_t` al trasladar código de Visual C++ 6.0 a versiones posteriores. En Visual C++ 6.0 y versiones anteriores, `wchar_t` era `typedef` para `unsigned short` y, por consiguiente, podía convertirse implícitamente en ese tipo. En versiones posteriores a Visual C++ 6.0, `wchar_t` es su propio tipo integrado, tal y como se especifica en el estándar de C++, y ya se puede convertir implícitamente en `unsigned short`. Vea [/Zc: wchar_t (Wchar_t es un tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="example"></a>Ejemplo
 
 En el ejemplo siguiente se genera el error C2664 y se muestra cómo corregirlo.
 
-```
+```cpp
 // C2664h.cpp
 #import "C2664g.tlb"
 using namespace myproj1;
@@ -260,7 +260,7 @@ int main() {
 
 El error C2664 también se produce si el compilador no puede deducir los argumentos de plantilla.
 
-```
+```cpp
 // C2664i.cpp
 #include <stdio.h>
 template <class T, int iType=0>

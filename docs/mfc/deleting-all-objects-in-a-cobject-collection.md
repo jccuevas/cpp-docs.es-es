@@ -10,23 +10,23 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 3e56c08f6165f6662c30e3ecbd6eda45c6696788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 303b8a566a730c5abd06d51fb7977174e19a6435
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542589"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370537"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Eliminar todos los objetos de una colección CObject
 
 En este artículo se explica cómo eliminar todos los objetos de una colección (sin eliminar el propio objeto de colección).
 
-Para eliminar todos los objetos de una colección de `CObject`s (o de objetos derivados de `CObject`), usa una de las técnicas de iteración que se describe en el artículo [acceso a todos los miembros de una colección](../mfc/accessing-all-members-of-a-collection.md) para eliminar todos los objetos de Activar.
+Para eliminar todos los objetos de una colección de `CObject`s (o de objetos derivados de `CObject`), utilice una de las técnicas de iteración descritas en el artículo Acceso a todos los [miembros de una colección](../mfc/accessing-all-members-of-a-collection.md) para eliminar cada objeto a su vez.
 
 > [!CAUTION]
->  Objetos de las colecciones se pueden compartir. Es decir, la colección mantiene un puntero al objeto, pero otras partes del programa también pueden tener punteros al mismo objeto. Debe ser cuidado de no eliminar un objeto que se comparte hasta que hayan terminado todas las partes con el objeto.
+> Los objetos de las colecciones se pueden compartir. Es decir, la colección mantiene un puntero al objeto, pero otras partes del programa también pueden tener punteros al mismo objeto. Debe tener cuidado de no eliminar un objeto que se comparte hasta que todas las partes hayan terminado de utilizar el objeto.
 
-Este artículo muestra cómo eliminar los objetos en:
+En este artículo se muestra cómo eliminar los objetos en:
 
 - [Una lista](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)
 
@@ -34,51 +34,50 @@ Este artículo muestra cómo eliminar los objetos en:
 
 - [Un mapa](#_core_to_delete_all_elements_in_a_map)
 
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Para eliminar todos los objetos en una lista de punteros a CObject
+#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Para eliminar todos los objetos de una lista de punteros a CObject
 
-1. Use `GetHeadPosition` y `GetNext` para recorrer en iteración la lista.
+1. Usar `GetHeadPosition` `GetNext` y recorrer en iteración la lista.
 
-1. Use la **eliminar** operador para eliminar cada objeto que se encuentre en la iteración.
+1. Utilice el operador **delete** para eliminar cada objeto tal como se encuentra en la iteración.
 
-1. Llame a la `RemoveAll` function para quitar todos los elementos de la lista después de eliminar los objetos asociados con esos elementos.
+1. Llame `RemoveAll` a la función para quitar todos los elementos de la lista después de que se hayan eliminado los objetos asociados a esos elementos.
 
-El ejemplo siguiente muestra cómo eliminar todos los objetos de una lista de `CPerson` objetos. Cada objeto de la lista es un puntero a un `CPerson` objeto que se asignó originalmente en el montón.
+En el ejemplo siguiente se muestra cómo `CPerson` eliminar todos los objetos de una lista de objetos. Cada objeto de la lista `CPerson` es un puntero a un objeto que se asignó originalmente en el montón.
 
 [!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]
 
-La última llamada de función, `RemoveAll`, es una función miembro de lista que quita todos los elementos de la lista. La función miembro `RemoveAt` quita un solo elemento.
+La última llamada `RemoveAll`de función, , es una función miembro de lista que quita todos los elementos de la lista. La función `RemoveAt` miembro quita un solo elemento.
 
-Tenga en cuenta la diferencia entre eliminar un objeto de un elemento y quitar el propio elemento. Quitar un elemento de la lista simplemente quita la referencia de la lista para el objeto. El objeto sigue existiendo en la memoria. Cuando se elimina un objeto, deja de existir y reclamar su memoria. Por lo tanto, es importante quitar un elemento inmediatamente después de que se ha eliminado el objeto del elemento para que la lista no intentará tener acceso a objetos que ya no existen.
+Observe la diferencia entre eliminar el objeto de un elemento y quitar el propio elemento. La eliminación de un elemento de la lista simplemente elimina la referencia de la lista al objeto. El objeto todavía existe en la memoria. Cuando se elimina un objeto, deja de existir y se recupera su memoria. Por lo tanto, es importante quitar un elemento inmediatamente después de que se ha eliminado el objeto del elemento para que la lista no intente tener acceso a los objetos que ya no existen.
 
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Para eliminar todos los elementos de una matriz
+#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a>Para eliminar todos los elementos de una matriz
 
-1. Use `GetSize` y valores de índice entero para recorrer en iteración la matriz.
+1. Utilice `GetSize` valores de índice enteros y de uso para recorrer en iteración la matriz.
 
-1. Use la **eliminar** operador para eliminar cada elemento que se encuentre en la iteración.
+1. Utilice el operador **delete** para eliminar cada elemento tal como se encuentra en la iteración.
 
-1. Llame a la `RemoveAll` function para quitar todos los elementos de la matriz después de que se han eliminado.
+1. Llame `RemoveAll` a la función para quitar todos los elementos de la matriz después de que se han eliminado.
 
-   El código para eliminar todos los elementos de una matriz es como sigue:
+   El código para eliminar todos los elementos de una matriz es el siguiente:
 
    [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
-Como con el ejemplo de la lista anterior, se puede llamar `RemoveAll` para quitar todos los elementos en una matriz o `RemoveAt` para quitar un elemento individual.
+Al igual que con el `RemoveAll` ejemplo de lista anterior, `RemoveAt` puede llamar para quitar todos los elementos de una matriz o para quitar un elemento individual.
 
-#### <a name="_core_to_delete_all_elements_in_a_map"></a> Para eliminar todos los elementos de un mapa
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>Para eliminar todos los elementos de un mapa
 
-1. Use `GetStartPosition` y `GetNextAssoc` para recorrer en iteración la matriz.
+1. Utilice `GetStartPosition` `GetNextAssoc` y para recorrer en iteración la matriz.
 
-1. Use la **eliminar** operador para eliminar la clave o el valor para cada elemento de mapa que se encuentre en la iteración.
+1. Utilice el operador **delete** para eliminar la clave y/o el valor de cada elemento de mapa tal como se encuentra en la iteración.
 
-1. Llame a la `RemoveAll` function para quitar todos los elementos del mapa después de que se han eliminado.
+1. Llame `RemoveAll` a la función para eliminar todos los elementos del mapa después de que se hayan eliminado.
 
-   El código para eliminar todos los elementos de un `CMap` colección es como sigue. Cada elemento del mapa tiene una cadena como la clave y un `CPerson` objeto (derivado de `CObject`) como valor.
+   El código para eliminar todos `CMap` los elementos de una colección es el siguiente. Cada elemento del mapa tiene una cadena `CPerson` como clave `CObject`y un objeto (derivado de ) como valor.
 
    [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
-Puede llamar a `RemoveAll` para quitar todos los elementos de un mapa o `RemoveKey` para quitar un elemento individual con la clave especificada.
+Puede llamar `RemoveAll` para quitar todos los `RemoveKey` elementos de un mapa o para quitar un elemento individual con la clave especificada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Acceso a todos los miembros de una colección](../mfc/accessing-all-members-of-a-collection.md)
-

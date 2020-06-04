@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4285
 ms.assetid: fa14de1f-fc19-4eec-8bea-81003636e12f
-ms.openlocfilehash: 96e1077ce3c9e60823a11aa41719738265ee703b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c75d2d776537307fd34fa3a55807d303630dbeb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161977"
 ---
 # <a name="compiler-warning-level-2-c4285"></a>Advertencia del compilador (nivel 2) C4285
 
-tipo de valor devuelto para 'identificador:: operator ->' es recursivo si se aplica utilizando una notación infija
+el tipo de valor devuelto para ' Identifier:: Operator-> ' es recursivo si se aplica mediante una notación infija
 
-Especificado **operador -> ()** función no puede devolver el tipo para la que está definida o una referencia al tipo para el que está definido.
+La función **Operator-> ()** especificada no puede devolver el tipo para el que se define o una referencia al tipo para el que se define.
 
-El ejemplo siguiente genera C4285:
+En el ejemplo siguiente se genera C4285:
 
-```
+```cpp
 // C4285.cpp
 // compile with: /W2
 class C

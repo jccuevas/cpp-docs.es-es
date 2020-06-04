@@ -7,22 +7,22 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662051"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196071"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Error del evaluador de expresiones CXX0015
 
 expresión demasiado compleja (desbordamiento de pila)
 
-La expresión especificado era demasiado compleja o demasiado anidada para almacenamiento disponible para el evaluador de expresiones de C.
+La expresión especificada era demasiado compleja o estaba demasiado anidada para la cantidad de almacenamiento disponible para el evaluador de expresiones de C.
 
-Desbordamiento suele producirse debido a demasiados cálculos pendientes.
+El desbordamiento normalmente se produce debido a demasiados cálculos pendientes.
 
-Reorganice la expresión para que pueda evaluarse cada componente de la expresión que se encuentre, en lugar de tener que esperar a otras partes de la expresión que se va a calcular.
+Reorganice la expresión para que cada componente de la expresión se pueda evaluar a medida que se encuentre, en lugar de tener que esperar a que se calculen otras partes de la expresión.
 
 Divida la expresión en varios comandos.
 

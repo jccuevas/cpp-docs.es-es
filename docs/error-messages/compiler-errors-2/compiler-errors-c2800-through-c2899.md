@@ -1,6 +1,6 @@
 ---
-title: Errores de compilador C2800 a C2899
-ms.date: 11/17/2017
+title: Errores del compilador de C2800 a C2899
+ms.date: 04/21/2019
 f1_keywords:
 - C2816
 - C2820
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a0367d1d465d4460202f4d6d29468e59f6a74657
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856725"
 ---
-# <a name="compiler-errors-c2800-through-c2899"></a>Errores de compilador C2800 a C2899
+# <a name="compiler-errors-c2800-through-c2899"></a>Errores del compilador de C2800 a C2899
 
 Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de error generados por el compilador.
 
@@ -75,13 +75,13 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2813](compiler-error-c2813.md)|No se admite #import con /MP|
 |[Error del compilador C2814](compiler-error-c2814.md)|'*miembro*': un tipo nativo no puede anidarse dentro de un tipo administrado o WinRT '*clase*'|
 |[Error del compilador C2815](compiler-error-c2815.md)|'operator delete': el primer parámetro formal debe ser ' void \*', pero '*tipo*' se usó|
-|C2816 de Error del compilador|Obsoleto.|
+|Error del compilador C2816|Obsoleto.|
 |[Error del compilador C2817](compiler-error-c2817.md)|tipo de valor devuelto para 'operator delete' debe ser 'void'|
 |[Error del compilador C2818](compiler-error-c2818.md)|aplicación de sobrecargado 'operator ->' es recursiva mediante el tipo '*clase*'|
 |[Error del compilador C2819](compiler-error-c2819.md)|tipo de '*clase*' no tiene un miembro sobrecargado 'operator' ->|
-|C2820 de Error del compilador|Obsoleto.|
+|Error del compilador C2820|Obsoleto.|
 |[Error del compilador C2821](compiler-error-c2821.md)|primer parámetro formal para 'operator new' debe ser 'size_t'|
-|C2822 de Error del compilador|no se admite desenredo local en esta plataforma|
+|Error del compilador C2822|no se admite desenredo local en esta plataforma|
 |[Error del compilador C2823](compiler-error-c2823.md)|un definición de tipo plantilla/genérico no es válido|
 |[Error del compilador C2824](compiler-error-c2824.md)|tipo de valor devuelto para 'operator new' debe ser ' void \*'|
 |[Error del compilador C2825](compiler-error-c2825.md)|'*identificador*': debe ser una clase o espacio de nombres cuando seguido de '::'|
@@ -91,28 +91,28 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2829](compiler-error-c2829.md)|' operador *operador*' no puede tener una lista de parámetros variable|
 |[Error del compilador C2830](compiler-error-c2830.md)|solo los parámetros de ubicación para 'operator new' pueden tener valores predeterminados|
 |[Error del compilador C2831](compiler-error-c2831.md)|' operador *operador*' no puede tener parámetros predeterminados|
-|C2832 de Error del compilador|'*identificador*': un tipo de referencia no puede ser el valor inicializado|
+|Error del compilador C2832|'*identificador*': un tipo de referencia no puede ser el valor inicializado|
 |[Error del compilador C2833](compiler-error-c2833.md)|' operador *token*' no es un operador o tipo reconocido|
 |[Error del compilador C2834](compiler-error-c2834.md)|' operador *operador*' debe calificar globalmente|
 |[Error del compilador C2835](compiler-error-c2835.md)|conversión definida por el usuario '*tipo*' no adopta parámetros formales|
-|C2836 de Error del compilador|'*identificador*': miembro de datos no estáticos solo de una unión puede tener un inicializador de miembro predeterminado|
-|C2837 de Error del compilador|'*función*': no se puede usar directivas de OpenMP y #pragma Loop (hint_parallel) en la misma función|
+|Error del compilador C2836|'*identificador*': miembro de datos no estáticos solo de una unión puede tener un inicializador de miembro predeterminado|
+|Error del compilador C2837|'*función*': no se puede usar directivas de OpenMP y #pragma Loop (hint_parallel) en la misma función|
 |[Error del compilador C2838](compiler-error-c2838.md)|'*identificador*': nombre completo no válido en la declaración de miembro|
 |[Error del compilador C2839](compiler-error-c2839.md)|tipo de valor devuelto no válido '*tipo*' para sobrecargado 'operator ->'|
-|C2840 de Error del compilador|argumento de palabra de instrucción máquina no constante|
-|C2841 de Error del compilador|registrar el argumento no constante|
+|Error del compilador C2840|argumento de palabra de instrucción máquina no constante|
+|Error del compilador C2841|registrar el argumento no constante|
 |[Error del compilador C2842](compiler-error-c2842.md)|'*clase*': un tipo administrado o WinRT no puede definir su propio 'operator new' u 'operator delete'|
 |[Error del compilador C2843](compiler-error-c2843.md)|'*miembro*': no se puede adquirir la dirección de un miembro de datos no estáticos o método de un tipo administrado o WinRT|
 |[Error del compilador C2844](compiler-error-c2844.md)|'*identificador*': no puede ser un miembro de interfaz '*interfaz*'|
 |[Error del compilador C2845](compiler-error-c2845.md)|'*tipo*': no se permite en este tipo de aritmética de puntero|
 |[Error del compilador C2846](compiler-error-c2846.md)|'*interfaz*': una interfaz no puede tener un constructor|
 |[Error del compilador C2847](compiler-error-c2847.md)|no se puede aplicar sizeof al tipo administrado o WinRT '*clase*'|
-|C2848 de Error del compilador|'*clase*': un tipo administrado o WinRT no puede ser un miembro de una unión|
+|Error del compilador C2848|'*clase*': un tipo administrado o WinRT no puede ser un miembro de una unión|
 |[Error del compilador C2849](compiler-error-c2849.md)|'*interfaz*': una interfaz no puede tener un destructor|
 |[Error del compilador C2850](compiler-error-c2850.md)|'*construir*': solo se permite en el ámbito de archivo; no puede estar en una construcción anidada|
-|C2851 de Error del compilador|'*enum*': una enumeración WinRT pública solo puede usar 'int' o 'unsigned int' como tipo base|
-|C2852 de Error del compilador|'*identificador*': solo los miembros de datos se pueden inicializar dentro de una clase|
-|C2853 de Error del compilador|'*identificador*': un miembro de datos no estático no puede tener un tipo que contiene 'auto'|
+|Error del compilador C2851|'*enum*': Una enumeración de WinRT pública solo puede usar 'int' o 'unsigned int' como tipo base|
+|Error del compilador C2852|'*identificador*': solo los miembros de datos se pueden inicializar dentro de una clase|
+|Error del compilador C2853|'*identificador*': un miembro de datos no estático no puede tener un tipo que contiene 'auto'|
 |[Error del compilador C2854](compiler-error-c2854.md)|error de sintaxis en #pragma hdrstop|
 |[Error del compilador C2855](compiler-error-c2855.md)|opción de línea de comandos '*opción*' incoherente con el encabezado precompilado|
 |[Error del compilador C2856](compiler-error-c2856.md)|#pragma hdrstop no puede estar dentro de un bloque #if|
@@ -139,23 +139,28 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2877](compiler-error-c2877.md)|'*miembro*'no es accesible desde'*clase*'|
 |[Error del compilador C2878](compiler-error-c2878.md)|'*identificador*': no existe un espacio de nombres o clase de este nombre|
 |[Error del compilador C2879](compiler-error-c2879.md)|'*identificador*': sólo un espacio de nombres existente se puede proporcionar un nombre alternativo mediante una definición de alias de espacio de nombres|
-|C2880 de Error del compilador|__swi o __hvc requiere una constante válida como primer argumento (número SWI)|
+|Error del compilador C2880|__swi o __hvc requiere una constante válida como primer argumento (número SWI)|
 |[Error del compilador C2881](compiler-error-c2881.md)|'*identificador*': ya se utiliza como un alias para '*clase*'|
 |[Error del compilador C2882](compiler-error-c2882.md)|'*identificador*': uso no válido de identificador de espacio de nombres en la expresión|
 |[Error del compilador C2883](compiler-error-c2883.md)|'*función*': declaración de función entra en conflicto con '*identificador*' introducidos por la declaración using|
 |[Error del compilador C2884](compiler-error-c2884.md)|'*identificador*': introducido por la declaración using entra en conflicto con la función local '*función*'|
 |[Error del compilador C2885](compiler-error-c2885.md)|'*clase*::*identificador*': no es una declaración using válida en el ámbito de no clase|
 |[Error del compilador C2886](compiler-error-c2886.md)|'*clase*::*identificador*': símbolo no se puede usar en una declaración using de miembro|
-|C2887 de Error del compilador|__swi o __hvc no puede tener más de cinco argumentos (número SWI, r0 - r3)|
+|Error del compilador C2887|__swi o __hvc no puede tener más de cinco argumentos (número SWI, r0 - r3)|
 |[Error del compilador C2888](compiler-error-c2888.md)|'*identificador*': símbolo no se pueden definir dentro del espacio de nombres '*espacio de nombres*'|
-|C2889 de Error del compilador|'*clase*': un tipo de clase administrada o WinRT no puede ser una clase base virtual|
+|Error del compilador C2889|'*clase*': un tipo de clase administrada o WinRT no puede ser una clase base virtual|
 |[Error del compilador C2890](compiler-error-c2890.md)|'*clase*': una clase ref solo puede tener una clase base sin interfaz|
 |[Error del compilador C2891](compiler-error-c2891.md)|'*parámetro*': no se puede adquirir la dirección de un parámetro de plantilla|
 |[Error del compilador C2892](compiler-error-c2892.md)|clase local no debe tener plantillas de miembro|
 |[Error del compilador C2893](compiler-error-c2893.md)|No se pudo especializar la plantilla de función '*plantilla*'|
 |[Error del compilador C2894](compiler-error-c2894.md)|las plantillas no se pueden declarar tenga vinculación 'C'|
-|C2895 de Error del compilador|'*declaración*': no se puede crear explícitamente instancias de una plantilla de función que se ha declarado con dllimport|
+|Error del compilador C2895|'*declaración*': no se puede crear explícitamente instancias de una plantilla de función que se ha declarado con dllimport|
 |[Error del compilador C2896](compiler-error-c2896.md)|'*función1*': no se puede usar la función de plantilla o genérico '*función2*' como argumento de función|
 |[Error del compilador C2897](compiler-error-c2897.md)|un destructor/finalizador no puede ser una plantilla de función|
 |[Error del compilador C2898](compiler-error-c2898.md)|'*declaración*': las plantillas de función miembro no pueden ser virtuales|
 |Error del compilador C2899|Obsoleto.|
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errores del compilador de C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

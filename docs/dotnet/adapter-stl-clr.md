@@ -7,7 +7,6 @@ f1_keywords:
 - cliext::collection_adapter
 - cliext::collection_adapter::base
 - cliext::collection_adapter::begin
-- cliext::collection_adapter
 - cliext::collection_adapter::collection_adapter
 - cliext::collection_adapter::difference_type
 - cliext::collection_adapter::end
@@ -49,16 +48,16 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdaf5e0e8e4d9620e7a55dfff84f271f0059faf3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436161"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545694"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
-El encabezado STL/CLR `<cliext/adapter>` especifica dos clases de plantilla (`collection_adapter` y `range_adapter`) y la función de plantilla `make_collection`.
+El encabezado de STL/CLR `<cliext/adapter>` especifica dos clases de plantilla (`collection_adapter` y `range_adapter`) y la función de plantilla `make_collection`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -68,26 +67,26 @@ El encabezado STL/CLR `<cliext/adapter>` especifica dos clases de plantilla (`co
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<cliext/adaptador >
+**Encabezado:** \<cliext (/adapter >
 
-**Namespace:** cliext
+**Espacio de nombres:** cliext (
 
 ## <a name="declarations"></a>Declaraciones
 
 |Clase|Descripción|
 |-----------|-----------------|
-|[collection_adapter (STL/CLR)](#collection_adapter)|Encapsula la colección de la biblioteca de clases Base (BCL) como un intervalo.|
-|[range_adapter (STL/CLR)](#range_adapter)|Ajusta el intervalo como una colección de BCL.|
+|[collection_adapter (STL/CLR)](#collection_adapter)|Ajusta la colección de la biblioteca de clases base (BCL) como un intervalo.|
+|[range_adapter (STL/CLR)](#range_adapter)|Ajusta el intervalo como una colección BCL.|
 
 |Función|Descripción|
 |--------------|-----------------|
-|[make_collection (STL/CLR)](#make_collection)|Crea un adaptador de intervalo con un par de iteradores.|
+|[make_collection (STL/CLR)](#make_collection)|Crea un adaptador de intervalo mediante un par de iteradores.|
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
+## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter (STL/CLR)
 
-Encapsula una colección de .NET para su uso como un contenedor de STL/CLR. Un `collection_adapter` es una clase de plantilla que describe un objeto de contenedor STL/CLR simple. Ajusta una interfaz de la biblioteca de clases Base (BCL) y devuelve un par de iteradores que se utiliza para manipular la secuencia controlada.
+Incluye una colección de .NET para su uso como un contenedor de STL/CLR. Una `collection_adapter` es una clase de plantilla que describe un objeto contenedor de STL/CLR simple. Encapsula una interfaz de la biblioteca de clases base (BCL) y devuelve un par de iteradores que se usa para manipular la secuencia controlada.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -124,30 +123,30 @@ template<typename Key,
 
 #### <a name="parameters"></a>Parámetros
 
-*Coll*<br/>
-El tipo de la colección ajustada.
+*Comparación*<br/>
+Tipo de la colección ajustada.
 
 ### <a name="specializations"></a>Especializaciones
 
 |Especialización|Descripción|
 |--------------------|-----------------|
-|IEnumerable|Secuencias a través de los elementos.|
+|IEnumerable|Secuencia a través de elementos.|
 |ICollection|Mantiene un grupo de elementos.|
-|IList|Mantiene un grupo de elementos ordenado.|
-|IDictionary|Mantener un conjunto de {clave, valor} pares.|
-|IEnumerable\<valor >|Secuencias a través de los elementos con tipo.|
-|ICollection\<valor >|Mantiene un grupo de elementos con tipo.|
+|IList|Mantiene un grupo ordenado de elementos.|
+|IDictionary|Mantenga un conjunto de {Key, Value} pares.|
+|IEnumerable\<valor >|Secuencias a través de elementos con tipo.|
+|Valor de\<ICollection >|Mantiene un grupo de elementos con tipo.|
 |IList\<valor >|Mantiene un grupo ordenado de elementos con tipo.|
-|IDictionary\<valor >|Mantiene un conjunto de tipo {clave, valor} pares.|
+|IDictionary\<valor >|Mantiene un conjunto de pares {Key, Value} con tipo.|
 
-### <a name="members"></a>Miembros
+### <a name="members"></a>Members
 
 |Definición de tipo|Descripción|
 |---------------------|-----------------|
 |[collection_adapter::difference_type (STL/CLR)](#difference_type)|El tipo de una distancia con signo entre dos elementos.|
 |[collection_adapter::iterator (STL/CLR)](#iterator)|El tipo de un iterador para la secuencia controlada.|
 |[collection_adapter::key_type (STL/CLR)](#key_type)|El tipo de una clave del diccionario.|
-|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|El tipo de un valor del diccionario.|
+|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|Tipo de un valor de diccionario.|
 |[collection_adapter::reference (STL/CLR)](#reference)|El tipo de una referencia a un elemento.|
 |[collection_adapter::size_type (STL/CLR)](#size_type)|El tipo de una distancia con signo entre dos elementos.|
 |[collection_adapter::value_type (STL/CLR)](#value_type)|El tipo de un elemento.|
@@ -161,15 +160,15 @@ El tipo de la colección ajustada.
 |[collection_adapter::size (STL/CLR)](#size)|Cuenta el número de elementos.|
 |[collection_adapter::swap (STL/CLR)](#swap)|Intercambia el contenido de dos contenedores.|
 
-|Operador|Descripción|
+|Operator|Descripción|
 |--------------|-----------------|
-|[collection_adapter::operator= (STL/CLR)](#op_eq)|Reemplaza el identificador de la BCL almacenado.|
+|[collection_adapter::operator= (STL/CLR)](#op_eq)|Reemplaza el identificador de BCL almacenado.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice esta clase de plantilla para manipular un contenedor BCL como un contenedor STL/CLR. El `collection_adapter` almacena un identificador a una interfaz BCL, que a su vez controla una secuencia de elementos. Un `collection_adapter` objeto `X` devuelve un par de iteradores de entrada `X.begin()` y `X.end()` que use para visitar los elementos en orden. Algunas de las especializaciones también permiten escribir `X.size()` para determinar la longitud de la secuencia controlada.
+Esta clase de plantilla se usa para manipular un contenedor BCL como un contenedor de STL/CLR. El `collection_adapter` almacena un identificador para una interfaz BCL, que a su vez controla una secuencia de elementos. Un objeto `collection_adapter` `X` devuelve un par de iteradores de entrada `X.begin()` y `X.end()` que se usan para visitar los elementos, en orden. Algunas de las especializaciones también permiten escribir `X.size()` para determinar la longitud de la secuencia controlada.
 
-## <a name="base"></a> collection_adapter::base (STL/CLR)
+## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter:: base (STL/CLR)
 
 Designa la interfaz BCL ajustada.
 
@@ -179,9 +178,9 @@ Designa la interfaz BCL ajustada.
 Coll^ base();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve el identificador de interfaz BCL almacenado.
+La función miembro devuelve el identificador de interfaz de BCL almacenado.
 
 ### <a name="example"></a>Ejemplo
 
@@ -213,7 +212,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="begin"></a> collection_adapter::begin (STL/CLR)
+## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a>collection_adapter:: Begin (STL/CLR)
 
 Designa el principio de la secuencia controlada.
 
@@ -223,9 +222,9 @@ Designa el principio de la secuencia controlada.
 iterator begin();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve un iterador de entrada que designa el primer elemento de la secuencia controlada o justo después del final de una secuencia vacía.
+La función miembro devuelve un iterador de entrada que designa el primer elemento de la secuencia controlada o más allá del final de una secuencia vacía.
 
 ### <a name="example"></a>Ejemplo
 
@@ -264,7 +263,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="collection_adapter_collection_adapter"></a> collection_adapter::collection_adapter (STL/CLR)
+## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a>collection_adapter:: collection_adapter (STL/CLR)
 
 Construye un objeto de adaptador.
 
@@ -280,36 +279,36 @@ collection_adapter(Coll^ collection);
 #### <a name="parameters"></a>Parámetros
 
 *collection*<br/>
-Identificador de la BCL wrap.
+Identificador de BCL que se va a ajustar.
 
 *right*<br/>
 Objeto que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor:
 
 `collection_adapter();`
 
-Inicializa el identificador almacenado con `nullptr`.
+Inicializa el controlador almacenado con `nullptr`.
 
 El constructor:
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-Inicializa el identificador almacenado con `right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
+Inicializa el controlador almacenado con `right.`[collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
 
 El constructor:
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-Inicializa el identificador almacenado con `right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
+Inicializa el controlador almacenado con `right->`[collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
 
 El constructor:
 
 `collection_adapter(Coll^ collection);`
 
-Inicializa el identificador almacenado con `collection`.
+Inicializa el controlador almacenado con `collection`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -358,9 +357,9 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="difference_type"></a> collection_adapter::difference_type (STL/CLR)
+## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a>collection_adapter::d ifference_type (STL/CLR)
 
-Los tipos de una distancia con signo entre dos elementos.
+Tipos de una distancia con signo entre dos elementos.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -368,9 +367,9 @@ Los tipos de una distancia con signo entre dos elementos.
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un recuento con signo del elemento.
+El tipo describe un recuento de elementos firmados.
 
 ### <a name="example"></a>Ejemplo
 
@@ -410,7 +409,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="end"></a> collection_adapter::end (STL/CLR)
+## <a name="collection_adapterend-stlclr"></a><a name="end"></a>collection_adapter:: end (STL/CLR)
 
 Designa el final de la secuencia controlada.
 
@@ -420,7 +419,7 @@ Designa el final de la secuencia controlada.
 iterator end();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve un iterador de entrada que apunta justo después del final de la secuencia controlada.
 
@@ -455,7 +454,7 @@ int main()
 a b c
 ```
 
-## <a name="iterator"></a> collection_adapter::Iterator (STL/CLR)
+## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a>collection_adapter:: iterator (STL/CLR)
 
 El tipo de un iterador para la secuencia controlada.
 
@@ -465,7 +464,7 @@ El tipo de un iterador para la secuencia controlada.
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto de tipo sin especificar `T1` que puede actuar como un iterador de entrada para la secuencia controlada.
 
@@ -500,7 +499,7 @@ int main()
 a b c
 ```
 
-## <a name="key_type"></a> collection_adapter::KEY_TYPE (STL/CLR)
+## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a>collection_adapter:: key_type (STL/CLR)
 
 El tipo de una clave del diccionario.
 
@@ -510,9 +509,9 @@ El tipo de una clave del diccionario.
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo del parámetro de plantilla `Key`, en una especialización para `IDictionary` o `IDictionary<Value>`; en caso contrario, no está definido.
+El tipo es un sinónimo del parámetro de plantilla `Key`, en una especialización de `IDictionary` o `IDictionary<Value>`; de lo contrario, no se define.
 
 ### <a name="example"></a>Ejemplo
 
@@ -550,9 +549,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> collection_adapter::mapped_type (STL/CLR)
+## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a>collection_adapter:: mapped_type (STL/CLR)
 
-El tipo de un valor del diccionario.
+Tipo de un valor de diccionario.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -560,9 +559,9 @@ El tipo de un valor del diccionario.
 typedef Value mapped_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo del parámetro de plantilla `Value`, en una especialización para `IDictionary` o `IDictionary<Value>`; en caso contrario, no está definido.
+El tipo es un sinónimo del parámetro de plantilla `Value`, en una especialización de `IDictionary` o `IDictionary<Value>`; de lo contrario, no se define.
 
 ### <a name="example"></a>Ejemplo
 
@@ -600,9 +599,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::operator = (STL/CLR)
+## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a>collection_adapter:: Operator = (STL/CLR)
 
-Reemplaza el identificador de la BCL almacenado.
+Reemplaza el identificador de BCL almacenado.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -613,11 +612,11 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 #### <a name="parameters"></a>Parámetros
 
 *right*<br/>
-Adaptador para copiar.
+Adaptador que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las copias de operador miembro *derecho* al objeto, a continuación, devuelve `*this`. Se usa para reemplazar el identificador de la BCL almacenado con una copia del identificador BCL almacenado *derecho*.
+El operador miembro copia *directamente* en el objeto y, a continuación, devuelve `*this`. Se usa para reemplazar el identificador de BCL almacenado por una copia del identificador de BCL almacenado a la *derecha*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -657,7 +656,7 @@ a b c
 a b c
 ```
 
-## <a name="reference"></a> collection_adapter::Reference (STL/CLR)
+## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a>collection_adapter:: Reference (STL/CLR)
 
 El tipo de una referencia a un elemento.
 
@@ -667,7 +666,7 @@ El tipo de una referencia a un elemento.
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe una referencia a un elemento.
 
@@ -705,7 +704,7 @@ int main()
 a b c
 ```
 
-## <a name="size"></a> collection_adapter::Size (STL/CLR)
+## <a name="collection_adaptersize-stlclr"></a><a name="size"></a>collection_adapter:: Size (STL/CLR)
 
 Cuenta el número de elementos.
 
@@ -715,9 +714,9 @@ Cuenta el número de elementos.
 size_type size();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve la longitud de la secuencia controlada. No está definido en una especialización para `IEnumerable` o `IEnumerable<Value>`.
+La función miembro devuelve la longitud de la secuencia controlada. No se define en una especialización para `IEnumerable` o `IEnumerable<Value>`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -748,7 +747,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="size_type"></a> collection_adapter::size_type (STL/CLR)
+## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a>collection_adapter:: size_type (STL/CLR)
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -758,9 +757,9 @@ El tipo de una distancia con signo entre dos elementos.
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe un recuento de elemento no negativo.
+El tipo describe un recuento de elementos no negativos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -793,7 +792,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="swap"></a> collection_adapter::swap (STL/CLR)
+## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a>collection_adapter:: swap (STL/CLR)
 
 Intercambia el contenido de dos contenedores.
 
@@ -808,9 +807,9 @@ void swap(collection_adapter<Coll>% right);
 *right*<br/>
 Contenedor con el que se va a intercambiar el contenido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro intercambia los identificadores BCL almacenados entre `*this` y *derecho*.
+La función miembro intercambia los manipuladores de BCL almacenados entre `*this` y *right*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -862,7 +861,7 @@ x x x x x
 a b c
 ```
 
-## <a name="value_type"></a> collection_adapter::value_type (STL/CLR)
+## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a>collection_adapter:: value_type (STL/CLR)
 
 El tipo de un elemento.
 
@@ -872,9 +871,9 @@ El tipo de un elemento.
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo del parámetro de plantilla *valor*, si está presente en la especialización; en caso contrario, es un sinónimo de `System::Object^`.
+El tipo es un sinónimo del *valor*del parámetro de plantilla, si está presente en la especialización; en caso contrario, es un sinónimo de `System::Object^`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -911,9 +910,9 @@ int main()
 a b c
 ```
 
-## <a name="make_collection"></a> make_collection (STL/CLR)
+## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection (STL/CLR)
 
-Realizar una `range_adapter` desde un par de iteradores.
+Cree un `range_adapter` a partir de un par de iteradores.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -925,17 +924,17 @@ template<typename Iter>
 #### <a name="parameters"></a>Parámetros
 
 *ITER*<br/>
-El tipo de los iteradores ajustados.
+Tipo de los iteradores encapsulados.
 
 *first*<br/>
-Primer iterador para ajustar.
+Primer iterador que se va a ajustar.
 
-*Último*<br/>
-Segundo iterador del ajuste de línea.
+*last*<br/>
+Segundo iterador que se va a ajustar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función de plantilla devuelve `gcnew range_adapter<Iter>(first, last)`. Utilícelo para construir un `range_adapter<Iter>` objeto a partir de un par de iteradores.
+La función de plantilla devuelve `gcnew range_adapter<Iter>(first, last)`. Se utiliza para construir un objeto `range_adapter<Iter>` a partir de un par de iteradores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -989,9 +988,9 @@ SyncRoot not nullptr = True
 | a b c |
 ```
 
-## <a name="range_adapter"></a> range_adapter (STL/CLR)
+## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a>range_adapter (STL/CLR)
 
-Una clase de plantilla que contiene un par de iteradores que se usan para implementar varias interfaces de la biblioteca de clases Base (BCL). Utilice el range_adapter para manipular un intervalo STL/CLR como si fuese una colección de BCL.
+Una clase de plantilla que contiene un par de iteradores que se usan para implementar varias interfaces de la biblioteca de clases base (BCL). Use el range_adapter para manipular un intervalo de STL/CLR como si fuera una colección BCL.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -1009,17 +1008,17 @@ template<typename Iter>
 #### <a name="parameters"></a>Parámetros
 
 *ITER*<br/>
-El tipo asociado con los iteradores ajustados.
+Tipo asociado a los iteradores encapsulados.
 
-### <a name="members"></a>Miembros
+### <a name="members"></a>Members
 
 |Función miembro|Descripción|
 |---------------------|-----------------|
 |[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|Construye un objeto de adaptador.|
 
-|Operador|Descripción|
+|Operator|Descripción|
 |--------------|-----------------|
-|[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|Reemplaza el par iterador almacenado.|
+|[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|Reemplaza el par de iteradores almacenado.|
 
 ### <a name="interfaces"></a>Interfaces
 
@@ -1027,16 +1026,16 @@ El tipo asociado con los iteradores ajustados.
 |---------------|-----------------|
 |<xref:System.Collections.IEnumerable>|Recorre en iteración los elementos de la colección.|
 |<xref:System.Collections.ICollection>|Mantiene un grupo de elementos.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Recorre en iteración los elementos con tipo en la colección...|
+|<xref:System.Collections.Generic.IEnumerable%601>|Procesa una iteración en los elementos con tipo de la colección.|
 |<xref:System.Collections.Generic.ICollection%601>|Mantiene un grupo de elementos con tipo.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El range_adapter almacena un par de iteradores, que a su vez delimitar una secuencia de elementos. El objeto implementa cuatro interfaces BCL que le permiten recorrer en iteración los elementos en orden. Utilice esta clase de plantilla para manipular los intervalos STL/CLR como contenedores BCL.
+El range_adapter almacena un par de iteradores, que a su vez delimitan una secuencia de elementos. El objeto implementa cuatro interfaces BCL que permiten recorrer en iteración los elementos, en orden. Esta clase de plantilla se usa para manipular los intervalos de STL/CLR de forma muy similar a los contenedores de BCL.
 
-## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
+## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a>range_adapter:: Operator = (STL/CLR)
 
-Reemplaza el par iterador almacenado.
+Reemplaza el par de iteradores almacenado.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -1047,11 +1046,11 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 #### <a name="parameters"></a>Parámetros
 
 *right*<br/>
-Adaptador para copiar.
+Adaptador que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las copias de operador miembro *derecho* al objeto, a continuación, devuelve `*this`. Se usa para reemplazar el par iterador almacenado con una copia del par iterador almacenado en *derecho*.
+El operador miembro copia *directamente* en el objeto y, a continuación, devuelve `*this`. Se usa para reemplazar el par de iteradores almacenado por una copia del par de iteradores almacenado de *derecha*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1091,7 +1090,7 @@ a b c
 a b c
 ```
 
-## <a name="range_adapter_range_adapter"></a> range_adapter::range_adapter (STL/CLR)
+## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a>range_adapter:: range_adapter (STL/CLR)
 
 Construye un objeto de adaptador.
 
@@ -1107,39 +1106,39 @@ range_adapter(Iter first, Iter last);
 #### <a name="parameters"></a>Parámetros
 
 *first*<br/>
-Primer iterador para ajustar.
+Primer iterador que se va a ajustar.
 
-*Último*<br/>
-Segundo iterador del ajuste de línea.
+*last*<br/>
+Segundo iterador que se va a ajustar.
 
 *right*<br/>
 Objeto que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor:
 
 `range_adapter();`
 
-Inicializa el par iterador almacenado con los iteradores construido de forma predeterminada.
+Inicializa el par de iteradores almacenado con los iteradores construidos predeterminados.
 
 El constructor:
 
 `range_adapter(range_adapter<Iter>% right);`
 
-Inicializa el par iterador almacenado copiando el par almacenado en *derecho*.
+Inicializa el par de iteradores almacenado copiando el par almacenado a la *derecha*.
 
 El constructor:
 
 `range_adapter(range_adapter<Iter>^ right);`
 
-Inicializa el par iterador almacenado copiando el par almacenado en `*right`.
+Inicializa el par de iteradores almacenado copiando el par almacenado en `*right`.
 
 El constructor:
 
 `range_adapter(Iter^ first, last);`
 
-Inicializa el par iterador almacenado con *primera* y *última*.
+Inicializa el par de iteradores almacenado con el *primero* y el *último*.
 
 ### <a name="example"></a>Ejemplo
 

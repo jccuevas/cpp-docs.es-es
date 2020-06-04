@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3634
 ms.assetid: fd09f10c-f863-483b-9756-71c16b760b02
-ms.openlocfilehash: 2acd76fee5e7ca309991e639044a45ea83ed112b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2abf5191035e450dca72777cdc2b2675ac9b90de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527548"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742592"
 ---
 # <a name="compiler-error-c3634"></a>Error del compilador C3634
 
-'function': no se puede definir un método abstracto de tipo administrado o WinRTclass
+' function ': no se puede definir un método abstracto de un administrado o WinRTclass
 
 Un método abstracto se puede declarar en una clase WinRT o administrada, pero no definirse.
 
@@ -23,7 +23,7 @@ Un método abstracto se puede declarar en una clase WinRT o administrada, pero n
 
 El ejemplo siguiente genera el error C3634.
 
-```
+```cpp
 // C3634.cpp
 // compile with: /clr
 ref class C {

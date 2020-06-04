@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4570
 ms.assetid: feec1225-e6ad-4995-8d96-c22e864a77bd
-ms.openlocfilehash: 1c92bd7f632ea6662c3cee1bcaa1dd0c917fb2a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13767cdbd34c72953568181c15ad33119bf5179a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661310"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991929"
 ---
 # <a name="compiler-warning-level-3-c4570"></a>Advertencia del compilador (nivel 3) C4570
 
-'type': no se declara explícitamente como abstracto pero tiene funciones abstractas
+' type ': no se ha declarado explícitamente como abstracto pero tiene funciones abstractas
 
-Un tipo que contiene [abstracta](../../windows/abstract-cpp-component-extensions.md) funciones deben estar marcadas como abstracto.
+Un tipo que contiene funciones [abstractas](../../extensions/abstract-cpp-component-extensions.md) debe marcarse como Abstract.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4570.
+En el ejemplo siguiente se genera C4570.
 
-```
+```cpp
 // C4570.cpp
 // compile with: /clr /W3 /c
 ref struct X {   // C4570

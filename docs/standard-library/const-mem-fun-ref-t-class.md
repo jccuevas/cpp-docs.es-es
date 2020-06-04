@@ -1,27 +1,27 @@
 ---
 title: const_mem_fun_ref_t (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun_ref_t
+- functional/std::const_mem_fun_ref_t
 helpviewer_keywords:
 - const_mem_fun_ref_t class
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
-ms.openlocfilehash: 3f0a87b71f39847590c5fbc4e94038b216ec4b1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ce29eb0d2122dbd95fea34fa59f3fa11b9b388e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515523"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689760"
 ---
-# <a name="constmemfunreft-class"></a>const_mem_fun_ref_t (Clase)
+# <a name="const_mem_fun_ref_t-class"></a>const_mem_fun_ref_t (Clase)
 
-Clase de adaptadores que permite llamar a una función miembro **const** que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia.
+Clase de adaptadores que permite llamar a una función miembro **const** que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia. En desuso en C++ 11, se ha quitado en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
 template <class Result, class Type>
-class const_mem_fun_ref_t
+    class const_mem_fun_ref_t
 : public unary_function<Type, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
@@ -31,11 +31,11 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>Parámetros
 
-*P. M.*<br/>
+@No__t_1 *PM*
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*left*<br/>
-El objeto que la *Pm* función miembro se llama en.
+\ *izquierda*
+Objeto en el que se llama a la función miembro *PM* .
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -43,19 +43,8 @@ Una función unaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de *Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva ( **izquierdo**.\* `Pm`) () **const**.
+La plantilla de clase almacena una copia de *PM*, que debe ser un puntero a una función miembro de la clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` como si devuelve (**left**. \* `Pm`) () **const**.
 
 ## <a name="example"></a>Ejemplo
 
 Normalmente, no se usa el constructor de `const_mem_fun_ref_t` directamente; la función del asistente `mem_fun_ref` se usa para adaptar funciones miembro. Vea [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) para obtener un ejemplo de cómo usar adaptadores de funciones miembro.
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

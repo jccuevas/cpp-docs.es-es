@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2994
 ms.assetid: b03570b5-e5fd-41d8-bdf1-dfadc2b1e116
-ms.openlocfilehash: 3e6089bccbd22b0e6a369099a6c678050f34c8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a1b2b2a527c2c37bf7c319c187c42eeed051bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176720"
 ---
 # <a name="compiler-error-c2994"></a>Error del compilador C2994
 

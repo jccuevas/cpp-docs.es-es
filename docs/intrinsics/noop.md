@@ -1,32 +1,32 @@
 ---
 title: __noop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __noop_cpp
 - __noop
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: 074ab4c6ea51c8b3a2543d9b43248a8da37567cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aec4df98413bf34ac1e2966d012bb905edd4775e
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613021"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857936"
 ---
-# <a name="noop"></a>__noop
+# <a name="__noop"></a>__noop
 
 **Específicos de Microsoft**
 
-El `__noop` intrínseco especifica que se debe ignorar una función y se puede analizar la lista de argumentos, pero no se generará ningún código para los argumentos. Se está diseñado para su uso en funciones de depuración global que toman un número variable de argumentos.
+El `__noop` intrínseco especifica que una función debe omitirse. La lista de argumentos se analiza, pero no se genera ningún código para los argumentos. Está diseñado para usarse en funciones de depuración globales que toman un número variable de argumentos.
 
 El compilador convierte el `__noop` intrínseco en 0 en tiempo de compilación.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo se podría utilizar `__noop`.
+En el código siguiente se muestra cómo puede usar `__noop`.
 
-```
+```cpp
 // compiler_intrinsics__noop.cpp
 // compile with or without /DDEBUG
 #include <stdio.h>
@@ -42,7 +42,9 @@ int main() {
 }
 ```
 
+**FIN de Específicos de Microsoft**
+
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del Compilador](../intrinsics/compiler-intrinsics.md)\
 [Palabras clave](../cpp/keywords-cpp.md)

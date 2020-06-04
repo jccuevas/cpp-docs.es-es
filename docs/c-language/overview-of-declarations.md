@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 439bc878bbcd1c9778fb74738cb3b32b908a5943
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148353"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857065"
 ---
 # <a name="overview-of-declarations"></a>Información general sobre las declaraciones
 
@@ -19,7 +19,7 @@ Una "declaración" especifica la interpretación y los atributos de un conjunto 
 ## <a name="syntax"></a>Sintaxis
 
 *declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub>  *init-declarator-list*<sub>opt</sub>**;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
 /\* *attribute-seq*<sub>opt</sub> es específico de Microsoft */
 
@@ -51,7 +51,7 @@ int const *fp;
 
 declara una variable con nombre `fp` como puntero a un valor `int` no modificable (**const**). Se pueden definir varias variables en una declaración si se utilizan varios declaradores separados por comas.
 
-Una declaración debe tener al menos un declarador, o su especificador de tipo debe declarar una etiqueta de estructura, una etiqueta de unión o miembros de una enumeración. Los declaradores proporcionan toda la información restante sobre un identificador. Un declarador es un identificador que se puede modificar con corchetes (**[ ]**), asteriscos (<strong>\*</strong>) o paréntesis ( **( )** ) para declarar una matriz, un puntero o un tipo de función, respectivamente. Cuando se declaran variables simples (como elementos de carácter, entero y punto flotante), o estructuras y uniones de variables simples, `declarator` es simplemente un identificador. Para más información sobre los declaradores, vea [Declaradores y declaraciones de variable](../c-language/declarators-and-variable-declarations.md).
+Una declaración debe tener al menos un declarador, o su especificador de tipo debe declarar una etiqueta de estructura, una etiqueta de unión o miembros de una enumeración. Los declaradores proporcionan toda la información restante sobre un identificador. Un declarador es un identificador que se puede modificar con corchetes ( **[ ]** ), asteriscos (<strong>\*</strong>) o paréntesis ( **( )** ) para declarar una matriz, un puntero o un tipo de función, respectivamente. Cuando se declaran variables simples (como elementos de carácter, entero y punto flotante), o estructuras y uniones de variables simples, `declarator` es simplemente un identificador. Para más información sobre los declaradores, vea [Declaradores y declaraciones de variable](../c-language/declarators-and-variable-declarations.md).
 
 Todas las definiciones son declaraciones de forma implícita, pero no todas las declaraciones son definiciones. Por ejemplo, las declaraciones de variable que comienzan con el especificador de clase de almacenamiento `extern` son de "referencia", no de "definición". Si se va a hacer referencia a una variable externa antes de definirse, o si se ha definido en otro archivo de código fuente distinto del archivo donde se utiliza, es necesaria una declaración `extern`. El almacenamiento no se asigna mediante declaraciones de "referencia" ni se pueden inicializar variables en las declaraciones.
 

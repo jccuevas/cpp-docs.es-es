@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2503
 ms.assetid: da86cc89-fd04-400b-aa8d-a5ffaf7e3918
-ms.openlocfilehash: c481a27f19a92f47a19f0cfaa7b59cd509bb3c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cfe574f79eae2e45dc62315245a1b8b773d04df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660816"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746908"
 ---
 # <a name="compiler-error-c2503"></a>Error del compilador C2503
 
-'class': las clases base no pueden contener matrices de tamaño cero
+' Class ': las clases base no pueden contener matrices de tamaño cero
 
-Una estructura o clase base contiene una matriz de tamaño cero. Una matriz en una clase debe tener al menos un elemento.
+Una clase base o estructura contiene una matriz de tamaño cero. Una matriz de una clase debe tener al menos un elemento.
 
-El ejemplo siguiente genera C2503:
+En el ejemplo siguiente se genera C2503:
 
-```
+```cpp
 // C2503.cpp
 // compile with: /c
 class A {

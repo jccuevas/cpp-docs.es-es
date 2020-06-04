@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3519
 ms.assetid: ca24b2bc-7e90-4448-ae84-3fedddf9bca7
-ms.openlocfilehash: e9a998e1c3a6c2fb770fb9d26d97b8a24e5554d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e56ff814b1a2dd6ec3cb41db2cbcc21d7dcf2d9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432778"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750174"
 ---
 # <a name="compiler-error-c3519"></a>Error del compilador C3519
 
-'parámetro no válido': parámetro no válido para el atributo embedded_idl
+' invalid_param ': parámetro no válido para embedded_idl atributo
 
-Se pasó un parámetro a la `embedded_idl` atributo de [#import](../../preprocessor/hash-import-directive-cpp.md), pero el compilador no reconoce el parámetro.
+Se pasó un parámetro al `embedded_idl` atributo de [#import](../../preprocessor/hash-import-directive-cpp.md), pero el compilador no reconoció el parámetro.
 
-Los únicos parámetros que se permiten para `embedded_idl` son `emitidl` y `no_emitidl`.
+Los únicos parámetros permitidos para `embedded_idl` son `emitidl` y `no_emitidl`.
 
-El ejemplo siguiente genera C3519:
+En el ejemplo siguiente se genera C3519:
 
-```
+```cpp
 // C3519.cpp
 // compile with: /LD
 [module(name="MyLib2")];

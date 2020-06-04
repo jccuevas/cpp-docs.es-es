@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4521
 ms.assetid: 057d770c-ebcf-44cd-b943-1b1bb1ceaa8c
-ms.openlocfilehash: 887526810f7e65280adcde422ef871a67ccdde1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79e0866262b2db18424355de0702288d0f24592d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591820"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992068"
 ---
 # <a name="compiler-warning-level-3-c4521"></a>Advertencia del compilador (nivel 3) C4521
 
-'class': han especificado varios constructores de copia
+' Class ': se especificaron varios constructores de copias
 
-La clase tiene varios constructores de copia de un tipo único. Esta advertencia es informativa; los constructores son invocables en el programa.
+La clase tiene varios constructores de copia de un único tipo. Esta advertencia es informativa; se puede llamar a los constructores en el programa.
 
-Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir esta advertencia.
+Use la pragma [Warning](../../preprocessor/warning.md) para suprimir esta advertencia.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4521.
+En el ejemplo siguiente se genera C4521.
 
-```
+```cpp
 // C4521.cpp
 // compile with: /EHsc /W3
 #include <iostream>

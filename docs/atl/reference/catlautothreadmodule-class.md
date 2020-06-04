@@ -1,5 +1,5 @@
 ---
-title: CAtlAutoThreadModule (clase)
+title: Clase CAtlAutoThreadModule
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlAutoThreadModule
@@ -7,36 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
-ms.openlocfilehash: acd277160bc277e919a2802541310aa55446e00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4bd1071380bf3e31c69c593c5db81112fdf21de
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619718"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168311"
 ---
-# <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule (clase)
+# <a name="catlautothreadmodule-class"></a>Clase CAtlAutoThreadModule
 
-Esta clase implementa un servidor COM de subprocesamiento de modelo, agrupadas por subproceso.
+Esta clase implementa un servidor COM de modelo de apartamento y agrupado de subprocesos.
 
 > [!IMPORTANT]
-> Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CAtlAutoThreadModule` se deriva de [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) e implementa un servidor COM de subprocesamiento de modelo, agrupadas por subproceso. `CAtlAutoThreadModule` usa [CComApartment](../../atl/reference/ccomapartment-class.md) para administrar un contenedor para cada subproceso en el módulo.
+`CAtlAutoThreadModule`se deriva de [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) e implementa un servidor com de modelo de apartamento y agrupado de subprocesos. `CAtlAutoThreadModule`usa [CComApartment](../../atl/reference/ccomapartment-class.md) para administrar un apartamento para cada subproceso del módulo.
 
-Debe usar el [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) macro en la definición de clase del objeto para especificar [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) como el generador de clases. A continuación, debe agregar una única instancia de una clase derivada de `CAtlAutoThreadModuleT` como `CAtlAutoThreadModule`. Por ejemplo:
+Debe utilizar la macro [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) en la definición de clase del objeto para especificar [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) como el generador de clases. A continuación, debe agregar una única instancia de una clase derivada `CAtlAutoThreadModuleT` de como `CAtlAutoThreadModule`. Por ejemplo:
 
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
 > [!NOTE]
-> Esta clase reemplaza el atributo obsolete [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) clase.
+> Esta clase reemplaza la clase [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) obsoleta.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -48,11 +48,11 @@ Debe usar el [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-ma
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CAtlAutoThreadModuleT (clase)](../../atl/reference/catlautothreadmodulet-class.md)<br/>
-[IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Clase CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)<br/>
+[Clase IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Clases de módulo](../../atl/atl-module-classes.md)

@@ -1,31 +1,31 @@
 ---
-title: Compilador advertencia (nivel 1) C4090
+title: ADVERTENCIA del compilador (nivel 1) C4090
 ms.date: 11/04/2016
 f1_keywords:
 - C4090
 helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-ms.openlocfilehash: b47d0bfbb6eab24fbe811d3e4f79b6bd86b3bb11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 551309757f5e76e230d0a275da94ac94ec30fb13
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462379"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163928"
 ---
-# <a name="compiler-warning-level-1-c4090"></a>Compilador advertencia (nivel 1) C4090
+# <a name="compiler-warning-level-1-c4090"></a>ADVERTENCIA del compilador (nivel 1) C4090
 
-'operación': calificadores 'modificador' diferentes
+' Operation ': distintos calificadores ' Modifier '
 
-Se define una variable usada en una operación con un modificador especificado que impide que se modifiquen sin ser detectado por el compilador. La expresión se compila sin modificaciones.
+Una variable que se usa en una operación se define con un modificador especificado que impide que el compilador modifique sin detección. La expresión se compila sin modificarla.
 
-Esta advertencia puede deberse a un puntero a un **const** o `volatile` elemento se asigna a un puntero no declarado como puntero a **const** o `volatile`.
+Esta advertencia puede deberse a que un puntero a un elemento **const** o `volatile` se asigna a un puntero no declarado como que apunta a **const** o `volatile`.
 
-Esta advertencia se emite para programas de C. En un programa de C++, el compilador emite un error: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
+Esta advertencia se emite para programas de C. En un C++ programa, el compilador emite un error: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
 
-El ejemplo siguiente genera C4090:
+En el ejemplo siguiente se genera C4090:
 
-```
+```c
 // C4090.c
 // compile with: /W1
 int *volatile *p;

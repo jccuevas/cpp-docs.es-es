@@ -18,22 +18,22 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312d14dc681736ee396d5c7af6c50ba8d72cd3a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375833"
 ---
 # <a name="ltthreadgt-operators"></a>Operadores de &lt;thread&gt;
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+|[¡Operador!](#op_neq)|[Operador&gt;](#op_gt)|[Operador&gt;=](#op_gt_eq)|
+|[Operador&lt;](#op_lt)|[Operador&lt;&lt;](#op_lt_lt)|[Operador&lt;=](#op_lt_eq)|
+|[operadora](#op_eq_eq)|
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operador&gt;=
 
 Determina si un objeto `thread::id` es mayor o igual que otro objeto.
 
@@ -45,21 +45,21 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
+*Izquierda*\
 Objeto `thread::id` izquierdo.
 
-*Derecha*<br/>
+*Correcto*\
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Operador&gt;
 
 Determina si un objeto `thread::id` es mayor que otro objeto.
 
@@ -71,21 +71,21 @@ bool operator> (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
+*Izquierda*\
 Objeto `thread::id` izquierdo.
 
-*Derecha*<br/>
+*Correcto*\
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `Right < Left`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operador&lt;=
 
 Determina si un objeto `thread::id` es menor o igual que otro objeto.
 
@@ -97,21 +97,21 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
+*Izquierda*\
 Objeto `thread::id` izquierdo.
 
-*Derecha*<br/>
+*Correcto*\
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Operador&lt;
 
 Determina si un objeto `thread::id` es menor que otro objeto.
 
@@ -123,23 +123,23 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
+*Izquierda*\
 Objeto `thread::id` izquierdo.
 
-*Derecha*<br/>
+*Correcto*\
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si *izquierda* precede *derecha* en la ordenación total; en caso contrario, **false**.
+**true** si *Left* precede a *Right* en el orden total; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El operador define una ordenación total en todos los objetos `thread::id`. Estos objetos pueden usarse como claves en contenedores asociativos.
 
 Esta función no produce ninguna excepción.
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>¡Operador!
 
 Compara dos objetos `thread::id` para determinar si no son iguales.
 
@@ -151,21 +151,21 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
+*Izquierda*\
 Objeto `thread::id` izquierdo.
 
-*Derecha*<br/>
+*Correcto*\
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operadora
 
 Compara dos objetos `thread::id` para determinar si son iguales.
 
@@ -177,21 +177,21 @@ bool operator== (
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
+*Izquierda*\
 Objeto `thread::id` izquierdo.
 
-*Derecha*<br/>
+*Correcto*\
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los dos objetos representan el mismo subproceso de ejecución o si ninguno de estos objetos representa un subproceso de ejecución; en caso contrario, **false**.
+**true** si los dos objetos representan el mismo subproceso de ejecución o si ninguno de los objetos representa un subproceso de ejecución; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operador&lt;&lt;
 
 Inserta una representación de texto de un objeto `thread::id` en una secuencia.
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ostr*<br/>
+*Ostr*\
 Un objeto [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*Id.*<br/>
-Un objeto `thread::id`.
+*Id*\
+Objeto `thread::id` .
 
 ### <a name="return-value"></a>Valor devuelto
 
 *Ostr*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función inserta *Id* en *Ostr*.
 
 Si dos objetos `thread::id` son iguales, las representaciones de texto insertadas de dichos objetos son iguales.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<>de hilo](../standard-library/thread.md)

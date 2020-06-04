@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3023
 ms.assetid: 89dcce98-3cd7-4931-a50f-87df1d2ebc9b
-ms.openlocfilehash: 397a68db2b97adc07ae2a22c9cf909f77a125725
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546f8bafb4e30919600dfce84d6c84ffa819367e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607797"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742046"
 ---
 # <a name="compiler-error-c3023"></a>Error del compilador C3023
 
@@ -21,7 +21,7 @@ Los valores pasados a una cláusula no eran válidos.
 
 El ejemplo siguiente genera la advertencia C3023:
 
-```
+```cpp
 // C3023.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

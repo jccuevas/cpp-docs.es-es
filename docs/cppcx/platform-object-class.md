@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8300ec484bdb58919ce8e450b706dd07c275ceee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850096"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363683"
 ---
 # <a name="platformobject-class"></a>Platform::Object (Clase)
 
-Proporciona un comportamiento común para clases ref y structs ref en aplicaciones de Windows en tiempo de ejecución. Todas las instancias de clase ref y struct ref se pueden convertir implícitamente a Platform::Object^ y pueden invalidar su método ToString virtual.
+Proporciona un comportamiento común para las clases ref y los structs ref en las aplicaciones de Windows en tiempo de ejecución. Todas las instancias de clase ref y struct ref se pueden convertir implícitamente a Platform::Object^ y pueden invalidar su método ToString virtual.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,16 +33,16 @@ public ref class Object : Object
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[Object::Object](#ctor)|Inicializa una nueva instancia de la clase Object.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Object::Equals](#equals)|Determina si el objeto especificado es igual al objeto actual.|
-|[Object::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|
+|[Object::Equals](#equals)|Determina si el objeto especificado es igual que el objeto actual.|
+|[Object::GetHashCode](#gethashcode)|Devuelve el código hash para esta instancia.|
 |[Object::ReferenceEquals](#referenceequals)|Determina si las instancias de Object especificadas son la misma instancia.|
 |[ToString](#tostring)|Devuelve una cadena que representa el objeto actual. Puede invalidarse.|
 |[GetType](#gettype)|Obtiene un [Platform::Type](../cppcx/platform-type-class.md) que describe la instancia actual.|
@@ -57,11 +57,11 @@ public ref class Object : Object
 
 **Encabezado:** vccorlib.h
 
-**Espacio de nombres**: Plataforma
+**Espacio de nombres:** Platform
 
-## <a name="equals"></a> Equals (método)
+## <a name="objectequals-method"></a><a name="equals"></a>Object::Equals Método
 
-Determina si el objeto especificado es igual al objeto actual.
+Determina si el objeto especificado es igual que el objeto actual.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -78,9 +78,9 @@ Objeto que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los objetos son iguales; en caso contrario **false**.
+**true** si los objetos son iguales, de lo contrario **false**.
 
-## <a name="gethashcode"></a>  GetHashCode (método)
+## <a name="objectgethashcode-method"></a><a name="gethashcode"></a>Object::GetHashCode Método
 
 Devuelve el valor de identidad `IUnknown`* para esta instancia si es un objeto COM o un valor hash calculado si no es un objeto COM.
 
@@ -94,13 +94,13 @@ public:int GetHashCode();
 
 Valor numérico que identifica de forma única este objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Puedes usar GetHashCode para crear claves para objetos de mapas. Puede comparar códigos hash mediante [Equals](#equals). Si la ruta de acceso del código es sumamente crítica y `GetHashCode` y `Equals` no son suficientemente rápidos, puedes bajar hasta el nivel COM subyacente y realizar comparaciones de puntero de `IUnknown` nativo.
+Puedes usar GetHashCode para crear claves para objetos de mapas. Puede comparar códigos hash mediante [Object::Equals](#equals). Si la ruta de acceso del código es sumamente crítica y `GetHashCode` y `Equals` no son suficientemente rápidos, puedes bajar hasta el nivel COM subyacente y realizar comparaciones de puntero de `IUnknown` nativo.
 
-## <a name="gettype"></a>  GetType (método)
+## <a name="objectgettype-method"></a><a name="gettype"></a>Object::GetType Método
 
-Devuelve un [Platform:: Type](../cppcx/platform-type-class.md) objeto que describe el tipo en tiempo de ejecución de un objeto.
+Devuelve un [objeto Platform::Type](../cppcx/platform-type-class.md) que describe el tipo de tiempo de ejecución de un objeto.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -110,21 +110,21 @@ Object::GetType();
 
 ### <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
 
-Un [Platform:: Type](../cppcx/platform-type-class.md) objeto que describe el tipo en tiempo de ejecución del objeto.
+Un objeto [Platform::Type](../cppcx/platform-type-class.md) que describe el tipo de tiempo de ejecución del objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Estático [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) puede usarse para obtener un [TypeCode (enumeración)](../cppcx/platform-typecode-enumeration.md) valor que representa el tipo actual. Esto es especialmente útil para los tipos integrados. El código de tipo para cualquier clase ref además [Platform:: String](../cppcx/platform-string-class.md) es objeto (1).
+El estático [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) se puede utilizar para obtener un [Platform::TypeCode enumeration](../cppcx/platform-typecode-enumeration.md) valor que representa el tipo actual. Esto es especialmente útil para los tipos integrados. El código de tipo para cualquier clase ref además de [Platform::String](../cppcx/platform-string-class.md) es Object (1).
 
-El [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) clase se utiliza en las API de Windows como una manera independiente del lenguaje de pasar información de tipos entre los componentes de Windows y aplicaciones. La T[Platform:: Type Class](../cppcx/platform-type-class.md) tiene operadores para la conversión entre `Type` y `TypeName`.
+La clase [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) se utiliza en las API de Windows como una forma independiente del lenguaje de pasar información de tipo entre los componentes y las aplicaciones de Windows. La clase T[Platform::Type](../cppcx/platform-type-class.md) tiene `Type` operadores para convertir entre y `TypeName`.
 
-Use la [typeid](../windows/typeid-cpp-component-extensions.md) operador para devolver un `Platform::Type` objeto para un nombre de clase, por ejemplo, al navegar entre páginas XAML:
+Usa el operador [typeid](../extensions/typeid-cpp-component-extensions.md) para devolver un `Platform::Type` objeto para un nombre de clase, por ejemplo, al navegar entre páginas XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="ctor"></a>  Constructor de Object
+## <a name="objectobject-constructor"></a><a name="ctor"></a>Objeto::Constructor de objetos
 
 Inicializa una nueva instancia de la clase Object.
 
@@ -134,7 +134,7 @@ Inicializa una nueva instancia de la clase Object.
 public:Object();
 ```
 
-## <a name="referenceequals"></a>  ReferenceEquals (método)
+## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a>Object::ReferenceEquals Método
 
 Determina si las instancias de Object especificadas son la misma instancia.
 
@@ -154,9 +154,9 @@ Segundo objeto que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los dos objetos son iguales; en caso contrario, **false**.
+**true** si los dos objetos son iguales; de lo contrario, **false**.
 
-## <a name="tostring"></a>  Object:: ToString (método) (C++ / c++ / CX)
+## <a name="objecttostring-method-ccx"></a><a name="tostring"></a>Object::ToString (Método) (C++/CX)
 
 Devuelve una cadena que representa el objeto actual.
 
@@ -169,7 +169,7 @@ virtual String^ ToString();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una cadena que representa el objeto actual. Puedes invalidar este método para proporcionar un mensaje de cadena personalizado en la clase o el struct ref:
+Cadena que representa el objeto actual. Puedes invalidar este método para proporcionar un mensaje de cadena personalizado en la clase o el struct ref:
 
 ```cpp
 public ref class Tree sealed
@@ -183,8 +183,8 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Plataforma Namespace](platform-namespace-c-cx.md)<br/>
+[Espacio de nombres de plataforma](platform-namespace-c-cx.md)<br/>
 [Platform::Type (Clase)](platform-type-class.md)<br/>
 [Sistema de tipos](type-system-c-cx.md)

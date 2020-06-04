@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: 047b2cc0ebc65d29f5f25d1bdf50b68da58c75d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553739"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545136"
 ---
 # <a name="user-defined-conversions-ccli"></a>Conversiones definidas por el usuario (C++/CLI)
 
-Esta sección describen las conversiones definidas por el usuario (UDC) cuando uno de los tipos en la conversión es una instancia de un tipo de referencia o tipo de valor o referencia.
+En esta sección se describen las conversiones definidas por el usuario (UDC) cuando uno de los tipos de la conversión es una referencia o una instancia de un tipo de valor o un tipo de referencia.
 
 ## <a name="implicit-and-explicit-conversions"></a>Conversiones implícitas y explícitas
 
-Una conversión definida por el usuario puede ser implícita o explícita.  Una UDC debe ser implícita si la conversión no produce una pérdida de información. En caso contrario, se debe definir una UDC explícita.
+Una conversión definida por el usuario puede ser implícita o explícita.  Una UDC debe ser implícita si la conversión no produce una pérdida de información. De lo contrario, se debe definir una UDC explícita.
 
-Constructor de la clase nativa puede usarse para convertir a un tipo de valor o referencia a una clase nativa.
+El constructor de una clase nativa se puede usar para convertir una referencia o un tipo de valor en una clase nativa.
 
-Para obtener más información sobre las conversiones, vea [Boxing](../windows/boxing-cpp-component-extensions.md) y [conversiones estándar](../cpp/standard-conversions.md).
+Para obtener más información sobre las conversiones, vea [conversión boxing](../extensions/boxing-cpp-component-extensions.md) y [conversiones estándar](../cpp/standard-conversions.md).
 
-```
+```cpp
 // mcpp_User_Defined_Conversions.cpp
 // compile with: /clr
 #include "stdio.h"
@@ -78,25 +78,25 @@ in N::N
 
 ## <a name="convert-from-operators"></a>Operadores de Convertir desde
 
-Operadores de conversión crean un objeto de la clase en el que está definido el operador de un objeto de alguna otra clase.
+Los operadores Convert-from crean un objeto de la clase en la que se define el operador a partir de un objeto de alguna otra clase.
 
-Estándar de C++ no admite los operadores de conversión; estándar de C++ usa los constructores para este propósito. Sin embargo, al utilizar tipos CLR, Visual C++ proporcionan compatibilidad sintáctica para llamar a operadores de conversión.
+Standard C++ no admite operadores Convert-from; Standard C++ usa constructores para este propósito. Sin embargo, al usar tipos CLR, C++ visual proporciona compatibilidad sintáctica para llamar a los operadores Convert-from.
 
-Para interoperar bien con otros lenguajes compatibles con CLS, puede que desee ajustar cada constructor unario definido por el usuario para una clase determinada con un operador de conversión correspondiente.
+Para interoperar bien con otros lenguajes conformes a CLS, es posible que desee ajustar cada constructor unario definido por el usuario para una clase determinada con un operador Convert-from correspondiente.
 
-Operadores de conversión:
+Operadores Convert-from:
 
 - Se definirán como funciones estáticas.
 
-- Puede ser implícita (para las conversiones que no pierdan precisión como short a int) o explícita, cuando puede haber una pérdida de precisión.
+- Puede ser implícito (para las conversiones que no pierden precisión, como Short-to-int) o Explicit, cuando puede haber una pérdida de precisión.
 
 - Devolverá un objeto de la clase contenedora.
 
-- Debe tener el tipo "de" como el tipo de parámetro único.
+- Debe tener el tipo "de" como tipo de parámetro único.
 
-El ejemplo siguiente muestra un implícito y explícito "convertir desde", el operador de conversión definido por el usuario (UDC).
+En el ejemplo siguiente se muestra un operador de conversión definido por el usuario (UDC) implícito y explícito.
 
-```
+```cpp
 // clr_udc_convert_from.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -142,11 +142,11 @@ in constructor
 1
 ```
 
-## <a name="convert-to-operators"></a>Operadores de convertir en
+## <a name="convert-to-operators"></a>Operadores Convert-to
 
-Operadores de conversión para conversión un objeto de la clase en el que está definido el operador a otro objeto. El ejemplo siguiente muestra un implícita, convertir en, operador de conversión definido por el usuario:
+Los operadores Convert-to convierten un objeto de la clase en la que se define el operador a algún otro objeto. En el ejemplo siguiente se muestra un operador de conversión implícito, convertido a definido por el usuario:
 
-```
+```cpp
 // clr_udc_convert_to.cpp
 // compile with: /clr
 using namespace System;
@@ -174,9 +174,9 @@ int main() {
 10
 ```
 
-Un operador de conversión explícitos definidos por el usuario convert-to es adecuado para las conversiones que porque podría perdieron datos de alguna manera. Para invocar un operador de conversión explícita, se debe usar una conversión.
+Un operador de conversión para convertir en definido por el usuario explícito es adecuado para las conversiones que pueden perder datos de alguna manera. Para invocar un operador Convert-to explícito, se debe usar una conversión.
 
-```
+```cpp
 // clr_udc_convert_to_2.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -206,9 +206,9 @@ int main() {
 
 ## <a name="to-convert-generic-classes"></a>Para convertir clases genéricas
 
-Una clase genérica se puede convertir a T.
+Puede convertir una clase genérica en T.
 
-```
+```cpp
 // clr_udc_generics.cpp
 // compile with: /clr
 generic<class T>
@@ -238,9 +238,9 @@ int main() {
 True
 ```
 
-Un constructor que convierte toma un tipo y lo usa para crear un objeto.  Se llama a un constructor que convierte con solo; inicialización directa conversiones de tipos no volverá a invocar constructores de conversión. De forma predeterminada, los constructores de conversión son explícitos para los tipos CLR.
+Un constructor de conversión toma un tipo y lo usa para crear un objeto.  Solo se llama a un constructor de conversión con inicialización directa; las conversiones no invocarán constructores de conversión. De forma predeterminada, los constructores de conversión son explícitos para los tipos CLR.
 
-```
+```cpp
 // clr_udc_converting_constructors.cpp
 // compile with: /clr
 public ref struct R {
@@ -274,7 +274,7 @@ int main() {
 R
 ```
 
-En este ejemplo de código, una función de conversión estática implícita hace lo mismo que un constructor de conversión explícita.
+En este ejemplo de código, una función de conversión estática implícita hace lo mismo que un constructor de conversión explícito.
 
 ```
 public value struct V {
@@ -319,6 +319,6 @@ int main() {
 2000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Clases y structs](../extensions/classes-and-structs-cpp-component-extensions.md)

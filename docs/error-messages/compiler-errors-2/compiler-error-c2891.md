@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2891
 ms.assetid: e12cfb2d-df45-4b0d-b155-c51d17e812fa
-ms.openlocfilehash: d9a1cdafdf7d3a2843aee4a20f71c7e6a4693150
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2544cfc9e8cff283a7c3e0ace499408bb84cd046
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547970"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201647"
 ---
 # <a name="compiler-error-c2891"></a>Error del compilador C2891
 
-'parámetro': no se puede adquirir la dirección de un parámetro de plantilla
+' parámetro ': no se puede adquirir la dirección de un parámetro de plantilla
 
-No se puede adquirir la dirección de un parámetro de plantilla a menos que sea un valor l. Parámetros de tipo no son valores l, ya que no hay ninguna dirección. Los valores sin tipo en listas de parámetros de plantilla que no son valores l no tienen también una dirección. Esto es un ejemplo de código que causa el Error del compilador C2891, porque el valor pasado como parámetro de plantilla es una copia generada por el compilador del argumento de plantilla.
+No se puede tomar la dirección de un parámetro de plantilla a menos que sea un valor l. Los parámetros de tipo no se lvalues porque no tienen ninguna dirección. Los valores sin tipo de las listas de parámetros de plantilla que no son lvalues tampoco tienen una dirección. Este es un ejemplo de código que provoca el error del compilador C2891, porque el valor que se pasa como parámetro de plantilla es una copia generada por el compilador del argumento de plantilla.
 
 ```
 template <int i> int* f() { return &i; }
 ```
 
-Parámetros de plantilla que son valores l, tales como tipos de referencia, puede su dirección realizadas.
+Los parámetros de plantilla que son lvalues, como los tipos de referencia, pueden tomar su dirección.
 
 ```
 template <int& r> int* f() { return &r; }
 ```
 
-Para corregir este error, no tomar la dirección de un parámetro de plantilla a menos que sea un valor l.
+Para corregir este error, no tome la dirección de un parámetro de plantilla a menos que sea un valor l.

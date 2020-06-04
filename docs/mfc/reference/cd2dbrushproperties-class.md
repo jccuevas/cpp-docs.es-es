@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: 8fa93a6dda6b15b972ea399fc6522a8dec7c8de5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2db720fd09c62f8b86baecea9229d946f3892333
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539027"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754184"
 ---
 # <a name="cd2dbrushproperties-class"></a>Clase CD2DBrushProperties
 
@@ -31,13 +31,13 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Sobrecargado. Crea un `CD2D_BRUSH_PROPERTIES` estructura|
+|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Sobrecargado. Crea `CD2D_BRUSH_PROPERTIES` una estructura|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CD2DBrushProperties::CommonInit](#commoninit)|Inicializa el objeto|
 
@@ -51,7 +51,7 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>CD2DBrushProperties::CD2DBrushProperties
 
 Crea una estructura CD2D_BRUSH_PROPERTIES
 
@@ -67,16 +67,16 @@ CD2DBrushProperties(
 ### <a name="parameters"></a>Parámetros
 
 *_opacity*<br/>
-La base opacidad del pincel. El valor predeterminado es 1,0.
+La opacidad base del pincel. El valor predeterminado es 1,0.
 
 *_transform*<br/>
-La transformación para aplicar al pincel
+La transformación que se aplicará al pincel
 
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>CD2DBrushProperties::CommonInit
 
 Inicializa el objeto
 
-```
+```cpp
 void CommonInit();
 ```
 

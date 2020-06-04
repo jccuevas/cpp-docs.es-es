@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /ASSEMBLYMODULE linker option
 - -ASSEMBLYMODULE linker option
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
-ms.openlocfilehash: d08b5bca38f4ff590a0e1bfb8d8693c374a43444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 728e8a84ff8d1afac99f99dbb975c7fd9360bcc1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273025"
 ---
 # <a name="assemblymodule-add-a-msil-module-to-the-assembly"></a>/ASSEMBLYMODULE (Agregar un módulo MSIL al ensamblado)
 
@@ -37,7 +37,7 @@ Use [#using](../../preprocessor/hash-using-directive-cpp.md) para agregar una re
 
 Por ejemplo, considere el siguiente escenario:
 
-1. Crear un módulo con [/LN](../../build/reference/ln-create-msil-module.md).
+1. Crear un módulo con [/LN](ln-create-msil-module.md).
 
 1. Use /ASSEMBLYMODULE en otro proyecto para incluir el módulo en la compilación actual, lo cual creará un ensamblado. Este proyecto no hará referencia al módulo con `#using`.
 
@@ -45,25 +45,25 @@ Por ejemplo, considere el siguiente escenario:
 
 Otras opciones del vinculador que afectan a la generación de ensamblado son:
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [/DELAYSIGN](delaysign-partially-sign-an-assembly.md)
 
-- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [/NOASSEMBLY](noassembly-create-a-msil-module.md)
 
-- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-El vinculador de Visual C++ acepta archivos .netmodule como entrada y el archivo de salida generado por el vinculador será un ensamblado o .netmodule sin ninguna dependencia de tiempo de ejecución en cualquiera de los archivos .netmodule que se utilizaron como entrada del vinculador.  Para más información, consulte [Archivos .netmodule como entrada del vinculador](../../build/reference/netmodule-files-as-linker-input.md).
+El vinculador MSVC acepta archivos .netmodule como entrada y el archivo de salida generado por el vinculador será un ensamblado o .netmodule sin ninguna dependencia de tiempo de ejecución en cualquiera de los archivos .netmodule que se utilizaron como entrada del vinculador.  Para más información, consulte [Archivos .netmodule como entrada del vinculador](netmodule-files-as-linker-input.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -77,5 +77,5 @@ El vinculador de Visual C++ acepta archivos .netmodule como entrada y el archivo
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

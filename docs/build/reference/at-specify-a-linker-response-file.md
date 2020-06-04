@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: e253381cef2fc46cf40792be85ad8367d75eef70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295004"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Especificar un archivo de respuesta del vinculador)
 
@@ -32,7 +32,7 @@ Un archivo de texto especifica comandos del vinculador.
 
 ## <a name="remarks"></a>Comentarios
 
-Consulte [@ (especificar un archivo de respuesta del compilador)](../../build/reference/at-specify-a-compiler-response-file.md) para obtener más información.
+Consulte [@ (especificar un archivo de respuesta del compilador)](at-specify-a-compiler-response-file.md) para obtener más información.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
@@ -44,5 +44,5 @@ Consulte [@ (especificar un archivo de respuesta del compilador)](../../build/re
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

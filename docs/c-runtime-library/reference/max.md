@@ -1,9 +1,9 @@
 ---
 title: __max
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __max
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - max
 - __max
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613764"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170194"
 ---
-# <a name="max"></a>__max
+# <a name="__max"></a>__max
 
 Macro de preprocesador que devuelve el mayor de dos valores.
 
@@ -42,18 +45,18 @@ Macro de preprocesador que devuelve el mayor de dos valores.
 
 ### <a name="parameters"></a>Parámetros
 
-*un*, *b*<br/>
+*a*, *b*<br/>
 Valores de cualquier tipo numérico que se va a comparar.
 
 ## <a name="return-value"></a>Valor devuelto
 
 **__max** devuelve el mayor de sus argumentos.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **__max** macro compara dos valores y devuelve el valor del mayor. Los argumentos pueden ser de cualquier tipo de datos numérico, con o sin signo. Los argumentos y el valor devuelto deben ser del mismo tipo de datos.
+La macro **__max** compara dos valores y devuelve el valor de mayor. Los argumentos pueden ser de cualquier tipo de datos numérico, con o sin signo. Los argumentos y el valor devuelto deben ser del mismo tipo de datos.
 
-El argumento devuelto se evalúa dos veces, la macro. Esto puede provocar resultados inesperados si el argumento es una expresión que se modifica su valor cuando sea evaluado, tales como `*p++`.
+La macro evalúa dos veces el argumento devuelto. Esto puede dar lugar a resultados inesperados si el argumento es una expresión que modifica su valor cuando se evalúa, como `*p++`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -65,7 +68,7 @@ El argumento devuelto se evalúa dos veces, la macro. Esto puede provocar result
 
 Para obtener más información, vea el ejemplo de [__min](min.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

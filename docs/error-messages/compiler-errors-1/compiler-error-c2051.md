@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2051
 ms.assetid: 81c0469a-78e2-49fa-bd76-97cdb135e3ea
-ms.openlocfilehash: e6b0d95628a1b4e7f9707202d57d29b906b1b96d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51bf9b9bcde7f02210dd0e381f1239507ac56bdb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532714"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739108"
 ---
 # <a name="compiler-error-c2051"></a>Error del compilador C2051
 
-expresión case no constante
+expresión Case no constante
 
 Las expresiones Case deben ser constantes de tipo entero.
 
-El ejemplo siguiente genera C2051:
+En el ejemplo siguiente se genera C2051:
 
-```
+```cpp
 // C2051.cpp
 class X {};
 
@@ -38,9 +38,9 @@ int main() {
 }
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C2051b.cpp
 class X {};
 

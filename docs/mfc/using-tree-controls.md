@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-ms.openlocfilehash: 2a42392253f158365af6bf9f7a5e4a1f4df93e95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cff48018d728ef9578be38c0d94300011265fa1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411453"
 ---
 # <a name="using-tree-controls"></a>Usar controles de árbol
 
@@ -34,4 +34,3 @@ Uso típico de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-clas
 
 [Uso de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

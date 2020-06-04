@@ -5,16 +5,16 @@ helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199b663331e3322601100206f222e80bbb7c8db0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473689"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142266"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Cómo: Usar parallel.invoke para ejecutar operaciones paralelas
+# <a name="how-to-use-parallel_invoke-to-execute-parallel-operations"></a>Cómo: Usar parallel.invoke para ejecutar operaciones paralelas
 
-En este ejemplo se muestra cómo usar el [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para mejorar el rendimiento de un programa que realiza varias operaciones en un origen de datos compartido. Dado que ninguna de ellas modifica el origen, se pueden ejecutar en paralelo de manera sencilla.
+En este ejemplo se muestra cómo usar el algoritmo [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) para mejorar el rendimiento de un programa que realiza varias operaciones en un origen de datos compartido. Dado que ninguna de ellas modifica el origen, se pueden ejecutar en paralelo de manera sencilla.
 
 ## <a name="example"></a>Ejemplo
 
@@ -32,7 +32,7 @@ En el ejemplo siguiente se modifica el ejemplo anterior para la ejecución en pa
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se descarga *la Ilíada* de Homero de gutenberg.org y realiza varias operaciones en ese archivo. El ejemplo realiza primero estas operaciones en serie y, a continuación, realiza las mismas operaciones en paralelo.
+En el ejemplo siguiente se descarga *Ilíada* de homero de Gutenberg.org y se realizan varias operaciones en ese archivo. El ejemplo realiza primero estas operaciones en serie y, a continuación, realiza las mismas operaciones en paralelo.
 
 [!code-cpp[concrt-parallel-word-mining#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_3.cpp)]
 
@@ -68,16 +68,15 @@ Dado que el algoritmo `parallel_invoke` llama a cada función de trabajo en para
 
 Dado que este ejemplo realiza tres tareas en paralelo, no debe esperar que el rendimiento se escale en los equipos que tienen más de tres procesadores. Para mejorar el rendimiento, puede dividir las tareas más prolongadas en otras más pequeñas y ejecutarlas en paralelo.
 
-Puede usar el `parallel_invoke` algoritmo en lugar de la [Concurrency:: task_group](reference/task-group-class.md) y [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) clases si no necesita soporte técnico para la cancelación. Para obtener un ejemplo que compara el uso de la `parallel_invoke` algoritmo frente a grupos de tareas, consulte [Cómo: usar Parallel.Invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
+Puede usar el algoritmo `parallel_invoke` en lugar de las clases [Concurrency:: task_group](reference/task-group-class.md) y [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) si no necesita compatibilidad con la cancelación. Para obtener un ejemplo en el que se compara el uso del algoritmo de `parallel_invoke` con los grupos de tareas, vea [Cómo: usar parallel_invoke para escribir una rutina de ordenación paralela](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
 
 ## <a name="compiling-the-code"></a>Compilar el código
 
 Para compilar el código, cópielo y, a continuación, péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `parallel-word-mining.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**/ EHsc cl.exe /MD/DUNICODE /D_AFXDLL paralelo-word-mining.cpp**
+> **cl. exe/EHsc/MD/DUNICODE/D_AFXDLL Parallel-Word-Mining. cpp**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)<br/>
-[parallel_invoke (función)](reference/concurrency-namespace-functions.md#parallel_invoke)
-
+[parallel_invoke función)](reference/concurrency-namespace-functions.md#parallel_invoke)

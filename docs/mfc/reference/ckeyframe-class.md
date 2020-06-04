@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-ms.openlocfilehash: b6ebe5ba78a259014f62bdf04f30e856a57f1aba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f535503338a82c7cc70455ae6a08cdab0f13c624
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372291"
 ---
 # <a name="ckeyframe-class"></a>Clase CKeyFrame
 
@@ -47,32 +47,32 @@ class CKeyFrame : public CBaseKeyFrame;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CKeyFrame::CKeyFrame](#ckeyframe)|Sobrecargado. Construye un fotograma clave que depende de otro fotogramas clave.|
+|[CKeyFrame::CKeyFrame](#ckeyframe)|Sobrecargado. Construye un fotograma clave que depende de otro fotograma clave.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Agrega un fotograma clave a un guión gráfico. (Invalida [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Agrega un fotograma clave para crear un guion gráfico después de la transición.|
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Agrega un fotograma clave para crear un guion gráfico con desplazamiento.|
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Devuelve un puntero a un fotograma clave que depende de este fotograma clave.|
-|[CKeyFrame::GetOffset](#getoffset)|Devuelve un desplazamiento respecto a otro fotogramas clave.|
-|[CKeyFrame::GetTransition](#gettransition)|Devuelve un puntero a una transición que depende de este fotograma clave.|
+|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Agrega un fotograma clave a un guión gráfico. (Reemplaza [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
+|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Agrega un fotograma clave al guión gráfico después de la transición.|
+|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Agrega un fotograma clave al guión gráfico en el desplazamiento.|
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Devuelve un puntero a un fotograma clave del que depende este fotograma clave.|
+|[CKeyFrame::GetOffset](#getoffset)|Devuelve un desplazamiento de otro fotograma clave.|
+|[CKeyFrame::GetTransition](#gettransition)|Devuelve un puntero a una transición de la que depende este fotograma clave.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CKeyFrame::m_offset](#m_offset)|Especifica el desplazamiento de este fotograma clave desde un fotograma clave almacenado en m_pExistingKeyFrame.|
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Almacena un puntero a un keframe existente. Este fotograma clave se agrega al guion gráfico con m_offset el fotograma clave existente.|
-|[CKeyFrame::m_pTransition](#m_ptransition)|Almacena un puntero a la transición que comienza en este fotograma clave.|
+|[CKeyFrame::m_offset](#m_offset)|Especifica el desplazamiento de este fotograma clave de un fotograma clave almacenado en m_pExistingKeyFrame.|
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Almacena un puntero a un keframe existente. Este fotograma clave se agrega al guión gráfico con m_offset al fotograma clave existente.|
+|[CKeyFrame::m_pTransition](#m_ptransition)|Almacena un puntero a la transción que comienza en este fotograma clave.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase implementa un fotograma clave de animación. Un fotograma clave representa un momento dado dentro de un guión gráfico y puede utilizarse para especificar los tiempos de inicio y finalización de las transiciones. Un fotograma clave deben basarse en otro fotogramas clave y tener un desplazamiento (en segundos), o puede basarse en una transición y representa un momento en el tiempo cuando finaliza esta transición.
+Esta clase implementa un fotograma clave de animación. Un fotograma clave representa un momento en el tiempo dentro de un guión gráfico y se puede utilizar para especificar las horas de inicio y finalización de las transiciones. Un fotograma clave puede basarse en otro fotograma clave y tener un desplazamiento (en segundos) de él, o puede basarse en una transición y representar un momento en el tiempo en el que finaliza esta transición.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -86,7 +86,7 @@ Esta clase implementa un fotograma clave de animación. Un fotograma clave repre
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard
+## <a name="ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard
 
 Agrega un fotograma clave a un guión gráfico.
 
@@ -102,19 +102,19 @@ virtual BOOL AddToStoryboard(
 Un puntero a un guión gráfico.
 
 *bDeepAdd*<br/>
-Especifica si se debe agregar fotogramas clave o realizar la transición de forma recursiva.
+Especifica si se debe agregar fotograma clave o transición de forma recursiva.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el fotograma clave se agregó correctamente.
+TRUE, si el fotograma clave se ha agregado correctamente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método agrega un fotograma clave para crear un guion gráfico. Si depende de otros fotogramas clave o una transición y bDeepAdd es TRUE, este método intenta agregarlos de forma recursiva.
+Este método agrega un fotograma clave al guión gráfico. Si depende de otro fotograma clave o transición y bDeepAdd es TRUE, este método intenta agregarlos recursivamente.
 
-##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition
+## <a name="ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition
 
-Agrega un fotograma clave para crear un guion gráfico después de la transición.
+Agrega un fotograma clave al guión gráfico después de la transición.
 
 ```
 BOOL AddToStoryboardAfterTransition(
@@ -132,15 +132,15 @@ Especifica si se debe agregar una transición de forma recursiva.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el fotograma clave se agregó correctamente.
+TRUE, si el fotograma clave se ha agregado correctamente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta función se llama el marco de trabajo para agregar un fotograma clave para crear un guion gráfico después de la transición.
+El marco de trabajo llama a esta función para agregar un fotograma clave al guión gráfico después de la transición.
 
-##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset
+## <a name="ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset
 
-Agrega un fotograma clave para crear un guion gráfico con desplazamiento.
+Agrega un fotograma clave al guión gráfico en el desplazamiento.
 
 ```
 virtual BOOL AddToStoryboardAtOffset(
@@ -154,17 +154,17 @@ virtual BOOL AddToStoryboardAtOffset(
 Un puntero a un guión gráfico.
 
 *bDeepAdd*<br/>
-Especifica si este fotograma clave dependen de forma recursiva para agregar un fotograma clave.
+Especifica si se debe agregar un fotograma clave este fotograma clave de forma recursiva.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el fotograma clave se agregó correctamente.
+TRUE, si el fotograma clave se ha agregado correctamente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta función se llama el marco de trabajo para agregar un fotograma clave para crear un guion gráfico con desplazamiento.
+El marco de trabajo llama a esta función para agregar un fotograma clave al guión gráfico en offset.
 
-##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame
+## <a name="ckeyframeckeyframe"></a><a name="ckeyframe"></a>CKeyFrame::CKeyFrame
 
 Construye un fotograma clave que depende de una transición.
 
@@ -178,22 +178,22 @@ CKeyFrame(
 
 ### <a name="parameters"></a>Parámetros
 
-*pTransition*<br/>
+*pTransición*<br/>
 Un puntero a una transición.
 
 *pKeyframe*<br/>
 Un puntero al fotograma clave.
 
 *offset*<br/>
-Desplazamiento, en segundos, desde el fotograma clave especificado por pKeyframe.
+Desplazamiento, en segundos, del fotograma clave especificado por pKeyframe.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El fotograma clave construido representará un momento dado dentro de un guión gráfico cuando finaliza la transición especificada.
+El fotograma clave construido representará un momento en el tiempo dentro de un guión gráfico cuando finalice la transición especificada.
 
-##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe
+## <a name="ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe
 
-Devuelve un puntero a un fotograma clave que depende de este fotograma clave.
+Devuelve un puntero a un fotograma clave del que depende este fotograma clave.
 
 ```
 CBaseKeyFrame* GetExistingKeyframe();
@@ -201,15 +201,15 @@ CBaseKeyFrame* GetExistingKeyframe();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero válido al fotograma clave, o NULL si este fotograma clave no depende de otro fotogramas clave.
+Un puntero válido al fotograma clave, o NULL si este fotograma clave no depende de otro fotograma clave.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Se trata de un descriptor de acceso a un fotograma clave que depende de este fotograma clave.
+Este es un descriptor de acceso a un fotograma clave del que depende este fotograma clave.
 
-##  <a name="getoffset"></a>  CKeyFrame::GetOffset
+## <a name="ckeyframegetoffset"></a><a name="getoffset"></a>CKeyFrame::GetOffset
 
-Devuelve un desplazamiento respecto a otro fotogramas clave.
+Devuelve un desplazamiento de otro fotograma clave.
 
 ```
 UI_ANIMATION_SECONDS GetOffset();
@@ -217,15 +217,15 @@ UI_ANIMATION_SECONDS GetOffset();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Posición de desplazamiento en segundos desde otro fotograma clave.
+Un desplazamiento en segundos desde otro fotograma clave.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método debe llamarse para determinar la posición de desplazamiento en segundos desde otro fotograma clave.
+Se debe llamar a este método para determinar un desplazamiento en segundos desde otro fotograma clave.
 
-##  <a name="gettransition"></a>  CKeyFrame::GetTransition
+## <a name="ckeyframegettransition"></a><a name="gettransition"></a>CKeyFrame::GetTransition
 
-Devuelve un puntero a una transición que depende de este fotograma clave.
+Devuelve un puntero a una transición de la que depende este fotograma clave.
 
 ```
 CBaseTransition* GetTransition();
@@ -233,36 +233,36 @@ CBaseTransition* GetTransition();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero válido para la transición, o NULL si este fotograma clave no depende de la transición.
+Un puntero válido a la transición, o NULL si este fotograma clave no depende de la transición.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Se trata de un descriptor de acceso a una transición que depende de este fotograma clave.
+Este es un descriptor de acceso a una transición de la que depende este fotograma clave.
 
-##  <a name="m_offset"></a>  CKeyFrame::m_offset
+## <a name="ckeyframem_offset"></a><a name="m_offset"></a>CKeyFrame::m_offset
 
-Especifica el desplazamiento de este fotograma clave desde un fotograma clave almacenado en m_pExistingKeyFrame.
+Especifica el desplazamiento de este fotograma clave de un fotograma clave almacenado en m_pExistingKeyFrame.
 
 ```
 UI_ANIMATION_SECONDS m_offset;
 ```
 
-##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame
+## <a name="ckeyframem_pexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame
 
-Almacena un puntero a un keframe existente. Este fotograma clave se agrega al guion gráfico con m_offset el fotograma clave existente.
+Almacena un puntero a un keframe existente. Este fotograma clave se agrega al guión gráfico con m_offset al fotograma clave existente.
 
 ```
 CBaseKeyFrame* m_pExistingKeyFrame;
 ```
 
-##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition
+## <a name="ckeyframem_ptransition"></a><a name="m_ptransition"></a>CKeyFrame::m_pTransition
 
-Almacena un puntero a la transición que comienza en este fotograma clave.
+Almacena un puntero a la transción que comienza en este fotograma clave.
 
 ```
 CBaseTransition* m_pTransition;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

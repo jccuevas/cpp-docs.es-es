@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: ddd3755a4fcabf8c097c359f31c9cc189b36f79a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b15ee67e39631926b7061826369e855bc3714a96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521117"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374189"
 ---
 # <a name="compiler-error-c2552"></a>Error del compilador C2552
 
@@ -19,19 +19,19 @@ ms.locfileid: "50521117"
 
 El identificador de agregado se inicializó incorrectamente.
 
-[Agregados](../../c-language/initializing-aggregate-types.md) se definen como:
+[Los agregados](../../c-language/initializing-aggregate-types.md) se definen como:
 
 - Matrices
 
 - Clases, estructuras y uniones que no tienen:
 
-   - Constructores
+  - Constructores
 
-   - Miembros privados o protegidos
+  - Miembros privados o protegidos
 
-   - Clases base
+  - Clases base
 
-   - Funciones virtuales
+  - Funciones virtuales
 
 Además, Visual C++ no permite los tipos de datos en un agregado que contiene constructores.
 
@@ -51,7 +51,7 @@ Las siguientes son las razones por las que C2552 puede desencadenarse cuando se 
 
 El código siguiente genera el error C2552:
 
-```
+```cpp
 // C2552.cpp
 // compile with: /clr
 #include <string>

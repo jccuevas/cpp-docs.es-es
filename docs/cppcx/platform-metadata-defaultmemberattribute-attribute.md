@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::DefaultMemberAttribute Attribute
 ms.assetid: d8abda01-c257-4371-aec4-541d4825e0af
-ms.openlocfilehash: a4b3d5e8ab5d6ce254560bc84daceac74e2c9ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 754d41a385e2717989e87c0e06a180f02429d2c2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183300"
 ---
 # <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::Metadata::DefaultMemberAttribute (Atributo)
 
@@ -40,7 +40,7 @@ Aplica el atributo DefaultMember a un método que va a ser utilizado por una apl
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Platform::Metadata
+**Espacio de nombres**: Platform:: Metadata
 
 **Metadatos:** platform.winmd
 

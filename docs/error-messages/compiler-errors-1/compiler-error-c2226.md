@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2226
 ms.assetid: b3aaa2a5-254a-46a9-a508-de2371ecffeb
-ms.openlocfilehash: 448034ee182de33080e70adba9f4c48fb65295f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b5f74a62004e1af61b206590aeae57cba838b0c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528705"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206564"
 ---
 # <a name="compiler-error-c2226"></a>Error del compilador C2226
 

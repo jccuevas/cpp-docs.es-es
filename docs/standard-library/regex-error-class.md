@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: eed961ea698591935c22fc748ff79583ae636b27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8f3c88c1b203ed7fcea148843fa99590e27b888
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331863"
 ---
-# <a name="regexerror-class"></a>regex_error (Clase)
+# <a name="regex_error-class"></a>regex_error (Clase)
 
 Informa de un objeto basic_regex incorrecto.
 
@@ -25,7 +25,7 @@ class regex_error
 : public std::runtime_error
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La clase describe un objeto de excepción que se produce para notificar un error en la construcción o el uso de un objeto `basic_regex` .
 
@@ -37,9 +37,9 @@ La clase describe un objeto de excepción que se produce para notificar un error
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
-|[code](#code)|Devuelve el código de error.|
+|[código](#code)|Devuelve el código de error.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,7 +82,7 @@ int main()
 regex error: unbalanced parentheses
 ```
 
-## <a name="code"></a> regex_error::code
+## <a name="regex_errorcode"></a><a name="code"></a>regex_error::código
 
 Devuelve el código de error.
 
@@ -90,11 +90,11 @@ Devuelve el código de error.
 regex_constants::error_code code() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve el valor que se pasó al constructor del objeto.
 
-## <a name="regex_error"></a> regex_error::regex_error
+## <a name="regex_errorregex_error"></a><a name="regex_error"></a>regex_error::regex_error
 
 Construye el objeto.
 
@@ -104,20 +104,20 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parámetros
 
-*Error*<br/>
+*Error*\
 Código de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El constructor crea un objeto que contiene el valor *error*.
+El constructor construye un objeto que contiene el *error*de valor .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants (Clase)](../standard-library/regex-constants-class.md)<br/>
-[Funciones de \<regex>](../standard-library/regex-functions.md)<br/>
-[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)<br/>
-[Operadores de \<regex>](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits (Clase)](../standard-library/regex-traits-class.md)<br/>
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Clase regex_constants](../standard-library/regex-constants-class.md)\
+[\<funciones de> regex](../standard-library/regex-functions.md)\
+[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores de> regex](../standard-library/regex-operators.md)\
+[Clase regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Clase regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

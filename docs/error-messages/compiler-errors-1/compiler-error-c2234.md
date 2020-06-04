@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2234
 ms.assetid: cfa42458-c803-4717-a017-9eca1c0cbfb0
-ms.openlocfilehash: 16cc09f43f8705452c207e5218f4cc274557e825
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f13b33c9e6c56e4ec82e6542ff0869849f0f822
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611476"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759248"
 ---
 # <a name="compiler-error-c2234"></a>Error del compilador C2234
 
-'name': las matrices de referencias no son válidas
+' name ': las matrices de referencias no son válidas
 
-Dado que no se permiten punteros a las referencias, las matrices de referencias no son posibles.
+Dado que no se permiten punteros a referencias, no se pueden usar matrices de referencias.
 
-El ejemplo siguiente genera C2234:
+En el ejemplo siguiente se genera C2234:
 
-```
+```cpp
 // C2234.cpp
 int main() {
    int i = 0, j = 0, k = 0, l = 0;

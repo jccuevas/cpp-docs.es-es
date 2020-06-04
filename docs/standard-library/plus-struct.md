@@ -1,26 +1,26 @@
 ---
-title: plus (struct)
+title: plus (Struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::plus
+- functional/std::plus
 helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 5cb37d0f0a1f3704176a4e419882f0dcfacd7921
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372069"
 ---
-# <a name="plus-struct"></a>plus (struct)
+# <a name="plus-struct"></a>plus (Struct)
 
 Objeto de función predefinido que realiza la operación de suma (`operator+` binario) sobre sus argumentos.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -39,13 +39,14 @@ struct plus<void>
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*, *T*, *U* un tipo que admita un binario `operator+` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U*\
+Tipo que admite un `operator+` binario que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda*<br/>
-Operando izquierdo de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
+*Izquierda*\
+Operando izquierdo de la operación de suma. La plantilla no especializada toma un argumento de referencia lvalue de tipo *Type*. La plantilla especializada realiza un reenvío perfecto de argumentos de referencia lvalue y rvalue de tipo deducido *T*.
 
-*Derecha*<br/>
-Operando derecho de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
+*Correcto*\
+Operando derecho de la operación de suma. La plantilla no especializada toma un argumento de referencia lvalue de tipo *Type*. La plantilla especializada realiza un reenvío perfecto de argumentos de referencia lvalue y rvalue de tipo deducido *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -94,20 +95,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 4 8 12 16 20 )
 The vector v2 = ( -4 -6 -8 -10 -12 -14 )
 The element-wise sums are: ( -4 -2 0 2 4 6 )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

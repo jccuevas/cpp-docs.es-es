@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1009
 ms.assetid: c377a068-bcc3-4ec4-b725-eb6927e10128
-ms.openlocfilehash: 594294b0a6ad0e8ce3bb9048cad8892607d75729
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a0629ac999b3ac13f9988a8219709ce6f9fe6b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474963"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173171"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>Error irrecuperable del compilador de recursos RC1009
 
-límite del compilador: las macros están demasiado anidadas 'macro'
+límite del compilador: las macros están demasiado anidadas ' macro '
 
-El archivo supera el límite del compilador de recursos de anidamiento de macros. Revise el archivo de origen especificado para disminuir la profundidad de anidamiento de las macros.
+El archivo supera el límite del compilador de recursos para el anidamiento de macros. Revise el archivo de código fuente especificado para reducir la profundidad de anidamiento de sus macros.

@@ -1,9 +1,9 @@
 ---
 title: _alloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _alloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _alloca
 - alloca
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668083"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821439"
 ---
-# <a name="alloca"></a>_alloca
+# <a name="_alloca"></a>_alloca
 
-Asigna memoria en la pila. Esta función está en desuso porque hay una versión más segura; consulte [_malloca](malloca.md).
+Asigna memoria en la pila. Esta función está en desuso porque hay disponible una versión más segura; vea [_malloca](malloca.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,37 +45,37 @@ void *_alloca(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *size*<br/>
 Bytes que se van a asignar desde la pila.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **_alloca** rutinarias devuelve un **void** puntero en el espacio asignado, que se garantiza que se alinee correctamente para el almacenamiento de cualquier tipo de objeto. Si *tamaño* es 0, **_alloca** asigna un elemento de longitud cero y devuelve un puntero válido para ese elemento.
+La rutina **_alloca** devuelve un puntero **void** al espacio asignado, cuya alineación es adecuada para el almacenamiento de cualquier tipo de objeto. Si *el tamaño* es 0, **_alloca** asigna un elemento de longitud cero y devuelve un puntero válido a ese elemento.
 
 Si no se puede asignar el espacio, se genera una excepción de desbordamiento de pila. La excepción de desbordamiento de pila no es una excepción de C++, sino que es una excepción estructurada. En lugar de usar el control de excepciones de C++, debe usar el [control de excepciones estructuradas](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-**_alloca** asigna *tamaño* bytes a partir de la pila del programa. El espacio asignado automáticamente se libera cuando sale la función que realiza la llamada (no cuando la asignación simplemente queda fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por **_alloca** como argumento a [libre](free.md).
+**_alloca** asigna bytes de *tamaño* de la pila del programa. El espacio asignado se libera automáticamente cuando finaliza la función de llamada (no cuando la asignación pasa simplemente fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por **_alloca** como argumento a [Free](free.md).
 
-Hay restricciones para llamar explícitamente a **_alloca** en un controlador de excepciones (EH). Las rutinas del controlador de excepciones que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: llevan a cabo sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función de inclusión. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por lo tanto, llamar explícitamente a **_alloca** en cualquiera de lo siguientes escenarios, se produce un error del programa durante la devolución de la rutina de controlador de eventos que realiza la llamada:
+Existen restricciones para llamar explícitamente a **_alloca** en un controlador de excepciones (EH). Las rutinas del controlador de excepciones que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: llevan a cabo sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función de inclusión. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por consiguiente, si se llama explícitamente a **_alloca** en cualquiera de los siguientes escenarios, se produce un error en el programa durante la devolución a la rutina de llamada EH:
 
 - Expresión de filtro de excepciones SEH de Windows NT: `__except ( _alloca() )`
 
-- Controlador de excepciones finales SEH de Windows NT: `__finally { _alloca() }`
+- Controlador de excepciones final de SEH de Windows NT: `__finally { _alloca() }`
 
 - Expresión de la cláusula catch del controlador de excepciones de C++
 
-Sin embargo, **_alloca** pueden llamarse directamente desde dentro de una rutina de controlador de excepciones o desde una devolución de llamada proporcionada por la aplicación que se invoca mediante uno de los escenarios EH enumerados anteriormente.
+Sin embargo, se puede llamar a **_alloca** directamente desde una rutina EH o desde una devolución de llamada proporcionada por la aplicación que se invoca mediante uno de los escenarios EH descritos anteriormente.
 
 > [!IMPORTANT]
-> En Windows XP, si **_alloca** se llama dentro de un bloque try/catch, se debe llamar a [_resetstkoflw](resetstkoflw.md) en el bloque catch.
+> En Windows XP, si se llama a **_alloca** dentro de un bloque try/catch, debe llamar a [_resetstkoflw](resetstkoflw.md) en el bloque catch.
 
-Además de las restricciones anteriores, cuando se usa el[/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) opción, **_alloca** no se puede usar en **__except** bloques. Para obtener más información, consulta [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Además de las restricciones anteriores, al usar la opción[/CLR (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , **_alloca** no se pueden usar en bloques de **__except** . Para obtener más información, vea [Restricciones de /clr](../../build/reference/clr-restrictions.md).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -116,7 +119,7 @@ int main()
         }
     }
 
-    // If an exception occured with the _alloca function
+    // If an exception occurred with the _alloca function
     __except( GetExceptionCode() == STATUS_STACK_OVERFLOW )
     {
         printf_s("_alloca failed!\n");

@@ -1,7 +1,7 @@
 ---
 title: and_eq
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - and_eq
 - std.and_eq
@@ -20,14 +23,14 @@ f1_keywords:
 helpviewer_keywords:
 - and_eq macro
 ms.assetid: 11091772-e359-4c2b-95c6-00841ac04354
-ms.openlocfilehash: 4dbce5115c656137f845e31b4793f43b5531afc2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f505faa561dafc5ba0f929f94676e0ee81a32199
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170922"
 ---
-# <a name="andeq"></a>and_eq
+# <a name="and_eq"></a>and_eq
 
 Alternativa al operador &=.
 
@@ -37,7 +40,7 @@ Alternativa al operador &=.
 #define and_eq &=
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La macro produce el operador &=.
 
@@ -69,4 +72,4 @@ int main( )
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<iso646.h>
+**Encabezado:** \<iso646. h >

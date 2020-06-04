@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4155
 ms.assetid: ba233353-09e3-4195-8127-13a27ddd8d70
-ms.openlocfilehash: 1f47b990762ebe2ea18368949c1781fcf5553d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e455ad67c9a36cfa4b52711ce60ce46ef6afac2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581420"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176213"
 ---
 # <a name="compiler-warning-level-1-c4155"></a>Advertencia del compilador (nivel 1) C4155
 
@@ -23,7 +23,7 @@ El formato de matriz **delete** debe usarse para eliminar una matriz. Esta adver
 
 El ejemplo siguiente genera la advertencia C4155:
 
-```
+```cpp
 // C4155.cpp
 // compile with: /Za /W1
 #include <stdio.h>

@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 93e3b8912ddf20bf8e190bb42e8413e6d909bbcc
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286445"
 ---
 # <a name="isnormal"></a>isnormal
 
-Determina si un valor de punto flotante es infinito.
+Determina si un valor de punto flotante es un valor normal.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,7 +27,7 @@ int isnormal(
 template <class FloatingType>
 inline bool isnormal(
    FloatingType x
-) throw(); /* C++-only template function */
+) throw(); /* C++-only function template */
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -37,11 +37,11 @@ Valor de punto flotante que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**isnormal** devuelve un valor distinto de cero (**true** en código de C++) si el argumento *x* es finito y no subnormal. **isnormal** devuelve 0 (**false** en código de C++) si el argumento es un NAN, infinito o un subnormales.
+**isnormal** devuelve un valor distinto de cero (**true** en C++ código) si el argumento *x* es cero, subnormales, infinito ni un NaN. En caso contrario, **isnormal** devuelve 0 (**false** en C++ código).
 
 ## <a name="remarks"></a>Comentarios
 
-**isnormal** es una macro, cuando se compila como C y una función de plantilla en línea cuando se compila como C++.
+**isnormal** es una macro, cuando se compila como C y una plantilla de función en línea cuando se compila como C++.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -54,7 +54,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 ## <a name="see-also"></a>Vea también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[isfinite, _finite, _finitef](finite-finitef.md)<br/>
+[isfinite, _finite y _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>

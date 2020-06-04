@@ -6,12 +6,12 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-ms.openlocfilehash: 3db635cfdc39f9c4166bbf3d6958f52e535d91f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1e8f9af696b6ea4cd485f4215e1c8425098e987
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396410"
 ---
 # <a name="help-menu-merging"></a>Combinar el menú Ayuda
 
@@ -37,7 +37,7 @@ Ambos elementos de menú son menús en cascada en la que se proporcionan los ele
 
 Para construir este combinado **ayuda** menú, la arquitectura de contención de documentos activos modifica el procedimiento normal de documentos OLE. Según los documentos OLE, la barra de menú combinado puede tener seis grupos de menús, es decir, **archivo**, **editar**, **contenedor**, **objeto**,  **Ventana**, **ayuda**, en ese orden. En cada grupo, puede haber cero o más menús. Los grupos de **archivo**, **contenedor**, y **ventana** pertenece al contenedor y los grupos de **editar**, **(objeto),** y **ayuda** pertenecen al objeto. Cuando el objeto que desea realizar la combinación de menús, crea una barra de menús en blanco y lo pasa al contenedor. El contenedor, a continuación, inserta sus menús, mediante una llamada a `IOleInPlaceFrame::InsertMenus`. El objeto también pasa una estructura que es una matriz de seis valores LARGOS (**OLEMENUGROUPWIDTHS**). Después de insertar los menús, el contenedor marca cuántos menús agregó a cada uno de sus grupos y, a continuación, se devuelve. A continuación, el objeto inserta sus menús, prestando atención al recuento de los menús en cada grupo de contenedores. Por último, el objeto pasa la barra de menú combinado y la matriz (que contiene el recuento de los menús de cada grupo) a OLE, que devuelve un opaco "descriptor de menú" controlar. Más adelante el objeto pasa el identificador y la barra de menú combinado en el contenedor, a través de `IOleInPlaceFrame::SetMenu`. En este momento, el contenedor muestra la barra de menú combinado y también pasa el identificador a OLE, para que pueda realizar OLE correcto envío de mensajes de menú.
 
-En el procedimiento de documento activo modificado, el objeto debe inicializar primero el **OLEMENUGROUPWIDTHS** elementos a cero antes de pasarlos al contenedor. El contenedor realiza una inserción de menú normal con una excepción: las inserciones de contenedor un **ayuda** menú como el último elemento y almacena el valor 1 en la última entrada (sexta) de la **OLEMENUGROUPWIDTHS** matriz (es decir, width [5], que pertenece al grupo de Ayuda del objeto). Esto **ayuda** menú tendrá solo un elemento que es un submenú, el "**ayuda contenedor** >" menú en cascada como se describió anteriormente.
+En el procedimiento de documento activo modificado, el objeto debe inicializar primero el **OLEMENUGROUPWIDTHS** elementos a cero antes de pasarlos al contenedor. A continuación, el contenedor realiza una inserción de menú normal con una excepción: Inserta el contenedor un **ayuda** menú como el último elemento y almacena el valor 1 en la última entrada (sexta) de la **OLEMENUGROUPWIDTHS** matriz (es decir, width [5], que pertenece al grupo de Ayuda del objeto). Esto **ayuda** menú tendrá solo un elemento que es un submenú, el "**ayuda contenedor** >" menú en cascada como se describió anteriormente.
 
 El objeto, a continuación, ejecuta su código de inserción de menú normal, excepto que antes de insertar su **ayuda** menú, comprueba la sexta entrada de la **OLEMENUGROUPWIDTHS** matriz. Si el valor es 1 y el nombre del último menú es **ayuda** (o la cadena localizada), a continuación, inserta el objeto su **ayuda** menú como submenú del contenedor de la **ayuda** menú.
 
@@ -52,4 +52,3 @@ Por último, cuando sea el momento para desensamblar el menú, el objeto quita i
 ## <a name="see-also"></a>Vea también
 
 [Contenedores de documentos activos](../mfc/active-document-containers.md)
-

@@ -4,14 +4,14 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bd6b2d3d716ba25999388d44e7bd5a8d0750eb5
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628987"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127201"
 ---
-# <a name="filesystemerror-class"></a>Clase filesystem_error
+# <a name="filesystem_error-class"></a>Clase filesystem_error
 
 Una base para todas las excepciones que se producen para notificar un desbordamiento de sistema de bajo nivel.
 
@@ -23,31 +23,33 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Comentarios
 
-Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un error de las funciones \<filesystem>. Almacena un objeto de tipo `string`, llamado `mymesg` aquí a efectos de la exposición. También almacena dos objetos de tipo `path`, llamado `mypval1` y `mypval2`.
+Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un error de las funciones \<filesystem>. Almacena un objeto de tipo `string`, al que se llama `mymesg` aquí para la exposición. También almacena dos objetos de tipo `path`, denominados `mypval1` y. `mypval2`
+
+## <a name="members"></a>Miembros
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|||
 |-|-|
 |[filesystem_error](#filesystem_error)|Construye un `filesystem_error` mensaje.|
 
-### <a name="member-functions"></a>Funciones miembro
+### <a name="functions"></a>Funciones
 
-|Función miembro|Descripción|
+|||
 |-|-|
 |[path1](#path1)|Devuelve `mypval1`|
 |[path2](#path2)|Devuelve `mypval2`|
-|[Qué](#what)|Devuelve un puntero a un objeto `NTBS`.|
+|[what](#what)|Devuelve un puntero a un objeto `NTBS`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<filesystem >
+**Encabezado:** \<> filesystem
 
 **Espacio de nombres:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error:: filesystem_error
+## <a name="filesystem_error"></a>filesystem_error
 
-El primer constructor crea su propio mensaje de *what_arg* y *CE*. El segundo constructor también crea su propio mensaje de *pval1*, que se almacena en `mypval1`. El tercer constructor también crea su propio mensaje de *pval1*, que se almacena en `mypval1`y desde *pval2*, que se almacena en `mypval2`.
+El primer constructor crea su mensaje de *what_arg* y *EC*. El segundo constructor también crea su mensaje a partir de *pval1*, que almacena en `mypval1`. El tercer constructor también crea su mensaje a partir de *pval1*, que almacena en `mypval1`y desde *pval2*, que almacena en `mypval2`.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -65,19 +67,19 @@ filesystem_error(const string& what_arg,
 
 ### <a name="parameters"></a>Parámetros
 
-*what_arg*<br/>
+*what_arg*\
 Mensaje especificado.
 
-*CE*<br/>
+*n°*\
 Código de error especificado.
 
-*mypval1*<br/>
-Aún más el parámetro de mensaje especificado.
+*mypval1*\
+Parámetro de mensaje especificado.
 
-*mypval2*<br/>
-Aún más el parámetro de mensaje especificado.
+*mypval2*\
+Parámetro de mensaje especificado.
 
-## <a name="path1"></a> filesystem_error:: path1
+## <a name="path1"></a>ruta1
 
 La función miembro devuelve `mypval1`
 
@@ -85,7 +87,7 @@ La función miembro devuelve `mypval1`
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> filesystem_error:: path2
+## <a name="path2"></a>rutaDeAcceso2
 
 La función miembro devuelve `mypval2`
 
@@ -93,17 +95,10 @@ La función miembro devuelve `mypval2`
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> filesystem_error::What
+## <a name="what"></a>elemento
 
-La función miembro devuelve un puntero a un `NTBS`, preferiblemente componerse de `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, y `mypval2.native_string()`.
+La función miembro devuelve un puntero a un `NTBS`, preferiblemente creado a `runtime_error::what()`partir `system_error::what()`de `mymesg`, `mypval1.native_string()`,, `mypval2.native_string()`y.
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-## <a name="see-also"></a>Vea también
-
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[system_error (Clase)](../standard-library/system-error-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[\<exception>](../standard-library/exception.md)<br/>

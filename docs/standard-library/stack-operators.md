@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: f6ec0855179e41c78f32fe45429ec0bea1ae2e59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493475"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425074"
 ---
 # <a name="ltstackgt-operators"></a>Operadores de &lt;stack&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.
 
@@ -40,17 +35,17 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si las pilas no son iguales, o bien **false** si las pilas son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. Dos pilas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -105,17 +100,17 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la pila del lado izquierdo del operador es menor que y no igual que la pila del lado derecho del operador. Si no es así, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.
 
@@ -179,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.
 
@@ -189,17 +184,17 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la pila del lado izquierdo del operador es menor o igual que la pila del lado derecho del operador. Si no es así, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de menor o igual entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.
 
@@ -246,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto de pila del lado izquierdo del operador es igual al objeto de pila del lado derecho.
 
@@ -256,17 +251,17 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si las pilas son iguales, o bien **false** si las pilas no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. Dos pilas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -321,17 +316,17 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la pila del lado izquierdo del operador es mayor que y no igual que la pila del lado derecho del operador. Si no es así, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.
 
@@ -380,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.
 
@@ -390,17 +385,17 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la pila del lado izquierdo del operador es estrictamente menor que la pila del lado derecho del operador. En caso contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de mayor o igual entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.
 
@@ -447,7 +442,3 @@ int main( )
 The stack s1 is less than the stack s2.
 The stack s1 is greater than or equal to the stack s3.
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<stack>](../standard-library/stack.md)<br/>

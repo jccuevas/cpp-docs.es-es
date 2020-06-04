@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4822
 ms.assetid: 0f231a30-2eb0-4722-aaa0-e2d19d3e7eea
-ms.openlocfilehash: 02e7ba11f7bda134bcc98ce2c494a3ef367c0d6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c42227c7e8be9bd31c37776d9724d23db61837
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591248"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174874"
 ---
 # <a name="compiler-warning-level-1-c4822"></a>Advertencia del compilador (nivel 1) C4822
 
@@ -23,7 +23,7 @@ Cualquier definición de la clase de una función miembro de clase local será u
 
 El ejemplo siguiente genera la advertencia C4822:
 
-```
+```cpp
 // C4822.cpp
 // compile with: /W1
 int main() {

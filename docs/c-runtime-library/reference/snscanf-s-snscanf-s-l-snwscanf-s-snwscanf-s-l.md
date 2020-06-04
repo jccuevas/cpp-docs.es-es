@@ -1,12 +1,12 @@
 ---
 title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf_s_l
 - _snwscanf_s
 - _snscanf_s
 - _snscanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,11 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sntscanf_s
 - snscanf_s
@@ -48,14 +52,14 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: b7f6fbbcdb6e3fa9d3137337992b2de0d81c1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947945"
 ---
-# <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
+# <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
 Lee datos con formato de una longitud especificada a partir de una cadena. Se trata de versiones de [_snscanf, _snscanf_l, _snwscanf, _snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) que incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -88,11 +92,11 @@ int __cdecl _snwscanf_s_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*entrada*<br/>
+*input*<br/>
 Cadena de entrada que se va a examinar.
 
 *length*<br/>
-Número de caracteres que se va a examinar en *entrada*.
+Número de caracteres que se van a examinar en la *entrada*.
 
 *format*<br/>
 Uno o varios especificadores de formato.
@@ -101,26 +105,26 @@ Uno o varios especificadores de formato.
 Configuración regional que se va a usar.
 
 *argument_list*<br/>
-Argumentos opcionales que se asignan según la cadena de formato.
+Argumentos opcionales que se van a asignar según la cadena de formato.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el número de campos convertidos y asignados correctamente; el valor devuelto no incluye los campos que se leyeron pero no se asignaron. Un valor devuelto de 0 indica que no se ha asignado ningún campo. El valor devuelto es **EOF** para un error o si se alcanza el final de la cadena antes de la primera conversión. Para obtener más información, vea [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Cada una de estas funciones devuelve el número de campos convertidos y asignados correctamente; el valor devuelto no incluye los campos que se leyeron pero no se asignaron. Un valor devuelto de 0 indica que no se ha asignado ningún campo. El valor devuelto es **EOF** para un error o si el final de la cadena se alcanza antes de la primera conversión. Para obtener más información, vea [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Si *entrada* o *formato* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
+Si la *entrada* o el *formato* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecen **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función es similar a **sscanf_s** excepto que proporciona la capacidad de especificar un número fijo de caracteres que se va a examinar de la cadena de entrada. Para obtener más información, vea [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Esta función es como **sscanf_s** , salvo que proporciona la capacidad de especificar un número fijo de caracteres que se van a examinar desde la cadena de entrada. Para obtener más información, vea [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Falta el parámetro de tamaño de búfer con los caracteres de campo de tipo **c**, **C**, **s**, **S**, y **[** . Para obtener más información, vea [scanf (Caracteres de campo de tipo)](../../c-runtime-library/scanf-type-field-characters.md).
+El parámetro de tamaño de búfer es necesario con los caracteres de campo de tipo **c**, **c**, **s**, **s**y **[** . Para obtener más información, vea [scanf (Caracteres de campo de tipo)](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> El parámetro de tamaño es de tipo **sin signo**, no **size_t**.
+> El parámetro de tamaño es de tipo sin **signo**, no **size_t**.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

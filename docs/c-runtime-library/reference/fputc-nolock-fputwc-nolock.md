@@ -1,10 +1,12 @@
 ---
 title: _fputc_nolock, _fputwc_nolock
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _fputwc_nolock
 - _fputc_nolock
-apilocation:
+- _o__fputc_nolock
+- _o__fputwc_nolock
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fputc_nolock
 - fputwc_nolock
@@ -33,14 +39,14 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25539bf6c6d590a787615e091ec68753cd1c93e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579778"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920134"
 ---
-# <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
+# <a name="_fputc_nolock-_fputwc_nolock"></a>_fputc_nolock, _fputwc_nolock
 
 Escribe un carácter en un flujo sin bloquear el subproceso.
 
@@ -59,21 +65,23 @@ wint_t _fputwc_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Carácter que se va a escribir.
 
-*secuencia*<br/>
+*misiones*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Cada una de estas funciones devuelve el carácter escrito. Para obtener información sobre errores, consulte [fputc, fputwc](fputc-fputwc.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**_fputc_nolock** y **_fputwc_nolock** son idénticas a **fputc** y **fputwc**, respectivamente, salvo que no están protegidas contra las interferencias otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_fputc_nolock** y **_fputwc_nolock** son idénticos a **fputc** y **fputwc**, respectivamente, salvo que no están protegidos contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
-Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_nolock** no admite actualmente la salida en un flujo UNICODE.
+Las dos funciones se comportan igual si el flujo se abre en modo ANSI. en la actualidad, **_fputc_nolock** no admite la salida en un flujo Unicode.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -88,7 +96,7 @@ Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -115,7 +123,7 @@ int main( void )
 This is a test of _fputc_nolock!!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

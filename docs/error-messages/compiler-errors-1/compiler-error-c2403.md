@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2403
 ms.assetid: add1f0ba-96b6-4df3-b53f-de1433d80c0c
-ms.openlocfilehash: 97354000cecb8b097b4efe6f44b441623fdf0836
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 412a2c59610ce023e6530ed0a1c6bc99f163401e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205951"
 ---
 # <a name="compiler-error-c2403"></a>Error del compilador C2403
 

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0026
 ms.assetid: c52bc9b5-8b22-4015-b477-8645ae56c489
-ms.openlocfilehash: 7450d655e4cc8cc073940ef13f8bd57db2ad5219
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9193d91d6abd3b1c9a4fbac1e3c50c045658ddff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590286"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192281"
 ---
 # <a name="project-build-error-prj0026"></a>Error PRJ0026 al compilar el proyecto
 
-> Archivo de respuesta '*archivo*' incluye contenido Unicode que no se puede traducir a la página de códigos ANSI del usuario.
+> El archivo de respuesta '*archivo*' contiene contenido Unicode que no se puede traducir a la página de códigos ANSI del usuario.
 >
-> *Contenido UNICODE del archivo*
+> *Contenido Unicode del archivo*
 
-El sistema de proyectos encontró contenido Unicode en un archivo de respuesta que no se puede traducir correctamente a la página de códigos ANSI actual del usuario.
+El sistema del proyecto encontró contenido Unicode en un archivo de respuesta que no se puede traducir correctamente a la página de códigos ANSI actual del usuario.
 
-La resolución de este error consiste en actualizar el contenido del archivo de respuesta para que utilice ANSI o para instalar la página de códigos en el equipo y establecerla como la predeterminada del sistema.
+La solución para este error es actualizar el contenido del archivo de respuesta para que use ANSI o instalar la página de códigos en el equipo y establecerlo como predeterminado del sistema.

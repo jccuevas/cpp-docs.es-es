@@ -7,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: 824b646699fbdd416ec81e795560375d60bff97f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62254013"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Cómo el marco llama a un controlador
 
@@ -33,4 +33,3 @@ Los siguientes temas en primer lugar examinar cómo el marco de trabajo enruta l
 ## <a name="see-also"></a>Vea también
 
 [Control y asignación de mensajes](../mfc/message-handling-and-mapping.md)
-

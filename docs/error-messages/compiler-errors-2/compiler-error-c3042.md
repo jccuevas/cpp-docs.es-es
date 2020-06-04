@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3042
 ms.assetid: bf73f61e-5bd2-40a8-9b06-6244e6a15a41
-ms.openlocfilehash: deb3b8d6251316bceb71ce03f2bda88520bbb9b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4347e5ee0e61ada700082b4954b616ce894e57b9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626803"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761395"
 ---
 # <a name="compiler-error-c3042"></a>Error del compilador C3042
 
@@ -21,7 +21,7 @@ Las cláusulas [copyprivate](../../parallel/openmp/reference/copyprivate.md) y [
 
 El ejemplo siguiente genera la advertencia C3042:
 
-```
+```cpp
 // C3042.cpp
 // compile with: /openmp /c
 #include <stdio.h>

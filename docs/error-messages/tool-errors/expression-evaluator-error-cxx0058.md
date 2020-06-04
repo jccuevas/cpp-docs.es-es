@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0058
 - CAN0058
 ms.assetid: b6246c6e-5845-4ad5-ac2a-e6c4faf8f3f9
-ms.openlocfilehash: 9727c4cbbef0594e30d19f816eb855a61f0b2e92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 032d3447cdf569c107cdb8f7a92f1fd02df35f40
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184637"
 ---
 # <a name="expression-evaluator-error-cxx0058"></a>Error del evaluador de expresiones CXX0058
 
 no se encontró el operador sobrecargado
 
-Se especificó un tipo de clase como el operando izquierdo de una expresión, pero no se definió un operador sobrecargado para la clase.
+Se especificó un tipo de clase como operando izquierdo en una expresión, pero no se definió un operador sobrecargado para la clase.
 
 Este error es idéntico a CAN0058.

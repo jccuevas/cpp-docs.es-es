@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: d9b9a6c04e7e9a5d88df516125280b6b23894a01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558202"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206563"
 ---
 # <a name="compiler-error-c2248"></a>Error del compilador C2248
 
-'*miembro*': no se puede obtener acceso a '*access_level*'miembro declarado en la clase'*clase*'
+'*member*': no se puede obtener acceso al miembro '*access_level*' declarado en la clase '*Class*'
 
-No se pueden obtener acceso los miembros de una clase derivada `private` miembros de una clase base. No se puede obtener acceso a `private` o `protected` los miembros de las instancias de clase.
+Los miembros de una clase derivada no pueden tener acceso a `private` miembros de una clase base. No se puede tener acceso a `private` o `protected` miembros de instancias de clase.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2248 cuando privada o los miembros protegidos de una clase se obtiene acceso desde fuera de la clase. Para corregir este problema, no tienen acceso a estos miembros directamente fuera de la clase. Usar datos de miembro público y las funciones miembro para interactuar con la clase.
+En el ejemplo siguiente se genera C2248 cuando se tiene acceso a miembros privados o protegidos de una clase desde fuera de la clase. Para corregir este problema, no tenga acceso a estos miembros directamente fuera de la clase. Use datos de miembros públicos y funciones miembro para interactuar con la clase.
 
 ```cpp
 // C2248_access.cpp
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-Otro problema que expone C2248 es el uso de friends de plantilla y la especialización. Para corregir este problema, declare friend funciones de plantilla mediante un <> de lista de parámetros de plantilla vacía o parámetros de plantilla específica.
+Otro problema de conformidad que expone C2248 es el uso de los amigos y la especialización de la plantilla. Para corregir este problema, declare funciones de plantilla de confianza mediante una lista de parámetros de plantilla vacía < > o parámetros de plantilla específicos.
 
 ```cpp
 // C2248_template.cpp
@@ -79,7 +79,7 @@ int main() {
 }
 ```
 
-Otro problema de conformidad que expone C2248 es cuando se intenta declarar a un elemento friend de una clase y cuando la clase no es visible para la declaración friend en el ámbito de la clase. Para corregir este problema, otorga a la clase envolvente.
+Otro problema de conformidad que expone C2248 es cuando se intenta declarar un Friend de una clase y cuando la clase no está visible para la Declaración friend en el ámbito de la clase. Para corregir este problema, conceda confianza a la clase envolvente.
 
 ```cpp
 // C2248_enclose.cpp

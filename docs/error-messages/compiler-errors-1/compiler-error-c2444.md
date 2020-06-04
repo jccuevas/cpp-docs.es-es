@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2444
 ms.assetid: 6339ed82-caad-45d3-a8ff-6c746589fd03
-ms.openlocfilehash: 277b5ba3199b059b493a8bc8c7228740c8f75a61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1cdee8cd5cc2fbd653d1daf9849f98cfd98ae0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205275"
 ---
 # <a name="compiler-error-c2444"></a>Error del compilador C2444
 

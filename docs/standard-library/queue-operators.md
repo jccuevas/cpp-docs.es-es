@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 496b728b67c4539a63d5bf3c783f8c9145c1de42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537493"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425254"
 ---
 # <a name="ltqueuegt-operators"></a>Operadores &lt;queue&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto queue en el lado izquierdo del operador no es igual al objeto queue del lado derecho.
 
@@ -40,17 +35,17 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si las colas no son iguales; **False** si lo son.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. Dos colas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -107,17 +102,17 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la cola del lado izquierdo del operador es menor y no igual que la cola del lado derecho del operador. Si no es así, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos queue se basa en una comparación del primer par de elementos diferentes.
 
@@ -160,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto queue en el lado izquierdo del operador es inferior a o igual que el objeto queue del lado derecho.
 
@@ -170,17 +165,17 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la cola del lado izquierdo del operador es estrictamente menor que la cola del lado derecho del operador. En caso contrario, es **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. La relación de menor o igual entre dos objetos queue se basa en una comparación del primer par de elementos diferentes.
 
@@ -225,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto queue en el lado izquierdo del operador es igual al objeto queue del lado derecho.
 
@@ -235,17 +230,17 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si las colas no son iguales; **False** si lo son.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. Dos colas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -301,17 +296,17 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la cola del lado izquierdo del operador es estrictamente menor que la cola del lado derecho del operador. En caso contrario, es **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos queue se basa en una comparación del primer par de elementos diferentes.
 
@@ -357,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto queue en el lado izquierdo del operador es mayor que o igual al objeto queue del lado derecho.
 
@@ -367,17 +362,17 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*right*<br/>
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la cola del lado izquierdo del operador es estrictamente menor que la cola del lado derecho del operador. En caso contrario, es **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. Dos colas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -421,7 +416,3 @@ int main( )
 The queue q1 is less than the queue q2.
 The queue q1 is greater than or equal to the queue q3.
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<queue>](../standard-library/queue.md)<br/>

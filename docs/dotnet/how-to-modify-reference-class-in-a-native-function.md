@@ -6,22 +6,22 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: 20ebf23cf97eb6232698e8c5f59f2f0531beb55b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528068"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544884"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>Cómo: Modificar la clase de referencia en una función nativa
 
-Puede pasar una clase de referencia con una matriz de CLR a una función nativa y modifique la clase, utilizando los servicios PInvoke.
+Puede pasar una clase de referencia con una matriz CLR a una función nativa y modificar la clase mediante los servicios PInvoke.
 
 ## <a name="example"></a>Ejemplo
 
 Compile la biblioteca nativa siguiente.
 
-```
+```cpp
 // modify_ref_class_in_native_function.cpp
 // compile with: /LD
 #include <stdio.h>
@@ -49,9 +49,9 @@ extern "C"  {
 
 ## <a name="example"></a>Ejemplo
 
-Compile el ensamblado siguiente.
+Compile el siguiente ensamblado.
 
-```
+```cpp
 // modify_ref_class_in_native_function_2.cpp
 // compile with: /clr
 using namespace System;
@@ -89,6 +89,6 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,9 +1,10 @@
 ---
 title: _CrtSetDebugFillThreshold
-ms.date: 03/21/2018
-apiname:
+description: Utilice la función _CrtSetDebugFillThreshold para establecer la cantidad máxima de búfer que se va a rellenar en funciones de CRT seguras.
+ms.date: 10/31/2019
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -23,16 +27,16 @@ helpviewer_keywords:
 - CrtSetDebugFillThreshold function
 - _CrtSetDebugFillThreshold function
 - buffer-filling behavior
-- 0xFD
+- 0xFE
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fdf6646603a59e8a7a2387600060ab3a3556b37
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602207"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624397"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
 Recupera o modifica el umbral que controla el comportamiento de llenado de búfer en las funciones de depuración.
 
@@ -49,15 +53,21 @@ Nuevo tamaño de umbral en bytes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor de umbral anterior.
+Valor de umbral anterior.
 
 ## <a name="remarks"></a>Comentarios
 
-Las versiones de depuración de algunas funciones de CRT con seguridad mejorada llenar el búfer pasado a ellas con un carácter especial (0xFE). Esto ayuda a encontrar casos en que se ha pasado el tamaño incorrecto a la función. Lamentablemente, también reduce el rendimiento. Para mejorar el rendimiento, utilice **_CrtSetDebugFillThreshold** para deshabilitar el llenado de búfer para los búferes mayores que el *newThreshold* umbral. Un *newThreshold* valor 0 la deshabilita para todos los búferes.
+Las versiones de depuración de algunas funciones CRT con seguridad mejorada rellenan el búfer que se les pasa con un carácter especial (0xFE). Este carácter de relleno ayuda a encontrar los casos en los que el tamaño incorrecto se pasó a la función. Lamentablemente, también reduce el rendimiento. Para mejorar el rendimiento, use **_CrtSetDebugFillThreshold** para deshabilitar el relleno de búfer para los búferes mayores que el umbral de *newThreshold* . Un valor *newThreshold* de 0 lo deshabilita para todos los búferes.
 
 El umbral predeterminado es **SIZE_T_MAX**.
 
 A continuación se ofrece una lista de las funciones afectadas.
+
+- [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)
+
+- [_cgets_s, _cgetws_s](cgets-s-cgetws-s.md)
+
+- [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
 - [_ecvt_s](ecvt-s.md)
 
@@ -75,11 +85,15 @@ A continuación se ofrece una lista de las funciones afectadas.
 
 - [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md)
 
+- [_mktemp_s, _wmktemp_s](makepath-s-wmakepath-s.md)
+
 - [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md)
 
 - [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)
 
 - [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)
+
+- [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md)
 
 - [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)
 
@@ -93,6 +107,8 @@ A continuación se ofrece una lista de las funciones afectadas.
 
 - [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md)
 
+- [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md)
+
 - [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
 
 ## <a name="requirements"></a>Requisitos
@@ -101,11 +117,11 @@ A continuación se ofrece una lista de las funciones afectadas.
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-Esta función es específico de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Esta función es específica de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
-Versiones de depuración de la [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md) solo.
+Solo las versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Ejemplo
 

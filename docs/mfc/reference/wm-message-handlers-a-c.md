@@ -1,5 +1,5 @@
 ---
-title: 'Controladores de mensajes WM_: A - C'
+title: 'Mensajes Wm_: A - C'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_CREATE
@@ -35,14 +35,14 @@ helpviewer_keywords:
 - ON_WM_ACTIVATEAPP [MFC]
 - ON_WM_CHANGECBCHAIN
 ms.assetid: 4e315896-d646-4b87-b0ab-41a4a753b045
-ms.openlocfilehash: 67ab1620d0ad815cc070935a2b314bbfa2ef1408
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08221e7569a8b4c4f4e8decba410bd1fe40f04d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309400"
 ---
-# <a name="wm-message-handlers-a---c"></a>Controladores de mensajes WM_: A - C
+# <a name="wm-message-handlers-a---c"></a>Mensajes Wm_: A - C
 
 Las siguientes entradas de mapa de la izquierda se corresponden con los prototipos de función de la derecha:
 
@@ -71,4 +71,3 @@ Las siguientes entradas de mapa de la izquierda se corresponden con los prototip
 
 [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)<br/>
 [Controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

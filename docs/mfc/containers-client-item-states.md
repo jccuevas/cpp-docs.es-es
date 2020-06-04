@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 866aa6f2265abe671ce0028e3be5f1c8ee1762a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152857"
 ---
 # <a name="containers-client-item-states"></a>Contenedores: Estados de elementos de cliente
 
@@ -42,6 +42,6 @@ Cuando un elemento se ha activado en su lugar, se aprueba, normalmente solo brev
 
 [Contenedores](../mfc/containers.md)<br/>
 [Activación](../mfc/activation-cpp.md)<br/>
-[Contenedores: Notificaciones de elementos de cliente](../mfc/containers-client-item-notifications.md)<br/>
+[Contenedores: notificaciones de elementos de cliente](../mfc/containers-client-item-notifications.md)<br/>
 [Seguimiento](../mfc/trackers.md)<br/>
 [CRectTracker (clase)](../mfc/reference/crecttracker-class.md)

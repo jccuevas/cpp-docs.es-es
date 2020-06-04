@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
-ms.openlocfilehash: 3eb2963916cbbcbd925f755f9162ce59e9bff569
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47320c79dbbfc2152c126c80d1eb8c061f3ceb3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432769"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757922"
 ---
 # <a name="compiler-error-c3709"></a>Error del compilador C3709
 
-'function': sintaxis incorrecta para especificar un evento en __hook /\__unhook
+' function ': Sintaxis incorrecta para especificar un evento en __hook/\__unhook
 
-Al especificar un origen de eventos con [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md), el primer parámetro debe ser un método de evento válido y el segundo parámetro debe ser un objeto de origen de evento válido (no un método).
+Cuando se especifica un origen de eventos con [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md), el primer parámetro debe ser un método de evento válido y el segundo parámetro debe ser un objeto de origen de eventos válido (no un método).
 
-El ejemplo siguiente genera C3709:
+En el ejemplo siguiente se genera C3709:
 
-```
+```cpp
 // C3709.cpp
 // compile with: /LD
 [event_source(native)]

@@ -1,31 +1,31 @@
 ---
-title: Compilador advertencia (nivel 1) C4129
+title: ADVERTENCIA del compilador (nivel 1) C4129
 ms.date: 11/04/2016
 f1_keywords:
 - C4129
 helpviewer_keywords:
 - C4129
 ms.assetid: a4190c64-4bfb-48fd-8e98-52720bc0d878
-ms.openlocfilehash: dc4f4c4c1feeba543ce0baa71e1ee5dfd81fdcae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a48fc806f3274a59c99be25ac7a0e7b03a0454b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428682"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176226"
 ---
-# <a name="compiler-warning-level-1-c4129"></a>Compilador advertencia (nivel 1) C4129
+# <a name="compiler-warning-level-1-c4129"></a>ADVERTENCIA del compilador (nivel 1) C4129
 
-'carácter': secuencia de escape de carácter no reconocida
+' carácter ': secuencia de escape de carácter no reconocida
 
-El `character` sigue una barra diagonal inversa (\\) en un carácter o cadena de constante no se reconoce como una secuencia de escape válida. La barra diagonal inversa se omite y no se imprimen. El carácter que sigue a la barra diagonal inversa se imprime.
+La `character` siguiente a una barra diagonal inversa (\\) en un carácter o una constante de cadena no se reconoce como una secuencia de escape válida. La barra diagonal inversa se omite y no se imprime. Se imprime el carácter que sigue a la barra diagonal inversa.
 
 Para imprimir una sola barra diagonal inversa, especifique una doble barra diagonal inversa (\\\\).
 
-El estándar de C++, en la sección 2.13.2 describe las secuencias de escape.
+El C++ estándar, en la sección 2.13.2, describe las secuencias de escape.
 
-El ejemplo siguiente genera C4129:
+En el ejemplo siguiente se genera C4129:
 
-```
+```cpp
 // C4129.cpp
 // compile with: /W1
 int main() {

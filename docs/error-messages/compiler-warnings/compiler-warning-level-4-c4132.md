@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4132
 ms.assetid: b60e5b4a-53ac-4503-8456-235477f48afd
-ms.openlocfilehash: b9dc0113379f8aec78082bfffc27ca5e506a6f77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c7e0f8b96daf6eea4f773f7245871ce3907591b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454839"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161495"
 ---
 # <a name="compiler-warning-level-4-c4132"></a>Advertencia del compilador (nivel 4) C4132
 

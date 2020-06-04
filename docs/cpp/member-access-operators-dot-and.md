@@ -1,5 +1,5 @@
 ---
-title: Operadores de acceso a miembro:. y -&gt;
+title: Operadores de acceso a miembros:. y-&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - .
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-ms.openlocfilehash: 0f370aa04af2e78efd5edfb7836fb71a4c4516a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05bab55e1646783e0f8ab9b414d608c912f60a0f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468749"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178020"
 ---
-# <a name="member-access-operators--and--gt"></a>Operadores de acceso a miembro:. y -&gt;
+# <a name="member-access-operators--and--gt"></a>Operadores de acceso a miembros:. y-&gt;
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,15 +30,15 @@ postfix-expression . name
 postfix-expression -> name
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Los operadores de acceso de miembro **.** y **->** se usan para hacer referencia a los miembros de estructuras, uniones y clases. Las expresiones de acceso a miembros tienen el valor y el tipo del miembro seleccionado.
+Los operadores de acceso a miembros **.** y **->** se usan para hacer referencia a los miembros de estructuras, uniones y clases. Las expresiones de acceso a miembros tienen el valor y el tipo del miembro seleccionado.
 
 Hay dos formas de expresiones de acceso de miembro:
 
-1. En la primera forma, *postfix-expression* representa un valor de tipo de unión, clase o struct y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor de la operación es de *nombre* y es un valor l si *postfix-expression* es un valor l.
+1. En el primer formulario, *postfijo-Expression* representa un valor de struct, Class o Union Type, y *Name* nombra un miembro de la estructura, Unión o clase especificadas. El valor de la operación es el de *Name* y es un valor l si *postfijo-Expression* es un valor l.
 
-1. En la segunda forma, *postfix-expression* representa un puntero a una estructura, unión o clase, y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor es el de *nombre* y es un valor l. El **->** operador de desreferencia el puntero. Por lo tanto, las expresiones `e->member` y `(*e).member` (donde *e* representa un puntero) producen resultados idénticos (excepto cuando los operadores **->** o <strong>\*</strong> están sobrecargados).
+1. En el segundo formulario, *postfijo-Expression* representa un puntero a una estructura, Unión o clase, y *Name* nombra un miembro de la estructura, Unión o clase especificadas. El valor es el de *Name* y es un valor l. El operador **->** desreferencia el puntero. Por consiguiente, las expresiones `e->member` y `(*e).member` (donde *e* representa un puntero) producen resultados idénticos (excepto cuando los operadores **->** o <strong>\*</strong> están sobrecargados).
 
 ## <a name="example"></a>Ejemplo
 
@@ -76,7 +76,7 @@ int main() {
 2/1/2000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones postfijas](../cpp/postfix-expressions.md)<br/>
 [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

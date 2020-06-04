@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2550
 ms.assetid: 3293f53e-ee66-4035-920d-34e115c3a24c
-ms.openlocfilehash: 2df6ae70be31bc519e6cfd826646073becf1ad61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29e907e682e0caae86569fe8bd7c101b3e0b14a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740824"
 ---
 # <a name="compiler-error-c2550"></a>Error del compilador C2550
 
-'identifier': las listas de inicializadores de constructor sólo se permiten en las definiciones de constructor
+' Identifier ': las listas de inicializadores de constructor solo se permiten en definiciones de constructor
 
-Una lista de inicializadores de clase base se usa en la definición de una función que no es un constructor.
+Una lista de inicializadores de clase base se utiliza en la definición de una función que no es un constructor.
 
-El ejemplo siguiente genera C2550:
+En el ejemplo siguiente se genera C2550:
 
-```
+```cpp
 // C2550.cpp
 // compile with: /c
 class C {

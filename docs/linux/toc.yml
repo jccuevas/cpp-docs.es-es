@@ -1,0 +1,52 @@
+- name: Documentación de Linux con Visual Studio C++
+  href: ../linux/index.yml
+- name: 'Descarga, instalación y configuración de la carga de trabajo de desarrollo de Linux'
+  href: ../linux/download-install-and-setup-the-linux-development-workload.md
+- name: Conexión al equipo remoto Linux
+  items:
+    - name: Conexión al equipo remoto Linux
+      href: ../linux/connect-to-your-remote-linux-computer.md
+    - name: Configuración del desarrollo de Linux remoto seguro compatible con FIPS
+      href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
+    - name: Referencia de ConnectionManager
+      href: ../linux/connectionmanager-reference.md
+- name: "Compilar proyectos de Linux con MSBuild en Visual\_Studio"
+  items:
+    - name: Creación de un proyecto de Linux
+      href: ../linux/create-a-new-linux-project.md
+    - name: Configuración de un proyecto de Linux
+      href: ../linux/configure-a-linux-project.md
+    - name: 'Implementar, ejecutar y depurar el proyecto de Linux'
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
+    - name: Referencia de las páginas de propiedades de un proyecto de Linux
+      items:
+        - name: Referencia de las páginas de propiedades de un proyecto de Linux
+          href: ../linux/prop-pages-linux.md
+        - name: Propiedades generales (Linux)
+          href: ../linux/prop-pages/general-linux.md
+        - name: Propiedades de depuración (Linux)
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: Propiedades de directorios de VC++ (Linux)
+          href: ../linux/prop-pages/directories-linux.md
+        - name: Propiedades de Copiar orígenes (Linux)
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: Propiedades de C/C++ (Linux)
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: Propiedades del enlazador (Linux)
+          href: ../linux/prop-pages/linker-linux.md
+        - name: Propiedades de evento de compilación (Linux)
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: Propiedades de paso de compilación personalizada (Linux)
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: Propiedades de proyecto de archivos Make (Linux)
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: Propiedades de archivo remoto (Linux)
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: "Compilar proyectos de Linux con CMake en Visual\_Studio"
+  items:
+    - name: Creación y configuración de un proyecto de CMake en Linux
+      href: ../linux/cmake-linux-project.md
+    - name: 'Tutorial: Creación de proyectos multiplataforma de C++ en Visual Studio'
+      href: ../build/get-started-linux-cmake.md
+- name: Configuración de proyectos de Linux para usar AddressSanitizer
+  href: ../linux/linux-asan-configuration.md

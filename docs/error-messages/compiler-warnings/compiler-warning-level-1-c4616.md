@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4616
 ms.assetid: 71e15265-c5bc-42ce-a6a9-4879892472b1
-ms.openlocfilehash: d63e1abffce617a48ac1a5cd8c61feba941b31ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd36d0cdbcaaeca4f84ce85aa80f3bb1fba616a0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599095"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185911"
 ---
 # <a name="compiler-warning-level-1-c4616"></a>Advertencia del compilador (nivel 1) C4616
 
-\#advertencia pragma: número de advertencia 'número' no es una advertencia del compilador válido
+\#pragma warning: el número de advertencia ' número ' no es una advertencia del compilador válida
 
-El número de advertencia especificado en el [advertencia](../../preprocessor/warning.md) pragma no se puede reasignar. Se omitió la directiva pragma.
+No se puede reasignar el número de advertencia especificado en pragma [Warning](../../preprocessor/warning.md) . Se omitió la Directiva pragma.
 
-El ejemplo siguiente genera C4616:
+En el ejemplo siguiente se genera C4616:
 
-```
+```cpp
 // C4616.cpp
 // compile with: /W1 /c
 #pragma warning( disable : 0 )   // C4616

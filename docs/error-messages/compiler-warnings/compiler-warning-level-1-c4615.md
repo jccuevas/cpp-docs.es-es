@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-ms.openlocfilehash: 1032261c39e0a285ac686e09573161de3b46e0e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d8c5ae1214b3e823bb3754e3b200a430026f1b9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573532"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185924"
 ---
 # <a name="compiler-warning-level-1-c4615"></a>Advertencia del compilador (nivel 1) C4615
 
-\#advertencia pragma: tipo de advertencia de usuario desconocido
+\#pragma warning: tipo de advertencia de usuario desconocido
 
-Se usó un especificador de advertencia no válido con **pragma** [advertencia](../../preprocessor/warning.md). Para resolver el error, utilice un especificador de advertencia válido.
+Se usó un especificador de advertencia no válido con la [ADVERTENCIA](../../preprocessor/warning.md) **pragma** . Para resolver el error, use un especificador de advertencia válido.
 
-El ejemplo siguiente genera C4615:
+En el ejemplo siguiente se genera C4615:
 
-```
+```cpp
 // C4615.cpp
 // compile with: /W1 /LD
 #pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier

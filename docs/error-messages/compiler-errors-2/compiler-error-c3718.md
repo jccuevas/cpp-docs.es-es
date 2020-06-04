@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
-ms.openlocfilehash: 765791499370836f7c99ea7af69cb34bcf1e21fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0bcf784f5b522d05585d63a3b38a2befb5aa191
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479058"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753203"
 ---
 # <a name="compiler-error-c3718"></a>Error del compilador C3718
 
-solo se puede llamar a 'event' en el contexto de una función miembro de la clase receptora
+solo se puede llamar a ' Event ' en el contexto de una función miembro de la clase receptora
 
-El `event` solo se puede llamar desde la clase receptora.
+Solo se puede llamar al `event` desde la clase receptora.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3718:
+En el ejemplo siguiente se genera C3718:
 
-```
+```cpp
 // C3718.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

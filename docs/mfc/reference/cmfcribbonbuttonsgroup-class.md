@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 0babda16ee29671a584599699b459062c22406e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d690e8bf306234e7b742a4c6a0917e5430d92d10
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592744"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754102"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup (clase)
 
-La `CMFCRibbonButtonsGroup` clase le permite organizar un conjunto de botones de cinta de opciones en un grupo. Todos los botones del grupo son directamente adyacentes a otros horizontalmente y se incluyen en un borde.
+La `CMFCRibbonButtonsGroup` clase le permite organizar un conjunto de botones de la cinta de opciones en un grupo. Todos los botones del grupo son directamente adyacentes a otros horizontalmente y se incluyen en un borde.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,33 +51,33 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup](#cmfcribbonbuttonsgroup)|Construye un objeto `CMFCRibbonButtonsGroup`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Agrega un botón a un grupo.|
 |[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Agrega una lista de botones a un grupo.|
-|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|Devuelve un puntero al botón que se encuentra en el índice especificado.|
-|[CMFCRibbonButtonsGroup::GetCount](#getcount)|Devuelve el número de botones en el grupo.|
-|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|Devuelve el tamaño de la imagen de las imágenes normales en el grupo de la cinta de opciones (invalidaciones [cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|Devuelve el tamaño normal del elemento cinta (invalidaciones [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
-|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|Los informes si el `CMFCRibbonButtonsGroup` objeto contiene imágenes de barra de herramientas.|
-|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|Dibuja la imagen adecuada para un botón especificado, dependiendo de si el botón es normal, resaltada o deshabilitado.|
-|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|Quita todos los botones de la `CMFCRibbonButtonsGroup` objeto.|
-|[CMFCRibbonButtonsGroup::SetImages](#setimages)|Las imágenes se asigna al grupo.|
-|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|Establece el elemento primario `CMFCRibbonCategory` de la `CMFCRibbonButtonsGroup` objeto y todos los botones dentro de él (invalidaciones [cmfcribbonbaseelement:: Setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
+|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|Devuelve un puntero al botón que se encuentra en un índice especificado.|
+|[CMFCRibbonButtonsGroup::GetCount](#getcount)|Devuelve el número de botones del grupo.|
+|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|Devuelve el tamaño de imagen de las imágenes normales en el grupo de la cinta de opciones (reemplaza [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
+|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|Devuelve el tamaño normal del elemento de la cinta de opciones (reemplaza [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|Indica si `CMFCRibbonButtonsGroup` el objeto contiene imágenes de la barra de herramientas.|
+|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|Dibuja la imagen adecuada para un botón especificado, dependiendo de si el botón es normal, resaltado o deshabilitado.|
+|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|Quita todos los `CMFCRibbonButtonsGroup` botones del objeto.|
+|[CMFCRibbonButtonsGroup::SetImages](#setimages)|Asigna imágenes al grupo.|
+|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|Establece el `CMFCRibbonCategory` elemento `CMFCRibbonButtonsGroup` primario del objeto y todos los botones dentro de él (reemplaza [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El grupo se deriva [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) y se puede manipular como una sola entidad. El grupo se puede colocar en cualquier panel o un menú emergente.
+El grupo se deriva de [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) y se puede manipular como una sola entidad. Puede colocar el grupo en cualquier panel o menú emergente.
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonButtonsGroup` . En el ejemplo se muestra cómo construir un `CMFCRibbonButtonsGroup` objeto, asignar imágenes para el grupo de botones de cinta de opciones y agregar un botón al grupo de botones de la cinta. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonButtonsGroup` . En el ejemplo se `CMFCRibbonButtonsGroup` muestra cómo construir un objeto, asignar imágenes al grupo de botones de la cinta de opciones y agregar un botón al grupo de botones de la cinta de opciones. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 
@@ -93,24 +93,24 @@ En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase
 
 **Encabezado:** afxribbonbuttonsgroup.h
 
-##  <a name="addbutton"></a>  CMFCRibbonButtonsGroup::AddButton
+## <a name="cmfcribbonbuttonsgroupaddbutton"></a><a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton
 
 Agrega un botón a un grupo.
 
-```
+```cpp
 void AddButton(CMFCRibbonBaseElement* pButton);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pButton*<br/>
-[in] Un puntero a un botón para agregar.
+[en] Un puntero a un botón para agregar.
 
-##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons
+## <a name="cmfcribbonbuttonsgroupaddbuttons"></a><a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons
 
 Agrega una lista de botones a un grupo.
 
-```
+```cpp
 void AddButtons(
     const CList<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& lstButtons);
 ```
@@ -118,9 +118,9 @@ void AddButtons(
 ### <a name="parameters"></a>Parámetros
 
 *lstButtons*<br/>
-[in] Una lista de punteros a los botones que desea agregar.
+[en] Una lista de punteros a los botones que desea agregar.
 
-##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup
+## <a name="cmfcribbonbuttonsgroupcmfcribbonbuttonsgroup"></a><a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup
 
 Construye un objeto `CMFCRibbonButtonsGroup`.
 
@@ -132,15 +132,15 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ### <a name="parameters"></a>Parámetros
 
 *pButton*<br/>
-[in] Especifica un botón para agregar recién creado `CMFCRibbonButtonsGroup` objeto.
+[en] Especifica un botón para agregar `CMFCRibbonButtonsGroup` al objeto recién creado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton
+## <a name="cmfcribbonbuttonsgroupgetbutton"></a><a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton
 
-Devuelve un puntero al botón que se encuentra en el índice especificado.
+Devuelve un puntero al botón que se encuentra en un índice especificado.
 
 ```
 CMFCRibbonBaseElement* GetButton(int i) const;
@@ -148,18 +148,18 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*i*<br/>
-[in] Índice de base cero de un botón para devolver.
+*Ⅰ*<br/>
+[en] Un índice de base cero de un botón que se va a devolver.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al botón que se encuentra en el índice especificado. Es NULL si el índice especificado está fuera del intervalo.
+Puntero al botón que se encuentra en el índice especificado. NULL si el índice especificado está fuera del intervalo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getcount"></a>  CMFCRibbonButtonsGroup::GetCount
+## <a name="cmfcribbonbuttonsgroupgetcount"></a><a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount
 
-Devuelve el número de botones en el grupo.
+Devuelve el número de botones del grupo.
 
 ```
 int GetCount() const;
@@ -167,11 +167,11 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de botones en el grupo.
+El número de botones del grupo.
 
-##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize
+## <a name="cmfcribbonbuttonsgroupgetimagesize"></a><a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize
 
-Recupera el tamaño de la imagen de origen del elemento protegido `CMFCToolBarImages` miembro `m_Images`.
+Recupera el tamaño de la `CMFCToolBarImages` `m_Images`imagen de origen del miembro protegido.
 
 ```
 const CSize GetImageSize() const;
@@ -179,11 +179,11 @@ const CSize GetImageSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el tamaño de la imagen de origen de las imágenes de la barra de herramientas, si hubiera alguno, o un `CSize` de cero si no lo es.
+Devuelve el tamaño de la imagen de origen de `CSize` las imágenes de la barra de herramientas, si hay alguna, o un de cero si no.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getregularsize"></a>  CMFCRibbonButtonsGroup::GetRegularSize
+## <a name="cmfcribbonbuttonsgroupgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize
 
 Recupera el tamaño máximo posible del elemento de grupo de cinta de opciones.
 
@@ -194,15 +194,15 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Puntero al contexto de dispositivo del grupo de cinta de opciones.
+[en] Puntero al contexto de dispositivo del grupo de cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="hasimages"></a>  CMFCRibbonButtonsGroup::HasImages
+## <a name="cmfcribbonbuttonsgrouphasimages"></a><a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages
 
-Los informes si el `CMFCRibbonButtonsGroup` objeto contiene imágenes de barra de herramientas.
+Indica si `CMFCRibbonButtonsGroup` el objeto contiene imágenes de la barra de herramientas.
 
 ```
 BOOL HasImages() const;
@@ -210,13 +210,13 @@ BOOL HasImages() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si el modo protegido `CMFCToolBarImages` miembro `m_Images` contiene las imágenes, o FALSE si no.
+Devuelve TRUE si `CMFCToolBarImages` `m_Images` el miembro protegido contiene imágenes o FALSE si no.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage
+## <a name="cmfcribbonbuttonsgroupondrawimage"></a><a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage
 
-Dibuja la imagen adecuada para un botón especificado, dependiendo de si el botón es normal, resaltada o deshabilitado.
+Dibuja la imagen adecuada para un botón especificado, dependiendo de si el botón es normal, resaltado o deshabilitado.
 
 ```
 virtual void OnDrawImage(
@@ -229,34 +229,34 @@ virtual void OnDrawImage(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Puntero al contexto de dispositivo de la `CMFCRibbonButtonsGroup` objeto.
+[en] Puntero al contexto del `CMFCRibbonButtonsGroup` dispositivo del objeto.
 
 *rectImage*<br/>
-[in] El rectángulo dentro del cual se va a dibujar la imagen.
+[en] El rectángulo dentro del cual se va a dibujar la imagen.
 
 *pButton*<br/>
-[in] El botón para que se va a dibujar la imagen.
+[en] El botón para el que desea dibujar la imagen.
 
 *nImageIndex*<br/>
-[in] El índice de la imagen para dibujar en el botón (en una de las matrices de tres imágenes para los botones normales, resaltadas o deshabilitados).
+[en] El índice de la imagen que se va a dibujar en el botón (en una de las tres matrices de imágenes para los botones normales, resaltados o deshabilitados).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll
+## <a name="cmfcribbonbuttonsgroupremoveall"></a><a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll
 
-Quita todos los botones de la `CMFCRibbonButtonsGroup` objeto.
+Quita todos los `CMFCRibbonButtonsGroup` botones del objeto.
 
-```
+```cpp
 void RemoveAll();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages
+## <a name="cmfcribbonbuttonsgroupsetimages"></a><a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages
 
-Las imágenes se asigna al grupo de botones de la cinta.
+Asigna imágenes al grupo de botones de la cinta de opciones.
 
-```
+```cpp
 void SetImages(
     CMFCToolBarImages* pImages,
     CMFCToolBarImages* pHotImages,
@@ -266,24 +266,24 @@ void SetImages(
 ### <a name="parameters"></a>Parámetros
 
 *pImages*<br/>
-[in] Imágenes normales.
+[en] Imágenes regulares.
 
 *pHotImages*<br/>
-[in] Imágenes activas.
+[en] Imágenes calientes.
 
 *pDisabledImages*<br/>
-[in] Imágenes deshabilitadas.
+[en] Imágenes desactivadas.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a `SetImages` antes de agregar botones a un grupo. El número de imágenes debe ser mayor o igual que el número de botones que deben agregarse al grupo.
+Llame `SetImages` antes de agregar botones a un grupo. El número de imágenes debe ser mayor o igual que el número de botones que se agregarán al grupo.
 
 > [!NOTE]
->  Acceso rápido son imágenes que se muestran cuando el usuario mantiene el puntero sobre el botón. Deshabilitado son imágenes que se muestran cuando el botón está deshabilitado.
+> Las imágenes en caliente son imágenes que se muestran cuando el usuario pasa el cursor sobre el botón. Las imágenes desactivadas son imágenes que se muestran cuando el botón está deshabilitado.
 
-##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory
+## <a name="cmfcribbonbuttonsgroupsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory
 
-Establece el elemento primario `CMFCRibbonCategory` de la `CMFCRibbonButtonsGroup` objeto y todos los botones dentro de él.
+Establece el `CMFCRibbonCategory` elemento `CMFCRibbonButtonsGroup` primario del objeto y todos los botones dentro de él.
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
@@ -292,9 +292,9 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ### <a name="parameters"></a>Parámetros
 
 *pCategory*<br/>
-[in] Puntero a la categoría primaria para establecer (los grupos con pestañas en los controles de cinta de opciones se denominan categorías).
+[en] Puntero a la categoría primaria que se va a establecer (los grupos con fichas de los controles de la cinta de opciones se denominan categorías).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="see-also"></a>Vea también
 

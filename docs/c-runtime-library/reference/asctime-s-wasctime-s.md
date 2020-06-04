@@ -1,10 +1,12 @@
 ---
 title: asctime_s, _wasctime_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _wasctime_s
 - asctime_s
-apilocation:
+- _o__wasctime_s
+- _o_asctime_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asctime_s
 - _wasctime_s
@@ -30,16 +36,16 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 350d8c7b1dcf61272a3cfee884dff8a63b455f1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471960"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909412"
 ---
-# <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
+# <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
-Convertir un **tm** estructura a una cadena de caracteres de hora. Estas funciones son versiones de [asctime, _wasctime](asctime-wasctime.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convierte una estructura de tiempo de **TM** en una cadena de caracteres. Estas funciones son versiones de [asctime, _wasctime](asctime-wasctime.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -68,14 +74,14 @@ errno_t _wasctime_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*buffer*<br/>
+*búfer*<br/>
 Un puntero a un búfer para almacenar el resultado de la cadena de caracteres. Esta función presupone un puntero a una ubicación de memoria válida con un tamaño especificado por *numberOfElements*.
 
 *numberOfElements*<br/>
-El tamaño del búfer usado para almacenar el resultado.
+Tamaño del búfer usado para almacenar el resultado.
 
 *tmSource*<br/>
-Estructura de fecha y hora. Esta función presupone un puntero a una **struct** **tm** objeto.
+Estructura de fecha y hora. Esta función presupone un puntero a un objeto **struct** **TM** válido.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -83,38 +89,42 @@ Cero si es correcto. Si hay un error, se invoca al controlador de parámetros no
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*numberOfElements*|*tmSource*|Volver|Valor de *búfer*|
+|*búfer*|*numberOfElements*|*tmSource*|Valor devuelto|Valor en *búfer*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Cualquiera|Cualquiera|**EINVAL**|No modificado|
-|No **NULL** (apunta a la memoria válida)|0|Cualquiera|**EINVAL**|No modificado|
-|No **NULL**|0< tamaño < 26|Cualquiera|**EINVAL**|Cadena vacía|
-|No **NULL**|>= 26|**NULL**|**EINVAL**|Cadena vacía|
-|No **NULL**|>= 26|Estructura de hora no válida o valores fuera del intervalo para los componentes del tiempo|**EINVAL**|Cadena vacía|
+|**ACEPTA**|Any|Any|**EINVAL**|No modificado|
+|Not **null** (apunta a la memoria válida)|0|Any|**EINVAL**|No modificado|
+|No **null**|0< tamaño < 26|Any|**EINVAL**|cadena vacía.|
+|No **null**|>= 26|**ACEPTA**|**EINVAL**|cadena vacía.|
+|No **null**|>= 26|Estructura de hora no válida o valores fuera del intervalo para los componentes del tiempo|**EINVAL**|cadena vacía.|
 
 > [!NOTE]
-> Condiciones de error de **wasctime_s** son similares a **asctime_s** con la excepción de que el límite de tamaño se mide en palabras.
+> Las condiciones de error para **wasctime_s** son similares a **asctime_s** con la excepción de que el límite de tamaño se mide en palabras.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **asctime** función convierte una hora almacenada como una estructura de una cadena de caracteres. El *tmSource* valor suele obtenerse de una llamada a **gmtime** o **localtime**. Ambas funciones se pueden usar para rellenar un **tm** estructura, tal como se define en el tiempo. H.
+La función **asctime** convierte una hora almacenada como una estructura en una cadena de caracteres. El valor *tmSource* se suele obtener de una llamada a **gmtime** o **localtime**. Ambas funciones se pueden usar para rellenar una estructura de **TM** , tal y como se define en el tiempo. C.
 
-|miembro de timeptr|Valor|
+|miembro de timeptr|Value|
 |--------------------|-----------|
-|**tm_hour**|Horas desde medianoche (0-23)|
+|**tm_hour**|Horas desde la medianoche (0-23)|
 |**tm_isdst**|Positivo si el horario de verano está en vigor; 0 si el horario de verano no está en vigor; negativo si se desconoce el estado del horario de verano. La biblioteca en tiempo de ejecución de C usa las reglas de Estados Unidos para implementar el cálculo del horario de verano (DST).|
 |**tm_mday**|Día del mes (1-31)|
 |**tm_min**|Minutos después de la hora (0-59)|
-|**tm_mon**|Mes (de 0 a 11; Enero = 0)|
+|**tm_mon**|Mes (0-11; Enero = 0)|
 |**tm_sec**|Segundos después del minuto (0-59)|
-|**tm_wday**|Día de la semana (0-6; El domingo = 0)|
-|**tm_yday**|Día del año (de 0 a 365; El 1 de enero = 0)|
+|**tm_wday**|Día de la semana (0-6; Sunday = 0)|
+|**tm_yday**|Día del año (0-365; 1 de enero = 0)|
 |**tm_year**|Año (año actual menos 1900)|
 
 La cadena de caracteres convertidos también se ajusta en función de la configuración de zona horaria local. Vea las funciones [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) y [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) para obtener información sobre cómo configurar la hora local y la función [_tzset](tzset.md) para obtener información sobre cómo definir el entorno de zona horaria y variables globales.
 
-El resultado de la cadena generado por **asctime_s** contiene exactamente 26 caracteres y tiene el formato `Wed Jan 02 02:03:55 1980\n\0`. Se usa un reloj de 24 horas. Todos los campos tienen un ancho constante. El carácter de nueva línea y el carácter nulo ocupan las dos últimas posiciones de la cadena. El valor que se pase como segundo parámetro debe ser al menos igual de grande. Si es inferior, un código de error **EINVAL**, se devolverá.
+El resultado de la cadena producido por **asctime_s** contiene exactamente 26 caracteres y tiene `Wed Jan 02 02:03:55 1980\n\0`el formato. Se usa un reloj de 24 horas. Todos los campos tienen un ancho constante. El carácter de nueva línea y el carácter nulo ocupan las dos últimas posiciones de la cadena. El valor que se pase como segundo parámetro debe ser al menos igual de grande. Si es menor, se devolverá un código de error, **EINVAL**.
 
-**_wasctime_s** es una versión con caracteres anchos de **asctime_s**. **_wasctime_s** y **asctime_s** se comportan exactamente igual.
+**_wasctime_s** es una versión con caracteres anchos de **asctime_s**. **_wasctime_s** y **asctime_s** se comportan de manera idéntica.
+
+Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Asignación de rutina de texto genérico
 
@@ -122,7 +132,7 @@ El resultado de la cadena generado por **asctime_s** contiene exactamente 26 car
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
-En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -133,13 +143,13 @@ En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantill
 
 ## <a name="security"></a>Seguridad
 
-Si el puntero de búfer no es **NULL** y el puntero no señala a un búfer válido, la función sobrescribirá cualquier cosa que esté en la ubicación. Esto también puede producir una infracción de acceso.
+Si el puntero de búfer no es **null** y el puntero no señala a un búfer válido, la función sobrescribirá lo que esté en la ubicación. Esto también puede producir una infracción de acceso.
 
-Puede producirse una [saturación del búfer](/windows/desktop/SecBP/avoiding-buffer-overruns) si el argumento de tamaño que se pasa es mayor que el tamaño real del búfer.
+Puede producirse una [saturación del búfer](/windows/win32/SecBP/avoiding-buffer-overruns) si el argumento de tamaño que se pasa es mayor que el tamaño real del búfer.
 
 ## <a name="example"></a>Ejemplo
 
-Este programa inserta la hora del sistema en el entero largo **aclock**, lo convierte en la estructura **newtime** y, a continuación, convierte a formato de cadena de salida, con el **asctime_s**función.
+Este programa coloca la hora del sistema en el **aclock**entero largo, lo traduce en la estructura **newtime** y, a continuación, lo convierte en un formato de cadena para la salida, mediante la función **asctime_s** .
 
 ```C
 // crt_asctime_s.c
@@ -173,9 +183,9 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>

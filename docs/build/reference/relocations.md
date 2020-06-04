@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /RELOCATIONS dumpbin option
 - -RELOCATIONS dumpbin option
 ms.assetid: 535eba3a-781a-4809-bf33-f67d3060b02c
-ms.openlocfilehash: 5ec53f4651d4aa1b140dd984d5ca62590a569d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8671d61d1157be2d126fc71c46e76d6a4ba94b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318945"
 ---
 # <a name="relocations"></a>/RELOCATIONS
 
@@ -25,8 +25,8 @@ ms.locfileid: "50493787"
 
 Esta opción muestra todos los cambios en el objeto o la imagen.
 
-Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.
+Solo el [/HEADERS](headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](gl-whole-program-optimization.md) opción del compilador.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opciones de DUMPBIN](dumpbin-options.md)

@@ -1,21 +1,21 @@
 ---
-title: v1_enum (atributo de COM de C++)
+title: v1_enum (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 9771181399a1abaef2e273665e8b267a2065efea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a189f6f1c5ef9d4ae77df9f1eda3f3671ddaf52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632432"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166112"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-Indica que el tipo enumerado especificado se transmite como una entidad de 32 bits en lugar de con el valor predeterminado de 16 bits.
+Indica que el tipo enumerado especificado se va a transmitir como una entidad de 32 bits en lugar del valor predeterminado de 16 bits.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,13 +23,13 @@ Indica que el tipo enumerado especificado se transmite como una entidad de 32 bi
 [v1_enum]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **v1_enum** atributo de C++ tiene la misma funcionalidad que el [v1_enum](/windows/desktop/Midl/v1-enum) atributo MIDL.
+El atributo **v1_enum** C++ tiene la misma funcionalidad que el atributo MIDL [v1_enum](/windows/win32/Midl/v1-enum) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra un uso de **v1_enum**:
+En el código siguiente se muestra el uso de **v1_enum**:
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -50,12 +50,12 @@ enum eList {
 |-|-|
 |**Se aplica a**|Tipo enumerado|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 69d26a4e4634ea60457d75bc97d2266036d11e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293100"
 ---
 # <a name="f-set-stack-size"></a>/F (Establecer el tamaño de la pila)
 
@@ -23,11 +23,11 @@ Establece el tamaño de pila del programa en bytes.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/F** *número*
+> **/F** *number*
 
 ## <a name="arguments"></a>Argumentos
 
-*Número*<br/>
+*number*<br/>
 El tamaño de pila en bytes.
 
 ## <a name="remarks"></a>Comentarios
@@ -38,13 +38,13 @@ Es posible que deba aumentar el tamaño de pila si el programa obtiene mensajes 
 
 También puede establecer el tamaño de pila:
 
-- Mediante el **/pila** opción del vinculador. Para obtener más información, consulte [/pila](../../build/reference/stack.md).
+- Mediante el **/pila** opción del vinculador. Para obtener más información, consulte [/pila](stack.md).
 
-- En el archivo .exe, mediante EDITBIN. Para obtener más información, consulte [referencia de EDITBIN](../../build/reference/editbin-reference.md).
+- En el archivo .exe, mediante EDITBIN. Para obtener más información, consulte [referencia de EDITBIN](editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
@@ -56,5 +56,5 @@ También puede establecer el tamaño de pila:
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

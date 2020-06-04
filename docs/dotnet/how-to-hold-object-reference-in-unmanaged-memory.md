@@ -8,20 +8,20 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 50afaa16f2e0976cf6a90bef09e652b4dc54582a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478083"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544956"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Cómo: Mantener una referencia a objeto en la memoria no administrada
 
-Puede usar gcroot.h, que encapsula <xref:System.Runtime.InteropServices.GCHandle>, para mantener una referencia de objeto CLR en memoria no administrada. Como alternativa, puede usar `GCHandle` directamente.
+Puede usar gcroot. h, que incluye <xref:System.Runtime.InteropServices.GCHandle>, para contener una referencia de objeto CLR en la memoria no administrada. Como alternativa, puede usar `GCHandle` directamente.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // hold_object_reference.cpp
 // compile with: /clr
 #include "gcroot.h"
@@ -57,9 +57,9 @@ StringWrapper::x == ManagedString
 
 ## <a name="example"></a>Ejemplo
 
-`GCHandle` Proporciona un medio para mantener una referencia de objeto administrado en memoria no administrada.  Usa el <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> método para crear un identificador opaco a un objeto administrado y <xref:System.Runtime.InteropServices.GCHandle.Free%2A> para liberarlo. Además, el <xref:System.Runtime.InteropServices.GCHandle.Target%2A> método le permite obtener la referencia al objeto desde el controlador en código administrado.
+`GCHandle` proporciona un medio para contener una referencia de objeto administrado en la memoria no administrada.  El método <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> se usa para crear un identificador opaco a un objeto administrado y <xref:System.Runtime.InteropServices.GCHandle.Free%2A> para liberarlo. Además, el método <xref:System.Runtime.InteropServices.GCHandle.Target%2A> permite obtener de nuevo la referencia de objeto desde el identificador del código administrado.
 
-```
+```cpp
 // hold_object_reference_2.cpp
 // compile with: /clr
 using namespace System;
@@ -94,6 +94,6 @@ int main() {
 StringWrapper::m_handle == ManagedString
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

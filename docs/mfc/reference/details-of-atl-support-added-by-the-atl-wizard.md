@@ -1,32 +1,42 @@
 ---
 title: Información detallada sobre la compatibilidad agregada por el Asistente para ATL
-ms.date: 11/04/2016
+ms.date: 08/20/2019
 f1_keywords:
 - vc.codewiz.atl.support
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: 5684e1f53e9df120feca89cbb6b2ba70bd38d439
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10bafc9bd06ee94398f91d5af478a6e1cd7ca617
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564780"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108451"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Información detallada sobre la compatibilidad agregada por el Asistente para ATL
 
-Cuando se [agregar compatibilidad con ATL a un ejecutable MFC o una DLL existente](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ hace las siguientes modificaciones en el proyecto MFC existente (en este ejemplo, el proyecto se denomina `MFCEXE`):
+::: moniker range=">=vs-2019"
 
-- Se agregan dos nuevos archivos (un archivo .idl y un archivo .rgs usado para registrar el servidor).
+Al [Agregar compatibilidad con ATL a un archivo ejecutable o dll de MFC existente](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual Studio agrega un archivo de encabezado denominado *Framework. h* de forma predeterminada `#include` , `#define` que contiene las directivas de preprocesador y para habilitar el uso de ATL en el proyecto. No se agrega ningún archivo o clase adicional, como se hacía en versiones anteriores de Visual Studio.
 
-- En los archivos de encabezado e implementación de aplicación principal (Mfcexe.h y Mfcexe.cpp), una nueva clase (derivada de `CAtlMFCModule`) se agrega. Además de la nueva clase, se agrega código para `InitInstance` para el registro. También se agrega código para el `ExitInstance` función para revocar el objeto de clase. En el archivo de encabezado, por último, se incluyen dos nuevos archivos de encabezado (Initguid.h y Mfcexe_i.c) en el archivo de implementación, declarar e inicializar los nuevos GUID para el `CAtlMFCModule`-clase derivada.
+::: moniker-end
 
-- Para registrar el servidor correctamente, se agrega una entrada para el nuevo archivo .rgs al archivo de recursos del proyecto.
+::: moniker range="<=vs-2017"
 
-## <a name="notes-for-dll-projects"></a>Notas para los proyectos DLL
+Al [Agregar compatibilidad con ATL a un archivo ejecutable o dll de MFC existente](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual Studio realiza las siguientes modificaciones en el proyecto de MFC existente (en este ejemplo, se llama `MFCEXE`al proyecto):
 
-Cuando se agrega compatibilidad con ATL a un proyecto de DLL de MFC, verá algunas diferencias. Se agrega código para el `DLLRegisterServer` y `DLLUnregisterServer` funciones para registrar y anular el registro de la DLL. También se agrega código para [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) y [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).
+- Se agregan dos nuevos archivos (un archivo. idl y un archivo. RGS, que se usa para registrar el servidor).
+
+- En los archivos de encabezado y de implementación de la aplicación principal (Mfcexe. h y Mfcexe. cpp), se agrega `CAtlMFCModule`una nueva clase (derivada de). Además de la nueva clase, el código se agrega a `InitInstance` para el registro. También se agrega el código a `ExitInstance` la función para revocar el objeto de clase. En el archivo de encabezado, por último, se incluyen dos nuevos archivos de encabezado (Initguid. h y Mfcexe_i. c) en el archivo de implementación, declarando e inicializando `CAtlMFCModule`los nuevos GUID para la clase derivada de.
+
+- Para registrar el servidor correctamente, se agrega una entrada para el nuevo archivo. RGS al archivo de recursos del proyecto.
+
+::: moniker-end
+
+## <a name="notes-for-dll-projects"></a>Notas para proyectos DLL
+
+Al agregar compatibilidad con ATL a un proyecto DLL de MFC, verá algunas diferencias. El código se agrega a `DLLRegisterServer` las `DLLUnregisterServer` funciones y para registrar y anular el registro del archivo dll. También se agrega el código a [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) y [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).
 
 ## <a name="see-also"></a>Vea también
 
@@ -37,4 +47,4 @@ Cuando se agrega compatibilidad con ATL a un proyecto de DLL de MFC, verá algun
 [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Controlador de mensajes de MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navegar por la estructura de clases](../../ide/navigate-code-cpp.md)

@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 5fb39d2291c2698dc57150eb44a6bbd6778812bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212297"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase (Clase)
 
-Todos los descriptores de acceso de las plantillas OLE DB que se derivan de esta clase. `CAccessorBase` permite que un conjunto de filas administrar varios descriptores de acceso. También proporciona enlaces para los parámetros y columnas de salida.
+Todos los descriptores de acceso de las plantillas de OLE DB derivan de esta clase. `CAccessorBase` permite que un conjunto de filas administre varios descriptores de acceso. También proporciona enlaces para los parámetros y las columnas de salida.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,23 +42,23 @@ Todos los descriptores de acceso de las plantillas OLE DB que se derivan de esta
 // Replace with syntax
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[Cerrar](#close)|Cierra los descriptores de acceso.|
-|[GetHAccessor](#geth)|Recupera el identificador de descriptor de acceso.|
-|[GetNumAccessors](#getnum)|Recupera el número de descriptores de acceso creado por la clase.|
-|[IsAutoAccessor](#isauto)|Comprueba si el descriptor de acceso especificada es autoaccessor.|
+|[Close](#close)|Cierra los descriptores de acceso.|
+|[GetHAccessor](#geth)|Recupera el identificador del descriptor de acceso.|
+|[GetNumAccessors](#getnum)|Recupera el número de descriptores de acceso creados por la clase.|
+|[IsAutoAccessor](#isauto)|Comprueba si el descriptor de acceso especificado es un autoscriptor.|
 |[ReleaseAccessors](#release)|Libera los descriptores de acceso.|
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldbcli.h
 
-## <a name="close"></a> CAccessorBase:: Close
+## <a name="caccessorbaseclose"></a><a name="close"></a>CAccessorBase:: Close
 
 Cierra los descriptores de acceso.
 
@@ -68,13 +68,13 @@ Cierra los descriptores de acceso.
 void Close();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Debe llamar a [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) primero.
+Primero debe llamar a [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) .
 
-## <a name="geth"></a> CAccessorBase:: Gethaccessor
+## <a name="caccessorbasegethaccessor"></a><a name="geth"></a>CAccessorBase:: GetHAccessor
 
-Recupera el identificador de descriptor de acceso de un descriptor de acceso especificada.
+Recupera el identificador de descriptor de acceso de un descriptor de acceso especificado.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -85,15 +85,15 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 #### <a name="parameters"></a>Parámetros
 
 *nAccessor*<br/>
-[in] El número de desplazamiento de cero para el descriptor de acceso.
+de Número de desplazamiento cero para el descriptor de acceso.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El identificador de descriptor de acceso.
+Identificador del descriptor de acceso.
 
-## <a name="getnum"></a> CAccessorBase:: Getnumaccessors
+## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a>CAccessorBase:: GetNumAccessors
 
-Recupera el número de descriptores de acceso creado por la clase.
+Recupera el número de descriptores de acceso creados por la clase.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -103,11 +103,11 @@ ULONG GetNumAccessors() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de descriptores de acceso creado por la clase.
+El número de descriptores de acceso creados por la clase.
 
-## <a name="isauto"></a> CAccessorBase:: Isautoaccessor
+## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a>CAccessorBase:: IsAutoAccessor
 
-Devuelve true si se recuperan automáticamente los datos para el descriptor de acceso durante una operación de movimiento.
+Devuelve true si los datos se recuperan automáticamente para el descriptor de acceso durante una operación de movimiento.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -118,13 +118,13 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 #### <a name="parameters"></a>Parámetros
 
 *nAccessor*<br/>
-[in] El número de desplazamiento de cero para el descriptor de acceso.
+de Número de desplazamiento cero para el descriptor de acceso.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve **true** si el descriptor de acceso es autoaccessor. En caso contrario, devuelve **false**.
+Devuelve **true** si el descriptor de acceso es un autoscriptor. En caso contrario, devuelve **false**.
 
-## <a name="release"></a> CAccessorBase:: Releaseaccessors
+## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: ReleaseAccessors
 
 Libera los descriptores de acceso creados por la clase.
 
@@ -137,17 +137,17 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>Parámetros
 
 *pUnk*<br/>
-[in] Un puntero a un `IUnknown` interfaz para el objeto COM para el que se han creado los descriptores de acceso.
+de Puntero a una interfaz de `IUnknown` para el objeto COM para el que se han creado los descriptores de acceso.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Se llama desde [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

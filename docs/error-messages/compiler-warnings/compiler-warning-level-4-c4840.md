@@ -1,30 +1,30 @@
 ---
-title: Del compilador (nivel 4) de la advertencia C4840
+title: ADVERTENCIA del compilador (nivel 4) C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: a757004659c1a9d2ce858cfae5ddfbc6c024d782
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586438"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185209"
 ---
-# <a name="compiler-warning-level-4-c4840"></a>Del compilador (nivel 4) de la advertencia C4840
+# <a name="compiler-warning-level-4-c4840"></a>ADVERTENCIA del compilador (nivel 4) C4840
 
-> uso no portable de la clase*tipo*' como argumento a una función variádica
+> uso no portátil de la clase '*Type*' como argumento de una función variádicas
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Clases o structs que se pasan a una función variádica debe poder copiar trivialmente. Al pasar objetos de este tipo, el compilador simplemente realiza una copia bit a bit y no llama al constructor ni al destructor.
+Las clases o Structs que se pasan a una función variádicas se deben poder copiar de forma trivial. Al pasar objetos de este tipo, el compilador simplemente realiza una copia bit a bit y no llama al constructor ni al destructor.
 
 Esta advertencia está disponible a partir de Visual Studio 2017.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4840 y muestra cómo corregirlo:
+En el ejemplo siguiente se genera C4840 y se muestra cómo corregirlo:
 
 ```cpp
 // C4840.cpp
@@ -49,7 +49,7 @@ int main()
 }
 ```
 
-Para las cadenas compiladas y administradas mediante `CStringW`, proporcionado `operator LPCWSTR()` debe usarse para convertir un `CStringW` objeto para el puntero de cadena de estilo C esperado por la cadena de formato:
+En el caso de las cadenas compiladas y administradas mediante `CStringW`, se debe usar el `operator LPCWSTR()` proporcionado para convertir un objeto `CStringW` en el puntero de cadena de estilo C esperado por la cadena de formato:
 
 ```cpp
     CStringW str1;

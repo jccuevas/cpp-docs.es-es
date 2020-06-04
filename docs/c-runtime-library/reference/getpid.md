@@ -1,9 +1,9 @@
 ---
 title: _getpid
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getpid
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getpid
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-ms.openlocfilehash: c110fb7b6d64be281fb3779c7e03f2c4145f4ce8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0848e5eb01f39c009fcdc650ea551f18e23c6fb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621083"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954996"
 ---
-# <a name="getpid"></a>_getpid
+# <a name="_getpid"></a>_getpid
 
 Obtiene el identificador del proceso.
 
@@ -49,7 +52,7 @@ Devuelve el identificador del proceso obtenido del sistema. No se devuelve ning�
 
 ## <a name="remarks"></a>Comentarios
 
-El **_getpid** función obtiene el identificador de proceso del sistema. El identificador del proceso identifica el proceso de llamada de forma única.
+La función **_getpid** obtiene el identificador de proceso del sistema. El identificador del proceso identifica el proceso de llamada de forma única.
 
 ## <a name="requirements"></a>Requisitos
 

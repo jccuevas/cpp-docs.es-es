@@ -1,5 +1,5 @@
 ---
-title: Tipo de fecha
+title: Tipo de FECHA
 ms.date: 11/04/2016
 f1_keywords:
 - DATE
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fd9fde83474ff4f439c0dd3989d4dc35fe1241a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548192"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317922"
 ---
-# <a name="date-type"></a>Tipo de fecha
+# <a name="date-type"></a>Tipo de FECHA
 
-El tipo de fecha se implementa mediante un número de punto flotante de 8 bytes. Días se representan mediante incrementos de números enteros, empezando por el 30 de diciembre de 1899, medianoche como hora cero. Los valores de hora se expresan como el valor absoluto de la parte fraccionaria del número. En la tabla siguiente se muestra varias fechas junto con su equivalente numérico del tipo de fecha:
+El tipo DATE se implementa mediante un número de punto flotante de 8 bytes. Los días están representados por incrementos de números enteros a partir del 30 de diciembre de 1899, medianoche como hora cero. Los valores de hora se expresan como el valor absoluto de la parte fraccionaria del número. En la tabla siguiente se ilustran varias fechas junto con su equivalente numérico de tipo DATE:
 
 |Fecha y hora|Representación|
 |-------------------|--------------------|
 |30 de diciembre de 1899, medianoche|0.00|
 |1 de enero de 1900, medianoche|2.00|
 |4 de enero de 1900, medianoche|5.00|
-|4 de enero de 1900, 6 a. M.|5.25|
+|4 de enero de 1900, 6 a.m.|5.25|
 |4 de enero de 1900, mediodía|5.50|
 |4 de enero de 1900, 9 P.M.|5.875|
 
-El tipo de fecha DATE, así como el `COleDateTime` clase representa fechas y horas como una línea número clásica. La `COleDateTime` clase contiene varios métodos para manipular valores de fecha, incluida la conversión a y desde otros formatos de fecha comunes.
+El tipo de fecha FECHA, así como la `COleDateTime` clase, representa fechas y horas como una línea numérica clásica. La `COleDateTime` clase contiene varios métodos para manipular valores DATE, incluida la conversión a y desde otros formatos de fecha comunes.
 
-Cuando se trabaja con estos formatos de fecha y hora en la automatización, deben tener en cuenta los siguientes puntos:
+Los siguientes puntos deben tenerse en cuenta al trabajar con estos formatos de fecha y hora en Automation:
 
-- Las fechas se especifican en hora local; la sincronización debe realizarse manualmente cuando se trabaja con fechas en distintas zonas horarias.
+- Las fechas se especifican en la hora local; la sincronización debe realizarse manualmente cuando se trabaja con fechas en diferentes zonas horarias.
 
-- Los tipos de fecha no tienen en cuenta para el horario de verano.
+- Los tipos de fecha no representan el horario de verano.
 
-- La escala de tiempo de fecha se convierte en discontinuo para valores de fecha menor que 0 (antes del 30 de diciembre de 1899). Esto es porque la parte de un número entero del valor de fecha se trata como valores con signo, mientras que la parte fraccionaria se trata como valores sin signo. En otras palabras, la parte de un número entero del valor date puede ser positivo o negativo, mientras que la parte fraccionaria del valor de fecha siempre se agrega a la fecha lógica global. En la tabla siguiente se muestra algunos ejemplos:
+- El cronograma de fecha sin escalas para los valores de fecha inferiores a 0 (antes del 30 de diciembre de 1899). Esto se debe a que la parte de número entero del valor de fecha se trata como firmada, mientras que la parte fraccionaria se trata como sin signo. En otras palabras, la parte de número entero del valor de fecha puede ser positiva o negativa, mientras que la parte fraccionaria del valor de fecha siempre se agrega a la fecha lógica general. En la tabla siguiente se muestran algunos ejemplos:
 
 |Fecha y hora|Representación|
 |-------------------|--------------------|
@@ -49,9 +49,9 @@ Cuando se trabaja con estos formatos de fecha y hora en la automatización, debe
 |29 de diciembre de 1899, medianoche|-1.00|
 |30 de diciembre de 1899, 6 P.M.|-0.75|
 |30 de diciembre de 1899, mediodía|-0.50|
-|30 de diciembre de 1899, 6 a. M.|-0.25|
+|30 de diciembre de 1899, 6 a.m.|-0.25|
 |30 de diciembre de 1899, medianoche|0.00|
-|30 de diciembre de 1899, 6 a. M.|0.25|
+|30 de diciembre de 1899, 6 a.m.|0,25|
 |30 de diciembre de 1899, mediodía|0.50|
 |30 de diciembre de 1899, 6 P.M.|0.75|
 |31 de diciembre de 1899, medianoche|1.00|
@@ -60,12 +60,11 @@ Cuando se trabaja con estos formatos de fecha y hora en la automatización, debe
 |2 de enero de 1900, medianoche|3.00|
 
 > [!CAUTION]
->  Tenga en cuenta que debido a 6:00 a. M. siempre se representa mediante un valor fraccionario 0,25 independientemente de si el entero que representa el día es positivo (después del 30 de diciembre de 1899) o negativo (antes del 30 de diciembre de 1899), una comparación de punto flotante simple incorrectamente ordenado cualquier fecha que representa 6:00 A.M. en un día anterior a 30/12/1899 como *más adelante* a una fecha que representa el 7:00 a. M. ese mismo día.
+> Tenga en cuenta que debido a que las 6:00 am siempre están representadas por un valor fraccionario 0,25 independientemente de si el entero que representa el día es positivo (después del 30 de diciembre de 1899) o negativo (antes del 30 de diciembre de 1899), una comparación de punto flotante simple ordenaría erróneamente cualquier FECHA que represente a las 6:00 a.m. de un día anterior al 12/30/1899 a *partir* de la fecha que representa a las 7:00 a.m. ese mismo día.
 
-Para obtener más información sobre problemas relacionados con la fecha y `COleDateTime` tipos pueden encontrarse en [COleDateTime (clase)](../atl-mfc-shared/reference/coledatetime-class.md) y [fecha y hora: compatibilidad de automatización](../atl-mfc-shared/date-and-time-automation-support.md).
+Puede encontrar más información sobre `COleDateTime` los problemas relacionados con la FECHA y los tipos en [COleDateTime Clase](../atl-mfc-shared/reference/coledatetime-class.md) y [Fecha y hora: Soporte de automatización](../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Fecha y hora](../atl-mfc-shared/date-and-time.md)<br/>
-[COleDateTime (clase)](../atl-mfc-shared/reference/coledatetime-class.md)
-
+[Clase COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)

@@ -1,27 +1,28 @@
 ---
 title: operador ! (Tiempo de ejecución de MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator !
 helpviewer_keywords:
 - operator !, syntax
 - '! operator'
 ms.assetid: e94f737a-8251-4a3d-95ec-e95c35689b37
-ms.openlocfilehash: 4a10fa603449e72108977604697227bbb24c3bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b85b90e82f17dd8a583867c0c69e8e9e2cc08d47
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597631"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317882"
 ---
 # <a name="operator--masm-run-time"></a>operador ! (Tiempo de ejecución de MASM)
 
-Negación lógica. Utilizan solo en [. IF](../../assembler/masm/dot-if.md), [. MIENTRAS](../../assembler/masm/dot-while.md), o [. Repita](../../assembler/masm/dot-repeat.md) bloquea y se evalúan en tiempo de ejecución, no en tiempo de ensamblado.
+Negación lógica. Se usa solo dentro de [. Si](dot-if.md)es, [. WHILE](dot-while.md), o [. REPETIR](dot-repeat.md) bloques y evaluarlos en tiempo de ejecución, no en tiempo de ensamblado.
 
 ## <a name="syntax"></a>Sintaxis
 
-> ! *Expresión*
+> **!** *expression*
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: 2c873451e9d2a47007330a5f05af05122a166ffb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6b2ebf918f42e274c372d1dda1e277f7fd49cd5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527275"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209474"
 ---
 # <a name="traversing-a-simple-rowset"></a>Recorrer un conjunto de filas simple
 
-El ejemplo siguiente muestra el acceso de base de datos rápida y sencilla que no implique comandos. El siguiente código de consumidor, en un proyecto ATL, recupera los registros de una tabla denominada *artistas* en una Microsoft Access de base de datos mediante el proveedor Microsoft OLE DB para ODBC. El código crea un [CTable](../../data/oledb/ctable-class.md) objeto de tabla con un descriptor de acceso basado en la clase de registro de usuario `CArtists`. Abre una conexión, se abre una sesión en la conexión y abre la tabla en la sesión.
+En el ejemplo siguiente se muestra el acceso rápido y sencillo a bases de datos que no implica comandos. El siguiente código de consumidor, en un proyecto ATL, recupera registros de una tabla denominada *artistas* en una base de datos de Microsoft Access mediante el proveedor de OLE DB de Microsoft para ODBC. El código crea un objeto de tabla [CTable](../../data/oledb/ctable-class.md) con un descriptor de acceso basado en la clase de registro de usuario `CArtists`. Se abre una conexión, se abre una sesión en la conexión y se abre la tabla en la sesión.
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-El registro de usuario, `CArtists`, similar a este ejemplo:
+El registro de usuario, `CArtists`, es similar al de este ejemplo:
 
 ```cpp
 class CArtists
@@ -74,6 +74,6 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

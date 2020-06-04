@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Usar referencias de seguimiento en C++/CLI'
+title: Procedimiento Usar referencias de seguimiento en C++ / c++ / CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8b95f6e3a5d98676134622e5c8805c6c031a1a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387141"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Cómo: Usar referencias de seguimiento en C++/CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Procedimiento Usar referencias de seguimiento en C++ / c++ / CLI
 
-Este artículo muestra cómo usar una referencia de seguimiento (%) en C / c++ / CLI para pasar de common language runtime (CLR) tipos por referencia.
+En este artículo se muestra cómo usar una referencia de seguimiento (%) en C++/CLI para pasar de common language runtime (CLR) tipos por referencia.
 
 ## <a name="to-pass-clr-types-by-reference"></a>Para pasar tipos CLR por referencia
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-El ejemplo siguiente muestra que tomar la dirección de una referencia de seguimiento devuelve un [interior_ptr (C++ / c++ / CLI)](../windows/interior-ptr-cpp-cli.md)y se muestra cómo modificar y tener acceso a datos a través de una referencia de seguimiento.
+El ejemplo siguiente muestra que tomar la dirección de una referencia de seguimiento devuelve un [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)y se muestra cómo modificar y tener acceso a datos a través de una referencia de seguimiento.
 
 ```cpp
 // tracking_reference_data.cpp
@@ -343,4 +343,4 @@ T &
 
 ## <a name="see-also"></a>Vea también
 
-[Operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md)
+[Operador de referencia de seguimiento](../extensions/tracking-reference-operator-cpp-component-extensions.md)

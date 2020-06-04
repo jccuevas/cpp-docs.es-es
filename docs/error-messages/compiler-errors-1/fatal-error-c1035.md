@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1035
 ms.assetid: 28cdccee-4377-4823-a4d8-89ca7229a83e
-ms.openlocfilehash: 14ba0275f91c9642ce4ba86213b1a6c963dd56c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed9c82966989e81912d852b7f62cc003aac6af99
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608973"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204638"
 ---
 # <a name="fatal-error-c1035"></a>Error irrecuperable C1035
 

@@ -10,27 +10,26 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-ms.openlocfilehash: 345c0b3e79bc531101481dc7be9624539a06d832
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e232010b443ace245844f1c28649477cccc8e9e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566196"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508961"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operaciones de portapapeles en los controles Rich Edit
 
-La aplicación puede pegar el contenido del Portapapeles en un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) con el formato del Portapapeles mejor disponible o en un formato específico del Portapapeles. También puede determinar si un control rich edit es capaz de pegar un formato de Portapapeles.
+La aplicación puede pegar el contenido del portapapeles en un control Rich Edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) con el mejor formato disponible del portapapeles o con un formato específico del portapapeles. También puede determinar si un control Rich Edit es capaz de pegar un formato de Portapapeles.
 
-Puede copiar o cortar el contenido de la selección actual utilizando la [copia](../mfc/reference/cricheditctrl-class.md#copy) o [cortar](../mfc/reference/cricheditctrl-class.md#cut) función miembro. De forma similar, puede pegar el contenido del Portapapeles en un control rich edit utilizando la [pegar](../mfc/reference/cricheditctrl-class.md#paste) función miembro. El control pega el primer formato disponible que reconoce, que es probablemente el formato más descriptivo.
+Puede copiar o cortar el contenido de la selección actual mediante la función miembro [copiar](../mfc/reference/cricheditctrl-class.md#copy) o [cortar](../mfc/reference/cricheditctrl-class.md#cut) . Del mismo modo, puede pegar el contenido del portapapeles en un control Rich Edit mediante la función miembro [Paste](../mfc/reference/cricheditctrl-class.md#paste) . El control pega el primer formato disponible que reconoce, lo que supuestamente es el formato más descriptivo.
 
-Para pegar un formato de Portapapeles específico, puede usar el [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) función miembro. Esta función es útil para aplicaciones con un comando Pegado especial que permite al usuario seleccionar el formato del Portapapeles. Puede usar el [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) función miembro para determinar si se reconoce un formato especificado por el control.
+Para pegar un formato específico del portapapeles, puede usar la función miembro [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) . Esta función es útil para las aplicaciones con un comando Pegar especial que permite al usuario seleccionar el formato del portapapeles. Puede usar la función miembro [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) para determinar si el control reconoce un formato determinado.
 
-También puede usar `CanPaste` para determinar si un control rich edit reconoce cualquier formato disponible del Portapapeles. Esta función es útil en el `OnInitMenuPopup` controlador. Una aplicación puede habilitar o atenuar su comando Pegar dependiendo de si el control puede pegar cualquier formato disponible.
+También puede usar `CanPaste` para determinar si un control de edición enriquecido reconoce cualquier formato de Portapapeles disponible. Esta función es útil en el `OnInitMenuPopup` controlador. Una aplicación podría habilitar o atenuar el comando pegar dependiendo de si el control puede pegar cualquier formato disponible.
 
-Controles Rich Edit. registrar dos formatos de Portapapeles: formato de texto enriquecido y un formato denominado RichEdit texto y objetos. Una aplicación puede registrar estos formatos mediante la [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funcione, especificando el **valores CF_RTF** y **CF_RETEXTOBJ** valores.
+Los controles Rich Edit registran dos formatos de portapapeles: el formato de texto enriquecido y un formato denominado texto y objetos de RichEdit. Una aplicación puede registrar estos formatos mediante la función [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) , especificando los valores **CF_RTF** y **CF_RETEXTOBJ** .
 
 ## <a name="see-also"></a>Vea también
 
 [Uso de CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

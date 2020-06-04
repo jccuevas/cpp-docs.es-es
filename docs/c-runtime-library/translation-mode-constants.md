@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: 9ac318c25b317d783e7fd7e287666bf85bb45b26
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220535"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376279"
 ---
 # <a name="translation-mode-constants"></a>Constantes del modo de traducción
 
@@ -40,7 +40,7 @@ Los valores permitidos son:
 
 |||
 |-|-|
-`_O_TEXT`  | Abre un archivo en modo de texto (traducido). Las combinaciones de retorno de carro y avance de línea (CR-LF) se traducen en un único carácter de avance de línea (LF) en la entrada. Los caracteres de salto de línea se traducen en combinaciones CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura y lectura y escritura, `fopen` comprueba si existe un CTRL+Z al final del archivo y lo quita, si es posible. Se hace así porque el uso de las funciones `fseek` y `ftell` para desplazarse por un archivo que finaliza con CTRL+Z puede hacer que `fseek` se comporte de manera incorrecta cerca del final del archivo.
+`_O_TEXT`  | Abre un archivo en modo de texto (traducido). Las combinaciones retorno de carro-salto de línea (CR-LF) se traducen en un salto de línea (LF) único en la entrada. Los caracteres de salto de línea se traducen a combinaciones CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura, así como para lectura y escritura, `fopen` comprueba si existe CTRL+Z al final del archivo y lo quita, si es posible. Se hace así porque el uso de las funciones `fseek` y `ftell` para desplazarse por un archivo que finaliza con CTRL+Z puede hacer que `fseek` se comporte de manera incorrecta cerca del final del archivo.
 `_O_BINARY`  | Abre un archivo en modo binario (sin traducir). Las traducciones anteriores se suprimen.
 `_O_RAW`  | Igual a `_O_BINARY`. Admite la compatibilidad con C 2.0.
 

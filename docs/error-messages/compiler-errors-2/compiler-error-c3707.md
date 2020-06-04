@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
-ms.openlocfilehash: 8a1525539c84ea427815a03057bb6d2f9213fec7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6faf035c0f4f68b10b187c56bea4cafc776998cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431119"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757961"
 ---
 # <a name="compiler-error-c3707"></a>Error del compilador C3707
 
-'function': el método dispinterface debe tener un dispid
+' función ': el método dispinterface debe tener un DISPID
 
-Si usa un `dispinterface` método, se le debe asignar un `dispid`. Para corregir este error, asigne un `dispid` a la `dispinterface` método, por ejemplo, al quitar el comentario del `id` atributo en el método en el ejemplo siguiente. Para obtener más información, vea los atributos [dispinterface](../../windows/dispinterface.md) y [id](../../windows/id.md).
+Si utiliza un método `dispinterface`, debe asignarle un `dispid`. Para corregir este error, asigne un `dispid` al método `dispinterface`, por ejemplo, quitando los comentarios del atributo `id` en el método en el ejemplo siguiente. Para obtener más información, vea los atributos [dispinterface](../../windows/dispinterface.md) e [ID](../../windows/id.md).
 
-El ejemplo siguiente genera C3707:
+En el ejemplo siguiente se genera C3707:
 
-```
+```cpp
 // C3707.cpp
 #include <atlbase.h>
 #include <atlcom.h>

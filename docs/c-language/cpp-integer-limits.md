@@ -1,23 +1,25 @@
 ---
-title: Límites de enteros de C++
-ms.date: 01/29/2018
+title: Límites de enteros de C y C++
+ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
 - limits, integer constants
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
-ms.openlocfilehash: 057da1ac8e4549a05d10a01cc3aead678045d9c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6940f36e37ec58ca8fe23c9062928cbf90b125bd
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548296"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778376"
 ---
-# <a name="c-integer-limits"></a>Límites de enteros de C++
+# <a name="c-and-c-integer-limits"></a>Límites de enteros de C y C++
 
 **Específicos de Microsoft**
 
-Los límites de los tipos enteros se muestran en la tabla siguiente. Estos límites se definen en el archivo de encabezado estándar LIMITS.H. Microsoft C también permite la declaración de variables de enteros con tamaño, que son tipos enteros con un tamaño de 8, 16 o 32 bits. Para obtener más información sobre los enteros con tamaño, vea [Tipos enteros con tamaño](../c-language/c-sized-integer-types.md).
+Los límites de los tipos enteros de C y C++ se muestran en la tabla siguiente. Estos límites se definen en el archivo de encabezado estándar de C `<limits.h>`. El encabezado de la biblioteca estándar de C++ `<limits>` incluye `<climits>`, que a su vez incluye `<limits.h>`.
+
+Microsoft C también permite la declaración de variables de enteros con tamaño, que son tipos enteros con un tamaño de 8, 16, 32 o 64 bits. Para obtener más información sobre los enteros con tamaño en C, vea [Tipos enteros con tamaño](../c-language/c-sized-integer-types.md).
 
 ## <a name="limits-on-integer-constants"></a>Límites en constantes de enteros
 
@@ -39,6 +41,9 @@ Los límites de los tipos enteros se muestran en la tabla siguiente. Estos lími
 |**LONG_MIN**|Valor mínimo de una variable de tipo **long**.|-2147483647 - 1|
 |**LONG_MAX**|Valor máximo de una variable de tipo **long**.|2147483647|
 |**ULONG_MAX**|Valor máximo de una variable de tipo **unsigned long**.|4294967295 (0xffffffff)|
+|**LLONG_MIN**|Valor mínimo de una variable de tipo **long long**.|-9,223,372,036,854,775,807 - 1|
+|**LLONG_MAX**|Valor máximo de una variable de tipo **long long**.|9\.223.372.036.854.775.807|
+|**ULLONG_MAX**|Valor máximo de una variable de tipo **unsigned long long**.|18,446,744,073,709,551,615 (0xffffffffffffffff)|
 
 Si un valor supera la representación de entero mayor, el compilador de Microsoft genera un error.
 

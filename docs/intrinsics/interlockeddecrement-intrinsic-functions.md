@@ -1,6 +1,6 @@
 ---
-title: Funciones intrínsecas _InterlockedDecrement
-ms.date: 12/17/2018
+title: Funciones intrínsecas de _InterlockedDecrement
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,22 +44,22 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: d180ed8d416483d1be5e2bbd52f1a8752996f3f9
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627491"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857923"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>Funciones intrínsecas _InterlockedDecrement
+# <a name="_interlockeddecrement-intrinsic-functions"></a>Funciones intrínsecas de _InterlockedDecrement
 
 **Específicos de Microsoft**
 
-Proporciona compatibilidad intrínseca del compilador para el SDK de Windows de Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement) función.
+Proporciona compatibilidad intrínseca del compilador para la función [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) de Win32 Windows SDK.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 long _InterlockedDecrement(
    long * lpAddend
 );
@@ -98,33 +98,34 @@ __int64 _InterlockedDecrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
-*lpAddend*<br/>
+\ *lpAddend*
 [in, out] Puntero a la variable que se va a reducir.
 
 ## <a name="return-value"></a>Valor devuelto
 
 El valor devuelto es el valor resultante disminuido.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|
-|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
+|`_InterlockedDecrement`, `_InterlockedDecrement16`|x86, ARM, x64, ARM64|
+|`_InterlockedDecrement64`|ARM, x64, ARM64|
+|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Hay diversas variaciones en `_InterlockedDecrement` que varían en función de los tipos de datos que implican y de si se utiliza la liberación o la adquisición de semántica específica del procesador.
 
 Mientras que la función `_InterlockedDecrement` opera con valores enteros de 32 bits, `_InterlockedDecrement16` opera con valores enteros de 16 bits y `_InterlockedDecrement64` opera con valores enteros de 64 bits.
 
-En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` si necesita adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.
+En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` si necesita adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos con un sufijo de `_nf` ("sin barrera") no actúan como una barrera de memoria.
 
-La variable a la que apunta el parámetro `lpAddend` debe estar alineada en un límite de 32 bits; de lo contrario, esta función produce un error en sistemas x86 multiprocesadores y en sistemas que no son x86. Para obtener más información, consulte [alinear](../cpp/align-cpp.md).
+La variable a la que apunta el parámetro `lpAddend` debe estar alineada en un límite de 32 bits; de lo contrario, esta función produce un error en sistemas x86 multiprocesadores y en sistemas que no son x86. Para obtener más información, consulte [align](../cpp/align-cpp.md).
 
 Estas rutinas solo están disponibles como intrínsecos.
 
@@ -196,8 +197,10 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
+**FIN de Específicos de Microsoft**
+
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
-[Palabras clave](../cpp/keywords-cpp.md)<br/>
+[Intrínsecos del Compilador](../intrinsics/compiler-intrinsics.md)\
+[Palabras clave](../cpp/keywords-cpp.md)\
 [Conflictos con el compilador de x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

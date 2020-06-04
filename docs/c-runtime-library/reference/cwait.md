@@ -1,9 +1,10 @@
 ---
 title: _cwait
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _cwait
-apilocation:
+- _o__cwait
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,21 +16,25 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwait
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2e23acb041004b9e96d1c6558ae195ed522155
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489627"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914796"
 ---
-# <a name="cwait"></a>_cwait
+# <a name="_cwait"></a>_cwait
 
 Espera hasta que finaliza otro proceso.
 
@@ -49,34 +54,36 @@ intptr_t _cwait(
 ### <a name="parameters"></a>Parámetros
 
 *termstat*<br/>
-Puntero a un búfer donde se almacenará el código de resultado del proceso especificado, o **NULL**.
+Puntero a un búfer donde se almacenará el código de resultado del proceso especificado, o **null**.
 
 *procHandle*<br/>
-El identificador del proceso para esperar (es decir, el proceso que tiene que finalizar antes de **_cwait** puede devolver).
+Identificador del proceso del que se va a esperar (es decir, el proceso que tiene que finalizar antes de que se pueda devolver **_cwait** ).
 
-*Acción*<br/>
-NULL: Omite las aplicaciones del sistema operativo de Windows; para otras aplicaciones: código de acción para llevar a cabo en *procHandle*.
+*action*<br/>
+NULL: se omite en las aplicaciones del sistema operativo Windows; para otras aplicaciones: código de acción que se realizará en *procHandle*.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cuando se haya completado correctamente el proceso especificado, devuelve el identificador del proceso especificado y establece *termstat* para el código de resultado devuelto por el proceso especificado. En caso contrario, devuelve -1 y establece **errno** como sigue.
+Cuando el proceso especificado se ha completado correctamente, devuelve el identificador del proceso especificado y establece *termstat* en el código de resultado devuelto por el proceso especificado. De lo contrario, devuelve-1 y establece **errno** como se indica a continuación.
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
-|**ECHILD**|No hay ningún proceso especificado existe, *procHandle* no es válido o la llamada a la [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) o [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) error de la API.|
-|**EINVAL**|*acción* no es válido.|
+|**ECHILD**|No existe ningún proceso especificado, *procHandle* no es válido o se produjo un error en la llamada a la API [API GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) o [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) .|
+|**EINVAL**|la *acción* no es válida.|
 
-Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para más información sobre estos y otros códigos devueltos, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_cwait** función espera la finalización de la Id. de proceso del proceso especificado que se proporciona por *procHandle*. El valor de *procHandle* que se pasa a **_cwait** debe ser el valor devuelto por la llamada a la [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) función que creó el proceso especificado. Si el identificador de proceso termina antes de **_cwait** se llama, **_cwait** devuelve inmediatamente. **_cwait** puede usar en cualquier proceso para esperar a cualquier otro proceso conocido para el que un identificador válido (*procHandle*) existe.
+La función **_cwait** espera a la finalización del identificador de proceso del proceso especificado proporcionado por *procHandle*. El valor de *procHandle* que se pasa a **_cwait** debe ser el valor devuelto por la llamada a la función [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) que creó el proceso especificado. Si el identificador de proceso finaliza antes de que se llame a **_cwait** , **_cwait** vuelve inmediatamente. cualquier proceso puede utilizar **_cwait** para esperar a cualquier otro proceso conocido para el que exista un identificador válido (*procHandle*).
 
-*termstat* apunta a un búfer donde se almacenará el código de retorno del proceso especificado. El valor de *termstat* indica si el proceso especificado finalizó con normalidad mediante una llamada a la Windows [ExitProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) API. **ExitProcess** llama internamente si el proceso especificado llama **salir** o **_exit**, devuelve de **principal**, o se alcanza el final de **principal** . Para obtener más información sobre el valor que se pasa a través de *termstat*, consulte [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Si **_cwait** se le llama mediante un **NULL** valor *termstat*, no se almacena el código de retorno del proceso especificado.
+*termstat* apunta a un búfer donde se almacenará el código de retorno del proceso especificado. El valor de *termstat* indica si el proceso especificado terminó normalmente mediante una llamada a la API [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) de Windows. Se llama a **ExitProcess** internamente si el proceso especificado llama a **Exit** o **_exit**, devuelve desde **Main**o alcanza el final de **Main**. Para obtener más información sobre el valor que se devuelve a través de *termstat*, vea [API GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Si se llama a **_cwait** mediante un valor **null** para *termstat*, el código de retorno del proceso especificado no se almacena.
 
-El *acción* parámetro se omite el sistema operativo de Windows porque las relaciones de elementos primarios y secundarios no están implementadas en estos entornos.
+El sistema operativo Windows omite el parámetro de *acción* porque las relaciones de elementos primarios y secundarios no se implementan en estos entornos.
 
-A menos que *procHandle* es -1 o -2 (identificadores para el proceso o subproceso actual), el identificador se cierra. Por consiguiente, en esta situación, no se debe usar el identificador devuelto.
+A menos que *procHandle* sea-1 o-2 (identificadores del proceso o subproceso actual), se cerrará el identificador. Por consiguiente, en esta situación, no se debe usar el identificador devuelto.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,7 +91,7 @@ A menos que *procHandle* es -1 o -2 (identificadores para el proceso o subproces
 |-------------|---------------------|---------------------|
 |**_cwait**|\<process.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -154,7 +161,7 @@ Hi, Dad. It's Carl.
 Hi, Dad. It's Dave.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_spawn, _wspawn (funciones)](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn, _wspawn funciones](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

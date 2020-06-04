@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2231
 ms.assetid: 677c5c66-d30f-4c3b-bbb9-760858d56477
-ms.openlocfilehash: 0d6519bd12cdb5ee5a86fa4a6915b51b0dc59fc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50230b3a9b609d281cddf996783287c270f844d5
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592808"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301826"
 ---
 # <a name="compiler-error-c2231"></a>Error del compilador C2231
 
-'.': operando izquierdo señala a 'class-key', use '->'
+'. ': el operando izquierdo apunta a ' Class-Key ', use '-> '
 
-El operando situado a la izquierda de la operación de selección de miembro (.) es un puntero en lugar de una clase, estructura o unión.
+El operando situado a la izquierda de la operación de selección de miembro (.) es un puntero en lugar de una clase, estructura o Unión.
 
 El ejemplo siguiente genera la advertencia C2231:
 
-```
+```c
 // C2231.c
 struct S {
    int member;

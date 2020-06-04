@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-ms.openlocfilehash: 00ac67fec3aafa5a259b5222bd6bb8654210fa61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af97c72f496177d2e94cf18f9685ac33c5e62404
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436367"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185664"
 ---
 # <a name="compiler-warning-level-1-c4742"></a>Advertencia del compilador (nivel 1) C4742
 
-'var' tiene una alineación diferente en 'archivo1' y 'archivo2': número y número
+' var ' tiene una alineación diferente en ' archivo1 ' y ' archivo2 ': número y número
 
-Una variable externa que se hace referencia o definida en dos archivos tiene una alineación diferente en esos archivos. Esta advertencia se genera cuando el compilador encuentra que `__alignof` para la variable en *file1* difiere `__alignof` para la variable en *file2*. Esto puede deberse mediante el uso de tipos no compatibles cuando se declara la variable en distintos archivos, o mediante el uso de no coincidentes `#pragma pack` en distintos archivos.
+Una variable externa a la que se hace referencia o que se define en dos archivos tiene una alineación diferente en esos archivos. Esta advertencia se genera cuando el compilador encuentra que `__alignof` para la variable en *archivo1* es diferente de `__alignof` para la variable en *archivo2*. Esto puede deberse a un uso de tipos incompatibles al declarar variables en archivos diferentes o a usar `#pragma pack` no coincidentes en archivos diferentes.
 
-Para resolver esta advertencia, utilice la misma definición de tipo o use nombres diferentes para las variables.
+Para resolver esta advertencia, use la misma definición de tipo o use nombres diferentes para las variables.
 
-Para obtener más información, consulte [pack](../../preprocessor/pack.md) y [operador __alignof](../../cpp/alignof-operator.md).
+Para obtener más información, vea operador [Pack](../../preprocessor/pack.md) y [__alignof](../../cpp/alignof-operator.md).
 
 ## <a name="example"></a>Ejemplo
 
 Este es el primer archivo que define el tipo.
 
-```
+```c
 // C4742a.c
 // compile with: /c
 struct X {
@@ -37,9 +37,9 @@ struct X {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4742.
+En el ejemplo siguiente se genera C4742.
 
-```
+```c
 // C4742b.c
 // compile with: C4742a.c /W1 /GL
 // C4742 expected

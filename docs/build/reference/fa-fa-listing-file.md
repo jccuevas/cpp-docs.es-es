@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b78704ea12365d9e10222d75c6807517f7cdb893
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292840"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Archivo de lista)
 
@@ -61,21 +61,21 @@ Una *origen*archivo .asm se crea para cada archivo de código fuente en la compi
 *filename*<br/>
 Un archivo de lista denominado *filename*.asm se coloca en el directorio actual. Esto solo es válido cuando se compila un archivo de código fuente único.
 
-*FileName.Extension*<br/>
+*filename.extension*<br/>
 Un archivo de lista denominado *filename.extension* se coloca en el directorio actual. Esto solo es válido cuando se compila un archivo de código fuente único.
 
-*Directorio*__\\__<br/>
+*directory*__\\__<br/>
 Una *archivo_origen*archivo .asm se crea y se colocan en la instancia especificada *directory* para cada archivo de código fuente en la compilación. Tenga en cuenta la barra diagonal necesaria. Se permiten rutas de acceso sólo en el disco actual.
 
 *directorio*__\\__*nombre de archivo*<br/>
 Un archivo de lista denominado *filename*.asm se coloca en la instancia especificada *directory*. Esto solo es válido cuando se compila un archivo de código fuente único.
 
-*directorio*__\\__*filename.extension*<br/>
+*directory*__\\__*filename.extension*<br/>
 Un archivo de lista denominado *filename.extension* se coloca en la instancia especificada *directory*. Esto solo es válido cuando se compila un archivo de código fuente único.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **archivos de salida** página de propiedades.
 
@@ -97,7 +97,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>Vea también
 
-[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)
+[/F (Opciones del archivo de resultados)](output-file-f-options.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Especificar la ruta de acceso](specifying-the-pathname.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2827
 ms.assetid: cb3e5814-0c92-40e4-b620-98578ae3003a
-ms.openlocfilehash: 7f1f19b91580bffa1133ae11ab91f2243153a389
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8da60b895ad5dab0713d736142225053d14301c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201947"
 ---
 # <a name="compiler-error-c2827"></a>Error del compilador C2827
 
-'operator operator' no se puede invalidar globalmente por un tipo unario
+' operator Operator ' no se puede invalidar globalmente con un formato unario
 
-El operador no puede tener un tipo unario fuera de un objeto.
+El operador no puede tener una forma unaria fuera de un objeto.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones
 
-1. Realice el operador sobrecargado local en un objeto.
+1. Haga que el operador sobrecargado sea local en un objeto.
 
-1. Elija un operador unario adecuado a la sobrecarga.
+1. Elija un operador unario adecuado para sobrecargar.

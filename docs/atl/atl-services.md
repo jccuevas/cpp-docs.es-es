@@ -1,20 +1,18 @@
 ---
 title: Servicios ATL
 ms.date: 11/04/2016
-f1_keywords:
-- CServiceModule
 helpviewer_keywords:
 - CServiceModule class
 - COM objects, ATL
 - services, ATL
 - ATL services
 ms.assetid: 8c09d1a8-7548-4d2c-947c-9d795a81659b
-ms.openlocfilehash: 50a3eecf210cacc35cd80ad82da079b18c998c8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 052169154a62cbd07a82f08087fc2c2db8ae46c5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62251920"
 ---
 # <a name="atl-services"></a>Servicios ATL
 
@@ -49,4 +47,3 @@ Los tres últimos temas explican conceptos relacionados con el desarrollo de un 
 ## <a name="see-also"></a>Vea también
 
 [Conceptos](../atl/active-template-library-atl-concepts.md)
-

@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Definir y utilizar delegados (C++/CLI)'
+title: Procedimiento Definir y utilizar delegados (C++ / c++ / CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 3254f01a2d6399626ad78bb742a2cfd861d095ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387375"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Cómo: Definir y utilizar delegados (C++/CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>Procedimiento Definir y utilizar delegados (C++ / c++ / CLI)
 
 Este artículo muestra cómo definir y consumir delegados en C / c++ / CLI.
 
@@ -504,4 +504,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[delegate (Extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md)
+[delegate (Extensiones de componentes de C++)](../extensions/delegate-cpp-component-extensions.md)

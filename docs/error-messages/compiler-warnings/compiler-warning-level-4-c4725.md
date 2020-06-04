@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4725
 ms.assetid: effa0335-71c3-4b3b-8618-da4b9b46a95d
-ms.openlocfilehash: 9da830133bbca2abcd5fa77339e698b35dae32f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c86d1a5351adf5ba29752613f2301a11fb1b93ce
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455645"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989525"
 ---
 # <a name="compiler-warning-level-4-c4725"></a>Advertencia del compilador (nivel 4) C4725
 
@@ -21,7 +21,7 @@ El código contiene una instrucción de ensamblado en línea que podría no prod
 
 El ejemplo siguiente genera la advertencia C4725:
 
-```
+```cpp
 // C4725.cpp
 // compile with: /W4
 // processor: x86

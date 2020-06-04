@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: ff48b1848e2d7631d789621a5ef845d04d8e8821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: becea4ff52342a79d0b87ffe0022e2cf84c47949
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495945"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456530"
 ---
 # <a name="addvolatile-class"></a>add_volatile (Clase)
 
-Realiza una **volátil** tipo a partir del tipo especificado.
+Crea un tipo **volátil** a partir del tipo especificado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,12 +30,12 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia de `add_volatile<T>` tiene un miembro **typedef** `type` decir *T* si *T* es una referencia, una función o un tipo calificado como volátil, en caso contrario **volátil** *T*. El alias `add_volatile_t` es un acceso directo para tener acceso al miembro **typedef** `type`.
+Una instancia de `add_volatile<T>` tiene una **definición** `type` de tipo de miembro que es *t* si *t* es una referencia, una función o un tipo calificado volátil; de lo contrario, es **volátil** *T*. El alias `add_volatile_t` es un acceso directo para acceder al **typedef** `type`de miembro.
 
 ## <a name="example"></a>Ejemplo
 
@@ -67,5 +67,5 @@ add_volatile<int> == int
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_volatile (Clase)](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_volatile (Clase)](../standard-library/remove-volatile-class.md)

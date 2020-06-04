@@ -1,49 +1,53 @@
 ---
-title: 'Cómo: Incrustar un manifiesto en una aplicación de C/C++'
-ms.date: 11/04/2016
+title: Procedimiento para insertar un manifiesto en una aplicación de C/C++
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 2f125ee445d4ee9efdf21c37134d4c5adbca256d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624880"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323000"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Cómo: Incrustar un manifiesto en una aplicación de C/C++
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedimiento para insertar un manifiesto en una aplicación de C/C++
 
-Se recomienda que una aplicación de C o C++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, Visual Studio intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen. consulte [Manifest Generation en Visual Studio](../build/manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar archivos MAKE existente para insertar automáticamente el manifiesto dentro del archivo binario final.
+Se recomienda insertar el manifiesto de la aplicación o biblioteca dentro del archivo binario final, ya que garantiza un comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, Visual Studio intenta insertar el manifiesto al compilar un proyecto. Para obtener más información, vea [Generación de manifiestos en Visual Studio](manifest-generation-in-visual-studio.md). Pero si compila la aplicación mediante nmake, tendrá que realizar algunos cambios en el archivo Make. En esta sección se muestra cómo cambiar los archivos Make para insertar automáticamente el manifiesto en el archivo binario final.
 
 ## <a name="two-approaches"></a>Dos enfoques
 
-Hay dos maneras para incrustar el manifiesto en una aplicación o biblioteca.
+Hay dos maneras de insertar el manifiesto dentro de una aplicación o biblioteca.
 
-- Si no está realizando una compilación incremental puede insertar directamente el manifiesto mediante una línea de comandos similar a lo siguiente como un paso posterior a la compilación:
+- Si no va a realizar una compilación incremental, puede insertar directamente el manifiesto mediante una línea de comandos similar a la siguiente como paso posterior a la compilación:
 
-   **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    o
 
-   **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 para un archivo EXE, 2 para un archivo DLL).
+   Use 1 para un archivo EXE y 2 para un archivo DLL.
 
-- Si está realizando una compilación incremental, editar el recurso directamente, como se muestra aquí se deshabilitará la compilación incremental y produzcan una recompilación completa; por lo tanto, se debe tomar un enfoque diferente:
+- Si va a realizar una compilación incremental, siga estos pasos:
 
-   - Vincule el archivo binario para generar el archivo MyApp.exe.manifest.
+  - Vincule el binario para generar el archivo MyApp.exe.manifest.
 
-   - Convierta el manifiesto en un archivo de recursos.
+  - Convierta el manifiesto en un archivo de recursos.
 
-   - Volver a vincular (de forma incremental) para incrustar el recurso del manifiesto en el archivo binario.
+  - Vuelva a vincular (de forma incremental) para insertar el recurso de manifiesto en el archivo binario.
 
-Los ejemplos siguientes muestran cómo modificar los archivos MAKE para incorporar ambas técnicas.
+En los ejemplos siguientes se muestra cómo cambiar los archivos Make para incorporar ambas técnicas.
 
-## <a name="makefiles-before"></a>Archivos MAKE (antes)
+## <a name="makefiles-before"></a>Archivos Make (antes)
 
-Tenga en cuenta la secuencia de comandos de nmake para MyApp.exe, una aplicación sencilla basada en un archivo:
+Considere el script nmake de MyApp.exe, una aplicación sencilla compilada a partir de un archivo:
 
 ```
 # build MyApp.exe
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Si esta secuencia de comandos se ejecuta sin cambios con Visual C++, crea correctamente MyApp.exe. También crea el archivo de manifiesto externo MyApp.exe.manifest, para su uso por el sistema operativo para cargar ensamblados dependientes en tiempo de ejecución.
+Si este script se ejecuta sin modificar con Visual Studio, crea correctamente MyApp.exe. También crea el archivo de manifiesto externo MyApp.exe.manifest, para que el sistema operativo lo use para cargar los ensamblados dependientes en tiempo de ejecución.
 
 El script nmake para MyLibrary.dll es muy similar:
 
@@ -88,9 +92,9 @@ clean :
     del MyLibrary.obj MyLibrary.dll
 ```
 
-## <a name="makefiles-after"></a>Archivos MAKE (después)
+## <a name="makefiles-after"></a>Archivos Make (después)
 
-Para compilar con incrusta manifiestos que tendrá que realizar cuatro pequeños cambios en los archivos MAKE originales. Para el archivo MAKE MyApp.exe:
+Para compilar con manifiestos insertados, debe realizar cuatro pequeños cambios en los archivos Make originales. Para el archivo Make MyApp.exe:
 
 ```
 # build MyApp.exe
@@ -120,7 +124,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Para el archivo MAKE MyLibrary.dll:
+Para el archivo Make MyLibrary.dll:
 
 ```
 # build MyLibrary.dll
@@ -153,9 +157,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Los archivos MAKE ahora incluyen dos archivos que realizan el trabajo real, makefile.inc y makefile.targ.inc.
+Los archivos Make ahora incluyen dos archivos que realizan el trabajo real, makefile.inc y makefile.targ.inc.
 
-Crear makefile.inc y copie lo siguiente:
+Cree makefile.inc y copie lo siguiente en su interior:
 
 ```
 # makefile.inc -- Include this file into existing makefile at the very top.
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Ahora cree el archivo makefile.targ.inc y copie lo siguiente:
+Ahora, cree **makefile.targ.inc** y copie lo siguiente en su interior:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile
@@ -255,4 +259,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>Vea también
 
-[Introducción a la generación de manifiestos para los programas de C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Introducción a la generación de manifiestos para los programas de C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

@@ -8,46 +8,46 @@ helpviewer_keywords:
 - data [MFC]
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
-ms.openlocfilehash: f612f4be726707681ffbddff88ccc6b8a672e427
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f965b90e1e0bbcfd3ad04bb5b40644d61050b2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522413"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367161"
 ---
 # <a name="record-field-exchange-rfx"></a>Intercambio de campos de registros (RFX)
 
-Las clases de base de datos ODBC de MFC automatizan el movimiento de datos entre el origen de datos y un [recordset](../../data/odbc/recordset-odbc.md) objeto. Al derivar una clase de [CRecordset](../../mfc/reference/crecordset-class.md) y no utiliza la obtención masiva de filas, se transfieren datos mediante el mecanismo de campos de registros (RFX) de exchange.
+Las clases de base de datos ODBC de MFC automatizan el movimiento de datos entre el origen de datos y un objeto de [conjunto de registros.](../../data/odbc/recordset-odbc.md) Cuando se deriva una clase de [CRecordset](../../mfc/reference/crecordset-class.md) y no se utiliza la obtención masiva de filas, los datos se transfieren mediante el mecanismo de intercambio de campos de registros (RFX).
 
 > [!NOTE]
->  Si ha implementado la obtención masiva de filas en una derivada `CRecordset` (clase), el marco de trabajo usa el mecanismo de forma masiva campos de registros (RFX masivo) para transferir datos. Para obtener más información, consulte [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Si ha implementado la obtención masiva `CRecordset` de filas en una clase derivada, el marco de trabajo utiliza el mecanismo de intercambio de campos de registros masivos (RFX masivo) para transferir datos. Para obtener más información, vea [Conjunto de registros: obtención de registros en masa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-RFX es similar al intercambio de datos de cuadro de diálogo (DDX). Mover datos entre un origen de datos y los miembros de datos de campo de un conjunto de registros requiere varias llamadas para el conjunto de registros [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) y considerable interacción entre el marco de trabajo y [ODBC](../../data/odbc/odbc-basics.md). El mecanismo de RFX tiene seguridad de tipos y ahorra el trabajo de llamar a funciones ODBC como `::SQLBindCol`. Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
+RFX es similar al intercambio de datos de cuadro de diálogo (DDX). Mover datos entre un origen de datos y los miembros de datos de campo de un conjunto de registros requiere varias llamadas a la función [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) del conjunto de registros y una interacción considerable entre el marco de trabajo y [ODBC.](../../data/odbc/odbc-basics.md) El mecanismo RFX es seguro para tipos y le ahorra `::SQLBindCol`el trabajo de llamar a funciones ODBC como . Para obtener más información sobre DDX, consulte [Intercambio y validación de datos de cuadro de diálogo](../../mfc/dialog-data-exchange-and-validation.md).
 
-RFX resulta casi transparente para usted. Si declara las clases de conjunto de registros mediante el Asistente para aplicaciones MFC o **Agregar clase** (como se describe en [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)), RFX se genera automáticamente en ellos. La clase de conjunto de registros debe derivarse de la clase base `CRecordset` proporcionado por el marco de trabajo. El Asistente para aplicaciones MFC permite crear una clase de conjunto de registros inicial. **Agregar clase** le permite agregar otras clases de conjunto de registros según sea necesario. Para obtener más información y ejemplos, vea [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+RFX es en su mayoría transparente para usted. Si declara las clases de conjunto de registros con el Asistente para aplicaciones MFC o **Agregar clase** (como se describe en Agregar un consumidor ODBC de [MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)), RFX se integra automáticamente. La clase de conjunto de registros debe derivarse de la clase `CRecordset` base proporcionada por el marco de trabajo. El Asistente para aplicaciones MFC le permite crear una clase de conjunto de registros inicial. **Agregar clase** le permite agregar otras clases de conjunto de registros según las necesite. Para obtener más información y ejemplos, vea [Agregar un consumidor ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)de MFC .
 
-Debe agregar manualmente una pequeña cantidad de código RFX en tres casos, cuando desea:
+Debe agregar manualmente una pequeña cantidad de código RFX en tres casos, cuando desee:
 
-- Use consultas parametrizadas. Para obtener más información, consulte [conjunto de registros: parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+- Utilice consultas parametrizadas. Para obtener más información, vea [Conjunto de registros: parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-- Realizar combinaciones (con un conjunto de registros para las columnas de dos o más tablas). Para obtener más información, consulte [conjunto de registros: realizar una combinación (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+- Realizar combinaciones (mediante un conjunto de registros para columnas de dos o más tablas). Para obtener más información, vea [Conjunto de registros: realizar una combinación (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
-- Enlazar dinámicamente columnas de datos. Esto es menos común que la parametrización. Para obtener más información, consulte [conjunto de registros: enlazar dinámicamente columnas de datos (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Enlazar columnas de datos dinámicamente. Esto es menos común que la parametrización. Para obtener más información, vea [Conjunto de registros: enlazar dinámicamente columnas de datos (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-Si necesita una descripción más avanzada de RFX, consulte [intercambio de campos de registros: funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Si necesita una comprensión más avanzada de RFX, vea Intercambio de campos de [registros: Cómo funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-Los siguientes temas explican los detalles del uso de objetos de conjunto de registros:
+En los temas siguientes se explican los detalles del uso de objetos de conjunto de registros:
 
-- [Intercambio de campos de registros: Usar RFX](../../data/odbc/record-field-exchange-using-rfx.md)
+- [Intercambio de campos de registros: Utilizar RFX](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Intercambio de campos de registros: Usar las funciones de RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Intercambio de campos de registros: Utilizar las funciones de RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
 - [Intercambio de campos de registros: Funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Conectividad de base de datos abierta (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Compatibilidad con bases de datos, Asistente para aplicaciones MFC](../../mfc/reference/database-support-mfc-application-wizard.md)<br/>
-[CRecordset (clase)](../../mfc/reference/crecordset-class.md)
+[Clase CRecordset](../../mfc/reference/crecordset-class.md)

@@ -1,9 +1,9 @@
 ---
 title: wctype
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctype
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f77082bbcc5f3cd9d82fb40993c3ac678e7e7ba2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456906"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957801"
 ---
 # <a name="wctype"></a>wctype
 
@@ -47,7 +50,7 @@ Cadena de propiedad.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si el **LC_CTYPE** categoría de la configuración regional actual no define una regla de clasificación cuyo nombre coincide con la cadena de propiedad *propiedad*, la función devuelve cero. De lo contrario, devuelve un valor distinto de cero adecuado como segundo argumento de una llamada subsiguiente a [towctrans](towctrans.md).
+Si la categoría **LC_CTYPE** de la configuración regional actual no define una regla de clasificación cuyo nombre coincida con la *propiedad*de cadena de propiedad, la función devuelve cero. De lo contrario, devuelve un valor distinto de cero adecuado como segundo argumento de una llamada subsiguiente a [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -55,17 +58,17 @@ La función determina una regla de clasificación para códigos de caracteres an
 
 |Función|Igual que|
 |--------------|-------------|
-|iswalnum(c)|iswctype (c, wctype ("alnum"))|
-|iswalpha(c)|iswctype (c, wctype ("alfa"))|
-|iswcntrl(c)|iswctype (c, wctype ("control"))|
-|iswdigit(c)|iswctype (c, wctype ("digit"))|
-|iswgraph(c)|iswctype (c, wctype ("gráfico"))|
-|iswlower(c)|iswctype (c, wctype ("inferior"))|
-|iswprint(c)|iswctype (c, wctype ("print"))|
-|iswpunct(c)|iswctype (c, wctype ("puntuación"))|
-|iswspace(c)|iswctype (c, wctype ("espacio"))|
-|iswupper(c)|iswctype (c, wctype ("superior"))|
-|iswxdigit(c)|iswctype (c, wctype ("xdigit"))|
+|iswalnum(c)|iswctype(c, wctype( "alnum" ) )|
+|iswalpha (c)|iswctype(c, wctype( "alpha" ) )|
+|iswcntrl (c)|iswctype(c, wctype( "cntrl" ) )|
+|iswdigit (c)|iswctype(c, wctype( "digit" ) )|
+|iswgraph (c)|iswctype (c, wctype ("Grafo"))|
+|iswlower (c)|iswctype (c, wctype ("Lower"))|
+|iswprint (c)|iswctype (c, wctype ("Print"))|
+|iswpunct (c)|iswctype (c, wctype ("punct"))|
+|iswspace (c)|iswctype (c, wctype ("Space"))|
+|iswupper (c)|iswctype (c, wctype ("Upper"))|
+|iswxdigit(c)|iswctype(c, wctype( "xdigit" ) )|
 
 ## <a name="requirements"></a>Requisitos
 

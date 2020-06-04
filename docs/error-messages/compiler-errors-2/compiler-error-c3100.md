@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3100
 ms.assetid: 7a9c9eaf-08ef-442d-94a0-e457beee8549
-ms.openlocfilehash: 07529b576a8ce967c4ff834aab4d6d78d32d52ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a0e0995b1a4dcbc92f02de03920893f884c2c7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521170"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750044"
 ---
 # <a name="compiler-error-c3100"></a>Error del compilador C3100
 
-'target': calificador de atributo desconocido
+' target ': calificador de atributo desconocido
 
 Se especificó un destino de atributo no válido.
 
-Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Para obtener más información, consulta [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3100.
+En el ejemplo siguiente se genera C3100.
 
-```
+```cpp
 // C3100.cpp
 // compile with: /clr /c
 using namespace System;

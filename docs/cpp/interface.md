@@ -1,23 +1,23 @@
 ---
 title: __interface
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - __interface_cpp
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 33a3d45f65ab5adf798a2b0f6b11191e6f6a0213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178216"
 ---
-# <a name="interface"></a>__interface
+# <a name="__interface"></a>__interface
 
 **Específicos de Microsoft**
 
-Una interfaz de Visual C++ se puede definir de la manera siguiente:
+Una interfaz C++ de Microsoft se puede definir de la siguiente manera:
 
 - Puede heredar de cero o más interfaces base.
 
@@ -37,9 +37,9 @@ Una interfaz de Visual C++ se puede definir de la manera siguiente:
 modifier __interface interface-name {interface-definition};
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-C++ [clase](../cpp/class-cpp.md) o [struct](../cpp/struct-cpp.md) podría implementarse con estas reglas, pero **__interface** aplica.
+Una C++ [clase](../cpp/class-cpp.md) o [struct](../cpp/struct-cpp.md) podría implementarse con estas reglas, pero **__interface** las aplica.
 
 Por ejemplo, este es un ejemplo de definición de interfaz:
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-Para obtener información sobre interfaces administradas, vea [clase de interfaz](../windows/interface-class-cpp-component-extensions.md).
+Para obtener información sobre las interfaces administradas, vea [clase interface](../extensions/interface-class-cpp-component-extensions.md).
 
 Observe que no tiene que indicar explícitamente que las funciones `CommitX` y `get_X` son virtuales puras. Una declaración equivalente para la primera función sería:
 
@@ -58,7 +58,7 @@ Observe que no tiene que indicar explícitamente que las funciones `CommitX` y `
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface** implica la [novtable](../cpp/novtable.md) **__declspec** modificador.
+**__interface** implica el modificador **__declspec** de [novtable](../cpp/novtable.md) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -144,7 +144,7 @@ bstr_data = Testing
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
 [Atributos de interfaz](../windows/attributes/interface-attributes.md)

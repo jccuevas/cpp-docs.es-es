@@ -1,6 +1,6 @@
 ---
 title: Funciones intrínsecas _InterlockedOr
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedOr8_nf
 - _InterlockedOr_HLEAcquire
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - _InterlockedOr16_rel intrinsic
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
-ms.openlocfilehash: c0006dccb3beb28fb7dcb2d9d8313be022523883
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: baad724c85d2d8fb981ec7836d7a46152000fae3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627194"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217589"
 ---
-# <a name="interlockedor-intrinsic-functions"></a>Funciones intrínsecas _InterlockedOr
+# <a name="_interlockedor-intrinsic-functions"></a>Funciones intrínsecas _InterlockedOr
 
 **Específicos de Microsoft**
 
@@ -71,7 +71,7 @@ Realizar una operación OR bit a bit atómica en una variable compartida por var
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 long _InterlockedOr(
    long volatile * Value,
    long Mask
@@ -170,13 +170,13 @@ __int64 _InterlockedOr64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Valor*<br/>
-[in, out] Un puntero al primer operando, sean reemplazadas por el resultado.
+*Valor*\
+[in, out] Puntero al primer operando, que se va a reemplazar por el resultado.
 
-*Máscara*<br/>
-[in] El segundo operando.
+*Máscara*\
+de Segundo operando.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -186,24 +186,26 @@ El valor original al que apunta el primer parámetro.
 
 |Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
-|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`, `_InterlockedOr64`|x86, ARM, x64|\<INTRIN.h >|
-|`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM|\<INTRIN.h >|
-|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|x64|\<INTRIN.h >|
-|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`, `_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x86, x64|\<immintrin.h >|
+|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedOr64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM, ARM64|\<intrin.h>|
+|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|x64|\<intrin.h>|
+|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Comentarios
 
 El número en el nombre de cada función especifica el tamaño en bits de los argumentos.
 
-En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` si necesita adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos ARM con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.
+En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` si necesita adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos ARM con un `_nf` sufijo ("sin barrera") no actúan como una barrera de memoria.
 
 Los intrínsecos con un sufijo `_np` ("sin captura previa") impiden que el compilador inserte una posible operación de captura previa.
 
-En las plataformas de Intel que admiten instrucciones de Elisión de bloqueo de Hardware (HLE), los intrínsecos con sufijos `_HLEAcquire` y `_HLERelease` incluyen una sugerencia para el procesador que puede acelerar el rendimiento mediante la eliminación de un paso de escritura de bloqueo en el hardware. Si se llama a estos intrínsecos en plataformas que no son compatibles con HLE, se omite la sugerencia.
+En las plataformas de Intel que admiten instrucciones de Elisión de bloqueo de Hardware (HLE), los intrínsecos con sufijos `_HLEAcquire` y `_HLERelease` incluyen una sugerencia para el procesador que puede acelerar el rendimiento mediante la eliminación de un paso de escritura de bloqueo en el hardware. Si se llama a estos intrínsecos en plataformas que no admiten HLE, se omite la sugerencia.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // _InterlockedOr.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -228,5 +230,5 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Conflictos con el compilador de x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

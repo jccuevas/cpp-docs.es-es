@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1508
 ms.assetid: 1112c17d-d60f-470d-b886-fd1a9556c0ea
-ms.openlocfilehash: 7a68fb016406b238bc322955dc5dd2f79253c0fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57940484b581d6aaadcb9a0ea9078f348a631973
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203013"
 ---
 # <a name="fatal-error-c1508"></a>Error irrecuperable C1508
 

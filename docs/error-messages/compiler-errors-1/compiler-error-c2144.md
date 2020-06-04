@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b917c0a2c15aeb70222c948bce9a6fb275c91068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483335"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207251"
 ---
 # <a name="compiler-error-c2144"></a>Error del compilador C2144
 
-> error de sintaxis: '*tipo*'debe ir precedido por'*token*'
+> error de sintaxis: '*Type*' debe ir precedido de '*token*'
 
-El compilador esperado *token* y encontrar *tipo* en su lugar.
+El compilador esperaba un *token* y se encontró el *tipo* en su lugar.
 
-Este error puede deberse a una llave de cierre que faltan, paréntesis de cierre o punto y coma.
+Este error puede deberse a que falta una llave de cierre, un paréntesis derecho o un punto y coma.
 
-C2144 también puede producirse al intentar crear una macro de una palabra clave CLR que contiene un carácter de espacio en blanco.
+C2144 también se puede producir al intentar crear una macro a partir de una palabra clave de CLR que contiene un carácter de espacio en blanco.
 
-También puede ver C2144 si intenta el reenvío de tipos. Consulte [reenvío de tipos (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md) para obtener más información.
+También puede ver C2144 si está intentando realizar el reenvío de tipos. Consulte [reenvío de tiposC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md) para obtener más información.
 
 ## <a name="examples"></a>Ejemplos
 
-El ejemplo siguiente genera C2144 y muestra cómo corregirlo:
+En el ejemplo siguiente se genera C2144 y se muestra una manera de corregirlo:
 
 ```cpp
 // C2144.cpp
@@ -40,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-El ejemplo siguiente genera C2144 y muestra cómo corregirlo:
+En el ejemplo siguiente se genera C2144 y se muestra una manera de corregirlo:
 
 ```cpp
 // C2144_2.cpp

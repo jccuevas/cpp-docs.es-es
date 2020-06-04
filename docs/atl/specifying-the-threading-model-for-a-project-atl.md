@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [ATL], models
 - _ATL_SINGLE_THREADED macro
 ms.assetid: 6b571078-521c-4f3e-9f08-482aa235a822
-ms.openlocfilehash: 419c9880573c2058b3bb60b9c77e4f3ca065fab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69c1c80bba0b09ce69e0b9b9b27296ef2508e60b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275222"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Especificar el modelo de subprocesos de un proyecto (ATL)
 
@@ -23,7 +23,7 @@ Las macros siguientes están disponibles para especificar el modelo de subproces
 |-----------|--------------------------|
 |_ATL_SINGLE_THREADED|Define si todos los objetos utilizan el modelo de subprocesamiento único.|
 |_ATL_APARTMENT_THREADED|Define si uno o varios de los objetos utilizan el apartamento de subproceso.|
-|ACTIVA _ATL_FREE_THREADED|Define si uno o varios de los objetos utilizan el subprocesamiento libre o neutra. El código existente puede contener referencias a la macro equivalente [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|
+|_ATL_FREE_THREADED|Define si uno o varios de los objetos utilizan el subprocesamiento libre o neutra. El código existente puede contener referencias a la macro equivalente [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|
 
 Si no se define ninguna de estas macros para el proyecto, activa _ATL_FREE_THREADED entrará en vigor.
 
@@ -40,4 +40,3 @@ Consulte [opciones, Asistente para objetos simples de ATL](../atl/reference/opti
 ## <a name="see-also"></a>Vea también
 
 [Conceptos](../atl/active-template-library-atl-concepts.md)
-

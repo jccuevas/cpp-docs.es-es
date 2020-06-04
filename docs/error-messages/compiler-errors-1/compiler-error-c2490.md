@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2490
 ms.assetid: 9de6bddd-b2e2-4ce6-b33b-201a8c2c8c54
-ms.openlocfilehash: 9e06883d0e8b6103eb44d086d3872d86c50a58b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86d9f41db8ba386a64878eebfae989011f637d71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452096"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757090"
 ---
 # <a name="compiler-error-c2490"></a>Error del compilador C2490
 
-'palabra clave' no se permite en la función con atributo 'naked'
+' keyword ' no se permite en la función con el atributo ' naked '
 
-Una función definida como [naked](../../cpp/naked-cpp.md) no se puede usar el control de excepciones estructurado.
+Una función definida como [naked](../../cpp/naked-cpp.md) no puede usar el control de excepciones estructurado.
 
-El ejemplo siguiente genera C2490:
+En el ejemplo siguiente se genera C2490:
 
-```
+```cpp
 // C2490.cpp
 // processor: x86
 __declspec( naked ) int func() {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-ms.openlocfilehash: 108c942bef33e44b515d46e953c9d99274e3ce8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12398203d61f2c3ea155b5f6e6e7b118d4a13c75
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475830"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689401"
 ---
-# <a name="maskarray-class"></a>mask_array (clase)
+# <a name="mask_array-class"></a>mask_array (clase)
 
-Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays principales, especificados con una expresión booleana, proporcionando operaciones entre matrices de subconjuntos.
+Una plantilla de clase auxiliar interna que admite objetos que son subconjuntos de valarrays principales, especificados con una expresión booleana, proporcionando operaciones entre las matrices de subconjuntos.
 
 ## <a name="syntax"></a>Sintaxis
 
 ## <a name="remarks"></a>Comentarios
 
-La clase describe un objeto que almacena una referencia a un objeto `va` de clase [valarray](../standard-library/valarray-class.md)**\<tipo >**, junto con un objeto `ba` de clase [ valarray\<bool >](../standard-library/valarray-bool-class.md), que describe la secuencia de elementos para seleccionar desde el `valarray<Type>` objeto.
+La clase describe un objeto que almacena una referencia a un objeto `va` de la clase [valarray](../standard-library/valarray-class.md)  **\<Type >** , junto con un objeto `ba` de la clase [valarray \<bool](../standard-library/valarray-bool-class.md)>, que describe la secuencia de elementos que se van a seleccionar. del objeto `valarray<Type>`.
 
-Construir un `mask_array<Type>` objeto escribiendo una expresión de formato [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase mask_array se comportarán como las firmas de función correspondientes definidas para `valarray<Type>`, excepto que solo la secuencia de elementos seleccionados se ve afectada.
+Solo se crea un objeto `mask_array<Type>` escribiendo una expresión con el formato [va&#91;BA&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase mask_array se comportarán como las signaturas de función correspondientes definidas para `valarray<Type>`, excepto en que solo la secuencia de elementos seleccionados se ve afectada.
 
-La secuencia consta de a lo sumo `ba.size` elementos. Un elemento *J* solo se incluye si **ba**[ *J*] es true. Por lo tanto, hay tantos elementos en la secuencia de elementos true en `ba`. Si `I` es el índice del elemento true más bajo en `ba`, a continuación, **va**[ `I`] es el elemento cero de la secuencia seleccionada.
+La secuencia consta de a lo sumo `ba.size` elementos. Un elemento *J* solo se incluye si **ba**[ *J*] es true. Por lo tanto, hay tantos elementos en la secuencia, ya que hay elementos verdaderos en `ba`. Si `I` es el índice del elemento true más bajo de `ba`, **va**[`I`] es el elemento cero de la secuencia seleccionada.
 
 ## <a name="example"></a>Ejemplo
 
@@ -61,7 +61,7 @@ int main( )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).
@@ -76,4 +76,4 @@ The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

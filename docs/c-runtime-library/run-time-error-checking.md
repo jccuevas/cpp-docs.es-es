@@ -1,18 +1,16 @@
 ---
 title: Comprobar errores en tiempo de ejecución
 ms.date: 11/04/2016
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-ms.openlocfilehash: 348698faa1f91e4d98acc762538fc1cbdb798e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: cf707cbd53e2285684d53d3f440db0f618343598
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435652"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444833"
 ---
 # <a name="run-time-error-checking"></a>Comprobar errores en tiempo de ejecución
 
@@ -22,14 +20,14 @@ Utilice las siguientes funciones para personalizar la forma en que el programa r
 
 ## <a name="run-time-error-checking-functions"></a>Funciones de comprobación de errores en tiempo de ejecución
 
-|Función|Usar|
+|Función|Uso|
 |--------------|---------|
 |[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Devuelve una breve descripción de un tipo de comprobación de error en tiempo de ejecución.|
 |[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Devuelve el número total de errores que se pueden detectar mediante las comprobaciones de errores en tiempo de ejecución.|
 |[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Designa una función como el controlador para notificar comprobaciones de errores en tiempo de ejecución.|
 |[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Asocia un error que se detecta mediante comprobaciones de errores en tiempo de ejecución con un tipo.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [/RTC (Comprobaciones de errores en tiempo de ejecución)](../build/reference/rtc-run-time-error-checks.md)<br/>

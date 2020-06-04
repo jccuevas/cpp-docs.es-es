@@ -2,34 +2,34 @@
 title: Usar mosaicos
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176099"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126271"
 ---
 # <a name="using-tiles"></a>Usar mosaicos
 
-Puede utilizar la disposición en mosaico para maximizar la aceleración de la aplicación. Mosaico divide los subprocesos en subconjuntos rectangulares iguales o *iconos*. Si usa un tamaño apropiado del mosaico y el algoritmo de teselado, puede obtener mayor aceleración desde el código de C++ AMP. Los componentes básicos de disposición en mosaico son:
+Puede usar la disposición en mosaico para maximizar la aceleración de la aplicación. El mosaico divide los subprocesos en subconjuntos o *mosaicos*rectangulares iguales. Si usa un tamaño de icono y un algoritmo en mosaico adecuados, puede obtener aún más aceleración del código C++ del amp. Los componentes básicos de la disposición en mosaico son:
 
-- `tile_static` variables. La principal ventaja del mosaico es la mejora de rendimiento de `tile_static` acceso. Acceso a datos en `tile_static` memoria puede ser mucho más rápida que el acceso a datos en el espacio global (`array` o `array_view` objetos). Se crea una instancia de la variable `tile_static` para cada mosaico y todos los subprocesos del mosaico tienen acceso a la variable. En un algoritmo en mosaico típico, los datos se copian en `tile_static` memoria una vez de la memoria global y, a continuación, obtener acceso a muchas veces desde el `tile_static` memoria.
+- `tile_static` variables. La principal ventaja de la disposición en mosaico es la ganancia de rendimiento de `tile_static` acceso. El acceso a los datos de `tile_static` memoria puede ser mucho más rápido que el acceso a los datos en el espacio global (objetos`array` o `array_view`). Se crea una instancia de la variable `tile_static` para cada mosaico y todos los subprocesos del mosaico tienen acceso a la variable. En un algoritmo en mosaico típico, los datos se copian en `tile_static` memoria una vez desde la memoria global y, a continuación, se tiene acceso a ellas muchas veces desde la memoria de `tile_static`.
 
-- [tile_barrier:: Wait (método)](reference/tile-barrier-class.md#wait). Una llamada a `tile_barrier::wait` suspende la ejecución del subproceso actual hasta que todos los subprocesos en el mismo mosaico llaman a `tile_barrier::wait`. No puede garantizar el orden en que los subprocesos se ejecutarán en, solo que no hay subprocesos del mosaico se ejecutará más allá de la llamada a `tile_barrier::wait` hasta que todos los subprocesos hayan alcanzado la llamada. Esto significa que mediante la `tile_barrier::wait` método, puede realizar tareas en un mosaico a mosaico en lugar de un subproceso por subproceso. Un algoritmo de disposición en mosaico típico tiene código para inicializar el `tile_static` memoria para todo el mosaico seguido por una llamada a `tile_barrer::wait`. Código que sigue `tile_barrier::wait` contiene los cálculos que requieren acceso a todos los `tile_static` valores.
+- [tile_barrier:: Wait (método](reference/tile-barrier-class.md#wait)). Una llamada a `tile_barrier::wait` suspende la ejecución del subproceso actual hasta que todos los subprocesos del mismo mosaico lleguen a la llamada a `tile_barrier::wait`. No se puede garantizar el orden en el que se ejecutarán los subprocesos, solo que no se ejecutarán los subprocesos del mosaico más allá de la llamada a `tile_barrier::wait` hasta que todos los subprocesos hayan alcanzado la llamada. Esto significa que, al usar el método `tile_barrier::wait`, puede realizar tareas en mosaico a mosaico en lugar de subproceso por subproceso. Un algoritmo de mosaico típico tiene código para inicializar el `tile_static` memoria para todo el mosaico seguido de una llamada a `tile_barrier::wait`. El código siguiente `tile_barrier::wait` contiene cálculos que requieren acceso a todos los valores de `tile_static`.
 
-- Indización local y global. Tener acceso al índice del subproceso que concierne a toda la `array_view` o `array` objeto y el índice que concierne al mosaico. Utiliza el índice local puede hacer más fácil leerlos y depurar su código. Normalmente, se utiliza la indización local para tener acceso a `tile_static` variables y la indización global para tener acceso a `array` y `array_view` variables.
+- Indexación local y global. Tiene acceso al índice del subproceso en relación con todo el `array_view` o `array` objeto y con el Índice relativo al mosaico. El uso del índice local puede hacer que el código sea más fácil de leer y depurar. Normalmente, se usa la indexación local para tener acceso a las variables `tile_static` e indexación global para tener acceso a las variables `array` y `array_view`.
 
-- [tiled_extent (clase)](../../parallel/amp/reference/tiled-extent-class.md) y [tiled_index (clase)](../../parallel/amp/reference/tiled-index-class.md). Usa un `tiled_extent` en lugar del objeto un `extent` objeto en el `parallel_for_each` llamar a. Usa un `tiled_index` en lugar del objeto un `index` objeto en el `parallel_for_each` llamar a.
+- [Tiled_extent clase](../../parallel/amp/reference/tiled-extent-class.md) y [tiled_index clase](../../parallel/amp/reference/tiled-index-class.md). Se usa un objeto de `tiled_extent` en lugar de un objeto `extent` en la llamada a `parallel_for_each`. Se usa un objeto de `tiled_index` en lugar de un objeto `index` en la llamada a `parallel_for_each`.
 
-Para aprovechar las ventajas del mosaico, el algoritmo debe dividir el dominio del cálculo en mosaicos y, a continuación, copie los datos de mosaico en `tile_static` variables para un acceso más rápido.
+Para aprovechar las ventajas de la disposición en mosaico, el algoritmo debe particionar el dominio de cálculo en mosaicos y, a continuación, copiar los datos del icono en variables de `tile_static` para obtener un acceso más rápido.
 
-## <a name="example-of-global-tile-and-local-indices"></a>Ejemplo de Global, icono y los índices locales
+## <a name="example-of-global-tile-and-local-indices"></a>Ejemplo de índices globales, de mosaico y locales
 
-El siguiente diagrama representa una matriz de 8 x 9 de datos que se organizan en mosaicos de 2 x 3.
+El siguiente diagrama representa una matriz de datos 8x9 que se organiza en mosaicos de 2x3.
 
-![8&#45;por&#45;matriz 9 dividido en 2&#45;por&#45;3 iconos](../../parallel/amp/media/usingtilesmatrix.png "8&#45;por&#45;matriz 9 dividido en 2&#45;por&#45;3 iconos")
+![una&#45;matriz&#45;de 8 por 9 dividida en 2&#45;por&#45;3 mosaicos](../../parallel/amp/media/usingtilesmatrix.png "una&#45;matriz&#45;de 8 por 9 dividida en 2&#45;por&#45;3 mosaicos")
 
-En el ejemplo siguiente se muestra el icono global, y los índices locales de esta matriz en mosaico. Un `array_view` objeto se crea mediante el uso de los elementos de tipo `Description`. El `Description` contiene la información global, icono y los índices locales del elemento de la matriz. El código en la llamada a `parallel_for_each` establece los valores de la información global, icono y los índices locales de cada elemento. La salida muestra los valores en el `Description` estructuras.
+En el ejemplo siguiente se muestran los índices globales, de mosaico y locales de esta matriz en mosaico. Se crea un objeto de `array_view` mediante el uso de elementos de tipo `Description`. El `Description` contiene los índices globales, de mosaico y locales del elemento de la matriz. El código de la llamada a `parallel_for_each` establece los valores de los índices globales, de mosaico y locales de cada elemento. La salida muestra los valores de las estructuras `Description`.
 
 ```cpp
 #include <iostream>
@@ -134,42 +134,42 @@ void TilingDescription() {
     }
 }
 
-void main() {
+int main() {
     TilingDescription();
     char wait;
     std::cin >> wait;
 }
 ```
 
-El trabajo principal del ejemplo está en la definición de la `array_view` objeto y la llamada a `parallel_for_each`.
+El trabajo principal del ejemplo está en la definición del objeto `array_view` y la llamada a `parallel_for_each`.
 
-1. El vector de `Description` estructuras se copia en un 8 x 9 `array_view` objeto.
+1. El vector de las estructuras de `Description` se copia en un objeto de `array_view` 8x9.
 
-2. El `parallel_for_each` se llama al método con un `tiled_extent` objeto como el dominio del cálculo. El `tiled_extent` objeto se crea mediante una llamada a la `extent::tile()` método de la `descriptions` variable. Los parámetros de tipo de la llamada a `extent::tile()`, `<2,3>`, especifique que se crean mosaicos de 2 x 3. Por lo tanto, la matriz de 8 x 9 está dispuesta en 12 mosaicos, cuatro filas y tres columnas.
+2. Se llama al método `parallel_for_each` con un objeto `tiled_extent` como el dominio de cálculo. El objeto `tiled_extent` se crea llamando al método `extent::tile()` de la variable `descriptions`. Los parámetros de tipo de la llamada a `extent::tile()`, `<2,3>`, especifican que se crean mosaicos de 2x3. Por lo tanto, la matriz 8x9 se coloca en mosaico en 12 mosaicos, cuatro filas y tres columnas.
 
-3. El `parallel_for_each` se llama al método mediante el uso de un `tiled_index<2,3>` objeto (`t_idx`) como el índice. Los parámetros de tipo del índice (`t_idx`) debe coincidir con los parámetros de tipo del dominio de proceso (`descriptions.extent.tile< 2, 3>()`).
+3. Se llama al método `parallel_for_each` mediante un objeto `tiled_index<2,3>` (`t_idx`) como índice. Los parámetros de tipo del índice (`t_idx`) deben coincidir con los parámetros de tipo del dominio de proceso (`descriptions.extent.tile< 2, 3>()`).
 
-4. Cuando se ejecuta cada subproceso, el índice `t_idx` devuelve información acerca de qué icono el subproceso está en (`tiled_index::tile` propiedad) y la ubicación del subproceso dentro del mosaico (`tiled_index::local` propiedad).
+4. Cuando se ejecuta cada subproceso, el índice `t_idx` devuelve información sobre el mosaico en el que se encuentra el subproceso (`tiled_index::tile` propiedad) y la ubicación del subproceso en el mosaico (propiedad`tiled_index::local`).
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Sincronización del mosaico: tile_static y tile_barrier:: wait
+## <a name="tile-synchronizationtile_static-and-tile_barrierwait"></a>Sincronización de iconos: tile_static y tile_barrier:: wait
 
-El ejemplo anterior muestra el diseño de mosaico y los índices, pero no es en sí mismo muy útil.  Mosaico resulta útil cuando los mosaicos son enteros para el algoritmo y explotan `tile_static` variables. Dado que todos los subprocesos de un mosaico tienen acceso a `tile_static` variables, llamadas a `tile_barrier::wait` se usan para sincronizar el acceso a la `tile_static` variables. Aunque todos los subprocesos de un mosaico tienen acceso a la `tile_static` variables, no hay ningún orden garantizado de la ejecución de subprocesos del mosaico. El ejemplo siguiente muestra cómo usar `tile_static` variables y `tile_barrier::wait` método para calcular el valor medio de cada mosaico. Estas son las claves para entender el ejemplo:
+En el ejemplo anterior se muestran los índices y el diseño del icono, pero no es muy útil.  El mosaico resulta útil cuando los mosaicos son integrales para el algoritmo y aprovechan las variables de `tile_static`. Dado que todos los subprocesos de un mosaico tienen acceso a las variables de `tile_static`, las llamadas a `tile_barrier::wait` se utilizan para sincronizar el acceso a las variables `tile_static`. Aunque todos los subprocesos de un mosaico tienen acceso a las variables `tile_static`, no hay ningún orden garantizado de ejecución de subprocesos en el icono. En el ejemplo siguiente se muestra cómo usar las variables `tile_static` y el método `tile_barrier::wait` para calcular el valor medio de cada mosaico. Estas son las claves para comprender el ejemplo:
 
-1. Los datos sin formato se almacenan en una matriz de 8 x 8.
+1. RawData se almacena en una matriz de 8 x 8.
 
-2. El tamaño del mosaico es de 2 x 2. Esto crea una cuadrícula 4 x 4 de iconos y los promedios se pueden almacenar en una matriz de 4 x 4 mediante el uso de un `array` objeto. Hay solo un número limitado de tipos que se pueden capturar por referencia en una función con restricción AMP. La `array` clase es uno de ellos.
+2. El tamaño del mosaico es 2x2. Esto crea una cuadrícula 4x4 de mosaicos y los promedios se pueden almacenar en una matriz 4x4 mediante un objeto `array`. Solo hay un número limitado de tipos que puede capturar por referencia en una función con restricción de AMP. La clase `array` es uno de ellos.
 
-3. El tamaño de matriz y el tamaño de muestra se definen mediante `#define` instrucciones, ya que los parámetros de tipo para `array`, `array_view`, `extent`, y `tiled_index` deben ser valores constantes. También puede usar `const int static` declaraciones. Como ventaja adicional, es muy fácil cambiar el tamaño de muestra para calcular el promedio mosaicos 4 x 4.
+3. El tamaño de la matriz y el tamaño de la muestra se definen mediante instrucciones de `#define`, porque los parámetros de tipo para `array`, `array_view`, `extent`y `tiled_index` deben ser valores constantes. También puede usar declaraciones `const int static`. Como ventaja adicional, es trivial cambiar el tamaño de la muestra para calcular el promedio de los mosaicos de 4x4.
 
-4. Un `tile_static` es declarar una matriz de 2 x 2 de valores flotantes para cada mosaico. Aunque la declaración está en la ruta de acceso de código para cada subproceso, se crea solo una matriz para cada mosaico en la matriz.
+4. Se declara una matriz de 2x2 `tile_static` de valores Float para cada mosaico. Aunque la declaración está en la ruta de acceso del código para cada subproceso, solo se crea una matriz para cada mosaico de la matriz.
 
-5. Hay una línea de código para copiar los valores de cada mosaico a la `tile_static` matriz. Para cada subproceso, después de que el valor se copia en la matriz, la ejecución en el subproceso se detenga debido a la llamada a `tile_barrier::wait`.
+5. Hay una línea de código para copiar los valores de cada mosaico en la `tile_static` matriz. Para cada subproceso, una vez que el valor se copia en la matriz, la ejecución en el subproceso se detiene debido a la llamada a `tile_barrier::wait`.
 
-6. Cuando todos los subprocesos de un mosaico han alcanzado la barrera, se puede calcular el promedio. Dado que el código se ejecuta para cada subproceso, hay un `if` instrucción para calcular solo el promedio en un subproceso. El promedio se almacena en la variable de promedios. La barrera es esencialmente el concepto que controla los cálculos por mosaico, tanto como se usarían un `for` bucle.
+6. Cuando todos los subprocesos de un mosaico han alcanzado la barrera, se puede calcular el promedio. Dado que el código se ejecuta para cada subproceso, hay una instrucción `if` para calcular únicamente el promedio en un subproceso. El promedio se almacena en la variable promedios. La barrera es esencialmente la construcción que controla los cálculos por mosaico, de forma muy similar a como podría usar un bucle `for`.
 
-7. Los datos en el `averages` variable porque es un `array` de objetos, se deben copiar al host. Este ejemplo utiliza el operador de conversión de vectores.
+7. Los datos de la variable `averages`, porque es un objeto `array`, se deben copiar de nuevo al host. En este ejemplo se usa el operador de conversión de vectores.
 
-8. En el ejemplo completo, puede cambiar SAMPLESIZE a 4 y el código se ejecuta correctamente sin realizar ningún otro cambio.
+8. En el ejemplo completo, puede cambiar MUESTREAdor a 4 y el código se ejecuta correctamente sin realizar ningún otro cambio.
 
 ```cpp
 #include <iostream>
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -252,7 +252,7 @@ int main() {
 
 ## <a name="race-conditions"></a>Condiciones de carrera
 
-Puede ser tentador crear un `tile_static` variable denominada `total` y aumentar dicha variable para cada subproceso, similar al siguiente:
+Podría ser tentador crear una variable de `tile_static` denominada `total` y aumentar esa variable para cada subproceso, como se indica a continuación:
 
 ```cpp
 // Do not do this.
@@ -263,7 +263,7 @@ t_idx.barrier.wait();
 averages(t_idx.tile[0],t_idx.tile[1]) /= (float) (SAMPLESIZE* SAMPLESIZE);
 ```
 
-El primer problema con este enfoque es que `tile_static` variables no pueden tener inicializadores. El segundo problema es que hay una condición de carrera en la asignación a `total`, porque todos los subprocesos del mosaico tienen acceso a la variable sin ningún orden determinado. Es posible programar un algoritmo para permitir sólo un subproceso tenga acceso a la total en cada barrera, tal como se muestra a continuación. Sin embargo, esta solución no es extensible.
+El primer problema de este enfoque es que `tile_static` variables no pueden tener inicializadores. El segundo problema es que hay una condición de carrera en la asignación a `total`, porque todos los subprocesos del mosaico tienen acceso a la variable en ningún orden determinado. Puede programar un algoritmo para permitir solo que un subproceso tenga acceso al total en cada barrera, como se muestra a continuación. Sin embargo, esta solución no es extensible.
 
 ```cpp
 // Do not do this.
@@ -281,27 +281,27 @@ t_idx.barrier.wait();
 // etc.
 ```
 
-## <a name="memory-fences"></a>Barreras de memoria
+## <a name="memory-fences"></a>Límites de memoria
 
-Hay dos tipos de accesos a memoria que deben estar sincronizadas: acceso a la memoria global y `tile_static` acceso a la memoria. Un `concurrency::array` objeto asigna solo memoria global. Un `concurrency::array_view` puede hacer referencia a la memoria global, `tile_static` memoria, o ambas, según cómo se construyó.  Hay dos tipos de memoria que deben sincronizarse:
+Hay dos tipos de accesos de memoria que se deben sincronizar: acceso a memoria global y `tile_static` acceso a memoria. Un objeto `concurrency::array` asigna solo memoria global. Un `concurrency::array_view` puede hacer referencia a la memoria global, `tile_static` memoria o ambos, en función de cómo se haya construido.  Hay dos tipos de memoria que se deben sincronizar:
 
 - memoria global
 
 - `tile_static`
 
-Un *barrera de memoria* garantiza que están disponibles para otros subprocesos del mosaico de subprocesos tiene acceso a la memoria y que la memoria se ejecutan según el orden programado. Para asegurarse de esto, los compiladores y los procesadores no reordenan lecturas y escrituras a través de la barrera. En C++ AMP, se crea una barrera de memoria mediante una llamada a uno de estos métodos:
+Una *barrera de memoria* garantiza que los accesos de memoria estén disponibles para otros subprocesos en el mosaico de subprocesos y que los accesos a memoria se ejecuten según el orden del programa. Para garantizar esto, los compiladores y los procesadores no reordenan las lecturas y escrituras en la barrera. En C++ amp, una barrera de memoria se crea mediante una llamada a uno de estos métodos:
 
-- [tile_barrier:: Wait (método)](reference/tile-barrier-class.md#wait): crea una barrera alrededor tanto global y `tile_static` memoria.
+- [tile_barrier:: wait Method](reference/tile-barrier-class.md#wait): crea una barrera alrededor de la memoria global y de `tile_static`.
 
-- [Método tile_barrier::wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): crea una barrera alrededor tanto global y `tile_static` memoria.
+- [método tile_barrier:: wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): crea una barrera alrededor de la memoria global y `tile_static`.
 
-- [Método tile_barrier::wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): crea una barrera alrededor únicamente la memoria global.
+- [método tile_barrier:: wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): crea una barrera alrededor únicamente de la memoria global.
 
-- [Método tile_barrier::wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crea una barrera alrededor únicamente `tile_static` memoria.
+- [método tile_barrier:: wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crea una barrera alrededor únicamente de la memoria `tile_static`.
 
-Una llamada a la barrera específica que necesite puede mejorar el rendimiento de la aplicación. El tipo de barrera influye en cómo el compilador y el hardware reordenan las instrucciones. Por ejemplo, si utiliza una barrera de memoria global, aplica accesos a memoria sólo globales y por lo tanto, el compilador y el hardware podrían cambiar el orden lee y escribe en `tile_static` variables en los dos lados de la barrera.
+Llamar a la barrera específica que necesita puede mejorar el rendimiento de la aplicación. El tipo de barrera afecta al modo en que el compilador y las instrucciones de reordenación de hardware. Por ejemplo, si usa una barrera de memoria global, solo se aplica a los accesos de memoria globales y, por tanto, el compilador y el hardware pueden reordenar las lecturas y escrituras en `tile_static` variables en los dos lados de la barrera.
 
-En el ejemplo siguiente, la barrera sincroniza las escrituras en `tileValues`, un `tile_static` variable. En este ejemplo, `tile_barrier::wait_with_tile_static_memory_fence` se llama en lugar de `tile_barrier::wait`.
+En el ejemplo siguiente, la barrera sincroniza las escrituras en `tileValues`, una variable de `tile_static`. En este ejemplo, se llama a `tile_barrier::wait_with_tile_static_memory_fence` en lugar de `tile_barrier::wait`.
 
 ```cpp
 // Using a tile_static memory fence.
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static (Palabra clave)](../../cpp/tile-static-keyword.md)

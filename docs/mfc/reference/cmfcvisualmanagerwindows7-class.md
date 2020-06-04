@@ -1,6 +1,6 @@
 ---
 title: CMFCVisualManagerWindows7 (clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: b71cce32d364200e6f6a8684ffd696c4ea33f1d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6686afecc2b8ef97ea24ef45ff5225433677a954
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591677"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319846"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 (clase)
 
-El `CMFCVisualManagerWindows7` proporciona la apariencia de una aplicación de Windows 7 a una aplicación.
+El `CMFCVisualManagerWindows7` da a una aplicación la apariencia de una aplicación de Windows 7.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,73 +31,73 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Constructor predeterminado.|
-|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Destructor predeterminado.|
+|[CMFCVisualManagerWindows7::-CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|Destructor predeterminado.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|Borra el estilo visual actual y restablece el estilo visual predeterminado.|
-|`CMFCVisualManagerWindows7::CleanUp`|Borra todos los objetos en la interfaz de usuario y restablece los menús.|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Dibuja un botón en el área no cliente en el marco. Los usos de framework, este método para dibujar minimizar, maximizar, cierre y restaurar los botones en la esquina superior derecha del marco de ventana. No se llama a este método cuando el programa usa un tema que no son Aero.|
-|`CMFCVisualManagerWindows7::DrawNcText`|Dibuja texto en el área no cliente en el marco. El marco de trabajo usa este método para dibujar el título de la aplicación en la barra de título en la parte superior de la ventana de marco.|
-|`CMFCVisualManagerWindows7::DrawSeparator`|Dibuja un separador en la [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md).|
-|`CMFCVisualManagerWindows7::GetRibbonBar`|Recupera el [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md) asociado con la interfaz de usuario.|
-|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Obtiene un color de fondo del cuadro de edición de cinta de opciones.|
-|`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Invalida [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Invalida [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Invalida [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
-|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|Invalida [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
-|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|Invalida [CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
-|`CMFCVisualManagerWindows7::IsRibbonPresent`|Determina si un `CMFCRibbonBar` está presente y es visible.|
-|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|Invalida [CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|Invalida [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
-|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|Invalida [CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
-|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|Invalida [CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
-|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|Invalida [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
-|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|Invalida [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|
-|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|Invalida [CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|
-|`CMFCVisualManagerWindows7::OnDrawRadioButton`|Invalidaciones `CMFCVisualManager::OnDrawRadioButton`|
-|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|Invalida [CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|Invalida [CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|Invalida [CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|Invalida [CMFCVisualManager::OnDrawRibbonCaptionButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|Invalida [CMFCVisualManager::OnDrawRibbonCategory](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|Invalida [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|Invalida [CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|Invalida [CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|Invalidaciones `CMFCVisualManager::OnDrawRibbonLaunchButton`|
-|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|Invalida [CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|Invalida [CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|Invalida [CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|Invalida [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|Invalida [CMFCVisualManager::OnDrawRibbonRecentFilesFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|Invalida [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|Invalida [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|Invalida [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|Invalida [CMFCVisualManager::OnDrawRibbonStatusBarPane](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|Invalida [CMFCVisualManager::OnDrawRibbonTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|
-|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Invalida [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
-|`CMFCVisualManagerWindows7::OnFillBarBackground`|Invalida [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|
-|`CMFCVisualManagerWindows7::OnFillButtonInterior`|Invalida [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
-|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|El marco llama a este método cuando rellena el área alrededor de las imágenes de elemento de menú.|
-|`CMFCVisualManagerWindows7::OnFillRibbonButton`|Invalida [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|
-|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Invalida [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
-|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Invalida [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
-|`CMFCVisualManagerWindows7::OnNcActivate`|Invalida [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|
-|`CMFCVisualManagerWindows7::OnNcPaint`|Invalida [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|
-|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Invalida [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
-|`CMFCVisualManagerWindows7::SetResourceHandle`|Establece el identificador de recurso que se describe los atributos del administrador visual.|
-|`CMFCVisualManagerWindows7::SetStyle`|Establece la combinación de colores de la `CMFCVisualManagerWindows7` interfaz gráfica de usuario.|
+|`CMFCVisualManagerWindows7::CleanUp`|Borra todos los objetos de la interfaz de usuario y restablece los menús.|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Dibuja un botón en el área no cliente del marco. El marco de trabajo utiliza este método para dibujar los botones minimizar, maximizar, cerrar y restaurar en la esquina superior derecha del marco de la ventana. Este método solo se llama `Aero` cuando el programa utiliza un tema.|
+|`CMFCVisualManagerWindows7::DrawNcText`|Dibuja texto en el área no cliente del marco. El marco de trabajo utiliza este método para dibujar el título de la aplicación en la barra de título en la parte superior de la ventana de marco.|
+|`CMFCVisualManagerWindows7::DrawSeparator`|Dibuja un separador en la [clase CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).|
+|`CMFCVisualManagerWindows7::GetRibbonBar`|Recupera la [clase CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) asociada a la interfaz de usuario.|
+|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Obtiene un color de fondo del cuadro de edición de la cinta de opciones.|
+|`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Reemplaza [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Reemplaza [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Reemplaza [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
+|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|Reemplaza [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
+|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|Reemplaza [CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
+|`CMFCVisualManagerWindows7::IsRibbonPresent`|Determina si `CMFCRibbonBar` a está presente y visible.|
+|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|Reemplaza [CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
+|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|Reemplaza [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
+|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|Reemplaza [CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
+|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|Reemplaza [CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
+|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|Reemplaza [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
+|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|Reemplaza [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|
+|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|Reemplaza [CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|
+|`CMFCVisualManagerWindows7::OnDrawRadioButton`|Reemplaza `CMFCVisualManager::OnDrawRadioButton`.|
+|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|Reemplaza [CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|Reemplaza [CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|Reemplaza [CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|Reemplaza [CMFCVisualManager::OnDrawRibbonCaptionButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|Reemplaza [CMFCVisualManager::OnDrawRibbonCategory](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|Reemplaza [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|Reemplaza [CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|Reemplaza [CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|Reemplaza `CMFCVisualManager::OnDrawRibbonLaunchButton`.|
+|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|Reemplaza [CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|Reemplaza [CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|Reemplaza [CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|Reemplaza [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|Reemplaza [CMFCVisualManager::OnDrawRibbonRecentFilesFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|Reemplaza [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|Reemplaza [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|Reemplaza [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|Reemplaza [CMFCVisualManager::OnDrawRibbonStatusBarPane](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|Reemplaza [CMFCVisualManager::OnDrawRibbonTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|
+|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Reemplaza [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
+|`CMFCVisualManagerWindows7::OnFillBarBackground`|Reemplaza [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|
+|`CMFCVisualManagerWindows7::OnFillButtonInterior`|Reemplaza [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
+|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|El marco de trabajo llama a este método cuando rellena el área alrededor de las imágenes de elementos de menú.|
+|`CMFCVisualManagerWindows7::OnFillRibbonButton`|Reemplaza [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|
+|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Reemplaza [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
+|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Reemplaza [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
+|`CMFCVisualManagerWindows7::OnNcActivate`|Reemplaza [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|
+|`CMFCVisualManagerWindows7::OnNcPaint`|Reemplaza [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|
+|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Reemplaza [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
+|`CMFCVisualManagerWindows7::SetResourceHandle`|Establece el identificador de recursos que describe los atributos del administrador visual.|
+|`CMFCVisualManagerWindows7::SetStyle`|Establece el esquema `CMFCVisualManagerWindows7` de color de la GUI.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Use la `CMFCVisualManagerWindows7` clase para cambiar la apariencia de la aplicación para imitar una aplicación de Windows 7 de forma predeterminada. Esta clase podría no ser válida si la aplicación se ejecuta en una versión de Windows anteriores a Windows 7. En ese caso, la aplicación utiliza el administrador visual predeterminado definido en [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).
+Utilice `CMFCVisualManagerWindows7` la clase para cambiar el aspecto de la aplicación para imitar una aplicación predeterminada de Windows 7. Esta clase podría no ser válida si la aplicación se ejecuta en una versión de Windows anterior a Windows 7. En ese escenario, la aplicación utiliza el administrador visual predeterminado definido en [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).
 
-El CMFCVisualManagerWindows7 hereda varios métodos de la [CMFCVisualManagerWindows (clase)](../../mfc/reference/cmfcvisualmanagerwindows-class.md) y `CMFCVisualManager` clase. Los métodos enumerados en la sección anterior son métodos nuevos a la `CMFCVisualManagerWindows7` clase.
+El CMFCVisualManagerWindows7 hereda varios métodos de la [CMFCVisualManagerWindows clase](../../mfc/reference/cmfcvisualmanagerwindows-class.md) y la `CMFCVisualManager` clase. Los métodos enumerados en la sección `CMFCVisualManagerWindows7` anterior son métodos nuevos en la clase.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -117,7 +117,7 @@ El CMFCVisualManagerWindows7 hereda varios métodos de la [CMFCVisualManagerWind
 
 **Encabezado:** afxvisualmanagerwindows7.h
 
-##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7
+## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::-CMFCVisualManagerWindows7
 
 Destructor predeterminado.
 
@@ -125,7 +125,7 @@ Destructor predeterminado.
 virtual ~CMFCVisualManagerWindows7();
 ```
 
-##  <a name="cmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
+## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
 
 Constructor predeterminado.
 
@@ -133,9 +133,9 @@ Constructor predeterminado.
 CMFCVisualManagerWindows7();
 ```
 
-##  <a name="getribboneditbackgroundcolor"></a>  CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor
+## <a name="cmfcvisualmanagerwindows7getribboneditbackgroundcolor"></a><a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor
 
-Obtiene el color de fondo de un cuadro de edición de la cinta de opciones.
+Obtiene el color de fondo de un cuadro de edición de cinta de opciones.
 
 ```
 virtual COLORREF GetRibbonEditBackgroundColor (
@@ -148,54 +148,54 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ### <a name="parameters"></a>Parámetros
 
 *pEdit*<br/>
-[in] Un puntero al control de edición. Este valor no puede ser NULL.
+[en] Un puntero al control de edición. Este valor no puede ser NULL.
 
 *bIsHighlighted*<br/>
-[out] Devuelve si la casilla de la cinta de opciones está resaltada.
+[fuera] Devuelve si el cuadro de la cinta de opciones está resaltado.
 
 *bIsPaneHighlighted*<br/>
-[out] Devuelve TRUE si la cinta de opciones del panel que contiene *pEdit* está resaltado.
+[fuera] Devuelve TRUE si se resalta el panel de la cinta de opciones que contiene *pEdit.*
 
 *bIsDisabled*<br/>
-[out] Devuelve si *pEdit* está deshabilitado.
+[fuera] Devuelve si *pEdit* está deshabilitado.
 
 ### <a name="return-value"></a>Valor devuelto
 
 El color de fondo del cuadro de edición *pEdit*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect
+## <a name="cmfcvisualmanagerwindows7onfillmenuimagerect"></a><a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect
 
-El marco llama a este método cuando rellena el área que rodea una imagen de elemento de menú.
+El marco de trabajo llama a este método cuando rellena el área alrededor de una imagen de elemento de menú.
 
 ```
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Un puntero al contexto de dispositivo de un botón de menú.
+[en] Un puntero al contexto del dispositivo de un botón de menú.
 
 *pButton*<br/>
-[in] Un puntero a un `CMFCToolBarButton`. El marco de trabajo rellena el fondo para este botón.
+[en] Un puntero `CMFCToolBarButton`a un archivo . El marco de trabajo rellena el fondo de este botón.
 
-*Rect*<br/>
-[in] Un rectángulo que especifica los límites del área de imagen del botón de menú.
+*Rectángulo*<br/>
+[en] Rectángulo que especifica los límites del área de imagen del botón de menú.
 
 *state*<br/>
-[in] El estado del botón.
+[en] El estado del botón.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager (clase)](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
-[CMFCVisualManagerWindows (clase)](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+[CMFCVisualManager (Clase)](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
+[CMFCVisualManagerWindows (Clase)](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-ms.openlocfilehash: 6c00a3bb388130d9a570e9fd731a9ed1200ed179
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f803d6f575d78fd7a9a9157f06b3f64c4eeb3d77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622188"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748793"
 ---
 # <a name="compiler-error-c3911"></a>Error del compilador C3911
 
-'event_accessor_method': función debe tener el tipo 'firma'
+' event_accessor_method ': la función debe tener el tipo ' Signature '
 
-Método de descriptor de acceso de un evento no se declaró correctamente.
+No se declaró correctamente el método de descriptor de acceso de un evento.
 
-Para obtener más información, consulte [eventos](../../windows/event-cpp-component-extensions.md).
+Para obtener más información, vea [Event](../../extensions/event-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3911:
+En el ejemplo siguiente se genera C3911:
 
-```
+```cpp
 // C3911.cpp
 // compile with: /clr
 using namespace System;

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3912
 ms.assetid: 674e050c-11fb-4db1-8bdf-a3e95b41161d
-ms.openlocfilehash: c6eb207342f44655d54e49d4cf0cd2410f7095da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9054124cbfe2d86c062c6e97651bd69eebe5471c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562037"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748754"
 ---
 # <a name="compiler-error-c3912"></a>Error del compilador C3912
 
-'evento': tipo de evento debe ser un tipo delegado
+' evento ': el tipo de evento debe ser un tipo delegado
 
-Un evento se ha declarado pero no era del tipo correcto.
+Se declaró un evento pero no era del tipo adecuado.
 
-Para obtener más información, consulte [eventos](../../windows/event-cpp-component-extensions.md).
+Para obtener más información, vea [Event](../../extensions/event-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3912:
+En el ejemplo siguiente se genera C3912:
 
-```
+```cpp
 // C3912.cpp
 // compile with: /clr
 delegate void H();

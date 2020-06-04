@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4972
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
-ms.openlocfilehash: dcf08f26809c7c61e3e00c41c555416c95f4a0e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca80e847174bbe225acaf8631c646d8c6a94c50a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598840"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164838"
 ---
 # <a name="compiler-warning-c4972"></a>Advertencia del compilador C4972
 
@@ -19,13 +19,13 @@ No se puede comprobar la modificación o el tratamiento directo del resultado de
 
 Si se desreferencia un controlador en un tipo de valor, que también conoce como conversión unboxing y después se asigna a él, no es comprobable.
 
-Para obtener más información, consulta [Boxing](../../windows/boxing-cpp-component-extensions.md).
+Para obtener más información, consulta [Boxing](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C4972.
 
-```
+```cpp
 // C4972.cpp
 // compile with: /clr:safe
 using namespace System;

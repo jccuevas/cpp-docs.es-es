@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: 606adf0e6984ebe93951c80620407f9f1c8775f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc2fb2df06225a5c963fe39178c1b4a10f77953d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533983"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368128"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy (Estructura)
 
@@ -24,7 +24,7 @@ Una abstracción para un subproceso de ejecución. Dependiendo de la clave de di
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 struct IThreadProxy;
 ```
 
@@ -32,16 +32,16 @@ struct IThreadProxy;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[IThreadProxy:: GetId](#getid)|Devuelve un identificador único para el proxy del subproceso.|
-|[IThreadProxy:: SwitchOut](#switchout)|Desasocia el contexto de la raíz del procesador virtual subyacente.|
-|[IThreadProxy:: SwitchTo](#switchto)|Realiza un cambio de contexto cooperativo desde el contexto de ejecución actualmente por otra distinta.|
-|[IThreadProxy::YieldToSystem](#yieldtosystem)|Hace que el subproceso que realiza la llamada ceda la ejecución a otro subproceso que está listo para ejecutarse en el procesador actual. El sistema operativo selecciona el subproceso siguiente que se ejecutará.|
+|[IThreadProxy::GetId](#getid)|Devuelve un identificador único para el proxy de subproceso.|
+|[IThreadProxy::SwitchOut](#switchout)|Desasocia el contexto de la raíz del procesador virtual subyacente.|
+|[IThreadProxy::SwitchTo](#switchto)|Realiza un cambio de contexto cooperativo del contexto que se está ejecutando actualmente a otro diferente.|
+|[IThreadProxy::YieldToSystem](#yieldtosystem)|Hace que el subproceso que realiza la llamada ceda la ejecución a otro subproceso que está listo para ejecutarse en el procesador actual. El sistema operativo selecciona el siguiente subproceso que se va a ejecutar.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Proxy del subproceso se acoplan a los contextos de ejecución representados por la interfaz `IExecutionContext` como un medio de envío de trabajo.
+Los proxies de subproceso se acoplan `IExecutionContext` a los contextos de ejecución representados por la interfaz como medio de distribución del trabajo.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -53,23 +53,23 @@ Proxy del subproceso se acoplan a los contextos de ejecución representados por 
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="getid"></a>  IThreadProxy:: GetId (método)
+## <a name="ithreadproxygetid-method"></a><a name="getid"></a>IThreadProxy::GetId Método
 
-Devuelve un identificador único para el proxy del subproceso.
+Devuelve un identificador único para el proxy de subproceso.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un identificador entero único.
+Identificador entero único.
 
-##  <a name="switchout"></a>  IThreadProxy:: SwitchOut (método)
+## <a name="ithreadproxyswitchout-method"></a><a name="switchout"></a>Método IThreadProxy::SwitchOut
 
 Desasocia el contexto de la raíz del procesador virtual subyacente.
 
-```
+```cpp
 virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```
 
@@ -78,13 +78,13 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 *switchState*<br/>
 Indica el estado del proxy del subproceso que está ejecutando el modificador. El parámetro es del tipo `SwitchingProxyState`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Use `SwitchOut` si necesita desasociar un contexto de la raíz de procesador virtual en la que se ejecuta, por cualquier razón. En función del valor pasado en el parámetro `switchState`, y de si se está ejecutando o no en una raíz de procesador virtual, la llamada volverá inmediatamente o bloqueará el proxy del subproceso asociado al contexto. Es un error llamar a `SwitchOut` con el parámetro establecido en `Idle`. Si lo hace, provocará un [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción.
+Use `SwitchOut` si necesita desasociar un contexto de la raíz de procesador virtual en la que se ejecuta, por cualquier razón. En función del valor pasado en el parámetro `switchState`, y de si se está ejecutando o no en una raíz de procesador virtual, la llamada volverá inmediatamente o bloqueará el proxy del subproceso asociado al contexto. Es un error llamar a `SwitchOut` con el parámetro establecido en `Idle`. Si lo hace, se producirá una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción.
 
-`SwitchOut` resulta útil cuando desea reducir el número de raíces de procesador virtual que tiene su programador, ya sea porque el administrador de recursos ha dado instrucciones de que lo haga, o porque solicitó temporalmente una suscripción excesiva de raíz del procesador virtual y ya ha terminado con ella. En este caso debe invocar el método [IVirtualProcessorRoot::Remove](iexecutionresource-structure.md#remove) en la raíz del procesador virtual, antes de realizar una llamada a `SwitchOut` con el parámetro `switchState` establecido en `Blocking`. Esto bloqueará el proxy del subproceso y reanudará la ejecución cuando está disponible una raíz del procesador virtual diferente en el programador para ejecutarlo. El proxy del subproceso de bloqueo se puede reanudar llamando a la función `SwitchTo` para cambiar al contexto de ejecución del proxy de este subproceso. También puede reanudar el proxy del subproceso, utilizando su contexto asociado para activar una raíz del procesador virtual. Para obtener más información sobre cómo hacerlo, consulte [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).
+`SwitchOut` resulta útil cuando desea reducir el número de raíces de procesador virtual que tiene su programador, ya sea porque el administrador de recursos ha dado instrucciones de que lo haga, o porque solicitó temporalmente una suscripción excesiva de raíz del procesador virtual y ya ha terminado con ella. En este caso, debe invocar el método [IVirtualProcessorRoot::Remove](iexecutionresource-structure.md#remove) en la `SwitchOut` raíz `switchState` del `Blocking`procesador virtual, antes de realizar una llamada con el parámetro establecido en . Esto bloqueará el proxy del subproceso y reanudará la ejecución cuando está disponible una raíz del procesador virtual diferente en el programador para ejecutarlo. El proxy del subproceso de bloqueo se puede reanudar llamando a la función `SwitchTo` para cambiar al contexto de ejecución del proxy de este subproceso. También puede reanudar el proxy del subproceso, utilizando su contexto asociado para activar una raíz del procesador virtual. Para obtener más información sobre cómo hacerlo, vea [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate).
 
-También se puede usar `SwitchOut` si desea reinicializar el procesador virtual de forma que se pueda activar en el futuro mientras se bloquea el proxy del subproceso o se desasocia temporalmente este de la raíz del procesador virtual en el que se ejecuta, y del programador para el que está enviando trabajo. Use `SwitchOut` con el parámetro `switchState` establecido en `Blocking` si desea bloquear el proxy del subproceso. Podrá reanudarlo posteriormente mediante `SwitchTo` o `IVirtualProcessorRoot::Activate` como se indicó anteriormente. Use `SwitchOut` con el parámetro establecido en `Nesting` si desea desasociar temporalmente este proxy del subproceso de la raíz del procesador virtual en el que se ejecuta, y del programador con el que está asociado el procesador virtual. La llamada a `SwitchOut` con el parámetro `switchState` establecido en `Nesting` mientras se está ejecutando en una raíz del procesador virtual hará que la raíz se reinicialice y que el proxy del subproceso actual continúe ejecutándose sin necesidad. El proxy del subproceso se considera que ha dejado el programador hasta que llama el [IThreadProxy:: SwitchOut](#switchout) método con `Blocking` en un momento posterior. La segunda llamada a `SwitchOut` con el parámetro establecido en `Blocking` tiene por objeto devolver el contexto a un estado bloqueado para que lo pueda reanudar `SwitchTo` o `IVirtualProcessorRoot::Activate` en el programador del que se desasoció. Dado que no estaba ejecutando en una raíz del procesador virtual, no se realiza ningún reinicio.
+También se puede usar `SwitchOut` si desea reinicializar el procesador virtual de forma que se pueda activar en el futuro mientras se bloquea el proxy del subproceso o se desasocia temporalmente este de la raíz del procesador virtual en el que se ejecuta, y del programador para el que está enviando trabajo. Use `SwitchOut` con el parámetro `switchState` establecido en `Blocking` si desea bloquear el proxy del subproceso. Podrá reanudarlo posteriormente mediante `SwitchTo` o `IVirtualProcessorRoot::Activate` como se indicó anteriormente. Use `SwitchOut` con el parámetro establecido en `Nesting` si desea desasociar temporalmente este proxy del subproceso de la raíz del procesador virtual en el que se ejecuta, y del programador con el que está asociado el procesador virtual. La llamada a `SwitchOut` con el parámetro `switchState` establecido en `Nesting` mientras se está ejecutando en una raíz del procesador virtual hará que la raíz se reinicialice y que el proxy del subproceso actual continúe ejecutándose sin necesidad. El proxy de subproceso se considera que ha dejado el programador hasta `Blocking` que llama a la [IThreadProxy::SwitchOut](#switchout) método con en un momento posterior en el tiempo. La segunda llamada a `SwitchOut` con el parámetro establecido en `Blocking` tiene por objeto devolver el contexto a un estado bloqueado para que lo pueda reanudar `SwitchTo` o `IVirtualProcessorRoot::Activate` en el programador del que se desasoció. Dado que no estaba ejecutando en una raíz del procesador virtual, no se realiza ningún reinicio.
 
 Una raíz del procesador virtual reinicializada no es distinta de una nueva raíz del procesador virtual que el Administrador de recursos concede al programador. Puede usarlo para la ejecución activándola con un contexto de ejecución mediante `IVirtualProcessorRoot::Activate`.
 
@@ -92,11 +92,11 @@ Se debe llamar a `SwitchOut` en la interfaz `IThreadProxy` que representa el sub
 
 En las bibliotecas y los encabezados incluidos con Visual Studio 2010, este método no tomaba un parámetro y no reinicializaba la raíz del procesador virtual. Para conservar el comportamiento anterior, se proporciona el valor de parámetro predeterminado de `Blocking`.
 
-##  <a name="switchto"></a>  IThreadProxy:: SwitchTo (método)
+## <a name="ithreadproxyswitchto-method"></a><a name="switchto"></a>IThreadProxy::SwitchTo Método
 
-Realiza un cambio de contexto cooperativo desde el contexto de ejecución actualmente por otra distinta.
+Realiza un cambio de contexto cooperativo del contexto que se está ejecutando actualmente a otro diferente.
 
-```
+```cpp
 virtual void SwitchTo(
     _Inout_ IExecutionContext* pContext,
     SwitchingProxyState switchState) = 0;
@@ -105,40 +105,40 @@ virtual void SwitchTo(
 ### <a name="parameters"></a>Parámetros
 
 *pContext*<br/>
-El contexto de ejecución para cambiar de forma cooperativa a.
+El contexto de ejecución al que se cambia de forma cooperativa.
 
 *switchState*<br/>
 Indica el estado del proxy del subproceso que está ejecutando el modificador. El parámetro es del tipo `SwitchingProxyState`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Use este método para cambiar de un contexto de ejecución a otro, desde el [IExecutionContext:: Dispatch](iexecutioncontext-structure.md#dispatch) método del primer contexto de ejecución. El método asocia el contexto de ejecución `pContext` con un proxy del subproceso si aún no está asociado a uno. La propiedad de proxy del subproceso actual viene determinada por el valor especificado para el `switchState` argumento.
+Utilice este método para cambiar de un contexto de ejecución a otro, desde el método [IExecutionContext::Dispatch](iexecutioncontext-structure.md#dispatch) del primer contexto de ejecución. El método asocia `pContext` el contexto de ejecución con un proxy de subproceso si aún no está asociado a uno. La propiedad del proxy de subproceso actual viene `switchState` determinada por el valor especificado para el argumento.
 
-Use el valor `Idle` cuando desee devolver el proxy del subproceso actualmente en ejecución en el Administrador de recursos. Una llamada a `SwitchTo` con el parámetro `switchState` establecido en `Idle` hará que el contexto de ejecución `pContext` para empezar a ejecutar en el recurso de ejecución subyacente. Propiedad de este proxy del subproceso se transfiere al administrador de recursos y se espera que se devuelven desde el contexto de ejecución `Dispatch` método poco después `SwitchTo` devuelve, para completar la transferencia. El contexto de ejecución que el proxy del subproceso estaba enviando se desasocia del proxy del subproceso, y el programador es libre de reutilizarlo o destruirlo cuando lo considere apropiado.
+Utilice el `Idle` valor cuando desee devolver el proxy de subproceso que se está ejecutando actualmente al Administrador de recursos. Llamar `SwitchTo` con `switchState` el `Idle` parámetro establecido en `pContext` hará que el contexto de ejecución comience a ejecutarse en el recurso de ejecución subyacente. La propiedad de este proxy de subproceso se transfiere al Administrador de `Dispatch` recursos y `SwitchTo` se espera que vuelva del método del contexto de ejecución poco después de las devoluciones, con el fin de completar la transferencia. El contexto de ejecución que el proxy de subproceso estaba distribuyendo se desasocia del proxy de subproceso y el programador es libre de reutilizarlo o destruirlo como considere oportuno.
 
-Use el valor `Blocking` cuando desee que este proxy del subproceso entre en estado bloqueado. Una llamada a `SwitchTo` con el parámetro `switchState` establecido en `Blocking` hará que el contexto de ejecución `pContext` para empezar a ejecutar y bloquear el proxy del subproceso actual hasta que se reanude. El programador conserva la propiedad del proxy del subproceso cuando el proxy del subproceso se encuentra en la `Blocking` estado. El proxy del subproceso de bloqueo se puede reanudar llamando a la función `SwitchTo` para cambiar al contexto de ejecución del proxy de este subproceso. También puede reanudar el proxy del subproceso, utilizando su contexto asociado para activar una raíz del procesador virtual. Para obtener más información sobre cómo hacerlo, consulte [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).
+Utilice el `Blocking` valor cuando desee que este proxy de subproceso entre en un estado bloqueado. Llamar `SwitchTo` con `switchState` el `Blocking` parámetro establecido hará `pContext` que el contexto de ejecución comience a ejecutarse y bloqueará el proxy de subproceso actual hasta que se reanude. El programador conserva la propiedad del proxy de `Blocking` subproceso cuando el proxy de subproceso está en el estado. El proxy del subproceso de bloqueo se puede reanudar llamando a la función `SwitchTo` para cambiar al contexto de ejecución del proxy de este subproceso. También puede reanudar el proxy del subproceso, utilizando su contexto asociado para activar una raíz del procesador virtual. Para obtener más información sobre cómo hacerlo, vea [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate).
 
-Use el valor `Nesting` cuando desea desasociar temporalmente este proxy del subproceso de la raíz del procesador virtual que se ejecuta y el programador está enviando trabajo. Una llamada a `SwitchTo` con el parámetro `switchState` establecido en `Nesting` hará que el contexto de ejecución `pContext` para iniciar la ejecución y la actual proxy del subproceso también sigue ejecutándose sin necesidad de una raíz del procesador virtual. El proxy del subproceso se considera que ha dejado el programador hasta que llama el [IThreadProxy:: SwitchOut](#switchout) método en un momento posterior. El `IThreadProxy::SwitchOut` método podría bloquear el proxy del subproceso hasta que esté disponible para volver a programar, una raíz del procesador virtual.
+Utilice el `Nesting` valor cuando desee separar temporalmente este proxy de subproceso de la raíz del procesador virtual en la que se está ejecutando y el programador para el que distribuye el trabajo. Llamar `SwitchTo` con `switchState` el `Nesting` parámetro establecido hará `pContext` que el contexto de ejecución comience a ejecutarse y el proxy de subproceso actual también continúa ejecutándose sin necesidad de una raíz de procesador virtual. Se considera que el proxy de subproceso ha dejado el programador hasta que llama al método [IThreadProxy::SwitchOut](#switchout) en un momento posterior. El `IThreadProxy::SwitchOut` método podría bloquear el proxy de subproceso hasta que una raíz de procesador virtual esté disponible para reprogramarlo.
 
-Se debe llamar a `SwitchTo` en la interfaz `IThreadProxy` que representa el subproceso actualmente en ejecución o los resultados no se definen. La función produce `invalid_argument` si el parámetro `pContext` está establecido en `NULL`.
+Se debe llamar a `SwitchTo` en la interfaz `IThreadProxy` que representa el subproceso actualmente en ejecución o los resultados no se definen. La función `invalid_argument` se `pContext` produce si `NULL`el parámetro está establecido en .
 
-##  <a name="yieldtosystem"></a>  YieldToSystem (método)
+## <a name="ithreadproxyyieldtosystem-method"></a><a name="yieldtosystem"></a>Método IThreadProxy::YieldToSystem
 
-Hace que el subproceso que realiza la llamada ceda la ejecución a otro subproceso que está listo para ejecutarse en el procesador actual. El sistema operativo selecciona el subproceso siguiente que se ejecutará.
+Hace que el subproceso que realiza la llamada ceda la ejecución a otro subproceso que está listo para ejecutarse en el procesador actual. El sistema operativo selecciona el siguiente subproceso que se va a ejecutar.
 
-```
+```cpp
 virtual void YieldToSystem() = 0;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando lo llama un proxy del subproceso respaldado por un subproceso de Windows normal, `YieldToSystem` se comporta exactamente igual que la función de Windows `SwitchToThread`. Sin embargo, cuando se llama desde subprocesos programables (UMS) en modo de usuario, el `SwitchToThread` función delega la tarea de elegir el subproceso siguiente que se ejecute el programador de modo de usuario, no en el sistema operativo. Para lograr el efecto deseado de cambiar a otro subproceso preparado en el sistema, use `YieldToSystem`.
+Cuando se llama por un proxy de `YieldToSystem` subproceso respaldado por un `SwitchToThread`subproceso de Windows normal, se comporta exactamente igual que la función de Windows. Sin embargo, cuando se llama desde subprocesos programables `SwitchToThread` en modo de usuario (UMS), la función delega la tarea de elegir el siguiente subproceso para que se ejecute en el programador de modo de usuario, no en el sistema operativo. Para lograr el efecto deseado de cambiar a un `YieldToSystem`subproceso listo diferente en el sistema, utilice .
 
 Se debe llamar a `YieldToSystem` en la interfaz `IThreadProxy` que representa el subproceso actualmente en ejecución o los resultados no se definen.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
+[espacio de nombres de simultaneidad](concurrency-namespace.md)<br/>
 [IExecutionContext (estructura)](iexecutioncontext-structure.md)<br/>
 [IScheduler (estructura)](ischeduler-structure.md)<br/>
 [IVirtualProcessorRoot (estructura)](ivirtualprocessorroot-structure.md)

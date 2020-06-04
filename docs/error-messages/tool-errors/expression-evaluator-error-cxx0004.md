@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CAN0004
 - CXX0004
 ms.assetid: a4063eda-0335-4ae7-9595-29cf10669376
-ms.openlocfilehash: 0913fd814c980362c696ecadcfd1c230f0edbb1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98c3301d0ee8e45fb114458f88fd7a9b2403d3b8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196370"
 ---
 # <a name="expression-evaluator-error-cxx0004"></a>Error del evaluador de expresiones CXX0004
 
-Error de sintaxis
+error de sintaxis
 
 La sintaxis de la expresión es incorrecta.
 

@@ -1,21 +1,21 @@
 ---
-title: vararg (atributo de COM de C++)
+title: vararg (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vararg
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: 6f3048e60c10efed05fc5bccc3c61949351f7bf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4761f65e0862a8de07330305b292b5b3501cac68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166021"
 ---
 # <a name="vararg"></a>vararg
 
-Especifica que la función toma un número variable de argumentos.
+Especificar que la función toma un número variable de argumentos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,13 +23,13 @@ Especifica que la función toma un número variable de argumentos.
 [vararg]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **vararg** atributo de C++ tiene la misma funcionalidad que el [vararg](/windows/desktop/Midl/vararg) atributo MIDL.
+El atributo **vararg** C++ tiene la misma funcionalidad que el atributo MIDL [vararg](/windows/win32/Midl/vararg) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra un uso de **vararg**:
+En el código siguiente se muestra el uso de **vararg**:
 
 ```cpp
 // cpp_attr_ref_vararg.cpp
@@ -53,12 +53,12 @@ __interface X : public IUnknown
 |-|-|
 |**Se aplica a**|Método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)

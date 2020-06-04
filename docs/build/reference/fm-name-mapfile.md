@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-ms.openlocfilehash: 49a3d20aee54b06bae2670be139d748fd2aaca6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eebb1bc0c553dba1934aea75e2e63edc0f222fff
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292411"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Asignar nombre al archivo de asignaciones)
 
@@ -31,15 +31,15 @@ Indica al vinculador para generar un archivo de asignaciones que contiene una li
 
 De forma predeterminada, el archivo de asignaciones recibe el nombre de base de que el archivo de código fuente de C o C++ correspondiente con un. Extensión de un mapa.
 
-Especificar **/Fm** tiene el mismo efecto que si se hubiera especificado el [/MAP (Generar archivo de asignaciones)](../../build/reference/map-generate-mapfile.md) opción del vinculador.
+Especificar **/Fm** tiene el mismo efecto que si se hubiera especificado el [/MAP (Generar archivo de asignaciones)](map-generate-mapfile.md) opción del vinculador.
 
-Si especifica [/c (compilar sin vincular)](../../build/reference/c-compile-without-linking.md) para suprimir la vinculación, **/Fm** no tiene ningún efecto.
+Si especifica [/c (compilar sin vincular)](c-compile-without-linking.md) para suprimir la vinculación, **/Fm** no tiene ningún efecto.
 
 Símbolos globales en un archivo de asignaciones normalmente tienen uno o más caracteres de subrayado iniciales porque el compilador agrega un carácter de subrayado inicial a los nombres de variable. Muchos símbolos globales que aparecen en el archivo de asignaciones se usan internamente por el compilador y las bibliotecas estándar.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -53,7 +53,7 @@ Símbolos globales en un archivo de asignaciones normalmente tienen uno o más c
 
 ## <a name="see-also"></a>Vea también
 
-[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)
+[/F (Opciones del archivo de resultados)](output-file-f-options.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Especificar la ruta de acceso](specifying-the-pathname.md)

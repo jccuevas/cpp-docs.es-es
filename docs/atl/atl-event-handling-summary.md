@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-ms.openlocfilehash: e2b17e7b6849163ee0e8e12696df25169e2773cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e3a47719e3160170ed1bfa64b315415ddc7a1c8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252153"
 ---
 # <a name="atl-event-handling-summary"></a>Resumen de control de eventos ATL
 
@@ -40,8 +40,8 @@ Hay tres maneras principales de aconsejar y desaconsejar un origen de eventos me
 
 |Función para aconsejar|No notificar (función)|Más adecuado para su uso con|Es preciso realizar un seguimiento de una cookie|Comentarios|
 |---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [¡CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable o interfaces duales|Sí|`AtlAdvise` es una función global de ATL. `CComPtrBase::Advise` se usa por [CComPtr](../atl/reference/ccomptr-class.md) y [CComQIPtr](../atl/reference/ccomqiptr-class.md).|
-|[IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl:: DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) o [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|No|Menos parámetros que `AtlAdvise` puesto que la clase base realiza más trabajo.|
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable o interfaces duales|Sí|`AtlAdvise` es una función global de ATL. `CComPtrBase::Advise` se usa por [CComPtr](../atl/reference/ccomptr-class.md) y [CComQIPtr](../atl/reference/ccomqiptr-class.md).|
+|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) o [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|No|Menos parámetros que `AtlAdvise` puesto que la clase base realiza más trabajo.|
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|Controles ActiveX en controles compuestos|No|`CComCompositeControl::AdviseSinkMap` le informa de que todas las entradas de mapa de receptores de eventos. La misma función no notifica las entradas. Este método se llama de forma automática el `CComCompositeControl` clase.|
 |[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|Controles ActiveX en un cuadro de diálogo|No|`CAxDialogImpl::AdviseSinkMap` aconseja y desaconseja todos los controles ActiveX en el recurso de cuadro de diálogo. Esto se hace automáticamente para usted.|
 
@@ -49,4 +49,3 @@ Hay tres maneras principales de aconsejar y desaconsejar un origen de eventos me
 
 [Control de eventos](../atl/event-handling-and-atl.md)<br/>
 [Admitir IDispEventImpl](../atl/supporting-idispeventimpl.md)
-

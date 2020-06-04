@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: a9efa2fa191cbdda99e057ac9329d79bc598743c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c18a5310646ea39c0599f709e9fddc3990b7a2b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315760"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/ Zc: externconstexpr (habilitar las variables del extern constexpr)
 
@@ -20,7 +20,7 @@ El **/Zc: externconstexpr** opción del compilador indica al compilador que se a
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ Zc: externconstexpr**[**-**]
+> **/Zc:externConstexpr**[**-**]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -30,7 +30,7 @@ Si un archivo de encabezado contiene una variable declarada `extern constexpr`, 
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para establecer esta opción del compilador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
@@ -38,5 +38,5 @@ Si un archivo de encabezado contiene una variable declarada `extern constexpr`, 
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (Ajuste)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Ajuste)](zc-conformance.md)<br/>
 [Auto (palabra clave)](../../cpp/auto-keyword.md)

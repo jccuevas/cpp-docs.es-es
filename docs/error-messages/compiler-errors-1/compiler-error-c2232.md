@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2232
 ms.assetid: 76f302b7-30a7-4a81-9a39-b4edde33b54c
-ms.openlocfilehash: f1478c2d06ab535a532b1be45c2db69050afe7b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78ed8970b29126bceb06ff89d12c83cb98c4b5fd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665392"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301813"
 ---
 # <a name="compiler-error-c2232"></a>Error del compilador C2232
 
-'->': operando izquierdo tenga 'class-key' tipo'.' use
+'-> ': el operando izquierdo tiene el tipo ' Class-Key ', use '. '
 
-El operando situado a la izquierda del operador `->` no es un puntero. Utilice el operador punto (.) para una clase, estructura o unión.
+El operando situado a la izquierda del operador `->` no es un puntero. Use el operador de punto (.) para una clase, estructura o Unión.
 
 El ejemplo siguiente genera la advertencia C2232:
 
-```
+```c
 // C2232.c
 struct X {
     int member;

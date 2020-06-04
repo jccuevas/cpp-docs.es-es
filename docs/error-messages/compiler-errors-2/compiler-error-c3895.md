@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3895
 ms.assetid: 771b9fe5-d6d4-4297-bf57-e2f857722155
-ms.openlocfilehash: 61dd280caa3c8c9b28dd77ecab2ed50ab9532d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 633ffa86bce3579adb808dbba34127bb6f0665c9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501289"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749417"
 ---
 # <a name="compiler-error-c3895"></a>Error del compilador C3895
 
-'var': los miembros de datos de tipo no pueden ser 'volatile'
+' var ': los miembros de datos de tipo no pueden ser ' volatile '
 
-Ciertos tipos de miembros de datos, por ejemplo [literal](../../windows/literal-cpp-component-extensions.md) o [initonly](../../dotnet/initonly-cpp-cli.md), no puede ser [volátil](../../cpp/volatile-cpp.md).
+Ciertos tipos de miembros de datos, por ejemplo, [literal](../../extensions/literal-cpp-component-extensions.md) o [InitOnly](../../dotnet/initonly-cpp-cli.md), no pueden ser [volátiles](../../cpp/volatile-cpp.md).
 
-El ejemplo siguiente genera C3895:
+En el ejemplo siguiente se genera C3895:
 
-```
+```cpp
 // C3895.cpp
 // compile with: /clr
 ref struct Y1 {

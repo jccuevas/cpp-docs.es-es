@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4404
 ms.assetid: 78ce9985-0ccd-4ec2-92bf-289475109cdd
-ms.openlocfilehash: 0f67d5f5d03cbbad84193c15e27a97b7d59ef914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3337302d001b6540ab3c242537128201327c74f7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599399"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185638"
 ---
 # <a name="compiler-warning-level-3-c4404"></a>Advertencia del compilador (nivel 3) C4404
 
-período de tiempo de la directiva pasa por alto
+se omitió el período de la Directiva
 
-Se omite el punto opcional que precede a la directiva.
+Se omite el período opcional que precede a la Directiva.

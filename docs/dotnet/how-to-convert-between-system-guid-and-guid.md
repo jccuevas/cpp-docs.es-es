@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GUID, converting to System::GUID
 - System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-ms.openlocfilehash: 7aa89557c1aeac4b7093ff6fc0bbd3937e99b0b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0150053157d2694788cd50bf64097805a8eda88
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635700"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545064"
 ---
-# <a name="how-to-convert-between-systemguid-and-guid"></a>Cómo: Realizar la conversión entre System::Guid y _GUID
+# <a name="how-to-convert-between-systemguid-and-_guid"></a>Cómo: Realizar la conversión entre System::Guid y _GUID
 
-Ejemplo de código siguiente muestra cómo convertir entre una <xref:System.Guid> y un `_GUID`.
+En el ejemplo de código siguiente se muestra cómo convertir entre un <xref:System.Guid> y un `_GUID`.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // convert_guids.cpp
 // compile with: /clr
 #include <windows.h>
@@ -65,6 +65,6 @@ int main() {
 11111111-2222-3333-4455-555555555555
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

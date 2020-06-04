@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3769
 ms.assetid: 341675e1-7428-4da6-8275-1b2f0a70dacc
-ms.openlocfilehash: 68845b446541b8d76ebd2b873a34b7e32ef314e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03f51ae589c56b28eb7a1484669d5982cd8f5dcb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480358"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757194"
 ---
 # <a name="compiler-error-c3769"></a>Error del compilador C3769
 
-'type': una clase anidada no puede tener el mismo nombre que la clase inmediatamente envolvente
+' type ': una clase anidada no puede tener el mismo nombre que la clase de inclusión inmediata
 
-Una clase anidada no puede tener el mismo nombre que la clase inmediatamente envolvente.
+Una clase anidada no puede tener el mismo nombre que la clase de inclusión inmediata.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3769.
+En el ejemplo siguiente se genera C3769.
 
-```
+```cpp
 // C3769.cpp
 // compile with: /c
 class x {

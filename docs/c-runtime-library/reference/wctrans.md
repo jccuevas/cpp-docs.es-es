@@ -1,9 +1,9 @@
 ---
 title: wctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctrans
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656695"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944885"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -50,7 +53,7 @@ Cadena que especifica una de las transformaciones válidas.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si el **LC_CTYPE** categoría de la configuración regional actual no define una asignación cuyo nombre coincide con la cadena de propiedad *propiedad*, la función devuelve cero. De lo contrario, devuelve un valor distinto de cero adecuado como segundo argumento de una llamada subsiguiente a [towctrans](towctrans.md).
+Si la categoría **LC_CTYPE** de la configuración regional actual no define una asignación cuyo nombre coincida con la *propiedad*de cadena de propiedad, la función devuelve cero. De lo contrario, devuelve un valor distinto de cero adecuado como segundo argumento de una llamada subsiguiente a [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -60,8 +63,8 @@ Los siguientes pares de llamadas tienen el mismo comportamiento en todas las con
 
 |Función|Igual que|
 |--------------|-------------|
-|ToLower(c)|towctrans (c, wctrans("towlower"))|
-|towupper(c)|towctrans (c, wctrans("toupper"))|
+|ToLower (c)|towctrans (c, wctrans ("towlower"))|
+|towupper (c)|towctrans (c, wctrans ("ToUpper"))|
 
 ## <a name="requirements"></a>Requisitos
 

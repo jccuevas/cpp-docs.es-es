@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 7d77df395d680b467d1a04a3f59c9822842f99f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e882cabdf38fd9bc926fbaa04352ba9d0ace90ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653107"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174419"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Advertencia del compilador (nivel 1) C4965
 
-conversión boxing implícita de entero 0; Utilice nullptr o conversión explícita
+cuadro implícito de entero 0; usar nullptr o conversión explícita
 
-Visual C++ incluye la conversión boxing implícita de tipos de valor. Una instrucción que dieron lugar a una asignación de valores null mediante extensiones administradas para C++ ahora se convierte en una asignación a un int con conversión boxing.
+Características C++ visuales conversión boxing implícita de tipos de valor. Una instrucción que dio como resultado una asignación nula con extensiones administradas para C++ ahora se convierte en una asignación a un int con conversión boxing.
 
-Para obtener más información, consulta [Boxing](../../windows/boxing-cpp-component-extensions.md).
+Para obtener más información, consulta [Boxing](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4965.
+En el ejemplo siguiente se genera C4965.
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

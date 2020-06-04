@@ -1,14 +1,17 @@
 ---
 title: is, isw (Rutinas)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isw
 - is
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 65dc5bbfbaeab59e91cdca23c4f0f01b5ef7ebbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620179"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940173"
 ---
 # <a name="is-isw-routines"></a>is, isw (Rutinas)
 
@@ -156,7 +159,7 @@ Carácter ancho imprimible incluido el carácter ancho de espacio (L' ').
 Carácter ancho imprimible que no es ni el carácter ancho de espacio (L' ') ni un carácter ancho para el que `iswalnum` sea distinto de cero.
 
 `iswspace`<br/>
-Carácter ancho correspondiente al carácter de espacio en blanco estándar o que pertenece a un conjunto de caracteres anchos que se define en la implementación para los que `iswalnum` es FALSE. Los caracteres de espacio en blanco estándar son: espacio (L' '), avance de página (L'\f'), nueva línea (L'\n'), retorno de carro (L'\r'), tabulación horizontal (L'\t') y tabulación vertical (L'\v').
+Carácter ancho correspondiente al carácter de espacio en blanco estándar o que pertenece a un conjunto de caracteres anchos que se define en la implementación para los que `iswalnum` es FALSE. Los caracteres de espacio en blanco estándar son espacio (L' '), avance de página (L'\f'), nueva línea (L'\n'), retorno de carro (L'\r'), tabulación horizontal (L'\t') y tabulación vertical (L'\v').
 
 `iswupper`<br/>
 Carácter ancho que es una mayúscula o que pertenece a un conjunto de caracteres anchos definido en la implementación para los que ni `iswcntrl`, ni `iswdigit`, ni `iswpunct`, ni `iswspace` sea distinto de cero. `iswupper` devuelve un valor distinto de cero solo para los caracteres anchos que corresponden a mayúsculas.

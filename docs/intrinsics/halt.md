@@ -1,6 +1,6 @@
 ---
 title: __halt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __halt
 - __halt_cpp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-ms.openlocfilehash: d99a87b1f3fd70d1fffb724629e9acded025732a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66f5e05e7673523966ef35ac743fc585930b511c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617183"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222149"
 ---
-# <a name="halt"></a>__halt
+# <a name="__halt"></a>__halt
 
 **Específicos de Microsoft**
 
@@ -23,7 +23,7 @@ Detiene el microprocesador hasta que se produzca una interrupción habilitada, u
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __halt( void );
 ```
 
@@ -33,14 +33,14 @@ void __halt( void );
 |---------------|------------------|
 |`__halt`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El `__halt` función es equivalente a la `HLT` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](https://software.intel.com/articles/intel-sdm) sitio.
+La `__halt` función es equivalente a la `HLT` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento "manual del desarrollador de software de arquitectura Intel, volumen 2: Referencia del conjunto de instrucciones, en el sitio de [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

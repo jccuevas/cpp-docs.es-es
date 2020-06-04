@@ -1,9 +1,9 @@
 ---
 title: _memccpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memccpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,21 +15,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memccpy
 helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 097cefb504ffcdbfbe6bf131d5e8b1837d11a47a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537402"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951967"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
 Copia los caracteres de un búfer.
 
@@ -60,13 +63,13 @@ Número de caracteres.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si el carácter *c* se copia, **_memccpy** devuelve un puntero al carácter en *dest* que sigue inmediatamente al carácter. Si *c* no se copia, devuelve **NULL**.
+Si se copia el carácter *c* , **_memccpy** devuelve un puntero al tipo char de *dest* que sigue inmediatamente al carácter. Si no se copia *c* , devuelve **null**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_memccpy** función copia 0 o más caracteres de *src* a *dest*, y se detiene cuando el carácter *c* se ha copiado o cuando *recuento* caracteres se han copiado, lo que ocurra primero.
+La función **_memccpy** copia 0 o más caracteres de *src* en *dest*y se detiene cuando se ha copiado el carácter *c* o cuando se han copiado los caracteres de *recuento* , lo que suceda primero.
 
-**Nota de seguridad** Asegúrese de que el búfer de destino sea del mismo tamaño o mayor que el búfer de origen. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+**Nota de seguridad** Asegúrese de que el búfer de destino sea del mismo tamaño o mayor que el búfer de origen. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,7 +108,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Function: _memccpy 60 characters or to character 's'

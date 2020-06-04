@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4002
 ms.assetid: 6bda1dfe-e2e4-4771-9794-5a404c466dd5
-ms.openlocfilehash: f2d2166a1370c02cfbc2346a63a424239ccb2b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb1e36a606f5c8bb0a1622260d64124264f0db32
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463067"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164773"
 ---
 # <a name="compiler-warning-level-1-c4002"></a>Advertencia del compilador (nivel 1) C4002
 
@@ -23,7 +23,7 @@ La advertencia C4002 puede aparecer al usar [Variadic Macros](../../preprocessor
 
 El ejemplo siguiente genera la advertencia C4002:
 
-```
+```cpp
 // C4002.cpp
 // compile with: /W1
 #define test(a) (a)
@@ -41,7 +41,7 @@ Este error también puede generarse como resultado del trabajo de conformidad de
 
 El compilador ya no aceptará comas adicionales en una macro. Para que el código sea válido en las versiones de Visual Studio .NET 2003 y de Visual Studio .NET de Visual C++, quite las comas adicionales.
 
-```
+```cpp
 // C4002b.cpp
 // compile with: /W1
 #define F(x,y)

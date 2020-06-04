@@ -2,17 +2,17 @@
 title: negate (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::negate
+- functional/std::negate
 helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: 029fd73faf5326a0d1b99885864b1ed992080e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb45f61323a407e90c2a455460a4d2cdd7b6720a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654719"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240553"
 ---
 # <a name="negate-struct"></a>negate (struct)
 
@@ -39,15 +39,15 @@ struct negate<void>
 
 ### <a name="parameters"></a>Parámetros
 
-*Type*<br/>
+*Tipo*\
 Cualquier tipo que admite un `operator-` que toma un operando del tipo especificado o deducido.
 
-*Izquierda*<br/>
+*Izquierda*\
 Operando que se va a negar. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *tipo*.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El resultado de `-Left.` La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por el `operator-` unario.
+Resultado de `-Left`. La plantilla especializada realiza el reenvío del resultado, que tiene el tipo devuelto por unario directo `operator-`.
 
 ## <a name="example"></a>Ejemplo
 
@@ -85,19 +85,9 @@ int main( )
       cout << *Iter2 << " ";
    cout << ")" << endl;
 }
-/* Output:
-The vector v1 = ( -10 -5 0 5 10 15 20 25 )
-The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
-*/
 ```
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+```Output
+The vector v1 = ( -10 -5 0 5 10 15 20 25 )
+The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
+```

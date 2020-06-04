@@ -1,14 +1,16 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+- _o__mbsncpy
+- _o__mbsncpy_l
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +23,12 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -61,19 +68,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5260d120fe1e5826bb4b9ebc8410a8bd1040ff3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507745"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919280"
 ---
-# <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
+# <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
 Copie los caracteres de una cadena en otra. Hay disponibles versiones más seguras de estas funciones; vea [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncpy** y **_mbsncpy_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy** y **_mbsncpy_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -170,20 +177,22 @@ Configuración regional que se va a usar.
 
 Devuelve *strDest*. No se reserva ningún valor devuelto para indicar un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **strncpy** función copia inicial *recuento* caracteres de *strSource* a *strDest* y devuelve *strDest* . Si *recuento* es menor o igual que la longitud de *strSource*, un carácter nulo no se adjunta automáticamente a la cadena copiada. Si *recuento* es mayor que la longitud de *strSource*, la cadena de destino se rellena con caracteres nulos hasta la longitud *recuento*. El comportamiento de **strncpy** es indefinido si las cadenas de origen y destino se superponen.
+La **función strncpy** copia los caracteres *de recuento* inicial de *StrSource* en *strDest* y devuelve *strDest*. Si el *recuento* es menor o igual que la longitud de *strSource*, un carácter nulo no se anexa automáticamente a la cadena copiada. Si el *recuento* es mayor que la longitud de *strSource*, la cadena de destino se rellena con caracteres nulos hasta el *recuento*de longitud. El comportamiento de **strncpy** es indefinido si las cadenas de origen y de destino se superponen.
 
 > [!IMPORTANT]
-> **strncpy** no comprueba si hay espacio suficiente en *strDest*; Esto facilita una posible causa de saturaciones del búfer. El *recuento* argumento limita el número de caracteres copiados; no es un límite del tamaño de *strDest*. Vea el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> **strncpy** no comprueba si hay espacio suficiente en *strDest*; Esto hace que sea una posible causa de saturaciones del búfer. El argumento *Count* limita el número de caracteres copiados; no es un límite en cuanto al tamaño de *strDest*. Consulte el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-Si *strDest* o *strSource* es un **NULL** puntero, o si *recuento* es menor o igual a cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
+Si *strDest* o *strSource* es un puntero **nulo** , o si el *recuento* es menor o igual que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
-**wcsncpy** y **_mbsncpy** son versiones de caracteres anchos y caracteres multibyte de **strncpy**. Los argumentos y el valor devuelto de **wcsncpy** y **_mbsncpy** varían en consecuencia. Por lo demás, estas seis funciones se comportan exactamente igual.
+**wcsncpy** y **_mbsncpy** son versiones de caracteres anchos y multibyte de **strncpy**. Los argumentos y el valor devuelto de **wcsncpy** y **_mbsncpy** varían en consecuencia. Por lo demás, estas seis funciones se comportan exactamente igual.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan la configuración regional pasada en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que usan la configuración regional que se pasa en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -193,7 +202,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** y **_wcsncpy_l** no que dependen de la configuración regional; se proporcionan solo para **_tcsncpy_l** y no están pensadas para llamarse directamente.
+> **_strncpy_l** y **_wcsncpy_l** no tienen ninguna dependencia de la configuración regional; se proporcionan solo para **_tcsncpy_l** y no están diseñados para llamarse directamente.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -207,7 +216,7 @@ Para obtener más información sobre la compatibilidad de plataformas, vea [Comp
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra el uso de **strncpy** y cómo se puede usar incorrectamente para provocar errores de programa y problemas de seguridad. El compilador genera una advertencia para cada llamada a **strncpy** similar a **crt_strncpy_x86.c (15): advertencia C4996: 'strncpy': esta función o variable puede no ser segura. Considere la posibilidad de usar strncpy_s en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS. Consulte la ayuda en línea para obtener información detallada.**
+En el ejemplo siguiente se muestra el uso de **strncpy** y cómo se puede usar inconvenientemente para causar errores de programa y problemas de seguridad. El compilador genera una advertencia para cada llamada a **strncpy** similar a **crt_strncpy_x86. c (15): ADVERTENCIA C4996: ' strncpy ': esta función o variable puede no ser segura. Considere la posibilidad de usar strncpy_s en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS. Consulte la ayuda en línea para obtener más información.**
 
 ```C
 // crt_strncpy_x86.c
@@ -261,7 +270,7 @@ int main() {
 }
 ```
 
-Salida
+Output
 
 ```Output
 ZZ
@@ -274,10 +283,10 @@ Buffer overrun: s = 'ars.' (should be 'test')
 
 El diseño de las variables automáticas y el nivel de detección de errores y protección del código pueden variar con la configuración de compilador modificada. Este ejemplo puede tener resultados diferentes si se crea en otros entornos de compilación o con otras opciones del compilador.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

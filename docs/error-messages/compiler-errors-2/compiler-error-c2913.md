@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2913
 ms.assetid: c6cf6090-02e8-49a5-913f-5bc6f864b769
-ms.openlocfilehash: deeabdb08f4b0fb3cd722d5d33a4d2cfffb15d61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f9e9393d0b4ee4075b24c20f0755a5317e94eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601580"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761077"
 ---
 # <a name="compiler-error-c2913"></a>Error del compilador C2913
 
-especialización explícita; 'declaration' no es una especialización de una plantilla de clase
+especialización explícita; ' DECLARATION ' no es una especialización de una plantilla de clase
 
-No se puede especializar una clase que no son de plantilla.
+No se puede especializar una clase que no sea de plantilla.
 
-El ejemplo siguiente genera C2913:
+En el ejemplo siguiente se genera C2913:
 
-```
+```cpp
 // C2913.cpp
 // compile with: /c
 class X{};

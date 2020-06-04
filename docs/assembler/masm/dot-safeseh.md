@@ -1,6 +1,6 @@
 ---
 title: .SAFESEH
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .SAFESEH
 helpviewer_keywords:
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: 417aea13518621f775cafa176ff7d74f9704d511
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5953ad6bdf1d9d1b0070ce83dd1d764799b7440a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328362"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317570"
 ---
-# <a name="safeseh"></a>.SAFESEH
+# <a name="safeseh-32-bit-masm"></a>. SAFESEH (32 bits MASM)
 
-Registra una función como controlador de excepciones estructurado.
+Registra una función como un controlador de excepciones estructurado. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
-> . Identificador SAFESEH
+> **.**  *Identificador* de SAFESEH
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-*identificador* debe ser el Id. de definida localmente [PROC](../../assembler/masm/proc.md) o [EXTRN](../../assembler/masm/extrn.md) procedimiento. Un [etiqueta](../../assembler/masm/label-masm.md) no está permitido. El archivo. SAFESEH (directiva) requiere la [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) opción de línea de comandos de ml.exe.
+El *identificador* debe ser el identificador de un procedimiento [PROC](proc.md) o [EXTRN](extrn.md) definido localmente. No se permite una [etiqueta](label-masm.md) . El. La Directiva SAFESEH requiere la opción de línea de comandos [/SAFESEH](ml-and-ml64-command-line-reference.md) ml. exe.
 
-Para obtener más información acerca de los controladores de excepciones estructurado, consulte [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+Para obtener más información acerca de los controladores de excepciones estructurados, vea [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-Por ejemplo, para registrar un controlador de excepciones seguros, cree un nuevo archivo MASM (como se indica a continuación), ensamblar con/SAFESEH y agregarlo a los objetos vinculados.
+Por ejemplo, para registrar un controlador de excepciones seguro, cree un nuevo archivo MASM (como se indica a continuación), ensamble con/SAFESEH y agréguelo a los objetos vinculados.
 
 ```asm
 .386
@@ -41,4 +41,5 @@ end
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

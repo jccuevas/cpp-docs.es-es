@@ -1,11 +1,11 @@
 ---
 title: cexp, cexpf, cexpl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cexp
 - cexpf
 - cexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cexp
 - cexpf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dd6c9deddfe93cf044985f93b2129695d0770f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462938"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943167"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
@@ -65,7 +68,7 @@ El valor de **e** elevado a la potencia de *z*.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cexp** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cexp** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Cexp** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **Cexp** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

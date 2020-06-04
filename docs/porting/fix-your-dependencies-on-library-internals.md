@@ -1,24 +1,24 @@
 ---
-title: Corrección de dependencias en los datos internos de biblioteca
+title: Corrección de las dependencias C++ en los elementos internos de la biblioteca
 ms.date: 05/24/2017
 helpviewer_keywords:
-- library internals in an upgraded Visual C++ project
-- _Hash_seq in an upgraded Visual C++ project
+- library internals in an upgraded Visual Studio C++ project
+- _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: 7f1db0019894474b0770d293b293a663b1ee5a0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: b101234c582d8730b1a8fb62e8182df68554b18c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662701"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214999"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>Corrección de dependencias en los datos internos de biblioteca
+# <a name="fix-your-dependencies-on-c-library-internals"></a>Corrección de las dependencias C++ en los elementos internos de la biblioteca
 
 Microsoft ha publicado el código fuente de la biblioteca estándar, la mayor parte de la biblioteca del entorno de ejecución de C y otras bibliotecas de Microsoft en muchas versiones de Visual Studio. Lo que se pretende es ayudarle a entender el comportamiento de las bibliotecas y a depurar código. Un efecto secundario de que se publique el código fuente de las bibliotecas es que algunas funciones, estructuras de datos y valores internos quedan expuestos, aunque no formen parte de la interfaz de la biblioteca. Normalmente tienen nombres que comienzan por dos caracteres de subrayado o por un carácter de subrayado seguido de una letra mayúscula: se trata de nombres que la biblioteca estándar de C++ reserva para las implementaciones. Estas funciones, estructuras de datos y valores son detalles de implementación que pueden cambiar, ya que las bibliotecas van evolucionando con el tiempo, por lo que se desaconseja establecer dependencias en ellos. Si lo hace, correrá el riesgo de obtener código no portátil y de sufrir problemas al intentar migrar el código a las nuevas versiones de las bibliotecas.
 
 En la mayoría de los casos, los documentos de novedades o de cambios importantes de cada versión de Visual Studio no reflejan cambios en los datos internos de las bibliotecas. Al fin y al cabo, se supone que no debe verse afectado por estos detalles de implementación. Sin embargo, a veces la tentación de recurrir al uso de parte del código que ve en la biblioteca es demasiado grande. En este tema se describen las dependencias de datos internos de CRT o de la biblioteca estándar que pueden haberse creado y cómo actualizar el código para quitar esas dependencias, de forma que sea más portátil o permita migrar a las nuevas versiones de la biblioteca.
 
-## <a name="hashseq"></a>_Hash_seq
+## <a name="_hash_seq"></a>_Hash_seq
 
 La función de hash interna `std::_Hash_seq(const unsigned char *, size_t)`, que sirve para implementar `std::hash` en algunos tipos de cadenas, era visible en las versiones recientes de la biblioteca estándar. Esta función implementaba un elemento [hash FNV-1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) en una secuencia de caracteres.
 
@@ -74,8 +74,8 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Actualizar proyectos desde versiones anteriores de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Información general sobre posibles problemas de actualización (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Actualizar código a CRT universal](upgrade-your-code-to-the-universal-crt.md)

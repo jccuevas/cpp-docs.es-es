@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b31581b77743104a92236336c4db380f1693ea55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394876"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Contenedores de controles ActiveX: Usar controles en un contenedor sin cuadro de diálogo
 
@@ -27,7 +27,7 @@ Un puntero al texto que se mostrará en la propiedad del control Text o Caption 
 *dwStyle*<br/>
 Estilos de Windows. Para obtener una lista completa, consulte [CWnd:: CreateControl](../mfc/reference/cwnd-class.md#createcontrol).
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control.
 
 *pParentWnd*<br/>
@@ -64,4 +64,3 @@ Implementación de esta característica es un proceso de cuatro pasos.
 ## <a name="see-also"></a>Vea también
 
 [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)
-

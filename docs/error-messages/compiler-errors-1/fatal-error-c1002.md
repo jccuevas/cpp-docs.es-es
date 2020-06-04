@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C1002
 ms.assetid: bd6d274a-c7b4-43af-8bf2-23c5e442aa22
-ms.openlocfilehash: 0588da99994be547742cc530ba435002a2d73359
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78edf886f34665f996497abe323a0ea5d3800c2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640510"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204937"
 ---
 # <a name="fatal-error-c1002"></a>Error irrecuperable C1002
 
 el compilador no tiene espacio en el montón en el paso 2
 
-El compilador se quedó sin espacio de memoria dinámica durante su segunda pasada, probablemente debido a un programa con demasiados símbolos o expresiones complejas.
+El compilador se quedó sin espacio de memoria dinámica durante su segundo paso, probablemente debido a un programa con demasiados símbolos o expresiones complejas.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones
 
-1. Dividir el archivo de código fuente en varios archivos más pequeños.
+1. Divida el archivo de origen en varios archivos más pequeños.
 
-1. Divida las expresiones en subexpresiones más pequeñas.
+1. Divida expresiones en subexpresiones más pequeñas.
 
-1. Quitar otros programas o controladores que consuman memoria.
+1. Quite otros programas o controladores que consuman memoria.

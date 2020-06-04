@@ -1,11 +1,12 @@
 ---
 title: tan, tanf, tanl
-ms.date: 04/10/2018
-apiname:
+ms.date: 4/2/2020
+api_name:
 - tan
 - tanf
 - tanl
-apilocation:
+- _o_tan
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tan
 - tanf
@@ -32,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564034"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912378"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -63,24 +68,26 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **tan** funciones devuelven la tangente de *x*. Si *x* es mayor o igual que 263 o menor o igual que -263, se produce una pérdida de significado en el resultado.
+Las funciones **tan** devuelven la tangente de *x*. Si *x* es mayor o igual que 263, o menor o igual que-263, se produce una pérdida de significado en el resultado.
 
-|Entrada|Excepción SEH|**_Matherr** excepción|
+|Entrada|Excepción SEH|**Matherr** Excepcional|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|ninguna|_DOMAIN|
-|+ INF|**NO VÁLIDO**|_DOMAIN|
+|± QNAN,IND|ninguno|_DOMAIN|
+|± INF|**No válido**|_DOMAIN|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **tan** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **tan** siempre toma y devuelve **doble**.
+Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **tan** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **tan** siempre toma y devuelve **Double**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> o \<math.h>|
+|**tan**, **TANF (**, **tanl**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -106,7 +113,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

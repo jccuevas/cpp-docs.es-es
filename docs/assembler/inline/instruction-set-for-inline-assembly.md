@@ -8,21 +8,21 @@ helpviewer_keywords:
 - assembler [C++], instruction set
 - instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-ms.openlocfilehash: 5d73b70603c3a3f51944a95fe54af11ecb50a9c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6d2dea1af43b52a7704af58855842075087a221
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169362"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Conjunto de instrucciones para el ensamblado insertado
 
 **Específicos de Microsoft**
 
-El compilador de Visual C++ admite todos los códigos de operación con Pentium 4 y AMD Athlon. Se pueden crear instrucciones adicionales admitidas por el procesador de destino con el [Pseudoinstrucción _emit](../../assembler/inline/emit-pseudoinstruction.md).
+El compilador de Microsoft C++ admite todos los códigos de acceso a través de Pentium 4 y AMD Athlon. Las instrucciones adicionales que admite el procesador de destino se pueden crear con el [_Emit Emit (](../../assembler/inline/emit-pseudoinstruction.md).
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso del lenguaje de ensamblado en bloques __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

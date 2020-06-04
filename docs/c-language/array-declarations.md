@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313550"
 ---
 # <a name="array-declarations"></a>Declaraciones de matrices
 
@@ -42,7 +42,7 @@ Como *constant-expression* es opcional, la sintaxis tiene dos formas:
 
 - La segunda forma declara una variable que se ha definido en otra parte. Omite el argumento *constant-expression* incluido entre corchetes, pero no los corchetes. Solo puede usar esta variante si previamente ha inicializado la matriz, la ha declarado como parámetro o la ha declarado como una referencia a una matriz definida explícitamente en otra parte del programa.
 
-En ambas formas, *direct-declarator* designa la variable y puede modificar el tipo de la variable. Los corchetes (**[ ]**) incluidos detrás de *direct-declarator* modifican el declarador de un tipo de matriz.
+En ambas formas, *direct-declarator* designa la variable y puede modificar el tipo de la variable. Los corchetes ( **[ ]** ) incluidos detrás de *direct-declarator* modifican el declarador de un tipo de matriz.
 
 Se pueden incluir calificadores de tipo en la declaración de un objeto de tipo de matriz, pero estos calificadores se aplican a los elementos en lugar de a la propia matriz.
 

@@ -1,9 +1,9 @@
 ---
 title: _matherr
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _matherr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _matherr
 - matherr
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 340e3b8562e1f0f564810bc63cf6bd2e87ffdf63
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329636"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952756"
 ---
-# <a name="matherr"></a>_matherr
+# <a name="_matherr"></a>_matherr
 
 Trata errores matemáticos.
 
@@ -46,17 +49,17 @@ Puntero a la estructura que contiene información de error.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_matherr** devuelve 0 para indicar un error o un valor distinto de cero para indicar el éxito. Si **_matherr** devuelve 0, un mensaje de error se puede mostrar y **errno** está establecido en un valor de error adecuado. Si **_matherr** devuelve un valor distinto de cero, ningún mensaje de error se muestra y **errno** permanece sin cambios.
+**_matherr** devuelve 0 para indicar un error o un valor distinto de cero para indicar que la operación se ha realizado correctamente. Si **_matherr** devuelve 0, se puede mostrar un mensaje de error y **errno** se establece en un valor de error adecuado. Si **_matherr** devuelve un valor distinto de cero, no se muestra ningún mensaje de error y **errno** permanece inalterado.
 
 Para obtener más información sobre los códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_matherr** función procesa los errores generados por las funciones de la biblioteca matemática de punto flotante. Estas funciones llaman a **_matherr** cuando se detecta un error.
+La función **_matherr** procesa los errores generados por las funciones de punto flotante de la biblioteca matemática. Estas funciones llaman a **_matherr** cuando se detecta un error.
 
-Para el control de errores especial, puede proporcionar una definición diferente de **_matherr**. Si usa la versión vinculada dinámicamente de la biblioteca de tiempo de ejecución de C (CRT), puede reemplazar el valor predeterminado **_matherr** rutinarias en un archivo ejecutable con una versión definido por el usuario del cliente. Sin embargo, no se puede reemplazar el valor predeterminado **_matherr** rutinarias en un cliente DLL de la DLL de CRT.
+Para un control de errores especial, puede proporcionar una definición diferente de **_matherr**. Si usa la versión vinculada dinámicamente de la biblioteca en tiempo de ejecución de C (CRT), puede reemplazar la rutina **_matherr** predeterminada en un ejecutable de cliente con una versión definida por el usuario. Sin embargo, no puede reemplazar la rutina **_matherr** predeterminada en un cliente DLL del archivo dll de CRT.
 
-Cuando se produce un error en una rutina matemática, **_matherr** se denomina con un puntero a un **_exception** estructura de tipo (definido en \<math.h >) como argumento. La estructura **_exception** contiene los siguientes elementos.
+Cuando se produce un error en una rutina matemática, se llama a **_matherr** con un puntero a una estructura de tipo **_exception** (definida en \<Math. h >) como argumento. La estructura **_exception** contiene los siguientes elementos.
 
 ```C
 struct _exception
@@ -69,15 +72,15 @@ struct _exception
 };
 ```
 
-El **tipo** miembro especifica el tipo de error matemático. Es uno de los valores siguientes, definidos en \<math.h >:
+El miembro de **tipo** especifica el tipo de error matemático. Es uno de los valores siguientes, definidos en \<Math. h >:
 
 |Macro|Significado|
 |-|-|
-| **_DOMINIO** | Error de argumento de dominio |
-| **_SING** | Singularidad del argumento |
+| **_DOMAIN** | Error de dominio de argumento |
+| **_SING** | Singularidad de los argumentos |
 | **_OVERFLOW** | Error de intervalo de desbordamiento |
-| **_PLOSS** | Pérdida parcial de significado |
-| **_TLOSS** | Pérdida total de significado |
+| **_PLOSS** | Pérdida parcial de importancia |
+| **_TLOSS** | Pérdida total de importancia |
 | **_UNDERFLOW** | El resultado es demasiado pequeño para representarlo (esta condición no se admite actualmente). |
 
 El miembro de estructura **name** es un puntero a una cadena terminada en nulo que contiene el nombre de la función que produjo el error. Los miembros de estructura **arg1** y **arg2** especifican los valores que provocaron el error Si solo se proporciona un argumento, se almacena en **arg1**.

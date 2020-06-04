@@ -1,9 +1,10 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _heapchk
-apilocation:
+- _o__heapchk
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,14 +31,14 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331404"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916213"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
 Ejecuta comprobaciones de coherencia en el montón.
 
@@ -45,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_heapchk** devuelve una de las siguientes constantes de manifiesto enteras, definidas en Malloc.h.
+**_heapchk** devuelve una de las siguientes constantes de manifiesto Integer definidas en malloc. h.
 
 |Valor devuelto|Condición|
 |-|-|
@@ -55,11 +60,13 @@ int _heapchk( void );
 | **_HEAPEMPTY** | No se ha inicializado el montón. |
 | **_HEAPOK** | El montón parece ser coherente. |
 
-Además, si se produce un error, **_heapchk** establece **errno** a **ENOSYS**.
+Además, si se produce un error, **_heapchk** establece **errno** en **ENOSYS**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **_heapchk** función ayuda a depurar problemas relacionados con el montón comprobando una coherencia mínima del montón. Si el sistema operativo no admite **_heapchk**(por ejemplo, Windows 98), la función devuelve **_HEAPOK** y establece **errno** a **ENOSYS**.
+La función **_heapchk** ayuda a depurar los problemas relacionados con el montón comprobando la coherencia mínima del montón. Si el sistema operativo no admite **_heapchk**(por ejemplo, Windows 98), la función devuelve **_HEAPOK** y establece **errno** en **ENOSYS**.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -67,7 +74,7 @@ El **_heapchk** función ayuda a depurar problemas relacionados con el montón c
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -112,7 +119,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asignación de memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>

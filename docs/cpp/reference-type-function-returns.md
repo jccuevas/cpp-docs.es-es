@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461326"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188303"
 ---
 # <a name="reference-type-function-returns"></a>Valores devueltos de función de tipo de referencia
 
@@ -23,9 +23,9 @@ Las funciones se pueden declarar para que devuelvan un tipo de referencia. Hay d
 
 - El objeto al que se hace referencia no saldrá del ámbito cuando la función devuelva un valor.
 
-Al igual que puede ser más eficaz pasar objetos grandes *a* funciones por referencia, también puede ser más eficaz devolver objetos grandes *desde* funciones por referencia. El protocolo de devolución de referencias elimina la necesidad de copiar el objeto en una ubicación temporal antes de que se devuelva.
+Del mismo modo que puede ser más eficaz pasar objetos grandes *a* funciones por referencia, también puede ser más eficaz devolver objetos grandes *de* funciones por referencia. El protocolo de devolución de referencias elimina la necesidad de copiar el objeto en una ubicación temporal antes de que se devuelva.
 
-Los tipos de valor devuelto de las referencias también pueden ser útiles cuando la función se debe evaluar como un valor L. La mayoría de los operadores sobrecargados pertenecen a esta categoría, especialmente el operador de asignación. Operadores sobrecargados se explican en [operadores sobrecargados](../cpp/operator-overloading.md).
+Los tipos de valor devuelto de las referencias también pueden ser útiles cuando la función se debe evaluar como un valor L. La mayoría de los operadores sobrecargados pertenecen a esta categoría, especialmente el operador de asignación. Los operadores sobrecargados se describen en [operadores sobrecargados](../cpp/operator-overloading.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -73,7 +73,7 @@ cout << "x = " << ThePoint.x() << "\n"
 }
 ```
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Output
 
 ```Output
 x = 7
@@ -86,7 +86,7 @@ Tenga en cuenta también que en main, el objeto ThePoint permanece en el ámbito
 
 Las declaraciones de tipos de referencia deben contener inicializadores excepto en los casos siguientes:
 
-- Explícita **extern** declaración
+- Declaración **extern** explícita
 
 - Declaración de un miembro de clase
 
@@ -110,6 +110,6 @@ Foo& GetFoo()
 
 El compilador emite una advertencia en este caso: `warning C4172: returning address of local variable or temporary`. Es posible que, en programas simples y en ocasiones, no se produzca ninguna infracción de acceso si el llamador tiene acceso a la referencia antes de que se sobrescriba la ubicación de memoria. Es simplemente una cuestión de suerte, así que haga caso a la advertencia.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencias](../cpp/references-cpp.md)

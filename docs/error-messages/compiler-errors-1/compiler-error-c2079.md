@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
-ms.openlocfilehash: 68435610680e3b21415a1d9439a8133fd1e2557f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea158d8dada013f6b90d0fbe1e7502665c1c24da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621668"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757727"
 ---
 # <a name="compiler-error-c2079"></a>Error del compilador C2079
 
-'identificador' utiliza la clase/struct/union sin definir 'name'
+' Identifier ' usa Class/struct/union ' name ' sin definir
 
-El identificador especificado es una clase no definida, estructura o unión.
+El identificador especificado es una clase, estructura o Unión sin definir.
 
-Este error puede deberse al inicializar una unión anónima.
+Este error puede deberse a la inicialización de una Unión anónima.
 
-El ejemplo siguiente genera C2079:
+En el ejemplo siguiente se genera C2079:
 
-```
+```cpp
 // C2079.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -32,9 +32,9 @@ int main() {
 }
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C2079b.cpp
 // compile with: /EHsc
 #include <fstream>
@@ -43,9 +43,9 @@ int main( ) {
 }
 ```
 
-C2079 también puede producirse si intenta declarar un objeto en la pila de un tipo cuya declaración adelantada está solo en el ámbito.
+C2079 también se puede producir si se intenta declarar un objeto en la pila de un tipo cuya declaración adelantada solo está en el ámbito.
 
-```
+```cpp
 // C2079c.cpp
 class A;
 
@@ -56,9 +56,9 @@ class B {
 class A {};
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C2079d.cpp
 // compile with: /c
 class A;

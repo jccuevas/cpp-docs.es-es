@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657774"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198970"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Advertencia del compilador (nivel 3) C4191
 
@@ -27,7 +27,7 @@ Varias operaciones que comprenden punteros a función no se consideran seguras:
 
 - Las longitudes de la lista de argumentos son diferentes (en `__cdecl`, solo en la conversión de una lista más larga a otra más corta, incluso si la más corta es varargs).
 
-- Puntero a datos (distinto de **void**<strong>\*</strong>) tiene un alias respecto de un puntero a función.
+- El puntero a los datos (excepto **void** <strong>\*</strong>) se alisa con un puntero a la función.
 
 - Cualquier otra diferencia de tipos que pueda producir un error o una advertencia en `reinterpret_cast`.
 
@@ -37,7 +37,7 @@ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias d
 
 El ejemplo siguiente genera la advertencia C4191:
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

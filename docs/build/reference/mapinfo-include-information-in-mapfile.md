@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MAPINFO linker option
 - -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-ms.openlocfilehash: bfb8273a8299349ea9aa0b78f1ee14a6cbb6276c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 491df211856a9d7ceb02b6a401270f15b9da3b96
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321441"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Incluir información en el archivo de asignaciones)
 
@@ -26,11 +26,11 @@ ms.locfileid: "50440318"
 
 ## <a name="remarks"></a>Comentarios
 
-La opción /MAPINFO indica al vinculador que incluya la información especificada en un archivo de asignaciones, que se crea si especifica la [/MAP](../../build/reference/map-generate-mapfile.md) opción.  EXPORTS indica al vinculador que incluya funciones exportadas.
+La opción /MAPINFO indica al vinculador que incluya la información especificada en un archivo de asignaciones, que se crea si especifica la [/MAP](map-generate-mapfile.md) opción.  EXPORTS indica al vinculador que incluya funciones exportadas.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -44,5 +44,5 @@ La opción /MAPINFO indica al vinculador que incluya la información especificad
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

@@ -14,27 +14,27 @@ helpviewer_keywords:
 - files [MFC], manipulating
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
-ms.openlocfilehash: 815239b0d4de1938a810153cb98f39b2642b6e2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a99c4143bbd27ba765b0289b80be8870a940f63
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459337"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365307"
 ---
 # <a name="files-in-mfc"></a>Archivos en MFC
 
-En la biblioteca de clases de Microsoft Foundation (MFC), clase [CFile](../mfc/reference/cfile-class.md) controla las operaciones de E/S de archivos normales. Esta serie de artículos explica cómo abrir y cerrar archivos, así como leer y escribir datos en esos archivos. También describe las operaciones de estado de archivo. Para obtener una descripción de cómo usar las características de serialización basada en objetos de MFC como una manera alternativa de leer y escribir datos en archivos, consulte el artículo [serialización](../mfc/serialization-in-mfc.md).
+En la biblioteca Microsoft Foundation Class (MFC), la clase [CFile](../mfc/reference/cfile-class.md) controla las operaciones de E/S de archivos normales. Esta familia de artículos explica cómo abrir y cerrar archivos, así como leer y escribir datos en esos archivos. También se describen las operaciones de estado de los archivos. Para obtener una descripción de cómo utilizar las características de serialización basadas en objetos de MFC como una forma alternativa de leer y escribir datos en archivos, vea el artículo [Serialización](../mfc/serialization-in-mfc.md).
 
 > [!NOTE]
->  Cuando se usa MFC `CDocument` objetos, el marco de trabajo hace gran parte del trabajo de serialización por usted. En concreto, el marco de trabajo crea y usa el `CFile` objeto. Solo tiene que escribir código en el reemplazo del `Serialize` función miembro de clase `CDocument`.
+> Cuando se `CDocument` usan objetos MFC, el marco de trabajo realiza gran parte del trabajo de serialización para usted. En particular, el marco `CFile` de trabajo crea y utiliza el objeto. Sólo tiene que escribir código en `Serialize` la invalidación de la función miembro de la clase `CDocument`.
 
-La `CFile` clase proporciona una interfaz para las operaciones de archivos binarios de propósito general. El `CStdioFile` y `CMemFile` las clases derivadas de `CFile` y `CSharedFile` clase derivada de `CMemFile` proporcionar servicios de archivo más especializados.
+La `CFile` clase proporciona una interfaz para operaciones de archivos binarios de propósito general. Las `CStdioFile` `CMemFile` clases y `CFile` derivadas `CSharedFile` de y `CMemFile` la clase derivada de proporcionan servicios de archivos más especializados.
 
-Para obtener más información sobre las alternativas para la administración de archivos de MFC, vea [manejo de archivos](../c-runtime-library/file-handling.md) en el *referencia de la biblioteca de tiempo de ejecución*.
+Para obtener más información acerca de las alternativas al control de archivos MFC, vea [Control de](../c-runtime-library/file-handling.md) archivos en la Referencia de biblioteca en tiempo *de ejecución*.
 
-Para obtener información acerca de derivan `CFile` las clases, consulte el [gráfico de jerarquías MFC](../mfc/hierarchy-chart.md).
+Para obtener información `CFile` acerca de las clases derivadas, vea el gráfico de [jerarquía MFC](../mfc/hierarchy-chart.md).
 
-## <a name="what-do-you-want-to-do"></a>Qué quieres hacer
+## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
 *Usar CFile*
 
@@ -44,23 +44,23 @@ Para obtener información acerca de derivan `CFile` las clases, consulte el [gr�
 
 - [Cerrar un archivo con CFile](../mfc/closing-files.md)
 
-- [Estado de archivo de acceso con CFile](../mfc/accessing-file-status.md)
+- [Acceda al estado del archivo con CFile](../mfc/accessing-file-status.md)
 
-*Usar la serialización de MFC (persistencia de objeto)*
+*Usar serialización MFC (persistencia de objetos)*
 
 - [Crear una clase serializable](../mfc/serialization-making-a-serializable-class.md)
 
-- [¿Serializar un objeto a través de un objeto CArchive?](../mfc/serialization-serializing-an-object.md)
+- [Serializar un objeto a través de un cArchive objeto](../mfc/serialization-serializing-an-object.md)
 
-- [¿Crear un objeto CArchive?](../mfc/two-ways-to-create-a-carchive-object.md)
+- [Crear un objeto CArchive](../mfc/two-ways-to-create-a-carchive-object.md)
 
-- [Usar CArchive <\< y >> operadores](../mfc/using-the-carchive-output-and-input-operators.md)
+- [Utilice los \< operadores de <y >> de CArchive](../mfc/using-the-carchive-output-and-input-operators.md)
 
-- [Store y cargar CObjects y derivadas de CObject objetos a través de un archivo](../mfc/storing-and-loading-cobjects-via-an-archive.md)
+- [Almacenar y cargar CObjects y objetos derivados de CObject a través de un archivo](../mfc/storing-and-loading-cobjects-via-an-archive.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conceptos](../mfc/mfc-concepts.md)<br/>
 [Temas generales de MFC](../mfc/general-mfc-topics.md)<br/>
 [CArchive (clase)](../mfc/reference/carchive-class.md)<br/>
-[CObject (clase)](../mfc/reference/cobject-class.md)
+[Clase CObject](../mfc/reference/cobject-class.md)

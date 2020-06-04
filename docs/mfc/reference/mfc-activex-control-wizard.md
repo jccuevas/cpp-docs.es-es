@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-ms.openlocfilehash: d916517342bd28aaf77cdce20e2479eb80dec024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3341f840c46584c4e45afe3607c83433976e6c37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446597"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217649"
 ---
 # <a name="mfc-activex-control-wizard"></a>Asistente para controles ActiveX MFC
 
@@ -64,7 +64,6 @@ Esta página del asistente describe la configuración de aplicación actual para
 
 ## <a name="see-also"></a>Vea también
 
-[Creación y administración de proyectos de Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Tipos de proyecto de Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Proyectos de Visual Studio: C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[C++tipos de proyecto en Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Conceptos](../../atl/active-template-library-atl-concepts.md)
-

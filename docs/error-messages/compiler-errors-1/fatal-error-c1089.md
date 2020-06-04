@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1089
 ms.assetid: c4f1e8e5-62c5-464a-9112-99b0790a0fb7
-ms.openlocfilehash: 03c3ae487170ba532ef594c141b79f6d1f977764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9f15cc209241610335909db18d0d31af3710fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203910"
 ---
 # <a name="fatal-error-c1089"></a>Error irrecuperable C1089
 

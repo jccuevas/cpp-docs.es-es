@@ -7,39 +7,39 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: dc3c4ea36aa9dac64f2aa7861fd5d51927c77ecd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265105"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209511"
 ---
 # <a name="testing-the-read-only-provider"></a>Probar el proveedor de sólo lectura
 
-Para probar un proveedor, se necesita un consumidor. Resulta útil si el consumidor puede contrastar con el proveedor. Las plantillas de consumidor OLE DB son un contenedor fino alrededor de OLE DB y coinciden con los objetos COM del proveedor. Dado que el origen se incluye con las plantillas de consumidor, es fácil de depurar un proveedor con ellos. Las plantillas de consumidor también son una manera muy pequeña y rápida para desarrollar aplicaciones de consumidor.
+Para probar un proveedor, necesita un consumidor. Ayuda si el consumidor puede hacer coincidir con el proveedor. Las plantillas de consumidor OLE DB son un contenedor fino alrededor de OLE DB y que coinciden con los objetos COM del proveedor. Dado que el origen se incluye con las plantillas de consumidor, es fácil depurar con ellos un proveedor. Las plantillas de consumidor son también una manera muy pequeña y rápida de desarrollar aplicaciones de consumidor.
 
-El ejemplo de este tema crea una aplicación de MFC Application Wizard predeterminada para un consumidor de prueba. La aplicación de prueba es un cuadro de diálogo sencillo con código de plantilla de consumidor OLE DB agregado.
+En el ejemplo de este tema se crea una aplicación del Asistente para aplicaciones MFC predeterminada para un consumidor de prueba. La aplicación de prueba es un cuadro de diálogo simple con OLE DB código de plantilla de consumidor agregado.
 
 ## <a name="to-create-the-test-application"></a>Para crear la aplicación de prueba
 
-1. En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.
+1. En el menú **Archivo**, haga clic en **Nuevo** y, después, en **Proyecto**.
 
-1. En el **tipos de proyecto** panel, seleccione el **instalado** > **Visual C++** > **MFC/ATL** carpeta. En el **plantillas** panel, seleccione **aplicación MFC**.
+1. En el panel **tipos de proyecto** , seleccione la carpeta **instalado** > **Visual C++**  > **MFC/ATL** . En el panel **plantillas** , seleccione **aplicación MFC**.
 
-1. Escriba el nombre del proyecto, *TestProv*y, a continuación, haga clic en **Aceptar**.
+1. En el nombre del proyecto, escriba *TestProv*y, a continuación, haga clic en **Aceptar**.
 
-   El **aplicación MFC** aparece el asistente.
+   Aparece el Asistente para **aplicaciones MFC** .
 
-1. En el **tipo de aplicación** página, seleccione **en función del cuadro de diálogo**.
+1. En la página **tipo de aplicación** , seleccione **basado en cuadros de diálogo**.
 
-1. En el **características avanzadas** página, seleccione **automatización**y, a continuación, haga clic en **finalizar**.
+1. En la página **características avanzadas** , seleccione **automatización**y, a continuación, haga clic en **Finalizar**.
 
 > [!NOTE]
-> La aplicación no requiere compatibilidad de automatización si agrega `CoInitialize` en `CTestProvApp::InitInstance`.
+> La aplicación no requiere compatibilidad con automatización si agrega `CoInitialize` en `CTestProvApp::InitInstance`.
 
-Puede ver y editar la **TestProv** cuadro de diálogo (IDD_TESTPROV_DIALOG) si lo selecciona en **vista de recursos**. Coloque dos cuadros de lista, uno para cada cadena en el conjunto de filas, en el cuadro de diálogo. Desactivar la propiedad de ordenación para los cuadros de lista presionando **Alt**+**ENTRAR** cuando se selecciona un cuadro de lista y estableciendo el **ordenación** propiedad **False**. Además, coloque un **ejecutar** botón en el cuadro de diálogo para buscar el archivo. El terminado **TestProv** cuadro de diálogo debe tener dos cuadros de lista con la etiqueta "String 1" y "String 2", respectivamente; también tiene **Aceptar**, **cancelar**, y **ejecutar**  botones.
+Puede ver y editar el cuadro de diálogo **TestProv** (IDD_TESTPROV_DIALOG) seleccionándolo en **vista de recursos**. Coloque dos cuadros de lista, uno para cada cadena del conjunto de filas, en el cuadro de diálogo. Para desactivar la propiedad de ordenación de ambos cuadros de lista, presione **Alt**+**entrar** cuando se selecciona un cuadro de lista y establezca la propiedad **Sort** en **false**. Además, coloque un botón **Ejecutar** en el cuadro de diálogo para capturar el archivo. El cuadro de diálogo **TestProv** finalizado debe tener dos cuadros de lista con la etiqueta "cadena 1" y "cadena 2", respectivamente; también tiene botones **Aceptar**, **Cancelar**y **Ejecutar** .
 
-Abra el archivo de encabezado para la clase de cuadro de diálogo (en este caso, TestProvDlg.h). Agregue el código siguiente al archivo de encabezado (fuera de cualquier declaración de clase):
+Abra el archivo de encabezado para la clase de cuadro de diálogo (en este caso, TestProvDlg. h). Agregue el código siguiente al archivo de encabezado (fuera de las declaraciones de clase):
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -61,9 +61,9 @@ END_COLUMN_MAP()
 };
 ```
 
-El código representa un registro de usuario que define qué columnas estarán en el conjunto de filas. Cuando el cliente llama a `IAccessor::CreateAccessor`, utiliza estas entradas para especificar las columnas que se va a enlazar. Las plantillas de consumidor OLE DB también le permiten enlazar columnas dinámicamente. Las macros COLUMN_ENTRY son la versión de cliente de las macros PROVIDER_COLUMN_ENTRY. Las dos macros COLUMN_ENTRY especifican el ordinal, tipo, longitud y miembro de datos para las dos cadenas.
+El código representa un registro de usuario que define qué columnas se incluirán en el conjunto de filas. Cuando el cliente llama a `IAccessor::CreateAccessor`, utiliza estas entradas para especificar las columnas que se van a enlazar. Las plantillas de consumidor de OLE DB también permiten enlazar columnas dinámicamente. Las macros COLUMN_ENTRY son la versión del lado cliente de las macros de PROVIDER_COLUMN_ENTRY. Las dos macros COLUMN_ENTRY especifican el ordinal, el tipo, la longitud y el miembro de datos de las dos cadenas.
 
-Agregar una función de controlador para el **ejecutar** botón presionando **Ctrl** y haga doble clic en el **ejecutar** botón. Coloque el código siguiente en la función:
+Para agregar una función de controlador para el botón **Ejecutar** , presione **Ctrl** y haga doble clic en el botón **Ejecutar** . Coloque el código siguiente en la función:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -92,20 +92,20 @@ void CTestProvDlg::OnRun()
 }
 ```
 
-El `CCommand`, `CDataSource`, y `CSession` clases todos pertenecen a las plantillas de consumidor OLE DB. Cada clase emula un objeto COM en el proveedor. El `CCommand` objeto toma la `CProvider` (clase), declarado en el archivo de encabezado, como un parámetro de plantilla. El `CProvider` parámetro representa los enlaces que utilizan para tener acceso a los datos del proveedor. 
+Todas las clases `CCommand`, `CDataSource`y `CSession` pertenecen a las plantillas de consumidor de OLE DB. Cada clase imita un objeto COM en el proveedor. El objeto `CCommand` toma la clase `CProvider`, declarada en el archivo de encabezado, como un parámetro de plantilla. El parámetro `CProvider` representa los enlaces que se utilizan para tener acceso a los datos del proveedor.
 
-Las líneas para abrir cada una de las clases crean cada objeto COM en el proveedor. Para buscar el proveedor, utilice el `ProgID` del proveedor. Puede obtener el `ProgID` desde el registro del sistema o mediante una búsqueda en el archivo Custom.rgs (abra el directorio del proveedor y busque la `ProgID` clave).
+Las líneas para abrir cada una de las clases crean cada objeto COM en el proveedor. Para buscar el proveedor, utilice el `ProgID` del proveedor. Puede obtener el `ProgID` del registro del sistema o si busca en el archivo. RGS personalizado (Abra el directorio del proveedor y busque la clave `ProgID`).
 
-Se incluye con el archivo MyData.txt el `MyProv` ejemplo. Para crear un archivo de su elección, use un editor y escriba un número par de cadenas, con presionar **ENTRAR** entre cada cadena. Cambie el nombre de ruta de acceso si mueve el archivo.
+El archivo de datos. txt se incluye con el ejemplo `MyProv`. Para crear un archivo propio, use un editor y escriba un número par de cadenas y presione **entrar** entre cada cadena. Cambie el nombre de la ruta de acceso si mueve el archivo.
 
-Pase la cadena "c:\\\samples\\\myprov\\\MyData.txt" en el `table.Open` línea. Si va a la `Open` llamada, verá que esta cadena se pasa a la `SetCommandText` método del proveedor. Tenga en cuenta que el `ICommandText::Execute` método utiliza esa cadena.
+Pase la cadena "c:\\\Samples\\\myprov\\\MyData.txt" en la línea de `table.Open`. Si va a la llamada `Open`, verá que esta cadena se pasa al método `SetCommandText` en el proveedor. Tenga en cuenta que el método `ICommandText::Execute` utilizó esa cadena.
 
-Para capturar los datos, llame a `MoveNext` en la tabla. `MoveNext` las llamadas del `IRowset::GetNextRows`, `GetRowCount`, y `GetData` funciones. Cuando no hay más filas (es decir, es mayor que la posición actual en el conjunto de filas `GetRowCount`), el bucle finaliza.
+Para capturar los datos, llame a `MoveNext` en la tabla. `MoveNext` llama a las funciones `IRowset::GetNextRows`, `GetRowCount`y `GetData`. Cuando no hay más filas (es decir, la posición actual en el conjunto de filas es mayor que `GetRowCount`), el bucle finaliza.
 
-Cuando no hay más filas, los proveedores devolverán DB_S_ENDOFROWSET. El valor DB_S_ENDOFROWSET no es un error. Siempre debe comprobar con S_OK para cancelar un bucle de recopilación de datos y no utilizar la macro SUCCEEDED.
+Cuando no hay más filas, los proveedores devuelven DB_S_ENDOFROWSET. El valor DB_S_ENDOFROWSET no es un error. Siempre debe comprobar en S_OK para cancelar un bucle de búsqueda de datos y no utilizar la macro SUCCEEDED.
 
-Ahora podrá compilar y probar el programa.
+Ahora debería poder compilar y probar el programa.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Mejorar un proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

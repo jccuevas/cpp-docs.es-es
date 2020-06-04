@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
-ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0f3441b749e3ae074e18e1132dcc4003eba3ba3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538689"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749612"
 ---
 # <a name="compiler-error-c3287"></a>Error del compilador C3287
 
@@ -25,7 +25,7 @@ Vea [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/
 
 El ejemplo siguiente genera la advertencia C3287.
 
-```
+```cpp
 // C3287.cpp
 // compile with: /clr
 using namespace System;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2709
 ms.assetid: e66fc7e6-0e91-4b99-a6e0-fdb069b09fbc
-ms.openlocfilehash: acfe0ccfb540422f58267682178f950349a88f36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43b635a7c2d5fabe39735123cca3c63c0a661744
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605041"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202350"
 ---
 # <a name="compiler-error-c2709"></a>Error del compilador C2709
 

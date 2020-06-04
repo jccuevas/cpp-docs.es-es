@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4357
 ms.assetid: 9259c633-3c02-4900-b94a-2d8d366d61cd
-ms.openlocfilehash: a7923fdcda2a781c9680f8b3753fd101c73be19c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3af2e742bde40bc3787603e32efbc34e59dcb419
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469698"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198710"
 ---
 # <a name="compiler-warning-level-3-c4357"></a>Advertencia del compilador (nivel 3) C4357
 
-param argumento de matriz en la lista de argumentos formal para el delegado 'del' omitir cuando se generen 'function'
+se omitió el argumento de matriz de parámetros en la lista de argumentos formales para el delegado ' del ' al generar ' función '
 
-El `ParamArray` omitió el atributo, y `function` no se puede llamar con argumentos variables.
+Se omitió el `ParamArray` atributo y no se puede llamar a `function` con argumentos variables.
 
-El ejemplo siguiente genera C4357:
+En el ejemplo siguiente se genera C4357:
 
-```
+```cpp
 // C4357.cpp
 // compile with: /clr /W3 /c
 using namespace System;

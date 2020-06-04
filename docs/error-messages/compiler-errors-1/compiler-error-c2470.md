@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2470
 ms.assetid: e17d2cb8-b84c-447c-976a-625f0c96f3fe
-ms.openlocfilehash: 2a4f8c8052081fe90801dfeb30d942fbb9a91a01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f81ba26f346508c0178a99c537206762476b7cb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517161"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743749"
 ---
 # <a name="compiler-error-c2470"></a>Error del compilador C2470
 
-'function': parece una definición de función, pero no hay ninguna lista de parámetros; omitiendo el cuerpo aparente
+' función ': parece una definición de función, pero no hay ninguna lista de parámetros; omitiendo el cuerpo aparente
 
-Una definición de función falta su lista de argumentos.
+Falta la lista de argumentos en una definición de función.
 
-El ejemplo siguiente genera C2470:
+En el ejemplo siguiente se genera C2470:
 
-```
+```cpp
 // C2470.cpp
 int MyFunc {};  // C2470
 void MyFunc2() {};  //OK

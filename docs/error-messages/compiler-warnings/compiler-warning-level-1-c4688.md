@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
-ms.openlocfilehash: f37b5ed43d375c5ee31eb233ce49f7ec88200155
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aebfa3ae602aa45c02897711cd94520a876cca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175407"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>Advertencia del compilador (nivel 1) C4688
 
 'constraint': la lista de restricciones contiene un tipo privado de ensamblado 'type'
 
-Una lista de restricciones tiene un tipo privado de ensamblado, lo que significa que no estará disponible cuando se acceda al tipo desde fuera del ensamblado. Para más información, vea [Genéricos](../../windows/generics-cpp-component-extensions.md).
+Una lista de restricciones tiene un tipo privado de ensamblado, lo que significa que no estará disponible cuando se acceda al tipo desde fuera del ensamblado. Para más información, vea [Genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C4688.
 
-```
+```cpp
 // C4688.cpp
 // compile with: /clr /c /W1
 ref struct A {};   // private type

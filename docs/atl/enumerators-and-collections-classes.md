@@ -2,17 +2,15 @@
 title: Los enumeradores y clases de colecciones (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.enum
 helpviewer_keywords:
 - enumerators, ATL classes
 ms.assetid: fcd093b2-98bf-444d-94ab-9a55520a5051
-ms.openlocfilehash: 28c741ec40b6d350dd5c5b1e777bd05ec083ad47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6de81a7b0ddd77471669b19c4be1145c776d2902
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198127"
 ---
 # <a name="enumerators-and-collections-classes"></a>Clases de colecciones y enumeradores
 
@@ -35,4 +33,3 @@ Las clases siguientes proporcionan compatibilidad para las enumeraciones y las c
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../atl/atl-class-overview.md)
-

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ed84d906944a09fa355e281640e9480f3173554
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587270"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373427"
 ---
-# <a name="rtsalloc-class"></a>rts_alloc (Clase)
+# <a name="rts_alloc-class"></a>rts_alloc (Clase)
 
-La clase de plantilla rts_alloc describe un [filtro](../standard-library/allocators-header.md) que contiene una matriz de instancias de caché y determina la instancia que se va a usar para la asignación y la desasignación en tiempo de ejecución, y no en tiempo de compilación.
+La plantilla de clase rts_alloc describe un [filtro](../standard-library/allocators-header.md) que contiene una matriz de instancias de caché y determina qué instancia se va a utilizar para la asignación y desasignación en tiempo de ejecución en lugar de en tiempo de compilación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,17 +34,17 @@ class rts_alloc
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Caché*|El tipo de instancias de caché contenido en la matriz. Puede ser [cache_chunklist (Clase)](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md)|
+|*Memoria caché*|El tipo de instancias de caché contenido en la matriz. Puede ser [cache_chunklist (Clase)](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md)|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase de plantilla contiene varias instancias del asignador de bloques y determina la instancia que se va a usar para la asignación o desasignación en tiempo de ejecución, y no en tiempo de compilación. Se usa con los compiladores que no se pueden reenlazar mediante compilación.
+Esta plantilla de clase contiene varias instancias de asignador de bloques y determina qué instancia se va a utilizar para la asignación o desasignación en tiempo de ejecución en lugar de en tiempo de compilación. Se usa con los compiladores que no se pueden reenlazar mediante compilación.
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
-|[allocate](#allocate)|Asigna un bloque de memoria.|
+|[Asignar](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
 |[equals](#equals)|Compara dos cachés para determinar si son iguales.|
 
@@ -54,7 +54,7 @@ Esta clase de plantilla contiene varias instancias del asignador de bloques y de
 
 **Espacio de nombres:** stdext
 
-## <a name="allocate"></a>  rts_alloc::allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc::asignar
 
 Asigna un bloque de memoria.
 
@@ -72,11 +72,11 @@ void *allocate(std::size_t count);
 
 Un puntero al objeto asignado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro devuelve `caches[_IDX].allocate(count)`, donde el índice `_IDX` viene determinada por el tamaño de bloque solicitado *recuento*, o bien, si *recuento* es demasiado grande, devuelve `operator new(count)`. `cache`, que representa el objeto de caché.
+La función `caches[_IDX].allocate(count)`miembro devuelve `_IDX` , donde el índice está determinado por el *recuento* `operator new(count)`de tamaño de bloque solicitado o, si *count* es demasiado grande, devuelve . `cache`, que representa el objeto de caché.
 
-## <a name="deallocate"></a>  rts_alloc::deallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::deallocate
 
 Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.
 
@@ -88,14 +88,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*Ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro llama a `caches[_IDX].deallocate(ptr, count)`, donde el índice `_IDX` viene determinada por el tamaño de bloque solicitado *recuento*, o bien, si *recuento* es demasiado grande, devuelve `operator delete(ptr)`.
+La función `caches[_IDX].deallocate(ptr, count)`miembro llama `_IDX` , donde el índice está determinado por el *recuento* `operator delete(ptr)`de tamaño de bloque solicitado o, si *count* es demasiado grande, devuelve .
 
-## <a name="equals"></a>  rts_alloc::equals
+## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc::igual es
 
 Compara dos cachés para determinar si son iguales.
 
@@ -108,13 +108,13 @@ bool equals(const sync<_Cache>& _Other) const;
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*_Cache*|El objeto de caché asociado con el filtro.|
-|*_Otro*|El objeto de caché para comparar la igualdad.|
+|*_Other*|El objeto de caché para comparar la igualdad.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**True** si el resultado de `caches[0].equals(other.caches[0])`; en caso contrario, **false**. `caches` representa la matriz de objetos de caché.
+**true** si el `caches[0].equals(other.caches[0])`resultado de ; de lo contrario, **false**. `caches` representa la matriz de objetos de caché.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<asignadores>](../standard-library/allocators-header.md)

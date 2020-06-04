@@ -1,12 +1,12 @@
 ---
 title: _vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vcwprintf
 - _vcprintf_l
 - _vcwprintf_l
 - _vcprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vcwprintf_l
 - _vtcprintf
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f2aa3dafc730b060e84558dfa03de5328e52893
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624762"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945633"
 ---
-# <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
+# <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
 Escribe salida con formato en la consola mediante un puntero a una lista de argumentos. Hay disponibles versiones más seguras de estas funciones; vea [_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).
 
@@ -95,16 +98,16 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-Número de caracteres escrito o un valor negativo si se produce un error en la salida. Si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y se devuelve -1.
+Número de caracteres escrito o un valor negativo si se produce un error en la salida. Si *Format* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve-1.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la consola. **_vcwprintf** es la versión de caracteres anchos de **_vcprintf**. Toma una cadena de caracteres anchos como argumento.
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la consola. **_vcwprintf** es la versión con caracteres anchos de **_vcprintf**. Toma una cadena de caracteres anchos como argumento.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
 
 > [!IMPORTANT]
-> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

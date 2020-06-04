@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4348
 ms.assetid: 816010eb-6079-48d5-a41b-0fc4d67cfe4c
-ms.openlocfilehash: b39d5a596594367d1ca2aea17d9a752c991d06be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97d382b68f9a252b09056599e38016a60e680bdf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594186"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187237"
 ---
 # <a name="compiler-warning-level-1-c4348"></a>Advertencia del compilador (nivel 1) C4348
 
-'type': nueva definición de parámetro predeterminado: parámetro número
+' type ': nueva definición del parámetro predeterminado: número de parámetro
 
-Un parámetro de plantilla se ha redefinido.
+Se redefinió un parámetro de plantilla.
 
-El ejemplo siguiente genera C4348:
+En el ejemplo siguiente se genera C4348:
 
-```
+```cpp
 // C4348.cpp
 // compile with: /LD /W1
 template <class T=int> struct A;   // forward declaration

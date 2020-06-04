@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 003ba2136e779c444c7edad9b1759a861a8b0803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574442"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687656"
 ---
-# <a name="moneypunctbyname-class"></a>moneypunct_byname (Clase)
+# <a name="moneypunct_byname-class"></a>moneypunct_byname (Clase)
 
-Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta `moneypunct` de una configuración regional concreta, que permite el formato de los campos monetarios de entrada o de salida.
+Una plantilla de clase derivada que describe un objeto que puede actuar como una faceta `moneypunct` de una configuración regional determinada, habilitando el campo de entrada monetario de formato o los campos de salida monetarios.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,4 +50,4 @@ Su comportamiento viene determinado por la configuración regional con nombre `_
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

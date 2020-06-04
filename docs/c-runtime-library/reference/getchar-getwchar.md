@@ -1,10 +1,12 @@
 ---
 title: getchar, getwchar
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - getchar
 - getwchar
-apilocation:
+- _o_getchar
+- _o_getwchar
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwchar
 - GetChar
@@ -27,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626608"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920326"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -47,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el carácter leído. Para indicar un error de lectura o una condición de final de archivo, **getchar** devuelve **EOF**, y **getwchar** devuelve **WEOF**. Para **getchar**, utilice **ferror** o **feof** para comprobar si hay un error o de fin de archivo.
+Devuelve el carácter leído. Para indicar un error de lectura o una condición de final de archivo, **getchar** devuelve **EOF**y **getwchar** devuelve **WEOF**. Para **getchar**, use **ferror** o **feof** para comprobar si hay un error o para el final del archivo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cada rutina lee un solo carácter de **stdin** e incrementa el puntero de archivo asociado para que apunte al carácter siguiente. **GetChar** es el mismo que [_fgetchar](fgetc-fgetwc.md), pero se implementa como una función y como macro.
+Cada rutina Lee un solo carácter de **stdin** e incrementa el puntero de archivo asociado para que señale al siguiente carácter. **getchar** es igual que [_fgetchar](fgetc-fgetwc.md), pero se implementa como una función y como una macro.
 
 Estas funciones bloquean el subproceso de llamada y son, por consiguiente, seguras para subprocesos. Para obtener una versión que no sea de bloqueo, consulte [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -68,7 +76,7 @@ Estas funciones bloquean el subproceso de llamada y son, por consiguiente, segur
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -100,7 +108,7 @@ int main()
 This textInput was: This text
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

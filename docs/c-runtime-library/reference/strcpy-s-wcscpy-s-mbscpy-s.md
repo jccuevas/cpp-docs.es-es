@@ -1,12 +1,16 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
-ms.date: 01/22/2019
-apiname:
+ms.date: 5/28/2020
+api_name:
 - wcscpy_s
 - _mbscpy_s
 - _mbscpy_s_l
 - strcpy_s
-apilocation:
+- _o__mbscpy_s
+- _o__mbscpy_s_l
+- _o_strcpy_s
+- _o_wcscpy_s
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +23,12 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
@@ -36,19 +45,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 5dec0c44519b78a3c4a98c51f8b8ca9bc3f54a7c
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
+ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702718"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206198"
 ---
-# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
+# <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
 Copia una cadena. Estas versiones de [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s** y **_mbscpy_s_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s** y **_mbscpy_s_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -107,7 +116,7 @@ errno_t _mbscpy_s_l(
 Ubicación del búfer de cadena de destino.
 
 *dest_size*<br/>
-Tamaño del búfer de cadena de destino en **char** unidades para las funciones estrechas y multibyte, y **wchar_t** unidades para las funciones anchas. Este valor debe ser mayor que cero y no mayor que **RSIZE_MAX**.
+Tamaño del búfer de cadena de destino en unidades **Char** para funciones estrechas y de varios bytes, y unidades de **wchar_t** para funciones anchas. Este valor debe ser mayor que cero y no mayor que **RSIZE_MAX**. Asegúrese de que este tamaño tiene en cuenta el final de `NULL` la cadena.
 
 *src*<br/>
 Búfer de cadena de origen terminada en NULL.
@@ -123,23 +132,25 @@ Cero si es correcto; en caso contrario, error.
 
 |*dest*|*dest_size*|*src*|Valor devuelto|Contenido de *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**|any|any|**EINVAL**|no modificado|
-|any|any|**NULL**|**EINVAL**|*dest*[0] se establece en 0|
-|any|0, o demasiado pequeño|any|**ERANGE**|*dest*[0] se establece en 0|
+|**NULL**|cualquiera|cualquiera|**EINVAL**|no modificado|
+|cualquiera|cualquiera|**NULL**|**EINVAL**|*dest*[0] establecido en 0|
+|cualquiera|0, o demasiado pequeño|cualquiera|**ERANGE**|*dest*[0] establecido en 0|
 
 ## <a name="remarks"></a>Comentarios
 
-El **strcpy_s** función copia el contenido de la dirección de *src*, incluido el carácter nulo final, en la ubicación especificada por *dest*. La cadena de destino debe ser lo suficientemente grande como para contener la cadena de origen y su carácter nulo de terminación. El comportamiento de **strcpy_s** es indefinido si las cadenas de origen y destino se superponen.
+La función **strcpy_s** copia el contenido de la dirección de *src*, incluido el carácter nulo de terminación, en la ubicación especificada por *dest*. La cadena de destino debe ser lo suficientemente grande como para contener la cadena de origen y su carácter nulo de terminación. El comportamiento de **strcpy_s** es indefinido si las cadenas de origen y de destino se superponen.
 
-**wcscpy_s** es la versión de caracteres anchos de **strcpy_s**, y **_mbscpy_s** es la versión de caracteres multibyte. Los argumentos de **wcscpy_s** son caracteres anchos cadenas; los de **_mbscpy_s** y **_mbscpy_s_l** son cadenas de caracteres multibyte. Por lo demás, estas funciones se comportan exactamente igual. **_mbscpy_s_l** es idéntico al **_mbscpy_s** salvo que usa el parámetro locale pasado en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**wcscpy_s** es la versión con caracteres anchos de **strcpy_s**y **_mbscpy_s** es la versión de caracteres multibyte. Los argumentos de **wcscpy_s** son cadenas de caracteres anchos; los de **_mbscpy_s** y **_mbscpy_s_l** son cadenas de caracteres multibyte. Por lo demás, estas funciones se comportan exactamente igual. **_mbscpy_s_l** es idéntica a **_mbscpy_s** , salvo que usa el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *dest* o *src* es un puntero nulo, o si el tamaño de la cadena de destino *dest_size* es demasiado pequeño, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL** cuando *dest* o  *src* es un puntero nulo, y devuelven **ERANGE** y establecer **errno** a **ERANGE** cuando la cadena de destino es demasiado pequeña.
+Si *dest* o *src* es un puntero nulo, o si el tamaño de la cadena de destino *dest_size* es demasiado pequeño, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y **establecen errno** en **EINVAL** cuando *dest* o *src* es un puntero nulo, y devuelven **ERANGE** y establecen **errno** en **ERANGE** cuando la cadena de destino es demasiado pequeña.
 
 Si la ejecución finaliza correctamente, la cadena de destino siempre termina en null.
 
-En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla —que pueden realizar automáticamente una inferencia de la longitud de búfer para eliminar la necesidad de especificar un argumento de tamaño— y pueden reemplazar automáticamente funciones anteriores no seguras por sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla —que pueden realizar automáticamente una inferencia de la longitud de búfer para eliminar la necesidad de especificar un argumento de tamaño— y pueden reemplazar automáticamente funciones anteriores no seguras por sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -155,11 +166,11 @@ Las versiones de la biblioteca de depuración de estas funciones rellenan primer
 |**wcscpy_s**|\<string.h> o \<wchar.h>|
 |**_mbscpy_s**|\<mbstring.h>|
 
-Estas funciones son específicas de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Estas funciones son específicas de Microsoft. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-A diferencia del código de calidad de producción, en este ejemplo llama a las funciones de cadena segura sin comprobación de errores:
+A diferencia del código de calidad de producción, este ejemplo llama a las funciones de cadena segura sin comprobar si hay errores:
 
 ```C
 // crt_strcpy_s.c
@@ -189,7 +200,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Al compilar el código de C++, las versiones de plantilla pueden ser más fáciles de usar.
+Al compilar código de C++, es posible que las versiones de la plantilla sean más fáciles de usar.
 
 ```cpp
 // crt_wcscpy_s.cpp

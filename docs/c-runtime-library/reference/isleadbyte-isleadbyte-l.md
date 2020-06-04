@@ -1,10 +1,12 @@
 ---
 title: isleadbyte, _isleadbyte_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 4/2/2020
+api_name:
 - _isleadbyte_l
 - isleadbyte
-apilocation:
+- _o__isleadbyte_l
+- _o_isleadbyte
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +18,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- api-ms-win-crt-private-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
@@ -28,14 +34,14 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531895"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909539"
 ---
-# <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
+# <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
 Determina si un carácter es el byte inicial de un carácter multibyte.
 
@@ -51,20 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*unidad*<br/>
 Entero que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**isleadbyte** devuelve un valor distinto de cero si el argumento cumple la condición de prueba o 0 si no es así. En la configuración regional "C" y un byte en el juego de caracteres de las configuraciones regionales (SBCS), **isleadbyte** siempre devuelve 0.
+**isleadbyte** devuelve un valor distinto de cero si el argumento cumple la condición de prueba o 0 si no es así. En la configuración regional de "C" y en las configuraciones regionales de juegos de caracteres de un solo byte (SBCS), **isleadbyte** siempre devuelve 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **isleadbyte** macro devuelve un valor distinto de cero si su argumento es el primer byte de un carácter multibyte. **isleadbyte** genera un resultado significativo para cualquier argumento entero comprendido entre -1 (**EOF**) a **UCHAR_MAX** (0xFF), ambos inclusive.
+La macro **isleadbyte** devuelve un valor distinto de cero si su argumento es el primer byte de un carácter multibyte. **isleadbyte** genera un resultado significativo para cualquier argumento de tipo entero comprendido entre-1 (**EOF**) y **UCHAR_MAX** (0xFF), ambos incluidos.
 
-El tipo de argumento esperado **isleadbyte** es **int**; si se pasa un carácter con signo, el compilador podría convertirlo en un entero mediante la extensión de signo y producir resultados imprevisibles.
+El tipo de argumento esperado de **isleadbyte** es **int**; Si se pasa un carácter con signo, el compilador puede convertirlo en un entero por la extensión de signo, lo que produce resultados imprevisibles.
 
-La versión de esta función con el **_l** sufijo es idéntico, salvo que usa la configuración regional pasada en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional.
+La versión de esta función con el sufijo **_L** es idéntica, salvo que usa la configuración regional que se pasa en lugar de la configuración regional actual para su comportamiento dependiente de la configuración regional.
+
+De forma predeterminada, el ámbito de este estado global de esta función es la aplicación. Para cambiar esto, vea [estado global en CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -79,10 +87,10 @@ La versión de esta función con el **_l** sufijo es idéntico, salvo que usa la
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>
-[Configuración regional](../../c-runtime-library/locale.md)<br/>
-[_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)<br/>

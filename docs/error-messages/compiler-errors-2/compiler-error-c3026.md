@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3026
 ms.assetid: 3297060e-cc5b-4600-a2db-09bfc4ffa21f
-ms.openlocfilehash: da3c42433448dccea9f33e34b771da85d7e5b747
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6779e4181525a9fcb855712f762974d9b49913e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574375"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741812"
 ---
 # <a name="compiler-error-c3026"></a>Error del compilador C3026
 
@@ -23,7 +23,7 @@ Se pasó un valor entero a una cláusula, pero el valor no era un número positi
 
 El ejemplo siguiente genera la advertencia C3026:
 
-```
+```cpp
 // C3026.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

@@ -1,11 +1,11 @@
 ---
 title: clog10, clog10f, clog10l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog10
 - clog10f
 - clog10l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog10
 - clog10f
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clog10f function
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
-ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a840494caf3c34f09d8c90970988e847be712cb4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506917"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939109"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10, clog10f, clog10l
 
@@ -73,13 +76,13 @@ Los valores de devolución posibles son:
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **clog10** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **clog10** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **clog10** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **clog10** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**clog10**, **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
+|**clog10**,               **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

@@ -1,8 +1,6 @@
 ---
 title: Clases de controles OLE
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - custom controls [MFC], classes
@@ -12,45 +10,45 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 909da3dc7b4f0298e6e5476ed7716257cc4d101d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47c28520d592c4bd49ab6cb40edbb2f5ddf59846
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509573"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447648"
 ---
 # <a name="ole-control-classes"></a>Clases de controles OLE
 
-Estas son las clases principales que usa al escribir controles OLE. El `COleControlModule` clase en un módulo de control OLE es como la [CWinApp](../mfc/reference/cwinapp-class.md) clase en una aplicación. Cada módulo implementa uno o varios controles OLE; Estos controles se representan mediante `COleControl` objetos. Estos controles comunican con sus contenedores con `CConnectionPoint` objetos.
+Estas son las clases principales que se usan al escribir controles OLE. La clase `COleControlModule` en un módulo de control OLE es como la clase [CWinApp](../mfc/reference/cwinapp-class.md) en una aplicación. Cada módulo implementa uno o más controles OLE; Estos controles se representan mediante objetos `COleControl`. Estos controles se comunican con sus contenedores mediante `CConnectionPoint` objetos.
 
-El `CPictureHolder` y `CFontHolder` clases encapsulan las interfaces COM para imágenes y fuentes, mientras que el `COlePropertyPage` y `CPropExchange` clases le ayudarán a implementar páginas de propiedades y persistencia de la propiedad para el control.
+Las clases `CPictureHolder` y `CFontHolder` encapsulan interfaces COM para imágenes y fuentes, mientras que las clases `COlePropertyPage` y `CPropExchange` ayudan a implementar páginas de propiedades y persistencia de propiedades para el control.
 
 [COleControlModule](../mfc/reference/colecontrolmodule-class.md)<br/>
-Reemplaza el `CWinApp` clase para el módulo de control OLE. Derivar de la `COleControlModule` clase para desarrollar un objeto de módulo de control OLE. Proporciona funciones miembro para inicializar el módulo del control OLE.
+Reemplaza la clase `CWinApp` del módulo de control OLE. Derive de la clase `COleControlModule` para desarrollar un objeto de módulo de control OLE. Proporciona funciones miembro para inicializar el módulo del control OLE.
 
 [COleControl](../mfc/reference/colecontrol-class.md)<br/>
-Derivar de la `COleControl` clase para desarrollar un control OLE. Deriva `CWnd`, esta clase hereda toda la funcionalidad de un objeto de ventana de Windows más funcionalidad específicas de OLE adicional, como la activación de eventos y la capacidad para admitir los métodos y propiedades.
+Derive de la clase `COleControl` para desarrollar un control OLE. Derivada de `CWnd`, esta clase hereda toda la funcionalidad de un objeto de ventana de Windows más funcionalidad adicional específica de OLE, como el desencadenamiento de eventos y la capacidad de admitir métodos y propiedades.
 
 [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)<br/>
-La `CConnectionPoint` clase define un tipo especial de interfaz que se utiliza para comunicarse con otros objetos OLE, denominados punto de conexión. Un punto de conexión implementa una interfaz de salida que es capaz de iniciar acciones en otros objetos, como la activación de eventos y notificaciones de cambio.
+La clase `CConnectionPoint` define un tipo especial de interfaz que se utiliza para comunicarse con otros objetos OLE, denominado punto de conexión. Un punto de conexión implementa una interfaz de salida que puede iniciar acciones en otros objetos, como desencadenar eventos y notificaciones de cambios.
 
 [CPictureHolder](../mfc/reference/cpictureholder-class.md)<br/>
-Encapsula la funcionalidad de un objeto de imagen de Windows y el `IPicture` COM de la interfaz; usado para implementar la propiedad de imagen personalizada de un control OLE.
+Encapsula la funcionalidad de un objeto de imagen de Windows y la interfaz COM de `IPicture`; se usa para implementar la propiedad de imagen personalizada de un control OLE.
 
 [CFontHolder](../mfc/reference/cfontholder-class.md)<br/>
-Encapsula la funcionalidad de un objeto de fuente de Windows y el `IFont` COM de la interfaz; usado para implementar la propiedad Font estándar de un control OLE.
+Encapsula la funcionalidad de un objeto de fuente de Windows y la interfaz COM de `IFont`; se usa para implementar la propiedad Font estándar de un control OLE.
 
 [COlePropertyPage](../mfc/reference/colepropertypage-class.md)<br/>
-Muestra las propiedades de OLE controlan en una interfaz gráfica, similar a un cuadro de diálogo.
+Muestra las propiedades de un control OLE en una interfaz gráfica, similar a un cuadro de diálogo.
 
 [CPropExchange](../mfc/reference/cpropexchange-class.md)<br/>
-Admite la implementación de persistencia de la propiedad para controles OLE. Análoga a [CDataExchange](../mfc/reference/cdataexchange-class.md) para cuadros de diálogo.
+Admite la implementación de la persistencia de propiedad para los controles OLE. Análogo a [CDataExchange (](../mfc/reference/cdataexchange-class.md) para los cuadros de diálogo.
 
 [CMonikerFile](../mfc/reference/cmonikerfile-class.md)<br/>
-Toma un moniker, o una representación de cadena que puede convertir en un moniker y lo enlaza sincrónicamente en el flujo para el que el moniker es un nombre.
+Toma un moniker o una representación de cadena que puede realizar en un moniker y lo enlaza de forma sincrónica a la secuencia para la que el moniker es un nombre.
 
 [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)<br/>
-Funciona de forma similar a `CMonikerFile`; sin embargo, enlaza el moniker de forma asincrónica en la secuencia para que el moniker es un nombre.
+Funciona de forma similar a `CMonikerFile`; sin embargo, enlaza el moniker de forma asincrónica a la secuencia para la que el moniker es un nombre.
 
 [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)<br/>
 Implementa una propiedad de control OLE que se puede cargar de forma asincrónica.
@@ -59,12 +57,11 @@ Implementa una propiedad de control OLE que se puede cargar de forma asincrónic
 Implementa una propiedad de control OLE transferida de forma asincrónica y almacenada en memoria caché en un archivo de memoria.
 
 [COleCmdUI](../mfc/reference/colecmdui-class.md)<br/>
-Permite a un documento activo recibir comandos que se originan en la interfaz de usuario de su contenedor (por ejemplo, FileNew, abrir, imprimir y así sucesivamente) y un contenedor recibir comandos que se originan en la interfaz de usuario del documento activo.
+Permite que un documento activo reciba comandos que se originan en la interfaz de usuario de su contenedor (como archivonuevo, apertura, impresión, etc.) y permite que un contenedor reciba comandos que se originan en la interfaz de usuario del documento activo.
 
 [COleSafeArray](../mfc/reference/colesafearray-class.md)<br/>
-Funciona con las matrices de tipo y dimensión arbitrarios.
+Funciona con matrices de tipo y dimensión arbitrarios.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general de clases](../mfc/class-library-overview.md)
-
+[Información general sobre clases](../mfc/class-library-overview.md)

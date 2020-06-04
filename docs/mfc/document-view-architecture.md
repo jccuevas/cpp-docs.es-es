@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389686"
 ---
 # <a name="documentview-architecture"></a>Arquitectura documento/vista
 
@@ -80,7 +80,7 @@ Documentos, sus vistas asociadas y las ventanas de marco de las vistas que se cr
 
 - [Uso de clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-- [Muestras](../visual-cpp-samples.md)
+- [Muestras](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vea también
 
@@ -90,4 +90,3 @@ Documentos, sus vistas asociadas y las ventanas de marco de las vistas que se cr
 [Las plantillas de documento y el proceso de creación de documento/vista](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Crear documentos y vistas](../mfc/document-view-creation.md)<br/>
 [Creación de nuevos documentos, ventanas y vistas](../mfc/creating-new-documents-windows-and-views.md)
-

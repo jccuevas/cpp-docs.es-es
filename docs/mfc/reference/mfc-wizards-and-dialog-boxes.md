@@ -2,12 +2,12 @@
 title: Asistentes y cuadros de diálogo de MFC
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310193"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Asistentes y cuadros de diálogo de MFC
 
@@ -28,4 +28,3 @@ Los asistentes de Microsoft Foundation Class (MFC) generan código reutilizable 
 |[Compatibilidad con ATL en un proyecto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|Crea los encabezados y las macros que son necesarios por Active Template Library (ATL).|
 |[Asistente para clases MFC](../../mfc/reference/mfc-class-wizard.md)|Crea un archivo .h y un archivo. cpp.|
 |[Aplicaciones de escritorio de MFC](../../mfc/mfc-desktop-applications.md)|Vínculos a la documentación de MFC.|
-

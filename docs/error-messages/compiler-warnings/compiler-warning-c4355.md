@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4355
 ms.assetid: b819ecab-8a07-42d7-8fa4-1180d51626c0
-ms.openlocfilehash: 6b74c8dd5ce9860cb218d21790f12ba05e9be22f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddc0d1968ae373ff1e81c98a513e6f84fdb885e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554185"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165332"
 ---
 # <a name="compiler-warning-c4355"></a>Advertencia del compilador C4355
 
 'this': utilizado en la lista de inicializadores de miembro base
 
-El **esto** puntero es válido únicamente en funciones miembro no estáticas. No se puede usar en la lista de inicializadores para una clase base.
+El puntero **this** solo es válido dentro de las funciones miembro no estáticas. No se puede usar en la lista de inicializadores de una clase base.
 
-Los constructores de clase base y miembros de clase se denominan antes **esto** constructor. De hecho, ha pasado un puntero a un objeto no construido a otro constructor. Si esos otros constructores tener acceso a los miembros o llamar a funciones miembro en esto, el resultado será undefined. No se debe usar el **esto** puntero hasta que finalice la construcción todas.
+Se llama a los constructores de clase base y a los constructores de miembros de clase antes de **este** constructor. En efecto, ha pasado un puntero a un objeto no construido a otro constructor. Si esos otros constructores obtienen acceso a los miembros o llaman a funciones miembro de este, el resultado será undefined. No debe utilizar el puntero **this** hasta que se haya completado toda la construcción.
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 
-El ejemplo siguiente genera C4355:
+En el ejemplo siguiente se genera C4355:
 
-```
+```cpp
 // C4355.cpp
 // compile with: /w14355 /c
 #include <tchar.h>

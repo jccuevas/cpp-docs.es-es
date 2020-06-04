@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1507
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
-ms.openlocfilehash: 35e21ce2db086506d06bb3ea40781d1c68c7a75f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f4a642c712f9973b8d7c696dd981a00777c8641
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560412"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197735"
 ---
 # <a name="bscmake-error-bk1507"></a>Error de BSCMAKE BK1507
 
-no se puede abrir el archivo temporal 'filename' [: motivo]
+no se puede abrir el archivo temporal ' nombredearchivo ' [: razón]
 
 BSCMAKE no puede abrir un archivo temporal.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. El **TMP** variable de entorno no se establece en una unidad válida y un directorio.
+1. La variable de entorno **tmp** no está establecida en una unidad y un directorio válidos.
 
-1. Disco lleno.
+1. Un disco completo.

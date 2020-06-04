@@ -1,6 +1,6 @@
 ---
 title: __outdwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 5579258c813850cdb8f29758bb4bd5d87270467f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 50908a65795af617f18a497c073cfefe009dfd80
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330286"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217163"
 ---
-# <a name="outdwordstring"></a>__outdwordstring
+# <a name="__outdwordstring"></a>__outdwordstring
 
 **Específicos de Microsoft**
 
-Genera el `rep outsd` instrucción, que envía `Count` a partir de palabras dobles `Buffer` fuera del puerto de E/S especificado por `Port`.
+Genera la `rep outsd` instrucción, que envía `Count` palabras dobles a `Buffer` partir del puerto de e/s especificado por `Port`.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __outdwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __outdwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Puerto*<br/>
-[in] El puerto para enviar los datos.
+*Casilla*\
+de Puerto al que se van a enviar los datos.
 
-*búfer*<br/>
-[in] Un puntero a los datos se envíen el puerto especificado.
+*Búfer*\
+de Puntero a los datos que se van a enviar al puerto especificado.
 
-*Recuento*<br/>
-[in] El número de palabras dobles para enviar.
+*Contabiliza*\
+de Número de palabras dobles que se van a enviar.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,7 +48,7 @@ void __outdwordstring(
 |---------------|------------------|
 |`__outdwordstring`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -58,4 +58,4 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2026
 ms.assetid: 8e64b6e1-b967-479b-be97-d12dc4a8e389
-ms.openlocfilehash: da4c03c681f95efaa5edb159869315b41d027e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9747b1edadc76ceeb502b2c6fd03496b91769f5a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657139"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208070"
 ---
 # <a name="compiler-error-c2026"></a>Error del compilador C2026
 
 cadena demasiado grande, caracteres finales truncados
 
-La cadena era mayor que el límite de 16380 caracteres de byte único.
+La cadena era más larga que el límite de 16380 caracteres de un solo byte.
 
-Antes de la concatenación de cadenas adyacentes, una cadena no puede tener más de 16380 caracteres de byte único.
+Antes de la concatenación de cadenas adyacentes, una cadena no puede tener más de 16380 caracteres de un solo byte.
 
-Una cadena Unicode de aproximadamente la mitad de esta longitud también generará este error.
+Una cadena Unicode de aproximadamente una mitad esta longitud también generará este error.
 
-Si tiene una cadena que se define como sigue, generará un error C2026:
+Si tiene una cadena definida como sigue, genera C2026:
 
 ```
 char sz[] =
@@ -33,7 +33,7 @@ long string here\
 ";
 ```
 
-Se podría dividirla como sigue:
+Podría dividirlo de la siguiente manera:
 
 ```
 char sz[] =
@@ -43,4 +43,4 @@ imagine a really, really "
 ";
 ```
 
-Es posible que desee almacenar los literales de cadena excepcionalmente grande (32 KB o más) en un recurso personalizado o un archivo externo. Consulte [crear un nuevo personalizado o recurso de datos](../../windows/creating-a-new-custom-or-data-resource.md) para obtener más información.
+Es posible que desee almacenar literales de cadena de gran tamaño (32K o más) en un recurso personalizado o en un archivo externo. Vea [crear un nuevo recurso personalizado o de datos](../../windows/creating-a-new-custom-or-data-resource.md) para obtener más información.

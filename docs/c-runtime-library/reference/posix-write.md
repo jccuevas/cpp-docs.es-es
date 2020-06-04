@@ -1,9 +1,9 @@
 ---
-title: escribir
-ms.date: 11/04/2016
-apiname:
+title: write
+ms.date: 12/16/2019
+api_name:
 - write
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,24 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - write
 helpviewer_keywords:
 - write function
 ms.assetid: 1cbf112e-b9ef-4df6-993a-83abd4213acd
-ms.openlocfilehash: c9093670d075e75b5f98b8cd4a87e0fb56025374
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2892bb5f342f3bec26e82da069d013e76f877b03
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617417"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300786"
 ---
-# <a name="write"></a>escribir
+# <a name="write"></a>write
 
-Esta función POSIX está en desuso. En su lugar, use la función [_write](write.md), compatible con ISO C++.
+El nombre de la función POSIX implementada por Microsoft `write` es un alias en desuso para la función [_write](write.md) . De forma predeterminada, genera una [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). El nombre está en desuso porque no sigue las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, todavía se admite la función.
+
+En su lugar, se recomienda usar [_write](write.md) . O bien, puede seguir usando el nombre de esta función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

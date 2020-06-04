@@ -3,12 +3,12 @@ title: / USEPROFILE (datos de uso PGO con LTCG)
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317138"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/ USEPROFILE (ejecutar PGO en modo de seguro para subprocesos)
 
@@ -16,14 +16,14 @@ Esta opción del vinculador junto con [/LTCG (generación de código en tiempo d
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ USEPROFILE**[**:**{**agresivo al VOLANTE**|**PGD =**_filename_}]
+> **/USEPROFILE**[**:**{**AGGRESSIVE**|**PGD=**_filename_}]
 
 ### <a name="arguments"></a>Argumentos
 
-**AGRESIVA**<br/>
+**AGGRESSIVE**<br/>
 Este argumento opcional especifica que se deben usar las optimizaciones de velocidad agresiva durante la generación de código optimizado.
 
-**PGD**=*nombre de archivo*<br/>
+**PGD**=*filename*<br/>
 Especifica un nombre de archivo base para el archivo .pgd. De forma predeterminada, el vinculador utiliza el nombre de archivo ejecutable base con una extensión de pgd.
 
 ## <a name="remarks"></a>Comentarios
@@ -38,7 +38,7 @@ El **/useprofile** opción del vinculador es nueva en Visual Studio 2015.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **vinculador** > **optimización** página de propiedades.
 
@@ -56,5 +56,5 @@ El **/useprofile** opción del vinculador es nueva en Visual Studio 2015.
 
 [/GENPROFILE y /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md)<br/>
-[Variables de entorno para las optimizaciones guiadas por perfiles](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optimizaciones guiadas por perfiles](../profile-guided-optimizations.md)<br/>
+[Variables de entorno para las optimizaciones guiadas por perfiles](../environment-variables-for-profile-guided-optimizations.md)<br/>

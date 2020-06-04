@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2170
 ms.assetid: d5c663f0-2459-4e11-a8bf-a52b62f3c71d
-ms.openlocfilehash: 04d41a50bc0d5e811e47e5f9d146362a543f26f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 828e5bbca0b796864ec8b364ee69c18a3b5eea00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445700"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206962"
 ---
 # <a name="compiler-error-c2170"></a>Error del compilador C2170
 
-'identifier': no se declara como una función, no puede ser intrínseco
+' Identifier ': no se ha declarado como una función, no puede ser intrínseco
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 

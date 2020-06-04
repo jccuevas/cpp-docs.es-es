@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DELAYLOAD linker option
 - delayed loading of DLLs, /DELAYLOAD option
 ms.assetid: 39ea0f1e-5c01-450f-9c75-2d9761ff9b28
-ms.openlocfilehash: 3833c2006a93ee73d2ed68ab7be5e869935143ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e92b470b7b5e76b39371f333cbbda150e7f6e8c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273366"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Retrasar importación de carga)
 
@@ -28,13 +28,13 @@ Nombre de un archivo DLL cuya carga se desea retrasar.
 
 ## <a name="remarks"></a>Comentarios
 
-La opción /DELAYLOAD hace que el archivo DLL especificado por `dllname` se cargue solo en la primera llamada del programa a una función en ese archivo DLL. Para obtener más información, consulte [compatibilidad con vinculador para archivos DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md). Puede usar esta opción tantas veces como sea necesario para especificar todos los archivos DLL que desee. Debe utilizar Delayimp.lib cuando enlace el programa o puede implementar su propia función del asistente de retraso de carga.
+La opción /DELAYLOAD hace que el archivo DLL especificado por `dllname` se cargue solo en la primera llamada del programa a una función en ese archivo DLL. Para obtener más información, consulte [compatibilidad con vinculador para archivos DLL de carga retrasada](linker-support-for-delay-loaded-dlls.md). Puede usar esta opción tantas veces como sea necesario para especificar todos los archivos DLL que desee. Debe utilizar Delayimp.lib cuando enlace el programa o puede implementar su propia función del asistente de retraso de carga.
 
-El [/DELAY](../../build/reference/delay-delay-load-import-settings.md) opción especifica el enlace y carga las opciones para cada archivo DLL de carga retrasada.
+El [/DELAY](delay-delay-load-import-settings.md) opción especifica el enlace y carga las opciones para cada archivo DLL de carga retrasada.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. En el **vinculador** carpeta, seleccione el **entrada** página de propiedades.
 
@@ -46,5 +46,5 @@ El [/DELAY](../../build/reference/delay-delay-load-import-settings.md) opción e
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

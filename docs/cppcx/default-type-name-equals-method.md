@@ -1,19 +1,17 @@
 ---
 title: default::(type_name)::Equals (Método)
 ms.date: 12/30/2016
-f1_keywords:
-- VCCORLIB/Platform::Object::Equals
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-ms.openlocfilehash: 39c238d682352ec4c4b332ab82dea4135537c9f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57143da18e98ed2d034343726ac96a92b4d1b23c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595707"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444326"
 ---
-# <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals (Método)
+# <a name="defaulttype_nameequals-method"></a>default::(type_name)::Equals (Método)
 
-Determina si el objeto especificado es igual al objeto actual.
+Determina si el objeto especificado es igual que el objeto actual.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,7 +28,7 @@ Objeto que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los objetos son iguales; en caso contrario **false**.
+**true** si los objetos son iguales; de lo contrario, **false**.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -42,6 +40,6 @@ Objeto que se va a comparar.
 
 **Encabezado:** vccorlib.h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [espacio de nombres predeterminado](../cppcx/default-namespace.md)

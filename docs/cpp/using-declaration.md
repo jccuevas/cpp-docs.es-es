@@ -1,24 +1,22 @@
 ---
-title: using (declaración)
+title: declaración using
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using declaration
-- declaring namespaces, unqualified names in namespaces
 - declarations [C++], using-declaration
 - namespaces [C++], unqualified names in
 - using keyword [C++]
-- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559856"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187848"
 ---
-# <a name="using-declaration"></a>using (declaración)
+# <a name="using-declaration"></a>declaración using
 
-La declaración using introduce un nombre en la región declarativa en el que la declaración using aparece.
+La declaración **using** introduce un nombre en la región declarativa en la que aparece la declaración using.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,15 +27,15 @@ using declarator-list ;
 
 ### <a name="parameters"></a>Parámetros
 
-*especificador de nombre anidado* una secuencia de espacio de nombres, clase, o los nombres de enumeración y operadores de resolución de ámbito (::), que termina con un operador de resolución de ámbito. Un operador de resolución de ámbito solo puede utilizarse para introducir un nombre de espacio de nombres global. La palabra clave **typename** es opcional y puede utilizarse para resolver nombres dependientes cuando se introducen en una plantilla de clase de una clase base.
+*Nested-Name-Specifier* Secuencia de nombres de espacio de nombres, clase o enumeración y operadores de resolución de ámbito (::), terminada por un operador de resolución de ámbito. Se puede usar un solo operador de resolución de ámbito para introducir un nombre del espacio de nombres global. La palabra clave **TypeName** es opcional y se puede usar para resolver nombres dependientes cuando se introducen en una plantilla de clase de una clase base.
 
-*incompleto-id* sin calificar Id. de expresión, que puede ser un identificador, un nombre de operador sobrecargado, un definido por el usuario literal operador o conversión de nombre de función, un nombre de un destructor de clase o una lista de nombre y el argumento de plantilla.
+*inqualified-ID* Una expresión de ID. incompleta, que puede ser un identificador, un nombre de operador sobrecargado, un nombre de función de conversión o un operador literal definido por el usuario, un nombre de destructor de clase o un nombre de plantilla y una lista de argumentos.
 
-*lista de declaradores* una lista separada por comas de [**typename**] *especificador de nombre anidado* *incompleto-id* declaradores, seguidos opcionalmente por una botón de puntos suspensivos.
+*lista de declaradores* Lista separada por comas de [**TypeName**] *declaradores* de nombre-de- *especificador Nested-Name-Specifier* , seguido opcionalmente por puntos suspensivos.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Una declaración using introduce un nombre no completo como sinónimo de una entidad declarado en otro lugar. Permite un nombre único de un espacio de nombres concreto se puede usar sin calificación explícita en la región de declaración en la que aparece. Esto es por el contrario el [#using](../cpp/namespaces-cpp.md#using_directives), lo que permite *todos los* los nombres de un espacio de nombres se puede usar sin calificación. El **mediante** también se utiliza la palabra clave para [escriba alias](../cpp/aliases-and-typedefs-cpp.md).
+Una declaración Using introduce un nombre no completo como sinónimo de una entidad declarada en otro lugar. Permite usar un nombre único de un espacio de nombres específico sin la calificación explícita en la región de declaración en la que aparece. Esto contrasta con la [directiva using](../cpp/namespaces-cpp.md#using_directives), que permite usar *todos* los nombres de un espacio de nombres sin calificación. La palabra clave **using** también se utiliza para los [alias de tipo](../cpp/aliases-and-typedefs-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -127,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>Ejemplo
 
-Los miembros se declaran mediante un uso de la declaración se puede hacer referencia mediante el uso de una calificación explícita. El prefijo `::` hace referencia al espacio de nombres global.
+Se puede hacer referencia a los miembros declarados mediante una declaración Using mediante la calificación explícita. El prefijo `::` hace referencia al espacio de nombres global.
 
 ```cpp
 // using_declaration3.cpp
@@ -169,7 +167,7 @@ In A::g
 
 Cuando se crea una declaración using, el sinónimo creado por la declaración solo hace referencia a las definiciones que son válidas en el lugar de la declaración using. Las definiciones que se agregan a un espacio de nombres después de la declaración using no son sinónimos válidos.
 
-Un nombre definido por un **mediante** declaración es un alias para su nombre original. No afecta al tipo, la vinculación u otros atributos de la declaración original.
+Un nombre definido por una declaración **using** es un alias para su nombre original. No afecta al tipo, la vinculación u otros atributos de la declaración original.
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -306,7 +304,7 @@ In D::g(char)
 
 Todas las instancias de un nombre mencionado en una declaración using deben ser accesibles. En concreto, si una clase derivada utiliza una declaración using para tener acceso a un miembro de una clase base, el nombre de miembro debe ser accesible. Si el nombre es el de una función miembro sobrecargada, todas las funciones enumeradas deben ser accesibles.
 
-Para obtener más información sobre la accesibilidad de miembros, vea [Control de acceso de miembro](../cpp/member-access-control-cpp.md).
+Para obtener más información sobre la accesibilidad de los miembros, vea [member-access control](../cpp/member-access-control-cpp.md).
 
 ```cpp
 // using_declaration_inheritance2.cpp
@@ -327,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacios de nombres](../cpp/namespaces-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

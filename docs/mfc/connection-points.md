@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6f934c4a5a24c5d54805a60e81cb0afdcdc2c14a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153325"
 ---
 # <a name="connection-points"></a>Puntos de conexión
 
@@ -67,4 +67,3 @@ En este ejemplo recupera el conjunto actual de conexiones en el `SampleConnPt` p
 ## <a name="see-also"></a>Vea también
 
 [MFC COM](../mfc/mfc-com.md)
-

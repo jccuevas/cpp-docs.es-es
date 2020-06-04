@@ -1,6 +1,6 @@
 ---
 title: Marco (MFC)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - encapsulation [MFC], Win32 API
 - MFC, application framework
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: ff29a867a8351a51ad7f09a5ca31d871fc67bab8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589311"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303414"
 ---
 # <a name="framework-mfc"></a>Marco (MFC)
 
-El trabajo con el marco de trabajo de la biblioteca Microsoft Foundation Class (MFC) se basa en gran medida en algunas clases principales y varias herramientas de Visual C++. Algunas clases encapsulan una gran parte de la interfaz de programación de aplicaciones (API) Win32. Otras clases encapsulan los conceptos de las aplicaciones, como documentos, vistas y la propia aplicación. Algunas clases encapsulan funciones OLE y la funcionalidad de acceso a datos ODBC y DAO.
+Su trabajo con el marco de biblioteca de Microsoft Foundation Class (MFC) se basa en gran medida en algunas clases principales y C++ varias herramientas visuales. Algunas clases encapsulan una gran parte de la interfaz de programación de aplicaciones (API) de Win32. Otras clases encapsulan conceptos de aplicaciones como documentos, vistas y la propia aplicación. Otras personas encapsulan las características OLE y la funcionalidad de acceso a datos de ODBC y DAO.  (DAO es compatible con Office 2013. DAO 3,6 es la versión final y se considera obsoleta.)
 
-Por ejemplo, se encapsula el concepto de Win32 de ventana mediante la clase MFC `CWnd`. Es decir, una clase de C++ denomina `CWnd` encapsula o "ajusta" los `HWND` identificador que representa una ventana de Windows. Del mismo modo, la clase `CDialog` encapsula los cuadros de diálogo de Win32.
+Por ejemplo, Win32 concepto de ventana está encapsulado por la clase MFC `CWnd`. Es decir, una C++ clase denominada `CWnd` encapsula o "ajusta" el identificador de `HWND` que representa una ventana de Windows. Del mismo modo, la clase `CDialog` encapsula cuadros de diálogo Win32.
 
-Encapsulación significa que la clase de C++ `CWnd`, por ejemplo, contiene una variable de miembro de tipo `HWND`, y las funciones miembro de la clase encapsulan las llamadas a funciones de Win32 que toman un `HWND` como un parámetro. Las funciones miembro de clase suelen tengan el mismo nombre que la función de Win32 que encapsulan.
+La encapsulación significa que C++ la clase `CWnd`, por ejemplo, contiene una variable miembro de tipo `HWND`y las funciones miembro de la clase encapsulan llamadas a funciones de Win32 que toman un `HWND` como parámetro. Las funciones miembro de clase suelen tener el mismo nombre que la función de Win32 que encapsulan.
 
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
 
 [SDI y MDI](../mfc/sdi-and-mdi.md)
 
@@ -43,7 +43,7 @@ Encapsulación significa que la clase de C++ `CWnd`, por ejemplo, contiene una v
 
 [CWinApp: la clase Application](../mfc/cwinapp-the-application-class.md)
 
-[Las plantillas de documento y el proceso de creación de documento/vista](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Plantillas de documento y el proceso de creación de documentos y vistas](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [Control y asignación de mensajes](../mfc/message-handling-and-mapping.md)
 

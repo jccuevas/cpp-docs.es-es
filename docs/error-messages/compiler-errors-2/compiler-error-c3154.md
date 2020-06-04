@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: d14b921afa3888f1a9497f19bfeaa013b147b086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e40b0c2a56c36b92465fb3bb3451a48c88b5822e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430555"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745933"
 ---
 # <a name="compiler-error-c3154"></a>Error del compilador C3154
 
-Se esperaba ',' antes de puntos suspensivos. No coma separada por puntos suspensivos no compatible con funciones de matriz.
+Se esperaba "," antes de los puntos suspensivos. Los puntos suspensivos no separados por coma no se admiten en funciones de matriz de parámetros.
 
-No se declaró correctamente una función de argumento variable.
+Una función de argumento variable no se declaró correctamente.
 
-Para obtener más información, consulte [listas de argumentos variables (...) (C++ / C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Para obtener más información, vea [listas de argumentos variables (...C++) (/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3154.
+En el ejemplo siguiente se genera C3154.
 
-```
+```cpp
 // C3154.cpp
 // compile with: /clr
 ref struct R {

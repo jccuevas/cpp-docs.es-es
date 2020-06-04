@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2540
 ms.assetid: 92c805a3-2dd9-46ca-a63d-3845c18ecc95
-ms.openlocfilehash: 813733e1ed5079e7b8d1afab1b27b898b0d4a17e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dc5dabee37955cb3f36830fe3c9e975e067be0b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576454"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758624"
 ---
 # <a name="compiler-error-c2540"></a>Error del compilador C2540
 
 expresión no constante como límite de matriz
 
-Una matriz debe tener un límite constante.
+Una matriz debe tener una constante enlazada.
 
-El ejemplo siguiente genera C2540:
+En el ejemplo siguiente se genera C2540:
 
-```
+```cpp
 // C2540.cpp
 void func(int n, int pC[]) {
    int i = ((int [n])pC)[1];   // C2540

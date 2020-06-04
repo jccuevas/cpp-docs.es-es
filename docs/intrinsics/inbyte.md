@@ -1,6 +1,6 @@
 ---
 title: __inbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inbyte
 - __inbyte_cpp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: 63d4e9229eb7c5058587975d0ea04696786a9c73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562154"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222146"
 ---
-# <a name="inbyte"></a>__inbyte
+# <a name="__inbyte"></a>__inbyte
 
 **Específicos de Microsoft**
 
-Genera el `in` instrucción de devolución de un byte lee desde el puerto especificado por `Port`.
+Genera la `in` instrucción, devolviendo una lectura de un solo byte desde el `Port`puerto especificado por.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned char __inbyte(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Puerto*<br/>
-[in] Para leer desde el puerto.
+*Casilla*\
+de Puerto desde el que se va a leer.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Byte leído desde el puerto especificado.
+Byte leído del puerto especificado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,7 +44,7 @@ Byte leído desde el puerto especificado.
 |---------------|------------------|
 |`__inbyte`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
@@ -54,4 +54,4 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)
