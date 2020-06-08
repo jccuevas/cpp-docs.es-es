@@ -1,11 +1,12 @@
 ---
 title: floor, floorf, floorl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - floorf
 - floorl
 - floor
 - _o_floor
+- _o_floorf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911636"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507006"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -80,7 +81,7 @@ Las funciones de **piso** devuelven un valor de punto flotante que representa el
 
 **Floor** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 C++ permite las sobrecargas, de modo que puede llamar a las sobrecargas de **piso** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **Floor** siempre toma y devuelve un **valor Double**.
 
@@ -129,9 +130,9 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[Compatibilidad de punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
