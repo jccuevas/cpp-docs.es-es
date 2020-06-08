@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 73de90667479fff647e399068f9b97453819d27c
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759243"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507058"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -140,6 +140,9 @@ Las [Especificaciones de formato](../../c-runtime-library/format-specification-s
 
 La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
+> [!IMPORTANT]
+> A partir de la versión 2004 de Windows 10 (compilación 19041), la `printf` familia de funciones imprime los números de punto flotante que se representarán exactamente según las reglas IEEE 754 para el redondeo. En versiones anteriores de Windows, los números de punto flotante que se representaban exactamente finales de ' 5 ' siempre se redondeaban. IEEE 754 indica que deben redondear al dígito par más cercano (también conocido como "redondeo bancario"). Por ejemplo, 1,5 y 2,5 se deben redondear a 2. Anteriormente, 1,5 se redondeaba a 2 y 2,5 se redondeaba a 3. Este cambio solo afecta a los números que se van a representar exactamente. Por ejemplo, 2,35 (que, cuando se representa en memoria, está más cerca de 2.35000000000000008) continúa redondeando a 2,4. El redondeo realizado por estas funciones ahora también respeta el modo de redondeo de punto flotante establecido por [fesetround](fegetround-fesetround2.md). Anteriormente, el redondeo siempre escogió FE_TONEAREST comportamiento. Este cambio solo afecta a los programas compilados con Visual Studio 2019, versión 16,2 y versiones posteriores. Para usar el comportamiento de redondeo de punto flotante heredado, vincule con [legacy_stdio_float_rounding. obj](../link-options.md).
+
 ## <a name="example"></a>Ejemplo
 
 ```C
@@ -231,7 +234,7 @@ Address as:   0012FF3C
 [Sintaxis de especificación de formato: funciones printf y wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [Compatibilidad de punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

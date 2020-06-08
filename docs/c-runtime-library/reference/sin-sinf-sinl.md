@@ -1,11 +1,12 @@
 ---
 title: sin, sinf, sinl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - sinl
 - sinf
 - sin
 - _o_sin
+- _o_sinf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915768"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507019"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -76,7 +77,7 @@ Las funciones **sin** devuelven el seno de *x*. Si *x* es mayor o igual que 263,
 
 Para obtener más información sobre los códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Dado que C++ permite las sobrecargas, puede llamar a las sobrecargas de **sin** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **sin** siempre toma y devuelve **Double**.
 
@@ -118,9 +119,9 @@ sin( 1.570796 ) = 1.000000
 cos( 1.570796 ) = 0.000000
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[Compatibilidad de punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
