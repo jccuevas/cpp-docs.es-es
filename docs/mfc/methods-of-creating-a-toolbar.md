@@ -9,28 +9,28 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-ms.openlocfilehash: f269ad990042f51554ec598b0bddbe5a6d7776b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b70e6f4dc15023b878bb58d6b7d0739eeb173d53
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383930"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624251"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Métodos de creación de una barra de herramientas
 
-MFC proporciona dos clases para crear barras de herramientas: [CToolBar](../mfc/reference/ctoolbar-class.md) y [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (que encapsula la API del control común de Windows). `CToolBar` proporciona toda la funcionalidad del control común de barra de herramientas, y controla muchas de las estructuras y configuración de control comunes necesarios para usted. Sin embargo, el ejecutable resultante normalmente será mayor que creados mediante el uso de `CToolBarCtrl`.
+MFC proporciona dos clases para crear barras de herramientas: [CToolBar](reference/ctoolbar-class.md) y [CToolBarCtrl](reference/ctoolbarctrl-class.md) (que incluye la API de control común de Windows). `CToolBar`proporciona toda la funcionalidad del control común de barra de herramientas y controla muchas de las estructuras y configuraciones de control comunes necesarias. sin embargo, el ejecutable resultante será normalmente mayor que el creado con `CToolBarCtrl` .
 
-`CToolBarCtrl` Normalmente, los resultados en un ejecutable más pequeño y quizás prefiera usar `CToolBarCtrl` si no va a integrar la barra de herramientas en la arquitectura MFC. Si tiene previsto usar `CToolBarCtrl` y la barra de herramientas se integran en la arquitectura MFC, debe tomar precauciones adicionales para comunicar las manipulaciones del control de barra de herramientas a MFC. Esta comunicación no es difícil; Sin embargo, es trabajo adicional que será innecesario cuando usas `CToolBar`.
+`CToolBarCtrl`normalmente da como resultado un ejecutable más pequeño y es posible que prefiera usar `CToolBarCtrl` si no desea integrar la barra de herramientas en la arquitectura de MFC. Si tiene previsto utilizar `CToolBarCtrl` e integrar la barra de herramientas en la arquitectura de MFC, debe tener cuidado adicional para comunicar las manipulaciones del control de la barra de herramientas a MFC. Esta comunicación no es difícil. sin embargo, es un trabajo adicional que no es necesario cuando se usa `CToolBar` .
 
-Visual C++ proporciona dos maneras de aprovechar el control común de barra de herramientas.
+Visual C++ proporciona dos maneras de aprovechar el control común de la barra de herramientas.
 
-- Cree la barra de herramientas mediante `CToolBar`y, a continuación, llame a [CToolBar:: GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl) para obtener acceso a la `CToolBarCtrl` funciones miembro.
+- Cree la barra de herramientas mediante `CToolBar` y, a continuación, llame a [CToolBar:: GetToolBarCtrl](reference/ctoolbar-class.md#gettoolbarctrl) para obtener acceso a las `CToolBarCtrl` funciones miembro.
 
-- Cree la barra de herramientas mediante [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)del constructor.
+- Cree la barra de herramientas mediante el constructor de [CToolBarCtrl](reference/ctoolbarctrl-class.md).
 
-Cualquiera de estos métodos le dará acceso a las funciones miembro del control de barra de herramientas. Cuando se llama a `CToolBar::GetToolBarCtrl`, devuelve una referencia a un `CToolBarCtrl` por lo que puede usar cualquier conjunto de funciones miembro de objeto. Consulte [CToolBar](../mfc/reference/ctoolbar-class.md) para obtener información sobre la construcción y creación de una barra de herramientas mediante `CToolBar`.
+Cualquier método le dará acceso a las funciones miembro del control Toolbar. Cuando se llama `CToolBar::GetToolBarCtrl` a, devuelve una referencia a un `CToolBarCtrl` objeto, por lo que puede usar cualquier conjunto de funciones miembro. Vea [CToolBar](reference/ctoolbar-class.md) para obtener información sobre la construcción y creación de una barra de herramientas con `CToolBar` .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Usar CToolBarCtrl](using-ctoolbarctrl.md)<br/>
+[Permite](controls-mfc.md)

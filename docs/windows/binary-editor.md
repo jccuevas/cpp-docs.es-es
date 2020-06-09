@@ -1,5 +1,5 @@
 ---
-title: Editor binarioC++()
+title: Editor binario (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.binary.F1
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 591a6714f1adabb30fda446cad0e79e2c28c30ad
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 955cce012ac30c3413d7d458e263643d0aefa711
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615352"
 ---
-# <a name="binary-editor-c"></a>Editor binarioC++()
+# <a name="binary-editor-c"></a>Editor binario (C++)
 
 > [!CAUTION]
 > Es peligroso editar recursos como cuadros de diálogo, imágenes o menús en el **Editor binario** . Una edición incorrecta podría dañar el recurso y hacerlo ilegible en su editor nativo.
 
 El **Editor binario** permite editar cualquier recurso en el nivel binario en formato hexadecimal o ASCII. También se puede utilizar el [comando Buscar](/visualstudio/ide/reference/find-command) para buscar cadenas ASCII o bytes hexadecimales. Use el **Editor binario** solo cuando necesite ver o realizar pequeños cambios en recursos personalizados o en tipos de recursos no admitidos por el entorno de Visual Studio. El **Editor binario** no está disponible en las ediciones Express.
 
-- Para abrir el **Editor binario** en un archivo nuevo, vaya a **archivo** de menú > **nuevo** **archivo**de > , seleccione el tipo de archivo que desea editar, haga clic en la flecha de lista desplegable situada junto al botón **abrir** y elija **abrir con** > **Editor binario**.
+- Para abrir el **Editor binario** en un archivo nuevo, vaya a menú **archivo**  >  **nuevo**  >  **archivo**, seleccione el tipo de archivo que desea editar, seleccione la flecha de lista desplegable situada junto al botón **abrir** y elija **abrir con**el  >  **Editor binario**.
 
-- Para abrir el **Editor binario** en un archivo existente, vaya a **archivo** de menú > **abrir** > **archivo**, seleccione el archivo que desea editar, haga clic en la flecha de lista desplegable situada junto al botón **abrir** y elija **abrir con** > **Editor binario**.
+- Para abrir el **Editor binario** en un archivo existente, vaya a menú **archivo**  >  **abrir**  >  **archivo**, seleccione el archivo que desea editar, haga clic en la flecha de lista desplegable situada junto al botón **abrir** y elija **abrir con**el  >  **Editor binario**.
 
-   ![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+   ![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    Datos binarios de un cuadro de diálogo mostrado en el **Editor binario**
 
 Solo determinados valores ASCII se representan en el **Editor binario** (de 0X20 a 0x7e). Los caracteres extendidos se muestran como puntos en la sección del valor ASCII del panel derecho del **Editor binario**. Los caracteres imprimibles son valores ASCII de 32 a 126.
@@ -69,7 +69,7 @@ El **Editor binario** le permite:
 1. En el cuadro de diálogo **Abrir con** , seleccione **Editor binario**.
 
 > [!NOTE]
-> Puede usar el [Editor de imágenes](../windows/image-editor-for-icons.md) y el **Editor binario** para trabajar con archivos de recursos en proyectos administrados. Todos los recursos administrados que vaya a editar deberán estar vinculados. Los editores de recursos de Visual Studio no admiten la edición de recursos incrustados.
+> Puede usar el [Editor de imágenes](image-editor-for-icons.md) y el **Editor binario** para trabajar con archivos de recursos en proyectos administrados. Todos los recursos administrados que vaya a editar deberán estar vinculados. Los editores de recursos de Visual Studio no admiten la edición de recursos incrustados.
 
 ### <a name="to-edit-a-resource"></a>Para editar un recurso
 
@@ -90,7 +90,7 @@ Si desea usar el **Editor binario** en un recurso que ya se está editando en ot
 
 Puede buscar cadenas ASCII o bytes hexadecimales. Por ejemplo, para buscar *Hola*, puede buscar la cadena *Hello* o su valor hexadecimal, *48 65 6C 6C 6F*.
 
-1. Vaya a menú **editar** > [Buscar](/visualstudio/ide/reference/find-command).
+1. Vaya a menú **Editar**  >  [Buscar](/visualstudio/ide/reference/find-command).
 
 1. En el cuadro **Buscar** , seleccione una cadena de búsqueda anterior en la lista desplegable o escriba los datos que desea buscar.
 
@@ -100,13 +100,13 @@ Puede buscar cadenas ASCII o bytes hexadecimales. Por ejemplo, para buscar *Hola
 
 Puede crear un nuevo recurso personalizado o de datos colocando el recurso en un archivo independiente mediante la sintaxis de archivo de script de recursos (. RC) normal y, a continuación, incluyendo ese archivo haciendo clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccionando archivos de **inclusión de recursos**.
 
-1. [Cree un archivo .rc](../windows/how-to-create-a-resource-script-file.md) que contenga el recurso personalizado o de datos.
+1. [Cree un archivo .rc](how-to-create-a-resource-script-file.md) que contenga el recurso personalizado o de datos.
 
    Puede escribir datos personalizados en un archivo .rc como cadenas entre comillas terminadas en null o como enteros en formato octal, hexadecimal o decimal.
 
 1. En **Explorador de soluciones**, haga clic con el botón secundario en el archivo. rc del proyecto y seleccione archivos de **inclusión de recursos**.
 
-1. En el cuadro **directivas de tiempo de compilación** , escriba una instrucción `#include` que proporcione el nombre del archivo que contiene el recurso personalizado, por ejemplo:
+1. En el cuadro **directivas de tiempo de compilación** , escriba una `#include` instrucción que proporcione el nombre del archivo que contiene el recurso personalizado, por ejemplo:
 
     ```cpp
     #include mydata.rc
@@ -127,4 +127,4 @@ None
 
 ## <a name="see-also"></a>Consulte también
 
-[Editores de recursos](../windows/resource-editors.md)
+[Editores de recursos](resource-editors.md)

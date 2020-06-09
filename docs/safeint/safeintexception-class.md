@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8149a5e1216e26fafc1e0cd4a489cdad0551607c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349952"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615409"
 ---
 # <a name="safeintexception-class"></a>SafeIntException (Clase)
 
 La clase `SafeInt` usa `SafeIntException` para identificar por qué no se puede realizar una operación matemática.
 
 > [!NOTE]
-> La última versión de [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)esta biblioteca se encuentra en .
+> La versión más reciente de esta biblioteca se encuentra en [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,13 +35,13 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-Nombre                                                    | Descripción
+NOMBRE                                                    | Descripción
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException::SafeIntException](#safeintexception) | Crea un objeto `SafeIntException` .
+[Safeintexception (:: Safeintexception (](#safeintexception) | Crea un objeto `SafeIntException` .
 
 ## <a name="remarks"></a>Observaciones
 
-La [clase SafeInt](../safeint/safeint-class.md) es la única clase que usa la clase `SafeIntException`.
+La [clase SafeInt](safeint-class.md) es la única clase que usa la clase `SafeIntException`.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -53,7 +53,7 @@ La [clase SafeInt](../safeint/safeint-class.md) es la única clase que usa la cl
 
 **Espacio de nombres:** msl::utilities
 
-## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>Safeintexception (:: Safeintexception (
 
 Crea un objeto `SafeIntException` .
 
@@ -67,7 +67,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>Parámetros
 
-*Código*<br/>
+*code*<br/>
 [in] Un valor de datos enumerado que describe el error que se ha producido.
 
 ### <a name="remarks"></a>Observaciones

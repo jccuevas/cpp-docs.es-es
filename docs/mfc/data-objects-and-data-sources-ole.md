@@ -10,35 +10,35 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241216"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616217"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objetos de datos y orígenes de datos (OLE)
 
-Al realizar una transferencia de datos, ya sea mediante el Portapapeles o arrastrar y colocar, los datos tienen un origen y un destino. Una aplicación proporciona los datos para copiar y la otra aplicación acepta para pegar. Cada parte de la transferencia se debe realizar distintas operaciones en los mismos datos para la transferencia se realice correctamente. La biblioteca Microsoft Foundation Class (MFC) proporciona dos clases que representan cada parte de esta transferencia:
+Al realizar una transferencia de datos, ya sea mediante el portapapeles o arrastrando y colocando, los datos tienen un origen y un destino. Una aplicación proporciona los datos para la copia y otra aplicación la acepta para pegarlos. Cada lado de la transferencia debe realizar distintas operaciones en los mismos datos para que la transferencia se realice correctamente. La biblioteca de Microsoft Foundation Class (MFC) proporciona dos clases que representan cada lado de esta transferencia:
 
-- Orígenes de datos (como se implementa mediante `COleDataSource` objetos) que representa el lado de origen de la transferencia de datos. Se crean mediante la aplicación de origen cuando los datos que se copiarán en el Portapapeles, o cuando se proporcionan datos para una operación de arrastrar y colocar.
+- Los orígenes de datos (implementados por `COleDataSource` objetos) representan el lado de origen de la transferencia de datos. Los crea la aplicación de origen cuando se copian los datos en el portapapeles, o cuando se proporcionan datos para una operación de arrastrar y colocar.
 
-- Objetos de datos (como se implementa mediante `COleDataObject` objetos) que representa el lado de destino de la transferencia de datos. Se crean cuando la aplicación de destino tiene datos que se colocan en él, o cuando se solicita para realizar una operación de pegar desde el Portapapeles.
+- Los objetos de datos (implementados por `COleDataObject` objetos) representan el lado de destino de la transferencia de datos. Se crean cuando la aplicación de destino tiene datos colocados en ella o cuando se le pide que realice una operación de pegar desde el portapapeles.
 
-Los siguientes artículos explican cómo usar objetos de datos y orígenes de datos en sus aplicaciones. Esta información se aplica a las aplicaciones de contenedor y servidor, porque ambos se pueden invocar para copiar y pegar datos.
+En los siguientes artículos se explica cómo usar objetos de datos y orígenes de datos en las aplicaciones. Esta información se aplica a las aplicaciones de contenedor y de servidor, ya que se puede llamar a ambas para copiar y pegar datos.
 
-- [Objetos de datos y orígenes de datos: creación y destrucción](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [Objetos de datos y orígenes de datos: Creación y destrucción](data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Objetos de datos y orígenes de datos: manipulación](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Objetos de datos y orígenes de datos: Manipulación](data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Arrastrar y colocar](../mfc/drag-and-drop-ole.md)
+[Arrastrar y colocar](drag-and-drop-ole.md)
 
-[Portapapeles](../mfc/clipboard.md)
+[Portapapeles](clipboard.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[COleDataObject (clase)](../mfc/reference/coledataobject-class.md)<br/>
-[COleDataSource (clase)](../mfc/reference/coledatasource-class.md)
+[OLE](ole-in-mfc.md)<br/>
+[COleDataObject (clase)](reference/coledataobject-class.md)<br/>
+[COleDataSource (clase)](reference/coledatasource-class.md)
