@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: 480f8fca46b13d445f372311ed837475c71a1e9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e5f9ffcebc3725851c599e7b21369f45d0029d81
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626079"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Clientes de Automation: Usar bibliotecas de tipos
 
@@ -29,7 +29,7 @@ Esta información de tipo puede hacerse conocida de varias maneras. La manera re
 
 Para obtener información sobre [MkTypLib](/windows/win32/Midl/differences-between-midl-and-mktyplib), vea el Windows SDK.
 
-Visual C++ puede leer un archivo de biblioteca de tipos y crear una clase de envío derivada de [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Un objeto de esa clase tiene propiedades y operaciones que duplican las del objeto de servidor. La aplicación llama a las propiedades y operaciones de este objeto y la funcionalidad `COleDispatchDriver` heredada de enruta estas llamadas al sistema OLE, que a su vez las enruta al objeto de servidor.
+Visual C++ puede leer un archivo de biblioteca de tipos y crear una clase de envío derivada de [COleDispatchDriver](reference/coledispatchdriver-class.md). Un objeto de esa clase tiene propiedades y operaciones que duplican las del objeto de servidor. La aplicación llama a las propiedades y operaciones de este objeto y la funcionalidad heredada de `COleDispatchDriver` enruta estas llamadas al sistema OLE, que a su vez las enruta al objeto de servidor.
 
 Visual C++ automáticamente mantiene este archivo de biblioteca de tipos si decide incluir la automatización cuando se creó el proyecto. Como parte de cada compilación, el archivo. tlb se generará con MkTypLib.
 
@@ -58,6 +58,6 @@ Visual C++ automáticamente mantiene este archivo de biblioteca de tipos si deci
 
    A continuación, el asistente escribirá el código de las clases de envío con la clase y los nombres de archivo especificados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clientes de automatización](../mfc/automation-clients.md)
+[Clientes de automatización](automation-clients.md)

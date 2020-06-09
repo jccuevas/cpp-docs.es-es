@@ -14,30 +14,30 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7c3130ab9d8dff6551ef0ecbec43e5422dbdc4c4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346121"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617907"
 ---
 # <a name="ole-background-containers-and-servers"></a>Nociones de OLE: Contenedores y servidores
 
-Una aplicación de contenedor es una aplicación que puede incorporar elementos incrustados o vinculados a sus propios documentos. Los documentos administrados por una aplicación de contenedor deben ser capaz de almacenar y mostrar los componentes de documentos OLE, así como los datos creados por la propia aplicación. Una aplicación contenedora también debe permitir a los usuarios insertar nuevos elementos o editar elementos existentes mediante la activación de aplicaciones de servidor cuando sea necesario. Se enumeran los requisitos de la interfaz de usuario de una aplicación contenedora en el artículo [contenedores: Problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md).
+Una aplicación contenedora es una aplicación que puede incorporar elementos incrustados o vinculados en sus propios documentos. Los documentos administrados por una aplicación contenedora deben ser capaces de almacenar y Mostrar componentes de documentos OLE, así como de los datos creados por la propia aplicación. Una aplicación contenedora también debe permitir que los usuarios inserten nuevos elementos o editen los elementos existentes activando las aplicaciones del servidor cuando sea necesario. Los requisitos de la interfaz de usuario de una aplicación de contenedor se muestran en el artículo [contenedores: problemas de la interfaz de usuario](containers-user-interface-issues.md).
 
-Una aplicación de servidor o el componente de aplicación es una aplicación que puede crear componentes de documentos OLE para su uso por aplicaciones de contenedor. Las aplicaciones de servidor suelen permitir arrastrar y colocar o copiar sus datos en el Portapapeles para que una aplicación contenedora puede insertar los datos como un elemento incrustado o vinculado. Una aplicación puede ser un contenedor y un servidor.
+Una aplicación de servidor o aplicación de componentes es una aplicación que puede crear componentes de documentos OLE para su uso por parte de aplicaciones de contenedor. Las aplicaciones de servidor suelen admitir la función de arrastrar y colocar o copiar sus datos en el portapapeles para que una aplicación contenedora pueda insertar los datos como un elemento incrustado o vinculado. Una aplicación puede ser tanto un contenedor como un servidor.
 
-Mayoría de los servidores es aplicaciones independientes o servidores completos; se pueden ejecutar como aplicaciones independientes o se puede iniciar una aplicación contenedora. Un miniservidor es un tipo especial de aplicación de servidor que puede iniciar un contenedor. No se puede ejecutar como una aplicación independiente. Servidores Microsoft Draw y Microsoft Graph son ejemplos de miniservidores.
+La mayoría de los servidores son aplicaciones independientes o servidores completos; pueden ejecutarse como aplicaciones independientes o pueden ser iniciadas por una aplicación contenedora. Un miniservidor es un tipo especial de aplicación de servidor que solo puede iniciar un contenedor. No se puede ejecutar como una aplicación independiente. Los servidores Microsoft Draw y Microsoft Graph son ejemplos de miniservers.
 
-Contenedores y servidores no se comunican directamente. En su lugar, se comunican a través de las bibliotecas de vínculos dinámicos del sistema OLE (DLL). Estos archivos DLL proporcionan funciones que llaman contenedores y servidores y los contenedores y servidores proporcionan funciones de devolución de llamada que llaman los archivos DLL.
+Los contenedores y los servidores no se comunican directamente. En su lugar, se comunican a través de las bibliotecas de vínculos dinámicos (DLL) del sistema OLE. Estos archivos dll proporcionan funciones a las que los contenedores y servidores llaman, y los contenedores y servidores proporcionan funciones de devolución de llamada a las que llaman los archivos dll.
 
-Un contenedor con este medio de comunicación, no es necesario conocer los detalles de implementación de la aplicación de servidor. Permite a un contenedor Aceptar los elementos creados por cualquier servidor sin tener que definir los tipos de servidores con el que puede funcionar. Como resultado, el usuario de una aplicación contenedora puede aprovechar las ventajas de las aplicaciones futuras y formatos de datos. Si estas nuevas aplicaciones son componentes OLE, un documento compuesto podrá incorporar elementos creados por esas aplicaciones.
+Mediante el uso de este medio de comunicación, un contenedor no necesita conocer los detalles de implementación de la aplicación de servidor. Permite que un contenedor acepte elementos creados por cualquier servidor sin tener que definir los tipos de servidores con los que puede trabajar. Como resultado, el usuario de una aplicación contenedora puede aprovechar las ventajas de las aplicaciones y los formatos de datos futuros. Si estas nuevas aplicaciones son componentes OLE, un documento compuesto podrá incorporar elementos creados por esas aplicaciones.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Nociones de OLE](../mfc/ole-background.md)<br/>
-[Nociones de OLE: Implementación de MFC](../mfc/ole-background-mfc-implementation.md)<br/>
-[Contenedores](../mfc/containers.md)<br/>
-[Servidores](../mfc/servers.md)<br/>
-[Contenedores: elementos de cliente](../mfc/containers-client-items.md)<br/>
-[Servidores: elementos del servidor](../mfc/servers-server-items.md)
+[Nociones de OLE](ole-background.md)<br/>
+[Nociones de OLE: Implementación de MFC](ole-background-mfc-implementation.md)<br/>
+[Contenedores](containers.md)<br/>
+[Servidores](servers.md)<br/>
+[Contenedores: Elementos de cliente](containers-client-items.md)<br/>
+[Servidores: Elementos de servidor](servers-server-items.md)

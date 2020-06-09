@@ -10,21 +10,21 @@ helpviewer_keywords:
 - handlers, OnCmdMessage [MFC]
 - OnCmdMessage method [MFC]
 ms.assetid: 8df07024-506f-47e7-bba9-1c3bc5ad8ab6
-ms.openlocfilehash: 6ed2e4c09e2fe413d29ad9953dbb8a03c106e86c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5114fe53a5bac345eb6a55fb6c371f7bc1f698ef
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385302"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624025"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg (Controlador)
 
-Para llevar a cabo el enrutamiento de comandos, llama cada destino del comando el `OnCmdMsg` función de miembro del destino del comando siguiente en la secuencia. Uso de destino del comando `OnCmdMsg` para determinar si puede controlar un comando y su enrutamiento a otro destino de comando si no puede controlarla.
+Para realizar el enrutamiento de comandos, cada destino de comando llama a la `OnCmdMsg` función miembro del siguiente destino del comando en la secuencia. Los destinos de comando usan `OnCmdMsg` para determinar si pueden controlar un comando y enrutarlo a otro destino de comando si no pueden controlarlo.
 
-Cada clase de destino del comando puede reemplazar el `OnCmdMsg` función miembro. Las invalidaciones permiten a cada clase enrutar comandos a un determinado destino siguiente. Una ventana de marco, por ejemplo, siempre enruta los comandos a su ventana secundaria actual o la vista, tal como se muestra en la tabla [ruta estándar de comando](../mfc/command-routing.md).
+Cada clase de destino de comando puede invalidar la `OnCmdMsg` función miembro. Las invalidaciones permiten que cada clase dirija comandos a un destino siguiente determinado. Por ejemplo, una ventana de marco siempre enruta los comandos a su vista o ventana secundaria actual, tal como se muestra en la [ruta de comando](command-routing.md)de tabla estándar.
 
-El valor predeterminado `CCmdTarget` implementación de `OnCmdMsg` utiliza el mapa de mensajes de la clase de destino del comando para buscar una función de controlador para cada mensaje de comando que recibe, de la misma manera que se va a buscar mensajes estándar. Si encuentra a una coincidencia, llama al controlador. Búsqueda de mapa de mensajes se explica en [cómo el marco de las búsquedas de mapas de mensajes](../mfc/how-the-framework-searches-message-maps.md).
+La `CCmdTarget` implementación predeterminada de `OnCmdMsg` usa el mapa de mensajes de la clase de destino de comando para buscar una función de controlador para cada mensaje de comando que recibe, de la misma manera que se busca en los mensajes estándar. Si encuentra una coincidencia, llama al controlador. La búsqueda de mapas de mensajes se explica en [Cómo busca el marco los mapas de mensajes](how-the-framework-searches-message-maps.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Cómo el marco llama a un controlador](../mfc/how-the-framework-calls-a-handler.md)
+[Cómo el marco llama a un controlador](how-the-framework-calls-a-handler.md)

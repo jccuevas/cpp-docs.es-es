@@ -12,18 +12,18 @@ helpviewer_keywords:
 - rich edit controls [MFC], and CRichEditDoc
 - CRichEditView class [MFC], and CRichEditCtrl
 ms.assetid: 4b31c2cc-6ea1-4146-b7c5-b0b5b419f14d
-ms.openlocfilehash: 349a8b5c26b7260c9af496d0f4a3a997ee753020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 584649a2bb2d9a118e390aebf9f7411c3123b1a3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327241"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620710"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Clases relacionadas con controles Rich Edit
 
-El [CRichEditView](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), y [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) clases proporcionan la funcionalidad del control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) en el contexto de la arquitectura documento/vista de MFC. `CRichEditView` mantiene el texto y la característica de formato de texto. `CRichEditDoc` mantiene la lista de elementos de cliente OLE que se encuentran en la vista. `CRichEditCntrItem` proporciona acceso de contenedor para el elemento de cliente OLE. Para modificar el contenido de un `CRichEditView`, utilice [CRichEditView:: GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) para tener acceso a la base de control rich edit.
+Las clases [CRichEditView](reference/cricheditview-class.md), [CRichEditDoc](reference/cricheditdoc-class.md)y [CRichEditCntrItem](reference/cricheditcntritem-class.md) proporcionan la funcionalidad del control Rich Edit ([CRichEditCtrl](reference/cricheditctrl-class.md)) en el contexto de la arquitectura de documento/vista de MFC. `CRichEditView`mantiene el texto y la característica de formato del texto. `CRichEditDoc`mantiene la lista de elementos de cliente OLE que se encuentran en la vista. `CRichEditCntrItem`proporciona acceso de contenedor al elemento de cliente OLE. Para modificar el contenido de un `CRichEditView` , utilice [CRichEditView:: GetRichEditCtrl](reference/cricheditview-class.md#getricheditctrl) para tener acceso al control Rich Edit subyacente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Uso de CRichEditCtrl](using-cricheditctrl.md)<br/>
+[Permite](controls-mfc.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 741106888cdab63a75e090e860269f125c35efa6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456480"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623832"
 ---
-# <a name="alignedstorage-class"></a>aligned_storage (Clase)
+# <a name="aligned_storage-class"></a>aligned_storage (Clase)
 
 Crea un tipo alineado como corresponda.
 
@@ -36,9 +36,9 @@ Tamaño del objeto.
 *Alinea*\
 Alineación del objeto.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La definición `type` de tipo de miembro de plantilla es un sinónimo de un tipo Pod con alineación de *alineación y* *longitud*de tamaño. *Align* debe ser igual a `alignment_of<T>::value` para algún tipo `T`o a la alineación predeterminada.
+La definición de tipo de miembro `type` de plantilla es un sinónimo de un *Align* tipo Pod con alineación de alineación y *longitud*de tamaño. *Align* debe ser igual a `alignment_of<T>::value` para algún tipo `T` o a la alineación predeterminada.
 
 ## <a name="example"></a>Ejemplo
 
@@ -66,11 +66,11 @@ aligned to double == 8
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<type_traits>
+**Encabezado:**\<type_traits>
 
 **Espacio de nombres:** std
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[<type_traits>](../standard-library/type-traits.md)\
-[alignment_of (Clase)](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[alignment_of (clase)](alignment-of-class.md)

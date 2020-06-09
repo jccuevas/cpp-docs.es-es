@@ -5,23 +5,23 @@ helpviewer_keywords:
 - MFC, file operations
 - files [MFC], closing
 ms.assetid: 8415a3a8-3c75-45b0-ac2a-d5385f49bdb3
-ms.openlocfilehash: 69a0960c1edabab00cb71702acda526ee9ebd798
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51e51c88260a51ec44f11ecb5c2a88e645194f4e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326929"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617230"
 ---
 # <a name="closing-files"></a>Cerrar archivos
 
-Como es habitual en las operaciones de E/S, cuando haya terminado con un archivo, debe cerrarlo.
+Como de costumbre en operaciones de e/s, una vez que haya terminado con un archivo, debe cerrarlo.
 
 #### <a name="to-close-a-file"></a>Para cerrar un archivo
 
-1. Use la **cerrar** función miembro. Esta función cierra el archivo de sistema de archivos y vacía los búferes si es necesario.
+1. Utilice la función miembro **Close** . Esta función cierra el archivo del sistema de archivos y vacía los búferes si es necesario.
 
-Si ha asignado la [CFile](../mfc/reference/cfile-class.md) objeto en el marco (como en el ejemplo se muestra en [abrir archivos](../mfc/opening-files.md)), automáticamente se cerrará y, a continuación, se destruye cuando sale del ámbito. Tenga en cuenta que al eliminar el `CFile` objeto no elimina el archivo físico en el sistema de archivos.
+Si ha asignado el objeto [CFile](reference/cfile-class.md) en el marco (como en el ejemplo que se muestra en [abrir archivos](opening-files.md)), el objeto se cerrará automáticamente y se destruirá cuando salga del ámbito. Tenga en cuenta que al eliminar el objeto no se `CFile` elimina el archivo físico en el sistema de archivos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Archivos](../mfc/files-in-mfc.md)
+[Archivos](files-in-mfc.md)

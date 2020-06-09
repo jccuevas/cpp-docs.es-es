@@ -6,26 +6,26 @@ helpviewer_keywords:
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-ms.openlocfilehash: 68a56983bccbdb2ed7f6701577ea5abaa7ea04c6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 623b5f5948d2428ccb4dab37ca227516474f2c1f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346082"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625966"
 ---
 # <a name="containers-user-interface-issues"></a>Contenedores: Problemas de la interfaz de usuario
 
-Debe agregar una serie de características para la interfaz de usuario de la aplicación contenedora para administrar adecuadamente los elementos vinculados e incrustados. Estas características implican cambios en la estructura de menús y a los eventos que controla la aplicación. Para obtener información detallada acerca de ellos, consulte los artículos siguientes:
+Debe agregar varias características a la interfaz de usuario de una aplicación contenedora para administrar adecuadamente los elementos vinculados e incrustados. Estas características implican cambios en la estructura del menú y en los eventos que controla la aplicación. Para obtener información detallada sobre ellos, consulte los siguientes artículos:
 
-|Para obtener información sobre|Vea|
+|Para obtener información acerca de|Vea|
 |------------------------|---------|
-|Adiciones de menú para contenedores|[Menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md)|
-|Recursos adicionales para los contenedores|[Menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md)|
-|Dibujar elementos vinculados o incrustados|[Ejemplo de contenedor](../overview/visual-cpp-samples.md)|
-|Nuevos cuadros de diálogo para contenedores|[Cuadros de diálogo en OLE](../mfc/dialog-boxes-in-ole.md)|
+|Adiciones de menú para contenedores|[Menús y recursos: Adiciones de contenedor](menus-and-resources-container-additions.md)|
+|Recursos adicionales para contenedores|[Menús y recursos: Adiciones de contenedor](menus-and-resources-container-additions.md)|
+|Pintar elementos vinculados o incrustados|[Ejemplo de contenedor](../overview/visual-cpp-samples.md)|
+|Nuevos cuadros de diálogo para contenedores|[Cuadros de diálogo en OLE](dialog-boxes-in-ole.md)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Contenedores](../mfc/containers.md)<br/>
-[Contenedores: características avanzadas](../mfc/containers-advanced-features.md)<br/>
-[Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)
+[Contenedores](containers.md)<br/>
+[Contenedores: Características avanzadas](containers-advanced-features.md)<br/>
+[Menús y recursos (OLE)](menus-and-resources-ole.md)

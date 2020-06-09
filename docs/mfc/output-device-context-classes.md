@@ -11,33 +11,33 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-ms.openlocfilehash: 1d76570e7bfd4ce587b3803235394ec5406d30b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15f5034604f9d6b67574288140b79b144692478
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410205"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615358"
 ---
 # <a name="output-device-context-classes"></a>Clases de resultados (Contexto de dispositivo)
 
-Estas clases encapsulan los diferentes tipos de contextos de dispositivo disponibles en Windows.
+Estas clases encapsulan los distintos tipos de contextos de dispositivo disponibles en Windows.
 
-La mayoría de las clases siguientes encapsula un identificador de un contexto de dispositivo de Windows. Un contexto de dispositivo es un objeto de Windows que contiene información sobre los atributos de dibujo de un dispositivo, como una pantalla o una impresora. Todas las llamadas de dibujos se realizan a través de un objeto de contexto de dispositivo. Las clases más derivadas de `CDC` encapsulan la funcionalidad especializada del contexto de dispositivo, incluida la compatibilidad con metarchivos de Windows.
+La mayoría de las clases siguientes encapsulan un identificador a un contexto de dispositivo de Windows. Un contexto de dispositivo es un objeto de Windows que contiene información sobre los atributos de dibujo de un dispositivo, como una pantalla o una impresora. Todas las llamadas de dibujo se realizan a través de un objeto de contexto de dispositivo. Otras clases derivadas de `CDC` encapsular la funcionalidad especializada de contexto de dispositivo, incluida la compatibilidad con los metaarchivos de Windows.
 
-[CDC](../mfc/reference/cdc-class.md)<br/>
-La clase base para los contextos de dispositivo. Utilizar directamente para tener acceso a la pantalla completa y obtener acceso a los contextos de nondisplay como las impresoras.
+[CDC](reference/cdc-class.md)<br/>
+La clase base para los contextos de dispositivo. Se usa directamente para obtener acceso a toda la presentación y para obtener acceso a los contextos no mostrados, como las impresoras.
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md)<br/>
-Utilizado en un contexto de presentación `OnPaint` funciones miembro de windows. Llama automáticamente a `BeginPaint` durante la construcción y `EndPaint` en la destrucción.
+[CPaintDC](reference/cpaintdc-class.md)<br/>
+Un contexto de presentación utilizado en `OnPaint` funciones miembro de Windows. Llama automáticamente a `BeginPaint` en la construcción y `EndPaint` en la destrucción.
 
-[CClientDC](../mfc/reference/cclientdc-class.md)<br/>
-Un contexto de presentación de las áreas de cliente de windows. Se usa, por ejemplo, para dibujar en una respuesta inmediata a los eventos del mouse.
+[CClientDC](reference/cclientdc-class.md)<br/>
+Un contexto de presentación para las áreas de cliente de Windows. Se utiliza, por ejemplo, para dibujar en una respuesta inmediata a los eventos del mouse.
 
-[CWindowDC](../mfc/reference/cwindowdc-class.md)<br/>
-Un contexto de presentación de windows completos, incluidas las áreas cliente y el cliente.
+[CWindowDC](reference/cwindowdc-class.md)<br/>
+Un contexto de presentación para todas las ventanas, incluidas las áreas cliente y no cliente.
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)<br/>
-Un contexto de dispositivo para metarchivos de Windows. Un metarchivo de Windows contiene una secuencia de comandos de interfaz (GDI) de dispositivo de gráficos que puede reproducirse para crear una imagen. Las llamadas realizadas a las funciones miembro de un `CMetaFileDC` se registran en un metarchivo.
+[CMetaFileDC](reference/cmetafiledc-class.md)<br/>
+Un contexto de dispositivo para los metaarchivos de Windows. Un metarchivo de Windows contiene una secuencia de comandos de la interfaz de dispositivo gráfico (GDI) que se pueden reproducir para crear una imagen. Las llamadas realizadas a las funciones miembro de un `CMetaFileDC` se registran en un metarchivo.
 
 ## <a name="related-classes"></a>Clases relacionadas
 
@@ -45,26 +45,26 @@ Un contexto de dispositivo para metarchivos de Windows. Un metarchivo de Windows
 Contiene pares de coordenadas (x, y).
 
 [CSize](../atl-mfc-shared/reference/csize-class.md)<br/>
-Contiene valores emparejados, posiciones relativas o distancia.
+Contiene la distancia, las posiciones relativas o los valores emparejados.
 
 [CRect](../atl-mfc-shared/reference/crect-class.md)<br/>
-Contiene las coordenadas de áreas rectangulares.
+Contiene las coordenadas de las áreas rectangulares.
 
-[CRgn](../mfc/reference/crgn-class.md)<br/>
-Encapsula una región GDI para manipular un área elíptico, poligonal o irregular dentro de una ventana. Usar junto con las funciones de miembro de recorte en la clase `CDC`.
+[CRgn](reference/crgn-class.md)<br/>
+Encapsula una región GDI para manipular una zona elíptica, poligonal o irregular dentro de una ventana. Se usa junto con las funciones miembro de recorte de la clase `CDC` .
 
-[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-Muestra y administra la interfaz de usuario para cambiar el tamaño y mover objetos rectangulares.
+[CRectTracker](reference/crecttracker-class.md)<br/>
+Muestra y controla la interfaz de usuario para cambiar el tamaño y mover objetos rectangulares.
 
-[CColorDialog](../mfc/reference/ccolordialog-class.md)<br/>
+[CColorDialog](reference/ccolordialog-class.md)<br/>
 Proporciona un cuadro de diálogo estándar para seleccionar un color.
 
-[CFontDialog](../mfc/reference/cfontdialog-class.md)<br/>
+[CFontDialog](reference/cfontdialog-class.md)<br/>
 Proporciona un cuadro de diálogo estándar para seleccionar una fuente.
 
-[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
+[CPrintDialog](reference/cprintdialog-class.md)<br/>
 Proporciona un cuadro de diálogo estándar para imprimir un archivo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general de clases](../mfc/class-library-overview.md)
+[Información general de clases](class-library-overview.md)

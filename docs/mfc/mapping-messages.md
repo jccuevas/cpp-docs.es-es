@@ -11,19 +11,19 @@ helpviewer_keywords:
 - mappings [MFC], messages
 - messages [MFC], mapping
 ms.assetid: 996f0652-0698-4b8c-b893-cdaa836d9d0f
-ms.openlocfilehash: 82c55c82d6b7a3faa65906345137885555a57d08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d6d7725d82bed6c9bfc02e408b68dcf7ffe5e4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279235"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625490"
 ---
 # <a name="mapping-messages"></a>Asignar mensajes
 
-Cada clase de marco de trabajo que puede recibir mensajes o comandos tiene su propio "mapa de mensajes". El marco de trabajo usa mapas de mensajes que se conectarán mensajes y comandos para las funciones de controlador. Cualquier clase derivada de la clase `CCmdTarget` puede tener un mapa de mensajes. Otros artículos explican los mapas de mensajes en detalle y describen cómo usarlos.
+Cada clase de Framework que puede recibir mensajes o comandos tiene su propio "mapa de mensajes". El marco de trabajo usa mapas de mensajes para conectar mensajes y comandos a sus funciones de controlador. Cualquier clase derivada de `CCmdTarget` la clase puede tener un mapa de mensajes. Otros artículos explican los mapas de mensajes en detalle y describen cómo usarlos.
 
-A pesar del nombre "mapa de mensajes," mapas de mensajes tratan ambos mensajes y comandos, las tres categorías de mensajes que aparecen en [categorías de mensaje](../mfc/message-categories.md).
+A pesar del nombre "mapa de mensajes", los mapas de mensajes controlan tanto los mensajes como los comandos, las tres categorías de mensajes que aparecen en [categorías de mensajes](message-categories.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Mensajes y comandos en el marco](../mfc/messages-and-commands-in-the-framework.md)
+[Mensajes y comandos en el marco](messages-and-commands-in-the-framework.md)

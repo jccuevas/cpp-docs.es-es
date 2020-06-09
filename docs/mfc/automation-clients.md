@@ -7,39 +7,39 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c34f6fccd06635dfb686e6eb1f2cf895bb86989
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254367"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626083"
 ---
 # <a name="automation-clients"></a>clientes de automatización
 
-Automatización hace posible que la aplicación manipule objetos implementados en otra aplicación o exponga objetos para que se puedan manipular. Un cliente de automatización es una aplicación que puede manipular objetos expuestos por otra aplicación. La aplicación que expone los objetos se denomina el servidor de automatización. El cliente usa objetos de la aplicación de servidor mediante el acceso a propiedades y funciones de esos objetos.
+La automatización permite que la aplicación manipule objetos implementados en otra aplicación o exponga objetos para que se puedan manipular. Un cliente de automatización es una aplicación que puede manipular objetos expuestos que pertenecen a otra aplicación. La aplicación que expone los objetos se denomina servidor de automatización. El cliente manipula los objetos de la aplicación de servidor mediante el acceso a las propiedades y funciones de los objetos.
 
 ### <a name="types-of-automation-clients"></a>Tipos de clientes de automatización
 
 Hay dos tipos de clientes de automatización:
 
-- Clientes que dinámicamente (en tiempo de ejecución) para obtener información acerca de las propiedades y operaciones del servidor.
+- Los clientes que dinámicamente (en tiempo de ejecución) adquieren información sobre las propiedades y las operaciones del servidor.
 
-- Clientes que poseen información estática (proporcionada en tiempo de compilación) que especifica las propiedades y operaciones del servidor.
+- Clientes que poseen información estática (proporcionada en tiempo de compilación) que especifica las propiedades y las operaciones del servidor.
 
-Los clientes del primer tipo obtienen información sobre los métodos y propiedades del servidor consultando el sistema OLE `IDispatch` mecanismo. Aunque resulta adecuada que se usará para los clientes dinámicos, `IDispatch` es difícil de usar para clientes estáticos, donde los objetos están impulsando debe conocerse en tiempo de compilación. Para estático enlazado a los clientes, Microsoft Foundation classes proporcionan el [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) clase.
+Los clientes del primer tipo adquieren información sobre los métodos y las propiedades del servidor mediante una consulta al mecanismo del sistema OLE `IDispatch` . Aunque es adecuado usar para clientes dinámicos, `IDispatch` es difícil de usar para clientes estáticos, donde los objetos que se van a controlar deben conocerse en tiempo de compilación. En el caso de los clientes enlazados estáticos, Microsoft Foundation Classes proporciona la clase [COleDispatchDriver](reference/coledispatchdriver-class.md) .
 
-Clientes enlazados estáticos utilizan una clase de proxy que está vinculada estáticamente con la aplicación cliente. Esta clase proporciona una encapsulación de C++ con seguridad de tipos de propiedades y operaciones de la aplicación de servidor.
+Los clientes enlazados estáticos utilizan una clase de proxy vinculada estáticamente a la aplicación cliente. Esta clase proporciona una encapsulación de C++ con seguridad de tipos de las propiedades y las operaciones de la aplicación de servidor.
 
-La clase `COleDispatchDriver` proporciona la compatibilidad para el cliente de automatización de la entidad de seguridad. Mediante el **Agregar nuevo elemento** cuadro de diálogo, crea una clase derivada de `COleDispatchDriver`.
+La clase `COleDispatchDriver` proporciona la compatibilidad principal para el lado cliente de la automatización. Mediante el cuadro de diálogo **Agregar nuevo elemento** , se crea una clase derivada de `COleDispatchDriver` .
 
-A continuación, especifique el archivo de biblioteca de tipos que describen las propiedades y funciones del objeto de la aplicación de servidor. El cuadro de diálogo Agregar elemento lee este archivo y crea el `COleDispatchDriver`-clase derivada, con las funciones miembro que se puede llamar la aplicación para tener acceso a objetos de la aplicación de servidor en C++, de manera segura para el tipo. Funcionalidad adicional que se hereda de `COleDispatchDriver` simplifica el proceso de llamada al servidor de automatización adecuado.
+A continuación, especifique el archivo de biblioteca de tipos que describe las propiedades y funciones del objeto de la aplicación de servidor. El cuadro de diálogo Agregar elemento Lee este archivo y crea la `COleDispatchDriver` clase derivada de, con las funciones miembro a las que la aplicación puede llamar para tener acceso a los objetos de la aplicación de servidor en C++ de una manera con seguridad de tipos. La funcionalidad adicional heredada de `COleDispatchDriver` simplifica el proceso de llamada al servidor de automatización adecuado.
 
-### <a name="handling-events-in-automation-clients"></a>Control de eventos en los clientes de automatización
+### <a name="handling-events-in-automation-clients"></a>Controlar eventos en clientes de Automation
 
-Si desea controlar los eventos en el cliente de automatización, deberá agregar una interfaz de receptor. MFC proporciona soporte técnico de Asistente para agregar interfaces de receptor para controles ActiveX, pero no se admite para otros servidores COM.
+Si desea controlar eventos en el cliente de automatización, debe agregar una interfaz de receptor. MFC proporciona compatibilidad con el Asistente para agregar interfaces de receptor para controles ActiveX, pero no para otros servidores COM.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clientes de automatización: Usar bibliotecas de tipos](../mfc/automation-clients-using-type-libraries.md)<br/>
-[Automatización](../mfc/automation.md)<br/>
-[Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md)
+[Clientes de Automation: Usar bibliotecas de tipos](automation-clients-using-type-libraries.md)<br/>
+[Automation](automation.md)<br/>
+[Asistente para aplicaciones MFC](reference/mfc-application-wizard.md)

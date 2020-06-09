@@ -16,54 +16,54 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: 799035976ea55988a635f7dc9b667e87c48d8f7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17956c0b175e978c6e4e2fefcdad5f744929d457
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406173"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621834"
 ---
 # <a name="documents-views-and-the-framework"></a>Documentos, vistas y el marco
 
-En el corazón de marco de trabajo MFC son los conceptos de documento y vista. Un documento es un objeto de datos con el que interactúa el usuario en una sesión de edición. Lo crea el **New** o **abierto** comando el **archivo** menú y normalmente se guarda en un archivo. (Los documentos estándar de MFC, derivados de la clase `CDocument`, son diferentes de documentos activos y los documentos compuestos OLE.) Una vista es un objeto de ventana a través del cual el usuario interactúa con un documento.
+En el corazón del marco de trabajo de MFC se encuentran los conceptos de documento y vista. Un documento es un objeto de datos con el que el usuario interactúa en una sesión de edición. Se crea mediante el comando **nuevo** o **abrir** en el menú **archivo** y normalmente se guarda en un archivo. (Los documentos de MFC estándar, que se derivan de la clase `CDocument` , son diferentes de los documentos activos y los documentos compuestos OLE). Una vista es un objeto de ventana a través del que el usuario interactúa con un documento.
 
-Los objetos de clave en una aplicación en ejecución son:
+Los objetos clave de una aplicación en ejecución son:
 
-- El documento o documentos.
+- Documento o documentos.
 
-   La clase de documento (derivado de [CDocument](../mfc/reference/cdocument-class.md)) especifica los datos de la aplicación.
+   La clase de documento (derivada de [CDocument](reference/cdocument-class.md)) especifica los datos de la aplicación.
 
-   Si desea la funcionalidad OLE en la aplicación, derive la clase de documento de [COleDocument](../mfc/reference/coledocument-class.md) o uno de sus clases derivadas, según el tipo de funcionalidad que necesita.
+   Si desea usar la funcionalidad OLE en la aplicación, derive la clase de documento de [COleDocument](reference/coledocument-class.md) o de una de sus clases derivadas, dependiendo del tipo de funcionalidad que necesite.
 
-- La vista o vistas.
+- Vista o vistas.
 
-   La clase de vista (derivado de [CView](../mfc/reference/cview-class.md)) es la ventana del usuario"en los datos." La clase de vista controla cómo el usuario ve los datos del documento e interactúa con él. En algunos casos, puede tener varias vistas de los datos de un documento.
+   La clase View (derivada de [CView](reference/cview-class.md)) es la "ventana de los datos" del usuario. La clase de vista controla cómo el usuario ve los datos del documento e interactúa con él. En algunos casos, puede que desee que un documento tenga varias vistas de los datos.
 
-   Si necesita el desplazamiento, que se derivan de [CScrollView](../mfc/reference/cscrollview-class.md). Si la vista tiene una interfaz de usuario que está colocada en un recurso de plantilla de cuadro de diálogo, debe derivar de [CFormView](../mfc/reference/cformview-class.md). Para los datos de texto simple, usar o derivar de [CEditView](../mfc/reference/ceditview-class.md). Para una aplicación de acceso a datos basada en formularios, como un programa de entrada de datos, se deriva de [CRecordView](../mfc/reference/crecordview-class.md) (para ODBC). También están disponibles las clases [CTreeView](../mfc/reference/ctreeview-class.md), [CListView](../mfc/reference/clistview-class.md), y [CRichEditView](../mfc/reference/cricheditview-class.md).
+   Si necesita desplazarse, derive de [CScrollView](reference/cscrollview-class.md). Si la vista tiene una interfaz de usuario que se coloca en un recurso de plantilla de cuadro de diálogo, derive de [CFormView](reference/cformview-class.md). Para datos de texto simples, use o derive de [CEditView](reference/ceditview-class.md). Para una aplicación de acceso a datos basada en formularios, como un programa de entrada de datos, derive de [CRecordView](reference/crecordview-class.md) (para ODBC). También están disponibles las clases [CTreeView](reference/ctreeview-class.md), [CListView](reference/clistview-class.md)y [CRichEditView](reference/cricheditview-class.md).
 
-- Las ventanas de marco
+- Ventanas de marco
 
-   Las vistas se muestran dentro de "ventanas de marco de documento". En una aplicación SDI, la ventana de marco de documento también es la "ventana de marco principal" de la aplicación. En una aplicación MDI, ventanas de documento son ventanas secundarias que se muestran dentro de una ventana de marco principal. La clase de ventana de marco principal derivada especifica los estilos y otras características de las ventanas de marco que contienen las vistas. Si necesita personalizar las ventanas de marco, que se derivan de [CFrameWnd](../mfc/reference/cframewnd-class.md) para personalizar la ventana de marco de documento para las aplicaciones SDI. Derivar de [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) para personalizar la ventana de marco principal para aplicaciones MDI. También derivar una clase de [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) para personalizar cada distintos tipos de ventanas de marco de documento MDI que admite la aplicación.
+   Las vistas se muestran dentro de "ventanas de marco de documento". En una aplicación SDI, la ventana de marco de documento es también la "ventana de marco principal" de la aplicación. En una aplicación MDI, las ventanas de documento son ventanas secundarias que se muestran en una ventana de marco principal. La clase de ventana de marco principal derivada especifica los estilos y otras características de las ventanas de marco que contienen las vistas. Si necesita personalizar las ventanas de marco, derive de [CFrameWnd](reference/cframewnd-class.md) para personalizar la ventana de marco de documento para aplicaciones SDI. Derive de [CMDIFrameWnd](reference/cmdiframewnd-class.md) para personalizar la ventana de marco principal de las aplicaciones MDI. Derive también una clase de [CMDIChildWnd](reference/cmdichildwnd-class.md) para personalizar cada clase distinta de ventanas de marco de documento MDI que admita la aplicación.
 
-- Las plantillas o una plantilla de documento
+- Plantilla o plantillas de documento
 
-   Una plantilla de documento organiza la creación de documentos, vistas y ventanas de marco. Una clase de plantilla de documento en particular, deriva de la clase [CDocTemplate](../mfc/reference/cdoctemplate-class.md), crea y administra todos los documentos abiertos de un tipo. Las aplicaciones que admiten más de un tipo de documento tienen varias plantillas de documento. Utilice la clase [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) para las aplicaciones SDI, o la clase [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) para aplicaciones MDI.
+   Una plantilla de documento organiza la creación de documentos, vistas y ventanas de marco. Una clase de plantilla de documento determinada, derivada de la clase [CDocTemplate](reference/cdoctemplate-class.md), crea y administra todos los documentos abiertos de un tipo. Las aplicaciones que admiten más de un tipo de documento tienen varias plantillas de documento. Use la clase [CSingleDocTemplate](reference/csingledoctemplate-class.md) para las aplicaciones SDI o use la clase [CMULTIDOCTEMPLATE](reference/cmultidoctemplate-class.md) para aplicaciones MDI.
 
-- El objeto de aplicación
+- El objeto Application
 
-   La clase de aplicación (derivado de [CWinApp](../mfc/reference/cwinapp-class.md)) controla todos los objetos anteriores y especifica el comportamiento de la aplicación, como la inicialización y limpieza. Crea y administra las plantillas de documento para cualquier documento de la aplicación admite los tipos de objeto uno de la aplicación y la única aplicación.
+   La clase de aplicación (derivada de [CWinApp](reference/cwinapp-class.md)) controla todos los objetos anteriores y especifica el comportamiento de la aplicación, como la inicialización y la limpieza. El objeto de aplicación único y único de la aplicación crea y administra las plantillas de documento para cualquier tipo de documento admitido por la aplicación.
 
-- Objetos de subprocesos
+- Objetos de subproceso
 
-   Si la aplicación crea subprocesos de ejecución aislados, por ejemplo, para realizar cálculos en segundo plano, deberá usar las clases derivadas de [CWinThread](../mfc/reference/cwinthread-class.md). [CWinApp](../mfc/reference/cwinapp-class.md) a su vez se deriva `CWinThread` y representa el subproceso principal de ejecución (o el proceso principal) en la aplicación. También puede utilizar MFC en subprocesos secundarios.
+   Si la aplicación crea subprocesos independientes de ejecución (por ejemplo, para realizar cálculos en segundo plano), usará clases derivadas de [CWinThread](reference/cwinthread-class.md). [CWinApp](reference/cwinapp-class.md) se deriva de `CWinThread` y representa el subproceso principal de ejecución (o el proceso principal) en la aplicación. También puede usar MFC en subprocesos secundarios.
 
-En una aplicación en ejecución, estos objetos responden de forma cooperativa a acciones del usuario, enlazadas mediante los comandos y otros mensajes. Un solo objeto aplicación administra una o varias plantillas de documento. Cada plantilla de documento crea y administra uno o varios documentos (dependiendo de si la aplicación es SDI o MDI). El usuario ve y manipula documentos a través de una vista contenida dentro de una ventana de marco. La siguiente ilustración muestra las relaciones entre estos objetos para una aplicación SDI.
+En una aplicación en ejecución, estos objetos responden de forma cooperativa a las acciones del usuario, enlazadas entre sí mediante comandos y otros mensajes. Un único objeto de aplicación administra una o varias plantillas de documento. Cada plantilla de documento crea y administra uno o más documentos (en función de si la aplicación es SDI o MDI). El usuario ve y manipula un documento a través de una vista contenida dentro de una ventana de marco. En la siguiente ilustración se muestran las relaciones entre estos objetos para una aplicación SDI.
 
-![Los objetos en una aplicación SDI en ejecución](../mfc/media/vc386v1.gif "objetos en una aplicación SDI en ejecución") <br/>
+![Objetos en una aplicación SDI en ejecución](../mfc/media/vc386v1.gif "Objetos de una aplicación SDI en ejecución") <br/>
 Objetos de una aplicación SDI en ejecución
 
-El resto de esta serie de artículos explica cómo las herramientas de marco de trabajo, el Asistente para aplicaciones MFC y los editores de recursos, crean estos objetos, cómo funcionan y cómo usarlos en su programación. Documentos, vistas y ventanas de marco se tratan con más detalle en [Window (objetos)](../mfc/window-objects.md) y [arquitectura documento/vista](../mfc/document-view-architecture.md).
+El resto de esta familia de artículos explica cómo las herramientas de marco de trabajo, el Asistente para aplicaciones MFC y los editores de recursos crean estos objetos, cómo funcionan juntos y cómo se usan en la programación. Los documentos, las vistas y las ventanas de marco se describen con más detalle en [objetos de ventana](window-objects.md) y en la arquitectura de [documento y vista](document-view-architecture.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[Uso de las clases para escribir aplicaciones para Windows](using-the-classes-to-write-applications-for-windows.md)

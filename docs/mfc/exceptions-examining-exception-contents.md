@@ -9,25 +9,25 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-ms.openlocfilehash: f6f9bca6f6b7ca9d104cb492c760ab89f7163afd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8554dda2f465aa058cea3d257c22ec38bc6e2c18
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406007"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625903"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Excepciones: Examinar contenidos de excepciones
 
-Aunque un **catch** argumento del bloque puede ser de casi cualquier tipo de datos, las funciones MFC producen excepciones de tipos derivados de la clase `CException`. Para detectar una excepción producida por una función MFC, a continuación, escribe un **catch** bloque cuyo argumento es un puntero a un `CException` objeto (o un objeto derivado de `CException`, tales como `CMemoryException`). Según el tipo exacto de la excepción, puede examinar los miembros de datos del objeto de excepción para recopilar información sobre la causa específica de la excepción.
+Aunque el argumento del bloque **catch** puede ser de casi cualquier tipo de datos, las funciones de MFC producen excepciones de tipos derivados de la clase `CException` . Para detectar una excepción producida por una función MFC, se escribe un bloque **catch** cuyo argumento es un puntero a un `CException` objeto (o un objeto derivado de, como `CException` `CMemoryException` ). Dependiendo del tipo exacto de la excepción, puede examinar los miembros de datos del objeto de excepción para recopilar información sobre la causa específica de la excepción.
 
-Por ejemplo, el `CFileException` tipo tiene el `m_cause` miembro de datos que contiene un tipo enumerado que especifica la causa de la excepción de archivo. Algunos ejemplos de los posibles valores devuelven son `CFileException::fileNotFound` y `CFileException::readOnly`.
+Por ejemplo, el `CFileException` tipo tiene el `m_cause` miembro de datos, que contiene un tipo enumerado que especifica la causa de la excepción de archivo. Algunos ejemplos de los posibles valores devueltos son `CFileException::fileNotFound` y `CFileException::readOnly` .
 
-El ejemplo siguiente muestra cómo examinar el contenido de un `CFileException`. Otros tipos de excepción pueden examinarse del mismo modo.
+En el ejemplo siguiente se muestra cómo examinar el contenido de un `CFileException` . Otros tipos de excepción se pueden examinar de forma similar.
 
-[!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#13](codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
 
-Para obtener más información, consulte [excepciones: Liberar objetos en excepciones](../mfc/exceptions-freeing-objects-in-exceptions.md) y [excepciones: Detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Para obtener más información, vea [excepciones: liberar objetos en excepciones](exceptions-freeing-objects-in-exceptions.md) y [excepciones: detectar y eliminar excepciones](exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de excepciones](../mfc/exception-handling-in-mfc.md)
+[Control de excepciones](exception-handling-in-mfc.md)

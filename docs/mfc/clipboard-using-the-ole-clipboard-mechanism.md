@@ -1,5 +1,5 @@
 ---
-title: 'Portapapeles: Usar el mecanismo del portapapeles OLE'
+title: 'Portapapeles: Usar el mecanismo del Portapapeles de OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 0f2c10f4a88b723d1ab9f4bb0ca903987359c9fd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: da0b99e6c9c803f3c3a4c09d67853649a4bac314
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508908"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626059"
 ---
-# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Portapapeles: Usar el mecanismo del portapapeles OLE
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Portapapeles: Usar el mecanismo del Portapapeles de OLE
 
 OLE usa formatos estándar y algunos formatos específicos de OLE para transferir datos a través del portapapeles.
 
-Al cortar o copiar datos de una aplicación, los datos se almacenan en el portapapeles para su uso posterior en operaciones de pegado. Estos datos están en una variedad de formatos. Cuando un usuario elige pegar datos del portapapeles, la aplicación puede elegir cuál de estos formatos usar. La aplicación debe escribirse para elegir el formato que proporciona la mayor cantidad de información, a menos que el usuario solicite específicamente un formato determinado, mediante pegar especial. Antes de continuar, puede que desee leer los temas de [objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md) . Describen los aspectos básicos de cómo funcionan las transferencias de datos y cómo implementarlas en las aplicaciones.
+Al cortar o copiar datos de una aplicación, los datos se almacenan en el portapapeles para su uso posterior en operaciones de pegado. Estos datos están en una variedad de formatos. Cuando un usuario elige pegar datos del portapapeles, la aplicación puede elegir cuál de estos formatos usar. La aplicación debe escribirse para elegir el formato que proporciona la mayor cantidad de información, a menos que el usuario solicite específicamente un formato determinado, mediante pegar especial. Antes de continuar, puede que desee leer los temas de [objetos de datos y orígenes de datos (OLE)](data-objects-and-data-sources-ole.md) . Describen los aspectos básicos de cómo funcionan las transferencias de datos y cómo implementarlas en las aplicaciones.
 
 Windows define una serie de formatos estándar que se pueden usar para transferir datos a través del portapapeles. Entre ellos se incluyen los metaarchivos, el texto, los mapas de bits y otros elementos. OLE define también una serie de formatos específicos de OLE. En el caso de las aplicaciones que necesitan más detalles de los proporcionados por estos formatos estándar, es una buena idea registrar sus propios formatos de Portapapeles personalizados. Para ello, utilice la función [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) de la API de Win32.
 
@@ -33,16 +33,16 @@ Por ejemplo, para habilitar el comando cortar, puede escribir un controlador sim
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Copiar y pegar datos](../mfc/clipboard-copying-and-pasting-data.md)
+- [Copiado y pegado de datos](clipboard-copying-and-pasting-data.md)
 
-- [Agregar otros formatos](../mfc/clipboard-adding-other-formats.md)
+- [Agregar otros formatos](clipboard-adding-other-formats.md)
 
-- [Usar el portapapeles de Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+- [Usar el portapapeles de Windows](clipboard-using-the-windows-clipboard.md)
 
-- [OLE](../mfc/ole-background.md)
+- [OLE](ole-background.md)
 
-- [Objetos de datos OLE y orígenes de datos y transferencia de datos uniforme](../mfc/data-objects-and-data-sources-ole.md)
+- [Objetos de datos OLE y orígenes de datos y transferencia de datos uniforme](data-objects-and-data-sources-ole.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Portapapeles](../mfc/clipboard.md)
+[Portapapeles](clipboard.md)
