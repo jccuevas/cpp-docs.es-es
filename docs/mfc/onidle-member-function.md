@@ -10,24 +10,24 @@ helpviewer_keywords:
 - CWinApp class [MFC], OnIdle method [MFC]
 - message handling [MFC], OnIdle method [MFC]
 ms.assetid: 51adc874-0075-4f76-be1c-79283f46c10b
-ms.openlocfilehash: c7cdd5cd2327be1b90e7fdb3694353acf8adcafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17595713f942c7fe7784fa2a12adbcc583cad418
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394561"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619847"
 ---
 # <a name="onidle-member-function"></a>OnIdle Member (Función)
 
-Cuando no se están procesando ningún mensaje de Windows, el marco llama a la [CWinApp](../mfc/reference/cwinapp-class.md) función miembro [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (descrita en la referencia de la biblioteca de MFC).
+Cuando no se están procesando mensajes de Windows, el marco de trabajo llama a la función miembro de [CWinApp](reference/cwinapp-class.md) [OnIdle](reference/cwinapp-class.md#onidle) (descrita en la referencia de la biblioteca MFC).
 
-Invalidar `OnIdle` para realizar tareas en segundo plano. La versión predeterminada actualiza el estado de los objetos de interfaz de usuario, como botones de barra de herramientas y realiza la limpieza de objetos temporales creados por el marco de trabajo en el transcurso de sus operaciones. La ilustración siguiente muestra cómo el bucle de mensajes llama `OnIdle` cuando hay mensajes en la cola.
+Invalide `OnIdle` para realizar tareas en segundo plano. La versión predeterminada actualiza el estado de los objetos de la interfaz de usuario, como los botones de la barra de herramientas, y realiza la limpieza de los objetos temporales creados por el marco de trabajo en el transcurso de sus operaciones. En la ilustración siguiente se muestra cómo el bucle de mensajes llama a cuando no hay `OnIdle` ningún mensaje en la cola.
 
-![Proceso de bucle de mensajes](../mfc/media/vc387c1.gif "proceso de bucle de mensajes") <br/>
+![Proceso de bucle de mensajes](../mfc/media/vc387c1.gif "Proceso de bucle de mensajes") <br/>
 El bucle de mensajes
 
-Para obtener más información sobre lo que puede hacer en el bucle de inactividad, consulte [procesamiento de bucles inactivos](../mfc/idle-loop-processing.md).
+Para obtener más información sobre lo que puede hacer en el bucle inactivo, consulte [procesamiento de bucles inactivos](idle-loop-processing.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CWinApp: La clase Application](../mfc/cwinapp-the-application-class.md)
+[CWinApp: la clase Application](cwinapp-the-application-class.md)

@@ -10,31 +10,31 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-ms.openlocfilehash: 66a951994a75cbd99debeb2c6511739411cdd470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e15a2a6bc016bf23bc0decf529b4c3ffeecc3a4c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174034"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621945"
 ---
 # <a name="creating-document-frame-windows"></a>Crear ventanas de marco de documento
 
-[Creación de documento/vista](../mfc/document-view-creation.md) muestra cómo el [CDocTemplate](../mfc/reference/cdoctemplate-class.md) objeto organiza la creación de la ventana de marco, el documento y la vista y conectarlos todos juntos. Tres [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argumentos para el `CDocTemplate` constructor especifica la ventana de marco, documento y las clases de vistas que crea la plantilla de documento de forma dinámica en respuesta a los comandos de usuario, como el nuevo comando en el archivo menú o el comando nueva ventana en un menú de la ventana MDI. La plantilla de documento almacena esta información para su uso posterior cuando crea una ventana de marco para una vista y un documento.
+La [creación de documentos y vistas](document-view-creation.md) muestra cómo el objeto [CDocTemplate](reference/cdoctemplate-class.md) orquesta la creación de la ventana de marco, el documento y la vista, y cómo conectarlos todos juntos. Tres argumentos [CRuntimeClass](reference/cruntimeclass-structure.md) para el `CDocTemplate` constructor especifican las clases de ventana de marco, documento y vista que la plantilla de documento crea dinámicamente en respuesta a comandos de usuario, como el nuevo comando en el menú archivo o el comando nueva ventana en un menú de ventana MDI. La plantilla de documento almacena esta información para su uso posterior cuando crea una ventana de marco para una vista y un documento.
 
-Para el [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) mecanismo funcione correctamente, la derivada clases de ventana de marco se deben declarar con la [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) macro. Esto es porque el marco de trabajo necesita para crear ventanas de marco mediante el mecanismo de construcción dinámica de clase de documento `CObject`.
+Para que el mecanismo de [RUNTIME_CLASS](reference/run-time-object-model-services.md#runtime_class) funcione correctamente, las clases derivadas de la ventana de marco se deben declarar con la macro [DECLARE_DYNCREATE](reference/run-time-object-model-services.md#declare_dyncreate) . Esto se debe a que el marco debe crear ventanas de marco de documento mediante el mecanismo de construcción dinámica de la clase `CObject` .
 
-Cuando el usuario elige un comando que crea un documento, el marco de trabajo llama a la plantilla de documento para crear el objeto de documento, su vista y la ventana de marco que se mostrará la vista. Cuando crea la ventana de marco de documento, la plantilla de documento crea un objeto de la clase apropiada, una clase derivada de [CFrameWnd](../mfc/reference/cframewnd-class.md) para una aplicación SDI o de [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) para formularios MDI aplicación. El marco llama a continuación, el objeto de ventana de marco [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) función de miembro para obtener información sobre la creación de recursos y crear la ventana de Windows. El marco de trabajo asocia el identificador de ventana para el objeto de ventana de marco. A continuación, crea la vista como una ventana secundaria de la ventana de marco de documento.
+Cuando el usuario elige un comando que crea un documento, el marco de trabajo llama a la plantilla de documento para crear el objeto de documento, su vista y la ventana de marco que mostrará la vista. Al crear la ventana de marco de documento, la plantilla de documento crea un objeto de la clase adecuada, una clase derivada de [CFrameWnd](reference/cframewnd-class.md) para una aplicación SDI o de [CMDIChildWnd](reference/cmdichildwnd-class.md) para una aplicación MDI. A continuación, el marco de trabajo llama a la función miembro [LoadFrame](reference/cframewnd-class.md#loadframe) del objeto de la ventana de marco para obtener información de creación de los recursos y para crear la ventana de Windows. El marco de trabajo asocia el identificador de ventana al objeto de ventana de marco. A continuación, crea la vista como una ventana secundaria de la ventana de marco del documento.
 
-Tenga cuidado al decidir [cuándo se debe inicializar](../mfc/when-to-initialize-cwnd-objects.md) su `CWnd`-objeto derivado.
+Tenga cuidado a la hora de decidir [Cuándo inicializar](when-to-initialize-cwnd-objects.md) el `CWnd` objeto derivado de.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Derivar una clase de CObject (su mecanismo de creación dinámica)](../mfc/deriving-a-class-from-cobject.md)
+- [Derivar una clase de CObject (su mecanismo de creación dinámico)](deriving-a-class-from-cobject.md)
 
-- [Creación de documentos y vistas (plantillas y creación de la ventana de marco)](../mfc/document-view-creation.md)
+- [Creación de documentos y vistas (plantillas y creación de ventanas de marco)](document-view-creation.md)
 
-- [Destruir ventanas de marco](../mfc/destroying-frame-windows.md)
+- [Destrucción de ventanas de marco](destroying-frame-windows.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de ventanas de marco](../mfc/using-frame-windows.md)
+[Usar ventanas de marco](using-frame-windows.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907626"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620695"
 ---
 # <a name="command-routing"></a>enrutamiento de comandos
 
@@ -31,18 +31,18 @@ Distintas clases de comando-destino comprueban sus mapas de mensajes en momentos
 
 ¿Cuánto cuesta este mecanismo de enrutamiento en comparación con lo que hace el controlador en respuesta a un comando, el costo de enrutamiento es bajo. Tenga en cuenta que el marco de trabajo genera comandos solo cuando el usuario interactúa con un objeto de la interfaz de usuario.
 
-### <a name="_core_standard_command_route"></a> Ruta estándar de comando
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a> Ruta estándar de comando
 
 |Cuando un objeto de este tipo recibe un comando. . .|Se da a si mismo y a otros objetos de destino del comando una oportunidad de controlar el comando, en este orden:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Ventana de marco MDI (`CMDIFrameWnd`)|1.  `CMDIChildWnd` activo<br />2.  Esta ventana de marco<br />3.  Aplicación (objeto de `CWinApp`)|
-|Ventana de marco de documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Vista activa<br />2.  Esta ventana de marco<br />3.  Aplicación (objeto de `CWinApp`)|
-|Ver|1.  Esta vista<br />2.  Documento asociado a la vista|
-|Documento|1.  Este documento<br />2.  Plantilla de documento asociada al documento|
-|Cuadro de diálogo|1.  Este cuadro de diálogo<br />2.  Ventana propietaria del cuadro de diálogo<br />3.  Aplicación (objeto de `CWinApp`)|
+|Ventana de marco MDI (`CMDIFrameWnd`)|1. activo`CMDIChildWnd`<br />2. esta ventana de marco<br />3. aplicación ( `CWinApp` objeto)|
+|Ventana de marco de documento (`CFrameWnd`, `CMDIChildWnd`)|1. vista activa<br />2. esta ventana de marco<br />3. aplicación ( `CWinApp` objeto)|
+|Ver|1. esta vista<br />2. documento adjunto a la vista|
+|Documento|1. este documento<br />2. plantilla de documento adjunta al documento|
+|Cuadro de diálogo|1. este cuadro de diálogo<br />2. ventana que posee el cuadro de diálogo<br />3. aplicación ( `CWinApp` objeto)|
 
 En los casos en los que las entradas numeradas de la segunda columna de la tabla anterior mencionan otros objetos, como un documento, vea el elemento correspondiente de la primera columna. Por ejemplo, cuando lee en la segunda columna que la vista reenvía un comando al documento, vea la entrada “Documento” en la primera columna para seguir el enrutamiento detenidamente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Cómo el marco llama a un controlador](../mfc/how-the-framework-calls-a-handler.md)
+[Cómo el marco llama a un controlador](how-the-framework-calls-a-handler.md)

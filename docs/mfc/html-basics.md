@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 6d3a692eab47a1309ee0248b51ab8563fb077d5a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620000"
 ---
 # <a name="html-basics"></a>Conceptos básicos de HTML
 
-La mayoría de los navegadores tienen la capacidad de examinar el origen HTML de las páginas que navega. Cuando vea el origen, verá una serie de etiquetas HTML (lenguaje de marcado de hipertexto), rodeadas de corchetes angulares (<>), intercaladas con texto.
+La mayoría de los exploradores tienen la capacidad de examinar el origen HTML de las páginas que se examinan. Al ver el código fuente, verá una serie de etiquetas HTML (lenguaje de marcado de hipertexto), entre corchetes angulares (<>), entremezcladas con texto.
 
-Los pasos siguientes utilizan etiquetas HTML para crear una página web sencilla. En estos pasos, escribirá texto sin formato en un archivo en el Bloc de notas, hará algunos cambios, guardará el archivo y volverá a cargar la página en el explorador para ver los cambios.
+En los pasos siguientes se usan etiquetas HTML para compilar una página web sencilla. En estos pasos, escriba texto sin formato en un archivo en el Bloc de notas, realice algunos cambios, guarde el archivo y vuelva a cargar la página en el explorador para ver los cambios.
 
 #### <a name="to-create-an-html-file"></a>Para crear un archivo HTML
 
 1. Abra el Bloc de notas o cualquier editor de texto sin formato.
 
-1. En el menú **Archivo,** elija **Nuevo**.
+1. En el menú **archivo** , elija **nuevo**.
 
-1. Escriba las siguientes líneas:
+1. Escriba las líneas siguientes:
 
     ```html
     <HTML>
@@ -33,15 +33,15 @@ Los pasos siguientes utilizan etiquetas HTML para crear una página web sencilla
     </HTML>
     ```
 
-1. En el menú **Archivo** , elija **Guardar**y guarde el archivo como c:-páginas web-First.htm. Deje el archivo abierto en el editor.
+1. En el menú **archivo** , elija **Guardar**y guarde el archivo como c:\webpages\First.htm. Deje abierto el archivo en el editor.
 
-1. Cambie a su navegador y, en el menú **Archivo,** elija **Abrir**o escriba *file://C:/webpages/first.htm* en el cuadro de edición URL del explorador. Debería ver una página en blanco con el título de la ventana "Top HTML Tags."
+1. Cambie al explorador y, en el menú **archivo** , elija **abrir**o escriba *File://C:/Webpages/First.htm* en el cuadro de edición dirección URL del explorador. Debería ver una página en blanco con el título de la ventana "etiquetas HTML principales".
 
-   Observe que las etiquetas están emparejadas y se incluyen entre corchetes angulares. Las etiquetas no distinguen entre mayúsculas y minúsculas, pero las mayúsculas se utilizan a menudo para hacer que las etiquetas destaquen.
+   Observe que las etiquetas se emparejan y se incluyen entre corchetes angulares. Las etiquetas no distinguen mayúsculas de minúsculas, pero a menudo se usa el uso de mayúsculas para hacer que las etiquetas destaquen.
 
-   La \<etiqueta HTML> inicia el \<documento y la etiqueta /HTML> lo finaliza. Las etiquetas finales (no siempre necesarias) son las mismas que la etiqueta inicial, pero tienen una barra diagonal (/) delante de la etiqueta. No debe haber espacios entre el corchete angular (<) y el inicio de la etiqueta.
+   La etiqueta \<HTML> inicia el documento y la etiqueta \</HTML> lo termina. Las etiquetas de cierre (no siempre necesarias) son las mismas que las de la etiqueta de apertura, pero tienen una barra diagonal (/) delante de la etiqueta. No debe haber espacios entre el corchete angular (<) y el inicio de la etiqueta.
 
-1. Vuelva al Bloc de \<notas y, después de la línea de> /HEAD, escriba:
+1. Vuelva al bloc de notas y, después de la \</HEAD> línea, escriba:
 
     ```html
     <BODY>
@@ -50,13 +50,13 @@ Los pasos siguientes utilizan etiquetas HTML para crear una página web sencilla
     </BODY>
     ```
 
-1. En el menú **Archivo,** elija **Guardar**.
+1. En el menú **archivo** , elija **Guardar**.
 
-1. Vuelva a su navegador y actualice la página.
+1. Vuelva al explorador y actualice la página.
 
-   Las palabras aparecerán en el área de cliente de la ventana de su navegador. Tenga en cuenta que se omite el retorno de carro. Si desea tener un salto de línea, debe incluir una `<BR>` etiqueta después de la primera línea.
+   Las palabras aparecerán en el área cliente de la ventana del explorador. Observe que se omite el retorno de carro. Si desea tener un salto de línea, debe incluir una `<BR>` etiqueta después de la primera línea.
 
-   Para todos los pasos siguientes, \<inserte el \<texto en cualquier lugar entre> BODY y /BODY> para agregarlo al cuerpo del documento.
+   En todos los pasos que se indican a continuación, inserte el texto entre \<BODY> y \</BODY> para agregarlo al cuerpo del documento.
 
 1. Agregue un encabezado:
 
@@ -64,13 +64,13 @@ Los pasos siguientes utilizan etiquetas HTML para crear una página web sencilla
     <H3>Here's the big picture</H3>
     ```
 
-1. Agregue una imagen, utilizando un archivo .gif guardado en el mismo directorio que su página:
+1. Agregue una imagen mediante un archivo. gif guardado en el mismo directorio que la página:
 
     ```html
     <IMG src="yourfile.gif">
     ```
 
-1. Agregue una lista:
+1. Agregar una lista:
 
     ```html
     <UL>Make me an unordered list.
@@ -80,11 +80,11 @@ Los pasos siguientes utilizan etiquetas HTML para crear una página web sencilla
     </UL>
     ```
 
-1. Para numerar la lista \<en su \<lugar, utilice etiquetas \<de> \<> OL emparejadas y /OL en lugar de las etiquetas> UL y /UL>.
+1. Para numerar la lista en su lugar, use \<OL> las etiquetas y emparejadas \</OL> en lugar de las \<UL> \</UL> etiquetas y.
 
-Eso debería empezar. Si ve una gran característica en una página Web, puede averiguar cómo se creó examinando el origen HTML. Los editores HTML, como Microsoft Front Page, se pueden usar para crear páginas simples y avanzadas.
+Esto debería ayudarle a comenzar. Si ve una gran característica en una página web, puede averiguar cómo se creó examinando el código fuente HTML. Los editores HTML, como Microsoft Front Page, se pueden usar para crear páginas simples y avanzadas.
 
-Aquí está todo el código fuente HTML para el archivo que ha estado creando:
+Este es el código fuente HTML completo del archivo que se ha creado:
 
 ```html
 <HTML>
@@ -105,10 +105,10 @@ Life is good.
 </HTML>
 ```
 
-Para obtener una descripción completa de etiquetas, atributos y extensiones, consulte la especificación de lenguaje de marcado de hipertexto (HTML):
+Para obtener una descripción completa de etiquetas, atributos y extensiones, vea la especificación de Lenguaje de marcado de hipertexto (HTML):
 
-[La última versión publicada de HTML](https://www.w3.org/TR/html/) en W3C.org.
+[Última versión publicada de HTML](https://www.w3.org/TR/html/) en W3C.org.
 
 ## <a name="see-also"></a>Consulte también
 
-[Fundamentos de programación de Internet de MFC](../mfc/mfc-internet-programming-basics.md)
+[Fundamentos de la programación para Internet de MFC](mfc-internet-programming-basics.md)

@@ -5,27 +5,27 @@ helpviewer_keywords:
 - message handling [MFC], reflected messages
 - reflected messages, handling
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
-ms.openlocfilehash: 973e8cff24eca37b1806207d081636f0d1b38365
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8907b432cf4dabad33c0925b841f65dfc57c6295
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240566"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620143"
 ---
 # <a name="handling-reflected-messages"></a>Controlar los mensajes reflejados
 
-Mensaje de reflexión le permite controlar los mensajes para un control, como **WM_CTLCOLOR**, **WM_COMMAND**, y **WM_NOTIFY**, dentro del propio control. Esto hace que el control más autocontenida y portátil. El mecanismo funciona con los controles comunes de Windows, así como con los controles ActiveX (anteriormente denominados controles OLE).
+La reflexión de mensajes le permite controlar los mensajes de un control, como **WM_CTLCOLOR**, **WM_COMMAND**y **WM_NOTIFY**, dentro del propio control. Esto hace que el control sea más independiente y portátil. El mecanismo funciona con controles comunes de Windows, así como con controles ActiveX (anteriormente denominados controles OLE).
 
-Reflexión de mensajes permite reutilizar la `CWnd`-las clases derivadas con más facilidad. Funciona a través de la reflexión de mensajes [CWnd::OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), uso especial **ON_XXX_REFLECT** entradas de mapa de mensajes: por ejemplo, **ON_CTLCOLOR_REFLECT** y **ON_CONTROL_REFLECT**. [Nota técnica 62](../mfc/tn062-message-reflection-for-windows-controls.md) explica la reflexión de mensajes con más detalle.
+La reflexión de mensajes le permite volver a usar las `CWnd` clases derivadas de más fácilmente. La reflexión de mensajes funciona a través de [CWnd:: OnChildNotify](reference/cwnd-class.md#onchildnotify), mediante entradas especiales de mapa de mensajes de **ON_XXX_REFLECT** : por ejemplo, **ON_CTLCOLOR_REFLECT** y **ON_CONTROL_REFLECT**. La [Nota técnica 62](tn062-message-reflection-for-windows-controls.md) explica la reflexión de mensajes con más detalle.
 
-## <a name="what-do-you-want-to-do"></a>Qué quieres hacer
+## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
-- [Más información sobre la reflexión de mensajes](../mfc/tn062-message-reflection-for-windows-controls.md)
+- [Más información sobre la reflexión de mensajes](tn062-message-reflection-for-windows-controls.md)
 
-- [Implementar la reflexión de mensajes para un control común](../mfc/tn062-message-reflection-for-windows-controls.md)
+- [Implementar la reflexión de mensajes para un control común](tn062-message-reflection-for-windows-controls.md)
 
-- [Implementar la reflexión de mensajes para un control ActiveX](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)
+- [Implementar la reflexión de mensajes para un control ActiveX](mfc-activex-controls-subclassing-a-windows-control.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Declaración de funciones del controlador de mensajes](../mfc/declaring-message-handler-functions.md)
+[Declarar funciones del controlador de mensajes](declaring-message-handler-functions.md)

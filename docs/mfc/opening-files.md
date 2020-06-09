@@ -16,40 +16,40 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: 6119bf922b05c30a14d8421800e3931c4a038779
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73407eba802b7640e880b821144954fa6442f177
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375959"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622164"
 ---
 # <a name="opening-files"></a>Abrir archivos
 
-En MFC, la forma más común de abrir un archivo es un proceso de dos etapas.
+En MFC, la manera más común de abrir un archivo es un proceso de dos fases.
 
 #### <a name="to-open-a-file"></a>Para abrir un archivo
 
-1. Cree el objeto de archivo sin especificar una ruta de acceso o marcas de permiso.
+1. Cree el objeto de archivo sin especificar una ruta de acceso o marcas de permisos.
 
-   Normalmente se crea un objeto de archivo declarando una variable [CFile](../mfc/reference/cfile-class.md) en el marco de pila.
+   Normalmente, se crea un objeto de archivo mediante la declaración de una variable [CFile](reference/cfile-class.md) en el marco de pila.
 
-1. Llame a la [Open](../mfc/reference/cfile-class.md#open) función miembro para el objeto de archivo, proporcionando una ruta de acceso y marcas de permiso.
+1. Llame a la función miembro [Open](reference/cfile-class.md#open) del objeto de archivo y proporcione una ruta de acceso y marcas de permisos.
 
-   El valor `Open` devuelto para será distinto de cero si el archivo se abrió correctamente o 0 si no se pudo abrir el archivo especificado. La `Open` función miembro se prototipo de la siguiente manera:
+   El valor devuelto para `Open` será distinto de cero si el archivo se abrió correctamente o 0 si no se pudo abrir el archivo especificado. El `Open` prototipo de la función miembro es el siguiente:
 
    `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-   Las marcas abiertas especifican qué permisos, como de solo lectura, desea para el archivo. Los valores de marca posibles se definen como constantes enumeradas dentro de la `CFile` clase, por lo que se califican con "`CFile::`" como en `CFile::modeRead`. Utilice `CFile::modeCreate` la marca si desea crear el archivo.
+   Las marcas de apertura especifican los permisos, como solo lectura, que desea para el archivo. Los valores de marca posibles se definen como constantes enumeradas en la `CFile` clase, por lo que se califican con " `CFile::` " como en `CFile::modeRead` . Use la `CFile::modeCreate` marca si desea crear el archivo.
 
 En el ejemplo siguiente se muestra cómo crear un nuevo archivo con permiso de lectura y escritura (reemplazando cualquier archivo anterior con la misma ruta de acceso):
 
 [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
 
 > [!NOTE]
-> En este ejemplo se crea y se abre un archivo. Si hay problemas, `Open` la llamada `CFileException` puede devolver un objeto en su último parámetro, como se muestra aquí. La macro TRACE imprime el nombre de archivo y un código que indica el motivo del error. Puede llamar `AfxThrowFileException` a la función si necesita informes de errores más detallados.
+> En este ejemplo se crea y se abre un archivo. Si hay problemas, la `Open` llamada puede devolver un `CFileException` objeto en su último parámetro, como se muestra aquí. La macro TRACE imprime el nombre de archivo y un código que indica la razón del error. Puede llamar a la `AfxThrowFileException` función si necesita informes de errores más detallados.
 
 ## <a name="see-also"></a>Consulte también
 
-[CFile (clase)](../mfc/reference/cfile-class.md)<br/>
-[CFile::Abrir](../mfc/reference/cfile-class.md#open)<br/>
-[Archivos](../mfc/files-in-mfc.md)
+[CFile (clase)](reference/cfile-class.md)<br/>
+[CFile:: Open](reference/cfile-class.md#open)<br/>
+[Archivos](files-in-mfc.md)

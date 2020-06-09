@@ -8,32 +8,32 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: 35416025339b8fc059ed44b2b3c55d9c38d18570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a76bc9775e13350a031539c63476a4a8fae68ed0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620637"
 ---
 # <a name="containers"></a>Contenedores
 
-Una aplicación de contenedor es una aplicación que puede incorporar elementos incrustados o vinculados a sus propios documentos. Los documentos administrados por una aplicación de contenedor deben ser capaz de almacenar y mostrar los componentes de un documento compuesto OLE, así como los datos creados por la propia aplicación. Una aplicación contenedora también debe permitir a los usuarios insertar nuevos elementos o editar elementos existentes.
+Una aplicación contenedora es una aplicación que puede incorporar elementos incrustados o vinculados en sus propios documentos. Los documentos administrados por una aplicación contenedora deben ser capaces de almacenar y Mostrar componentes de documentos compuestos OLE, así como de los datos creados por la propia aplicación. Una aplicación contenedora también debe permitir a los usuarios insertar nuevos elementos o editar elementos existentes.
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Implementar un contenedor](../mfc/containers-implementing-a-container.md)
+[Implementación de un contenedor](containers-implementing-a-container.md)
 
-[Elementos de cliente de contenedor](../mfc/containers-client-items.md)
+[Elementos de cliente de contenedor](containers-client-items.md)
 
-[Usar archivos compuestos](../mfc/containers-compound-files.md)
+[Usar archivos compuestos](containers-compound-files.md)
 
-[Problemas de la interfaz de usuario de contenedor](../mfc/containers-user-interface-issues.md)
+[Problemas de la interfaz de usuario de contenedor](containers-user-interface-issues.md)
 
-[Características avanzadas de contenedores](../mfc/containers-advanced-features.md)
+[Características avanzadas de los contenedores](containers-advanced-features.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[Servidores](../mfc/servers.md)<br/>
-[Activación](../mfc/activation-cpp.md)<br/>
-[Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)
+[OLE](ole-in-mfc.md)<br/>
+[Servidores](servers.md)<br/>
+[Activación](activation-cpp.md)<br/>
+[Menús y recursos (OLE)](menus-and-resources-ole.md)

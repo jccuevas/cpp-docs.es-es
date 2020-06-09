@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 6317b6665adb7f3a06da564fcf049d0b64eb42e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f822e3393853c780bfe4ee86d5a5c799ec7646d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456570"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617672"
 ---
-# <a name="addlvaluereference-class"></a>Clase add_lvalue_reference
+# <a name="add_lvalue_reference-class"></a>Clase add_lvalue_reference
 
 Convierte una referencia en un tipo a partir de un tipo.
 
@@ -32,9 +32,9 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 *H*\
 Tipo que se va a modificar.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Una instancia del modificador de tipo contiene un tipo modificado que es *t* si *t* es una referencia lvalue; de lo `T&`contrario,.
+Una instancia del modificador de tipo contiene un tipo modificado que es *t* si *t* es una referencia lvalue; de lo contrario, `T&` .
 
 ## <a name="example"></a>Ejemplo
 
@@ -61,11 +61,11 @@ add_lvalue_reference_t<int> == int
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<type_traits>
+**Encabezado:**\<type_traits>
 
 **Espacio de nombres:** std
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[<type_traits>](../standard-library/type-traits.md)\
-[remove_reference (Clase)](../standard-library/remove-reference-class.md)
+[<type_traits>](type-traits.md)\
+[remove_reference (clase)](remove-reference-class.md)
