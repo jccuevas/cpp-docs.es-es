@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 649d64f8e8b894027b9d6850b62d357d79c1dafa
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685742"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616270"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Crear y mostrar cuadros de diálogo
 
@@ -21,13 +21,13 @@ La creación de un objeto de cuadro de diálogo es una operación en dos fases. 
 
 ### <a name="dialog-creation"></a>Creación de cuadros de diálogo
 
-|Tipo de cuadro de diálogo|Cómo crearlo|
+|Tipo de diálogo|Cómo crearlo|
 |-----------------|----------------------|
-|[No modal](../mfc/creating-modeless-dialog-boxes.md)|Construya `CDialog` y, a continuación, llame a la función miembro `Create`.|
-|[DoModal](../mfc/creating-modal-dialog-boxes.md)|Construya `CDialog` y, a continuación, llame a la función miembro `DoModal`.|
+|[Modeless](creating-modeless-dialog-boxes.md)|Construya `CDialog` y después llame a la `Create` función miembro.|
+|[DoModal](creating-modal-dialog-boxes.md)|Construya `CDialog` y después llame a la `DoModal` función miembro.|
 
-Si lo desea, puede crear el cuadro de diálogo a partir de una [plantilla de diálogo en memoria](../mfc/using-a-dialog-template-in-memory.md) que haya creado en lugar de hacerlo desde un recurso de plantilla de cuadro de diálogo. Sin embargo, se trata de un tema avanzado.
+Si lo desea, puede crear el cuadro de diálogo a partir de una [plantilla de diálogo en memoria](using-a-dialog-template-in-memory.md) que haya creado en lugar de hacerlo desde un recurso de plantilla de cuadro de diálogo. Sin embargo, se trata de un tema avanzado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Trabajar con cuadros de diálogo en MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Trabajar con cuadros de diálogo en MFC](life-cycle-of-a-dialog-box.md)

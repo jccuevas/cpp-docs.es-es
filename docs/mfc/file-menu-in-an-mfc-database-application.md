@@ -5,33 +5,33 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbbb4382749278708e8e758f79a618d5cad0549e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615699"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Archivo (Menú en una aplicación de base de datos MFC)
 
-Si crea una aplicación de base de datos MFC y no utiliza la serialización, cómo debe interpretar la apertura, cierre, guardar y guardar como comandos en el menú archivo aunque no hay ninguna directriz de estilo para esta pregunta, estas son algunas sugerencias:
+Si crea una aplicación de base de datos MFC y no utiliza la serialización, ¿cómo debe interpretar los comandos abrir, cerrar, guardar y guardar como en el menú Archivo, pero no hay ninguna guía de estilo para esta pregunta, estas son algunas sugerencias:
 
-- Eliminar completamente el comando Abrir del menú archivo.
+- Elimine completamente el comando abrir del menú archivo.
 
-- Interprete el comando Abrir como "Abrir base de datos" y mostrar al usuario una lista de orígenes de datos de que la aplicación reconozca.
+- Interprete el comando Open como "Open Database" y muestre al usuario una lista de orígenes de datos que la aplicación reconoce.
 
-- Interprete el comando Abrir como, quizás, "abrir perfil". Conserve abierto para abrir un archivo serializado, pero se use el archivo para almacenar un documento serializado que contiene información de "perfil de usuario", como las preferencias del usuario, incluida su o su Id. de inicio de sesión (excluyendo opcionalmente la contraseña) y el origen de datos que más recientemente se ha trabajado con.
+- Interprete el comando Abrir como, quizás, "abrir perfil". Mantenga abierto para abrir un archivo serializado, pero use el archivo para almacenar un documento serializado que contenga información de "Perfil de usuario", como las preferencias del usuario, incluido su identificador de inicio de sesión (opcionalmente excluyendo la contraseña) y el origen de datos con el que trabajó más recientemente.
 
-El Asistente para aplicaciones MFC admite la creación de una aplicación con ningún comandos del menú archivo relacionados con el documento. Seleccione el **vista sin compatibilidad con archivos de base de datos** opción el **base de datos admite** página.
+El Asistente para aplicaciones MFC admite la creación de una aplicación sin ningún comando de menú archivo relacionado con el documento. Seleccione la opción **vista de base de datos sin soporte de archivo** en la página **compatibilidad con bases de datos** .
 
-Para interpretar un comando de menú archivo de una manera especial, debe reemplazar uno o varios controladores de comandos, principalmente en su `CWinApp`-clase derivada. Por ejemplo, si reemplaza completamente `OnFileOpen` (que implementa el `ID_FILE_OPEN` comando) significa "Abrir base de datos:"
+Para interpretar un comando de menú Archivo de una manera especial, debe invalidar uno o más controladores de comandos, principalmente en la `CWinApp` clase derivada de. Por ejemplo, si invalida completamente `OnFileOpen` (que implementa el `ID_FILE_OPEN` comando) para indicar "base de datos abierta:"
 
-- No llame a la versión de la clase base `OnFileOpen`, ya que se va a reemplazar completamente implementación de predeterminada de .NET framework del comando.
+- No llame a la versión de la clase base de `OnFileOpen` , ya que está reemplazando por completo la implementación predeterminada del marco del comando.
 
-- Utilice en su lugar, el controlador para mostrar un cuadro de diálogo lista de orígenes de datos. Puede mostrar un cuadro de diálogo tal mediante una llamada a `CDatabase::OpenEx` o `CDatabase::Open` con el parámetro **NULL**. Se abrirá un cuadro de diálogo ODBC que muestra todos los orígenes de datos disponibles en el equipo del usuario.
+- En su lugar, utilice el controlador para mostrar un cuadro de diálogo que muestre los orígenes de datos. Para mostrar este cuadro de diálogo, puede llamar a `CDatabase::OpenEx` o `CDatabase::Open` con el parámetro **null**. Se abrirá un cuadro de diálogo ODBC que muestra todos los orígenes de datos disponibles en el equipo del usuario.
 
-- Dado que las aplicaciones de base de datos normalmente no guardan un documento completo, probablemente deseará quitar al guardar y guardar como implementaciones a menos que utilice un documento serializado para almacenar información de perfil. En caso contrario, podría implementar el comando Guardar como, por ejemplo, "Confirmar transacción". Consulte [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md) para obtener más información sobre cómo reemplazar estos comandos.
+- Dado que las aplicaciones de base de datos no suelen guardar todo un documento, es probable que quiera quitar las implementaciones guardar y guardar como, a menos que use un documento serializado para almacenar información de perfil. De lo contrario, podría implementar el comando Guardar como, por ejemplo, "COMMIT TRANSACTION". Vea la [Nota técnica 22](tn022-standard-commands-implementation.md) para obtener más información sobre la invalidación de estos comandos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Serialización: serialización frente a Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serialización: Serialización frente a entrada/salida de bases de datos](serialization-serialization-vs-database-input-output.md)

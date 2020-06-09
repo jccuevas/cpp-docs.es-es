@@ -47,18 +47,18 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: 67f40d0dc50a853a39cb9b60a938d8eafe8293c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d88e1efe12fd5b31a9f78b8fe439ba1aefa72d1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370491"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625725"
 ---
 # <a name="handling-customization-notifications"></a>Control de notificaciones de personalización
 
 Un control común de barra de herramientas de Windows tiene características de personalización integradas, incluyendo un cuadro de diálogo de personalización definido por el sistema que permite insertar, eliminar o reorganizar botones de la barra de herramientas. La aplicación determina si las características de personalización están disponibles y controla la medida en que el usuario puede personalizar la barra de herramientas.
 
-Puede hacer que estas características de personalización estén disponibles para el usuario dando a la barra de herramientas el estilo **CCS_ADJUSTABLE.** Las características de personalización permiten al usuario arrastrar un botón a una nueva posición o quitar un botón arrastrándolo fuera de la barra de herramientas. Además, el usuario puede hacer doble clic en la barra de herramientas para mostrar el cuadro de diálogo **Personalizar barra de herramientas** , que permite al usuario agregar, eliminar y reorganizar botones de la barra de herramientas. La aplicación puede mostrar el cuadro de diálogo mediante la función de miembro [Personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) .
+Puede hacer que estas características de personalización estén disponibles para el usuario. para ello, proporcione a la barra de herramientas el estilo **CCS_ADJUSTABLE** . Las características de personalización permiten al usuario arrastrar un botón a una nueva posición o quitar un botón arrastrándolo fuera de la barra de herramientas. Además, el usuario puede hacer doble clic en la barra de herramientas para mostrar el cuadro de diálogo **Personalizar barra de herramientas** , que permite al usuario agregar, eliminar y reorganizar botones de la barra de herramientas. La aplicación puede mostrar el cuadro de diálogo mediante la función de miembro [Personalizar](reference/ctoolbarctrl-class.md#customize) .
 
 El control de barra de herramientas envía mensajes de notificación a la ventana primaria en cada paso del proceso de personalización. Si el usuario mantiene presionada la tecla MAYÚS y comienza a arrastrar un botón, la barra de herramientas controla automáticamente la operación de arrastre. La barra de herramientas envía el mensaje de notificación **TBN_QUERYDELETE** a la ventana primaria para determinar si se puede eliminar el botón. La operación de arrastre termina si la ventana primaria devuelve **FALSE**. De lo contrario, la barra de herramientas captura la entrada del mouse y espera a que el usuario suelte el botón del mouse.
 
@@ -114,13 +114,13 @@ typedef struct tagNMHDR {
 
 - **hwndFrom**
 
-   Identificador de ventana del control que envía la notificación. Para convertir este identificador en un puntero `CWnd` , use [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).
+   Identificador de ventana del control que envía la notificación. Para convertir este identificador en un puntero `CWnd` , use [CWnd::FromHandle](reference/cwnd-class.md#fromhandle).
 
 - **idFrom**
 
    Identificador del control que envía la notificación.
 
-- **Código**
+- **code**
 
    Código de notificación. Este miembro puede ser un valor específico para un tipo de control, como **TBN_BEGINADJUST** o **TTN_NEEDTEXT**, o bien ser uno de los valores de notificación comunes que se enumeran a continuación:
 
@@ -162,7 +162,7 @@ typedef struct {
 
 - **tbButton**
 
-   **Estructura TBBUTTON** que contiene información sobre el botón de barra de herramientas asociado a la notificación.
+   Estructura **TBBUTTON** que contiene información sobre el botón de la barra de herramientas asociado a la notificación.
 
 - **cchText**
 
@@ -184,11 +184,11 @@ Las notificaciones que la barra de herramientas envía son las siguientes:
 
 - **TBN_CUSTHELP**
 
-   Se envía cuando el usuario elige el botón Ayuda en el cuadro de diálogo Personalizar barra de herramientas. No de devuelve ningún valor. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
+   Se envía cuando el usuario elige el botón ayuda en el cuadro de diálogo Personalizar barra de herramientas. No de devuelve ningún valor. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
 
 - **TBN_ENDADJUST**
 
-   Se envía cuando el usuario deja de personalizar un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
+   Se envía cuando el usuario detiene la personalización de un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
 
 - **TBN_ENDDRAG**
 
@@ -200,11 +200,11 @@ Las notificaciones que la barra de herramientas envía son las siguientes:
 
 - **TBN_QUERYDELETE**
 
-   Se envía mientras el usuario está personalizando una barra de herramientas para determinar si se puede eliminar un botón de un control de barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se va a eliminar. Devuelva **TRUE** para permitir que el botón se elimine o **FALSE** para impedir su eliminación.
+   Se envía mientras el usuario está personalizando una barra de herramientas para determinar si un botón se puede eliminar de un control de barra de herramientas. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se va a eliminar. Devuelva **TRUE** para permitir que el botón se elimine o **FALSE** para impedir su eliminación.
 
 - **TBN_QUERYINSERT**
 
-   Se envía mientras el usuario está personalizando un control de barra de herramientas para determinar si se puede insertar un botón a la izquierda del botón especificado. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se va a insertar. Devuelva **TRUE** para permitir que un botón se inserte delante del botón especificado o **FALSE** para impedir que el botón se inserte.
+   Se envía mientras el usuario está personalizando un control de barra de herramientas para determinar si un botón se puede insertar a la izquierda del botón especificado. El puntero apunta a una estructura **TBNOTIFY** . El miembro **iItem** contiene el índice basado en cero del botón que se va a insertar. Devuelva **TRUE** para permitir que un botón se inserte delante del botón especificado o **FALSE** para impedir que el botón se inserte.
 
 - **TBN_RESET**
 
@@ -212,9 +212,9 @@ Las notificaciones que la barra de herramientas envía son las siguientes:
 
 - **TBN_TOOLBARCHANGE**
 
-   Se envía después de que el usuario ha personalizado un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
+   Se envía una vez que el usuario ha personalizado un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
 
 ## <a name="see-also"></a>Consulte también
 
-[Usar CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Usar CToolBarCtrl](using-ctoolbarctrl.md)<br/>
+[Permite](controls-mfc.md)

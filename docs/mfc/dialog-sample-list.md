@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-ms.openlocfilehash: 72470463c3d4ff402bca9c119456778cf7fadecb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28bf4beaafaaff5c4b9122daeca9d61ed05346fc
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384080"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625912"
 ---
 # <a name="dialog-sample-list"></a>Lista de cuadros de diálogo de ejemplo
 
-Vea los siguientes programas de ejemplo que muestran cuadros de diálogo y las hojas de propiedades:
+Vea los siguientes programas de ejemplo que muestran cuadros de diálogo y hojas de propiedades:
 
 *Aplicación de ejemplo MDI con cuadros de diálogo*
 
-- [SCRIBBLE](../overview/visual-cpp-samples.md)
+- [GARABATO](../overview/visual-cpp-samples.md)
 
 *Cuadro de diálogo no modal*
 
-- [NO MODAL](../overview/visual-cpp-samples.md)
+- [NO modal](../overview/visual-cpp-samples.md)
 
-*Cuadro de diálogo de hoja de propiedades (cuadro de diálogo de pestaña)*
+*Cuadro de diálogo hoja de propiedades (cuadro de diálogo pestaña)*
 
 - [PROPDLG](../overview/visual-cpp-samples.md)
 
@@ -45,7 +45,7 @@ Vea los siguientes programas de ejemplo que muestran cuadros de diálogo y las h
 
 - [CTRLTEST](../overview/visual-cpp-samples.md)
 
-*Vistas de formulario de tipo cuadro de diálogo*
+*Vistas de formulario similares a los cuadros de diálogo*
 
 - [VIEWEX](../overview/visual-cpp-samples.md)
 
@@ -53,6 +53,6 @@ Vea los siguientes programas de ejemplo que muestran cuadros de diálogo y las h
 
 - [DLGTEMPL](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Cuadros de diálogo](../mfc/dialog-boxes.md)
+[Cuadros de diálogo](dialog-boxes.md)
