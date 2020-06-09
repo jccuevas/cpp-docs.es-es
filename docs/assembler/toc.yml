@@ -1,313 +1,18 @@
 - name: Intrínsecos del compilador y lenguaje ensamblador
-  href: ../intrinsics/compiler-intrinsics-and-assembly-language.md
+  href: ../intrinsics/index.yml
 - name: Intrínsecos del controlador
-  expanded: false
-  items:
-    - name: Información general de los intrínsecos del controlador
-      href: ../intrinsics/compiler-intrinsics.md
-    - name: Intrínsecos ARM
-      href: ../intrinsics/arm-intrinsics.md
-    - name: Intrínsecos de ARM64
-      href: ../intrinsics/arm64-intrinsics.md
-    - name: Lista de intrínsecos de x86
-      href: ../intrinsics/x86-intrinsics-list.md
-    - name: Lista de intrínsecos de x64 (amd64)
-      href: ../intrinsics/x64-amd64-intrinsics-list.md
-    - name: Intrínsecos disponibles en todas las arquitecturas
-      href: ../intrinsics/intrinsics-available-on-all-architectures.md
-    - name: Lista alfabética de funciones intrínsecas
-      expanded: false
-      items:
-        - name: Lista alfabética de funciones intrínsecas
-          href: ../intrinsics/alphabetical-listing-of-intrinsic-functions.md
-        - name: '__addfsbyte, __addfsword, __addfsdword'
-          href: ../intrinsics/addfsbyte-addfsword-addfsdword.md
-        - name: '__addgsbyte, __addgsword, __addgsdword, __addgsqword'
-          href: ../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md
-        - name: _AddressOfReturnAddress
-          href: ../intrinsics/addressofreturnaddress.md
-        - name: __assume
-          href: ../intrinsics/assume.md
-        - name: '_BitScanForward, _BitScanForward64'
-          href: ../intrinsics/bitscanforward-bitscanforward64.md
-        - name: '_BitScanReverse, _BitScanReverse64'
-          href: ../intrinsics/bitscanreverse-bitscanreverse64.md
-        - name: '_bittest, _bittest64'
-          href: ../intrinsics/bittest-bittest64.md
-        - name: '_bittestandcomplement, _bittestandcomplement64'
-          href: ../intrinsics/bittestandcomplement-bittestandcomplement64.md
-        - name: '_bittestandreset, _bittestandreset64'
-          href: ../intrinsics/bittestandreset-bittestandreset64.md
-        - name: '_bittestandset, _bittestandset64'
-          href: ../intrinsics/bittestandset-bittestandset64.md
-        - name: '__cpuid, __cpuidex'
-          href: ../intrinsics/cpuid-cpuidex.md
-        - name: __debugbreak
-          href: ../intrinsics/debugbreak.md
-        - name: _disable
-          href: ../intrinsics/disable.md
-        - name: _div128
-          href: ../intrinsics/div128.md
-        - name: _div64
-          href: ../intrinsics/div64.md
-        - name: '__emul, __emulu'
-          href: ../intrinsics/emul-emulu.md
-        - name: _enable
-          href: ../intrinsics/enable.md
-        - name: __fastfail
-          href: ../intrinsics/fastfail.md
-        - name: __faststorefence
-          href: ../intrinsics/faststorefence.md
-        - name: __getcallerseflags
-          href: ../intrinsics/getcallerseflags.md
-        - name: __halt
-          href: ../intrinsics/halt.md
-        - name: Funciones intrínsecas _InterlockedAdd
-          href: ../intrinsics/interlockedadd-intrinsic-functions.md
-        - name: _InterlockedAddLargeStatistic
-          href: ../intrinsics/interlockedaddlargestatistic.md
-        - name: Funciones intrínsecas _InterlockedAnd
-          href: ../intrinsics/interlockedand-intrinsic-functions.md
-        - name: Funciones intrínsecas _interlockedbittestandreset
-          href: ../intrinsics/interlockedbittestandreset-intrinsic-functions.md
-        - name: Funciones intrínsecas _interlockedbittestandset
-          href: ../intrinsics/interlockedbittestandset-intrinsic-functions.md
-        - name: Funciones intrínsecas de _InterlockedCompareExchange
-          href: ../intrinsics/interlockedcompareexchange-intrinsic-functions.md
-        - name: _InterlockedCompareExchange128
-          href: ../intrinsics/interlockedcompareexchange128.md
-        - name: Funciones intrínsecas _InterlockedCompareExchangePointer
-          href: ../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md
-        - name: Funciones intrínsecas _InterlockedDecrement
-          href: ../intrinsics/interlockeddecrement-intrinsic-functions.md
-        - name: Funciones intrínsecas _InterlockedExchange
-          href: ../intrinsics/interlockedexchange-intrinsic-functions.md
-        - name: Funciones intrínsecas _InterlockedExchangeAdd
-          href: ../intrinsics/interlockedexchangeadd-intrinsic-functions.md
-        - name: Funciones intrínsecas _InterlockedExchangePointer
-          href: ../intrinsics/interlockedexchangepointer-intrinsic-functions.md
-        - name: Funciones intrínsecas _InterlockedIncrement
-          href: ../intrinsics/interlockedincrement-intrinsic-functions.md
-        - name: Funciones intrínsecas _InterlockedOr
-          href: ../intrinsics/interlockedor-intrinsic-functions.md
-        - name: Funciones intrínsecas _InterlockedXor
-          href: ../intrinsics/interlockedxor-intrinsic-functions.md
-        - name: __inbyte
-          href: ../intrinsics/inbyte.md
-        - name: __inbytestring
-          href: ../intrinsics/inbytestring.md
-        - name: '__incfsbyte, __incfsword, __incfsdword'
-          href: ../intrinsics/incfsbyte-incfsword-incfsdword.md
-        - name: '__incgsbyte, __incgsword, __incgsdword, __incgsqword'
-          href: ../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md
-        - name: __indword
-          href: ../intrinsics/indword.md
-        - name: __indwordstring
-          href: ../intrinsics/indwordstring.md
-        - name: __int2c
-          href: ../intrinsics/int2c.md
-        - name: __invlpg
-          href: ../intrinsics/invlpg.md
-        - name: __inword
-          href: ../intrinsics/inword.md
-        - name: __inwordstring
-          href: ../intrinsics/inwordstring.md
-        - name: __lidt
-          href: ../intrinsics/lidt.md
-        - name: __ll_lshift
-          href: ../intrinsics/ll-lshift.md
-        - name: __ll_rshift
-          href: ../intrinsics/ll-rshift.md
-        - name: '__lzcnt16, __lzcnt, __lzcnt64'
-          href: ../intrinsics/lzcnt16-lzcnt-lzcnt64.md
-        - name: _mm_cvtsi64x_ss
-          href: ../intrinsics/mm-cvtsi64x-ss.md
-        - name: _mm_cvtss_si64x
-          href: ../intrinsics/mm-cvtss-si64x.md
-        - name: _mm_cvttss_si64x
-          href: ../intrinsics/mm-cvttss-si64x.md
-        - name: '_mm_extract_si64, _mm_extracti_si64'
-          href: ../intrinsics/mm-extract-si64-mm-extracti-si64.md
-        - name: '_mm_insert_si64, _mm_inserti_si64'
-          href: ../intrinsics/mm-insert-si64-mm-inserti-si64.md
-        - name: _mm_stream_sd
-          href: ../intrinsics/mm-stream-sd.md
-        - name: _mm_stream_si64x
-          href: ../intrinsics/mm-stream-si64x.md
-        - name: _mm_stream_ss
-          href: ../intrinsics/mm-stream-ss.md
-        - name: __movsb
-          href: ../intrinsics/movsb.md
-        - name: __movsd
-          href: ../intrinsics/movsd.md
-        - name: __movsq
-          href: ../intrinsics/movsq.md
-        - name: __movsw
-          href: ../intrinsics/movsw.md
-        - name: __mul128
-          href: ../intrinsics/mul128.md
-        - name: __mulh
-          href: ../intrinsics/mulh.md
-        - name: __noop
-          href: ../intrinsics/noop.md
-        - name: __nop
-          href: ../intrinsics/nop.md
-        - name: __outbyte
-          href: ../intrinsics/outbyte.md
-        - name: __outbytestring
-          href: ../intrinsics/outbytestring.md
-        - name: __outdword
-          href: ../intrinsics/outdword.md
-        - name: __outdwordstring
-          href: ../intrinsics/outdwordstring.md
-        - name: __outword
-          href: ../intrinsics/outword.md
-        - name: __outwordstring
-          href: ../intrinsics/outwordstring.md
-        - name: '__popcnt16, __popcnt, __popcnt64'
-          href: ../intrinsics/popcnt16-popcnt-popcnt64.md
-        - name: __rdtsc
-          href: ../intrinsics/rdtsc.md
-        - name: __rdtscp
-          href: ../intrinsics/rdtscp.md
-        - name: _ReadBarrier
-          href: ../intrinsics/readbarrier.md
-        - name: __readcr0
-          href: ../intrinsics/readcr0.md
-        - name: __readcr2
-          href: ../intrinsics/readcr2.md
-        - name: __readcr3
-          href: ../intrinsics/readcr3.md
-        - name: __readcr4
-          href: ../intrinsics/readcr4.md
-        - name: __readcr8
-          href: ../intrinsics/readcr8.md
-        - name: __readdr
-          href: ../intrinsics/readdr.md
-        - name: __readeflags
-          href: ../intrinsics/readeflags.md
-        - name: '__readfsbyte, __readfsdword, __readfsqword, __readfsword'
-          href: ../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md
-        - name: '__readgsbyte, __readgsdword, __readgsqword, __readgsword'
-          href: ../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md
-        - name: __readmsr
-          href: ../intrinsics/readmsr.md
-        - name: __readpmc
-          href: ../intrinsics/readpmc.md
-        - name: _ReadWriteBarrier
-          href: ../intrinsics/readwritebarrier.md
-        - name: _ReturnAddress
-          href: ../intrinsics/returnaddress.md
-        - name: '_rotl8, _rotl16'
-          href: ../intrinsics/rotl8-rotl16.md
-        - name: '_rotr8, _rotr16'
-          href: ../intrinsics/rotr8-rotr16.md
-        - name: __segmentlimit
-          href: ../intrinsics/segmentlimit.md
-        - name: __shiftleft128
-          href: ../intrinsics/shiftleft128.md
-        - name: __shiftright128
-          href: ../intrinsics/shiftright128.md
-        - name: __sidt
-          href: ../intrinsics/sidt.md
-        - name: __stosb
-          href: ../intrinsics/stosb.md
-        - name: __stosd
-          href: ../intrinsics/stosd.md
-        - name: __stosq
-          href: ../intrinsics/stosq.md
-        - name: __stosw
-          href: ../intrinsics/stosw.md
-        - name: __svm_clgi
-          href: ../intrinsics/svm-clgi.md
-        - name: __svm_invlpga
-          href: ../intrinsics/svm-invlpga.md
-        - name: __svm_skinit
-          href: ../intrinsics/svm-skinit.md
-        - name: __svm_stgi
-          href: ../intrinsics/svm-stgi.md
-        - name: __svm_vmload
-          href: ../intrinsics/svm-vmload.md
-        - name: __svm_vmrun
-          href: ../intrinsics/svm-vmrun.md
-        - name: __svm_vmsave
-          href: ../intrinsics/svm-vmsave.md
-        - name: __ud2
-          href: ../intrinsics/ud2.md
-        - name: _udiv128
-          href: ../intrinsics/udiv128.md
-        - name: _udiv64
-          href: ../intrinsics/udiv64.md
-        - name: __ull_rshift
-          href: ../intrinsics/ull-rshift.md
-        - name: _umul128
-          href: ../intrinsics/umul128.md
-        - name: __umulh
-          href: ../intrinsics/umulh.md
-        - name: __vmx_off
-          href: ../intrinsics/vmx-off.md
-        - name: __vmx_on
-          href: ../intrinsics/vmx-on.md
-        - name: __vmx_vmclear
-          href: ../intrinsics/vmx-vmclear.md
-        - name: __vmx_vmlaunch
-          href: ../intrinsics/vmx-vmlaunch.md
-        - name: __vmx_vmptrld
-          href: ../intrinsics/vmx-vmptrld.md
-        - name: __vmx_vmptrst
-          href: ../intrinsics/vmx-vmptrst.md
-        - name: __vmx_vmread
-          href: ../intrinsics/vmx-vmread.md
-        - name: __vmx_vmresume
-          href: ../intrinsics/vmx-vmresume.md
-        - name: __vmx_vmwrite
-          href: ../intrinsics/vmx-vmwrite.md
-        - name: __wbinvd
-          href: ../intrinsics/wbinvd.md
-        - name: _WriteBarrier
-          href: ../intrinsics/writebarrier.md
-        - name: __writecr0
-          href: ../intrinsics/writecr0.md
-        - name: __writecr3
-          href: ../intrinsics/writecr3.md
-        - name: __writecr4
-          href: ../intrinsics/writecr4.md
-        - name: __writecr8
-          href: ../intrinsics/writecr8.md
-        - name: __writedr
-          href: ../intrinsics/writedr.md
-        - name: __writeeflags
-          href: ../intrinsics/writeeflags.md
-        - name: '__writefsbyte, __writefsdword, __writefsqword, __writefsword'
-          href: ../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md
-        - name: '__writegsbyte, __writegsdword, __writegsqword, __writegsword'
-          href: ../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md
-        - name: __writemsr
-          href: ../intrinsics/writemsr.md
-- name: Referencia del ensamblador de ARM
-  expanded: false
-  items:
-    - name: Referencia del ensamblador de ARM
-      href: ../assembler/arm/arm-assembler-reference.md
-    - name: Referencia de la línea de comandos de ARM
-      href: ../assembler/arm/arm-assembler-command-line-reference.md
-    - name: Mensajes de diagnóstico del ensamblador de ARM
-      href: ../assembler/arm/arm-assembler-diagnostic-messages.md
-    - name: Directiva del ensamblador de ARM
-      href: ../assembler/arm/arm-assembler-directives.md
-- name: Código de ensamblado en línea en MSVC
-  expanded: false
+  href: ../intrinsics/compiler-intrinsics.md
+- name: Ensamblado insertado de Microsoft C/C++ x86
   items:
     - name: Código de ensamblado en línea en MSVC
       href: ../assembler/inline/inline-assembler.md
-    - name: Información general de ensamblador alineado
+    - name: Información general de ensamblador insertado
       href: ../assembler/inline/inline-assembler-overview.md
-    - name: Ventajas de ensamblado alineado
+    - name: Ventajas de ensamblado insertado
       href: ../assembler/inline/advantages-of-inline-assembly.md
     - name: __asm
       href: ../assembler/inline/asm.md
     - name: Uso del lenguaje de ensamblado en bloques __asm
-      expanded: false
       items:
         - name: Uso del lenguaje de ensamblado en bloques __asm
           href: ../assembler/inline/using-assembly-language-in-asm-blocks.md
@@ -327,39 +32,47 @@
           href: ../assembler/inline/type-and-variable-sizes-in-inline-assembly.md
         - name: Comentarios en lenguaje de ensamblado
           href: ../assembler/inline/assembly-language-comments.md
-        - name: _emit (Pseudoinstrucción)
+        - name: _emit (pseudoinstrucción)
           href: ../assembler/inline/emit-pseudoinstruction.md
         - name: Depuración y listas para el ensamblado insertado
           href: ../assembler/inline/debugging-and-listings-for-inline-assembly.md
-        - name: Conjunto de instrucciones MMX de Intel
+        - name: Conjunto de instrucciones MMX Intel
           href: ../assembler/inline/intel-s-mmx-instruction-set.md
     - name: Uso de C o C++ en bloques __asm
-      expanded: false
       items:
         - name: Uso de C o C++ en bloques __asm
           href: ../assembler/inline/using-c-or-cpp-in-asm-blocks.md
         - name: Uso de operadores en bloques __asm
           href: ../assembler/inline/using-operators-in-asm-blocks.md
-        - name: Usar símbolos de C o C++ en bloques __asm
+        - name: Uso de símbolos de C o C++ en bloques __asm
           href: ../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md
         - name: Acceso a datos de C o C++ en bloques __asm
           href: ../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md
-        - name: Escribir funciones con ensamblado alineado
+        - name: Escritura de funciones con ensamblado insertado
           href: ../assembler/inline/writing-functions-with-inline-assembly.md
-    - name: Uso y conservación de registros en un ensamblado alineado
+    - name: Uso y conservación de registros en un ensamblado insertado
       href: ../assembler/inline/using-and-preserving-registers-in-inline-assembly.md
-    - name: Salto a etiquetas en un ensamblado alineado
+    - name: Salto a etiquetas en un ensamblado insertado
       href: ../assembler/inline/jumping-to-labels-in-inline-assembly.md
-    - name: Llamada a funciones C en el ensamblado alineado
+    - name: Llamada a funciones C en ensamblado insertado
       href: ../assembler/inline/calling-c-functions-in-inline-assembly.md
-    - name: Llamada a funciones C++ en el ensamblado alineado
+    - name: Llamada a funciones C en ensamblado insertado
       href: ../assembler/inline/calling-cpp-functions-in-inline-assembly.md
     - name: Definición de bloques __asm como macros de C
       href: ../assembler/inline/defining-asm-blocks-as-c-macros.md
-    - name: Optimización de un ensamblado alineado
+    - name: Optimización de un ensamblado insertado
       href: ../assembler/inline/optimizing-inline-assembly.md
-- name: Referencia de Microsoft Macro Assembler (MASM)
-  expanded: false
+- name: Referencia del ensamblador ARM y ARM64
+  items:
+    - name: Referencia del ensamblador ARM y ARM64
+      href: ../assembler/arm/arm-assembler-reference.md
+    - name: Referencia de la línea de comandos del ensamblador ARM y ARM64
+      href: ../assembler/arm/arm-assembler-command-line-reference.md
+    - name: Mensajes de diagnóstico del ensamblador ARM y ARM64
+      href: ../assembler/arm/arm-assembler-diagnostic-messages.md
+    - name: Directivas del ensamblador ARM y ARM64
+      href: ../assembler/arm/arm-assembler-directives.md
+- name: Referencia del ensamblador x86 y x64
   items:
     - name: Referencia de Microsoft Macro Assembler (MASM)
       href: ../assembler/masm/microsoft-macro-assembler-reference.md
@@ -368,7 +81,6 @@
     - name: Referencia de la línea de comandos de ML y ML64
       href: ../assembler/masm/ml-and-ml64-command-line-reference.md
     - name: Referencia de directivas (MASM)
-      expanded: false
       items:
         - name: Referencia de directivas (MASM)
           href: ../assembler/masm/directives-reference.md
@@ -705,7 +417,6 @@
         - name: YMMWORD
           href: ../assembler/masm/ymmword.md
     - name: Referencia de símbolos
-      expanded: false
       items:
         - name: Referencia de símbolos
           href: ../assembler/masm/symbols-reference.md
@@ -768,12 +479,10 @@
     - name: Manuales de programación de los fabricantes de procesadores
       href: ../assembler/masm/processor-manufacturer-programming-manuals.md
     - name: Referencia de operadores
-      expanded: false
       items:
         - name: Referencia de operadores
           href: ../assembler/masm/operators-reference.md
         - name: Operadores (MASM)
-          expanded: false
           items:
             - name: + (Operador)
               href: ../assembler/masm/operator-add.md
@@ -884,7 +593,6 @@
             - name: Operador XOR
               href: ../assembler/masm/operator-xor.md
         - name: Operadores en tiempo de ejecución (MASM)
-          expanded: false
           items:
             - name: == (Operador) (En tiempo de ejecución de MASM)
               href: ../assembler/masm/operator-equal-masm-run-time.md
@@ -916,13 +624,11 @@
               href: ../assembler/masm/operator-sign-q.md
             - name: Operador ZERO?
               href: ../assembler/masm/operator-zero-q.md
-    - name: Mensajes de error de ML (MASM)
-      expanded: false
+    - name: Mensajes de error de ML64 y ML (MASM)
       items:
         - name: Mensajes de error de ML (MASM)
           href: ../assembler/masm/ml-error-messages.md
         - name: Errores irrecuperables de ML
-          expanded: false
           items:
             - name: Error irrecuperable A1000 de ML
               href: ../assembler/masm/ml-fatal-error-a1000.md
@@ -943,10 +649,8 @@
             - name: Error irrecuperable A1017 de ML
               href: ../assembler/masm/ml-fatal-error-a1017.md
         - name: Errores recuperables de ML
-          expanded: false
           items:
             - name: Errores recuperables A2000-A2049 de ML
-              expanded: false
               items:
                 - name: Error recuperable A2004 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2004.md
@@ -975,7 +679,6 @@
                 - name: Error recuperable A2047 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2047.md
             - name: Error recuperable A2050-A2099 de ML
-              expanded: false
               items:
                 - name: Error recuperable A2050 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2050.md
@@ -1016,7 +719,6 @@
                 - name: Error recuperable A2097 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2097.md
             - name: Errores recuperables A2100-A2149 de ML
-              expanded: false
               items:
                 - name: Error recuperable A2107 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2107.md
@@ -1027,19 +729,16 @@
                 - name: Error recuperable A2137 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2137.md
             - name: Errores recuperables A2150-A2199 de ML
-              expanded: false
               items:
                 - name: Error recuperable A2189 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2189.md
             - name: Errores recuperables A2200-A2901 de ML
-              expanded: false
               items:
                 - name: Error recuperable A2206 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2206.md
                 - name: Error recuperable A2219 de ML
                   href: ../assembler/masm/ml-nonfatal-error-a2219.md
         - name: Advertencias de ML
-          expanded: false
           items:
             - name: Advertencia A4004 de ML
               href: ../assembler/masm/ml-warning-a4004.md

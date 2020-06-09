@@ -6,12 +6,12 @@ metadata:
   description: Obtenga más información sobre cómo Visual Studio puede ayudarle a analizar la calidad del código C y C++.
   ms.topic: landing-page
   ms.date: 05/26/2020
-  ms.openlocfilehash: 95bba65d42138424efb8978a67666c8354384aea
-  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.openlocfilehash: cb4015d2890e24568373ff97d884e4aa24ddcf71
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/27/2020
-  ms.locfileid: "84108412"
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84506760"
 landingContent:
 - title: Análisis del código de C y C++
   linkLists:
@@ -27,8 +27,6 @@ landingContent:
     links:
     - text: Tutorial Analizar código de C/C++ en busca de defectos
       url: walkthrough-analyzing-c-cpp-code-for-defects.md
-    - text: Utilizar anotaciones SAL para reducir defectos de código de C/C++
-      url: using-sal-annotations-to-reduce-c-cpp-code-defects.md
 - title: Referencia de análisis de código
   linkLists:
   - linkListType: overview
@@ -41,3 +39,29 @@ landingContent:
       url: code-analysis-for-cpp-corecheck.md
     - text: Advertencias de análisis de código de C++
       url: code-analysis-for-c-cpp-warnings.md
+- title: Uso de anotaciones SAL para reducir defectos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introducción a SAL
+      url: understanding-sal.md
+  - linkListType: get-started
+    links:
+    - text: Ejemplos de SAL
+      url: best-practices-and-examples-sal.md
+  - linkListType: how-to-guide
+    links:
+    - text: Anotación de parámetros de función y valores devueltos
+      url: annotating-function-parameters-and-return-values.md
+    - text: Anotación del comportamiento de las funciones
+      url: annotating-function-behavior.md
+    - text: Anotación de clases y elementos struct
+      url: annotating-structs-and-classes.md
+    - text: Anotación del comportamiento de bloqueo
+      url: annotating-locking-behavior.md
+    - text: Especificar cuándo y dónde se aplican las anotaciones
+      url: specifying-when-and-where-an-annotation-applies.md
+  - linkListType: reference
+    links:
+    - text: Intrínsecos de la anotación SAL
+      url: intrinsic-functions.md
