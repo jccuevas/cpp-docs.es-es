@@ -6,41 +6,41 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-ms.openlocfilehash: 6a31c783e19603eadb90fd0e6be99ff55f4eaeb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5fcb15a0cb7e336f6c818eb39b271f5f6e74af5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352182"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621354"
 ---
 # <a name="making-and-using-controls"></a>Crear y usar controles
 
-Realizar la mayoría de los controles de cuadros de diálogo en Visual C++ [editor de cuadro de diálogo](../windows/dialog-editor.md). Pero también puede crear los controles en cualquier cuadro de diálogo o ventana.
+La mayoría de los controles de los cuadros de diálogo se convierten en el editor de cuadros de [diálogo](../windows/dialog-editor.md)Visual C++. Pero también puede crear controles en cualquier cuadro de diálogo o ventana.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Usar controles comunes en un cuadro de diálogo](../mfc/using-common-controls-in-a-dialog-box.md)
+- [Usar controles comunes en un cuadro de diálogo](using-common-controls-in-a-dialog-box.md)
 
-- [Utilizar el editor de cuadros de diálogo para agregar controles](../mfc/using-the-dialog-editor-to-add-controls.md)
+- [Usar el editor de cuadros de diálogo para agregar controles](using-the-dialog-editor-to-add-controls.md)
 
-- [Agregar controles a mano](../mfc/adding-controls-by-hand.md) (sin el editor de cuadro de diálogo)
+- [Agregar controles a mano](adding-controls-by-hand.md) (sin el editor de cuadros de diálogo)
 
-- [Derivar controles de un control estándar](../mfc/deriving-controls-from-a-standard-control.md)
+- [Derivar controles de un control estándar](deriving-controls-from-a-standard-control.md)
 
-- [Usar un control común como ventana secundaria](../mfc/using-a-common-control-as-a-child-window.md)
+- [Usar un control común como ventana secundaria](using-a-common-control-as-a-child-window.md)
 
-- [Recibir notificación de controles comunes](../mfc/receiving-notification-from-common-controls.md)
+- [Recibir notificaciones de controles comunes](receiving-notification-from-common-controls.md)
 
-- [Intercambio y validación de datos de cuadros de diálogo](../mfc/dialog-data-exchange-and-validation.md)
+- [Intercambio y validación de datos de cuadros de diálogo](dialog-data-exchange-and-validation.md)
 
-- [Acceso con seguridad de tipos a los controles con Asistentes para código](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+- [Acceso con seguridad de tipos a los controles con Asistentes para código](type-safe-access-to-controls-with-code-wizards.md)
 
-- Los controles individuales: vea [controles](../mfc/controls-mfc.md) para obtener vínculos a todos los controles comunes
+- Controles individuales: vea [controles](controls-mfc.md) para obtener vínculos a todos los controles comunes
 
-- [Cuadros de diálogo](../mfc/dialog-boxes.md)
+- [Cuadros de diálogo](dialog-boxes.md)
 
-- [Barras de cuadro de diálogo](../mfc/dialog-bars.md)
+- [Barras de diálogo](dialog-bars.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Controles](../mfc/controls-mfc.md)
+[Permite](controls-mfc.md)

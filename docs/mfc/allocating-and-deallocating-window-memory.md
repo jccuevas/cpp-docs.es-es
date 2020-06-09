@@ -9,25 +9,25 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02546559183d0e14973bc2e5ccb26a4570a39b1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394707"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623263"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Asignar y desasignar memoria de ventana
 
-No use C++ **eliminar** operador para destruir una ventana de marco o vista. En su lugar, llame a la `CWnd` función miembro `DestroyWindow`. Ventanas de marco, por lo tanto, se deben asignar en el montón con operador **nuevo**. Tenga cuidado al asignar ventanas de marco en el marco de pila o global. Otras ventanas se deben asignar en el marco de pila siempre que sea posible.
+No use el operador **Delete** de C++ para destruir una ventana o vista de marco. En su lugar, llame a la `CWnd` función miembro `DestroyWindow` . Por lo tanto, las ventanas de marco deben asignarse en el montón con el operador **New**. Tenga cuidado al asignar ventanas de marco en el marco de pila o globalmente. Siempre que sea posible, se deben asignar otras ventanas en el marco de pila.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Creación de ventanas](../mfc/creating-windows.md)
+- [Crear ventanas](creating-windows.md)
 
-- [Secuencia de destrucción de ventanas](../mfc/window-destruction-sequence.md)
+- [Secuencia de destrucción de ventanas](window-destruction-sequence.md)
 
-- [Desasociar CWnd de su HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Desasociar CWnd de su HWND](detaching-a-cwnd-from-its-hwnd.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Destrucción de objetos de ventana](../mfc/destroying-window-objects.md)
+[Destruir objetos Window](destroying-window-objects.md)

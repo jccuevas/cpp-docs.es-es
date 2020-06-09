@@ -6,48 +6,48 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54b1b2a64685b00fb265e0f80c1f6ad878a7da85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153430"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623020"
 ---
 # <a name="containers-client-item-notifications"></a>Contenedores: Notificaciones de elementos de cliente
 
-En este artículo se describe las funciones reemplazables que llama el marco MFC cuando las aplicaciones de servidor modifican elementos en el documento de la aplicación cliente.
+En este artículo se describen las funciones reemplazables a las que llama el marco de trabajo de MFC cuando las aplicaciones de servidor modifican elementos en el documento de la aplicación cliente.
 
-[COleClientItem](../mfc/reference/coleclientitem-class.md) define varias funciones reemplazables que se llaman en respuesta a solicitudes de la aplicación de componente, que también se denomina la aplicación de servidor. Estas funciones reemplazables suelen actúan como notificaciones. Informarán de la aplicación contenedora de diversos eventos, como el desplazamiento, la activación o un cambio de posición y de los cambios que realice el usuario al editar o manipular el elemento.
+[COleClientItem](reference/coleclientitem-class.md) define varias funciones reemplazables a las que se llama en respuesta a las solicitudes de la aplicación de componentes, que también se denomina aplicación de servidor. Estos reemplazables suelen actuar como notificaciones. Informan a la aplicación contenedora de diversos eventos, como el desplazamiento, la activación o un cambio de posición, y de los cambios que el usuario realiza al editar o manipular el elemento de otra manera.
 
-El marco de trabajo notifica a la aplicación de contenedor de los cambios a través de una llamada a `COleClientItem::OnChange`, una función reemplazable cuya implementación se requiere. Esta función protegida recibe dos argumentos. El primero especifica el motivo por que el servidor puede cambiar el elemento:
+El marco de trabajo notifica a la aplicación de contenedor los cambios a través de una llamada a `COleClientItem::OnChange` , una función reemplazable cuya implementación es necesaria. Esta función protegida recibe dos argumentos. El primero especifica la razón por la que el servidor cambió el elemento:
 
-|notificación|Significado|
+|Notificación|Significado|
 |------------------|-------------|
-|**OLE_CHANGED**|Apariencia del elemento OLE ha cambiado.|
+|**OLE_CHANGED**|La apariencia del elemento OLE ha cambiado.|
 |**OLE_SAVED**|Se ha guardado el elemento OLE.|
-|**OLE_CLOSED**|Se cerró el elemento OLE.|
-|**OLE_RENAMED**|Se ha cambiado el documento del servidor que contiene el elemento OLE.|
+|**OLE_CLOSED**|El elemento OLE se ha cerrado.|
+|**OLE_RENAMED**|Se ha cambiado el nombre del documento de servidor que contiene el elemento OLE.|
 |**OLE_CHANGED_STATE**|El elemento OLE ha cambiado de un estado a otro.|
-|**OLE_CHANGED_ASPECT**|Aspecto de dibujo del elemento OLE se cambió el marco de trabajo.|
+|**OLE_CHANGED_ASPECT**|El marco ha cambiado el aspecto de dibujo del elemento OLE.|
 
-Estos valores están comprendidos entre el **OLE_NOTIFICATION** enumeración, que se define en el archivo AFXOLE. H.
+Estos valores proceden de la enumeración **OLE_NOTIFICATION** , que se define en AFXOLE. C.
 
-El segundo argumento a esta función especifica cómo ha cambiado el elemento o qué estado que ha entrado en:
+El segundo argumento de esta función especifica el modo en que el elemento ha cambiado o el estado que ha escrito:
 
 |Cuando el primer argumento es|Segundo argumento|
 |----------------------------|---------------------|
 |**OLE_SAVED** o **OLE_CLOSED**|No se utiliza.|
 |**OLE_CHANGED**|Especifica el aspecto del elemento OLE que ha cambiado.|
-|**OLE_CHANGED_STATE**|Describe el estado que se escribió (*emptyState*, *loadedState*, *openState*, *activeState*, o  *activeUIState*).|
+|**OLE_CHANGED_STATE**|Describe el estado que se va a especificar (*emptyState*, *loadedState*, *openState*, *activeState*o *activeUIState*).|
 
-Para obtener más información acerca de los Estados que puede suponer un elemento de cliente, consulte [contenedores: Estados de elementos de cliente](../mfc/containers-client-item-states.md).
+Para obtener más información sobre los Estados que un elemento de cliente puede asumir, consulte [contenedores: Estados de elementos de cliente](containers-client-item-states.md).
 
-Las llamadas de framework `COleClientItem::OnGetItemPosition` cuando se está activando un elemento para su edición en contexto. Implementación es necesaria para las aplicaciones que admiten la edición en contexto. El Asistente para aplicaciones MFC proporciona una implementación básica, que asigna las coordenadas del elemento en el `CRect` objeto que se pasa como argumento a `OnGetItemPosition`.
+El marco de trabajo llama `COleClientItem::OnGetItemPosition` cuando un elemento se activa para la edición en contexto. La implementación es necesaria para las aplicaciones que admiten la edición en contexto. El Asistente para aplicaciones MFC proporciona una implementación básica, que asigna las coordenadas del elemento al `CRect` objeto que se pasa como argumento a `OnGetItemPosition` .
 
-Si cambia el tamaño o posición de un elemento OLE durante la edición en contexto, se debe actualizar la información del contenedor sobre rectángulos de recorte y la posición del elemento y el servidor debe recibir información sobre los cambios. Las llamadas de framework `COleClientItem::OnChangeItemPosition` para este propósito. El Asistente para aplicaciones MFC proporciona una invalidación que llama a la función de la clase base. Debe editar la función que escribe el Asistente para aplicaciones para su `COleClientItem`-clase derivada para que la función actualiza cualquier información retenida por el objeto de elementos de cliente.
+Si cambia la posición o el tamaño de un elemento OLE durante la edición en contexto, se debe actualizar la información del contenedor sobre la posición del elemento y los rectángulos de recorte, y el servidor debe recibir información acerca de los cambios. El marco de trabajo llama a `COleClientItem::OnChangeItemPosition` para este propósito. El Asistente para aplicaciones MFC proporciona una invalidación que llama a la función de la clase base. Debe editar la función que el Asistente para aplicaciones escribe en la `COleClientItem` clase derivada de para que la función actualice cualquier información retenida por el objeto de elemento de cliente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Contenedores](../mfc/containers.md)<br/>
-[Contenedores: estados de elementos de cliente](../mfc/containers-client-item-states.md)<br/>
-[COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
+[Contenedores](containers.md)<br/>
+[Contenedores: Estados de elementos de cliente](containers-client-item-states.md)<br/>
+[COleClientItem:: OnChangeItemPosition](reference/coleclientitem-class.md#onchangeitemposition)

@@ -34,16 +34,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 8cd49051a25148c1c3289de9f0d7046ad27818c9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5459fdbd445e7823dcc28096a7b7da3c0c5b38cf
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690083"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617506"
 ---
 # <a name="allocator-class"></a>allocator (Clase)
 
-La plantilla de clase describe un objeto que administra la asignación de almacenamiento y la liberación de las matrices de objetos de tipo `Type`. Un objeto de clase `allocator` es el objeto de asignador predeterminado especificado en los constructores para varias plantillas de clase de contenedor C++ en la biblioteca estándar.
+La plantilla de clase describe un objeto que administra la asignación de almacenamiento y la liberación de las matrices de objetos de tipo `Type` . Un objeto de clase `allocator` es el objeto de asignador predeterminado especificado en los constructores para varias plantillas de clase de contenedor en la biblioteca estándar de C++.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,32 +54,32 @@ class allocator
 
 ### <a name="parameters"></a>Parámetros
 
-*Escribir* \
+*Automáticamente*\
 Tipo de objeto al que se va a asignar o desasignar almacenamiento.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Todos los C++ contenedores de la biblioteca estándar tienen un parámetro de plantilla que tiene como valor predeterminado `allocator`. Crear un contenedor con un asignador personalizado confiere control sobre la asignación y la liberación de los elementos de ese contenedor.
+Todos los contenedores de la biblioteca estándar de C++ tienen un parámetro de plantilla que tiene como valor predeterminado `allocator` . Crear un contenedor con un asignador personalizado confiere control sobre la asignación y la liberación de los elementos de ese contenedor.
 
 Así, por ejemplo, un objeto de asignador puede asignar almacenamiento en un montón privado o en la memoria compartida, o puede optimizar los tamaños de objetos pequeños o grandes. También puede especificar, a través de las definiciones de tipo que proporciona, que el acceso a los elementos tiene que realizarse a través de objetos de descriptor de acceso especiales que administran la memoria compartida, o realizar una recolección automática de elementos no utilizados. Por lo tanto, una clase que asigna almacenamiento con un objeto de asignador debe usar estos tipos para declarar los objetos de puntero y referencia, tal como hacen los contenedores de la biblioteca estándar de C++.
 
-<strong>(Solo C++ 98/03)</strong> Cuando derive de la clase allocator, tendrá que proporcionar un struct de [reenlace](#rebind) , cuyo `_Other` typedef hace referencia a la clase recién derivada.
+<strong>(Solo C++ 98/03)</strong> Al derivar de la clase allocator, tendrá que proporcionar un struct de [reenlace](#rebind) , cuyo `_Other` typedef haga referencia a la clase recién derivada.
 
 Por lo tanto, un asignador define los siguientes tipos:
 
-- el [puntero](#pointer) se comporta como un puntero a `Type`.
+- el [puntero](#pointer) se comporta como un puntero a `Type` .
 
-- [const_pointer](#const_pointer) se comporta como un puntero const a `Type`.
+- [const_pointer](#const_pointer) se comporta como un puntero const a `Type` .
 
-- la [referencia](#reference) se comporta como una referencia a `Type`.
+- la [referencia](#reference) se comporta como una referencia a `Type` .
 
-- [const_reference](#const_reference) se comporta como una referencia const a `Type`.
+- [const_reference](#const_reference) se comporta como una referencia const a `Type` .
 
-Estos `Type`s especifican el formulario que los punteros y referencias deben realizar para los elementos asignados. ( [allocator::p ointer](#pointer) no es necesariamente el mismo que `Type*` para todos los objetos de asignador, aunque tenga esta definición obvia para `allocator` de clase).
+Estos `Type` s especifican el formulario que deben tomar los punteros y las referencias para los elementos asignados. ( [allocator::p ointer](#pointer) no es necesariamente el mismo que `Type*` para todos los objetos de asignador, aunque tiene esta definición obvia para la clase `allocator` ).
 
-**C++11 y versiones posteriores:** para permitir las operaciones de movimiento en el asignador, use la interfaz de asignador mínima e implemente el constructor de copias, los operadores == y! = y allocate y deallocate. Para obtener más información y ver un ejemplo, vea [Asignadores](../standard-library/allocators.md)
+**C++11 y versiones posteriores:** para permitir las operaciones de movimiento en el asignador, use la interfaz de asignador mínima e implemente el constructor de copias, los operadores == y! = y allocate y deallocate. Para obtener más información y ver un ejemplo, vea [Asignadores](allocators.md)
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Constructores
 
@@ -87,27 +87,27 @@ Estos `Type`s especifican el formulario que los punteros y referencias deben rea
 |-|-|
 |[allocator](#allocator)|Constructores usados para crear objetos `allocator`.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
 |[const_pointer](#const_pointer)|Tipo que proporciona un puntero constante al tipo de objeto administrado por el asignador.|
 |[const_reference](#const_reference)|Tipo que proporciona una referencia constante al tipo de objeto administrado por el asignador.|
 |[difference_type](#difference_type)|Tipo entero con signo que puede representar la diferencia entre valores de punteros que señalan al tipo de objeto administrado por el asignador.|
-|[pointer](#pointer)|Tipo que proporciona un puntero al tipo de objeto administrado por el asignador.|
+|[puntero](#pointer)|Tipo que proporciona un puntero al tipo de objeto administrado por el asignador.|
 |[reference](#reference)|Tipo que proporciona una referencia al tipo de objeto administrado por el asignador.|
 |[size_type](#size_type)|Tipo entero sin signo que puede representar la longitud de cualquier secuencia que un objeto de tipo `allocator` puede asignar.|
 |[value_type](#value_type)|Tipo administrado por el asignador.|
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
 |[address](#address)|Encuentra la dirección de un objeto cuyo valor se especifica.|
 |[allocate](#allocate)|Asigna un bloque de memoria lo suficientemente grande como para almacenar al menos un número especificado de elementos.|
-|[construct](#construct)|Crea un tipo concreto de objeto en una dirección especificada que se inicializa con un valor especificado.|
-|[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
-|[destroy](#destroy)|Llama a un destructor de objetos sin desasignar la memoria donde el objeto se almacena.|
+|[construir](#construct)|Crea un tipo concreto de objeto en una dirección especificada que se inicializa con un valor especificado.|
+|[desasignar](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
+|[borrar](#destroy)|Llama a un destructor de objetos sin desasignar la memoria donde el objeto se almacena.|
 |[max_size](#max_size)|Devuelve el número de elementos de tipo `Type` que podrían ser asignados por un objeto de clase `allocator` antes de que la memoria libre se agote.|
 |[rebind](#rebind)|Estructura que permite que un asignador de objetos de un tipo asigne almacenamiento para objetos de otro tipo.|
 
@@ -115,9 +115,9 @@ Estos `Type`s especifican el formulario que los punteros y referencias deben rea
 
 |||
 |-|-|
-|[operator=](#op_eq)|Asigna un objeto `allocator` a otro objeto `allocator`.|
+|[operador =](#op_eq)|Asigna un objeto `allocator` a otro objeto `allocator`.|
 
-### <a name="address"></a>Dirección
+### <a name="address"></a>Dirección <a name="address"></a>
 
 Encuentra la dirección de un objeto cuyo valor se especifica.
 
@@ -128,14 +128,14 @@ const_pointer address(const_reference val) const;
 
 #### <a name="parameters"></a>Parámetros
 
-\ *Val*
+*Val*\
 Valor const o nonconst del objeto cuya dirección se busca.
 
 #### <a name="return-value"></a>Valor devuelto
 
 Puntero const o nonconst al objeto encontrado de valor const o nonconst respectivamente.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Las funciones miembro devuelven la dirección de *Val*, en el formulario que los punteros deben realizar para los elementos asignados.
 
@@ -183,7 +183,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
-### <a name="allocate"></a>asignación
+### <a name="allocate"></a><a name="allocate"></a>asignación
 
 Asigna un bloque de memoria lo suficientemente grande como para almacenar al menos un número especificado de elementos.
 
@@ -193,19 +193,19 @@ pointer allocate(size_type count, const void* _Hint);
 
 #### <a name="parameters"></a>Parámetros
 
-*recuento* \
+*contabiliza*\
 El número de elementos para los que se puede asignar suficiente espacio de almacenamiento.
 
-@No__t_1 *_Hint*
+*_Hint*\
 Puntero const que puede ayudar al objeto de asignador a satisfacer la solicitud de almacenamiento al buscar la dirección de un objeto asignado antes de la solicitud.
 
 #### <a name="return-value"></a>Valor devuelto
 
 Puntero al objeto asignado o nulo si no se ha asignado memoria.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-La función miembro asigna almacenamiento para una matriz de elementos Count de tipo `Type`, llamando al operador New (*Count*). Devuelve un puntero al objeto asignado. El argumento de sugerencia ayuda a algunos asignadores a mejorar la localidad de referencia; una opción válida es la dirección de un objeto anteriormente asignado por el mismo objeto de asignador y que aún no se ha desasignado. Para no proporcionar ningún argumento de sugerencia, use un argumento de puntero nulo.
+La función miembro asigna almacenamiento para una matriz de elementos de recuento de tipo `Type` , llamando al operador New (*Count*). Devuelve un puntero al objeto asignado. El argumento de sugerencia ayuda a algunos asignadores a mejorar la localidad de referencia; una opción válida es la dirección de un objeto anteriormente asignado por el mismo objeto de asignador y que aún no se ha desasignado. Para no proporcionar ningún argumento de sugerencia, use un argumento de puntero nulo.
 
 #### <a name="example"></a>Ejemplo
 
@@ -243,7 +243,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9
 ```
 
-### <a name="allocator"></a>Asignador
+### <a name="allocator"></a><a name="allocator"></a>Asignador
 
 Constructores usados para crear objetos de asignador.
 
@@ -256,10 +256,10 @@ template <class Other>
 
 #### <a name="parameters"></a>Parámetros
 
-\ *derecha*
+*correcta*\
 Objeto de asignador que se va a copiar.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El constructor no hace nada. Pero, en general, un objeto de asignador creado a partir de otro objeto de asignador debe ser igual a él y permitir la mezcla de asignación de objetos y liberación entre los dos objetos de asignador.
 
@@ -326,7 +326,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-### <a name="const_pointer"></a>const_pointer
+### <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
 Tipo que proporciona un puntero constante al tipo de objeto administrado por el asignador.
 
@@ -334,9 +334,9 @@ Tipo que proporciona un puntero constante al tipo de objeto administrado por el 
 typedef const value_type *const_pointer;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-El tipo de puntero describe un objeto `ptr` que puede designar, a través de la expresión `*ptr`, cualquier objeto const que un objeto de tipo `allocator` pueda asignar.
+El tipo de puntero describe un objeto `ptr` que puede designar, a través de la expresión `*ptr` , cualquier objeto const que puede asignar un objeto de tipo `allocator` .
 
 #### <a name="example"></a>Ejemplo
 
@@ -381,7 +381,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.
 ```
 
-### <a name="const_reference"></a>const_reference
+### <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
 Tipo que proporciona una referencia constante al tipo de objeto administrado por el asignador.
 
@@ -389,9 +389,9 @@ Tipo que proporciona una referencia constante al tipo de objeto administrado por
 typedef const value_type& const_reference;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-El tipo de referencia describe un objeto que puede designar cualquier objeto const que puede asignar un objeto de tipo `allocator`.
+El tipo de referencia describe un objeto que puede designar cualquier objeto const que puede asignar un objeto de tipo `allocator` .
 
 #### <a name="example"></a>Ejemplo
 
@@ -447,7 +447,7 @@ The value of the element referred to by vcref,
 after nofication through its nonconst iterator, is: 175.
 ```
 
-### <a name="construct"></a>construir
+### <a name="construct"></a><a name="construct"></a>construir
 
 Crea un tipo concreto de objeto en una dirección especificada que se inicializa con un valor especificado.
 
@@ -460,15 +460,15 @@ template <class _Other>
 
 #### <a name="parameters"></a>Parámetros
 
-\ *ptr*
+*anota*\
 Puntero a la ubicación donde se va a crear el objeto.
 
-\ *Val*
+*Val*\
 Valor con el que se va a inicializar el objeto que se está creando.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-La primera función miembro equivale al **nuevo** **tipo** ((`void` \*) `ptr`) (`val`).
+La primera función miembro es equivalente a **New** (( `void` \* ) `ptr` ) **Type** ( `val` ).
 
 #### <a name="example"></a>Ejemplo
 
@@ -519,7 +519,7 @@ The modified vector v1 is:
 ( 3 7 9 12 15 18 21 ).
 ```
 
-### <a name="deallocate"></a>desasignar
+### <a name="deallocate"></a><a name="deallocate"></a>desasignar
 
 Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.
 
@@ -529,21 +529,21 @@ void deallocate(pointer ptr, size_type count);
 
 #### <a name="parameters"></a>Parámetros
 
-\ *ptr*
+*anota*\
 Un puntero al primer objeto que se va a desasignar del almacenamiento.
 
-*recuento* \
+*contabiliza*\
 El número de objetos que se van a desasignar del almacenamiento.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-La función miembro libera almacenamiento para la matriz de objetos de recuento de tipo `Type` a partir de *ptr*, llamando a `operator delete(ptr)`. El puntero *ptr* debe haber sido devuelto anteriormente por una llamada [a allocate](#allocate) para un objeto de asignador que compare igual a **\*this**, asignando un objeto de matriz del mismo tamaño y tipo. `deallocate` nunca inicia una excepción.
+La función miembro libera almacenamiento para la matriz de objetos de recuento de tipo `Type` que comienza en *ptr*, llamando a `operator delete(ptr)` . El puntero *ptr* debe haber sido devuelto anteriormente por una llamada [a allocate](#allocate) para un objeto de asignador que se compare con ** \* esto**, asignando un objeto de matriz del mismo tamaño y tipo. `deallocate` nunca inicia una excepción.
 
 #### <a name="example"></a>Ejemplo
 
 Para ver un ejemplo de uso de la función miembro, vea [allocator::allocate](#allocate).
 
-### <a name="destroy"></a>borrar
+### <a name="destroy"></a><a name="destroy"></a>borrar
 
 Llama a un destructor de objetos sin desasignar la memoria donde el objeto se almacena.
 
@@ -553,12 +553,12 @@ void destroy(pointer ptr);
 
 #### <a name="parameters"></a>Parámetros
 
-\ *ptr*
+*anota*\
 Puntero que designa la dirección del objeto que se va a destruir.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-La función miembro destruye el objeto designado por *ptr*, llamando al destructor `ptr->`**Type**:: **~ Type**.
+La función miembro destruye el objeto designado por *ptr*, llamando al tipo de destructor `ptr->` **Type**::**~ Type**.
 
 #### <a name="example"></a>Ejemplo
 
@@ -609,7 +609,7 @@ The modified vector v1 is:
 ( 2 4 6 8 10 -99 14 ).
 ```
 
-### <a name="difference_type"></a>difference_type
+### <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 Tipo entero con signo que puede representar la diferencia entre valores de punteros que señalan al tipo de objeto administrado por el asignador.
 
@@ -617,7 +617,7 @@ Tipo entero con signo que puede representar la diferencia entre valores de punte
 typedef ptrdiff_t difference_type;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El tipo de entero con signo describe un objeto que puede representar la diferencia entre las direcciones de dos elementos cualesquiera de una secuencia que un objeto de tipo `allocator` puede asignar.
 
@@ -670,7 +670,7 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.
 ```
 
-### <a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a>max_size
 
 Devuelve el número de elementos de tipo `Type` que podría asignar un objeto de clase allocator antes de que la memoria libre se agote.
 
@@ -739,7 +739,7 @@ int main( )
 }
 ```
 
-### <a name="op_eq"></a>operador =
+### <a name="operator"></a><a name="op_eq"></a>operador =
 
 Asigna un objeto de asignador a otro objeto de asignador.
 
@@ -750,14 +750,14 @@ template <class Other>
 
 #### <a name="parameters"></a>Parámetros
 
-\ *derecha*
+*correcta*\
 Un objeto de asignador que se va a asignar a otro de esos objetos.
 
 #### <a name="return-value"></a>Valor devuelto
 
 Referencia al objeto de asignador
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El operador de asignaciones de plantilla no hace nada. Pero, en general, un objeto de asignador asignado a otro objeto de asignador debe ser igual a él y permitir la mezcla de asignación de objetos y liberación entre los dos objetos de asignador.
 
@@ -802,7 +802,7 @@ int main( )
 }
 ```
 
-### <a name="pointer"></a>puntero
+### <a name="pointer"></a>Puntero <a name="pointer"></a>
 
 Tipo que proporciona un puntero al tipo de objeto administrado por el asignador.
 
@@ -810,9 +810,9 @@ Tipo que proporciona un puntero al tipo de objeto administrado por el asignador.
 typedef value_type *pointer;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-El tipo de puntero describe un objeto `ptr` que puede designar, a través de la expresión **\*ptr**, cualquier objeto que un objeto de tipo `allocator` pueda asignar.
+El tipo de puntero describe un objeto `ptr` que puede designar, a través de la expresión ** \* ptr**, cualquier objeto que pueda asignar un objeto de tipo `allocator` .
 
 #### <a name="example"></a>Ejemplo
 
@@ -857,7 +857,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
-### <a name="rebind"></a>reenlazar
+### <a name="rebind"></a><a name="rebind"></a>reenlazar
 
 Estructura que permite que un asignador de objetos de un tipo asigne almacenamiento para objetos de otro tipo.
 
@@ -867,16 +867,16 @@ struct rebind { typedef allocator<_Other> other; };
 
 #### <a name="parameters"></a>Parámetros
 
-*otros* \
+*distinta*\
 Tipo de elemento para el que se está asignando memoria.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Esta estructura es útil para asignar memoria para el tipo que difiere del tipo de elemento del contenedor que se va a implementar.
 
-La plantilla de clase de miembro define el tipo. Su única finalidad es proporcionar el nombre de tipo **allocator**\<_ **Other**>, dado el nombre de tipo **allocator**\< **Type**>.
+La plantilla de clase de miembro define el tipo. Su única finalidad es proporcionar el **asignador**de nombre de tipo \<_ **Other**> , dado el **asignador**de nombre de tipo \< **Type**> .
 
-Por ejemplo, dado un objeto de asignador `al` de tipo `A`, puede asignar un objeto de tipo `_Other` con la expresión:
+Por ejemplo, dado un objeto de asignador `al` de tipo `A` , puede asignar un objeto de tipo `_Other` con la expresión:
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
@@ -913,7 +913,7 @@ int main( )
 }
 ```
 
-### <a name="reference"></a>referencia
+### <a name="reference"></a><a name="reference"></a>referencia
 
 Tipo que proporciona una referencia al tipo de objeto administrado por el asignador.
 
@@ -921,9 +921,9 @@ Tipo que proporciona una referencia al tipo de objeto administrado por el asigna
 typedef value_type& reference;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-El tipo de referencia describe un objeto que puede designar cualquier objeto que puede asignar un objeto de tipo `allocator`.
+El tipo de referencia describe un objeto que puede designar cualquier objeto que pueda asignar un objeto de tipo `allocator` .
 
 #### <a name="example"></a>Ejemplo
 
@@ -973,7 +973,7 @@ the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
-### <a name="size_type"></a>size_type
+### <a name="size_type"></a><a name="size_type"></a>size_type
 
 Tipo entero sin signo que puede representar la longitud de cualquier secuencia que un objeto de tipo `allocator` puede asignar.
 
@@ -1018,7 +1018,7 @@ int main( )
 }
 ```
 
-### <a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a>value_type
 
 Tipo administrado por el asignador.
 
@@ -1026,7 +1026,7 @@ Tipo administrado por el asignador.
 typedef Type value_type;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `Type`.
 
@@ -1079,16 +1079,16 @@ The modified vector v is:
 ( 150 200 300 400 500 600 700 ).
 ```
 
-## <a name="helpers"></a>Aplicaciones auxiliares
+## <a name="helpers"></a>Asistentes
 
-### <a name="allocator_arg_t"></a>allocator_arg_t
+### <a name="allocator_arg_t"></a><a name="allocator_arg_t"></a>allocator_arg_t
 
 ```cpp
 struct allocator_arg_t { explicit allocator_arg_t() = default; };
 inline constexpr allocator_arg_t allocator_arg{};
 ```
 
-### <a name="uses_allocator"></a>uses_allocator
+### <a name="uses_allocator"></a><a name="uses_allocator"></a>uses_allocator
 
 ```cpp
 template <class T, class Alloc> struct uses_allocator;

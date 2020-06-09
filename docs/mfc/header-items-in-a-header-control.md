@@ -7,29 +7,29 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-ms.openlocfilehash: 31b6bcb134b62fc11df78a846b3c256a2ef69c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a70d1d9225d2ac8ef2f7ed3ad9f603a64a937bc7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240002"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620097"
 ---
 # <a name="header-items-in-a-header-control"></a>Elementos de encabezado en un control de encabezado
 
-Tiene un gran control sobre la apariencia y comportamiento de los elementos de encabezado que componen un control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Cada elemento de encabezado puede tener una cadena, una imagen de mapa de bits, una imagen de una lista de imágenes asociada o un valor de 32 bits definido por la aplicación asociada con él. La cadena, el mapa de bits o la imagen se muestra en el elemento de encabezado.
+Tiene un control considerable sobre la apariencia y el comportamiento de los elementos de encabezado que componen un control de encabezado ([CHeaderCtrl](reference/cheaderctrl-class.md)). Cada elemento de encabezado puede tener una cadena, una imagen de mapa de bits, una imagen de una lista de imágenes asociada o un valor de 32 bits definido por la aplicación asociado a ella. La cadena, el mapa de bits o la imagen se muestran en el elemento de encabezado.
 
-Puede personalizar la apariencia y el contenido de los elementos nuevos cuando se crean mediante una llamada [:: InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem) o modificando un elemento existente, con una llamada a [CHeaderCtrl:: GetItem](../mfc/reference/cheaderctrl-class.md#getitem) y [ CHeaderCtrl:: SetItem](../mfc/reference/cheaderctrl-class.md#setitem).
+Puede personalizar la apariencia y el contenido de los nuevos elementos cuando se crean realizando una llamada a [CHeaderCtrl:: InsertItem](reference/cheaderctrl-class.md#insertitem) o modificando un elemento existente, con una llamada a [CHeaderCtrl:: GetItem](reference/cheaderctrl-class.md#getitem) y [CHeaderCtrl:: SetItem](reference/cheaderctrl-class.md#setitem).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Personalizar la apariencia del elemento de encabezado](../mfc/customizing-the-header-item-s-appearance.md)
+- [Personalizar la apariencia del elemento de encabezado](customizing-the-header-item-s-appearance.md)
 
-- [Ordenar elementos en el control de encabezado](../mfc/ordering-items-in-the-header-control.md)
+- [Ordenar elementos en el control de encabezado](ordering-items-in-the-header-control.md)
 
-- [Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado](../mfc/providing-drag-and-drop-support-for-header-items.md)
+- [Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado](providing-drag-and-drop-support-for-header-items.md)
 
-- [Usar listas de imágenes con controles de encabezado](../mfc/using-image-lists-with-header-controls.md)
+- [Usar listas de imágenes con controles de encabezado](using-image-lists-with-header-controls.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de CHeaderCtrl](../mfc/using-cheaderctrl.md)
+[Uso de CHeaderCtrl](using-cheaderctrl.md)

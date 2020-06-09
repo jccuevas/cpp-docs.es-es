@@ -6,25 +6,25 @@ helpviewer_keywords:
 - technical notes, MFC
 - technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
-ms.openlocfilehash: 3621bca8116e3dd8edf202f4efa758bcb2590fcc
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 251c37f687c0176256f74c7e4dc14cff7f25c99c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617936"
 ---
 # <a name="mfc-technical-notes"></a>Notas técnicas de MFC
 
-Una nota técnica es un documento escrito para los programadores de los programadores.
+Una nota técnica es un documento escrito para programadores por programadores.
 
-Cada nota técnica describe un problema o una característica que está fuera del ámbito del resto de la documentación de MFC. Las notas técnicas proporcionadas reflejan las solicitudes de información de los usuarios, así como información especializada que los desarrolladores MFC anticiparse a los usuarios avanzados quieran.
+Cada nota técnica describe un problema o una característica que está fuera del ámbito del resto de la documentación de MFC. Las notas técnicas suministradas reflejan las solicitudes de información de los usuarios, así como información especializada que los desarrolladores de MFC prevemos que los usuarios avanzados querrán.
 
-Hay dos maneras de buscar en las notas técnicas:
+Hay dos maneras de examinar las notas técnicas:
 
-- [Notas técnicas por número](../mfc/technical-notes-by-number.md)
+- [Notas técnicas por número](technical-notes-by-number.md)
 
-- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+- [Notas técnicas por categoría](technical-notes-by-category.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md)
+[Aplicaciones de escritorio de MFC](mfc-desktop-applications.md)

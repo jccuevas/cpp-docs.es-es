@@ -2,12 +2,12 @@
 title: Configuración de un proyecto de C++ para Linux en Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80150971"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623587"
 ---
 # <a name="configure-a-linux-project"></a>Configuración de un proyecto de Linux
 
@@ -126,7 +126,7 @@ Puede habilitar el registro para ayudar a solucionar problemas:
 ## <a name="see-also"></a>Vea también
 
 [Set compiler and build properties](../build/working-with-project-properties.md) (Establecer las propiedades del compilador y la compilación)<br/>
-[C++ General Properties (Linux C++)](../linux/prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))<br/>
-[VC++ Directories (Linux C++)](../linux/prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))<br/>
-[Copy Sources Project Properties (Linux C++)](../linux/prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))<br/>
-[Build Event Properties (Linux C++)](../linux/prop-pages/build-events-linux.md) (Propiedades de evento de compilación (Linux C++))
+[C++ General Properties (Linux C++)](prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))<br/>
+[VC++ Directories (Linux C++)](prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))<br/>
+[Copy Sources Project Properties (Linux C++)](prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))<br/>
+[Build Event Properties (Linux C++)](prop-pages/build-events-linux.md) (Propiedades de evento de compilación (Linux C++))

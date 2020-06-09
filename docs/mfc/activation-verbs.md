@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03edba0a4336fdc147ef6dd10c7a8154aca19d3a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392913"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616644"
 ---
 # <a name="activation-verbs"></a>Activación: Verbos
 
-En este artículo se explica el rol que desempeñan los verbos principal y secundaria en OLE [activación](../mfc/activation-cpp.md).
+En este artículo se explican los verbos principales y secundarios de rol que se reproducen en la [activación](activation-cpp.md)OLE.
 
-Por lo general, haga doble clic en un elemento incrustado permite que el usuario editarlo. Sin embargo, algunos elementos no se comportan así. Por ejemplo, haga doble clic en un elemento creado con la aplicación de la grabadora de sonidos no se abre el servidor en una ventana independiente; en su lugar, reproduce el sonido.
+Normalmente, al hacer doble clic en un elemento incrustado, el usuario puede editarlo. Sin embargo, algunos elementos no se comportan de esta manera. Por ejemplo, al hacer doble clic en un elemento creado con la aplicación grabadora de sonidos no se abre el servidor en una ventana independiente. en su lugar, reproduce el sonido.
 
-La razón de esta diferencia de comportamiento es que los elementos de la grabadora de sonidos tienen diferentes "verbo principal". El verbo principal es la acción realizada cuando el usuario hace doble clic en un elemento OLE. Para la mayoría de los tipos de elementos OLE, el verbo principal es editar, que inicia el servidor que creó el elemento. Para algunos tipos de elementos, como los elementos de la grabadora de sonidos, el verbo principal es reproducir.
+La razón de esta diferencia de comportamiento es que los elementos de la grabadora de sonidos tienen un "verbo principal" diferente. El verbo principal es la acción que se realiza cuando el usuario hace doble clic en un elemento OLE. Para la mayoría de los tipos de elementos OLE, el verbo principal es Edit, que inicia el servidor que creó el elemento. En algunos tipos de elementos, como los elementos de la grabadora de sonidos, el verbo principal es Play.
 
-Muchos tipos de elementos OLE admiten un solo verbo y edición es la más común. Sin embargo, algunos tipos de elementos admiten varios verbos. Por ejemplo, los elementos admiten la grabadora de sonidos editar como verbo secundario.
+Muchos tipos de elementos OLE solo admiten un verbo y Edit es el más común. Sin embargo, algunos tipos de elementos admiten varios verbos. Por ejemplo, los elementos de la grabadora de sonidos admiten editar como verbo secundario.
 
-Otro verbo que se usan con frecuencia es abierto. El verbo Open es idéntico al editar, salvo que se inicia la aplicación de servidor en una ventana independiente. Este verbo debe usarse cuando la aplicación de contenedor o la aplicación de servidor no admite la activación en contexto.
+Otro verbo utilizado con frecuencia es Open. El verbo Open es idéntico a Edit, excepto que la aplicación de servidor se inicia en una ventana independiente. Este verbo debe usarse cuando la aplicación contenedora o la aplicación de servidor no admiten la activación en contexto.
 
-Los verbos distintos del principal se deben invocar a través de un comando de submenú cuando se selecciona el elemento. Este menú contiene todos los verbos admitidos por el elemento y suele alcanzarse por la *typename* **objeto** comando el **editar** menú. Para obtener información sobre la *typename* **objeto** de comandos, consulte el artículo [menús y recursos: Adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).
+Los verbos distintos del verbo principal deben invocarse a través de un comando de submenú cuando se selecciona el elemento. Este submenú contiene todos los verbos admitidos por el elemento y normalmente se alcanza mediante el comando *TypeName* **Object** en el menú **Editar** . Para obtener información sobre el comando *TypeName* **Object** , vea el artículo [menús y recursos: adiciones de contenedor](menus-and-resources-container-additions.md).
 
-Los verbos que admite una aplicación de servidor se muestran en la base de datos de registro de Windows. Si se escribe la aplicación de servidor con la biblioteca Microsoft Foundation Class, se registrarán automáticamente todos los verbos cuando se inicia el servidor. Si no es así, debe registrarlos durante la fase de inicialización de la aplicación de servidor. Para obtener más información, vea el artículo [registro](../mfc/registration.md).
+Los verbos que admite una aplicación de servidor se muestran en la base de datos de registro de Windows. Si la aplicación de servidor se escribe con el biblioteca MFC, se registrarán automáticamente todos los verbos cuando se inicie el servidor. Si no es así, debe registrarlos durante la fase de inicialización de la aplicación de servidor. Para obtener más información, consulte el artículo [registro](registration.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Activación](../mfc/activation-cpp.md)<br/>
-[Contenedores](../mfc/containers.md)<br/>
-[Servidores](../mfc/servers.md)
+[Activación](activation-cpp.md)<br/>
+[Contenedores](containers.md)<br/>
+[Servidores](servers.md)

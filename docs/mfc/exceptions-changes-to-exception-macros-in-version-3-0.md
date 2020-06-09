@@ -7,59 +7,59 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 82320b0c7ccd6766e016f0437633339f8f8f61d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25095257096efd869e237383c5cd202ae4e602c2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365493"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620169"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Excepciones: Cambios en las macros de excepción en la versión 3.0
 
 Este es un tema avanzado.
 
-En MFC versión 3.0 y versiones posteriores, las macros de control de excepciones se han cambiado para usar excepciones De C++. En este artículo se explica cómo esos cambios pueden afectar al comportamiento del código existente que usa las macros.
+En la versión 3,0 de MFC y versiones posteriores, las macros de control de excepciones se han cambiado para usar excepciones de C++. En este artículo se indica cómo estos cambios pueden afectar al comportamiento del código existente que usa las macros.
 
 En este artículo se tratan los temas siguientes:
 
 - [Tipos de excepción y la macro CATCH](#_core_exception_types_and_the_catch_macro)
 
-- [Volver a lanzar excepciones](#_core_re.2d.throwing_exceptions)
+- [Volver a producir excepciones](#_core_re.2d.throwing_exceptions)
 
 ## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a>Tipos de excepción y la macro CATCH
 
-En versiones anteriores de MFC, la macro **CATCH** usaba información de tipo en tiempo de ejecución MFC para determinar el tipo de una excepción; el tipo de la excepción se determina, en otras palabras, en el sitio de captura. Con las excepciones de C++, sin embargo, el tipo de la excepción siempre se determina en el sitio de inicio por el tipo del objeto de excepción que se produce. Esto provocará incompatibilidades en el caso poco frecuente donde el tipo del puntero al objeto lanzado difiere del tipo del objeto lanzado.
+En versiones anteriores de MFC, la macro **catch** usaba información de tipo en tiempo de ejecución de MFC para determinar el tipo de una excepción. el tipo de la excepción se determina, en otras palabras, en el sitio de catch. Sin embargo, con las excepciones de C++, el tipo de la excepción siempre se determina en el sitio de inicio por el tipo del objeto de excepción que se produce. Esto producirá incompatibilidades en el caso excepcional en el que el tipo del puntero al objeto iniciado difiere del tipo del objeto generado.
 
-En el ejemplo siguiente se muestra la consecuencia de esta diferencia entre MFC versión 3.0 y versiones anteriores:
+En el ejemplo siguiente se muestra la consecuencia de esta diferencia entre la versión 3,0 de MFC y las versiones anteriores:
 
-[!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#1](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-Este código se comporta de forma diferente en la versión 3.0 porque el control siempre pasa al primer bloque **catch** con una declaración de excepción coincidente. El resultado de la expresión throw
+Este código se comporta de forma diferente en la versión 3,0 porque el control siempre pasa al primer bloque **catch** con una declaración de excepción coincidente. Resultado de la expresión Throw
 
-[!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
+[!code-cpp[NVC_MFCExceptions#19](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 
-se lanza como `CException*`un , a pesar `CCustomException`de que se construye como un . La macro **CATCH** en las versiones `CObject::IsKindOf` 2.5 y anteriores de MFC se usa para probar el tipo en tiempo de ejecución. Porque la expresión
+se produce como `CException*` , aunque se construya como `CCustomException` . La macro **catch** de las versiones 2,5 y anteriores de MFC utiliza `CObject::IsKindOf` para probar el tipo en tiempo de ejecución. Dado que la expresión
 
-[!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
+[!code-cpp[NVC_MFCExceptions#20](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
 
-es cierto, el primer bloque catch detecta la excepción. En la versión 3.0, que utiliza excepciones C++ para implementar muchas de `CException`las macros de control de excepciones, el segundo bloque catch coincide con el producido.
+es true, el primer bloque catch detecta la excepción. En la versión 3,0, que usa excepciones de C++ para implementar muchas de las macros de control de excepciones, el segundo bloque catch coincide con el generado `CException` .
 
-Un código como este es poco común. Normalmente aparece cuando se pasa un objeto de `CException*`excepción a otra función que acepta un procesamiento genérico, realiza el procesamiento "pre-throw" y, finalmente, produce la excepción.
+Código como esto es poco habitual. Normalmente aparece cuando un objeto de excepción se pasa a otra función que acepta un genérico `CException*` , realiza el procesamiento "previo a la iniciación" y, por último, produce la excepción.
 
-Para evitar este problema, mueva la expresión throw de la función al código de llamada y produzca una excepción del tipo real conocido por el compilador en el momento en que se genera la excepción.
+Para solucionar este problema, mueva la expresión Throw de la función al código de llamada y produzca una excepción del tipo real conocido para el compilador en el momento en que se genera la excepción.
 
-## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>Volver a lanzar excepciones
+## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>Volver a producir excepciones
 
-Un bloque catch no puede producir el mismo puntero de excepción que detectó.
+Un bloque catch no puede iniciar el mismo puntero de excepción que detectó.
 
-Por ejemplo, este código era válido en versiones anteriores, pero tendrá resultados inesperados con la versión 3.0:
+Por ejemplo, este código era válido en versiones anteriores, pero tendrá resultados inesperados con la versión 3,0:
 
-[!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
+[!code-cpp[NVC_MFCExceptions#2](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
 
-El uso de **THROW** en `e` el bloque catch hace que se elimine el puntero, de modo que el sitio de captura externo recibirá un puntero no válido. Utilice **THROW_LAST** para `e`volver a lanzar .
+El uso de **Throw** en el bloque catch hace que `e` se elimine el puntero, por lo que el sitio Catch externo recibirá un puntero no válido. Use **THROW_LAST** para volver a iniciar `e` .
 
-Para obtener más información, vea [Excepciones: captura y eliminación](../mfc/exceptions-catching-and-deleting-exceptions.md)de excepciones .
+Para obtener más información, vea [excepciones: detectar y eliminar excepciones](exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Consulte también
 
-[Control de excepciones](../mfc/exception-handling-in-mfc.md)
+[Control de excepciones](exception-handling-in-mfc.md)

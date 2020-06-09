@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 - message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
-ms.openlocfilehash: 4b9fb0a72b330380f0207db9968199a7e4c3d9b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7b2bf819c5305da4039fae172578298d3b4e609
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407944"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618509"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Cómo llegan a los controladores los mensajes que no son de comandos
 
-A diferencia de los comandos, los mensajes de Windows estándar no se enrutan a través de una cadena de destinos de comandos, pero normalmente se controlan mediante la ventana a la que Windows envía el mensaje. La ventana puede ser una ventana de marco principal, una ventana secundaria MDI, un control estándar, un cuadro de diálogo, una vista o algún otro tipo de ventana secundaria.
+A diferencia de los comandos, los mensajes estándar de Windows no se enrutan a través de una cadena de destinos de comando, pero suelen controlarse mediante la ventana en la que Windows envía el mensaje. La ventana puede ser una ventana de marco principal, una ventana secundaria MDI, un control estándar, un cuadro de diálogo, una vista o algún otro tipo de ventana secundaria.
 
-En tiempo de ejecución, cada ventana de Windows está asociada a un objeto de ventana (deriva directa o indirectamente `CWnd`) que tiene sus propias funciones de asignación y el controlador de mensaje asociado. El marco de trabajo usa el mapa de mensajes, en cuanto a un comando, para asignar los mensajes entrantes a los controladores.
+En tiempo de ejecución, cada ventana de Windows se adjunta a un objeto de ventana (derivado directa o indirectamente de `CWnd` ) que tiene sus propias funciones de asignación y controlador de mensajes asociadas. El marco de trabajo usa el mapa de mensajes, como para un comando, para asignar los mensajes entrantes a los controladores.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Cómo el marco llama a un controlador](../mfc/how-the-framework-calls-a-handler.md)
+[Cómo el marco llama a un controlador](how-the-framework-calls-a-handler.md)

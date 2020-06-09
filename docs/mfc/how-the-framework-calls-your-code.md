@@ -12,25 +12,25 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407957"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622606"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Cómo el marco llama al código
 
-Es fundamental comprender la relación entre el código fuente y el código en el marco de trabajo MFC. Cuando se ejecuta la aplicación, la mayor parte del flujo de control se encuentra en el código de .NET framework. El marco de trabajo administra el bucle de mensajes que recibe mensajes de Windows cuando el usuario elige los comandos y edita datos en una vista. Eventos que el marco de trabajo puede controlar por sí solo no confían en el código en absoluto. Por ejemplo, el marco de trabajo sabe cómo cerrar ventanas y cómo salir de la aplicación en respuesta a los comandos de usuario. A medida que controla estas tareas, el marco de trabajo utiliza controladores de mensajes y funciones virtuales de C++ para ofrecer oportunidades para responder a estos eventos también. El código es no en el control, sin embargo; es el marco de trabajo.
+Es fundamental comprender la relación entre el código fuente y el código en el marco de trabajo de MFC. Cuando se ejecuta la aplicación, la mayor parte del flujo de control reside en el código del marco. El marco de trabajo administra el bucle de mensajes que recibe los mensajes de Windows cuando el usuario elige comandos y edita datos en una vista. Los eventos que el marco de trabajo puede controlar por sí mismos no se basan en el código. Por ejemplo, el marco de trabajo sabe cómo cerrar Windows y cómo salir de la aplicación en respuesta a los comandos del usuario. Dado que controla estas tareas, el marco de trabajo usa controladores de mensajes y funciones virtuales de C++ para ofrecer también oportunidades para responder a estos eventos. Sin embargo, el código no está en el control; el marco de trabajo es.
 
-El marco de trabajo llama al código para los eventos específicos de la aplicación. Por ejemplo, cuando el usuario elige un comando de menú, el marco de trabajo enruta el comando a lo largo de una secuencia de objetos de C++: la ventana de vista y el marco actual, el documento asociado a la vista de plantilla de documento del documento y el objeto de aplicación. Si uno de estos objetos puede controlar el comando, lo hace, llamar a la función de controlador de mensajes adecuado. Para un determinado comando, el código que llama puede ser suyo o es posible que el marco de trabajo.
+El marco de trabajo llama al código para los eventos específicos de la aplicación. Por ejemplo, cuando el usuario elige un comando de menú, el marco de trabajo enruta el comando a lo largo de una secuencia de objetos de C++: la vista actual y la ventana de marco, el documento asociado a la vista, la plantilla de documento del documento y el objeto de aplicación. Si uno de estos objetos puede controlar el comando, lo hace y llama a la función de controlador de mensajes adecuada. Para cualquier comando dado, el código llamado puede ser suyo o puede ser el del marco.
 
-Esta disposición es familiar para los programadores con experiencia en la programación tradicional de Windows o la programación orientada a eventos.
+Esta disposición es un poco familiar para los programadores experimentados con programación tradicional para Windows o programación controlada por eventos.
 
-En otros temas relacionados, leerá lo que el marco de trabajo tal como se inicializa y ejecuta la aplicación y, a continuación, limpia como la aplicación finaliza. También comprenderá dónde encaja el código que escriba.
+En temas relacionados, leerá lo que hace el marco de trabajo mientras inicializa y ejecuta la aplicación y, a continuación, se limpia cuando finaliza la aplicación. También sabrá dónde encaja el código que escribe.
 
-Para obtener más información, consulte [clase CWinApp: La clase Application](../mfc/cwinapp-the-application-class.md) y [plantillas de documento y el proceso de creación de documento/vista](../mfc/document-templates-and-the-document-view-creation-process.md).
+Para obtener más información, vea [la clase CWinApp: la clase de aplicación](cwinapp-the-application-class.md) y las [plantillas de documento y el proceso de creación de documentos y vistas](document-templates-and-the-document-view-creation-process.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Compilación en el marco](../mfc/building-on-the-framework.md)
+[Compilar en el marco](building-on-the-framework.md)

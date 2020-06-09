@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 5d81bd0a8bdd24059951cba5c8b69751b3d1db86
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 464a31491f2c3017453bdd5bbdc8b059d348eb3c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626258"
 ---
 # <a name="memory-management"></a>Administración de memoria
 
@@ -25,21 +25,21 @@ Para obtener información sobre la administración de memoria en los programas p
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Asignación de marcos](../mfc/memory-management-frame-allocation.md)
+- [Asignación de marcos](memory-management-frame-allocation.md)
 
-- [Asignación del montón](../mfc/memory-management-heap-allocation.md)
+- [Asignación del montón](memory-management-heap-allocation.md)
 
-- [Asignar memoria para una matriz](../mfc/memory-management-examples.md)
+- [Asignar memoria para una matriz](memory-management-examples.md)
 
-- [Desasignar memoria para una matriz del montón](../mfc/memory-management-examples.md)
+- [Desasignar memoria para una matriz del montón](memory-management-examples.md)
 
-- [Asignar memoria para una estructura de datos](../mfc/memory-management-examples.md)
+- [Asignar memoria para una estructura de datos](memory-management-examples.md)
 
-- [Asignar memoria para un objeto](../mfc/memory-management-examples.md)
+- [Asignar memoria para un objeto](memory-management-examples.md)
 
-- [Bloques de memoria de tamaño variable](../mfc/memory-management-resizable-memory-blocks.md)
+- [Bloques de memoria de tamaño variable](memory-management-resizable-memory-blocks.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Conceptos](../mfc/mfc-concepts.md)<br/>
-[Temas generales de MFC](../mfc/general-mfc-topics.md)
+[Conceptos](mfc-concepts.md)<br/>
+[Temas generales de MFC](general-mfc-topics.md)
