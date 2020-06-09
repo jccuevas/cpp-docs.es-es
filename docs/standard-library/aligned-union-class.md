@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ae6ef629535238b9406216afd9f680a5c1e1afe0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690106"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623799"
 ---
 # <a name="aligned_union-class"></a>Clase aligned_union
 
@@ -29,15 +29,15 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*Len* \
+*Terminado*\
 El valor de alineación para el tipo más grande de la unión.
 
-*Types*\ (Tipos [Referencia de C#])
+*Distintos*\
 Los distintos tipos de la unión subyacente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Use la plantilla de clase para obtener la alineación y el tamaño necesarios para almacenar una Unión en almacenamiento no inicializado. La definición de tipo de miembro `type` nombra un tipo POD adecuado para el almacenamiento de cualquier tipo enumerado en *tipos*; el tamaño mínimo es *Len*. El miembro estático `alignment_value` del tipo `std::size_t` contiene la alineación más estricta necesaria para todos los tipos enumerados en *tipos*.
+Use la plantilla de clase para obtener la alineación y el tamaño necesarios para almacenar una Unión en almacenamiento no inicializado. El typedef de miembro `type` nombra un tipo Pod adecuado para el almacenamiento de cualquier tipo enumerado en *tipos*; el tamaño mínimo es *Len*. El miembro estático `alignment_value` de tipo `std::size_t` contiene la alineación más estricta necesaria para todos los tipos enumerados en *tipos*.
 
 ## <a name="example"></a>Ejemplo
 
@@ -79,11 +79,11 @@ value of u->i is 1065353216
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<type_traits>
+**Encabezado:**\<type_traits>
 
 **Espacio de nombres:** std
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[<type_traits>](../standard-library/type-traits.md)\
-[alignment_of (Clase)](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[alignment_of (clase)](alignment-of-class.md)

@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 470b3086b4bdfa776558122eda9e496fa6c4bcdc
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690074"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617416"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits (clase)
 
-La plantilla de clase describe un objeto que complementa un *tipo de asignador*. Un tipo de asignador es cualquier tipo que describe a un objeto de asignador que se usa para administrar el almacenamiento asignado. Concretamente, para cualquier tipo de asignador `Alloc`, puede usar `allocator_traits<Alloc>` para determinar toda la información que necesita un contenedor habilitado como asignador. Para más información, vea [allocator (Clase)](../standard-library/allocator-class.md).
+La plantilla de clase describe un objeto que complementa un *tipo de asignador*. Un tipo de asignador es cualquier tipo que describe a un objeto de asignador que se usa para administrar el almacenamiento asignado. Concretamente, para cualquier tipo de asignador `Alloc`, puede usar `allocator_traits<Alloc>` para determinar toda la información que necesita un contenedor habilitado como asignador. Para más información, vea [allocator (Clase)](allocator-class.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -60,7 +60,7 @@ template <class Alloc>
 
 ## <a name="members"></a>Miembros
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -83,13 +83,13 @@ Los siguientes métodos estáticos llaman al método correspondiente en un pará
 |||
 |-|-|
 |[allocate](#allocate)|Método estático que asigna memoria mediante el parámetro de asignador determinado.|
-|[construct](#construct)|Método estático que usa un asignador especificado para crear un objeto.|
-|[deallocate](#deallocate)|Método estático que usa un asignador especificado para desasignar un número determinado de objetos.|
-|[destroy](#destroy)|Método estático que usa un asignador especificado para llamar al destructor de un objeto sin desasignar su memoria.|
+|[construir](#construct)|Método estático que usa un asignador especificado para crear un objeto.|
+|[desasignar](#deallocate)|Método estático que usa un asignador especificado para desasignar un número determinado de objetos.|
+|[borrar](#destroy)|Método estático que usa un asignador especificado para llamar al destructor de un objeto sin desasignar su memoria.|
 |[max_size](#max_size)|Método estático que usa un asignador especificado para determinar el número máximo de objetos que se pueden asignar.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Método estático que se llama a `select_on_container_copy_construction` en el asignador especificado.|
 
-### <a name="allocate"></a>asignación
+### <a name="allocate"></a><a name="allocate"></a>asignación
 
 Método estático que asigna memoria mediante el parámetro de asignador determinado.
 
@@ -102,13 +102,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 #### <a name="parameters"></a>Parámetros
 
-*al* \
+*Alabama*\
 Un objeto de asignador.
 
-*recuento* \
+*contabiliza*\
 Número de elementos que se van a asignar.
 
-\ de *sugerencias*
+*diversas*\
 `const_pointer` que puede ayudar al objeto de asignador a satisfacer la solicitud de almacenamiento al buscar la dirección de un objeto asignado antes de la solicitud. Un puntero nulo se trata como si no hubiera sugerencia.
 
 #### <a name="return-value"></a>Valor devuelto
@@ -119,7 +119,7 @@ El primer método estático devuelve `al.allocate(count)`.
 
 Si la expresión tiene el formato correcto, el segundo método devuelve `al.allocate(count, hint)`; de lo contrario, devuelve `al.allocate(count)`.
 
-### <a name="construct"></a>construir
+### <a name="construct"></a><a name="construct"></a>construir
 
 Método estático que usa un asignador especificado para crear un objeto.
 
@@ -130,20 +130,20 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 #### <a name="parameters"></a>Parámetros
 
-*al* \
+*Alabama*\
 Un objeto de asignador.
 
-\ *ptr*
+*anota*\
 Puntero a la ubicación donde se va a crear el objeto.
 
-\ *args*
+*args*\
 Lista de argumentos que se pasa al constructor de objeto.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Si la expresión tiene el formato correcto, la función miembro estática llama a `al.construct(ptr, args...)`; de lo contrario, se evalúa como `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-### <a name="deallocate"></a>desasignar
+### <a name="deallocate"></a><a name="deallocate"></a>desasignar
 
 Método estático que usa un asignador especificado para desasignar un número determinado de objetos.
 
@@ -155,22 +155,22 @@ static void deallocate(Alloc al,
 
 #### <a name="parameters"></a>Parámetros
 
-*al* \
+*Alabama*\
 Un objeto de asignador.
 
-\ *ptr*
-Un puntero a la ubicación inicial de los objetos que se van a desasignar.
+*anota*\
+Puntero a la ubicación inicial de los objetos que se van a desasignar.
 
-*recuento* \
-El número de objetos para desasignar.
+*contabiliza*\
+Número de objetos que se van a desasignar.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Este método llama a `al.deallocate(ptr, count)`.
 
 Este método no produce nada.
 
-### <a name="destroy"></a>borrar
+### <a name="destroy"></a><a name="destroy"></a>borrar
 
 Método estático que usa un asignador especificado para llamar al destructor de un objeto sin desasignar su memoria.
 
@@ -181,17 +181,17 @@ template <class Uty>
 
 #### <a name="parameters"></a>Parámetros
 
-*al* \
+*Alabama*\
 Un objeto de asignador.
 
-\ *ptr*
+*anota*\
 Puntero a la ubicación del objeto.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Si esa expresión tiene el formato correcto, este método llama a `al.destroy(ptr)`; de lo contrario, se evalúa como `ptr->~Uty()`.
 
-### <a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a>max_size
 
 Método estático que usa un asignador especificado para determinar el número máximo de objetos que se pueden asignar.
 
@@ -201,14 +201,14 @@ static size_type max_size(const Alloc& al);
 
 #### <a name="parameters"></a>Parámetros
 
-*al* \
+*Alabama*\
 Un objeto de asignador.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Si esa expresión tiene el formato correcto, este método devuelve `al.max_size()`; de lo contrario, devuelve `numeric_limits<size_type>::max()`.
 
-### <a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
 
 Método estático que se llama a `select_on_container_copy_construction` en el asignador especificado.
 
@@ -218,13 +218,13 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="parameters"></a>Parámetros
 
-*al* \
+*Alabama*\
 Un objeto de asignador.
 
 #### <a name="return-value"></a>Valor devuelto
 
-Este método devuelve `al.select_on_container_copy_construction()`, si ese tipo tiene el formato correcto; en caso contrario, devuelve *al*.
+Este método devuelve `al.select_on_container_copy_construction()` , si ese tipo tiene el formato correcto; en caso contrario, devuelve *al*.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Este método se usa para especificar un asignador cuando se ha aplicado el constructor de copias al contenedor asociado.

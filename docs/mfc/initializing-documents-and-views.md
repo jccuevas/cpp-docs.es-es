@@ -8,19 +8,19 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-ms.openlocfilehash: 0cf9faecbb7e0d74c2199a1a829aa68241e1c019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e970d6e8a166283f82575b309cf023f48899403
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297117"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626350"
 ---
 # <a name="initializing-documents-and-views"></a>Inicializar documentos y vistas
 
-Se crean documentos de dos maneras diferentes, por lo que la clase de documento debe ser compatible con ambas formas. En primer lugar, el usuario puede crear un nuevo documento vacío con el comando nuevo archivo. En ese caso, inicialice el documento en el reemplazo del [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) función miembro de clase [CDocument](../mfc/reference/cdocument-class.md). En segundo lugar, el usuario puede utilizar el comando Abrir en el menú archivo para crear un nuevo documento cuyo contenido se lee desde un archivo. En ese caso, inicialice el documento en el reemplazo del [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) función miembro de clase `CDocument`. Si dos inicializaciones son iguales, puede llamar a una función miembro común desde ambos reemplazos, o `OnOpenDocument` puede llamar a `OnNewDocument` para inicializar un documento limpio y, después, finalice la operación de apertura.
+Los documentos se crean de dos maneras diferentes, por lo que la clase de documento debe admitir ambas maneras. En primer lugar, el usuario puede crear un nuevo documento vacío con el comando archivo nuevo. En ese caso, inicialice el documento en la invalidación de la función miembro [OnNewDocument](reference/cdocument-class.md#onnewdocument) de la clase [CDocument](reference/cdocument-class.md). En segundo lugar, el usuario puede usar el comando abrir del menú Archivo para crear un nuevo documento cuyo contenido se lea desde un archivo. En ese caso, inicialice el documento en la invalidación de la función miembro [OnOpenDocument](reference/cdocument-class.md#onopendocument) de la clase `CDocument` . Si ambas inicializaciones son iguales, puede llamar a una función miembro común desde ambas invalidaciones o `OnOpenDocument` puede llamar `OnNewDocument` a para inicializar un documento limpio y después finalizar la operación de apertura.
 
-Las vistas se crean después de que se crean sus documentos. El mejor momento para inicializar una vista es después de que el marco de trabajo ha terminado de crear el documento, la ventana de marco y la vista. Puede inicializar la vista invalidando el [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) función miembro de [CView](../mfc/reference/cview-class.md). Si necesita reinicializar o ajustar algo cada vez que los cambios del documento, se puede reemplazar [OnUpdate](../mfc/reference/cview-class.md#onupdate).
+Las vistas se crean una vez creados los documentos. El mejor momento para inicializar una vista es después de que el marco haya terminado de crear el documento, la ventana de marco y la vista. Puede inicializar la vista invalidando la función miembro [OnInitialUpdate](reference/cview-class.md#oninitialupdate) de [CView](reference/cview-class.md). Si necesita reinicializar o ajustar nada cada vez que cambie el documento, puede invalidar [Actualizar](reference/cview-class.md#onupdate).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Inicialización y limpieza de documentos y vistas](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+[Inicialización y limpieza de documentos y vistas](initializing-and-cleaning-up-documents-and-views.md)
