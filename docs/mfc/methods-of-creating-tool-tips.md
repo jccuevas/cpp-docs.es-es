@@ -6,24 +6,24 @@ helpviewer_keywords:
 - tool tips [MFC], tool tip controls
 - tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
-ms.openlocfilehash: 2ba935f52f24f62dded3b89df1563454cf7e0335
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26f31705068df009e906d50451efa9ea6572d7e6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625455"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Métodos de creación de información sobre herramientas
 
-MFC proporciona tres clases para crear y administrar el control de información sobre herramientas: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) y [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Las funciones de miembro de sugerencia de herramienta en estas clases ajustan la API del control común de Windows. Clase `CToolBarCtrl` y clase `CToolTipCtrl` se derivan de la clase `CWnd`.
+MFC proporciona tres clases para crear y administrar el control de información sobre herramientas: [CWnd](reference/cwnd-class.md), [CToolBarCtrl](reference/ctoolbarctrl-class.md), [CToolTipCtrl](reference/ctooltipctrl-class.md) y [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md). Las funciones miembro de información sobre herramientas de estas clases incluyen Windows Common control API. La clase `CToolBarCtrl` y la clase `CToolTipCtrl` se derivan de la clase `CWnd` .
 
-`CWnd` proporciona cuatro funciones de miembro para crear y administrar información sobre herramientas: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), y [OnToolHitTest](../mfc/reference/cwnd-class.md#ontoolhittest). Vea estas funciones miembro individuales para obtener más información acerca de cómo implementar la información sobre herramientas.
+`CWnd`proporciona cuatro funciones miembro para crear y administrar la información sobre herramientas: [EnableToolTips](reference/cwnd-class.md#enabletooltips), [CancelToolTips](reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](reference/cwnd-class.md#filtertooltipmessage)y [OnToolHitTest](reference/cwnd-class.md#ontoolhittest). Vea estas funciones miembro individuales para obtener más información sobre cómo implementan la información sobre herramientas.
 
-Si crea una barra de herramientas mediante `CToolBarCtrl`, puede implementar información sobre herramientas para esa barra de herramientas directamente mediante las funciones miembro siguientes: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) y [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). Vea estas funciones miembro individuales y [controlar herramienta notificaciones](../mfc/handling-tool-tip-notifications.md) para obtener más información acerca de cómo implementar la información sobre herramientas.
+Si crea una barra de herramientas con `CToolBarCtrl` , puede implementar la información sobre herramientas para esa barra de herramientas directamente mediante las siguientes funciones miembro: [GetToolTips](reference/ctoolbarctrl-class.md#gettooltips) y [SetToolTips](reference/ctoolbarctrl-class.md#settooltips). Consulte estas funciones de miembro individuales y control de las [notificaciones de información sobre herramientas](handling-tool-tip-notifications.md) para obtener más información sobre cómo implementan la información sobre herramientas.
 
-La `CToolTipCtrl` clase proporciona la funcionalidad del control de sugerencia de herramienta común de Windows. Control de información sobre una sola herramienta puede proporcionar información de más de una herramienta. Una herramienta es cualquier ventana, como una ventana secundaria de control o un área rectangular definida por la aplicación dentro del área cliente de una ventana. El [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) clase se deriva de `CToolTipCtrl` y proporciona la funcionalidad y los estilos visuales adicionales.
+La `CToolTipCtrl` clase proporciona la funcionalidad del control de información común de herramientas de Windows. Un único control de información sobre herramientas puede proporcionar información a más de una herramienta. Una herramienta es una ventana, como un control o una ventana secundaria, o un área rectangular definida por la aplicación en el área de cliente de una ventana. La clase [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md) se deriva de `CToolTipCtrl` y proporciona estilos visuales y funcionalidad adicionales.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Uso de CToolTipCtrl](using-ctooltipctrl.md)<br/>
+[Permite](controls-mfc.md)

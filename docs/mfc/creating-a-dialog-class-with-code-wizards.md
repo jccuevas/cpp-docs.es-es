@@ -7,12 +7,12 @@ helpviewer_keywords:
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-ms.openlocfilehash: dd18a639bc94686bb3023d64c09074ca4d808546
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5c534219ec656318e2e70a47df8536ddfbe26ab7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616335"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Crear una clase de diálogo con los Asistentes para código
 
@@ -22,21 +22,21 @@ En la tabla siguiente se enumeran las tareas relacionadas con los cuadros de di�
 
 |Tarea|Aplicar a. . .|
 |----------|--------------------|
-|[Cree una nueva clase derivada de CDialog](../mfc/creating-your-dialog-class.md) para administrar el cuadro de diálogo.|Cada cuadro de diálogo.|
-|[Asigne mensajes de Windows](../mfc/handling-windows-messages-in-your-dialog-box.md) a la clase de cuadro de diálogo.|Cada mensaje que desea administrar.|
+|[Cree una nueva clase derivada de CDialog](creating-your-dialog-class.md) para administrar el cuadro de diálogo.|Cada cuadro de diálogo.|
+|[Asigne mensajes de Windows](handling-windows-messages-in-your-dialog-box.md) a la clase de cuadro de diálogo.|Cada mensaje que desea administrar.|
 |Declare las variables de miembro de clase para representar los controles del cuadro de diálogo.|Cada control que produce un texto o un valor numérico al que desea obtener acceso desde el programa.|
-|Especifique [cómo se intercambiarán los datos](../mfc/dialog-data-exchange-and-validation.md) entre los controles y las variables de miembro.|Cada control al que desea obtener acceso desde el programa.|
-|Especifique [reglas de validación](../mfc/dialog-data-exchange-and-validation.md) para las variables de miembro.|Cada control que produce un texto o un valor numérico, si se desea.|
+|Especifique [cómo se intercambiarán los datos](dialog-data-exchange-and-validation.md) entre los controles y las variables de miembro.|Cada control al que desea obtener acceso desde el programa.|
+|Especifique [reglas de validación](dialog-data-exchange-and-validation.md) para las variables de miembro.|Cada control que produce un texto o un valor numérico, si se desea.|
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Crear la clase de cuadro de diálogo](../mfc/creating-your-dialog-class.md)
+- [Crear la clase de cuadro de diálogo](creating-your-dialog-class.md)
 
-- [Controlar mensajes de Windows en el cuadro de diálogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [Controlar mensajes de Windows en el cuadro de diálogo](handling-windows-messages-in-your-dialog-box.md)
 
-- [Intercambio y validación de datos de cuadros de diálogo](../mfc/dialog-data-exchange-and-validation.md)
+- [Intercambio y validación de datos de cuadros de diálogo](dialog-data-exchange-and-validation.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
-[Trabajar con cuadros de diálogo en MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Cuadros de diálogo](dialog-boxes.md)<br/>
+[Trabajar con cuadros de diálogo en MFC](life-cycle-of-a-dialog-box.md)

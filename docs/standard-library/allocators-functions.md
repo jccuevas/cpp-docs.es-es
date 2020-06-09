@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2d9b84a2be42df38df36bb90c0b5aeee076bf6a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364969"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623607"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; (macros)
 
@@ -38,7 +38,7 @@ Produce una plantilla de clase de asignador.
 
 ### <a name="remarks"></a>Observaciones
 
-La macro produce una `template <class Type> class name {.....}` definición `template <> class name<void> {.....}` de plantilla y una especialización que `sync` en conjunto `cache`definen una plantilla de clase de asignador que utiliza el filtro de sincronización y una memoria caché de tipo .
+La macro produce una definición de plantilla `template <class Type> class name {.....}` y una especialización `template <> class name<void> {.....}` que, juntos, definen una plantilla de clase de asignador que usa el filtro `sync` de sincronización y una memoria caché de tipo `cache` .
 
 En el caso de los compiladores que pueden compilar reenlaces, la definición de plantilla resultante tiene el siguiente aspecto:
 
@@ -112,4 +112,4 @@ Si un compilador admite la compilación de aplicaciones de un único subproceso 
 
 ## <a name="see-also"></a>Consulte también
 
-[\<asignadores>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

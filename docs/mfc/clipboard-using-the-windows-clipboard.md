@@ -11,35 +11,35 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b11bfe18443858de0dd7032f72fecadb1d6ebdd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326994"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626038"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>Portapapeles: Usar el Portapapeles de Windows
 
-Este tema describe cómo usar la API de Portapapeles de Windows estándar dentro de la aplicación MFC.
+En este tema se describe cómo utilizar la API del portapapeles de Windows estándar en la aplicación MFC.
 
-Mayoría de las aplicaciones para Windows admite Cortar o copiar datos en el Portapapeles de Windows y pegar datos desde el Portapapeles. Varían los formatos de datos del Portapapeles entre aplicaciones. El marco de trabajo admite sólo un número limitado de formatos de Portapapeles para un número limitado de clases. Normalmente se implementarán los comandos relacionados con el Portapapeles, cortar, copiar y pegar, en el menú de edición de la vista. La biblioteca de clases define los identificadores de comando para estos comandos: **ID_EDIT_CUT**, **ID_EDIT_COPY**, y **ID_EDIT_PASTE**. También se definen los símbolos de línea de mensaje.
+La mayoría de las aplicaciones para Windows permiten cortar o copiar datos en el portapapeles de Windows y pegar datos del portapapeles. Los formatos de datos del portapapeles varían entre las aplicaciones. El marco de trabajo solo admite un número limitado de formatos del portapapeles para un número limitado de clases. Normalmente, se implementan los comandos relacionados con el portapapeles (cortar, copiar y pegar) en el menú edición de la vista. La biblioteca de clases define los identificadores de comando para estos comandos: **ID_EDIT_CUT**, **ID_EDIT_COPY**y **ID_EDIT_PASTE**. También se definen sus solicitudes de línea de mensaje.
 
-[Los mensajes y comandos en el marco](../mfc/messages-and-commands-in-the-framework.md) explica cómo controlar los comandos de menú en la aplicación asignando el comando de menú a una función de controlador. Siempre y cuando la aplicación no define las funciones de controlador para los comandos del Portapapeles en el menú Edición, permanecen deshabilitados. Para escribir funciones de controlador para los comandos Cortar y copiar, implemente la selección en la aplicación. Para escribir una función de controlador para el comando Pegar, consulte el Portapapeles para ver si contiene datos en un formato de la aplicación puede aceptar. Por ejemplo, para habilitar el comando Copy, puede escribir a un controlador de algo parecido a lo siguiente:
+[Mensajes y comandos en el marco de trabajo](messages-and-commands-in-the-framework.md) explica cómo controlar los comandos de menú en la aplicación asignando el comando de menú a una función de controlador. Siempre que la aplicación no defina funciones de controlador para los comandos del portapapeles en el menú Edición, permanecerán deshabilitadas. Para escribir funciones de controlador para los comandos cortar y copiar, implemente la selección en la aplicación. Para escribir una función de controlador para el comando Paste, consulte el portapapeles para ver si contiene datos en un formato que la aplicación puede aceptar. Por ejemplo, para habilitar el comando Copiar, puede escribir un controlador similar al siguiente:
 
 [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]
 
-Los comandos Cortar, copiar y pegar solo son significativos en ciertos contextos. Los comandos Cortar y copiar deben habilitarse únicamente cuando se selecciona un elemento y el comando Pegar sólo cuando algo está en el Portapapeles. Puede proporcionar este comportamiento mediante la definición de funciones del controlador de actualización que habilitan o deshabilitan estos comandos en función del contexto. Para obtener más información, consulte [cómo actualizar objetos de interfaz de usuario](../mfc/how-to-update-user-interface-objects.md).
+Los comandos cortar, copiar y pegar solo son significativos en determinados contextos. Los comandos cortar y copiar solo deben habilitarse cuando se selecciona algo y el comando pegar solo cuando hay algo en el portapapeles. Puede proporcionar este comportamiento definiendo las funciones del controlador de actualización que habilitan o deshabilitan estos comandos en función del contexto. Para obtener más información, vea [Cómo actualizar objetos de la interfaz de usuario](how-to-update-user-interface-objects.md).
 
-La biblioteca Microsoft Foundation Class proporcionan compatibilidad con el Portapapeles para su edición de texto con el `CEdit` y `CEditView` clases. Las clases OLE también simplifican la implementación las operaciones del Portapapeles que incluyen elementos OLE. Para obtener más información sobre las clases OLE, vea [Portapapeles: Usar el mecanismo del Portapapeles OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
+La biblioteca MFC proporciona compatibilidad con el portapapeles para la edición de texto con las `CEdit` `CEditView` clases y. Las clases OLE también simplifican la implementación de operaciones del portapapeles que implican elementos OLE. Para obtener más información sobre las clases OLE, vea [portapapeles: usar el mecanismo del portapapeles OLE](clipboard-using-the-ole-clipboard-mechanism.md).
 
-Implementación de otra edición comandos de menú, como deshacer (**ID_EDIT_UNDO**) y Rehacer (**ID_EDIT_REDO**), también se deja para usted. Si la aplicación no es compatible con estos comandos, puede eliminarlos fácilmente desde el archivo de recursos con los editores de recursos de Visual C++.
+También se le deja la implementación de otros comandos de menú Edición, como deshacer (**ID_EDIT_UNDO**) y rehacer (**ID_EDIT_REDO**). Si la aplicación no admite estos comandos, puede eliminarlos fácilmente del archivo de recursos mediante los Visual C++ editores de recursos.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Copiar y pegar datos](../mfc/clipboard-copying-and-pasting-data.md)
+- [Copiado y pegado de datos](clipboard-copying-and-pasting-data.md)
 
-- [Mediante el mecanismo del Portapapeles de OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+- [Usar el mecanismo del portapapeles OLE](clipboard-using-the-ole-clipboard-mechanism.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Portapapeles](../mfc/clipboard.md)
+[Portapapeles](clipboard.md)

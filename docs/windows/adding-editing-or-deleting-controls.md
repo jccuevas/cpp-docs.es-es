@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: ad14a0500336bc1ca61e00bcd6d9a6e1088afc81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623464"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Cómo: agregar, editar o eliminar controles (C++)
 
@@ -98,7 +98,7 @@ La pestaña **Editor de cuadros de diálogo** aparece en la [ventana cuadro de h
 
 ### <a name="to-add-a-custom-control"></a>Para agregar un control personalizado
 
-Puede Agregar controles personalizados al cuadro de diálogo. Seleccione el icono de **control personalizado** en el cuadro de **herramientas** y arrástrelo hasta el cuadro de diálogo. Para agregar un control de `Syslink`, agregue un control personalizado y, a continuación, cambie la propiedad de **clase** del control a `Syslink`. Esta acción hará que las propiedades se actualicen y muestren las propiedades del control `Syslink`. Para obtener información sobre la clase contenedora de MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Puede Agregar controles personalizados al cuadro de diálogo. Seleccione el icono de **control personalizado** en el cuadro de **herramientas** y arrástrelo hasta el cuadro de diálogo. Para agregar un `Syslink` control, agregue un control personalizado y, a continuación, cambie la propiedad de **clase** del control a `Syslink` . Esta acción hará que las propiedades se actualicen y muestren las `Syslink` propiedades del control. Para obtener información sobre la clase contenedora de MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Controles de edición
 
@@ -118,14 +118,14 @@ Puede Agregar controles personalizados al cuadro de diálogo. Seleccione el icon
 
 1. Asegúrese de que el control tiene el foco en el **Editor de cuadros de diálogo**.
 
-1. Vaya a menú **editar** > **Deshacer**. Si el foco no está en el control, el comando **Deshacer** no estará disponible.
+1. Vaya a menú **Editar**  >  **Deshacer**. Si el foco no está en el control, el comando **Deshacer** no estará disponible.
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Para definir una variable miembro para un control de cuadro de diálogo (que no sea un botón)
 
 > [!NOTE]
 > Este proceso solo se aplica a los controles de cuadro de diálogo de un proyecto MFC. Los proyectos ATL deben usar el cuadro de diálogo **nuevos mensajes y controladores de eventos de Windows** . Para obtener más información, consulte [tipos de mensajes asociados a objetos de la interfaz de usuario](../mfc/reference/message-types-associated-with-user-interface-objects.md), edición de [un controlador de mensajes](../mfc/reference/editing-a-message-handler.md)y [definición de un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-1. En el [Editor de cuadros de diálogo](../windows/dialog-editor.md), seleccione un control.
+1. En el [Editor de cuadros de diálogo](dialog-editor.md), seleccione un control.
 
 1. Mientras presiona la tecla **Ctrl** , haga doble clic en el control cuadro de diálogo.
 
@@ -142,7 +142,7 @@ También puede usar la pestaña **variables miembro** del Asistente para [clases
 
 ## <a name="delete-controls"></a>Eliminar controles
 
-En el cuadro de diálogo, seleccione el control y, a continuación, presione la tecla **suprimir** o vaya a **edición** de menú > **eliminar**.
+En el cuadro de diálogo, seleccione el control y, a continuación, presione la tecla **suprimir** o vaya a menú **Editar**  >  **eliminar**.
 
 ## <a name="other-issues"></a>Otras incidencias
 
@@ -176,7 +176,7 @@ Actualmente, el **Editor de cuadros de diálogo** no agrega automáticamente có
 
 Para usar controles comunes en un cuadro de diálogo, debe llamar a [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) o `AFXInitCommonControls` antes de crear el cuadro de diálogo.
 
-Para utilizar controles RichEdit, debe llamar a `LoadLibrary`. Para obtener más información, vea acerca de los [controles Rich Edit](/windows/win32/Controls/about-rich-edit-controls) en el Windows SDK e [información general del control Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
+Para utilizar controles RichEdit, debe llamar a `LoadLibrary` . Para obtener más información, vea acerca de los [controles Rich Edit](/windows/win32/Controls/about-rich-edit-controls) en el Windows SDK e [información general del control Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
 > Para usar un control RichEdit con MFC, primero debe llamar a [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) para cargar el control RichEdit 2,0 (riched20. DLL) o llame a [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) para cargar el Control RichEdit 1,0 anterior (Riched32. DLL).
@@ -187,7 +187,7 @@ Para utilizar controles RichEdit, debe llamar a `LoadLibrary`. Para obtener más
 
 Visual Studio le permite insertar controles ActiveX en el cuadro de diálogo. Para obtener más información, vea [controles ActiveX MFC](../mfc/mfc-activex-controls.md) y [contenedores de controles ActiveX](../mfc/activex-control-containers.md).
 
-El cuadro de diálogo **Insertar control ActiveX** permite insertar controles ActiveX en el cuadro de diálogo mientras se usa el [Editor de cuadros de diálogo](../windows/dialog-editor.md). Este cuadro de diálogo contiene las siguientes propiedades:
+El cuadro de diálogo **Insertar control ActiveX** permite insertar controles ActiveX en el cuadro de diálogo mientras se usa el [Editor de cuadros de diálogo](dialog-editor.md). Este cuadro de diálogo contiene las siguientes propiedades:
 
 |Propiedad|Descripción|
 |---|---|
@@ -216,7 +216,7 @@ El cuadro de diálogo **Insertar control ActiveX** permite insertar controles Ac
 
 Los controles ActiveX suministrados por proveedores independientes pueden estar equipados con sus propias propiedades y características. Estas propiedades se muestran en la ventana **propiedades** . Las páginas de propiedades creadas por los escritores del control ActiveX se muestran en el cuadro de diálogo **páginas de propiedades** . (Para ver la **Página de propiedades** de un control ActiveX específico, seleccione el botón **Página de propiedades** en el [ventana Propiedades](/visualstudio/ide/reference/properties-window)).
 
-- Seleccione el control **ActiveX** y vaya a la **vista** de menú > **Página de propiedades** para ver las propiedades. Realice los cambios necesarios en la página de propiedades.
+- Seleccione el control **ActiveX** y vaya a la página de propiedades de la **vista**de menú  >  **Property Page** para ver las propiedades. Realice los cambios necesarios en la página de propiedades.
 
    En la página de propiedades de un control ActiveX se muestran varias pestañas, en función de las hojas de propiedades que se incluyen como parte del control ActiveX.
 

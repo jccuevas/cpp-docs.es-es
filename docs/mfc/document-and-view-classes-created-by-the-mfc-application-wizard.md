@@ -7,21 +7,21 @@ helpviewer_keywords:
 - application wizards [MFC], document/view classes created
 - view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
-ms.openlocfilehash: 95b50e34d612c3b8f5dea2f8b469bd6c65182d41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766fe4efb37c199c5babb75ce2cb08ebf676cca6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408035"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616053"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Clases de documentos y de vistas creadas por el Asistente para aplicaciones MFC
 
-MFC Application Wizard ofrece una ventaja en el desarrollo del programa mediante la creación de documento de esquema y clases de vista para usted. A continuación, puede [asignar comandos y mensajes a estas clases](../mfc/reference/mapping-messages-to-functions.md) y use el editor de código fuente de Visual C++ para escribir sus funciones miembro.
+El Asistente para aplicaciones MFC le ofrece un inicio principal en el desarrollo del programa mediante la creación de clases de documento y vista esquemáticas. A continuación, puede [asignar comandos y mensajes a estas clases](reference/mapping-messages-to-functions.md) y usar el editor de código fuente de Visual C++ para escribir sus funciones miembro.
 
-La clase de documento creada por el Asistente para aplicaciones MFC se deriva de una clase [CDocument](../mfc/reference/cdocument-class.md). Se deriva la clase de vista [CView](../mfc/reference/cview-class.md). Los nombres que el Asistente para aplicaciones proporciona estas clases y los archivos que contienen se basan en el nombre del proyecto proporcione en el cuadro de diálogo del Asistente para la aplicación. En el Asistente para la aplicación, puede usar la página clases generadas para modificar los nombres predeterminados.
+La clase de documento creada por el Asistente para aplicaciones MFC se deriva de la clase [CDocument](reference/cdocument-class.md). La clase de vista se deriva de [CView](reference/cview-class.md). Los nombres que el Asistente para aplicaciones proporciona a estas clases y los archivos que los contienen se basan en el nombre del proyecto que se proporciona en el cuadro de diálogo Asistente para aplicaciones. En el Asistente para aplicaciones, puede usar la página clases generadas para modificar los nombres predeterminados.
 
-Algunas aplicaciones pueden necesitar más de una clase de documento, clase de vista o clase de ventana de marco. Para obtener más información, consulte [varios tipos de documentos, vistas y marco Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
+Es posible que algunas aplicaciones necesiten más de una clase de documento, una clase de vista o una clase de ventana de marco. Para obtener más información, vea [varios tipos de documentos, vistas y ventanas de marco](multiple-document-types-views-and-frame-windows.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Arquitectura documento/vista](../mfc/document-view-architecture.md)
+[Arquitectura documento/vista](document-view-architecture.md)
