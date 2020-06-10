@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630856"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619743"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Requisitos de compilación para los controles comunes de Windows
 
@@ -18,7 +18,7 @@ La biblioteca MFC (Microsoft Foundation Class) es compatible con [los controles 
 
 ## <a name="compilation-requirements"></a>Requisitos de compilación
 
-### <a name="supported-versions"></a>Versiones compatibles
+### <a name="supported-versions"></a>Versiones admitidas
 
 MFC es compatible con todas las versiones de los controles comunes. Para obtener información sobre las versiones de controles comunes de Windows, vea [versiones de control comunes](/windows/win32/controls/common-control-versions).
 
@@ -30,7 +30,7 @@ Los controles comunes de Windows solo admiten el juego de caracteres Unicode, no
 /D_UNICODE /DUNICODE
 ```
 
-Si compila la aplicación en el entorno de desarrollo integrado (IDE) de Visual Studio, especifique la opción **juego de caracteres Unicode** de la propiedad juego de **caracteres** en el nodo **General** de las propiedades del proyecto.
+Si compila la aplicación en el entorno de desarrollo integrado (IDE) de Visual Studio, especifique la opción **juego de caracteres Unicode** de la propiedad **juego de caracteres** en el nodo **General** de las propiedades del proyecto.
 
 ## <a name="migration-requirements"></a>Requisitos de migración
 
@@ -50,8 +50,8 @@ Si usa el IDE de Visual Studio para compilar una nueva aplicación MFC que utili
 #endif
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Temas generales de MFC](../mfc/general-mfc-topics.md)<br/>
-[Gráfico de jerarquías](../mfc/hierarchy-chart.md)<br/>
-[API ANSI en desuso](../mfc/deprecated-ansi-apis.md)
+[Temas generales de MFC](general-mfc-topics.md)<br/>
+[Gráfico de jerarquías](hierarchy-chart.md)<br/>
+[API ANSI en desuso](deprecated-ansi-apis.md)

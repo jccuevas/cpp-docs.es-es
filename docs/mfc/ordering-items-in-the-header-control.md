@@ -12,27 +12,27 @@ helpviewer_keywords:
 - SetOrderArray method [MFC]
 - header controls [MFC], ordering items
 ms.assetid: 5aaef872-75b5-49c5-8fed-6f9a81fca812
-ms.openlocfilehash: bae351d921c25993d6b7029f9052e1938179673b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4b4711729c6c3a4b63d4ad05252a5c49df98a0c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622135"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Ordenar elementos en el control de encabezado
 
-Una vez que haya [agrega elementos a un control de encabezado](../mfc/adding-items-to-the-header-control.md), puede manipular u obtener información sobre el orden con las siguientes funciones:
+Una vez que haya [agregado elementos a un control de encabezado](adding-items-to-the-header-control.md), puede manipular u obtener información sobre su pedido con las siguientes funciones:
 
-- [CHeaderCtrl:: GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) y [CHeaderCtrl:: SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)
+- [CHeaderCtrl:: GetOrderArray](reference/cheaderctrl-class.md#getorderarray) y [CHeaderCtrl:: SetOrderArray](reference/cheaderctrl-class.md#setorderarray)
 
    Recupera y establece el orden de izquierda a derecha de los elementos de encabezado.
 
-- [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).
+- [CHeaderCtrl:: OrderToIndex](reference/cheaderctrl-class.md#ordertoindex).
 
-   Recupera el valor de índice para un elemento de encabezado específico.
+   Recupera el valor de índice de un elemento de encabezado específico.
 
-Además de las funciones de miembro anterior, el estilo HDS_DRAGDROP permite al usuario arrastrar y colocar elementos de encabezado dentro del control de encabezado. Para obtener más información, consulte [que proporciona compatibilidad con arrastrar y colocar elementos de encabezado](../mfc/providing-drag-and-drop-support-for-header-items.md).
+Además de las funciones miembro anteriores, el estilo de HDS_DRAGDROP permite al usuario arrastrar y colocar elementos de encabezado dentro del control de encabezado. Para obtener más información, vea [proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado](providing-drag-and-drop-support-for-header-items.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de CHeaderCtrl](../mfc/using-cheaderctrl.md)
+[Uso de CHeaderCtrl](using-cheaderctrl.md)
