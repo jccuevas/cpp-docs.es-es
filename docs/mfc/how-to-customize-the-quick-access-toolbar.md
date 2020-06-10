@@ -1,21 +1,21 @@
 ---
-title: Procedimiento Personalizar la barra de herramientas de acceso rápido
+title: 'Cómo: Personalizar la barra de herramientas de acceso rápido'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907778"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620029"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Procedimiento Personalizar la barra de herramientas de acceso rápido
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Cómo: Personalizar la barra de herramientas de acceso rápido
 
 La barra de herramientas de acceso rápido (QAT) es una barra de herramientas personalizable que contiene un conjunto de comandos que se muestran junto al botón aplicación o en las pestañas categoría. En la ilustración siguiente se muestra una barra de herramientas de acceso rápido típica.
 
-![Barra de herramientas de acceso rápido de cinta MFC](../mfc/media/quick_access_toolbar.png "Barra de herramientas de acceso rápido de cinta MFC")
+![Barra de herramientas de acceso rápido de la cinta de opciones de MFC](../mfc/media/quick_access_toolbar.png "Barra de herramientas de acceso rápido de la cinta de opciones de MFC")
 
 Para personalizar la barra de herramientas de acceso rápido, ábrala en la ventana **propiedades** , modifique sus comandos y, a continuación, obtenga una vista previa del control de la cinta de opciones.
 
@@ -38,7 +38,7 @@ En la tabla siguiente se definen las propiedades de la barra de herramientas de 
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Para agregar o quitar comandos en la barra de herramientas de acceso rápido
 
-1. En la ventana **propiedades** , haga clic en **Qat elementos**y, a continuación, haga clic en el botón de puntos suspensivos **(...)** .
+1. En la ventana **propiedades** , haga clic en **Qat elementos**y, a continuación, haga clic en el botón de puntos suspensivos **(...)**.
 
 1. En el cuadro de diálogo **Editor de elementos de Qat** , use los botones **Agregar** y **quitar** para modificar la lista de comandos de la barra de herramientas de acceso rápido.
 
@@ -52,6 +52,6 @@ Los comandos de la barra de herramientas de acceso rápido no aparecen en la sup
 
 - En la **barra de herramientas del editor**de la cinta de opciones, haga clic en **probar cinta**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Diseñador de la cinta de opciones (MFC)](../mfc/ribbon-designer-mfc.md)
+[Diseñador de la cinta de opciones (MFC)](ribbon-designer-mfc.md)

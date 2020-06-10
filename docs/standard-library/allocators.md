@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457540"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623511"
 ---
 # <a name="allocators"></a>Asignadores
 
@@ -24,7 +24,7 @@ template <
 class vector
 ```
 
-La biblioteca estándar de C++ proporciona una implementación predeterminada para un asignador. En C++11 y versiones posteriores, el asignador predeterminado se actualiza para exponer una interfaz más pequeña. El nuevo asignador se denomina *asignador mínimo*. En particular, el miembro del asignador mínimo `construct()` admite la semántica de movimiento, que puede mejorar considerablemente el rendimiento. En la mayoría de los casos, este asignador predeterminado debería ser suficiente. En C++11 todos los tipos y las funciones de la biblioteca estándar con un parámetro de tipo de asignador admiten la interfaz del asignador mínimo, incluyendo `std::function`, `shared_ptr, allocate_shared()` y `basic_string`.  Para más información sobre el asignador predeterminado, vea [allocator (Clase)](../standard-library/allocator-class.md).
+La biblioteca estándar de C++ proporciona una implementación predeterminada para un asignador. En C++11 y versiones posteriores, el asignador predeterminado se actualiza para exponer una interfaz más pequeña. El nuevo asignador se denomina *asignador mínimo*. En particular, el miembro del asignador mínimo `construct()` admite la semántica de movimiento, que puede mejorar considerablemente el rendimiento. En la mayoría de los casos, este asignador predeterminado debería ser suficiente. En C++11 todos los tipos y las funciones de la biblioteca estándar con un parámetro de tipo de asignador admiten la interfaz del asignador mínimo, incluyendo `std::function`, `shared_ptr, allocate_shared()` y `basic_string`.  Para más información sobre el asignador predeterminado, vea [allocator (Clase)](allocator-class.md).
 
 ## <a name="writing-your-own-allocator-c11"></a>Escribir su propio asignador (C++11)
 
@@ -119,8 +119,8 @@ Además, cualquier asignador usado con contenedores de la biblioteca estándar d
 |`allocate`|`operator!=`|
 |`construct`||
 
-Para más información sobre estas definiciones de tipos y métodos, vea [allocator (Clase)](../standard-library/allocator-class.md).
+Para más información sobre estas definiciones de tipos y métodos, vea [allocator (Clase)](allocator-class.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+[Referencia de la biblioteca estándar de C++](cpp-standard-library-reference.md)

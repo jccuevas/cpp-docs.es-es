@@ -10,19 +10,19 @@ helpviewer_keywords:
 - frame windows [MFC], dragging and dropping files in
 - drag and drop [MFC], Windows Explorer
 ms.assetid: 85560fe9-121b-4105-bd7b-216b966e19fa
-ms.openlocfilehash: 0129b939e0fe2afd5dd29623bb44418bfd16c20d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42f21e2441f8ba3d2c6a13503c928880fe100f04
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240665"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623157"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Arrastrar y colocar archivos en una ventana de marco
 
-La ventana de marco administra una relación con el Explorador de archivos o el Administrador de archivos.
+La ventana marco administra una relación con el explorador de archivos o el administrador de archivos.
 
-Al agregar unos Inicializando llama en el reemplazo de la `CWinApp` función miembro `InitInstance`, tal y como se describe en [CWinApp: La clase Application](../mfc/cwinapp-the-application-class.md), puede tener la ventana de marco indirectamente abrir archivos arrastra desde el Explorador de archivos o el Administrador de archivos y se coloca en la ventana de marco. Consulte [Administrador de archivos de arrastrar y colocar](../mfc/special-cwinapp-services.md).
+Al agregar algunas llamadas de inicialización en la invalidación de la `CWinApp` función miembro `InitInstance` , tal como se describe en [CWinApp: la clase Application](cwinapp-the-application-class.md), puede hacer que la ventana de marco abra indirectamente los archivos arrastrados desde el explorador de archivos o el administrador de archivos y que se coloquen en la ventana de marco. Consulte [arrastrar y colocar del administrador de archivos](special-cwinapp-services.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de ventanas de marco](../mfc/using-frame-windows.md)
+[Usar ventanas de marco](using-frame-windows.md)
