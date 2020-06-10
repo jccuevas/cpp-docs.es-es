@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373467"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620951"
 ---
 # <a name="safeint-class"></a>SafeInt (Clase)
 
 Amplía las primitivas de enteros para ayudar a evitar el desbordamiento de enteros y permite comparar diferentes tipos de enteros.
 
 > [!NOTE]
-> La última versión de [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)esta biblioteca se encuentra en .
+> La versión más reciente de esta biblioteca se encuentra en [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,16 +42,16 @@ class SafeInt;
 | Parámetro  |  Descripción |
 |---------|-----------------|
 | *rhs*      |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
-| *Ⅰ*        |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
-| *bits*     |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
+| *i*        |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
+| *parada*     |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-| Nombre                          |  Descripción |
+| NOMBRE                          |  Descripción |
 |---------------------------|--------------------|
-| [SafeInt::SafeInt](#safeint)  |  Constructor predeterminado. |
+| [SafeInt:: SafeInt](#safeint)  |  Constructor predeterminado. |
 
 ### <a name="assignment-operators"></a>Operadores de asignación
 
@@ -212,7 +212,7 @@ A `T` y `U` se les puede asignar un tipo booleano, un tipo de carácter o un tip
 > [!NOTE]
 > Aunque la clase `SafeInt` acepta cualquier tipo de entero, funciona mejor con tipos sin signo.
 
-`E` es el mecanismo de control de errores que usa `SafeInt`. Con la biblioteca de SafeInt se proporcionan dos mecanismos de control de errores. La directiva predeterminada es `SafeIntErrorPolicy_SafeIntException`, que produce una excepción [SafeIntException (Clase)](../safeint/safeintexception-class.md) cuando hay un error. La otra directiva es `SafeIntErrorPolicy_InvalidParameter`, que detiene el programa si se produce un error.
+`E` es el mecanismo de control de errores que usa `SafeInt`. Con la biblioteca de SafeInt se proporcionan dos mecanismos de control de errores. La directiva predeterminada es `SafeIntErrorPolicy_SafeIntException`, que produce una excepción [SafeIntException (Clase)](safeintexception-class.md) cuando hay un error. La otra directiva es `SafeIntErrorPolicy_InvalidParameter`, que detiene el programa si se produce un error.
 
 Hay dos opciones para personalizar la directiva de errores. La primera opción es establecer el parámetro `E` al crear un objeto `SafeInt`. Use esta opción si quiere cambiar la directiva de control de errores de un único objeto `SafeInt`. La otra opción es definir _SAFEINT_DEFAULT_ERROR_POLICY como la clase de control de errores personalizada antes de incluir la biblioteca `SafeInt`. Use esta opción si quiere cambiar la directiva de control de errores predeterminada de todas las instancias de la clase `SafeInt` en el código.
 
@@ -229,7 +229,7 @@ Hay dos opciones para personalizar la directiva de errores. La primera opción e
 
 **Espacio de nombres:** msl::utilities
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
 
 Construye un objeto `SafeInt`.
 
@@ -257,10 +257,10 @@ SafeInt (
 
 ### <a name="parameters"></a>Parámetros
 
-*Ⅰ*<br/>
+*i*<br/>
 [in] El valor del nuevo objeto `SafeInt`. Debe ser un parámetro de tipo T o U, según el constructor.
 
-*B*<br/>
+*b*<br/>
 [in] El valor booleano del nuevo objeto `SafeInt`.
 
 *u*<br/>

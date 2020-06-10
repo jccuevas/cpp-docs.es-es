@@ -1,41 +1,41 @@
 ---
-title: Ventajas de la arquitectura de documentos y vistas
+title: Ventajas de la arquitectura de vista-documento
 ms.date: 11/04/2016
 helpviewer_keywords:
 - views [MFC], advantages
 - document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
-ms.openlocfilehash: e250630bf3c9714fc01ff66b66fba3ac0d5b1cc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80f7141ec62d509defdea361586399bd375df0d1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623275"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Ventajas de la arquitectura documento/vista
 
-La ventaja clave de la arquitectura documento/vista MFC es que la arquitectura admite varias vistas del mismo documento particularmente bien. (Si no necesita varias vistas y la mínima sobrecarga de documento/vista es excesiva en la aplicación, puede evitar la arquitectura. [Alternativas a la arquitectura documento/vista](../mfc/alternatives-to-the-document-view-architecture.md).)
+La principal ventaja de utilizar la arquitectura de documento y vista de MFC es que la arquitectura admite varias vistas del mismo documento. (Si no necesita varias vistas y la pequeña sobrecarga de documento o vista es excesiva en la aplicación, puede evitar la arquitectura. [Alternativas a la arquitectura documento/vista](alternatives-to-the-document-view-architecture.md)).
 
-Supongamos que la aplicación permite a los usuarios ver los datos numéricos en forma de hoja de cálculo o en forma de gráfico. Un usuario podría desear ver simultáneamente tanto los datos sin procesar, en formato de hoja de cálculo y un gráfico que es el resultado de los datos. Mostrar estas vistas independientes en ventanas de marco independiente o en paneles divisores dentro de una sola ventana. Ahora supongamos que el usuario puede editar los datos en la hoja de cálculo y vea los cambios reflejan al instante en el gráfico.
+Supongamos que la aplicación permite a los usuarios ver datos numéricos en un formulario de hoja de cálculo o en un gráfico. Es posible que un usuario desee ver simultáneamente los datos sin procesar, en el formulario de la hoja de cálculo y un gráfico que resulte de los datos. Estas vistas independientes se muestran en ventanas de marco independientes o en paneles divisores dentro de una sola ventana. Ahora Supongamos que el usuario puede editar los datos de la hoja de cálculo y ver los cambios reflejados al instante en el gráfico.
 
-En MFC, la vista de la hoja de cálculo y la vista del gráfico podrían basarse en distintas clases derivadas de CView. Ambas vistas sería asociados a un objeto de documento único. El documento almacena los datos (o quizás los obtiene de una base de datos). Ambas vistas tengan acceso al documento y mostrar los datos que se recuperan de ella.
+En MFC, la vista de hoja de cálculo y la vista de gráfico se basarían en distintas clases derivadas de CView. Ambas vistas se asociarían a un solo objeto de documento. El documento almacena los datos (o quizás los obtiene de una base de datos). Ambas vistas acceden al documento y muestran los datos que recuperan de ella.
 
-Cuando un usuario actualiza una de las vistas, que permite ver las llamadas de objeto `CDocument::UpdateAllViews`. Notifica a esa función de las vistas del documento y cada vista se actualiza con los datos más recientes del documento. La única llamada a `UpdateAllViews` sincroniza las distintas vistas.
+Cuando un usuario actualiza una de las vistas, el objeto de vista llama a `CDocument::UpdateAllViews` . Esa función notifica a todas las vistas del documento y cada vista se actualiza con los datos más recientes del documento. La única llamada a `UpdateAllViews` sincroniza las distintas vistas.
 
-Este escenario sería difícil de código sin la separación de datos de la vista, especialmente si las vistas almacenan los datos por sí mismos. Documento/vista, es fácil. El marco de trabajo realiza la mayor parte del trabajo de coordinación para usted.
+Este escenario sería difícil de codificar sin la separación de datos de la vista, especialmente si las vistas almacenaban los datos. Con documento o vista, es fácil. El marco de trabajo realiza la mayoría de las tareas de coordinación.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Alternativas al documento/vista](../mfc/alternatives-to-the-document-view-architecture.md)
+- [Alternativas a documento/vista](alternatives-to-the-document-view-architecture.md)
 
-- [CDocument](../mfc/reference/cdocument-class.md)
+- [CDocument](reference/cdocument-class.md)
 
-- [CView](../mfc/reference/cview-class.md)
+- [CView](reference/cview-class.md)
 
-- [CDocument::UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)
+- [CDocument:: UpdateAllViews](reference/cdocument-class.md#updateallviews)
 
-- [CView::GetDocument](../mfc/reference/cview-class.md#getdocument)
+- [CView:: GetDocument](reference/cview-class.md#getdocument)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Arquitectura documento/vista](../mfc/document-view-architecture.md)
+[Arquitectura documento/vista](document-view-architecture.md)

@@ -5,36 +5,36 @@ helpviewer_keywords:
 - CToolTipCtrl class [MFC], manipulating tool tip attributes
 - tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
-ms.openlocfilehash: d8c994748239871f17b878dd8ea7505a2a8a0b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61bc35e8b19ba7645736b939acac6cdaa6cb7316
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226162"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622420"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Manipular el control de información sobre herramientas
 
-Clase `CToolTipCtrl` proporciona un grupo de miembros de funciones que controlan los distintos atributos de la `CToolTipCtrl` objeto y la ventana de información sobre herramientas.
+`CToolTipCtrl`La clase proporciona un grupo de funciones miembro que controlan los distintos atributos del `CToolTipCtrl` objeto y la ventana de información sobre herramientas.
 
-La inicial, emergente y reshow las duraciones de las ventanas de información sobre herramientas se pueden establecer y recuperar con llamadas a [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) y [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).
+Las duraciones iniciales, emergentes y de representación de las ventanas de información sobre herramientas se pueden establecer y recuperar con llamadas a [GetDelayTime](reference/ctooltipctrl-class.md#getdelaytime) y [SetDelayTime](reference/ctooltipctrl-class.md#setdelaytime).
 
-Cambiar la apariencia de las ventanas de información sobre herramientas con las siguientes funciones:
+Cambie la apariencia de las ventanas de información sobre herramientas con las siguientes funciones:
 
-- [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) y [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) recupera y establece el ancho entre el borde de sugerencia de la herramienta y la herramienta de texto de sugerencia.
+- [GetMargin](reference/ctooltipctrl-class.md#getmargin) y [SetMargin](reference/ctooltipctrl-class.md#setmargin) recupera y establece el ancho entre el borde de información sobre herramientas y el texto de información sobre herramientas.
 
-- [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) y [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) recupera y conjuntos de ventana de información sobre el ancho máximo de la herramienta.
+- [GetMaxTipWidth](reference/ctooltipctrl-class.md#getmaxtipwidth) y [SetMaxTipWidth](reference/ctooltipctrl-class.md#setmaxtipwidth) recupera y establece el ancho máximo de la ventana de información sobre herramientas.
 
-- [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) y [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) recupera y establece el color de fondo de la herramienta de sugerencia de ventana.
+- [GetTipBkColor](reference/ctooltipctrl-class.md#gettipbkcolor) y [SetTipBkColor](reference/ctooltipctrl-class.md#settipbkcolor) recupera y establece el color de fondo de la ventana de información sobre herramientas.
 
-- [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) y [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) recupera y establece el color del texto de la herramienta de sugerencia de ventana.
+- [GetTipTextColor](reference/ctooltipctrl-class.md#gettiptextcolor) y [SetTipTextColor](reference/ctooltipctrl-class.md#settiptextcolor) recupera y establece el color del texto de la ventana de información sobre herramientas.
 
-En orden para el control de información sobre herramientas recibir una notificación de mensajes importantes, tales como mensajes WM_LBUTTONXXX, debe transmitir los mensajes para el control de información sobre herramientas. El mejor método para esta transmisión consiste en realizar una llamada a [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent), en el `PreTranslateMessage` función de la ventana propietaria. El ejemplo siguiente muestra un método posible (suponiendo que el control se denomina `m_ToolTip`):
+Para que el control de información sobre herramientas reciba notificaciones de mensajes importantes, como WM_LBUTTONXXX mensajes, debe retransmitir los mensajes al control de información sobre herramientas. El mejor método para esta retransmisión es realizar una llamada a [CToolTipCtrl:: RelayEvent](reference/ctooltipctrl-class.md#relayevent)en la `PreTranslateMessage` función de la ventana propietaria. En el ejemplo siguiente se muestra un método posible (suponiendo que se llama al control de información sobre herramientas `m_ToolTip` ):
 
-[!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#41](codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]
 
-Para quitar inmediatamente una ventana de información sobre herramientas, llame a la [Pop](../mfc/reference/ctooltipctrl-class.md#pop) función miembro.
+Para quitar inmediatamente una ventana de información sobre herramientas, llame a la función miembro [pop](reference/ctooltipctrl-class.md#pop) .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Uso de CToolTipCtrl](using-ctooltipctrl.md)<br/>
+[Permite](controls-mfc.md)

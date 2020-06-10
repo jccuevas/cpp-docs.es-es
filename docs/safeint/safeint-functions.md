@@ -31,23 +31,23 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: c1c5593aee19254d4348d4e8658ffe9c3f0cf1b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368249"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622074"
 ---
 # <a name="safeint-functions"></a>SafeInt (Funciones)
 
-La biblioteca SafeInt proporciona varias funciones que puede usar sin crear una instancia de la [clase SafeInt](../safeint/safeint-class.md). Si desea proteger una sola operación matemática del desbordamiento de enteros, puede usar estas funciones. Si desea proteger varias operaciones matemáticas, debe crear objetos `SafeInt`. Resulta más eficaz crear objetos `SafeInt` que usar estas funciones varias veces.
+La biblioteca SafeInt proporciona varias funciones que puede usar sin crear una instancia de la [clase SafeInt](safeint-class.md). Si desea proteger una sola operación matemática del desbordamiento de enteros, puede usar estas funciones. Si desea proteger varias operaciones matemáticas, debe crear objetos `SafeInt`. Resulta más eficaz crear objetos `SafeInt` que usar estas funciones varias veces.
 
 Estas funciones le permiten comparar o realizar operaciones matemáticas con dos tipos de parámetros diferentes sin tener que convertirlos en el mismo tipo primero.
 
 Cada una de estas funciones tiene dos tipos de plantilla: `T` y `U`. Cada uno de estos tipos puede ser un valor booleano, un carácter o un tipo entero. Los tipos enteros pueden tener o no signo y cualquier tamaño entre 8 y 64 bits.
 
 > [!NOTE]
-> La última versión de [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)esta biblioteca se encuentra en .
+> La versión más reciente de esta biblioteca se encuentra en [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -65,8 +65,8 @@ Función                      | Descripción
 
 Sección                                                  | Descripción
 -------------------------------------------------------- | ----------------------------------------------------
-[SafeInt](../safeint/safeint-class.md)                   | La clase `SafeInt`.
-[SafeIntException](../safeint/safeintexception-class.md) | Clase de excepción específica de la librería SafeInt.
+[SafeInt](safeint-class.md)                   | La clase `SafeInt`.
+[SafeIntException](safeintexception-class.md) | Clase de excepción específica de la librería SafeInt.
 
 ## <a name="safeadd"></a><a name="safeadd"></a>SafeAdd
 
@@ -83,13 +83,13 @@ inline bool SafeAdd (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número que se va a agregar. Este debe ser del tipo T.
 
 *u*<br/>
 [in] Segundo número que se va a agregar. Este debe ser del tipo U.
 
-*Resultado*<br/>
+*result*<br/>
 [out] Parámetro donde `SafeAdd` almacena el resultado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -110,7 +110,7 @@ inline bool SafeCast (
 
 ### <a name="parameters"></a>Parámetros
 
-*De*<br/>
+*From*<br/>
 [in] Número de origen que se va a convertir. Debe ser del tipo `T`.
 
 *To*<br/>
@@ -135,13 +135,13 @@ inline bool SafeDivide (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Divisor. Este debe ser del tipo T.
 
 *u*<br/>
 [in] Dividendo. Este debe ser del tipo U.
 
-*Resultado*<br/>
+*result*<br/>
 [out] Parámetro donde `SafeDivide` almacena el resultado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -162,7 +162,7 @@ inline bool SafeEquals (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número que se va a comparar. Este debe ser del tipo T.
 
 *u*<br/>
@@ -190,7 +190,7 @@ inline bool SafeGreaterThan (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número que se va a comparar. Debe ser del tipo `T`.
 
 *u*<br/>
@@ -218,7 +218,7 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número que se va a comparar. Debe ser del tipo `T`.
 
 *u*<br/>
@@ -246,7 +246,7 @@ inline bool SafeLessThan (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número. Debe ser del tipo `T`.
 
 *u*<br/>
@@ -274,7 +274,7 @@ inline bool SafeLessThanEquals (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número que se va a comparar. Debe ser del tipo `T`.
 
 *u*<br/>
@@ -303,13 +303,13 @@ inline bool SafeModulus (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Divisor. Debe ser del tipo `T`.
 
 *u*<br/>
 [in] Dividendo. Debe ser del tipo `U`.
 
-*Resultado*<br/>
+*result*<br/>
 [out] Parámetro donde `SafeModulus` almacena el resultado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -331,13 +331,13 @@ inline bool SafeMultiply (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número que se va a multiplicar. Debe ser del tipo `T`.
 
 *u*<br/>
 [in] Segundo número que se va a multiplicar. Debe ser del tipo `U`.
 
-*Resultado*<br/>
+*result*<br/>
 [out] Parámetro donde `SafeMultiply` almacena el resultado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -358,7 +358,7 @@ inline bool SafeNotEquals (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número que se va a comparar. Debe ser del tipo `T`.
 
 *u*<br/>
@@ -387,13 +387,13 @@ inline bool SafeSubtract (
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*h*<br/>
 [in] Primer número de la resta. Debe ser del tipo `T`.
 
 *u*<br/>
 [in] Número que se va a restar de *t*. Debe ser del tipo `U`.
 
-*Resultado*<br/>
+*result*<br/>
 [out] Parámetro donde `SafeSubtract` almacena el resultado.
 
 ### <a name="return-value"></a>Valor devuelto
