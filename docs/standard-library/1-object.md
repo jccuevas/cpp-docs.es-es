@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 1c1f13d40e02ec6e099ef1e2c20fe1cac4a4ef93
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8fdb53ea03031f2bf1634a105275c72263ee20e3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620923"
 ---
-# <a name="1-object"></a>_1 (Objeto)
+# <a name="_1-object"></a>_1 (Objeto)
 
 Marcadores de posición para argumentos reemplazables.
 
@@ -27,9 +27,9 @@ namespace placeholders {
 } // namespace placeholders (within std)
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Los objetos `_1, _2, ... _M` son marcadores de posición que designa el primer, segundo, …, m-ésimo argumentos, respectivamente, en una llamada de función a un objeto devuelto por [enlazar](../standard-library/functional-functions.md#bind). `_N` se usa para especificar dónde se debe insertar el argumento Nth cuando se evalúa la expresión de enlace.
+Los objetos `_1, _2, ... _M` son marcadores de posición que designan el primer, segundo,..., el argumento MTH, respectivamente, en una llamada de función a un objeto devuelto por [BIND](functional-functions.md#bind). `_N` se usa para especificar dónde se debe insertar el argumento Nth cuando se evalúa la expresión de enlace.
 
 En esta implementación, el valor de `M` es 20.
 

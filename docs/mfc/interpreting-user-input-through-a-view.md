@@ -8,37 +8,37 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: 3ef23ad74e1ff53d947453faa5682c5ecc1f4e43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fb903fa169233ce532e41ecdf02c23ab6037c8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621461"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretar la entrada del usuario a través de una vista
 
-Otras funciones miembro de la vista de controlarán e interpretan todos los usuarios de entrada. Normalmente, definirá las funciones miembro de controlador de mensajes en la clase de vista para procesar:
+Otras funciones miembro de la vista controlan e interpretan todos los datos proporcionados por el usuario. Normalmente, se definen las funciones miembro de controlador de mensajes en la clase de vista para procesar:
 
-- Windows [mensajes](../mfc/messages.md) generado por acciones del mouse y teclado.
+- [Mensajes](messages.md) de Windows generados por acciones del mouse y del teclado.
 
-- [Comandos](../mfc/user-interface-objects-and-command-ids.md) de menús, botones de barra de herramientas y teclas de aceleración.
+- [Comandos](user-interface-objects-and-command-ids.md) de menús, botones de barra de herramientas y teclas de aceleración.
 
-Estas funciones miembro de controlador de mensajes a interpretar las siguientes acciones como entrada de datos, la selección o la edición, incluso mover datos hacia y desde el Portapapeles:
+Estas funciones miembro de controlador de mensajes interpretan las siguientes acciones como entrada, selección o edición de datos, incluido el movimiento de datos hacia y desde el portapapeles:
 
-- Movimientos del mouse y clics, arrastra y hace doble clic en
+- Movimientos y clics del mouse, arrastre y doble clic
 
-- Pulsaciones de teclas
+- Pulsaciones
 
 - Comandos de menú
 
-Los mensajes que Windows controle la vista depende de las necesidades de su aplicación.
+Los mensajes de Windows que controla la vista dependen de las necesidades de la aplicación.
 
-[Temas de control y asignación de mensajes](../mfc/message-handling-and-mapping.md) explica cómo asignar elementos de menú y otros objetos de interfaz de usuario a los comandos y cómo enlazar los comandos a las funciones de controlador. [Temas de control y asignación de mensajes](../mfc/message-handling-and-mapping.md) también se explica cómo MFC enruta los comandos y envía mensajes estándar de Windows a los objetos que contienen controladores para ellos.
+[Temas de control y asignación de mensajes](message-handling-and-mapping.md) explica cómo asignar elementos de menú y otros objetos de la interfaz de usuario a los comandos y cómo enlazar los comandos a las funciones de controlador. Los [temas de control y asignación de mensajes](message-handling-and-mapping.md) también explican el modo en que MFC enruta comandos y envía mensajes estándar de Windows a los objetos que contienen controladores para ellos.
 
-Por ejemplo, la aplicación que tenga que implementar directo mouse en la vista de dibujo. El ejemplo Scribble muestra cómo controlar los mensajes WM_LBUTTONDOWN, WM_MOUSEMOVE y WM_LBUTTONUP respectivamente para comenzar, continuar y finalizar el dibujo de un segmento de línea. Por otro lado, es posible que a veces es necesario interpretar un clic del mouse en la vista como una selección. La vista `OnLButtonDown` función de controlador podría determinar si el usuario se dibujando o seleccionar. Si ha seleccionado, el controlador podría determinar si el clic estaba dentro de los límites de algún objeto en la vista y, si es así, cambiar la visualización para mostrar el objeto seleccionado.
+Por ejemplo, es posible que la aplicación necesite implementar dibujo de mouse directo en la vista. El ejemplo Scribble muestra cómo controlar los mensajes WM_LBUTTONDOWN, WM_MOUSEMOVE y WM_LBUTTONUP respectivamente para comenzar, continuar y finalizar el dibujo de un segmento de línea. Por otro lado, en ocasiones es posible que necesite interpretar un clic del mouse en la vista como una selección. La función de controlador de la vista `OnLButtonDown` determinaría si el usuario estaba dibujando o seleccionando. Si selecciona, el controlador determinará si el clic estaba dentro de los límites de algún objeto en la vista y, en caso afirmativo, modifica la presentación para mostrar el objeto como seleccionado.
 
-La vista también podría controlar ciertos comandos de menú, tales como en el menú de edición para cortar, copiar, pegar o eliminar los datos seleccionados mediante el Portapapeles. Este tipo de controlador llamaría a algunos de los miembros relacionados con el Portapapeles funciones de la clase `CWnd` para transferir un elemento de datos seleccionado a o desde el Portapapeles.
+La vista también puede controlar determinados comandos de menú, como los del menú Editar para cortar, copiar, pegar o eliminar los datos seleccionados mediante el portapapeles. Este tipo de controlador llamaría a algunas de las funciones miembro relacionadas con el portapapeles de la clase `CWnd` para transferir un elemento de datos seleccionado a o desde el portapapeles.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de vistas](../mfc/using-views.md)
+[Usar vistas](using-views.md)
