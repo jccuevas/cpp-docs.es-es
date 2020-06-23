@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 46619e77861b6a3a78d74ce6c6d9173a3a5f270f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857327"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777323"
 ---
 # <a name="profile-guided-optimizations"></a>Optimizaciones guiadas por perfiles
 
@@ -48,6 +48,9 @@ Para usar la optimización guiada por perfiles, siga estos pasos para optimizar 
    Use las opciones **/LTCG** y [/USEPROFILE](reference/useprofile.md) del enlazador para crear la imagen optimizada. Este paso toma como entrada el archivo `.pgd`. Al especificar **/USEPROFILE**, opcionalmente puede agregar un argumento **PGD=** _filename_ para especificar un nombre o una ubicación no predeterminados para el archivo `.pgd`. También puede especificar este nombre mediante la opción **/PGD** en desuso del enlazador. La combinación de **/LTCG** y **/USEPROFILE** reemplaza a las opciones **/LTCG:PGOPTIMIZE** y **/LTCG:PGUPDATE** en desuso del enlazador.
 
 Incluso es posible crear el archivo ejecutable optimizado y, posteriormente, determinar que la generación de perfiles adicionales sería útil para crear una imagen más optimizada. Si la imagen instrumentada y el archivo `.pgd` correspondiente están disponibles, puede efectuar series de pruebas adicionales y recompilar la imagen optimizada con el archivo `.pgd` más reciente mediante el uso de las mismas opciones **/LTCG** y **/USEPROFILE** del enlazador.
+
+> [!NOTE]
+> Los archivos `.pgc` y `.pgd` son de tipo binario. Si están almacenados en un sistema de control de código fuente, evite toda transformación automática que se pueda hacer en archivos de texto.
 
 ## <a name="optimizations-performed-by-pgo"></a>Optimizaciones realizadas mediante PGO
 
